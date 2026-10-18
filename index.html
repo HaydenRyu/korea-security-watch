@@ -707,7 +707,8 @@ function initMap(){
   // 10/18 hayden 실기기: 확대하면 선이 남쪽 민간 지역에 그어진 것처럼 보였다 — 원인은 Natural Earth 선 자체가
   // 확대 11 에서 실제 경계와 수 km 어긋난 것. MDL 은 OSM 으로 교체, 개략 DMZ 점선은 확대 10 이상에서 숨긴다
   fetch("data/dmz.json").then(r=>r.ok?r.json():null).then(z=>{if(!z)return;
-    if(!map.getPane("mdl")){map.createPane("mdl").style.zIndex=420}
+    // 층 높이 350 = 타일(200) 위·열점 등 겹층(400) 아래 — 420 으로 두면 캔버스가 지도 전체의 클릭을 가로채 열점이 안 눌렸다(10/18)
+    if(!map.getPane("mdl")){map.createPane("mdl").style.zIndex=350}
     const rd=L.canvas({pane:"mdl",padding:.5});
     const dz=L.polyline(z.dmz,{renderer:rd,color:"#dbe5f1",weight:1,opacity:.55,dashArray:"3 4",interactive:false});
     const dzSync=()=>{map.getZoom()<10?dz.addTo(map):dz.remove()};dzSync();map.on("zoomend",dzSync);
@@ -843,7 +844,7 @@ async function loadAir(){
   const r=$("airR");
   if(d.ratio==null){r.textContent=`평소 기준을 쌓는 중 · 같은 시각 기록 ${d.samples}/3일`}
   else{r.textContent=`평소(${Math.round(d.baseline)}대)의 ${Math.round(d.ratio*100)}%`;r.classList.toggle("low",d.ratio<AIR_LOW)}
-  $("airMil").innerHTML=d.mil?.length?d.mil.map(m=>`<li>${esc(m.name||m.type)}${m.call?` <span class="d">${esc(m.call)}</span>`:""} <span class="d">· 한반도 중심에서 ${dir8(m.lat,m.lon)}쪽</span></li>`).join(""):'<li class="d">지금은 없음</li>';
+  $("airMil").innerHTML=d.mil?.length?d.mil.map(m=>`<li>${esc(m.name||m.type)}${(c=>c?` <span class="d">${esc(c)}</span>`:` <span class="d">호출부호 미송출</span>`)((m.call||"").replace(/@/g,"").trim())} <span class="d">· 한반도 중심에서 ${dir8(m.lat,m.lon)}쪽</span></li>`).join(""):'<li class="d">지금은 없음</li>';
 }
 loadAir();
 const CAM="https://jis-cctv.jis-probe.workers.dev";

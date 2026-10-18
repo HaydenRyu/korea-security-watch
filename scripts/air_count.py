@@ -48,7 +48,7 @@ def main() -> int:
         return 0
     airborne = [a for a in area if a.get("alt_baro") not in (None, "ground")]
     south = sum(1 for a in airborne if inside(a, SOUTH))
-    mil_here = [{"type": a.get("t") or "?", "name": NAMED.get(a.get("t") or ""), "call": (a.get("flight") or "").strip(),
+    mil_here = [{"type": a.get("t") or "?", "name": NAMED.get(a.get("t") or ""), "call": (a.get("flight") or "").replace("@", "").strip(),  # ADS-B 빈 호출부호 = "@" 채움(10/18 「@@@@@@@@」 노출)
                  "lat": round(a["lat"], 2), "lon": round(a["lon"], 2)} for a in mil if inside(a, BOX)]
 
     hist_p = ROOT / "state" / "air.jsonl"

@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-10-18T05:07:00+00:00",
+  "items": {
+    "troop_movement": {
+      "status": "none"
+    },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "region": "예시 지역 C",
+      "summary": "예시: 정례 시험 발사(일상 활동으로 분류)",
+      "sources": [
+        {
+          "name": "예시 출처 4",
+          "url": "https://example.com/sample-4"
+        }
+      ],
+      "confidence": "높음"
+    },
+    "logistics": {
+      "status": "single",
+      "region": "예시 지역 B",
+      "summary": "예시: 수송 증가 정황 단일 보도, 교차확인 대기",
+      "sources": [
+        {
+          "name": "예시 출처 3",
+          "url": "https://example.com/sample-3"
+        }
+      ],
+      "confidence": "중간"
+    },
+    "border_clash": {
+      "status": "corroborated",
+      "region": "예시 지역 A",
+      "summary": "예시: 경계선 인근 사격 1건 보고, 두 출처가 같은 내용을 확인한 상태",
+      "sources": [
+        {
+          "name": "예시 출처 1",
+          "url": "https://example.com/sample-1"
+        },
+        {
+          "name": "예시 출처 2",
+          "url": "https://example.com/sample-2"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "예시 사실"
+      ],
+      "speculation": [
+        "예시 추정"
+      ]
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    }
+  },
+  "overall_summary": "예시 데이터입니다. 실제 상황이 아닙니다. 복수 항목 징후로 경계 등급 표시 예시.",
+  "grade": 2,
+  "grade_label": "경계",
+  "active": [
+    "border_clash",
+    "logistics"
+  ]
+}

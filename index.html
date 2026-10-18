@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한반도 징후 상황판</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@87.5..112.5,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --ink:#070b14; --deep:#0c1322; --rim:#1b2638; --rim-2:#273449;
+  --ice:#dce8fa; --fog:#8193ad; --dim:#4b5a71;
+  --g0:#5fd0b8; --g1:#f2c14e; --g2:#ff8a3d; --g3:#ff4d5e; --unk:#56647a;
+  --data:'Martian Mono',ui-monospace,monospace;
+  --text:'Pretendard Variable',Pretendard,system-ui,sans-serif;
+  --gut:16px; --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(1200px 600px at 20% -10%,#14203a 0%,transparent 60%),var(--ink);
+  color:var(--ice);font:15px/1.6 var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:var(--dim);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--ice)}
+a:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut) 64px}
+
+/* 상단 바 */
+.bar{display:flex;align-items:center;gap:18px;padding:18px 0;font:400 12px var(--data);color:var(--fog);flex-wrap:wrap}
+.mark{font:700 13px var(--data);font-stretch:112.5%;color:var(--ice);letter-spacing:.04em}
+.bar .sp{flex:1}
+.bar b{font-weight:500;color:var(--ice)}
+.note{font-size:11px;color:var(--dim)}
+.lag{display:none;color:var(--g3)} .lag.on{display:inline}
+
+/* 히어로: 다이얼 */
+.hero{display:grid;grid-template-columns:minmax(260px,380px) 1fr;gap:48px;align-items:center;padding:28px 0 40px}
+.dial{position:relative;aspect-ratio:1;width:100%}
+.dial svg{width:100%;height:100%;display:block;overflow:visible}
+.dial .seg{fill:none;stroke-width:14;stroke:var(--rim);transition:stroke .6s var(--ease)}
+.dial .tick{stroke:var(--rim-2);stroke-width:1.5}
+.dial .tick.past{stroke:var(--fog)}
+.dial .core{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.dial .num{font:300 104px/1 var(--data);font-stretch:87.5%;color:var(--gc,var(--fog));font-variant-numeric:tabular-nums}
+.dial .of{font:400 11px var(--data);color:var(--dim)}
+.verdict .lbl{font:800 64px/1 var(--text);letter-spacing:-.03em;color:var(--gc,var(--ice))}
+.verdict .scale{display:flex;gap:14px;margin:14px 0 22px;font:400 12px var(--data);color:var(--dim)}
+.verdict .scale span.on{color:var(--ice)}
+.verdict p{margin:0;font-size:18px;line-height:1.65;max-width:56ch;color:var(--ice)}
+.fwd{display:none;margin-top:22px;padding:12px 0 12px 16px;border-left:3px solid var(--g3);font-size:15px}
+.fwd.on{display:block}
+.fwd strong{color:var(--g3)}
+
+/* 센서 행 */
+h2{font:600 13px var(--text);color:var(--fog);margin:0 0 6px;letter-spacing:.01em}
+.sensors{border-top:1px solid var(--rim)}
+.row{display:grid;grid-template-columns:168px 48px 1fr 300px;gap:20px;align-items:center;
+  padding:16px 0;border-bottom:1px solid var(--rim);min-height:64px}
+.row .name{font-weight:600}
+.meter{display:flex;gap:4px;height:14px;align-items:flex-end}
+.meter i{width:10px;background:var(--rim-2)}
+.meter i:nth-child(1){height:6px} .meter i:nth-child(2){height:10px} .meter i:nth-child(3){height:14px}
+.meter[data-s="single"] i:nth-child(-n+2){background:var(--g1)}
+.meter[data-s="corroborated"] i{background:var(--g3)}
+.meter[data-s="none"] i:nth-child(1){background:var(--g0)}
+.meter[data-s="routine"] i:nth-child(-n+1){background:transparent;box-shadow:inset 0 0 0 1.5px var(--fog)}
+.row .what{color:var(--fog);font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .what.has{color:var(--ice)}
+.row .what em{font-style:normal;color:var(--fog);font-size:12px;margin-left:8px}
+.row .src{font:400 12px var(--data);color:var(--fog);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* 추이 */
+.trace{margin-top:48px}
+.trace svg{width:100%;height:120px;display:block}
+.trace .axis{display:flex;justify-content:space-between;font:400 11px var(--data);color:var(--dim);margin-top:6px}
+
+/* 기록 */
+.log{margin-top:48px}
+.ev{display:grid;grid-template-columns:120px 110px 1fr;gap:20px;padding:12px 0;border-bottom:1px solid var(--rim);font-size:14px}
+.ev .t{font:400 12px var(--data);color:var(--fog);padding-top:2px}
+.ev .g{font-weight:600}
+.empty{color:var(--fog);padding:20px 0}
+.foot{margin-top:56px;font-size:12px;line-height:1.8;color:var(--dim);max-width:72ch}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:20px;justify-items:center;text-align:center}
+  .dial{max-width:300px}
+  .verdict .scale{justify-content:center}
+  .verdict p{margin:0 auto}
+  .fwd{text-align:left}
+  .row{grid-template-columns:1fr auto;gap:6px 16px}
+  .row .what{grid-column:1/-1;white-space:normal}
+  .row .src{grid-column:1/-1;text-align:left}
+  .ev{grid-template-columns:96px 1fr} .ev .s{grid-column:1/-1}
+}
+@media (max-width:420px){ .verdict .lbl{font-size:48px} .dial .num{font-size:84px} }
+@media (prefers-reduced-motion:no-preference){
+  .row{animation:in .5s var(--ease) both;animation-delay:calc(var(--i)*40ms)}
+  @keyframes in{from{opacity:0;transform:translateY(4px)}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar">
+    <span class="mark">KSW</span>
+    <span>KST <b id="now">--:--:--</b></span>
+    <span>최종 확인 <b id="checked">—</b></span>
+    <span class="lag" id="lag">· 감시 지연</span>
+    <span class="sp"></span>
+    <span class="note" id="note">공개정보 기반 개인 분석</span>
+  </div>
+
+  <section class="hero" id="hero">
+    <div class="dial" aria-hidden="true">
+      <svg viewBox="-110 -110 220 220" id="dialsvg"></svg>
+      <div class="core"><div class="num" id="gnum">–</div><div class="of">/ 3</div></div>
+    </div>
+    <div class="verdict">
+      <div class="lbl" id="glabel">대기</div>
+      <div class="scale" id="scale"><span>평시</span><span>주의</span><span>경계</span><span>위험</span></div>
+      <p id="summary">첫 분석 결과를 기다리는 중입니다.</p>
+      <div class="fwd" id="fwd"><strong>지인 전달 권고</strong> — 복수 징후가 교차확인됐습니다. 출처를 확인한 뒤 공유하세요.</div>
+    </div>
+  </section>
+
+  <h2>감시 항목</h2>
+  <div class="sensors" id="sensors"></div>
+
+  <section class="trace">
+    <h2>최근 72회 추이</h2>
+    <svg id="trace" viewBox="0 0 720 120" preserveAspectRatio="none"></svg>
+    <div class="axis"><span id="t0">—</span><span>지금</span></div>
+  </section>
+
+  <section class="log">
+    <h2>알림·판정 불가 기록</h2>
+    <div id="log"></div>
+  </section>
+
+  <p class="foot">
+    등급은 평시·주의(단일 징후 또는 일상 활동)·경계(복수 항목 또는 교차확인)·위험(핵·동원·정부 경고 교차확인) 네 단계입니다.
+    정례 훈련·예고된 미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다.
+    공식 경보는 행정안전부 재난문자를 따르세요.
+  </p>
+</div>
+<script>
+const ITEMS={troop_movement:"병력 이동·동원",nuclear:"핵·전략무기",logistics:"군수 비축·수송",border_clash:"DMZ·NLL 충돌",
+  foreign_forces:"미·중·러 이상 동향",parade_massing:"기념일 전후 집결",gov_warning:"정부 긴급 경고"};
+const LABEL=["평시","주의","경계","위험"];
+const C=g=>`var(--g${g})`;
+const sample=new URLSearchParams(location.search).has("sample");
+const base=sample?"state/sample/":"state/";
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const kst=(d,o)=>new Date(d).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",hour12:false,...o});
+const short=d=>kst(d,{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
+const safeUrl=u=>/^https?:\/\//.test(u||"")?u:"#";
+let lastCheck=null;
+
+function polar(r,a){a=(a-90)*Math.PI/180;return[r*Math.cos(a),r*Math.sin(a)]}
+function arc(r,a0,a1){const[x0,y0]=polar(r,a0),[x1,y1]=polar(r,a1);return`M${x0} ${y0}A${r} ${r} 0 ${a1-a0>180?1:0} 1 ${x1} ${y1}`}
+function drawDial(g){
+  // 4개 구간(평시~위험) 240° 호, 바깥 60눈금 = 다음 확인까지 남은 분
+  const start=-120,span=240,gap=4,seg=span/4;
+  let s="";
+  for(let i=0;i<4;i++){
+    const on=g!=null&&i<=g;
+    s+=`<path class="seg" d="${arc(84,start+i*seg+gap/2,start+(i+1)*seg-gap/2)}" style="${on?`stroke:${C(i)}`:""}"/>`;
+  }
+  const mins=lastCheck?Math.min(60,(Date.now()-new Date(lastCheck))/60000):0;
+  for(let m=0;m<60;m++){
+    const a=m*6,[x0,y0]=polar(100,a),[x1,y1]=polar(m%15?104:108,a);
+    s+=`<line class="tick${m<mins?" past":""}" x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}"/>`;
+  }
+  document.getElementById("dialsvg").innerHTML=s;
+}
+
+function render(latest,events){
+  if(sample)document.getElementById("note").textContent="예시 데이터 — 실제 상황 아님";
+  const g=latest?latest.grade:null;
+  lastCheck=events.length?events[events.length-1].checked_at:latest?.checked_at;
+  if(g!=null){
+    document.getElementById("hero").style.setProperty("--gc",C(g));
+    document.getElementById("gnum").textContent=g;
+    document.getElementById("glabel").textContent=LABEL[g];
+    document.querySelectorAll("#scale span")[g].classList.add("on");
+    document.getElementById("summary").textContent=latest.overall_summary||"";
+    document.getElementById("fwd").classList.toggle("on",g>=2);
+  }
+  document.getElementById("checked").textContent=lastCheck?short(lastCheck):"—";
+  if(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3)document.getElementById("lag").classList.add("on");
+  drawDial(g);
+
+  const items=latest?.items||{};
+  document.getElementById("sensors").innerHTML=Object.entries(ITEMS).map(([k,name],i)=>{
+    const it=items[k]||{status:"none"};
+    const s=it.status!=="none"&&it.routine?"routine":it.status;
+    const src=(it.sources||[])[0];
+    const what=it.status==="none"?(latest?"이상 없음":"분석 전"):esc(it.summary)+(it.routine?"<em>일상 활동</em>":"");
+    const meta=[it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
+    return `<div class="row" style="--i:${i}"><div class="name">${name}</div>
+      <div class="meter" data-s="${s}" title="${{none:"이상 없음",single:"단일 출처",corroborated:"교차확인",routine:"일상 활동"}[s]}"><i></i><i></i><i></i></div>
+      <div class="what ${it.status!=="none"?"has":""}">${what}</div>
+      <div class="src">${src?`<a href="${esc(safeUrl(src.url))}" target="_blank" rel="noopener">${esc(src.name||"출처")}</a>`:""}${src&&meta?" · ":""}${meta}</div></div>`}).join("");
+
+  // 추이: 등급 계단선, 판정 불가는 끊고 회색 점
+  const rec=events.slice(-72),W=720,H=120,step=W/72,y=gr=>H-12-gr*((H-24)/3);
+  let d="",dots="",pen=false;
+  const off=72-rec.length;
+  rec.forEach((e,i)=>{
+    const x=(i+off)*step;
+    if(e.status==="unverified"){pen=false;dots+=`<rect x="${x+step/2-2}" y="${H/2-2}" width="4" height="4" fill="var(--unk)"/>`;return}
+    d+=(pen?`H${x}V${y(e.grade)}`:`M${x} ${y(e.grade)}`)+`H${x+step}`;pen=true;
+  });
+  const grid=[0,1,2,3].map(gr=>`<line x1="0" x2="${W}" y1="${y(gr)}" y2="${y(gr)}" stroke="var(--rim)" stroke-width="1" vector-effect="non-scaling-stroke"/>`).join("");
+  const top=rec.filter(e=>e.status!=="unverified").reduce((m,e)=>Math.max(m,e.grade),0);
+  document.getElementById("trace").innerHTML=grid+`<path d="${d}" fill="none" stroke="${C(g??top)}" stroke-width="2" vector-effect="non-scaling-stroke"/>`+dots;
+  document.getElementById("t0").textContent=rec.length?short(rec[0].checked_at):"—";
+
+  const rows=events.filter(e=>e.notified||e.status==="unverified").slice(-20).reverse();
+  document.getElementById("log").innerHTML=rows.length?rows.map(e=>{
+    const u=e.status==="unverified";
+    const lbl=u?"판정 불가":`${LABEL[e.grade]} 알림`;
+    const body=u?esc(e.reason):esc((e.new||[]).map(k=>ITEMS[k]).join(", ")||e.summary);
+    return `<div class="ev"><div class="t">${short(e.checked_at)}</div><div class="g" style="color:${u?"var(--fog)":C(e.grade)}">${lbl}</div><div class="s">${body}</div></div>`}).join("")
+    :`<div class="empty">아직 보낸 알림이 없습니다. 변화가 생기면 여기에 쌓입니다.</div>`;
+}
+
+function tick(){document.getElementById("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"})}
+(async()=>{
+  const get=async(p,t)=>{const r=await fetch(base+p+"?t="+Date.now());if(!r.ok)throw r.status;return t?r.text():r.json()};
+  let latest=null,events=[];
+  try{latest=await get("latest.json")}catch(e){}
+  try{events=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(l=>JSON.parse(l))}catch(e){}
+  render(latest,events);tick();
+  setInterval(tick,1000);setInterval(()=>drawDial(latest?.grade??null),60000);
+})();
+</script>
+</body>
+</html>

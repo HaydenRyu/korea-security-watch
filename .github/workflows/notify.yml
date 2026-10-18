@@ -1,0 +1,41 @@
+name: notify
+# 루틴이 state/outbox.json 을 바꿔 push 하면 카톡 「나에게 보내기」로 발송한다.
+on:
+  push:
+    branches: [main]
+    paths: [state/outbox.json]
+  workflow_dispatch:
+    inputs:
+      text:
+        description: 테스트 메시지
+        required: true
+        default: 안보 감시 테스트 메시지
+
+concurrency: { group: kakao, cancel-in-progress: false }
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+      KAKAO_CLIENT_SECRET: ${{ secrets.KAKAO_CLIENT_SECRET }}
+      KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+      ROTATED_TOKEN_FILE: /tmp/kakao_rotated_rt
+    steps:
+      - uses: actions/checkout@v4
+      - name: send outbox
+        if: github.event_name == 'push'
+        run: python3 scripts/kakao.py send state/outbox.json
+      - name: send test
+        if: github.event_name == 'workflow_dispatch'
+        env: { TEXT: "${{ inputs.text }}" }
+        run: python3 scripts/kakao.py send --text "$TEXT"
+      - name: store rotated refresh token
+        if: always()
+        env: { GH_TOKEN: "${{ secrets.SECRETS_PAT }}" }
+        run: |
+          if [ -s "$ROTATED_TOKEN_FILE" ]; then
+            gh secret set KAKAO_REFRESH_TOKEN -R "$GITHUB_REPOSITORY" < "$ROTATED_TOKEN_FILE"
+            echo rotated-and-stored
+          fi

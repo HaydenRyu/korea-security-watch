@@ -102,6 +102,26 @@ def compose(run: dict, grade: int, new_keys: set[str]) -> str:
     return text if len(text) <= 200 else text[:199] + "…"
 
 
+def release_text(run: dict, prev_grade: int, grade: int) -> str:
+    t = datetime.fromisoformat(run["checked_at"]).astimezone().strftime("%m/%d %H:%M")
+    return (f"안보 감시 {GRADE_LABEL[prev_grade]} 해제 → {GRADE_LABEL[grade]}({grade}) · {t}\n"
+            f"{run.get('overall_summary', '')}")[:200]
+
+
+def friends_message(run: dict, grade: int, new_keys: set[str], released: bool, prev_grade: int) -> dict:
+    """ntfy 용. 「지인 전달 권고」 머리말 없이, 상황판에서 대조하라는 안내를 붙인다."""
+    if released:
+        title = f"한반도 징후 {GRADE_LABEL[prev_grade]} 해제"
+        body = release_text(run, prev_grade, grade).split("\n", 1)[-1]
+        priority = 3
+    else:
+        title = f"한반도 징후 {GRADE_LABEL[grade]}({grade})"
+        body = "\n".join(compose(run, grade, new_keys).split("\n")[2:])  # 머리 2줄(권고·등급) 제외
+        priority = 5 if grade >= 3 else 4
+    body = (body + "\n상황판에서 출처를 확인하세요.").strip()
+    return {"title": title, "message": body, "priority": priority}
+
+
 def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | None, dict, dict | None]:
     """(새 latest 또는 None=유지, 이벤트, outbox 또는 None)"""
     validate(run)
@@ -132,12 +152,22 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
         notify = grade >= 1  # 최초 분석: 징후가 있으면 알린다
     else:
         notify = grade > prev_grade or (grade >= 1 and grade == prev_grade and bool(new_keys))
+    # 지인(ntfy): 경계 이상에서 알림 조건을 만족할 때 + 경계 이상에서 내려올 때(해제)
+    friends = notify and grade >= FORWARD_MIN_GRADE
+    released = latest is not None and prev_grade >= FORWARD_MIN_GRADE > grade
+    notify = notify or released
 
     new_latest = {**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)}
     event = {"checked_at": now, "status": "ok", "grade": grade, "prev_grade": prev_grade,
              "active": sorted(active), "new": sorted(new_keys), "notified": notify,
              "summary": run.get("overall_summary", "")}
-    outbox = {"id": now, "text": compose(run, grade, new_keys), "link": DASHBOARD_URL} if notify else None
+    event["friends"] = friends or released
+    outbox = None
+    if notify:
+        outbox = {"id": now, "grade": grade, "link": DASHBOARD_URL,
+                  "text": compose(run, grade, new_keys) if not released else release_text(run, prev_grade, grade)}
+        if friends or released:
+            outbox["friends"] = friends_message(run, grade, new_keys, released, prev_grade)
     return new_latest, event, outbox
 
 

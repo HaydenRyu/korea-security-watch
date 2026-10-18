@@ -27,6 +27,11 @@ jobs:
       - name: send outbox
         if: github.event_name == 'push'
         run: python3 scripts/kakao.py send state/outbox.json
+      - name: send friends (ntfy)
+        # 카톡 실패와 무관하게 지인 발송은 시도한다
+        if: always() && github.event_name == 'push'
+        env: { NTFY_TOPIC: "${{ secrets.NTFY_TOPIC }}" }
+        run: python3 scripts/ntfy_send.py state/outbox.json
       - name: send test
         if: github.event_name == 'workflow_dispatch'
         env: { TEXT: "${{ inputs.text }}" }

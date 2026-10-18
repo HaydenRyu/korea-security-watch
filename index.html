@@ -6,6 +6,8 @@
 <title>한반도 징후 상황판</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@87.5..112.5,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
@@ -23,7 +25,7 @@ body{background:radial-gradient(1200px 600px at 20% -10%,#14203a 0%,transparent 
 a{color:inherit;text-decoration-color:var(--dim);text-underline-offset:3px}
 a:hover{text-decoration-color:var(--ice)}
 a:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
-.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut) 64px}
+.wrap{max-width:1680px;margin:0 auto;padding:0 var(--gut) 64px}
 
 /* 상단 바 */
 .bar{display:flex;align-items:center;gap:18px;padding:18px 0;font:400 12px var(--data);color:var(--fog);flex-wrap:wrap}
@@ -56,7 +58,11 @@ h2{font:600 13px var(--text);color:var(--fog);margin:0 0 6px;letter-spacing:.01e
 .sensors{border-top:1px solid var(--rim)}
 .row{display:grid;grid-template-columns:168px 48px 1fr 300px;gap:20px;align-items:center;
   padding:16px 0;border-bottom:1px solid var(--rim);min-height:64px}
+.row{color:inherit;text-decoration:none;cursor:pointer;transition:background .15s var(--ease)}
+.row:hover{background:rgba(220,232,250,.03)}
+.row:focus-visible{outline:2px solid var(--ice);outline-offset:-2px}
 .row .name{font-weight:600}
+.row .name::after{content:" ›";color:var(--dim);font-weight:400}
 .meter{display:flex;gap:4px;height:14px;align-items:flex-end}
 .meter i{width:10px;background:var(--rim-2)}
 .meter i:nth-child(1){height:6px} .meter i:nth-child(2){height:10px} .meter i:nth-child(3){height:14px}
@@ -82,7 +88,89 @@ h2{font:600 13px var(--text);color:var(--fog);margin:0 0 6px;letter-spacing:.01e
 .empty{color:var(--fog);padding:20px 0}
 .foot{margin-top:56px;font-size:12px;line-height:1.8;color:var(--dim);max-width:72ch}
 
+/* 지휘통제 배치 */
+.ops{display:grid;grid-template-columns:360px minmax(0,1fr) 380px;gap:20px;align-items:start}
+.ops .hero{grid-template-columns:1fr;gap:6px;padding:4px 0 20px;justify-items:center;text-align:center}
+.ops .dial{max-width:210px}
+.ops .dial .num{font-size:72px}
+.ops .verdict .lbl{font-size:44px}
+.ops .verdict .scale{justify-content:center;margin:10px 0 14px}
+.ops .verdict p{font-size:15px;margin:0 auto}
+.ops .fwd{text-align:left;font-size:14px}
+.ops .row{grid-template-columns:1fr auto;gap:4px 12px;padding:12px 0;min-height:0}
+.ops .row .what{grid-column:1/-1;font-size:13px}
+.ops .row .src{grid-column:1/-1;text-align:left;font-size:11px}
+.panel{position:relative;background:var(--deep);border:1px solid var(--rim)}
+.panel .hud{position:absolute;z-index:500;font:400 11px var(--data);color:var(--fog);pointer-events:none;
+  background:rgba(7,11,20,.72);padding:4px 8px}
+.panel .tl{top:10px;left:10px} .panel .bl{bottom:10px;left:10px} .panel .br{bottom:10px;right:10px}
+.theater{height:calc(100vh - 150px);min-height:520px;max-height:860px}
+#map{position:absolute;inset:0;background:var(--ink)}
+.theater::before,.theater::after{content:"";position:absolute;z-index:501;width:22px;height:22px;pointer-events:none;border:1.5px solid var(--fog)}
+.theater::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.theater::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.sat{filter:saturate(.35) brightness(.72) contrast(1.15)}
+.coast{filter:invert(1) brightness(.75) sepia(1) hue-rotate(170deg) saturate(2.4);opacity:.75}
+.layers{position:absolute;z-index:500;top:10px;right:10px;display:flex;gap:2px;font:400 11px var(--data)}
+.layers button{background:rgba(7,11,20,.8);color:var(--fog);border:1px solid var(--rim);padding:6px 9px;cursor:pointer;font:inherit}
+.layers button[aria-pressed="true"]{color:var(--ice);border-color:var(--fog)}
+.layers button:disabled{cursor:not-allowed;opacity:.5}
+.layers button:focus-visible{outline:2px solid var(--ice)}
+.pin{width:14px;height:14px;border-radius:50%;background:var(--pc);box-shadow:0 0 0 3px rgba(7,11,20,.8)}
+.pin.ring::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1.5px solid var(--pc);opacity:.8}
+@media (prefers-reduced-motion:no-preference){.pin.ring::after{animation:ping 2.4s var(--ease) infinite}
+  @keyframes ping{from{transform:scale(.4);opacity:.9}to{transform:scale(1.6);opacity:0}}}
+.leaflet-tooltip.tip{background:var(--deep);color:var(--ice);border:1px solid var(--rim-2);border-radius:0;font:500 12px var(--text);box-shadow:none}
+.leaflet-tooltip.tip::before{display:none}
+.leaflet-container{font-family:var(--text)}
+.leaflet-control-attribution{background:rgba(7,11,20,.7)!important;color:var(--dim)!important;font:400 10px var(--data)}
+.leaflet-control-attribution a{color:var(--fog)!important}
+.leaflet-bar a{background:var(--deep)!important;color:var(--fog)!important;border-color:var(--rim)!important}
+.air{height:360px;overflow:hidden}
+.air iframe{width:100%;height:100%;border:0;display:block;filter:invert(.92) hue-rotate(180deg) saturate(.7)}
+.right .log{margin-top:20px}
+.right .ev{grid-template-columns:116px 1fr;gap:4px 12px}
+.right .ev .s{grid-column:1/-1;color:var(--fog);font-size:13px}
+h2 .sub{font:400 11px var(--data);color:var(--dim);margin-left:8px}
+.trace{margin-top:28px}
+@media (max-width:1439px){
+  .ops{grid-template-columns:1fr 1fr}
+  .center{grid-column:1/-1;grid-row:1}
+  .theater{height:62vh;min-height:420px}
+}
+@media (max-width:760px){
+  .ops{grid-template-columns:1fr}
+  .theater{height:56vh;min-height:340px}
+}
+
+/* 항목 상세 */
+#detail[hidden],#main[hidden]{display:none}
+.back{display:inline-block;margin:8px 0 28px;font:400 12px var(--data);color:var(--fog);text-decoration:none}
+.back:hover{color:var(--ice)}
+.dhead{display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;padding-bottom:24px;border-bottom:1px solid var(--rim)}
+.dhead h1{margin:0;font:800 44px/1.1 var(--text);letter-spacing:-.03em}
+.dhead .st{font:400 12px var(--data);color:var(--fog);padding-bottom:8px;display:flex;gap:12px;align-items:center}
+.dsum{font-size:19px;line-height:1.65;margin:28px 0 8px;max-width:60ch}
+.dmean{color:var(--fog);margin:0 0 8px;max-width:60ch}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+.cols ul{margin:0;padding:0;list-style:none}
+.cols li{padding:10px 0;border-bottom:1px solid var(--rim);font-size:14px}
+.cols .spec li{color:var(--fog)}
+.srcs{margin-top:40px}
+.srcs a.s{display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--rim);text-decoration:none}
+.srcs a.s:hover .nm{text-decoration:underline}
+.tier{font:600 11px var(--data);color:var(--ink);background:var(--fog);text-align:center;padding:2px 0}
+.tier[data-t="A"]{background:var(--ice)} .tier[data-t="D"]{background:transparent;color:var(--g3);box-shadow:inset 0 0 0 1px var(--g3)}
+.srcs .u{font:400 11px var(--data);color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:320px}
+.hist{margin-top:40px}
+.hist .h{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:10px 0;border-bottom:1px solid var(--rim);font-size:14px}
+.hist .h .t{font:400 12px var(--data);color:var(--fog)}
+.none{color:var(--dim);font-size:14px;padding:10px 0}
 @media (max-width:860px){
+  .cols{grid-template-columns:1fr;gap:28px}
+  .dhead h1{font-size:34px}
+  .srcs a.s{grid-template-columns:36px 1fr} .srcs .u{grid-column:2;max-width:100%}
+
   .hero{grid-template-columns:1fr;gap:20px;justify-items:center;text-align:center}
   .dial{max-width:300px}
   .verdict .scale{justify-content:center}
@@ -111,36 +199,61 @@ h2{font:600 13px var(--text);color:var(--fog);margin:0 0 6px;letter-spacing:.01e
     <span class="note" id="note">공개정보 기반 개인 분석</span>
   </div>
 
-  <section class="hero" id="hero">
-    <div class="dial" aria-hidden="true">
-      <svg viewBox="-110 -110 220 220" id="dialsvg"></svg>
-      <div class="core"><div class="num" id="gnum">–</div><div class="of">/ 3</div></div>
+  <div id="main">
+  <div class="ops">
+    <aside class="left">
+      <section class="hero" id="hero">
+        <div class="dial" aria-hidden="true">
+          <svg viewBox="-110 -110 220 220" id="dialsvg"></svg>
+          <div class="core"><div class="num" id="gnum">–</div><div class="of">/ 3</div></div>
+        </div>
+        <div class="verdict">
+          <div class="lbl" id="glabel">대기</div>
+          <div class="scale" id="scale"><span>평시</span><span>주의</span><span>경계</span><span>위험</span></div>
+          <p id="summary">첫 분석 결과를 기다리는 중입니다.</p>
+          <div class="fwd" id="fwd"><strong>지인 전달 권고</strong> — 복수 징후가 교차확인됐습니다. 출처를 확인한 뒤 공유하세요.</div>
+        </div>
+      </section>
+      <h2>감시 항목</h2>
+      <div class="sensors" id="sensors"></div>
+    </aside>
+
+    <div class="center">
+    <section class="panel theater" aria-label="한반도 지도">
+      <div id="map"></div>
+      <div class="hud tl" id="imgdate">위성 영상 —</div>
+      <div class="hud bl" id="coord">37.80N 127.50E</div>
+      <div class="layers" role="group" aria-label="지도 레이어">
+        <button type="button" data-layer="day" aria-pressed="true">주간 위성</button>
+        <button type="button" data-layer="night" aria-pressed="false">야간 조명</button>
+        <button type="button" data-layer="firms" disabled title="NASA FIRMS 키 등록 후 표시">열점</button>
+      </div>
+    </section>
+    <section class="trace">
+      <h2>최근 72회 추이</h2>
+      <svg id="trace" viewBox="0 0 720 120" preserveAspectRatio="none"></svg>
+      <div class="axis"><span id="t0">—</span><span>지금</span></div>
+    </section>
     </div>
-    <div class="verdict">
-      <div class="lbl" id="glabel">대기</div>
-      <div class="scale" id="scale"><span>평시</span><span>주의</span><span>경계</span><span>위험</span></div>
-      <p id="summary">첫 분석 결과를 기다리는 중입니다.</p>
-      <div class="fwd" id="fwd"><strong>지인 전달 권고</strong> — 복수 징후가 교차확인됐습니다. 출처를 확인한 뒤 공유하세요.</div>
-    </div>
-  </section>
 
-  <h2>감시 항목</h2>
-  <div class="sensors" id="sensors"></div>
+    <aside class="right">
+      <h2>항공기 실시간 <span class="sub">adsb.lol · ODbL</span></h2>
+      <div class="panel air"><iframe title="한반도 상공 항공기 위치" loading="lazy"
+        src="https://globe.adsb.lol/?lat=37.9&lon=127.3&zoom=6.5&hideSidebar&hideButtons"></iframe></div>
+      <section class="log">
+        <h2>알림·판정 불가 기록</h2>
+        <div id="log"></div>
+      </section>
+    </aside>
+  </div>
 
-  <section class="trace">
-    <h2>최근 72회 추이</h2>
-    <svg id="trace" viewBox="0 0 720 120" preserveAspectRatio="none"></svg>
-    <div class="axis"><span id="t0">—</span><span>지금</span></div>
-  </section>
+  </div>
 
-  <section class="log">
-    <h2>알림·판정 불가 기록</h2>
-    <div id="log"></div>
-  </section>
+  <section id="detail" hidden></section>
 
   <p class="foot">
     등급은 평시·주의(단일 징후 또는 일상 활동)·경계(복수 항목 또는 교차확인)·위험(핵·동원·정부 경고 교차확인) 네 단계입니다.
-    정례 훈련·예고된 미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다.
+    정례 훈련·예고된 미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다. 위성 영상은 NASA GIBS 하루 단위 영상(약 250m 해상도)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다. 항공기 지도는 신호를 켠 기체만 보이고 등급 판단에는 쓰지 않습니다.
     공식 경보는 행정안전부 재난문자를 따르세요.
   </p>
 </div>
@@ -198,10 +311,10 @@ function render(latest,events){
     const src=(it.sources||[])[0];
     const what=it.status==="none"?(latest?"이상 없음":"분석 전"):esc(it.summary)+(it.routine?"<em>일상 활동</em>":"");
     const meta=[it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
-    return `<div class="row" style="--i:${i}"><div class="name">${name}</div>
+    return `<a class="row" href="#item=${k}" style="--i:${i}"><div class="name">${name}</div>
       <div class="meter" data-s="${s}" title="${{none:"이상 없음",single:"단일 출처",corroborated:"교차확인",routine:"일상 활동"}[s]}"><i></i><i></i><i></i></div>
       <div class="what ${it.status!=="none"?"has":""}">${what}</div>
-      <div class="src">${src?`<a href="${esc(safeUrl(src.url))}" target="_blank" rel="noopener">${esc(src.name||"출처")}</a>`:""}${src&&meta?" · ":""}${meta}</div></div>`}).join("");
+      <div class="src">${src?esc(src.name||"출처"):""}${src&&meta?" · ":""}${meta}</div></a>`}).join("");
 
   // 추이: 등급 계단선, 판정 불가는 끊고 회색 점
   const rec=events.slice(-72),W=720,H=120,step=W/72,y=gr=>H-12-gr*((H-24)/3);
@@ -226,13 +339,83 @@ function render(latest,events){
     :`<div class="empty">아직 보낸 알림이 없습니다. 변화가 생기면 여기에 쌓입니다.</div>`;
 }
 
+const TIER={A:"공식",B:"언론",C:"분석",D:"북한 주장"};
+const STAT={none:"이상 없음",single:"단일 출처",corroborated:"교차확인",routine:"일상 활동"};
+let DATA={latest:null,events:[]};
+function renderDetail(k){
+  const name=ITEMS[k];if(!name){location.hash="";return}
+  const it=(DATA.latest?.items||{})[k]||{status:"none"};
+  const s=it.status!=="none"&&it.routine?"routine":it.status;
+  const li=(a,cls)=>a&&a.length?`<ul class="${cls||""}">${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:`<div class="none">없음</div>`;
+  const hist=DATA.events.filter(e=>e.status==="ok"&&(e.active||[]).includes(k));
+  // 연속 구간으로 묶어 「처음 감지 ~ 마지막 감지」로 보여준다
+  const runs=[];let cur=null,prevIdx=-2;
+  DATA.events.forEach((e,i)=>{if(e.status!=="ok"||!(e.active||[]).includes(k))return;
+    if(cur&&i===prevIdx+1){cur.to=e}else{cur={from:e,to:e,max:0};runs.push(cur)}cur.max=Math.max(cur.max,e.grade);prevIdx=i});
+  const meta=[it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
+  document.getElementById("detail").innerHTML=`
+    <a class="back" href="#">← 상황판</a>
+    <div class="dhead"><h1>${name}</h1>
+      <div class="st"><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${STAT[s]}${meta?" · "+meta:""}</div></div>
+    <p class="dsum">${it.status==="none"?(DATA.latest?"현재 보고된 이상 징후가 없습니다.":"첫 분석 전입니다."):esc(it.summary)}</p>
+    ${it.meaning?`<p class="dmean">군사적 의미 — ${esc(it.meaning)}</p>`:""}
+    <div class="cols"><div><h2>확인된 사실</h2>${li(it.facts)}</div><div><h2>추정</h2>${li(it.speculation,"spec")}</div></div>
+    <div class="srcs"><h2>출처 ${(it.sources||[]).length}곳</h2>${(it.sources||[]).length?(it.sources).map(x=>`
+      <a class="s" href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener"><span class="tier" data-t="${esc(x.tier||"")}">${esc(x.tier||"–")}</span>
+      <span class="nm">${esc(x.name||"출처")} <span style="color:var(--fog);font-size:12px">${TIER[x.tier]||""}</span></span>
+      <span class="u">${esc((x.url||"").replace(/^https?:\/\//,""))}</span></a>`).join(""):`<div class="none">없음</div>`}</div>
+    <div class="hist"><h2>감지 이력</h2>${runs.length?runs.slice(-15).reverse().map(r=>`
+      <div class="h"><div class="t">${short(r.from.checked_at)}</div><div>${r.from===r.to?"1회":`${short(r.to.checked_at)}까지`} · 최고 <span style="color:${C(r.max)}">${LABEL[r.max]}</span></div></div>`).join(""):`<div class="none">최근 기록에서 감지된 적이 없습니다.</div>`}</div>`;
+}
+function route(){
+  const m=location.hash.match(/^#item=(\w+)/);
+  document.getElementById("main").hidden=!!m;document.getElementById("detail").hidden=!m;
+  if(m){renderDetail(m[1]);window.scrollTo(0,0)}else if(map){setTimeout(()=>map.invalidateSize(),0)}
+}
+addEventListener("hashchange",route);
+let map,pinLayer,layers={};
+function initMap(){
+  if(!window.L)return;
+  map=L.map("map",{zoomControl:true,attributionControl:true,minZoom:5,maxZoom:9,worldCopyJump:false})
+    .setView([38.4,127.4],6);
+  const d=new Date(Date.now()-30*3600e3).toISOString().slice(0,10); // 전일 영상(당일은 미완성)
+  const G=(lyr,t,lvl,ext)=>`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/${lyr}/default/${t}/GoogleMapsCompatible_Level${lvl}/{z}/{y}/{x}.${ext}`;
+  const attr='<a href="https://earthdata.nasa.gov/gibs">NASA GIBS</a>';
+  // 위성 한 대는 궤도 사이 빈 띠가 생긴다 → NOAA-20 위에 SNPP 를 겹쳐 메운다
+  layers.day=L.layerGroup([
+    L.tileLayer(G("VIIRS_NOAA20_CorrectedReflectance_TrueColor",d,9,"jpg"),{maxNativeZoom:9,className:"sat",attribution:attr}),
+    L.tileLayer(G("VIIRS_SNPP_CorrectedReflectance_TrueColor",d,9,"jpg"),{maxNativeZoom:9,className:"sat"})
+      .on("add",e=>{e.target.getContainer().style.mixBlendMode="lighten"})]).addTo(map); // jpg 빈 띠(검정)는 lighten 으로 비친다
+  layers.night=L.tileLayer(G("VIIRS_Black_Marble","2016-01-01",8,"png"),{maxNativeZoom:8,className:"sat",attribution:attr});
+  L.tileLayer(G("Coastlines_15m","default",13,"png").replace("/default/default/","/default/default/"),{maxNativeZoom:9,className:"coast",pane:"overlayPane"}).addTo(map);
+  document.getElementById("imgdate").textContent=`위성 영상 ${d} · VIIRS`;
+  map.on("mousemove",e=>document.getElementById("coord").textContent=`${e.latlng.lat.toFixed(2)}N ${e.latlng.lng.toFixed(2)}E`);
+  document.querySelectorAll(".layers button[data-layer]").forEach(b=>b.addEventListener("click",()=>{
+    const k=b.dataset.layer;if(b.disabled)return;
+    ["day","night"].forEach(o=>{const on=o===k;document.querySelector(`[data-layer=${o}]`).setAttribute("aria-pressed",on);
+      if(on)layers[o].addTo(map);else map.removeLayer(layers[o])});
+    document.getElementById("imgdate").textContent=k==="night"?"야간 조명 · VIIRS Black Marble":`위성 영상 ${d} · VIIRS`;
+  }));
+  pinLayer=L.layerGroup().addTo(map);
+}
+function drawPins(items){
+  if(!map)return;pinLayer.clearLayers();
+  Object.entries(items||{}).forEach(([k,it])=>{
+    if(it.status==="none"||typeof it.lat!=="number"||typeof it.lon!=="number")return;
+    const col=it.routine?"var(--fog)":it.status==="corroborated"?"var(--g3)":"var(--g1)";
+    const icon=L.divIcon({className:"",iconSize:[14,14],html:`<div class="pin ${it.status==="corroborated"&&!it.routine?"ring":""}" style="--pc:${col};position:relative"></div>`});
+    L.marker([it.lat,it.lon],{icon,keyboard:true,title:ITEMS[k]}).addTo(pinLayer)
+      .bindTooltip(`${ITEMS[k]} · ${esc(it.region||"")}`,{className:"tip",direction:"top",offset:[0,-8]})
+      .on("click",()=>location.hash="item="+k);
+  });
+}
 function tick(){document.getElementById("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"})}
 (async()=>{
   const get=async(p,t)=>{const r=await fetch(base+p+"?t="+Date.now());if(!r.ok)throw r.status;return t?r.text():r.json()};
   let latest=null,events=[];
   try{latest=await get("latest.json")}catch(e){}
   try{events=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(l=>JSON.parse(l))}catch(e){}
-  render(latest,events);tick();
+  DATA={latest,events};render(latest,events);initMap();drawPins(latest?.items);route();tick();
   setInterval(tick,1000);setInterval(()=>drawDial(latest?.grade??null),60000);
 })();
 </script>

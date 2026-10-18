@@ -18,10 +18,10 @@
 {"checked_at": "2026-10-16T01:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
 {"checked_at": "2026-10-16T02:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
 {"checked_at": "2026-10-16T03:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-16T04:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-16T05:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-16T06:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-16T07:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-16T04:07:00+00:00", "status": "ok", "grade": 1, "active": ["border_clash"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-16T05:07:00+00:00", "status": "ok", "grade": 1, "active": ["border_clash"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-16T06:07:00+00:00", "status": "ok", "grade": 1, "active": ["border_clash"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-16T07:07:00+00:00", "status": "ok", "grade": 1, "active": ["border_clash"], "new": [], "notified": false, "summary": "예시 요약"}
 {"checked_at": "2026-10-16T08:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
 {"checked_at": "2026-10-16T09:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
 {"checked_at": "2026-10-16T10:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
@@ -38,35 +38,35 @@
 {"checked_at": "2026-10-16T21:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
 {"checked_at": "2026-10-16T22:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
 {"checked_at": "2026-10-16T23:07:00+00:00", "status": "ok", "grade": 0, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T00:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": ["logistics"], "notified": true, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T01:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T02:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T03:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T04:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T05:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T06:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T07:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T08:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T09:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T00:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": ["logistics"], "notified": true, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T01:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T02:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T03:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T04:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T05:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T06:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T07:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T08:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T09:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
 {"checked_at": "2026-10-17T10:07:00+00:00", "status": "unverified", "reason": "예시: 검색 실패", "streak": 1}
 {"checked_at": "2026-10-17T11:07:00+00:00", "status": "unverified", "reason": "예시: 검색 실패", "streak": 2}
-{"checked_at": "2026-10-17T12:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T13:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T14:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T15:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T16:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T17:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T18:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T19:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T20:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T21:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T22:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-17T23:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-18T00:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-18T01:07:00+00:00", "status": "ok", "grade": 1, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-18T02:07:00+00:00", "status": "ok", "grade": 2, "active": [], "new": ["border_clash"], "notified": true, "summary": "예시 요약"}
-{"checked_at": "2026-10-18T03:07:00+00:00", "status": "ok", "grade": 2, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-18T04:07:00+00:00", "status": "ok", "grade": 2, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-18T05:07:00+00:00", "status": "ok", "grade": 2, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-18T06:07:00+00:00", "status": "ok", "grade": 2, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
-{"checked_at": "2026-10-18T07:07:00+00:00", "status": "ok", "grade": 2, "active": [], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T12:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T13:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T14:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T15:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T16:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T17:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T18:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T19:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T20:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T21:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T22:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-17T23:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-18T00:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-18T01:07:00+00:00", "status": "ok", "grade": 1, "active": ["logistics"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-18T02:07:00+00:00", "status": "ok", "grade": 2, "active": ["logistics", "border_clash"], "new": ["border_clash"], "notified": true, "summary": "예시 요약"}
+{"checked_at": "2026-10-18T03:07:00+00:00", "status": "ok", "grade": 2, "active": ["logistics", "border_clash"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-18T04:07:00+00:00", "status": "ok", "grade": 2, "active": ["logistics", "border_clash"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-18T05:07:00+00:00", "status": "ok", "grade": 2, "active": ["logistics", "border_clash"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-18T06:07:00+00:00", "status": "ok", "grade": 2, "active": ["logistics", "border_clash"], "new": [], "notified": false, "summary": "예시 요약"}
+{"checked_at": "2026-10-18T07:07:00+00:00", "status": "ok", "grade": 2, "active": ["logistics", "border_clash"], "new": [], "notified": false, "summary": "예시 요약"}

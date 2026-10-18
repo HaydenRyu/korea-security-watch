@@ -12,10 +12,13 @@
       "sources": [
         {
           "name": "예시 출처 4",
-          "url": "https://example.com/sample-4"
+          "url": "https://example.com/sample-4",
+          "tier": "A"
         }
       ],
-      "confidence": "높음"
+      "confidence": "높음",
+      "lat": 40.0,
+      "lon": 124.6
     },
     "logistics": {
       "status": "single",
@@ -24,10 +27,13 @@
       "sources": [
         {
           "name": "예시 출처 3",
-          "url": "https://example.com/sample-3"
+          "url": "https://example.com/sample-3",
+          "tier": "B"
         }
       ],
-      "confidence": "중간"
+      "confidence": "중간",
+      "lat": 39.0,
+      "lon": 125.75
     },
     "border_clash": {
       "status": "corroborated",
@@ -35,21 +41,37 @@
       "summary": "예시: 경계선 인근 사격 1건 보고, 두 출처가 같은 내용을 확인한 상태",
       "sources": [
         {
-          "name": "예시 출처 1",
+          "name": "예시 공식 기관",
+          "tier": "A",
           "url": "https://example.com/sample-1"
         },
         {
-          "name": "예시 출처 2",
+          "name": "예시 통신사",
+          "tier": "B",
           "url": "https://example.com/sample-2"
+        },
+        {
+          "name": "예시 분석 기관",
+          "tier": "C",
+          "url": "https://example.com/sample-5"
+        },
+        {
+          "name": "예시 북한 관영매체",
+          "tier": "D",
+          "url": "https://example.com/sample-6"
         }
       ],
       "confidence": "높음",
       "facts": [
-        "예시 사실"
+        "예시 사실 1 — 공식 발표로 확인된 내용",
+        "예시 사실 2 — 두 통신사가 같은 내용 보도"
       ],
       "speculation": [
-        "예시 추정"
-      ]
+        "예시 추정 — 의도에 대한 분석가 해석"
+      ],
+      "meaning": "예시: 국지 도발 가능성 상승, 확전 신호는 아직 없음",
+      "lat": 37.95,
+      "lon": 126.9
     },
     "foreign_forces": {
       "status": "none"

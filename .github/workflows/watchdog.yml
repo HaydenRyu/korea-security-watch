@@ -1,20 +1,17 @@
 name: watchdog
-# 6시간마다: ① 카카오 토큰 유지·회전 ② 루틴이 멎었는지(최종 확인 3~9시간 전) 감지해 1회 알림
+# 6시간마다 루틴이 멎었는지(최종 확인 3~9시간 전) 감지해 본인 주제로 1회 알린다
 on:
   schedule: [{ cron: "23 */6 * * *" }]
   workflow_dispatch:
 
-concurrency: { group: kakao, cancel-in-progress: false }
+concurrency: { group: watchdog, cancel-in-progress: false }
 
 jobs:
   watch:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
-      KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
-      KAKAO_CLIENT_SECRET: ${{ secrets.KAKAO_CLIENT_SECRET }}
-      KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
-      ROTATED_TOKEN_FILE: /tmp/kakao_rotated_rt
+      NTFY_TOPIC_ME: ${{ secrets.NTFY_TOPIC_ME }}
     steps:
       - uses: actions/checkout@v4
       - name: stale check
@@ -34,15 +31,4 @@ jobs:
       - name: alert stale
         if: steps.stale.outputs.stale == '1'
         env: { HOURS: "${{ steps.stale.outputs.hours }}" }
-        run: python3 scripts/kakao.py send --text "안보 감시 정지 — 마지막 확인 ${HOURS}시간 전. 루틴 상태를 확인하세요."
-      - name: keep token alive
-        if: steps.stale.outputs.stale != '1'
-        run: python3 scripts/kakao.py refresh
-      - name: store rotated refresh token
-        if: always()
-        env: { GH_TOKEN: "${{ secrets.SECRETS_PAT }}" }
-        run: |
-          if [ -s "$ROTATED_TOKEN_FILE" ]; then
-            gh secret set KAKAO_REFRESH_TOKEN -R "$GITHUB_REPOSITORY" < "$ROTATED_TOKEN_FILE"
-            echo rotated-and-stored
-          fi
+        run: python3 scripts/ntfy_send.py me "안보 감시 정지" "마지막 확인 ${HOURS}시간 전. 루틴 상태를 확인하세요." 4

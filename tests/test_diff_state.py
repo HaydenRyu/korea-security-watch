@@ -27,13 +27,13 @@ def test_same_state_no_notify():
     assert out is None and ev["grade"] == 1
 
 
-def test_grade_rise_notifies_with_forward_flag():
+def test_grade_rise_notifies_me_and_friends():
     latest, _, _ = d.step(run(border_clash={"status": "single", "sources": SRC1}), None, [])
     r = run(border_clash={"status": "single", "sources": SRC1},
             logistics={"status": "single", "sources": SRC1})
     _, ev, out = d.step(r, latest, [])
-    assert ev["grade"] == 2 and out["text"].startswith("[지인 전달 권고]")
-    assert len(out["text"]) <= 200
+    assert ev["grade"] == 2 and out["me"]["title"] == "한반도 징후 경계(2)" and "friends" in out
+    assert len(out["me"]["message"]) <= d.MSG_MAX
 
 
 def test_routine_only_caps_at_1():
@@ -65,7 +65,7 @@ def test_drop_from_3_sends_release_only():
     latest, _, _ = d.step(run(nuclear={"status": "corroborated", "sources": SRC2},
                               logistics={"status": "single", "sources": SRC1}), None, [])
     _, ev, out = d.step(run(), latest, [])
-    assert ev["grade"] == 0 and out["text"].startswith("안보 감시 위험 해제")
+    assert ev["grade"] == 0 and out["me"]["title"].startswith("한반도 징후 위험 해제")
 
 
 def test_unverified_keeps_latest_and_alerts_on_third():
@@ -77,6 +77,7 @@ def test_unverified_keeps_latest_and_alerts_on_third():
         events.append(ev)
         outs.append(out)
     assert [o is not None for o in outs] == [False, False, True, False]
+    assert outs[2]["me"]["title"] == "안보 감시 중단" and "friends" not in outs[2]
 
 
 def test_corroborated_requires_two_sources():
@@ -89,10 +90,10 @@ def test_corroborated_requires_two_sources():
 
 def test_friends_only_at_warning_or_above():
     _, _, out1 = d.step(run(border_clash={"status": "single", "sources": SRC1}), None, [])
-    assert out1 is not None and "friends" not in out1
+    assert out1 is not None and "friends" not in out1 and out1["me"]["priority"] == 3
     latest, _, _ = d.step(run(border_clash={"status": "single", "sources": SRC1}), None, [])
     _, _, out2 = d.step(run(border_clash={"status": "corroborated", "sources": SRC2}), latest, [])
-    assert out2["friends"]["priority"] == 4 and "지인 전달" not in out2["friends"]["message"]
+    assert out2["friends"]["priority"] == 4 and "지인 주제" not in out2["friends"]["message"]
 
 
 def test_release_notifies_friends():

@@ -5,7 +5,8 @@ LLM 은 항목별 관측만 낸다(run.json). 등급·발송 여부는 이 파�
 사용: python3 scripts/diff_state.py <run.json>
   - state/latest.json   직전 *검증된* 판정 (unverified 회차는 덮지 않는다)
   - state/events.jsonl  회차 이력 1줄씩 추가
-  - state/outbox.json   이번 회차에 보낼 메시지(없으면 null) — Actions 가 이 파일 변경을 보고 발송
+  - state/outbox.json   이번 회차에 보낼 메시지 — Actions 가 이 파일 변경을 보고 ntfy 로 발송
+                        me = 본인 주제(주의 이상·해제·감시 중단), friends = 지인 주제(경계 이상·해제)
 """
 from __future__ import annotations
 
@@ -30,7 +31,7 @@ ITEMS = {
 CRITICAL = {"nuclear", "troop_movement", "gov_warning"}
 STATUSES = {"none", "single", "corroborated"}
 GRADE_LABEL = {0: "평시", 1: "주의", 2: "경계", 3: "위험"}
-FORWARD_MIN_GRADE = 2  # 이 등급 이상이면 「지인 전달 권고」
+FORWARD_MIN_GRADE = 2  # 이 등급 이상이면 지인 주제에도 보낸다
 UNVERIFIED_ALERT_AT = 3  # 연속 판정 불가 N회째에 1회 알림
 DASHBOARD_URL = "https://haydenryu.github.io/korea-security-watch/"
 
@@ -83,43 +84,44 @@ def _headline(items: dict, keys: set[str]) -> str:
     return order[0] if order else ""
 
 
-def compose(run: dict, grade: int, new_keys: set[str]) -> str:
-    """카카오 텍스트 템플릿 200자 제한 안에 맞춘다. 상세는 대시보드."""
+MSG_MAX = 600  # 상세는 상황판. 알림은 한눈에 읽히는 길이로
+
+
+def _t(run: dict) -> str:
+    return datetime.fromisoformat(run["checked_at"]).astimezone().strftime("%m/%d %H:%M")
+
+
+def compose(run: dict, new_keys: set[str]) -> str:
+    """대표 항목 1개의 지역·요약·신뢰도·출처. 등급은 제목에 싣는다."""
     items = run["items"]
     key = _headline(items, new_keys or active_keys(items))
     it = items.get(key, {})
-    t = datetime.fromisoformat(run["checked_at"]).astimezone().strftime("%m/%d %H:%M")
     lines = []
-    if grade >= FORWARD_MIN_GRADE:
-        lines.append("[지인 전달 권고]")
-    lines.append(f"안보 감시 {GRADE_LABEL[grade]}({grade}) · {t}")
     if it:
         lines.append(f"{ITEMS[key]} · {it.get('region', '')}".rstrip(" ·"))
         lines.append(it.get("summary", ""))
         src = ", ".join(s.get("name", "") for s in it.get("sources", [])[:2] if s.get("name"))
         lines.append(f"신뢰도 {it.get('confidence', '-')} · {src}".rstrip(" ·"))
-    text = "\n".join(l for l in lines if l)
-    return text if len(text) <= 200 else text[:199] + "…"
+    return "\n".join(l for l in lines if l)
 
 
-def release_text(run: dict, prev_grade: int, grade: int) -> str:
-    t = datetime.fromisoformat(run["checked_at"]).astimezone().strftime("%m/%d %H:%M")
-    return (f"안보 감시 {GRADE_LABEL[prev_grade]} 해제 → {GRADE_LABEL[grade]}({grade}) · {t}\n"
-            f"{run.get('overall_summary', '')}")[:200]
+def _msg(title: str, body: str, priority: int) -> dict:
+    body = (body.strip() + "\n상황판에서 출처를 확인하세요.").strip()
+    return {"title": title, "message": body if len(body) <= MSG_MAX else body[:MSG_MAX - 1] + "…", "priority": priority}
 
 
-def friends_message(run: dict, grade: int, new_keys: set[str], released: bool, prev_grade: int) -> dict:
-    """ntfy 용. 「지인 전달 권고」 머리말 없이, 상황판에서 대조하라는 안내를 붙인다."""
+def alert_messages(run: dict, grade: int, new_keys: set[str], released: bool, prev_grade: int,
+                   friends: bool) -> tuple[dict, dict | None]:
+    """(본인, 지인 또는 None). 우선순위: 위험 5 · 경계 4 · 주의·해제 3"""
     if released:
-        title = f"한반도 징후 {GRADE_LABEL[prev_grade]} 해제"
-        body = release_text(run, prev_grade, grade).split("\n", 1)[-1]
-        priority = 3
-    else:
-        title = f"한반도 징후 {GRADE_LABEL[grade]}({grade})"
-        body = "\n".join(compose(run, grade, new_keys).split("\n")[2:])  # 머리 2줄(권고·등급) 제외
-        priority = 5 if grade >= 3 else 4
-    body = (body + "\n상황판에서 출처를 확인하세요.").strip()
-    return {"title": title, "message": body, "priority": priority}
+        m = _msg(f"한반도 징후 {GRADE_LABEL[prev_grade]} 해제 → {GRADE_LABEL[grade]}({grade})",
+                 f"{_t(run)}\n{run.get('overall_summary', '')}", 3)
+        return m, m
+    m = _msg(f"한반도 징후 {GRADE_LABEL[grade]}({grade})", f"{_t(run)}\n{compose(run, new_keys)}",
+             {3: 5, 2: 4}.get(grade, 3))
+    if not friends:
+        return m, None
+    return {**m, "message": m["message"] + "\n(지인 주제에도 발송됨)"}, m
 
 
 def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | None, dict, dict | None]:
@@ -137,8 +139,8 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
         event = {"checked_at": now, "status": "unverified", "reason": run.get("reason", ""), "streak": streak}
         outbox = None
         if streak == UNVERIFIED_ALERT_AT:
-            outbox = {"id": now, "text": f"안보 감시 중단: {streak}회 연속 판정 불가\n사유: {run.get('reason', '미상')}"[:200],
-                      "link": DASHBOARD_URL}
+            outbox = {"id": now, "link": DASHBOARD_URL,
+                      "me": _msg("안보 감시 중단", f"{streak}회 연속 판정 불가\n사유: {run.get('reason', '미상')}", 4)}
         return None, event, outbox
 
     items = run["items"]
@@ -164,10 +166,10 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     event["friends"] = friends or released
     outbox = None
     if notify:
-        outbox = {"id": now, "grade": grade, "link": DASHBOARD_URL,
-                  "text": compose(run, grade, new_keys) if not released else release_text(run, prev_grade, grade)}
-        if friends or released:
-            outbox["friends"] = friends_message(run, grade, new_keys, released, prev_grade)
+        me, fr = alert_messages(run, grade, new_keys, released, prev_grade, friends)
+        outbox = {"id": now, "grade": grade, "link": DASHBOARD_URL, "me": me}
+        if fr:
+            outbox["friends"] = fr
     return new_latest, event, outbox
 
 

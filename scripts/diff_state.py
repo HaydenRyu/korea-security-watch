@@ -25,7 +25,7 @@ ITEMS = {
     "logistics": "군수 비축·수송",
     "border_clash": "DMZ·NLL 충돌",
     "electronic_cyber": "전자전·사이버",
-    "foreign_forces": "미·중·러 이상 동향",
+    "foreign_forces": "외국군·북러·북중 협력",
     "parade_massing": "기념일 전후 집결",
     "nk_internal": "북 내부 전시태세",
     "gov_warning": "정부 긴급 경고",
@@ -330,6 +330,10 @@ def main(argv: list[str]) -> int:
         # 스키마 위반도 판정 불가로 기록한다(평시로 두지 않는다)
         new_latest, event, outbox = step({"status": "unverified", "reason": f"schema: {e}",
                                           "checked_at": run.get("checked_at")}, latest, events)
+    # 브리핑 진단: 루틴이 world 를 냈는지(raw) · 열람 검사 뒤 몇 건 남았는지(kept). 판정과 무관
+    raw = run.get("world") if isinstance(run, dict) else None
+    kept = clean_world(run) if isinstance(run, dict) else None
+    event["world"] = {"raw": len(raw) if isinstance(raw, list) else 0, "kept": len(kept[0]) if kept else 0}
     STATE.mkdir(exist_ok=True)
     if new_latest is not None:
         (STATE / "latest.json").write_text(json.dumps(new_latest, ensure_ascii=False, indent=2) + "\n")

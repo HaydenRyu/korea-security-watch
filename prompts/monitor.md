@@ -33,11 +33,12 @@
 | logistics | 탄약·연료·의료물자 비축, 군수 수송 |
 | border_clash | DMZ·NLL 침범, 지뢰·포격·교전 |
 | electronic_cyber | 북한 GPS 교란, 한국 정부·금융·기반시설 대상 대규모 사이버 공격 |
-| foreign_forces | 미군 전략자산, 중·러군 이상 동향 |
+| foreign_forces | 미군 전략자산 전개, 중·러군 이상 동향, **북·러·북·중 군사협력**(파병·추가 파병, 무기·탄약·미사일 이전, 군사기술 이전, 합동훈련·공동 비행, 군사 협정·고위 군사 방문) |
 | parade_massing | 열병식·기념일 전후 비정상 병력 집결 |
 | nk_internal | 북한 내부 전시태세 — 등화관제, 주민 대피·전시 훈련, 준전시 상태 선포, 노농적위군 동원, 평양 외국 공관 철수, 중국 접경 통제 |
 | gov_warning | 한·미·일 정부 긴급 경고·전시 동원·대피 권고 |
 
+- `foreign_forces` 의 북러·북중 협력은 이미 알려진 파병·협력의 **반복 보도는 배경**(`none`, summary 에만)이고, 24시간 안에 **새로 확인된** 파병·이전·훈련·협정만 징후다.
 - `electronic_cyber`·`nk_internal` 은 **일반 징후**다(핵심 항목 아님). 핵·병력·정부 경고처럼 단독으로 위험(3)을 만들지 않고, 다른 항목과 겹칠 때 등급을 올린다(`diff_state.py` 의 `CRITICAL` 밖).
 
 ## 3. 판정 규칙
@@ -116,6 +117,7 @@
    - WebFetch 가 "unable to fetch"·403 이면 같은 URL 을 Bash 로 연다: `curl -sL -A 'Mozilla/5.0' --max-time 20 <URL> | sed 's/<[^>]*>/ /g' | tr -s ' \n' | head -c 6000`. 본문이 나오면 연 것으로 친다.
    - 원문은 한 매체에 몰리지 않게 **서로 다른 사이트 2곳 이상**에서 연다(예: NK News + 연합뉴스·합참·Reuters 중 하나). `diff_state.py` 가 검사하며, 한 사이트뿐이면 판정 불가로 기록된다.
    - `sources` 에는 `opened` 에 있는 URL 만 넣는다. 둘 다 `diff_state.py` 가 검사하며, 어기면 회차가 판정 불가로 기록된다.
+1-1. **세계 안보 브리핑(4-1절)을 채운다** — 판정 검색이 끝난 뒤, 국제면(Reuters World·AP World·BBC World·NHK World 중 2곳 이상)을 열어 `opened` 에 넣고 `world` 3~5건과 `world_context` 를 쓴다. 판정용으로 이미 연 원문도 쓸 수 있다. `source.url` 이 `opened` 에 없으면 버려진다. 실패해도 회차는 계속한다.
 2. `python3 scripts/diff_state.py run.json` 를 실행하고 출력을 확인한다. 스키마 위반이면 스크립트가 unverified 로 기록한다.
 3. `rm run.json` 후 `git add state/ data/sources.json $(ls data/source_requests.jsonl 2>/dev/null) && git commit -m "watch: <등급 또는 unverified> <시각>"` 를 실행한다.
 4. `git pull --rebase origin main && git push origin HEAD:main`. 거절되면 한 번 더 pull --rebase 후 push 한다. 그래도 실패하면 사유를 출력하고 끝낸다.

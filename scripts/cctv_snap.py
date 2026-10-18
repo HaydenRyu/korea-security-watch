@@ -142,6 +142,37 @@ def kick_workflows() -> dict:
     return out
 
 
+STALE_MARK = Path.home() / "Library" / "Caches" / "jis-stale-alert"   # 알린 정지의 마지막 확인 시각(정지 1건당 1회)
+STALE_MIN = 100   # 루틴은 매시 :07 — 1시간 40분 넘게 새 확인이 없으면 정지로 본다
+
+
+def stale_alert() -> str | None:
+    """감시 루틴 정지를 본인 주제로 알린다(정지 1건당 1회, 재개 시 1회). GHA watchdog 은 6시간 주기라
+    10/18 밤 4시간 정지를 못 잡았다 — 이 맥은 5분마다 돈다. 실패는 조용히 넘어간다(사진이 본업)."""
+    try:
+        with urllib.request.urlopen(f"https://haydenryu.github.io/korea-security-watch/state/latest.json?t={int(time.time())}",
+                                    timeout=20) as r:
+            last = json.loads(r.read())["checked_at"]
+        age = (datetime.now(timezone.utc) - datetime.fromisoformat(last)).total_seconds() / 60
+        sent = STALE_MARK.read_text().strip() if STALE_MARK.exists() else ""
+        if age >= STALE_MIN and sent != last:
+            msg = ("안보 감시 정지", f"마지막 확인 {int(age // 60)}시간 {int(age % 60)}분 전. 루틴이 멈췄습니다(사용량 한도·실행 오류). 상황판 등급이 갱신되지 않습니다.", 4)
+        elif age < STALE_MIN and sent and sent != "ok":
+            msg = ("안보 감시 재개", "감시 루틴이 다시 돌고 있습니다.", 2)
+        else:
+            return None
+        topic = (CONF / "ntfy_me").read_text().strip()
+        req = urllib.request.Request("https://ntfy.sh", headers={"Content-Type": "application/json"}, method="POST",
+                                     data=json.dumps({"topic": topic, "title": msg[0], "message": msg[1], "priority": msg[2],
+                                                      "click": "https://haydenryu.github.io/korea-security-watch/"}, ensure_ascii=False).encode())
+        urllib.request.urlopen(req, timeout=20).close()
+        STALE_MARK.parent.mkdir(parents=True, exist_ok=True)
+        STALE_MARK.write_text(last if msg[2] == 4 else "ok")
+        return msg[0]
+    except (OSError, ValueError, KeyError):
+        return None
+
+
 # 민항기 등록국 = ICAO 24비트 주소 국가 할당 블록(ICAO Annex 10 Vol.III 부록) — 항공사 국적과 대개 같지만 리스기는 다를 수 있다
 ICAO_CC = [("KR", 0x718000, 0x71FFFF), ("KP", 0x720000, 0x727FFF), ("CN", 0x780000, 0x7BFFFF),
            ("JP", 0x840000, 0x87FFFF), ("TW", 0x899000, 0x8993FF), ("US", 0xA00000, 0xAFFFFF), ("RU", 0x100000, 0x1FFFFF)]
@@ -251,6 +282,8 @@ def main() -> int:
     if (b := busy()) and not dry:
         print(json.dumps({"skip": b}))
         return 0
+    if not dry and (sa := stale_alert()):
+        print(json.dumps({"stale": sa}, ensure_ascii=False))
     if not dry and (k := kick_workflows()):
         print(json.dumps({"kick": k}))
     key = (CONF / "its_key").read_text().strip()

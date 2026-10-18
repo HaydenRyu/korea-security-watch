@@ -1,5 +1,5 @@
 name: firms
-# 매시간 NASA FIRMS 열점을 받아 state/firms.json 을 갱신한다(키는 시크릿 FIRMS_KEY).
+# 매시간 NASA FIRMS 열점(state/firms.json, 키 시크릿 FIRMS_KEY)과 한반도 항공 지표(state/air.json, 키 불필요)를 갱신한다.
 # 감시 루틴은 :07 에 돈다. 그 전에 끝나도록 :45 에 받는다.
 on:
   schedule: [{ cron: "45 * * * *" }]
@@ -17,12 +17,14 @@ jobs:
       - name: fetch
         env: { FIRMS_KEY: "${{ secrets.FIRMS_KEY }}" }
         run: python3 scripts/firms.py
+      - name: air
+        run: python3 scripts/air_count.py   # 실패해도 기존 파일 유지(rc 0)
       - name: commit
         run: |
-          [ -z "$(git status --porcelain -- state/firms.json)" ] && { echo unchanged; exit 0; }  # 신규 파일도 변경으로 본다
+          [ -z "$(git status --porcelain -- state/firms.json state/air.json state/air.jsonl)" ] && { echo unchanged; exit 0; }  # 신규 파일도 변경으로 본다
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add state/firms.json
+          git add state/firms.json $(ls state/air.json state/air.jsonl 2>/dev/null)
           git commit -m "firms: $(date -u +%FT%H:%MZ)"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
           exit 1

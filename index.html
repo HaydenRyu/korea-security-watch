@@ -608,7 +608,7 @@ $("srcReq").addEventListener("submit",async e=>{e.preventDefault();const f=e.tar
     try{localStorage.setItem("srcReqAt",Date.now())}catch(_){}}
   catch(_){m.textContent="보내지 못했습니다. 잠시 뒤 다시 시도해 주세요."}finally{b.disabled=false}});
 // 누적 조회(GoatCounter, 쿠키 없음). 대시보드 설정 「visitor counts」가 꺼져 있으면 조용히 숨긴다
-fetch("https://jis.goatcounter.com/counter/TOTAL.json").then(r=>r.ok?r.json():null).then(d=>{if(d?.count){$("viewsN").textContent=d.count;$("views").hidden=false}}).catch(()=>{});
+fetch("https://jis.goatcounter.com/counter/"+encodeURIComponent(location.pathname)+".json").then(r=>r.ok?r.json():null).then(d=>{if(d?.count){$("viewsN").textContent=d.count;$("views").hidden=false}}).catch(()=>{});
 // 최근 출처 요청 처리 결과(루틴이 data/source_requests.jsonl 에 남긴다)
 async function loadReqLog(){try{const r=await fetch("data/source_requests.jsonl?t="+Date.now());if(!r.ok)return;
   const rows=(await r.text()).trim().split("\n").filter(Boolean).map(l=>JSON.parse(l)).slice(-10).reverse();if(!rows.length)return;

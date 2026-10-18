@@ -132,12 +132,8 @@
    "desc": "교차확인에 쓰는 보도",
    "groups": [
     {
-     "name": "",
+     "name": "통신사",
      "items": [
-      {
-       "name": "연합뉴스",
-       "url": "https://www.yna.co.kr"
-      },
       {
        "name": "Reuters",
        "url": "https://www.reuters.com"
@@ -151,16 +147,74 @@
        "url": "https://www.afp.com"
       },
       {
+       "name": "연합뉴스",
+       "url": "https://www.yna.co.kr"
+      },
+      {
+       "name": "교도통신",
+       "url": "https://english.kyodonews.net",
+       "note": "일본 정부 발표(발사 탐지·EEZ 낙하) 속보가 빠르다"
+      },
+      {
+       "name": "지지통신",
+       "url": "https://www.jiji.com",
+       "note": "방위성·총리관저 발표 속보"
+      }
+     ]
+    },
+    {
+     "name": "일본",
+     "items": [
+      {
+       "name": "NHK",
+       "url": "https://www3.nhk.or.jp",
+       "note": "J얼럿·발사 속보 1순위"
+      },
+      {
+       "name": "아사히신문",
+       "url": "https://www.asahi.com/ajw/"
+      },
+      {
+       "name": "요미우리 (The Japan News)",
+       "url": "https://japannews.yomiuri.co.jp"
+      },
+      {
+       "name": "닛케이 아시아",
+       "url": "https://asia.nikkei.com",
+       "note": "유료 기사 — 제목·요약만 보이면 단독 single 상한"
+      }
+     ]
+    },
+    {
+     "name": "미국·유럽",
+     "items": [
+      {
        "name": "BBC",
        "url": "https://www.bbc.com"
       },
       {
-       "name": "NHK",
-       "url": "https://www3.nhk.or.jp"
+       "name": "The New York Times",
+       "url": "https://www.nytimes.com",
+       "note": "자동 열람이 막힌다(403) — 다른 매체가 받아 쓴 보도로 확인, 단독 근거 금지"
       },
       {
-       "name": "교도통신",
-       "url": "https://english.kyodonews.net"
+       "name": "The Wall Street Journal",
+       "url": "https://www.wsj.com",
+       "note": "자동 열람이 막힌다(403) — 다른 매체가 받아 쓴 보도로 확인, 단독 근거 금지"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com",
+       "note": "유료 기사 — 제목·요약만 보이면 단독 single 상한"
+      },
+      {
+       "name": "Financial Times",
+       "url": "https://www.ft.com",
+       "note": "자동 열람이 막힌다(403) — 다른 매체가 받아 쓴 보도로 확인, 단독 근거 금지"
+      },
+      {
+       "name": "The Guardian",
+       "url": "https://www.theguardian.com"
       }
      ]
     }

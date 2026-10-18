@@ -58,7 +58,16 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .p.hot .ph .k{color:var(--g1)}
 .p.chem .ph .k{color:var(--g2)}
 
-.mapbox svg{display:block;width:100%;height:auto;background:var(--map-bg)}
+#map svg,#mapPrint svg{display:block;width:100%;height:auto;background:var(--map-bg)}  /* 약도만 — .mapbox svg 로 두면 Leaflet 저작권 깃발 SVG 가 칸 폭으로 커졌다 */
+/* 화면 = 실제 지도(OSM, 10/18 hayden 「진짜 지도여야지」) · 인쇄·오프라인 = 아래 약도(SVG) */
+#lmap{height:380px;background:#d9d6cf}
+#lmap[hidden]{display:none}
+@media (min-width:760px){#lmap{height:440px}}
+.lm{display:grid;place-items:center;font:600 11px/1 var(--text);color:#05080e;background:var(--g0);border:1.5px solid #05080e;border-radius:50%;box-sizing:border-box}
+.lm.sub{background:#fff;border-radius:0;border-width:2px}
+.lm.home{background:var(--g1);transform:rotate(45deg)}
+@media (pointer:coarse){.leaflet-marker-icon.lm::before{content:"";position:absolute;inset:-14px}}
+.leaflet-popup-content{font:400 13px/1.5 var(--text);margin:10px 12px} .leaflet-popup-content b{display:block}
 .legend{display:flex;flex-wrap:wrap;gap:4px 16px;padding:8px var(--pad);border-top:1px solid var(--line);font-size:11px;color:var(--fog)}
 .legend i{display:inline-block;width:8px;height:8px;margin-right:6px;vertical-align:1px}
 .lg-dot{background:var(--map-dot);border-radius:50%} .lg-sub{border:2px solid var(--map-sub)} .lg-home{background:var(--map-home);transform:rotate(45deg)}
@@ -135,7 +144,7 @@ th.ad,td.ad{display:none}  /* 짧은 주소 칸은 인쇄 전용(화면은 이�
   .ug{padding:0 3px;font-size:6.5pt}
   th.dg,td.dg{display:table-cell}
   .scr{display:none} .prt{display:block}
-  .mapbox svg{height:46mm}  /* 남은 높이에 맞춘 약도 크기(가로는 비율 유지·가운데) */
+  #mapPrint svg{height:46mm}  /* 남은 높이에 맞춘 약도 크기(가로는 비율 유지·가운데) */
   .warn{display:block} .warn b{margin-right:8px}
   .legend{padding:4px 8px;font-size:7.5pt}
   .foot{font-size:7pt;line-height:1.4;gap:0}
@@ -165,8 +174,8 @@ th.ad,td.ad{display:none}  /* 짧은 주소 칸은 인쇄 전용(화면은 이�
     </section>
     <div class="side">
       <section class="p mapbox" aria-label="대피소 위치 약도">
-        <div class="ph"><span class="k">위치 약도</span><span class="r">번호 = 대피소 목록</span></div>
-        <div id="map" class="scr"></div><div id="mapPrint" class="prt"></div>
+        <div class="ph"><span class="k">대피소 위치</span><span class="r">번호 = 대피소 목록</span></div>
+        <div id="lmap" class="scr" hidden></div><div id="map" class="scr"></div><div id="mapPrint" class="prt"></div>
         <div class="legend"><span><i class="lg-dot"></i>대피소</span><span><i class="lg-sub"></i>지하철역</span><span><i class="lg-home"></i>자곡동 기준점</span><span>점선 = 반경 2km</span></div>
       </section>
       <section class="p" aria-label="가까운 지하철역">
@@ -261,6 +270,30 @@ function renderMap(doc,shel,sub,k,el){
   el.dataset.miss=miss;  // 자리가 없어 생략한 글자 수(검수용)
 }
 
+// 실제 지도: Leaflet 을 화면에서만 늦게 불러온다. 불러오기·타일이 6초 안에 안 되면(통신 끊김) 약도를 그대로 둔다
+function realMap(doc,shel,sub){
+  const box=$("lmap"),c=doc.center;
+  const css=document.createElement("link");css.rel="stylesheet";css.href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css";document.head.append(css);
+  const js=document.createElement("script");js.src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js";
+  js.onload=()=>{try{
+    box.hidden=false;
+    const m=L.map(box,{scrollWheelZoom:false,tap:true}).setView([c.lat,c.lon],14);
+    let ok=false;
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'})
+      .on("tileload",()=>{if(!ok){ok=true;$("map").hidden=true}}).addTo(m);
+    setTimeout(()=>{if(!ok){box.hidden=true}},6000);
+    const ic=(cls,h,sz)=>L.divIcon({className:"lm "+cls,html:h,iconSize:[sz,sz]});
+    L.circle([c.lat,c.lon],{radius:doc.radius_m||2000,color:"#05080e",weight:1.5,dashArray:"4 5",fill:false,interactive:false}).addTo(m);
+    const all=[[c.lat,c.lon]];
+    sub.forEach(x=>{all.push([x.lat,x.lon]);L.marker([x.lat,x.lon],{icon:ic("sub","",12),title:x.name}).bindPopup(`<b>${esc(x.name)}</b>${esc(x.lines)} · ${x.k.toFixed(1)}km`).addTo(m)});
+    shel.forEach((x,i)=>{all.push([x.lat,x.lon]);L.marker([x.lat,x.lon],{icon:ic("",String(i+1),20),title:x.name,zIndexOffset:500})
+      .bindPopup(`<b>${i+1}. ${esc(x.name)}</b>${esc(x.addr)}<br>${under(x)?"지하":"지상"} · ${x.dist_m>=1000?(x.dist_m/1000).toFixed(1)+"km":x.dist_m+"m"}`).addTo(m)});
+    L.marker([c.lat,c.lon],{icon:ic("home","",12),title:"자곡동 기준점",zIndexOffset:1000}).bindPopup("<b>자곡동 기준점</b>거리 계산 기준").addTo(m);
+    m.fitBounds(all,{padding:[16,16]});
+  }catch(e){box.hidden=true}};
+  document.head.append(js);
+}
+
 (async()=>{
   try{
     const [s,p]=await Promise.all(["data/shelters.json","data/prep.json"].map(u=>fetch(u).then(r=>{if(!r.ok)throw u+" "+r.status;return r.json()})));
@@ -268,6 +301,7 @@ function renderMap(doc,shel,sub,k,el){
     const shel=renderShelters(s,s.dongs||[]);
     const sub=renderSubway(p,s.center);
     renderMap(s,shel,sub,1.5,$("map"));renderMap(s,shel,sub,2,$("mapPrint"));
+    realMap(s,shel,sub);
   }catch(e){
     $("acts").innerHTML=`<div class="err">대피소·행동요령 자료를 불러오지 못했습니다. 통신이 되는 곳에서 한 번 열어 두어야 오프라인에서도 보입니다.
       국민재난안전포털(www.safekorea.go.kr)에서 「민방위 대피소」를 확인하세요.</div>`;

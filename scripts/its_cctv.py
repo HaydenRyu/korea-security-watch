@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import json
+import math
 import os
 import sys
 import urllib.request
@@ -17,11 +18,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 API = ("https://openapi.its.go.kr:9443/cctvInfo?apiKey={key}&type={t}&cctvType=4"
-       "&minX=126.2&maxX=128.7&minY=37.7&maxY=38.9&getType=json")  # 남쪽 끝 37.7 = 강화 북단(한강 하구 접경)
+       "&minX=126.2&maxX=128.7&minY=37.7&maxY=38.9&getType=json")  # 남쪽 끝 37.7 = 강화 북단(한강 하구 접경) · 동해안 속초(38.2)까지 들어온다
 # 서→동 경도 구간(접경을 빈틈없이 덮기 위한 분할, 행정구역 아님) · 구간마다 가장 북쪽 카메라 n 대
 # 경기북부는 군 단위로 잘게(강화·김포·파주 서부=자유로·임진각·파주 적성=국도37·연천) — 넓게 묶으면 위도가 높은 철원이 연천 몫을 가져간다
-REGIONS = [(126.2, 126.53, 2), (126.53, 126.66, 1), (126.66, 126.8, 2), (126.8, 127.0, 2), (127.0, 127.16, 1),
-           (127.16, 127.25, 2), (127.25, 127.6, 2), (127.6, 128.0, 2), (128.0, 128.3, 2), (128.3, 128.7, 2)]
+# 10/18 hayden 「지점 수 자체를 늘리기(접경·해안 도로)」 → 구간당 대수를 늘리고 서로 3km 이상 떨어진 것만(접경을 더 촘촘히).
+# 동해안(128.3~)은 고성 북단~속초까지 해안 국도7을 따라 내려오게 대수를 크게. 한 회차 ITS 호출 수는 그대로(도로 종류별 1회)
+REGIONS = [(126.2, 126.53, 4), (126.53, 126.66, 2), (126.66, 126.8, 4), (126.8, 127.0, 4), (127.0, 127.16, 3),
+           (127.16, 127.25, 3), (127.25, 127.6, 4), (127.6, 128.0, 4), (128.0, 128.3, 4), (128.3, 128.7, 6)]
+MIN_GAP_KM = 3
+
+
+def km(a: dict, b: dict) -> float:
+    dy = (a["lat"] - b["lat"]) * 111
+    dx = (a["lon"] - b["lon"]) * 111 * math.cos(math.radians(a["lat"]))
+    return math.hypot(dx, dy)
 
 
 def main() -> int:
@@ -39,7 +49,13 @@ def main() -> int:
     picked = []
     for lo, hi, n in REGIONS:
         inside = sorted((c for c in cams if lo <= c["lon"] < hi), key=lambda c: -c["lat"])
-        picked += inside[:n]
+        took = []
+        for c in inside:  # 북쪽부터, 이미 고른 카메라와 MIN_GAP_KM 안이면 건너뛴다(같은 교차로 2대 중복 방지)
+            if len(took) >= n:
+                break
+            if all(km(c, t) >= MIN_GAP_KM for t in took):
+                took.append(c)
+        picked += took
     doc = {"fetched_at": datetime.now(timezone.utc).isoformat(), "source": "국가교통정보센터",
            "play_url": "https://www.its.go.kr/map/cctv", "cameras": picked}
     out = ROOT / "data" / "cctv.json"

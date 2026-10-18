@@ -705,8 +705,12 @@ function initMap(){
   L.tileLayer(G("Coastlines_15m","default",13,"png"),{maxNativeZoom:9,className:"coast",pane:"overlayPane"}).addTo(map);
   // 군사분계선(MDL)과 비무장지대 남·북 한계선 — Natural Earth 10m 경계(퍼블릭 도메인), 항상 표시
   fetch("data/dmz.json").then(r=>r.ok?r.json():null).then(z=>{if(!z)return;
-    L.polyline(z.dmz,{color:"#dbe5f1",weight:1,opacity:.55,dashArray:"3 4",interactive:false}).addTo(map);
-    L.polyline(z.mdl,{color:"#ff4d5e",weight:3,opacity:.95}).bindTooltip("군사분계선(MDL) · 양옆 점선은 비무장지대 남·북 한계선(각 2km)",{sticky:true}).addTo(map)}).catch(()=>{});
+    // 전용 층 + 캔버스: 휴대폰 핀치 확대 때 SVG 선이 다시 그려지지 않아 남쪽 민간 지역에 그어진 것처럼 남았다(10/18 hayden 실기기).
+    // 위성 층의 mix-blend-mode 와 겹친 모바일 재도장 문제로 추정 — 캔버스는 확대가 끝날 때마다 새로 그린다
+    if(!map.getPane("mdl")){map.createPane("mdl").style.zIndex=420}
+    const rd=L.canvas({pane:"mdl",padding:.5});
+    L.polyline(z.dmz,{renderer:rd,color:"#dbe5f1",weight:1,opacity:.55,dashArray:"3 4",interactive:false}).addTo(map);
+    L.polyline(z.mdl,{renderer:rd,color:"#ff4d5e",weight:3,opacity:.95}).bindTooltip("군사분계선(MDL) · 양옆 점선은 비무장지대 남·북 한계선(각 2km)",{sticky:true}).addTo(map)}).catch(()=>{});
   $("imgdate").textContent=`위성 ${d} · VIIRS`;
   map.on("mousemove",e=>$("coord").textContent=`${e.latlng.lat.toFixed(2)}N ${e.latlng.lng.toFixed(2)}E`);
   document.querySelectorAll("[data-layer=day],[data-layer=night]").forEach(b=>b.addEventListener("click",()=>{

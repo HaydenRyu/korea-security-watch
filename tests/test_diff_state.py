@@ -457,3 +457,14 @@ def test_state_release_lifts_floor_but_cause_report_does_not():
     _, events, _ = _seq([_at(run(border_clash=sink, nuclear={"status": "corroborated", "sources": SRC2}), _h(0)),
                          _at(found, _h(1)), _at(run(), _h(2))])
     assert not events[1].get("deescalation") and [e["grade"] for e in events] == [3, 3, 2]
+
+
+def test_world_article_via_opened_feed():
+    feed = "https://feeds.bbci.co.uk/news/world/rss.xml"
+    art = "https://www.bbc.com/news/articles/abc123"
+    run = {"opened": [feed], "world": [
+        {"title": "t", "summary": "s", "source": {"name": "BBC", "url": art, "via": feed}},
+        {"title": "t2", "summary": "s2", "source": {"name": "X", "url": "https://x.example/a", "via": "https://not-opened.example/rss"}}]}
+    out, _ = d.clean_world(run)
+    assert [r["source"]["url"] for r in out] == [art]
+    assert out[0]["source"]["via"] == feed

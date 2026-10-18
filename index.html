@@ -133,6 +133,8 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .reticle{position:absolute;z-index:450;left:50%;top:50%;width:28px;height:28px;margin:-14px 0 0 -14px;pointer-events:none;opacity:.5}
 .reticle::before,.reticle::after{content:"";position:absolute;background:var(--ice)}
 .reticle::before{left:13px;top:0;width:1px;height:28px} .reticle::after{top:13px;left:0;height:1px;width:28px}
+/* 터치 기기: 네모·마름모 표지의 누르는 범위를 사방 16px 넓힌다(모양은 그대로) */
+@media (pointer:coarse){.leaflet-marker-icon.hit::before{content:"";position:absolute;inset:-16px}}
 .corner{position:absolute;z-index:451;width:16px;height:16px;pointer-events:none;border:0 solid var(--fog)}
 .corner.a{top:8px;right:8px;border-top-width:1.5px;border-right-width:1.5px}
 .corner.b{bottom:8px;right:8px;border-bottom-width:1.5px;border-right-width:1.5px}
@@ -530,6 +532,11 @@ const CRIT=[["징후 없음","징후 없음"],
   ["징후 2개 항목 이상 · 교차확인","일상 활동이 아닌 징후가 2개 항목 이상, 또는 교차확인된 징후 1개 이상"],
   ["핵심 징후 교차확인 + 다른 징후","핵·병력 동원·정부 경고 중 하나가 교차확인되고, 다른 항목 징후가 동시에 있음"]];
 const STAT={none:"이상 없음",single:"단일 출처",corroborated:"교차확인",routine:"일상 활동"};
+// 정례 판정 = diff_state.is_routine 과 같은 식(최후통첩은 정례 아님, 상공 통과 경보는 정례)
+const isRoutine=it=>it.ultimatum===true?false:it.overflight_alert===true?true:!!it.routine;
+// 휴대폰 손가락 표적: 열점 점 지름 5px·CCTV 10px 이라 눌리지 않았다(10/18 hayden) → 터치 기기에서만 누르는 범위를 넓힌다(보이는 크기 그대로)
+const TOUCH=matchMedia("(pointer:coarse)").matches;let _hr;
+const hitR=()=>TOUCH?(_hr||=L.canvas({tolerance:16})):undefined;  // 원형 표지: 캔버스 허용 반경 16px
 const TIER={A:"공식",B:"언론",C:"분석",D:"북한 주장"};
 const C=g=>`var(--g${g})`;
 const Q=new URLSearchParams(location.search);
@@ -540,6 +547,9 @@ const kst=(d,o)=>new Date(d).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",hour1
 // 시각 표기는 한 형식만: 10.18 16:07 (KST)
 const short=d=>{const p=Object.fromEntries(new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date(d)).map(x=>[x.type,x.value]));return`${p.month}.${p.day} ${p.hour}:${p.minute}`};
 const safeUrl=u=>/^https?:\/\//.test(u||"")?u:"#";
+// 기사 링크가 피드(RSS·XML)면 사람이 읽는 국제면으로 돌린다 — 10/18 브리핑 링크가 XML 로 열렸다(새 회차는 기사 주소를 낸다)
+const FEED_HOME={"feeds.bbci.co.uk":"https://www.bbc.com/news/world","www.nhk.or.jp":"https://www3.nhk.or.jp/nhkworld/en/news/"};
+const artUrl=u=>{u=safeUrl(u);if(!/rss|\.xml($|\?)|\/feed\b|feeds\./i.test(u))return u;try{const h=new URL(u).hostname;return FEED_HOME[h]||"https://"+h.replace(/^feeds\./,"www.")+"/"}catch(e){return u}};
 const $=id=>document.getElementById(id);
 let lastCheck=null;
 
@@ -570,6 +580,13 @@ function render(latest,events){
     const h=latest.held;
     if(h&&LABEL[h.raw_grade]!=null)$("summary").insertAdjacentHTML("beforeend",
       `<span class="held">${short(h.at)} 확인은 <b style="color:${C(h.raw_grade)}">${LABEL[h.raw_grade]}</b>로 산정 — 두 번 연속 낮게 나와야 등급을 내립니다. 위 내용은 직전 판정입니다.</span>`);
+    // 위기 바닥·해제 미확인(diff_state.py 87fa3f5): 항목 없이 등급만 남아 보일 수 있어 이유를 적는다
+    const f=latest.floor;
+    if(f)$("summary").insertAdjacentHTML("beforeend",
+      `<span class="held">위기 바닥 적용 중 — ${short(f.since)} 위험 판정 뒤 72시간(${short(f.until)}까지)은 해제 근거 없이 경계 아래로 내리지 않습니다. 이번 산정은 <b style="color:${C(f.base_grade)}">${LABEL[f.base_grade]??"—"}</b>입니다.</span>`);
+    const ur=(latest.unresolved||[]).map(k=>ITEMS[k]||k);
+    if(ur.length)$("summary").insertAdjacentHTML("beforeend",
+      `<span class="held">해제 미확인 — ${ur.map(esc).join(" · ")}: 해제·원인 발표가 나올 때까지 징후로 유지합니다.</span>`);
   }
   $("checked").textContent=lastCheck?short(lastCheck):"—";
   if(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3)$("lag").classList.add("on");
@@ -587,15 +604,15 @@ function render(latest,events){
     return `<div class="cev"><div class="evh"><b>확인 근거</b><span>${esc(short(d.checked_at))} 회차</span></div>
       <p class="cevn">「이상 없음」은 아래 검색과 원문에서 최근 24시간 해당 보도를 찾지 못했다는 뜻입니다.</p>
       <dl><dt>검색</dt><dd>${nq}건 · 항목마다 국문·영문</dd>
-      <dt>연 원문</dt><dd>${op.length}곳 · ${op.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(" · ")}</dd></dl>
+      <dt>연 원문</dt><dd>${op.length}곳 · ${op.map(u=>`<a href="${esc(artUrl(u))}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(" · ")}</dd></dl>
       <details><summary>항목별 검색어</summary><ul>${cov.map(([name,q])=>`<li><b>${esc(name)}</b><span>${q.map(esc).join(" / ")||"—"}</span></li>`).join("")}</ul></details></div>`}
   const items=latest?.items||{};let n=0;
   $("sensors").innerHTML=Object.entries(ITEMS).map(([k,name])=>{
     const it=items[k]||{status:"none"};
-    const s=it.status!=="none"&&it.routine?"routine":it.status;
+    const s=it.status!=="none"&&isRoutine(it)?"routine":it.status;
     if(it.status!=="none")n++;
     const src=(it.sources||[])[0];
-    const meta=[src&&src.name,it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
+    const meta=[it.carried&&`${short(it.carried_since)}부터 유지 · 해제 보도 전`,src&&src.name,it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
     const body=it.status==="none"?"":`<div class="what">${esc(it.summary)}</div>${meta?`<div class="src">${meta}</div>`:""}`;
     return `<a class="row${it.status!=="none"?" on":""}" href="#item=${k}"><span class="name">${name}</span>
       <span class="st">${latest?STAT[s]:"분석 전"}</span><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${body}</a>`}).join("")
@@ -659,7 +676,7 @@ function renderWorld(latest){
   const head=`<div class="tnow"><b>오늘 브리핑</b><span>${
     w.length?esc(latest.world_context||`한반도와 이어지는 소식 ${w.length}건`):"다음 확인부터 정리됩니다. 아래는 올해 흐름입니다."}</span></div>`;
   if(!w.length){$("world").innerHTML=head+`<div id="year"></div>`;loadYear(true);return}
-  $("world").innerHTML=head+'<div class="wl">'+w.map(x=>{const s=x.source||{};return `<div class="wi"><a class="wt" href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(x.title)}</a>
+  $("world").innerHTML=head+'<div class="wl">'+w.map(x=>{const s=x.source||{};return `<div class="wi"><a class="wt" href="${esc(artUrl(s.url))}" target="_blank" rel="noopener">${esc(x.title)}</a>
       <p>${esc(x.summary)}</p>${x.link_korea?`<div class="wk2"><b>한반도 연결</b>${esc(x.link_korea)}</div>`:""}
       <div class="wm">${[x.region,s.name].filter(Boolean).map(esc).join(" · ")}</div></div>`}).join("")+'</div><div id="year"></div>';
   loadYear(false);
@@ -683,7 +700,7 @@ let DATA={latest:null,events:[]};
 function renderDetail(k){
   const name=ITEMS[k];if(!name){location.hash="";return}
   const it=(DATA.latest?.items||{})[k]||{status:"none"};
-  const s=it.status!=="none"&&it.routine?"routine":it.status;
+  const s=it.status!=="none"&&isRoutine(it)?"routine":it.status;
   const li=(a,cls)=>a&&a.length?`<ul class="${cls||""}">${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:`<div class="none">없음</div>`;
   const runs=[];let cur=null,prev=-2;
   DATA.events.forEach((e,i)=>{if(e.status!=="ok"||!(e.active||[]).includes(k))return;
@@ -746,7 +763,7 @@ function initMap(){
     $("imgdate").textContent=k==="night"?"야간 조명 · Black Marble":`위성 ${d} · VIIRS`;
   }));
   pinLayer=L.layerGroup().addTo(map);
-  layers.subway=L.layerGroup(SUBWAY.map(x=>L.marker([x[2],x[3]],{title:x[0],icon:L.divIcon({className:"",iconSize:[12,12],
+  layers.subway=L.layerGroup(SUBWAY.map(x=>L.marker([x[2],x[3]],{title:x[0],icon:L.divIcon({className:"hit",iconSize:[12,12],
       html:'<div style="width:12px;height:12px;background:var(--ink);border:2.5px solid var(--ice);border-radius:2px"></div>'})})
     .bindPopup(`<div class="pop"><div class="ph2"><b>${x[0]}</b></div><dl><dt>노선</dt><dd>${x[1]}</dd><dt>거리</dt><dd>자곡동에서 직선 ${subDist(x).toFixed(1)}km</dd></dl>
       <p>지하철역은 민방위 대피소로 지정된 곳이 많습니다. 지정 여부는 대피소 레이어·국민재난안전포털에서 확인하세요.</p></div>`,{className:"jpop",maxWidth:280})
@@ -764,7 +781,7 @@ function drawShelters(doc){
   if(!map||!doc?.shelters?.length)return;SHEL=doc;
   const b=document.querySelector("[data-layer=shelter]");b.textContent=`대피소 ${doc.shelters.length}`;
   layers.shelter=L.layerGroup();
-  doc.shelters.forEach(x=>L.circleMarker([x.lat,x.lon],{radius:5,color:"#05080e",weight:1.5,fillColor:"var(--g0)",fillOpacity:1})
+  doc.shelters.forEach(x=>L.circleMarker([x.lat,x.lon],{renderer:hitR(),radius:5,color:"#05080e",weight:1.5,fillColor:"var(--g0)",fillOpacity:1})
     .bindTooltip(`${esc(x.name)}<br><span style="color:var(--fog)">${x.dong?`${esc(x.dong)} · `:""}${esc(x.addr)} · ${x.dist_m}m</span>`,{className:"tip"}).addTo(layers.shelter));
   toggle(b,layers.shelter);map.attributionControl.addAttribution("대피소 © 국민재난안전포털");
   document.querySelectorAll(".findShelter").forEach(fl=>fl.textContent=shelterLabel());
@@ -777,7 +794,7 @@ function drawCctv(doc){
   if(!map||!doc?.cameras)return;
   const b=document.querySelector("[data-layer=cctv]");b.textContent=`CCTV ${doc.cameras.length}`;
   layers.cctv=L.layerGroup();
-  doc.cameras.forEach((c,i)=>L.marker([c.lat,c.lon],{title:c.name,icon:L.divIcon({className:"",iconSize:[10,10],
+  doc.cameras.forEach((c,i)=>L.marker([c.lat,c.lon],{title:c.name,icon:L.divIcon({className:"hit",iconSize:[10,10],
       html:'<div style="width:10px;height:10px;background:var(--ice);transform:rotate(45deg);box-shadow:0 0 0 2px rgba(5,8,14,.85)"></div>'})})
     .bindTooltip(`${esc(c.name)}<br><span style="color:var(--fog)">누르면 사진 보기 · 5분마다 찍어 최대 6분 늦음</span>`,{className:"tip"})
     .on("click",()=>openCams(c.name)).addTo(layers.cctv));
@@ -810,7 +827,7 @@ function drawFirms(doc){
   b.textContent=`열점 ${doc.count}`+(doc.border_count?` · 접경 ${doc.border_count}`:"");
   layers.firms=L.layerGroup();
   doc.points.forEach(p=>{
-    const m=L.circleMarker([p.lat,p.lon],{radius:p.border?5:2.5,weight:p.border?1.5:0,color:"#ffd2a8",
+    const m=L.circleMarker([p.lat,p.lon],{renderer:hitR(),radius:p.border?5:2.5,weight:p.border?1.5:0,color:"#ffd2a8",
       fillColor:p.border?"#ff6a3d":"#ff9d5c",fillOpacity:p.border?.95:.7}).addTo(layers.firms);
     m.bindPopup(()=>firmsPop(p,p._w),{className:"jpop",maxWidth:280,autoPanPadding:[16,16]})
       .on("popupopen",async()=>{if(p._w!=null)return;p._w=nearPlace(await loadPlaces(),p.lat,p.lon);m.setPopupContent(firmsPop(p,p._w))});
@@ -823,8 +840,8 @@ function drawPins(items){
   if(!map)return;pinLayer.clearLayers();
   Object.entries(items||{}).forEach(([k,it])=>{
     if(it.status==="none"||typeof it.lat!=="number"||typeof it.lon!=="number")return;
-    const col=it.routine?"var(--fog)":it.status==="corroborated"?"var(--g3)":"var(--g1)";
-    const icon=L.divIcon({className:"",iconSize:[14,14],html:`<div class="pin ${it.status==="corroborated"&&!it.routine?"ring":""}" style="--pc:${col};position:relative"></div>`});
+    const col=isRoutine(it)?"var(--fog)":it.status==="corroborated"?"var(--g3)":"var(--g1)";
+    const icon=L.divIcon({className:"hit",iconSize:[14,14],html:`<div class="pin ${it.status==="corroborated"&&!isRoutine(it)?"ring":""}" style="--pc:${col};position:relative"></div>`});
     L.marker([it.lat,it.lon],{icon,title:ITEMS[k]}).addTo(pinLayer)
       .bindTooltip(`${ITEMS[k]} · ${esc(it.region||"")}`,{className:"tip",direction:"top",offset:[0,-8]})
       .on("click",()=>location.hash="item="+k);

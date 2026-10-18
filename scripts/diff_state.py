@@ -306,7 +306,12 @@ def clean_world(run: dict) -> tuple[list[dict], str] | None:
             if not isinstance(it, dict):
                 continue
             src = it.get("source")
-            if not isinstance(src, dict) or not isinstance(src.get("url"), str) or src["url"] not in opened:
+            if not isinstance(src, dict) or not isinstance(src.get("url"), str) or not src["url"].startswith("http"):
+                continue
+            # 기사 주소(url)가 직접 연 원문이거나, 실제로 연 피드·목록(via)에 실린 기사여야 한다.
+            # 10/18: 피드 주소를 url 로 넣어 브리핑 링크가 RSS(XML)로 열렸다 → url = 기사, via = 연 피드
+            via = src.get("via")
+            if src["url"] not in opened and not (isinstance(via, str) and via in opened):
                 continue
             row = {}
             for k, n in _WORLD_LEN.items():
@@ -318,7 +323,7 @@ def clean_world(run: dict) -> tuple[list[dict], str] | None:
                 continue
             name = src.get("name")
             row["source"] = {"name": name.strip()[:60] if isinstance(name, str) and name.strip() else site(src["url"]),
-                             "url": src["url"]}
+                             "url": src["url"], **({"via": via} if isinstance(via, str) and via in opened else {})}
             out.append(row)
             if len(out) >= WORLD_MAX:
                 break

@@ -158,6 +158,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .empty{padding:12px var(--pad);color:var(--fog);font-size:13px}
 
 /* 항공기 */
+.street{filter:invert(1) hue-rotate(180deg) brightness(.8) contrast(.9) saturate(.4)}  /* OSM 밝은 지도를 상황판 톤으로 */
 #air-p{height:320px}
 #air-p .pb{padding:0}
 #air-p iframe{width:100%;height:100%;border:0;display:block}
@@ -166,9 +167,10 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 #crit-p .pb{padding:0}
 .cr{display:grid;grid-template-columns:8px 32px minmax(0,1fr);gap:12px;align-items:baseline;padding:10px var(--pad);white-space:nowrap;border-bottom:1px solid var(--line);font-size:12px;color:var(--fog)}
 .cr:last-of-type{border-bottom:1px solid var(--line)}
-.todo{display:grid;gap:4px;padding:10px var(--pad);font-size:12px;line-height:1.5}
+.todo{display:grid;gap:4px;grid-template-columns:auto 1fr;padding:10px var(--pad);font-size:12px;line-height:1.5}
+.todo b,.todo span{grid-column:1/-1}
 .todo b{font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em}
-.todo span{color:var(--ice)} .todo a{font-size:11px;color:var(--fog)}
+.todo span{color:var(--ice)} .todo a{font-size:11px;color:var(--fog);margin-right:12px} .todo #findShelter{color:var(--g0)}
 .cr i{width:8px;height:8px;align-self:center;background:var(--c)}
 .cr b{color:var(--ice);font-weight:600}
 .cr span{overflow:hidden;text-overflow:ellipsis}
@@ -278,6 +280,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
       <div class="layers" role="group" aria-label="지도 레이어">
         <button type="button" data-layer="day" aria-pressed="true">주간 위성</button>
         <button type="button" data-layer="night" aria-pressed="false">야간 조명</button>
+        <button type="button" data-layer="shelter" aria-pressed="false" disabled title="자곡동 반경 2km 민방위 대피소(국민재난안전포털)">대피소</button>
         <button type="button" data-layer="cctv" aria-pressed="false" disabled title="접경 도로 CCTV 위치(국가교통정보센터)">CCTV</button>
         <button type="button" data-layer="firms" aria-pressed="false" disabled title="NASA FIRMS 위성 열점(최근 48시간)">열점</button>
       </div></div>
@@ -374,7 +377,7 @@ function render(latest,events){
   if(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3)$("lag").classList.add("on");
   drawDial(g);
   $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("")
-    +(g!=null?`<div class="todo"><b>지금 할 일</b><span>${TODO[g]}</span><a href="https://www.safekorea.go.kr" target="_blank" rel="noopener">대피소 찾기 · 국민재난안전포털</a></div>`:"");
+    +(g!=null?`<div class="todo"><b>지금 할 일</b><span>${TODO[g]}</span><a href="#map-p" id="findShelter">자곡동 대피소 보기${SHEL?` · ${SHEL.shelters.length}곳`:""}</a><a href="https://www.safekorea.go.kr/safekorea-kor/flsm/flsm/facilitiesSafteyMap.do?menuSn=2&title=%EB%AF%BC%EB%B0%A9%EC%9C%84%EB%8C%80%ED%94%BC%EC%86%8C" target="_blank" rel="noopener">다른 지역 · 국민재난안전포털</a></div>`:"");
 
   const items=latest?.items||{};let n=0;
   $("sensors").innerHTML=Object.entries(ITEMS).map(([k,name])=>{
@@ -442,7 +445,7 @@ addEventListener("hashchange",route);
 let map,pinLayer,layers={};
 function initMap(){
   if(!window.L)return;
-  map=L.map("map",{zoomControl:true,minZoom:5,maxZoom:9}).setView([38.4,127.4],6);
+  map=L.map("map",{zoomControl:true,minZoom:5,maxZoom:16}).setView([38.4,127.4],6);
   const d=new Date(Date.now()-30*3600e3).toISOString().slice(0,10); // 전일 영상(당일은 미완성)
   const G=(l,t,lv,x)=>`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/${l}/default/${t}/GoogleMapsCompatible_Level${lv}/{z}/{y}/{x}.${x}`;
   const attr='<a href="https://earthdata.nasa.gov/gibs">NASA GIBS</a>';
@@ -452,6 +455,9 @@ function initMap(){
     L.tileLayer(G("VIIRS_SNPP_CorrectedReflectance_TrueColor",d,9,"jpg"),{maxNativeZoom:9,className:"sat"})
       .on("add",e=>{e.target.getContainer().style.mixBlendMode="lighten"})]).addTo(map);
   layers.night=L.tileLayer(G("VIIRS_Black_Marble","2016-01-01",8,"png"),{maxNativeZoom:8,className:"sat",attribution:attr});
+  // 동네 단위(대피소)로 확대하면 위성 해상도(레벨 9)가 모자라 거리 지도를 얹는다 — 11 미만에선 요청하지 않는다
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{minZoom:11,maxZoom:16,className:"street",
+    attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
   L.tileLayer(G("Coastlines_15m","default",13,"png"),{maxNativeZoom:9,className:"coast",pane:"overlayPane"}).addTo(map);
   $("imgdate").textContent=`위성 ${d} · VIIRS`;
   map.on("mousemove",e=>$("coord").textContent=`${e.latlng.lat.toFixed(2)}N ${e.latlng.lng.toFixed(2)}E`);
@@ -465,6 +471,20 @@ function initMap(){
 }
 function toggle(b,layer){b.disabled=false;b.addEventListener("click",()=>{const on=b.getAttribute("aria-pressed")!=="true";
   b.setAttribute("aria-pressed",on);if(on)layer.addTo(map);else map.removeLayer(layer)})}
+let SHEL=null;
+function drawShelters(doc){
+  if(!map||!doc?.shelters?.length)return;SHEL=doc;
+  const b=document.querySelector("[data-layer=shelter]");b.textContent=`대피소 ${doc.shelters.length}`;
+  layers.shelter=L.layerGroup();
+  doc.shelters.forEach(x=>L.circleMarker([x.lat,x.lon],{radius:5,color:"#05080e",weight:1.5,fillColor:"var(--g0)",fillOpacity:1})
+    .bindTooltip(`${esc(x.name)}<br><span style="color:var(--fog)">${esc(x.addr)} · ${x.dist_m}m</span>`,{className:"tip"}).addTo(layers.shelter));
+  toggle(b,layers.shelter);map.attributionControl.addAttribution("대피소 © 국민재난안전포털");
+  const fl=document.getElementById("findShelter");if(fl)fl.textContent=`자곡동 대피소 보기 · ${doc.shelters.length}곳`;
+  document.addEventListener("click",ev=>{if(!ev.target.closest("#findShelter"))return;ev.preventDefault();
+    if(b.getAttribute("aria-pressed")!=="true")b.click();
+    map.flyTo([doc.center.lat,doc.center.lon],14,{duration:.8});
+    document.getElementById("map-p").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"nearest"})});
+}
 function drawCctv(doc){
   if(!map||!doc?.cameras)return;
   const b=document.querySelector("[data-layer=cctv]");b.textContent=`CCTV ${doc.cameras.length}`;
@@ -508,6 +528,7 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
   DATA={latest,events};render(latest,events);initMap();drawPins(latest?.items);route();tick();
   try{drawFirms(await get("firms.json"))}catch(e){}
   try{const r=await fetch("data/cctv.json");if(r.ok)drawCctv(await r.json())}catch(e){}
+  try{const r=await fetch("data/shelters.json");if(r.ok)drawShelters(await r.json())}catch(e){}
   setInterval(tick,1000);setInterval(()=>drawDial(latest?.grade??null),60000);
 })();
 </script>

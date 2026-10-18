@@ -171,11 +171,40 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .todo{display:grid;gap:4px;grid-template-columns:auto 1fr;padding:10px var(--pad);font-size:12px;line-height:1.5}
 .todo b,.todo span{grid-column:1/-1}
 .todo b{font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em}
-.todo span{color:var(--ice)} .todo a{font-size:11px;color:var(--fog);margin-right:12px} .todo #findShelter{color:var(--g0)}
+.todo span{color:var(--ice)} .todo a{font-size:11px;color:var(--fog);margin-right:12px} .todo a.go{color:var(--g0)}
 .cr i{width:8px;height:8px;align-self:center;background:var(--c)}
 .cr b{color:var(--ice);font-weight:600}
 .cr span{overflow:hidden;text-overflow:ellipsis}
 .cr.on{background:rgba(219,229,241,.04)} .cr.on span{color:var(--ice)}
+
+/* ── 한 화면 아래 줄: 세계 안보 브리핑 · 지금 할 일 (참고 칸 — 한 화면 격자에 넣지 않는다) ── */
+.more{display:grid;gap:var(--gap);padding:0 var(--side) var(--gap);grid-template-columns:minmax(0,1fr);align-items:start}
+.wctx{margin:0 0 4px;font-size:13px;color:var(--ice)}
+.wi{padding:12px 0;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.wi:last-child{border-bottom:0;padding-bottom:0}
+.wi .wt{font:600 14px/1.45 var(--text);color:var(--ice)}
+.wi p{margin:0;font-size:13px;color:var(--ice)}
+.wi .wk2{font-size:12px;color:var(--fog)} .wi .wk2 b{font:500 10px/1.4 var(--data);letter-spacing:.04em;margin-right:8px}
+.wi .wm{font:400 10px/1.4 var(--data);color:var(--dim)}
+#todo-p .pb{padding:0}
+.tnow{padding:12px var(--pad);border-bottom:1px solid var(--line);display:grid;gap:4px}
+.tnow b{font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em} .tnow b em{font-style:normal;color:var(--gc)}
+.tnow span{font-size:13px;color:var(--ice)}
+.tsec summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:baseline;padding:10px var(--pad);border-bottom:1px solid var(--line);font-weight:600;font-size:13px}
+.tsec summary::-webkit-details-marker{display:none}
+.tsec summary::after{content:"+";margin-left:auto;font:400 12px/1 var(--data);color:var(--fog)}
+.tsec[open] summary::after{content:"−"}
+.tsec summary small{font:400 11px/1.4 var(--text);color:var(--fog)}
+.tsec summary:hover,.tsec[open] summary{background:rgba(219,229,241,.03)}
+.tsec ul{margin:0;padding:8px var(--pad) 12px;list-style:none;display:grid;gap:6px;border-bottom:1px solid var(--line);font-size:13px}
+.tsec li{padding-left:16px;position:relative}
+.tsec li::before{content:"";position:absolute;left:2px;top:.6em;width:5px;height:5px;background:var(--line-2)}
+.tsec li.ck{padding-left:0}.tsec li.ck::before{display:none}
+.tsec label{display:flex;gap:8px;align-items:baseline;cursor:pointer}
+.tsec input{accent-color:var(--g0);margin:0;flex:none;transform:translateY(2px)}
+.tlinks{display:flex;flex-wrap:wrap;gap:8px 16px;padding:12px var(--pad);border-bottom:1px solid var(--line);font-size:12px}
+.tlinks a{color:var(--fog)} .tlinks a.go{color:var(--g0)}
+.disc{margin:0;padding:12px var(--pad);font-size:11px;line-height:1.6;color:var(--dim)} .disc a{color:var(--fog)}
 
 .foot{padding:4px var(--side) 32px;font-size:12px;line-height:1.8;color:var(--dim);max-width:96ch}
 
@@ -224,6 +253,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
     grid-template-areas:"status crit" "map map" "sensors log" "trend air"}
   #map-p{height:min(64vh,620px)}
   #log-p,#trend-p{height:auto}
+  .more{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
 }
 /* ── 노트북·데스크톱 ≥1180 · 높이 ≥680 : 스크롤 없는 한 화면 ──
    세 칸이 같은 위 끝에서 시작하고, 아래 띠가 세 칸을 같은 높이로 가로지른다.
@@ -231,11 +261,12 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 @media (min-width:1180px) and (min-height:680px){
   body{height:100vh;display:flex;flex-direction:column}
   #main{flex:1;min-height:0;display:flex;flex-direction:column}
-  .ops{flex:1;min-height:0;grid-template-columns:344px minmax(0,1fr) 360px;grid-template-rows:auto minmax(0,1fr) 200px;
+  .ops{flex:0 0 100%;min-height:0;grid-template-columns:344px minmax(0,1fr) 360px;grid-template-rows:auto minmax(0,1fr) 200px;
     grid-template-areas:"status map crit" "sensors map air" "sensors trend log"}  /* 감시 항목은 왼쪽 두 칸 높이 — 7행이 스크롤 없이 다 보인다 */
   #map-p,#air-p,#log-p,#trend-p{height:auto}
   .row .what{-webkit-line-clamp:1}  /* 한 화면 고정이라 요약은 1줄, 전문은 항목 상세 */
   .foot{display:none}
+  .more{padding-bottom:32px}  /* 한 화면 격자는 그대로, 이 줄은 스크롤해서 본다 */
 }
 @media (min-width:1180px) and (max-width:1439px) and (min-height:680px){
   .ops{grid-template-columns:304px minmax(0,1fr) 312px;grid-template-rows:auto minmax(0,1fr) 168px}
@@ -360,6 +391,16 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
     <div class="pb scroll" id="log"></div>
   </section>
 </div>
+<div class="more">
+  <section class="p" id="world-p" aria-label="세계 안보 브리핑">
+    <div class="ph"><span class="k">세계 안보 브리핑</span><span id="worldAt"></span><span class="r">참고 · 등급 판정과 무관</span></div>
+    <div class="pb" id="world"><div class="empty" style="padding:0">다음 확인부터 정리됩니다.</div></div>
+  </section>
+  <section class="p" id="todo-p" aria-label="지금 할 일">
+    <div class="ph"><span class="k">지금 할 일</span><span class="r">개인 준비 · 국민재난안전포털 행동요령 참고</span></div>
+    <div class="pb" id="todo"></div>
+  </section>
+</div>
 <p class="foot">
   정례 훈련·미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다.
   위성 영상은 NASA GIBS 하루 단위 영상(약 250m)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다.
@@ -447,7 +488,8 @@ function render(latest,events){
   if(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3)$("lag").classList.add("on");
   drawDial(g);
   $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("")
-    +(g!=null?`<div class="todo"><b>지금 할 일</b><span>${TODO[g]}</span><a href="#map-p" id="findShelter">자곡동 대피소 보기${SHEL?` · ${SHEL.shelters.length}곳`:""}</a><a href="https://www.safekorea.go.kr/safekorea-kor/flsm/flsm/facilitiesSafteyMap.do?menuSn=2&title=%EB%AF%BC%EB%B0%A9%EC%9C%84%EB%8C%80%ED%94%BC%EC%86%8C" target="_blank" rel="noopener">다른 지역 · 국민재난안전포털</a></div>`:"");
+    +(g!=null?`<div class="todo"><b>지금 할 일</b><span>${TODO[g]}</span><a href="#todo-p" class="go" id="todoJump">비상용품·대피 요령 보기 ↓</a></div>`:"");
+  renderTodo(g);renderWorld(latest);
 
   const items=latest?.items||{};let n=0;
   $("sensors").innerHTML=Object.entries(ITEMS).map(([k,name])=>{
@@ -480,6 +522,40 @@ function render(latest,events){
       <span class="s">${esc(u?e.reason:((e.new||[]).map(k=>ITEMS[k]).join(", ")||e.summary))}</span></summary>
       <div class="evx"><p>${esc(u?e.reason:e.summary||"")}</p>${src?`<div class="evs">${src}</div>`:`<div class="evn">${u?"판정 불가 회차라 근거 기사가 없습니다.":"이 회차는 기사 경로가 기록되지 않았습니다."}</div>`}</div></details>`}).join("")
     :`<div class="empty">아직 보낸 알림이 없습니다. 변화가 생기면 여기에 쌓입니다.</div>`;
+}
+
+// ── 지금 할 일: 등급별 한 줄 + 접는 준비 목록. 내용은 국민재난안전포털 국민행동요령을 일반화한 것 ──
+const SHELTER_URL="https://www.safekorea.go.kr/safekorea-kor/flsm/flsm/facilitiesSafteyMap.do?menuSn=2&title=%EB%AF%BC%EB%B0%A9%EC%9C%84%EB%8C%80%ED%94%BC%EC%86%8C";
+const PREP=[
+  ["supplies","비상용품 체크리스트","3일분 기준 · 체크는 이 기기에만 저장",true,
+    ["물·비상식량 3일분","상비약·복용 중인 처방약","손전등·보조배터리·휴대용 라디오","현금·신분증 사본","마스크·물티슈"]],
+  ["family","가족 연락 계획","미리 정해 둘 것",false,
+    ["만날 장소 2곳 — 집 근처 1곳, 동네 밖 1곳","연락 순서 — 누가 누구에게 먼저 연락할지","통신이 끊기면 — 전화 대신 문자를 보내고, 정한 장소·시간에 만납니다","멀리 사는 가족·친척 한 명을 공통 연락처로 정해 둡니다"]],
+  ["air","공습 경보가 울리면","사이렌·재난문자",false,
+    ["가까운 지하 대피소·지하철역·건물 지하층으로 갑니다","재난문자·TV·라디오의 정부 안내를 따릅니다","해제 안내가 나올 때까지 대피한 곳에 머뭅니다"]],
+  ["chem","화학무기 공격이 의심되면","지하로 가지 않습니다",false,
+    ["가스는 낮은 곳에 고이므로 지하가 아니라 건물 높은 층·실내로 갑니다","오염된 곳을 벗어날 때는 바람이 불어가는 쪽을 피해 바람이 불어오는 쪽이나 옆으로 이동합니다","창문을 닫고 문틈을 젖은 수건·테이프로 막습니다","긴 옷·마스크로 피부와 호흡기 노출을 줄입니다"]]];
+const CK="jisPrep";
+function ckGet(){try{return JSON.parse(localStorage.getItem(CK)||"{}")}catch(_){return{}}}
+function renderTodo(g){
+  const ck=ckGet(),open=k=>(g>=2&&(k==="supplies"||k==="family"))||(g>=3&&k==="air");
+  $("todo").innerHTML=`<div class="tnow"><b>현재 등급 <em>${g!=null?LABEL[g]:"분석 전"}</em> 기준</b><span>${g!=null?TODO[g]:"첫 분석 결과를 기다리는 중입니다."}</span></div>`
+    +PREP.map(([k,t,sub,isCk,list])=>`<details class="tsec" data-k="${k}"${open(k)?" open":""}><summary>${t}<small>${sub}</small></summary><ul>`
+      +list.map((x,i)=>isCk?`<li class="ck"><label><input type="checkbox" data-ck="${k}${i}"${ck[k+i]?" checked":""}>${x}</label></li>`:`<li>${x}</li>`).join("")+`</ul></details>`).join("")
+    +`<div class="tlinks"><a href="#map-p" class="go findShelter">자곡동 대피소 보기${SHEL?` · ${SHEL.shelters.length}곳`:""}</a><a href="${SHELTER_URL}" target="_blank" rel="noopener">다른 지역 대피소 · 국민재난안전포털</a></div>`
+    +`<p class="disc">이 감시판의 권고입니다. 실제 대피는 정부 경보(재난문자·민방위 사이렌·TV·라디오)를 따르세요. 행동요령 원문은 <a href="https://www.safekorea.go.kr" target="_blank" rel="noopener">국민재난안전포털</a>에 있습니다.</p>`;
+}
+document.addEventListener("change",e=>{const k=e.target.dataset?.ck;if(!k)return;const ck=ckGet();
+  if(e.target.checked)ck[k]=1;else delete ck[k];try{localStorage.setItem(CK,JSON.stringify(ck))}catch(_){}});
+// ── 세계 안보 브리핑: latest.world (diff_state 가 열어 본 출처만 남긴다). 참고용 — 등급과 무관 ──
+function renderWorld(latest){
+  const w=Array.isArray(latest?.world)?latest.world:[];
+  $("worldAt").textContent=w.length&&latest.world_at?`${short(latest.world_at)} 기준`:"";
+  if(!w.length){$("world").innerHTML=`<div class="empty" style="padding:0">다음 확인부터 정리됩니다.</div>`;return}
+  $("world").innerHTML=(latest.world_context?`<p class="wctx">${esc(latest.world_context)}</p>`:"")
+    +w.map(x=>{const s=x.source||{};return `<div class="wi"><a class="wt" href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(x.title)}</a>
+      <p>${esc(x.summary)}</p>${x.link_korea?`<div class="wk2"><b>한반도 연결</b>${esc(x.link_korea)}</div>`:""}
+      <div class="wm">${[x.region,s.name].filter(Boolean).map(esc).join(" · ")}</div></div>`}).join("");
 }
 
 let DATA={latest:null,events:[]};
@@ -549,8 +625,8 @@ function drawShelters(doc){
   doc.shelters.forEach(x=>L.circleMarker([x.lat,x.lon],{radius:5,color:"#05080e",weight:1.5,fillColor:"var(--g0)",fillOpacity:1})
     .bindTooltip(`${esc(x.name)}<br><span style="color:var(--fog)">${esc(x.addr)} · ${x.dist_m}m</span>`,{className:"tip"}).addTo(layers.shelter));
   toggle(b,layers.shelter);map.attributionControl.addAttribution("대피소 © 국민재난안전포털");
-  const fl=document.getElementById("findShelter");if(fl)fl.textContent=`자곡동 대피소 보기 · ${doc.shelters.length}곳`;
-  document.addEventListener("click",ev=>{if(!ev.target.closest("#findShelter"))return;ev.preventDefault();
+  document.querySelectorAll(".findShelter").forEach(fl=>fl.textContent=`자곡동 대피소 보기 · ${doc.shelters.length}곳`);
+  document.addEventListener("click",ev=>{if(!ev.target.closest(".findShelter"))return;ev.preventDefault();
     if(b.getAttribute("aria-pressed")!=="true")b.click();
     map.flyTo([doc.center.lat,doc.center.lon],14,{duration:.8});
     document.getElementById("map-p").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"nearest"})});
@@ -646,7 +722,7 @@ $("srcReq").addEventListener("submit",async e=>{e.preventDefault();const f=e.tar
     try{localStorage.setItem("srcReqAt",Date.now())}catch(_){}}
   catch(_){m.textContent="보내지 못했습니다. 잠시 뒤 다시 시도해 주세요."}finally{b.disabled=false}});
 // 누적 조회(GoatCounter, 쿠키 없음). 대시보드 설정 「visitor counts」가 꺼져 있으면 조용히 숨긴다
-fetch("https://jis.goatcounter.com/counter/"+encodeURIComponent(location.pathname)+".json").then(r=>r.ok?r.json():null).then(d=>{if(d?.count){$("viewsN").textContent=d.count;$("views").hidden=false}}).catch(()=>{});
+fetch("https://jis.goatcounter.com/counter/TOTAL.json?start=2026-10-18").then(r=>r.ok?r.json():null).then(d=>{if(d?.count){$("viewsN").textContent=d.count;$("views").hidden=false}}).catch(()=>{});
 // 최근 출처 요청 처리 결과(루틴이 data/source_requests.jsonl 에 남긴다)
 async function loadReqLog(){try{const r=await fetch("data/source_requests.jsonl?t="+Date.now());if(!r.ok)return;
   const rows=(await r.text()).trim().split("\n").filter(Boolean).map(l=>JSON.parse(l)).slice(-10).reverse();if(!rows.length)return;

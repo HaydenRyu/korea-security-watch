@@ -63,7 +63,7 @@ def validate(run: dict) -> None:
     cov = run.get("coverage")
     if not isinstance(cov, dict) or any(not cov.get(k) for k in ITEMS):
         raise RunError("coverage 에 7개 항목마다 검색어가 1개 이상 있어야 한다")
-    opened = {u for u in run.get("opened") or [] if isinstance(u, str) and u.startswith("http")}
+    opened = _opened(run)
     if len(opened) < MIN_OPENED:
         raise RunError(f"원문을 {MIN_OPENED}건 이상 열어야 한다(opened {len(opened)}건)")
     doms = {site(u) for u in opened}
@@ -168,6 +168,69 @@ def event_sources(items: dict) -> list[dict]:
     return out[:EVENT_SOURCES_MAX]
 
 
+WORLD_MAX = 5  # 세계 안보 브리핑 — 참고용. 등급·알림·이력에는 쓰지 않는다
+_WORLD_LEN = {"title": 120, "summary": 300, "link_korea": 200, "region": 40}
+
+
+def _opened(run: dict) -> set[str]:
+    return {u for u in run.get("opened") or [] if isinstance(u, str) and u.startswith("http")}
+
+
+def clean_world(run: dict) -> tuple[list[dict], str] | None:
+    """run.world 를 너그럽게 거른다: 모양이 틀린 항목·열지 않은 출처는 버리고 5건까지.
+    남는 게 없으면 None. 어떤 입력에도 예외를 내지 않는다(판정을 막지 않는다)."""
+    try:
+        raw = run.get("world")
+        if not isinstance(raw, list):
+            return None
+        opened = _opened(run)
+        out = []
+        for it in raw:
+            if not isinstance(it, dict):
+                continue
+            src = it.get("source")
+            if not isinstance(src, dict) or not isinstance(src.get("url"), str) or src["url"] not in opened:
+                continue
+            row = {}
+            for k, n in _WORLD_LEN.items():
+                v = it.get(k)
+                if isinstance(v, str) and v.strip():
+                    v = v.strip()
+                    row[k] = v if len(v) <= n else v[:n - 1] + "…"
+            if "title" not in row or "summary" not in row:
+                continue
+            name = src.get("name")
+            row["source"] = {"name": name.strip()[:60] if isinstance(name, str) and name.strip() else site(src["url"]),
+                             "url": src["url"]}
+            out.append(row)
+            if len(out) >= WORLD_MAX:
+                break
+        if not out:
+            return None
+        ctx = run.get("world_context")
+        ctx = ctx.strip()[:200] if isinstance(ctx, str) else ""
+        return out, ctx
+    except Exception:  # noqa: BLE001 — 참고 블록이 회차를 깨뜨리면 안 된다
+        return None
+
+
+def with_world(new_latest: dict, run: dict, latest: dict | None, now: str) -> dict:
+    """새 latest 에 세계 브리핑을 싣는다. 이번 회차에 쓸 만한 게 없으면 직전 것을 그대로 둔다."""
+    for k in ("world", "world_context", "world_at"):
+        new_latest.pop(k, None)
+    w = clean_world(run)
+    if w:
+        new_latest["world"], ctx = w
+        if ctx:
+            new_latest["world_context"] = ctx
+        new_latest["world_at"] = now
+    elif isinstance(latest, dict) and isinstance(latest.get("world"), list) and latest["world"]:
+        for k in ("world", "world_context", "world_at"):
+            if k in latest:
+                new_latest[k] = latest[k]
+    return new_latest
+
+
 def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | None, dict, dict | None]:
     """(새 latest 또는 None=유지, 이벤트, outbox 또는 None)"""
     validate(run)
@@ -203,7 +266,8 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     released = latest is not None and prev_grade >= FORWARD_MIN_GRADE > grade
     notify = notify or released
 
-    new_latest = {**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)}
+    new_latest = with_world({**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)},
+                            run, latest, now)
     event = {"checked_at": now, "status": "ok", "grade": grade, "prev_grade": prev_grade,
              "active": sorted(active), "new": sorted(new_keys), "notified": notify,
              "summary": run.get("overall_summary", ""), "sources": event_sources(items)}

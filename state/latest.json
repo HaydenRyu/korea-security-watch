@@ -13,8 +13,8 @@
       "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 합참 발표 미사일 10월 18일",
-      "North Korea DMZ NLL clash"
+      "북한 합참 발표 10월 18일",
+      "North Korea missile OR border OR troops October 18 2026"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 사이버",
@@ -39,7 +39,6 @@
   },
   "opened": [
     "https://www.nknews.org/category/news/",
-    "https://www.koreaherald.com/",
     "https://www.nhk.or.jp/rss/news/cat6.xml",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.mod.go.jp/j/press/news/index.html"
@@ -74,42 +73,42 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T09:09:08+00:00",
+  "checked_at": "2026-10-18T10:10:20+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],
   "world": [
     {
-      "title": "프랑스 전역 물가 항의 시위, 1,200여 명 체포",
-      "summary": "50만 명 넘게 참가한 시위가 폭력·약탈로 번져 1,200명 이상이 체포됐다.",
-      "link_korea": "유럽 정세 불안은 대북 제재·대러 공조 논의 여력에 영향을 줄 수 있다.",
-      "region": "프랑스",
+      "title": "캐나다 서부 군기지 화재, 7명 이상 사망",
+      "summary": "캐나다 현지 언론은 서부 군사 기지에서 화재가 나 최소 7명이 숨졌다고 보도했다.",
+      "link_korea": "서방 동맹국 군 시설 사고로 연합 전력 운용에 간접적 영향 여지가 있다.",
+      "region": "캐나다",
       "source": {
-        "name": "BBC",
-        "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "name": "NHK",
+        "url": "https://www.nhk.or.jp/rss/news/cat6.xml"
       }
     },
     {
-      "title": "트럼프, 일부 대러 제재 한시 면제",
-      "summary": "미 대통령이 의회가 통과시킨 러시아 제재 다수를 일시 중단했고 젤렌스키와의 갈등이 커지고 있다.",
-      "link_korea": "대러 제재 완화는 북러 군사협력을 둘러싼 국제 압박 구도에 영향을 줄 수 있다.",
-      "region": "미국·러시아",
+      "title": "미 중간선거 2주 앞 사전투표 독려 집회",
+      "summary": "트럼프 대통령 비판 단체들이 전국에서 사전투표를 촉구했다.",
+      "link_korea": "미국 정치 일정은 대북·대한 정책 방향의 변수다.",
+      "region": "미국",
       "source": {
-        "name": "BBC",
-        "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "name": "NHK",
+        "url": "https://www.nhk.or.jp/rss/news/cat6.xml"
       }
     },
     {
       "title": "유럽 외교관, 요르단강 서안서 정착민에게 피습",
-      "summary": "이스라엘군은 폭력을 비난했으나 총리실은 비방 캠페인이라고 주장했다.",
+      "summary": "팔레스타인에서 유대인 정착민이 유럽 외교관을 습격했다고 보도됐다.",
       "link_korea": "중동 긴장 지속은 미군 전력 배치 우선순위에 영향을 줄 수 있다.",
       "region": "서안지구",
       "source": {
-        "name": "BBC",
-        "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "name": "NHK",
+        "url": "https://www.nhk.or.jp/rss/news/cat6.xml"
       }
     }
   ],
-  "world_context": "유럽 불안과 대러 제재 완화 움직임이 이어지는 가운데 한반도에서는 신규 징후가 없다.",
-  "world_at": "2026-10-18T09:09:08+00:00"
+  "world_context": "서방 정치·중동 불안이 이어지는 가운데 한반도에서는 신규 징후가 없다.",
+  "world_at": "2026-10-18T10:10:20+00:00"
 }

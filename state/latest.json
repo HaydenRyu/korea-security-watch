@@ -14,7 +14,7 @@
     ],
     "border_clash": [
       "합참 북한 DMZ NLL 통지문",
-      "North Korea DMZ Joint Chiefs of Staff"
+      "North Korea missile launch OR DMZ OR troops October 18 2026"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 사이버 공격",
@@ -38,13 +38,11 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.nknews.org/2026/10/",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.mod.go.jp/j/press/news/index.html",
     "https://www.jcs.mil.kr"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 병력·핵·국경·정부 경고 징후는 없다. 연합뉴스·NK News 최신 기사는 원산 유람선, 타도제국주의동맹 100주년 행사, 북중·북러 교류 등 배경성 기사뿐이며 직전 회차와 변동이 없다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 병력·핵·국경·정부 경고 징후는 없다. NK News 최신 기사(10/17 관영매체 어뢰 시험 주장 등)는 24시간을 넘겼거나 배경성이며 직전 회차와 변동이 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -74,14 +72,14 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T19:09:38+00:00",
+  "checked_at": "2026-10-18T20:09:06+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],
   "world": [
     {
       "title": "상트페테르부르크 석유시설 야간 공격, 사망자 발생",
-      "summary": "BBC는 러시아 상트페테르부르크 유류시설이 야간 공격을 받아 사상자가 났다고 전했다.",
+      "summary": "BBC는 러시아 상트페테르부르크 유류시설과 데이터센터가 야간 공격을 받아 최소 1명이 숨졌다고 전했다.",
       "link_korea": "러시아 전쟁 수행 동향은 북러 군사협력 평가와 직결된다.",
       "region": "러시아",
       "source": {
@@ -92,27 +90,16 @@
     },
     {
       "title": "트럼프, 대러 제재 일부 일시 면제",
-      "summary": "BBC는 트럼프 대통령이 젤렌스키와의 갈등 속에 대러 제재 일부를 면제했다고 전했다.",
-      "link_korea": "대러 제재 기조 변화는 북러 협력과 대북 제재 공조에 영향을 줄 수 있다.",
+      "summary": "BBC는 트럼프 대통령이 의회가 통과시킨 대러 제재 일부를 일시 면제했다고 전했다.",
+      "link_korea": "대러 제재 기조 변화는 북러 무기 거래 대응에도 영향을 줄 수 있다.",
       "region": "미국·러시아",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "서안지구에서 유럽 외교관들 정착민 공격 받아",
-      "summary": "BBC는 유럽 외교관들이 서안지구에서 이스라엘 정착민에게 공격당했다고 전했다.",
-      "link_korea": "중동 정세는 미군 전력 배분에 간접 영향을 줄 수 있다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c962ydpmjm3zo",
+        "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "러시아 전쟁과 대러 제재 변화가 북러 협력 환경에 영향을 줄 수 있다.",
-  "world_at": "2026-10-18T19:09:38+00:00"
+  "world_context": "러시아 전쟁과 대러 제재 동향이 북러 협력 환경에 영향을 주는 국면이다.",
+  "world_at": "2026-10-18T20:09:06+00:00"
 }

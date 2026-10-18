@@ -288,7 +288,11 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
     grid-template-areas:"status crit" "map map" "sensors log" "trend air"}
   #map-p{height:min(64vh,620px)}
   #log-p,#trend-p{height:auto}
-  .more{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .more{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch}
+  /* 두 칸 높이를 맞춘다: 줄 높이는 「지금 할 일」이 정하고(펼치면 같이 늘어남), 브리핑은 그 안에서 스크롤 */
+  #world-p{contain:size;min-height:420px}
+  #world-p>.pb{flex:1 1 0;min-height:0;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+  #world-p .ye{max-height:none;overflow:visible}
 }
 /* ── 노트북·데스크톱 ≥1180 · 높이 ≥680 : 스크롤 없는 한 화면 ──
    세 칸이 같은 위 끝에서 시작하고, 아래 띠가 세 칸을 같은 높이로 가로지른다.

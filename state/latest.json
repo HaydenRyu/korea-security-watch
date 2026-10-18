@@ -5,16 +5,20 @@
       "North Korea troop buildup border"
     ],
     "nuclear": [
-      "북한 핵 실험 풍계리",
+      "북한 핵 풍계리",
       "North Korea nuclear strategic weapon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea ammunition logistics shipment"
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 DMZ NLL 합참 발표",
+      "북한 합참 발표 미사일 10월 18일",
       "North Korea DMZ NLL clash"
+    ],
+    "electronic_cyber": [
+      "북한 GPS 교란 사이버",
+      "North Korea GPS jamming cyber attack Korea October 2026"
     ],
     "foreign_forces": [
       "미군 전략자산 한반도",
@@ -23,6 +27,10 @@
     "parade_massing": [
       "북한 열병식 집결",
       "North Korea parade massing"
+    ],
+    "nk_internal": [
+      "북한 노농적위군 등화관제 전시 훈련",
+      "North Korea civil defense mobilization"
     ],
     "gov_warning": [
       "북한 정부 긴급 경고 대피",
@@ -35,7 +43,7 @@
     "https://www.koreaherald.com/",
     "https://www.mod.go.jp/j/press/news/index.html"
   ],
-  "overall_summary": "최근 24시간 내 합참·방위성의 신규 발사 발표나 병력·정부 경고 징후는 확인되지 않았다. 북한 관영매체의 AI 어뢰 시험(10/14~17 보도)은 시험 성격으로 정례 범주다.",
+  "overall_summary": "최근 24시간 내 합참·방위성의 신규 발사 발표나 병력·정부 경고 징후는 확인되지 않았다. 북한 관영매체의 AI 어뢰 시험(10/17 보도)은 시험 성격으로 정례 범주다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -49,17 +57,23 @@
     "border_clash": {
       "status": "none"
     },
+    "electronic_cyber": {
+      "status": "none"
+    },
     "foreign_forces": {
       "status": "none"
     },
     "parade_massing": {
       "status": "none"
     },
+    "nk_internal": {
+      "status": "none"
+    },
     "gov_warning": {
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T07:09:50+00:00",
+  "checked_at": "2026-10-18T08:09:31+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

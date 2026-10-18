@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>JIS 예측</title>
-<meta name="description" content="북한 발사 흐름과 앞으로 30일 도발 위험 일정 — 공개 DB(CSIS·CNS)로 센 과거 기록. 전쟁 확률은 만들지 않는다.">
+<meta name="description" content="북한 발사 흐름·달별 계절성·재발사 간격과 앞으로 90일 도발 위험 일정 — 공개 DB(CSIS·CNS)로 센 과거 기록. 전쟁 확률은 만들지 않는다.">
 <link rel="icon" href="assets/jis-mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@87.5..112.5,300..700&display=swap" rel="stylesheet">
@@ -12,7 +12,9 @@
 /* 토큰은 상황판(index.html)과 같은 값 */
 :root{--ink:#05080e;--panel:#0a1019;--head:#0d1520;--line:#1a2331;--line-2:#2a3649;--ice:#dbe5f1;--fog:#8091a8;--dim:#4c5a6e;
   --g0:#5fd0b8;--g1:#f2c14e;--amber:var(--g1);--data:'Martian Mono',ui-monospace,monospace;
-  --text:'Pretendard Variable',Pretendard,system-ui,sans-serif;--pad:12px;--side:16px;--ease:cubic-bezier(.2,.8,.2,1)}
+  --text:'Pretendard Variable',Pretendard,system-ui,sans-serif;--pad:12px;--side:16px;--ease:cubic-bezier(.2,.8,.2,1);
+  /* 도발 종류(연도 막대 누적) — 핵은 가장 무거운 종류라 위험색, 기타(풍선·포격 등)는 판단 집계 밖이라 흐리게 */
+  --k-mis:var(--fog);--k-nuc:#ff4d5e;--k-oth:var(--line-2)}
 *{box-sizing:border-box}html,body{margin:0}
 body{background:var(--ink);color:var(--ice);font:14px/1.55 var(--text)}
 a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line-2);transition:text-decoration-color 120ms var(--ease)}
@@ -27,9 +29,29 @@ main{max-width:960px;margin:0 auto;padding:16px var(--side) 48px;display:grid;ga
 .pb{padding:12px var(--pad)}
 .big{display:flex;gap:8px 24px;flex-wrap:wrap;align-items:baseline}
 .big b{font:600 28px/1 var(--data)}.big b.hot{color:var(--amber)}.big span{color:var(--fog);font-size:12px}
-.bars{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;align-items:end;height:64px;margin-top:16px}
-.bars i{display:block;background:var(--line-2);min-height:1px}.bars i.now{background:var(--amber)}
-.bx{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;font:400 10px/1.6 var(--data);color:var(--dim);text-align:center}
+.bars{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px;align-items:end;height:64px;margin-top:16px}
+.bars i{display:flex;flex-direction:column-reverse;min-height:1px;font-style:normal}
+.bars i u{display:block;text-decoration:none}.bars u.mis{background:var(--k-mis)}.bars u.nuc{background:var(--k-nuc)}.bars u.oth{background:var(--k-oth)}
+.bx{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px;font:400 10px/1.6 var(--data);color:var(--dim);text-align:center}
+.bx .now{color:var(--amber)}
+/* 21년 칸이라 좁은 화면은 한 해 걸러 이름만(막대는 전부) — 첫해(짝수)·올해가 남는다 */
+@media (max-width:520px){.bx span:nth-child(even){visibility:hidden}}
+.lg{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:8px;font:400 10px/1.6 var(--data);color:var(--fog)}
+.lg span::before{content:"";display:inline-block;width:8px;height:8px;margin-right:4px;vertical-align:-1px;background:var(--c)}
+/* 재발사 간격: 한 줄 결론 + 7·14·30일 */
+.rl{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
+.rl p{margin:0;font-size:13px}.rl p b{font:600 15px/1 var(--data);color:var(--ice)}
+.rl .ks{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:6px;font:400 11px/1.6 var(--data);color:var(--fog)}
+/* 달별: 막대 = 20년 발사한 날 수 합 · 가로선 = 평소라면(달 길이 비례) · 지금 달·다음 달 강조 */
+.mo{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;align-items:end;height:80px;margin-top:4px}
+.mo i{position:relative;display:block;height:100%;font-style:normal}
+.mo i u{position:absolute;left:0;right:0;bottom:0;background:var(--line-2);min-height:1px}
+.mo i.now u{background:var(--amber)}.mo i.nx u{background:color-mix(in srgb,var(--amber) 45%,var(--line-2))}
+.mo i s{position:absolute;left:-2px;right:-2px;height:0;border-top:1px dashed var(--fog)}
+.mx{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;font:400 10px/1.6 var(--data);color:var(--dim);text-align:center}
+.mx .now,.mx .nx{color:var(--amber)}
+.mo-sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 24px;margin-top:12px}
+.mo-sum div{font-size:12px;color:var(--fog)}.mo-sum b{display:block;font:600 13px/1.5 var(--data);color:var(--ice)}
 .wrap{overflow-x:auto}.wrap table{min-width:640px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{font:500 11px/1.4 var(--data);color:var(--fog);text-align:left;padding:8px;border-bottom:1px solid var(--line-2)}
@@ -53,18 +75,24 @@ ul.note{padding-left:18px;margin:0}
 <section class="p"><div class="ph"><span class="k">지금 흐름</span><span class="r" id="tbasis">발사한 날 수 · CSIS 도발 DB</span></div>
 <div class="pb" id="tempo"><p class="note">불러오는 중</p></div></section>
 
-<section class="p"><div class="ph"><span class="k">앞으로 30일</span><span class="r" id="uprange">—</span></div>
+<section class="p"><div class="ph"><span class="k">달별 · 어느 달에 잦았나</span><span class="r" id="mobasis">—</span></div>
+<div class="pb" id="season"><p class="note">불러오는 중</p></div></section>
+
+<section class="p"><div class="ph"><span class="k">앞으로 90일</span><span class="r" id="uprange">—</span></div>
 <div class="pb wrap"><table><thead><tr><th>날짜</th><th>일정</th><th>과거 ±7일 발사</th><th>판단</th><th>출처</th></tr></thead><tbody id="up"></tbody></table></div></section>
 
 <section class="p"><div class="ph"><span class="k">1년 달력 · 이 시기에 도발이 잦았나</span><span class="r" id="lb">—</span></div>
 <div class="pb wrap"><table><thead><tr><th>시기</th><th>일정</th><th>발사 있던 해</th><th>평소라면</th><th>판단</th></tr></thead><tbody id="yr"></tbody></table>
 <p class="note">칸 하나 = 1년(왼쪽이 오래된 해). 채운 칸 = 그 기간에 발사 있음 — 누르면 그 발사의 출처로 간다 · 빈 칸 = 없음 · 점선 = 훈련 미실시.
-「평소라면」 = 그해 아무 때나 같은 길이 기간을 골랐을 때 발사가 들어 있었을 확률을 해마다 더한 값. 차이가 2년 이상이면 「평소보다 잦음」·「오히려 드묾」.</p></div></section>
+「평소라면」 = 그해 아무 때나 같은 길이 기간을 골랐을 때 발사가 들어 있었을 확률을 해마다 더한 값. 실제 해 수가 평소와 우연으로 보기 어려울 만큼(10% 기준) 많거나 적을 때만 「평소보다 잦음」·「오히려 드묾」.</p></div></section>
 
 <section class="p"><div class="ph"><span class="k">집계 기준</span><span class="r" id="upd">—</span></div>
 <div class="pb"><ul class="note">
   <li>발사 = <a href="https://beyondparallel.csis.org/database-north-korean-provocations/" target="_blank" rel="noopener">CSIS Beyond Parallel 도발 DB ↗</a> 의 미사일·핵 도발 날짜 ∪ <a href="https://www.nti.org/analysis/articles/cns-north-korea-missile-test-database/" target="_blank" rel="noopener">CNS 미사일 시험 DB ↗</a>(2024.11 까지). 같은 날 여러 발 = 1일. 풍선·포격 등은 세지 않는다.</li>
-  <li>훈련 날짜 = 연도별 보도 원문으로 확인한 값(출처는 연도 칸 · 정본 <a href="https://github.com/HaydenRyu/korea-security-watch/blob/main/data/risk_calendar.json" target="_blank" rel="noopener">data/risk_calendar.json ↗</a>). 훈련이 없던 해는 세지 않는다.</li>
+  <li>판단 기준 = 해마다 「그 길이 기간에 발사가 들어 있었을 확률」이 다르므로, 그 확률들로 「발사 있던 해 수」가 우연히 나올 범위를 정확히 계산한다. 실제 값이 그 범위 끝 10% 밖일 때만 「평소보다 잦음」·「오히려 드묾」 — 우연으로 보기 어려운 정도(10% 기준). 20년 표본이라 차이가 작으면 「평소 수준」으로 남는다.</li>
+  <li>재발사 비율·달별 막대는 지난 20년에 실제 있었던 빈도다. 다음 발사의 예측 확률이 아니다.</li>
+  <li>연도 막대의 기타(풍선·포격·GPS 교란 등, CSIS Other Provocation)는 보여 주기만 하고 「최근 30일」·「평소」·일정별 판단에는 넣지 않는다 — 종류가 섞여 해마다 기준이 흔들린다.</li>
+  <li>훈련 날짜 = 연도별 보도 원문으로 확인한 값(출처는 연도 칸 · 정본 <a href="https://github.com/HaydenRyu/korea-security-watch/blob/main/data/risk_calendar.json" target="_blank" rel="noopener">data/risk_calendar.json ↗</a>). 훈련이 없던 해는 세지 않는다. 봄 훈련 창은 2006~2018 키리졸브+독수리 전체 기간, 2019~ 지휘소 연습 기간이다(독수리 폐지). 2010 봄 종료일·2008 여름(사전 발표값)은 불확실, 일부 해는 GlobalSecurity 정리 페이지 기준.</li>
   <li>우리는 「전쟁 확률 %」를 만들지 않는다 — 전례가 거의 없어 그럴듯한 숫자만 나온다. 이 페이지는 「언제 더 자주 볼지」를 정하는 데 쓴다.</li>
   <li>외부 예측 시장(Metaculus·Polymarket·Manifold)은 싣지 않는다 — 토큰 필요·한국 접속 차단·참여자 수십 명 수준이라 판단 근거가 못 된다(2026-10-18 실측).</li>
   <li>갱신 = 매일 아침 6시 DB 를 다시 받아 다시 센다(scripts/risk_calendar.py).</li>
@@ -78,19 +106,34 @@ const tag=v=>`<span class="tag ${v==="more"?"hi":v==="less"?"lo":""}">${FC_VERDI
 function yrs(s){return `<span class="yrs">${s.rows.map(r=>r.held===false?`<i class="x" title="${r.year} 훈련 미실시"></i>`
   :r.n?`<a class="h" href="${esc(r.src||"#")}" target="_blank" rel="noopener" title="${r.year} · ${r.n}일 발사 · 첫 발사 ${r.first}"></a>`:`<i title="${r.year} · 발사 없음"></i>`).join("")}</span>`}
 fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.json()).then(doc=>{
-  const tp=doc.tempo,cfg=doc.config,py=tp.per_year,ys=Object.keys(py),mx=Math.max(...Object.values(py)),thisY=ys[ys.length-1];
-  const hot=tp.ratio>=2,last=tp.recent[0];
+  const tp=doc.tempo,cfg=doc.config,py=tp.per_year,ys=Object.keys(py),thisY=ys[ys.length-1];
+  const tot=y=>py[y].missile+py[y].nuclear+py[y].other,mx=Math.max(...ys.map(tot)),hot=tp.ratio>=2,rl=doc.relaunch,nY=cfg.lookback[1]-cfg.lookback[0]+1;
+  const seg=(y,k,c)=>py[y][k]?`<u class="${c}" style="height:${py[y][k]/tot(y)*100}%"></u>`:"";
+  const rk=k=>rl?.rate?.[k];
   $("tbasis").textContent=tp.basis;
-  $("tempo").innerHTML=`<div class="big"><div><b class="${hot?"hot":""}">${tp.last30}일</b><span> 최근 30일</span></div><div><b>${tp.avg30}일</b><span> 평소 30일</span></div><div><b>${py[thisY]}일</b><span> ${thisY}년 누적</span></div></div>
-   <div class="bars" aria-label="연도별 발사한 날 수">${ys.map(y=>`<i class="${y===thisY?"now":""}" style="height:${Math.round(py[y]/mx*100)}%" title="${y}년 ${py[y]}일"></i>`).join("")}</div>
-   <div class="bx">${ys.map(y=>`<span>${y.slice(2)}${y===thisY?"*":""}</span>`).join("")}</div>
-   <p class="note">${hot?`최근 30일 발사가 평소의 ${tp.ratio}배 — 발사가 몰리는 시기엔 다음 발사도 가깝다. 평소보다 자주 상황판을 본다.`:"최근 30일은 평소 범위."} * ${thisY}년은 진행 중.</p>
+  $("tempo").innerHTML=`<div class="big"><div><b class="${hot?"hot":""}">${tp.last30}일</b><span> 최근 30일</span></div><div><b>${tp.avg30}일</b><span> 평소 30일</span></div><div><b>${py[thisY].launch}일</b><span> ${thisY}년 누적</span></div></div>
+   <div class="bars" role="img" aria-label="연도별 도발한 날 수(미사일·핵·기타 누적)">${ys.map(y=>`<i style="height:${Math.round(tot(y)/mx*100)}%" title="${y}년 · 미사일 ${py[y].missile}일 · 핵 ${py[y].nuclear}일 · 기타 ${py[y].other}일">${seg(y,"missile","mis")}${seg(y,"nuclear","nuc")}${seg(y,"other","oth")}</i>`).join("")}</div>
+   <div class="bx">${ys.map(y=>`<span class="${y===thisY?"now":""}">${y.slice(2)}</span>`).join("")}</div>
+   <div class="lg"><span style="--c:var(--k-mis)">미사일</span><span style="--c:var(--k-nuc)">핵</span><span style="--c:var(--k-oth)">기타(표시만 · 판단 집계 밖)</span><span>CSIS 날짜 기준</span></div>
+   <p class="note">${hot?`최근 30일 발사가 평소의 ${tp.ratio}배 — 발사가 몰리는 시기엔 다음 발사도 가깝다. 평소보다 자주 상황판을 본다.`:"최근 30일은 평소 범위."} ${thisY}년(노란 글자)은 진행 중.</p>
+   ${rl&&rk("14")?`<div class="rl"><p>지난 ${nY}년, 발사 뒤 14일 안에 또 쏜 경우 <b>${rk("14").pct}%</b> · 마지막 발사 <b>${fcMD(rl.last)}</b>(${rl.since}일 전)</p>
+   <div class="ks"><span>7일 안 ${rk("7").pct}%</span><span>14일 안 ${rk("14").pct}%</span><span>30일 안 ${rk("30").pct}%</span><span>발사한 날 ${rk("14").n}일 기준</span></div>
+   <p class="note" style="margin-top:4px">과거에 실제 있었던 빈도다 — 다음 발사의 예측 확률이 아니다.</p></div>`:""}
    <ul class="recent">${tp.recent.map(e=>`<li><span class="d">${fcMD(e.date)}</span>${esc(e.event)} ${lnk(e.src,"출처")}</li>`).join("")}</ul>`;
-  const up=fcUpcoming(doc),t=fcKST(new Date());
+  const t=fcKST(new Date());
+  const ss=doc.season;
+  if(ss){const ms=ss.months,cm=t.getMonth()+1,nm=cm%12+1,top=Math.max(...ms.map(r=>Math.max(r.days,r.expected)));
+    const sum=r=>`<div><b>${r.m}월${r.m===cm?" · 이번 달":" · 다음 달"}</b>${ss.years}년 중 ${r.years}년 발사 · 발사한 날 ${r.days}일(평소라면 ${r.expected}일)</div>`;
+    $("mobasis").textContent=`${cfg.lookback[0]}~${cfg.lookback[1]} · 발사한 날 수 합`;
+    $("season").innerHTML=`<div class="mo" role="img" aria-label="달별 발사한 날 수(지난 ${ss.years}년 합)">${ms.map(r=>`<i class="${r.m===cm?"now":r.m===nm?"nx":""}" title="${r.m}월 · 발사한 날 ${r.days}일 · ${ss.years}년 중 ${r.years}년 · 평소라면 ${r.expected}일"><u style="height:${r.days/top*100}%"></u><s style="bottom:${r.expected/top*100}%"></s></i>`).join("")}</div>
+     <div class="mx">${ms.map(r=>`<span class="${r.m===cm?"now":r.m===nm?"nx":""}">${r.m}월</span>`).join("")}</div>
+     <div class="mo-sum">${sum(ms[cm-1])}${sum(ms[nm-1])}</div>
+     <p class="note">막대 = 지난 ${ss.years}년 그달에 발사한 날 수 합 · 점선 = 평소라면(그해 발사한 날 수를 달 길이로 나눈 기대치의 합). 막대가 점선보다 높으면 그달에 몰렸다는 뜻. 지난 빈도이지 올해 예측이 아니다.</p>`;}
+  const up=fcUpcoming(doc);
   $("uprange").textContent=`${fcMD(fcISO(t))}–${fcMD(fcISO(new Date(t.getTime()+cfg.horizon_days*FC_DAY)))}`;
   $("up").innerHTML=up.length?up.map(u=>`<tr><td class="n">${fcMD(u.start)}${u.end?"–"+fcMD(u.end):""}</td><td>${esc(u.name)}${u.note?`<br><small style="color:var(--fog)">${esc(u.note)}</small>`:""}</td>
     <td>${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년${yrs(u.stat)}`:"—"}</td><td>${u.stat?tag(u.stat.verdict):'<span class="tag lo">집계 없음</span>'}</td><td>${lnk(u.src,"원문")}</td></tr>`).join("")
-    :'<tr><td colspan="5">앞으로 30일 안 주요 일정 없음</td></tr>';
+    :`<tr><td colspan="5">앞으로 ${cfg.horizon_days}일 안 주요 일정 없음</td></tr>`;
   $("lb").textContent=`${cfg.lookback[0]}~${cfg.lookback[1]} · 기준일 ±${cfg.window_days}일`;
   const when=a=>a.md?a.md.replace("-","."):a.id==="fs"?"03월":a.id==="ufs"?"08월":a.id==="us_election"?"11월(짝수 해)":"—";
   const order=a=>a.md||({fs:"03",ufs:"08",us_election:"11"}[a.id]||"99");

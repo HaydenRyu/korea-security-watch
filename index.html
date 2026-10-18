@@ -177,7 +177,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .trend svg{width:100%;height:100%;display:block}
 .xax{grid-column:2;display:flex;justify-content:space-between;font:400 10px/1 var(--data);color:var(--dim)}
 .ph a.fcall{color:var(--g0);font-weight:500;text-decoration:none} .ph a.fcall:hover{text-decoration:underline}
-/* 흐름·예측: 왼쪽 등급 추이 · 오른쪽 발사 흐름과 앞으로 30일(누르면 예측 페이지). 좁으면 위아래 */
+/* 흐름·예측: 왼쪽 등급 추이 · 오른쪽 발사 흐름과 앞으로 90일 중 가까운 2건(누르면 예측 페이지). 좁으면 위아래 */
 .fc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 16px;height:100%}
 .fc .trend{min-height:96px}
 .fcr{display:block;position:relative;margin:-12px calc(-1*var(--pad)) -12px 0;padding:12px 28px 12px 16px;border-left:1px solid var(--line);text-decoration:none;min-width:0;overflow:hidden}
@@ -508,7 +508,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
       <div class="hud bl" id="coord">37.80N 127.50E</div></div>
   </section>
 
-  <!-- 흐름·예측(10/18): 등급 추이(72시간)만 있던 아래 띠에 「발사 흐름 · 앞으로 30일 일정」을 붙였다 — 정본 data/risk_calendar.json -->
+  <!-- 흐름·예측(10/18): 등급 추이(72시간)만 있던 아래 띠에 「발사 흐름 · 앞으로 일정(90일 중 가까운 2건)」을 붙였다 — 정본 data/risk_calendar.json -->
   <section class="p" id="trend-p" aria-label="흐름과 예측">
     <div class="ph"><span class="k">흐름·예측</span><span class="wk" id="week" title="지난 7일 · 일요일 저녁 같은 내용이 본인 알림으로 갑니다">이번 주 —</span><a class="r fcall" href="forecast.html">예측 전체 ›</a></div>
     <div class="pb fc"><div class="trend" title="등급 추이 · 최근 72회(1시간 간격)">
@@ -1038,12 +1038,12 @@ $("srcReq").addEventListener("submit",async e=>{e.preventDefault();const f=e.tar
     if(!r.ok)throw r.status;m.textContent="요청을 보냈습니다. 검토 후 반영합니다.";f.reset();
     try{localStorage.setItem("srcReqAt",Date.now())}catch(_){}}
   catch(_){m.textContent="보내지 못했습니다. 잠시 뒤 다시 시도해 주세요."}finally{b.disabled=false}});
-// 흐름·예측 칸: 최근 30일 발사한 날 vs 평소 + 앞으로 30일 일정 2건(전체는 forecast.html). 매일 06:10 갱신되는 파일이라 한 번만 읽는다
+// 흐름·예측 칸: 최근 30일 발사한 날 vs 평소 + 앞으로 90일 중 가까운 일정 2건(전체는 forecast.html). 매일 06:10 갱신되는 파일이라 한 번만 읽는다
 fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(doc=>{
   if(!doc?.tempo)return;
   const tp=doc.tempo,hot=tp.ratio!=null&&tp.ratio>=2,up=fcUpcoming(doc);
   $("fcr").innerHTML=`<span class="fct">최근 30일 발사 <b class="${hot?"":"q"}">${tp.last30}일</b> · 평소 ${tp.avg30}일<small>${hot?`평소의 ${tp.ratio}배 — 발사가 몰릴 땐 다음 발사도 가깝다`:"평소 범위"}</small></span>`+
-    `<ul class="fcu">${up.length?up.slice(0,2).map(u=>`<li><span class="d">${fcMD(u.start)}${u.end?"~":""}</span><span class="t"><span class="${u.stat?.verdict==="more"?"hi":""}">${esc(u.name)}</span> <small>· ${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년 발사(평소 ${u.stat.expected})`:"과거 집계 없음"}</small></span></li>`).join(""):'<li><span class="d">—</span><span class="t">앞으로 30일 안 주요 일정 없음</span></li>'}</ul>`;
+    `<ul class="fcu">${up.length?up.slice(0,2).map(u=>`<li><span class="d">${fcMD(u.start)}${u.end?"~":""}</span><span class="t"><span class="${u.stat?.verdict==="more"?"hi":""}">${esc(u.name)}</span> <small>· ${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년 발사(평소 ${u.stat.expected})`:"과거 집계 없음"}</small></span></li>`).join(""):`<li><span class="d">—</span><span class="t">앞으로 ${doc.config?.horizon_days||90}일 안 주요 일정 없음</span></li>`}</ul>`;
 }).catch(()=>{});
 // 누적 조회(GoatCounter, 쿠키 없음). 대시보드 설정 「visitor counts」가 꺼져 있으면 조용히 숨긴다
 // 누적 방문자(GoatCounter 는 같은 사람의 새로고침을 세지 않고, 집계 반영에 수 분 걸린다) — 1분마다 다시 읽는다. 응답이 cache-control:public 이라 매번 다른 쿼리로 우회

@@ -3,10 +3,14 @@
  "config": {
   "window_days": 7,
   "lookback": [
-   2016,
+   2006,
    2025
   ],
-  "horizon_days": 30
+  "horizon_days": 90,
+  "tempo_baseline": [
+   2016,
+   2025
+  ]
  },
  "anchors": [
   {
@@ -14,6 +18,46 @@
    "kind": "exercise",
    "name": "자유의방패(한미연합 · 봄)",
    "dates": {
+    "2006": [
+     "2006-03-25",
+     "2006-03-31"
+    ],
+    "2007": [
+     "2007-03-25",
+     "2007-03-31"
+    ],
+    "2008": [
+     "2008-03-02",
+     "2008-03-07"
+    ],
+    "2009": [
+     "2009-03-09",
+     "2009-03-20"
+    ],
+    "2010": [
+     "2010-03-08",
+     "2010-03-18"
+    ],
+    "2011": [
+     "2011-02-28",
+     "2011-04-30"
+    ],
+    "2012": [
+     "2012-02-27",
+     "2012-04-30"
+    ],
+    "2013": [
+     "2013-03-01",
+     "2013-04-30"
+    ],
+    "2014": [
+     "2014-02-24",
+     "2014-04-18"
+    ],
+    "2015": [
+     "2015-03-02",
+     "2015-04-24"
+    ],
     "2016": [
      "2016-03-07",
      "2016-04-30"
@@ -57,6 +101,16 @@
     ]
    },
    "sources": {
+    "2006": "https://www.globalsecurity.org/military/library/news/2006/04/mil-060407-nns01.htm",
+    "2007": "https://www.globalsecurity.org/military/library/news/2007/04/mil-070406-nns05.htm",
+    "2008": "https://www.koreatimes.co.kr/amp/southkorea/defense/20080302/south-korea-us-begin-large-scale-military-exercise",
+    "2009": "https://www.globalsecurity.org/military/library/news/2009/03/mil-090310-arnews02.htm",
+    "2010": "https://www.globalsecurity.org/military/library/news/2010/03/mil-100307-arnews02.htm",
+    "2011": "https://www.globalsecurity.org/military/library/news/2011/02/mil-110215-voa08.htm",
+    "2012": "https://www.koreatimes.co.kr/southkorea/defense/20120227/korea-us-begin-annual-key-resolve-exercise-as-nk-issues-threat",
+    "2013": "https://www.stripes.com/theaters/asia_pacific/exercises-provide-dry-run-for-s-korean-wartime-control-of-forces-1.migrated",
+    "2014": "https://www.stripes.com/news/pacific/korea/dates-announced-for-spring-us-south-korea-exercises-1.266700",
+    "2015": "https://m.koreaherald.com/article/388814",
     "2016": "https://www.globalsecurity.org/military/library/news/2016/03/mil-160307-pdo01.htm",
     "2017": "https://www.koreajoongangdaily.com/korea/postponed-joint-uskorea-drills-start-april-1/10513538",
     "2018": "https://www.koreatimes.co.kr/southkorea/defense/20180401/south-korea-us-begin-joint-military-drills-amid-diplomatic-thaw",
@@ -71,6 +125,56 @@
    },
    "next": null,
    "check": {
+    "2006": {
+     "verdict": "confirmed",
+     "quote": "Reception, Staging, Onward-Movement and Integration (RSOI) and Foal Eagle (FE) 2006 took place March 25-31 in the Republic of Korea (ROK)",
+     "note": "RSOI·FE 통합 기간(지휘소 단독 날짜 미기재) · GlobalSecurity 미러(미 해군 NNS 원문)"
+    },
+    "2007": {
+     "verdict": "confirmed",
+     "quote": "the annually scheduled combined and joint Exercise Reception, Staging, Onward movement, & Integration and Foal Eagle 2007 (RSOI/FOAL EAGLE 07), from March 25 to 31.",
+     "note": "RSOI·FE 통합 기간(지휘소 단독 날짜 미기재) · GlobalSecurity 미러(미 해군 NNS 원문)"
+    },
+    "2008": {
+     "verdict": "confirmed",
+     "quote": "South Korea and the United States began their annual large-scale military exercise Sunday. ... Joint drills will be conducted through March 7 in multiple locations throughout South Korea",
+     "note": "키리졸브 첫해 · 독수리 야외기동이 3.7 뒤까지 갔는지 미확인"
+    },
+    "2009": {
+     "verdict": "confirmed",
+     "quote": "Key Resolve/Foal Eagle 2009 began Monday and will continue through March 20 across the Republic of Korea.",
+     "note": "KR/FE 3.9~20 · 독수리 4.30 설(위키)은 원문 미확인이라 미반영"
+    },
+    "2010": {
+     "verdict": "confirmed",
+     "quote": "Eighth (Field) Army Soldiers are participating from March 8 - 18 in Key Resolve/Foal Eagle 2010, the first of two annual peninsula-wide exercises in South Korea.",
+     "note": "주의: 종료일 불확실 — KR/FE 3.8~18 은 원문 확인, 독수리 야외기동이 3.18 뒤(4월)까지 이어졌을 수 있음(원문 403 미확인)"
+    },
+    "2011": {
+     "verdict": "confirmed",
+     "quote": "the annual exercises, code-named Key Resolve and Foal Eagle, will begin February 28 and run through April. ... The Key Resolve drill ... will last through March 10. The Foal Eagle exercise ... will continue until April 30.",
+     "note": "키리졸브 2.28~3.10(사후 확인) + 독수리 ~4.30(사전 발표값)"
+    },
+    "2012": {
+     "verdict": "confirmed",
+     "quote": "South Korea and the U.S. kicked off their joint Key Resolve military exercise on Monday ... The Key Resolve, which will go on until March 9 ... the Foal Eagle, will take place from March 1 to April 30.",
+     "note": "키리졸브 2.27~3.9 + 독수리 3.1~4.30(예정값)"
+    },
+    "2013": {
+     "verdict": "confirmed",
+     "quote": "About 13,500 U.S. troops will participate in the Foal Eagle exercise March 1-April 30 or the Key Resolve exercise March 11-21.",
+     "note": "독수리 3.1~4.30 + 키리졸브 3.11~21(사전 발표, 사후 보도로 확인)"
+    },
+    "2014": {
+     "verdict": "confirmed",
+     "quote": "The Key Resolve command post exercise will take place Feb. 24-March 6, and the Foal Eagle field training exercise will run Feb. 24-April 18, according to the U.S. military.",
+     "note": "키리졸브 2.24~3.6 + 독수리 2.24~4.18"
+    },
+    "2015": {
+     "verdict": "confirmed",
+     "quote": "The computerized command post exercise, called Key Resolve, will be held from March 2-13 ... the allies are scheduled to hold the field training exercise Foal Eagle ... from March 2 to April 24.",
+     "note": "키리졸브 3.2~13 + 독수리 3.2~4.24(연합사 발표)"
+    },
     "2016": {
      "verdict": "confirmed",
      "quote": "SEOUL, March 7 -- South Korea and the United States on Monday kicked off ... The Key Resolve command post exercise ... through March 18, with the Foal Eagle field training exercise lasting until April 30."
@@ -114,13 +218,54 @@
      "verdict": "confirmed",
      "quote": "will hold large-scale springtime military drills on countering North Korean threats from March 9 to 19"
     }
-   }
+   },
+   "note": "창 기준: 2006~2018 = 키리졸브(지휘소)+독수리(야외기동) 연합 전체 기간(2016·2018 기존 항목과 같은 기준), 2019~ = 독수리 폐지 뒤 지휘소 연습(동맹·연합지휘소훈련·자유의방패) 기간. 2006~2015 는 길게는 2달 창이라 그해 「평소라면」 확률이 높게 잡힌다. 2017 은 시작일만 확인(종료 미확인 → 하루 창)."
   },
   {
    "id": "ufs",
    "kind": "exercise",
    "name": "을지자유의방패(한미연합 · 여름)",
    "dates": {
+    "2006": [
+     "2006-08-21",
+     "2006-09-01"
+    ],
+    "2007": [
+     "2007-08-20",
+     "2007-08-31"
+    ],
+    "2008": [
+     "2008-08-18",
+     "2008-08-22"
+    ],
+    "2009": [
+     "2009-08-17",
+     "2009-08-28"
+    ],
+    "2010": [
+     "2010-08-16",
+     "2010-08-26"
+    ],
+    "2011": [
+     "2011-08-16",
+     "2011-08-26"
+    ],
+    "2012": [
+     "2012-08-20",
+     "2012-08-31"
+    ],
+    "2013": [
+     "2013-08-19",
+     "2013-08-30"
+    ],
+    "2014": [
+     "2014-08-18",
+     "2014-08-28"
+    ],
+    "2015": [
+     "2015-08-17",
+     "2015-08-28"
+    ],
     "2016": [
      "2016-08-22",
      "2016-09-02"
@@ -164,6 +309,16 @@
     ]
    },
    "sources": {
+    "2006": "https://www.globalsecurity.org/military/ops/ulchi-focus-lens.htm",
+    "2007": "https://www.globalsecurity.org/military/ops/ulchi-focus-lens.htm",
+    "2008": "https://www.stripes.com/news/2008-07-14/ulchi-freedom-guardian-exercise-slated-for-august-1985033.html",
+    "2009": "https://www.globalsecurity.org/military/library/news/2009/08/mil-090819-arnews08.htm",
+    "2010": "https://www.koreatimes.co.kr/amp/southkorea/defense/20100815/s-korea-us-to-kick-off-annual-war-games",
+    "2011": "https://www.globalsecurity.org/military/library/news/2011/08/mil-110816-arnews01.htm",
+    "2012": "https://www.globalsecurity.org/military/ops/ulchi-freedom-guardian.htm",
+    "2013": "https://www.globalsecurity.org/military/ops/ulchi-freedom-guardian.htm",
+    "2014": "https://www.stripes.com/theaters/asia_pacific/us-south-korea-quietly-end-ulchi-freedom-guardian-exercise-1.300309",
+    "2015": "https://www.globalsecurity.org/military/ops/ulchi-freedom-guardian.htm",
     "2016": "https://nknews.org/?p=796015",
     "2017": "https://www.army.mil/article/192802/dod_announces_start_of_exercise_ulchi_freedom_guardian",
     "2018": "https://www.defensenews.com/news/your-air-force/2018/06/18/south-korea-us-cancel-ulchi-freedom-guardian-exercise-for-2018/",
@@ -178,6 +333,53 @@
    },
    "next": null,
    "check": {
+    "2006": {
+     "verdict": "confirmed",
+     "quote": "Exercise Ulchi Focus Lens '06 ran from Aug. 21 through Sept. 1 across the Korean peninsula.",
+     "note": "을지포커스렌즈 · GlobalSecurity 정리 페이지(1차 원문 아님)"
+    },
+    "2007": {
+     "verdict": "confirmed",
+     "quote": "This year's Ulchi Focus Lens, August 20-31. was the 31st of its kind.",
+     "note": "을지포커스렌즈 · GlobalSecurity 정리 페이지(1차 원문 아님)"
+    },
+    "2008": {
+     "verdict": "confirmed",
+     "quote": "Combined Forces Command officials announced late Thursday that the upcoming Ulchi Freedom Guardian exercise will take place Aug. 18-22.",
+     "note": "주의: 사전 발표값만(종료 사후 확인 없음) · 을지프리덤가디언 첫해"
+    },
+    "2009": {
+     "verdict": "confirmed",
+     "quote": "Ulchi Freedom Guardian, the world's largest annual computerized command and control exercise, is being conducted Aug. 17 - 28 by Republic of Korea and United States military forces."
+    },
+    "2010": {
+     "verdict": "confirmed",
+     "quote": "The militaries of South Korea and the United States will start their annual Ulchi Freedom Guardian (UFG) exercise Aug. 16 ... The computerized simulation war games, which will run through Aug. 26"
+    },
+    "2011": {
+     "verdict": "confirmed",
+     "quote": "The U.S. Army's top operational headquarters in South Korea will train with its Republic of Korea counterparts ... during Exercise Ulchi Freedom Guardian, Aug. 16-26."
+    },
+    "2012": {
+     "verdict": "confirmed",
+     "quote": "The annual Ulchi Freedom Guardian exercise took place from Aug 20-31, 2012.",
+     "note": "GlobalSecurity 정리 페이지(1차 원문 아님) · 중앙일보 보도와 일치"
+    },
+    "2013": {
+     "verdict": "confirmed",
+     "quote": "The Republic of Korea U.S. Combined Forces Command conducted the annual Ulchi Freedom Guardian exercise Aug. 19 through Aug. 30.",
+     "note": "GlobalSecurity 정리 페이지(1차 원문 아님)"
+    },
+    "2014": {
+     "verdict": "confirmed",
+     "quote": "The biggest U.S.-South Korea war games ended Thursday as they began, with little fanfare ... It was scheduled to end Friday.",
+     "note": "실제 8.28 종료(예정 8.29, 연합사 발표 Wayback)"
+    },
+    "2015": {
+     "verdict": "confirmed",
+     "quote": "The Republic of Korea United States Combined Forces Command conducted the annual exercise Ulchi Freedom Guardian 2015 Aug. 17 to Aug. 28.",
+     "note": "GlobalSecurity 정리 페이지(1차 원문 아님) · 성조지 보도와 일치"
+    },
     "2016": {
      "verdict": "confirmed",
      "quote": "From August 22 till September 2, one of three major annual U.S.-ROK maneuvers, \"Ulchi Freedom Guardian\", were conducted."
@@ -219,7 +421,8 @@
      "verdict": "confirmed",
      "quote": "The exercise began Monday and had originally been scheduled to run through Aug. 27. | The exercise will conclude on Aug. 21, six days earlier than scheduled."
     }
-   }
+   },
+   "note": "창 기준: 전 기간 지휘소 연습(을지포커스렌즈 → 을지프리덤가디언 → 을지자유의방패) 기간 — 2006~2015 와 2016~ 같은 기준."
   },
   {
    "id": "0108",
@@ -289,6 +492,26 @@
    "kind": "election",
    "name": "미국 선거일(대선·중간)",
    "dates": {
+    "2006": [
+     "2006-11-07",
+     null
+    ],
+    "2008": [
+     "2008-11-04",
+     null
+    ],
+    "2010": [
+     "2010-11-02",
+     null
+    ],
+    "2012": [
+     "2012-11-06",
+     null
+    ],
+    "2014": [
+     "2014-11-04",
+     null
+    ],
     "2016": [
      "2016-11-08",
      null
@@ -311,14 +534,20 @@
     ]
    },
    "sources": {
-    "rule": "https://en.wikipedia.org/wiki/Election_Day_(United_States)"
+    "rule": "https://en.wikipedia.org/wiki/Election_Day_(United_States)",
+    "2006": "https://www.law.cornell.edu/uscode/text/2/7",
+    "2008": "https://www.law.cornell.edu/uscode/text/2/7",
+    "2010": "https://www.law.cornell.edu/uscode/text/2/7",
+    "2012": "https://www.law.cornell.edu/uscode/text/2/7",
+    "2014": "https://www.law.cornell.edu/uscode/text/2/7"
    },
    "next": {
     "start": "2026-11-03",
     "end": null,
     "label": "미국 중간선거",
     "source": "https://en.wikipedia.org/wiki/Election_Day_(United_States)"
-   }
+   },
+   "note": "2006~2014 는 법정일 계산(2 U.S.C. §7: 11월 첫 월요일 다음 화요일)."
   },
   {
    "id": "hoguk",
@@ -385,11 +614,61 @@
  ],
  "stats": {
   "fs": {
-   "years": 9,
-   "hit": 7,
-   "expected": 5.3,
+   "years": 19,
+   "hit": 11,
+   "expected": 8.7,
    "verdict": "usual",
+   "p_ge": 0.155,
+   "p_le": 0.943,
    "rows": [
+    {
+     "year": 2006,
+     "n": 0
+    },
+    {
+     "year": 2007,
+     "n": 0
+    },
+    {
+     "year": 2008,
+     "n": 0
+    },
+    {
+     "year": 2009,
+     "n": 0
+    },
+    {
+     "year": 2010,
+     "n": 0
+    },
+    {
+     "year": 2011,
+     "n": 0
+    },
+    {
+     "year": 2012,
+     "n": 2,
+     "first": "2012-03-29",
+     "src": "http://english.chosun.com/site/data/html_dir/2012/03/30/2012033001081.html"
+    },
+    {
+     "year": 2013,
+     "n": 1,
+     "first": "2013-03-15",
+     "src": "https://www.nknews.org/2013/03/breaking-north-korea-launches-short-range-missiles-on-east-coast/"
+    },
+    {
+     "year": 2014,
+     "n": 7,
+     "first": "2014-02-27",
+     "src": "http://www.reuters.com/article/us-korea-north-missiles-idUSBREA1Q0U520140227"
+    },
+    {
+     "year": 2015,
+     "n": 5,
+     "first": "2015-03-01",
+     "src": "http://www.voanews.com/a/north-korea-fires-rockets-as-joint-us-south-korean-maneuvers-begin/2664198.html"
+    },
     {
      "year": 2016,
      "n": 11,
@@ -447,11 +726,55 @@
    ]
   },
   "ufs": {
-   "years": 9,
-   "hit": 7,
-   "expected": 5.7,
+   "years": 19,
+   "hit": 8,
+   "expected": 8.0,
    "verdict": "usual",
+   "p_ge": 0.598,
+   "p_le": 0.62,
    "rows": [
+    {
+     "year": 2006,
+     "n": 0
+    },
+    {
+     "year": 2007,
+     "n": 0
+    },
+    {
+     "year": 2008,
+     "n": 0
+    },
+    {
+     "year": 2009,
+     "n": 0
+    },
+    {
+     "year": 2010,
+     "n": 0
+    },
+    {
+     "year": 2011,
+     "n": 0
+    },
+    {
+     "year": 2012,
+     "n": 0
+    },
+    {
+     "year": 2013,
+     "n": 0
+    },
+    {
+     "year": 2014,
+     "n": 2,
+     "first": "2014-08-14",
+     "src": "http://www.reuters.com/article/us-northkorea-rockets-idUSKBN0GE06D20140814"
+    },
+    {
+     "year": 2015,
+     "n": 0
+    },
     {
      "year": 2016,
      "n": 3,
@@ -509,11 +832,53 @@
    ]
   },
   "0108": {
-   "years": 10,
+   "years": 20,
    "hit": 5,
-   "expected": 4.3,
+   "expected": 5.8,
    "verdict": "usual",
+   "p_ge": 0.768,
+   "p_le": 0.436,
    "rows": [
+    {
+     "year": 2006,
+     "n": 0
+    },
+    {
+     "year": 2007,
+     "n": 0
+    },
+    {
+     "year": 2008,
+     "n": 0
+    },
+    {
+     "year": 2009,
+     "n": 0
+    },
+    {
+     "year": 2010,
+     "n": 0
+    },
+    {
+     "year": 2011,
+     "n": 0
+    },
+    {
+     "year": 2012,
+     "n": 0
+    },
+    {
+     "year": 2013,
+     "n": 0
+    },
+    {
+     "year": 2014,
+     "n": 0
+    },
+    {
+     "year": 2015,
+     "n": 0
+    },
     {
      "year": 2016,
      "n": 1,
@@ -567,11 +932,57 @@
    ]
   },
   "0208": {
-   "years": 10,
-   "hit": 3,
-   "expected": 4.3,
+   "years": 20,
+   "hit": 5,
+   "expected": 5.8,
    "verdict": "usual",
+   "p_ge": 0.768,
+   "p_le": 0.436,
    "rows": [
+    {
+     "year": 2006,
+     "n": 0
+    },
+    {
+     "year": 2007,
+     "n": 0
+    },
+    {
+     "year": 2008,
+     "n": 0
+    },
+    {
+     "year": 2009,
+     "n": 0
+    },
+    {
+     "year": 2010,
+     "n": 0
+    },
+    {
+     "year": 2011,
+     "n": 0
+    },
+    {
+     "year": 2012,
+     "n": 0
+    },
+    {
+     "year": 2013,
+     "n": 1,
+     "first": "2013-02-12",
+     "src": "http://www.wsj.com/articles/SB10001424127887324880504578298943003246654"
+    },
+    {
+     "year": 2014,
+     "n": 0
+    },
+    {
+     "year": 2015,
+     "n": 2,
+     "first": "2015-02-07",
+     "src": "http://www.reuters.com/article/us-northkorea-missile-idUSKBN0LB04B20150207"
+    },
     {
      "year": 2016,
      "n": 1,
@@ -621,11 +1032,55 @@
    ]
   },
   "0216": {
-   "years": 10,
-   "hit": 3,
-   "expected": 4.3,
+   "years": 20,
+   "hit": 4,
+   "expected": 5.8,
    "verdict": "usual",
+   "p_ge": 0.907,
+   "p_le": 0.232,
    "rows": [
+    {
+     "year": 2006,
+     "n": 0
+    },
+    {
+     "year": 2007,
+     "n": 0
+    },
+    {
+     "year": 2008,
+     "n": 0
+    },
+    {
+     "year": 2009,
+     "n": 0
+    },
+    {
+     "year": 2010,
+     "n": 0
+    },
+    {
+     "year": 2011,
+     "n": 0
+    },
+    {
+     "year": 2012,
+     "n": 0
+    },
+    {
+     "year": 2013,
+     "n": 1,
+     "first": "2013-02-12",
+     "src": "http://www.wsj.com/articles/SB10001424127887324880504578298943003246654"
+    },
+    {
+     "year": 2014,
+     "n": 0
+    },
+    {
+     "year": 2015,
+     "n": 0
+    },
     {
      "year": 2016,
      "n": 0
@@ -675,11 +1130,55 @@
    ]
   },
   "0415": {
-   "years": 10,
-   "hit": 7,
-   "expected": 4.3,
-   "verdict": "more",
+   "years": 20,
+   "hit": 8,
+   "expected": 5.8,
+   "verdict": "usual",
+   "p_ge": 0.173,
+   "p_le": 0.931,
    "rows": [
+    {
+     "year": 2006,
+     "n": 0
+    },
+    {
+     "year": 2007,
+     "n": 0
+    },
+    {
+     "year": 2008,
+     "n": 0
+    },
+    {
+     "year": 2009,
+     "n": 0
+    },
+    {
+     "year": 2010,
+     "n": 0
+    },
+    {
+     "year": 2011,
+     "n": 0
+    },
+    {
+     "year": 2012,
+     "n": 1,
+     "first": "2012-04-13",
+     "src": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=8&cad=rja&uact=8&ved=0ahUKEwiig6LAsZbNAhVMkx4KHSyiB4gQFghPMAc&url=http%3A%2F%2Fwww.mofa.go.kr%2Fwebmodule%2Fcommon%2Fdownload.jsp%3Fboardid%3D8701%26tablename%3DTYPE_DATABOARD%26seqno%3D058fd3040ff800105efb3f8d%26fileseq%3Dfbcfd1003f93f85fd4fedf9e&usg=AFQjCNGrgQDhfmJZuJR4kDS8zHJFTaEFmQ&sig2=nsL29cSYcHu6bOeW3MX00Q"
+    },
+    {
+     "year": 2013,
+     "n": 0
+    },
+    {
+     "year": 2014,
+     "n": 0
+    },
+    {
+     "year": 2015,
+     "n": 0
+    },
     {
      "year": 2016,
      "n": 2,
@@ -737,11 +1236,55 @@
    ]
   },
   "0727": {
-   "years": 10,
-   "hit": 4,
-   "expected": 4.3,
+   "years": 20,
+   "hit": 5,
+   "expected": 5.8,
    "verdict": "usual",
+   "p_ge": 0.768,
+   "p_le": 0.436,
    "rows": [
+    {
+     "year": 2006,
+     "n": 0
+    },
+    {
+     "year": 2007,
+     "n": 0
+    },
+    {
+     "year": 2008,
+     "n": 0
+    },
+    {
+     "year": 2009,
+     "n": 0
+    },
+    {
+     "year": 2010,
+     "n": 0
+    },
+    {
+     "year": 2011,
+     "n": 0
+    },
+    {
+     "year": 2012,
+     "n": 0
+    },
+    {
+     "year": 2013,
+     "n": 0
+    },
+    {
+     "year": 2014,
+     "n": 1,
+     "first": "2014-07-26",
+     "src": "http://www.koreatimes.co.kr/www/news/nation/2016/06/113_161740.html"
+    },
+    {
+     "year": 2015,
+     "n": 0
+    },
     {
      "year": 2016,
      "n": 1,
@@ -793,11 +1336,55 @@
    ]
   },
   "0909": {
-   "years": 10,
-   "hit": 6,
-   "expected": 4.3,
+   "years": 20,
+   "hit": 7,
+   "expected": 5.8,
    "verdict": "usual",
+   "p_ge": 0.346,
+   "p_le": 0.827,
    "rows": [
+    {
+     "year": 2006,
+     "n": 0
+    },
+    {
+     "year": 2007,
+     "n": 0
+    },
+    {
+     "year": 2008,
+     "n": 0
+    },
+    {
+     "year": 2009,
+     "n": 0
+    },
+    {
+     "year": 2010,
+     "n": 0
+    },
+    {
+     "year": 2011,
+     "n": 0
+    },
+    {
+     "year": 2012,
+     "n": 0
+    },
+    {
+     "year": 2013,
+     "n": 0
+    },
+    {
+     "year": 2014,
+     "n": 1,
+     "first": "2014-09-06",
+     "src": "http://www.telegraph.co.uk/news/worldnews/asia/northkorea/11078937/North-Korea-tests-missiles-ahead-of-South-Korea-holiday.html"
+    },
+    {
+     "year": 2015,
+     "n": 0
+    },
     {
      "year": 2016,
      "n": 2,
@@ -853,11 +1440,59 @@
    ]
   },
   "1010": {
-   "years": 10,
-   "hit": 2,
-   "expected": 4.3,
-   "verdict": "less",
+   "years": 20,
+   "hit": 5,
+   "expected": 5.8,
+   "verdict": "usual",
+   "p_ge": 0.768,
+   "p_le": 0.436,
    "rows": [
+    {
+     "year": 2006,
+     "n": 1,
+     "first": "2006-10-09",
+     "src": "http://georgewbush-whitehouse.archives.gov/news/releases/2006/10/20061009.html"
+    },
+    {
+     "year": 2007,
+     "n": 0
+    },
+    {
+     "year": 2008,
+     "n": 1,
+     "first": "2008-10-07",
+     "src": "http://2001-2009.state.gov/r/pa/prs/dpb/2008/oct/110799.htm"
+    },
+    {
+     "year": 2009,
+     "n": 1,
+     "first": "2009-10-12",
+     "src": "http://www.mnd.go.kr/user/mnd/upload/pblictn/PBLICTNEBOOK_201304110724185440.pdf"
+    },
+    {
+     "year": 2010,
+     "n": 0
+    },
+    {
+     "year": 2011,
+     "n": 0
+    },
+    {
+     "year": 2012,
+     "n": 0
+    },
+    {
+     "year": 2013,
+     "n": 0
+    },
+    {
+     "year": 2014,
+     "n": 0
+    },
+    {
+     "year": 2015,
+     "n": 0
+    },
     {
      "year": 2016,
      "n": 1,
@@ -905,11 +1540,33 @@
    ]
   },
   "us_election": {
-   "years": 5,
+   "years": 10,
    "hit": 2,
-   "expected": 2.0,
+   "expected": 2.8,
    "verdict": "usual",
+   "p_ge": 0.858,
+   "p_le": 0.421,
    "rows": [
+    {
+     "year": 2006,
+     "n": 0
+    },
+    {
+     "year": 2008,
+     "n": 0
+    },
+    {
+     "year": 2010,
+     "n": 0
+    },
+    {
+     "year": 2012,
+     "n": 0
+    },
+    {
+     "year": 2014,
+     "n": 0
+    },
     {
      "year": 2016,
      "n": 0
@@ -969,29 +1626,144 @@
    }
   ],
   "per_year": {
-   "2016": 22,
-   "2017": 18,
-   "2018": 0,
-   "2019": 14,
-   "2020": 6,
-   "2021": 8,
-   "2022": 37,
-   "2023": 24,
-   "2024": 20,
-   "2025": 19,
-   "2026": 22
+   "2006": {
+    "nuclear": 1,
+    "missile": 2,
+    "other": 0,
+    "launch": 3
+   },
+   "2007": {
+    "nuclear": 0,
+    "missile": 3,
+    "other": 0,
+    "launch": 3
+   },
+   "2008": {
+    "nuclear": 0,
+    "missile": 3,
+    "other": 0,
+    "launch": 3
+   },
+   "2009": {
+    "nuclear": 1,
+    "missile": 7,
+    "other": 2,
+    "launch": 8
+   },
+   "2010": {
+    "nuclear": 0,
+    "missile": 0,
+    "other": 8,
+    "launch": 0
+   },
+   "2011": {
+    "nuclear": 0,
+    "missile": 1,
+    "other": 0,
+    "launch": 1
+   },
+   "2012": {
+    "nuclear": 0,
+    "missile": 3,
+    "other": 0,
+    "launch": 3
+   },
+   "2013": {
+    "nuclear": 1,
+    "missile": 4,
+    "other": 1,
+    "launch": 5
+   },
+   "2014": {
+    "nuclear": 0,
+    "missile": 16,
+    "other": 5,
+    "launch": 16
+   },
+   "2015": {
+    "nuclear": 0,
+    "missile": 10,
+    "other": 2,
+    "launch": 10
+   },
+   "2016": {
+    "nuclear": 2,
+    "missile": 20,
+    "other": 3,
+    "launch": 22
+   },
+   "2017": {
+    "nuclear": 1,
+    "missile": 17,
+    "other": 2,
+    "launch": 18
+   },
+   "2018": {
+    "nuclear": 0,
+    "missile": 0,
+    "other": 0,
+    "launch": 0
+   },
+   "2019": {
+    "nuclear": 0,
+    "missile": 14,
+    "other": 2,
+    "launch": 14
+   },
+   "2020": {
+    "nuclear": 0,
+    "missile": 6,
+    "other": 1,
+    "launch": 6
+   },
+   "2021": {
+    "nuclear": 0,
+    "missile": 8,
+    "other": 0,
+    "launch": 8
+   },
+   "2022": {
+    "nuclear": 0,
+    "missile": 37,
+    "other": 9,
+    "launch": 37
+   },
+   "2023": {
+    "nuclear": 0,
+    "missile": 24,
+    "other": 5,
+    "launch": 24
+   },
+   "2024": {
+    "nuclear": 0,
+    "missile": 20,
+    "other": 44,
+    "launch": 20
+   },
+   "2025": {
+    "nuclear": 0,
+    "missile": 19,
+    "other": 4,
+    "launch": 19
+   },
+   "2026": {
+    "nuclear": 0,
+    "missile": 22,
+    "other": 5,
+    "launch": 22
+   }
   },
   "basis": "CSIS 미사일·핵 도발 날짜, 평소 = 2016~2025 평균"
  },
  "data": {
-  "updated_at": "2026-10-18T13:36:26+00:00",
+  "updated_at": "2026-10-18T13:57:52+00:00",
   "csis_rows": 508,
   "csis_last": "2026-10-14",
   "cns_days": 153,
   "cns_last": "2024-11-05",
   "launch_days": 270
  },
- "_verify": "훈련 연도별 check = 원문 인용·판정(2026-10-18 검증). confirmed 19 · start_only 4(note 참고). USFK.mil 은 403 이라 보도로 대체",
+ "_verify": "훈련 연도별 check = 원문 인용·판정(2016~ 2026-10-18 검증 · 2006~2015 2026-10-18 조사 추가). confirmed 36 · start_only 4(note 참고). USFK.mil 은 403 이라 보도·Wayback 으로 대체. GlobalSecurity 정리 페이지는 1차 원문 아님(note 표기)",
  "cns": {
   "1984-04-09": "http://www.nti.org/media/pdfs/north_korea_missile_2.pdf?_=1327534760",
   "1984-09-01": null,
@@ -1147,5 +1919,105 @@
   "2024-10-31": "https://en.yna.co.kr/view/AEN20241031002253315",
   "2024-11-05": "https://en.yna.co.kr/view/AEN20241105001354315"
  },
- "_exercises": "외국 훈련은 공식 발표 원문을 연 것만(2026-10-18 조사). 일본 통합막료감부·중국 해사국 목록 페이지는 403 — 새 공고는 수동 확인. 대만 해군 정례 해상훈련(가오슝 남서)은 한반도 판단과 무관해 제외"
+ "_exercises": "외국 훈련은 공식 발표 원문을 연 것만(2026-10-18 조사). 일본 통합막료감부·중국 해사국 목록 페이지는 403 — 새 공고는 수동 확인. 대만 해군 정례 해상훈련(가오슝 남서)은 한반도 판단과 무관해 제외",
+ "season": {
+  "months": [
+   {
+    "m": 1,
+    "days": 17,
+    "years": 5,
+    "expected": 19.4
+   },
+   {
+    "m": 2,
+    "days": 13,
+    "years": 9,
+    "expected": 17.6
+   },
+   {
+    "m": 3,
+    "days": 39,
+    "years": 14,
+    "expected": 19.4
+   },
+   {
+    "m": 4,
+    "days": 21,
+    "years": 11,
+    "expected": 18.7
+   },
+   {
+    "m": 5,
+    "days": 28,
+    "years": 12,
+    "expected": 19.4
+   },
+   {
+    "m": 6,
+    "days": 12,
+    "years": 10,
+    "expected": 18.7
+   },
+   {
+    "m": 7,
+    "days": 20,
+    "years": 9,
+    "expected": 19.4
+   },
+   {
+    "m": 8,
+    "days": 15,
+    "years": 8,
+    "expected": 19.4
+   },
+   {
+    "m": 9,
+    "days": 21,
+    "years": 8,
+    "expected": 18.7
+   },
+   {
+    "m": 10,
+    "days": 18,
+    "years": 9,
+    "expected": 19.4
+   },
+   {
+    "m": 11,
+    "days": 14,
+    "years": 7,
+    "expected": 18.7
+   },
+   {
+    "m": 12,
+    "days": 10,
+    "years": 5,
+    "expected": 19.4
+   }
+  ],
+  "years": 20,
+  "basis": "발사한 날(CSIS ∪ CNS) 2006~2025 · 평소 = 그해 발사한 날 수 × 달 길이/1년"
+ },
+ "relaunch": {
+  "rate": {
+   "7": {
+    "n": 228,
+    "hit": 100,
+    "pct": 44
+   },
+   "14": {
+    "n": 228,
+    "hit": 137,
+    "pct": 60
+   },
+   "30": {
+    "n": 228,
+    "hit": 179,
+    "pct": 79
+   }
+  },
+  "last": "2026-10-14",
+  "since": 4,
+  "basis": "발사한 날 228일(2006~2025) 각각의 다음 발사까지 간격"
+ }
 }

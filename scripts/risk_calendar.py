@@ -6,11 +6,15 @@
 정본은 data/risk_calendar.json 한 파일이다.
   anchors  사람이 고치는 부분 — 훈련 연도별 날짜·기념일·선거·정상회담과 출처(원문을 확인한 값만)
   stats    이 스크립트가 쓰는 부분 — 기준일 ±WINDOW 일 안에 발사가 있던 해, 평소라면 기대되는 해 수
-  tempo    이 스크립트가 쓰는 부분 — 최근 30일 발사한 날 수 vs 평소 30일
+  tempo    이 스크립트가 쓰는 부분 — 최근 30일 발사한 날 수 vs 평소 30일, 연도별 종류별(미사일·핵·기타) 날 수
+  season   이 스크립트가 쓰는 부분 — 달별 발사한 날 수 합·발사가 있던 해 수 vs 달 길이 비례 기대치
+  relaunch 이 스크립트가 쓰는 부분 — 발사한 날 뒤 7·14·30일 안에 또 발사한 비율(과거 빈도), 마지막 발사일
 
 발사 = CSIS Beyond Parallel 도발 DB 의 Missile·Nuclear Provocation 날짜 ∪ CNS 미사일 시험 DB(2024-11 까지, UTC → KST).
 같은 날 여러 발은 1일. 풍선·포격 같은 Other Provocation 은 세지 않는다(종류가 섞여 해마다 기준이 흔들린다).
 평소라면 = 그해 아무 날이나 같은 길이 기간을 골랐을 때 발사가 들어 있었을 확률을 연도별로 더한 값.
+판단 = 연도별 그 확률로 「발사 있던 해 수」의 정확한 분포(Poisson-binomial)를 만들어, 실제 값이 우연으로 나올
+가능성이 한쪽 10% 미만이면 more/less, 아니면 usual. 이 가능성(p_ge·p_le)은 판단용이고 화면에 확률로 싣지 않는다.
 우리는 「전쟁 확률」을 만들지 않는다 — 이 파일은 「언제 더 자주 볼지」를 정하는 데만 쓴다.
 """
 from __future__ import annotations
@@ -107,39 +111,109 @@ def chance(year: int, length: int, days: set[date]) -> float:
     return hit / n
 
 
+VERDICT_P = 0.1  # 한쪽 꼬리 10% — 「우연으로 보기 어려운 정도」
+
+
+def poisson_binomial(ps: list[float]) -> list[float]:
+    """독립 시행 확률 ps → 성공 횟수 k 의 정확한 확률 [P(X=0), …, P(X=n)]."""
+    dist = [1.0]
+    for p in ps:
+        nxt = [0.0] * (len(dist) + 1)
+        for k, q in enumerate(dist):
+            nxt[k] += q * (1 - p)
+            nxt[k + 1] += q * p
+        dist = nxt
+    return dist
+
+
+def verdict(ps: list[float], hit: int, cut: float = VERDICT_P) -> tuple[str, float, float]:
+    """(more|less|usual, P(X≥hit), P(X≤hit)) — 한쪽 꼬리가 cut 미만이면 평소와 다르다고 본다."""
+    dist = poisson_binomial(ps)
+    ge, le = sum(dist[hit:]), sum(dist[:hit + 1])
+    return ("more" if ge < cut else "less" if le < cut else "usual"), ge, le
+
+
 def anchor_stats(a: dict, days: dict[date, str | None], years: range, w: int) -> dict | None:
     occ = occurrences(a, years)
     if not occ:
         return None
     by_year = {y: {d for d in days if d.year == y} for y in years}
-    rows, exp = [], 0.0
+    rows, ps = [], []
     for y in sorted(occ):
         if occ[y] is None:
             rows.append({"year": y, "held": False})
             continue
         lo, hi = occ[y][0] - timedelta(w), occ[y][1] + timedelta(w)
         hits = sorted(d for d in days if lo <= d <= hi)
-        exp += chance(y, (hi - lo).days + 1, by_year[y])
+        ps.append(chance(y, (hi - lo).days + 1, by_year[y]))
         rows.append({"year": y, "n": len(hits), **({"first": hits[0].isoformat(), "src": days[hits[0]]} if hits else {})})
     counted = [r for r in rows if r.get("held", True)]
     hit = sum(1 for r in counted if r["n"])
-    diff = hit - exp
-    return {"years": len(counted), "hit": hit, "expected": round(exp, 1),
-            "verdict": "more" if diff >= 2 else "less" if diff <= -2 else "usual", "rows": rows}
+    v, ge, le = verdict(ps, hit)
+    return {"years": len(counted), "hit": hit, "expected": round(sum(ps), 1), "verdict": v,
+            "p_ge": round(ge, 3), "p_le": round(le, 3), "rows": rows}
 
 
-def tempo(csis: list[dict], today: date, years: range) -> dict:
-    """최근 30일 발사한 날 수 — CSIS 만 쓴다(CNS 는 2024-11 에서 끝나 최근과 비교 기준이 달라진다)."""
+def month_len(y: int, m: int) -> int:
+    return ((date(y + m // 12, m % 12 + 1, 1)) - date(y, m, 1)).days
+
+
+def season(days: set[date], years: range) -> list[dict]:
+    """달별 {발사한 날 수 합, 발사가 있던 해 수, 평소(그해 발사한 날 수를 달 길이로 나눈 기대치의 합)}."""
+    out = []
+    for m in range(1, 13):
+        n = sum(1 for d in days if d.year in years and d.month == m)
+        yrs = sum(1 for y in years if any(d.year == y and d.month == m for d in days))
+        exp = sum(sum(1 for d in days if d.year == y) * month_len(y, m) / (date(y + 1, 1, 1) - date(y, 1, 1)).days
+                  for y in years)
+        out.append({"m": m, "days": n, "years": yrs, "expected": round(exp, 1)})
+    return out
+
+
+def relaunch(days: set[date], years: range, today: date, ks: tuple[int, ...] = (7, 14, 30)) -> dict:
+    """기간 안 발사한 날마다 「k 일 안에 또 발사했나」 — 과거 빈도다(예측 확률 아님).
+    다음 발사는 기간 밖(이후)도 본다. 아직 k 일이 다 지나지 않은 날은 분모에서 뺀다."""
+    srt = sorted(d for d in days if d <= today)
+    base = [d for d in srt if d.year in years]
+    nxt = {a: b for a, b in zip(srt, srt[1:])}
+    rate = {}
+    for k in ks:
+        pool = [d for d in base if d in nxt or (today - d).days > k]
+        hit = sum(1 for d in pool if d in nxt and (nxt[d] - d).days <= k)
+        rate[str(k)] = {"n": len(pool), "hit": hit, "pct": round(100 * hit / len(pool)) if pool else None}
+    last = srt[-1] if srt else None
+    return {"rate": rate, "last": last.isoformat() if last else None, "since": (today - last).days if last else None,
+            "basis": f"발사한 날 {len(base)}일({years.start}~{years.stop - 1}) 각각의 다음 발사까지 간격"}
+
+
+KIND_RANK = {"nuclear": 0, "missile": 1, "other": 2}
+
+
+def tempo(csis: list[dict], today: date, years: range, base_years: range | None = None) -> dict:
+    """최근 30일 발사한 날 수 — CSIS 만 쓴다(CNS 는 2024-11 에서 끝나 최근과 비교 기준이 달라진다).
+    per_year = 연도별 종류별 날 수. 한 날에 종류가 겹치면 핵 > 미사일 > 기타 하나로(누적 막대 합 = 도발한 날 수).
+    launch = 미사일+핵(위험 판단에 쓰는 값) · other 는 표시만 한다.
+    평소(avg30)는 base_years(config.tempo_baseline, 최근 10년) — 지금 빈도는 지금 체제와 비교한다(2006~13 저빈도가 기준을 낮춰 배율을 부풀린다)."""
+    base_years = base_years or years
+    kind = {}
+    for e in csis:
+        k = {"Nuclear Provocation": "nuclear", "Missile Provocation": "missile"}.get(e["kind"], "other")
+        x = date.fromisoformat(e["date"])
+        if KIND_RANK[k] < KIND_RANK.get(kind.get(x), 9):
+            kind[x] = k
     d = {}
     for e in csis:
         if e["kind"] != "Other Provocation":
             d.setdefault(date.fromisoformat(e["date"]), e)
     last = sorted((x for x in d if today - timedelta(30) <= x < today), reverse=True)
-    base = sum(1 for x in d if x.year in years) / (len(years) * 365) * 30
-    per_year = {str(y): sum(1 for x in d if x.year == y) for y in range(years.start, today.year + 1)}
+    base = sum(1 for x in d if x.year in base_years) / (len(base_years) * 365) * 30
+    per_year = {}
+    for y in range(years.start, today.year + 1):
+        c = {k: sum(1 for x, v in kind.items() if x.year == y and v == k) for k in KIND_RANK}
+        per_year[str(y)] = {**c, "launch": c["missile"] + c["nuclear"]}
     return {"last30": len(last), "avg30": round(base, 1), "ratio": round(len(last) / base, 1) if base else None,
             "recent": [{"date": x.isoformat(), "event": d[x]["event"], "src": d[x]["src"]} for x in last],
-            "per_year": per_year, "basis": f"CSIS 미사일·핵 도발 날짜, 평소 = {years.start}~{years.stop - 1} 평균"}
+            "per_year": per_year, "basis": f"CSIS 미사일·핵 도발 날짜, 평소 = {base_years.start}~{base_years.stop - 1} 평균"}
 
 
 def main() -> int:
@@ -159,13 +233,19 @@ def main() -> int:
         print(f"CNS 받기 실패 — 저장본 {len(cns)}일 사용: {e}")
     days = launch_days(csis, cns)
     doc["stats"] = {a["id"]: s for a in doc["anchors"] if (s := anchor_stats(a, days, years, cfg["window_days"]))}
-    doc["tempo"] = tempo(csis, today, years)
+    tb = cfg.get("tempo_baseline")
+    doc["tempo"] = tempo(csis, today, years, range(tb[0], tb[1] + 1) if tb else None)
+    doc["season"] = {"months": season(set(days), years), "years": len(years),
+                     "basis": f"발사한 날(CSIS ∪ CNS) {years.start}~{years.stop - 1} · 평소 = 그해 발사한 날 수 × 달 길이/1년"}
+    doc["relaunch"] = relaunch(set(days), years, today)
     doc["data"] = {"updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                    "csis_rows": len(csis), "csis_last": max(e["date"] for e in csis),
                    "cns_days": len(cns), "cns_last": max(cns), "launch_days": len(days)}
-    summary = {k: f'{v["hit"]}/{v["years"]} vs {v["expected"]} {v["verdict"]}' for k, v in doc["stats"].items()}
+    summary = {k: f'{v["hit"]}/{v["years"]} vs {v["expected"]} {v["verdict"]} (≥{v["p_ge"]} ≤{v["p_le"]})'
+               for k, v in doc["stats"].items()}
+    top = sorted(doc["season"]["months"], key=lambda r: -r["days"])[:3]
     print(json.dumps({"tempo": {k: doc["tempo"][k] for k in ("last30", "avg30", "ratio")}, "stats": summary,
-                      "data": doc["data"]}, ensure_ascii=False, indent=1))
+                      "season_top3": top, "relaunch": doc["relaunch"], "data": doc["data"]}, ensure_ascii=False, indent=1))
     if "--dry" not in sys.argv:
         DOC.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
     return 0

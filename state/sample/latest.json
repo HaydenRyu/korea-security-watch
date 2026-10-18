@@ -73,10 +73,16 @@
       "lat": 37.95,
       "lon": 126.9
     },
+    "electronic_cyber": {
+      "status": "none"
+    },
     "foreign_forces": {
       "status": "none"
     },
     "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
       "status": "none"
     },
     "gov_warning": {

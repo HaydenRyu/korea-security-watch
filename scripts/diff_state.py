@@ -24,11 +24,14 @@ ITEMS = {
     "nuclear": "핵·전략무기",
     "logistics": "군수 비축·수송",
     "border_clash": "DMZ·NLL 충돌",
+    "electronic_cyber": "전자전·사이버",
     "foreign_forces": "미·중·러 이상 동향",
     "parade_massing": "기념일 전후 집결",
+    "nk_internal": "북 내부 전시태세",
     "gov_warning": "정부 긴급 경고",
 }
-# 이 중 하나가 교차확인되고 다른 항목 징후가 동시에 있으면 등급 3
+# 이 중 하나가 교차확인되고 다른 항목 징후가 동시에 있으면 등급 3.
+# 전자전·사이버, 북 내부 전시태세는 일반 징후다 — 다른 항목과 겹치면 등급을 올리지만 단독으로 위험을 만들지 않는다.
 CRITICAL = {"nuclear", "troop_movement", "gov_warning"}
 STATUSES = {"none", "single", "corroborated"}
 GRADE_LABEL = {0: "평시", 1: "주의", 2: "경계", 3: "위험"}
@@ -62,7 +65,7 @@ def validate(run: dict) -> None:
         raise RunError(f"items 키는 정확히 {sorted(ITEMS)} 여야 한다")
     cov = run.get("coverage")
     if not isinstance(cov, dict) or any(not cov.get(k) for k in ITEMS):
-        raise RunError("coverage 에 7개 항목마다 검색어가 1개 이상 있어야 한다")
+        raise RunError(f"coverage 에 {len(ITEMS)}개 항목마다 검색어가 1개 이상 있어야 한다")
     opened = _opened(run)
     if len(opened) < MIN_OPENED:
         raise RunError(f"원문을 {MIN_OPENED}건 이상 열어야 한다(opened {len(opened)}건)")
@@ -231,6 +234,33 @@ def with_world(new_latest: dict, run: dict, latest: dict | None, now: str) -> di
     return new_latest
 
 
+def last_verified(events: list[dict]) -> dict | None:
+    """판정 불가 회차를 건너뛴 직전 판정 회차."""
+    return next((e for e in reversed(events) if e.get("status") == "ok"), None)
+
+
+def drop_confirmed(events: list[dict], cur_grade: int) -> bool:
+    """내림은 두 회차 연속일 때만 — 직전 판정 회차의 산정 등급도 현재 등급보다 낮았는가.
+    판정 불가 회차는 연속을 늘리지도 끊지도 않는다(last_verified 가 건너뛴다)."""
+    e = last_verified(events)
+    return e is not None and e.get("raw_grade", e.get("grade", cur_grade)) < cur_grade
+
+
+def held_step(run: dict, latest: dict, events: list[dict], grade: int, active: set[str],
+              now: str) -> tuple[dict, dict, None]:
+    """내림 보류: 표시 등급·항목은 직전 판정 그대로, 이번 산정값은 이력과 latest.held 에 정직하게 남긴다.
+    알림(해제 포함)은 내림이 적용되는 회차에 한 번만 나간다."""
+    cur = latest.get("grade", 0)
+    new_latest = with_world({k: v for k, v in latest.items() if k != "held"}, run, latest, now)
+    new_latest["held"] = {"raw_grade": grade, "raw_label": GRADE_LABEL[grade], "at": now,
+                          "summary": run.get("overall_summary", "")}
+    event = {"checked_at": now, "status": "ok", "grade": cur, "prev_grade": cur, "raw_grade": grade,
+             "held": True, "active": sorted(latest.get("active", [])), "raw_active": sorted(active), "new": [],
+             "notified": False, "summary": run.get("overall_summary", ""), "sources": event_sources(run["items"]),
+             "friends": False}
+    return new_latest, event, None
+
+
 def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | None, dict, dict | None]:
     """(새 latest 또는 None=유지, 이벤트, outbox 또는 None)"""
     validate(run)
@@ -255,6 +285,10 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     prev_grade = (latest or {}).get("grade", 0)
     prev_active = set((latest or {}).get("active", []))
     active = active_keys(items)
+
+    if latest is not None and grade < prev_grade and not drop_confirmed(events, prev_grade):
+        return held_step(run, latest, events, grade, active, now)
+
     new_keys = active - prev_active
 
     if latest is None:
@@ -268,7 +302,7 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
 
     new_latest = with_world({**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)},
                             run, latest, now)
-    event = {"checked_at": now, "status": "ok", "grade": grade, "prev_grade": prev_grade,
+    event = {"checked_at": now, "status": "ok", "grade": grade, "prev_grade": prev_grade, "raw_grade": grade,
              "active": sorted(active), "new": sorted(new_keys), "notified": notify,
              "summary": run.get("overall_summary", ""), "sources": event_sources(items)}
     event["friends"] = friends or released

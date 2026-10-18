@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="JIS">
 <meta property="og:title" content="JIS · 북한 전쟁·핵 징후 감시">
-<meta property="og:description" content="공개정보(OSINT)로 매시간 확인하는 비공식 개인 감시판 — 현재 등급·감시 항목 7개·근거 출처">
+<meta property="og:description" content="공개정보(OSINT)로 매시간 확인하는 비공식 개인 감시판 — 현재 등급·감시 항목 9개·근거 출처">
 <meta property="og:url" content="https://haydenryu.github.io/korea-security-watch/">
 <meta property="og:image" content="https://haydenryu.github.io/korea-security-watch/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -85,6 +85,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .ladder span{font:400 10px/1 var(--data);color:var(--dim);padding-top:8px;border-top:3px solid var(--line-2)}
 .ladder span.on{color:var(--ice);border-color:var(--gc)}
 #summary{margin:12px 0 0;color:var(--ice)}
+#summary .held{display:block;margin-top:8px;font-size:12px;line-height:1.5;color:var(--fog)}
 
 /* 감시 항목: 이름 · 상태 · 막대 세 칸은 모든 행이 같은 x 에 선다 */
 #sensors-p .pb{padding:0}
@@ -130,6 +131,16 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
   @keyframes ping{from{transform:scale(.4);opacity:.9}to{transform:scale(1.6);opacity:0}}}
 .leaflet-tooltip.tip{background:var(--head);color:var(--ice);border:1px solid var(--line-2);border-radius:0;font:500 12px var(--text);box-shadow:none}
 .leaflet-tooltip.tip::before{display:none}
+/* 지도 팝업(열점·지하철역) — 누르면 열린다. 상황판 톤 */
+.jpop .leaflet-popup-content-wrapper{background:var(--head);color:var(--ice);border:1px solid var(--line-2);border-radius:0;box-shadow:none}
+.jpop .leaflet-popup-tip{background:var(--head);border:1px solid var(--line-2);box-shadow:none}
+.jpop .leaflet-popup-content{margin:12px;font:400 12px/1.5 var(--text);min-width:200px}
+.jpop a.leaflet-popup-close-button{color:var(--fog);font:400 16px/24px var(--data);width:24px;height:24px}
+.pop .ph2{display:flex;gap:8px;align-items:center;margin:0 24px 8px 0;font-size:13px}
+.pop .btag{font:500 10px/1 var(--data);padding:4px 6px;border:1px solid var(--g2);color:var(--g2)}
+.pop dl{display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 8px;margin:0 0 8px}
+.pop dt{font:400 10px/1.8 var(--data);color:var(--fog)} .pop dd{margin:0} .pop .dim{color:var(--dim)}
+.pop p{margin:0;color:var(--fog);font-size:11px;line-height:1.55}
 .leaflet-container{font-family:var(--text)}
 .leaflet-control-attribution{background:rgba(5,8,14,.75)!important;color:var(--dim)!important;font:400 9px var(--data)}
 .leaflet-control-attribution a{color:var(--fog)!important}
@@ -200,6 +211,8 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .tsec li{padding-left:16px;position:relative}
 .tsec li::before{content:"";position:absolute;left:2px;top:.6em;width:5px;height:5px;background:var(--line-2)}
 .tsec li.ck{padding-left:0}.tsec li.ck::before{display:none}
+.tsec li .sn{font-weight:600;margin-right:4px} .tsec li .km{float:right;font:400 11px/1.6 var(--data);color:var(--fog);margin-left:8px}
+.tsec li.note{padding-left:0;font-size:12px;color:var(--fog)}.tsec li.note::before{display:none} .tsec li.note a{color:var(--g0)}
 .tsec label{display:flex;gap:8px;align-items:baseline;cursor:pointer}
 .tsec input{accent-color:var(--g0);margin:0;flex:none;transform:translateY(2px)}
 .tlinks{display:flex;flex-wrap:wrap;gap:8px 16px;padding:12px var(--pad);border-bottom:1px solid var(--line);font-size:12px}
@@ -262,7 +275,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
   body{height:100vh;display:flex;flex-direction:column}
   #main{flex:1;min-height:0;display:flex;flex-direction:column}
   .ops{flex:0 0 100%;min-height:0;grid-template-columns:344px minmax(0,1fr) 360px;grid-template-rows:auto minmax(0,1fr) 200px;
-    grid-template-areas:"status map crit" "sensors map air" "sensors trend log"}  /* 감시 항목은 왼쪽 두 칸 높이 — 7행이 스크롤 없이 다 보인다 */
+    grid-template-areas:"status map crit" "sensors map air" "sensors trend log"}  /* 감시 항목은 왼쪽 두 칸 높이 — 9행이 스크롤 없이 다 보인다 */
   #map-p,#air-p,#log-p,#trend-p{height:auto}
   .row .what{-webkit-line-clamp:1}  /* 한 화면 고정이라 요약은 1줄, 전문은 항목 상세 */
   .foot{display:none}
@@ -270,14 +283,18 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 }
 @media (min-width:1180px) and (max-width:1439px) and (min-height:680px){
   .ops{grid-template-columns:304px minmax(0,1fr) 312px;grid-template-rows:auto minmax(0,1fr) 168px}
+  .layers button{padding:6px}  /* 레이어 6개 — 1366 폭에서 지도 머리띠가 한 줄로 */
 }
 @media (min-width:1180px) and (min-height:680px) and (max-height:819px){
   .ops{grid-template-rows:auto minmax(0,1fr) 168px}
-  .row{padding-top:8px;padding-bottom:8px}
+  /* 9행: 행 높이 29px(위아래 4 + 이름 20 + 선 1) — 1280×680 에서도 9행 + 징후 1행이 스크롤 없이 들어간다 */
+  .row,.row:not(.on){padding-top:4px;padding-bottom:4px}
+  .row .name{line-height:20px}
 }
 @media (min-width:1180px) and (min-height:680px) and (max-height:759px){
   .ops{grid-template-rows:auto minmax(0,1fr) 160px}  /* 기록은 쌓이는 목록이라 스크롤 */
-  .row .src{display:none}  /* 낮은 화면: 출처 줄은 항목 상세에서 — 감시 항목 7행이 다 보이게 */
+  .row .src{display:none}  /* 낮은 화면: 출처 줄은 항목 상세에서 — 감시 항목 9행이 다 보이게 */
+  .row .what{line-height:18px}
 }
 
 /* 항목 상세 */
@@ -306,6 +323,14 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .h .t{font:400 11px var(--data);color:var(--fog)}
 .none{color:var(--dim);font-size:13px;padding:8px var(--pad)}
 @media (max-width:759px){
+  /* 휴대폰 순서: 현재 등급 → 지금 할 일 → 감시 항목 → 알림 기록 → 지도 → 등급 추이 → 세계 안보 브리핑 → 등급 기준 → 항공기.
+     두 묶음(.ops·.more)을 풀어 한 세로 줄로 놓고 order 로 섞는다. 태블릿·데스크톱 배치는 grid-area 그대로 */
+  #main{display:flex;flex-direction:column;gap:var(--gap);padding:var(--gap) var(--side)}
+  .ops,.more{display:contents}
+  #status{order:1} #todo-p{order:2} #sensors-p{order:3} #log-p{order:4} #map-p{order:5}
+  #trend-p{order:6} #world-p{order:7} #crit-p{order:8} #air-p{order:9}
+  .foot{order:10;padding:4px 0 32px}
+  .todo .dn{display:none}  /* 휴대폰에선 「지금 할 일」 칸이 위에 있다 — 아래 화살표를 숨긴다 */
   /* 머리띠가 두 줄로 접히면 위아래 여백이 0 이 된다 — 8px 를 주고 줄 사이도 8px 로 */
   .ph{padding:8px var(--pad);row-gap:8px}
   /* 지도 레이어 버튼은 한 줄 가로 스크롤 — 줄바꿈되면 머리띠가 들쭉날쭉해진다 */
@@ -350,8 +375,13 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
   </section>
 
   <section class="p" id="sensors-p" aria-label="감시 항목">
-    <div class="ph"><span class="k">감시 항목</span><span class="r" id="sensorsum">7개</span></div>
+    <div class="ph"><span class="k">감시 항목</span><span class="r" id="sensorsum">9개</span></div>
     <div class="pb scroll" id="sensors"></div>
+  </section>
+
+  <section class="p" id="log-p" aria-label="알림 기록">
+    <div class="ph"><span class="k">알림 기록</span><span class="r">알림 · 판정 불가</span></div>
+    <div class="pb scroll" id="log"></div>
   </section>
 
   <section class="p" id="map-p" aria-label="한반도 지도">
@@ -359,23 +389,13 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
       <div class="layers" role="group" aria-label="지도 레이어">
         <button type="button" data-layer="day" aria-pressed="true">주간 위성</button>
         <button type="button" data-layer="night" aria-pressed="false">야간 조명</button>
-        <button type="button" data-layer="shelter" aria-pressed="false" disabled title="자곡동 반경 2km 민방위 대피소(국민재난안전포털)">대피소</button>
+        <button type="button" data-layer="shelter" aria-pressed="false" disabled title="세곡·자곡·율현동 + 자곡동 반경 2km 민방위 대피소(국민재난안전포털)">대피소</button>
+        <button type="button" data-layer="subway" aria-pressed="false" disabled title="자곡동 가까운 지하철역 5곳">지하철</button>
         <button type="button" data-layer="cctv" aria-pressed="false" disabled title="접경 도로 CCTV 위치(국가교통정보센터)">CCTV</button>
-        <button type="button" data-layer="firms" aria-pressed="false" disabled title="위성 열점 — NASA 위성이 감지한 열원(최근 48시간, 산불·소각 포함). 점에 올리거나 누르면 설명">열점</button>
+        <button type="button" data-layer="firms" aria-pressed="false" disabled title="위성 열점 — NASA 위성이 감지한 열원(최근 48시간, 산불·소각 포함). 점을 누르면 위치·설명">열점</button>
       </div></div>
     <div class="pb"><div id="map"></div><div class="reticle"></div><span class="corner a"></span><span class="corner b"></span>
       <div class="hud bl" id="coord">37.80N 127.50E</div></div>
-  </section>
-
-  <section class="p" id="air-p" aria-label="항공기">
-    <div class="ph"><span class="k">공역</span><span>신호를 켠 항공기</span><span class="r">adsb.lol · ODbL</span></div>
-    <div class="pb"><iframe title="한반도 상공 항공기 위치" loading="lazy"
-      src="https://adsb.lol/?lat=37.9&lon=127.3&zoom=6.5&hideSideBar&hideButtons&baseMap=OpenFreeMapDark&mapDim=0.2&iconScale=0.65"></iframe></div>
-  </section>
-
-  <section class="p" id="crit-p" aria-label="등급 기준">
-    <div class="ph"><span class="k">등급 기준</span><span class="r">공식 경보는 재난문자</span></div>
-    <div class="pb scroll" id="crit"></div>
   </section>
 
   <section class="p" id="trend-p" aria-label="등급 추이">
@@ -386,9 +406,15 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
       <div class="xax"><span id="t0">—</span><span>지금</span></div></div></div>
   </section>
 
-  <section class="p" id="log-p" aria-label="알림 기록">
-    <div class="ph"><span class="k">알림 기록</span><span class="r">알림 · 판정 불가</span></div>
-    <div class="pb scroll" id="log"></div>
+  <section class="p" id="crit-p" aria-label="등급 기준">
+    <div class="ph"><span class="k">등급 기준</span><span class="r">공식 경보는 재난문자</span></div>
+    <div class="pb scroll" id="crit"></div>
+  </section>
+
+  <section class="p" id="air-p" aria-label="항공기">
+    <div class="ph"><span class="k">공역</span><span>신호를 켠 항공기</span><span class="r">adsb.lol · ODbL</span></div>
+    <div class="pb"><iframe title="한반도 상공 항공기 위치" loading="lazy"
+      src="https://adsb.lol/?lat=37.9&lon=127.3&zoom=6.5&hideSideBar&hideButtons&baseMap=OpenFreeMapDark&mapDim=0.2&iconScale=0.65"></iframe></div>
   </section>
 </div>
 <div class="more">
@@ -433,8 +459,11 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
   </form>
 </div></dialog>
 <script>
+// 키·순서는 scripts/diff_state.py ITEMS 와 같다
 const ITEMS={troop_movement:"병력 이동·동원",nuclear:"핵·전략무기",logistics:"군수 비축·수송",border_clash:"DMZ·NLL 충돌",
-  foreign_forces:"미·중·러 이상 동향",parade_massing:"기념일 전후 집결",gov_warning:"정부 긴급 경고"};
+  electronic_cyber:"전자전·사이버",foreign_forces:"미·중·러 이상 동향",parade_massing:"기념일 전후 집결",
+  nk_internal:"북 내부 전시태세",gov_warning:"정부 긴급 경고"};
+const NI=Object.keys(ITEMS).length;
 const LABEL=["평시","주의","경계","위험"];
 // 한 줄 요약(칸 높이 고정). 전체 문장은 title 로
 // 등급별 개인 준비 — 이 감시판의 권고일 뿐이다. 실제 대피는 정부 경보(재난문자·사이렌)를 따른다.
@@ -483,12 +512,16 @@ function render(latest,events){
     $("gnum").textContent=g;$("glabel").textContent=LABEL[g];
     document.querySelectorAll("#scale span")[g].classList.add("on");
     $("summary").textContent=latest.overall_summary||"";
+    // 내림 보류: 이번 확인은 더 낮게 산정됐지만 두 회차 연속일 때만 내린다(diff_state.py)
+    const h=latest.held;
+    if(h&&LABEL[h.raw_grade]!=null)$("summary").insertAdjacentHTML("beforeend",
+      `<span class="held">${short(h.at)} 확인은 <b style="color:${C(h.raw_grade)}">${LABEL[h.raw_grade]}</b>로 산정 — 두 번 연속 낮게 나와야 등급을 내립니다. 위 내용은 직전 판정입니다.</span>`);
   }
   $("checked").textContent=lastCheck?short(lastCheck):"—";
   if(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3)$("lag").classList.add("on");
   drawDial(g);
   $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("")
-    +(g!=null?`<div class="todo"><b>지금 할 일</b><span>${TODO[g]}</span><a href="#todo-p" class="go" id="todoJump">비상용품·대피 요령 보기 ↓</a></div>`:"");
+    +(g!=null?`<div class="todo"><b>지금 할 일</b><span>${TODO[g]}</span><a href="#todo-p" class="go" id="todoJump">비상용품·대피 요령 보기<span class="dn"> ↓</span></a></div>`:"");
   renderTodo(g);renderWorld(latest);
 
   const items=latest?.items||{};let n=0;
@@ -501,7 +534,7 @@ function render(latest,events){
     const body=it.status==="none"?"":`<div class="what">${esc(it.summary)}</div>${meta?`<div class="src">${meta}</div>`:""}`;
     return `<a class="row${it.status!=="none"?" on":""}" href="#item=${k}"><span class="name">${name}</span>
       <span class="st">${latest?STAT[s]:"분석 전"}</span><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${body}</a>`}).join("");
-  $("sensorsum").textContent=latest?`7개 중 ${n}개 징후`:"7개";
+  $("sensorsum").textContent=latest?`${NI}개 중 ${n}개 징후`:`${NI}개`;
 
   const rec=events.slice(-72),W=720,H=120,step=W/72,y=gr=>H-6-gr*((H-12)/3);
   let d="",dots="",pen=false;const off=72-rec.length;
@@ -534,7 +567,18 @@ const PREP=[
   ["air","공습 경보가 울리면","사이렌·재난문자",false,
     ["가까운 지하 대피소·지하철역·건물 지하층으로 갑니다","재난문자·TV·라디오의 정부 안내를 따릅니다","해제 안내가 나올 때까지 대피한 곳에 머뭅니다"]],
   ["chem","화학무기 공격이 의심되면","지하로 가지 않습니다",false,
-    ["가스는 낮은 곳에 고이므로 지하가 아니라 건물 높은 층·실내로 갑니다","오염된 곳을 벗어날 때는 바람이 불어가는 쪽을 피해 바람이 불어오는 쪽이나 옆으로 이동합니다","창문을 닫고 문틈을 젖은 수건·테이프로 막습니다","긴 옷·마스크로 피부와 호흡기 노출을 줄입니다"]]];
+    ["가스는 낮은 곳에 고이므로 지하가 아니라 건물 높은 층·실내로 갑니다","오염된 곳을 벗어날 때는 바람이 불어가는 쪽을 피해 바람이 불어오는 쪽이나 옆으로 이동합니다","창문을 닫고 문틈을 젖은 수건·테이프로 막습니다","긴 옷·마스크로 피부와 호흡기 노출을 줄입니다"]],
+  ["alert","재난문자 받는지 확인","휴대폰 설정 한 번",false,
+    ["아이폰 — 설정 → 알림 → 맨 아래 「긴급 재난 문자」「안전 안내 문자」를 켭니다",
+     "안드로이드(삼성) — 설정 → 안전 및 긴급 → 무선 긴급 알림. 또는 메시지 앱 설정 → 긴급 알림 설정",
+     "기종·OS 버전에 따라 메뉴 이름이 다를 수 있습니다. 설정 검색창에 「긴급」을 넣어 찾아 보세요"]]];
+// 자곡동 가까운 지하철역(좌표: OSM Nominatim 역 앞 지점, 약 100m 오차). 세곡동 쪽엔 역이 없다
+const SUBWAY=[["수서역","SRT·3호선·수인분당선",37.4873,127.1017],["대모산입구역","수인분당선",37.4914,127.0729],
+  ["일원역","3호선",37.4843,127.0837],["가락시장역","3·8호선",37.4925,127.1186],["복정역","8호선·수인분당선",37.4701,127.1256]];
+const HOME={lat:37.474,lon:127.103};  // 자곡동 기준점(data/shelters.json center 와 같다)
+const subDist=x=>km(HOME.lat,HOME.lon,x[2],x[3]);
+function shelterLabel(){const d=SHEL?.dongs?.length?SHEL.dongs.map(x=>x.replace(/동$/,"")).join("·"):"세곡·자곡·율현";
+  return`${d} 대피소${SHEL?` · ${SHEL.shelters.length}곳`:""}`}
 const CK="jisPrep";
 function ckGet(){try{return JSON.parse(localStorage.getItem(CK)||"{}")}catch(_){return{}}}
 function renderTodo(g){
@@ -542,7 +586,10 @@ function renderTodo(g){
   $("todo").innerHTML=`<div class="tnow"><b>현재 등급 <em>${g!=null?LABEL[g]:"분석 전"}</em> 기준</b><span>${g!=null?TODO[g]:"첫 분석 결과를 기다리는 중입니다."}</span></div>`
     +PREP.map(([k,t,sub,isCk,list])=>`<details class="tsec" data-k="${k}"${open(k)?" open":""}><summary>${t}<small>${sub}</small></summary><ul>`
       +list.map((x,i)=>isCk?`<li class="ck"><label><input type="checkbox" data-ck="${k}${i}"${ck[k+i]?" checked":""}>${x}</label></li>`:`<li>${x}</li>`).join("")+`</ul></details>`).join("")
-    +`<div class="tlinks"><a href="#map-p" class="go findShelter">자곡동 대피소 보기${SHEL?` · ${SHEL.shelters.length}곳`:""}</a><a href="${SHELTER_URL}" target="_blank" rel="noopener">다른 지역 대피소 · 국민재난안전포털</a></div>`
+    +`<details class="tsec" data-k="subway"${g>=3?" open":""}><summary>가까운 지하철역<small>자곡동 기준 직선거리</small></summary><ul>`
+      +SUBWAY.map(x=>[x,subDist(x)]).sort((a,b)=>a[1]-b[1]).map(([x,k])=>`<li><b class="sn">${x[0]}</b> ${x[1]}<span class="km">${k.toFixed(1)}km</span></li>`).join("")
+      +`<li>세곡동 쪽에는 지하철역이 없습니다</li><li class="note">지하철역은 민방위 대피소로 지정된 곳이 많습니다. 지정 여부는 대피소 지도와 국민재난안전포털에서 확인하세요. <a href="#map-p" class="go findSubway">지도에서 보기</a></li></ul></details>`
+    +`<div class="tlinks"><a href="#map-p" class="go findShelter">${shelterLabel()}</a><a href="${SHELTER_URL}" target="_blank" rel="noopener">다른 지역 대피소 · 국민재난안전포털</a></div>`
     +`<p class="disc">이 감시판의 권고입니다. 실제 대피는 정부 경보(재난문자·민방위 사이렌·TV·라디오)를 따르세요. 행동요령 원문은 <a href="https://www.safekorea.go.kr" target="_blank" rel="noopener">국민재난안전포털</a>에 있습니다.</p>`;
 }
 document.addEventListener("change",e=>{const k=e.target.dataset?.ck;if(!k)return;const ck=ckGet();
@@ -572,6 +619,7 @@ function renderDetail(k){
   $("detail").innerHTML=`<a class="back" href="#">← 감시판으로</a>
     <div class="dhead"><h2>${name}</h2><div class="st"><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${STAT[s]}${meta?" · "+meta:""}</div></div>
     <p class="dsum">${it.status==="none"?(DATA.latest?"현재 보고된 이상 징후가 없습니다.":"첫 분석 전입니다."):esc(it.summary)}</p>
+    ${it.status==="none"&&it.summary?`<p class="dmean">판정 메모 — ${esc(it.summary)}</p>`:""}
     ${it.meaning?`<p class="dmean">군사적 의미 — ${esc(it.meaning)}</p>`:""}
     <div class="cols">${P("확인된 사실","",li(it.facts))}${P("추정","",li(it.speculation,"spec"))}</div>
     ${P("출처",`${(it.sources||[]).length}곳`,`<div class="srcs">${(it.sources||[]).length?it.sources.map(x=>`
@@ -614,6 +662,16 @@ function initMap(){
     $("imgdate").textContent=k==="night"?"야간 조명 · Black Marble":`위성 ${d} · VIIRS`;
   }));
   pinLayer=L.layerGroup().addTo(map);
+  layers.subway=L.layerGroup(SUBWAY.map(x=>L.marker([x[2],x[3]],{title:x[0],icon:L.divIcon({className:"",iconSize:[12,12],
+      html:'<div style="width:12px;height:12px;background:var(--ink);border:2.5px solid var(--ice);border-radius:2px"></div>'})})
+    .bindPopup(`<div class="pop"><div class="ph2"><b>${x[0]}</b></div><dl><dt>노선</dt><dd>${x[1]}</dd><dt>거리</dt><dd>자곡동에서 직선 ${subDist(x).toFixed(1)}km</dd></dl>
+      <p>지하철역은 민방위 대피소로 지정된 곳이 많습니다. 지정 여부는 대피소 레이어·국민재난안전포털에서 확인하세요.</p></div>`,{className:"jpop",maxWidth:280})
+    .bindTooltip(`${x[0]} · ${x[1]}`,{className:"tip",direction:"top",offset:[0,-6]})));
+  toggle(document.querySelector("[data-layer=subway]"),layers.subway);
+  document.addEventListener("click",ev=>{if(!ev.target.closest(".findSubway"))return;ev.preventDefault();
+    const sb=document.querySelector("[data-layer=subway]");if(sb.getAttribute("aria-pressed")!=="true")sb.click();
+    map.flyToBounds(L.latLngBounds(SUBWAY.map(x=>[x[2],x[3]]).concat([[HOME.lat,HOME.lon]])).pad(.2),{duration:.8,maxZoom:14});
+    document.getElementById("map-p").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"nearest"})});
 }
 function toggle(b,layer){b.disabled=false;b.addEventListener("click",()=>{const on=b.getAttribute("aria-pressed")!=="true";
   b.setAttribute("aria-pressed",on);if(on)layer.addTo(map);else map.removeLayer(layer)})}
@@ -623,9 +681,9 @@ function drawShelters(doc){
   const b=document.querySelector("[data-layer=shelter]");b.textContent=`대피소 ${doc.shelters.length}`;
   layers.shelter=L.layerGroup();
   doc.shelters.forEach(x=>L.circleMarker([x.lat,x.lon],{radius:5,color:"#05080e",weight:1.5,fillColor:"var(--g0)",fillOpacity:1})
-    .bindTooltip(`${esc(x.name)}<br><span style="color:var(--fog)">${esc(x.addr)} · ${x.dist_m}m</span>`,{className:"tip"}).addTo(layers.shelter));
+    .bindTooltip(`${esc(x.name)}<br><span style="color:var(--fog)">${x.dong?`${esc(x.dong)} · `:""}${esc(x.addr)} · ${x.dist_m}m</span>`,{className:"tip"}).addTo(layers.shelter));
   toggle(b,layers.shelter);map.attributionControl.addAttribution("대피소 © 국민재난안전포털");
-  document.querySelectorAll(".findShelter").forEach(fl=>fl.textContent=`자곡동 대피소 보기 · ${doc.shelters.length}곳`);
+  document.querySelectorAll(".findShelter").forEach(fl=>fl.textContent=shelterLabel());
   document.addEventListener("click",ev=>{if(!ev.target.closest(".findShelter"))return;ev.preventDefault();
     if(b.getAttribute("aria-pressed")!=="true")b.click();
     map.flyTo([doc.center.lat,doc.center.lon],14,{duration:.8});
@@ -642,14 +700,38 @@ function drawCctv(doc){
   toggle(b,layers.cctv);layers.cctv.addTo(map);b.setAttribute("aria-pressed","true");  // 기본 켬 — 접경 도로 위치가 지도의 기준점
   map.attributionControl.addAttribution("CCTV 위치 © 국가교통정보센터");
 }
+// ── 열점 위치 설명: data/places.json 기준 도시 중 가장 가까운 곳의 방향·거리(처음 열 때 한 번만 받는다) ──
+let PLACES=null;
+const loadPlaces=()=>PLACES||(PLACES=fetch("data/places.json").then(r=>r.ok?r.json():null).then(d=>d?.places||[]).catch(()=>[]));
+const DIR8=["북","북동","동","남동","남","남서","서","북서"];
+function km(a,b,c,d){const R=6371,r=Math.PI/180,x=Math.sin((c-a)*r/2)**2+Math.cos(a*r)*Math.cos(c*r)*Math.sin((d-b)*r/2)**2;return 2*R*Math.asin(Math.sqrt(x))}
+function nearPlace(places,lat,lon){
+  let best=null;for(const p of places){const k=km(p[2],p[3],lat,lon);if(!best||k<best.k)best={p,k}}
+  if(!best)return"";const[c,name,plat,plon]=best.p;
+  if(best.k<2)return`${c} · ${name} 부근`;
+  const r=Math.PI/180,y=Math.sin((lon-plon)*r)*Math.cos(lat*r),
+    x=Math.cos(plat*r)*Math.sin(lat*r)-Math.sin(plat*r)*Math.cos(lat*r)*Math.cos((lon-plon)*r);
+  const deg=(Math.atan2(y,x)/r+360)%360;
+  return`${c} · ${name} ${DIR8[Math.round(deg/45)%8]}쪽 ${Math.round(best.k)}km`;
+}
+function firmsPop(p,where){
+  return `<div class="pop"><div class="ph2"><b>위성 열점</b>${p.border?'<span class="btag">접경 구역</span>':""}</div>
+    <dl><dt>위치</dt><dd>${where?esc(where):'<span class="dim">위치 확인 중</span>'}</dd><dt>감지</dt><dd>${short(p.t)} KST</dd><dt>위성</dt><dd>${esc(p.sat||"—")}</dd></dl>
+    <p>NASA 위성이 감지한 지표 열원입니다. 산불·소각·공장도 잡힙니다. 같은 곳의 포격·화재 보도가 있을 때만 판정 근거로 씁니다.</p></div>`;
+}
+const HOVER=matchMedia("(hover:hover) and (pointer:fine)").matches;  // 휴대폰은 누르면 팝업만(툴팁과 겹치지 않게)
 function drawFirms(doc){
   if(!map||!doc?.points)return;
   const b=document.querySelector("[data-layer=firms]");
   b.textContent=`열점 ${doc.count}`+(doc.border_count?` · 접경 ${doc.border_count}`:"");
   layers.firms=L.layerGroup();
-  doc.points.forEach(p=>L.circleMarker([p.lat,p.lon],{radius:p.border?5:2.5,weight:p.border?1.5:0,color:"#ffd2a8",
-      fillColor:p.border?"#ff6a3d":"#ff9d5c",fillOpacity:p.border?.95:.7})
-    .bindTooltip(`위성 열점 · ${short(p.t)} · ${p.sat}${p.border?" · 접경 구역":""}<br><span style="color:var(--fog)">NASA 위성이 감지한 지표 열원 — 산불·소각·공장도 잡힙니다.<br>같은 곳의 포격·화재 보도가 있을 때만 판정 근거로 씁니다.</span>`,{className:"tip"}).addTo(layers.firms));
+  doc.points.forEach(p=>{
+    const m=L.circleMarker([p.lat,p.lon],{radius:p.border?5:2.5,weight:p.border?1.5:0,color:"#ffd2a8",
+      fillColor:p.border?"#ff6a3d":"#ff9d5c",fillOpacity:p.border?.95:.7}).addTo(layers.firms);
+    m.bindPopup(()=>firmsPop(p,p._w),{className:"jpop",maxWidth:280,autoPanPadding:[16,16]})
+      .on("popupopen",async()=>{if(p._w!=null)return;p._w=nearPlace(await loadPlaces(),p.lat,p.lon);m.setPopupContent(firmsPop(p,p._w))});
+    if(HOVER)m.bindTooltip(()=>`위성 열점 · ${short(p.t)}${p.border?" · 접경 구역":""}${p._w?`<br><span style="color:var(--fog)">${esc(p._w)}</span>`:""}<br><span style="color:var(--fog)">누르면 설명</span>`,{className:"tip"});
+  });
   toggle(b,layers.firms);
   if(doc.border_count){b.setAttribute("aria-pressed","true");layers.firms.addTo(map)} // 접경 열점이 있으면 기본으로 켠다
 }

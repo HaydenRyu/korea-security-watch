@@ -63,10 +63,18 @@ def test_routine_other_signal_does_not_make_3():
     assert latest["grade"] == 2
 
 
+def _drop_twice(latest, events, r_factory=run):
+    """내림은 두 회차 연속이어야 적용된다 — 첫 회차는 보류, 두 번째에 적용."""
+    l1, ev1, out1 = d.step(r_factory(), latest, events)
+    assert ev1["held"] and out1 is None and l1["grade"] == latest["grade"]
+    l2, ev2, out2 = d.step(r_factory(), l1, events + [ev1])
+    return l2, ev2, out2
+
+
 def test_drop_from_3_sends_release_only():
-    latest, _, _ = d.step(run(nuclear={"status": "corroborated", "sources": SRC2},
-                              logistics={"status": "single", "sources": SRC1}), None, [])
-    _, ev, out = d.step(run(), latest, [])
+    latest, ev0, _ = d.step(run(nuclear={"status": "corroborated", "sources": SRC2},
+                                logistics={"status": "single", "sources": SRC1}), None, [])
+    _, ev, out = _drop_twice(latest, [ev0])
     assert ev["grade"] == 0 and out["me"]["title"].startswith("한반도 징후 위험 해제")
 
 
@@ -99,15 +107,109 @@ def test_friends_only_at_warning_or_above():
 
 
 def test_release_notifies_friends():
-    latest, _, _ = d.step(run(border_clash={"status": "corroborated", "sources": SRC2}), None, [])
-    _, ev, out = d.step(run(), latest, [])
+    latest, ev0, _ = d.step(run(border_clash={"status": "corroborated", "sources": SRC2}), None, [])
+    _, ev, out = _drop_twice(latest, [ev0])
     assert out is not None and "해제" in out["friends"]["title"] and ev["friends"]
 
 
 def test_drop_within_low_grades_silent():
-    latest, _, _ = d.step(run(border_clash={"status": "single", "sources": SRC1}), None, [])
-    _, _, out = d.step(run(), latest, [])
-    assert out is None
+    latest, ev0, _ = d.step(run(border_clash={"status": "single", "sources": SRC1}), None, [])
+    l2, ev, out = _drop_twice(latest, [ev0])
+    assert out is None and l2["grade"] == 0 and "held" not in l2
+
+
+# ── 내림 히스테리시스: 같은 사건이 회차마다 1↔0 으로 뒤집히던 문제(10/18 AI 어뢰 시험) ──
+R1 = dict(nuclear={"status": "single", "routine": True, "sources": SRC1})
+
+
+def _r1():
+    return run(**R1)
+
+
+def test_single_drop_is_held_keeps_items_and_logs_raw():
+    latest, ev0, _ = d.step(_r1(), None, [])
+    r = run()
+    r["overall_summary"] = "이번엔 평시"
+    l1, ev1, out1 = d.step(r, latest, [ev0])
+    assert out1 is None and ev1["held"] is True and ev1["grade"] == 1 and ev1["raw_grade"] == 0
+    assert ev1["notified"] is False
+    assert l1["grade"] == 1 and l1["items"] == latest["items"] and l1["active"] == latest["active"]
+    assert l1["held"]["raw_grade"] == 0 and l1["held"]["summary"] == "이번엔 평시"
+    assert l1["checked_at"] == latest["checked_at"]  # 표시 항목은 직전 판정 시각의 것
+
+
+def test_flip_flop_1_0_1_0_stays_1_and_silent():
+    latest, ev, _ = d.step(_r1(), None, [])
+    events = [ev]
+    outs = []
+    for r in [run(), _r1(), run(), _r1()]:
+        nl, ev, out = d.step(r, latest, events)
+        latest = nl or latest
+        events.append(ev)
+        outs.append(out)
+    assert [e["grade"] for e in events] == [1, 1, 1, 1, 1]
+    assert [e.get("held", False) for e in events] == [False, True, False, True, False]
+    assert outs == [None] * 4 and "held" not in latest
+
+
+def test_two_consecutive_drops_apply():
+    latest, ev0, _ = d.step(_r1(), None, [])
+    l1, ev1, _ = d.step(run(), latest, [ev0])
+    l2, ev2, out2 = d.step(run(), l1, [ev0, ev1])
+    assert ev2["grade"] == 0 and not ev2.get("held") and l2["grade"] == 0 and "held" not in l2 and out2 is None
+
+
+def test_increase_applies_immediately_after_held():
+    latest, ev0, _ = d.step(run(border_clash={"status": "single", "sources": SRC1}), None, [])
+    l1, ev1, _ = d.step(run(), latest, [ev0])
+    assert ev1["held"]
+    two = run(border_clash={"status": "single", "sources": SRC1}, logistics={"status": "single", "sources": SRC1})
+    l2, ev2, out2 = d.step(two, l1, [ev0, ev1])
+    assert l2["grade"] == 2 and out2["me"]["title"] == "한반도 징후 경계(2)" and "held" not in l2
+
+
+def test_unverified_neither_counts_nor_resets_drop_streak():
+    latest, ev0, _ = d.step(run(border_clash={"status": "corroborated", "sources": SRC2}), None, [])
+    l1, ev1, out1 = d.step(run(), latest, [ev0])
+    assert ev1["held"] and out1 is None
+    _, evu, _ = d.step({"status": "unverified", "reason": "x"}, l1, [ev0, ev1])
+    # 판정 불가는 연속을 끊지 않는다 → 다음 낮은 회차에 적용 + 해제 1회
+    l2, ev2, out2 = d.step(run(), l1, [ev0, ev1, evu])
+    assert l2["grade"] == 0 and out2 is not None and "해제" in out2["me"]["title"]
+    # 판정 불가만으로는 연속이 생기지 않는다: 높은 등급 → 판정 불가 → 낮은 회차 = 보류
+    _, evu2, _ = d.step({"status": "unverified", "reason": "x"}, latest, [ev0])
+    _, ev3, out3 = d.step(run(), latest, [ev0, evu2])
+    assert ev3["held"] and out3 is None
+
+
+def test_release_fires_once_when_drop_applied():
+    latest, ev0, _ = d.step(run(border_clash={"status": "corroborated", "sources": SRC2}), None, [])
+    events, outs = [ev0], []
+    for _ in range(4):
+        nl, ev, out = d.step(run(), latest, events)
+        latest = nl or latest
+        events.append(ev)
+        outs.append(out)
+    assert [o is not None for o in outs] == [False, True, False, False]
+    assert "해제" in outs[1]["me"]["title"] and outs[1]["friends"]
+
+
+def test_new_items_are_normal_signals():
+    assert {"electronic_cyber", "nk_internal"} <= set(d.ITEMS) and len(d.ITEMS) == 9
+    assert not {"electronic_cyber", "nk_internal"} & d.CRITICAL
+    r = run(electronic_cyber={"status": "corroborated", "sources": SRC2},
+            nk_internal={"status": "single", "sources": SRC1})
+    latest, _, _ = d.step(r, None, [])
+    assert latest["grade"] == 2  # 교차확인돼도 핵심 항목이 아니면 위험(3)이 아니다
+    r = run(nuclear={"status": "corroborated", "sources": SRC2}, nk_internal={"status": "single", "sources": SRC1})
+    latest, _, _ = d.step(r, None, [])
+    assert latest["grade"] == 3
+
+
+def test_old_seven_key_run_rejected():
+    r = run()
+    del r["items"]["electronic_cyber"]
+    assert _raises(r)
 
 
 def _raises(r):

@@ -90,6 +90,18 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 
 /* 감시 항목: 이름 · 상태 · 막대 세 칸은 모든 행이 같은 x 에 선다 */
 #sensors-p .pb{padding:0}
+/* 확인 근거 — 감시 항목 아래 빈 영역(≥1180)을 판단 근거로 채운다(10/18 hayden) */
+.cev{padding:12px var(--pad) 16px;border-top:1px solid var(--line);display:grid;gap:8px;font-size:12px;color:var(--fog)}
+.cev .evh{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font:500 11px/1.2 var(--data);letter-spacing:.02em}
+.cev .evh b{color:var(--ice);font-weight:500}
+.cev .cevn{margin:0;line-height:1.5}
+.cev dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;line-height:1.5}
+.cev dt{font:500 11px/1.5 var(--data);color:var(--dim)} .cev dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.cev a{color:var(--ice)}
+.cev summary{cursor:pointer;font:500 11px/1.5 var(--data);color:var(--dim)}
+.cev ul{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px}
+.cev li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:8px;line-height:1.4}
+.cev li b{font-weight:500;color:var(--ice)}
 .row{display:grid;grid-template-columns:minmax(0,1fr) 72px 34px;gap:2px 12px;align-items:center;padding:10px var(--pad);
   border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
 .row:not(.on){padding:8px var(--pad)}
@@ -566,6 +578,17 @@ function render(latest,events){
     +(g!=null?`<div class="todo"><b>지금 할 일</b><span>${TODO[g]}</span><a href="#todo-p" class="go" id="todoJump">비상용품·대피 요령 보기<span class="dn"> ↓</span></a></div>`:"");
   renderTodo(g);renderWorld(latest);
 
+  // 「이상 없음」의 근거 — 이번 회차에 실제로 돌린 검색어(coverage)와 연 원문(opened). 루틴이 coverage 게이트로 남기는 값이라 추정이 아니다
+  function evidence(d){
+    if(!d?.coverage)return"";
+    const cov=Object.entries(ITEMS).map(([k,name])=>[name,d.coverage[k]||[]]);
+    const nq=cov.reduce((a,[,q])=>a+q.length,0),op=d.opened||[];
+    const host=u=>{try{return new URL(u).hostname.replace(/^www\./,"").replace(/^feeds\./,"")}catch(e){return u}};
+    return `<div class="cev"><div class="evh"><b>확인 근거</b><span>${esc(short(d.checked_at))} 회차</span></div>
+      <p class="cevn">「이상 없음」은 아래 검색과 원문에서 최근 24시간 해당 보도를 찾지 못했다는 뜻입니다.</p>
+      <dl><dt>검색</dt><dd>${nq}건 · 항목마다 국문·영문</dd>
+      <dt>연 원문</dt><dd>${op.length}곳 · ${op.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(" · ")}</dd></dl>
+      <details><summary>항목별 검색어</summary><ul>${cov.map(([name,q])=>`<li><b>${esc(name)}</b><span>${q.map(esc).join(" / ")||"—"}</span></li>`).join("")}</ul></details></div>`}
   const items=latest?.items||{};let n=0;
   $("sensors").innerHTML=Object.entries(ITEMS).map(([k,name])=>{
     const it=items[k]||{status:"none"};
@@ -575,7 +598,8 @@ function render(latest,events){
     const meta=[src&&src.name,it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
     const body=it.status==="none"?"":`<div class="what">${esc(it.summary)}</div>${meta?`<div class="src">${meta}</div>`:""}`;
     return `<a class="row${it.status!=="none"?" on":""}" href="#item=${k}"><span class="name">${name}</span>
-      <span class="st">${latest?STAT[s]:"분석 전"}</span><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${body}</a>`}).join("");
+      <span class="st">${latest?STAT[s]:"분석 전"}</span><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${body}</a>`}).join("")
+    +evidence(latest);
   $("sensorsum").textContent=latest?`${NI}개 중 ${n}개 징후`:`${NI}개`;
 
   const rec=events.slice(-72),W=720,H=120,step=W/72,y=gr=>H-6-gr*((H-12)/3);

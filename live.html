@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JIS 라이브 방송</title>
+<meta name="description" content="국내 24시간 뉴스 채널과 해외 국제뉴스 라이브를 한 화면에서 — 속보가 났을 때 여러 채널을 동시에 본다.">
+<link rel="icon" href="assets/jis-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@87.5..112.5,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script data-goatcounter="https://jis.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+/* 토큰은 상황판(index.html)과 같은 값 */
+:root{--ink:#05080e;--panel:#0a1019;--head:#0d1520;--line:#1a2331;--line-2:#2a3649;--ice:#dbe5f1;--fog:#8091a8;--dim:#4c5a6e;
+  --g0:#5fd0b8;--g1:#f2c14e;--g3:#ff4d5e;--amber:var(--g1);--data:'Martian Mono',ui-monospace,monospace;
+  --text:'Pretendard Variable',Pretendard,system-ui,sans-serif;--pad:12px;--side:16px;--gap:12px;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--ink);color:var(--ice);font:14px/1.55 var(--text)}
+.top{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;padding:12px var(--side);border-bottom:1px solid var(--line)}
+.top h1{margin:0;font:700 16px/1.2 var(--text)}.top .back{margin-left:auto;font:500 12px/1 var(--data);color:var(--fog);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line-2)}
+.top .back:hover{color:var(--ice);text-decoration-color:var(--fog)}
+main{max-width:1440px;margin:0 auto;padding:var(--gap) var(--side) 32px;display:grid;gap:var(--gap)}
+/* 묶음 전환(국내 / 해외) — 상황판 지도 레이어 버튼과 같은 모양 */
+.tabs{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.tabs button,.chips button{font:500 11px/1 var(--data);color:var(--fog);background:transparent;border:1px solid var(--line-2);padding:8px 12px;cursor:pointer;
+  transition:border-color 120ms var(--ease),background-color 120ms var(--ease),color 120ms var(--ease)}
+.tabs button:hover,.chips button:hover{border-color:var(--fog);color:var(--ice)}
+.tabs button[aria-pressed="true"],.chips button[aria-pressed="true"]{color:var(--ink);background:var(--ice);border-color:var(--ice)}
+.tabs .hint{margin-left:auto;font:400 11px/1.4 var(--data);color:var(--dim)}
+/* 넓은 화면: 2×2 동시 보기(전부 음소거) · 타일을 누르면 그 채널만 소리 */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap)}
+/* 노트북 한 화면에 2×2 가 다 들어오게 폭을 높이에 맞춘다(타일 = 머리 33px + 16:9) */
+@media (min-width:760px){.grid{width:100%;max-width:calc(((100vh - 150px) / 2 - 33px) * 32 / 9 + var(--gap));justify-self:center}}
+.tile{background:var(--panel);border:1px solid var(--line);min-width:0}
+.tile.on{border-color:var(--ice)}
+.th{display:flex;align-items:center;gap:8px;min-height:32px;padding:0 var(--pad);background:var(--head);border-bottom:1px solid var(--line);font:500 11px/1.4 var(--data);color:var(--fog)}
+.th .k{color:var(--ice)} .th .live{color:var(--g3)} .th .live::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--g3);margin-right:6px;vertical-align:1px}
+.th .snd{margin-left:auto;font:500 11px/1 var(--data);color:var(--ice);background:transparent;border:1px solid var(--line-2);padding:5px 8px;cursor:pointer;transition:border-color 120ms var(--ease)}
+.th .snd:hover{border-color:var(--fog)} .tile.on .snd{color:var(--ink);background:var(--ice);border-color:var(--ice)}
+.th a{color:var(--fog);text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
+.vid{position:relative;aspect-ratio:16/9;background:#000}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.chips{display:none}
+.note{font-size:12px;line-height:1.7;color:var(--fog);margin:0}
+.note b{color:var(--ice);font-weight:500}
+/* 휴대폰: 한 채널 크게 + 채널 버튼(동시 재생 4개는 데이터·배터리 부담) */
+@media (max-width:759px){
+  .grid{grid-template-columns:minmax(0,1fr)} .grid .tile:not(.on){display:none}
+  .chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px} .chips button{padding:10px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tabs .hint{display:none} .tabs button{flex:1}
+}
+@media (prefers-reduced-motion:reduce){.tabs button,.chips button,.th .snd{transition:none}}
+</style></head><body>
+<header class="top"><h1>JIS 라이브 방송</h1><a class="back" href="./">← 상황판</a></header>
+<main>
+  <div class="tabs" role="group" aria-label="채널 묶음"><button type="button" data-g="domestic" aria-pressed="true">국내 뉴스</button><button type="button" data-g="foreign" aria-pressed="false">해외 국제뉴스</button>
+    <span class="hint">4개 동시 · 처음엔 모두 음소거 — 「소리」를 누른 채널만 들린다</span></div>
+  <div class="chips" id="chips" role="group" aria-label="채널"></div>
+  <div class="grid" id="grid"></div>
+  <p class="note">영상은 각 방송사의 유튜브 공식 라이브입니다. 국내 채널은 한국 맥이 1시간마다 현재 라이브 영상을 찾아 올리고(<span id="liveAt">—</span>), 못 찾으면 마지막으로 확인한 영상으로 엽니다.
+    방송이 끝났거나 지역 제한이면 「유튜브에서 열기」로 확인하세요. <b>속보 화면은 판단 근거가 아닙니다</b> — 등급은 상황판이 공식 발표·교차확인으로 정합니다.</p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const CAM="https://jis-cctv.jis-probe.workers.dev";
+const narrow=matchMedia("(max-width:759px)");
+let CH=null,IDS={},group="domestic",on=-1,pick=0;  // on = 소리 켠 타일(처음엔 없음 — 브라우저가 소리 자동재생을 막는다) · pick = 휴대폰에서 보는 채널
+// 국내 = 맥이 찾은 현재 영상 ID(없으면 fb) · 해외 = 채널의 현재 라이브(live_stream?channel=)
+const src=(c,muted)=>{const q=`autoplay=1&mute=${muted?1:0}&playsinline=1&rel=0`;
+  const id=IDS[c.ch]||c.fb;return id?`https://www.youtube.com/embed/${id}?${q}`:`https://www.youtube.com/embed/live_stream?channel=${c.ch}&${q}`};
+const watch=c=>{const id=IDS[c.ch]||c.fb;return id?`https://www.youtube.com/watch?v=${id}`:`https://www.youtube.com/channel/${c.ch}/live`};
+function draw(){
+  const list=CH[group],one=narrow.matches;
+  $("grid").innerHTML=list.map((c,i)=>(one&&i!==pick)?`<section class="tile" data-i="${i}"></section>`:
+    `<section class="tile${(one?i===pick:i===on)?" on":""}" data-i="${i}"><div class="th"><span class="k">${esc(c.name)}</span><span class="live">LIVE</span>
+      <a href="${esc(watch(c))}" target="_blank" rel="noopener">유튜브에서 열기 ↗</a>${one?"":`<button type="button" class="snd" aria-pressed="${i===on}">${i===on?"소리 켜짐":"소리"}</button>`}</div>
+      <div class="vid"><iframe src="${src(c,one||i!==on)}" title="${esc(c.name)} 라이브" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div></section>`).join("");
+  $("chips").innerHTML=list.map((c,i)=>`<button type="button" data-i="${i}" aria-pressed="${i===pick}">${esc(c.name)}</button>`).join("");
+}
+// 소리 전환은 iframe 주소를 바꿔 다시 연다(유튜브 API 없이) — 소리 켠 채널 1개 + 이전 채널만 다시 연다
+function setOn(i){
+  if(narrow.matches){if(i!==pick){pick=i;draw()}return}   // 휴대폰은 음소거로 열고 플레이어에서 소리를 켠다
+  if(i===on)return;const prev=on;on=i;
+  for(const k of [prev,i].filter(k=>k>=0)){const t=document.querySelector(`.tile[data-i="${k}"]`),c=CH[group][k];
+    t.classList.toggle("on",k===i);const b=t.querySelector(".snd");b.textContent=k===i?"소리 켜짐":"소리";b.setAttribute("aria-pressed",k===i);
+    t.querySelector("iframe").src=src(c,k!==i)}
+}
+document.addEventListener("click",e=>{
+  const g=e.target.closest(".tabs button");if(g){group=g.dataset.g;on=-1;pick=0;document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-pressed",b===g));draw();return}
+  const s=e.target.closest(".snd,.chips button");if(s){setOn(+(s.dataset.i??s.closest(".tile").dataset.i))}
+});
+narrow.addEventListener("change",draw);
+Promise.all([fetch("data/live.json").then(r=>r.json()),fetch(CAM+"/live.json").then(r=>r.ok?r.json():null).catch(()=>null)]).then(([ch,lv])=>{
+  CH=ch;IDS=lv?.ids||{};
+  $("liveAt").textContent=lv?.at?`마지막 확인 ${new Date(lv.at).toLocaleString("ko-KR",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false,timeZone:"Asia/Seoul"})}`:"확인 기록 없음";
+  if(location.hash==="#foreign"){group="foreign";document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.g==="foreign"))}
+  draw();
+});
+</script>
+</body></html>

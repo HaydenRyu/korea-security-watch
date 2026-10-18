@@ -90,7 +90,10 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .ladder span.on{color:var(--ice);border-color:var(--gc)}
 #summary{margin:12px 0 0;color:var(--ice)}
 /* AI 표시(10/18): 루틴(Claude)이 공개 기사를 읽고 쓴 문장 — 등급은 코드(diff_state.py)가 정한다. 한 컴포넌트로 통일 */
-.ai{display:inline-block;font:500 10px/1 var(--data);letter-spacing:.02em;color:var(--fog);border:1px solid var(--line-2);padding:2px 5px;margin-right:6px;vertical-align:1px;cursor:help;white-space:nowrap}
+:root{--ai:#b69cff;--ai-2:#5cc8ff}  /* AI 표시 전용 색 — 등급색(초록·노랑·주황·빨강)과 겹치지 않는 보라→하늘 */
+.ai{display:inline-flex;align-items:center;gap:3px;font:600 10px/1 var(--data);letter-spacing:.02em;color:#d9ccff;padding:3px 6px;margin-right:6px;vertical-align:1px;cursor:help;white-space:nowrap;
+  border:1px solid color-mix(in srgb,var(--ai) 55%,transparent);background:linear-gradient(90deg,color-mix(in srgb,var(--ai) 22%,transparent),color-mix(in srgb,var(--ai-2) 14%,transparent))}
+.ai::before{content:"✦";font-size:9px;background:linear-gradient(135deg,var(--ai),var(--ai-2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .ph .ai{margin:0;vertical-align:0}
 #summary .held{display:block;margin-top:8px;font-size:12px;line-height:1.5;color:var(--fog)}
 
@@ -446,7 +449,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   #map-p .hud.bl{display:none}
   .leaflet-control-attribution{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100vw - 2*var(--side) - 4px)}
   /* 머리 바로가기는 한 줄 4칸 같은 폭(겹침 방지: 버튼 위아래 음수 여백 해제) */
-  .qnav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;flex-basis:100%;order:9}
+  .qnav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;flex-basis:100%;order:9} .qnav .lg{display:none}  /* 5칸 — 긴 이름은 줄인다 */
   .qnav .srclink{margin:0;justify-content:center;padding:8px 4px;white-space:nowrap}
   .id small{letter-spacing:.02em;word-break:keep-all}
   .cols{grid-template-columns:1fr}
@@ -465,7 +468,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
     <span>KST <b id="now">--:--:--</b></span>
     <span>최종 확인 <b id="checked">—</b></span>
     <span id="views" hidden title="GoatCounter 대시보드 「전체 기간」 방문자 수와 같은 값(같은 사람의 새로고침은 세지 않음 · 반영에 수 분) · 1분마다 갱신">누적 방문 <b id="viewsN">—</b></span>
-    <nav class="qnav" aria-label="바로가기"><a href="#sources" id="srcOpen" class="srclink">출처 <b id="srcN">—</b></a><a href="forecast.html" class="srclink">예측 ›</a><a href="#world-p" class="srclink">세계 브리핑 ↓</a><a href="shelter.html" class="srclink">대피 안내 ›</a></nav>
+    <nav class="qnav" aria-label="바로가기"><a href="#sources" id="srcOpen" class="srclink">출처 <b id="srcN">—</b></a><a href="forecast.html" class="srclink">예측 ›</a><a href="live.html" class="srclink">라이브 ›</a><a href="#world-p" class="srclink">세계<span class="lg"> 브리핑</span> ↓</a><a href="shelter.html" class="srclink">대피<span class="lg"> 안내</span> ›</a></nav>
     <span>다음 확인 <b id="next">—</b></span>
     <span class="lag" id="lag">감시 지연</span>
     <span class="tag" id="sampletag" hidden>예시 데이터 · 실제 상황 아님</span>
@@ -487,7 +490,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   </section>
 
   <section class="p" id="sensors-p" aria-label="감시 항목">
-    <div class="ph"><span class="k">감시 항목</span><span class="ai" title="AI(Claude)가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 판독</span><span class="r" id="sensorsum">9개</span></div>
+    <div class="ph"><span class="k">감시 항목</span><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 판독</span><span class="r" id="sensorsum">9개</span></div>
     <div class="pb scroll" id="sensors"></div>
   </section>
 
@@ -532,14 +535,14 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
     </div>
   </section>
   <section class="p" id="log-p" aria-label="알림 기록">
-    <div class="ph"><span class="k">알림 기록</span><span class="ai" title="AI(Claude)가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 요약</span><span class="r">알림 · 판정 불가</span></div>
+    <div class="ph"><span class="k">알림 기록</span><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 요약</span><span class="r">알림 · 판정 불가</span></div>
     <div class="pb scroll" id="log"></div>
   </section>
   </div>
 </div>
 <div class="more">
   <section class="p" id="world-p" aria-label="세계 안보 브리핑">
-    <div class="ph"><span class="k">세계 안보 브리핑</span><span class="ai" title="AI(Claude)가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 선별·요약</span><span id="worldAt"></span><span class="r">참고 · 등급 판정과 무관</span></div>
+    <div class="ph"><span class="k">세계 안보 브리핑</span><a class="fcall" href="live.html#foreign">해외 뉴스 라이브 ›</a><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 선별·요약</span><span id="worldAt"></span><span class="r">참고 · 등급 판정과 무관</span></div>
     <div class="pb" id="world"></div>
   </section>
   <section class="p" id="todo-p" aria-label="지금 할 일">
@@ -548,7 +551,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   </section>
 </div>
 <p class="foot">
-  「AI 요약」 표시 문장은 AI(Claude)가 공개 기사를 읽고 쓴 것입니다. 등급은 코드 규칙이 정하며, 사실은 출처 원문으로 확인하세요.
+  「AI 요약」 표시 문장은 AI가 공개 기사를 읽고 쓴 것입니다. 등급은 코드 규칙이 정하며, 사실은 출처 원문으로 확인하세요.
   정례 훈련·미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다.
   위성 영상은 NASA GIBS 하루 단위 영상(약 250m)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다.
   열점은 NASA FIRMS 위성 열 감지(최근 48시간)로 산불·소각·공장 열원도 포함하며, 접경 구역은 근사 범위입니다.
@@ -609,7 +612,7 @@ const Q=new URLSearchParams(location.search);
 const sample=Q.has("sample");
 const base=sample?"state/sample/":"state/";
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const AI_TAG='<span class="ai" title="AI(Claude)가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 요약</span>';
+const AI_TAG='<span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 요약</span>';
 const kst=(d,o)=>new Date(d).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",hour12:false,...o});
 // 시각 표기는 한 형식만: 10.18 16:07 (KST)
 const short=d=>{const p=Object.fromEntries(new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date(d)).map(x=>[x.type,x.value]));return`${p.month}.${p.day} ${p.hour}:${p.minute}`};

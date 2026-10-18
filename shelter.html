@@ -63,7 +63,8 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 #lmap{height:380px;background:#d9d6cf}
 #lmap[hidden]{display:none}
 @media (min-width:760px){#lmap{height:440px}}
-.lm{display:grid;place-items:center;font:600 11px/1 var(--text);color:#05080e;background:var(--g0);border:1.5px solid #05080e;border-radius:50%;box-sizing:border-box}
+/* leaflet 의 .leaflet-marker-icon{display:block} 이 grid 를 덮어 번호가 왼쪽 위로 쏠렸다 → 한 줄 높이 = 안쪽 17px(20 − 테두리 1.5×2)로 가운데 */
+.leaflet-marker-icon.lm{display:block;text-align:center;font:600 11px/17px var(--text);color:#05080e;background:var(--g0);border:1.5px solid #05080e;border-radius:50%;box-sizing:border-box}
 .lm.sub{background:#fff;border-radius:0;border-width:2px}
 .lm.home{background:var(--g1);transform:rotate(45deg)}
 @media (pointer:coarse){.leaflet-marker-icon.lm::before{content:"";position:absolute;inset:-14px}}

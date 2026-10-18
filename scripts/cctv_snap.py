@@ -1,5 +1,7 @@
 """접경 CCTV 화면을 한 장씩 찍어 중계 Worker 에 올린다 (한국 IP 호스트에서 5분마다).
 1시간에 한 번은 「라이브 방송」 국내 채널의 현재 영상 ID 도 같이 올린다(live_ids).
+항공기 위치(air_snapshot)도 같이 올린다 — adsb.lol 이 Cloudflare 출구를 막아 Worker 가 직접 못 받는다(10/18 503).
+GitHub 예약 실행(cron)이 자주 빠지므로 마지막 실행이 오래된 워크플로는 여기서 깨운다(kick_workflows).
 
   python3 scripts/cctv_snap.py            # ~/.config/ksw/its_key · cctv_upload 사용
   python3 scripts/cctv_snap.py --dry      # 올리지 않고 결과만 출력
@@ -13,12 +15,14 @@ import base64
 import json
 import math
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
 import time
+import urllib.error
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,6 +35,11 @@ GRAB_TIMEOUT = 20   # 카메라 1대 상한(초)
 BUDGET = 150        # 회차 전체 상한(초) — 5분 주기의 절반
 LIVE_EVERY = 3600   # 라이브 ID 재조회 간격(초)
 LIVE_MARK = Path.home() / "Library" / "Caches" / "jis-live-at"   # 마지막 조회 시각(파일 mtime)
+# 10/18 실측: firms(:45 매시)는 하루 1회만, weekly(일 11:00Z)는 아예 안 돌았다 → 주간 요약 알림 누락
+KICK = {"firms.yml": ("hourly", 70 * 60), "watchdog.yml": ("hourly", 7 * 3600), "weekly.yml": ("sun11z", 20 * 60)}
+QUOTA_MARK = Path.home() / "Library" / "Caches" / "jis-its-quota"   # 월 호출 한도 초과(4001) — 다음 달 1일까지 CCTV 조회 중단
+KICK_MARK = Path.home() / "Library" / "Caches" / "jis-kick"   # 워크플로별 마지막 깨운 시각(파일 mtime)
+REPO = "HaydenRyu/korea-security-watch"
 
 
 def live_ids() -> dict | None:
@@ -59,6 +68,81 @@ def live_ids() -> dict | None:
     LIVE_MARK.parent.mkdir(parents=True, exist_ok=True)
     LIVE_MARK.touch()
     return out or None
+
+
+def _due(kind: str, arg: int, last: datetime | None, now: datetime) -> bool:
+    if kind == "hourly":   # arg = 허용 공백(초)
+        return last is None or (now - last).total_seconds() > arg
+    slot = (now - timedelta(days=(now.weekday() + 1) % 7)).replace(hour=11, minute=0, second=0, microsecond=0)
+    if slot > now:         # 일요일 11:00Z 이전이면 지난주 슬롯
+        slot -= timedelta(days=7)
+    return (now - slot).total_seconds() > arg and (last is None or last < slot)
+
+
+def quota_blocked() -> str | None:
+    """한도 초과 표시가 이번 달 것이면 해제일(다음 달 1일, KST) 문자열."""
+    if not QUOTA_MARK.exists():
+        return None
+    until = QUOTA_MARK.read_text().strip()
+    return until if datetime.now(timezone(timedelta(hours=9))).date().isoformat() < until else None
+
+
+def block_quota() -> str:
+    d = datetime.now(timezone(timedelta(hours=9))).date().replace(day=1)
+    until = (d.replace(year=d.year + 1, month=1) if d.month == 12 else d.replace(month=d.month + 1)).isoformat()
+    QUOTA_MARK.parent.mkdir(parents=True, exist_ok=True)
+    QUOTA_MARK.write_text(until)
+    return until
+
+
+def kick_workflows() -> dict:
+    """예약 시각을 놓친 워크플로를 workflow_dispatch. gh 가 없거나 실패하면 조용히 넘어간다(사진이 본업)."""
+    gh = shutil.which("gh") or next((p for p in ("/opt/homebrew/bin/gh", "/usr/local/bin/gh") if Path(p).exists()), None)
+    if not gh:
+        return {"gh": "missing"}
+    now, out = datetime.now(timezone.utc), {}
+    KICK_MARK.mkdir(parents=True, exist_ok=True)
+    for wf, (kind, arg) in KICK.items():
+        mark = KICK_MARK / wf
+        if mark.exists() and time.time() - mark.stat().st_mtime < 15 * 60:
+            continue   # 깨운 직후 실행이 목록에 뜨기까지의 중복 방지
+        try:
+            r = subprocess.run([gh, "run", "list", "-R", REPO, "-w", wf, "-L", "1", "--json", "createdAt"],
+                               capture_output=True, text=True, timeout=30)
+            if r.returncode != 0:
+                out[wf] = "list-fail"
+                continue
+            runs = json.loads(r.stdout or "[]")
+            last = datetime.fromisoformat(runs[0]["createdAt"].replace("Z", "+00:00")) if runs else None
+            if not _due(kind, arg, last, now):
+                continue
+            r = subprocess.run([gh, "workflow", "run", wf, "-R", REPO], capture_output=True, text=True, timeout=30)
+            mark.touch()
+            out[wf] = "kicked" if r.returncode == 0 else f"fail:{r.stderr.strip()[:80]}"
+        except (subprocess.SubprocessError, OSError, ValueError, KeyError, IndexError) as e:
+            out[wf] = f"err:{type(e).__name__}"
+    return out
+
+
+def air_snapshot() -> dict | None:
+    """상황판 공역 지도용 항공기 목록(범위·군용 판정은 air_count.py 와 같은 상수)."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import air_count as ac
+    try:
+        area, mil = ac.get(ac.AREA)["ac"], ac.get(ac.MIL)["ac"]
+    except (OSError, ValueError, KeyError):
+        return None
+    milhex, seen, out = {a.get("hex") for a in mil}, set(), []
+    for a in area + [m for m in mil if ac.inside(m, ac.BOX)]:
+        if a.get("hex") in seen or a.get("lat") is None or a.get("lon") is None:
+            continue
+        seen.add(a.get("hex"))
+        alt = a.get("alt_baro")
+        out.append({"lat": round(a["lat"], 3), "lon": round(a["lon"], 3), "trk": a.get("track", a.get("true_heading")),
+                    "alt": 0 if alt == "ground" else alt, "t": a.get("t"),
+                    "call": (a.get("flight") or "").replace("@", "").strip() or None, "mil": (a.get("hex") in milhex) or None,
+                    "name": ac.NAMED.get(a.get("t") or "") if a.get("hex") in milhex else None})
+    return {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "src": "adsb.lol", "ac": out}
 
 
 def ffmpeg() -> str:
@@ -115,18 +199,28 @@ def main() -> int:
     if (b := busy()) and not dry:
         print(json.dumps({"skip": b}))
         return 0
+    if not dry and (k := kick_workflows()):
+        print(json.dumps({"kick": k}))
     key = (CONF / "its_key").read_text().strip()
     cams = json.loads((ROOT / "data" / "cctv.json").read_text())["cameras"]
     ff, t0 = ffmpeg(), time.monotonic()
-    shots = []
+    shots, quota = [], quota_blocked()
+    if quota:
+        print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 건너뜀"}, ensure_ascii=False))
     with tempfile.TemporaryDirectory() as td:
         for i, c in enumerate(cams):
             img, at, p = None, None, Path(td) / f"{i}.jpg"
-            for _ in range(TRIES):
+            for _ in range(0 if quota else TRIES):
                 if time.monotonic() - t0 > BUDGET:
                     break
                 try:
                     url = nearest(c, live_urls(key, c))
+                except urllib.error.HTTPError as e:
+                    if e.code == 401 and b'"resultCode":4001' in e.read().replace(b" ", b""):
+                        quota = block_quota()   # 10/18: 5분 × 카메라마다 조회로 한도 소진 — 한 달 내내 401 을 두드리지 않는다
+                        print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 중단"}, ensure_ascii=False))
+                        break
+                    url = None
                 except (OSError, ValueError, KeyError):
                     url = None
                 if url and grab(ff, url, p):
@@ -137,12 +231,16 @@ def main() -> int:
             shots.append({"name": c["name"], "at": at, "img": img})
     ok = sum(1 for s in shots if s["img"])
     bundle = {"captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "shots": shots}
+    if quota:
+        bundle["paused"] = {"reason": "교통정보센터 월 호출 한도 초과", "until": quota}
     if not dry and (lv := live_ids()):  # 못 찾은 채널은 빠진다 — 상황판이 data/live.json 의 fb 로 메운다
         bundle["live"], bundle["live_at"] = lv, bundle["captured_at"]
+    if not dry and (air := air_snapshot()):
+        bundle["air"] = air
     size = len(json.dumps(bundle))
     print(json.dumps({"ok": ok, "total": len(shots), "bytes": size, "sec": round(time.monotonic() - t0)}))
-    if dry or ok == 0:
-        return 0 if ok else 1   # 전부 실패면 올리지 않는다 — 직전 사진이 시각과 함께 남는 편이 낫다
+    if dry or (ok == 0 and "air" not in bundle):
+        return 0 if ok else 1   # 올릴 게 없다 — 사진 전부 실패는 Worker 가 칸마다 직전 사진을 시각과 함께 남긴다
     req = urllib.request.Request(RELAY, data=json.dumps(bundle).encode(), method="POST", headers={
         "Authorization": "Bearer " + (CONF / "cctv_upload").read_text().strip(),
         "Content-Type": "application/json", "User-Agent": "jis-cctv-snap/1"})  # 기본 Python-urllib UA 는 Cloudflare 가 1010 으로 막는다

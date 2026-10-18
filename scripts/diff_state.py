@@ -431,6 +431,25 @@ def clean_signal(raw, opened: set[str], now: str) -> dict | None:
         return None
 
 
+SIGNAL_ALSO_MAX = 5
+
+
+def same_event(sig: dict, same_as, active: list[dict]) -> dict | None:
+    """같은 사건 판정(코드): ① 루틴이 same_as 로 기존 신호 id 를 지목 ② 같은 종류 + 둘 다 시점이 있고 기간이 겹침.
+    시점 없는 신호끼리는 문장만으로 같은지 코드가 알 수 없다 — 루틴의 same_as 에 맡긴다."""
+    for x in active:
+        if isinstance(same_as, str) and x.get("id") == same_as and x.get("kind") == sig["kind"]:
+            return x
+    w = sig.get("window")
+    if not w:
+        return None
+    for x in active:
+        v = x.get("window") or None
+        if x.get("kind") == sig["kind"] and v and v.get("start") and w["start"] <= (v.get("end") or v["start"]) and v["start"] <= w["end"]:
+            return x
+    return None
+
+
 def update_signals(run: dict, doc: dict | None, now: str) -> dict:
     """signals.json 갱신: ① 만료분을 expired 로 옮긴다(지우지 않음) ② run.signals 를 거른 통과분을 active 에 더한다.
     같은 kind·출처 URL 은 active·expired 어디에 있든 다시 쓰지 않는다. 모든 입력에 예외를 내지 않는다."""
@@ -452,6 +471,13 @@ def update_signals(run: dict, doc: dict | None, now: str) -> dict:
         for r in raw[:SIGNAL_PER_RUN * 2]:
             sig = clean_signal(r, opened, now)
             if not sig or (sig["kind"], sig["source"]["url"]) in seen:
+                continue
+            twin = same_event(sig, r.get("same_as") if isinstance(r, dict) else None, keep)
+            if twin is not None:  # 같은 사건의 다른 보도 — 새 신호가 아니라 그 신호의 추가 출처(교차확인 수)
+                also = twin.setdefault("also", [])
+                if len(also) < SIGNAL_ALSO_MAX and sig["source"]["url"] not in {a.get("url") for a in also}:
+                    also.append(sig["source"])
+                seen.add((sig["kind"], sig["source"]["url"]))
                 continue
             keep.append(sig)
             seen.add((sig["kind"], sig["source"]["url"]))

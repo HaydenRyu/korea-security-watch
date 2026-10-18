@@ -524,3 +524,16 @@ def test_signals_never_break_a_round(tmp=None):
     latest, ev, _ = d.step(run(), None, [])  # signals 는 판정(step)에 영향을 주지 않는다
     r = run(); r["signals"] = [sig()]
     assert d.step(r, None, [])[0]["grade"] == latest["grade"]
+
+
+def test_signals_same_event_merges_as_extra_source():
+    now = "2026-10-19T00:00:00+00:00"
+    base = {"kind": "nav_warning", "summary": "s", "level": "official", "window": {"start": "2026-10-25", "end": "2026-11-05"}}
+    run = {"status": "ok", "opened": ["https://a.jp/1", "https://b.cn/2", "https://c.kr/3"],
+           "signals": [{**base, "source": {"url": "https://a.jp/1"}}]}
+    doc = d.update_signals(run, None, now)
+    sid = doc["active"][0]["id"]
+    run["signals"] = [{**base, "window": {"start": "2026-10-30", "end": "2026-11-02"}, "source": {"url": "https://b.cn/2"}},
+                      {"kind": "nav_warning", "summary": "다른 표현", "level": "report", "window": None, "same_as": sid, "source": {"url": "https://c.kr/3"}}]
+    doc = d.update_signals(run, doc, now)
+    assert len(doc["active"]) == 1 and [a["url"] for a in doc["active"][0]["also"]] == ["https://b.cn/2", "https://c.kr/3"]

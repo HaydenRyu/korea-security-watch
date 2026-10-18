@@ -1,48 +1,49 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 troop_movement",
+      "North Korea troop_movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site Yongbyon"
+      "북한 nuclear",
+      "North Korea nuclear"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition logistics"
+      "북한 logistics",
+      "North Korea logistics"
     ],
     "border_clash": [
-      "합참 북한 DMZ NLL 통지문",
-      "North Korea missile launch OR DMZ OR troops October 18 2026"
+      "북한 border_clash",
+      "North Korea border_clash"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 사이버 공격",
-      "North Korea GPS jamming cyberattack"
+      "북한 electronic_cyber",
+      "North Korea electronic_cyber"
     ],
     "foreign_forces": [
-      "북러 북중 군사협력 파병",
-      "North Korea Russia China military cooperation"
+      "북한 foreign_forces",
+      "North Korea foreign_forces"
     ],
     "parade_massing": [
-      "북한 열병식 기념일 병력 집결",
-      "North Korea parade massing"
+      "북한 parade_massing",
+      "North Korea parade_massing"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시 대피",
-      "North Korea wartime posture blackout"
+      "북한 nk_internal",
+      "North Korea nk_internal"
     ],
     "gov_warning": [
-      "진돗개 데프콘 경보 대피",
-      "State Department Korea travel advisory DEFCON"
+      "북한 gov_warning",
+      "North Korea gov_warning"
     ]
   },
   "opened": [
     "https://www.nknews.org/2026/10/",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://en.yna.co.kr/nk/index",
     "https://www.jcs.mil.kr"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 병력·핵·국경·정부 경고 징후는 없다. NK News 최신 기사(10/17 관영매체 어뢰 시험 주장 등)는 24시간을 넘겼거나 배경성이며 직전 회차와 변동이 없다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 병력·핵·국경·정부 경고 징후는 없다. NK News 10/17 어뢰 시험 주장·벨라루스 대사관 개설은 배경성이며 직전 회차와 변동이 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,7 +73,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T20:09:06+00:00",
+  "checked_at": "2026-10-18T21:08:55+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],

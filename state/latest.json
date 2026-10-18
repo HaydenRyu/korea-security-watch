@@ -1,52 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 troop_movement",
-      "North Korea troop_movement"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 nuclear",
-      "North Korea nuclear"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site Yongbyon"
     ],
     "logistics": [
-      "북한 logistics",
-      "North Korea logistics"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 border_clash",
-      "North Korea border_clash"
+      "합참 북한 DMZ NLL 통지문",
+      "North Korea DMZ Joint Chiefs of Staff"
     ],
     "electronic_cyber": [
-      "북한 electronic_cyber",
-      "North Korea electronic_cyber"
+      "북한 GPS 교란 사이버 공격",
+      "North Korea GPS jamming cyberattack"
     ],
     "foreign_forces": [
-      "북한 foreign_forces",
-      "North Korea foreign_forces"
+      "북러 북중 군사협력 파병",
+      "North Korea Russia China military cooperation"
     ],
     "parade_massing": [
-      "북한 parade_massing",
-      "North Korea parade_massing"
+      "북한 열병식 기념일 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 nk_internal",
-      "North Korea nk_internal"
+      "북한 등화관제 준전시 대피",
+      "North Korea wartime posture blackout"
     ],
     "gov_warning": [
-      "북한 gov_warning",
-      "North Korea gov_warning"
+      "진돗개 데프콘 경보 대피",
+      "State Department Korea travel advisory DEFCON"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.nknews.org/category/news/",
-    "https://www.yna.co.kr/view/AKR20261017007351504",
-    "https://www.nknews.org/2026/10/north-korea-tests-new-high-precision-ai-equipped-torpedo-state-media/",
     "https://www.nhk.or.jp/rss/news/cat6.xml",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.mod.go.jp/j/press/news/index.html"
+    "https://www.mod.go.jp/j/press/news/index.html",
+    "https://www.yna.co.kr/view/AKR20261018059600009",
+    "https://www.nknews.org/2026/10/north-korean-gps-jamming-along-border-has-plummeted-this-year-data-shows/"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 병력·핵·정부 경고 징후는 없다. 북한 어뢰 시험발사 주장(10/16 첫 보도)은 24시간이 지났고 북러·북중 교류는 기존 협력의 반복이다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 병력·핵·국경·정부 경고 징후는 없다. 연합뉴스 북한 속보와 NK News 최신 글은 북중·북러·벨라루스 교류와 10/16~17 보도된 어뢰 시험 주장(24시간 경과)이 전부다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,11 +61,12 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "NK News는 접경 GPS 교란이 올해 크게 줄었다는 데이터 분석을 10/16 보도했고 새 교란 사건은 없다."
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "주북 러시아·중국 대사 활동, 북러 IT분과위 의정서 조인, 벨라루스 대사관 개설은 기존 협력의 반복·외교 교류로 배경에 해당한다."
+      "summary": "주북 러시아대사 활동, 북러 IT분과위 의정서, 북중 지방교류 등은 기존 협력의 반복·외교 교류로 배경에 해당한다."
     },
     "parade_massing": {
       "status": "none"
@@ -77,26 +78,15 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T13:09:26+00:00",
+  "checked_at": "2026-10-18T15:47:50+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],
   "world": [
     {
-      "title": "캐나다 서부 군기지 화재, 7명 이상 사망",
-      "summary": "캐나다 알버타주 군사기지에서 화재가 나 최소 7명이 숨졌다고 현지 방송이 전했다.",
-      "link_korea": "서방 동맹국 군 시설 사고로 연합 전력 운용에 간접적 영향 여지가 있다.",
-      "region": "캐나다",
-      "source": {
-        "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261018de61247",
-        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
-      }
-    },
-    {
-      "title": "상트페테르부르크 유류시설 야간 공격",
-      "summary": "BBC는 러시아 상트페테르부르크 석유 시설이 야간 공격을 받아 사상자가 났다고 보도했다.",
-      "link_korea": "러·우 전쟁 확전은 북러 군사협력과 북한군 파병 논의에 연결된다.",
+      "title": "상트페테르부르크 석유시설 야간 공격, 1명 이상 사망",
+      "summary": "BBC는 러시아 상트페테르부르크 유류시설이 야간 공격을 받아 최소 1명이 숨졌고 데이터센터도 피해를 입었다고 전했다.",
+      "link_korea": "러시아 전쟁 수행 동향은 북러 군사협력 평가와 직결된다.",
       "region": "러시아",
       "source": {
         "name": "BBC",
@@ -105,17 +95,39 @@
       }
     },
     {
-      "title": "미국, 대러 제재 일부 면제",
-      "summary": "BBC는 트럼프 대통령이 러시아 제재 일부를 면제했고 젤렌스키 대통령과의 갈등이 커졌다고 보도했다.",
-      "link_korea": "대러 제재 기조 변화는 북러 군사협력 대응과 대북 제재 공조에 영향을 준다.",
+      "title": "트럼프, 대러 제재 대부분 일시 면제",
+      "summary": "BBC는 트럼프 대통령이 의회가 통과시킨 대러 제재 상당수를 국가안보를 이유로 일시 중단했고 젤렌스키와 갈등이 커졌다고 전했다.",
+      "link_korea": "대러 제재 완화 여부는 북러 협력과 대북 제재 공조에 영향을 줄 수 있다.",
       "region": "미국·러시아",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/world",
+        "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "젤렌스키 \"위성통신 제한으로 드론 요격 지장\"",
+      "summary": "NHK에 따르면 젤렌스키 대통령은 스페이스X 위성통신 일부 제한 탓에 러시아 드론 요격에 지장이 있다고 주장했다.",
+      "link_korea": "우크라이나 전선 동향은 북한군 파병과 북러 무기 이전의 배경이다.",
+      "region": "우크라이나",
+      "source": {
+        "name": "NHK",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261018de61066",
+        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
+      }
+    },
+    {
+      "title": "서안지구서 유럽 외교관 일행 정착민에게 습격당해",
+      "summary": "BBC는 유럽 외교관들이 서안지구에서 이스라엘 정착민에게 공격받았고 이스라엘군이 폭력을 비난했다고 전했다.",
+      "link_korea": "중동 정세 악화는 미군 전력 배분과 대북 억제 태세에 간접 영향을 줄 수 있다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c962ydpmjm3zo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "러시아 관련 확전과 제재 변화가 북러 협력 환경에 영향을 줄 수 있다.",
-  "world_at": "2026-10-18T13:09:26+00:00"
+  "world_context": "러시아·우크라이나 전선과 대러 제재 향방이 북러 군사협력과 한반도 안보 환경에 이어지는 하루였다.",
+  "world_at": "2026-10-18T15:47:50+00:00"
 }

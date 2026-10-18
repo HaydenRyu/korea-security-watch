@@ -1,40 +1,40 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
+      "북한 troop_movement",
+      "North Korea troop_movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리",
+      "북한 nuclear",
       "North Korea nuclear"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition logistics"
+      "북한 logistics",
+      "North Korea logistics"
     ],
     "border_clash": [
-      "북한 합참 발표 10월 18일",
-      "North Korea October 18 2026"
+      "북한 border_clash",
+      "North Korea border_clash"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 사이버",
-      "North Korea GPS jamming cyber"
+      "북한 electronic_cyber",
+      "North Korea electronic_cyber"
     ],
     "foreign_forces": [
-      "미군 전략자산 한반도",
-      "North Korea Russia China military cooperation"
+      "북한 foreign_forces",
+      "North Korea foreign_forces"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 parade_massing",
+      "North Korea parade_massing"
     ],
     "nk_internal": [
-      "북한 노농적위군 등화관제",
-      "North Korea civil defense"
+      "북한 nk_internal",
+      "North Korea nk_internal"
     ],
     "gov_warning": [
-      "북한 정부 긴급 경고 대피",
-      "Korea travel advisory"
+      "북한 gov_warning",
+      "North Korea gov_warning"
     ]
   },
   "opened": [
@@ -44,7 +44,7 @@
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.mod.go.jp/j/press/news/index.html"
   ],
-  "overall_summary": "최근 24시간 내 합참·방위성의 신규 발사 발표나 병력·핵·정부 경고 징후는 확인되지 않았다. 10/17 KCNA의 AI 어뢰 시험 주장은 시험 성격이며 직전 회차와 같은 평시 수준이다.",
+  "overall_summary": "최근 24시간 내 합참·방위성의 신규 발사 발표나 병력·핵·정부 경고 징후는 확인되지 않았다. 북러·북중 교류 보도는 기존 협력의 반복이며 직전 회차와 같은 평시 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -74,14 +74,14 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T11:09:59+00:00",
+  "checked_at": "2026-10-18T12:09:45+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],
   "world": [
     {
       "title": "캐나다 서부 군기지 화재, 7명 이상 사망",
-      "summary": "캐나다 현지 언론은 서부 군사 기지에서 화재가 나 최소 7명이 숨졌다고 보도했다.",
+      "summary": "캐나다 서부 알버타주 군사기지에서 화재가 나 최소 7명이 숨졌다고 현지 방송이 전했다.",
       "link_korea": "서방 동맹국 군 시설 사고로 연합 전력 운용에 간접적 영향 여지가 있다.",
       "region": "캐나다",
       "source": {
@@ -90,26 +90,26 @@
       }
     },
     {
-      "title": "미 중간선거 2주 앞 사전투표 독려 집회",
-      "summary": "트럼프 대통령 비판 단체들이 전국에서 사전투표를 촉구했다.",
-      "link_korea": "미국 정치 일정은 대북·대한 정책 방향의 변수다.",
-      "region": "미국",
+      "title": "상트페테르부르크 유류시설 야간 공격",
+      "summary": "BBC는 러시아 상트페테르부르크의 석유 시설이 야간 공격을 받아 사상자가 났다고 보도했다.",
+      "link_korea": "러·우 전쟁 확전은 북러 군사협력과 북한군 파병 논의에 연결된다.",
+      "region": "러시아",
       "source": {
-        "name": "NHK",
-        "url": "https://www.nhk.or.jp/rss/news/cat6.xml"
+        "name": "BBC",
+        "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "유럽 외교관, 요르단강 서안서 정착민에게 피습",
-      "summary": "팔레스타인에서 유대인 정착민이 유럽 외교관을 습격했다고 보도됐다.",
-      "link_korea": "중동 긴장 지속은 미군 전력 배치 우선순위에 영향을 줄 수 있다.",
-      "region": "서안지구",
+      "title": "트럼프, 대러 제재 일부 면제",
+      "summary": "BBC는 트럼프 대통령이 젤렌스키 대통령과 갈등이 커지는 가운데 대러 제재 일부를 면제했다고 전했다.",
+      "link_korea": "미국의 대러 제재 기조 변화는 북러 협력 환경에 영향을 줄 수 있다.",
+      "region": "미국",
       "source": {
-        "name": "NHK",
-        "url": "https://www.nhk.or.jp/rss/news/cat6.xml"
+        "name": "BBC",
+        "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "서방 정치·중동 불안이 이어지는 가운데 한반도에서는 신규 징후가 없다.",
-  "world_at": "2026-10-18T11:09:59+00:00"
+  "world_context": "러·우 전쟁과 미국 정치 일정이 북러 협력과 대북 정책의 외부 변수로 이어진다.",
+  "world_at": "2026-10-18T12:09:45+00:00"
 }

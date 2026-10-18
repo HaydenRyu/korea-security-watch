@@ -17,9 +17,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 API = ("https://openapi.its.go.kr:9443/cctvInfo?apiKey={key}&type={t}&cctvType=4"
-       "&minX=125.9&maxX=128.7&minY=37.85&maxY=38.9&getType=json")
+       "&minX=126.2&maxX=128.7&minY=37.7&maxY=38.9&getType=json")  # 남쪽 끝 37.7 = 강화 북단(한강 하구 접경)
 # 서→동 경도 구간(접경을 고르게 덮기 위한 분할, 행정구역 아님). 구간마다 가장 북쪽 카메라 PER_REGION 대
-REGIONS = [(126.6, 126.95), (126.95, 127.25), (127.25, 127.6), (127.6, 128.0), (128.0, 128.3), (128.3, 128.7)]
+REGIONS = [(126.2, 126.6), (126.6, 126.8), (126.8, 126.95),  # 강화·김포 / 파주 서부(자유로·임진각) / 파주 적성
+            (126.95, 127.25), (127.25, 127.6), (127.6, 128.0), (128.0, 128.3), (128.3, 128.7)]
 PER_REGION = 2
 
 

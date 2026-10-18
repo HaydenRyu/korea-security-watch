@@ -13,7 +13,7 @@ from __future__ import annotations
 import json
 from urllib.parse import urlparse
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +40,21 @@ MIN_OPENED = 3  # 회차마다 원문을 최소 3건 열어야 판정으로 인�
 MIN_DOMAINS = 2  # 연 원문이 한 매체에 몰리면 교차확인이 아니다 — 서로 다른 사이트 2곳 이상
 UNVERIFIED_ALERT_AT = 3  # 연속 판정 불가 N회째에 1회 알림
 DASHBOARD_URL = "https://haydenryu.github.io/korea-security-watch/"
+# 위기 바닥: 최근 이 시간 안에 위험(3)이 있었으면 해제 근거 없이 경계(2) 아래로 내리지 않는다.
+# 근거: 2015-08 백테스트 — 24시간 만료로 최후통첩 시한 22시간 전에 「위험 해제」, 시한 당일 아침 「평시」가 나갔다.
+CRISIS_FLOOR_H = 72
+CRISIS_FLOOR_GRADE = 2
+DEADLINE_GRACE_H = 24  # 시한(until)이 있는 지속 상태는 시한 뒤 이 시간까지만 이어 간다(시한 + 24h)
+
+# 항목 선택 필드 — 없으면 기존 동작이다(하위 호환). 값이 정확히 true 일 때만 켠다.
+#   ongoing        지속 상태(준전시·전시상태, 대피령·진돗개·데프콘 격상, 최후통첩) — 해제 보도(ended) 또는 시한+24h 까지 유지
+#   until          지속 상태의 시한(ISO 시각). 최후통첩 시한 등
+#   ended          이번 회차에 해제·종료 보도가 있었다(status 는 보통 none) — 이어 가기·위기 바닥을 끊는다
+#   unresolved     원인 미상 중대 사건(함정 침몰·대형 폭발, 조사 중) — 원인 발표(ended) 전까지 single 로 이어 간다
+#   ultimatum      시한·표적·군사행동을 명시한 최후통첩 — routine 이 아니고 ongoing 으로 다룬다
+#   fatalities / territory_hit   border_clash 에서 사망자 발생 / 남측 영토·함정 피격 — 교차확인이면 단독 위험(3)
+#   overflight_alert            gov_warning 이 J-Alert 등 시험 발사 상공 통과 경보(해상 착탄) — routine
+BORDER_SEVERE_FLAGS = ("fatalities", "territory_hit")
 
 
 class RunError(ValueError):
@@ -84,9 +99,29 @@ def validate(run: dict) -> None:
             raise RunError(f"{key}: corroborated 인데 출처가 2곳 미만이다")
 
 
+def _flag(it: dict, key: str) -> bool:
+    return isinstance(it, dict) and it.get(key) is True
+
+
+def is_routine(it: dict) -> bool:
+    """정례 여부. 최후통첩은 정례가 아니고, 시험 발사 상공 통과 경보(J-Alert 등)는 정례다."""
+    if _flag(it, "ultimatum"):
+        return False
+    if _flag(it, "overflight_alert"):
+        return True
+    return bool(it.get("routine"))
+
+
 def active_keys(items: dict) -> set[str]:
     """일상 활동(routine)이 아닌 징후 항목."""
-    return {k for k, it in items.items() if it["status"] != "none" and not it.get("routine")}
+    return {k for k, it in items.items() if it["status"] != "none" and not is_routine(it)}
+
+
+def border_severe(items: dict) -> bool:
+    """border_clash 에서 사망 또는 남측 영토·함정 피격이 교차확인됐는가 — 다른 항목 없이도 위험(3)."""
+    it = items.get("border_clash") or {}
+    return (it.get("status") == "corroborated" and not is_routine(it)
+            and any(_flag(it, f) for f in BORDER_SEVERE_FLAGS))
 
 
 def compute_grade(items: dict) -> int:
@@ -96,11 +131,90 @@ def compute_grade(items: dict) -> int:
         # 일상 훈련·미사일 시험·위협 발언만 있으면 최대 1
         return 1 if any_signal else 0
     corroborated = {k for k in active if items[k]["status"] == "corroborated"}
+    if border_severe(items):
+        return 3  # 사망·영토 피격 교차확인은 단독으로 위험(연평도·천안함 백테스트)
     if corroborated & CRITICAL and len(active) >= 2:
         return 3  # 핵실험 단독 등 한 항목만으로는 위험으로 올리지 않는다
     if len(active) >= 2 or corroborated:
         return 2
     return 1
+
+
+def _dt(v) -> datetime | None:
+    """ISO 시각 → aware datetime. 시간대가 없으면 UTC 로 본다. 읽을 수 없으면 None."""
+    if not isinstance(v, str):
+        return None
+    try:
+        t = datetime.fromisoformat(v)
+    except ValueError:
+        return None
+    return t if t.tzinfo else t.replace(tzinfo=timezone.utc)
+
+
+def _persists(it: dict) -> bool:
+    if it.get("ended_at"):  # 내림 보류 중에 해제 보도가 온 항목 — 표시는 남되 더 이어 가지 않는다
+        return False
+    return _flag(it, "ongoing") or _flag(it, "ultimatum") or _flag(it, "unresolved")
+
+
+def carry_items(items: dict, latest: dict | None, now: str) -> tuple[dict, set[str]]:
+    """지속 상태·원인 미상 사건을 이어 간다. 이번 회차가 그 항목을 none 으로 냈어도 해제 근거(ended)가 없으면
+    직전 항목을 유지한다(24시간 만료 제외). 시한(until)이 있으면 시한 + 24h 까지.
+    unresolved 만 있는 항목은 single 로 이어 간다(원인 발표 전까지 등급 1 바닥). 반환: (새 items, 이어 간 키)"""
+    prev_items = (latest or {}).get("items") or {}
+    t_now = _dt(now)
+    out, carried = dict(items), set()
+    for k, prev in prev_items.items():
+        cur = items.get(k)
+        if k not in ITEMS or not isinstance(prev, dict) or prev.get("status", "none") == "none" or not _persists(prev):
+            continue
+        if not isinstance(cur, dict) or cur.get("status") != "none" or _flag(cur, "ended"):
+            continue
+        until = _dt(prev.get("until"))
+        if until and t_now and t_now >= until + timedelta(hours=DEADLINE_GRACE_H):
+            continue
+        it = {**prev, "carried": True, "carried_since": prev.get("carried_since") or now}
+        if _flag(prev, "unresolved") and not (_flag(prev, "ongoing") or _flag(prev, "ultimatum")):
+            it["status"] = "single"
+        out[k] = it
+        carried.add(k)
+    return out, carried
+
+
+def unresolved_keys(items: dict) -> list[str]:
+    """해제 미확인 상태 — 지속 상태·원인 미상 사건으로 표시 중인 항목(상황판 표시용)."""
+    return sorted(k for k, it in items.items() if it.get("status", "none") != "none" and _persists(it))
+
+
+def deescalated(run: dict, latest: dict | None) -> bool:
+    """위기 해제 근거: 회차 deescalation(합의 등 1문장) 또는 직전에 지속 상태(ongoing·최후통첩)였던 항목의 ended.
+    원인 미상 사건의 원인 발표(unresolved 의 ended)는 위기 해제가 아니다."""
+    d = run.get("deescalation")
+    if isinstance(d, str) and d.strip():
+        return True
+    prev = (latest or {}).get("items") or {}
+    return any(_flag(it, "ended") and (_flag(prev.get(k), "ongoing") or _flag(prev.get(k), "ultimatum"))
+               for k, it in run["items"].items())
+
+
+def crisis_floor(events: list[dict], now: str) -> str | None:
+    """최근 CRISIS_FLOOR_H 안에 위험(3) 판정이 있었고 그 뒤 해제 근거가 없으면 그 마지막 위험 시각."""
+    t_now = _dt(now)
+    if t_now is None:
+        return None
+    for e in reversed(events):
+        if e.get("status") != "ok":
+            continue
+        if e.get("deescalation"):
+            return None
+        t = _dt(e.get("checked_at"))
+        if t is None:
+            continue
+        if t_now - t > timedelta(hours=CRISIS_FLOOR_H):
+            return None
+        if e.get("raw_grade", e.get("grade")) == 3:  # 내림 보류로 표시만 3 인 회차는 세지 않는다
+            return e["checked_at"]
+    return None
 
 
 def _load(path: Path, default):
@@ -252,6 +366,14 @@ def held_step(run: dict, latest: dict, events: list[dict], grade: int, active: s
     알림(해제 포함)은 내림이 적용되는 회차에 한 번만 나간다."""
     cur = latest.get("grade", 0)
     new_latest = with_world({k: v for k, v in latest.items() if k != "held"}, run, latest, now)
+    ended = {k for k, it in run["items"].items() if _flag(it, "ended")}
+    if ended & set(new_latest.get("items") or {}):
+        new_latest["items"] = {k: ({**it, "ended_at": now} if k in ended and isinstance(it, dict) else it)
+                               for k, it in new_latest["items"].items()}
+        unres = unresolved_keys(new_latest["items"])
+        new_latest.pop("unresolved", None)
+        if unres:
+            new_latest["unresolved"] = unres
     new_latest["held"] = {"raw_grade": grade, "raw_label": GRADE_LABEL[grade], "at": now,
                           "summary": run.get("overall_summary", "")}
     event = {"checked_at": now, "status": "ok", "grade": cur, "prev_grade": cur, "raw_grade": grade,
@@ -280,14 +402,31 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
                       "me": _msg("안보 감시 중단", f"{streak}회 연속 판정 불가\n사유: {run.get('reason', '미상')}", 4)}
         return None, event, outbox
 
-    items = run["items"]
-    grade = compute_grade(items)
+    deesc = deescalated(run, latest)
+    items, carried = carry_items(run["items"], latest, now)
+    run["items"] = items
+    base_grade = compute_grade(items)
+    grade = base_grade
+    floor_at = None if deesc else crisis_floor(events, now)
+    if floor_at and grade < CRISIS_FLOOR_GRADE:
+        grade = CRISIS_FLOOR_GRADE
+    else:
+        floor_at = None
     prev_grade = (latest or {}).get("grade", 0)
     prev_active = set((latest or {}).get("active", []))
     active = active_keys(items)
+    extra = {"base_grade": base_grade} if base_grade != grade else {}
+    if floor_at:
+        extra["floor"] = True
+    if carried:
+        extra["carried"] = sorted(carried)
+    if deesc:
+        extra["deescalation"] = True
 
     if latest is not None and grade < prev_grade and not drop_confirmed(events, prev_grade):
-        return held_step(run, latest, events, grade, active, now)
+        nl, ev, ob = held_step(run, latest, events, grade, active, now)
+        ev.update(extra)
+        return nl, ev, ob
 
     new_keys = active - prev_active
 
@@ -300,11 +439,19 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     released = latest is not None and prev_grade >= FORWARD_MIN_GRADE > grade
     notify = notify or released
 
-    new_latest = with_world({**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)},
-                            run, latest, now)
+    new_latest = {**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)}
+    for k in ("unresolved", "floor"):
+        new_latest.pop(k, None)
+    unres = unresolved_keys(items)
+    if unres:
+        new_latest["unresolved"] = unres
+    if floor_at:
+        new_latest["floor"] = {"since": floor_at, "base_grade": base_grade,
+                               "until": (_dt(floor_at) + timedelta(hours=CRISIS_FLOOR_H)).isoformat()}
+    new_latest = with_world(new_latest, run, latest, now)
     event = {"checked_at": now, "status": "ok", "grade": grade, "prev_grade": prev_grade, "raw_grade": grade,
              "active": sorted(active), "new": sorted(new_keys), "notified": notify,
-             "summary": run.get("overall_summary", ""), "sources": event_sources(items)}
+             "summary": run.get("overall_summary", ""), "sources": event_sources(items), **extra}
     event["friends"] = friends or released
     outbox = None
     if notify:

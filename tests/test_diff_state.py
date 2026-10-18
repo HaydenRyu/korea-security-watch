@@ -71,10 +71,17 @@ def _drop_twice(latest, events, r_factory=run):
     return l2, ev2, out2
 
 
+def _deesc():
+    r = run()
+    r["deescalation"] = "남북 고위급 합의 — 준전시상태 해제"
+    return r
+
+
 def test_drop_from_3_sends_release_only():
+    # 위기 바닥(72h) 안에서는 해제 근거가 있어야 2 아래로 내려간다
     latest, ev0, _ = d.step(run(nuclear={"status": "corroborated", "sources": SRC2},
                                 logistics={"status": "single", "sources": SRC1}), None, [])
-    _, ev, out = _drop_twice(latest, [ev0])
+    _, ev, out = _drop_twice(latest, [ev0], _deesc)
     assert ev["grade"] == 0 and out["me"]["title"].startswith("한반도 징후 위험 해제")
 
 
@@ -301,3 +308,152 @@ def test_world_does_not_affect_grade():
     r["world"] = [W_OK]
     b, _, out = d.step(r, None, [])
     assert a["grade"] == b["grade"] == 0 and out is None
+
+
+# ── 2026-10-18 역검증(과거 위기 4건) 반영 규칙 ──
+def _at(r, iso):
+    r["checked_at"] = iso
+    return r
+
+
+def _seq(runs, latest=None, events=None):
+    """runs 를 차례로 넣고 (latest, events, outs) 를 돌려준다."""
+    events = list(events or [])
+    outs = []
+    for r in runs:
+        nl, ev, out = d.step(r, latest, events)
+        latest = nl or latest
+        events.append(ev)
+        outs.append(out)
+    return latest, events, outs
+
+
+def _h(n):
+    from datetime import datetime, timedelta, timezone
+    return (datetime(2026, 10, 18, 5, tzinfo=timezone.utc) + timedelta(hours=n)).isoformat()
+
+
+# 제안 1 — 지속 상태는 24h 만료로 빠지지 않고 해제 보도까지 유지
+QUASI_WAR = {"status": "single", "ongoing": True, "sources": SRC1, "summary": "준전시상태 선포"}
+
+
+def test_ongoing_state_carried_when_model_drops_it():
+    latest, events, outs = _seq([_at(run(nk_internal=dict(QUASI_WAR)), _h(0))] +
+                                [_at(run(), _h(n)) for n in range(25, 30)])
+    assert [e["grade"] for e in events] == [1] * 6
+    assert latest["items"]["nk_internal"]["carried"] is True
+    assert latest["items"]["nk_internal"]["carried_since"] == _h(25)  # 처음 이어 간 시각을 유지
+    assert latest["unresolved"] == ["nk_internal"] and events[-1]["carried"] == ["nk_internal"]
+    assert not any(e.get("held") for e in events) and outs[1:] == [None] * 5
+
+
+def test_ongoing_state_ends_on_release_report():
+    ended = run(nk_internal={"status": "none", "ended": True, "summary": "준전시상태 해제 보도"})
+    latest, events, _ = _seq([_at(run(nk_internal=dict(QUASI_WAR)), _h(0)), _at(run(), _h(25)),
+                              _at(ended, _h(26)), _at(run(), _h(27))])
+    assert [e["grade"] for e in events] == [1, 1, 1, 0]  # 해제 뒤 내림은 기존 2회 연속 규칙
+    assert latest["items"]["nk_internal"]["status"] == "none" and "unresolved" not in latest
+
+
+def test_ongoing_with_deadline_expires_deadline_plus_24h():
+    ult = {"status": "corroborated", "ultimatum": True, "until": _h(48), "sources": SRC2}
+    latest, events, _ = _seq([_at(run(border_clash=dict(ult)), _h(0))] +
+                             [_at(run(), _h(n)) for n in (30, 71, 72, 73)])
+    assert [e["grade"] for e in events] == [2, 2, 2, 2, 0]  # 시한(48h) + 24h = 72h 부터 이어 가지 않음
+    assert events[3].get("held") and not events[4].get("held")
+
+
+def test_old_runs_without_new_fields_unchanged():
+    # 새 필드가 없으면 기존 동작: 이어 가지 않고 24h 뒤 판정 그대로 내린다
+    latest, events, _ = _seq([_at(run(nk_internal={"status": "single", "sources": SRC1}), _h(0)),
+                              _at(run(), _h(25)), _at(run(), _h(26))])
+    assert [e["grade"] for e in events] == [1, 1, 0] and "unresolved" not in latest
+
+
+# 제안 2 — 최후통첩은 routine 이 아니다
+def test_ultimatum_never_routine():
+    it = {"status": "single", "routine": True, "ultimatum": True, "sources": SRC1}
+    latest, _, _ = d.step(run(border_clash=it), None, [])
+    assert latest["active"] == ["border_clash"] and latest["grade"] == 1
+    latest, _, _ = d.step(run(border_clash=it, nuclear={"status": "corroborated", "sources": SRC2}), None, [])
+    assert latest["grade"] == 3  # 정례였다면 핵 단독 2
+
+
+# 제안 3 — border_clash 사망·영토 피격 교차확인은 단독 3
+def test_border_clash_fatal_or_territory_alone_is_3():
+    for f in ("fatalities", "territory_hit"):
+        latest, _, out = d.step(run(border_clash={"status": "corroborated", f: True, "sources": SRC2}), None, [])
+        assert latest["grade"] == 3 and out["friends"]["priority"] == 5
+    # 단일 출처·정례·플래그 없음은 기존대로
+    assert d.compute_grade(run(border_clash={"status": "single", "fatalities": True, "sources": SRC1})["items"]) == 1
+    assert d.compute_grade(run(border_clash={"status": "corroborated", "sources": SRC2})["items"]) == 2
+    assert d.compute_grade(run(border_clash={"status": "corroborated", "routine": True, "territory_hit": True,
+                                             "sources": SRC2})["items"]) == 1
+    assert d.compute_grade(run(nuclear={"status": "corroborated", "fatalities": True,
+                                        "sources": SRC2})["items"]) == 2  # 다른 항목에는 적용 안 함
+
+
+# 제안 4 — 위기 바닥 72h
+THREE = dict(border_clash={"status": "corroborated", "territory_hit": True, "sources": SRC2})
+
+
+def test_crisis_floor_holds_2_for_72h_then_releases():
+    runs = [_at(run(**THREE), _h(0))] + [_at(run(), _h(n)) for n in (1, 2, 3, 71, 72, 73, 74)]
+    latest, events, outs = _seq(runs)
+    assert [e["grade"] for e in events] == [3, 3, 2, 2, 2, 2, 2, 0]
+    assert events[2]["floor"] and events[2]["base_grade"] == 0
+    assert not events[6].get("floor") and events[6]["held"]  # 72h 넘은 첫 회차 = 내림 보류
+    rel = [o for o in outs if o and "friends" in o and "해제" in o["friends"]["title"]]
+    assert len(rel) == 1 and rel[0]["me"]["title"].startswith("한반도 징후 경계 해제")  # 위기 중 「위험 해제」는 없다
+    assert latest["grade"] == 0 and "floor" not in latest
+
+
+def test_crisis_floor_marks_latest_and_counts_from_last_3():
+    latest, events, _ = _seq([_at(run(**THREE), _h(0)), _at(run(**THREE), _h(40))] +
+                             [_at(run(), _h(n)) for n in (41, 42, 100)])
+    assert [e["grade"] for e in events] == [3, 3, 3, 2, 2]  # 마지막 3(40h) 기준 72h → 100h 도 바닥
+    assert latest["floor"]["since"] == _h(40) and latest["floor"]["base_grade"] == 0
+
+
+def test_deescalation_lifts_floor_until_next_3():
+    runs = [_at(run(**THREE), _h(0)), _at(_deesc(), _h(1)), _at(run(), _h(2)), _at(run(), _h(3))]
+    _, events, _ = _seq(runs)
+    assert [e["grade"] for e in events] == [3, 3, 0, 0] and events[1]["deescalation"]
+    # 해제 근거 뒤 다시 3 이 되면 바닥이 다시 선다
+    _, events, _ = _seq([_at(run(**THREE), _h(5)), _at(run(), _h(6)), _at(run(), _h(7))], None, events)
+    assert [e["grade"] for e in events[-3:]] == [3, 3, 2]
+
+
+# 제안 5 — J-Alert 상공 통과 경보는 routine
+def test_overflight_alert_is_routine():
+    jalert = {"status": "corroborated", "overflight_alert": True, "sources": SRC2}
+    launch = {"status": "corroborated", "routine": True, "sources": SRC2}
+    latest, _, _ = d.step(run(gov_warning=jalert, nuclear=launch), None, [])
+    assert latest["grade"] == 1 and latest["active"] == []
+    latest, _, _ = d.step(run(gov_warning=jalert, nuclear={"status": "corroborated", "sources": SRC2}), None, [])
+    assert latest["grade"] == 2  # 정례 경보는 핵 항목과 겹쳐도 위험을 만들지 않는다
+
+
+# 제안 6 — unresolved: 원인 미상 중대 사건은 원인 발표 전까지 single 로 이어 간다(등급 1 바닥)
+def test_unresolved_carried_as_single_until_resolved():
+    sink = {"status": "corroborated", "unresolved": True, "fatalities": True, "sources": SRC2}
+    runs = [_at(run(border_clash=sink), _h(0))] + [_at(run(), _h(n)) for n in (25, 26, 75, 76, 200)]
+    latest, events, _ = _seq(runs)
+    assert [e["grade"] for e in events] == [3, 3, 2, 2, 1, 1]  # 72h 바닥 뒤에도 1, 0 이 아니다
+    assert latest["items"]["border_clash"]["status"] == "single" and latest["unresolved"] == ["border_clash"]
+    found = run(border_clash={"status": "corroborated", "ended": True, "sources": SRC2, "summary": "조사 결론 발표"})
+    latest, events, _ = _seq([_at(found, _h(201)), _at(run(), _h(230)), _at(run(), _h(231))], latest, events)
+    assert [e["grade"] for e in events[-3:]] == [2, 2, 0] and "unresolved" not in latest
+
+
+def test_state_release_lifts_floor_but_cause_report_does_not():
+    quasi = {"status": "corroborated", "ongoing": True, "sources": SRC2}
+    first = run(nk_internal=quasi, **THREE)
+    rel = run(nk_internal={"status": "none", "ended": True, "summary": "준전시 해제"})
+    _, events, _ = _seq([_at(first, _h(0)), _at(rel, _h(1)), _at(run(), _h(2))])
+    assert events[1]["deescalation"] and [e["grade"] for e in events] == [3, 3, 0]
+    sink = {"status": "corroborated", "unresolved": True, "sources": SRC2}
+    found = run(border_clash={"status": "none", "ended": True, "summary": "원인 발표"})
+    _, events, _ = _seq([_at(run(border_clash=sink, nuclear={"status": "corroborated", "sources": SRC2}), _h(0)),
+                         _at(found, _h(1)), _at(run(), _h(2))])
+    assert not events[1].get("deescalation") and [e["grade"] for e in events] == [3, 3, 2]

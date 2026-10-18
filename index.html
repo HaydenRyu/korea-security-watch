@@ -310,7 +310,11 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .cams figcaption{display:flex;gap:8px;justify-content:space-between;padding:6px 8px;font:400 11px/1.4 var(--data);color:var(--fog)}
 .cams figcaption span:first-child{color:var(--ice);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cams figcaption .old{color:var(--amber)}
-.srclink{color:var(--fog);text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}.srclink:hover{color:var(--ice);text-decoration-color:var(--fog)}.srclink b{color:var(--ice)}
+/* 상단 이동 링크는 버튼처럼(10/18 — 밑줄만으로는 「출처」를 누를 수 있는 줄 몰랐다) */
+.srclink{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;margin:-4px 0;border:1px solid var(--line-2);color:var(--ice);text-decoration:none;
+  transition:border-color 120ms var(--ease),background-color 120ms var(--ease)}
+.srclink:hover{border-color:var(--fog);background:rgba(219,229,241,.05)} .srclink:active{background:rgba(219,229,241,.1)}
+.srclink b{color:var(--ice)} #srcOpen::after{content:"›";color:var(--fog)}
 .sbody{overflow:auto;padding:0 var(--pad);scrollbar-width:thin;scrollbar-color:var(--line) transparent}
 .st2{padding:12px 0;border-bottom:1px solid var(--line)}
 .st2 h3{margin:0 0 8px;display:flex;gap:8px;align-items:baseline;font:600 13px/1.4 var(--text)}
@@ -355,10 +359,10 @@ details>summary:hover::after{border-color:var(--ice)}
   transition:color 120ms var(--ease),transform 120ms var(--ease)}
 .row:hover,.go-row:hover{background:rgba(219,229,241,.05)}
 .row:hover::after,.go-row:hover::after{color:var(--ice);transform:translate(2px,-50%)}
-a[target=_blank]:not([class]),a.wt{text-decoration:underline;text-decoration-color:var(--line-2)}
-a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--fog)}
+a[target=_blank]:not([class]),a.wt{text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--fog) 70%,transparent);text-underline-offset:3px}
+a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 .taphint{font:400 11px/1.4 var(--text);color:var(--fog)}
-@media (prefers-reduced-motion:reduce){details>summary::after,.row::after,.go-row::after{transition:none}}
+@media (prefers-reduced-motion:reduce){details>summary::after,.row::after,.go-row::after,.srclink{transition:none}}
 /* ── 노트북·데스크톱 ≥1180 · 높이 ≥680 : 스크롤 없는 한 화면 ──
    세 칸이 같은 위 끝에서 시작하고, 아래 띠가 세 칸을 같은 높이로 가로지른다.
    13~14인치 노트북(1280×720 ~ 1512×860)도 이 배치를 쓴다 — 폭에 따라 옆 칸·아래 띠만 줄인다. */

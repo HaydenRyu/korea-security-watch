@@ -72,6 +72,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .scroll{overflow:auto;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
 #status{grid-area:status} #sensors-p{grid-area:sensors} #map-p{grid-area:map} #trend-p{grid-area:trend}
 #air-p{grid-area:air} #log-p{grid-area:log} #crit-p{grid-area:crit}
+.side{display:contents}
 
 /* 등급 */
 .grade{display:grid;grid-template-columns:96px minmax(0,1fr);gap:0 16px;align-items:center}
@@ -171,24 +172,24 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 
 /* 항공기 */
 .street{filter:invert(1) hue-rotate(180deg) brightness(.8) contrast(.9) saturate(.4)}  /* OSM 밝은 지도를 상황판 톤으로 */
-#air{padding:8px var(--pad) 12px;display:flex;flex-direction:column;gap:8px}
-#air .al{font:500 11px/1.4 var(--data);color:var(--fog)}
-#air .aq{display:grid;grid-template-columns:1fr auto;align-items:baseline;row-gap:2px}
-#air .aq b{font:600 28px/1 var(--data);color:var(--ice);grid-row:span 2;align-self:center}
-#air .aq b small{font-size:12px;font-weight:400;color:var(--fog);margin-left:2px}
-#air .ar{font:400 12px/1.4 var(--text);color:var(--fog)}
+#air{padding:0;display:flex;flex-direction:column}
+#air .aq,#air .am{display:flex;align-items:baseline;gap:8px;padding:6px var(--pad);border-bottom:1px solid var(--line);min-width:0}
+#air .al{flex:none;font:500 11px/1.4 var(--data);color:var(--fog)}
+#air .aq b{font:600 18px/1 var(--data);color:var(--ice)}
+#air .aq b small{font-size:11px;font-weight:400;color:var(--fog);margin-left:2px}
+#air .ar{font:400 11px/1.4 var(--text);color:var(--fog);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #air .ar.low{color:var(--amber)}
-#air .an{margin:0;font-size:12px;line-height:1.6;color:var(--dim)}
-#air .an a{color:var(--fog)}#air .an a:hover{color:var(--ice)}
-#air ul{margin:4px 0 0;padding:0;list-style:none;font-size:13px;line-height:1.6;color:var(--ice)}
+#air ul{display:flex;gap:8px;margin:0;padding:0;list-style:none;font-size:12px;line-height:1.4;color:var(--ice);overflow:hidden;white-space:nowrap}
 #air ul .d{color:var(--dim)}
+#air iframe{flex:1 1 auto;min-height:0;width:100%;border:0;display:block}
+#air-p{height:380px}  /* 휴대폰·태블릿. 한 화면 격자에서는 칸 높이를 따른다 */
 
 /* 등급 기준 */
 #crit-p .pb{padding:0}
 .cr{display:grid;grid-template-columns:8px 32px minmax(0,1fr);gap:12px;align-items:baseline;padding:10px var(--pad);white-space:nowrap;border-bottom:1px solid var(--line);font-size:12px;color:var(--fog)}
 .cr:last-of-type{border-bottom:1px solid var(--line)}
-.todo{display:grid;gap:4px;grid-template-columns:auto 1fr;padding:10px var(--pad);font-size:12px;line-height:1.5}
-.todo b,.todo span{grid-column:1/-1}
+.todo{display:grid;gap:4px 12px;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;padding:10px var(--pad);font-size:12px;line-height:1.5}
+.todo span{grid-column:1/-1} .todo a.go{grid-row:1;grid-column:2;margin-right:0}  /* 바로가기는 이름 줄 오른쪽 — 한 줄 아낀다 */
 .todo b{font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em}
 .todo span{color:var(--ice)} .todo a{font-size:11px;color:var(--fog);margin-right:12px} .todo a.go{color:var(--g0)}
 .cr i{width:8px;height:8px;align-self:center;background:var(--c)}
@@ -198,9 +199,14 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 
 /* ── 한 화면 아래 줄: 세계 안보 브리핑 · 지금 할 일 (참고 칸 — 한 화면 격자에 넣지 않는다) ── */
 .more{display:grid;gap:var(--gap);padding:0 var(--side) var(--gap);grid-template-columns:minmax(0,1fr);align-items:start}
-.yr{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
-.yr>summary,.ym>summary{cursor:pointer;font:600 13px/1.6 var(--text);color:var(--ice);padding:4px 0}
-.yr>summary span{font:400 11px var(--data);color:var(--fog)}
+#world{padding:0}
+.wl{padding:0 var(--pad);border-bottom:1px solid var(--line)}
+.yr>.wctx,.yr>.ym,.yr>.ye{margin-left:var(--pad);margin-right:var(--pad)} .yr>.wctx{margin-top:10px}
+.yr>summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:baseline;padding:10px var(--pad);border-bottom:1px solid var(--line);font-weight:600;font-size:13px;color:var(--ice)}
+.yr>summary::-webkit-details-marker{display:none} .yr>summary::after{content:"+";margin-left:auto;font:400 12px/1 var(--data);color:var(--fog)} .yr[open]>summary::after{content:"−"}
+.yr>summary:hover,.yr[open]>summary{background:rgba(219,229,241,.03)}
+.ym>summary{cursor:pointer;font:600 13px/1.6 var(--text);color:var(--ice);padding:4px 0}
+.yr>summary span{font:400 11px/1.4 var(--text);color:var(--fog)}
 .ym>summary{font-weight:500;font-size:12px;color:var(--fog)}
 .ym ul,.ye{list-style:none;margin:0;padding:0}
 .ym li{display:grid;grid-template-columns:36px 1fr;gap:8px;padding:4px 0;font-size:12px;line-height:1.6;color:var(--fog)}
@@ -214,7 +220,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 @media (max-width:759px){.ye summary{grid-template-columns:40px 1fr}.ye .yc{display:none}}
 .wctx{margin:0 0 4px;font-size:13px;color:var(--ice)}
 .wi{padding:12px 0;border-bottom:1px solid var(--line);display:grid;gap:4px}
-.wi:last-child{border-bottom:0;padding-bottom:0}
+.wi:last-child{border-bottom:0}
 .wi .wt{font:600 14px/1.45 var(--text);color:var(--ice)}
 .wi p{margin:0;font-size:13px;color:var(--ice)}
 .wi .wk2,.ye .wk2{font-size:12px;color:var(--fog)} .wi .wk2 b,.ye .wk2 b{font:500 10px/1.4 var(--data);letter-spacing:.04em;margin-right:8px}
@@ -300,25 +306,29 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 @media (min-width:1180px) and (min-height:680px){
   body{height:100vh;display:flex;flex-direction:column}
   #main{flex:1;min-height:0;display:flex;flex-direction:column}
-  .ops{flex:0 0 100%;min-height:0;grid-template-columns:344px minmax(0,1fr) 360px;grid-template-rows:auto minmax(0,1fr) 200px;
-    grid-template-areas:"status map crit" "sensors map air" "sensors trend log"}  /* 감시 항목은 왼쪽 두 칸 높이 — 9행이 스크롤 없이 다 보인다 */
+  .ops{flex:0 0 100%;min-height:0;grid-template-columns:344px minmax(0,1fr) 360px;grid-template-rows:auto minmax(0,1fr) var(--bot);--bot:200px;
+    grid-template-areas:"status map side" "sensors map side" "sensors trend side"}  /* 감시 항목은 왼쪽 두 칸 높이 — 9행이 스크롤 없이 다 보인다 */
   #map-p,#air-p,#log-p,#trend-p{height:auto}
+  /* 오른쪽 열은 행을 나눠 쓰지 않는다: 등급 기준은 내용만큼, 기록은 아래 띠(--bot)와 같은 높이, 공역 지도가 나머지 전부 */
+  .side{grid-area:side;display:flex;flex-direction:column;gap:var(--gap);min-height:0}
+  #crit-p{flex:none} #air-p{flex:1 1 0;min-height:0} #log-p{flex:0 0 var(--bot)}
+  .cr{padding-top:6px;padding-bottom:6px} .todo{padding-top:8px;padding-bottom:8px}
   .row .what{-webkit-line-clamp:1}  /* 한 화면 고정이라 요약은 1줄, 전문은 항목 상세 */
   .foot{display:none}
   .more{padding-bottom:32px}  /* 한 화면 격자는 그대로, 이 줄은 스크롤해서 본다 */
 }
 @media (min-width:1180px) and (max-width:1439px) and (min-height:680px){
-  .ops{grid-template-columns:304px minmax(0,1fr) 312px;grid-template-rows:auto minmax(0,1fr) 168px}
+  .ops{grid-template-columns:304px minmax(0,1fr) 312px;--bot:168px}
   .layers button{padding:6px}  /* 레이어 6개 — 1366 폭에서 지도 머리띠가 한 줄로 */
 }
 @media (min-width:1180px) and (min-height:680px) and (max-height:819px){
-  .ops{grid-template-rows:auto minmax(0,1fr) 168px}
+  .ops{--bot:168px}
   /* 9행: 행 높이 29px(위아래 4 + 이름 20 + 선 1) — 1280×680 에서도 9행 + 징후 1행이 스크롤 없이 들어간다 */
   .row,.row:not(.on){padding-top:4px;padding-bottom:4px}
   .row .name{line-height:20px}
 }
 @media (min-width:1180px) and (min-height:680px) and (max-height:759px){
-  .ops{grid-template-rows:auto minmax(0,1fr) 160px}  /* 기록은 쌓이는 목록이라 스크롤 */
+  .ops{--bot:160px}  /* 기록은 쌓이는 목록이라 스크롤 */
   .row .src{display:none}  /* 낮은 화면: 출처 줄은 항목 상세에서 — 감시 항목 9행이 다 보이게 */
   .row .what{line-height:18px}
 }
@@ -405,11 +415,6 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
     <div class="pb scroll" id="sensors"></div>
   </section>
 
-  <section class="p" id="log-p" aria-label="알림 기록">
-    <div class="ph"><span class="k">알림 기록</span><span class="r">알림 · 판정 불가</span></div>
-    <div class="pb scroll" id="log"></div>
-  </section>
-
   <section class="p" id="map-p" aria-label="한반도 지도">
     <div class="ph"><span class="k">상황 지도</span><span id="imgdate">위성 영상 —</span>
       <div class="layers" role="group" aria-label="지도 레이어">
@@ -432,6 +437,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
       <div class="xax"><span id="t0">—</span><span>지금</span></div></div></div>
   </section>
 
+  <div class="side">  <!-- 오른쪽 열: 한 화면 격자에서 따로 쌓는다(등급 기준=내용 높이 · 공역=남는 높이 · 기록=아래 띠) -->
   <section class="p" id="crit-p" aria-label="등급 기준">
     <div class="ph"><span class="k">등급 기준</span><span class="r">공식 경보는 재난문자</span></div>
     <div class="pb scroll" id="crit"></div>
@@ -439,18 +445,23 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 
   <section class="p" id="air-p" aria-label="항공기">
     <div class="ph"><span class="k">공역</span><span id="airAt">매시간</span><span class="r">참고 · 등급 판정과 무관</span></div>
-    <div class="pb scroll" id="air">
-      <div class="aq"><span class="al" title="위험이 커지면 항공사가 정부 발표보다 먼저 운항을 줄이거나 우회합니다. 지난 7일 같은 시각보다 30% 넘게 줄면 주황색으로 표시합니다.">남한 상공 민항기 · 줄면 항공사 회피 신호</span><b id="airN">—</b><span id="airR" class="ar">기록을 불러오는 중</span></div>
-      <div class="am"><span class="al">신호를 켠 군용기</span><ul id="airMil"><li>—</li></ul></div>
-      <p class="an">군용기는 대부분 신호를 꺼 보이지 않습니다. 공개 수신망이라 수신 공백으로도 줄 수 있습니다.
-        <a href="https://adsb.lol/?lat=37.9&lon=127.3&zoom=6.5" target="_blank" rel="noopener">실시간 항공 지도 ↗</a></p>
+    <div class="pb" id="air">
+      <div class="aq"><span class="al" title="위험이 커지면 항공사가 정부 발표보다 먼저 운항을 줄이거나 우회합니다. 지난 7일 같은 시각보다 30% 넘게 줄면 주황색으로 표시합니다. 공개 수신망이라 수신 공백으로도 줄 수 있습니다.">남한 상공 민항기</span><b id="airN">—</b><span id="airR" class="ar">기록을 불러오는 중</span></div>
+      <div class="am"><span class="al">신호 켠 군용기</span><ul id="airMil"><li>—</li></ul></div>
+      <iframe title="한반도 상공 항공기 위치(신호를 켠 기체만)" loading="lazy"
+        src="https://adsb.lol/?lat=37.9&lon=127.3&zoom=6.5&hideSideBar&hideButtons&baseMap=OpenFreeMapDark&mapDim=0.2&iconScale=0.65"></iframe>
     </div>
   </section>
+  <section class="p" id="log-p" aria-label="알림 기록">
+    <div class="ph"><span class="k">알림 기록</span><span class="r">알림 · 판정 불가</span></div>
+    <div class="pb scroll" id="log"></div>
+  </section>
+  </div>
 </div>
 <div class="more">
   <section class="p" id="world-p" aria-label="세계 안보 브리핑">
     <div class="ph"><span class="k">세계 안보 브리핑</span><span id="worldAt"></span><span class="r">참고 · 등급 판정과 무관</span></div>
-    <div class="pb" id="world"><div class="empty" style="padding:0">다음 확인부터 정리됩니다.</div></div>
+    <div class="pb" id="world"></div>
   </section>
   <section class="p" id="todo-p" aria-label="지금 할 일">
     <div class="ph"><span class="k">지금 할 일</span><span class="r">개인 준비 · 국민재난안전포털 행동요령 참고</span></div>
@@ -461,6 +472,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
   정례 훈련·미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다.
   위성 영상은 NASA GIBS 하루 단위 영상(약 250m)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다.
   열점은 NASA FIRMS 위성 열 감지(최근 48시간)로 산불·소각·공장 열원도 포함하며, 접경 구역은 근사 범위입니다.
+  붉은 선은 군사분계선(MDL), 양옆 점선은 비무장지대 한계선입니다(Natural Earth 경계 자료, 축척상 수백 m 오차 가능).
   CCTV 는 국가교통정보센터 영상을 5분마다 한 장씩 찍은 사진이라 실제보다 최대 6분 늦습니다.
   항공기 지도는 신호를 켠 기체만 보이고 등급 판단에는 쓰지 않습니다. 공식 경보는 행정안전부 재난문자를 따르세요.
 </p>
@@ -628,11 +640,12 @@ document.addEventListener("change",e=>{const k=e.target.dataset?.ck;if(!k)return
 function renderWorld(latest){
   const w=Array.isArray(latest?.world)?latest.world:[];
   $("worldAt").textContent=w.length&&latest.world_at?`${short(latest.world_at)} 기준`:"";
-  if(!w.length){$("world").innerHTML=`<div class="empty" style="padding:0">오늘 브리핑은 다음 확인부터 정리됩니다.</div><div id="year"></div>`;loadYear(true);return}
-  $("world").innerHTML=(latest.world_context?`<p class="wctx">${esc(latest.world_context)}</p>`:"")
-    +w.map(x=>{const s=x.source||{};return `<div class="wi"><a class="wt" href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(x.title)}</a>
+  const head=`<div class="tnow"><b>오늘 브리핑</b><span>${
+    w.length?esc(latest.world_context||`한반도와 이어지는 소식 ${w.length}건`):"다음 확인부터 정리됩니다. 아래는 올해 흐름입니다."}</span></div>`;
+  if(!w.length){$("world").innerHTML=head+`<div id="year"></div>`;loadYear(true);return}
+  $("world").innerHTML=head+'<div class="wl">'+w.map(x=>{const s=x.source||{};return `<div class="wi"><a class="wt" href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(x.title)}</a>
       <p>${esc(x.summary)}</p>${x.link_korea?`<div class="wk2"><b>한반도 연결</b>${esc(x.link_korea)}</div>`:""}
-      <div class="wm">${[x.region,s.name].filter(Boolean).map(esc).join(" · ")}</div></div>`}).join("")+'<div id="year"></div>';
+      <div class="wm">${[x.region,s.name].filter(Boolean).map(esc).join(" · ")}</div></div>`}).join("")+'</div><div id="year"></div>';
   loadYear(false);
 }
 // ── 올해 흐름: data/context_2026.json (원문 확인한 사건만, 수동 갱신). 감시 기록이 쌓이기 전의 맥락 ──
@@ -698,6 +711,10 @@ function initMap(){
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{minZoom:11,maxZoom:16,className:"street",
     attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
   L.tileLayer(G("Coastlines_15m","default",13,"png"),{maxNativeZoom:9,className:"coast",pane:"overlayPane"}).addTo(map);
+  // 군사분계선(MDL)과 비무장지대 남·북 한계선 — Natural Earth 10m 경계(퍼블릭 도메인), 항상 표시
+  fetch("data/dmz.json").then(r=>r.ok?r.json():null).then(z=>{if(!z)return;
+    L.polyline(z.dmz,{color:"#dbe5f1",weight:1,opacity:.55,dashArray:"3 4",interactive:false}).addTo(map);
+    L.polyline(z.mdl,{color:"#ff4d5e",weight:3,opacity:.95}).bindTooltip("군사분계선(MDL) · 양옆 점선은 비무장지대 남·북 한계선(각 2km)",{sticky:true}).addTo(map)}).catch(()=>{});
   $("imgdate").textContent=`위성 ${d} · VIIRS`;
   map.on("mousemove",e=>$("coord").textContent=`${e.latlng.lat.toFixed(2)}N ${e.latlng.lng.toFixed(2)}E`);
   document.querySelectorAll("[data-layer=day],[data-layer=night]").forEach(b=>b.addEventListener("click",()=>{

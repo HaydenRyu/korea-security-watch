@@ -330,7 +330,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
         <button type="button" data-layer="night" aria-pressed="false">야간 조명</button>
         <button type="button" data-layer="shelter" aria-pressed="false" disabled title="자곡동 반경 2km 민방위 대피소(국민재난안전포털)">대피소</button>
         <button type="button" data-layer="cctv" aria-pressed="false" disabled title="접경 도로 CCTV 위치(국가교통정보센터)">CCTV</button>
-        <button type="button" data-layer="firms" aria-pressed="false" disabled title="NASA FIRMS 위성 열점(최근 48시간)">열점</button>
+        <button type="button" data-layer="firms" aria-pressed="false" disabled title="위성 열점 — NASA 위성이 감지한 열원(최근 48시간, 산불·소각 포함). 점에 올리거나 누르면 설명">열점</button>
       </div></div>
     <div class="pb"><div id="map"></div><div class="reticle"></div><span class="corner a"></span><span class="corner b"></span>
       <div class="hud bl" id="coord">37.80N 127.50E</div></div>
@@ -572,8 +572,8 @@ function drawFirms(doc){
   b.textContent=`열점 ${doc.count}`+(doc.border_count?` · 접경 ${doc.border_count}`:"");
   layers.firms=L.layerGroup();
   doc.points.forEach(p=>L.circleMarker([p.lat,p.lon],{radius:p.border?5:2.5,weight:p.border?1.5:0,color:"#ffd2a8",
-      fillColor:p.border?"#ff6a3d":"#ff9d5c",fillOpacity:p.border?.95:.7,interactive:p.border})
-    .bindTooltip(`위성 열점 · ${short(p.t)} · ${p.sat}${p.border?" · 접경 구역":""}`,{className:"tip"}).addTo(layers.firms));
+      fillColor:p.border?"#ff6a3d":"#ff9d5c",fillOpacity:p.border?.95:.7})
+    .bindTooltip(`위성 열점 · ${short(p.t)} · ${p.sat}${p.border?" · 접경 구역":""}<br><span style="color:var(--fog)">NASA 위성이 감지한 지표 열원 — 산불·소각·공장도 잡힙니다.<br>같은 곳의 포격·화재 보도가 있을 때만 판정 근거로 씁니다.</span>`,{className:"tip"}).addTo(layers.firms));
   toggle(b,layers.firms);
   if(doc.border_count){b.setAttribute("aria-pressed","true");layers.firms.addTo(map)} // 접경 열점이 있으면 기본으로 켠다
 }

@@ -14,6 +14,7 @@ import io
 import json
 import os
 import sys
+import time
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -30,8 +31,15 @@ def in_border(lat: float, lon: float) -> bool:
 
 
 def fetch(key: str, src: str) -> list[dict]:
-    with urllib.request.urlopen(API.format(key=key, src=src), timeout=40) as r:
-        text = r.read().decode()
+    for attempt in range(3):  # 러너 네트워크 일시 불통(Errno 101) 실측 — 짧게 재시도
+        try:
+            with urllib.request.urlopen(API.format(key=key, src=src), timeout=40) as r:
+                text = r.read().decode()
+            break
+        except OSError:
+            if attempt == 2:
+                raise
+            time.sleep(10)
     if not text.startswith("latitude"):
         raise RuntimeError(f"{src}: unexpected response {text[:120]!r}")
     return list(csv.DictReader(io.StringIO(text)))

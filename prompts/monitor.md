@@ -80,5 +80,5 @@
 1. 위 출처를 검색해 `run.json` 을 레포 루트에 쓴다.
 2. `python3 scripts/diff_state.py run.json` 를 실행하고 출력을 확인한다. 스키마 위반이면 스크립트가 unverified 로 기록한다.
 3. `rm run.json` 후 `git add state/ && git commit -m "watch: <등급 또는 unverified> <시각>"` 를 실행한다.
-4. `git push origin HEAD:main`.
+4. `git pull --rebase origin main && git push origin HEAD:main`. 거절되면 한 번 더 pull --rebase 후 push 한다. 그래도 실패하면 사유를 출력하고 끝낸다.
    - 알림 발송은 GitHub Actions 가 `state/outbox.json` 변경을 보고 ntfy 로 처리한다. 이 세션에서 ntfy 를 직접 부르지 않는다.

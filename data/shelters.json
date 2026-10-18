@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-18T05:24:03+00:00",
+ "fetched_at": "2026-10-18T07:47:19+00:00",
  "source": "국민재난안전포털 민방위 대피소",
  "center": {
   "name": "자곡동",
@@ -7,6 +7,11 @@
   "lon": 127.103
  },
  "radius_m": 2000,
+ "dongs": [
+  "세곡동",
+  "자곡동",
+  "율현동"
+ ],
  "portal": "https://www.safekorea.go.kr/safekorea-kor/flsm/flsm/facilitiesSafteyMap.do?menuSn=2&title=민방위대피소",
  "shelters": [
   {
@@ -16,7 +21,8 @@
    "lon": 127.109636,
    "area_m2": 40804,
    "open": true,
-   "dist_m": 586
+   "dist_m": 586,
+   "dong": "자곡동"
   },
   {
    "name": "세곡동 주민센터 지하 1층",
@@ -25,7 +31,8 @@
    "lon": 127.106914,
    "area_m2": 399,
    "open": true,
-   "dist_m": 650
+   "dist_m": 650,
+   "dong": "율현동"
   },
   {
    "name": "강남한양수자인아파트 지하주차장 1층",
@@ -34,7 +41,8 @@
    "lon": 127.111447,
    "area_m2": 61656,
    "open": true,
-   "dist_m": 802
+   "dist_m": 802,
+   "dong": "자곡동"
   },
   {
    "name": "강남에버시움 지하주차장 1층",
@@ -43,7 +51,8 @@
    "lon": 127.090719,
    "area_m2": 8565,
    "open": true,
-   "dist_m": 1119
+   "dist_m": 1119,
+   "dong": "자곡동"
   },
   {
    "name": "강남더샵포레스트아파트 지하주차장 2층~3층",
@@ -52,7 +61,8 @@
    "lon": 127.094744,
    "area_m2": 29365,
    "open": true,
-   "dist_m": 1161
+   "dist_m": 1161,
+   "dong": null
   },
   {
    "name": "세곡푸르지오아파트 지하주차장 1층",
@@ -61,7 +71,8 @@
    "lon": 127.094119,
    "area_m2": 34060,
    "open": true,
-   "dist_m": 1213
+   "dist_m": 1213,
+   "dong": "세곡동"
   },
   {
    "name": "세곡리엔파크4단지아파트 지하주차장 1층",
@@ -70,7 +81,8 @@
    "lon": 127.101822,
    "area_m2": 17198,
    "open": true,
-   "dist_m": 1253
+   "dist_m": 1253,
+   "dong": "세곡동"
   },
   {
    "name": "강남자곡힐스테이트아파트 지하주차장 1층",
@@ -79,7 +91,8 @@
    "lon": 127.089083,
    "area_m2": 4787,
    "open": true,
-   "dist_m": 1261
+   "dist_m": 1261,
+   "dong": "자곡동"
   },
   {
    "name": "SRT수서역사 지하1층~2층",
@@ -88,7 +101,8 @@
    "lon": 127.104561,
    "area_m2": 9465,
    "open": true,
-   "dist_m": 1277
+   "dist_m": 1277,
+   "dong": null
   },
   {
    "name": "강남데시앙포레아파트 지하주차장 1층~2층",
@@ -97,7 +111,8 @@
    "lon": 127.089639,
    "area_m2": 35911,
    "open": true,
-   "dist_m": 1393
+   "dist_m": 1393,
+   "dong": null
   },
   {
    "name": "동익아파트 지하주차장 1층",
@@ -106,7 +121,8 @@
    "lon": 127.097622,
    "area_m2": 4104,
    "open": true,
-   "dist_m": 1405
+   "dist_m": 1405,
+   "dong": null
   },
   {
    "name": "하니움아파트 지하주차장 1층",
@@ -115,7 +131,8 @@
    "lon": 127.107203,
    "area_m2": 1220,
    "open": true,
-   "dist_m": 1449
+   "dist_m": 1449,
+   "dong": null
   },
   {
    "name": "수서역 지하1층~2층",
@@ -124,7 +141,8 @@
    "lon": 127.101856,
    "area_m2": 3505,
    "open": true,
-   "dist_m": 1492
+   "dist_m": 1492,
+   "dong": null
   },
   {
    "name": "광현교회(지하1층)",
@@ -133,7 +151,8 @@
    "lon": 127.104478,
    "area_m2": 214,
    "open": true,
-   "dist_m": 1511
+   "dist_m": 1511,
+   "dong": null
   },
   {
    "name": "신동아아파트 지하주차장 1층",
@@ -142,7 +161,8 @@
    "lon": 127.099064,
    "area_m2": 4032,
    "open": true,
-   "dist_m": 1566
+   "dist_m": 1566,
+   "dong": null
   },
   {
    "name": "한아름아파트 지하주차장 1층",
@@ -151,7 +171,8 @@
    "lon": 127.102011,
    "area_m2": 8451,
    "open": true,
-   "dist_m": 1693
+   "dist_m": 1693,
+   "dong": null
   },
   {
    "name": "서울동부지방법원 지하주차장 1층",
@@ -160,7 +181,8 @@
    "lon": 127.119275,
    "area_m2": 1651,
    "open": true,
-   "dist_m": 1765
+   "dist_m": 1765,
+   "dong": null
   },
   {
    "name": "다니엘학교 지하1층 강당",
@@ -169,7 +191,8 @@
    "lon": 127.091353,
    "area_m2": 500,
    "open": true,
-   "dist_m": 1800
+   "dist_m": 1800,
+   "dong": null
   },
   {
    "name": "가람아파트 지하주차장 1층~2층",
@@ -178,7 +201,8 @@
    "lon": 127.085811,
    "area_m2": 2310,
    "open": true,
-   "dist_m": 1813
+   "dist_m": 1813,
+   "dong": null
   },
   {
    "name": "세종고등학교 지하1층",
@@ -187,7 +211,8 @@
    "lon": 127.102797,
    "area_m2": 2940,
    "open": true,
-   "dist_m": 1822
+   "dist_m": 1822,
+   "dong": null
   },
   {
    "name": "까치마을아파트 지하주차장 1층~2층",
@@ -196,7 +221,8 @@
    "lon": 127.086603,
    "area_m2": 3135,
    "open": true,
-   "dist_m": 1847
+   "dist_m": 1847,
+   "dong": null
   },
   {
    "name": "일원역 지하 1층~2층",
@@ -205,7 +231,8 @@
    "lon": 127.084494,
    "area_m2": 1188,
    "open": true,
-   "dist_m": 1976
+   "dist_m": 1976,
+   "dong": null
   },
   {
    "name": "가든파이브 라이프관 지하주차장 3층",
@@ -214,7 +241,8 @@
    "lon": 127.124958,
    "area_m2": 36973,
    "open": true,
-   "dist_m": 1986
+   "dist_m": 1986,
+   "dong": null
   },
   {
    "name": "목련타운아파트 지하주차장 1층~2층",
@@ -223,7 +251,8 @@
    "lon": 127.085678,
    "area_m2": 3640,
    "open": true,
-   "dist_m": 1991
+   "dist_m": 1991,
+   "dong": null
   }
  ]
 }

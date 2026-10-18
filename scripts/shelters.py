@@ -1,4 +1,4 @@
-"""국민재난안전포털 민방위 대피소 → data/shelters.json (자곡동 반경 RADIUS_M 안, 거리순)
+"""국민재난안전포털 민방위 대피소 → data/shelters.json (세곡·자곡·율현동 + 자곡동 반경 RADIUS_M 안, 거리순)
 
   python3 scripts/shelters.py
 
@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 URL = "https://www.safekorea.go.kr/safekorea-kor/flsm/flsm/facilityDataList.do"
 CENTER = (37.474, 127.103)  # 자곡동
 RADIUS_M = 2000
+DONGS = ("세곡동", "자곡동", "율현동")  # 주소에 이 동이 있으면 반경 밖이어도 넣는다(2026-10-18 hayden)
 SGG = {"11680": "강남구", "11710": "송파구", "11650": "서초구", "41131": "성남 수정구", "41133": "성남 중원구"}
 
 
@@ -51,14 +52,17 @@ def main() -> int:
             except (KeyError, TypeError):
                 continue
             m = dist_m(*CENTER, lat, lon)
-            if m <= RADIUS_M and r.get("facilCode") not in seen:
+            jibun, road = r.get("facilAddr") or "", r.get("facilRdAddr") or ""
+            # 법정동은 지번 주소가 정확하다(도로명 괄호의 동은 건물명일 때가 있다)
+            dong = next((d for d in DONGS if f" {d} " in f" {jibun} "), None) or next((d for d in DONGS if d in road), None)
+            if (m <= RADIUS_M or dong) and r.get("facilCode") not in seen:
                 seen.add(r.get("facilCode"))
                 out.append({"name": r["facilNm"].strip(), "addr": (r.get("facilRdAddr") or r.get("facilAddr") or "").strip(),
                             "lat": round(lat, 6), "lon": round(lon, 6), "area_m2": r.get("facilPow"),
-                            "open": r.get("opnYn") == "Y", "dist_m": round(m)})
+                            "open": r.get("opnYn") == "Y", "dist_m": round(m), "dong": dong})
     out.sort(key=lambda x: x["dist_m"])
     doc = {"fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "source": "국민재난안전포털 민방위 대피소",
-           "center": {"name": "자곡동", "lat": CENTER[0], "lon": CENTER[1]}, "radius_m": RADIUS_M,
+           "center": {"name": "자곡동", "lat": CENTER[0], "lon": CENTER[1]}, "radius_m": RADIUS_M, "dongs": list(DONGS),
            "portal": "https://www.safekorea.go.kr/safekorea-kor/flsm/flsm/facilitiesSafteyMap.do?menuSn=2&title=민방위대피소",
            "shelters": out}
     (ROOT / "data" / "shelters.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")

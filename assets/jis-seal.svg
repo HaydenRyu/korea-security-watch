@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="JIS 자곡동 인텔리전스 서비스(비공식)">
+  <!-- 원형 인장 형식만 빌리고 국가 상징(태극·무궁화·봉황·국가기관 마크)은 쓰지 않는다.
+       가운데 = 대모산 능선(자곡동 뒷산) 위의 감시 조준선. 비공식 표기를 인장 안에 고정한다. -->
+  <defs>
+    <path id="top" d="M30 120 A90 90 0 0 1 210 120"/>
+    <path id="bot" d="M24 120 A96 96 0 0 0 216 120"/>
+  </defs>
+  <circle cx="120" cy="120" r="116" fill="#0a1019"/>
+  <circle cx="120" cy="120" r="112" fill="none" stroke="#dbe5f1" stroke-width="3"/>
+  <circle cx="120" cy="120" r="78" fill="none" stroke="#dbe5f1" stroke-width="1.5"/>
+  <g font-family="'Martian Mono',ui-monospace,Menlo,monospace" fill="#dbe5f1" font-weight="600">
+    <text font-size="11" letter-spacing="1.2"><textPath href="#top" startOffset="50%" text-anchor="middle">JAGOK-DONG INTELLIGENCE SERVICE</textPath></text>
+    <text font-size="11" letter-spacing="2.4" fill="#8091a8"><textPath href="#bot" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">UNOFFICIAL · OSINT · 2026</textPath></text>
+  </g>
+  <g fill="#f2c14e"><rect x="17" y="116" width="8" height="8" transform="rotate(45 21 120)"/><rect x="215" y="116" width="8" height="8" transform="rotate(45 219 120)"/></g>
+  <clipPath id="in"><circle cx="120" cy="120" r="76"/></clipPath>
+  <g clip-path="url(#in)">
+    <!-- 대모산 능선 -->
+    <path d="M40 168 L78 138 L96 148 L124 118 L150 140 L166 130 L200 162 L200 200 L40 200 Z" fill="#1a2331"/>
+    <path d="M40 168 L78 138 L96 148 L124 118 L150 140 L166 130 L200 162" fill="none" stroke="#dbe5f1" stroke-width="2" stroke-linejoin="round"/>
+    <!-- 조준선 -->
+    <circle cx="124" cy="92" r="26" fill="none" stroke="#dbe5f1" stroke-width="2"/>
+    <path d="M124 58 V78 M124 106 V118 M90 92 H110 M138 92 H158" stroke="#dbe5f1" stroke-width="2"/>
+    <circle cx="124" cy="92" r="5" fill="#f2c14e"/>
+  </g>
+  <text x="120" y="190" text-anchor="middle" font-family="Pretendard,system-ui,sans-serif" font-weight="800" font-size="22" letter-spacing="6" fill="#dbe5f1">JIS</text>
+</svg>

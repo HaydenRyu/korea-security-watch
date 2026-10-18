@@ -3,451 +3,457 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>한반도 징후 상황판</title>
+<title>JIS 북한 징후 감시</title>
+<meta name="description" content="북한의 핵 사용 준비·병력 동원·무력 충돌 징후를 공개정보로 매시간 확인하는 개인 감시판">
+<link rel="icon" href="assets/jis-mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@87.5..112.5,300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
+/* ── 토큰 ─────────────────────────────────────────────
+   간격은 4의 배수만 쓴다: 4 · 8 · 12 · 16 · 24
+   패널 = 머리띠 32px + 본문. 머리띠·행의 좌우 안쪽 여백은 모두 12px 이라 글자 왼쪽 끝이 한 줄에 선다. */
 :root{
-  --ink:#070b14; --deep:#0c1322; --rim:#1b2638; --rim-2:#273449;
-  --ice:#dce8fa; --fog:#8193ad; --dim:#4b5a71;
+  --ink:#05080e; --panel:#0a1019; --head:#0d1520; --line:#1a2331; --line-2:#2a3649;
+  --ice:#dbe5f1; --fog:#8091a8; --dim:#4c5a6e;
   --g0:#5fd0b8; --g1:#f2c14e; --g2:#ff8a3d; --g3:#ff4d5e; --unk:#56647a;
+  --gc:var(--fog);
   --data:'Martian Mono',ui-monospace,monospace;
   --text:'Pretendard Variable',Pretendard,system-ui,sans-serif;
-  --gut:16px; --ease:cubic-bezier(.2,.8,.2,1);
+  --gap:12px; --pad:12px; --hh:32px; --side:16px;
+  --ease:cubic-bezier(.2,.8,.2,1);
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{background:radial-gradient(1200px 600px at 20% -10%,#14203a 0%,transparent 60%),var(--ink);
-  color:var(--ice);font:15px/1.6 var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration-color:var(--dim);text-underline-offset:3px}
-a:hover{text-decoration-color:var(--ice)}
-a:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
-.wrap{max-width:1680px;margin:0 auto;padding:0 var(--gut) 64px}
+body{background:var(--ink);color:var(--ice);font:14px/1.55 var(--text);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
+:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
 
-/* 상단 바 */
-.bar{display:flex;align-items:center;gap:18px;padding:18px 0;font:400 12px var(--data);color:var(--fog);flex-wrap:wrap}
-.mark{font:700 13px var(--data);font-stretch:112.5%;color:var(--ice);letter-spacing:.04em}
-.bar .sp{flex:1}
-.bar b{font-weight:500;color:var(--ice)}
-.note{font-size:11px;color:var(--dim)}
-.lag{display:none;color:var(--g3)} .lag.on{display:inline}
+/* ── 머리 ── 맨 위 3px 띠는 현재 등급 색이다(한눈에 상태) */
+.band{height:3px;background:var(--gc)}
+.top{display:flex;align-items:center;gap:8px 24px;flex-wrap:wrap;padding:12px var(--side);border-bottom:1px solid var(--line)}
+.id{display:flex;align-items:center;gap:12px;min-width:0}
+.mark{flex:none;display:block}
+.sigil{width:24px;height:24px;flex:none;border:1.5px solid var(--gc);display:grid;place-items:center}
+.sigil i{width:8px;height:8px;background:var(--gc)}
+.id h1{margin:0;font:700 16px/1.2 var(--text);letter-spacing:-.01em;white-space:nowrap}
+.id h1 .sub{font-weight:500;color:var(--fog);margin-left:8px}
+.id small{display:block;font:400 10px/1.4 var(--data);color:var(--dim);letter-spacing:.08em}
+.meta{display:flex;gap:4px 20px;flex-wrap:wrap;margin-left:auto;font:400 11px/1.4 var(--data);color:var(--fog)}
+.meta b{color:var(--ice);font-weight:500;font-variant-numeric:tabular-nums}
+.meta .lag{color:var(--g3);display:none} .meta .lag.on{display:inline}
+.tag{font:500 10px/1 var(--data);padding:4px 8px;border:1px solid var(--g1);color:var(--g1);letter-spacing:.04em}
+.tag[hidden]{display:none}
 
-/* 히어로: 다이얼 */
-.hero{display:grid;grid-template-columns:minmax(260px,380px) 1fr;gap:48px;align-items:center;padding:28px 0 40px}
-.dial{position:relative;aspect-ratio:1;width:100%}
+/* ── 패널 ── */
+.ops{display:grid;gap:var(--gap);padding:var(--gap) var(--side);grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"status" "map" "sensors" "trend" "log" "air" "crit"}
+.p{background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;min-width:0;min-height:0;position:relative}
+.ph{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;min-height:var(--hh);padding:0 var(--pad);
+  background:var(--head);border-bottom:1px solid var(--line);font:500 11px/1 var(--data);color:var(--fog);letter-spacing:.02em}
+.ph .k{color:var(--ice)}
+.ph .r{margin-left:auto;color:var(--dim);font-weight:400}
+.pb{flex:1;min-height:0;padding:var(--pad)}
+.scroll{overflow:auto;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
+#status{grid-area:status} #sensors-p{grid-area:sensors} #map-p{grid-area:map} #trend-p{grid-area:trend}
+#air-p{grid-area:air} #log-p{grid-area:log} #crit-p{grid-area:crit}
+
+/* 등급 */
+.grade{display:grid;grid-template-columns:96px minmax(0,1fr);gap:0 16px;align-items:center}
+.dial{width:96px;height:96px;position:relative}
 .dial svg{width:100%;height:100%;display:block;overflow:visible}
-.dial .seg{fill:none;stroke-width:14;stroke:var(--rim);transition:stroke .6s var(--ease)}
-.dial .tick{stroke:var(--rim-2);stroke-width:1.5}
-.dial .tick.past{stroke:var(--fog)}
-.dial .core{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
-.dial .num{font:300 104px/1 var(--data);font-stretch:87.5%;color:var(--gc,var(--fog));font-variant-numeric:tabular-nums}
-.dial .of{font:400 11px var(--data);color:var(--dim)}
-.verdict .lbl{font:800 64px/1 var(--text);letter-spacing:-.03em;color:var(--gc,var(--ice))}
-.verdict .scale{display:flex;gap:14px;margin:14px 0 22px;font:400 12px var(--data);color:var(--dim)}
-.verdict .scale span.on{color:var(--ice)}
-.verdict p{margin:0;font-size:18px;line-height:1.65;max-width:56ch;color:var(--ice)}
-.fwd{display:none;margin-top:22px;padding:12px 0 12px 16px;border-left:3px solid var(--g3);font-size:15px}
-.fwd.on{display:block}
-.fwd strong{color:var(--g3)}
+.dial .seg{fill:none;stroke-width:10;stroke:var(--line-2)}
+.dial .tick{stroke:var(--line-2);stroke-width:1.5} .dial .tick.past{stroke:var(--fog)}
+.dial .num{position:absolute;inset:0;display:grid;place-items:center;font:300 44px/1 var(--data);font-stretch:87.5%;color:var(--gc)}
+.lbl{font:800 36px/1 var(--text);letter-spacing:-.03em;color:var(--gc)}
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:12px}
+.ladder span{font:400 10px/1 var(--data);color:var(--dim);padding-top:8px;border-top:3px solid var(--line-2)}
+.ladder span.on{color:var(--ice);border-color:var(--gc)}
+#summary{margin:12px 0 0;color:var(--ice)}
 
-/* 센서 행 */
-h2{font:600 13px var(--text);color:var(--fog);margin:0 0 6px;letter-spacing:.01em}
-.sensors{border-top:1px solid var(--rim)}
-.row{display:grid;grid-template-columns:168px 48px 1fr 300px;gap:20px;align-items:center;
-  padding:16px 0;border-bottom:1px solid var(--rim);min-height:64px}
-.row{color:inherit;text-decoration:none;cursor:pointer;transition:background .15s var(--ease)}
-.row:hover{background:rgba(220,232,250,.03)}
-.row:focus-visible{outline:2px solid var(--ice);outline-offset:-2px}
-.row .name{font-weight:600}
-.row .name::after{content:" ›";color:var(--dim);font-weight:400}
-.meter{display:flex;gap:4px;height:14px;align-items:flex-end}
-.meter i{width:10px;background:var(--rim-2)}
-.meter i:nth-child(1){height:6px} .meter i:nth-child(2){height:10px} .meter i:nth-child(3){height:14px}
+/* 감시 항목: 이름 · 상태 · 막대 세 칸은 모든 행이 같은 x 에 선다 */
+#sensors-p .pb{padding:0}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 72px 34px;gap:2px 12px;align-items:center;padding:10px var(--pad);
+  border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.row:not(.on){padding:8px var(--pad)}
+.row:last-child{border-bottom:0}
+.row:hover{background:rgba(219,229,241,.03)}
+.row .name{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .st{font:400 11px/1 var(--data);color:var(--dim);text-align:right}
+.row.on .st{color:var(--ice)}
+.row .what{grid-column:1/-1;font-size:13px;color:var(--ice);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.row .src{grid-column:1/-1;font:400 10px/1.4 var(--data);color:var(--fog)}
+.meter{display:flex;gap:3px;height:12px;align-items:flex-end;justify-content:flex-end}
+.meter i{width:8px;background:var(--line-2)}
+.meter i:nth-child(1){height:4px} .meter i:nth-child(2){height:8px} .meter i:nth-child(3){height:12px}
+.meter[data-s="none"] i:nth-child(1){background:var(--g0)}
+.meter[data-s="routine"] i:nth-child(1){background:transparent;box-shadow:inset 0 0 0 1.5px var(--fog)}
 .meter[data-s="single"] i:nth-child(-n+2){background:var(--g1)}
 .meter[data-s="corroborated"] i{background:var(--g3)}
-.meter[data-s="none"] i:nth-child(1){background:var(--g0)}
-.meter[data-s="routine"] i:nth-child(-n+1){background:transparent;box-shadow:inset 0 0 0 1.5px var(--fog)}
-.row .what{color:var(--fog);font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.row .what.has{color:var(--ice)}
-.row .what em{font-style:normal;color:var(--fog);font-size:12px;margin-left:8px}
-.row .src{font:400 12px var(--data);color:var(--fog);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
-/* 추이 */
-.trace{margin-top:48px}
-.trace svg{width:100%;height:120px;display:block}
-.trace .axis{display:flex;justify-content:space-between;font:400 11px var(--data);color:var(--dim);margin-top:6px}
-
-/* 기록 */
-.log{margin-top:48px}
-.ev{display:grid;grid-template-columns:120px 110px 1fr;gap:20px;padding:12px 0;border-bottom:1px solid var(--rim);font-size:14px}
-.ev .t{font:400 12px var(--data);color:var(--fog);padding-top:2px}
-.ev .g{font-weight:600}
-.empty{color:var(--fog);padding:20px 0}
-.foot{margin-top:56px;font-size:12px;line-height:1.8;color:var(--dim);max-width:72ch}
-
-/* 지휘통제 배치 — 영역: status · center(지도+추이) · sensors · right(항공기+기록)
-   모바일: 등급 → 지도 → 항목 → 항공기·기록 / 태블릿: 등급 · 지도 전폭, 아래 2칸 / 데스크톱: 한 화면 고정 3칸 */
-.ops{display:grid;gap:16px;grid-template-columns:minmax(0,1fr);grid-template-areas:"status" "center" "sensors" "right"}
-.left{display:contents}
-.sensors-wrap{grid-area:sensors;min-width:0}
-.center{grid-area:center;display:flex;flex-direction:column;gap:16px;min-width:0}
-.right{grid-area:right;display:flex;flex-direction:column;gap:16px;min-width:0}
-.ops .hero{grid-area:status;grid-template-columns:112px 1fr;grid-template-areas:"dial lbl" "dial scale" "sum sum" "fwd fwd";
-  gap:0 16px;padding:0;align-items:center;justify-items:stretch;text-align:left}
-.ops .verdict{display:contents}
-.ops .dial{grid-area:dial;max-width:none}
-.ops .dial .num{font-size:48px}
-.ops .dial .of{display:none}
-.ops .verdict .lbl{grid-area:lbl;align-self:end;font-size:36px}
-.ops .verdict .scale{grid-area:scale;align-self:start;justify-content:flex-start;margin:8px 0 0;gap:10px}
-.ops #summary{grid-area:sum;font-size:15px;margin:14px 0 0;max-width:none}
-.ops .fwd{grid-area:fwd;font-size:14px;margin-top:12px;padding:8px 0 8px 12px}
-.ops .row{grid-template-columns:1fr auto;gap:2px 12px;padding:11px 0;min-height:0}
-.ops .row .what{grid-column:1/-1;font-size:13px;white-space:nowrap}
-.ops .row .src{grid-column:1/-1;text-align:left;font-size:11px}
-.ops .row .src:empty{display:none}
-/* 이상 없는 항목은 한 줄로 접는다: 이름 · 상태문구 · 막대 */
-.ops .row.quiet{grid-template-columns:1fr auto auto;padding:9px 0}
-.ops .row.quiet .what{grid-column:2;grid-row:1;font-size:12px;color:var(--dim)}
-.ops .row.quiet .meter{grid-column:3;grid-row:1}
-.scroll{overflow:auto;scrollbar-width:thin;scrollbar-color:var(--rim-2) transparent}
-.panel{position:relative;background:var(--deep);border:1px solid var(--rim)}
-.panel .hud{position:absolute;z-index:500;font:400 11px var(--data);color:var(--fog);pointer-events:none;
-  background:rgba(7,11,20,.72);padding:4px 8px}
-.panel .tl{top:10px;left:10px} .panel .bl{bottom:10px;left:10px} .panel .br{bottom:10px;right:10px}
-.theater{height:52vh;min-height:320px}
+/* 지도 */
+#map-p{min-height:320px;height:min(72vh,560px)}
+#map-p .pb{padding:0;position:relative;overflow:hidden}
 #map{position:absolute;inset:0;background:var(--ink)}
-.theater::before,.theater::after{content:"";position:absolute;z-index:501;width:22px;height:22px;pointer-events:none;border:1.5px solid var(--fog)}
-.theater::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
-.theater::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
-.sat{filter:saturate(.35) brightness(.72) contrast(1.15)}
-.coast{filter:invert(1) brightness(.75) sepia(1) hue-rotate(170deg) saturate(2.4);opacity:.75}
-.layers{position:absolute;z-index:500;top:10px;right:10px;display:flex;gap:2px;font:400 11px var(--data)}
-.layers button{background:rgba(7,11,20,.8);color:var(--fog);border:1px solid var(--rim);padding:6px 9px;cursor:pointer;font:inherit}
-.layers button[aria-pressed="true"]{color:var(--ice);border-color:var(--fog)}
-.layers button:disabled{cursor:not-allowed;opacity:.5}
-.layers button:focus-visible{outline:2px solid var(--ice)}
-.pin{width:14px;height:14px;border-radius:50%;background:var(--pc);box-shadow:0 0 0 3px rgba(7,11,20,.8)}
-.pin.ring::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1.5px solid var(--pc);opacity:.8}
+.layers{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.layers button{font:400 10px/1 var(--data);color:var(--fog);background:transparent;border:1px solid var(--line-2);padding:6px 8px;cursor:pointer}
+.layers button[aria-pressed="true"]{color:var(--ink);background:var(--ice);border-color:var(--ice)}
+.layers button:disabled{opacity:.45;cursor:not-allowed}
+.hud{position:absolute;z-index:500;pointer-events:none;font:400 10px/1 var(--data);color:var(--fog);background:rgba(5,8,14,.78);padding:6px 8px}
+.hud.bl{left:8px;bottom:8px} .hud.tl{left:8px;top:8px}
+.reticle{position:absolute;z-index:450;left:50%;top:50%;width:28px;height:28px;margin:-14px 0 0 -14px;pointer-events:none;opacity:.5}
+.reticle::before,.reticle::after{content:"";position:absolute;background:var(--ice)}
+.reticle::before{left:13px;top:0;width:1px;height:28px} .reticle::after{top:13px;left:0;height:1px;width:28px}
+.corner{position:absolute;z-index:451;width:16px;height:16px;pointer-events:none;border:0 solid var(--fog)}
+.corner.a{top:8px;right:8px;border-top-width:1.5px;border-right-width:1.5px}
+.corner.b{bottom:8px;right:8px;border-bottom-width:1.5px;border-right-width:1.5px}
+.sat{filter:saturate(.3) brightness(.7) contrast(1.15)}
+.coast{filter:invert(1) brightness(.75) sepia(1) hue-rotate(170deg) saturate(2.4);opacity:.7}
+.pin{width:14px;height:14px;border-radius:50%;background:var(--pc);box-shadow:0 0 0 3px rgba(5,8,14,.85)}
+.pin.ring::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1.5px solid var(--pc)}
 @media (prefers-reduced-motion:no-preference){.pin.ring::after{animation:ping 2.4s var(--ease) infinite}
   @keyframes ping{from{transform:scale(.4);opacity:.9}to{transform:scale(1.6);opacity:0}}}
-.leaflet-tooltip.tip{background:var(--deep);color:var(--ice);border:1px solid var(--rim-2);border-radius:0;font:500 12px var(--text);box-shadow:none}
+.leaflet-tooltip.tip{background:var(--head);color:var(--ice);border:1px solid var(--line-2);border-radius:0;font:500 12px var(--text);box-shadow:none}
 .leaflet-tooltip.tip::before{display:none}
 .leaflet-container{font-family:var(--text)}
-.leaflet-control-attribution{background:rgba(7,11,20,.7)!important;color:var(--dim)!important;font:400 10px var(--data)}
+.leaflet-control-attribution{background:rgba(5,8,14,.75)!important;color:var(--dim)!important;font:400 9px var(--data)}
 .leaflet-control-attribution a{color:var(--fog)!important}
-.leaflet-bar a{background:var(--deep)!important;color:var(--fog)!important;border-color:var(--rim)!important}
-.air{height:300px;overflow:hidden}
-.air iframe{width:100%;height:100%;border:0;display:block}
-.right .log{margin:0;flex:1}
-.right .ev{grid-template-columns:116px 1fr;gap:4px 12px}
-.right .ev .s{grid-column:1/-1;color:var(--fog);font-size:13px}
-h2 .sub{font:400 11px var(--data);color:var(--dim);margin-left:8px}
-.trace{margin:0}
-.trace svg{height:96px}
+.leaflet-bar{border:1px solid var(--line-2)!important;border-radius:0!important}
+.leaflet-bar a{background:var(--head)!important;color:var(--fog)!important;border-color:var(--line)!important;border-radius:0!important}
+
+/* 추이: 왼쪽 40px 축 이름, 계단선 */
+#trend-p{height:200px}
+.trend{display:grid;grid-template-columns:40px minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;gap:4px 8px;height:100%}
+.yax{display:flex;flex-direction:column-reverse;justify-content:space-between;font:400 10px/1 var(--data);color:var(--dim);padding:0}
+.trend svg{width:100%;height:100%;display:block}
+.xax{grid-column:2;display:flex;justify-content:space-between;font:400 10px/1 var(--data);color:var(--dim)}
+
+/* 기록 */
+#log-p{height:200px}
+#log-p .pb{padding:0}
+.ev{display:grid;grid-template-columns:96px 64px minmax(0,1fr);gap:12px;padding:8px var(--pad);border-bottom:1px solid var(--line);align-items:baseline}
+.ev .t{font:400 10px/1.4 var(--data);color:var(--fog)}
+.ev .g{font:600 12px/1.4 var(--text)}
+.ev .s{font-size:12px;color:var(--fog);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.empty{padding:12px var(--pad);color:var(--fog);font-size:13px}
+
+/* 항공기 */
+#air-p{height:320px}
+#air-p .pb{padding:0}
+#air-p iframe{width:100%;height:100%;border:0;display:block}
+
+/* 등급 기준 */
+#crit-p .pb{padding:0}
+.cr{display:grid;grid-template-columns:8px 32px minmax(0,1fr);gap:12px;align-items:baseline;padding:10px var(--pad);white-space:nowrap;border-bottom:1px solid var(--line);font-size:12px;color:var(--fog)}
+.cr:last-child{border-bottom:0}
+.cr i{width:8px;height:8px;align-self:center;background:var(--c)}
+.cr b{color:var(--ice);font-weight:600}
+.cr span{overflow:hidden;text-overflow:ellipsis}
+.cr.on{background:rgba(219,229,241,.04)} .cr.on span{color:var(--ice)}
+
+.foot{padding:4px var(--side) 32px;font-size:12px;line-height:1.8;color:var(--dim);max-width:96ch}
+
+/* ── 태블릿 760~1439 : 높이가 비슷한 칸끼리 짝 — 등급|기준 · 지도 전폭 · 항목|기록 · 추이|항공기 ── */
 @media (min-width:760px){
-  .ops{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"status status" "center center" "sensors right"}
-  .ops .hero{grid-template-columns:150px minmax(0,1fr) minmax(0,1.3fr);grid-template-areas:"dial lbl sum" "dial scale sum" "dial fwd fwd";gap:0 24px}
-  .ops .dial .num{font-size:60px}
-  .ops .verdict .lbl{font-size:44px}
-  .ops #summary{margin:0;align-self:center}
-  .theater{height:60vh;min-height:420px}
-  .air{height:340px}
+  .ops{grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    grid-template-areas:"status crit" "map map" "sensors log" "trend air"}
+  #map-p{height:min(64vh,620px)}
+  #log-p,#trend-p{height:auto}
 }
-/* 데스크톱: 스크롤 없는 상황판. 칸 안에서만 스크롤 */
-@media (min-width:1440px) and (min-height:760px){
-  .ops{grid-template-columns:340px minmax(0,1fr) 360px;grid-template-rows:auto minmax(0,1fr);
-    grid-template-areas:"status center right" "sensors center right";height:calc(100vh - 72px);gap:16px 20px}
-  .ops .hero{grid-template-columns:128px 1fr;grid-template-areas:"dial lbl" "dial scale" "sum sum" "fwd fwd";gap:0 16px}
-  .ops .dial .num{font-size:52px}
-  .ops .verdict .lbl{font-size:40px}
-  .ops #summary{margin:14px 0 0;font-size:14px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-  .sensors-wrap{display:flex;flex-direction:column;min-height:0}
-  .sensors-wrap .sensors{flex:1;min-height:0}
-  .center,.right{min-height:0}
-  .theater{flex:1;height:auto;min-height:0}
-  .air{flex:0 0 44%;height:auto}
-  .right .log{flex:1;min-height:0;display:flex;flex-direction:column}
-  .right #log{flex:1;min-height:0}
+/* ── 노트북·데스크톱 ≥1180 · 높이 ≥680 : 스크롤 없는 한 화면 ──
+   세 칸이 같은 위 끝에서 시작하고, 아래 띠가 세 칸을 같은 높이로 가로지른다.
+   13~14인치 노트북(1280×720 ~ 1512×860)도 이 배치를 쓴다 — 폭에 따라 옆 칸·아래 띠만 줄인다. */
+@media (min-width:1180px) and (min-height:680px){
+  body{height:100vh;display:flex;flex-direction:column}
+  #main{flex:1;min-height:0;display:flex;flex-direction:column}
+  .ops{flex:1;min-height:0;grid-template-columns:344px minmax(0,1fr) 360px;grid-template-rows:auto minmax(0,1fr) 200px;
+    grid-template-areas:"status map crit" "sensors map air" "sensors trend log"}  /* 감시 항목은 왼쪽 두 칸 높이 — 7행이 스크롤 없이 다 보인다 */
+  #map-p,#air-p,#log-p,#trend-p{height:auto}
+  .row .what{-webkit-line-clamp:1}  /* 한 화면 고정이라 요약은 1줄, 전문은 항목 상세 */
+  .foot{display:none}
+}
+@media (min-width:1180px) and (max-width:1439px) and (min-height:680px){
+  .ops{grid-template-columns:304px minmax(0,1fr) 312px;grid-template-rows:auto minmax(0,1fr) 168px}
+}
+@media (min-width:1180px) and (min-height:680px) and (max-height:819px){
+  .ops{grid-template-rows:auto minmax(0,1fr) 168px}
+  .row{padding-top:8px;padding-bottom:8px}
+}
+@media (min-width:1180px) and (min-height:680px) and (max-height:759px){
+  .ops{grid-template-rows:auto minmax(0,1fr) 160px}  /* 기록은 쌓이는 목록이라 스크롤 */
+  .row .src{display:none}  /* 낮은 화면: 출처 줄은 항목 상세에서 — 감시 항목 7행이 다 보이게 */
 }
 
 /* 항목 상세 */
 #detail[hidden],#main[hidden]{display:none}
-.back{display:inline-block;margin:8px 0 28px;font:400 12px var(--data);color:var(--fog);text-decoration:none}
+#detail{padding:var(--gap) var(--side) 48px;max-width:1080px}
+.back{display:inline-block;margin:12px 0 24px;font:400 11px var(--data);color:var(--fog);text-decoration:none}
 .back:hover{color:var(--ice)}
-.dhead{display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;padding-bottom:24px;border-bottom:1px solid var(--rim)}
-.dhead h1{margin:0;font:800 44px/1.1 var(--text);letter-spacing:-.03em}
-.dhead .st{font:400 12px var(--data);color:var(--fog);padding-bottom:8px;display:flex;gap:12px;align-items:center}
-.dsum{font-size:19px;line-height:1.65;margin:28px 0 8px;max-width:60ch}
-.dmean{color:var(--fog);margin:0 0 8px;max-width:60ch}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+.dhead{display:flex;align-items:flex-end;gap:12px 24px;flex-wrap:wrap;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.dhead h2{margin:0;font:800 40px/1.1 var(--text);letter-spacing:-.03em}
+.dhead .st{font:400 11px var(--data);color:var(--fog);padding-bottom:6px;display:flex;gap:12px;align-items:center}
+.dsum{font-size:18px;line-height:1.65;margin:24px 0 8px;max-width:60ch}
+.dmean{color:var(--fog);margin:0;max-width:60ch}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:24px}
 .cols ul{margin:0;padding:0;list-style:none}
-.cols li{padding:10px 0;border-bottom:1px solid var(--rim);font-size:14px}
+.cols li{padding:8px var(--pad);border-bottom:1px solid var(--line);font-size:14px}
+.cols li:last-child{border-bottom:0}
 .cols .spec li{color:var(--fog)}
-.srcs{margin-top:40px}
-.srcs a.s{display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--rim);text-decoration:none}
+.dp{margin-top:var(--gap)}
+.srcs a.s{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:8px var(--pad);border-bottom:1px solid var(--line);text-decoration:none}
+.srcs a.s:last-child{border-bottom:0}
 .srcs a.s:hover .nm{text-decoration:underline}
-.tier{font:600 11px var(--data);color:var(--ink);background:var(--fog);text-align:center;padding:2px 0}
+.tier{font:600 10px/1.6 var(--data);color:var(--ink);background:var(--fog);text-align:center}
 .tier[data-t="A"]{background:var(--ice)} .tier[data-t="D"]{background:transparent;color:var(--g3);box-shadow:inset 0 0 0 1px var(--g3)}
-.srcs .u{font:400 11px var(--data);color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:320px}
-.hist{margin-top:40px}
-.hist .h{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:10px 0;border-bottom:1px solid var(--rim);font-size:14px}
-.hist .h .t{font:400 12px var(--data);color:var(--fog)}
-.none{color:var(--dim);font-size:14px;padding:10px 0}
-@media (max-width:860px){
-  .cols{grid-template-columns:1fr;gap:28px}
-  .dhead h1{font-size:34px}
-  .srcs a.s{grid-template-columns:36px 1fr} .srcs .u{grid-column:2;max-width:100%}
-
-  .ev{grid-template-columns:96px 1fr} .ev .s{grid-column:1/-1}
-}
-@media (prefers-reduced-motion:no-preference){
-  .row{animation:in .5s var(--ease) both;animation-delay:calc(var(--i)*40ms)}
-  @keyframes in{from{opacity:0;transform:translateY(4px)}}
+.srcs .u{font:400 10px var(--data);color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:320px}
+.h{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:8px var(--pad);border-bottom:1px solid var(--line);font-size:14px}
+.h .t{font:400 11px var(--data);color:var(--fog)}
+.none{color:var(--dim);font-size:13px;padding:8px var(--pad)}
+@media (max-width:759px){
+  .cols{grid-template-columns:1fr}
+  .dhead h2{font-size:32px}
+  .srcs a.s{grid-template-columns:32px minmax(0,1fr)} .srcs .u{grid-column:2;max-width:100%}
+  .ev{gap:8px}
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="bar">
-    <span class="mark">KSW</span>
+<div class="band"></div>
+<header class="top">
+  <div class="id"><img class="mark" src="assets/jis-mark.svg" width="28" height="28" alt="">
+    <div><h1>JIS <span class="sub">북한 전쟁·핵 징후 감시</span></h1><small>JAGOK-DONG INTELLIGENCE SERVICE · OSINT · 비공식</small></div></div>
+  <div class="meta">
     <span>KST <b id="now">--:--:--</b></span>
     <span>최종 확인 <b id="checked">—</b></span>
-    <span class="lag" id="lag">· 감시 지연</span>
-    <span class="sp"></span>
-    <span class="note" id="note">공개정보 기반 개인 분석</span>
+    <span>다음 확인 <b id="next">—</b></span>
+    <span class="lag" id="lag">감시 지연</span>
+    <span class="tag" id="sampletag" hidden>예시 데이터 · 실제 상황 아님</span>
   </div>
+</header>
 
-  <div id="main">
-  <div class="ops">
-    <aside class="left">
-      <section class="hero" id="hero">
-        <div class="dial" aria-hidden="true">
-          <svg viewBox="-110 -110 220 220" id="dialsvg"></svg>
-          <div class="core"><div class="num" id="gnum">–</div><div class="of">/ 3</div></div>
-        </div>
-        <div class="verdict">
-          <div class="lbl" id="glabel">대기</div>
-          <div class="scale" id="scale"><span>평시</span><span>주의</span><span>경계</span><span>위험</span></div>
-          <p id="summary">첫 분석 결과를 기다리는 중입니다.</p>
-          <div class="fwd" id="fwd"><strong>지인 전달 권고</strong> — 복수 징후가 교차확인됐습니다. 출처를 확인한 뒤 공유하세요.</div>
-        </div>
-      </section>
-      <div class="sensors-wrap">
-        <h2>감시 항목</h2>
-        <div class="sensors scroll" id="sensors"></div>
+<main id="main">
+<div class="ops">
+  <section class="p" id="status" aria-label="현재 등급">
+    <div class="ph"><span class="k">현재 등급</span><span class="r">4단계 · 코드 판정</span></div>
+    <div class="pb">
+      <div class="grade">
+        <div class="dial" aria-hidden="true"><svg viewBox="-110 -110 220 220" id="dialsvg"></svg><div class="num" id="gnum">–</div></div>
+        <div><div class="lbl" id="glabel">대기</div>
+          <div class="ladder" id="scale"><span>평시</span><span>주의</span><span>경계</span><span>위험</span></div></div>
       </div>
-    </aside>
+      <p id="summary">첫 분석 결과를 기다리는 중입니다.</p>
+    </div>
+  </section>
 
-    <div class="center">
-    <section class="panel theater" aria-label="한반도 지도">
-      <div id="map"></div>
-      <div class="hud tl" id="imgdate">위성 영상 —</div>
-      <div class="hud bl" id="coord">37.80N 127.50E</div>
+  <section class="p" id="sensors-p" aria-label="감시 항목">
+    <div class="ph"><span class="k">감시 항목</span><span class="r" id="sensorsum">7개</span></div>
+    <div class="pb scroll" id="sensors"></div>
+  </section>
+
+  <section class="p" id="map-p" aria-label="한반도 지도">
+    <div class="ph"><span class="k">상황 지도</span><span id="imgdate">위성 영상 —</span>
       <div class="layers" role="group" aria-label="지도 레이어">
         <button type="button" data-layer="day" aria-pressed="true">주간 위성</button>
         <button type="button" data-layer="night" aria-pressed="false">야간 조명</button>
         <button type="button" data-layer="cctv" aria-pressed="false" disabled title="접경 도로 CCTV 위치(국가교통정보센터)">CCTV</button>
         <button type="button" data-layer="firms" aria-pressed="false" disabled title="NASA FIRMS 위성 열점(최근 48시간)">열점</button>
-      </div>
-    </section>
-    <section class="trace">
-      <h2>최근 72회 추이</h2>
+      </div></div>
+    <div class="pb"><div id="map"></div><div class="reticle"></div><span class="corner a"></span><span class="corner b"></span>
+      <div class="hud bl" id="coord">37.80N 127.50E</div></div>
+  </section>
+
+  <section class="p" id="air-p" aria-label="항공기">
+    <div class="ph"><span class="k">공역</span><span>신호를 켠 항공기</span><span class="r">adsb.lol · ODbL</span></div>
+    <div class="pb"><iframe title="한반도 상공 항공기 위치" loading="lazy"
+      src="https://globe.adsb.lol/?lat=37.9&lon=127.3&zoom=6.5&hideSideBar&hideButtons&baseMap=OpenFreeMapDark&mapDim=0.2&iconScale=0.65"></iframe></div>
+  </section>
+
+  <section class="p" id="crit-p" aria-label="등급 기준">
+    <div class="ph"><span class="k">등급 기준</span><span class="r">공식 경보는 재난문자</span></div>
+    <div class="pb scroll" id="crit"></div>
+  </section>
+
+  <section class="p" id="trend-p" aria-label="등급 추이">
+    <div class="ph"><span class="k">등급 추이</span><span class="r">최근 72회 · 1시간 간격</span></div>
+    <div class="pb"><div class="trend">
+      <div class="yax"><span>평시</span><span>주의</span><span>경계</span><span>위험</span></div>
       <svg id="trace" viewBox="0 0 720 120" preserveAspectRatio="none"></svg>
-      <div class="axis"><span id="t0">—</span><span>지금</span></div>
-    </section>
-    </div>
+      <div class="xax"><span id="t0">—</span><span>지금</span></div></div></div>
+  </section>
 
-    <aside class="right">
-      <div class="panel air">
-        <div class="hud tl">항공기 실시간 · adsb.lol · ODbL</div><iframe title="한반도 상공 항공기 위치" loading="lazy"
-        src="https://globe.adsb.lol/?lat=37.9&lon=127.3&zoom=6.5&hideSideBar&hideButtons&baseMap=OpenFreeMapDark&mapDim=0.2&iconScale=0.65"></iframe></div>
-      <section class="log">
-        <h2>알림·판정 불가 기록</h2>
-        <div id="log" class="scroll"></div>
-      </section>
-    </aside>
-  </div>
-
-  </div>
-
-  <section id="detail" hidden></section>
-
-  <p class="foot">
-    등급은 평시·주의(단일 징후 또는 일상 활동)·경계(복수 항목 또는 교차확인)·위험(핵·동원·정부 경고 중 하나가 교차확인되고 다른 징후가 동시에 있음) 네 단계입니다.
-    정례 훈련·예고된 미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다. 위성 영상은 NASA GIBS 하루 단위 영상(약 250m 해상도)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다. 열점은 NASA FIRMS 위성 열 감지(최근 48시간)로 산불·소각·공장 열원도 포함하며, 접경 구역은 근사 범위입니다. 항공기 지도는 신호를 켠 기체만 보이고 등급 판단에는 쓰지 않습니다.
-    공식 경보는 행정안전부 재난문자를 따르세요.
-  </p>
+  <section class="p" id="log-p" aria-label="알림 기록">
+    <div class="ph"><span class="k">알림 기록</span><span class="r">알림 · 판정 불가</span></div>
+    <div class="pb scroll" id="log"></div>
+  </section>
 </div>
+<p class="foot">
+  정례 훈련·미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다.
+  위성 영상은 NASA GIBS 하루 단위 영상(약 250m)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다.
+  열점은 NASA FIRMS 위성 열 감지(최근 48시간)로 산불·소각·공장 열원도 포함하며, 접경 구역은 근사 범위입니다.
+  항공기 지도는 신호를 켠 기체만 보이고 등급 판단에는 쓰지 않습니다. 공식 경보는 행정안전부 재난문자를 따르세요.
+</p>
+</main>
+
+<section id="detail" hidden></section>
 <script>
 const ITEMS={troop_movement:"병력 이동·동원",nuclear:"핵·전략무기",logistics:"군수 비축·수송",border_clash:"DMZ·NLL 충돌",
   foreign_forces:"미·중·러 이상 동향",parade_massing:"기념일 전후 집결",gov_warning:"정부 긴급 경고"};
 const LABEL=["평시","주의","경계","위험"];
+// 한 줄 요약(칸 높이 고정). 전체 문장은 title 로
+const CRIT=[["징후 없음","징후 없음"],
+  ["단일 징후 · 정례 활동만","단일 징후, 또는 정례 훈련·미사일 시험·위협 발언만 있음"],
+  ["징후 2개 항목 이상 · 교차확인","일상 활동이 아닌 징후가 2개 항목 이상, 또는 교차확인된 징후 1개 이상"],
+  ["핵심 징후 교차확인 + 다른 징후","핵·병력 동원·정부 경고 중 하나가 교차확인되고, 다른 항목 징후가 동시에 있음"]];
+const STAT={none:"이상 없음",single:"단일 출처",corroborated:"교차확인",routine:"일상 활동"};
+const TIER={A:"공식",B:"언론",C:"분석",D:"북한 주장"};
 const C=g=>`var(--g${g})`;
-const sample=new URLSearchParams(location.search).has("sample");
+const Q=new URLSearchParams(location.search);
+const sample=Q.has("sample");
 const base=sample?"state/sample/":"state/";
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const kst=(d,o)=>new Date(d).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",hour12:false,...o});
-const short=d=>kst(d,{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"});
+// 시각 표기는 한 형식만: 10.18 16:07 (KST)
+const short=d=>{const p=Object.fromEntries(new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date(d)).map(x=>[x.type,x.value]));return`${p.month}.${p.day} ${p.hour}:${p.minute}`};
 const safeUrl=u=>/^https?:\/\//.test(u||"")?u:"#";
+const $=id=>document.getElementById(id);
 let lastCheck=null;
 
 function polar(r,a){a=(a-90)*Math.PI/180;return[r*Math.cos(a),r*Math.sin(a)]}
 function arc(r,a0,a1){const[x0,y0]=polar(r,a0),[x1,y1]=polar(r,a1);return`M${x0} ${y0}A${r} ${r} 0 ${a1-a0>180?1:0} 1 ${x1} ${y1}`}
 function drawDial(g){
-  // 4개 구간(평시~위험) 240° 호, 바깥 60눈금 = 다음 확인까지 남은 분
-  const start=-120,span=240,gap=4,seg=span/4;
-  let s="";
-  for(let i=0;i<4;i++){
-    const on=g!=null&&i<=g;
-    s+=`<path class="seg" d="${arc(84,start+i*seg+gap/2,start+(i+1)*seg-gap/2)}" style="${on?`stroke:${C(i)}`:""}"/>`;
-  }
+  // 240° 호 4구간(평시~위험) + 바깥 60눈금 = 지난 확인 이후 흐른 분
+  const start=-120,seg=60,gap=4;let s="";
+  for(let i=0;i<4;i++)s+=`<path class="seg" d="${arc(84,start+i*seg+gap/2,start+(i+1)*seg-gap/2)}" style="${g!=null&&i<=g?`stroke:${C(i)}`:""}"/>`;
   const mins=lastCheck?Math.min(60,(Date.now()-new Date(lastCheck))/60000):0;
-  for(let m=0;m<60;m++){
-    const a=m*6,[x0,y0]=polar(100,a),[x1,y1]=polar(m%15?104:108,a);
-    s+=`<line class="tick${m<mins?" past":""}" x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}"/>`;
-  }
-  document.getElementById("dialsvg").innerHTML=s;
+  for(let m=0;m<60;m++){const a=m*6,[x0,y0]=polar(100,a),[x1,y1]=polar(m%15?105:110,a);
+    s+=`<line class="tick${m<mins?" past":""}" x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}"/>`}
+  $("dialsvg").innerHTML=s;
+  const left=lastCheck?Math.ceil(60-(Date.now()-new Date(lastCheck))/60000):null;
+  $("next").textContent=left==null?"—":left>=0?`${Math.min(60,left)}분 뒤`:"지연";
 }
 
 function render(latest,events){
-  if(sample)document.getElementById("note").textContent="예시 데이터 — 실제 상황 아님";
+  $("sampletag").hidden=!sample;
   const g=latest?latest.grade:null;
   lastCheck=events.length?events[events.length-1].checked_at:latest?.checked_at;
   if(g!=null){
-    document.getElementById("hero").style.setProperty("--gc",C(g));
-    document.getElementById("gnum").textContent=g;
-    document.getElementById("glabel").textContent=LABEL[g];
+    document.documentElement.style.setProperty("--gc",C(g));
+    $("gnum").textContent=g;$("glabel").textContent=LABEL[g];
     document.querySelectorAll("#scale span")[g].classList.add("on");
-    document.getElementById("summary").textContent=latest.overall_summary||"";
-    document.getElementById("fwd").classList.toggle("on",g>=2);
+    $("summary").textContent=latest.overall_summary||"";
   }
-  document.getElementById("checked").textContent=lastCheck?short(lastCheck):"—";
-  if(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3)document.getElementById("lag").classList.add("on");
+  $("checked").textContent=lastCheck?short(lastCheck):"—";
+  if(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3)$("lag").classList.add("on");
   drawDial(g);
+  $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("");
 
-  const items=latest?.items||{};
-  document.getElementById("sensors").innerHTML=Object.entries(ITEMS).map(([k,name],i)=>{
+  const items=latest?.items||{};let n=0;
+  $("sensors").innerHTML=Object.entries(ITEMS).map(([k,name])=>{
     const it=items[k]||{status:"none"};
     const s=it.status!=="none"&&it.routine?"routine":it.status;
+    if(it.status!=="none")n++;
     const src=(it.sources||[])[0];
-    const what=it.status==="none"?(latest?"이상 없음":"분석 전"):esc(it.summary)+(it.routine?"<em>일상 활동</em>":"");
-    const meta=[it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
-    return `<a class="row${it.status==="none"?" quiet":""}" href="#item=${k}" style="--i:${i}"><div class="name">${name}</div>
-      <div class="meter" data-s="${s}" title="${{none:"이상 없음",single:"단일 출처",corroborated:"교차확인",routine:"일상 활동"}[s]}"><i></i><i></i><i></i></div>
-      <div class="what ${it.status!=="none"?"has":""}">${what}</div>
-      <div class="src">${src?esc(src.name||"출처"):""}${src&&meta?" · ":""}${meta}</div></a>`}).join("");
+    const meta=[src&&src.name,it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
+    const body=it.status==="none"?"":`<div class="what">${esc(it.summary)}</div>${meta?`<div class="src">${meta}</div>`:""}`;
+    return `<a class="row${it.status!=="none"?" on":""}" href="#item=${k}"><span class="name">${name}</span>
+      <span class="st">${latest?STAT[s]:"분석 전"}</span><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${body}</a>`}).join("");
+  $("sensorsum").textContent=latest?`7개 중 ${n}개 징후`:"7개";
 
-  // 추이: 등급 계단선, 판정 불가는 끊고 회색 점
-  const rec=events.slice(-72),W=720,H=120,step=W/72,y=gr=>H-12-gr*((H-24)/3);
-  let d="",dots="",pen=false;
-  const off=72-rec.length;
-  rec.forEach((e,i)=>{
-    const x=(i+off)*step;
+  const rec=events.slice(-72),W=720,H=120,step=W/72,y=gr=>H-6-gr*((H-12)/3);
+  let d="",dots="",pen=false;const off=72-rec.length;
+  rec.forEach((e,i)=>{const x=(i+off)*step;
     if(e.status==="unverified"){pen=false;dots+=`<rect x="${x+step/2-2}" y="${H/2-2}" width="4" height="4" fill="var(--unk)"/>`;return}
-    d+=(pen?`H${x}V${y(e.grade)}`:`M${x} ${y(e.grade)}`)+`H${x+step}`;pen=true;
-  });
-  const grid=[0,1,2,3].map(gr=>`<line x1="0" x2="${W}" y1="${y(gr)}" y2="${y(gr)}" stroke="var(--rim)" stroke-width="1" vector-effect="non-scaling-stroke"/>`).join("");
-  const top=rec.filter(e=>e.status!=="unverified").reduce((m,e)=>Math.max(m,e.grade),0);
-  document.getElementById("trace").innerHTML=grid+`<path d="${d}" fill="none" stroke="${C(g??top)}" stroke-width="2" vector-effect="non-scaling-stroke"/>`+dots;
-  document.getElementById("t0").textContent=rec.length?short(rec[0].checked_at):"—";
+    d+=(pen?`H${x}V${y(e.grade)}`:`M${x} ${y(e.grade)}`)+`H${x+step}`;pen=true});
+  const grid=[0,1,2,3].map(gr=>`<line x1="0" x2="${W}" y1="${y(gr)}" y2="${y(gr)}" stroke="var(--line)" stroke-width="1" vector-effect="non-scaling-stroke"/>`).join("");
+  $("trace").innerHTML=grid+`<path d="${d}" fill="none" stroke="var(--gc)" stroke-width="2" vector-effect="non-scaling-stroke"/>`+dots;
+  $("t0").textContent=rec.length?short(rec[0].checked_at):"—";
 
-  const rows=events.filter(e=>e.notified||e.status==="unverified").slice(-20).reverse();
-  document.getElementById("log").innerHTML=rows.length?rows.map(e=>{
-    const u=e.status==="unverified";
-    const lbl=u?"판정 불가":`${LABEL[e.grade]} 알림`;
-    const body=u?esc(e.reason):esc((e.new||[]).map(k=>ITEMS[k]).join(", ")||e.summary);
-    return `<div class="ev"><div class="t">${short(e.checked_at)}</div><div class="g" style="color:${u?"var(--fog)":C(e.grade)}">${lbl}</div><div class="s">${body}</div></div>`}).join("")
+  const rows=events.filter(e=>e.notified||e.status==="unverified").slice(-30).reverse();
+  $("log").innerHTML=rows.length?rows.map(e=>{const u=e.status==="unverified";
+    return `<div class="ev"><span class="t">${short(e.checked_at)}</span><span class="g" style="color:${u?"var(--fog)":C(e.grade)}">${u?"판정 불가":LABEL[e.grade]+" 알림"}</span>
+      <span class="s">${esc(u?e.reason:((e.new||[]).map(k=>ITEMS[k]).join(", ")||e.summary))}</span></div>`}).join("")
     :`<div class="empty">아직 보낸 알림이 없습니다. 변화가 생기면 여기에 쌓입니다.</div>`;
 }
 
-const TIER={A:"공식",B:"언론",C:"분석",D:"북한 주장"};
-const STAT={none:"이상 없음",single:"단일 출처",corroborated:"교차확인",routine:"일상 활동"};
 let DATA={latest:null,events:[]};
 function renderDetail(k){
   const name=ITEMS[k];if(!name){location.hash="";return}
   const it=(DATA.latest?.items||{})[k]||{status:"none"};
   const s=it.status!=="none"&&it.routine?"routine":it.status;
   const li=(a,cls)=>a&&a.length?`<ul class="${cls||""}">${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:`<div class="none">없음</div>`;
-  const hist=DATA.events.filter(e=>e.status==="ok"&&(e.active||[]).includes(k));
-  // 연속 구간으로 묶어 「처음 감지 ~ 마지막 감지」로 보여준다
-  const runs=[];let cur=null,prevIdx=-2;
+  const runs=[];let cur=null,prev=-2;
   DATA.events.forEach((e,i)=>{if(e.status!=="ok"||!(e.active||[]).includes(k))return;
-    if(cur&&i===prevIdx+1){cur.to=e}else{cur={from:e,to:e,max:0};runs.push(cur)}cur.max=Math.max(cur.max,e.grade);prevIdx=i});
+    if(cur&&i===prev+1)cur.to=e;else{cur={from:e,to:e,max:0};runs.push(cur)}cur.max=Math.max(cur.max,e.grade);prev=i});
   const meta=[it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
-  document.getElementById("detail").innerHTML=`
-    <a class="back" href="#">← 상황판</a>
-    <div class="dhead"><h1>${name}</h1>
-      <div class="st"><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${STAT[s]}${meta?" · "+meta:""}</div></div>
+  const P=(t,r,b)=>`<section class="p dp"><div class="ph"><span class="k">${t}</span>${r?`<span class="r">${r}</span>`:""}</div><div>${b}</div></section>`;
+  $("detail").innerHTML=`<a class="back" href="#">← 감시판으로</a>
+    <div class="dhead"><h2>${name}</h2><div class="st"><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${STAT[s]}${meta?" · "+meta:""}</div></div>
     <p class="dsum">${it.status==="none"?(DATA.latest?"현재 보고된 이상 징후가 없습니다.":"첫 분석 전입니다."):esc(it.summary)}</p>
     ${it.meaning?`<p class="dmean">군사적 의미 — ${esc(it.meaning)}</p>`:""}
-    <div class="cols"><div><h2>확인된 사실</h2>${li(it.facts)}</div><div><h2>추정</h2>${li(it.speculation,"spec")}</div></div>
-    <div class="srcs"><h2>출처 ${(it.sources||[]).length}곳</h2>${(it.sources||[]).length?(it.sources).map(x=>`
+    <div class="cols">${P("확인된 사실","",li(it.facts))}${P("추정","",li(it.speculation,"spec"))}</div>
+    ${P("출처",`${(it.sources||[]).length}곳`,`<div class="srcs">${(it.sources||[]).length?it.sources.map(x=>`
       <a class="s" href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener"><span class="tier" data-t="${esc(x.tier||"")}">${esc(x.tier||"–")}</span>
       <span class="nm">${esc(x.name||"출처")} <span style="color:var(--fog);font-size:12px">${TIER[x.tier]||""}</span></span>
-      <span class="u">${esc((x.url||"").replace(/^https?:\/\//,""))}</span></a>`).join(""):`<div class="none">없음</div>`}</div>
-    <div class="hist"><h2>감지 이력</h2>${runs.length?runs.slice(-15).reverse().map(r=>`
-      <div class="h"><div class="t">${short(r.from.checked_at)}</div><div>${r.from===r.to?"1회":`${short(r.to.checked_at)}까지`} · 최고 <span style="color:${C(r.max)}">${LABEL[r.max]}</span></div></div>`).join(""):`<div class="none">최근 기록에서 감지된 적이 없습니다.</div>`}</div>`;
+      <span class="u">${esc((x.url||"").replace(/^https?:\/\//,""))}</span></a>`).join(""):`<div class="none">없음</div>`}</div>`)}
+    ${P("감지 이력","",runs.length?runs.slice(-15).reverse().map(r=>`<div class="h"><span class="t">${short(r.from.checked_at)}</span>
+      <span>${r.from===r.to?"1회":`${short(r.to.checked_at)}까지`} · 최고 <span style="color:${C(r.max)}">${LABEL[r.max]}</span></span></div>`).join(""):`<div class="none">최근 기록에서 감지된 적이 없습니다.</div>`)}`;
 }
 function route(){
   const m=location.hash.match(/^#item=(\w+)/);
-  document.getElementById("main").hidden=!!m;document.getElementById("detail").hidden=!m;
-  if(m){renderDetail(m[1]);window.scrollTo(0,0)}else if(map){setTimeout(()=>map.invalidateSize(),0)}
+  $("main").hidden=!!m;$("detail").hidden=!m;
+  if(m){renderDetail(m[1]);scrollTo(0,0)}else if(map)setTimeout(()=>map.invalidateSize(),0);
 }
 addEventListener("hashchange",route);
+
 let map,pinLayer,layers={};
 function initMap(){
   if(!window.L)return;
-  map=L.map("map",{zoomControl:true,attributionControl:true,minZoom:5,maxZoom:9,worldCopyJump:false})
-    .setView([38.4,127.4],6);
+  map=L.map("map",{zoomControl:true,minZoom:5,maxZoom:9}).setView([38.4,127.4],6);
   const d=new Date(Date.now()-30*3600e3).toISOString().slice(0,10); // 전일 영상(당일은 미완성)
-  const G=(lyr,t,lvl,ext)=>`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/${lyr}/default/${t}/GoogleMapsCompatible_Level${lvl}/{z}/{y}/{x}.${ext}`;
+  const G=(l,t,lv,x)=>`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/${l}/default/${t}/GoogleMapsCompatible_Level${lv}/{z}/{y}/{x}.${x}`;
   const attr='<a href="https://earthdata.nasa.gov/gibs">NASA GIBS</a>';
-  // 위성 한 대는 궤도 사이 빈 띠가 생긴다 → NOAA-20 위에 SNPP 를 겹쳐 메운다
+  // 위성 한 대는 궤도 사이 빈 띠가 생긴다 → NOAA-20 위에 SNPP 를 lighten 으로 겹쳐 메운다
   layers.day=L.layerGroup([
     L.tileLayer(G("VIIRS_NOAA20_CorrectedReflectance_TrueColor",d,9,"jpg"),{maxNativeZoom:9,className:"sat",attribution:attr}),
     L.tileLayer(G("VIIRS_SNPP_CorrectedReflectance_TrueColor",d,9,"jpg"),{maxNativeZoom:9,className:"sat"})
-      .on("add",e=>{e.target.getContainer().style.mixBlendMode="lighten"})]).addTo(map); // jpg 빈 띠(검정)는 lighten 으로 비친다
+      .on("add",e=>{e.target.getContainer().style.mixBlendMode="lighten"})]).addTo(map);
   layers.night=L.tileLayer(G("VIIRS_Black_Marble","2016-01-01",8,"png"),{maxNativeZoom:8,className:"sat",attribution:attr});
-  L.tileLayer(G("Coastlines_15m","default",13,"png").replace("/default/default/","/default/default/"),{maxNativeZoom:9,className:"coast",pane:"overlayPane"}).addTo(map);
-  document.getElementById("imgdate").textContent=`위성 영상 ${d} · VIIRS`;
-  map.on("mousemove",e=>document.getElementById("coord").textContent=`${e.latlng.lat.toFixed(2)}N ${e.latlng.lng.toFixed(2)}E`);
-  document.querySelectorAll(".layers button[data-layer]").forEach(b=>b.addEventListener("click",()=>{
-    const k=b.dataset.layer;if(b.disabled)return;
+  L.tileLayer(G("Coastlines_15m","default",13,"png"),{maxNativeZoom:9,className:"coast",pane:"overlayPane"}).addTo(map);
+  $("imgdate").textContent=`위성 ${d} · VIIRS`;
+  map.on("mousemove",e=>$("coord").textContent=`${e.latlng.lat.toFixed(2)}N ${e.latlng.lng.toFixed(2)}E`);
+  document.querySelectorAll("[data-layer=day],[data-layer=night]").forEach(b=>b.addEventListener("click",()=>{
+    const k=b.dataset.layer;
     ["day","night"].forEach(o=>{const on=o===k;document.querySelector(`[data-layer=${o}]`).setAttribute("aria-pressed",on);
       if(on)layers[o].addTo(map);else map.removeLayer(layers[o])});
-    document.getElementById("imgdate").textContent=k==="night"?"야간 조명 · VIIRS Black Marble":`위성 영상 ${d} · VIIRS`;
+    $("imgdate").textContent=k==="night"?"야간 조명 · Black Marble":`위성 ${d} · VIIRS`;
   }));
   pinLayer=L.layerGroup().addTo(map);
-  layers.firms=L.layerGroup();
-  const fb=document.querySelector("[data-layer=firms]");
-  fb.addEventListener("click",()=>{const on=fb.getAttribute("aria-pressed")!=="true";fb.setAttribute("aria-pressed",on);
-    if(on)layers.firms.addTo(map);else map.removeLayer(layers.firms)});
 }
+function toggle(b,layer){b.disabled=false;b.addEventListener("click",()=>{const on=b.getAttribute("aria-pressed")!=="true";
+  b.setAttribute("aria-pressed",on);if(on)layer.addTo(map);else map.removeLayer(layer)})}
 function drawCctv(doc){
-  if(!map||!doc||!doc.cameras)return;
-  const b=document.querySelector("[data-layer=cctv]");b.disabled=false;b.textContent=`CCTV ${doc.cameras.length}`;
+  if(!map||!doc?.cameras)return;
+  const b=document.querySelector("[data-layer=cctv]");b.textContent=`CCTV ${doc.cameras.length}`;
   layers.cctv=L.layerGroup();
   doc.cameras.forEach(c=>L.marker([c.lat,c.lon],{title:c.name,icon:L.divIcon({className:"",iconSize:[10,10],
-      html:'<div style="width:10px;height:10px;background:var(--ice);transform:rotate(45deg);box-shadow:0 0 0 2px rgba(7,11,20,.85)"></div>'})})
+      html:'<div style="width:10px;height:10px;background:var(--ice);transform:rotate(45deg);box-shadow:0 0 0 2px rgba(5,8,14,.85)"></div>'})})
     .bindTooltip(`${esc(c.name)}<br><span style="color:var(--fog)">누르면 국가교통정보센터에서 재생</span>`,{className:"tip"})
     .on("click",()=>window.open(doc.play_url,"_blank","noopener")).addTo(layers.cctv));
-  b.addEventListener("click",()=>{const on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);
-    if(on)layers.cctv.addTo(map);else map.removeLayer(layers.cctv)});
-  const a=map.attributionControl;a.addAttribution("CCTV 위치 © 국가교통정보센터");
+  toggle(b,layers.cctv);layers.cctv.addTo(map);b.setAttribute("aria-pressed","true");  // 기본 켬 — 접경 도로 위치가 지도의 기준점
+  map.attributionControl.addAttribution("CCTV 위치 © 국가교통정보센터");
 }
 function drawFirms(doc){
-  if(!map||!doc||!doc.points)return;
-  const fb=document.querySelector("[data-layer=firms]");fb.disabled=false;
-  fb.textContent=`열점 ${doc.count}`+(doc.border_count?` · 접경 ${doc.border_count}`:"");
+  if(!map||!doc?.points)return;
+  const b=document.querySelector("[data-layer=firms]");
+  b.textContent=`열점 ${doc.count}`+(doc.border_count?` · 접경 ${doc.border_count}`:"");
+  layers.firms=L.layerGroup();
   doc.points.forEach(p=>L.circleMarker([p.lat,p.lon],{radius:p.border?5:2.5,weight:p.border?1.5:0,color:"#ffd2a8",
       fillColor:p.border?"#ff6a3d":"#ff9d5c",fillOpacity:p.border?.95:.7,interactive:p.border})
     .bindTooltip(`위성 열점 · ${short(p.t)} · ${p.sat}${p.border?" · 접경 구역":""}`,{className:"tip"}).addTo(layers.firms));
-  // 접경 구역에 열점이 있으면 기본으로 켠다
-  if(doc.border_count){fb.setAttribute("aria-pressed","true");layers.firms.addTo(map)}
+  toggle(b,layers.firms);
+  if(doc.border_count){b.setAttribute("aria-pressed","true");layers.firms.addTo(map)} // 접경 열점이 있으면 기본으로 켠다
 }
 function drawPins(items){
   if(!map)return;pinLayer.clearLayers();
@@ -455,13 +461,13 @@ function drawPins(items){
     if(it.status==="none"||typeof it.lat!=="number"||typeof it.lon!=="number")return;
     const col=it.routine?"var(--fog)":it.status==="corroborated"?"var(--g3)":"var(--g1)";
     const icon=L.divIcon({className:"",iconSize:[14,14],html:`<div class="pin ${it.status==="corroborated"&&!it.routine?"ring":""}" style="--pc:${col};position:relative"></div>`});
-    L.marker([it.lat,it.lon],{icon,keyboard:true,title:ITEMS[k]}).addTo(pinLayer)
+    L.marker([it.lat,it.lon],{icon,title:ITEMS[k]}).addTo(pinLayer)
       .bindTooltip(`${ITEMS[k]} · ${esc(it.region||"")}`,{className:"tip",direction:"top",offset:[0,-8]})
       .on("click",()=>location.hash="item="+k);
   });
 }
-if(new URLSearchParams(location.search).has("noair"))document.querySelector(".air iframe").src="about:blank";
-function tick(){document.getElementById("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"})}
+if(Q.has("noair"))document.querySelector("#air-p iframe").src="about:blank";
+function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"})}
 (async()=>{
   const get=async(p,t)=>{const r=await fetch(base+p+"?t="+Date.now());if(!r.ok)throw r.status;return t?r.text():r.json()};
   let latest=null,events=[];

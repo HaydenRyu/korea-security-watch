@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="JIS">
+  <!-- 작은 크기(16~32px)용: 인장 글자를 빼고 능선 + 조준선만 -->
+  <circle cx="16" cy="16" r="15" fill="#0a1019" stroke="#dbe5f1" stroke-width="1.5"/>
+  <path d="M4 22 L10 17 L13 19 L17 14 L21 18 L23 16 L28 21" fill="none" stroke="#dbe5f1" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="17" cy="10" r="4.5" fill="none" stroke="#dbe5f1" stroke-width="1.3"/>
+  <circle cx="17" cy="10" r="1.6" fill="#f2c14e"/>
+</svg>

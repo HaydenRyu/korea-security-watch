@@ -457,6 +457,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   .srcs a.s{grid-template-columns:32px minmax(0,1fr)} .srcs .u{grid-column:2;max-width:100%}
   .ev{gap:8px}
 }
+#next{font-variant-numeric:tabular-nums}  /* 매초 바뀌는 카운트다운이 흔들리지 않게 */
 </style>
 </head>
 <body>
@@ -633,8 +634,12 @@ function drawDial(g){
   for(let m=0;m<60;m++){const a=m*6,[x0,y0]=polar(100,a),[x1,y1]=polar(m%15?105:110,a);
     s+=`<line class="tick${m<mins?" past":""}" x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}"/>`}
   $("dialsvg").innerHTML=s;
-  const left=lastCheck?Math.ceil(60-(Date.now()-new Date(lastCheck))/60000):null;
-  $("next").textContent=left==null?"—":left>=0?`${Math.min(60,left)}분 뒤`:"지연";
+  setNext();
+}
+// 다음 확인까지 남은 시간 — 매초 줄어드는 mm:ss(10/18 hayden). 시계 tick 이 매초 부른다
+function setNext(){
+  const left=lastCheck?Math.ceil((60*60000-(Date.now()-new Date(lastCheck)))/1000):null;
+  $("next").textContent=left==null?"—":left>=0?`${String(Math.floor(Math.min(3600,left)/60)).padStart(2,"0")}:${String(Math.min(3600,left)%60).padStart(2,"0")} 남음`:"지연";
 }
 
 function render(latest,events){
@@ -917,7 +922,7 @@ function drawPins(items){
       .on("click",()=>location.hash="item="+k);
   });
 }
-function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"})}
+function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"});setNext()}
 (async()=>{
   const get=async(p,t)=>{const r=await fetch(base+p+"?t="+Date.now());if(!r.ok)throw r.status;return t?r.text():r.json()};
   let latest=null,events=[];

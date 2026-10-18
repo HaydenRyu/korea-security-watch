@@ -124,6 +124,19 @@ def kick_workflows() -> dict:
     return out
 
 
+# 민항기 등록국 = ICAO 24비트 주소 국가 할당 블록(ICAO Annex 10 Vol.III 부록) — 항공사 국적과 대개 같지만 리스기는 다를 수 있다
+ICAO_CC = [("KR", 0x718000, 0x71FFFF), ("KP", 0x720000, 0x727FFF), ("CN", 0x780000, 0x7BFFFF),
+           ("JP", 0x840000, 0x87FFFF), ("TW", 0x899000, 0x8993FF), ("US", 0xA00000, 0xAFFFFF), ("RU", 0x100000, 0x1FFFFF)]
+
+
+def icao_cc(hexid: str | None) -> str | None:
+    try:
+        n = int((hexid or "").lstrip("~"), 16)
+    except ValueError:
+        return None
+    return next((cc for cc, lo, hi in ICAO_CC if lo <= n <= hi), None)
+
+
 def air_snapshot() -> dict | None:
     """상황판 공역 지도용 항공기 목록(범위·군용 판정은 air_count.py 와 같은 상수)."""
     sys.path.insert(0, str(ROOT / "scripts"))
@@ -141,7 +154,7 @@ def air_snapshot() -> dict | None:
         out.append({"lat": round(a["lat"], 3), "lon": round(a["lon"], 3), "trk": a.get("track", a.get("true_heading")),
                     "alt": 0 if alt == "ground" else alt, "t": a.get("t"),
                     "call": (a.get("flight") or "").replace("@", "").strip() or None, "mil": (a.get("hex") in milhex) or None,
-                    "name": ac.NAMED.get(a.get("t") or "") if a.get("hex") in milhex else None})
+                    "name": ac.NAMED.get(a.get("t") or "") if a.get("hex") in milhex else None, "cc": icao_cc(a.get("hex"))})
     return {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "src": "adsb.lol", "ac": out}
 
 

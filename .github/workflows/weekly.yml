@@ -1,13 +1,22 @@
 name: weekly
-# 일요일 20:00 KST, 지난 7일 이력 요약을 본인 주제로 1통(우선순위 2 — 조용히). claude 미사용
+# 일요일 20:00 KST
+#  summary  — 지난 7일 이력 요약을 본인 주제로 1통(우선순위 2 — 조용히). claude 미사용
+#  calendar — 도발 위험 일정 집계(scripts/risk_calendar.py → data/risk_calendar.json, 공개 DB·키 불필요)
 on:
   schedule: [{ cron: "0 11 * * 0" }]
   workflow_dispatch:
+    inputs:
+      job:
+        description: 돌릴 작업
+        type: choice
+        options: [all, summary, calendar]
+        default: all
 
 concurrency: { group: weekly, cancel-in-progress: false }
 
 jobs:
   summary:
+    if: github.event_name == 'schedule' || inputs.job != 'calendar'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
@@ -18,3 +27,22 @@ jobs:
         run: |
           python3 scripts/weekly_summary.py > /tmp/w.json
           python3 scripts/ntfy_send.py me "$(jq -r .title /tmp/w.json)" "$(jq -r .message /tmp/w.json)" 2
+
+  calendar:
+    if: github.event_name == 'schedule' || inputs.job != 'summary'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@v4
+      - name: count
+        run: python3 scripts/risk_calendar.py
+      - name: commit
+        run: |
+          [ -z "$(git status --porcelain -- data/risk_calendar.json)" ] && { echo unchanged; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/risk_calendar.json
+          git commit -m "calendar: $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1

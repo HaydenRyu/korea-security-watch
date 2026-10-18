@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JIS 예측</title>
+<meta name="description" content="북한 발사 흐름과 앞으로 30일 도발 위험 일정 — 공개 DB(CSIS·CNS)로 센 과거 기록. 전쟁 확률은 만들지 않는다.">
+<link rel="icon" href="assets/jis-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@87.5..112.5,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script src="forecast.js"></script>
+<script data-goatcounter="https://jis.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+/* 토큰은 상황판(index.html)과 같은 값 */
+:root{--ink:#05080e;--panel:#0a1019;--head:#0d1520;--line:#1a2331;--line-2:#2a3649;--ice:#dbe5f1;--fog:#8091a8;--dim:#4c5a6e;
+  --g0:#5fd0b8;--g1:#f2c14e;--amber:var(--g1);--data:'Martian Mono',ui-monospace,monospace;
+  --text:'Pretendard Variable',Pretendard,system-ui,sans-serif;--pad:12px;--side:16px;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--ink);color:var(--ice);font:14px/1.55 var(--text)}
+a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line-2);transition:text-decoration-color 120ms var(--ease)}
+a:hover{text-decoration-color:var(--fog)}
+@media (prefers-reduced-motion:reduce){a{transition:none}}
+.top{display:flex;align-items:center;gap:12px;padding:12px var(--side);border-bottom:1px solid var(--line)}
+.top h1{margin:0;font:700 16px/1.2 var(--text)}.top a{margin-left:auto;font:500 12px/1 var(--data);color:var(--fog)}
+main{max-width:960px;margin:0 auto;padding:16px var(--side) 48px;display:grid;gap:16px}
+.p{background:var(--panel);border:1px solid var(--line);min-width:0}
+.ph{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;min-height:32px;padding:6px var(--pad);background:var(--head);border-bottom:1px solid var(--line);font:500 11px/1.4 var(--data);color:var(--fog)}
+.ph .k{color:var(--ice)}.ph .r{margin-left:auto;color:var(--dim)}
+.pb{padding:12px var(--pad)}
+.big{display:flex;gap:8px 24px;flex-wrap:wrap;align-items:baseline}
+.big b{font:600 28px/1 var(--data)}.big b.hot{color:var(--amber)}.big span{color:var(--fog);font-size:12px}
+.bars{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;align-items:end;height:64px;margin-top:16px}
+.bars i{display:block;background:var(--line-2);min-height:1px}.bars i.now{background:var(--amber)}
+.bx{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;font:400 10px/1.6 var(--data);color:var(--dim);text-align:center}
+.wrap{overflow-x:auto}.wrap table{min-width:640px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font:500 11px/1.4 var(--data);color:var(--fog);text-align:left;padding:8px;border-bottom:1px solid var(--line-2)}
+td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{font:500 12px/1.5 var(--data);white-space:nowrap}
+.tag{font:500 10px/1 var(--data);padding:3px 6px;border:1px solid var(--line-2);color:var(--fog);white-space:nowrap}
+.tag.hi{border-color:var(--amber);color:var(--amber)}.tag.lo{color:var(--dim)}
+/* 연도 칸: 채움 = 그 기간 발사 있음(누르면 첫 발사 출처) · 빈 칸 = 없음 · 점선 = 훈련 미실시 */
+.yrs{display:inline-flex;gap:2px;vertical-align:middle;margin-left:6px}
+.yrs a,.yrs i{display:block;width:8px;height:12px;background:var(--line-2);text-decoration:none}
+.yrs a.h{background:var(--ice)}.yrs a.h:hover{background:var(--amber)}.yrs i.x{background:none;box-shadow:inset 0 0 0 1px var(--line-2)}
+.fx{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.fx:last-child{border-bottom:0}.fx b{font:600 18px/1 var(--data);text-align:right;color:var(--fog)}.fx small{grid-column:1/-1;color:var(--fog);font-size:12px}
+.note{font-size:12px;color:var(--fog);line-height:1.7;margin:12px 0 0}.note li{margin-bottom:4px}
+ul.note{padding-left:18px;margin:0}
+.recent{margin:12px 0 0;padding:0;list-style:none;font-size:12px;color:var(--fog)}.recent li{padding:2px 0}.recent .d{font:500 11px var(--data);color:var(--ice);margin-right:8px}
+</style></head><body>
+<header class="top"><h1>JIS 예측</h1><a href="./">← 상황판</a></header>
+<main>
+
+<section class="p"><div class="ph"><span class="k">지금 흐름</span><span class="r" id="tbasis">발사한 날 수 · CSIS 도발 DB</span></div>
+<div class="pb" id="tempo"><p class="note">불러오는 중</p></div></section>
+
+<section class="p"><div class="ph"><span class="k">앞으로 30일</span><span class="r" id="uprange">—</span></div>
+<div class="pb wrap"><table><thead><tr><th>날짜</th><th>일정</th><th>과거 ±7일 발사</th><th>판단</th><th>출처</th></tr></thead><tbody id="up"></tbody></table></div></section>
+
+<section class="p"><div class="ph"><span class="k">1년 달력 · 이 시기에 도발이 잦았나</span><span class="r" id="lb">—</span></div>
+<div class="pb wrap"><table><thead><tr><th>시기</th><th>일정</th><th>발사 있던 해</th><th>평소라면</th><th>판단</th></tr></thead><tbody id="yr"></tbody></table>
+<p class="note">칸 하나 = 1년(왼쪽이 오래된 해). 채운 칸 = 그 기간에 발사 있음 — 누르면 그 발사의 출처로 간다 · 빈 칸 = 없음 · 점선 = 훈련 미실시.
+「평소라면」 = 그해 아무 때나 같은 길이 기간을 골랐을 때 발사가 들어 있었을 확률을 해마다 더한 값. 차이가 2년 이상이면 「평소보다 잦음」·「오히려 드묾」.</p></div></section>
+
+<section class="p"><div class="ph"><span class="k">외부 예측</span><span class="r">우리 숫자가 아니다</span></div>
+<div class="pb">
+  <div class="fx"><span>Metaculus — 북한 핵실험·한반도 무력충돌 질문</span><b>—</b><small>공개 API 가 토큰을 요구하고 질문 페이지는 봇 차단(10/18 실측). 토큰을 받으면 매주 질문·확률·예측자 수를 갱신해 표시</small></div>
+  <div class="fx"><span>Polymarket — 실돈 예측시장</span><b>—</b><small>한국에서 접속 차단(451, 10/18 실측) — 표시하지 않음</small></div>
+  <div class="fx"><span>Manifold — 가상 화폐 예측시장</span><b>—</b><small>관련 질문은 기한이 2030년 이후이고 참여자가 수십 명 이하라 판단 근거로 쓰기 어려워 표시하지 않음</small></div>
+</div></section>
+
+<section class="p"><div class="ph"><span class="k">집계 기준</span><span class="r" id="upd">—</span></div>
+<div class="pb"><ul class="note">
+  <li>발사 = <a href="https://beyondparallel.csis.org/database-north-korean-provocations/" target="_blank" rel="noopener">CSIS Beyond Parallel 도발 DB ↗</a> 의 미사일·핵 도발 날짜 ∪ <a href="https://www.nti.org/analysis/articles/cns-north-korea-missile-test-database/" target="_blank" rel="noopener">CNS 미사일 시험 DB ↗</a>(2024.11 까지). 같은 날 여러 발 = 1일. 풍선·포격 등은 세지 않는다.</li>
+  <li>훈련 날짜 = 연도별 보도 원문으로 확인한 값(출처는 연도 칸 · 정본 <a href="https://github.com/HaydenRyu/korea-security-watch/blob/main/data/risk_calendar.json" target="_blank" rel="noopener">data/risk_calendar.json ↗</a>). 훈련이 없던 해는 세지 않는다.</li>
+  <li>우리는 「전쟁 확률 %」를 만들지 않는다 — 전례가 거의 없어 그럴듯한 숫자만 나온다. 이 페이지는 「언제 더 자주 볼지」를 정하는 데 쓴다.</li>
+  <li>갱신 = 매주 일요일 DB 를 다시 받아 다시 센다(scripts/risk_calendar.py).</li>
+</ul></div></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const lnk=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${t} ↗</a>`:"";
+const tag=v=>`<span class="tag ${v==="more"?"hi":v==="less"?"lo":""}">${FC_VERDICT[v]}</span>`;
+function yrs(s){return `<span class="yrs">${s.rows.map(r=>r.held===false?`<i class="x" title="${r.year} 훈련 미실시"></i>`
+  :r.n?`<a class="h" href="${esc(r.src||"#")}" target="_blank" rel="noopener" title="${r.year} · ${r.n}일 발사 · 첫 발사 ${r.first}"></a>`:`<i title="${r.year} · 발사 없음"></i>`).join("")}</span>`}
+fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.json()).then(doc=>{
+  const tp=doc.tempo,cfg=doc.config,py=tp.per_year,ys=Object.keys(py),mx=Math.max(...Object.values(py)),thisY=ys[ys.length-1];
+  const hot=tp.ratio>=2,last=tp.recent[0];
+  $("tbasis").textContent=tp.basis;
+  $("tempo").innerHTML=`<div class="big"><div><b class="${hot?"hot":""}">${tp.last30}일</b><span> 최근 30일</span></div><div><b>${tp.avg30}일</b><span> 평소 30일</span></div><div><b>${py[thisY]}일</b><span> ${thisY}년 누적</span></div></div>
+   <div class="bars" aria-label="연도별 발사한 날 수">${ys.map(y=>`<i class="${y===thisY?"now":""}" style="height:${Math.round(py[y]/mx*100)}%" title="${y}년 ${py[y]}일"></i>`).join("")}</div>
+   <div class="bx">${ys.map(y=>`<span>${y.slice(2)}${y===thisY?"*":""}</span>`).join("")}</div>
+   <p class="note">${hot?`최근 30일 발사가 평소의 ${tp.ratio}배 — 발사가 몰리는 시기엔 다음 발사도 가깝다. 평소보다 자주 상황판을 본다.`:"최근 30일은 평소 범위."} * ${thisY}년은 진행 중.</p>
+   <ul class="recent">${tp.recent.map(e=>`<li><span class="d">${fcMD(e.date)}</span>${esc(e.event)} ${lnk(e.src,"출처")}</li>`).join("")}</ul>`;
+  const up=fcUpcoming(doc),t=fcKST(new Date());
+  $("uprange").textContent=`${fcMD(fcISO(t))}–${fcMD(fcISO(new Date(t.getTime()+cfg.horizon_days*FC_DAY)))}`;
+  $("up").innerHTML=up.length?up.map(u=>`<tr><td class="n">${fcMD(u.start)}${u.end?"–"+fcMD(u.end):""}</td><td>${esc(u.name)}${u.note?`<br><small style="color:var(--fog)">${esc(u.note)}</small>`:""}</td>
+    <td>${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년${yrs(u.stat)}`:"—"}</td><td>${u.stat?tag(u.stat.verdict):'<span class="tag lo">집계 없음</span>'}</td><td>${lnk(u.src,"원문")}</td></tr>`).join("")
+    :'<tr><td colspan="5">앞으로 30일 안 주요 일정 없음</td></tr>';
+  $("lb").textContent=`${cfg.lookback[0]}~${cfg.lookback[1]} · 기준일 ±${cfg.window_days}일`;
+  const when=a=>a.md?a.md.replace("-","."):a.id==="fs"?"03월":a.id==="ufs"?"08월":a.id==="us_election"?"11월(짝수 해)":"—";
+  const order=a=>a.md||({fs:"03",ufs:"08",us_election:"11"}[a.id]||"99");
+  $("yr").innerHTML=doc.anchors.filter(a=>doc.stats[a.id]).sort((p,q)=>order(p).localeCompare(order(q))).map(a=>{const s=doc.stats[a.id];
+    return `<tr><td class="n">${when(a)}</td><td>${esc(a.name)}</td><td>${s.years}년 중 ${s.hit}년${yrs(s)}</td><td class="n">${s.expected}년</td><td>${tag(s.verdict)}</td></tr>`}).join("");
+  $("upd").textContent=`갱신 ${doc.data.updated_at.slice(0,10)} · CSIS ${doc.data.csis_last}까지`;
+}).catch(()=>{$("tempo").innerHTML='<p class="note">자료를 불러오지 못했습니다.</p>'});
+</script>
+</body></html>

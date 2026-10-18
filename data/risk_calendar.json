@@ -1,0 +1,1124 @@
+{
+ "_doc": "정본: anchors 는 사람이 고친다(원문 확인한 날짜·출처만). stats·tempo·data 는 scripts/risk_calendar.py 가 매주 다시 쓴다.",
+ "config": {
+  "window_days": 7,
+  "lookback": [
+   2016,
+   2025
+  ],
+  "horizon_days": 30
+ },
+ "anchors": [
+  {
+   "id": "fs",
+   "kind": "exercise",
+   "name": "자유의방패(한미연합 · 봄)",
+   "dates": {
+    "2016": [
+     "2016-03-07",
+     "2016-04-30"
+    ],
+    "2017": [
+     "2017-03-01",
+     null
+    ],
+    "2018": [
+     "2018-04-01",
+     "2018-05-03"
+    ],
+    "2019": [
+     "2019-03-04",
+     "2019-03-12"
+    ],
+    "2020": null,
+    "2021": [
+     "2021-03-08",
+     "2021-03-18"
+    ],
+    "2022": [
+     "2022-04-18",
+     "2022-04-28"
+    ],
+    "2023": [
+     "2023-03-13",
+     "2023-03-23"
+    ],
+    "2024": [
+     "2024-03-04",
+     "2024-03-14"
+    ],
+    "2025": [
+     "2025-03-10",
+     "2025-03-20"
+    ],
+    "2026": [
+     "2026-03-09",
+     "2026-03-19"
+    ]
+   },
+   "sources": {
+    "2016": "https://www.globalsecurity.org/military/library/news/2016/03/mil-160307-pdo01.htm",
+    "2017": "https://www.koreajoongangdaily.com/korea/postponed-joint-uskorea-drills-start-april-1/10513538",
+    "2018": "https://www.koreatimes.co.kr/southkorea/defense/20180401/south-korea-us-begin-joint-military-drills-amid-diplomatic-thaw",
+    "2019": "https://www.koreatimes.co.kr/amp/southkorea/politics/20190303/korea-and-us-axe-two-annual-large-scale-joint-military-drills",
+    "2020": "https://www.koreatimes.co.kr/amp/southkorea/defense/20200227/joint-military-drills-postponed-due-to-virus-fears",
+    "2021": "https://www.koreajoongangdaily.com/korea/korea-us-kick-off-scaleddown-joint-drills/10429262",
+    "2022": "https://www.chinadailyhk.com/hk/article/268120",
+    "2023": "https://www.koreajoongangdaily.com/korea/freedom-shield-biggest-uskorea-exercise-in-years-to-start-on-13th/11621967",
+    "2024": "https://www.upi.com/Top_News/World-News/2024/02/28/US-South-Korea-Freedom-Shield-joint-military-exercise-North-Korea-threat/3751709102127/",
+    "2025": "https://www.koreatimes.co.kr/amp/southkorea/defense/20250310/south-korea-us-begin-key-springtime-military-exercise",
+    "2026": "https://www.nknews.org/?p=968115"
+   },
+   "next": null,
+   "check": {
+    "2016": {
+     "verdict": "confirmed",
+     "quote": "SEOUL, March 7 -- South Korea and the United States on Monday kicked off ... The Key Resolve command post exercise ... through March 18, with the Foal Eagle field training exercise lasting until April 30."
+    },
+    "2017": {
+     "verdict": "start_only",
+     "quote": "down from last year's eight-week program, which kicked off on March 1.",
+     "note": "종료일 미기재(「3월 1일 시작 8주」)"
+    },
+    "2018": {
+     "verdict": "start_only",
+     "quote": "got under way Sunday as scheduled ... the four-week Foal Eagle training ... The allies will also kick off a two-week Key Resolve command-post war game April 23",
+     "note": "4.1 시작은 원문 확인 · 5.3 은 키리졸브 종료(다른 출처)"
+    },
+    "2019": {
+     "verdict": "confirmed",
+     "quote": "Dong Maeng will be held from March 4 to 12, except for the weekend, on a much smaller scale than the previous two exercises,"
+    },
+    "2021": {
+     "verdict": "confirmed",
+     "quote": "South Korea and the United States on Monday kicked off a springtime combined military exercise ... The computer-simulated Combined Command Post Training (CCPT), set to continue until March 18"
+    },
+    "2022": {
+     "verdict": "start_only",
+     "quote": "kicked off major springtime military exercise on Monday ... will run for nine days from Monday",
+     "note": "「월요일부터 9일」 — 종료 4.26 또는 4.28"
+    },
+    "2023": {
+     "verdict": "confirmed",
+     "quote": "In a press release Friday, militaries of both countries said Freedom Shield will last from March 13 to 23."
+    },
+    "2024": {
+     "verdict": "confirmed",
+     "quote": "The exercise will run from Mar. 4-14 and is focused on countering North Korea's growing nuclear threat."
+    },
+    "2025": {
+     "verdict": "confirmed",
+     "quote": "The allies began the Freedom Shield exercise, which runs through March 20,"
+    },
+    "2026": {
+     "verdict": "confirmed",
+     "quote": "will hold large-scale springtime military drills on countering North Korean threats from March 9 to 19"
+    }
+   }
+  },
+  {
+   "id": "ufs",
+   "kind": "exercise",
+   "name": "을지자유의방패(한미연합 · 여름)",
+   "dates": {
+    "2016": [
+     "2016-08-22",
+     "2016-09-02"
+    ],
+    "2017": [
+     "2017-08-21",
+     "2017-08-31"
+    ],
+    "2018": null,
+    "2019": [
+     "2019-08-05",
+     "2019-08-20"
+    ],
+    "2020": [
+     "2020-08-18",
+     "2020-08-28"
+    ],
+    "2021": [
+     "2021-08-16",
+     "2021-08-26"
+    ],
+    "2022": [
+     "2022-08-22",
+     "2022-09-01"
+    ],
+    "2023": [
+     "2023-08-21",
+     "2023-08-31"
+    ],
+    "2024": [
+     "2024-08-19",
+     "2024-08-29"
+    ],
+    "2025": [
+     "2025-08-18",
+     "2025-08-28"
+    ],
+    "2026": [
+     "2026-08-17",
+     "2026-08-21"
+    ]
+   },
+   "sources": {
+    "2016": "https://nknews.org/?p=796015",
+    "2017": "https://www.army.mil/article/192802/dod_announces_start_of_exercise_ulchi_freedom_guardian",
+    "2018": "https://www.defensenews.com/news/your-air-force/2018/06/18/south-korea-us-cancel-ulchi-freedom-guardian-exercise-for-2018/",
+    "2019": "https://english.kyodonews.net/news/2019/08/c552656b8998-s-korea-us-military-exercise-begins-despite-n-korea-warnings.html",
+    "2020": "https://www.koreatimes.co.kr/southkorea/defense/20200818/s-korea-us-kick-off-joint-summertime-exercise-amid-covid-19-concern",
+    "2021": "https://www.koreatimes.co.kr/www/nation/2021/08/205_313531.html",
+    "2022": "https://timesofoman.com/article/120351-us-south-korea-kick-off-biggest-joint-military-exercises-in-5-years",
+    "2023": "https://www.gulf-times.com/article/666448/international/aseanphilippines/s-korea-us-to-launch-key-military-drills-next-week",
+    "2024": "https://www.koreajoongangdaily.com/korea/south-korea-us-to-begin-ulchi-freedom-shield-exercise-next-week-amid-threats-from-north/10155078",
+    "2025": "https://asianews.network/south-korea-us-military-exercise-kicks-off-amid-pursuit-of-inter-korean-thaw/",
+    "2026": "https://www.koreatimes.co.kr/southkorea/defense/20260819/s-korea-us-to-conduct-159-field-drills-this-year-despite-shortened-ufs-exercise"
+   },
+   "next": null,
+   "check": {
+    "2016": {
+     "verdict": "confirmed",
+     "quote": "From August 22 till September 2, one of three major annual U.S.-ROK maneuvers, \"Ulchi Freedom Guardian\", were conducted."
+    },
+    "2017": {
+     "verdict": "confirmed",
+     "quote": "will hold the annual Ulchi Freedom Guardian exercise Aug. 21-31"
+    },
+    "2019": {
+     "verdict": "start_only",
+     "quote": "SEOUL - South Korea and the United States began a joint military drill Monday despite warnings from North Korea",
+     "note": "8.5 = 사전 위기관리 참모훈련 시작 · 본훈련 8.11경 · 종료 8.20(신화)"
+    },
+    "2020": {
+     "verdict": "confirmed",
+     "quote": "South Korea and the United States on Tuesday kicked off their annual summertime combined exercise ... which will run until Aug. 28,"
+    },
+    "2021": {
+     "verdict": "confirmed",
+     "quote": "The computer-simulated Combined Command Post Training (CCPT) is expected to be held from Aug. 16-26"
+    },
+    "2022": {
+     "verdict": "confirmed",
+     "quote": "The US and South Korea on Monday kicked off annual joint military exercises, summertime drills known as Ulchi Freedom Shield. ... scheduled to run through September 1."
+    },
+    "2023": {
+     "verdict": "confirmed",
+     "quote": "is set to take place from Aug. 21-31"
+    },
+    "2024": {
+     "verdict": "confirmed",
+     "quote": "is scheduled to take place from Aug. 19 to 29"
+    },
+    "2025": {
+     "verdict": "confirmed",
+     "quote": "began their annual large-scale military exercise Monday ... will be carried out for 11 days and concludes on Aug. 28."
+    },
+    "2026": {
+     "verdict": "confirmed",
+     "quote": "The exercise began Monday and had originally been scheduled to run through Aug. 27. | The exercise will conclude on Aug. 21, six days earlier than scheduled."
+    }
+   }
+  },
+  {
+   "id": "0108",
+   "kind": "anniversary",
+   "name": "김정은 생일",
+   "md": "01-08",
+   "sources": {
+    "list": "https://en.wikipedia.org/wiki/Public_holidays_in_North_Korea"
+   }
+  },
+  {
+   "id": "0208",
+   "kind": "anniversary",
+   "name": "건군절(조선인민군 창건)",
+   "md": "02-08",
+   "sources": {
+    "list": "https://en.wikipedia.org/wiki/Public_holidays_in_North_Korea"
+   }
+  },
+  {
+   "id": "0216",
+   "kind": "anniversary",
+   "name": "광명성절(김정일 생일)",
+   "md": "02-16",
+   "sources": {
+    "list": "https://en.wikipedia.org/wiki/Public_holidays_in_North_Korea"
+   }
+  },
+  {
+   "id": "0415",
+   "kind": "anniversary",
+   "name": "태양절(김일성 생일)",
+   "md": "04-15",
+   "sources": {
+    "list": "https://en.wikipedia.org/wiki/Public_holidays_in_North_Korea"
+   }
+  },
+  {
+   "id": "0727",
+   "kind": "anniversary",
+   "name": "전승절(정전협정)",
+   "md": "07-27",
+   "sources": {
+    "list": "https://en.wikipedia.org/wiki/Public_holidays_in_North_Korea"
+   }
+  },
+  {
+   "id": "0909",
+   "kind": "anniversary",
+   "name": "공화국 창건일",
+   "md": "09-09",
+   "sources": {
+    "list": "https://en.wikipedia.org/wiki/Public_holidays_in_North_Korea"
+   }
+  },
+  {
+   "id": "1010",
+   "kind": "anniversary",
+   "name": "노동당 창건일",
+   "md": "10-10",
+   "sources": {
+    "list": "https://en.wikipedia.org/wiki/Public_holidays_in_North_Korea"
+   }
+  },
+  {
+   "id": "us_election",
+   "kind": "election",
+   "name": "미국 선거일(대선·중간)",
+   "dates": {
+    "2016": [
+     "2016-11-08",
+     null
+    ],
+    "2018": [
+     "2018-11-06",
+     null
+    ],
+    "2020": [
+     "2020-11-03",
+     null
+    ],
+    "2022": [
+     "2022-11-08",
+     null
+    ],
+    "2024": [
+     "2024-11-05",
+     null
+    ]
+   },
+   "sources": {
+    "rule": "https://en.wikipedia.org/wiki/Election_Day_(United_States)"
+   },
+   "next": {
+    "start": "2026-11-03",
+    "end": null,
+    "label": "미국 중간선거",
+    "source": "https://en.wikipedia.org/wiki/Election_Day_(United_States)"
+   }
+  },
+  {
+   "id": "hoguk",
+   "kind": "exercise",
+   "name": "호국훈련(한국군)",
+   "dates": {},
+   "sources": {},
+   "next": {
+    "start": "2026-10-19",
+    "end": "2026-10-30",
+    "label": "호국훈련(한국군)",
+    "source": "https://biz.heraldcorp.com/article/10904035",
+    "note": "종료일 보도 엇갈림 — 10.23(연합뉴스) / 10.30(헤럴드). 표시는 늦은 쪽까지"
+   }
+  },
+  {
+   "id": "asean",
+   "kind": "summit",
+   "name": "아세안·동아시아 정상회의",
+   "next": {
+    "start": "2026-11-16",
+    "end": "2026-11-18",
+    "label": "아세안·동아시아 정상회의(마닐라)",
+    "source": "https://asianews.network/?p=307992"
+   }
+  },
+  {
+   "id": "apec",
+   "kind": "summit",
+   "name": "APEC 정상회의",
+   "next": {
+    "start": "2026-11-18",
+    "end": "2026-11-19",
+    "label": "APEC 정상회의(선전)",
+    "source": "https://www.sz.gov.cn/en_szgov/news/infocus/APEC2026/News/content/post_12977146.html"
+   }
+  }
+ ],
+ "stats": {
+  "fs": {
+   "years": 9,
+   "hit": 7,
+   "expected": 5.3,
+   "verdict": "usual",
+   "rows": [
+    {
+     "year": 2016,
+     "n": 11,
+     "first": "2016-03-03",
+     "src": "http://www.koreatimes.co.kr/www/news/nation/2016/03/116_199569.html"
+    },
+    {
+     "year": 2017,
+     "n": 1,
+     "first": "2017-03-06",
+     "src": "http://www.cnn.com/2017/03/06/asia/north-korea-missile-launch-analysis/index.html"
+    },
+    {
+     "year": 2018,
+     "n": 0
+    },
+    {
+     "year": 2019,
+     "n": 0
+    },
+    {
+     "year": 2020,
+     "held": false
+    },
+    {
+     "year": 2021,
+     "n": 2,
+     "first": "2021-03-21",
+     "src": "https://en.yna.co.kr/view/AEN20210324000555325?section=news"
+    },
+    {
+     "year": 2022,
+     "n": 2,
+     "first": "2022-04-16",
+     "src": "https://en.yna.co.kr/view/AEN20220417000452325?section=nk/nk"
+    },
+    {
+     "year": 2023,
+     "n": 7,
+     "first": "2023-03-09",
+     "src": "https://en.yna.co.kr/view/AEN20230310000652325?section=news"
+    },
+    {
+     "year": 2024,
+     "n": 1,
+     "first": "2024-03-18",
+     "src": "https://kcnawatch.org/newstream/1710889846-526123314/respected-comrade-kim-jong-un-guides-ground-jet-test-of-solid-fuel-engine-for-new-type-intermediate-range-hypersonic-missile/"
+    },
+    {
+     "year": 2025,
+     "n": 2,
+     "first": "2025-03-10",
+     "src": "https://www.nknews.org/pro/north-korean-missiles-appear-to-strike-targets-on-west-coast-island-imagery/"
+    }
+   ]
+  },
+  "ufs": {
+   "years": 9,
+   "hit": 7,
+   "expected": 5.7,
+   "verdict": "usual",
+   "rows": [
+    {
+     "year": 2016,
+     "n": 3,
+     "first": "2016-08-24",
+     "src": "http://www.reuters.com/article/us-northkorea-missiles-idUSKCN10Y2B0"
+    },
+    {
+     "year": 2017,
+     "n": 3,
+     "first": "2017-08-26",
+     "src": "http://www.cnn.com/2017/08/28/asia/north-korea-missile-test/index.html"
+    },
+    {
+     "year": 2018,
+     "held": false
+    },
+    {
+     "year": 2019,
+     "n": 6,
+     "first": "2019-07-31",
+     "src": "https://en.yna.co.kr/view/AEN20190731000556325?section=nk/nk"
+    },
+    {
+     "year": 2020,
+     "n": 0
+    },
+    {
+     "year": 2021,
+     "n": 0
+    },
+    {
+     "year": 2022,
+     "n": 1,
+     "first": "2022-08-17",
+     "src": "https://en.yna.co.kr/view/AEN20220817006451325"
+    },
+    {
+     "year": 2023,
+     "n": 3,
+     "first": "2023-08-24",
+     "src": "https://www.nknews.org/2023/08/north-korea-launches-satellite-from-main-spaceport-rok-media/"
+    },
+    {
+     "year": 2024,
+     "n": 1,
+     "first": "2024-08-27",
+     "src": "https://www.nknews.org/2024/08/north-korea-tests-updated-240mm-rocket-system-for-fourth-time-this-year/"
+    },
+    {
+     "year": 2025,
+     "n": 1,
+     "first": "2025-08-23",
+     "src": "https://www.nknews.org/2025/08/kim-jong-un-oversees-launch-of-two-new-air-defense-missiles-state-media/"
+    }
+   ]
+  },
+  "0108": {
+   "years": 10,
+   "hit": 5,
+   "expected": 4.3,
+   "verdict": "usual",
+   "rows": [
+    {
+     "year": 2016,
+     "n": 1,
+     "first": "2016-01-06",
+     "src": "http://www.reuters.com/article/us-northkorea-nuclear-idUSKBN0UK0G420160106"
+    },
+    {
+     "year": 2017,
+     "n": 0
+    },
+    {
+     "year": 2018,
+     "n": 0
+    },
+    {
+     "year": 2019,
+     "n": 0
+    },
+    {
+     "year": 2020,
+     "n": 0
+    },
+    {
+     "year": 2021,
+     "n": 0
+    },
+    {
+     "year": 2022,
+     "n": 4,
+     "first": "2022-01-05",
+     "src": "https://en.yna.co.kr/view/AEN20220105001855325?section=national/defense"
+    },
+    {
+     "year": 2023,
+     "n": 1,
+     "first": "2023-01-01",
+     "src": "https://www.nknews.org/2023/01/north-korea-rings-in-the-new-year-with-early-morning-missile-launch-tokyo/"
+    },
+    {
+     "year": 2024,
+     "n": 1,
+     "first": "2024-01-14",
+     "src": "https://en.yna.co.kr/view/AEN20240119004652315?section=nk/nk"
+    },
+    {
+     "year": 2025,
+     "n": 2,
+     "first": "2025-01-06",
+     "src": "https://en.yna.co.kr/view/AEN20240918004353315?section=nk/nk"
+    }
+   ]
+  },
+  "0208": {
+   "years": 10,
+   "hit": 3,
+   "expected": 4.3,
+   "verdict": "usual",
+   "rows": [
+    {
+     "year": 2016,
+     "n": 1,
+     "first": "2016-02-07",
+     "src": "http://www.cnn.com/2016/02/06/asia/north-korea-rocket-launch-window/"
+    },
+    {
+     "year": 2017,
+     "n": 1,
+     "first": "2017-02-12",
+     "src": "https://www.nytimes.com/2017/02/13/world/asia/north-korea-missile-launch-success.html?_r=0"
+    },
+    {
+     "year": 2018,
+     "n": 0
+    },
+    {
+     "year": 2019,
+     "n": 0
+    },
+    {
+     "year": 2020,
+     "n": 0
+    },
+    {
+     "year": 2021,
+     "n": 0
+    },
+    {
+     "year": 2022,
+     "n": 0
+    },
+    {
+     "year": 2023,
+     "n": 0
+    },
+    {
+     "year": 2024,
+     "n": 2,
+     "first": "2024-02-02",
+     "src": "https://kcnawatch.org/newstream/1707691107-31728029/controllable-shells-for-multiple-rocket-launcher-newly-developed-in-dprk/"
+    },
+    {
+     "year": 2025,
+     "n": 0
+    }
+   ]
+  },
+  "0216": {
+   "years": 10,
+   "hit": 3,
+   "expected": 4.3,
+   "verdict": "usual",
+   "rows": [
+    {
+     "year": 2016,
+     "n": 0
+    },
+    {
+     "year": 2017,
+     "n": 1,
+     "first": "2017-02-12",
+     "src": "https://www.nytimes.com/2017/02/13/world/asia/north-korea-missile-launch-success.html?_r=0"
+    },
+    {
+     "year": 2018,
+     "n": 0
+    },
+    {
+     "year": 2019,
+     "n": 0
+    },
+    {
+     "year": 2020,
+     "n": 0
+    },
+    {
+     "year": 2021,
+     "n": 0
+    },
+    {
+     "year": 2022,
+     "n": 0
+    },
+    {
+     "year": 2023,
+     "n": 3,
+     "first": "2023-02-18",
+     "src": "https://en.yna.co.kr/view/AEN20230219000453325?section=search"
+    },
+    {
+     "year": 2024,
+     "n": 1,
+     "first": "2024-02-14",
+     "src": "https://kcnawatch.org/newstream/1709802642-977687581/respected-comrade-kim-jong-un-inspects-major-operational-training-base-in-western-area/"
+    },
+    {
+     "year": 2025,
+     "n": 0
+    }
+   ]
+  },
+  "0415": {
+   "years": 10,
+   "hit": 7,
+   "expected": 4.3,
+   "verdict": "more",
+   "rows": [
+    {
+     "year": 2016,
+     "n": 2,
+     "first": "2016-04-15",
+     "src": "http://www.mofa.go.kr/webmodule/htsboard/template/read/engreadboard.jsp?typeID=12&boardid=303&seqno=316434"
+    },
+    {
+     "year": 2017,
+     "n": 1,
+     "first": "2017-04-16",
+     "src": "http://www.cnn.com/2017/04/15/asia/north-korea-missile-test/"
+    },
+    {
+     "year": 2018,
+     "n": 0
+    },
+    {
+     "year": 2019,
+     "n": 1,
+     "first": "2019-04-17",
+     "src": "https://kcnawatch.org/newstream/1555539382-294181785/supreme-leader-kim-jong-un-guides-test-fire-of-new-type-tactical-guided-weapon/"
+    },
+    {
+     "year": 2020,
+     "n": 1,
+     "first": "2020-04-14",
+     "src": "https://en.yna.co.kr/view/AEN20200414006452325?section=nk/nk"
+    },
+    {
+     "year": 2021,
+     "n": 0
+    },
+    {
+     "year": 2022,
+     "n": 1,
+     "first": "2022-04-16",
+     "src": "https://en.yna.co.kr/view/AEN20220417000452325?section=nk/nk"
+    },
+    {
+     "year": 2023,
+     "n": 1,
+     "first": "2023-04-13",
+     "src": "https://www.reuters.com/world/asia-pacific/north-korea-fires-missile-into-sea-off-east-coast-south-korea-says-2023-04-12/#:~:text=%22So%20far%20we%20assess%20that,a%20solid%2Dfuel%20propellant.%22"
+    },
+    {
+     "year": 2024,
+     "n": 2,
+     "first": "2024-04-19",
+     "src": "https://kcnawatch.org/newstream/1713852645-62527343/report-on-participation-of-600-mm-super-large-multiple-rocket-sub-units-in-first-combined-tactical-drill-simulating-nuclear-counterattack-respected-comrade-kim-jong-un-guides-combined-tactical-drill-s/"
+    },
+    {
+     "year": 2025,
+     "n": 0
+    }
+   ]
+  },
+  "0727": {
+   "years": 10,
+   "hit": 4,
+   "expected": 4.3,
+   "verdict": "usual",
+   "rows": [
+    {
+     "year": 2016,
+     "n": 1,
+     "first": "2016-08-03",
+     "src": "http://www.cnn.com/2016/08/02/asia/north-korea-missile/index.html"
+    },
+    {
+     "year": 2017,
+     "n": 1,
+     "first": "2017-07-28",
+     "src": "https://www.washingtonpost.com/world/asia_pacific/north-korea-fires-another-missile-its-latest-step-toward-putting-the-us-within-reach/2017/07/28/7fc4437a-71fd-11e7-8c17-533c52b2f014_story.html?utm_term=.d2de50d3f181"
+    },
+    {
+     "year": 2018,
+     "n": 0
+    },
+    {
+     "year": 2019,
+     "n": 3,
+     "first": "2019-07-25",
+     "src": "https://www.nytimes.com/2019/07/24/world/asia/north-korea-launched-projectiles.html?auth=login-email&login=email&login=email&auth=login-email"
+    },
+    {
+     "year": 2020,
+     "n": 0
+    },
+    {
+     "year": 2021,
+     "n": 0
+    },
+    {
+     "year": 2022,
+     "n": 0
+    },
+    {
+     "year": 2023,
+     "n": 2,
+     "first": "2023-07-22",
+     "src": "https://en.yna.co.kr/view/AEN20230722000551325?section=nk/nk"
+    },
+    {
+     "year": 2024,
+     "n": 0
+    },
+    {
+     "year": 2025,
+     "n": 0
+    }
+   ]
+  },
+  "0909": {
+   "years": 10,
+   "hit": 6,
+   "expected": 4.3,
+   "verdict": "usual",
+   "rows": [
+    {
+     "year": 2016,
+     "n": 2,
+     "first": "2016-09-05",
+     "src": "http://english.yonhapnews.co.kr/national/2016/09/09/0301000000AEN20160909000300315.html"
+    },
+    {
+     "year": 2017,
+     "n": 2,
+     "first": "2017-09-03",
+     "src": "http://www.cnn.com/2017/09/03/asia/north-korea-nuclear-test-live-updates/index.html"
+    },
+    {
+     "year": 2018,
+     "n": 0
+    },
+    {
+     "year": 2019,
+     "n": 2,
+     "first": "2019-09-09",
+     "src": "https://en.yna.co.kr/view/AEN20190910001055325?section=national/defense"
+    },
+    {
+     "year": 2020,
+     "n": 0
+    },
+    {
+     "year": 2021,
+     "n": 3,
+     "first": "2021-09-11",
+     "src": "https://en.yna.co.kr/view/AEN20210913000354325"
+    },
+    {
+     "year": 2022,
+     "n": 0
+    },
+    {
+     "year": 2023,
+     "n": 2,
+     "first": "2023-09-02",
+     "src": "https://www.nknews.org/2023/09/north-korea-simulates-tactical-nuclear-attack-in-response-to-us-rok-drills/"
+    },
+    {
+     "year": 2024,
+     "n": 1,
+     "first": "2024-09-12",
+     "src": "https://en.yna.co.kr/view/AEN20240912001452315?section=nk/nk"
+    },
+    {
+     "year": 2025,
+     "n": 0
+    }
+   ]
+  },
+  "1010": {
+   "years": 10,
+   "hit": 2,
+   "expected": 4.3,
+   "verdict": "less",
+   "rows": [
+    {
+     "year": 2016,
+     "n": 1,
+     "first": "2016-10-15",
+     "src": "http://www.reuters.com/article/us-korea-north-usa-idUSKBN12F0S2"
+    },
+    {
+     "year": 2017,
+     "n": 0
+    },
+    {
+     "year": 2018,
+     "n": 0
+    },
+    {
+     "year": 2019,
+     "n": 0
+    },
+    {
+     "year": 2020,
+     "n": 0
+    },
+    {
+     "year": 2021,
+     "n": 0
+    },
+    {
+     "year": 2022,
+     "n": 5,
+     "first": "2022-10-04",
+     "src": "https://en.yna.co.kr/view/AEN20221004001353325?section=national/defense"
+    },
+    {
+     "year": 2023,
+     "n": 0
+    },
+    {
+     "year": 2024,
+     "n": 0
+    },
+    {
+     "year": 2025,
+     "n": 0
+    }
+   ]
+  },
+  "us_election": {
+   "years": 5,
+   "hit": 2,
+   "expected": 2.0,
+   "verdict": "usual",
+   "rows": [
+    {
+     "year": 2016,
+     "n": 0
+    },
+    {
+     "year": 2018,
+     "n": 0
+    },
+    {
+     "year": 2020,
+     "n": 0
+    },
+    {
+     "year": 2022,
+     "n": 4,
+     "first": "2022-11-02",
+     "src": "https://en.yna.co.kr/view/AEN20220307009057325?section=nk/nk"
+    },
+    {
+     "year": 2024,
+     "n": 2,
+     "first": "2024-10-31",
+     "src": "https://www.nknews.org/pro/new-north-korean-icbm-delivers-big-political-message-and-likely-bigger-payloads/"
+    }
+   ]
+  }
+ },
+ "tempo": {
+  "last30": 5,
+  "avg30": 1.4,
+  "ratio": 3.6,
+  "recent": [
+   {
+    "date": "2026-10-14",
+    "event": "Submarine Launched Cruise Missile Launch",
+    "src": "https://en.yna.co.kr/view/AEN20261015000751315"
+   },
+   {
+    "date": "2026-10-12",
+    "event": "Ballistic Missile Launch",
+    "src": "https://en.yna.co.kr/view/AEN20261012002700315?section=national/defense"
+   },
+   {
+    "date": "2026-10-03",
+    "event": "Intermediate-range Ballistic Missile Launch",
+    "src": "https://www.koreajoongangdaily.com/korea/kim-jongun-watches-missile-drill-with-daughter-vows-to-rapidly-advance-nuclear-war-deterrentnbsp/12903879 "
+   },
+   {
+    "date": "2026-09-22",
+    "event": "Multiple Launch Rocket System (MLRS) Test",
+    "src": "https://www.chosun.com/english/national-en/2026/09/24/RJQMLNFDGVHBRHXSLJLSDV67JQ/ "
+   },
+   {
+    "date": "2026-09-20",
+    "event": "Short-range Ballistic Missile Launch",
+    "src": "https://www.reuters.com/world/asia-pacific/north-korea-says-it-tests-new-combat-weapon-system-kcna-reports-2026-09-21/"
+   }
+  ],
+  "per_year": {
+   "2016": 22,
+   "2017": 18,
+   "2018": 0,
+   "2019": 14,
+   "2020": 6,
+   "2021": 8,
+   "2022": 37,
+   "2023": 24,
+   "2024": 20,
+   "2025": 19,
+   "2026": 22
+  },
+  "basis": "CSIS 미사일·핵 도발 날짜, 평소 = 2016~2025 평균"
+ },
+ "data": {
+  "updated_at": "2026-10-18T13:04:44+00:00",
+  "csis_rows": 508,
+  "csis_last": "2026-10-14",
+  "cns_days": 153,
+  "cns_last": "2024-11-05",
+  "launch_days": 270
+ },
+ "_verify": "훈련 연도별 check = 원문 인용·판정(2026-10-18 검증). confirmed 19 · start_only 4(note 참고). USFK.mil 은 403 이라 보도로 대체",
+ "cns": {
+  "1984-04-09": "http://www.nti.org/media/pdfs/north_korea_missile_2.pdf?_=1327534760",
+  "1984-09-01": null,
+  "1986-05-01": "http://www.nti.org/media/pdfs/north_korea_missile_2.pdf?_=1327534760",
+  "1990-05-01": "http://www.astronautix.com/g/gitdaeryung.html",
+  "1990-06-01": "http://www.nti.org/media/pdfs/north_korea_missile_2.pdf?_=1327534760",
+  "1991-07-01": "http://www.astronautix.com/k/koreanorth.html",
+  "1992-06-01": "http://www.astronautix.com/g/gitdaeryung.html",
+  "1993-05-29": "http://www.nti.org/media/pdfs/north_korea_missile_2.pdf?_=1327534760",
+  "1993-05-30": "http://www.astronautix.com/g/gitdaeryung.html",
+  "1998-08-31": "http://www.astronautix.com/g/gitdaeryung.html",
+  "2006-07-05": "http://www.nti.org/media/pdfs/north_korea_missile_2.pdf?_=1327534760",
+  "2009-04-05": "http://www.nytimes.com/2009/04/06/world/asia/06korea.html?pagewanted=all",
+  "2009-07-05": "http://www.astronautix.com/g/gitdaeryung.html",
+  "2012-04-13": "http://www.nytimes.com/2012/04/13/world/asia/north-korea-launches-rocket-defying-world-warnings.html",
+  "2012-12-12": "http://www.astronautix.com/k/koreanorth.html",
+  "2013-05-18": "http://www.reuters.com/article/us-korea-north-missiles-idUSBRE94H04P20130519",
+  "2013-05-19": "http://www.reuters.com/article/us-korea-north-missiles-idUSBRE94H04P20130519",
+  "2013-05-20": "http://www.reuters.com/article/us-korea-north-missiles-idUSBRE94H04P20130519",
+  "2014-02-27": "http://www.astronautix.com/k/koreanorth.html",
+  "2014-03-03": "http://www.astronautix.com/g/gitdaeryung.html",
+  "2014-03-26": "http://www.astronautix.com/k/koreanorth.html",
+  "2014-06-26": "http://www.un.org/ga/search/view_doc.asp?symbol=S/2016/157",
+  "2014-06-29": "http://www.astronautix.com/g/gitdaeryung.html",
+  "2014-07-09": "http://www.astronautix.com/k/koreanorth.html",
+  "2014-07-13": "http://www.astronautix.com/k/koreanorth.html",
+  "2014-07-26": "http://www.mnd.go.kr/user/mnd_eng/upload/pblictn/PBLICTNEBOOK_201506161152304650.pdf",
+  "2014-08-14": "http://www.un.org/ga/search/view_doc.asp?symbol=S/2016/157",
+  "2014-09-01": "http://www.un.org/ga/search/view_doc.asp?symbol=S/2016/157",
+  "2014-09-06": "http://www.un.org/ga/search/view_doc.asp?symbol=S/2016/157",
+  "2015-02-08": "http://www.un.org/ga/search/view_doc.asp?symbol=S/2016/157",
+  "2015-03-01": "http://www.voanews.com/a/north-korea-fires-rockets-as-joint-us-south-korean-maneuvers-begin/2664198.html",
+  "2015-04-02": "http://www.un.org/ga/search/view_doc.asp?symbol=S/2016/157",
+  "2015-04-03": "http://www.un.org/ga/search/view_doc.asp?symbol=S/2016/157",
+  "2015-05-08": "http://www.defensenews.com/story/defense/international/asia-pacific/2015/05/10/north-korea-submarine-launched-ballistic-missile-test-fired/27083023/",
+  "2015-11-28": "http://thediplomat.com/2015/11/north-koreas-submarine-launched-ballistic-missile-test-fails/",
+  "2015-12-21": "http://www.armscontrolwonk.com/archive/1200759/video-analysis-of-dprk-slbm-footage/",
+  "2016-02-07": "http://www.bbc.com/news/world-asia-35515207",
+  "2016-03-10": "http://www.cnn.com/2016/03/10/asia/north-korea-missiles/",
+  "2016-03-18": "http://www.cnn.com/2016/03/17/asia/north-korea-missile-launch/",
+  "2016-04-16": "https://www.washingtonpost.com/world/asia_pacific/north-koreas-missile-has-failed-officials-from-south-say/2016/04/14/8eb2ce53-bc38-40d0-9013-5655bed26764_story.html",
+  "2016-04-23": "http://www.bbc.com/news/world-asia-36119159",
+  "2016-04-28": "http://edition.cnn.com/2016/04/28/asia/north-korea-failed-missile-launch/",
+  "2016-05-31": "http://defense-update.com/20160531_musudan-2.html",
+  "2016-06-22": "http://english.yonhapnews.co.kr/northkorea/2016/06/22/0401000000AEN20160622000554315.html",
+  "2016-07-09": "http://english.yonhapnews.co.kr/national/2016/07/09/86/0301000000AEN20160709002253315F.html",
+  "2016-07-19": "http://www.cnn.com/2016/07/18/asia/north-korea-missiles/",
+  "2016-08-03": "http://www.cnn.com/2016/08/02/asia/north-korea-missile/",
+  "2016-08-24": "https://en.wikipedia.org/wiki/Pukkuksong-1",
+  "2016-09-05": "http://thediplomat.com/2016/09/north-korea-showed-off-a-previously-unseen-missile-during-the-g20/",
+  "2016-10-15": "http://www.reuters.com/article/us-korea-north-usa-idUSKBN12F0S2",
+  "2016-10-20": "https://www.stratcom.mil/news/2016/648/USSTRATCOM_Detects_Attempted_North_Korean_Missile_Launch/",
+  "2017-02-12": "http://www.stratcom.mil/Media/News/News-Article-View/Article/1080866/usstratcom-detects-tracks-north-korean-missile-launch/",
+  "2017-03-06": "http://www.cnn.com/2017/03/06/asia/north-korea-missiles-kim-jong-un/",
+  "2017-03-22": "http://www.reuters.com/article/us-northkorea-missiles-idUSKBN16T07M",
+  "2017-04-05": "https://www.nytimes.com/2017/04/04/world/asia/north-korea-ballistic-missile-test-xi-trump.html",
+  "2017-04-16": "https://www.nytimes.com/2017/04/04/world/asia/north-korea-ballistic-missile-test-xi-trump.html",
+  "2017-04-29": "http://www.cnn.com/2017/04/15/asia/north-korea-missile-test/",
+  "2017-05-15": "https://www.washingtonpost.com/world/north-korea-fires-another-ballistic-missile-the-75th-of-kim-jong-uns-tenure/2017/04/28/c4b7aa8a-2c5c-11e7-9081-f5405f56d3e4_story.html?utm_term=.eea0faa61c57",
+  "2017-05-21": "http://thediplomat.com/2017/05/north-koreas-new-intermediate-range-ballistic-missile-the-hwasong-12-first-takeaways/?utm_content=buffer3dda6&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
+  "2017-05-29": "https://twitter.com/DaveSchmerler/status/869346581941600256",
+  "2017-07-04": "https://www.wsj.com/articles/north-korea-launches-missile-into-waters-between-korea-and-japan-1499131848",
+  "2017-07-28": "https://twitter.com/DaveSchmerler/status/891208500071636992",
+  "2017-08-26": "https://twitter.com/PacificCommand/status/901226675647561728",
+  "2017-08-29": "http://english.yonhapnews.co.kr/northkorea/2017/08/29/91/0401000000AEN20170829000755315F.html",
+  "2017-09-15": "http://www.mod.go.jp/e/press/release/2017/09/15a.html",
+  "2017-11-29": "https://www.nytimes.com/2017/11/28/world/asia/north-korea-missile-test.html",
+  "2019-04-17": "https://kcnawatch.org/newstream/1555539382-294181785/supreme-leader-kim-jong-un-guides-test-fire-of-new-type-tactical-guided-weapon/",
+  "2019-05-04": "https://www.bloomberg.com/news/articles/2019-05-05/kim-jong-un-s-weapon-test-may-have-included-ballistic-missile",
+  "2019-05-09": "https://www.bbc.com/news/world-asia-48212045",
+  "2019-07-25": "https://en.yna.co.kr/view/AEN20190725000858325?section=national/defense",
+  "2019-07-31": "https://en.yna.co.kr/view/AEN20190731000556325",
+  "2019-08-02": "https://kcnawatch.org/newstream/1564726601-671457213/supreme-leader-kim-jong-un-guides-test-fire-of-new-type-large-caliber-multiple-launch-guided-rocket-system/",
+  "2019-08-06": "https://en.yna.co.kr/view/AEN20190807000454325?section=nk/nk#none",
+  "2019-08-10": "https://www.washingtonpost.com/world/asia_pacific/fast-low-and-hard-to-stop-north-koreas-missile-tests-crank-up-the-threat-level/2019/08/15/adf3f3e4-bdc3-11e9-aff2-3835caab97f6_story.html",
+  "2019-08-16": "https://m-en.yna.co.kr/view/AEN20190816001354325?section=national/defense",
+  "2019-08-24": "https://en.yna.co.kr/view/AEN20190824000453325?section=nk/nk",
+  "2019-09-10": "https://en.yna.co.kr/view/AEN20190910001055325?section=national/defense",
+  "2019-09-09": "https://en.yna.co.kr/view/AEN20190910001055325?section=national/defense",
+  "2019-10-02": "https://www.bbc.com/news/world-asia-49915224",
+  "2019-10-31": "https://en.yna.co.kr/view/AEN20191031011453325",
+  "2019-11-28": "https://www.reuters.com/article/us-northkorea-missiles-kim/north-koreas-thanksgiving-day-test-shows-improving-speed-for-missile-crews-idUSKBN1Y229Z",
+  "2020-03-02": "https://www.wsj.com/articles/north-korea-fires-two-missiles-in-its-first-weapons-test-this-year-11583126221",
+  "2020-03-09": "https://www.38north.org/2020/03/jdempsey031020/",
+  "2020-03-21": "https://thediplomat.com/2020/03/north-korea-launches-2-short-range-ballistic-missiles/",
+  "2020-03-29": "https://en.yna.co.kr/view/AEN20200330000352325?section=nk/nk",
+  "2021-03-25": "https://kcnawatch.org/newstream/1616706026-838802969/new-type-tactical-guided-missiles-test-fired/",
+  "2021-09-15": "https://en.yna.co.kr/view/AEN20210915005652325?section=nk/nk",
+  "2021-09-28": "https://m-en.yna.co.kr/view/AEN20210928000455325?section=nk/nk",
+  "2021-10-19": "https://en.yna.co.kr/view/AEN20211019002958325?section=nk/nk",
+  "2022-01-06": "https://en.yna.co.kr/view/AEN20220105001855325?section=national/defense",
+  "2022-01-11": "https://en.yna.co.kr/view/AEN20220111001057325",
+  "2022-01-14": "https://en.yna.co.kr/view/AEN20220114007056325?section=national/defense",
+  "2022-01-17": "https://en.yna.co.kr/view/AEN20220117001954325?section=nk/nk",
+  "2022-01-27": "https://en.yna.co.kr/view/AEN20220127001554325?section=nk/nk",
+  "2022-01-30": "https://en.yna.co.kr/view/AEN20220130000353325?section=nk/nk",
+  "2022-02-27": "https://twitter.com/nktpnd/status/1498042983098331141?s=20&t=PbwgoY3Y74ajWEYLZDwpgg",
+  "2022-03-05": "https://en.yna.co.kr/view/AEN20220305000853325?section=search",
+  "2022-03-16": "https://twitter.com/ELINTNews/status/1503894603841351680",
+  "2022-03-24": "https://en.yna.co.kr/view/AEN20220324007454325?section=national/defense",
+  "2022-04-16": "https://en.yna.co.kr/view/AEN20220417000452325?section=search",
+  "2022-05-04": "https://en.yna.co.kr/view/AEN20220504005153325",
+  "2022-05-07": "https://en.yna.co.kr/view/AEN20220507002155325?section=national/defense",
+  "2022-05-12": "https://en.yna.co.kr/view/AEN20220512012153325?section=national/defense",
+  "2022-05-25": "https://en.yna.co.kr/view/AEN20220525000755325?section=national/defense",
+  "2022-06-05": "https://en.yna.co.kr/view/AEN20220305000454325?input=tw",
+  "2022-09-25": "https://en.yna.co.kr/view/AEN20220925000355325?section=nk/nk",
+  "2022-09-28": "https://en.yna.co.kr/view/AEN20220928009057315",
+  "2022-09-29": "https://en.yna.co.kr/view/AEN20220929010154325?section=nk/nk",
+  "2022-10-01": "https://en.yna.co.kr/view/AEN20221001000455325",
+  "2022-10-04": "https://en.yna.co.kr/view/AEN20221004001354325",
+  "2022-10-06": "https://en.yna.co.kr/view/AEN20221006000853325",
+  "2022-10-09": "https://en.yna.co.kr/view/AEN20221009000354325?section=national/defense",
+  "2022-10-14": "https://en.yna.co.kr/view/AEN20221014000555325?section=national/defense",
+  "2022-10-28": "https://en.yna.co.kr/view/AEN20221028005657325",
+  "2022-11-02": "https://en.yna.co.kr/view/AEN20221102010351325?section=nk/nk",
+  "2022-11-03": "https://en.yna.co.kr/view/AEN20221005004357325?section=nk/nk",
+  "2022-11-09": "https://en.yna.co.kr/view/AEN20221109006953325",
+  "2022-11-17": "https://en.yna.co.kr/view/AEN20221117003754325",
+  "2022-11-18": "https://en.yna.co.kr/view/AEN20221104001655325?section=nk/nk",
+  "2022-12-18": "https://en.yna.co.kr/view/AEN20221218001257315?section=nk/nk",
+  "2022-12-23": "https://en.yna.co.kr/view/AEN20221223008254325?section=search",
+  "2022-12-31": "https://en.yna.co.kr/view/AEN20221231000454325",
+  "2023-02-18": "https://en.yna.co.kr/view/AEN20230218003053325?section=nk/nk",
+  "2023-02-20": "https://en.yna.co.kr/view/AEN20230220000955325?section=search",
+  "2023-03-09": "https://en.yna.co.kr/view/AEN20230309011454325?input=tw",
+  "2023-03-14": "https://en.yna.co.kr/view/AEN20230314001053325?input=tw",
+  "2023-03-16": "https://en.yna.co.kr/view/AEN20230316000755325?section=nk/nk",
+  "2023-03-19": "https://en.yna.co.kr/view/AEN20230319001254325?input=tw",
+  "2023-03-27": "https://en.yna.co.kr/view/AEN20230320001156325?section=nk/nk",
+  "2023-04-13": "https://en.yna.co.kr/view/AEN20230413000756325?input=tw",
+  "2023-05-31": "https://en.yna.co.kr/view/AEN20230418005560325",
+  "2023-06-15": "https://en.yna.co.kr/view/AEN20230615009053325?section=nk/nk",
+  "2023-07-12": "https://en.yna.co.kr/view/AEN20230712003456325?section=nk/nk",
+  "2023-07-19": "https://en.yna.co.kr/view/AEN20230719000553325?input=tw",
+  "2023-07-24": "https://en.yna.co.kr/view/AEN20230725000251325?section=nk/nk",
+  "2023-08-24": "https://en.yna.co.kr/view/AEN20230822004351320",
+  "2023-08-30": "https://en.yna.co.kr/view/AEN20230717007752325?section=nk/nk",
+  "2023-09-13": "https://en.yna.co.kr/view/AEN20230831009552325",
+  "2023-11-22": "https://en.yna.co.kr/view/AEN20231121010052315?section=nk/nk",
+  "2023-12-17": "https://en.yna.co.kr/view/AEN20231218001500315?section=nk/nk",
+  "2023-12-18": "https://en.yna.co.kr/view/AEN20231218001554315?section=nk/nk",
+  "2024-01-14": "https://en.yna.co.kr/view/AEN20240115000554315",
+  "2024-03-18": "https://en.yna.co.kr/view/AEN20240318000954315?section=national/defense",
+  "2024-04-02": "https://en.yna.co.kr/view/AEN20240402001552315?section=nk/nk",
+  "2024-04-22": "https://www.mod.go.jp/j/press/news/2024/04/22c.html",
+  "2024-05-27": "https://www.mod.go.jp/j/press/news/2024/05/28a.html",
+  "2024-05-30": "https://www.mod.go.jp/j/press/news/2024/05/30b.html",
+  "2024-06-26": "https://www.mod.go.jp/j/press/news/2024/06/26b.html",
+  "2024-07-01": "https://www.mod.go.jp/j/press/news/2024/06/26b.html",
+  "2024-09-12": "https://www.mod.go.jp/j/press/news/2024/09/12b.html",
+  "2024-09-19": "https://www.mod.go.jp/j/press/news/2024/09/18b.html",
+  "2024-10-31": "https://en.yna.co.kr/view/AEN20241031002253315",
+  "2024-11-05": "https://en.yna.co.kr/view/AEN20241105001354315"
+ }
+}

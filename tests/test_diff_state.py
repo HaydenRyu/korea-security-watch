@@ -133,3 +133,11 @@ def test_min_opened_pages():
 def test_source_must_be_opened():
     r = run(border_clash={"status": "single", "sources": [{"name": "x", "url": "https://never.example"}]})
     assert _raises(r)
+
+
+def test_event_keeps_sources_for_history():
+    r = run(nuclear={"status": "corroborated", "routine": True, "sources": SRC2})
+    _, ev, _ = d.step(r, None, [])
+    assert [s["url"] for s in ev["sources"]] == ["https://a.example", "https://b.example"]
+    _, ev0, _ = d.step(run(), None, [])
+    assert ev0["sources"] == []

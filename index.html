@@ -145,6 +145,12 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 #log-p{height:200px}
 #log-p .pb{padding:0}
 .ev{display:grid;grid-template-columns:96px 64px minmax(0,1fr);gap:12px;padding:8px var(--pad);border-bottom:1px solid var(--line);align-items:baseline}
+.evd summary{list-style:none;cursor:pointer}.evd summary::-webkit-details-marker{display:none}
+.evd summary:hover,.evd[open] summary{background:rgba(219,229,241,.03)}
+.evx{padding:4px var(--pad) 12px;background:rgba(219,229,241,.03);border-bottom:1px solid var(--line);font-size:12px;color:var(--fog)}
+.evx p{margin:0 0 8px;color:var(--ice)}
+.evs{display:flex;flex-wrap:wrap;gap:4px 12px}.evs a{color:var(--ice)}
+.evn{color:var(--dim)}
 .ev .t{font:400 10px/1.4 var(--data);color:var(--fog)}
 .ev .g{font:600 12px/1.4 var(--text)}
 .ev .s{font-size:12px;color:var(--fog);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -383,8 +389,10 @@ function render(latest,events){
 
   const rows=events.filter(e=>e.notified||e.status==="unverified").slice(-30).reverse();
   $("log").innerHTML=rows.length?rows.map(e=>{const u=e.status==="unverified";
-    return `<div class="ev"><span class="t">${short(e.checked_at)}</span><span class="g" style="color:${u?"var(--fog)":C(e.grade)}">${u?"판정 불가":LABEL[e.grade]+" 알림"}</span>
-      <span class="s">${esc(u?e.reason:((e.new||[]).map(k=>ITEMS[k]).join(", ")||e.summary))}</span></div>`}).join("")
+    const src=(e.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name||x.url)}</a>`).join("");
+    return `<details class="evd"><summary class="ev"><span class="t">${short(e.checked_at)}</span><span class="g" style="color:${u?"var(--fog)":C(e.grade)}">${u?"판정 불가":LABEL[e.grade]+" 알림"}</span>
+      <span class="s">${esc(u?e.reason:((e.new||[]).map(k=>ITEMS[k]).join(", ")||e.summary))}</span></summary>
+      <div class="evx"><p>${esc(u?e.reason:e.summary||"")}</p>${src?`<div class="evs">${src}</div>`:`<div class="evn">${u?"판정 불가 회차라 근거 기사가 없습니다.":"이 회차는 기사 경로가 기록되지 않았습니다."}</div>`}</div></details>`}).join("")
     :`<div class="empty">아직 보낸 알림이 없습니다. 변화가 생기면 여기에 쌓입니다.</div>`;
 }
 

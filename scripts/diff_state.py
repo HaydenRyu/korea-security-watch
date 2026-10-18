@@ -134,6 +134,24 @@ def alert_messages(run: dict, grade: int, new_keys: set[str], released: bool, pr
     return {**m, "message": m["message"] + "\n(지인 주제에도 발송됨)"}, m
 
 
+EVENT_SOURCES_MAX = 6
+
+
+def event_sources(items: dict) -> list[dict]:
+    """이력 한 줄에 남길 근거 — 신호가 있는 항목(정례 포함)의 출처, URL 중복 제거.
+    latest.json 은 매 회차 덮이므로, 지난 알림의 기사 경로는 여기에만 남는다."""
+    out, seen = [], set()
+    for k, it in items.items():
+        if it.get("status", "none") == "none":
+            continue
+        for src in it.get("sources") or []:
+            u = src.get("url")
+            if u and u not in seen:
+                seen.add(u)
+                out.append({"item": k, "name": src.get("name", ""), "url": u})
+    return out[:EVENT_SOURCES_MAX]
+
+
 def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | None, dict, dict | None]:
     """(새 latest 또는 None=유지, 이벤트, outbox 또는 None)"""
     validate(run)
@@ -172,7 +190,7 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     new_latest = {**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)}
     event = {"checked_at": now, "status": "ok", "grade": grade, "prev_grade": prev_grade,
              "active": sorted(active), "new": sorted(new_keys), "notified": notify,
-             "summary": run.get("overall_summary", "")}
+             "summary": run.get("overall_summary", ""), "sources": event_sources(items)}
     event["friends"] = friends or released
     outbox = None
     if notify:

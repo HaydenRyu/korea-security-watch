@@ -51,7 +51,8 @@
 ## 4. 출력 — `run.json`
 ```json
 {
-  "checked_at": "<ISO8601, 지금>",
+  "coverage": {"<키>": ["<검색어>", "..."]},
+  "opened": ["<WebFetch 로 연 URL>", "..."],
   "overall_summary": "<2문장 이내 종합 판단, 과거 대비>",
   "items": {
     "<키>": {
@@ -77,7 +78,11 @@
 0. 위성 열점은 GitHub Actions `firms` 가 매시간 `state/firms.json` 에 갱신한다. 이 세션에서 firms.py 를 실행하지 않는다. 파일이 없거나 `fetched_at` 이 3시간보다 오래됐으면 열점 근거를 쓰지 않는다.
    - 출력의 `border_count` 가 0보다 크면 `state/firms.json` 의 `border: true` 지점을 확인한다.
    - 열점은 산불·소각도 잡는다. 같은 지역·시간대의 포격·화재 **보도가 있을 때만** border_clash 의 보조 근거로 쓴다. 열점만으로 징후를 올리지 않는다.
-1. 위 출처를 검색해 `run.json` 을 레포 루트에 쓴다.
+1. 먼저 `date -u` 로 지금 시각을 확인한다. 그리고 아래 **필수 검색**을 모두 한 뒤 `run.json` 을 레포 루트에 쓴다.
+   - 7개 항목마다 한국어·영어 검색어를 각각 1개 이상 쓴다. 쓴 검색어는 `coverage` 에 항목별로 남긴다.
+   - 공통 확인처: 합참·국방부 최근 발표, 연합뉴스 북한 속보, Reuters·AP North Korea, 38 North·NK News 최근 글, 미 국무부 한국 여행경보, 일본 방위성 발사 발표.
+   - 검색 결과 목록만 보고 판정하지 않는다. 원문을 **3건 이상** WebFetch 로 열고, 연 URL 을 `opened` 에 남긴다.
+   - `sources` 에는 `opened` 에 있는 URL 만 넣는다. 둘 다 `diff_state.py` 가 검사하며, 어기면 회차가 판정 불가로 기록된다.
 2. `python3 scripts/diff_state.py run.json` 를 실행하고 출력을 확인한다. 스키마 위반이면 스크립트가 unverified 로 기록한다.
 3. `rm run.json` 후 `git add state/ && git commit -m "watch: <등급 또는 unverified> <시각>"` 를 실행한다.
 4. `git pull --rebase origin main && git push origin HEAD:main`. 거절되면 한 번 더 pull --rebase 후 push 한다. 그래도 실패하면 사유를 출력하고 끝낸다.

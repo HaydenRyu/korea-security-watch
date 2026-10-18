@@ -32,6 +32,7 @@ CRITICAL = {"nuclear", "troop_movement", "gov_warning"}
 STATUSES = {"none", "single", "corroborated"}
 GRADE_LABEL = {0: "평시", 1: "주의", 2: "경계", 3: "위험"}
 FORWARD_MIN_GRADE = 2  # 이 등급 이상이면 지인 주제에도 보낸다
+MIN_OPENED = 3  # 회차마다 원문을 최소 3건 열어야 판정으로 인정
 UNVERIFIED_ALERT_AT = 3  # 연속 판정 불가 N회째에 1회 알림
 DASHBOARD_URL = "https://haydenryu.github.io/korea-security-watch/"
 
@@ -46,7 +47,16 @@ def validate(run: dict) -> None:
     items = run.get("items")
     if not isinstance(items, dict) or set(items) != set(ITEMS):
         raise RunError(f"items 키는 정확히 {sorted(ITEMS)} 여야 한다")
+    cov = run.get("coverage")
+    if not isinstance(cov, dict) or any(not cov.get(k) for k in ITEMS):
+        raise RunError("coverage 에 7개 항목마다 검색어가 1개 이상 있어야 한다")
+    opened = {u for u in run.get("opened") or [] if isinstance(u, str) and u.startswith("http")}
+    if len(opened) < MIN_OPENED:
+        raise RunError(f"원문을 {MIN_OPENED}건 이상 열어야 한다(opened {len(opened)}건)")
     for key, it in items.items():
+        for s in it.get("sources") or []:
+            if s.get("url") not in opened:
+                raise RunError(f"{key}: 열어 보지 않은 출처 {s.get('url')!r}")
         if it.get("status") not in STATUSES:
             raise RunError(f"{key}.status 값 오류: {it.get('status')!r}")
         if it["status"] != "none" and not it.get("sources"):
@@ -178,6 +188,7 @@ def main(argv: list[str]) -> int:
         print(__doc__)
         return 2
     run = json.loads(Path(argv[1]).read_text())
+    run["checked_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")  # 시각은 모델이 아니라 시계가 정한다
     latest = _load(STATE / "latest.json", None)
     events_path = STATE / "events.jsonl"
     events = [json.loads(l) for l in events_path.read_text().splitlines() if l.strip()] if events_path.exists() else []

@@ -12,7 +12,9 @@ def run(**over):
     items = {k: {"status": "none"} for k in d.ITEMS}
     for k, v in over.items():
         items[k] = v
-    return {"checked_at": "2026-10-18T05:00:00+00:00", "items": items, "overall_summary": "s"}
+    return {"checked_at": "2026-10-18T05:00:00+00:00", "items": items, "overall_summary": "s",
+            "coverage": {k: ["q"] for k in d.ITEMS},
+            "opened": ["https://a.example", "https://b.example", "https://c.example"]}
 
 
 def test_quiet_first_run_no_notify():
@@ -106,3 +108,28 @@ def test_drop_within_low_grades_silent():
     latest, _, _ = d.step(run(border_clash={"status": "single", "sources": SRC1}), None, [])
     _, _, out = d.step(run(), latest, [])
     assert out is None
+
+
+def _raises(r):
+    try:
+        d.validate(r)
+    except d.RunError:
+        return True
+    return False
+
+
+def test_coverage_required_for_every_item():
+    r = run()
+    del r["coverage"]["nuclear"]
+    assert _raises(r)
+
+
+def test_min_opened_pages():
+    r = run()
+    r["opened"] = r["opened"][:2]
+    assert _raises(r)
+
+
+def test_source_must_be_opened():
+    r = run(border_clash={"status": "single", "sources": [{"name": "x", "url": "https://never.example"}]})
+    assert _raises(r)

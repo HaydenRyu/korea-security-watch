@@ -31,6 +31,16 @@
        "name": "행정안전부 국민재난안전포털",
        "url": "https://www.safekorea.go.kr",
        "note": "재난문자"
+      },
+      {
+       "name": "국립해양조사원 항행경보",
+       "url": "https://www.khoa.go.kr",
+       "note": "사격·발사 구역 사전 공고 — 북한 사격구역 선포·우리 군 해상 실사격. 훈련 공고는 routine 판정 근거"
+      },
+      {
+       "name": "항공정보통합관리(AIM Korea) NOTAM",
+       "url": "https://aim.koca.go.kr",
+       "note": "공역 폐쇄·위험구역 사전 공고. 발사·훈련 직전 신호 — 단독으로는 single 상한"
       }
      ]
     },
@@ -78,6 +88,11 @@
        "name": "해상보안청 항행경보 NAVAREA XI",
        "url": "https://www.kaiho.mlit.go.jp",
        "note": "북한 위성발사 낙하구역 사전 통보"
+      },
+      {
+       "name": "국민보호포털 J-Alert",
+       "url": "https://www.kokuminhogo.go.jp",
+       "note": "일본 상공·EEZ 낙하 가능 발사 시 경보 — 방위성 발표보다 빠를 수 있다"
       }
      ]
     },
@@ -101,6 +116,21 @@
        "name": "중국 외교부 정례브리핑",
        "url": "https://www.fmprc.gov.cn",
        "note": "한반도 문안 변화"
+      },
+      {
+       "name": "중국 해사국 항행경고",
+       "url": "https://www.msa.gov.cn",
+       "note": "서해·발해·동중국해 실사격 구역. 공고는 며칠 전에만 나온다"
+      },
+      {
+       "name": "러시아 외무부",
+       "url": "https://mid.ru/en/",
+       "note": "북러 협력·대북 입장 1차 발표. 사실 확인보다 입장 확인용"
+      },
+      {
+       "name": "다국적제재모니터링팀(MSMT) 보고서",
+       "url": "https://msmt.info",
+       "note": "유엔 전문가패널(2024 종료) 후속 11개국 보고서 — 무기 이전·제재 위반 근거"
       }
      ]
     },
@@ -121,6 +151,11 @@
        "name": "KINS 국가환경방사선자동감시망 IERNet",
        "url": "https://iernet.kins.re.kr",
        "note": "장비 이상·강우 오경보 이력 — 단독으로는 single 을 넘기지 않는다"
+      },
+      {
+       "name": "중국지진대망(CENC)",
+       "url": "https://www.cenc.ac.cn",
+       "note": "북한 핵실험 인공지진을 「의심 폭발」로 가장 먼저 표기해 온 기관. 자동 접속은 차단(403) — 검색으로 확인. 기상청·CTBTO 와 함께 볼 때만 nuclear 징후"
       }
      ]
     },

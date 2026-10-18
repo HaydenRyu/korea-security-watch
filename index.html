@@ -178,6 +178,44 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 
 .foot{padding:4px var(--side) 32px;font-size:12px;line-height:1.8;color:var(--dim);max-width:96ch}
 
+/* CCTV 최근 화면 — 12칸 그리드(3열 · 폰 2열 · 좁은 폰 1열). 화면은 Pages 배포가 30분마다 한 장씩 뜬다 */
+#cctvDlg,#srcDlg{padding:0;border:1px solid var(--line);background:var(--panel);color:var(--ice);
+  width:min(960px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);overflow:hidden}
+#cctvDlg::backdrop,#srcDlg::backdrop{background:rgba(5,8,14,.72)}
+.cw{display:flex;flex-direction:column;max-height:calc(100dvh - 34px)}
+.chd{display:flex;align-items:center;gap:12px;min-height:var(--hh);padding:4px var(--pad);border-bottom:1px solid var(--line);
+  font:500 11px/1.4 var(--data);color:var(--fog)}
+.chd .k{color:var(--ice)}
+.chd button{margin-left:auto;flex:none;font:400 10px/1 var(--data);color:var(--fog);background:transparent;border:1px solid var(--line);padding:8px 12px;cursor:pointer}
+.chd button:hover{color:var(--ice)}
+.cg{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--gap);padding:var(--pad);overflow:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.cc{margin:0;border:1px solid var(--line);min-width:0}
+.cc.on{border-color:var(--ice);box-shadow:0 0 0 1px var(--ice)}
+.cc img,.cc .nf{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--line)}
+.cc .nf{display:grid;place-items:center;font:400 10px/1 var(--data);color:var(--fog)}
+.cc figcaption{display:grid;gap:4px;padding:8px var(--pad)}
+.cc .nm{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cc .t{font:400 10px/1.4 var(--data);color:var(--fog)}
+.srclink{color:var(--fog);text-decoration:none}.srclink:hover{color:var(--ice)}.srclink b{color:var(--ice)}
+.sbody{overflow:auto;padding:0 var(--pad);scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.st2{padding:12px 0;border-bottom:1px solid var(--line)}
+.st2 h3{margin:0 0 8px;display:flex;gap:8px;align-items:baseline;font:600 13px/1.4 var(--text)}
+.st2 h3 small{font:400 11px/1.4 var(--text);color:var(--fog)}
+.st2 h4{margin:8px 0 4px;font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em}
+.st2 ul{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+.st2 li{font-size:13px} .st2 li span{color:var(--fog);font-size:12px} .st2 li span::before{content:" — "}
+.sreq{display:grid;gap:8px;padding:12px var(--pad);border-top:1px solid var(--line)}
+.sreq b{font:500 11px/1.4 var(--data);color:var(--ice)}
+.sreq input,.sreq textarea{font:14px/1.4 var(--text);color:var(--ice);background:var(--ink);border:1px solid var(--line-2);padding:8px;width:100%}
+.sreq .hp{position:absolute;left:-9999px;width:1px;height:1px}
+.srow{display:flex;gap:12px;align-items:center}
+.srow button{font:500 11px/1 var(--data);color:var(--ink);background:var(--ice);border:0;padding:10px 16px;cursor:pointer}
+.srow button:disabled{opacity:.5;cursor:wait}
+#srcMsg{font-size:12px;color:var(--fog)} .sreq small{font-size:11px;color:var(--dim)}
+.cft{padding:8px var(--pad);border-top:1px solid var(--line);font-size:12px;color:var(--fog)}
+@media (min-width:480px){.cg{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:760px){.cg{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
 /* ── 태블릿 760~1439 : 높이가 비슷한 칸끼리 짝 — 등급|기준 · 지도 전폭 · 항목|기록 · 추이|항공기 ── */
 @media (min-width:760px){
   .ops{grid-template-columns:minmax(0,1fr) minmax(0,1fr);
@@ -235,6 +273,12 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .h .t{font:400 11px var(--data);color:var(--fog)}
 .none{color:var(--dim);font-size:13px;padding:8px var(--pad)}
 @media (max-width:759px){
+  /* 머리띠가 두 줄로 접히면 위아래 여백이 0 이 된다 — 8px 를 주고 줄 사이도 8px 로 */
+  .ph{padding:8px var(--pad);row-gap:8px}
+  /* 지도 레이어 버튼은 한 줄 가로 스크롤 — 줄바꿈되면 머리띠가 들쭉날쭉해진다 */
+  #map-p .layers{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;max-width:100%}
+  #map-p .layers button{flex:none}
+  #map .leaflet-control-attribution{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
   .cols{grid-template-columns:1fr}
   .dhead h2{font-size:32px}
   .srcs a.s{grid-template-columns:32px minmax(0,1fr)} .srcs .u{grid-column:2;max-width:100%}
@@ -250,6 +294,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
   <div class="meta">
     <span>KST <b id="now">--:--:--</b></span>
     <span>최종 확인 <b id="checked">—</b></span>
+    <a href="#sources" id="srcOpen" class="srclink">출처 <b id="srcN">—</b></a>
     <span>다음 확인 <b id="next">—</b></span>
     <span class="lag" id="lag">감시 지연</span>
     <span class="tag" id="sampletag" hidden>예시 데이터 · 실제 상황 아님</span>
@@ -282,6 +327,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
         <button type="button" data-layer="night" aria-pressed="false">야간 조명</button>
         <button type="button" data-layer="shelter" aria-pressed="false" disabled title="자곡동 반경 2km 민방위 대피소(국민재난안전포털)">대피소</button>
         <button type="button" data-layer="cctv" aria-pressed="false" disabled title="접경 도로 CCTV 위치(국가교통정보센터)">CCTV</button>
+        <button type="button" id="cctvShots" disabled aria-haspopup="dialog" title="접경 도로 CCTV 최근 화면 · 30분마다 갱신">화면</button>
         <button type="button" data-layer="firms" aria-pressed="false" disabled title="NASA FIRMS 위성 열점(최근 48시간)">열점</button>
       </div></div>
     <div class="pb"><div id="map"></div><div class="reticle"></div><span class="corner a"></span><span class="corner b"></span>
@@ -321,6 +367,26 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 </main>
 
 <section id="detail" hidden></section>
+<dialog id="cctvDlg" aria-labelledby="cctvTitle"><div class="cw">
+  <div class="chd"><span id="cctvTitle"><span class="k">접경 도로 CCTV</span> · 30분마다 갱신 · 출처 국가교통정보센터</span>
+    <button type="button" id="cctvClose">닫기</button></div>
+  <div class="cg" id="cctvGrid"></div>
+  <div class="cft">실시간 영상은 <a id="cctvLive" href="https://www.its.go.kr/map/cctv" target="_blank" rel="noopener">국가교통정보센터</a></div>
+</div></dialog>
+<dialog id="srcDlg" aria-labelledby="srcTitle"><div class="cw">
+  <div class="chd"><span id="srcTitle"><span class="k">감시 출처</span> · 매시간 이 목록을 확인합니다</span>
+    <button type="button" id="srcClose">닫기</button></div>
+  <div class="sbody" id="srcBody"></div>
+  <form class="sreq" id="srcReq">
+    <b>출처 추가 요청</b>
+    <input name="name" maxlength="80" required placeholder="매체·기관 이름" autocomplete="off">
+    <input name="url" maxlength="200" type="url" placeholder="주소 (https://…)" autocomplete="off">
+    <textarea name="why" maxlength="300" rows="2" placeholder="왜 필요한지 (선택)"></textarea>
+    <input name="hp" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+    <div class="srow"><button type="submit">요청 보내기</button><span id="srcMsg" role="status"></span></div>
+    <small>검토 후 반영합니다. 익명으로 전달되며, 연락처는 받지 않습니다.</small>
+  </form>
+</div></dialog>
 <script>
 const ITEMS={troop_movement:"병력 이동·동원",nuclear:"핵·전략무기",logistics:"군수 비축·수송",border_clash:"DMZ·NLL 충돌",
   foreign_forces:"미·중·러 이상 동향",parade_massing:"기념일 전후 집결",gov_warning:"정부 긴급 경고"};
@@ -489,13 +555,32 @@ function drawCctv(doc){
   if(!map||!doc?.cameras)return;
   const b=document.querySelector("[data-layer=cctv]");b.textContent=`CCTV ${doc.cameras.length}`;
   layers.cctv=L.layerGroup();
-  doc.cameras.forEach(c=>L.marker([c.lat,c.lon],{title:c.name,icon:L.divIcon({className:"",iconSize:[10,10],
+  doc.cameras.forEach((c,i)=>L.marker([c.lat,c.lon],{title:c.name,icon:L.divIcon({className:"",iconSize:[10,10],
       html:'<div style="width:10px;height:10px;background:var(--ice);transform:rotate(45deg);box-shadow:0 0 0 2px rgba(5,8,14,.85)"></div>'})})
-    .bindTooltip(`${esc(c.name)}<br><span style="color:var(--fog)">위치만 표시 · 누르면 국가교통정보센터 지도(영상은 거기서 이 위치를 찾아 재생)</span>`,{className:"tip"})
-    .on("click",()=>window.open(doc.play_url,"_blank","noopener")).addTo(layers.cctv));
+    .bindTooltip(`${esc(c.name)}<br><span style="color:var(--fog)">누르면 최근 화면</span>`,{className:"tip"})
+    .on("click",()=>openShots(i)).addTo(layers.cctv));
   toggle(b,layers.cctv);layers.cctv.addTo(map);b.setAttribute("aria-pressed","true");  // 기본 켬 — 접경 도로 위치가 지도의 기준점
   map.attributionControl.addAttribution("CCTV 위치 © 국가교통정보센터");
+  CCTV=doc;$("cctvLive").href=safeUrl(doc.play_url);
+  const sb=$("cctvShots");sb.disabled=false;sb.addEventListener("click",()=>openShots(-1));
 }
+// 화면 목록은 Pages 배포 때만 생긴다(cctv/index.json). 없거나 실패한 칸은 「화면 없음」 — 로컬에서도 깨지지 않는다
+let CCTV=null;
+async function openShots(sel){
+  const dlg=$("cctvDlg");
+  let idx=null;try{const r=await fetch("cctv/index.json?t="+Date.now());if(r.ok)idx=await r.json()}catch(e){}
+  const by=Object.fromEntries((idx?.shots||[]).filter(s=>s.ok&&s.file).map(s=>[s.name,s]));
+  const t=idx?.taken_at?short(idx.taken_at):"—";
+  const nf='<div class="nf">화면 없음</div>';
+  $("cctvGrid").innerHTML=CCTV.cameras.map((c,i)=>{const s=by[c.name];
+    return `<figure class="cc${i===sel?" on":""}"${i===sel?' aria-current="true"':""}>${s?`<img src="${esc(s.file)}?t=${esc(idx.taken_at)}" alt="${esc(c.name)} 최근 화면" loading="lazy" width="480" height="270">`:nf}
+      <figcaption><span class="nm" title="${esc(c.name)}">${esc(c.name)}</span><span class="t">${s?t:"—"}</span></figcaption></figure>`}).join("");
+  $("cctvGrid").querySelectorAll("img").forEach(im=>im.addEventListener("error",()=>{im.outerHTML=nf},{once:true}));
+  if(!dlg.open)dlg.showModal();
+  const on=$("cctvGrid").querySelector(".cc.on");if(on)on.scrollIntoView({block:"nearest"});
+}
+$("cctvClose").addEventListener("click",()=>$("cctvDlg").close());
+$("cctvDlg").addEventListener("click",e=>{if(e.target===e.currentTarget)e.currentTarget.close()});  // 바깥(배경) 클릭
 function drawFirms(doc){
   if(!map||!doc?.points)return;
   const b=document.querySelector("[data-layer=firms]");
@@ -531,6 +616,33 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
   try{const r=await fetch("data/shelters.json");if(r.ok)drawShelters(await r.json())}catch(e){}
   setInterval(tick,1000);setInterval(()=>drawDial(latest?.grade??null),60000);
 })();
+
+// ── 출처(정본 data/sources.json — 루틴과 같은 파일) · 추가 요청은 본인 요청 주제(ntfy)로 ──
+const REQ_TOPIC="ksw-req-5c0d1b934d8cb1a6";
+let SRC=null;
+async function loadSources(){try{const r=await fetch("data/sources.json?t="+Date.now());if(!r.ok)return;SRC=await r.json();
+  const n=SRC.tiers.reduce((a,t)=>a+t.groups.reduce((b,g)=>b+g.items.length,0),0);$("srcN").textContent=n;
+  const li=x=>`<li>${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a>`:esc(x.name)}${x.note?`<span>${esc(x.note)}</span>`:""}</li>`;
+  $("srcBody").innerHTML=SRC.tiers.map(t=>`<section class="st2"><h3>${t.id} ${esc(t.label)}<small>${esc(t.desc)}</small></h3>`
+    +t.groups.map(g=>(g.name?`<h4>${esc(g.name)}</h4>`:"")+`<ul>${g.items.map(li).join("")}</ul>`).join("")+`</section>`).join("")
+    +`<section class="st2"><h3>지도·보조 데이터</h3><ul>${SRC.data_feeds.map(li).join("")}</ul></section>`
+    +`<section class="st2"><h3>쓰지 않는 것</h3><ul>${SRC.excluded.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></section>`;
+}catch(e){}}
+function openSources(){const d=$("srcDlg");if(!d.open)d.showModal()}
+$("srcOpen").addEventListener("click",e=>{e.preventDefault();openSources();history.replaceState(null,"","#sources")});
+$("srcClose").addEventListener("click",()=>$("srcDlg").close());
+$("srcDlg").addEventListener("click",e=>{if(e.target===$("srcDlg"))$("srcDlg").close()});
+$("srcDlg").addEventListener("close",()=>{if(location.hash==="#sources")history.replaceState(null,"",location.pathname+location.search)});
+$("srcReq").addEventListener("submit",async e=>{e.preventDefault();const f=e.target,b=f.querySelector("button"),m=$("srcMsg");
+  if(f.hp.value)return;  // 봇
+  try{if(localStorage.getItem("srcReqAt")>Date.now()-60e3){m.textContent="1분 뒤에 다시 보내 주세요.";return}}catch(_){}
+  b.disabled=true;m.textContent="보내는 중…";
+  const body=`${f.name.value.trim()}\n${f.url.value.trim()}\n${f.why.value.trim()}`.slice(0,600);
+  try{const r=await fetch("https://ntfy.sh/"+REQ_TOPIC,{method:"POST",body,headers:{Title:"JIS 출처 추가 요청",Priority:"2",Tags:"inbox_tray"}});
+    if(!r.ok)throw r.status;m.textContent="요청을 보냈습니다. 검토 후 반영합니다.";f.reset();
+    try{localStorage.setItem("srcReqAt",Date.now())}catch(_){}}
+  catch(_){m.textContent="보내지 못했습니다. 잠시 뒤 다시 시도해 주세요."}finally{b.disabled=false}});
+loadSources().then(()=>{if(location.hash==="#sources")openSources()});
 </script>
 </body>
 </html>

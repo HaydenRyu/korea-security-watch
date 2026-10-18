@@ -1,0 +1,266 @@
+{
+ "updated": "2026-10-18",
+ "note": "감시 루틴(prompts/monitor.md)과 상황판 「출처」 화면이 함께 읽는 정본. 추가 요청은 검토 후 여기에 반영한다.",
+ "tiers": [
+  {
+   "id": "A",
+   "label": "공식",
+   "desc": "정부·국제기구·계측 기관의 발표",
+   "groups": [
+    {
+     "name": "한국",
+     "items": [
+      {
+       "name": "합동참모본부",
+       "url": "https://www.jcs.mil.kr"
+      },
+      {
+       "name": "국방부",
+       "url": "https://www.mnd.go.kr"
+      },
+      {
+       "name": "통일부",
+       "url": "https://www.unikorea.go.kr"
+      },
+      {
+       "name": "대통령실",
+       "url": "https://www.president.go.kr",
+       "note": "긴급 NSC 상임위 개최·결과 — 개최 자체가 신호"
+      },
+      {
+       "name": "행정안전부 국민재난안전포털",
+       "url": "https://www.safekorea.go.kr",
+       "note": "재난문자"
+      }
+     ]
+    },
+    {
+     "name": "미국",
+     "items": [
+      {
+       "name": "국방부",
+       "url": "https://www.defense.gov"
+      },
+      {
+       "name": "주한미군(USFK)",
+       "url": "https://www.usfk.mil"
+      },
+      {
+       "name": "인도태평양사령부(INDOPACOM)",
+       "url": "https://www.pacom.mil"
+      },
+      {
+       "name": "국무부 한국 여행경보",
+       "url": "https://travel.state.gov",
+       "note": "단계 상향"
+      },
+      {
+       "name": "주한미국대사관 보안경보",
+       "url": "https://kr.usembassy.gov",
+       "note": "ordered departure·대피 안내"
+      }
+     ]
+    },
+    {
+     "name": "일본",
+     "items": [
+      {
+       "name": "방위성·통합막료감부",
+       "url": "https://www.mod.go.jp",
+       "note": "탄도미사일 발사 발표"
+      },
+      {
+       "name": "외무성 해외안전 위험정보",
+       "url": "https://www.anzen.mofa.go.jp",
+       "note": "한국 레벨 변경"
+      },
+      {
+       "name": "해상보안청 항행경보 NAVAREA XI",
+       "url": "https://www.kaiho.mlit.go.jp",
+       "note": "북한 위성발사 낙하구역 사전 통보"
+      }
+     ]
+    },
+    {
+     "name": "국제",
+     "items": [
+      {
+       "name": "IAEA 사무총장 성명",
+       "url": "https://www.iaea.org"
+      },
+      {
+       "name": "CTBTO 성명",
+       "url": "https://www.ctbto.org",
+       "note": "「explosion-like event」"
+      },
+      {
+       "name": "유엔 안보리 긴급회의",
+       "url": "https://www.un.org/securitycouncil"
+      },
+      {
+       "name": "중국 외교부 정례브리핑",
+       "url": "https://www.fmprc.gov.cn",
+       "note": "한반도 문안 변화"
+      }
+     ]
+    },
+    {
+     "name": "계측",
+     "items": [
+      {
+       "name": "기상청 지진정보",
+       "url": "https://www.weather.go.kr",
+       "note": "북한 지역 인공지진"
+      },
+      {
+       "name": "USGS 지진",
+       "url": "https://earthquake.usgs.gov",
+       "note": "풍계리 41.28N 129.08E 반경 200km 얕은 M4+. 단독으로는 인공 여부를 모른다 — 기상청·CTBTO 와 함께 볼 때만 nuclear 징후"
+      },
+      {
+       "name": "KINS 국가환경방사선자동감시망 IERNet",
+       "url": "https://iernet.kins.re.kr",
+       "note": "장비 이상·강우 오경보 이력 — 단독으로는 single 을 넘기지 않는다"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "label": "통신·주요 언론",
+   "desc": "교차확인에 쓰는 보도",
+   "groups": [
+    {
+     "name": "",
+     "items": [
+      {
+       "name": "연합뉴스",
+       "url": "https://www.yna.co.kr"
+      },
+      {
+       "name": "Reuters",
+       "url": "https://www.reuters.com"
+      },
+      {
+       "name": "AP",
+       "url": "https://apnews.com"
+      },
+      {
+       "name": "AFP",
+       "url": "https://www.afp.com"
+      },
+      {
+       "name": "BBC",
+       "url": "https://www.bbc.com"
+      },
+      {
+       "name": "NHK",
+       "url": "https://www3.nhk.or.jp"
+      },
+      {
+       "name": "교도통신",
+       "url": "https://english.kyodonews.net"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "label": "전문 분석",
+   "desc": "위성사진·연구기관 분석",
+   "groups": [
+    {
+     "name": "",
+     "items": [
+      {
+       "name": "38 North (Stimson)",
+       "url": "https://www.38north.org"
+      },
+      {
+       "name": "CSIS Beyond Parallel",
+       "url": "https://beyondparallel.csis.org"
+      },
+      {
+       "name": "NK News / NK Pro",
+       "url": "https://www.nknews.org"
+      },
+      {
+       "name": "Middlebury CNS",
+       "url": "https://nonproliferation.org",
+       "note": "위성사진 분석"
+      },
+      {
+       "name": "Open Nuclear Network",
+       "url": "https://opennuclear.org"
+      },
+      {
+       "name": "RFA 한국어",
+       "url": "https://www.rfa.org/korean"
+      },
+      {
+       "name": "MSMT(다국적제재모니터링팀) 보고서"
+      },
+      {
+       "name": "Daily NK",
+       "url": "https://www.dailynk.com",
+       "note": "익명 내부 소식통 기반 — 단독이면 single 을 넘기지 않는다"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "label": "북한 관영",
+   "desc": "북한의 주장으로만 다룬다. 사실 확인 근거로 쓰지 않는다",
+   "groups": [
+    {
+     "name": "",
+     "items": [
+      {
+       "name": "조선중앙통신(KCNA)·노동신문",
+       "url": "https://kcnawatch.org",
+       "note": "열람은 KCNA Watch 경유"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "excluded": [
+  "SNS·텔레그램·유튜브·커뮤니티 게시물",
+  "출처 불명 「소식통」 단독 보도",
+  "위키",
+  "민간 CDS 집계 사이트"
+ ],
+ "caveats": [
+  "러시아 국방부 사이트는 해외 접속이 불안정하다. Reuters·연합 보도로 받는다."
+ ],
+ "data_feeds": [
+  {
+   "name": "NASA FIRMS 위성 열점",
+   "url": "https://firms.modaps.eosdis.nasa.gov",
+   "note": "매시간 수집, 접경 상자 안 열점"
+  },
+  {
+   "name": "NASA GIBS 위성 영상",
+   "url": "https://earthdata.nasa.gov/gibs"
+  },
+  {
+   "name": "adsb.lol 항공기 위치",
+   "url": "https://adsb.lol"
+  },
+  {
+   "name": "국가교통정보센터 CCTV",
+   "url": "https://www.its.go.kr",
+   "note": "접경 도로 카메라 위치"
+  },
+  {
+   "name": "국민재난안전포털 민방위 대피소",
+   "url": "https://www.safekorea.go.kr",
+   "note": "자곡동 반경 2km"
+  }
+ ]
+}

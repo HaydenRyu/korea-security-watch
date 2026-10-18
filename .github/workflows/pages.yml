@@ -1,0 +1,40 @@
+name: pages
+# 대시보드 배포. 레포 파일 + CCTV 최근 화면(30분마다)을 아티팩트로 올려 Pages 에 싣는다.
+# 화면 JPG 는 git 에 커밋하지 않는다(용량). 스냅샷이 실패해도 배포는 계속한다 — 대시보드가 화면 없음으로 보인다.
+# 전제: Settings → Pages → Source = GitHub Actions
+on:
+  push:
+    branches: [main]
+  schedule: [{ cron: "15,45 * * * *" }]
+  workflow_dispatch:
+
+permissions: { pages: write, id-token: write, contents: read }
+concurrency: { group: pages, cancel-in-progress: false }
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
+    env:
+      ITS_KEY: ${{ secrets.ITS_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: ffmpeg
+        run: |
+          command -v ffmpeg >/dev/null && exit 0
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends ffmpeg >/dev/null
+      - name: site
+        # 공개 대상만 싣는다. index.html · assets · data · state 는 반드시 포함
+        run: |
+          mkdir -p _site
+          rsync -a --exclude='.git' --exclude='.github' --exclude='tests' --exclude='scripts' \
+            --exclude='prompts' --exclude='_*' --exclude='__pycache__' ./ _site/
+          for p in index.html assets data state; do [ -e "_site/$p" ] || { echo "missing $p"; exit 1; }; done
+      - name: cctv snapshots
+        run: python3 scripts/cctv_snap.py _site || true
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: _site }
+      - id: deploy
+        uses: actions/deploy-pages@v4

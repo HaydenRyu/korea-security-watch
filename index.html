@@ -439,7 +439,7 @@ function drawCctv(doc){
   layers.cctv=L.layerGroup();
   doc.cameras.forEach(c=>L.marker([c.lat,c.lon],{title:c.name,icon:L.divIcon({className:"",iconSize:[10,10],
       html:'<div style="width:10px;height:10px;background:var(--ice);transform:rotate(45deg);box-shadow:0 0 0 2px rgba(5,8,14,.85)"></div>'})})
-    .bindTooltip(`${esc(c.name)}<br><span style="color:var(--fog)">누르면 국가교통정보센터에서 재생</span>`,{className:"tip"})
+    .bindTooltip(`${esc(c.name)}<br><span style="color:var(--fog)">위치만 표시 · 누르면 국가교통정보센터 지도(영상은 거기서 이 위치를 찾아 재생)</span>`,{className:"tip"})
     .on("click",()=>window.open(doc.play_url,"_blank","noopener")).addTo(layers.cctv));
   toggle(b,layers.cctv);layers.cctv.addTo(map);b.setAttribute("aria-pressed","true");  // 기본 켬 — 접경 도로 위치가 지도의 기준점
   map.attributionControl.addAttribution("CCTV 위치 © 국가교통정보센터");

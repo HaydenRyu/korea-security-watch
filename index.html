@@ -88,23 +88,37 @@ h2{font:600 13px var(--text);color:var(--fog);margin:0 0 6px;letter-spacing:.01e
 .empty{color:var(--fog);padding:20px 0}
 .foot{margin-top:56px;font-size:12px;line-height:1.8;color:var(--dim);max-width:72ch}
 
-/* 지휘통제 배치 */
-.ops{display:grid;grid-template-columns:360px minmax(0,1fr) 380px;gap:20px;align-items:start}
-.ops .hero{grid-template-columns:1fr;gap:6px;padding:4px 0 20px;justify-items:center;text-align:center}
-.ops .dial{max-width:210px}
-.ops .dial .num{font-size:72px}
-.ops .verdict .lbl{font-size:44px}
-.ops .verdict .scale{justify-content:center;margin:10px 0 14px}
-.ops .verdict p{font-size:15px;margin:0 auto}
-.ops .fwd{text-align:left;font-size:14px}
-.ops .row{grid-template-columns:1fr auto;gap:4px 12px;padding:12px 0;min-height:0}
-.ops .row .what{grid-column:1/-1;font-size:13px}
+/* 지휘통제 배치 — 영역: status · center(지도+추이) · sensors · right(항공기+기록)
+   모바일: 등급 → 지도 → 항목 → 항공기·기록 / 태블릿: 등급 · 지도 전폭, 아래 2칸 / 데스크톱: 한 화면 고정 3칸 */
+.ops{display:grid;gap:16px;grid-template-columns:minmax(0,1fr);grid-template-areas:"status" "center" "sensors" "right"}
+.left{display:contents}
+.sensors-wrap{grid-area:sensors;min-width:0}
+.center{grid-area:center;display:flex;flex-direction:column;gap:16px;min-width:0}
+.right{grid-area:right;display:flex;flex-direction:column;gap:16px;min-width:0}
+.ops .hero{grid-area:status;grid-template-columns:112px 1fr;grid-template-areas:"dial lbl" "dial scale" "sum sum" "fwd fwd";
+  gap:0 16px;padding:0;align-items:center;justify-items:stretch;text-align:left}
+.ops .verdict{display:contents}
+.ops .dial{grid-area:dial;max-width:none}
+.ops .dial .num{font-size:48px}
+.ops .dial .of{display:none}
+.ops .verdict .lbl{grid-area:lbl;align-self:end;font-size:36px}
+.ops .verdict .scale{grid-area:scale;align-self:start;justify-content:flex-start;margin:8px 0 0;gap:10px}
+.ops #summary{grid-area:sum;font-size:15px;margin:14px 0 0;max-width:none}
+.ops .fwd{grid-area:fwd;font-size:14px;margin-top:12px;padding:8px 0 8px 12px}
+.ops .row{grid-template-columns:1fr auto;gap:2px 12px;padding:11px 0;min-height:0}
+.ops .row .what{grid-column:1/-1;font-size:13px;white-space:nowrap}
 .ops .row .src{grid-column:1/-1;text-align:left;font-size:11px}
+.ops .row .src:empty{display:none}
+/* 이상 없는 항목은 한 줄로 접는다: 이름 · 상태문구 · 막대 */
+.ops .row.quiet{grid-template-columns:1fr auto auto;padding:9px 0}
+.ops .row.quiet .what{grid-column:2;grid-row:1;font-size:12px;color:var(--dim)}
+.ops .row.quiet .meter{grid-column:3;grid-row:1}
+.scroll{overflow:auto;scrollbar-width:thin;scrollbar-color:var(--rim-2) transparent}
 .panel{position:relative;background:var(--deep);border:1px solid var(--rim)}
 .panel .hud{position:absolute;z-index:500;font:400 11px var(--data);color:var(--fog);pointer-events:none;
   background:rgba(7,11,20,.72);padding:4px 8px}
 .panel .tl{top:10px;left:10px} .panel .bl{bottom:10px;left:10px} .panel .br{bottom:10px;right:10px}
-.theater{height:calc(100vh - 150px);min-height:520px;max-height:860px}
+.theater{height:52vh;min-height:320px}
 #map{position:absolute;inset:0;background:var(--ink)}
 .theater::before,.theater::after{content:"";position:absolute;z-index:501;width:22px;height:22px;pointer-events:none;border:1.5px solid var(--fog)}
 .theater::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
@@ -126,21 +140,38 @@ h2{font:600 13px var(--text);color:var(--fog);margin:0 0 6px;letter-spacing:.01e
 .leaflet-control-attribution{background:rgba(7,11,20,.7)!important;color:var(--dim)!important;font:400 10px var(--data)}
 .leaflet-control-attribution a{color:var(--fog)!important}
 .leaflet-bar a{background:var(--deep)!important;color:var(--fog)!important;border-color:var(--rim)!important}
-.air{height:360px;overflow:hidden}
-.air iframe{width:100%;height:100%;border:0;display:block;filter:invert(.92) hue-rotate(180deg) saturate(.7)}
-.right .log{margin-top:20px}
+.air{height:300px;overflow:hidden}
+.air iframe{width:100%;height:100%;border:0;display:block}
+.right .log{margin:0;flex:1}
 .right .ev{grid-template-columns:116px 1fr;gap:4px 12px}
 .right .ev .s{grid-column:1/-1;color:var(--fog);font-size:13px}
 h2 .sub{font:400 11px var(--data);color:var(--dim);margin-left:8px}
-.trace{margin-top:28px}
-@media (max-width:1439px){
-  .ops{grid-template-columns:1fr 1fr}
-  .center{grid-column:1/-1;grid-row:1}
-  .theater{height:62vh;min-height:420px}
+.trace{margin:0}
+.trace svg{height:96px}
+@media (min-width:760px){
+  .ops{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"status status" "center center" "sensors right"}
+  .ops .hero{grid-template-columns:150px minmax(0,1fr) minmax(0,1.3fr);grid-template-areas:"dial lbl sum" "dial scale sum" "dial fwd fwd";gap:0 24px}
+  .ops .dial .num{font-size:60px}
+  .ops .verdict .lbl{font-size:44px}
+  .ops #summary{margin:0;align-self:center}
+  .theater{height:60vh;min-height:420px}
+  .air{height:340px}
 }
-@media (max-width:760px){
-  .ops{grid-template-columns:1fr}
-  .theater{height:56vh;min-height:340px}
+/* 데스크톱: 스크롤 없는 상황판. 칸 안에서만 스크롤 */
+@media (min-width:1440px) and (min-height:760px){
+  .ops{grid-template-columns:340px minmax(0,1fr) 360px;grid-template-rows:auto minmax(0,1fr);
+    grid-template-areas:"status center right" "sensors center right";height:calc(100vh - 72px);gap:16px 20px}
+  .ops .hero{grid-template-columns:128px 1fr;grid-template-areas:"dial lbl" "dial scale" "sum sum" "fwd fwd";gap:0 16px}
+  .ops .dial .num{font-size:52px}
+  .ops .verdict .lbl{font-size:40px}
+  .ops #summary{margin:14px 0 0;font-size:14px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .sensors-wrap{display:flex;flex-direction:column;min-height:0}
+  .sensors-wrap .sensors{flex:1;min-height:0}
+  .center,.right{min-height:0}
+  .theater{flex:1;height:auto;min-height:0}
+  .air{flex:0 0 44%;height:auto}
+  .right .log{flex:1;min-height:0;display:flex;flex-direction:column}
+  .right #log{flex:1;min-height:0}
 }
 
 /* 항목 상세 */
@@ -171,17 +202,8 @@ h2 .sub{font:400 11px var(--data);color:var(--dim);margin-left:8px}
   .dhead h1{font-size:34px}
   .srcs a.s{grid-template-columns:36px 1fr} .srcs .u{grid-column:2;max-width:100%}
 
-  .hero{grid-template-columns:1fr;gap:20px;justify-items:center;text-align:center}
-  .dial{max-width:300px}
-  .verdict .scale{justify-content:center}
-  .verdict p{margin:0 auto}
-  .fwd{text-align:left}
-  .row{grid-template-columns:1fr auto;gap:6px 16px}
-  .row .what{grid-column:1/-1;white-space:normal}
-  .row .src{grid-column:1/-1;text-align:left}
   .ev{grid-template-columns:96px 1fr} .ev .s{grid-column:1/-1}
 }
-@media (max-width:420px){ .verdict .lbl{font-size:48px} .dial .num{font-size:84px} }
 @media (prefers-reduced-motion:no-preference){
   .row{animation:in .5s var(--ease) both;animation-delay:calc(var(--i)*40ms)}
   @keyframes in{from{opacity:0;transform:translateY(4px)}}
@@ -214,8 +236,10 @@ h2 .sub{font:400 11px var(--data);color:var(--dim);margin-left:8px}
           <div class="fwd" id="fwd"><strong>지인 전달 권고</strong> — 복수 징후가 교차확인됐습니다. 출처를 확인한 뒤 공유하세요.</div>
         </div>
       </section>
-      <h2>감시 항목</h2>
-      <div class="sensors" id="sensors"></div>
+      <div class="sensors-wrap">
+        <h2>감시 항목</h2>
+        <div class="sensors scroll" id="sensors"></div>
+      </div>
     </aside>
 
     <div class="center">
@@ -237,12 +261,12 @@ h2 .sub{font:400 11px var(--data);color:var(--dim);margin-left:8px}
     </div>
 
     <aside class="right">
-      <h2>항공기 실시간 <span class="sub">adsb.lol · ODbL</span></h2>
-      <div class="panel air"><iframe title="한반도 상공 항공기 위치" loading="lazy"
-        src="https://globe.adsb.lol/?lat=37.9&lon=127.3&zoom=6.5&hideSidebar&hideButtons"></iframe></div>
+      <div class="panel air">
+        <div class="hud tl">항공기 실시간 · adsb.lol · ODbL</div><iframe title="한반도 상공 항공기 위치" loading="lazy"
+        src="https://globe.adsb.lol/?lat=37.9&lon=127.3&zoom=6.5&hideSideBar&hideButtons&baseMap=OpenFreeMapDark&mapDim=0.2&iconScale=0.65"></iframe></div>
       <section class="log">
         <h2>알림·판정 불가 기록</h2>
-        <div id="log"></div>
+        <div id="log" class="scroll"></div>
       </section>
     </aside>
   </div>
@@ -252,7 +276,7 @@ h2 .sub{font:400 11px var(--data);color:var(--dim);margin-left:8px}
   <section id="detail" hidden></section>
 
   <p class="foot">
-    등급은 평시·주의(단일 징후 또는 일상 활동)·경계(복수 항목 또는 교차확인)·위험(핵·동원·정부 경고 교차확인) 네 단계입니다.
+    등급은 평시·주의(단일 징후 또는 일상 활동)·경계(복수 항목 또는 교차확인)·위험(핵·동원·정부 경고 중 하나가 교차확인되고 다른 징후가 동시에 있음) 네 단계입니다.
     정례 훈련·예고된 미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다. 위성 영상은 NASA GIBS 하루 단위 영상(약 250m 해상도)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다. 항공기 지도는 신호를 켠 기체만 보이고 등급 판단에는 쓰지 않습니다.
     공식 경보는 행정안전부 재난문자를 따르세요.
   </p>
@@ -311,7 +335,7 @@ function render(latest,events){
     const src=(it.sources||[])[0];
     const what=it.status==="none"?(latest?"이상 없음":"분석 전"):esc(it.summary)+(it.routine?"<em>일상 활동</em>":"");
     const meta=[it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
-    return `<a class="row" href="#item=${k}" style="--i:${i}"><div class="name">${name}</div>
+    return `<a class="row${it.status==="none"?" quiet":""}" href="#item=${k}" style="--i:${i}"><div class="name">${name}</div>
       <div class="meter" data-s="${s}" title="${{none:"이상 없음",single:"단일 출처",corroborated:"교차확인",routine:"일상 활동"}[s]}"><i></i><i></i><i></i></div>
       <div class="what ${it.status!=="none"?"has":""}">${what}</div>
       <div class="src">${src?esc(src.name||"출처"):""}${src&&meta?" · ":""}${meta}</div></a>`}).join("");
@@ -409,6 +433,7 @@ function drawPins(items){
       .on("click",()=>location.hash="item="+k);
   });
 }
+if(new URLSearchParams(location.search).has("noair"))document.querySelector(".air iframe").src="about:blank";
 function tick(){document.getElementById("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"})}
 (async()=>{
   const get=async(p,t)=>{const r=await fetch(base+p+"?t="+Date.now());if(!r.ok)throw r.status;return t?r.text():r.json()};

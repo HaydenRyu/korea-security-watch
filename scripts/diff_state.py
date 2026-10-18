@@ -26,7 +26,7 @@ ITEMS = {
     "parade_massing": "기념일 전후 집결",
     "gov_warning": "정부 긴급 경고",
 }
-# 교차확인되면 단독으로 등급 3 을 만드는 항목
+# 이 중 하나가 교차확인되고 다른 항목 징후가 동시에 있으면 등급 3
 CRITICAL = {"nuclear", "troop_movement", "gov_warning"}
 STATUSES = {"none", "single", "corroborated"}
 GRADE_LABEL = {0: "평시", 1: "주의", 2: "경계", 3: "위험"}
@@ -66,8 +66,8 @@ def compute_grade(items: dict) -> int:
         # 일상 훈련·미사일 시험·위협 발언만 있으면 최대 1
         return 1 if any_signal else 0
     corroborated = {k for k in active if items[k]["status"] == "corroborated"}
-    if corroborated & CRITICAL:
-        return 3
+    if corroborated & CRITICAL and len(active) >= 2:
+        return 3  # 핵실험 단독 등 한 항목만으로는 위험으로 올리지 않는다
     if len(active) >= 2 or corroborated:
         return 2
     return 1

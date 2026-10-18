@@ -43,13 +43,27 @@ def test_routine_only_caps_at_1():
     assert latest["grade"] == 1
 
 
-def test_critical_corroborated_is_3():
+def test_critical_alone_is_2():
     latest, _, out = d.step(run(nuclear={"status": "corroborated", "sources": SRC2}), None, [])
-    assert latest["grade"] == 3 and out is not None
+    assert latest["grade"] == 2 and out is not None
+
+
+def test_critical_with_other_signal_is_3():
+    r = run(nuclear={"status": "corroborated", "sources": SRC2}, logistics={"status": "single", "sources": SRC1})
+    latest, _, out = d.step(r, None, [])
+    assert latest["grade"] == 3 and out["friends"]["priority"] == 5
+
+
+def test_routine_other_signal_does_not_make_3():
+    r = run(nuclear={"status": "corroborated", "sources": SRC2},
+            border_clash={"status": "single", "routine": True, "sources": SRC1})
+    latest, _, _ = d.step(r, None, [])
+    assert latest["grade"] == 2
 
 
 def test_drop_from_3_sends_release_only():
-    latest, _, _ = d.step(run(nuclear={"status": "corroborated", "sources": SRC2}), None, [])
+    latest, _, _ = d.step(run(nuclear={"status": "corroborated", "sources": SRC2},
+                              logistics={"status": "single", "sources": SRC1}), None, [])
     _, ev, out = d.step(run(), latest, [])
     assert ev["grade"] == 0 and out["text"].startswith("안보 감시 위험 해제")
 

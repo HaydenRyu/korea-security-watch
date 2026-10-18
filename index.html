@@ -1044,11 +1044,14 @@ $("srcReq").addEventListener("submit",async e=>{e.preventDefault();const f=e.tar
     try{localStorage.setItem("srcReqAt",Date.now())}catch(_){}}
   catch(_){m.textContent="보내지 못했습니다. 잠시 뒤 다시 시도해 주세요."}finally{b.disabled=false}});
 // 흐름·예측 칸: 최근 30일 발사한 날 vs 평소 + 앞으로 90일 중 가까운 일정 2건(전체는 forecast.html). 매일 06:10 갱신되는 파일이라 한 번만 읽는다
-fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(doc=>{
+// 임박 신호(기사로 본 앞으로의 단서)는 유효분이 있을 때만 1줄 — 일정을 1건으로 줄여 칸 높이(200px)를 그대로 둔다. 없으면 아무것도 더하지 않는다
+Promise.all([fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.ok?r.json():null),
+  fetch(base+"signals.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)]).then(([doc,sg])=>{
   if(!doc?.tempo)return;
-  const tp=doc.tempo,hot=tp.ratio!=null&&tp.ratio>=2,up=fcUpcoming(doc);
+  const tp=doc.tempo,hot=tp.ratio!=null&&tp.ratio>=2,up=fcUpcoming(doc),sig=fcSignals(sg,new Date(),!sample);
+  const sigLi=sig.length?`<li><span class="d">${sig[0].window?.start?fcMD(sig[0].window.start)+(sig[0].window.end&&sig[0].window.end!==sig[0].window.start?"~":""):"임박"}</span><span class="t"><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 사실 확인은 출처 원문으로 하세요.">AI</span>${esc(FC_SIG_KIND[sig[0].kind]||"신호")} · ${esc(sig[0].summary)}${sig.length>1?` <small>외 ${sig.length-1}건</small>`:""}</span></li>`:"";
   $("fcr").innerHTML=`<span class="fct">최근 30일 발사 <b class="${hot?"":"q"}">${tp.last30}일</b> · 평소 ${tp.avg30}일<small>${hot?`평소의 ${tp.ratio}배 — 발사가 몰릴 땐 다음 발사도 가깝다`:"평소 범위"}</small></span>`+
-    `<ul class="fcu">${up.length?up.slice(0,2).map(u=>`<li><span class="d">${fcMD(u.start)}${u.end?"~":""}</span><span class="t"><span class="${u.stat?.verdict==="more"?"hi":""}">${esc(u.name)}</span> <small>· ${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년 발사(평소 ${u.stat.expected})`:"과거 집계 없음"}</small></span></li>`).join(""):`<li><span class="d">—</span><span class="t">앞으로 ${doc.config?.horizon_days||90}일 안 주요 일정 없음</span></li>`}</ul>`;
+    `<ul class="fcu">${up.length?up.slice(0,sig.length?1:2).map(u=>`<li><span class="d">${fcMD(u.start)}${u.end?"~":""}</span><span class="t"><span class="${u.stat?.verdict==="more"?"hi":""}">${esc(u.name)}</span> <small>· ${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년 발사(평소 ${u.stat.expected})`:"과거 집계 없음"}</small></span></li>`).join(""):`<li><span class="d">—</span><span class="t">앞으로 ${doc.config?.horizon_days||90}일 안 주요 일정 없음</span></li>`}${sigLi}</ul>`;
 }).catch(()=>{});
 // 누적 조회(GoatCounter, 쿠키 없음). 대시보드 설정 「visitor counts」가 꺼져 있으면 조용히 숨긴다
 // 누적 방문자(GoatCounter 는 같은 사람의 새로고침을 세지 않고, 집계 반영에 수 분 걸린다) — 1분마다 다시 읽는다. 응답이 cache-control:public 이라 매번 다른 쿼리로 우회

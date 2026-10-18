@@ -49,9 +49,32 @@ def test_season_expected_sums_to_total():
     assert s[2]["days"] == 2 and s[2]["years"] == 1 and s[6]["years"] == 1
     assert abs(sum(r["expected"] for r in s) - 3) <= 12 * 0.05  # 달마다 소수 1자리 반올림
 
+def test_signal_check_counts_only_finished_windows():
+    today = date(2026, 12, 1)
+    mk = lambda kind, fs, **o: {"kind": kind, "first_seen": fs + "T03:00:00+00:00", "expires": "2026-11-01", **o}
+    doc = {"expired": [mk("nav_warning", "2026-10-01"), mk("nav_warning", "2026-10-10"), mk("nk_threat", "2026-10-01"),
+                       mk("nk_threat", "2026-11-25")],  # 마지막은 14일이 안 지났다
+           "active": [mk("site_activity", "2026-09-01"), mk("site_activity", "2026-11-30", expires="2026-12-20")]}
+    launch = {date(2026, 10, 5), date(2026, 10, 15)}  # 10/1 신호는 4일 뒤, 10/10 신호는 5일 뒤 발사
+    r = rc.signal_check(doc, launch, today)
+    assert r["kinds"]["nav_warning"] == {"n": 2, "hit": 2}
+    assert r["kinds"]["nk_threat"] == {"n": 1, "hit": 1}
+    assert r["kinds"]["site_activity"] == {"n": 1, "hit": 0}  # 만료된 active 만, 발사 없음
+    assert rc.signal_check({"expired": [mk("nav_warning", "2026-10-01")]}, {date(2026, 10, 16)}, today)["kinds"]["nav_warning"]["hit"] == 0  # 15일째는 밖
+    assert rc.signal_check(None, set(), today)["kinds"] == {} and rc.signal_check({"expired": [{"kind": "x"}]}, set(), today)["kinds"] == {}
+
+
 
 if __name__ == "__main__":
     for k, f in list(globals().items()):
         if k.startswith("test_"):
             f()
     print("ok")
+
+
+def test_signal_check_skips_unfinished_db_and_reports_baseline():
+    today = date(2026, 11, 30)
+    doc = {"expired": [{"kind": "nk_threat", "first_seen": "2026-11-01"}, {"kind": "nk_threat", "first_seen": "2026-10-01"}]}
+    r = rc.signal_check(doc, {date(2026, 10, 5)}, today, data_last=date(2026, 11, 10), base_years=range(2026, 2027))
+    assert r["kinds"]["nk_threat"] == {"n": 1, "hit": 1}  # 11-01 신호는 DB(11-10)가 14일을 다 덮지 못해 보류
+    assert 0 < r["baseline"] < 1

@@ -107,12 +107,21 @@
      "link_korea": "<한반도와의 연결 1문장>", "region": "<지역>",
      "source": {"name": "<매체명>", "url": "<기사 자체 주소>", "via": "<기사를 찾은 피드·목록 주소(opened 에 있음)>"}}
   ],
-  "world_context": "<항목들을 잇는 한국어 1문장>"
+  "world_context": "<항목들을 잇는 한국어 1문장>",
+  "signals": [
+    {"kind": "nav_warning|nk_threat|site_activity|launcher_move|scheduled_event",
+     "summary": "<한국어 1문장 — 무엇이 언제쯤 일어날 수 있다고 기사가 가리키는가>",
+     "window": {"start": "YYYY-MM-DD", "end": "YYYY-MM-DD"},
+     "level": "official|report|analysis",
+     "source": {"url": "<기사 원문 URL, opened 에 있음>", "title": "<기사 제목>", "publisher": "<매체명>"},
+     "expires": "YYYY-MM-DD"}
+  ]
 }
 ```
 - 9개 키를 모두 쓴다. `none` 인 항목은 `{"status":"none"}` 만 써도 된다(직전에 징후였던 항목은 `summary` 에 none 이유를 함께 쓴다).
 - `sources` 에는 실제로 열어 본 URL 만 넣는다.
 - `ongoing`~`overflight_alert`·`deescalation` 은 **해당할 때만** 쓴다(3절·3-1절). 해당하지 않으면 키를 생략한다 — `false` 를 채울 필요 없다.
+- `signals` 는 선택이다(4-2절). 없으면 키를 생략하거나 빈 배열.
 - `lat`·`lon` 은 보도된 지역의 대략적 좌표(소수 2자리)다. 지역이 특정되지 않으면 생략한다. 지도 핀으로 쓰인다.
 
 ## 4-1. 세계 안보 브리핑 (`world`, 선택 · 판정과 무관)
@@ -123,6 +132,24 @@
 - `link_korea` 는 한반도와의 연결 1문장이다(예: 미군 전력 이동, 중·러 관계, 대북 제재, 핵 비확산 체제). 연결이 억지면 그 뉴스는 고르지 않는다.
 - 모두 한국어로 쓴다. 확인된 사실만 적고 추측은 적지 않는다.
 - 시간이 모자라거나 실패하면 `world`·`world_context` 를 **생략**한다. 회차를 막지 않는다(직전 브리핑이 그대로 남는다).
+
+## 4-2. 임박 신호 (`signals`, 선택 · 판정과 무관)
+- 상황판 「기사로 본 임박 신호」 칸에 싣는 **앞으로 일어날 도발의 단서**다. 등급·알림·이력에 쓰지 않는다. `items` 판정에 섞지 않는다.
+  **우리 확률(전쟁·발사 %)을 쓰지 않는다.** 기사가 가리키는 사실만 옮긴다. 과거 적중은 코드가 만료된 신호를 모아 따로 센다.
+- 종류(`kind`, 키 고정):
+  - `nav_warning` — 일본 해상보안청·중국 해사국 항행경보/NOTAM 의 북한 관련 위험구역(발사 예고 구역·시간대)
+  - `nk_threat` — 북한 공식 매체·담화의 **구체적** 행동 예고(대상·시점·수단 중 둘 이상). 막연한 비난·규탄은 제외
+  - `site_activity` — 38 North·CSIS·합참 등이 보도한 발사장·핵실험장·잠수함 기지의 준비 정황
+  - `launcher_move` — 합참·주요 언론이 보도한 TEL 이동·발사 준비
+  - `scheduled_event` — 공식 발표된 북한 정치 일정(당 전원회의·열병식·최고인민회의)·한미 훈련 공표
+- 항목 필드: `summary`(한국어 1문장) · `window{start,end}`(신호가 가리키는 시점, 하루면 start=end, **모르면 `null`**) ·
+  `level`(`official` 정부·기관 발표 / `report` 주요 언론 보도 / `analysis` 전문 분석 기관) ·
+  `source{url,title,publisher}` · `expires`(생략하면 관측일 + 14일, 최대 30일).
+- **근거는 이번 회차에 실제로 연 원문(`opened`)만.** 다른 어디서 읽은 것·검색 결과 목록의 제목만 본 것은 쓰지 않는다. 추측·익명 SNS·텔레그램·커뮤니티는 쓰지 않는다.
+  `source.url` 이 `opened` 에 없거나 종류·날짜 형식이 틀리면 **그 신호만 버려진다**(회차는 유지).
+- **이미 기록된 신호와 같은 사건이면 새로 쓰지 않는다.** 회차 시작에 `state/signals.json` 의 `active` 를 읽어 `summary`·`source.url` 을 대조한다.
+  같은 기사·같은 사건의 재인용은 건너뛴다(코드도 같은 종류·같은 URL 은 막는다). 사건이 **바뀐 경우**(시점이 당겨졌다·구역이 넓어졌다)만 새 신호로 쓴다.
+- 한 회차에 최대 5건. 해당하는 것이 없으면 `signals` 를 생략한다 — 억지로 채우지 않는다.
 
 ## 5. 회차 절차
 0. 위성 열점은 GitHub Actions `firms` 가 매시간 `state/firms.json` 에 갱신한다. 이 세션에서 firms.py 를 실행하지 않는다. 파일이 없거나 `fetched_at` 이 3시간보다 오래됐으면 열점 근거를 쓰지 않는다.
@@ -137,6 +164,7 @@
    - 원문은 한 매체에 몰리지 않게 **서로 다른 사이트 2곳 이상**에서 연다(예: NK News + 연합뉴스·합참·Reuters 중 하나). `diff_state.py` 가 검사하며, 한 사이트뿐이면 판정 불가로 기록된다.
    - `sources` 에는 `opened` 에 있는 URL 만 넣는다. 둘 다 `diff_state.py` 가 검사하며, 어기면 회차가 판정 불가로 기록된다.
 1-1. **세계 안보 브리핑(4-1절)을 채운다** — 판정 검색이 끝난 뒤, 국제면(Reuters World·AP World·BBC World·NHK World 중 2곳 이상)을 열어 `opened` 에 넣고 `world` 3~5건과 `world_context` 를 쓴다. 판정용으로 이미 연 원문도 쓸 수 있다. `source.url` 이 `opened` 에 없으면 버려진다. 실패해도 회차는 계속한다.
+1-2. **임박 신호(4-2절)를 채운다** — 판정·브리핑 검색에서 이미 연 원문 중 항행경보·북한 예고·시설 동향·발사대 이동·공표 일정을 가리키는 기사를 골라 `signals` 에 쓴다. 먼저 `state/signals.json`(없으면 건너뜀)의 `active` 와 대조해 같은 사건을 빼고, 항행경보(일본 해상보안청·중국 해사국)와 38 North 최근 글은 이 단계에서 확인한다. 실패해도 회차는 계속한다.
 2. `python3 scripts/diff_state.py run.json` 를 실행하고 출력을 확인한다. 스키마 위반이면 스크립트가 unverified 로 기록한다.
 3. `rm run.json` 후 `git add state/ data/sources.json $(ls data/source_requests.jsonl 2>/dev/null) && git commit -m "watch: <등급 또는 unverified> <시각>"` 를 실행한다.
 4. `git pull --rebase origin main && git push origin HEAD:main`. 거절되면 한 번 더 pull --rebase 후 push 한다. 그래도 실패하면 사유를 출력하고 끝낸다.

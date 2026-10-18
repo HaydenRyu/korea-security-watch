@@ -10,7 +10,9 @@ LLM 은 항목별 관측만 낸다(run.json). 등급·발송 여부는 이 파�
 """
 from __future__ import annotations
 
+import hashlib
 import json
+import re
 from urllib.parse import urlparse
 import sys
 from datetime import datetime, timedelta, timezone
@@ -353,6 +355,112 @@ def with_world(new_latest: dict, run: dict, latest: dict | None, now: str) -> di
     return new_latest
 
 
+# ── 임박 신호(signals, 선택 · 판정과 무관) ─────────────────────────────────────────────
+# 기사에서 「앞으로 일어날 도발」을 가리키는 징후. 등급·알림에 쓰지 않는다. 우리 확률을 만들지 않는다.
+# 검증은 scripts/risk_calendar.signal_check 가 만료된 신호의 이후 14일 발사 여부로 센다.
+SIGNAL_KINDS = {
+    "nav_warning": "항행경보",        # 일본 해상보안청·중국 해사국 항행경보/NOTAM 의 북한 관련 위험구역
+    "nk_threat": "북 예고",           # 북한 공식 매체·담화의 구체적 행동 예고
+    "site_activity": "시설 동향",     # 발사장·핵실험장·잠수함 기지 준비 정황 보도
+    "launcher_move": "발사대 이동",   # TEL 이동·발사 준비 보도
+    "scheduled_event": "공표 일정",   # 공식 발표된 북한 정치 일정·한미 훈련
+}
+SIGNAL_LEVELS = {"official", "report", "analysis"}
+SIGNAL_TTL_DAYS = 14      # expires 기본값(첫 관측일 + 14일)
+SIGNAL_MAX_TTL_DAYS = 30  # 모델이 더 길게 써도 이 안으로 자른다
+SIGNAL_PER_RUN = 5
+_DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}$")
+_SIG_LEN = {"summary": 200, "title": 120, "publisher": 60}
+
+
+def _date_ok(v) -> str | None:
+    if not isinstance(v, str) or not _DATE_RE.match(v):
+        return None
+    try:
+        datetime.strptime(v, "%Y-%m-%d")
+    except ValueError:
+        return None
+    return v
+
+
+def signal_id(kind: str, url: str, first_seen: str) -> str:
+    return f"{kind}-{first_seen[:10].replace('-', '')}-{hashlib.sha1(url.encode()).hexdigest()[:8]}"
+
+
+def clean_signal(raw, opened: set[str], now: str) -> dict | None:
+    """신호 1건 검증 — 어기면 None(그 신호만 버린다). 어떤 입력에도 예외를 내지 않는다."""
+    try:
+        if not isinstance(raw, dict) or raw.get("kind") not in SIGNAL_KINDS or raw.get("level") not in SIGNAL_LEVELS:
+            return None
+        summ = raw.get("summary")
+        src = raw.get("source")
+        if not isinstance(summ, str) or not summ.strip() or not isinstance(src, dict):
+            return None
+        url = src.get("url")
+        if not isinstance(url, str) or url not in opened:  # 실제로 연 원문만 근거
+            return None
+        win = raw.get("window")
+        if win is not None:
+            if not isinstance(win, dict):
+                return None
+            a, b = win.get("start"), win.get("end")
+            a, b = (_date_ok(a) if a is not None else None), (_date_ok(b) if b is not None else None)
+            if (win.get("start") is not None and a is None) or (win.get("end") is not None and b is None):
+                return None  # 날짜 형식 오류
+            if a and b and b < a:
+                return None
+            win = {"start": a, "end": b or a} if a else None
+        t_now = _dt(now) or datetime.now(timezone.utc)
+        first_seen = t_now.isoformat(timespec="seconds")
+        cap = (t_now + timedelta(days=SIGNAL_MAX_TTL_DAYS)).date().isoformat()
+        exp = raw.get("expires")
+        if exp is None:
+            exp = (t_now + timedelta(days=SIGNAL_TTL_DAYS)).date().isoformat()
+        else:
+            exp = _date_ok(exp)
+            if exp is None or exp < t_now.date().isoformat():
+                return None
+            exp = min(exp, cap)
+        name = src.get("publisher")
+        out = {"id": signal_id(raw["kind"], url, first_seen), "kind": raw["kind"], "summary": summ.strip()[:_SIG_LEN["summary"]],
+               "window": win, "level": raw["level"], "first_seen": first_seen, "expires": exp,
+               "source": {"url": url, "title": str(src.get("title") or "").strip()[:_SIG_LEN["title"]],
+                          "publisher": (name.strip()[:_SIG_LEN["publisher"]] if isinstance(name, str) and name.strip() else site(url))}}
+        return out
+    except Exception:  # noqa: BLE001 — 참고 블록이 회차를 깨뜨리면 안 된다
+        return None
+
+
+def update_signals(run: dict, doc: dict | None, now: str) -> dict:
+    """signals.json 갱신: ① 만료분을 expired 로 옮긴다(지우지 않음) ② run.signals 를 거른 통과분을 active 에 더한다.
+    같은 kind·출처 URL 은 active·expired 어디에 있든 다시 쓰지 않는다. 모든 입력에 예외를 내지 않는다."""
+    doc = doc if isinstance(doc, dict) else {}
+    act = [x for x in doc.get("active") or [] if isinstance(x, dict)]
+    exp = [x for x in doc.get("expired") or [] if isinstance(x, dict)]
+    today = (_dt(now) or datetime.now(timezone.utc)).date().isoformat()
+    keep = []
+    for x in act:
+        if isinstance(x.get("expires"), str) and x["expires"] < today:
+            exp.append({**x, "expired_at": now})
+        else:
+            keep.append(x)
+    seen = {(x.get("kind"), (x.get("source") or {}).get("url")) for x in keep + exp}
+    raw = run.get("signals") if isinstance(run, dict) and run.get("status") != "unverified" else None
+    added = 0
+    if isinstance(raw, list):
+        opened = _opened(run)
+        for r in raw[:SIGNAL_PER_RUN * 2]:
+            sig = clean_signal(r, opened, now)
+            if not sig or (sig["kind"], sig["source"]["url"]) in seen:
+                continue
+            keep.append(sig)
+            seen.add((sig["kind"], sig["source"]["url"]))
+            added += 1
+            if added >= SIGNAL_PER_RUN:
+                break
+    return {"version": 1, "updated_at": now, "active": keep, "expired": exp}
+
+
 def last_verified(events: list[dict]) -> dict | None:
     """판정 불가 회차를 건너뛴 직전 판정 회차."""
     return next((e for e in reversed(events) if e.get("status") == "ok"), None)
@@ -447,7 +555,7 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     notify = notify or released or calmed
 
     new_latest = {**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)}
-    for k in ("unresolved", "floor"):
+    for k in ("unresolved", "floor", "signals"):  # signals 는 state/signals.json 에 따로 쌓는다
         new_latest.pop(k, None)
     unres = unresolved_keys(items)
     if unres:
@@ -491,6 +599,12 @@ def main(argv: list[str]) -> int:
     kept = clean_world(run) if isinstance(run, dict) else None
     event["world"] = {"raw": len(raw) if isinstance(raw, list) else 0, "kept": len(kept[0]) if kept else 0}
     STATE.mkdir(exist_ok=True)
+    try:  # 임박 신호는 판정과 무관 — 실패해도 회차를 막지 않는다
+        sig = update_signals(run if event.get("status") == "ok" else {}, _load(STATE / "signals.json", None), event["checked_at"])
+        (STATE / "signals.json").write_text(json.dumps(sig, ensure_ascii=False, indent=2) + "\n")
+        event["signals"] = {"raw": len(run["signals"]) if isinstance(run.get("signals"), list) else 0, "active": len(sig["active"])}
+    except Exception as e:  # noqa: BLE001
+        event["signals"] = {"error": str(e)[:120]}
     if new_latest is not None:
         (STATE / "latest.json").write_text(json.dumps(new_latest, ensure_ascii=False, indent=2) + "\n")
     with events_path.open("a") as f:

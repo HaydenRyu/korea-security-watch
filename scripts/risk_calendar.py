@@ -9,6 +9,7 @@
   tempo    이 스크립트가 쓰는 부분 — 최근 30일 발사한 날 수 vs 평소 30일, 연도별 종류별(미사일·핵·기타) 날 수
   season   이 스크립트가 쓰는 부분 — 달별 발사한 날 수 합·발사가 있던 해 수 vs 달 길이 비례 기대치
   relaunch 이 스크립트가 쓰는 부분 — 발사한 날 뒤 7·14·30일 안에 또 발사한 비율(과거 빈도), 마지막 발사일
+  signal_check 이 스크립트가 쓰는 부분 — 기사로 뽑은 임박 신호(state/signals.json)를 종류별로 「본 뒤 14일 안 발사가 있었나」
 
 발사 = CSIS Beyond Parallel 도발 DB 의 Missile·Nuclear Provocation 날짜 ∪ CNS 미사일 시험 DB(2024-11 까지, UTC → KST).
 같은 날 여러 발은 1일. 풍선·포격 같은 Other Provocation 은 세지 않는다(종류가 섞여 해마다 기준이 흔들린다).
@@ -216,6 +217,40 @@ def tempo(csis: list[dict], today: date, years: range, base_years: range | None 
             "per_year": per_year, "basis": f"CSIS 미사일·핵 도발 날짜, 평소 = {base_years.start}~{base_years.stop - 1} 평균"}
 
 
+SIGNAL_WINDOW_D = 14  # 신호를 처음 본 날부터 이 안에 발사가 있었으면 적중
+SIGNAL_MIN_N = 5      # 종류별 n 이 이보다 적으면 화면은 「집계 중」
+
+
+def signal_check(sig_doc: dict | None, launch: set[date], today: date,
+                 data_last: date | None = None, base_years: range | None = None) -> dict:
+    """만료된 신호마다 first_seen 부터 14일 안에 미사일·핵 발사가 있었는지 → 종류별 {n, hit}.
+    14일이 다 지나지 않은 신호는 세지 않는다(미확정). 적중률이 아니라 건수다 — n 이 작으면 화면이 확률로 읽지 않게 「집계 중」.
+    data_last(CSIS 최신 기록일) 뒤로 14일이 걸치는 신호도 세지 않는다 — DB 가 늦게 올라오면 실제 발사를 miss 로 셀 수 있다.
+    baseline = base_years 에서 아무 날이나 시작한 14일 구간에 발사가 들어 있던 비율(평소 기준선, 같은 식으로 비교)."""
+    sig_doc = sig_doc if isinstance(sig_doc, dict) else {}
+    done = [x for x in sig_doc.get("expired") or [] if isinstance(x, dict)]
+    done += [x for x in sig_doc.get("active") or [] if isinstance(x, dict) and str(x.get("expires", "9")) < today.isoformat()]
+    kinds: dict[str, dict] = {}
+    for x in done:
+        try:
+            a = date.fromisoformat(str(x["first_seen"])[:10])
+        except (KeyError, ValueError):
+            continue
+        if (today - a).days < SIGNAL_WINDOW_D or not isinstance(x.get("kind"), str):
+            continue
+        if data_last and a + timedelta(SIGNAL_WINDOW_D) > data_last:
+            continue
+        k = kinds.setdefault(x["kind"], {"n": 0, "hit": 0})
+        k["n"] += 1
+        k["hit"] += any(a <= d <= a + timedelta(SIGNAL_WINDOW_D) for d in launch)
+    baseline = None
+    if base_years:
+        ys = [y for y in base_years]
+        baseline = round(sum(chance(y, SIGNAL_WINDOW_D + 1, {d for d in launch if d.year == y}) for y in ys) / len(ys), 2)
+    return {"window_days": SIGNAL_WINDOW_D, "min_n": SIGNAL_MIN_N, "kinds": kinds, "baseline": baseline,
+            "basis": f"신호를 처음 본 날부터 {SIGNAL_WINDOW_D}일 안 CSIS 미사일·핵 발사 여부 · 기간이 다 지난 신호만"}
+
+
 def main() -> int:
     doc = json.loads(DOC.read_text())
     cfg = doc["config"]
@@ -238,6 +273,9 @@ def main() -> int:
     doc["season"] = {"months": season(set(days), years), "years": len(years),
                      "basis": f"발사한 날(CSIS ∪ CNS) {years.start}~{years.stop - 1} · 평소 = 그해 발사한 날 수 × 달 길이/1년"}
     doc["relaunch"] = relaunch(set(days), years, today)
+    sp = ROOT / "state" / "signals.json"
+    doc["signal_check"] = signal_check(json.loads(sp.read_text()) if sp.exists() else None, set(days), today,
+                                       date.fromisoformat(max(e["date"] for e in csis)), range(tb[0], tb[1] + 1) if tb else years)
     doc["data"] = {"updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                    "csis_rows": len(csis), "csis_last": max(e["date"] for e in csis),
                    "cns_days": len(cns), "cns_last": max(cns), "launch_days": len(days)}

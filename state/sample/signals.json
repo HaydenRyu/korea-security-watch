@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "sample": true,
+  "updated_at": "2026-10-18T05:07:00+00:00",
+  "active": [
+    {
+      "id": "nav_warning-20261018-sample01",
+      "kind": "nav_warning",
+      "summary": "예시: 일본 해상보안청이 동해 공해상 일부 해역에 10/25~11/05 사이 발사 가능성이 있는 위험구역을 공지했다.",
+      "window": {"start": "2026-10-25", "end": "2026-11-05"},
+      "level": "official",
+      "first_seen": "2026-10-18T05:07:00+00:00",
+      "expires": "2026-11-01",
+      "source": {"url": "https://example.com/sample-signal-1", "title": "예시 항행경보", "publisher": "예시 기관 A"}
+    },
+    {
+      "id": "site_activity-20261017-sample02",
+      "kind": "site_activity",
+      "summary": "예시: 전문 분석 매체가 발사장 인근 시설 정비 정황을 위성사진으로 보도했으나 시점은 특정되지 않았다.",
+      "window": null,
+      "level": "analysis",
+      "first_seen": "2026-10-17T09:00:00+00:00",
+      "expires": "2026-10-31",
+      "source": {"url": "https://example.com/sample-signal-2", "title": "예시 분석 기사", "publisher": "예시 매체 B"}
+    }
+  ],
+  "expired": []
+}

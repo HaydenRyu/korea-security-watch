@@ -471,3 +471,56 @@ def test_world_article_via_opened_feed():
     out, _ = d.clean_world(run)
     assert [r["source"]["url"] for r in out] == [art]
     assert out[0]["source"]["via"] == feed
+
+
+# 임박 신호 — 거르기는 그 신호만 버리고 회차는 유지, 만료분은 지우지 않고 expired 로 보관
+NOW = "2026-10-19T03:00:00+00:00"
+SIG_URL = "https://www.38north.org/2026/10/x"
+
+
+def sig(**over):
+    s = {"kind": "site_activity", "summary": "예시: 동창리 발사장 정비 정황", "window": {"start": "2026-10-25", "end": "2026-11-05"},
+         "level": "analysis", "source": {"url": SIG_URL, "title": "t", "publisher": "38 North"}}
+    s.update(over)
+    return s
+
+
+def _sigrun(*sigs, opened=(SIG_URL,)):
+    return {"opened": list(opened), "signals": list(sigs)}
+
+
+def test_signal_passes_and_defaults_expiry():
+    doc = d.update_signals(_sigrun(sig()), None, NOW)
+    [x] = doc["active"]
+    assert x["kind"] == "site_activity" and x["expires"] == "2026-11-02" and x["first_seen"] == NOW
+    assert x["id"].startswith("site_activity-20261019-") and x["window"] == {"start": "2026-10-25", "end": "2026-11-05"}
+    assert doc["expired"] == []
+
+
+def test_signal_invalid_dropped_individually():
+    bad = [sig(kind="war_prob"), sig(level="rumor"), sig(summary=" "), sig(window={"start": "10/25", "end": None}),
+           sig(window={"start": "2026-11-05", "end": "2026-10-25"}), sig(expires="2026-10-01"), sig(expires="soon"),
+           sig(source={"url": "https://not-opened.example/a"}), "text", None, sig(source=None)]
+    ok = sig(kind="nk_threat", source={"url": SIG_URL, "title": "t", "publisher": "p"}, window=None)
+    doc = d.update_signals(_sigrun(ok, *bad), None, NOW)
+    assert [x["kind"] for x in doc["active"]] == ["nk_threat"] and doc["active"][0]["window"] is None
+
+
+def test_signal_expiry_capped_and_dedup_and_move_to_expired():
+    doc = d.update_signals(_sigrun(sig(expires="2027-06-01")), None, NOW)
+    assert doc["active"][0]["expires"] == "2026-11-18"  # 첫 관측 + 30일 상한
+    again = d.update_signals(_sigrun(sig()), doc, "2026-10-20T03:00:00+00:00")
+    assert len(again["active"]) == 1  # 같은 kind·출처는 새로 쓰지 않는다
+    later = d.update_signals(_sigrun(sig()), again, "2026-11-19T03:00:00+00:00")
+    assert later["active"] == [] and len(later["expired"]) == 1 and later["expired"][0]["expired_at"].startswith("2026-11-19")
+    again2 = d.update_signals(_sigrun(sig()), later, "2026-11-20T03:00:00+00:00")
+    assert again2["active"] == [] and len(again2["expired"]) == 1  # 만료분과 같은 사건도 되살리지 않는다
+
+
+def test_signals_never_break_a_round(tmp=None):
+    for junk in (None, "x", [None, 3], {"a": 1}):
+        d.update_signals({"opened": [SIG_URL], "signals": junk}, {"active": "bad", "expired": None}, NOW)
+    assert d.update_signals({"status": "unverified", "signals": [sig()]}, None, NOW)["active"] == []
+    latest, ev, _ = d.step(run(), None, [])  # signals 는 판정(step)에 영향을 주지 않는다
+    r = run(); r["signals"] = [sig()]
+    assert d.step(r, None, [])[0]["grade"] == latest["grade"]

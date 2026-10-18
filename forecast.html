@@ -67,10 +67,28 @@ td.n{font:500 12px/1.5 var(--data);white-space:nowrap}
 .fx:last-child{border-bottom:0}.fx b{font:600 18px/1 var(--data);text-align:right;color:var(--fog)}.fx small{grid-column:1/-1;color:var(--fog);font-size:12px}
 .note{font-size:12px;color:var(--fog);line-height:1.7;margin:12px 0 0}.note li{margin-bottom:4px}
 ul.note{padding-left:18px;margin:0}
+/* 임박 신호 — AI 칩은 상황판(index.html)과 같은 컴포넌트 */
+:root{--ai:#b69cff;--ai-2:#5cc8ff}
+.ai{display:inline-flex;align-items:center;gap:3px;font:600 10px/1 var(--data);letter-spacing:.02em;color:#d9ccff;padding:3px 6px;margin-right:6px;vertical-align:1px;cursor:help;white-space:nowrap;
+  border:1px solid color-mix(in srgb,var(--ai) 55%,transparent);background:linear-gradient(90deg,color-mix(in srgb,var(--ai) 22%,transparent),color-mix(in srgb,var(--ai-2) 14%,transparent))}
+.ai::before{content:"✦";font-size:9px;background:linear-gradient(135deg,var(--ai),var(--ai-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sg{list-style:none;margin:0;padding:0}
+.sg li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.sg li:first-child{padding-top:0}.sg li:last-child{border-bottom:0}
+.sg .kd{font:500 11px/1.6 var(--data);color:var(--amber)}
+.sg p{margin:0;font-size:13px}.sg .mt{display:block;margin-top:4px;font:400 11px/1.6 var(--data);color:var(--fog)}
+.sg .mt b{font-weight:500;color:var(--ice)}
+.sg-none{margin:0;font-size:13px;color:var(--fog)}
+.sg-ck{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--fog);line-height:1.7}
+.sg-ck b{font:500 11px var(--data);color:var(--ice);margin-right:6px}
+@media (max-width:520px){.sg li{grid-template-columns:minmax(0,1fr)}}
 .recent{margin:12px 0 0;padding:0;list-style:none;font-size:12px;color:var(--fog)}.recent li{padding:2px 0}.recent .d{font:500 11px var(--data);color:var(--ice);margin-right:8px}
 </style></head><body>
 <header class="top"><h1>JIS 예측</h1><a href="./">← 상황판</a></header>
 <main>
+
+<section class="p" id="sigp"><div class="ph"><span class="k">기사로 본 임박 신호</span><span class="tag" id="sigsample" hidden>예시 데이터 · 실제 상황 아님</span><span class="r" id="sigat">—</span></div>
+<div class="pb"><div id="sig"><p class="sg-none">불러오는 중</p></div><p class="sg-ck" id="sigck" hidden></p></div></section>
 
 <section class="p"><div class="ph"><span class="k">지금 흐름</span><span class="r" id="tbasis">발사한 날 수 · CSIS 도발 DB</span></div>
 <div class="pb" id="tempo"><p class="note">불러오는 중</p></div></section>
@@ -95,6 +113,7 @@ ul.note{padding-left:18px;margin:0}
   <li>훈련 날짜 = 연도별 보도 원문으로 확인한 값(출처는 연도 칸 · 정본 <a href="https://github.com/HaydenRyu/korea-security-watch/blob/main/data/risk_calendar.json" target="_blank" rel="noopener">data/risk_calendar.json ↗</a>). 훈련이 없던 해는 세지 않는다. 봄 훈련 창은 2006~2018 키리졸브+독수리 전체 기간, 2019~ 지휘소 연습 기간이다(독수리 폐지). 2010 봄 종료일·2008 여름(사전 발표값)은 불확실, 일부 해는 GlobalSecurity 정리 페이지 기준.</li>
   <li>우리는 「전쟁 확률 %」를 만들지 않는다 — 전례가 거의 없어 그럴듯한 숫자만 나온다. 이 페이지는 「언제 더 자주 볼지」를 정하는 데 쓴다.</li>
   <li>외부 예측 시장(Metaculus·Polymarket·Manifold)은 싣지 않는다 — 토큰 필요·한국 접속 차단·참여자 수십 명 수준이라 판단 근거가 못 된다(2026-10-18 실측).</li>
+  <li>임박 신호 = 매시간 루틴이 읽은 기사에서 「앞으로의 도발」을 가리키는 단서(항행경보·북한 예고·시설 동향·발사대 이동·공표 일정)를 AI 가 뽑은 문장이다. 실제로 연 원문만 근거이고, 등급·알림과 무관하다. 사실 확인은 출처 원문으로. 과거 적중 = 만료된 신호마다 처음 본 날부터 14일 안에 미사일·핵 발사가 있었는지 센 건수이며(종류별 5건 미만은 「집계 중」), 확률이 아니다.</li>
   <li>갱신 = 매일 아침 6시 DB 를 다시 받아 다시 센다(scripts/risk_calendar.py).</li>
 </ul></div></section>
 </main>
@@ -105,6 +124,23 @@ const lnk=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${t} ↗<
 const tag=v=>`<span class="tag ${v==="more"?"hi":v==="less"?"lo":""}">${FC_VERDICT[v]}</span>`;
 function yrs(s){return `<span class="yrs">${s.rows.map(r=>r.held===false?`<i class="x" title="${r.year} 훈련 미실시"></i>`
   :r.n?`<a class="h" href="${esc(r.src||"#")}" target="_blank" rel="noopener" title="${r.year} · ${r.n}일 발사 · 첫 발사 ${r.first}"></a>`:`<i title="${r.year} · 발사 없음"></i>`).join("")}</span>`}
+const SAMPLE=new URLSearchParams(location.search).has("sample"),SB=SAMPLE?"state/sample/":"state/";
+const AI_TAG='<span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 사실 확인은 출처 원문으로 하세요.">AI</span>';
+const jf=u=>fetch(u,{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null);
+const hhmm=iso=>{if(!iso)return"";const p=Object.fromEntries(new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date(iso)).map(x=>[x.type,x.value]));return`${p.month}.${p.day} ${p.hour}:${p.minute}`};
+// 임박 신호 칸: 먼저 그린다(판단에 가장 먼저 필요한 「지금 임박한 것」). 실패해도 아래 칸에 영향 없음
+Promise.all([jf(SB+"signals.json"),jf(SB+"latest.json"),jf("data/risk_calendar.json")]).then(([sg,lt,cal])=>{
+  $("sigsample").hidden=!SAMPLE;
+  const list=fcSignals(sg,new Date(),!SAMPLE),chk=fcSigCheck(cal?.signal_check),at=hhmm(lt?.checked_at||sg?.updated_at);
+  $("sigat").textContent=at?`마지막 확인 ${at}`:"—";
+  $("sig").innerHTML=!sg?'<p class="sg-none">신호 자료를 불러오지 못했습니다.</p>'
+    :list.length?`<ul class="sg">${list.map(s=>`<li><span class="kd">${FC_SIG_KIND[s.kind]||esc(s.kind)}</span><div><p>${AI_TAG}${esc(s.summary)}</p>
+      <span class="mt">${s.window?.start?`시점 <b>${fcSigWhen(s)}</b>`:`<b>${fcSigWhen(s)}</b>`} · ${FC_SIG_LEVEL[s.level]||""} · ${lnk(s.source?.url,esc(s.source?.publisher||"출처"))} · ${fcMD(s.first_seen.slice(0,10))} 확인${s.expires?` · ${fcMD(s.expires)}까지`:""}</span></div></li>`).join("")}</ul>`
+    :`<p class="sg-none">현재 유효한 임박 신호 없음${at?` — 마지막 확인 ${at}`:""}</p>`;
+  const ck=$("sigck");ck.hidden=false;
+  ck.innerHTML=`<b>과거 적중</b>`+(chk.length?`${chk.map(esc).join(" · ")}<br>신호를 처음 본 날부터 ${cal.signal_check.window_days}일 안 발사 여부 — 지난 건수이며 다음 발사의 확률이 아니다.`
+    :`집계 중 — 만료된 신호가 쌓이면 종류별로 보여 줍니다(종류별 ${cal?.signal_check?.min_n||5}건부터 비율).`);
+});
 fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.json()).then(doc=>{
   const tp=doc.tempo,cfg=doc.config,py=tp.per_year,ys=Object.keys(py),thisY=ys[ys.length-1];
   const tot=y=>py[y].missile+py[y].nuclear+py[y].other,mx=Math.max(...ys.map(tot)),hot=tp.ratio>=2,rl=doc.relaunch,nY=cfg.lookback[1]-cfg.lookback[0]+1;

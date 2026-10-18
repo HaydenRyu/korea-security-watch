@@ -28,3 +28,22 @@ function fcStatText(s) {
   return `최근 ${s.years}년 중 ${s.hit}년 이 기간에 발사 · 평소라면 ${s.expected}년`;
 }
 const FC_VERDICT = { more: "평소보다 잦음", usual: "평소 수준", less: "오히려 드묾" };
+
+// 임박 신호(기사로 본 앞으로의 단서) — 정본 state/signals.json(sample 모드는 state/sample/). 우리 확률이 아니라 기사가 가리키는 사실만 보여 준다
+const FC_SIG_KIND = { nav_warning: "항행경보", nk_threat: "북 예고", site_activity: "시설 동향", launcher_move: "발사대 이동", scheduled_event: "공표 일정" };
+const FC_SIG_LEVEL = { official: "공식 발표", report: "언론 보도", analysis: "분석" };
+const FC_SIG_FULL = { nav_warning: "항행경보(해상보안청·해사국)", nk_threat: "북한 공식 예고", site_activity: "발사장·시설 동향", launcher_move: "발사대 이동", scheduled_event: "공표 일정" };
+
+// 유효(만료 전) 신호, 시점이 가까운 순 — 시점 미특정은 뒤로. expire=false 면 만료를 보지 않는다(sample 예시용)
+function fcSignals(sig, now = new Date(), expire = true) {
+  const today = fcISO(fcKST(now));
+  return (sig?.active || []).filter(s => !expire || !s.expires || s.expires >= today)
+    .sort((p, q) => (p.window?.start || "9").localeCompare(q.window?.start || "9") || p.first_seen.localeCompare(q.first_seen));
+}
+const fcSigWhen = s => !s.window?.start ? "시점 미특정" : s.window.end && s.window.end !== s.window.start ? `${fcMD(s.window.start)}–${fcMD(s.window.end)}` : fcMD(s.window.start);
+// 종류별 과거 적중 한 줄 조각 — n 이 min_n 미만이면 건수를 비율로 읽지 않게 「집계 중」
+function fcSigCheck(chk) {
+  const ks = Object.entries(chk?.kinds || {}).filter(([k]) => FC_SIG_KIND[k]);
+  const base = chk?.baseline != null ? ` · 평소 아무 ${chk.window_days || 14}일 중 ${Math.round(chk.baseline * 100)}%` : "";
+  return ks.map(([k, v]) => v.n < (chk.min_n || 5) ? `${FC_SIG_FULL[k]} 집계 중(${v.n}건)` : `${FC_SIG_FULL[k]} ${v.n}건 중 ${v.hit}건 ${chk.window_days || 14}일 안 발사${base}`);
+}

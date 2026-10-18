@@ -1,5 +1,5 @@
 {
- "_doc": "정본: anchors 는 사람이 고친다(원문 확인한 날짜·출처만). stats·tempo·data 는 scripts/risk_calendar.py 가 매주 다시 쓴다.",
+ "_doc": "정본: anchors 는 사람이 고친다(원문 확인한 날짜·출처만). stats·tempo·data 는 scripts/risk_calendar.py 가 매일 다시 쓴다.",
  "config": {
   "window_days": 7,
   "lookback": [

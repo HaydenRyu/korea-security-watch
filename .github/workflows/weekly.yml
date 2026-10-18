@@ -1,9 +1,9 @@
 name: weekly
-# 일요일 20:00 KST
-#  summary  — 지난 7일 이력 요약을 본인 주제로 1통(우선순위 2 — 조용히). claude 미사용
-#  calendar — 도발 위험 일정 집계(scripts/risk_calendar.py → data/risk_calendar.json, 공개 DB·키 불필요)
+#  summary  — 일요일 20:00 KST, 지난 7일 이력 요약을 본인 주제로 1통(우선순위 2 — 조용히). claude 미사용
+#  calendar — 매일 06:10 KST, 도발 위험 일정 집계(scripts/risk_calendar.py → data/risk_calendar.json, 공개 DB·키 불필요)
+#             최근 30일 발사 빈도·앞으로 30일 일정이 날마다 바뀌어 매일 돈다(10/18 hayden)
 on:
-  schedule: [{ cron: "0 11 * * 0" }]
+  schedule: [{ cron: "0 11 * * 0" }, { cron: "10 21 * * *" }]
   workflow_dispatch:
     inputs:
       job:
@@ -16,7 +16,7 @@ concurrency: { group: weekly, cancel-in-progress: false }
 
 jobs:
   summary:
-    if: github.event_name == 'schedule' || inputs.job != 'calendar'
+    if: (github.event_name == 'schedule' && github.event.schedule == '0 11 * * 0') || (github.event_name == 'workflow_dispatch' && inputs.job != 'calendar')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
@@ -29,7 +29,7 @@ jobs:
           python3 scripts/ntfy_send.py me "$(jq -r .title /tmp/w.json)" "$(jq -r .message /tmp/w.json)" 2
 
   calendar:
-    if: github.event_name == 'schedule' || inputs.job != 'summary'
+    if: (github.event_name == 'schedule' && github.event.schedule == '10 21 * * *') || (github.event_name == 'workflow_dispatch' && inputs.job != 'summary')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions: { contents: write }

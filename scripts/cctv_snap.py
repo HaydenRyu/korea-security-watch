@@ -42,7 +42,9 @@ REPO = "HaydenRyu/korea-security-watch"
 
 
 def live_ids() -> dict | None:
-    """data/live.json 국내 채널마다 /streams 에서 「지금 라이브」 + 제목 패턴인 영상 ID.
+    """data/live.json 채널마다 지금 라이브 영상 ID.
+    국내(pat 있음) = /streams 에서 「지금 라이브」 + 제목 패턴 · 그 밖 = /live 가 가리키는 라이브 영상
+    (embed/live_stream?channel= 은 ABC·Bloomberg 처럼 막히는 채널이 있다 — 10/18 실측, 영상 ID 로는 재생).
     유튜브가 Cloudflare 출구 IP 에는 429 를 줘서(10/18 실측) Worker 가 못 하고 이 호스트가 한다. 한 시간에 한 번."""
     try:
         if time.time() - LIVE_MARK.stat().st_mtime < LIVE_EVERY:
@@ -50,7 +52,19 @@ def live_ids() -> dict | None:
     except OSError:
         pass
     out = {}
-    for c in json.loads((ROOT / "data" / "live.json").read_text())["domestic"]:
+    doc = json.loads((ROOT / "data" / "live.json").read_text())
+    for c in [c for t in doc["tabs"] for c in doc[t["id"]]]:
+        if not c.get("pat"):
+            try:
+                req = urllib.request.Request(f"https://www.youtube.com/channel/{c['ch']}/live",
+                                             headers={"User-Agent": "Mozilla/5.0", "Accept-Language": "en"})
+                h = urllib.request.urlopen(req, timeout=20).read().decode("utf-8", "replace")
+            except OSError:
+                continue
+            v = re.search(r'<link rel="canonical" href="https://www\.youtube\.com/watch\?v=([\w-]{11})"', h)
+            if v and '"isLive":true' in h and '"playableInEmbed":true' in h:
+                out[c["ch"]] = v.group(1)
+            continue
         try:
             req = urllib.request.Request(f"https://www.youtube.com/channel/{c['ch']}/streams",
                                          headers={"User-Agent": "Mozilla/5.0", "Accept-Language": "ko-KR"})

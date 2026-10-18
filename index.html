@@ -171,9 +171,17 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 
 /* 항공기 */
 .street{filter:invert(1) hue-rotate(180deg) brightness(.8) contrast(.9) saturate(.4)}  /* OSM 밝은 지도를 상황판 톤으로 */
-#air-p{height:320px}
-#air-p .pb{padding:0}
-#air-p iframe{width:100%;height:100%;border:0;display:block}
+#air{padding:8px var(--pad) 12px;display:flex;flex-direction:column;gap:8px}
+#air .al{font:500 11px/1.4 var(--data);color:var(--fog)}
+#air .aq{display:grid;grid-template-columns:1fr auto;align-items:baseline;row-gap:2px}
+#air .aq b{font:600 28px/1 var(--data);color:var(--ice);grid-row:span 2;align-self:center}
+#air .aq b small{font-size:12px;font-weight:400;color:var(--fog);margin-left:2px}
+#air .ar{font:400 12px/1.4 var(--text);color:var(--fog)}
+#air .ar.low{color:var(--amber)}
+#air .an{margin:0;font-size:12px;line-height:1.6;color:var(--dim)}
+#air .an a{color:var(--fog)}#air .an a:hover{color:var(--ice)}
+#air ul{margin:4px 0 0;padding:0;list-style:none;font-size:13px;line-height:1.6;color:var(--ice)}
+#air ul .d{color:var(--dim)}
 
 /* 등급 기준 */
 #crit-p .pb{padding:0}
@@ -412,9 +420,13 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
   </section>
 
   <section class="p" id="air-p" aria-label="항공기">
-    <div class="ph"><span class="k">공역</span><span>신호를 켠 항공기</span><span class="r">adsb.lol · ODbL</span></div>
-    <div class="pb"><iframe title="한반도 상공 항공기 위치" loading="lazy"
-      src="https://adsb.lol/?lat=37.9&lon=127.3&zoom=6.5&hideSideBar&hideButtons&baseMap=OpenFreeMapDark&mapDim=0.2&iconScale=0.65"></iframe></div>
+    <div class="ph"><span class="k">공역</span><span id="airAt">매시간</span><span class="r">참고 · 등급 판정과 무관</span></div>
+    <div class="pb scroll" id="air">
+      <div class="aq"><span class="al" title="위험이 커지면 항공사가 정부 발표보다 먼저 운항을 줄이거나 우회합니다. 지난 7일 같은 시각보다 30% 넘게 줄면 주황색으로 표시합니다.">남한 상공 민항기 · 줄면 항공사 회피 신호</span><b id="airN">—</b><span id="airR" class="ar">기록을 불러오는 중</span></div>
+      <div class="am"><span class="al">신호를 켠 군용기</span><ul id="airMil"><li>—</li></ul></div>
+      <p class="an">군용기는 대부분 신호를 꺼 보이지 않습니다. 공개 수신망이라 수신 공백으로도 줄 수 있습니다.
+        <a href="https://adsb.lol/?lat=37.9&lon=127.3&zoom=6.5" target="_blank" rel="noopener">실시간 항공 지도 ↗</a></p>
+    </div>
   </section>
 </div>
 <div class="more">
@@ -746,7 +758,6 @@ function drawPins(items){
       .on("click",()=>location.hash="item="+k);
   });
 }
-if(Q.has("noair"))document.querySelector("#air-p iframe").src="about:blank";
 function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"})}
 (async()=>{
   const get=async(p,t)=>{const r=await fetch(base+p+"?t="+Date.now());if(!r.ok)throw r.status;return t?r.text():r.json()};
@@ -771,6 +782,20 @@ async function loadSources(){try{const r=await fetch("data/sources.json?t="+Date
     +`<section class="st2"><h3>지도·보조 데이터</h3><ul>${SRC.data_feeds.map(li).join("")}</ul></section>`
     +`<section class="st2"><h3>쓰지 않는 것</h3><ul>${SRC.excluded.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></section>`;
 }catch(e){}}
+// 항공 지표 — scripts/air_count.py 가 매시간 state/air.json 을 쓴다
+const AIR_LOW=0.7;  // 평소의 70% 미만이면 강조
+function dir8(lat,lon){const a=Math.atan2(lon-127.5,lat-37.5)*180/Math.PI;return["북","북동","동","남동","남","남서","서","북서"][Math.round(((a+360)%360)/45)%8]}
+async function loadAir(){
+  let d=null;try{const r=await fetch("state/air.json",{cache:"no-store"});if(r.ok)d=await r.json()}catch(e){}
+  if(!d){$("airR").textContent="기록 없음 — 매시 45분에 갱신됩니다";return}
+  $("airAt").textContent=short(d.at)+" 기준";
+  $("airN").innerHTML=`${d.south}<small>대</small>`;
+  const r=$("airR");
+  if(d.ratio==null){r.textContent=`평소 기준을 쌓는 중 · 같은 시각 기록 ${d.samples}/3일`}
+  else{r.textContent=`평소(${Math.round(d.baseline)}대)의 ${Math.round(d.ratio*100)}%`;r.classList.toggle("low",d.ratio<AIR_LOW)}
+  $("airMil").innerHTML=d.mil?.length?d.mil.map(m=>`<li>${esc(m.name||m.type)}${m.call?` <span class="d">${esc(m.call)}</span>`:""} <span class="d">· 한반도 중심에서 ${dir8(m.lat,m.lon)}쪽</span></li>`).join(""):'<li class="d">지금은 없음</li>';
+}
+loadAir();
 const CAM="https://jis-cctv.jis-probe.workers.dev";
 function ago(iso){const m=Math.max(0,Math.round((Date.now()-Date.parse(iso))/60000));return m<1?"방금":m<60?`${m}분 전`:`${Math.floor(m/60)}시간 ${m%60}분 전`}
 async function openCams(name){

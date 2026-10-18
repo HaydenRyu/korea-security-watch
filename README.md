@@ -23,7 +23,7 @@
 - 3회 연속 판정 불가면 「감시 중단」을 1회 알린다
 
 ## 설정 (최초 1회)
-1. 레포 시크릿 두 개를 넣는다. 값은 추측 불가한 무작위 문자열이다. 레포·공개 페이지에 적지 않는다.
+1. 레포 시크릿을 넣는다. `FIRMS_KEY`(NASA FIRMS MAP_KEY, Actions `firms` 가 매시간 열점 갱신)와 ntfy 주제 두 개다. 값은 추측 불가한 무작위 문자열이다. 레포·공개 페이지에 적지 않는다.
    - `NTFY_TOPIC_ME`: 본인 주제
    - `NTFY_TOPIC`: 지인 주제
 2. 휴대폰에 ntfy 앱을 설치하고 주제를 구독한다. 서버는 기본값 `ntfy.sh` 그대로 둔다.
@@ -33,7 +33,6 @@
    - 주기: 매시간
    - 레포: 이 레포
    - 지시문: `prompts/monitor.md 를 읽고 그대로 수행하라`
-   - 환경 변수 `FIRMS_KEY`: NASA FIRMS MAP_KEY (https://firms.modaps.eosdis.nasa.gov/api/map_key/)
    - 네트워크: Full. 출처 사이트가 다양해 Trusted 로는 막힐 수 있다.
 
 ## 테스트

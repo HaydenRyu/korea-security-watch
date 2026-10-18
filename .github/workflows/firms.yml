@@ -1,0 +1,28 @@
+name: firms
+# 매시간 NASA FIRMS 열점을 받아 state/firms.json 을 갱신한다(키는 시크릿 FIRMS_KEY).
+# 감시 루틴은 :07 에 돈다. 그 전에 끝나도록 :45 에 받는다.
+on:
+  schedule: [{ cron: "45 * * * *" }]
+  workflow_dispatch:
+
+permissions: { contents: write }
+concurrency: { group: firms, cancel-in-progress: false }
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: fetch
+        env: { FIRMS_KEY: "${{ secrets.FIRMS_KEY }}" }
+        run: python3 scripts/firms.py
+      - name: commit
+        run: |
+          git diff --quiet -- state/firms.json && { echo unchanged; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add state/firms.json
+          git commit -m "firms: $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1

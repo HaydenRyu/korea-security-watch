@@ -74,7 +74,7 @@
 - `lat`·`lon` 은 보도된 지역의 대략적 좌표(소수 2자리)다. 지역이 특정되지 않으면 생략한다. 지도 핀으로 쓰인다.
 
 ## 5. 회차 절차
-0. `python3 scripts/firms.py` 로 위성 열점을 갱신한다(env `FIRMS_KEY`). rc 3 이면 실패 사유만 기록하고 계속한다.
+0. 위성 열점은 GitHub Actions `firms` 가 매시간 `state/firms.json` 에 갱신한다. 이 세션에서 firms.py 를 실행하지 않는다. 파일이 없거나 `fetched_at` 이 3시간보다 오래됐으면 열점 근거를 쓰지 않는다.
    - 출력의 `border_count` 가 0보다 크면 `state/firms.json` 의 `border: true` 지점을 확인한다.
    - 열점은 산불·소각도 잡는다. 같은 지역·시간대의 포격·화재 **보도가 있을 때만** border_clash 의 보조 근거로 쓴다. 열점만으로 징후를 올리지 않는다.
 1. 위 출처를 검색해 `run.json` 을 레포 루트에 쓴다.

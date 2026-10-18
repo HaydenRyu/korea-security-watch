@@ -1,50 +1,51 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 troop_movement",
-      "North Korea troop_movement"
+      "북한 병력 이동 전방",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 nuclear",
+      "북한 핵 풍계리 영변",
       "North Korea nuclear"
     ],
     "logistics": [
-      "북한 logistics",
-      "North Korea logistics"
+      "북한 군수 탄약 수송",
+      "North Korea logistics ammunition"
     ],
     "border_clash": [
-      "북한 border_clash",
-      "North Korea border_clash"
+      "북한 DMZ NLL 합참 발표",
+      "North Korea military news October 18 2026"
     ],
     "electronic_cyber": [
-      "북한 electronic_cyber",
-      "North Korea electronic_cyber"
+      "북한 GPS 교란 사이버",
+      "North Korea GPS jamming cyber"
     ],
     "foreign_forces": [
-      "북한 foreign_forces",
-      "North Korea foreign_forces"
+      "북러 군사협력 파병",
+      "North Korea Russia military cooperation"
     ],
     "parade_massing": [
-      "북한 parade_massing",
-      "North Korea parade_massing"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 nk_internal",
-      "North Korea nk_internal"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "북한 gov_warning",
-      "North Korea gov_warning"
+      "진돗개 데프콘 합참 발표",
+      "US travel advisory Korea"
     ]
   },
   "opened": [
     "https://www.nknews.org/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/cw240zl08dm5o",
-    "https://www.jcs.mil.kr",
-    "https://www.mnd.go.kr"
+    "https://www.nknews.org/2026/10/north-korea-tests-new-high-precision-ai-equipped-torpedo-state-media/",
+    "https://www.yna.co.kr/rss/northkorea.xml",
+    "https://www.yna.co.kr/view/AKR20261019008600504",
+    "https://www.yna.co.kr/view/AKR20261018047700504",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 병력·핵·국경·정부 경고 징후는 없다. 9월 21일 DMZ 지뢰 사건 이후 10/3·10/12 탄도미사일 발사는 배경이며 직전 회차와 변동이 없다.",
+  "overall_summary": "북한 관영매체가 10/17 신형 어뢰 수중시험을 주장했으나 시험 발표성 정례 활동이며, 병력·핵·국경·정부 경고 징후는 새로 없다. 9월 지뢰 사건 이후 배경은 직전 회차와 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -56,13 +57,31 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "북한(위치 미공개)",
+      "summary": "조선중앙통신이 10/17 신형 AI 탑재 정밀유도 어뢰 'Zam-2.0' 수중시험을 주장했고 NK News가 이를 보도했다.",
+      "meaning": "해군 무기 시험 주장으로, 독립 확인이 없고 위협 발언·시험 성격의 정례 활동이다.",
+      "sources": [
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/10/north-korea-tests-new-high-precision-ai-equipped-torpedo-state-media/"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "KCNA가 목요일 시험을 토요일(10/17)에 보도",
+        "시험 장소·사진 비공개"
+      ],
+      "speculation": []
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "북러 수교 78주년 연회 보도는 반복되는 배경이다."
     },
     "parade_massing": {
       "status": "none"
@@ -74,9 +93,9 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T22:09:28+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-10-18T23:11:40+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": [],
   "world": [
     {

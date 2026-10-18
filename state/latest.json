@@ -2,45 +2,67 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강 합참",
-      "North Korea troop movement front line deployment"
+      "North Korea troop movement border buildup October 2026"
     ],
     "nuclear": [
-      "북한 핵 전략무기 풍계리 핵실험 징후",
-      "North Korea nuclear weapons Punggye-ri 38 North"
+      "북한 핵 전략무기 풍계리 핵실험 준비",
+      "North Korea nuclear weapons strategic missile Reuters"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 러시아 연료 비축",
-      "North Korea munitions logistics shipment Russia NK News"
+      "북한 군수 탄약 러시아 수송",
+      "North Korea ammunition logistics Russia shipments"
     ],
     "border_clash": [
-      "DMZ NLL 북한 군사분계선 침범 포격 경고사격",
-      "North Korea DMZ border clash NLL Reuters"
+      "DMZ NLL 북한 군사분계선 침범 포격",
+      "North Korea DMZ border clash NLL shots",
+      "北朝鮮 ミサイル 発射 防衛省 速報"
     ],
     "foreign_forces": [
-      "미군 전략자산 한반도 중국 러시아 군용기 KADIZ",
-      "US strategic assets Korea USFK China Russia aircraft October 2026"
+      "미군 전략자산 한반도 전개 중국 러시아 군용기",
+      "US strategic assets Korean Peninsula China Russia aircraft KADIZ"
     ],
     "parade_massing": [
-      "북한 열병식 10월 10일 기념일 병력 집결",
-      "North Korea parade Pyongyang October 2026"
+      "북한 열병식 10월 10일 당창건 기념일 병력 집결",
+      "North Korea parade Party founding anniversary NK News"
     ],
     "gov_warning": [
-      "북한 긴급 NSC 대피 경보 여행경보 상향 주한미국대사관",
-      "South Korea travel advisory State Department embassy security alert North Korea missile Japan Ministry of Defense"
+      "북한 긴급 경고 대피 권고 정부 NSC",
+      "State Department Korea travel advisory North Korea warning evacuation"
     ]
   },
   "opened": [
-    "https://www.omanobserver.om/article/1127336/world/asia/north-south-korea-exchange-warning-shots-near-sea-border",
+    "https://www.koreajoongangdaily.com/korea/norths-mdl-troop-deployment-increases-by-thousands-as-de-facto-border-takes-shape/12807678",
     "https://www.nknews.org/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+    "https://www.nknews.org/category/news/"
   ],
-  "overall_summary": "최근 24시간 내 새 징후는 KCNA 발표(코리아타임스·연합 인용)의 AI 유도 어뢰 시험뿐으로 정례 무기시험 범주다. 병력·핵·군수·접경·정부 경고에서 새 사건은 확인되지 않았다.",
+  "overall_summary": "최근 24시간 내 새 징후는 10/17 KCNA가 주장한 AI 유도 어뢰 시험(정례 무기시험 범주)뿐이다. 병력·핵·군수·접경·정부 경고에서 새 사건은 확인되지 않아 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "북한 동해안",
+      "lat": 39.8,
+      "lon": 127.5,
+      "summary": "북한이 10/17 신형 고정밀 AI 유도 어뢰 시험을 국영매체로 주장했다.",
+      "meaning": "재래식 무기 시험 주장으로 핵 운용 준비 신호는 아니다.",
+      "sources": [
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/category/news/"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "NK News 10/17: 북한 국영매체가 AI 탑재 고정밀 어뢰 시험을 보도",
+        "최근 일련의 미사일 발사에 이은 시험"
+      ],
+      "speculation": [
+        "무기 시험 기조 지속 가능성"
+      ]
     },
     "logistics": {
       "status": "none"
@@ -58,8 +80,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T05:10:24+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-10-18T06:09:47+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

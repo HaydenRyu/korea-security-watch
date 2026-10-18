@@ -38,12 +38,13 @@
     ]
   },
   "opened": [
-    "https://www.nknews.org/2026/10/",
+    "https://www.nknews.org/",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://en.yna.co.kr/nk/index",
-    "https://www.jcs.mil.kr"
+    "https://www.bbc.co.uk/news/articles/cw240zl08dm5o",
+    "https://www.jcs.mil.kr",
+    "https://www.mnd.go.kr"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 병력·핵·국경·정부 경고 징후는 없다. NK News 10/17 어뢰 시험 주장·벨라루스 대사관 개설은 배경성이며 직전 회차와 변동이 없다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 병력·핵·국경·정부 경고 징후는 없다. 9월 21일 DMZ 지뢰 사건 이후 10/3·10/12 탄도미사일 발사는 배경이며 직전 회차와 변동이 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -73,7 +74,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T21:08:55+00:00",
+  "checked_at": "2026-10-18T22:09:28+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],

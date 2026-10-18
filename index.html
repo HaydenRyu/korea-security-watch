@@ -402,7 +402,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
   <div class="meta">
     <span>KST <b id="now">--:--:--</b></span>
     <span>최종 확인 <b id="checked">—</b></span>
-    <span id="views" hidden>누적 조회 <b id="viewsN">—</b></span>
+    <span id="views" hidden title="10/18부터 방문한 사람 수(같은 사람의 새로고침은 세지 않음 · 반영에 수 분) · 1분마다 갱신">누적 방문 <b id="viewsN">—</b></span>
     <a href="#sources" id="srcOpen" class="srclink">출처 <b id="srcN">—</b></a>
     <span>다음 확인 <b id="next">—</b></span>
     <span class="lag" id="lag">감시 지연</span>
@@ -921,7 +921,9 @@ $("srcReq").addEventListener("submit",async e=>{e.preventDefault();const f=e.tar
     try{localStorage.setItem("srcReqAt",Date.now())}catch(_){}}
   catch(_){m.textContent="보내지 못했습니다. 잠시 뒤 다시 시도해 주세요."}finally{b.disabled=false}});
 // 누적 조회(GoatCounter, 쿠키 없음). 대시보드 설정 「visitor counts」가 꺼져 있으면 조용히 숨긴다
-fetch("https://jis.goatcounter.com/counter/TOTAL.json?start=2026-10-18").then(r=>r.ok?r.json():null).then(d=>{if(d?.count){$("viewsN").textContent=d.count;$("views").hidden=false}}).catch(()=>{});
+// 누적 방문자(GoatCounter 는 같은 사람의 새로고침을 세지 않고, 집계 반영에 수 분 걸린다) — 1분마다 다시 읽는다. 응답이 cache-control:public 이라 매번 다른 쿼리로 우회
+const views=()=>fetch(`https://jis.goatcounter.com/counter/TOTAL.json?start=2026-10-18&t=${Date.now()}`,{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if(d?.count){$("viewsN").textContent=d.count;$("views").hidden=false}}).catch(()=>{});
+views();setInterval(()=>{if(!document.hidden)views()},60000);
 // 최근 출처 요청 처리 결과(루틴이 data/source_requests.jsonl 에 남긴다)
 async function loadReqLog(){try{const r=await fetch("data/source_requests.jsonl?t="+Date.now());if(!r.ok)return;
   const rows=(await r.text()).trim().split("\n").filter(Boolean).map(l=>JSON.parse(l)).slice(-10).reverse();if(!rows.length)return;

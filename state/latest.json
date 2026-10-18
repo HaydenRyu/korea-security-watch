@@ -14,7 +14,7 @@
     ],
     "border_clash": [
       "북한 합참 발표 10월 18일",
-      "North Korea missile OR border OR troops October 18 2026"
+      "North Korea October 18 2026"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 사이버",
@@ -39,6 +39,7 @@
   },
   "opened": [
     "https://www.nknews.org/category/news/",
+    "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.nhk.or.jp/rss/news/cat6.xml",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.mod.go.jp/j/press/news/index.html"
@@ -73,7 +74,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T10:10:20+00:00",
+  "checked_at": "2026-10-18T11:09:59+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],
@@ -110,5 +111,5 @@
     }
   ],
   "world_context": "서방 정치·중동 불안이 이어지는 가운데 한반도에서는 신규 징후가 없다.",
-  "world_at": "2026-10-18T10:10:20+00:00"
+  "world_at": "2026-10-18T11:09:59+00:00"
 }

@@ -28,7 +28,7 @@
    - `NTFY_TOPIC`: 지인 주제
 2. 휴대폰에 ntfy 앱을 설치하고 주제를 구독한다. 서버는 기본값 `ntfy.sh` 그대로 둔다.
 3. Actions → notify → Run workflow 로 본인 주제 테스트 메시지를 보낸다.
-4. GitHub Pages: Settings → Pages → Source = GitHub Actions (`.github/workflows/pages.yml` 이 배포하고 30분마다 CCTV 화면을 뜬다). 시크릿 ITS_KEY 필요
+4. GitHub Pages: Settings → Pages → Source = main / root. (CCTV 화면 스냅샷은 GitHub 러너(미국)에서 국가교통정보센터 API 가 막혀 보류 — 2026-10-18 실측)
 5. Claude 루틴을 만든다.
    - 주기: 매시간
    - 레포: 이 레포

@@ -35,6 +35,7 @@
    - `KAKAO_REFRESH_TOKEN`
    - `KAKAO_CLIENT_SECRET`: 클라이언트 시크릿을 켠 경우만
    - `SECRETS_PAT`: fine-grained PAT. 이 레포만 대상으로, Secrets 권한은 Read and write
+   - 루틴 환경 변수 `FIRMS_KEY`: NASA FIRMS MAP_KEY (https://firms.modaps.eosdis.nasa.gov/api/map_key/)
 4. Actions → notify → Run workflow 로 테스트 메시지를 보낸다.
 5. Settings → Pages 에서 source 를 `main` / root 로 지정한다.
 6. Claude 루틴을 만든다.

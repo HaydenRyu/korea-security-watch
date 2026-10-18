@@ -250,7 +250,7 @@ h2 .sub{font:400 11px var(--data);color:var(--dim);margin-left:8px}
       <div class="layers" role="group" aria-label="지도 레이어">
         <button type="button" data-layer="day" aria-pressed="true">주간 위성</button>
         <button type="button" data-layer="night" aria-pressed="false">야간 조명</button>
-        <button type="button" data-layer="firms" disabled title="NASA FIRMS 키 등록 후 표시">열점</button>
+        <button type="button" data-layer="firms" aria-pressed="false" disabled title="NASA FIRMS 위성 열점(최근 48시간)">열점</button>
       </div>
     </section>
     <section class="trace">
@@ -277,7 +277,7 @@ h2 .sub{font:400 11px var(--data);color:var(--dim);margin-left:8px}
 
   <p class="foot">
     등급은 평시·주의(단일 징후 또는 일상 활동)·경계(복수 항목 또는 교차확인)·위험(핵·동원·정부 경고 중 하나가 교차확인되고 다른 징후가 동시에 있음) 네 단계입니다.
-    정례 훈련·예고된 미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다. 위성 영상은 NASA GIBS 하루 단위 영상(약 250m 해상도)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다. 항공기 지도는 신호를 켠 기체만 보이고 등급 판단에는 쓰지 않습니다.
+    정례 훈련·예고된 미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다. 위성 영상은 NASA GIBS 하루 단위 영상(약 250m 해상도)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다. 열점은 NASA FIRMS 위성 열 감지(최근 48시간)로 산불·소각·공장 열원도 포함하며, 접경 구역은 근사 범위입니다. 항공기 지도는 신호를 켠 기체만 보이고 등급 판단에는 쓰지 않습니다.
     공식 경보는 행정안전부 재난문자를 따르세요.
   </p>
 </div>
@@ -421,6 +421,20 @@ function initMap(){
     document.getElementById("imgdate").textContent=k==="night"?"야간 조명 · VIIRS Black Marble":`위성 영상 ${d} · VIIRS`;
   }));
   pinLayer=L.layerGroup().addTo(map);
+  layers.firms=L.layerGroup();
+  const fb=document.querySelector("[data-layer=firms]");
+  fb.addEventListener("click",()=>{const on=fb.getAttribute("aria-pressed")!=="true";fb.setAttribute("aria-pressed",on);
+    if(on)layers.firms.addTo(map);else map.removeLayer(layers.firms)});
+}
+function drawFirms(doc){
+  if(!map||!doc||!doc.points)return;
+  const fb=document.querySelector("[data-layer=firms]");fb.disabled=false;
+  fb.textContent=`열점 ${doc.count}`+(doc.border_count?` · 접경 ${doc.border_count}`:"");
+  doc.points.forEach(p=>L.circleMarker([p.lat,p.lon],{radius:p.border?5:2.5,weight:p.border?1.5:0,color:"#ffd2a8",
+      fillColor:p.border?"#ff6a3d":"#ff9d5c",fillOpacity:p.border?.95:.7,interactive:p.border})
+    .bindTooltip(`위성 열점 · ${short(p.t)} · ${p.sat}${p.border?" · 접경 구역":""}`,{className:"tip"}).addTo(layers.firms));
+  // 접경 구역에 열점이 있으면 기본으로 켠다
+  if(doc.border_count){fb.setAttribute("aria-pressed","true");layers.firms.addTo(map)}
 }
 function drawPins(items){
   if(!map)return;pinLayer.clearLayers();
@@ -441,6 +455,7 @@ function tick(){document.getElementById("now").textContent=kst(Date.now(),{hour:
   try{latest=await get("latest.json")}catch(e){}
   try{events=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(l=>JSON.parse(l))}catch(e){}
   DATA={latest,events};render(latest,events);initMap();drawPins(latest?.items);route();tick();
+  try{drawFirms(await get("firms.json"))}catch(e){}
   setInterval(tick,1000);setInterval(()=>drawDial(latest?.grade??null),60000);
 })();
 </script>

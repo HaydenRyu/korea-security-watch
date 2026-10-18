@@ -74,6 +74,9 @@
 - `lat`·`lon` 은 보도된 지역의 대략적 좌표(소수 2자리)다. 지역이 특정되지 않으면 생략한다. 지도 핀으로 쓰인다.
 
 ## 5. 회차 절차
+0. `python3 scripts/firms.py` 로 위성 열점을 갱신한다(env `FIRMS_KEY`). rc 3 이면 실패 사유만 기록하고 계속한다.
+   - 출력의 `border_count` 가 0보다 크면 `state/firms.json` 의 `border: true` 지점을 확인한다.
+   - 열점은 산불·소각도 잡는다. 같은 지역·시간대의 포격·화재 **보도가 있을 때만** border_clash 의 보조 근거로 쓴다. 열점만으로 징후를 올리지 않는다.
 1. 위 출처를 검색해 `run.json` 을 레포 루트에 쓴다.
 2. `python3 scripts/diff_state.py run.json` 를 실행하고 출력을 확인한다. 스키마 위반이면 스크립트가 unverified 로 기록한다.
 3. `rm run.json` 후 `git add state/ && git commit -m "watch: <등급 또는 unverified> <시각>"` 를 실행한다.

@@ -1,0 +1,9 @@
+# JIS CCTV 사진 중계 — 한국 호스트가 5분마다 올린 사진 묶음을 KV 한 키에 두고 상황판에 내준다.
+# 교통정보센터는 해외 IP 를 막아서 Worker 가 직접 찍을 수 없다(10/18 실측). 키·재생 주소는 여기 오지 않는다.
+name = "jis-cctv"
+main = "index.js"
+compatibility_date = "2026-09-01"
+
+[[kv_namespaces]]
+binding = "SNAP"
+id = "ce01ea0a2a534387b33293ec1e7eec55"

@@ -28,8 +28,9 @@
    - `NTFY_TOPIC`: 지인 주제
 2. 휴대폰에 ntfy 앱을 설치하고 주제를 구독한다. 서버는 기본값 `ntfy.sh` 그대로 둔다.
 3. Actions → notify → Run workflow 로 본인 주제 테스트 메시지를 보낸다.
-4. GitHub Pages: Settings → Pages → Source = main / root. (CCTV 화면 스냅샷은 GitHub 러너(미국)에서 국가교통정보센터 API 가 막혀 보류 — 2026-10-18 실측)
-5. Claude 루틴을 만든다.
+4. GitHub Pages: Settings → Pages → Source = main / root.
+5. CCTV 사진: 국가교통정보센터가 해외 IP 를 막아 GitHub 러너·Cloudflare 에서 직접 못 찍는다(2026-10-18 실측). 한국 IP 맥에서 `bash scripts/install_cctv_snap.sh` 로 5분 주기 설치 → `relay/`(Cloudflare Worker `jis-cctv`, `npx wrangler deploy`)로 올린다. 사진은 최대 6분 늦다.
+6. Claude 루틴을 만든다.
    - 주기: 매시간
    - 레포: 이 레포
    - 지시문: `prompts/monitor.md 를 읽고 그대로 수행하라`

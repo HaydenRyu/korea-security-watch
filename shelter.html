@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JIS 대피 안내 · 자곡동</title>
+<meta name="description" content="자곡동 기준 반경 2km 민방위 대피소·가까운 지하철역·공습·화학 경보 행동 요점을 한 장에 — 인쇄·저장용. JIS 비공식 개인 감시판">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@87.5..112.5,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+/* 토큰은 index.html :root 와 같은 값(간격 4의 배수: 4·8·12·16·24). 인쇄는 아래 @media print 에서 흰 바탕으로 바꾼다 */
+:root{
+  --ink:#05080e; --panel:#0a1019; --head:#0d1520; --line:#1a2331; --line-2:#2a3649;
+  --ice:#dbe5f1; --fog:#8091a8; --dim:#4c5a6e;
+  --g0:#5fd0b8; --g1:#f2c14e; --g2:#ff8a3d; --g3:#ff4d5e;
+  --data:'Martian Mono',ui-monospace,monospace;
+  --text:'Pretendard Variable',Pretendard,system-ui,sans-serif;
+  --gap:12px; --pad:12px; --hh:32px; --side:16px;
+  --map-bg:#070c14; --map-dot:var(--g0); --map-sub:var(--ice); --map-home:var(--g1);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ink);color:var(--ice);font:14px/1.55 var(--text);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
+:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:16px var(--side) 32px;display:grid;gap:var(--gap)}
+
+.top{display:flex;align-items:center;gap:8px 16px;flex-wrap:wrap}
+.id{display:flex;align-items:center;gap:12px;min-width:0}
+.id img{flex:none;display:block}
+.id h1{margin:0;font:700 16px/1.2 var(--text);letter-spacing:-.01em}
+.id small{display:block;font:400 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em}
+.acts{display:flex;gap:8px;margin-left:auto}
+.acts a,.acts button{font:500 12px/1 var(--text);color:var(--ice);background:var(--head);border:1px solid var(--line-2);padding:8px 12px;cursor:pointer;text-decoration:none}
+.acts button{color:var(--ink);background:var(--g0);border-color:var(--g0)}
+.acts a:hover{border-color:var(--fog)} .acts button:hover{filter:brightness(1.08)}
+
+.warn{border:1px solid var(--g1);padding:12px;font-size:13px;display:grid;gap:4px}
+.warn b{font:500 10px/1.4 var(--data);color:var(--g1);letter-spacing:.04em}
+
+.p{background:var(--panel);border:1px solid var(--line);min-width:0;break-inside:avoid}
+.ph{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;min-height:var(--hh);padding:0 var(--pad);
+  background:var(--head);border-bottom:1px solid var(--line);font:500 11px/1 var(--data);color:var(--fog);letter-spacing:.02em}
+.ph .k{color:var(--ice)} .ph .r{margin-left:auto;color:var(--dim);font-weight:400}
+.pb{padding:var(--pad)}
+
+.acts3{display:grid;gap:var(--gap)}
+.p ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:13px}
+.p li{padding-left:16px;position:relative}
+.p li::before{content:"";position:absolute;left:2px;top:.6em;width:5px;height:5px;background:var(--line-2)}
+/* 행동요령 3칸: 제목·부제를 두 줄로 고정 — 부제 길이가 달라도 목록 시작선이 칸마다 같다 */
+.acts3 .ph{flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;padding:8px var(--pad)}
+.acts3 .ph .r{margin-left:0}
+.p.hot .ph .k{color:var(--g1)}
+.p.chem .ph .k{color:var(--g2)}
+
+.mapbox svg{display:block;width:100%;height:auto;background:var(--map-bg)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;padding:8px var(--pad);border-top:1px solid var(--line);font-size:11px;color:var(--fog)}
+.legend i{display:inline-block;width:8px;height:8px;margin-right:6px;vertical-align:1px}
+.lg-dot{background:var(--map-dot);border-radius:50%} .lg-sub{border:2px solid var(--map-sub)} .lg-home{background:var(--map-home);transform:rotate(45deg)}
+svg .ring{fill:none;stroke:var(--line-2);stroke-dasharray:4 4}
+svg .dot{fill:var(--map-dot);stroke:var(--map-bg);stroke-width:1.5}
+svg .sub{fill:var(--map-bg);stroke:var(--map-sub);stroke-width:2}
+svg .home{fill:var(--map-home);stroke:var(--map-bg);stroke-width:1.5}
+svg text{font:500 10px var(--data);fill:var(--ice)}
+svg text.sl{font:600 11px var(--text);fill:var(--fog)}
+svg text.hl{font:600 11px var(--text);fill:var(--map-home)}
+svg .bar{stroke:var(--ice);stroke-width:2;fill:none}
+svg .lead{stroke:var(--dim);stroke-width:1}
+
+/* 대피소 목록: 좁은 화면은 2줄 행, 넓은 화면·인쇄는 표 */
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{font:500 10px/1.4 var(--data);color:var(--fog);text-align:left;padding:8px;border-bottom:1px solid var(--line-2);letter-spacing:.02em;white-space:nowrap}
+td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,td.d{font:400 11px/1.6 var(--data);color:var(--fog);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.d{text-align:right} th.d{text-align:right}
+td.nm b{font-weight:600}
+td.nm span{display:block;color:var(--fog);font-size:11px}
+.ug{font:500 10px/1 var(--data);padding:2px 4px;border:1px solid var(--g0);color:var(--g0);white-space:nowrap}
+.ug.no{border-color:var(--g1);color:var(--g1)}
+.pin{color:var(--g1);font-size:11px;margin-left:4px}
+.sub-l li{display:flex;gap:8px;align-items:baseline}
+.sub-l b{font-weight:600} .sub-l .km{margin-left:auto;font:400 11px/1.6 var(--data);color:var(--fog);white-space:nowrap}
+.sub-l li.note{padding-left:0;color:var(--fog);font-size:12px;display:block} .sub-l li.note::before{display:none}
+
+.foot{font-size:11px;line-height:1.7;color:var(--dim);display:grid;gap:4px}
+.foot b{color:var(--fog);font-weight:600}
+.foot a{color:var(--fog)}
+.err{padding:12px;border:1px solid var(--g3);color:var(--ice);font-size:13px}
+
+.prt{display:none}
+th.ad,td.ad{display:none}  /* 짧은 주소 칸은 인쇄 전용(화면은 이름 밑에 전체 주소) */
+@media (max-width:599px){
+  th.dg,td.dg{display:none}
+}
+@media (min-width:760px){
+  .acts3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .two{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:var(--gap);align-items:start}
+  .side{display:grid;gap:var(--gap)}
+}
+
+/* ── 인쇄: A4 한 장 · 흰 바탕 · 잉크 절약(배경 없음, 선만) ── */
+@page{size:A4;margin:10mm}
+@media print{
+  :root{--ink:#fff;--panel:#fff;--head:#fff;--line:#c9ced6;--line-2:#8a93a0;--ice:#111;--fog:#3d4450;--dim:#5b6370;
+    --g0:#0b6b5a;--g1:#8a5a00;--g2:#a33f00;--g3:#b0172a;--map-bg:#fff;--map-dot:#0b6b5a;--map-sub:#111;--map-home:#b0172a}
+  body{font-size:9pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .wrap{max-width:none;padding:0;gap:8px}
+  .acts,.noprint{display:none!important}
+  .warn{padding:8px;font-size:9pt}
+  .ph{min-height:0;padding:4px 8px;font-size:8pt;border-bottom-color:var(--line-2)}
+  .acts3 .ph{padding:4px 8px;gap:2px}
+  .pb{padding:6px 8px}
+  .p{border-color:var(--line-2)}
+  .p ul{font-size:8.5pt;gap:2px}
+  .acts3{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  /* 인쇄: 표는 전폭 한 줄 행(짧은 주소 칸), 약도·지하철역은 그 아래 나란히 — A4 한 장에 들어가게 */
+  .two{display:grid;gap:8px}
+  .side{display:grid;grid-template-columns:minmax(0,55fr) minmax(0,45fr);gap:8px;align-items:start}
+  .p.list{break-inside:auto}
+  table{font-size:7.5pt}
+  th{padding:2px 4px;font-size:6.5pt}
+  td{padding:1px 4px;line-height:1.35}
+  td.nm span{display:none}
+  th.ad,td.ad{display:table-cell;color:var(--fog)}
+  td.n,td.d{font-size:7pt;line-height:1.35}
+  .ug{padding:0 3px;font-size:6.5pt}
+  th.dg,td.dg{display:table-cell}
+  .scr{display:none} .prt{display:block}
+  .mapbox svg{height:46mm}  /* 남은 높이에 맞춘 약도 크기(가로는 비율 유지·가운데) */
+  .warn{display:block} .warn b{margin-right:8px}
+  .legend{padding:4px 8px;font-size:7.5pt}
+  .foot{font-size:7pt;line-height:1.4;gap:0}
+  a{text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="id"><img src="assets/jis-mark.svg" width="28" height="28" alt="">
+      <div><h1>자곡동 대피 안내 · 한 장</h1><small>JIS · 비공식 개인 감시판 · 정부·기관 문서가 아닙니다</small></div></div>
+    <div class="acts"><a href="./">감시판으로</a><button type="button" id="printBtn">인쇄 · PDF 저장</button></div>
+  </header>
+
+  <div class="warn"><b>먼저 읽기</b>
+    <span>실제 대피는 정부 경보(재난문자·민방위 사이렌·TV·라디오)를 따르세요. 이 장은 개인이 공개자료로 정리한 참고용입니다.</span>
+    <span class="noprint">한 번 열어 두면 이 기기에 저장되어 통신이 끊겨도 다시 열 수 있습니다(브라우저가 지원할 때). 확실하게 하려면 인쇄하거나 PDF로 저장해 두세요.</span>
+  </div>
+
+  <div class="acts3" id="acts"></div>
+
+  <div class="two">
+    <section class="p list" aria-label="대피소 목록">
+      <div class="ph"><span class="k">민방위 대피소</span><span id="shN"></span><span class="r" id="shAt"></span></div>
+      <div id="shList"></div>
+    </section>
+    <div class="side">
+      <section class="p mapbox" aria-label="대피소 위치 약도">
+        <div class="ph"><span class="k">위치 약도</span><span class="r">번호 = 대피소 목록</span></div>
+        <div id="map" class="scr"></div><div id="mapPrint" class="prt"></div>
+        <div class="legend"><span><i class="lg-dot"></i>대피소</span><span><i class="lg-sub"></i>지하철역</span><span><i class="lg-home"></i>자곡동 기준점</span><span>점선 = 반경 2km</span></div>
+      </section>
+      <section class="p" aria-label="가까운 지하철역">
+        <div class="ph"><span class="k">가까운 지하철역</span><span class="r">자곡동 기준 직선거리</span></div>
+        <div class="pb"><ul class="sub-l" id="subList"></ul></div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span><b>더 넓은 지역·최신 정보</b> 국민재난안전포털(www.safekorea.go.kr) 「민방위 대피소」 지도와 국민행동요령, 행정안전부 「안전디딤돌」 앱. 긴급 신고 119(화재·구조) · 112(경찰).</span>
+    <span id="srcLine">대피소: 국민재난안전포털 민방위 대피소 자료를 자곡동 기준 반경 2km 로 추린 것입니다. 지하철역 좌표는 역 앞 지점(약 100m 오차)이고 거리는 직선거리입니다. 실제 걷는 거리는 더 깁니다.</span>
+    <span>JIS · 비공식 개인 감시판 — haydenryu.github.io/korea-security-watch</span>
+  </footer>
+</div>
+<script>
+// 데이터 정본: data/shelters.json(대피소, scripts/shelters.py) · data/prep.json(행동요령·지하철역 — index.html 「지금 할 일」과 같은 파일)
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function km(a,b,c,d){const R=6371,r=Math.PI/180,x=Math.sin((c-a)*r/2)**2+Math.cos(a*r)*Math.cos(c*r)*Math.sin((d-b)*r/2)**2;return 2*R*Math.asin(Math.sqrt(x))}
+const dongOf=x=>x.dong||(String(x.addr||"").match(/\(([^,()]+?[동가])[,)]/)||[])[1]||"";
+const shortAddr=a=>String(a||"").replace(/^(서울특별시|경기도)\s+/,"").replace(/\s*\(.*\)\s*$/,"");  // 인쇄 한 줄용
+const under=x=>/지하/.test(x.name+" "+(x.addr||""));
+const SHOW=["air","chem","family"];  // 한 장에 싣는 행동요령(전체 목록은 감시판 「지금 할 일」)
+$("printBtn").addEventListener("click",()=>print());
+
+function renderActs(prep){
+  const by=Object.fromEntries((prep||[]).map(x=>[x.k,x]));
+  $("acts").innerHTML=SHOW.filter(k=>by[k]).map(k=>{const x=by[k];
+    return `<section class="p ${k==="air"?"hot":k==="chem"?"chem":""}"><div class="ph"><span class="k">${esc(x.title)}</span><span class="r">${esc(x.sub)}</span></div>
+      <div class="pb"><ul>${x.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul></div></section>`}).join("");
+}
+function renderShelters(doc,dongs){
+  const s=doc.shelters.slice().sort((a,b)=>a.dist_m-b.dist_m);
+  const inDong=s.filter(x=>dongs.includes(x.dong)).length;
+  $("shN").textContent=`${s.length}곳 · ${dongs.map(d=>d.replace(/동$/,"")).join("·")}동 ${inDong}곳 포함`;
+  $("shAt").textContent=doc.fetched_at?`${doc.fetched_at.slice(0,10)} 기준`:"";
+  $("shList").innerHTML=`<table><thead><tr><th>#</th><th>이름 · 주소</th><th class="ad">주소</th><th>구분</th><th class="dg">동</th><th class="d">거리</th></tr></thead><tbody>`
+    +s.map((x,i)=>`<tr><td class="n">${i+1}</td><td class="nm"><b>${esc(x.name)}</b>${x.open===false?'<span class="pin">· 개방 안 함</span>':""}<span>${esc(x.addr)}</span></td><td class="ad">${esc(shortAddr(x.addr))}</td>`
+      +`<td><span class="ug${under(x)?"":" no"}">${under(x)?"지하":"지상"}</span></td><td class="dg">${esc(dongOf(x))}</td>`
+      +`<td class="d">${x.dist_m>=1000?(x.dist_m/1000).toFixed(1)+"km":x.dist_m+"m"}</td></tr>`).join("")+`</tbody></table>`;
+  return s;
+}
+function renderSubway(p,c){
+  const sub=(p.subway||[]).map(x=>({...x,k:km(c.lat,c.lon,x.lat,x.lon)})).sort((a,b)=>a.k-b.k);
+  $("subList").innerHTML=sub.map(x=>`<li><b>${esc(x.name)}</b><span>${esc(x.lines)}</span><span class="km">${x.k.toFixed(1)}km</span></li>`).join("")
+    +(p.subway_tips||[]).map(t=>`<li class="note">${esc(t)}</li>`).join("");
+  return sub;
+}
+// 약도: 외부 타일 없이 좌표만으로 그린다(등장방형 근사 — 반경 몇 km 에선 오차 무시 가능)
+// k = 글자·점 확대 배율(좌표 폭을 600/k 로 줄여 같은 글자 크기가 상대적으로 커진다). 인쇄본은 약도가 작아 k 를 키운 별도 SVG 를 쓴다
+function renderMap(doc,shel,sub,k,el){
+  const c=doc.center,cos=Math.cos(c.lat*Math.PI/180);
+  const mx=lon=>(lon-c.lon)*111320*cos, my=lat=>(c.lat-lat)*110574;
+  const pts=[...shel.map(x=>[mx(x.lon),my(x.lat)]),...sub.map(x=>[mx(x.lon),my(x.lat)]),[0,0]];
+  const R=doc.radius_m||2000;
+  let x0=Math.min(-R,...pts.map(p=>p[0])),x1=Math.max(R,...pts.map(p=>p[0])),y0=Math.min(-R,...pts.map(p=>p[1])),y1=Math.max(R,...pts.map(p=>p[1]));
+  const pad=320;x0-=pad;x1+=pad;y0-=pad;y1+=pad;
+  const W=Math.round(600/k),sc=W/(x1-x0),H=Math.round((y1-y0)*sc);
+  const X=v=>(v-x0)*sc,Y=v=>(v-y0)*sc;
+  const boxes=[];  // 글자 겹침 방지: 놓인 글자·점의 사각형
+  const hit=b=>boxes.some(o=>b[0]<o[2]&&b[2]>o[0]&&b[1]<o[3]&&b[3]>o[1])||b[0]<0||b[2]>W||b[1]<0||b[3]>H;
+  const tw=(t,cw)=>[...t].reduce((a,ch)=>a+(/[가-힣]/.test(ch)?cw*1.6:cw),0);
+  let g=`<circle class="ring" cx="${X(0)}" cy="${Y(0)}" r="${R*sc}"/>`;
+  shel.forEach(x=>{const px=X(mx(x.lon)),py=Y(my(x.lat));boxes.push([px-5,py-5,px+5,py+5])});
+  sub.forEach(x=>{const px=X(mx(x.lon)),py=Y(my(x.lat));boxes.push([px-6,py-6,px+6,py+6])});
+  boxes.push([X(0)-7,Y(0)-7,X(0)+7,Y(0)+7]);
+  const L=1000*sc,bx=16,by=H-16;
+  boxes.push([bx-4,by-22,bx+L+18,by+4],[W-32,10,W-4,50]);  // 축척·북쪽 표시 자리
+  const place=(px,py,t,cw,h,cls,lead)=>{
+    const w=tw(t,cw),cand=[[8,4,"start"],[-8,4,"end"],[0,-9,"middle"],[0,h+6,"middle"],[7,-6,"start"],[-7,-6,"end"],[7,h+3,"start"],[-7,h+3,"end"]];
+    if(lead)for(const d of [16,26,36,46])cand.push([d,-d+2,"start"],[-d,-d+2,"end"],[d,h+d-4,"start"],[-d,h+d-4,"end"],[0,-d-6,"middle"],[0,h+d+4,"middle"],[d+4,4,"start"],[-d-4,4,"end"]);
+    const bx=([dx,dy,a])=>{const l=a==="start"?px+dx:a==="end"?px+dx-w:px+dx-w/2;return[l-1,py+dy-h,l+w+1,py+dy+3]};
+    let pick=cand.find(o=>!hit(bx(o)));
+    if(!pick)return"";  // 자리가 없으면 글자를 생략(번호는 목록과 순서가 같아 찾을 수 있다)
+    const b=bx(pick);boxes.push(b);
+    const ln=Math.abs(pick[0])>12||pick[1]<-12||pick[1]>h+10?`<line class="lead" x1="${px}" y1="${py}" x2="${(b[0]+b[2])/2}" y2="${pick[1]<0?b[3]:b[1]}"/>`:"";
+    return ln+`<text class="${cls}" x="${px+pick[0]}" y="${py+pick[1]}" text-anchor="${pick[2]}">${esc(t)}</text>`;
+  };
+  let lab="",miss=0;
+  const put=t=>{if(!t)miss++;lab+=t};
+  sub.forEach(x=>put(place(X(mx(x.lon)),Y(my(x.lat)),x.name,6.4,12,"sl",true)));
+  put(place(X(0),Y(0),"자곡동 기준점",6.4,12,"hl",true));
+  shel.forEach((x,i)=>put(place(X(mx(x.lon)),Y(my(x.lat)),String(i+1),7.6,11,"",true)));
+  g+=shel.map(x=>`<circle class="dot" cx="${X(mx(x.lon)).toFixed(1)}" cy="${Y(my(x.lat)).toFixed(1)}" r="4"/>`).join("");
+  g+=sub.map(x=>`<rect class="sub" x="${(X(mx(x.lon))-5).toFixed(1)}" y="${(Y(my(x.lat))-5).toFixed(1)}" width="10" height="10"/>`).join("");
+  g+=`<rect class="home" x="${X(0)-5}" y="${Y(0)-5}" width="10" height="10" transform="rotate(45 ${X(0)} ${Y(0)})"/>`;
+  // 축척 1km · 북쪽
+  g+=`<path class="bar" d="M${bx} ${by-6}V${by}H${bx+L}V${by-6}"/><text x="${bx}" y="${by-10}">0</text><text x="${bx+L}" y="${by-10}" text-anchor="middle">1km</text>`;
+  g+=`<path d="M${W-24} 34L${W-18} 16L${W-12} 34L${W-18} 29Z" fill="var(--ice)"/><text x="${W-18}" y="46" text-anchor="middle">N</text>`;
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="자곡동 기준점과 대피소 ${shel.length}곳, 지하철역 ${sub.length}곳의 위치 약도">${g}${lab}</svg>`;
+  el.dataset.miss=miss;  // 자리가 없어 생략한 글자 수(검수용)
+}
+
+(async()=>{
+  try{
+    const [s,p]=await Promise.all(["data/shelters.json","data/prep.json"].map(u=>fetch(u).then(r=>{if(!r.ok)throw u+" "+r.status;return r.json()})));
+    renderActs(p.prep);
+    const shel=renderShelters(s,s.dongs||[]);
+    const sub=renderSubway(p,s.center);
+    renderMap(s,shel,sub,1.5,$("map"));renderMap(s,shel,sub,2,$("mapPrint"));
+  }catch(e){
+    $("acts").innerHTML=`<div class="err">대피소·행동요령 자료를 불러오지 못했습니다. 통신이 되는 곳에서 한 번 열어 두어야 오프라인에서도 보입니다.
+      국민재난안전포털(www.safekorea.go.kr)에서 「민방위 대피소」를 확인하세요.</div>`;
+  }
+})();
+if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+</script>
+</body>
+</html>

@@ -1,4 +1,5 @@
-"""접경 CCTV 12대 화면을 한 장씩 찍어 중계 Worker 에 올린다 (한국 IP 호스트에서 5분마다).
+"""접경 CCTV 화면을 한 장씩 찍어 중계 Worker 에 올린다 (한국 IP 호스트에서 5분마다).
+1시간에 한 번은 「라이브 방송」 국내 채널의 현재 영상 ID 도 같이 올린다(live_ids).
 
   python3 scripts/cctv_snap.py            # ~/.config/ksw/its_key · cctv_upload 사용
   python3 scripts/cctv_snap.py --dry      # 올리지 않고 결과만 출력
@@ -11,6 +12,7 @@ from __future__ import annotations
 import base64
 import json
 import math
+import re
 import subprocess
 import sys
 import tempfile
@@ -27,6 +29,36 @@ API = ("https://openapi.its.go.kr:9443/cctvInfo?apiKey={key}&type={t}&cctvType=4
 TRIES = 3           # 재생 서버가 수시로 403 을 준다(10/18 실측) — 매번 새 주소를 받아 다시 시도
 GRAB_TIMEOUT = 20   # 카메라 1대 상한(초)
 BUDGET = 150        # 회차 전체 상한(초) — 5분 주기의 절반
+LIVE_EVERY = 3600   # 라이브 ID 재조회 간격(초)
+LIVE_MARK = Path.home() / "Library" / "Caches" / "jis-live-at"   # 마지막 조회 시각(파일 mtime)
+
+
+def live_ids() -> dict | None:
+    """data/live.json 국내 채널마다 /streams 에서 「지금 라이브」 + 제목 패턴인 영상 ID.
+    유튜브가 Cloudflare 출구 IP 에는 429 를 줘서(10/18 실측) Worker 가 못 하고 이 호스트가 한다. 한 시간에 한 번."""
+    try:
+        if time.time() - LIVE_MARK.stat().st_mtime < LIVE_EVERY:
+            return None
+    except OSError:
+        pass
+    out = {}
+    for c in json.loads((ROOT / "data" / "live.json").read_text())["domestic"]:
+        try:
+            req = urllib.request.Request(f"https://www.youtube.com/channel/{c['ch']}/streams",
+                                         headers={"User-Agent": "Mozilla/5.0", "Accept-Language": "ko-KR"})
+            h = urllib.request.urlopen(req, timeout=20).read().decode("utf-8", "replace")
+        except OSError:
+            continue
+        ids = list(re.finditer(r'"contentId":"([\w-]{11})"', h))
+        for k, m in enumerate(ids):
+            chunk = h[m.start():ids[k + 1].start() if k + 1 < len(ids) else m.start() + 20000]
+            t = re.search(r'"title":\{"content":"([^"]+)"', chunk)
+            if "BADGE_STYLE_LIVE" in chunk and t and c["pat"] in t.group(1):
+                out[c["ch"]] = m.group(1)
+                break
+    LIVE_MARK.parent.mkdir(parents=True, exist_ok=True)
+    LIVE_MARK.touch()
+    return out or None
 
 
 def ffmpeg() -> str:
@@ -105,6 +137,8 @@ def main() -> int:
             shots.append({"name": c["name"], "at": at, "img": img})
     ok = sum(1 for s in shots if s["img"])
     bundle = {"captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "shots": shots}
+    if not dry and (lv := live_ids()):  # 못 찾은 채널은 빠진다 — 상황판이 data/live.json 의 fb 로 메운다
+        bundle["live"], bundle["live_at"] = lv, bundle["captured_at"]
     size = len(json.dumps(bundle))
     print(json.dumps({"ok": ok, "total": len(shots), "bytes": size, "sec": round(time.monotonic() - t0)}))
     if dry or ok == 0:

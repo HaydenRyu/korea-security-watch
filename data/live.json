@@ -1,0 +1,47 @@
+{
+ "_note": "라이브 방송 칸 채널 목록(정본). 국내=영상 ID(맥이 1시간마다 /streams 에서 제목 패턴으로 찾아 Worker 에 올림, 못 찾으면 fb) · 해외=live_stream?channel= 로 재생(10/18 실측)",
+ "domestic": [
+  {
+   "name": "연합뉴스TV",
+   "ch": "UCTHCOPwqNfZ0uiKOvFyhGwg",
+   "pat": "24시간 현장",
+   "fb": "faZX3TyCI_M"
+  },
+  {
+   "name": "YTN",
+   "ch": "UChlgI3UHCOnwUGzWzbJ3H5w",
+   "pat": "24시간 뉴스채널 YTN",
+   "fb": "2LgmPPKw19o"
+  },
+  {
+   "name": "KBS 뉴스24",
+   "ch": "UCcQTRi69dsVYHN3exePtZ1A",
+   "pat": "KBS 뉴스24",
+   "fb": "3FjdhYVMGZ8"
+  },
+  {
+   "name": "MBC 뉴스",
+   "ch": "UCF4Wxdo3inmxP-Y59wXDsFw",
+   "pat": "24시간 최신 MBC",
+   "fb": "7CT4PVpMjR0"
+  }
+ ],
+ "foreign": [
+  {
+   "name": "NHK World",
+   "ch": "UCSPEjw8F2nQDtmUKPFNF7_A"
+  },
+  {
+   "name": "Al Jazeera",
+   "ch": "UCNye-wNBqNL5ZzHSJj3l8Bg"
+  },
+  {
+   "name": "DW News",
+   "ch": "UCknLrEdhRCp1aegoMqRaCZg"
+  },
+  {
+   "name": "France 24",
+   "ch": "UCQfwfsi5VrQ8yKZ-UWmAEFg"
+  }
+ ]
+}

@@ -600,38 +600,30 @@ function render(latest,events){
 }
 
 // ── 지금 할 일: 등급별 한 줄 + 접는 준비 목록. 내용은 국민재난안전포털 국민행동요령을 일반화한 것 ──
-const SHELTER_URL="https://www.safekorea.go.kr/safekorea-kor/flsm/flsm/facilitiesSafteyMap.do?menuSn=2&title=%EB%AF%BC%EB%B0%A9%EC%9C%84%EB%8C%80%ED%94%BC%EC%86%8C";
-const PREP=[
-  ["supplies","비상용품 체크리스트","3일분 기준 · 체크는 이 기기에만 저장",true,
-    ["물·비상식량 3일분","상비약·복용 중인 처방약","손전등·보조배터리·휴대용 라디오","현금·신분증 사본","마스크·물티슈"]],
-  ["family","가족 연락 계획","미리 정해 둘 것",false,
-    ["만날 장소 2곳 — 집 근처 1곳, 동네 밖 1곳","연락 순서 — 누가 누구에게 먼저 연락할지","통신이 끊기면 — 전화 대신 문자를 보내고, 정한 장소·시간에 만납니다","멀리 사는 가족·친척 한 명을 공통 연락처로 정해 둡니다"]],
-  ["air","공습 경보가 울리면","사이렌·재난문자",false,
-    ["가까운 지하 대피소·지하철역·건물 지하층으로 갑니다","재난문자·TV·라디오의 정부 안내를 따릅니다","해제 안내가 나올 때까지 대피한 곳에 머뭅니다"]],
-  ["chem","화학무기 공격이 의심되면","지하로 가지 않습니다",false,
-    ["가스는 낮은 곳에 고이므로 지하가 아니라 건물 높은 층·실내로 갑니다","오염된 곳을 벗어날 때는 바람이 불어가는 쪽을 피해 바람이 불어오는 쪽이나 옆으로 이동합니다","창문을 닫고 문틈을 젖은 수건·테이프로 막습니다","긴 옷·마스크로 피부와 호흡기 노출을 줄입니다"]],
-  ["alert","재난문자 받는지 확인","휴대폰 설정 한 번",false,
-    ["아이폰 — 설정 → 알림 → 맨 아래 「긴급 재난 문자」「안전 안내 문자」를 켭니다",
-     "안드로이드(삼성) — 설정 → 안전 및 긴급 → 무선 긴급 알림. 또는 메시지 앱 설정 → 긴급 알림 설정",
-     "기종·OS 버전에 따라 메뉴 이름이 다를 수 있습니다. 설정 검색창에 「긴급」을 넣어 찾아 보세요"]]];
-// 자곡동 가까운 지하철역(좌표: OSM Nominatim 역 앞 지점, 약 100m 오차). 세곡동 쪽엔 역이 없다
-const SUBWAY=[["수서역","SRT·3호선·수인분당선",37.4873,127.1017],["대모산입구역","수인분당선",37.4914,127.0729],
-  ["일원역","3호선",37.4843,127.0837],["가락시장역","3·8호선",37.4925,127.1186],["복정역","8호선·수인분당선",37.4701,127.1256]];
+// 행동요령·지하철역 정본은 data/prep.json — 한 장 안내(shelter.html)와 같은 파일을 읽는다(문구 사본 금지)
+let SHELTER_URL="https://www.safekorea.go.kr",PREP=[],SUBWAY=[],SUBTIPS=[],PREP_OK=false;
+async function loadPrep(){try{const r=await fetch("data/prep.json");if(!r.ok)return;const p=await r.json();
+  SHELTER_URL=p.shelter_url||SHELTER_URL;SUBTIPS=p.subway_tips||[];
+  PREP=(p.prep||[]).map(x=>[x.k,x.title,x.sub,!!x.check,x.items||[]]);
+  SUBWAY=(p.subway||[]).map(x=>[x.name,x.lines,x.lat,x.lon]);PREP_OK=PREP.length>0}catch(e){}}
 const HOME={lat:37.474,lon:127.103};  // 자곡동 기준점(data/shelters.json center 와 같다)
 const subDist=x=>km(HOME.lat,HOME.lon,x[2],x[3]);
 function shelterLabel(){const d=SHEL?.dongs?.length?SHEL.dongs.map(x=>x.replace(/동$/,"")).join("·"):"세곡·자곡·율현";
-  return`${d} 대피소${SHEL?` · ${SHEL.shelters.length}곳`:""}`}
+  // 24곳 중 세곡·자곡·율현동 안은 일부뿐(나머지는 반경 2km 의 수서·일원·문정동 등) — 동 이름만 붙이면 전부 그 동인 것처럼 읽힌다
+  if(!SHEL)return`${d} 대피소`;const n=SHEL.shelters.filter(x=>SHEL.dongs?.includes(x.dong)).length;
+  return`대피소 ${SHEL.shelters.length}곳 · ${d} ${n}곳 포함`}
 const CK="jisPrep";
 function ckGet(){try{return JSON.parse(localStorage.getItem(CK)||"{}")}catch(_){return{}}}
 function renderTodo(g){
   const ck=ckGet(),open=k=>(g>=2&&(k==="supplies"||k==="family"))||(g>=3&&k==="air");
   $("todo").innerHTML=`<div class="tnow"><b>현재 등급 <em>${g!=null?LABEL[g]:"분석 전"}</em> 기준</b><span>${g!=null?TODO[g]:"첫 분석 결과를 기다리는 중입니다."}</span></div>`
+    +(PREP_OK?"":`<div class="tnow"><span>행동요령을 불러오지 못했습니다. 새로고침하거나 <a href="${SHELTER_URL}" target="_blank" rel="noopener">국민재난안전포털</a>에서 확인하세요.</span></div>`)
     +PREP.map(([k,t,sub,isCk,list])=>`<details class="tsec" data-k="${k}"${open(k)?" open":""}><summary>${t}<small>${sub}</small></summary><ul>`
       +list.map((x,i)=>isCk?`<li class="ck"><label><input type="checkbox" data-ck="${k}${i}"${ck[k+i]?" checked":""}>${x}</label></li>`:`<li>${x}</li>`).join("")+`</ul></details>`).join("")
     +`<details class="tsec" data-k="subway"${g>=3?" open":""}><summary>가까운 지하철역<small>자곡동 기준 직선거리</small></summary><ul>`
       +SUBWAY.map(x=>[x,subDist(x)]).sort((a,b)=>a[1]-b[1]).map(([x,k])=>`<li><b class="sn">${x[0]}</b> ${x[1]}<span class="km">${k.toFixed(1)}km</span></li>`).join("")
-      +`<li>세곡동 쪽에는 지하철역이 없습니다</li><li class="note">지하철역은 민방위 대피소로 지정된 곳이 많습니다. 지정 여부는 대피소 지도와 국민재난안전포털에서 확인하세요. <a href="#map-p" class="go findSubway">지도에서 보기</a></li></ul></details>`
-    +`<div class="tlinks"><a href="#map-p" class="go findShelter">${shelterLabel()}</a><a href="${SHELTER_URL}" target="_blank" rel="noopener">다른 지역 대피소 · 국민재난안전포털</a></div>`
+      +(SUBTIPS[0]?`<li>${SUBTIPS[0]}</li>`:"")+`<li class="note">${SUBTIPS[1]||""} <a href="#map-p" class="go findSubway">지도에서 보기</a></li></ul></details>`
+    +`<div class="tlinks"><a href="#map-p" class="go findShelter">${shelterLabel()}</a><a href="shelter.html" class="go">한 장 안내(인쇄·저장)</a><a href="${SHELTER_URL}" target="_blank" rel="noopener">다른 지역 대피소 · 국민재난안전포털</a></div>`
     +`<p class="disc">이 감시판의 권고입니다. 실제 대피는 정부 경보(재난문자·민방위 사이렌·TV·라디오)를 따르세요. 행동요령 원문은 <a href="https://www.safekorea.go.kr" target="_blank" rel="noopener">국민재난안전포털</a>에 있습니다.</p>`;
 }
 document.addEventListener("change",e=>{const k=e.target.dataset?.ck;if(!k)return;const ck=ckGet();
@@ -812,6 +804,7 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
 (async()=>{
   const get=async(p,t)=>{const r=await fetch(base+p+"?t="+Date.now());if(!r.ok)throw r.status;return t?r.text():r.json()};
   let latest=null,events=[];
+  await loadPrep();  // render·initMap(지하철 레이어) 앞
   try{latest=await get("latest.json")}catch(e){}
   try{events=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(l=>JSON.parse(l))}catch(e){}
   DATA={latest,events};render(latest,events);initMap();drawPins(latest?.items);route();tick();
@@ -820,6 +813,8 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
   try{const r=await fetch("data/shelters.json");if(r.ok)drawShelters(await r.json())}catch(e){}
   setInterval(tick,1000);setInterval(()=>drawDial(latest?.grade??null),60000);
 })();
+// 오프라인 캐시(sw.js) — 통신이 끊겨도 이 화면·대피소·행동요령을 다시 열 수 있게. 실패해도 페이지는 그대로 동작한다
+if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 
 // ── 출처(정본 data/sources.json — 루틴과 같은 파일) · 추가 요청은 본인 요청 주제(ntfy)로 ──
 const REQ_TOPIC="ksw-req-5c0d1b934d8cb1a6";

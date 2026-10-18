@@ -11,6 +11,7 @@ LLM 은 항목별 관측만 낸다(run.json). 등급·발송 여부는 이 파�
 from __future__ import annotations
 
 import json
+from urllib.parse import urlparse
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -33,12 +34,24 @@ STATUSES = {"none", "single", "corroborated"}
 GRADE_LABEL = {0: "평시", 1: "주의", 2: "경계", 3: "위험"}
 FORWARD_MIN_GRADE = 2  # 이 등급 이상이면 지인 주제에도 보낸다
 MIN_OPENED = 3  # 회차마다 원문을 최소 3건 열어야 판정으로 인정
+MIN_DOMAINS = 2  # 연 원문이 한 매체에 몰리면 교차확인이 아니다 — 서로 다른 사이트 2곳 이상
 UNVERIFIED_ALERT_AT = 3  # 연속 판정 불가 N회째에 1회 알림
 DASHBOARD_URL = "https://haydenryu.github.io/korea-security-watch/"
 
 
 class RunError(ValueError):
     pass
+
+
+_SLD = {"co", "go", "or", "ac", "ne", "re", "com", "gov", "org", "net"}
+
+
+def site(url: str) -> str:
+    """URL → 사이트 단위(yna.co.kr · nknews.org). 같은 매체의 하위 경로·서브도메인은 한 곳으로 센다."""
+    host = urlparse(url).hostname or ""
+    parts = host.removeprefix("www.").split(".")
+    n = 3 if len(parts) >= 3 and parts[-2] in _SLD and len(parts[-1]) == 2 else 2
+    return ".".join(parts[-n:])
 
 
 def validate(run: dict) -> None:
@@ -53,6 +66,9 @@ def validate(run: dict) -> None:
     opened = {u for u in run.get("opened") or [] if isinstance(u, str) and u.startswith("http")}
     if len(opened) < MIN_OPENED:
         raise RunError(f"원문을 {MIN_OPENED}건 이상 열어야 한다(opened {len(opened)}건)")
+    doms = {site(u) for u in opened}
+    if len(doms) < MIN_DOMAINS:
+        raise RunError(f"원문을 서로 다른 사이트 {MIN_DOMAINS}곳 이상에서 열어야 한다({', '.join(sorted(doms))})")
     for key, it in items.items():
         for s in it.get("sources") or []:
             if s.get("url") not in opened:

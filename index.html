@@ -164,7 +164,10 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 /* 등급 기준 */
 #crit-p .pb{padding:0}
 .cr{display:grid;grid-template-columns:8px 32px minmax(0,1fr);gap:12px;align-items:baseline;padding:10px var(--pad);white-space:nowrap;border-bottom:1px solid var(--line);font-size:12px;color:var(--fog)}
-.cr:last-child{border-bottom:0}
+.cr:last-of-type{border-bottom:1px solid var(--line)}
+.todo{display:grid;gap:4px;padding:10px var(--pad);font-size:12px;line-height:1.5}
+.todo b{font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em}
+.todo span{color:var(--ice)} .todo a{font-size:11px;color:var(--fog)}
 .cr i{width:8px;height:8px;align-self:center;background:var(--c)}
 .cr b{color:var(--ice);font-weight:600}
 .cr span{overflow:hidden;text-overflow:ellipsis}
@@ -319,6 +322,11 @@ const ITEMS={troop_movement:"병력 이동·동원",nuclear:"핵·전략무기",
   foreign_forces:"미·중·러 이상 동향",parade_massing:"기념일 전후 집결",gov_warning:"정부 긴급 경고"};
 const LABEL=["평시","주의","경계","위험"];
 // 한 줄 요약(칸 높이 고정). 전체 문장은 title 로
+// 등급별 개인 준비 — 이 감시판의 권고일 뿐이다. 실제 대피는 정부 경보(재난문자·사이렌)를 따른다.
+const TODO=["가까운 지하 대피소 위치를 한 번 알아 둡니다.",
+  "뉴스로 상황만 확인합니다. 따로 할 일은 없습니다.",
+  "비상용품(물·식량·상비약·라디오·보조배터리)을 점검하고 가족 연락 방법을 정해 둡니다.",
+  "재난문자·TV·라디오의 정부 안내를 확인하고, 경보가 울리면 가까운 지하 대피소로 갑니다."];
 const CRIT=[["징후 없음","징후 없음"],
   ["단일 징후 · 정례 활동만","단일 징후, 또는 정례 훈련·미사일 시험·위협 발언만 있음"],
   ["징후 2개 항목 이상 · 교차확인","일상 활동이 아닌 징후가 2개 항목 이상, 또는 교차확인된 징후 1개 이상"],
@@ -364,7 +372,8 @@ function render(latest,events){
   $("checked").textContent=lastCheck?short(lastCheck):"—";
   if(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3)$("lag").classList.add("on");
   drawDial(g);
-  $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("");
+  $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("")
+    +(g!=null?`<div class="todo"><b>지금 할 일</b><span>${TODO[g]}</span><a href="https://www.safekorea.go.kr" target="_blank" rel="noopener">대피소 찾기 · 국민재난안전포털</a></div>`:"");
 
   const items=latest?.items||{};let n=0;
   $("sensors").innerHTML=Object.entries(ITEMS).map(([k,name])=>{

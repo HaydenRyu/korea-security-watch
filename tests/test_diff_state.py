@@ -141,3 +141,12 @@ def test_event_keeps_sources_for_history():
     assert [s["url"] for s in ev["sources"]] == ["https://a.example", "https://b.example"]
     _, ev0, _ = d.step(run(), None, [])
     assert ev0["sources"] == []
+
+
+def test_opened_must_span_two_sites():
+    r = run()
+    r["opened"] = ["https://www.nknews.org/", "https://www.nknews.org/pro/", "https://nknews.org/category/news/"]
+    assert _raises(r)
+    r["opened"] = ["https://www.nknews.org/", "https://en.yna.co.kr/nk", "https://www.yna.co.kr/x"]
+    assert not _raises(r)
+    assert d.site("https://en.yna.co.kr/a") == "yna.co.kr" and d.site("https://www.38north.org/") == "38north.org"

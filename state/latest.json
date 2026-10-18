@@ -1,65 +1,46 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 증강 합참",
+      "North Korea troop movement front line deployment"
     ],
     "nuclear": [
-      "북한 핵 전략무기 풍계리",
-      "North Korea nuclear Punggye-ri Yongbyon"
+      "북한 핵 전략무기 풍계리 핵실험 징후",
+      "North Korea nuclear weapons Punggye-ri 38 North"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition logistics"
+      "북한 탄약 군수 수송 러시아 연료 비축",
+      "North Korea munitions logistics shipment Russia NK News"
     ],
     "border_clash": [
-      "DMZ NLL 북한 침범 포격",
-      "North Korea DMZ clash"
+      "DMZ NLL 북한 군사분계선 침범 포격 경고사격",
+      "North Korea DMZ border clash NLL Reuters"
     ],
     "foreign_forces": [
-      "미군 전략자산 한반도 중러 군용기",
-      "US strategic assets Korea Russia China military"
+      "미군 전략자산 한반도 중국 러시아 군용기 KADIZ",
+      "US strategic assets Korea USFK China Russia aircraft October 2026"
     ],
     "parade_massing": [
-      "북한 열병식 기념일 집결",
-      "North Korea parade massing"
+      "북한 열병식 10월 10일 기념일 병력 집결",
+      "North Korea parade Pyongyang October 2026"
     ],
     "gov_warning": [
-      "한국 여행경보 대피 권고 합참",
-      "State Department Korea travel advisory"
+      "북한 긴급 NSC 대피 경보 여행경보 상향 주한미국대사관",
+      "South Korea travel advisory State Department embassy security alert North Korea missile Japan Ministry of Defense"
     ]
   },
   "opened": [
+    "https://www.omanobserver.om/article/1127336/world/asia/north-south-korea-exchange-warning-shots-near-sea-border",
     "https://www.nknews.org/",
-    "https://www.nknews.org/pro/",
-    "https://www.nknews.org/category/news/"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "최근 24시간 내 신규 징후는 무기 시험 주장(정례)뿐이며 병력·군수·정부 경고 신호는 확인되지 않았다. 10/3·10/12 미사일 발사 이후 시험 기조가 이어지는 수준이다.",
+  "overall_summary": "최근 24시간 내 새 징후는 KCNA 발표(코리아타임스·연합 인용)의 AI 유도 어뢰 시험뿐으로 정례 무기시험 범주다. 병력·핵·군수·접경·정부 경고에서 새 사건은 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "북한 동해안",
-      "lat": 39.5,
-      "lon": 127.5,
-      "summary": "북한이 AI 유도 어뢰 시험과 잠수함발사 전략순항미사일 2발 발사를 주장했다고 NK News 가 전했다.",
-      "meaning": "무기 시험·위협 성격으로 정례 범주에 해당한다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/category/news/"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "10/17 NK News: 북한 국영매체가 고정밀 AI 어뢰 시험 보도",
-        "10/16 NK News Pro: 북한 잠수함발사 전략순항미사일 2발 발사 주장"
-      ],
-      "speculation": []
+      "status": "none"
     },
     "logistics": {
       "status": "none"
@@ -77,8 +58,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-18T04:45:31+00:00",
-  "grade": 1,
-  "grade_label": "주의",
+  "checked_at": "2026-10-18T05:10:24+00:00",
+  "grade": 0,
+  "grade_label": "평시",
   "active": []
 }

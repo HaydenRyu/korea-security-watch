@@ -250,6 +250,7 @@ h2 .sub{font:400 11px var(--data);color:var(--dim);margin-left:8px}
       <div class="layers" role="group" aria-label="지도 레이어">
         <button type="button" data-layer="day" aria-pressed="true">주간 위성</button>
         <button type="button" data-layer="night" aria-pressed="false">야간 조명</button>
+        <button type="button" data-layer="cctv" aria-pressed="false" disabled title="접경 도로 CCTV 위치(국가교통정보센터)">CCTV</button>
         <button type="button" data-layer="firms" aria-pressed="false" disabled title="NASA FIRMS 위성 열점(최근 48시간)">열점</button>
       </div>
     </section>
@@ -426,6 +427,18 @@ function initMap(){
   fb.addEventListener("click",()=>{const on=fb.getAttribute("aria-pressed")!=="true";fb.setAttribute("aria-pressed",on);
     if(on)layers.firms.addTo(map);else map.removeLayer(layers.firms)});
 }
+function drawCctv(doc){
+  if(!map||!doc||!doc.cameras)return;
+  const b=document.querySelector("[data-layer=cctv]");b.disabled=false;b.textContent=`CCTV ${doc.cameras.length}`;
+  layers.cctv=L.layerGroup();
+  doc.cameras.forEach(c=>L.marker([c.lat,c.lon],{title:c.name,icon:L.divIcon({className:"",iconSize:[10,10],
+      html:'<div style="width:10px;height:10px;background:var(--ice);transform:rotate(45deg);box-shadow:0 0 0 2px rgba(7,11,20,.85)"></div>'})})
+    .bindTooltip(`${esc(c.name)}<br><span style="color:var(--fog)">누르면 국가교통정보센터에서 재생</span>`,{className:"tip"})
+    .on("click",()=>window.open(doc.play_url,"_blank","noopener")).addTo(layers.cctv));
+  b.addEventListener("click",()=>{const on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);
+    if(on)layers.cctv.addTo(map);else map.removeLayer(layers.cctv)});
+  const a=map.attributionControl;a.addAttribution("CCTV 위치 © 국가교통정보센터");
+}
 function drawFirms(doc){
   if(!map||!doc||!doc.points)return;
   const fb=document.querySelector("[data-layer=firms]");fb.disabled=false;
@@ -456,6 +469,7 @@ function tick(){document.getElementById("now").textContent=kst(Date.now(),{hour:
   try{events=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(l=>JSON.parse(l))}catch(e){}
   DATA={latest,events};render(latest,events);initMap();drawPins(latest?.items);route();tick();
   try{drawFirms(await get("firms.json"))}catch(e){}
+  try{const r=await fetch("data/cctv.json");if(r.ok)drawCctv(await r.json())}catch(e){}
   setInterval(tick,1000);setInterval(()=>drawDial(latest?.grade??null),60000);
 })();
 </script>

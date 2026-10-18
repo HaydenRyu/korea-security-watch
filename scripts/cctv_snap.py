@@ -36,6 +36,11 @@ LIVE_EVERY = 3600   # 라이브 ID 재조회 간격(초)
 LIVE_MARK = Path.home() / "Library" / "Caches" / "jis-live-at"   # 마지막 조회 시각(파일 mtime)
 # 10/18 실측: firms(:45 매시)는 하루 1회만, weekly(일 11:00Z)는 아예 안 돌았다 → 주간 요약 알림 누락
 KICK = {"firms.yml": ("hourly", 70 * 60), "watchdog.yml": ("hourly", 7 * 3600), "weekly.yml": ("sun11z", 20 * 60)}
+# 받은 재생 주소 재사용 — 5분마다 2~4회 조회(월 1.7만~3.5만)는 한도 해제 뒤 다시 바닥난다(10/18).
+# 주소(인증키 서명 포함)는 이 맥 캐시에만 둔다(600). 유효 시간은 실측 전 — 11/1 뒤 성공률로 URL_TTL 을 조정한다
+URL_CACHE = Path.home() / "Library" / "Caches" / "jis-its-urls.json"
+URL_TTL = 30 * 60        # 캐시 주소를 쓰는 최대 나이(초)
+MIN_REFETCH = 10 * 60    # 실패 재조회 사이 최소 간격(초) — 재생 서버 403 이 잦아도 조회를 몰아 쓰지 않는다
 QUOTA_MARK = Path.home() / "Library" / "Caches" / "jis-its-quota"   # 월 호출 한도 초과(4001) — 다음 달 1일까지 CCTV 조회 중단
 KICK_MARK = Path.home() / "Library" / "Caches" / "jis-kick"   # 워크플로별 마지막 깨운 시각(파일 mtime)
 REPO = "HaydenRyu/korea-security-watch"
@@ -178,6 +183,21 @@ def ffmpeg() -> str:
     raise SystemExit("ffmpeg 없음")
 
 
+def url_cache() -> tuple[float, dict | None]:
+    """(마지막 조회 시각, URL_TTL 안이면 주소 목록)."""
+    try:
+        d = json.loads(URL_CACHE.read_text())
+        return d["at"], d["urls"] if time.time() - d["at"] < URL_TTL else None
+    except (OSError, ValueError, KeyError):
+        return 0.0, None
+
+
+def save_url_cache(urls: dict) -> None:
+    URL_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    URL_CACHE.write_text(json.dumps({"at": time.time(), "urls": urls}))
+    URL_CACHE.chmod(0o600)
+
+
 def area_urls(key: str, cams: list[dict]) -> dict[str, list[dict]]:
     """도로 종류별 1회 조회(카메라 전부를 덮는 상자) — 10/18 카메라마다 최대 3회 조회(5분에 최대 54회)로 월 한도를 넘겼다.
     한 회차 호출 = 종류 수(2) + 실패분 재조회 1바퀴(최대 2) = 최대 4회."""
@@ -241,19 +261,24 @@ def main() -> int:
         print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 건너뜀"}, ensure_ascii=False))
     shots = [{"name": c["name"], "at": None, "img": None} for c in cams]
     with tempfile.TemporaryDirectory() as td:
-        for _ in range(0 if quota else 2):          # 1바퀴 + 실패분 1바퀴(재생 서버 403 이 잦다 — 새 주소로)
+        for n in range(0 if quota else 2):          # 1바퀴(캐시 주소 우선) + 실패분 1바퀴(새 주소 — 재생 서버 403 이 잦다)
             todo = [i for i, sh in enumerate(shots) if not sh["img"]]
             if not todo or time.monotonic() - t0 > BUDGET:
                 break
-            try:
-                urls = area_urls(key, [cams[i] for i in todo])
-            except urllib.error.HTTPError as e:
-                if e.code == 401 and b'"resultCode":4001' in e.read().replace(b" ", b""):
-                    quota = block_quota()   # 한 달 내내 401 을 두드리지 않는다
-                    print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 중단"}, ensure_ascii=False))
-                break
-            except (OSError, ValueError, KeyError):
-                break
+            last, urls = url_cache()
+            if n or not urls:
+                if time.time() - last < MIN_REFETCH:
+                    break   # 방금 받은 주소로도 실패 — 다음 회차에(Worker 가 직전 사진을 남긴다)
+                try:
+                    urls = area_urls(key, cams)   # 전 카메라 상자 — 캐시가 다음 회차 전부를 덮게
+                    save_url_cache(urls)
+                except urllib.error.HTTPError as e:
+                    if e.code == 401 and b'"resultCode":4001' in e.read().replace(b" ", b""):
+                        quota = block_quota()   # 한 달 내내 401 을 두드리지 않는다
+                        print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 중단"}, ensure_ascii=False))
+                    break
+                except (OSError, ValueError, KeyError):
+                    break
             for i in todo:
                 if time.monotonic() - t0 > BUDGET:
                     break

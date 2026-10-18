@@ -1,0 +1,534 @@
+{
+ "updated": "2026-10-18",
+ "title": "2026년 한반도 안보 흐름",
+ "overview": "북한은 2월 9차 당대회에서 핵 보유를 협상 불가로 못박고 남한을 '적대국'으로 고정한 뒤, 극초음속·중거리·전술핵·집속탄 탄두 등 다양한 미사일 시험과 세 번째 농축시설 공개로 핵·재래식 전력을 함께 키웠다. 러시아와는 파병 기념관·군사협력 계획·두만강 다리로 밀착을 제도화했고, 6월 시진핑 방북과 10월 신압록강대교 개통으로 중국과의 관계도 복원했다. 2월 말 시작된 미국의 이란 전쟁은 주한 미사일방어 자산 이전, 한미훈련 축소·취소로 이어져 한반도 억지 태세에 공백 우려를 낳았다. 9월 DMZ 지뢰 폭발 이후 10월 미사일 시험이 몰리면서 남북 군사 긴장이 다시 높아졌다.",
+ "months": [
+  {
+   "month": "2026-01",
+   "summary": "새해 첫 극초음속 발사와 무인기 침투 공방으로 시작했다. 이재명 대통령은 방중해 시진핑에게 대북 중재를 요청했다."
+  },
+  {
+   "month": "2026-02",
+   "summary": "9차 당대회에서 핵 고수·남한 적대·조건부 대미 대화 노선이 확정됐다. 2월 28일 미·이스라엘의 이란 공격으로 중동 전쟁이 시작됐다."
+  },
+  {
+   "month": "2026-03",
+   "summary": "프리덤 실드(축소 규모) 중 탄도미사일 약 10발이 발사됐고, 주한 사드 일부가 중동으로 옮겨졌다는 보도가 나왔다. 최고인민회의가 헌법을 고쳤고 ICBM용 엔진 시험도 보도됐다."
+  },
+  {
+   "month": "2026-04",
+   "summary": "집속탄 탄두 탄도미사일 시험이 잇따랐고, 평양에 러시아 파병 기념관이 문을 열어 북러 군사협력 장기화가 공식화됐다."
+  },
+  {
+   "month": "2026-05",
+   "summary": "트럼프–시진핑 베이징 회담이 경제 중심으로 끝났고, 북한은 서해상으로 근거리탄도미사일을 쐈다."
+  },
+  {
+   "month": "2026-06",
+   "summary": "김정은이 세 번째 우라늄 농축시설을 공개했고 IAEA가 우려를 표명했다. 시진핑이 7년 만에 방북했고 전술핵 탄두 시험이 보도됐다."
+  },
+  {
+   "month": "2026-07",
+   "summary": "신형 구축함 강건호의 순항미사일 시험 외에 큰 발사는 없었다. 중동 전쟁이 이어지며 미군 자산 이탈 우려가 계속됐다."
+  },
+  {
+   "month": "2026-08",
+   "summary": "트럼프가 한미훈련 축소를 지시해 을지 프리덤 실드가 5일로 줄었고, 이란전 여파로 쌍룡훈련도 취소됐다. 북한은 훈련 전후 탄도미사일을 잇달아 쐈다."
+  },
+  {
+   "month": "2026-09",
+   "summary": "DMZ 지뢰 폭발로 한국군 3명이 다쳤고, 북러 두만강 다리 개통·MSMT 노동자 보고서·북한군 포로 송환 공개가 이어졌다. 한미일은 프리덤 에지를 실시했다."
+  },
+  {
+   "month": "2026-10",
+   "summary": "중거리미사일(3일)·탄도미사일(12일)·잠수함발사 순항미사일(14일) 시험이 몰렸고, 한국은 극초음속 활공체 시험에 성공했다. 북중 신압록강대교도 개통됐다."
+  }
+ ],
+ "events": [
+  {
+   "date": "2026-10-15",
+   "category": "북러·북중",
+   "title": "신의주–단둥 신압록강대교 공식 개통",
+   "summary": "2014년 중국 측 구간 완공 뒤 지연되던 4차로 3km 다리가 개통됐다. 북·중 총리가 무역 확대를 언급했다.",
+   "why": "중국이 북한 교역의 최대 95%를 차지하는 상황에서 대북 제재의 실효가 더 약해질 수 있다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/economy/2026/10/16/china-north-korea-border-bridge-may-do-little-to-spur-trade-experts-say"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "category": "미사일",
+   "title": "잠수함발사 전략순항미사일 2종 시험",
+   "summary": "조선중앙통신은 동해상에서 잠수함발사 전략순항미사일 2종(불화살-3-31 포함)을 시험했다고 밝혔다.",
+   "why": "'전략' 표현은 핵탑재를 시사하며, 해상 기반 핵 운반수단 확보 시도가 이어지고 있다는 신호다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/10/15/north-korea-tests-two-submarine-launched-missiles-state-media-reports"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-12",
+   "category": "미사일",
+   "title": "평양 일대서 탄도미사일 여러 발 발사",
+   "summary": "합참은 오전 9시 20분께 평양 일대에서 동해상으로 탄도미사일 여러 발을 탐지했고, 일부는 900km 이상 비행했다고 밝혔다. 다음 날 김정은은 화성-20형 등을 전시한 무기 박물관을 열고 무기 개발 지속을 공언했다.",
+   "why": "한국의 극초음속 시험 나흘 만의 대응 성격으로, 남북 간 미사일 경쟁이 서로를 자극하는 구도다.",
+   "sources": [
+    {
+     "name": "Euronews",
+     "url": "https://www.euronews.com/2026/10/12/north-korea-fires-several-ballistic-missiles-into-sea-of-japan-seouls-military-says"
+    },
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/10/kim-jong-un-opens-new-weapons-museum-as-north-korea-claims-missile-test-success/"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-08",
+   "category": "한미일 훈련·전력",
+   "title": "한국, 국산 극초음속 활공체(HGV) 첫 시험 성공",
+   "summary": "이재명 대통령이 참관한 가운데 국방과학연구소 안흥시험장에서 국산 극초음속 활공체 시험이 성공했다고 청와대가 밝혔다.",
+   "why": "한국의 독자 타격 능력 강화로, 북한이 이를 명분 삼아 추가 발사에 나섰다.",
+   "sources": [
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/10/south-korea-tests-hypersonic-missile-for-first-time-weeks-after-north/"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-03",
+   "category": "미사일",
+   "title": "원산서 중거리탄도미사일(IRBM) 발사",
+   "summary": "합참은 원산 일대에서 발사된 미사일이 700km 이상 비행했다고 밝혔고(일본 추정 약 680km), 김여정은 김정은이 참관한 '전략' 중거리미사일 시험이라며 회피 기동과 AI 기능을 주장했다.",
+   "why": "핵탑재 가능 중거리미사일로 주일미군·한국 미사일방어망 돌파 능력을 과시한 것이다.",
+   "sources": [
+    {
+     "name": "Euronews",
+     "url": "https://www.euronews.com/2026/10/04/north-korea-fires-intermediate-range-missile-claiming-evasive-flight-and-ai-features"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "category": "제재·외교",
+   "title": "젤렌스키, 북한군 포로 2명 한국 송환 공개",
+   "summary": "젤렌스키 대통령이 유엔총회 연설에서 2025년 1월 쿠르스크에서 생포한 북한군 포로 2명을 한국에 보냈다고 밝혔다. 한국은 비공개 합의 위반이라며 사과를 요구했고 10월 8일 주우크라이나 대사 소환을 발표했다.",
+   "why": "북한군의 러시아 파병이 한국 외교에 직접 부담으로 돌아온 첫 사례다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/9/24/zelenskyy-says-ukraine-sent-two-north-korean-pows-to-south-korea"
+    },
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/10/8/south-korea-recalls-envoy-to-kyiv-over-diplomatic-row-with-ukraine"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-21",
+   "category": "접경",
+   "title": "DMZ 서부 폭발로 한국군 3명 중상",
+   "summary": "비무장지대 서부 구간에서 폭발이 일어나 한국군 3명이 크게 다쳤다. 합참은 유엔사와의 조사 결과 최근 매설된 북한 지뢰일 가능성이 높다고 밝혔다.",
+   "why": "군사분계선 인근에서 인명 피해가 난 직접 충돌로, 우발적 확전 위험을 키운다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/9/21/three-south-korean-officers-wounded-in-border-explosion"
+    },
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/9/28/south-korea-suspects-north-korean-mines-behind-dmz-blast"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "category": "제재·외교",
+   "title": "다국적제재모니터링팀(MSMT), 북한 해외 노동자 보고서",
+   "summary": "한·미·일 등 11개국 MSMT는 북한이 노동자 3만5600~10만1280명을 해외(대부분 중·러)에 보내 2025년 4억5천만~8억 달러를 벌어 핵·미사일 개발에 썼다고 발표했다.",
+   "why": "유엔 전문가패널 해체 뒤 제재 감시를 대신하는 장치로, 중·러의 제재 이탈을 수치로 보여준다.",
+   "sources": [
+    {
+     "name": "미 국무부",
+     "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/09/joint-statement-of-the-multilateral-sanctions-monitoring-team-msmt-on-the-report-covering-the-dprks-overseas-labour-program"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-12",
+   "category": "미사일",
+   "title": "원산서 탄도미사일 여러 발 발사",
+   "summary": "합참은 오전 5시 20분께 원산 일대에서 탄도미사일 여러 발이 약 250km 비행했다고 밝혔다. 한미일 해상훈련 종료 다음 날이었다.",
+   "why": "3국 훈련에 대한 무력 대응 패턴이 반복되고 있다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/9/12/north-korea-fires-ballistic-missiles-off-eastern-coast-seoul-says"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-07",
+   "category": "한미일 훈련·전력",
+   "title": "한미일 '프리덤 에지' 훈련(9.7~11)",
+   "summary": "제주 남동방 공해에서 구축함 6척, 약 2300명이 참가한 3국 다영역 훈련이 열렸다. 하루 전 북한은 핵탑재 가능하다는 두 번째 5000t급 구축함 '강건호'를 취역시켰다.",
+   "why": "미국 훈련 축소 속에서도 3국 미사일방어 공조는 유지되고, 북한은 해군 핵무장으로 맞서고 있다.",
+   "sources": [
+    {
+     "name": "Stars and Stripes",
+     "url": "https://www.stripes.com/theaters/asia_pacific/2026-09-07/freedom-edge-japan-south-korea-drills-22783709.html"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-07",
+   "category": "북러·북중",
+   "title": "북러 첫 두만강 자동차 다리 개통",
+   "summary": "두만강을 가로지르는 약 1km 2차로 다리가 개통돼 첫 화물트럭이 건넜다. 러시아 총리는 쿠르스크에서 함께 싸운 북한군을 언급했다.",
+   "why": "파병 대가로 북러 물자 교류 통로가 늘어 제재 회피 여지가 커진다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/9/7/russia-and-north-korea-deepen-relations-with-symbolic-road-bridge"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "category": "한미일 훈련·전력",
+   "title": "미국, 이란전 여파로 한미 쌍룡 상륙훈련 취소",
+   "summary": "한국 해병대는 미국이 6월 중동 상황으로 전개 능력이 제약된다고 통보했고, 9월 예정이던 쌍룡훈련이 취소됐다고 밝혔다.",
+   "why": "중동 전쟁이 한반도 연합 전력·훈련을 직접 잠식하고 있다는 사례다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/8/24/south-korea-says-us-cancelled-upcoming-joint-marine-exercises-over-iran-war"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "category": "미사일",
+   "title": "을지 프리덤 실드 중 단거리탄도미사일 10여 발",
+   "summary": "합참은 평양 일대에서 단거리탄도미사일 10발 이상이 약 300km 비행했다고 밝혔다. 국방장관은 600mm 방사포로 추정했다.",
+   "why": "훈련 축소에도 북한은 도발을 멈추지 않아, 축소가 긴장 완화로 이어지지 않았다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/8/20/north-korea-launches-ballistic-missiles-as-us-south-korea-drills-end"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-16",
+   "category": "한미일 훈련·전력",
+   "title": "트럼프, 한미연합훈련 대폭 축소 지시…UFS 11일→5일",
+   "summary": "트럼프 대통령이 한미훈련을 '대폭 축소'하라고 지시해 8월 17일 시작된 을지 프리덤 실드가 21일 조기 종료됐다. 트럼프는 김정은이 대화 요청에 '긍정적'으로 답했다고 했지만 김여정은 19일 이를 부인했다.",
+   "why": "동맹 훈련이 미국의 비용·이란전 기여 문제와 엮여 흔들리고, 북미 대화 신호와 억지력 사이 간극이 커졌다.",
+   "sources": [
+    {
+     "name": "Stars and Stripes",
+     "url": "https://www.stripes.com/theaters/asia_pacific/2026-08-18/trump-south-korea-exercise-ending-early-22594931.html"
+    },
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/8/18/trump-says-n-koreas-kim-has-responded-to-his-request-for-a-conversation"
+    },
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/8/19/north-korea-leaders-sister-denies-talks-with-hostile-us"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-12",
+   "category": "미사일",
+   "title": "원산서 탄도미사일 발사…올해 11번째",
+   "summary": "합참은 원산 일대에서 발사된 탄도미사일이 700km 이상 비행했다고 밝혔다. 8월 6일에 이은 두 번째 발사로, 한국 평가 기준 올해 11번째 탄도미사일 시험이다.",
+   "why": "을지훈련 직전 무력시위로 6월 말 이후 멈췄던 탄도미사일 발사가 재개됐다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/8/12/n-korea-launches-ballistic-missile-as-s-korea-us-plan-military-drills"
+    }
+   ]
+  },
+  {
+   "date": "2026-06-25",
+   "category": "핵",
+   "title": "'전술핵' 화성-11라로 남측 발전소 타격 시험 주장",
+   "summary": "김정은이 화성-11라 근거리탄도미사일 등 시험을 참관했고, 북한 매체는 남측 발전소를 겨냥할 수 있는 전술핵 임무라고 시사했다. 실시간 공지가 없어 탐지 실패 논란이 일자 국방부는 한미가 실시간 추적했다고 밝혔다.",
+   "why": "한국 기반시설을 전술핵 표적으로 공개 거론해 핵 사용 문턱을 낮추는 신호다.",
+   "sources": [
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/06/north-korea-tests-ability-to-strike-rok-power-stations-with-tactical-nukes-kcna/"
+    },
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/06/seoul-says-it-tracked-north-korea-missile-test-despite-no-real-time-alert/"
+    }
+   ]
+  },
+  {
+   "date": "2026-06-08",
+   "category": "북러·북중",
+   "title": "시진핑 7년 만에 방북(6.8~9)",
+   "summary": "시진핑 주석이 2019년 이후 처음 평양을 국빈 방문해 김정은과 정상회담을 했다. 양측은 협력 강화를 약속했고, 공개 논의에 비핵화는 없었다.",
+   "why": "중국이 북러 밀착을 견제하며 북한에 대한 영향력을 되찾으려는 움직임으로, 대북 압박 공조는 더 어려워진다.",
+   "sources": [
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/06/chinese-leader-xi-jinping-arrives-in-north-korea-for-summit-with-kim-jong-un/"
+    },
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/economy/2026/6/9/xi-kim-pledge-to-boost-ties-at-rare-pyongyang-summit"
+    }
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "category": "핵",
+   "title": "김정은, 세 번째 우라늄 농축시설 첫 공개",
+   "summary": "김정은이 새로 가동한 핵물질 생산시설을 시찰하며 핵무기급 물질 생산능력이 5년간 두 배 이상 늘었다고 주장하고 핵무력의 '기하급수적' 확대를 지시했다. IAEA 그로시 사무총장은 이 시설을 영변의 새 건물로 지목하며 '심각한 우려'를 표명했다.",
+   "why": "핵탄두 생산 속도가 빨라진다는 뜻으로, 핵 동결·협상의 기준선 자체가 올라간다.",
+   "sources": [
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/06/kim-jong-un-unveils-new-nuclear-plant-vows-to-boost-arsenal-exponentially/"
+    },
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/06/iaea-chief-voices-serious-concern-about-north-koreas-new-nuclear-facility/"
+    }
+   ]
+  },
+  {
+   "date": "2026-05-26",
+   "category": "미사일",
+   "title": "정주서 서해상으로 근거리탄도미사일 발사",
+   "summary": "합참은 평안북도 정주 일대에서 서해상으로 근거리탄도미사일(CRBM) 여러 발이 발사됐다고 밝혔다. 시진핑 방북설이 돌던 때였다.",
+   "why": "서해 방향 발사는 수도권·서해5도 방면 전술 타격 능력을 겨냥한다.",
+   "sources": [
+    {
+     "name": "연합뉴스(Yonhap)",
+     "url": "https://m-en.yna.co.kr/view/AEN20260526005851315"
+    }
+   ]
+  },
+  {
+   "date": "2026-05-15",
+   "category": "세계(연결)",
+   "title": "트럼프–시진핑 베이징 정상회담",
+   "summary": "트럼프 대통령이 사흘간 베이징을 방문해 시진핑과 회담했다. 경제 협력이 중심이었고, 시진핑은 대만을 '가장 중요한 문제'로 경고했으며 미국 측은 호르무즈 해협 개방에 합의했다고 밝혔다.",
+   "why": "미중 관계가 거래 중심으로 흘러 대북 문제는 의제에서 밀려났고, 대만 긴장은 주한미군 역할 논쟁과 맞닿아 있다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/5/15/trump-and-xi-move-towards-business-first-relationship-after-beijing-summit"
+    }
+   ]
+  },
+  {
+   "date": "2026-04-26",
+   "category": "북러·북중",
+   "title": "평양에 러시아 파병 기념관 개관",
+   "summary": "김정은이 러시아 국방장관 벨로우소프 등이 참석한 가운데 해외군사작전 전투위훈기념관을 열었다. 벨로우소프는 2027~31년 군사협력 계획 서명 준비가 됐다고 밝혔다.",
+   "why": "파병을 공식 기념하고 다년 군사협력으로 제도화해 북러 동맹이 장기화되고 있음을 보여준다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/gallery/2026/4/27/north-korea-opens-museum-for-troops-killed-fighting-for-russia"
+    }
+   ]
+  },
+  {
+   "date": "2026-04-19",
+   "category": "미사일",
+   "title": "집속탄·지뢰 탄두 화성-11라 5발 시험",
+   "summary": "김정은이 참관한 가운데 개량형 화성-11라 5발을 약 136km 떨어진 섬에 쐈다고 북한 매체가 밝혔다. 4월 초에도 화성-11가 집속탄 탄두 시험을 했다.",
+   "why": "핵 이전 단계의 대량 재래식 타격 수단을 늘려 전쟁 초기 선택지를 넓히고 있다.",
+   "sources": [
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/04/north-korea-tests-missiles-armed-with-cluster-bombs-and-fragmentation-mines/"
+    },
+    {
+     "name": "연합뉴스(Yonhap)",
+     "url": "https://en.yna.co.kr/view/AEN20260409000351315"
+    }
+   ]
+  },
+  {
+   "date": "2026-03-29",
+   "category": "미사일",
+   "title": "ICBM용 고체연료 엔진 지상분출시험 보도",
+   "summary": "조선중앙통신은 탄소섬유 복합재를 쓴 고체연료 엔진이 최대추력 2500kN을 냈다고 보도했다(2025년 9월 주장 1971kN).",
+   "why": "미 본토 타격용 차세대 ICBM(화성-20형 추정) 개발이 진행 중임을 뜻한다.",
+   "sources": [
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/03/kim-jong-un-oversees-engine-test-state-media-claims-higher-thrust-capabilities/"
+    }
+   ]
+  },
+  {
+   "date": "2026-03-22",
+   "category": "북 내부",
+   "title": "최고인민회의, 헌법 개정·김정은 재선출",
+   "summary": "3월 22~23일 최고인민회의에서 김정은이 국무위원장에 재선출되고 헌법이 개정됐다. '사회주의헌법' 명칭이 바뀌었으나 전문은 공개되지 않았다.",
+   "why": "남한을 적대국으로 규정하는 조항이 헌법에 반영됐을 가능성이 있어 '두 국가' 노선의 제도화 여부가 관건이다.",
+   "sources": [
+    {
+     "name": "38 North",
+     "url": "https://www.38north.org/2026/03/expert-takes-on-opening-session-of-the-15th-supreme-peoples-assembly/"
+    }
+   ]
+  },
+  {
+   "date": "2026-03-14",
+   "category": "미사일",
+   "title": "프리덤 실드 중 탄도미사일 약 10발",
+   "summary": "합참은 순안 일대에서 동해상으로 탄도미사일 약 10발이 약 350km 비행했다고 밝혔다. 3월 9일 시작된 한미 프리덤 실드(야외훈련 22건, 전년의 절반 이하) 기간이었다.",
+   "why": "대규모 일제사격으로 연합훈련에 맞대응하는 패턴이 이어졌다.",
+   "sources": [
+    {
+     "name": "France 24",
+     "url": "https://www.france24.com/en/live-news/20260314-s-korea-says-north-fires-around-10-ballistic-missiles"
+    },
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/3/10/north-korea-denounces-muscle-flexing-us-south-korean-military-exercises"
+    }
+   ]
+  },
+  {
+   "date": "2026-03-11",
+   "category": "한미일 훈련·전력",
+   "title": "주한미군 사드 일부 중동 이전 보도",
+   "summary": "미 국방부가 주한 사드 체계 일부를 중동으로 옮기고 인도태평양의 패트리엇 요격미사일도 끌어 쓰고 있다고 보도됐다. 이재명 대통령은 반대했지만 대북 억지력이 크게 약화되진 않는다고 말했다.",
+   "why": "이란전으로 한반도 미사일방어 자산이 빠져나가 공백 우려가 커졌다.",
+   "sources": [
+    {
+     "name": "Stars and Stripes",
+     "url": "https://www.stripes.com/theaters/asia_pacific/2026-03-11/thaad-south-korea-middle-east-iran-21025377.html"
+    }
+   ]
+  },
+  {
+   "date": "2026-03-04",
+   "category": "미사일",
+   "title": "최현호 구축함서 순항미사일 시험",
+   "summary": "김정은이 서해에서 '핵무장' 구축함 최현호의 순항미사일 발사를 참관했다고 노동신문이 보도했다. 2030년까지 핵무장 함정 12척 건조를 지시했다고 전해졌다.",
+   "why": "해상 발사 핵 순항미사일로 공격 방향이 다양해진다.",
+   "sources": [
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/03/kim-jong-un-oversees-cruise-missile-test-from-new-warship-ahead-of-deployment/"
+    }
+   ]
+  },
+  {
+   "date": "2026-03-02",
+   "category": "핵",
+   "title": "IAEA \"영변 새 건물 외부 완공, 내부 설비 진행 추정\"",
+   "summary": "그로시 IAEA 사무총장은 이사회에서 강선 농축시설과 비슷한 규모의 영변 새 건물이 외부 공사를 마쳤고, 원자로도 계속 가동 중이라고 밝혔다.",
+   "why": "6월 북한의 농축시설 공개로 이어진 사전 경고였다.",
+   "sources": [
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/03/north-korea-has-finished-new-facility-at-nuclear-complex-watchdog-says/"
+    }
+   ]
+  },
+  {
+   "date": "2026-02-28",
+   "category": "세계(연결)",
+   "title": "미·이스라엘 이란 공격 개시, 하메네이 사망",
+   "summary": "미국과 이스라엘이 이란 공습을 시작했고 하메네이 최고지도자가 사망했다. 북한은 '불법 침략'이라 비난했다. 10월에도 호르무즈 해협 봉쇄를 둘러싼 충돌이 이어지고 있다.",
+   "why": "미군 자산·훈련 역량이 중동으로 쏠리고, 북한은 핵 포기국의 운명을 핵 보유 정당화에 활용할 수 있다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/3/1/world-reacts-to-killing-of-irans-khamenei-by-us-israel-forces"
+    },
+    {
+     "name": "Al Jazeera",
+     "url": "https://aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels"
+    }
+   ]
+  },
+  {
+   "date": "2026-02-19",
+   "category": "북 내부",
+   "title": "노동당 9차 대회(2.19~25)",
+   "summary": "김정은이 총비서에 재추대됐고, 핵은 협상 대상이 아니라며 미국이 핵보유 지위를 인정하면 '평화공존'도 가능하다고 했다. 남한과의 동족 관계 단절은 '일시적 전술이 아니다'라고 못박았다.",
+   "why": "향후 5년 북한 노선(핵 고수·대남 적대·조건부 대미 대화)을 확정한 회의다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/2/20/north-koreas-kim-jong-un-launches-key-party-congress-held-every-5-years"
+    },
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/02/kim-jong-un-leaves-door-open-to-talks-if-us-accepts-north-koreas-nuclear-status/"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-27",
+   "category": "미사일",
+   "title": "평양 일대서 단거리탄도미사일 2발",
+   "summary": "일본 발표에 따르면 오후 4시께 평양 일대에서 단거리탄도미사일 2발이 약 350km 비행했다. 콜비 미 국방차관이 한국을 떠난 직후였다.",
+   "why": "무인기 갈등 속 남북 긴장이 이어졌다.",
+   "sources": [
+    {
+     "name": "ABC News",
+     "url": "https://abcnews.com/International/north-korea-test-launches-2-ballistic-missiles-sea/story?id=129591323"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-10",
+   "category": "접경",
+   "title": "북한, 한국 무인기 침투 주장",
+   "summary": "북한 총참모부는 한국이 2025년 9월 이후 최소 두 차례 무인기를 보냈고 1월 4일 한 대가 추락했다고 주장했다. 국방부는 군 운용 기종이 아니라고 부인했고 이 대통령은 민간 연루 가능성까지 조사를 지시했다.",
+   "why": "2024년 평양 무인기 사건처럼 접경 긴장의 촉발점이 될 수 있다.",
+   "sources": [
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/?p=966435"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-04",
+   "category": "미사일",
+   "title": "새해 첫 발사, 극초음속 미사일 주장",
+   "summary": "합참은 동해상으로 탄도미사일 여러 발이 약 900km 비행했다고 밝혔고, 북한은 김정은 참관 극초음속 미사일 발사훈련이라고 했다. 같은 날 이재명 대통령은 방중했고 1월 6일 시진핑에게 대북 중재를 요청했다.",
+   "why": "당대회를 앞두고 핵 억지력 강화를 과시하며 한중 정상외교에 맞불을 놓았다.",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/1/4/north-korea-fires-missiles-towards-sea-as-south-korean-leader-visits-china"
+    },
+    {
+     "name": "Euronews",
+     "url": "https://www.euronews.com/2026/01/05/north-korea-says-latest-missile-tests-involved-new-hypersonic-weapons-systems"
+    },
+    {
+     "name": "NK News",
+     "url": "https://www.nknews.org/2026/01/lee-says-he-asked-chinas-xi-to-act-as-a-mediator-with-north-korea/"
+    }
+   ]
+  }
+ ]
+}

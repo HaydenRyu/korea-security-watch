@@ -198,12 +198,26 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 
 /* ── 한 화면 아래 줄: 세계 안보 브리핑 · 지금 할 일 (참고 칸 — 한 화면 격자에 넣지 않는다) ── */
 .more{display:grid;gap:var(--gap);padding:0 var(--side) var(--gap);grid-template-columns:minmax(0,1fr);align-items:start}
+.yr{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+.yr>summary,.ym>summary{cursor:pointer;font:600 13px/1.6 var(--text);color:var(--ice);padding:4px 0}
+.yr>summary span{font:400 11px var(--data);color:var(--fog)}
+.ym>summary{font-weight:500;font-size:12px;color:var(--fog)}
+.ym ul,.ye{list-style:none;margin:0;padding:0}
+.ym li{display:grid;grid-template-columns:36px 1fr;gap:8px;padding:4px 0;font-size:12px;line-height:1.6;color:var(--fog)}
+.ym li b{color:var(--ice);font-weight:500}
+.ye{max-height:480px;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.ye>li{border-bottom:1px solid var(--line)}
+.ye summary{cursor:pointer;display:grid;grid-template-columns:40px 92px 1fr;gap:8px;padding:8px 0;font-size:13px;line-height:1.5;align-items:baseline}
+.ye .yd{font:400 11px var(--data);color:var(--fog)}.ye .yc{font:400 11px/1.4 var(--data);color:var(--dim)}.ye .yt{color:var(--ice)}
+.ye details>p{margin:0 0 4px;font-size:13px;line-height:1.6;color:var(--fog)}
+.ye details>.wk2,.ye details>.wm{margin-bottom:8px}.ye .wm a{color:var(--fog)}.ye .wm a:hover{color:var(--ice)}
+@media (max-width:759px){.ye summary{grid-template-columns:40px 1fr}.ye .yc{display:none}}
 .wctx{margin:0 0 4px;font-size:13px;color:var(--ice)}
 .wi{padding:12px 0;border-bottom:1px solid var(--line);display:grid;gap:4px}
 .wi:last-child{border-bottom:0;padding-bottom:0}
 .wi .wt{font:600 14px/1.45 var(--text);color:var(--ice)}
 .wi p{margin:0;font-size:13px;color:var(--ice)}
-.wi .wk2{font-size:12px;color:var(--fog)} .wi .wk2 b{font:500 10px/1.4 var(--data);letter-spacing:.04em;margin-right:8px}
+.wi .wk2,.ye .wk2{font-size:12px;color:var(--fog)} .wi .wk2 b,.ye .wk2 b{font:500 10px/1.4 var(--data);letter-spacing:.04em;margin-right:8px}
 .wi .wm{font:400 10px/1.4 var(--data);color:var(--dim)}
 #todo-p .pb{padding:0}
 .tnow{padding:12px var(--pad);border-bottom:1px solid var(--line);display:grid;gap:4px}
@@ -610,11 +624,26 @@ document.addEventListener("change",e=>{const k=e.target.dataset?.ck;if(!k)return
 function renderWorld(latest){
   const w=Array.isArray(latest?.world)?latest.world:[];
   $("worldAt").textContent=w.length&&latest.world_at?`${short(latest.world_at)} 기준`:"";
-  if(!w.length){$("world").innerHTML=`<div class="empty" style="padding:0">다음 확인부터 정리됩니다.</div>`;return}
+  if(!w.length){$("world").innerHTML=`<div class="empty" style="padding:0">오늘 브리핑은 다음 확인부터 정리됩니다.</div><div id="year"></div>`;loadYear(true);return}
   $("world").innerHTML=(latest.world_context?`<p class="wctx">${esc(latest.world_context)}</p>`:"")
     +w.map(x=>{const s=x.source||{};return `<div class="wi"><a class="wt" href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(x.title)}</a>
       <p>${esc(x.summary)}</p>${x.link_korea?`<div class="wk2"><b>한반도 연결</b>${esc(x.link_korea)}</div>`:""}
-      <div class="wm">${[x.region,s.name].filter(Boolean).map(esc).join(" · ")}</div></div>`}).join("");
+      <div class="wm">${[x.region,s.name].filter(Boolean).map(esc).join(" · ")}</div></div>`}).join("")+'<div id="year"></div>';
+  loadYear(false);
+}
+// ── 올해 흐름: data/context_2026.json (원문 확인한 사건만, 수동 갱신). 감시 기록이 쌓이기 전의 맥락 ──
+let YEAR=null;
+async function loadYear(open){
+  if(!YEAR){try{const r=await fetch("data/context_2026.json");if(r.ok)YEAR=await r.json()}catch(e){}}
+  const el=$("year");if(!YEAR||!el)return;
+  const mm=m=>+m.slice(5,7)+"월";
+  el.innerHTML=`<details class="yr"${open?" open":""}><summary>${esc(YEAR.title)} <span>· 사건 ${YEAR.events.length}건 · ${esc(YEAR.updated)} 정리</span></summary>
+    <p class="wctx">${esc(YEAR.overview)}</p>
+    <details class="ym"><summary>월별 요약</summary><ul>${YEAR.months.slice().reverse().map(m=>`<li><b>${mm(m.month)}</b>${esc(m.summary)}</li>`).join("")}</ul></details>
+    <ul class="ye">${YEAR.events.map(e=>`<li><details><summary><span class="yd">${e.date.slice(5).replace("-",".")}</span><span class="yc">${esc(e.category)}</span><span class="yt">${esc(e.title)}</span></summary>
+      <p>${esc(e.summary)}</p>${e.why?`<div class="wk2"><b>한반도 의미</b>${esc(e.why)}</div>`:""}
+      <div class="wm">${(e.sources||[]).map(s=>`<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.name)} ↗</a>`).join(" · ")}</div></details></li>`).join("")}</ul>
+  </details>`;
 }
 
 let DATA={latest:null,events:[]};

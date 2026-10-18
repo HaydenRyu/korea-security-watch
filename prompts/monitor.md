@@ -82,6 +82,8 @@
    - 7개 항목마다 한국어·영어 검색어를 각각 1개 이상 쓴다. 쓴 검색어는 `coverage` 에 항목별로 남긴다.
    - 공통 확인처: 합참·국방부 최근 발표, 연합뉴스 북한 속보, Reuters·AP North Korea, 38 North·NK News 최근 글, 미 국무부 한국 여행경보, 일본 방위성 발사 발표.
    - 검색 결과 목록만 보고 판정하지 않는다. 원문을 **3건 이상** WebFetch 로 열고, 연 URL 을 `opened` 에 남긴다.
+   - WebFetch 가 "unable to fetch"·403 이면 같은 URL 을 Bash 로 연다: `curl -sL -A 'Mozilla/5.0' --max-time 20 <URL> | sed 's/<[^>]*>/ /g' | tr -s ' \n' | head -c 6000`. 본문이 나오면 연 것으로 친다.
+   - 원문은 한 매체에 몰리지 않게 **서로 다른 매체 2곳 이상**에서 연다(예: NK News + 연합뉴스·합참·Reuters 중 하나).
    - `sources` 에는 `opened` 에 있는 URL 만 넣는다. 둘 다 `diff_state.py` 가 검사하며, 어기면 회차가 판정 불가로 기록된다.
 2. `python3 scripts/diff_state.py run.json` 를 실행하고 출력을 확인한다. 스키마 위반이면 스크립트가 unverified 로 기록한다.
 3. `rm run.json` 후 `git add state/ && git commit -m "watch: <등급 또는 unverified> <시각>"` 를 실행한다.

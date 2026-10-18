@@ -442,7 +442,9 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     # 지인(ntfy): 경계 이상에서 알림 조건을 만족할 때 + 경계 이상에서 내려올 때(해제)
     friends = notify and grade >= FORWARD_MIN_GRADE
     released = latest is not None and prev_grade >= FORWARD_MIN_GRADE > grade
-    notify = notify or released
+    # 주의 → 평시 는 본인에게만 조용히(우선순위 2) — 10/18 「주의 알림 뒤 아무 소식이 없다」(hayden 결정: 본인에게도 보낸다)
+    calmed = latest is not None and not released and prev_grade >= 1 and grade == 0
+    notify = notify or released or calmed
 
     new_latest = {**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)}
     for k in ("unresolved", "floor"):
@@ -460,7 +462,9 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     event["friends"] = friends or released
     outbox = None
     if notify:
-        me, fr = alert_messages(run, grade, new_keys, released, prev_grade, friends)
+        me, fr = alert_messages(run, grade, new_keys, released or calmed, prev_grade, friends)
+        if calmed:
+            me, fr = {**me, "priority": 2}, None
         outbox = {"id": now, "grade": grade, "link": DASHBOARD_URL, "me": me}
         if fr:
             outbox["friends"] = fr

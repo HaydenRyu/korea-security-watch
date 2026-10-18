@@ -57,6 +57,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .id small{display:block;font:400 10px/1.4 var(--data);color:var(--dim);letter-spacing:.08em}
 .meta{display:flex;gap:4px 20px;flex-wrap:wrap;margin-left:auto;font:400 11px/1.4 var(--data);color:var(--fog)}
 .meta b{color:var(--ice);font-weight:500;font-variant-numeric:tabular-nums}
+.qnav{display:contents}
 .meta .lag{color:var(--g3);display:none} .meta .lag.on{display:inline}
 .tag{font:500 10px/1 var(--data);padding:4px 8px;border:1px solid var(--g1);color:var(--g1);letter-spacing:.04em}
 .tag[hidden]{display:none}
@@ -173,9 +174,6 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 /* 흐름·예측: 왼쪽 등급 추이 · 오른쪽 발사 흐름과 앞으로 30일(누르면 예측 페이지). 좁으면 위아래 */
 .fc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 16px;height:100%}
 .fc .trend{min-height:96px}
-/* 칸 폭이 좁으면(휴대폰·태블릿 2열) 위아래로 — 화면 폭이 아니라 칸 폭으로 가른다 */
-#trend-p{container-type:inline-size}
-@container (max-width:560px){.fc{grid-template-columns:minmax(0,1fr)} .fcr{margin:0 calc(-1*var(--pad)) -12px;border-left:0;border-top:1px solid var(--line);padding-left:var(--pad)}}
 .fcr{display:block;position:relative;margin:-12px calc(-1*var(--pad)) -12px 0;padding:12px 28px 12px 16px;border-left:1px solid var(--line);text-decoration:none;min-width:0;overflow:hidden}
 .fct{display:block;font-size:13px;line-height:1.5;color:var(--ice)} .fct b{font:600 15px/1 var(--data);color:var(--amber)} .fct b.q{color:var(--ice)}
 .fct small{display:block;font-size:11px;color:var(--fog)}
@@ -183,6 +181,10 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .fcu li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:8px;font-size:12px;line-height:1.5;color:var(--ice)}
 .fcu .d{font:500 11px/1.65 var(--data);color:var(--fog)} .fcu small{color:var(--fog)} .fcu .hi{color:var(--amber)}
 .fcu .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* 칸 폭이 좁으면(휴대폰·태블릿 2열) 위아래로 — 화면 폭이 아니라 칸 폭으로 가른다 */
+#trend-p{container-type:inline-size}
+/* 기본 .fcr 뒤에 둬야 덮인다 */
+@container (max-width:560px){.fc{grid-template-columns:minmax(0,1fr)} .fcr{margin:0 calc(-1*var(--pad)) -12px;border-left:0;border-top:1px solid var(--line);padding-left:var(--pad)}}
 
 /* 기록 */
 #log-p{height:200px}
@@ -434,9 +436,16 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   /* 머리띠가 두 줄로 접히면 위아래 여백이 0 이 된다 — 8px 를 주고 줄 사이도 8px 로 */
   .ph{padding:8px var(--pad);row-gap:8px}
   /* 지도 레이어 버튼은 한 줄 가로 스크롤 — 줄바꿈되면 머리띠가 들쭉날쭉해진다 */
-  #map-p .layers{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;max-width:100%}
-  #map-p .layers button{flex:none}
-  #map .leaflet-control-attribution{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+  /* 10/18: 가로 스크롤은 끝 버튼(열점)이 잘려 있는 줄 몰랐다 → 3개씩 두 줄, 같은 폭 */
+  #map-p .layers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;margin-left:0}
+  #map-p .layers button{padding:8px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  /* 출처 문구가 좌표 표시를 덮었다 — 좌표는 마우스용이라 휴대폰에선 숨기고, 출처는 지도 폭 안에서 말줄임 */
+  #map-p .hud.bl{display:none}
+  .leaflet-control-attribution{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100vw - 2*var(--side) - 4px)}
+  /* 머리 바로가기는 한 줄 4칸 같은 폭(겹침 방지: 버튼 위아래 음수 여백 해제) */
+  .qnav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;flex-basis:100%;order:9}
+  .qnav .srclink{margin:0;justify-content:center;padding:8px 4px;white-space:nowrap}
+  .id small{letter-spacing:.02em;word-break:keep-all}
   .cols{grid-template-columns:1fr}
   .dhead h2{font-size:32px}
   .srcs a.s{grid-template-columns:32px minmax(0,1fr)} .srcs .u{grid-column:2;max-width:100%}
@@ -453,8 +462,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
     <span>KST <b id="now">--:--:--</b></span>
     <span>최종 확인 <b id="checked">—</b></span>
     <span id="views" hidden title="GoatCounter 대시보드 「전체 기간」 방문자 수와 같은 값(같은 사람의 새로고침은 세지 않음 · 반영에 수 분) · 1분마다 갱신">누적 방문 <b id="viewsN">—</b></span>
-    <a href="#sources" id="srcOpen" class="srclink">출처 <b id="srcN">—</b></a>
-    <a href="forecast.html" class="srclink">예측 ›</a><a href="#world-p" class="srclink">세계 브리핑 ↓</a><a href="shelter.html" class="srclink">대피 안내 ›</a>
+    <nav class="qnav" aria-label="바로가기"><a href="#sources" id="srcOpen" class="srclink">출처 <b id="srcN">—</b></a><a href="forecast.html" class="srclink">예측 ›</a><a href="#world-p" class="srclink">세계 브리핑 ↓</a><a href="shelter.html" class="srclink">대피 안내 ›</a></nav>
     <span>다음 확인 <b id="next">—</b></span>
     <span class="lag" id="lag">감시 지연</span>
     <span class="tag" id="sampletag" hidden>예시 데이터 · 실제 상황 아님</span>

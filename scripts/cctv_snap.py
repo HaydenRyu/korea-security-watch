@@ -30,7 +30,6 @@ CONF = Path.home() / ".config" / "ksw"
 RELAY = "https://jis-cctv.jis-probe.workers.dev/upload"
 API = ("https://openapi.its.go.kr:9443/cctvInfo?apiKey={key}&type={t}&cctvType=4"
        "&minX={x0}&maxX={x1}&minY={y0}&maxY={y1}&getType=json")
-TRIES = 3           # 재생 서버가 수시로 403 을 준다(10/18 실측) — 매번 새 주소를 받아 다시 시도
 GRAB_TIMEOUT = 20   # 카메라 1대 상한(초)
 BUDGET = 150        # 회차 전체 상한(초) — 5분 주기의 절반
 LIVE_EVERY = 3600   # 라이브 ID 재조회 간격(초)
@@ -165,12 +164,18 @@ def ffmpeg() -> str:
     raise SystemExit("ffmpeg 없음")
 
 
-def live_urls(key: str, cam: dict) -> list[dict]:
-    """카메라 주변 약 500m 만 조회한다 — 재생 주소는 받은 직후에 써야 잘 열린다."""
-    box = dict(x0=cam["lon"] - .005, x1=cam["lon"] + .005, y0=cam["lat"] - .005, y1=cam["lat"] + .005)
-    with urllib.request.urlopen(API.format(key=key, t=cam.get("road", "its"), **box), timeout=30) as r:
-        data = json.loads(r.read())["response"]["data"]
-    return [data] if isinstance(data, dict) else data
+def area_urls(key: str, cams: list[dict]) -> dict[str, list[dict]]:
+    """도로 종류별 1회 조회(카메라 전부를 덮는 상자) — 10/18 카메라마다 최대 3회 조회(5분에 최대 54회)로 월 한도를 넘겼다.
+    한 회차 호출 = 종류 수(2) + 실패분 재조회 1바퀴(최대 2) = 최대 4회."""
+    out: dict[str, list[dict]] = {}
+    for road in sorted({c.get("road", "its") for c in cams}):
+        cs = [c for c in cams if c.get("road", "its") == road]
+        box = dict(x0=min(c["lon"] for c in cs) - .005, x1=max(c["lon"] for c in cs) + .005,
+                   y0=min(c["lat"] for c in cs) - .005, y1=max(c["lat"] for c in cs) + .005)
+        with urllib.request.urlopen(API.format(key=key, t=road, **box), timeout=30) as r:
+            data = json.loads(r.read())["response"]["data"]
+        out[road] = [data] if isinstance(data, dict) else data
+    return out
 
 
 def nearest(cam: dict, live: list[dict]) -> str | None:
@@ -217,31 +222,32 @@ def main() -> int:
     key = (CONF / "its_key").read_text().strip()
     cams = json.loads((ROOT / "data" / "cctv.json").read_text())["cameras"]
     ff, t0 = ffmpeg(), time.monotonic()
-    shots, quota = [], quota_blocked()
+    quota = quota_blocked()
     if quota:
         print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 건너뜀"}, ensure_ascii=False))
+    shots = [{"name": c["name"], "at": None, "img": None} for c in cams]
     with tempfile.TemporaryDirectory() as td:
-        for i, c in enumerate(cams):
-            img, at, p = None, None, Path(td) / f"{i}.jpg"
-            for _ in range(0 if quota else TRIES):
+        for _ in range(0 if quota else 2):          # 1바퀴 + 실패분 1바퀴(재생 서버 403 이 잦다 — 새 주소로)
+            todo = [i for i, sh in enumerate(shots) if not sh["img"]]
+            if not todo or time.monotonic() - t0 > BUDGET:
+                break
+            try:
+                urls = area_urls(key, [cams[i] for i in todo])
+            except urllib.error.HTTPError as e:
+                if e.code == 401 and b'"resultCode":4001' in e.read().replace(b" ", b""):
+                    quota = block_quota()   # 한 달 내내 401 을 두드리지 않는다
+                    print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 중단"}, ensure_ascii=False))
+                break
+            except (OSError, ValueError, KeyError):
+                break
+            for i in todo:
                 if time.monotonic() - t0 > BUDGET:
                     break
-                try:
-                    url = nearest(c, live_urls(key, c))
-                except urllib.error.HTTPError as e:
-                    if e.code == 401 and b'"resultCode":4001' in e.read().replace(b" ", b""):
-                        quota = block_quota()   # 10/18: 5분 × 카메라마다 조회로 한도 소진 — 한 달 내내 401 을 두드리지 않는다
-                        print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 중단"}, ensure_ascii=False))
-                        break
-                    url = None
-                except (OSError, ValueError, KeyError):
-                    url = None
+                c, p = cams[i], Path(td) / f"{i}.jpg"
+                url = nearest(c, urls.get(c.get("road", "its"), []))
                 if url and grab(ff, url, p):
-                    img = base64.b64encode(p.read_bytes()).decode()
-                    at = datetime.now(timezone.utc).isoformat(timespec="seconds")
-                    break
-                time.sleep(2)
-            shots.append({"name": c["name"], "at": at, "img": img})
+                    shots[i]["img"] = base64.b64encode(p.read_bytes()).decode()
+                    shots[i]["at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     ok = sum(1 for s in shots if s["img"])
     bundle = {"captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "shots": shots}
     if quota:

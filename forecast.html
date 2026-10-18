@@ -61,18 +61,12 @@ ul.note{padding-left:18px;margin:0}
 <p class="note">칸 하나 = 1년(왼쪽이 오래된 해). 채운 칸 = 그 기간에 발사 있음 — 누르면 그 발사의 출처로 간다 · 빈 칸 = 없음 · 점선 = 훈련 미실시.
 「평소라면」 = 그해 아무 때나 같은 길이 기간을 골랐을 때 발사가 들어 있었을 확률을 해마다 더한 값. 차이가 2년 이상이면 「평소보다 잦음」·「오히려 드묾」.</p></div></section>
 
-<section class="p"><div class="ph"><span class="k">외부 예측</span><span class="r">우리 숫자가 아니다</span></div>
-<div class="pb">
-  <div class="fx"><span>Metaculus — 북한 핵실험·한반도 무력충돌 질문</span><b>—</b><small>공개 API 가 토큰을 요구하고 질문 페이지는 봇 차단(10/18 실측). 토큰을 받으면 매주 질문·확률·예측자 수를 갱신해 표시</small></div>
-  <div class="fx"><span>Polymarket — 실돈 예측시장</span><b>—</b><small>한국에서 접속 차단(451, 10/18 실측) — 표시하지 않음</small></div>
-  <div class="fx"><span>Manifold — 가상 화폐 예측시장</span><b>—</b><small>관련 질문은 기한이 2030년 이후이고 참여자가 수십 명 이하라 판단 근거로 쓰기 어려워 표시하지 않음</small></div>
-</div></section>
-
 <section class="p"><div class="ph"><span class="k">집계 기준</span><span class="r" id="upd">—</span></div>
 <div class="pb"><ul class="note">
   <li>발사 = <a href="https://beyondparallel.csis.org/database-north-korean-provocations/" target="_blank" rel="noopener">CSIS Beyond Parallel 도발 DB ↗</a> 의 미사일·핵 도발 날짜 ∪ <a href="https://www.nti.org/analysis/articles/cns-north-korea-missile-test-database/" target="_blank" rel="noopener">CNS 미사일 시험 DB ↗</a>(2024.11 까지). 같은 날 여러 발 = 1일. 풍선·포격 등은 세지 않는다.</li>
   <li>훈련 날짜 = 연도별 보도 원문으로 확인한 값(출처는 연도 칸 · 정본 <a href="https://github.com/HaydenRyu/korea-security-watch/blob/main/data/risk_calendar.json" target="_blank" rel="noopener">data/risk_calendar.json ↗</a>). 훈련이 없던 해는 세지 않는다.</li>
   <li>우리는 「전쟁 확률 %」를 만들지 않는다 — 전례가 거의 없어 그럴듯한 숫자만 나온다. 이 페이지는 「언제 더 자주 볼지」를 정하는 데 쓴다.</li>
+  <li>외부 예측 시장(Metaculus·Polymarket·Manifold)은 싣지 않는다 — 토큰 필요·한국 접속 차단·참여자 수십 명 수준이라 판단 근거가 못 된다(2026-10-18 실측).</li>
   <li>갱신 = 매주 일요일 DB 를 다시 받아 다시 센다(scripts/risk_calendar.py).</li>
 </ul></div></section>
 </main>

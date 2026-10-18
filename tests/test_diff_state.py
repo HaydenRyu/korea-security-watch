@@ -119,10 +119,12 @@ def test_release_notifies_friends():
     assert out is not None and "해제" in out["friends"]["title"] and ev["friends"]
 
 
-def test_drop_within_low_grades_silent():
+def test_calm_down_from_caution_goes_to_me_only_quietly():
+    """주의 → 평시: 본인에게만 우선순위 2 로(10/18 hayden 결정 — 전엔 조용히 끝나 「알림이 안 온다」로 보였다). 지인 주제는 그대로 안 간다."""
     latest, ev0, _ = d.step(run(border_clash={"status": "single", "sources": SRC1}), None, [])
     l2, ev, out = _drop_twice(latest, [ev0])
-    assert out is None and l2["grade"] == 0 and "held" not in l2
+    assert l2["grade"] == 0 and "held" not in l2
+    assert out and "friends" not in out and out["me"]["priority"] == 2 and "해제" in out["me"]["title"]
 
 
 # ── 내림 히스테리시스: 같은 사건이 회차마다 1↔0 으로 뒤집히던 문제(10/18 AI 어뢰 시험) ──
@@ -163,7 +165,8 @@ def test_two_consecutive_drops_apply():
     latest, ev0, _ = d.step(_r1(), None, [])
     l1, ev1, _ = d.step(run(), latest, [ev0])
     l2, ev2, out2 = d.step(run(), l1, [ev0, ev1])
-    assert ev2["grade"] == 0 and not ev2.get("held") and l2["grade"] == 0 and "held" not in l2 and out2 is None
+    assert ev2["grade"] == 0 and not ev2.get("held") and l2["grade"] == 0 and "held" not in l2
+    assert out2 and "friends" not in out2 and out2["me"]["priority"] == 2  # 주의 → 평시 는 본인에게만 조용히
 
 
 def test_increase_applies_immediately_after_held():

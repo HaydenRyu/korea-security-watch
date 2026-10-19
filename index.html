@@ -755,6 +755,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 <dialog id="srcDlg" aria-labelledby="srcTitle"><div class="cw">
   <div class="chd"><span id="srcTitle"><span class="k">감시 출처</span> · 매시간 이 목록을 확인합니다</span>
     <button type="button" id="srcClose">닫기</button></div>
+  <div class="cnote" id="srcNews" role="status" hidden></div>
   <div class="sbody" id="srcBody"></div>
   <form class="sreq" id="srcReq">
     <b>출처 추가 요청</b>
@@ -1342,6 +1343,19 @@ async function loadSources(){try{const r=await fetch("data/sources.json?t="+Date
     +`<section class="st2"><h3>지도·보조 데이터</h3><ul>${SRC.data_feeds.map(li).join("")}</ul></section>`
     +`<section class="st2"><h3>쓰지 않는 것</h3><ul>${SRC.excluded.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></section>`;
 }catch(e){}}
+// 국내 언론 피드 수집 상태 — state/news_kr.json(firms.yml 매시 :45, 건수·상태만). 기사 제목·링크는 공개하지 않는다. 못 읽으면 줄을 숨긴 채 둔다
+async function loadNewsKr(){const el=$("srcNews");try{const r=await fetch("state/news_kr.json?t="+Date.now());if(!r.ok)return;const d=await r.json();
+  const c=d.counts||{},n=Object.keys(d.outlets||{}).length,ok=(c.feeds||0)-(c.feeds_failed||0);
+  const kst=s=>{if(!s)return"—";const t=new Date(s),f=o=>t.toLocaleString("ko-KR",{timeZone:"Asia/Seoul",hour12:false,...o});
+    return (Date.now()-t>20*36e5?f({month:"2-digit",day:"2-digit"}).replace(/\.\s*/g,".").replace(/\.$/,"")+" ":"")+f({hour:"2-digit",minute:"2-digit"})};
+  const age=(Date.now()-new Date(d.fetched_at))/36e5;
+  let t;
+  if(d.status==="error")t=`국내 언론 ${n}곳 · <b>피드 수집 실패</b> · 마지막 정상 수집 ${kst(d.last_ok_at)} — 이번 회차는 검색으로만 확인`;
+  else{t=`국내 언론 ${n}곳 · 피드 정상 ${ok}/${c.feeds} · 마지막 수집 ${kst(d.fetched_at)}`;
+    if(d.status==="partial"){const bad=(d.feeds||[]).filter(f=>!f.ok).map(f=>`${f.outlet} ${f.section}`);
+      t+=` · <b>${bad.length}개 피드 실패</b>(${esc(bad.slice(0,2).join(", "))}${bad.length>2?` 외 ${bad.length-2}`:""}) — 나머지로 확인`}}
+  if(age>2)t+=` · <b>${Math.floor(age)}시간째 새 수집 없음</b>`;
+  el.innerHTML=t;el.hidden=false}catch(e){}}
 // 항공 지표 — scripts/air_count.py 가 매시간 state/air.json 을 쓴다
 const AIR_LOW=0.7;  // 평소의 70% 미만이면 강조
 let AIR_BASE=null;  // 지난 7일 같은 시각 중앙값(state/air.json baseline) — 실시간 대수와 비교
@@ -1473,7 +1487,7 @@ async function loadReqLog(){try{const r=await fetch("data/source_requests.jsonl?
   const rows=(await r.text()).trim().split("\n").filter(Boolean).map(l=>JSON.parse(l)).slice(-10).reverse();if(!rows.length)return;
   $("srcBody").insertAdjacentHTML("beforeend",`<section class="st2"><h3>최근 추가 요청<small>루틴이 매시간 검토</small></h3><ul>${rows.map(x=>
     `<li>${esc(x.name)} <b style="color:${x.decision==="accepted"?"var(--g0)":"var(--fog)"};font-weight:500">${x.decision==="accepted"?"반영":"보류"}</b><span>${esc(x.reason||"")}</span></li>`).join("")}</ul></section>`)}catch(e){}}
-loadSources().then(loadReqLog).then(()=>{if(location.hash==="#sources")openSources()});
+loadNewsKr();loadSources().then(loadReqLog).then(()=>{if(location.hash==="#sources")openSources()});
 </script>
 </body>
 </html>

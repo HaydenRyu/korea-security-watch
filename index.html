@@ -474,7 +474,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 .phs .px{margin-left:auto;white-space:nowrap;transition:color 120ms var(--ease)}
 .phs:hover .px{color:var(--ice)}
 #phase4{display:none}
-#fac-p .pb{padding:0}
+#fac-p .pb{padding:0;flex:none}  /* 배경 요인·연동 위기 두 블록이 남는 높이를 나눠 갖지 않게(사이 빈칸) */
 .fa-g{display:grid;grid-template-columns:minmax(0,1fr)}
 .fa-x{display:grid;gap:var(--s4);padding:var(--s12) var(--pad);border-bottom:1px solid var(--line);min-width:0}
 .fa-h{display:flex;align-items:center;gap:var(--s8);min-width:0}
@@ -486,6 +486,14 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 .fa-s span:first-child{overflow:hidden;text-overflow:ellipsis} .fa-s a{color:var(--fog)}
 .fa-e{margin:0;padding:var(--s12) var(--pad);border-bottom:1px solid var(--line);font-size:13px;color:var(--fog)}
 .fa-ns{display:none}
+/* 연동 위기(10/19) — 배경 요인 칸 아래 줄. 카드는 .fa-x 재사용, 새 클래스는 .lk-* 뿐. 수치 줄(.lk-n)은 20px 한 줄 자리 */
+#lk{border-top:1px solid var(--line)}
+.lk-t{display:flex;align-items:baseline;gap:var(--s8);padding:var(--s12) var(--pad) 0;font:500 10px/16px var(--data);color:var(--fog);letter-spacing:.04em;min-width:0}
+.lk-t span{color:var(--dim);letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.lk-g{display:grid;grid-template-columns:minmax(0,1fr)}
+.lk-n{font:600 12px/20px var(--data);color:var(--ice);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.lk-n small{font-weight:400;font-size:11px;color:var(--fog)} .lk-n a{color:var(--fog);font-weight:400}
+#lk .lk-1{display:none}
 .wtab{display:inline-flex;border:1px solid var(--line-2)}
 .wtab button{all:unset;cursor:pointer;font:500 11px/16px var(--data);color:var(--fog);padding:var(--s4) var(--s8);white-space:nowrap;
   transition:color 120ms var(--ease),background-color 120ms var(--ease)}
@@ -516,6 +524,9 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   .fa-g{grid-template-columns:repeat(2,minmax(0,1fr))}
   /* 카드가 나란히 서면 근거 줄 수(0~2)와 무관하게 수준·근거·출처가 같은 y — 근거 칸은 2줄 자리를 잡는다 */
   .fa-x{grid-template-rows:20px 36px 16px;border-right:1px solid var(--line)} .fa-x:nth-child(2n){border-right:0}
+  /* 연동 위기 3칸 — 머리·수치·근거(2줄 자리)·출처가 칸끼리 같은 y */
+  .lk-g{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .lk-g .fa-x{grid-template-rows:20px 20px 36px 16px} .lk-g .fa-x:nth-child(2n){border-right:1px solid var(--line)} .lk-g .fa-x:last-child{border-right:0}
 }
 @media (min-width:1180px){
   .fa-g{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -531,7 +542,10 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   .fa-r{-webkit-line-clamp:1}
   .fa-s{display:none}
   .fa-e{padding:var(--s8) var(--pad)}
-  .fa-n{padding:var(--s8) var(--pad);white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .fa-nl{display:none} .fa-ns{display:inline}  /* 넷째 칸: 각주는 한 줄 — 브리핑·할 일 칸 높이를 덜 먹게 */
+  .fa-n{padding:var(--s8) var(--pad);white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .fa-nl{display:none} .fa-ns{display:inline}
+  /* 넷째 칸: 연동 위기는 세 칸 대신 한 줄(긴장 국면 #phase4 와 같은 모양) — 브리핑·할 일 칸 높이를 덜 먹게. 자세한 것은 예측 화면 */
+  .lk-t,.lk-g,#lk .fa-n{display:none}
+  #lk .lk-1{display:flex;margin:0;padding:var(--s8) var(--pad);border-top:0;border-bottom:1px solid var(--line)}  /* 넷째 칸: 각주는 한 줄 — 브리핑·할 일 칸 높이를 덜 먹게 */
 }
 
 /* 항목 상세 */
@@ -684,6 +698,8 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   <section class="p" id="fac-p" aria-label="배경 요인">
     <div class="ph"><span class="k">배경 요인</span><span class="ai" title="AI가 공개 기사를 읽고 쓴 판정입니다. 등급과 알림에는 쓰지 않습니다.">AI 판정</span><span class="r">참고 · 등급과 무관 · 하루 3회(08·14·20시)</span></div>
     <div class="pb" id="fac"><p class="fa-e">불러오는 중</p></div>
+    <!-- 연동 위기(10/19): 대만 해협·러-우 전쟁·한반도 연결. state/linkage.json(루틴) + data/linkage.json(정본·과거 검정) + data/conflicts.json. 등급·알림과 무관 -->
+    <div class="pb" id="lk" aria-label="연동 위기"><p class="fa-e">불러오는 중</p></div>
   </section>
   <section class="p" id="world-p" aria-label="세계 안보 브리핑">
     <div class="ph"><div class="wtab" role="tablist" aria-label="세계 칸"><button type="button" role="tab" id="wt-world" aria-controls="world" aria-selected="true" data-t="world">오늘 브리핑</button><button type="button" role="tab" id="wt-conf" aria-controls="conf" aria-selected="false" tabindex="-1" data-t="conf">분쟁 현황</button></div><a class="fcall" href="live.html#us">해외 뉴스 라이브 ›</a><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 선별·요약</span><span id="worldAt"></span><span class="r">참고 · 등급 판정과 무관</span></div>
@@ -923,6 +939,52 @@ function renderFactors(f){
     const src=(Array.isArray(d.sources)?d.sources:[]).filter(x=>x&&x.url).map(s=>`<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.publisher||(()=>{try{return new URL(s.url).hostname.replace(/^www\./,"")}catch(e){return"출처"}})())}</a>`).join(" · ");
     return `<div class="fa-x"><div class="fa-h"><b>${n}</b><span class="fa-lv ${FAC_LV[d.level]||"mid"}">${esc(d.level)}</span></div><p class="fa-r" title="${esc(d.summary||"")}">${esc(d.summary||"특이 보도 없음")}</p><div class="fa-s"><span>${src||"출처 없음(보통)"}</span><span>${d.at?short(d.at):""}</span></div></div>`}).join("")}</div>`+foot;
 }
+// ── 연동 위기(10/19): 대만 해협 훈련 여부·러-우 전쟁·한반도 연결. 우리 확률 없음 — 사실과 출처만 ──
+// st = state/linkage.json(diff_state.update_linkage, 루틴이 아직 안 썼으면 null) · lk = data/linkage.json(정본) · cf/cl = 분쟁 현황 자료
+function renderLinkage(st,lk,cf,cl){
+  if(!lk&&!st&&!cf){$("lk").innerHTML=`<p class="fa-e">연동 위기 자료를 불러오지 못했습니다 — <a href="forecast.html#linkage">검증 결과 ›</a></p>`;return}
+  st=st&&typeof st==="object"&&!Array.isArray(st)?st:null;
+  const host=u=>{try{return new URL(u).hostname.replace(/^www\./,"")}catch(e){return"출처"}};
+  const A=(u,t)=>`<a href="${esc(safeUrl(u))}" target="_blank" rel="noopener">${esc(t||host(u))}</a>`;
+  const srcs=a=>(Array.isArray(a)?a:[]).filter(x=>x&&x.url).slice(0,2).map(x=>A(x.url,x.publisher)).join(" · ");
+  const card=(n,cls,chip,num,txt,src,at)=>`<div class="fa-x"><div class="fa-h"><b>${n}</b><span class="fa-lv ${cls}">${esc(chip)}</span></div>`
+    +`<div class="lk-n">${num}</div><p class="fa-r" title="${esc(txt)}">${esc(txt)}</p><div class="fa-s"><span>${src||""}</span><span>${at||""}</span></div></div>`;
+  const span=x=>x?`${x.start||""}${x.end&&x.end!==x.start?"~"+x.end.slice(5):""}`:"";
+  // ① 대만 해협 — 확인(서로 다른 기관 2곳) 된 명명 훈련·대규모 전개만 강조. 수치는 국방부 원문 링크만(자동 수집 안 함)
+  const tw=st?.taiwan,ln=st?.last_named||lk?.taiwan?.last_named,mnd=lk?.taiwan?.mnd_list||"https://www.mnd.gov.tw/news/plaactlist";
+  const lastTxt=ln?`마지막 명명 훈련 ${ln.name}(${span(ln)})`:"";
+  const numTw=`<a href="${esc(safeUrl(mnd))}" target="_blank" rel="noopener" title="대만 국방부 「臺海周邊海、空域動態」 — 하루 1건, 전일 06시~당일 06시">국방부 일일 보고(군용기·군함) ↗</a>`;
+  let c1;
+  if(tw&&tw.status==="corroborated"&&tw.state!=="none"){
+    const nm=tw.state==="named"?"명명 훈련 중":"대규모 전개";
+    c1=card("대만 해협","hi",nm,numTw,`${tw.name?tw.name+": ":""}${tw.summary||""}`,srcs(tw.sources),tw.last_seen?short(tw.last_seen):"");
+  }else if(tw){
+    c1=card("대만 해협","mid","확인 중",numTw,`${tw.summary||""} — 다른 기관 확인 전`,srcs(tw.sources),tw.last_seen?short(tw.last_seen):"");
+  }else if(st&&!st.error){
+    c1=card("대만 해협","mid","명명 훈련 없음",numTw,lastTxt||"확인된 대만 주변 명명 훈련 없음",ln?.url?A(ln.url,ln.publisher):"",st.updated_at?short(st.updated_at):"");
+  }else{
+    c1=card("대만 해협","mid","판정 전",numTw,lastTxt||"루틴이 다음 회차부터 확인합니다",ln?.url?A(ln.url,ln.publisher):"","");
+  }
+  // ② 러-우 전쟁 — 분쟁 현황(UCDP 월 잠정치)과 같은 값. 한반도 연결은 원문 확인된 줄만
+  const ru=(cf?.rows||[]).find(r=>r.key==="russia_ukraine"),rl=cl?.links?.russia_ukraine,mo=m=>m?+m.slice(5,7)+"월":"";
+  const c2=card("러-우 전쟁","mid",ru&&ru.best>0?"진행 중":"—",
+    ru?`사망 추정 ${ru.best.toLocaleString("ko-KR")} <small>· ${mo(cf.month)}${ru.prev_best!=null?` · ${mo(cf.prev_month)} ${ru.prev_best.toLocaleString("ko-KR")}`:""}</small>`:"<small>UCDP 자료 없음</small>",
+    rl?.line||"한반도 연결 근거 없음",[cf?.page?A(cf.page,"UCDP"):"",rl?.url?A(rl.url,rl.publisher):""].filter(Boolean).join(" · "),"");
+  // ③ 한반도 연결 — 루틴이 연 원문의 관측 사실(최근 72시간). 없으면 정본의 기준 사실 1줄
+  const ks=Array.isArray(st?.korea)?st.korea.filter(k=>k&&k.summary):[],ok=ks.filter(k=>k.status==="corroborated"),top=ok[0]||ks[0],base=lk?.korea_baseline;
+  const c3=st?card("한반도 연결",ok.length?"hi":"mid",ks.length?`새 사실 ${ks.length}건`:"새 보도 없음",
+      `최근 72시간 <small>· 확인 ${ok.length} · 확인 중 ${ks.length-ok.length}</small>`,
+      top?`${top.summary}${top.status==="corroborated"?"":" — 다른 기관 확인 전"}`:(base?.summary||""),
+      top?srcs(top.sources):(base?.url?A(base.url,base.publisher):""),top?.last_seen?short(top.last_seen):(base?.date||""))
+    :card("한반도 연결","mid","판정 전","<small>루틴이 다음 회차부터 기록</small>",base?.summary||"",base?.url?A(base.url,base.publisher):"",base?.date||"");
+  const g=(lk?.groups||[]).find(x=>x.key==="tw_major"),w=g?.w14,vk={more:"평소보다 잦음",usual:"평소 수준",less:"오히려 드묾"};
+  const stat=w?`대만 해협 대규모 훈련 ${w.events}회 앞뒤 14일 중 ${w.hit}회 발사(평소라면 ${w.expected}회) — ${vk[w.verdict]||""}`:"";
+  const chip=h=>(h.match(/class="fa-lv (\w+)">([^<]*)</)||[]).slice(1);
+  const [k1,t1]=chip(c1),[,t2]=chip(c2),[,t3]=chip(c3);
+  $("lk").innerHTML=`<a class="phs lk-1" href="forecast.html#linkage" title="연동 위기 — 등급과 무관"><span class="pk">연동 위기</span><b class="${k1==="hi"?"up":""}">대만 ${esc(t1||"—")}</b><span class="pm">러-우 ${esc(t2||"—")} · 한반도 ${esc(t3||"—")}</span><span class="px">›</span></a>`
+    +`<div class="lk-t">연동 위기<span>다른 곳의 전쟁·위기 · 참고 · 등급과 무관</span></div><div class="lk-g">${c1}${c2}${c3}</div>`
+    +`<p class="disc fa-n"><span class="fa-nl">${stat?esc(stat)+" · ":""}러-우·북러 사건 앞뒤도 평소 수준이라 등급에 쓰지 않습니다</span><span class="fa-ns">과거 발사와 관계 확인 안 됨 · 등급에 안 씀</span> — <a href="forecast.html#linkage">검증 결과 ›</a></p>`;
+}
 // ── 분쟁 현황(10/19): data/conflicts.json (scripts/ucdp_month.py, 월 1회) + data/conflict_links.json(근거 있는 한반도 연결만) ──
 let CONF=null;
 async function loadConflicts(){
@@ -1124,7 +1186,10 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
   try{events=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(l=>JSON.parse(l))}catch(e){}
   DATA={latest,events};render(latest,events);initMap();drawPins(latest?.items);route();tick();
   // 참고 블록(긴장 국면·배경 요인) — 파일이 없거나 깨져도 빈 상태로 그린다. 등급 화면과 따로 읽는다
-  const refs=()=>Promise.all(["ladder.json","factors.json"].map(p=>get(p).catch(()=>null))).then(([l,f])=>{renderPhase(l);renderFactors(f)});
+  const jget=u=>fetch(u,{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null);
+  const refs=()=>Promise.all([...["ladder.json","factors.json","linkage.json"].map(p=>get(p).catch(()=>null)),
+    ...["data/linkage.json","data/conflicts.json","data/conflict_links.json"].map(jget)])
+    .then(([l,f,k,kd,cf,cl])=>{renderPhase(l);renderFactors(f);try{renderLinkage(k,kd,cf,cl)}catch(e){console.error("renderLinkage",e)}});
   refs();
   try{drawFirms(await get("firms.json"))}catch(e){}
   try{const r=await fetch("data/cctv.json");if(r.ok)drawCctv(await r.json())}catch(e){}

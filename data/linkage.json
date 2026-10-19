@@ -1,0 +1,746 @@
+{
+ "_doc": "연동 위기(대만 해협·러-우 전쟁 ↔ 한반도) 정본. 과거 검정값·사건 날짜·출처·읽을거리. 상황판 「연동 위기」 줄과 forecast.html #linkage 가 읽는다. 우리 확률을 만들지 않는다.",
+ "updated": "2026-10-19",
+ "basis": {
+  "launch_days": "발사한 날 = CSIS Missile Defense Project 북한 미사일·핵 표(2026-10-19 받음, Other Provocation 제외) ∪ CNS 저장본(data/risk_calendar.json cns) — scripts/risk_calendar.launch_days",
+  "range": "2006-01-01 ~ 2026-10-19 (2026 은 부분 연도)",
+  "launch_days_n": 250,
+  "window": "사건 시작 −w일 ~ 끝 +w일, w = 7(기본·달력과 같은 기준)·14(감도). 겹치는 창은 하나로 합친다",
+  "usual": "그해 아무 날을 시작으로 같은 길이 창을 잡았을 때 발사가 들어 있었을 확률(risk_calendar.chance). 2026 은 1/1~10/19 안에서만",
+  "verdict": "risk_calendar.verdict — Poisson-binomial, 한쪽 10% 밖이면 잦음·드묾, 아니면 평소 수준",
+  "multiple_comparisons": "이번 6개 검정(3묶음 × 2창) + 배경 요인 18개 = 같은 발사 기록으로 24번 비교. 본페로니 0.1/24 ≈ 0.004 — 이번 6개는 보정 없는 10% 기준도 넘지 못함(가장 작은 한쪽 p 0.362)",
+  "excluded": [
+   "1995–96 제3차 대만 해협 위기 — 우리 검정은 2006~ 이고, 그 전 CSIS 기록은 1995년 1일·1996년 0일뿐이라 「평소」를 잡을 수 없다",
+   "2026-10-12~20 중국 연안 실사격 — 대만 국방부가 「대만 주변 아님」이라 함(AFP via HKFP). 2026년 명명 훈련은 찾지 못함(없다는 확인이 아님)"
+  ],
+  "caution": "사건 5~7건이라 검정력이 낮다 — 「관계없음」의 증거가 아니라 「늘었다는 근거가 없다」"
+ },
+ "groups": [
+  {
+   "key": "tw_named",
+   "name": "대만 해협 명명 훈련",
+   "desc": "중국 동부전구가 코드명을 붙여 발표한 대만 주변 합동훈련",
+   "events": [
+    "tw_2023_04_joint_sword",
+    "tw_2024_05_joint_sword_2024a",
+    "tw_2024_10_joint_sword_2024b",
+    "tw_2025_04_strait_thunder_2025a",
+    "tw_2025_12_justice_mission_2025"
+   ],
+   "w7": {
+    "events": 5,
+    "hit": 3,
+    "expected": 2.81,
+    "verdict": "usual",
+    "p_ge": 0.617,
+    "p_le": 0.724,
+    "launch_days_in_windows": 7,
+    "launch_days_expected": 4.6,
+    "windows": [
+     {
+      "from": "2023-04-01",
+      "to": "2023-04-17",
+      "launch_days": [
+       "2023-04-13"
+      ]
+     },
+     {
+      "from": "2024-05-16",
+      "to": "2024-05-31",
+      "launch_days": [
+       "2024-05-17",
+       "2024-05-27",
+       "2024-05-30"
+      ]
+     },
+     {
+      "from": "2024-10-07",
+      "to": "2024-10-21",
+      "launch_days": []
+     },
+     {
+      "from": "2025-03-25",
+      "to": "2025-04-09",
+      "launch_days": []
+     },
+     {
+      "from": "2025-12-22",
+      "to": "2026-01-06",
+      "launch_days": [
+       "2025-12-24",
+       "2025-12-28",
+       "2026-01-04"
+      ]
+     }
+    ]
+   },
+   "w14": {
+    "events": 5,
+    "hit": 4,
+    "expected": 3.9,
+    "verdict": "usual",
+    "p_ge": 0.697,
+    "p_le": 0.711,
+    "launch_days_in_windows": 9,
+    "launch_days_expected": 8.6,
+    "windows": [
+     {
+      "from": "2023-03-25",
+      "to": "2023-04-24",
+      "launch_days": [
+       "2023-03-27",
+       "2023-04-13"
+      ]
+     },
+     {
+      "from": "2024-05-09",
+      "to": "2024-06-07",
+      "launch_days": [
+       "2024-05-17",
+       "2024-05-27",
+       "2024-05-30"
+      ]
+     },
+     {
+      "from": "2024-09-30",
+      "to": "2024-10-28",
+      "launch_days": []
+     },
+     {
+      "from": "2025-03-18",
+      "to": "2025-04-16",
+      "launch_days": [
+       "2025-03-20"
+      ]
+     },
+     {
+      "from": "2025-12-15",
+      "to": "2026-01-13",
+      "launch_days": [
+       "2025-12-24",
+       "2025-12-28",
+       "2026-01-04"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "tw_major",
+   "name": "대만 해협 대규모 훈련",
+   "desc": "명명 훈련 5회 + 2022-08 펠로시 방문 뒤 훈련 + 2024-12 비명명 대규모 전개",
+   "events": [
+    "tw_2022_08_pelosi",
+    "tw_2023_04_joint_sword",
+    "tw_2024_05_joint_sword_2024a",
+    "tw_2024_10_joint_sword_2024b",
+    "tw_2024_12_maritime_deployment",
+    "tw_2025_04_strait_thunder_2025a",
+    "tw_2025_12_justice_mission_2025"
+   ],
+   "w7": {
+    "events": 7,
+    "hit": 4,
+    "expected": 4.18,
+    "verdict": "usual",
+    "p_ge": 0.706,
+    "p_le": 0.588,
+    "launch_days_in_windows": 8,
+    "launch_days_expected": 7.8,
+    "windows": [
+     {
+      "from": "2022-07-28",
+      "to": "2022-08-17",
+      "launch_days": [
+       "2022-08-17"
+      ]
+     },
+     {
+      "from": "2023-04-01",
+      "to": "2023-04-17",
+      "launch_days": [
+       "2023-04-13"
+      ]
+     },
+     {
+      "from": "2024-05-16",
+      "to": "2024-05-31",
+      "launch_days": [
+       "2024-05-17",
+       "2024-05-27",
+       "2024-05-30"
+      ]
+     },
+     {
+      "from": "2024-10-07",
+      "to": "2024-10-21",
+      "launch_days": []
+     },
+     {
+      "from": "2024-12-02",
+      "to": "2024-12-19",
+      "launch_days": []
+     },
+     {
+      "from": "2025-03-25",
+      "to": "2025-04-09",
+      "launch_days": []
+     },
+     {
+      "from": "2025-12-22",
+      "to": "2026-01-06",
+      "launch_days": [
+       "2025-12-24",
+       "2025-12-28",
+       "2026-01-04"
+      ]
+     }
+    ]
+   },
+   "w14": {
+    "events": 7,
+    "hit": 5,
+    "expected": 5.6,
+    "verdict": "usual",
+    "p_ge": 0.852,
+    "p_le": 0.426,
+    "launch_days_in_windows": 10,
+    "launch_days_expected": 14.1,
+    "windows": [
+     {
+      "from": "2022-07-21",
+      "to": "2022-08-24",
+      "launch_days": [
+       "2022-08-17"
+      ]
+     },
+     {
+      "from": "2023-03-25",
+      "to": "2023-04-24",
+      "launch_days": [
+       "2023-03-27",
+       "2023-04-13"
+      ]
+     },
+     {
+      "from": "2024-05-09",
+      "to": "2024-06-07",
+      "launch_days": [
+       "2024-05-17",
+       "2024-05-27",
+       "2024-05-30"
+      ]
+     },
+     {
+      "from": "2024-09-30",
+      "to": "2024-10-28",
+      "launch_days": []
+     },
+     {
+      "from": "2024-11-25",
+      "to": "2024-12-26",
+      "launch_days": []
+     },
+     {
+      "from": "2025-03-18",
+      "to": "2025-04-16",
+      "launch_days": [
+       "2025-03-20"
+      ]
+     },
+     {
+      "from": "2025-12-15",
+      "to": "2026-01-13",
+      "launch_days": [
+       "2025-12-24",
+       "2025-12-28",
+       "2026-01-04"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "ru_nk",
+   "name": "러-우 전쟁·북러 사건",
+   "desc": "전면 침공 · 정상회담 · 조약 서명/발효 · 파병 발표 · 첫 교전 · 공식 인정",
+   "events": [
+    "ua_2022_02_invasion",
+    "nk_2023_09_putin_kim_vostochny",
+    "nk_2024_06_treaty_signed",
+    "nk_2024_10_nis_troops",
+    "nk_2024_11_first_combat",
+    "nk_2024_12_treaty_in_force",
+    "nk_2025_04_official_ack"
+   ],
+   "w7": {
+    "events": 7,
+    "hit": 5,
+    "expected": 4.01,
+    "verdict": "usual",
+    "p_ge": 0.362,
+    "p_le": 0.874,
+    "launch_days_in_windows": 6,
+    "launch_days_expected": 6.9,
+    "windows": [
+     {
+      "from": "2022-02-17",
+      "to": "2022-03-03",
+      "launch_days": [
+       "2022-02-27"
+      ]
+     },
+     {
+      "from": "2023-09-06",
+      "to": "2023-09-20",
+      "launch_days": [
+       "2023-09-13"
+      ]
+     },
+     {
+      "from": "2024-06-12",
+      "to": "2024-06-26",
+      "launch_days": [
+       "2024-06-26"
+      ]
+     },
+     {
+      "from": "2024-10-11",
+      "to": "2024-10-25",
+      "launch_days": []
+     },
+     {
+      "from": "2024-10-28",
+      "to": "2024-11-11",
+      "launch_days": [
+       "2024-10-31",
+       "2024-11-05"
+      ]
+     },
+     {
+      "from": "2024-11-27",
+      "to": "2024-12-11",
+      "launch_days": []
+     },
+     {
+      "from": "2025-04-19",
+      "to": "2025-05-05",
+      "launch_days": [
+       "2025-04-28"
+      ]
+     }
+    ]
+   },
+   "w14": {
+    "events": 6,
+    "hit": 5,
+    "expected": 4.89,
+    "verdict": "usual",
+    "p_ge": 0.69,
+    "p_le": 0.713,
+    "launch_days_in_windows": 11,
+    "launch_days_expected": 12.6,
+    "windows": [
+     {
+      "from": "2022-02-10",
+      "to": "2022-03-10",
+      "launch_days": [
+       "2022-02-27",
+       "2022-03-05"
+      ]
+     },
+     {
+      "from": "2023-08-30",
+      "to": "2023-09-27",
+      "launch_days": [
+       "2023-08-30",
+       "2023-09-02",
+       "2023-09-13"
+      ]
+     },
+     {
+      "from": "2024-06-05",
+      "to": "2024-07-03",
+      "launch_days": [
+       "2024-06-26",
+       "2024-07-01"
+      ]
+     },
+     {
+      "from": "2024-10-04",
+      "to": "2024-11-18",
+      "launch_days": [
+       "2024-10-31",
+       "2024-11-05"
+      ]
+     },
+     {
+      "from": "2024-11-20",
+      "to": "2024-12-18",
+      "launch_days": []
+     },
+     {
+      "from": "2025-04-12",
+      "to": "2025-05-12",
+      "launch_days": [
+       "2025-04-28",
+       "2025-05-08"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "events": [
+  {
+   "id": "tw_2022_08_pelosi",
+   "name": "펠로시 방문 뒤 대만 주변 훈련",
+   "start": "2022-08-04",
+   "end": "2022-08-10",
+   "named": false,
+   "sources": [
+    {
+     "publisher": "AFP via Aaj News",
+     "url": "https://english.aaj.tv/news/amp/30294475"
+    },
+    {
+     "publisher": "CGTN",
+     "url": "https://news.cgtn.com/news/2022-08-10/PLA-Eastern-Theater-Command-completes-military-drills-around-Taiwan-1cnUhIFgg3S/share_amp.html"
+    }
+   ]
+  },
+  {
+   "id": "tw_2023_04_joint_sword",
+   "name": "Joint Sword(聯合利劍)",
+   "start": "2023-04-08",
+   "end": "2023-04-10",
+   "named": true,
+   "sources": [
+    {
+     "publisher": "Associated Press (via News4Jax)",
+     "url": "https://www.news4jax.com/news/world/2023/04/12/china-says-taiwan-encirclement-drills-a-serious-warning/"
+    }
+   ]
+  },
+  {
+   "id": "tw_2024_05_joint_sword_2024a",
+   "name": "Joint Sword-2024A",
+   "start": "2024-05-23",
+   "end": "2024-05-24",
+   "named": true,
+   "sources": [
+    {
+     "publisher": "Reuters (via Yahoo News)",
+     "url": "https://sg.news.yahoo.com/china-ends-two-days-war-174750597.html"
+    }
+   ]
+  },
+  {
+   "id": "tw_2024_10_joint_sword_2024b",
+   "name": "Joint Sword-2024B",
+   "start": "2024-10-14",
+   "end": "2024-10-14",
+   "named": true,
+   "sources": [
+    {
+     "publisher": "CSIS ChinaPower",
+     "url": "https://chinapower.csis.org/china-taiwan-joint-sword-2024b-coast-guard/"
+    },
+    {
+     "publisher": "Radio Free Asia",
+     "url": "https://www.rfa.org/english/news/china/chinese-army-taiwan-drills-10142024033023.html"
+    }
+   ]
+  },
+  {
+   "id": "tw_2024_12_maritime_deployment",
+   "name": "비명명 대규모 해상 전개(약 90척)",
+   "start": "2024-12-09",
+   "end": "2024-12-12",
+   "named": false,
+   "sources": [
+    {
+     "publisher": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2024/12/9/taiwan-raises-alert-to-high-amid-presence-of-chinese-warships"
+    },
+    {
+     "publisher": "AFP via Arab News",
+     "url": "https://www.arabnews.com/node/2582914/world"
+    }
+   ]
+  },
+  {
+   "id": "tw_2025_04_strait_thunder_2025a",
+   "name": "Strait Thunder-2025A(海峽雷霆)",
+   "start": "2025-04-01",
+   "end": "2025-04-02",
+   "named": true,
+   "sources": [
+    {
+     "publisher": "Xinhua",
+     "url": "http://www.news.cn/20250401/01ebd5f546944c89ad0104c4a0fb0d97/c.html"
+    },
+    {
+     "publisher": "Associated Press (via ClickOnDetroit)",
+     "url": "https://www.clickondetroit.com/business/2025/04/02/china-conducts-military-drills-focusing-on-taiwan-strait/"
+    }
+   ]
+  },
+  {
+   "id": "tw_2025_12_justice_mission_2025",
+   "name": "Justice Mission-2025(正義使命)",
+   "start": "2025-12-29",
+   "end": "2025-12-30",
+   "named": true,
+   "sources": [
+    {
+     "publisher": "Defense News (Military Times staff)",
+     "url": "https://www.defensenews.com/global/asia-pacific/2026/01/08/chinese-drill-near-taiwan-seen-as-test-run-for-blockade-message-to-us/"
+    },
+    {
+     "publisher": "United Daily News (udn)",
+     "url": "https://udn.com/news/story/124693/9237687"
+    }
+   ]
+  },
+  {
+   "id": "ua_2022_02_invasion",
+   "name": "러시아 우크라이나 전면 침공",
+   "start": "2022-02-24",
+   "end": null,
+   "named": false,
+   "sources": [
+    {
+     "publisher": "Associated Press (via ABC 33/40)",
+     "url": "https://abc3340.com/news/nation-world/russias-putin-announces-military-operation-in-ukraine-02-24-2022"
+    }
+   ]
+  },
+  {
+   "id": "nk_2023_09_putin_kim_vostochny",
+   "name": "푸틴-김정은 보스토치니 정상회담",
+   "start": "2023-09-13",
+   "end": "2023-09-13",
+   "named": false,
+   "sources": [
+    {
+     "publisher": "Associated Press (via NBC Bay Area)",
+     "url": "https://www.nbcbayarea.com/news/national-international/putin-gives-north-korean-leader-tour-of-rocket-launch-center-as-leaders-meet/"
+    }
+   ]
+  },
+  {
+   "id": "nk_2024_06_treaty_signed",
+   "name": "북러 포괄적 전략동반자 조약 서명",
+   "start": "2024-06-19",
+   "end": null,
+   "named": false,
+   "sources": [
+    {
+     "publisher": "Interfax (citing KCNA)",
+     "url": "https://interfax.com/newsroom/top-stories/108291/"
+    }
+   ]
+  },
+  {
+   "id": "nk_2024_10_nis_troops",
+   "name": "국정원 북한군 러시아 파병 발표",
+   "start": "2024-10-18",
+   "end": null,
+   "named": false,
+   "sources": [
+    {
+     "publisher": "The Korea Herald (via Daum)",
+     "url": "https://v.daum.net/v/20241018191733718"
+    }
+   ]
+  },
+  {
+   "id": "nk_2024_11_first_combat",
+   "name": "북한군 첫 교전(쿠르스크) 보도",
+   "start": "2024-11-04",
+   "end": null,
+   "named": false,
+   "sources": [
+    {
+     "publisher": "Reuters (via Arab News Pakistan)",
+     "url": "https://www.arabnews.pk/node/2578278/world"
+    }
+   ]
+  },
+  {
+   "id": "nk_2024_12_treaty_in_force",
+   "name": "북러 조약 발효",
+   "start": "2024-12-04",
+   "end": null,
+   "named": false,
+   "sources": [
+    {
+     "publisher": "Interfax (citing KCNA)",
+     "url": "https://interfax.com/newsroom/top-stories/108291/"
+    }
+   ]
+  },
+  {
+   "id": "nk_2025_04_official_ack",
+   "name": "러시아·북한 파병 공식 인정",
+   "start": "2025-04-26",
+   "end": "2025-04-28",
+   "named": false,
+   "sources": [
+    {
+     "publisher": "NBC News",
+     "url": "https://www.nbcwashington.com/news/national-international/north-korea-confirms-it-sent-troops-to-russia-calling-them-heroes/3900620/?amp=1"
+    }
+   ]
+  }
+ ],
+ "taiwan": {
+  "mnd_list": "https://www.mnd.gov.tw/news/plaactlist",
+  "mnd_list_en": "https://www.mnd.gov.tw/en/news/plaactlist",
+  "mnd_note": "대만 국방부 「中共解放軍臺海周邊海、空域動態」 하루 1건(전일 06시~당일 06시, 대만 시각). 정부자료 개방 라이선스지만 robots.txt 가 자동 수집을 막아 링크만 건다(2026-10-19 결정)",
+  "last_named": {
+   "name": "Justice Mission-2025(正義使命)",
+   "start": "2025-12-29",
+   "end": "2025-12-30",
+   "url": "https://www.defensenews.com/global/asia-pacific/2026/01/08/chinese-drill-near-taiwan-seen-as-test-run-for-blockade-message-to-us/",
+   "publisher": "Defense News"
+  }
+ },
+ "korea_baseline": {
+  "summary": "북러 조약 4조 「지체 없이」 군사 원조(2024-06 서명·12월 발효)",
+  "date": "2024-06-19",
+  "url": "https://hawaiitribune-herald.com/2024/06/21/nation-world-news/new-north-korea-russia-pact-calls-for-immediate-military-aid-if-invaded/",
+  "publisher": "AP"
+ },
+ "readings": [
+  {
+   "kind": "observed",
+   "direction": null,
+   "date": "2024-06-21",
+   "publisher": "Hawaii Tribune-Herald (AP)",
+   "summary": "2024년 6월 체결된 북러 조약 4조는 일방이 무력침공으로 전쟁상태에 처하면 상대방이 유엔헌장 51조에 따라 지체 없이 군사적 원조를 제공하도록 규정했다.",
+   "quote": "provide military and other assistance with all means in its possession without delay",
+   "url": "https://hawaiitribune-herald.com/2024/06/21/nation-world-news/new-north-korea-russia-pact-calls-for-immediate-military-aid-if-invaded/"
+  },
+  {
+   "kind": "observed",
+   "direction": null,
+   "date": "2025-04-28",
+   "publisher": "뉴시스",
+   "summary": "북한은 2025년 4월 28일 노동신문을 통해 김정은 명령으로 북한군이 쿠르스크 작전에 참전했다고 처음 공식 인정했다.",
+   "quote": "북한군이 쿠르스크 '해방 작전'에 참전했다고 밝혔다",
+   "url": "https://www.newsis.com/view/NISX20250428_0003156062"
+  },
+  {
+   "kind": "observed",
+   "direction": null,
+   "date": "2024-11-20",
+   "publisher": "The Korea Times",
+   "summary": "국정원은 국회 정보위에서 북한군 1만2천~1만5천 명 파병, 일부 전투 참가를 평가했고 장기전 시 러시아의 첨단 무기기술 이전 가능성을 제기했다.",
+   "quote": "are assessed to have participated in combat",
+   "url": "https://www.koreatimes.co.kr/amp/foreignaffairs/northkorea/20241120/north-korean-troops-assigned-to-russias-airborne-brigade-and-marine-corps-some-enter-combat-says-nis"
+  },
+  {
+   "kind": "observed",
+   "direction": null,
+   "date": "2025-05-29",
+   "publisher": "Korea JoongAng Daily",
+   "summary": "다국적제재모니터링팀(MSMT) 첫 보고서는 2023년 9월 이후 2만 개 이상 컨테이너 분량의 북한 군수품 이전과 러시아의 판치르급 방공체계 이전을 적시했다.",
+   "quote": "Russia transferred at least one Pantsir-class mobile air defense system combat vehicle to North Korea",
+   "url": "https://www.koreajoongangdaily.com/korea/sanctions-monitoring-teams-first-report-details-north-korea-russia-military-ties/12238454"
+  },
+  {
+   "kind": "observed",
+   "direction": null,
+   "date": "2006-01-30",
+   "publisher": "Korea JoongAng Daily",
+   "summary": "2006년 1월 한미 공동성명에서 한국은 주한미군의 전략적 유연성 필요성을 존중하고, 미국은 한국민 의사에 반해 동북아 지역분쟁에 개입되지 않는다는 한국 입장을 존중한다고 명시했다.",
+   "quote": "respects the necessity for strategic flexibility of the U.S. forces in the ROK.",
+   "url": "https://www.koreajoongangdaily.com/korea/flexible-us-troops-may-not-help-the-alliance/11775374",
+   "indirect": "2006-01 한미 공동성명 원문(미 국무부 2001-2009 기록관)이 열리지 않아 언론 보도로 인용"
+  },
+  {
+   "kind": "observed",
+   "direction": null,
+   "date": "2025-08-10",
+   "publisher": "Korea JoongAng Daily",
+   "summary": "브런슨 주한미군사령관은 미국이 대만에 가면 한국도 따라간다는 것이 기정사실은 아니라고 했고, 논의는 병력 수가 아니라 역량 중심이어야 한다며 감축 가능성을 열어뒀다.",
+   "quote": "I don't think it should be considered a foregone conclusion",
+   "url": "https://www.koreajoongangdaily.com/korea/usfk-commander-warns-against-chinas-moves-hints-at-troop-reduction/12145217"
+  },
+  {
+   "kind": "observed",
+   "direction": null,
+   "date": "2025-08-25",
+   "publisher": "Korea JoongAng Daily",
+   "summary": "이재명 대통령은 주한미군 운용 범위에 대한 미국의 유연성 요구가 있음을 인정하면서 이를 받아들이기 어렵다고 밝혔다.",
+   "quote": "It is true that there are demands from the U.S. side for flexibility",
+   "url": "https://www.koreajoongangdaily.com/korea/washingtons-demands-for-usfk-flexibility-hard-to-accept-president-lee-says-before-trump-summit/11961094"
+  },
+  {
+   "kind": "analyst",
+   "direction": "raises_korea_risk",
+   "date": "2023-08-16",
+   "publisher": "Atlantic Council",
+   "summary": "미중 분쟁 시 미군 증원·손실이 북한의 기회주의적·선제적 공격을 유발할 수 있고, 중국이 한미 전력 묶어두기를 위해 북한의 확전을 부추길 수 있다고 분석했다.",
+   "quote": "could prompt opportunistic or preemptive aggression from North Korea",
+   "url": "https://www.atlanticcouncil.org/in-depth-research-reports/report/the-united-states-and-its-allies-must-be-ready-to-deter-a-two-front-war-and-nuclear-attacks-in-east-asia/"
+  },
+  {
+   "kind": "analyst",
+   "direction": "mixed/conditional",
+   "date": "2023-08-16",
+   "publisher": "Atlantic Council",
+   "summary": "같은 보고서는 북중 사전 공모는 동시 분쟁의 덜 유력한 경로이며, 북한은 기회와 위협을 동시에 보고 초기에는 정권 위험을 감수하는 데 신중할 것이라고 봤다.",
+   "quote": "Advance coordination between the two is one of the less likely ways",
+   "url": "https://www.atlanticcouncil.org/in-depth-research-reports/report/the-united-states-and-its-allies-must-be-ready-to-deter-a-two-front-war-and-nuclear-attacks-in-east-asia/"
+  },
+  {
+   "kind": "analyst",
+   "direction": "raises_korea_risk",
+   "date": "2025-11-12",
+   "publisher": "Lowy Institute (The Interpreter)",
+   "summary": "1961년 조약 2조는 누가 먼저 쐈는지를 따지지 않아 북한도 의무를 지지만, 북한은 대규모 참전 대신 한국에 대한 소규모 도발로 주한미군을 묶는 방식이 가장 비용효율적이라고 분석했다.",
+   "quote": "The most cost-effective way for Pyongyang to meet its treaty obligation",
+   "url": "https://www.lowyinstitute.org/the-interpreter/will-north-korea-defend-china-taiwan-war"
+  },
+  {
+   "kind": "analyst",
+   "direction": "raises_korea_risk",
+   "date": "2024-07-11",
+   "publisher": "머니투데이 (국가안보전략연구원 '국가안보와 전략' 2024 여름호 인용)",
+   "summary": "국가안보전략연구원 보고서는 대만 유사시 미국이 주한미군 전략적 유연성 해석을 넓혀 전력을 대만에 투입하고, 중국이 한·일 내 미군 전력을 타격할 수 있다고 전망했다.",
+   "quote": "주한미군의 전략적 유연성에 대한 해석을 확대할 것으로 보인다",
+   "url": "https://www.mt.co.kr/politics/2024/07/11/2024071117264333840",
+   "indirect": "국가안보전략연구원 「국가안보와 전략」 2024 여름호 원문을 찾지 못해 언론 보도로 인용"
+  },
+  {
+   "kind": "analyst",
+   "direction": "mixed/conditional",
+   "date": "2024-04-04",
+   "publisher": "War on the Rocks",
+   "summary": "동북아 위기는 대만보다 한반도에서 먼저 시작될 가능성이 크며, 오히려 한반도 유사시 중국이 대만에서 기회주의적으로 행동할지를 물어야 한다고 주장했다.",
+   "quote": "more likely to start on the Korean Peninsula, not in Taiwan",
+   "url": "https://warontherocks.com/2024/04/the-crisis-in-east-asia-korea-or-taiwan/"
+  },
+  {
+   "kind": "analyst",
+   "direction": "lowers_korea_risk",
+   "date": "2021-06-30",
+   "publisher": "38 North",
+   "summary": "중국은 북한이 먼저 공격받을 때만 지원 의무가 있다고 보며, 북한에 중국의 군사지원을 기대하지 말라고 했다고 전해지는 등 전면전 회피를 최우선으로 한다고 분석했다.",
+   "quote": "count on Chinese military aid",
+   "url": "https://38north.org/2021/06/how-eternal-is-the-sino-dprk-alliance/"
+  },
+  {
+   "kind": "analyst",
+   "direction": "lowers_korea_risk",
+   "date": "2024-03-20",
+   "publisher": "Prospect Foundation (Taiwan)",
+   "summary": "북한이 러시아에 대량의 포탄을 제공한 것은 강적 침공을 앞둔 행동으로 보기 어려워 북중 동시 전쟁을 곧 예상할 필요는 없다는 반(反)연계 논거를 제시했다.",
+   "quote": "That is not something you do before launching an invasion against a formidable opponent",
+   "url": "https://www.pf.org.tw/en/pfen/13-10599.html"
+  }
+ ]
+}

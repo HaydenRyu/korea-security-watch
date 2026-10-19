@@ -67,6 +67,8 @@ details>summary:hover{background:rgba(219,229,241,.05)}details>summary:hover::af
 
 /* ── 목록 행(일정·달력·배경 요인) — 좁은 화면은 2줄, 넓으면 한 줄 ── */
 .rows{list-style:none;margin:0;padding:0}
+.lkr summary{cursor:pointer}.lkr .rows{margin-top:var(--s12)}.lkr .rw .nm small .tag{margin-left:var(--s4)}
+.rw .st .lkw{flex-basis:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:inherit;gap:var(--s4) var(--s8)}
 .rw{display:grid;grid-template-columns:88px minmax(0,1fr);gap:var(--s4) var(--s12);padding:var(--s12) 0;border-bottom:1px solid var(--line);font-size:13px}
 .rw:first-child{padding-top:0}.rw:last-child{border-bottom:0;padding-bottom:0}
 .rw .d{font:500 12px/1.55 var(--data);color:var(--ice);white-space:nowrap}
@@ -204,6 +206,9 @@ details>summary:hover{background:rgba(219,229,241,.05)}details>summary:hover::af
 <section class="p" id="factors"><div class="ph"><span class="k">배경 요인 · 과거 20년에 발사를 늘렸나</span><span class="r" id="fvb">—</span></div>
 <div class="pb" id="fv"><p class="none">불러오는 중</p></div></section>
 
+<section class="p" id="linkage"><div class="ph"><span class="k">연동 위기 · 다른 곳의 전쟁·위기 때 발사가 늘었나</span><span class="r" id="lkb">—</span></div>
+<div class="pb" id="lkv"><p class="none">불러오는 중</p></div></section>
+
 <section class="p" id="cfr"><div class="ph"><span class="k">외부 전문가 시각</span><span class="r">연 1회 · 확률 아님</span></div>
 <div class="pb" id="cfrb"><p class="none">불러오는 중</p></div></section>
 
@@ -225,11 +230,11 @@ const hhmm=iso=>{if(!iso)return"";const p=Object.fromEntries(new Intl.DateTimeFo
 const GRADE=[["평시","--g0"],["주의","--g1"],["경계","--g2"],["위험","--g3"]];
 
 /* ── 자료 한 번에 읽고, 칸마다 그린다(한 칸 실패가 다른 칸을 막지 않는다) ── */
-Promise.all([jf(SB+"signals.json"),jf(SB+"latest.json"),jf("data/risk_calendar.json"),jf("data/escalation_ladder.json"),jf(SB+"ladder.json"),jf("data/factors_validation.json")])
-.then(([sg,lt,cal,cat,st,fv])=>{
+Promise.all([jf(SB+"signals.json"),jf(SB+"latest.json"),jf("data/risk_calendar.json"),jf("data/escalation_ladder.json"),jf(SB+"ladder.json"),jf("data/factors_validation.json"),jf("data/linkage.json")])
+.then(([sg,lt,cal,cat,st,fv,lk])=>{
   if(st&&(typeof st!=="object"||typeof st.stage!=="number"))st=null;
   const t=fcKST(new Date());
-  for(const[f,a]of[[drawSummary,[sg,lt,cal,cat,st,t]],[drawSignals,[sg,lt,cal]],[drawUpcoming,[cal,t]],[drawLadder,[cat,st]],[drawTempo,[cal,t]],[drawYear,[cal]],[drawFactors,[fv]],[drawCfr,[cat]],[drawMethod,[cal,cat]]])
+  for(const[f,a]of[[drawSummary,[sg,lt,cal,cat,st,t]],[drawSignals,[sg,lt,cal]],[drawUpcoming,[cal,t]],[drawLadder,[cat,st]],[drawTempo,[cal,t]],[drawYear,[cal]],[drawFactors,[fv]],[drawLinkage,[lk]],[drawCfr,[cat]],[drawMethod,[cal,cat]]])
     try{f(...a)}catch(e){console.error(f.name,e)}
 });
 
@@ -359,6 +364,26 @@ function drawFactors(fv){
   ${(fv.unverified||[]).map(u=>`<li class="rw"><span class="d">—</span><span class="nm">${esc(u.name)}<small>${esc(u.reason)}</small></span><span class="st"><span class="tag lo">미검증</span></span></li>`).join("")}</ul>
   ${fv.control?`<p class="note">대조: ${esc(fv.control.name)} ${fv.control.events}번 중 ${fv.control.hit}번(평소라면 ${fv.control.expected}번) — 아래 기준과 같은 방법으로 다시 세어 「1년 달력」의 미국 선거일 값과 같은지 확인했다.</p>`:""}
   ${sv?`<p class="note">¹ 참고: 앞뒤 ${sv.window_days}일로 넓히면 ${sv.events}번 중 ${sv.hit}번(평소라면 ${sv.expected}번)으로 「잦음」이 나오지만, 18번 비교한 가운데 하나뿐이라 여러 번 비교하면 우연히 나올 수 있는 수준을 넘지 못한다. 표본 ${sv.events}건 — 참고로만 두고 예측에 쓰지 않는다.</p>`:""}`;
+}
+
+/* 연동 위기(10/19) — data/linkage.json(정본). 검정은 배경 요인과 같은 방법(앞뒤 7·14일, 평소라면 = 그해 아무 날). 확률 아님 */
+function drawLinkage(lk){
+  if(!lk?.groups?.length){$("lkv").innerHTML='<p class="none">검증 자료를 불러오지 못했습니다.</p>';return}
+  const b=lk.basis||{},ev=Object.fromEntries((lk.events||[]).map(e=>[e.id,e]));
+  $("lkb").textContent=`앞뒤 7·14일 · 발사한 날 ${b.launch_days_n??"—"}일`;
+  const w=(r,n)=>`<span class="lkw">앞뒤 ${n}일 <b>${r.hit}번</b> 발사 · 평소라면 ${r.expected}번 ${tag(r.verdict)}</span>`;
+  const evs=g=>g.events.map(i=>ev[i]).filter(Boolean).map(e=>`<a href="${esc(e.sources?.[0]?.url||"#")}" target="_blank" rel="noopener" title="${esc(e.start)}${e.end&&e.end!==e.start?"~"+esc(e.end):""}">${esc(e.name)}</a>`).join(" · ");
+  const rd=(lk.readings||[]);
+  const DIR={raises_korea_risk:"위험↑ 주장","lowers_korea_risk":"위험↓ 주장","mixed/conditional":"조건부"};
+  const li=x=>`<li class="rw"><span class="d">${esc(x.date.slice(0,7))}</span><span class="nm">${esc(x.summary)}<small>「${esc(x.quote)}」 — ${lnk(x.url,esc(x.publisher))}${x.indirect?` <span class="tag lo" title="${esc(x.indirect)}">간접 인용</span>`:""}${x.direction?` <span class="tag lo">${DIR[x.direction]||""}</span>`:""}</small></span></li>`;
+  $("lkv").innerHTML=`<p class="note" style="margin:0 0 var(--s12)">대만 해협 대규모 훈련·러-우 전쟁 주요 사건 앞뒤로 북한 발사가 늘었는지 셌다. 「평소 수준」 = 늘었다는 근거가 없다 — 그래서 상황판 「연동 위기」 줄은 사실과 출처만 보이고 등급·알림에 쓰지 않는다.</p>
+  <ul class="rows">${lk.groups.map(g=>`<li class="rw"><span class="d">${g.w7.events}번</span><span class="nm">${esc(g.name)}<small>${evs(g)}</small></span><span class="st">${w(g.w7,7)}${w(g.w14,14)}</span></li>`).join("")}</ul>
+  <p class="note">${esc(b.multiple_comparisons||"")}. ${esc(b.caution||"")}.</p>
+  ${(b.excluded||[]).map(x=>`<p class="note">제외: ${esc(x)}</p>`).join("")}
+  <p class="note">${esc(b.launch_days||"")} · ${esc(b.range||"")}. 날짜는 사건마다 연 원문(이름을 누르면 열림).</p>
+  <details class="lkr"><summary class="note">읽을거리 — 관측된 사실 ${rd.filter(x=>x.kind==="observed").length}건 · 분석가 주장 ${rd.filter(x=>x.kind!=="observed").length}건</summary>
+  <p class="note"><b>관측된 사실</b></p><ul class="rows">${rd.filter(x=>x.kind==="observed").map(li).join("")}</ul>
+  <p class="note"><b>분석가 주장</b> — 대만에서 실제 전쟁이 났을 때를 가정한 의견이다. 훈련·위기 국면의 예측이 아니다.</p><ul class="rows">${rd.filter(x=>x.kind!=="observed").map(li).join("")}</ul></details>`;
 }
 
 function drawCfr(cat){

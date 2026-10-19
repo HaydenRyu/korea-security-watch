@@ -683,6 +683,121 @@ def update_factors(run: dict, doc: dict | None, now: str) -> dict:
         return {**doc, "error": str(e)[:120]}
 
 
+# ── 연동 위기(linkage, 선택 · 등급·알림과 무관) ─────────────────────────────────────────
+# 대만 해협 명명 훈련 여부(뉴스 판정) + 한반도 연결 사실(관측된 사실만). 정본·과거 검정은 data/linkage.json —
+# 대만 해협 대규모 훈련·러-우/북러 사건 앞뒤 북한 발사는 모두 「평소 수준」이라 등급·알림에 쓰지 않는다.
+# 확인 기준·유지는 긴장 국면(ladder)과 같다: 서로 다른 사이트 2곳 이상 = corroborated, 마지막 확인 뒤 CRISIS_FLOOR_H 유지.
+# 루틴이 이번 회차에 linkage 를 안 내면 직전 값을 잇는다(시간 경과 만료만 반영).
+TAIWAN_STATES = ("named", "large_unnamed", "none")
+KOREA_LINKS_MAX = 5  # 화면 표시 길이 — 판정에 쓰지 않는다
+_LINK_LEN = {"summary": 200, "name": 80}
+
+
+def _alive(row: dict, t_now: datetime) -> bool:
+    last = _dt(row.get("last_seen"))
+    return bool(last and t_now - last <= timedelta(hours=CRISIS_FLOOR_H))
+
+
+def _status(srcs: list[dict]) -> str:
+    return "corroborated" if len({site(s["url"]) for s in srcs}) >= 2 else "single"
+
+
+def _merge_sources(old: list, new: list) -> list[dict]:
+    out = [s for s in old if isinstance(s, dict) and s.get("url")]
+    for s in new:
+        if s["url"] not in {x["url"] for x in out}:
+            out.append(s)
+    return out[-LADDER_SOURCES_MAX:]
+
+
+def clean_linkage(run: dict) -> dict:
+    """run.linkage → {taiwan?: row, korea: [row]}. 연 원문 없는 줄·모르는 state 는 그것만 버린다. 예외를 내지 않는다."""
+    out: dict = {"korea": []}
+    try:
+        raw, opened = run.get("linkage"), _opened(run)
+        if not isinstance(raw, dict):
+            return out
+        tw = raw.get("taiwan")
+        if isinstance(tw, dict):
+            srcs = _clean_sources(tw.get("sources", tw.get("source")), opened, LADDER_SOURCES_MAX)
+            summ = tw.get("summary").strip()[:_LINK_LEN["summary"]] if isinstance(tw.get("summary"), str) else ""
+            if _flag(tw, "ended") or tw.get("state") == "none":
+                if srcs:  # 해제·없음도 연 원문이 있어야 직전 훈련을 내린다(근거 없는 「없음」은 직전 값을 잇는다)
+                    out["taiwan"] = {"state": "none", "summary": summ, "sources": srcs}
+            elif tw.get("state") in TAIWAN_STATES and srcs and summ:
+                row = {"state": tw["state"], "summary": summ, "sources": srcs}
+                if isinstance(tw.get("name"), str) and tw["name"].strip():
+                    row["name"] = tw["name"].strip()[:_LINK_LEN["name"]]
+                for f in ("start", "end"):
+                    if _date_ok(tw.get(f)):
+                        row[f] = tw[f]
+                out["taiwan"] = row
+        for k in raw.get("korea") if isinstance(raw.get("korea"), list) else []:
+            if not isinstance(k, dict) or not isinstance(k.get("summary"), str) or not k["summary"].strip():
+                continue
+            srcs = _clean_sources(k.get("sources", k.get("source")), opened, LADDER_SOURCES_MAX)
+            if not srcs:
+                continue
+            row = {"summary": k["summary"].strip()[:_LINK_LEN["summary"]], "sources": srcs}
+            if _date_ok(k.get("date")):
+                row["date"] = k["date"]
+            if isinstance(k.get("same_as"), str):
+                row["same_as"] = k["same_as"]
+            out["korea"].append(row)
+            if len(out["korea"]) >= KOREA_LINKS_MAX:
+                break
+        return out
+    except Exception:  # noqa: BLE001 — 참고 블록이 회차를 깨뜨리면 안 된다
+        return {"korea": []}
+
+
+def update_linkage(run: dict, doc: dict | None, now: str) -> dict:
+    """state/linkage.json = {version, updated_at, judged_at, taiwan{state,status,name?,start?,end?,summary,sources,first_seen,last_seen}|None,
+    last_named{name,start?,end?,at}?, korea[{id,status,summary,date?,sources,first_seen,last_seen}]}.
+    taiwan 은 corroborated 일 때만 화면이 「훈련 중」으로 쓴다(single = 확인 중). 어떤 입력에도 예외를 내지 않는다."""
+    doc = doc if isinstance(doc, dict) else {}
+    try:
+        t_now = _dt(now) or datetime.now(timezone.utc)
+        run = run if isinstance(run, dict) else {}
+        new = clean_linkage(run)
+        tw = doc.get("taiwan") if isinstance(doc.get("taiwan"), dict) else None
+        last_named = doc.get("last_named") if isinstance(doc.get("last_named"), dict) else None
+        row = new.get("taiwan")
+        if row and row["state"] == "none":
+            tw = None
+        elif row:
+            same = tw and tw.get("state") == row["state"] and (tw.get("name") or "") == (row.get("name") or "")
+            srcs = _merge_sources(tw["sources"] if same else [], row["sources"])
+            st = "corroborated" if (same and tw.get("status") == "corroborated") else _status(srcs)
+            tw = {**{f: v for f, v in row.items() if f != "sources"}, "status": st, "sources": srcs,
+                  "first_seen": (tw.get("first_seen") if same else None) or now, "last_seen": now}
+        if tw and not _alive(tw, t_now):
+            tw = None
+        if tw and tw.get("state") == "named" and tw.get("status") == "corroborated" and tw.get("name"):
+            last_named = {"name": tw["name"], **{f: tw[f] for f in ("start", "end") if tw.get(f)}, "at": now}
+        korea = [dict(k) for k in doc.get("korea") or [] if isinstance(k, dict) and isinstance(k.get("sources"), list)]
+        for r in new["korea"]:
+            urls = {s["url"] for s in r["sources"]}
+            hit = next((k for k in korea if k.get("id") == r.get("same_as") or urls & {s.get("url") for s in k["sources"]}), None)
+            if hit:
+                hit["sources"] = _merge_sources(hit["sources"], r["sources"])
+                hit["status"] = _status(hit["sources"])
+                hit["last_seen"] = now
+                continue
+            korea.append({"id": signal_id("korea", r["sources"][0]["url"], now), "status": _status(r["sources"]),
+                          "summary": r["summary"], **({"date": r["date"]} if r.get("date") else {}),
+                          "sources": r["sources"], "first_seen": now, "last_seen": now})
+        korea = sorted((k for k in korea if _alive(k, t_now)), key=lambda k: k["last_seen"], reverse=True)[:KOREA_LINKS_MAX]
+        got = "linkage" in run and isinstance(run.get("linkage"), dict)
+        out = {"version": 1, "updated_at": now, "judged_at": now if got else doc.get("judged_at"),
+               "taiwan": tw, "korea": korea}
+        if last_named:
+            out["last_named"] = last_named
+        return out
+    except Exception as e:  # noqa: BLE001
+        return {**doc, "updated_at": now, "error": str(e)[:120]}
+
+
 def last_verified(events: list[dict]) -> dict | None:
     """판정 불가 회차를 건너뛴 직전 판정 회차."""
     return next((e for e in reversed(events) if e.get("status") == "ok"), None)
@@ -777,7 +892,7 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     notify = notify or released or calmed
 
     new_latest = {**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)}
-    for k in ("unresolved", "floor", "signals", "ladder", "factors"):  # 참고 블록은 state/signals·ladder·factors.json 에 따로 쌓는다
+    for k in ("unresolved", "floor", "signals", "ladder", "factors", "linkage"):  # 참고 블록은 state/signals·ladder·factors·linkage.json 에 따로 쌓는다
         new_latest.pop(k, None)
     unres = unresolved_keys(items)
     if unres:
@@ -845,6 +960,13 @@ def main(argv: list[str]) -> int:
                             "kept": len(clean_factors(ok))}
     except Exception as e:  # noqa: BLE001
         event["factors"] = {"error": str(e)[:120]}
+    try:  # 연동 위기 — 등급·알림과 무관. 안 내면 직전 값을 잇고, 판정 불가 회차는 시간 경과(만료)만 반영
+        lk = update_linkage(ok, _load_safe(STATE / "linkage.json"), event["checked_at"])
+        (STATE / "linkage.json").write_text(json.dumps(lk, ensure_ascii=False, indent=2) + "\n")
+        event["linkage"] = {"taiwan": (lk.get("taiwan") or {}).get("state", "none") if not lk.get("error") else None,
+                            "korea": len(lk.get("korea") or [])}
+    except Exception as e:  # noqa: BLE001
+        event["linkage"] = {"error": str(e)[:120]}
     if new_latest is not None:
         (STATE / "latest.json").write_text(json.dumps(new_latest, ensure_ascii=False, indent=2) + "\n")
     with events_path.open("a") as f:

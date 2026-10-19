@@ -14,7 +14,7 @@
     ],
     "border_clash": [
       "목함지뢰 해안 발견 DMZ 귀순",
-      "강화 해안 북 유실 추정 지뢰"
+      "김여정 남부국경 확성기 경고사격"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 해킹",
@@ -45,15 +45,17 @@
   },
   "opened": [
     "https://www.yna.co.kr/rss/northkorea.xml",
+    "https://www.yna.co.kr/view/AKR20261019167400504",
+    "https://www.chosun.com/politics/politics_general/2026/10/19/6LMMJ5GMLVHG3FC3UNAS4JRXWI/",
     "https://www.yna.co.kr/view/AKR20261019132700065",
     "https://www.segye.com/newsView/20261019517511",
     "https://www.yna.co.kr/view/AKR20261019144700504",
     "https://www.yna.co.kr/view/AKR20261019159200504",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/rok-kicks-off-exercise-on-countering-north-korea-postponed-drills-with-us/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.aljazeera.com/xml/rss/all.xml"
   ],
-  "overall_summary": "새로 확인된 군사 징후는 없고, 강화 볼음도 해안의 북 유실 추정 반보병지뢰 발견(군 폭파 처리, 인명 피해 없음)만 정례 범주로 보도됐다. 호국훈련(10/19~30)과 북러 사법 교류는 정례·배경이며 직전 회차와 판단이 같다.",
+  "overall_summary": "김여정 담화(10/19 18시경, 조선중앙통신 보도)가 MDL 경고사격에 반발해 남부 국경 전술 타격수단 증강 배치·대남 확성기 재개를 「검토」한다고 위협했으나 시한·표적이 없는 위협 발언이라 정례 범주다. 강화 해안 유실 추정 지뢰 발견(이달 4번째)도 정례로 직전 회차와 판단이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,11 +69,11 @@
     "border_clash": {
       "status": "corroborated",
       "routine": true,
-      "region": "인천 강화군 볼음도",
+      "region": "인천 강화군 볼음도·군사분계선 일대",
       "lat": 37.65,
       "lon": 126.35,
-      "summary": "19일 오전 강화군 볼음도 조갯골 해안에서 북 유실 추정 반보병지뢰 1발이 발견돼 해병대 2사단 EOD가 폭파 처리했고 인명·물적 피해는 없었다(이달 4번째).",
-      "meaning": "여름 호우로 떠내려온 유실 지뢰의 반복 발견으로 의도된 도발 근거는 없다.",
+      "summary": "19일 강화 볼음도 해안에서 북 유실 추정 반보병지뢰가 발견돼 군이 폭파 처리했고(인명 피해 없음), 같은 날 김여정이 MDL 경고사격에 반발해 전술 타격수단 증강 배치·대남 확성기 방송 재개를 검토한다는 담화를 냈다.",
+      "meaning": "유실 지뢰는 의도된 도발 근거가 없고, 김여정 담화는 시한·표적 없는 위협 발언이라 정례 범주이나 접경 긴장 어조가 높아졌다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -82,21 +84,35 @@
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261019517511"
+        },
+        {
+          "name": "연합뉴스(김여정 담화)",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261019167400504"
+        },
+        {
+          "name": "조선일보(김여정 담화)",
+          "tier": "B",
+          "url": "https://www.chosun.com/politics/politics_general/2026/10/19/6LMMJ5GMLVHG3FC3UNAS4JRXWI/"
         }
       ],
       "confidence": "높음",
       "facts": [
-        "해병대 2사단 발표, 인명·물적 피해 없음"
+        "해병대 2사단 발표, 지뢰 인명·물적 피해 없음",
+        "김여정 담화는 8/1~10/17 확성기 경고방송 2,870차·경고사격 201차를 주장(북한 측 주장)",
+        "군은 교전수칙상 MDL 침범 시 경고방송·경고사격 실시"
       ],
       "speculation": [
-        "호우로 북측에서 유실된 것으로 군 추정"
+        "호우로 북측에서 유실된 것으로 군 추정",
+        "전술 타격수단은 DMZ 인접 부대 직사·근거리 화력 보강 가능성이 거론됨"
       ]
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "북한 최고검찰소장 방러(사법 공조)는 군사협력이 아닌 배경이다."
     },
     "parade_massing": {
       "status": "none"
@@ -108,34 +124,45 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T09:10:44+00:00",
+  "checked_at": "2026-10-19T10:10:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "캐나다 군 기지 대형 화재, 4명 사망",
-      "summary": "캐나다 군 기지에서 대형 화재가 나 4명이 숨지고 수십 명이 다쳤다고 BBC가 보도했다.",
-      "link_korea": "직접 연관은 없으나 서방 군 시설 안전 사안으로 참고한다.",
-      "region": "캐나다",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cxj0ly1m3q81o",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "트럼프, 대러 제재 유예 \"평화협상 유지 위해\"",
-      "summary": "트럼프 미 대통령이 대러 제재 시행을 유예했으며 평화협상을 이어 가기 위해서라고 밝혔다.",
-      "link_korea": "대러 제재 기조 변화는 북러 군사협력을 둘러싼 국제 압박 구도에 영향을 준다.",
+      "title": "트럼프, 러시아 제재 유예는 평화협상 유지 목적",
+      "summary": "트럼프 미 대통령이 러시아 제재 일시 중단은 평화 협상을 이어가기 위한 것이라고 밝혔다.",
+      "link_korea": "대러 제재 완화 기류는 북러 군사협력 대응과 대북 제재 공조 환경에 영향을 줄 수 있다.",
       "region": "미국·러시아",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c9p8gz7zx4peo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
+    },
+    {
+      "title": "루비오 \"우크라이나 정보공유 중단은 없었다\"",
+      "summary": "루비오 미 국무장관이 미국이 우크라이나에 대한 정보 공유를 중단한 적이 없다고 밝혔다.",
+      "link_korea": "미국의 동맹·파트너 정보 공유 기조는 한미 정보 협력 신뢰 논의와도 연결된다.",
+      "region": "미국·우크라이나",
+      "source": {
+        "name": "알자지라",
+        "url": "https://www.aljazeera.com/news/2026/10/19/rubio-says-there-was-no-us-pause-in-intelligence-sharing-with",
+        "via": "https://www.aljazeera.com/xml/rss/all.xml"
+      }
+    },
+    {
+      "title": "카타르 \"이란 전쟁발 에너지 충격 아직 정점 아냐\"",
+      "summary": "카타르가 이란 전쟁에 따른 세계 에너지 충격이 아직 정점에 이르지 않았다고 경고했다.",
+      "link_korea": "중동발 에너지 충격은 에너지 수입 의존도가 높은 한국의 안보·경제 여건과 직결된다.",
+      "region": "중동",
+      "source": {
+        "name": "알자지라",
+        "url": "https://www.aljazeera.com/news/2026/10/19/qatar-warns-global-energy-shockwaves-from-iran-war-have-yet-to-peak",
+        "via": "https://www.aljazeera.com/xml/rss/all.xml"
+      }
     }
   ],
-  "world_context": "대러 제재와 서방 군 관련 사안이 이어지나 한반도 직접 영향은 제한적이다.",
-  "world_at": "2026-10-19T08:09:28+00:00"
+  "world_context": "미·러 협상, 정보 공유, 중동 에너지 충격이 겹치며 대외 환경의 불확실성이 이어지고 있다.",
+  "world_at": "2026-10-19T10:10:12+00:00"
 }

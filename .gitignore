@@ -3,3 +3,4 @@ run.json
 __pycache__/
 .DS_Store
 relay/.wrangler/
+news_kr.local.json

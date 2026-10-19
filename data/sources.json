@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18",
+ "updated": "2026-10-19",
  "note": "감시 루틴(prompts/monitor.md)과 상황판 「출처」 화면이 함께 읽는 정본. 추가 요청은 검토 후 여기에 반영한다.",
  "tiers": [
   {
@@ -203,7 +203,30 @@
       },
       {
        "name": "연합뉴스",
-       "url": "https://www.yna.co.kr"
+       "url": "https://www.yna.co.kr",
+       "note": "북한 기사가 사회·지방면으로도 나간다(2026-10-19 강화 해안 지뢰는 북한 피드에 없고 사회·지방 피드에만 있었다). RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
+       "feeds": [
+        {
+         "section": "북한",
+         "url": "https://www.yna.co.kr/rss/northkorea.xml"
+        },
+        {
+         "section": "정치",
+         "url": "https://www.yna.co.kr/rss/politics.xml"
+        },
+        {
+         "section": "사회",
+         "url": "https://www.yna.co.kr/rss/society.xml"
+        },
+        {
+         "section": "지방",
+         "url": "https://www.yna.co.kr/rss/local.xml"
+        },
+        {
+         "section": "전체",
+         "url": "https://www.yna.co.kr/rss/news.xml"
+        }
+       ]
       },
       {
        "name": "교도통신",
@@ -214,6 +237,101 @@
        "name": "지지통신",
        "url": "https://www.jiji.com",
        "note": "방위성·총리관저 발표 속보"
+      }
+     ]
+    },
+    {
+     "name": "한국 방송·신문",
+     "items": [
+      {
+       "name": "SBS",
+       "url": "https://news.sbs.co.kr",
+       "note": "RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
+       "feeds": [
+        {
+         "section": "정치",
+         "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER"
+        },
+        {
+         "section": "사회",
+         "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03&plink=RSSREADER"
+        },
+        {
+         "section": "속보",
+         "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER"
+        }
+       ]
+      },
+      {
+       "name": "조선일보",
+       "url": "https://www.chosun.com",
+       "note": "이용약관 미확인 — 온라인신문협회 디지털뉴스 이용규칙(개인 구독 한정)을 따른다. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
+       "feeds": [
+        {
+         "section": "정치",
+         "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/politics/?outputType=xml"
+        },
+        {
+         "section": "사회",
+         "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/national/?outputType=xml"
+        }
+       ]
+      },
+      {
+       "name": "동아일보",
+       "url": "https://www.donga.com",
+       "note": "RSS 안내: 개인 이용자의 비상업적 사용에만 허용, AI 학습 이용 금지. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
+       "feeds": [
+        {
+         "section": "정치",
+         "url": "https://rss.donga.com/politics.xml"
+        },
+        {
+         "section": "사회",
+         "url": "https://rss.donga.com/national.xml"
+        }
+       ]
+      },
+      {
+       "name": "국민일보",
+       "url": "https://www.kmib.co.kr",
+       "note": "이용약관 미확인 — 협회 이용규칙(개인 구독 한정). robots.txt 가 Claude-User 를 막는다: 루틴은 원문을 열지 않고(curl 우회 금지) 다른 매체로 확인한다. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
+       "feeds": [
+        {
+         "section": "정치",
+         "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml"
+        },
+        {
+         "section": "사회",
+         "url": "https://www.kmib.co.kr/rss/data/kmibSocRss.xml"
+        }
+       ]
+      },
+      {
+       "name": "세계일보",
+       "url": "https://www.segye.com",
+       "note": "디지털뉴스 이용규칙: RSS 는 개인 PC 등 한정된 공간에서 개인 구독에 그쳐야 하고 공중 배포·재RSS 금지. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
+       "feeds": [
+        {
+         "section": "정치",
+         "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml"
+        },
+        {
+         "section": "사회",
+         "url": "https://www.segye.com/Articles/RSSList/segye_society.xml"
+        }
+       ]
+      },
+      {
+       "name": "국방일보",
+       "url": "https://kookbang.dema.mil.kr",
+       "note": "국방홍보원 발행(국방부 소속) — 군 공식 입장 보도라 A 가 아니라 B 로 둔다. 날짜만 있는 일간 피드. 이용약관 미확인. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
+       "feeds": [
+        {
+         "section": "국방",
+         "url": "https://kookbang.dema.mil.kr/dema_xml/dema0010010000.xml"
+        }
+       ]
       }
      ]
     },
@@ -371,5 +489,61 @@
    "url": "https://www.safekorea.go.kr",
    "note": "자곡동 반경 2km"
   }
- ]
+ ],
+ "news_feed_audit": {
+  "checked": "2026-10-19",
+  "note": "국내 언론 피드 자동 수집(scripts/news_kr.py) 판정. 채택 매체는 tiers B 의 feeds 에 있다. 아래는 제외 매체와 사유 — 약관·robots 가 바뀌면 다시 본다.",
+  "excluded": [
+   {
+    "name": "MBC",
+    "url": "https://imnews.imbc.com",
+    "reason": "robots.txt `User-agent: *` 가 `Disallow: /`(지정 검색봇만 허용). 공식 RSS 는 google_news 1종뿐"
+   },
+   {
+    "name": "서울신문",
+    "url": "https://www.seoul.co.kr",
+    "reason": "robots.txt `User-agent: *` 가 `Disallow: /xml/` — RSS 경로(/xml/rss/) 차단. 뉴스 저작권 안내도 공중 배포·재RSS 금지"
+   },
+   {
+    "name": "YTN",
+    "url": "https://www.ytn.co.kr",
+    "reason": "이용약관 제24조: 사전 서면 동의 없이 콘텐츠를 자동화 도구(로봇·크롤러 등)로 활용 금지, 공익·비영리도 동의 필요. 공식 RSS 없음"
+   },
+   {
+    "name": "뉴스1",
+    "url": "https://www.news1.kr",
+    "reason": "이용약관: 자동화 도구로 수집·게시 활용, 사전 서면 동의 없는 크롤링·스크래핑 금지. 공식 RSS 없음"
+   },
+   {
+    "name": "뉴시스",
+    "url": "https://www.newsis.com",
+    "reason": "이용정책 제4장: 자동화 도구로 콘텐츠 모니터링·복제·수집 금지(하이퍼링크 포함, 검색엔진 색인만 예외)"
+   },
+   {
+    "name": "경향신문",
+    "url": "https://www.khan.co.kr",
+    "reason": "이용약관 제17조: 크롤링·자동화 수단 일체 불허(승인 시 예외). RSS 안내: 한정된 영역 개인 구독만"
+   },
+   {
+    "name": "한국일보",
+    "url": "https://www.hankookilbo.com",
+    "reason": "이용약관 제13조: 자동화 도구로 콘텐츠·데이터 수집 엄격 금지(검색엔진 색인 예외). 공식 RSS 없음"
+   },
+   {
+    "name": "한겨레",
+    "url": "https://www.hani.co.kr",
+    "reason": "회원약관 제22조 자동화 도구 불허 + RSS 저작권 표기 「AI 학습 및 활용 금지」 + robots.txt 가 Claude-User 차단"
+   },
+   {
+    "name": "KBS",
+    "url": "https://news.kbs.co.kr",
+    "reason": "공식 RSS 없음(뉴스 사이트맵은 검색엔진용이라 쓰지 않는다). 이용약관 미확인"
+   },
+   {
+    "name": "중앙일보",
+    "url": "https://www.joongang.co.kr",
+    "reason": "공식 RSS 없음(사이트맵만). robots.txt 가 Claude-User 차단. 이용약관 미확인"
+   }
+  ]
+ }
 }

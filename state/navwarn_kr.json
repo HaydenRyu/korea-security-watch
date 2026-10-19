@@ -4,9 +4,9 @@
   "https://www.data.go.kr/data/15057792/openapi.do",
   "https://www.data.go.kr/data/15058193/openapi.do"
  ],
- "fetched_at": "2026-10-19T15:02:23.883008+00:00",
- "status": "ok",
- "status_detail": "",
+ "fetched_at": "2026-10-19T16:14:21.212532+00:00",
+ "status": "error",
+ "status_detail": "getNavigationalWarningInfo(date=20261020,pageNo=1): SERVICETIMEOUT_ERROR (code 05)",
  "last_ok_at": "2026-10-19T15:02:23.883008+00:00",
  "warnings": [
   {

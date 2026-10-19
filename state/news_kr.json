@@ -1,14 +1,14 @@
 {
- "fetched_at": "2026-10-19T15:03:30+00:00",
+ "fetched_at": "2026-10-19T16:15:04+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-19T15:03:30+00:00",
+ "last_ok_at": "2026-10-19T16:15:04+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1144,
-  "hits": 39,
+  "fetched": 1143,
+  "hits": 40,
   "clusters": 25,
   "by_group": {
    "border": 16,
@@ -22,14 +22,14 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 584,
+   "count": 583,
    "hits": 38
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 7
+   "hits": 10
   },
   "동아일보": {
    "feeds": 2,
@@ -41,7 +41,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 22
+   "hits": 21
   },
   "세계일보": {
    "feeds": 2,
@@ -61,17 +61,17 @@
   "border": {
    "clusters": 16,
    "max_independent": 4,
-   "latest": "2026-10-19T15:03:30+00:00"
+   "latest": "2026-10-19T16:15:04+00:00"
   },
   "drone_balloon": {
    "clusters": 5,
    "max_independent": 4,
-   "latest": "2026-10-19T15:03:30+00:00"
+   "latest": "2026-10-19T16:15:04+00:00"
   },
   "mine": {
    "clusters": 4,
    "max_independent": 4,
-   "latest": "2026-10-19T15:03:30+00:00"
+   "latest": "2026-10-19T16:15:04+00:00"
   },
   "fire": {
    "clusters": 4,
@@ -90,7 +90,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 104,
+   "count": 103,
    "hits": 22
   },
   {
@@ -131,7 +131,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "SBS",
@@ -147,7 +147,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 3
+   "hits": 5
   },
   {
    "outlet": "동아일보",
@@ -171,7 +171,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 20
+   "hits": 19
   },
   {
    "outlet": "국민일보",

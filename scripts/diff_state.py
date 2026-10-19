@@ -100,6 +100,28 @@ def validate(run: dict) -> None:
         if it["status"] == "corroborated" and len({s.get("url") for s in it["sources"]}) < 2:
             raise RunError(f"{key}: corroborated 인데 출처가 2곳 미만이다")
     normalize_conflict(items)
+    normalize_attribution(items)
+
+
+ATTRIBUTIONS = {"nk", "cn", "ru", "unknown"}
+
+
+def normalize_attribution(items: dict) -> dict:
+    """귀속(attribution) 정규화 — 값은 ATTRIBUTIONS 만, 「unknown」이면 등급에 안 쓰도록 routine 강제(표시는 화면 칩).
+    10/20 hayden: 북한·중국 소행으로 밝혀지지 않은 해킹은 항목에는 적되 등급은 올리지 않는다."""
+    for it in items.values():
+        a = it.get("attribution")
+        if a is None:
+            continue
+        a = str(a).strip().lower()
+        if a not in ATTRIBUTIONS:
+            it.pop("attribution", None)
+            continue
+        it["attribution"] = a
+        if a == "unknown" and it.get("status") != "none" and not it.get("routine"):
+            it["routine"] = True
+            it["routine_forced"] = "attribution unknown"
+    return items
 
 
 def normalize_conflict(items: dict) -> dict:

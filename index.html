@@ -112,6 +112,16 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .ladder span{font:400 10px/1 var(--data);color:var(--dim);padding-top:8px;border-top:3px solid var(--line-2)}
 .ladder span.on{color:var(--ice);border-color:var(--gc)}
 #summary{margin:12px 0 0;color:var(--ice)}
+/* TO-BE 시안(10/20): 사건 경과 시간 큰 표시 — 상황실의 가장 큰 글자는 시각이다 */
+.elapsed{display:grid;grid-template-columns:1fr 1fr;gap:0 12px;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.elapsed b{display:block;font:300 28px/1 var(--data);font-stretch:87.5%;color:var(--ice);font-variant-numeric:tabular-nums;white-space:nowrap}
+.elapsed b small{font-size:13px;color:var(--fog);margin:0 4px 0 2px}
+.elapsed span{display:block;margin-top:4px;font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.elapsed i{font-style:normal;color:var(--gc)}
+/* 확인 상태 칩 — 확인됨(서로 다른 사이트 N곳) · 미확인(단일) · 상충(신설 예정) · 판정 불가. 색은 등급색만 */
+.vf{display:inline-block;font:600 10px/1 var(--data);padding:3px 5px;border:1px solid var(--line-2);color:var(--fog);letter-spacing:.02em;white-space:nowrap}
+.vf.ok{color:var(--ice);border-color:var(--fog)} .vf.one{color:var(--g1);border-color:color-mix(in srgb,var(--g1) 55%,transparent)}
+.vf.bad{color:var(--g3);border-color:color-mix(in srgb,var(--g3) 55%,transparent)} .vf.unk{border-style:dashed}
 /* AI 표시(10/18): 루틴(Claude)이 공개 기사를 읽고 쓴 문장 — 등급은 코드(diff_state.py)가 정한다. 한 컴포넌트로 통일 */
 :root{--ai:#b69cff;--ai-2:#5cc8ff}  /* AI 표시 전용 색 — 등급색(초록·노랑·주황·빨강)과 겹치지 않는 보라→하늘 */
 .ai{display:inline-flex;align-items:center;gap:3px;font:600 10px/1 var(--data);letter-spacing:.02em;color:#d9ccff;padding:3px 6px;margin-right:6px;vertical-align:1px;cursor:help;white-space:nowrap;
@@ -134,7 +144,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .cev ul{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px}
 .cev li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:8px;line-height:1.4}
 .cev li b{font-weight:500;color:var(--ice)}
-.row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 72px 34px;gap:2px 12px;align-items:center;padding:10px 28px 10px var(--pad);
+.row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 92px 34px;gap:2px 12px;align-items:center;padding:10px 28px 10px var(--pad);
   border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
 .row:not(.on){padding:8px 28px 8px var(--pad)}
 .row:last-child{border-bottom:0}
@@ -674,6 +684,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
         <div><div class="lbl" id="glabel">대기</div>
           <div class="ladder" id="scale"><span>평시</span><span>주의</span><span>경계</span><span>위험</span></div></div>
       </div>
+      <div class="elapsed"><div><b id="eG">—</b><span id="eGs">등급 유지</span></div><div><b id="eS">—</b><span id="eSs">징후 경과</span></div></div>
       <p id="summary">첫 분석 결과를 기다리는 중입니다.</p>
       <a class="phs" id="phase" href="forecast.html#ladder"><span class="pk">긴장 국면</span><b class="no">불러오는 중</b><span class="px">사다리 ›</span></a>
     </div>
@@ -811,6 +822,20 @@ const CRIT=[["징후 없음","징후 없음"],
   ["징후 2개 항목 이상 · 교차확인","일상 활동이 아닌 징후가 2개 항목 이상, 또는 교차확인된 징후 1개 이상"],
   ["핵심 징후 교차확인 + 다른 징후","핵·병력 동원·정부 경고 중 하나가 교차확인되고, 다른 항목 징후가 동시에 있음"]];
 const STAT={none:"이상 없음",single:"단일 출처",corroborated:"교차확인",routine:"일상 활동"};
+// 확인 상태 = diff_state 와 같은 기준(corroborated = 서로 다른 사이트 2곳 이상). 「상충」은 루틴 출력에 conflict 필드가 생기면 켠다(판정 정의 변경 — 승인 뒤)
+const nsite=it=>new Set((it.sources||[]).map(x=>{try{return new URL(x.url).hostname.replace(/^www\./,"")}catch(e){return x.name}})).size;
+const vf=it=>it.status==="none"?"이상 없음":it.status==="unverified"?`<i class="vf unk">판정 불가</i>`
+  :it.conflict?`<i class="vf bad" title="${esc(it.conflict_what||"")}">상충</i>`:it.status==="corroborated"?`<i class="vf ok">확인됨 ${nsite(it)}곳</i>`:`<i class="vf one">미확인 1곳</i>`;
+// 경과 시간 — 등급이 지금 값으로 바뀐 회차(events)부터, 징후는 지금 징후 항목의 출처가 처음 실린 회차부터
+let G_SINCE=null,S_SINCE=null;
+function sinceOf(events,latest){const g=latest?.grade;G_SINCE=null;S_SINCE=null;if(g==null)return;
+  for(let i=events.length-1;i>=0;i--){const e=events[i];if(e.status!=="ok")continue;if(e.grade!==g)break;G_SINCE=e.checked_at}
+  const on=new Set(Object.entries(latest.items||{}).filter(([,v])=>v.status!=="none").map(([k])=>k));if(!on.size)return;
+  for(let i=events.length-1;i>=0;i--){const e=events[i];if(e.status!=="ok")continue;if(!(e.sources||[]).some(x=>on.has(x.item)))break;S_SINCE=e.checked_at}}
+const dur=t=>{const m=Math.max(0,Math.round((Date.now()-new Date(t))/60000)),h=Math.floor(m/60),d=Math.floor(h/24);return d?`${d}<small>일</small>${h%24}<small>시간</small>`:`${h}<small>시간</small>${String(m%60).padStart(2,"0")}<small>분</small>`};
+function tickElapsed(){const g=$("gnum").textContent,L=LABEL[+g];
+  $("eG").innerHTML=G_SINCE?dur(G_SINCE):"—";$("eGs").innerHTML=G_SINCE?`<i>${L}</i> · ${short(G_SINCE)}부터`:"등급 유지";
+  $("eS").innerHTML=S_SINCE?dur(S_SINCE):"—";$("eSs").textContent=S_SINCE?`징후 · ${short(S_SINCE)}부터`:"징후 없음"}
 // 정례 판정 = diff_state.is_routine 과 같은 식(최후통첩은 정례 아님, 상공 통과 경보는 정례)
 const isRoutine=it=>it.ultimatum===true?false:it.overflight_alert===true?true:!!it.routine;
 // 휴대폰 손가락 표적: 열점 점 지름 5px·CCTV 10px 이라 눌리지 않았다(10/18 hayden) → 터치 기기에서만 누르는 범위를 넓힌다(보이는 크기 그대로)
@@ -873,6 +898,7 @@ function render(latest,events){
     if(ur.length)$("summary").insertAdjacentHTML("beforeend",
       `<span class="held">해제 미확인 — ${ur.map(esc).join(" · ")}: 해제·원인 발표가 나올 때까지 징후로 유지합니다.</span>`);
   }
+  sinceOf(events,latest);tickElapsed();
   $("checked").textContent=lastCheck?short(lastCheck):"—";
   $("lag").classList.toggle("on",!!(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3));
   drawDial(g);
@@ -900,7 +926,7 @@ function render(latest,events){
     const meta=[it.carried&&`${short(it.carried_since)}부터 유지 · 해제 보도 전`,src&&src.name,it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
     const body=it.status==="none"?"":`<div class="what">${esc(it.summary)}</div>${meta?`<div class="src">${meta}</div>`:""}`;
     return `<a class="row${it.status!=="none"?" on":""}" href="#item=${k}"><span class="name">${name}</span>
-      <span class="st">${latest?STAT[s]:"분석 전"}</span><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${body}</a>`}).join("")
+      <span class="st">${latest?vf(it):"분석 전"}</span><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${body}</a>`}).join("")
     +evidence(latest);
   $("sensorsum").textContent=latest?`${NI}개 중 ${n}개 징후`:`${NI}개`;
 
@@ -1315,7 +1341,7 @@ function drawPins(items){
       .on("click",()=>location.hash="item="+k);
   });
 }
-function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"});setNext()}
+function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"});setNext();tickElapsed()}
 (async()=>{
   const get=async(p,t)=>{const r=await fetch(base+p+"?t="+Date.now());if(!r.ok)throw r.status;return t?r.text():r.json()};
   let latest=null,events=[];

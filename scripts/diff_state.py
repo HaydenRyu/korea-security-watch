@@ -99,6 +99,26 @@ def validate(run: dict) -> None:
             raise RunError(f"{key}: 징후가 있는데 출처가 없다")
         if it["status"] == "corroborated" and len({s.get("url") for s in it["sources"]}) < 2:
             raise RunError(f"{key}: corroborated 인데 출처가 2곳 미만이다")
+    normalize_conflict(items)
+
+
+def normalize_conflict(items: dict) -> dict:
+    """「상충」 표시(10/20): A~C 출처가 같은 사실을 서로 부정할 때 루틴이 conflict: true + conflict_what 을 낸다.
+    등급 계산은 읽지 않는다(화면 표시만). 징후 없음·서로 다른 사이트 2곳 미만·무엇이 상충하는지 없음이면 지우고 사유를 남긴다."""
+    for key, it in items.items():
+        if not _flag(it, "conflict"):
+            continue
+        why = None
+        if it.get("status") == "none":
+            why = "징후 없음"
+        elif len({site(s.get("url") or "") for s in it.get("sources") or []}) < 2:
+            why = "서로 다른 사이트 2곳 미만"
+        elif not str(it.get("conflict_what") or "").strip():
+            why = "conflict_what 없음"
+        if why:
+            it["conflict"] = False
+            it["conflict_dropped"] = why
+    return items
 
 
 def _flag(it: dict, key: str) -> bool:

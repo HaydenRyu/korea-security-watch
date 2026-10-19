@@ -6,7 +6,7 @@
     ],
     "nuclear": [
       "북한 핵시설 영변 풍계리",
-      "North Korea nuclear site 38 North"
+      "North Korea nuclear 38 North"
     ],
     "logistics": [
       "북한 탄약 군수 수송",
@@ -14,8 +14,8 @@
     ],
     "border_clash": [
       "목함지뢰 해안 발견",
-      "귀순 NLL 월선",
-      "김여정 담화 남부국경 확성기"
+      "NLL 귀순 월선",
+      "김여정 확성기 담화"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
@@ -27,37 +27,26 @@
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
-      "North Korea parade massing"
+      "North Korea parade"
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
-      "North Korea wartime mobilization"
+      "North Korea mobilization"
     ],
     "gov_warning": [
       "진돗개 데프콘 발령",
-      "합참 북한 발표"
-    ],
-    "linkage:taiwan": [
-      "东部战区 台岛 联合演习",
-      "PLA drills around Taiwan"
-    ],
-    "linkage:korea": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "합참 북한 발표 10월 19일"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.nknews.org/feed/",
-    "https://www.yna.co.kr/view/AKR20261019167451504",
     "https://www.yna.co.kr/view/AKR20261019132700065",
     "https://www.segye.com/newsView/20261019519617",
     "https://www.nknews.org/2026/10/another-north-korean-mine-found-on-south-korean-island-fourth-in-last-month/",
     "https://www.nknews.org/2026/10/kim-yo-jong-threatens-restart-of-north-korean-loudspeakers-amid-border-tensions/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.aljazeera.com/xml/rss/all.xml"
   ],
-  "overall_summary": "직전 회차 이후 새 징후는 없다. 김여정 담화(확성기 재개 검토)와 강화 볼음도 유실 추정 지뢰는 시한·표적이 없는 정례 범주이며, 브런슨 사령관 DMZ 발언은 한미 정치 논란이다.",
+  "overall_summary": "직전 회차 이후 새 징후는 없다. 강화 볼음도 유실 추정 지뢰(인명 피해 없음)와 김여정의 확성기 재개 검토 담화(시한·표적 없음)는 정례 범주이며 브런슨 DMZ 발언은 한미 정치 논란이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -88,11 +77,6 @@
           "url": "https://www.nknews.org/2026/10/another-north-korean-mine-found-on-south-korean-island-fourth-in-last-month/"
         },
         {
-          "name": "연합뉴스(김여정 담화 종합)",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261019167451504"
-        },
-        {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261019519617"
@@ -113,8 +97,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "북한 최고검찰소장 방러(사법 공조)는 군사협력이 아닌 배경이다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -126,7 +109,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T13:11:33+00:00",
+  "checked_at": "2026-10-19T14:15:22+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

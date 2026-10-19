@@ -23,7 +23,7 @@
     ],
     "foreign_forces": [
       "북러 군사협력 파병",
-      "North Korea Russia troops"
+      "North Korea troops Russia"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -44,11 +44,10 @@
     "https://www.segye.com/newsView/20261019519617",
     "https://www.nknews.org/2026/10/another-north-korean-mine-found-on-south-korean-island-fourth-in-last-month/",
     "https://www.nknews.org/2026/10/kim-yo-jong-threatens-restart-of-north-korean-loudspeakers-amid-border-tensions/",
-    "https://www.nknews.org/2026/10/rok-kicks-off-exercise-on-countering-north-korea-postponed-drills-with-us/",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.aljazeera.com/xml/rss/all.xml"
   ],
-  "overall_summary": "직전 회차 이후 새 징후는 없다. 강화 볼음도 유실 추정 지뢰(피해 없음)와 김여정의 확성기 재개 검토 담화(시한·표적 없음)는 정례 범주이며, 합참 호국훈련(10/30까지)은 연례 정례 훈련이다.",
+  "overall_summary": "직전 회차 이후 새 징후는 없다. 강화 유실 추정 지뢰(피해 없음)와 김여정 확성기 재개 검토 담화는 정례 범주이며 다른 항목에 새 보도가 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -111,7 +110,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T15:13:48+00:00",
+  "checked_at": "2026-10-19T16:10:22+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,14 +1,14 @@
 {
- "fetched_at": "2026-10-19T12:31:03+00:00",
+ "fetched_at": "2026-10-19T15:03:30+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-19T12:31:03+00:00",
+ "last_ok_at": "2026-10-19T15:03:30+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1143,
-  "hits": 38,
+  "fetched": 1144,
+  "hits": 39,
   "clusters": 25,
   "by_group": {
    "border": 16,
@@ -28,14 +28,14 @@
   "SBS": {
    "feeds": 3,
    "failed": 0,
-   "count": 159,
+   "count": 160,
    "hits": 7
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 9
+   "hits": 8
   },
   "국민일보": {
    "feeds": 2,
@@ -60,23 +60,23 @@
  "groups": {
   "border": {
    "clusters": 16,
-   "max_independent": 3,
-   "latest": "2026-10-19T12:31:03+00:00"
+   "max_independent": 4,
+   "latest": "2026-10-19T15:03:30+00:00"
   },
   "drone_balloon": {
    "clusters": 5,
-   "max_independent": 3,
-   "latest": "2026-10-19T11:48:00+00:00"
+   "max_independent": 4,
+   "latest": "2026-10-19T15:03:30+00:00"
   },
   "mine": {
    "clusters": 4,
-   "max_independent": 3,
-   "latest": "2026-10-19T11:48:00+00:00"
+   "max_independent": 4,
+   "latest": "2026-10-19T15:03:30+00:00"
   },
   "fire": {
    "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-10-19T11:06:53+00:00"
+   "latest": "2026-10-19T14:07:34+00:00"
   },
   "defect": {
    "clusters": 2,
@@ -146,7 +146,7 @@
    "section": "속보",
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
-   "count": 101,
+   "count": 102,
    "hits": 3
   },
   {
@@ -163,7 +163,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 4
+   "hits": 3
   },
   {
    "outlet": "국민일보",

@@ -45,9 +45,11 @@ FIXED_MIN_DAYS = 2        # 시설 근처에서 이 일수 이상이면 신뢰 �
 REPEAT_MIN_DAYS = 3       # 시설 없이 이 일수 이상 반복되면 산불·소각으로 보지 않는다(→ 미상)
 OSM_RADIUS_M = 750        # 시설 경계까지 거리. Overpass around 는 way 선분 기준 = 경계 거리. 375m 화소 2개 폭
 OSM_TTL_DAYS = 30
-OSM_BATCH = 60            # 한 질의에 묶는 칸 수. 10/19 실측: make 요약 방식 60칸 = 53초(칸별 호출은 칸당 ~25초)
-OSM_BATCH_TIMEOUT_S = 60  # 묶음 1회 서버 timeout
-OSM_BUDGET_S = 120        # 회차당 Overpass 총 시간 상한 — 묶음은 경과 ≤ 60초일 때만 시작(최대 2묶음 ≈ 120칸)
+OSM_BATCH = 40            # 한 질의에 묶는 칸 수. 10/19 실측(overpass-api.de): 4칸 28초·30칸 45초·60칸 53초 — 고정 대기가 크다.
+                          # 60칸은 GHA 에서 게이트웨이 504 → 40칸, 실패 시 반으로 나눠 재시도
+OSM_MIN_SPLIT = 10        # 이 이하 묶음이 실패하면 그 회차 조회를 멈춘다
+OSM_BATCH_TIMEOUT_S = 50  # 묶음 1회 서버 timeout
+OSM_BUDGET_S = 120        # 회차당 Overpass 총 시간 상한 — 새 묶음은 경과 ≤ 70초일 때만 시작
 OVERPASS = "https://overpass-api.de/api/interpreter"
 UA = "korea-security-watch/1.0 (personal OSINT dashboard; github actions)"
 KIND_LABEL = {"fixed": "상시 열원 추정", "burn": "산불·소각 추정", "unknown": "미상"}
@@ -149,22 +151,29 @@ def osm_batch(items: list[tuple[str, float, float]]) -> dict[str, list[str]]:
 def enrich_osm(cells: dict, now: datetime, lookup=None, priority: set[str] | None = None,
                batch: int = OSM_BATCH) -> int:
     """OSM 미조회·만료 칸을 묶음(batch 칸) 단위로 조회해 칸별로 캐시한다.
-    순서 = 이번 회차 열점이 있는 칸 → 최근 감지 순. 새 묶음은 경과 시간이 OSM_BUDGET_S − OSM_BATCH_TIMEOUT_S 이하일 때만
-    시작한다(묶음 하나가 상한을 넘지 않게). 묶음 실패에서 멈춘다 — 그 칸들은 미조회로 남고 열점 갱신은 계속된다."""
+    순서 = 이번 회차 열점이 있는 칸 → 최근 감지 순, 묶음 안은 위치순(같은 지역끼리). 새 묶음은 경과 시간이
+    OSM_BUDGET_S − OSM_BATCH_TIMEOUT_S 이하일 때만 시작한다. 묶음이 실패하면 반으로 나눠 한 번 더(혼잡 504 대응),
+    OSM_MIN_SPLIT 칸 이하 묶음이 실패하면 멈춘다 — 그 칸들은 미조회로 남고 열점 갱신은 계속된다."""
     lookup = lookup or osm_batch
     stale = (now - timedelta(days=OSM_TTL_DAYS)).isoformat()
     pri = priority or set()
     todo = sorted((k for k, c in cells.items() if c.get("osm_checked", "") < stale),
                   key=lambda k: (k in pri, cells[k]["dates"][-1]), reverse=True)
+    queue = [sorted(todo[i:i + batch], key=lambda k: (cells[k]["lat"], cells[k]["lon"])) for i in range(0, len(todo), batch)]
     done, t0 = 0, time.monotonic()
-    for i in range(0, len(todo), batch):
+    while queue:
         if time.monotonic() - t0 > OSM_BUDGET_S - OSM_BATCH_TIMEOUT_S:
-            print(f"overpass 시간 상한 — 남은 {len(todo) - i}칸 다음 회차로")
+            print(f"overpass 시간 상한 — 남은 {sum(map(len, queue))}칸 다음 회차로")
             break
-        chunk = todo[i:i + batch]
+        chunk = queue.pop(0)
         try:
             got = lookup([(k, cells[k]["lat"], cells[k]["lon"]) for k in chunk])
         except Exception as e:  # noqa: BLE001 — Overpass 혼잡(429·502·504)·불통
+            if len(chunk) > OSM_MIN_SPLIT:
+                h = len(chunk) // 2
+                print(f"overpass {len(chunk)}칸 묶음 실패({e}) — 반으로 나눠 재시도")
+                queue[:0] = [chunk[:h], chunk[h:]]
+                continue
             print(f"overpass 중단({len(chunk)}칸 묶음): {e}")
             break
         for k, names in got.items():

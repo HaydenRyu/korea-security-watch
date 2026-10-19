@@ -79,7 +79,7 @@ def test_enrich_osm_batches_caches_and_stops_on_failure():
     def boom(items):
         calls.append(len(items))
         raise OSError("502")
-    assert f.enrich_osm(cells, now, lookup=boom, batch=2) == 0 and calls == [2]   # 첫 묶음 실패에서 멈춤
+    assert f.enrich_osm(cells, now, lookup=boom, batch=2) == 0 and calls == [2]   # 작은 묶음 실패에서 멈춤
     assert all("osm_checked" not in c for c in cells.values())                 # 실패는 캐시하지 않는다
 
     def fake(items):
@@ -94,6 +94,21 @@ def test_enrich_osm_batches_caches_and_stops_on_failure():
     calls.clear()
     f.enrich_osm(cells, now, lookup=fake, batch=4)
     assert calls == [2]                                                         # TTL 안 칸은 재조회 없음
+
+
+def test_enrich_osm_splits_failed_batch():
+    now = datetime(2026, 10, 19, tzinfo=timezone.utc)
+    cells = {}
+    f.update_cells(cells, [_pt(36.0 + i * 0.01, 126.69, "2026-10-19") for i in range(24)], "2026-10-19")
+    calls = []
+
+    def flaky(items):  # 혼잡: 12칸 넘는 묶음은 504
+        calls.append(len(items))
+        if len(items) > 12:
+            raise OSError("504")
+        return {k: [] for k, _, _ in items}
+    assert f.enrich_osm(cells, now, lookup=flaky, batch=24) == 24
+    assert calls == [24, 12, 12]
 
 
 def test_typed_keeps_hotspots_when_overpass_fails(tmp=None):

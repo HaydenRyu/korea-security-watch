@@ -41,15 +41,16 @@
     "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.yna.co.kr/view/AKR20261019074000504",
     "https://www.yna.co.kr/view/AKR20261019008600504",
-    "https://www.yna.co.kr/view/AKR20261018059600009",
+    "https://www.nknews.org/feed/",
+    "https://www.nknews.org/2026/10/north-korean-gps-jamming-along-border-has-plummeted-this-year-data-shows/",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nknews.org/feed/"
+    "https://www.bbc.co.uk/news/articles/c3eweygrjzd7o",
+    "https://www.bbc.co.uk/news/articles/c9p8gz7zx4peo"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 북한 군사 징후는 없다. 연합뉴스·NK News 최신 기사는 북러 수교 연회, 육군 GOP 경비여단 창설 계획 등 정례·비군사 내용이다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 북한 군사 징후는 없다. 최신 보도는 북러 수교 연회, 육군 GOP경비여단 창설 계획 등 정례·비군사 내용이다.",
   "items": {
     "troop_movement": {
-      "status": "none",
-      "summary": "육군의 GOP경비여단 창설 추진(연합뉴스 10/19)은 계획 발표로 병력 이동 징후가 아니다."
+      "status": "none"
     },
     "nuclear": {
       "status": "none"
@@ -59,10 +60,11 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "서해 열점 1건은 포격·화재 보도가 없어 근거로 쓰지 않는다."
+      "summary": "열점 1건은 포격·화재 보도가 없어 근거로 쓰지 않는다."
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "NK News 10/16: 접경 GPS 교란은 올해 크게 감소."
     },
     "foreign_forces": {
       "status": "none",
@@ -78,14 +80,14 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T03:09:17+00:00",
+  "checked_at": "2026-10-19T04:10:17+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],
   "world": [
     {
       "title": "상트페테르부르크 석유시설 야간 공격, 사망자 발생",
-      "summary": "BBC는 러시아 상트페테르부르크 유류시설과 데이터센터가 야간 공격을 받아 최소 1명이 숨졌다고 전했다.",
+      "summary": "BBC는 러시아 상트페테르부르크 유류시설과 데이터센터가 공격을 받아 최소 1명이 숨졌다고 전했다.",
       "link_korea": "러시아 전쟁 수행 동향은 북러 군사협력 평가와 직결된다.",
       "region": "러시아",
       "source": {
@@ -93,8 +95,19 @@
         "url": "https://www.bbc.co.uk/news/articles/c3eweygrjzd7o",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
+    },
+    {
+      "title": "트럼프, 대러 제재 시행 직전 유예",
+      "summary": "트럼프 미 대통령은 발효 이틀 전 다수의 대러 제재를 막았으며 평화협상 유지를 위해서라고 밝혔다.",
+      "link_korea": "대러 제재 완화는 북러 군사협력을 둘러싼 국제 압박 구도에 영향을 준다.",
+      "region": "미국·러시아",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c9p8gz7zx4peo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
     }
   ],
-  "world_context": "러시아 본토 공격과 제재 조정 등 러시아 관련 동향이 북러 협력 평가의 배경이다.",
-  "world_at": "2026-10-19T02:09:18+00:00"
+  "world_context": "러시아 본토 공격과 대러 제재 유예가 북러 협력 평가의 배경이다.",
+  "world_at": "2026-10-19T04:10:17+00:00"
 }

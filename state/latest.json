@@ -13,16 +13,16 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견",
-      "북한 합참 발표 지뢰 NLL 귀순"
+      "북한 합참 발표 지뢰 NLL 귀순 DMZ 10월 20일",
+      "목함지뢰 해안 발견"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
+      "북한 GPS 교란 해킹 공격 사이버 공격 10월",
       "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "북러 군사협력 파병",
-      "North Korea troops Russia"
+      "North Korea troops Russia October 2026",
+      "북러 군사협력 파병"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -34,15 +34,14 @@
     ],
     "gov_warning": [
       "진돗개 데프콘 발령",
-      "North Korea Reuters AP October 20 2026"
+      "North Korea Reuters AP latest"
     ]
   },
   "opened": [
     "https://www.nknews.org/feed/",
-    "https://www.yna.co.kr/view/AKR20261019132700065",
     "https://www.segye.com/newsView/20261019519617",
-    "https://www.nknews.org/2026/10/another-north-korean-mine-found-on-south-korean-island-fourth-in-last-month/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261019/1/ATCE_CTGR_0010010000/view.do"
+    "https://www.yna.co.kr/view/AKR20261019132700065",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
   "overall_summary": "직전 회차 이후 새 징후는 없다. 강화 유실 지뢰와 김여정 확성기 재개 검토 담화는 정례 범주로 유지한다.",
   "items": {
@@ -54,42 +53,6 @@
     },
     "logistics": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "인천 강화군 볼음도·군사분계선 일대",
-      "lat": 37.65,
-      "lon": 126.35,
-      "summary": "강화 볼음도 해안 유실 추정 지뢰(피해 없음)와 김여정 확성기 재개 검토 담화는 이미 반영된 건이며, 직전 회차 이후 새 접경 사건 보도는 없다.",
-      "meaning": "유실 지뢰는 의도된 도발 근거가 없고, 김여정 담화는 시한·표적 없는 위협 발언이라 정례 범주이나 접경 긴장 어조가 높아졌다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261019132700065"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/another-north-korean-mine-found-on-south-korean-island-fourth-in-last-month/"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261019519617"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "해병대 2사단 발표, 지뢰 인명·물적 피해 없음",
-        "김여정 담화는 8/1~10/17 확성기 경고방송 2,870차·경고사격 201차를 주장(북한 측 주장)",
-        "군은 교전수칙상 MDL 침범 시 경고방송·경고사격 실시"
-      ],
-      "speculation": [
-        "호우로 북측에서 유실된 것으로 군 추정",
-        "전술 타격수단은 DMZ 인접 부대 직사·근거리 화력 보강 가능성이 거론됨"
-      ]
     },
     "electronic_cyber": {
       "status": "none"
@@ -105,9 +68,45 @@
     },
     "gov_warning": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "인천 강화군 볼음도·군사분계선 일대",
+      "lat": 37.65,
+      "lon": 126.35,
+      "summary": "직전 회차 이후 새 접경 사건은 없고, 강화 볼음도 유실 추정 지뢰와 김여정 확성기 재개 검토 담화는 기존 건이다.",
+      "meaning": "유실 지뢰는 의도된 도발 근거가 없고, 김여정 담화는 시한·표적 없는 위협 발언이라 정례 범주이나 접경 긴장 어조가 높아졌다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261019132700065"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/feed/"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261019519617"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "해병대가 강화 볼음도 해안에서 반보병지뢰 1개 발견, 피해 없음(연합뉴스)",
+        "NK News 피드: 이달 4번째 의심 지뢰, 김여정 확성기 재개 위협",
+        "국방부는 브런슨 DMZ 발언에 우려를 미국 측에 전달(세계일보) — 정치·외교 사안"
+      ],
+      "speculation": [
+        "호우로 북측에서 유실된 것으로 군 추정",
+        "전술 타격수단은 DMZ 인접 부대 직사·근거리 화력 보강 가능성이 거론됨"
+      ]
     }
   },
-  "checked_at": "2026-10-19T17:10:44+00:00",
+  "checked_at": "2026-10-19T18:10:44+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

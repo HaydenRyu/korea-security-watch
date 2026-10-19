@@ -4,10 +4,10 @@
   "https://www.data.go.kr/data/15057792/openapi.do",
   "https://www.data.go.kr/data/15058193/openapi.do"
  ],
- "fetched_at": "2026-10-19T07:28:03.997048+00:00",
+ "fetched_at": "2026-10-19T07:29:34.700738+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-19T07:28:03.997048+00:00",
+ "last_ok_at": "2026-10-19T07:29:34.700738+00:00",
  "warnings": [
   {
    "doc_num": "26-323",
@@ -377,7 +377,7 @@
    "source": "국립해양조사원 항행경보(공공데이터포털)",
    "url": "https://www.data.go.kr/data/15057792/openapi.do",
    "active_now": true,
-   "exercise": true
+   "exercise": false
   },
   {
    "doc_num": "26-352",
@@ -3987,7 +3987,7 @@
  ],
  "counts": {
   "listed_docs": 14,
-  "new_details": 4,
+  "new_details": 0,
   "valid": 7,
   "active_now": 7,
   "by_kind": {
@@ -3999,7 +3999,7 @@
   "fetched_at": null,
   "status": "error",
   "items": [],
-  "status_detail": "getSeatnInfo(pageNo=1): 응답 XML 해석 실패(unclosed token: line 77, column 157): …ZoneX>129-38-57.49 E</centerZoneX><centerZoneY>37-16-20.00 N</…"
+  "status_detail": "getSeatnInfo(pageNo=1): 응답 XML 해석 실패(unclosed token: line 124, column 57, 본문 19415자, 끝 「Desc>해당 지점을 순차 연결한 선내 해역</zoneDesc></ite」): …&#xD;</zoneCrdnt><zoneDesc>해당 지점을 순차 연결한 선내 해역</zoneDesc></ite…"
  },
  "cache": {
   "26-323": {

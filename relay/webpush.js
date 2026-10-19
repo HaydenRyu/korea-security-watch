@@ -91,7 +91,7 @@ export async function vapidAuth(endpoint, pubB64, privB64, subject, nowSec = Mat
   return `vapid t=${head}.${body}.${b64u(sig)}, k=${pubB64}`;
 }
 
-/** 구독 하나에 발송. 반환 = 푸시 서비스 HTTP 상태 */
+/** 구독 하나에 발송. 반환 = { status, reason } — reason 은 실패 응답 본문 앞 120자(애플은 400 에 reason 을 담아 준다) */
 export async function sendPush(sub, payload, vapid, { ttl = 86400, urgency = "normal", topic } = {}) {
   const body = await encrypt(JSON.stringify(payload), sub.keys.p256dh, sub.keys.auth);
   const headers = {
@@ -100,7 +100,9 @@ export async function sendPush(sub, payload, vapid, { ttl = 86400, urgency = "no
   };
   if (topic) headers.Topic = topic;  // 같은 topic 의 미배달 알림은 새 것으로 교체된다(오래된 등급이 쌓이지 않게)
   const r = await fetch(sub.endpoint, { method: "POST", headers, body });
-  return r.status;
+  let reason = "";
+  if (!r.ok) { try { reason = (await r.text()).replace(/\s+/g, " ").slice(0, 120); } catch { /* 본문 없음 */ } }
+  return { status: r.status, reason };
 }
 
 // 알려진 브라우저 푸시 서비스만 받는다(임의 주소로 Worker 가 POST 하는 통로가 되지 않게)

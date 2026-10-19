@@ -74,10 +74,10 @@ export async function handlePush(req, env, path) {
     await Promise.all(subs.map(async ({ name, sub }) => {
       if (!sub) { failed++; return; }
       try {
-        const st = await sendPush(sub, payload, vapid, { ttl: 86400, urgency: pr >= 4 ? "high" : "normal", topic: "jis-grade" });
+        const { status: st, reason } = await sendPush(sub, payload, vapid, { ttl: 86400, urgency: pr >= 4 ? "high" : "normal", topic: "jisgrade" });
         if (st >= 200 && st < 300) sent++;
         else if (st === 404 || st === 410) { await env.PUSH.delete(name); removed++; }  // 만료·해지된 구독
-        else { failed++; errors.push(st); }
+        else { failed++; errors.push(reason ? `${st} ${reason}` : st); }  // 사유를 남겨야 400 의 정체를 알 수 있다(10/19 애플 400)
       } catch (e) { failed++; errors.push(String(e).slice(0, 80)); }
     }));
     return json({ sent, removed, failed, cursor, done, errors: errors.slice(0, 5) }, 200, h);

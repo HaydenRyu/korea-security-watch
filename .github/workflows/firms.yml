@@ -1,5 +1,5 @@
 name: firms
-# 매시간 NASA FIRMS 열점(state/firms.json, 키 시크릿 FIRMS_KEY)과 한반도 항공 지표(state/air.json, 키 불필요)를 갱신한다.
+# 매시간 NASA FIRMS 열점(state/firms.json + 유형 추정 이력 state/firms_cells.json, 키 시크릿 FIRMS_KEY)과 한반도 항공 지표(state/air.json, 키 불필요)를 갱신한다.
 # 감시 루틴은 :07 에 돈다. 그 전에 끝나도록 :45 에 받는다.
 on:
   schedule: [{ cron: "45 * * * *" }]
@@ -11,7 +11,7 @@ concurrency: { group: firms, cancel-in-progress: false }
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8   # 유형 추정 Overpass 상한 120s(firms.OSM_BUDGET_S) 포함
     steps:
       - uses: actions/checkout@v4
       - name: fetch
@@ -21,10 +21,10 @@ jobs:
         run: python3 scripts/air_count.py   # 실패해도 기존 파일 유지(rc 0)
       - name: commit
         run: |
-          [ -z "$(git status --porcelain -- state/firms.json state/air.json state/air.jsonl)" ] && { echo unchanged; exit 0; }  # 신규 파일도 변경으로 본다
+          [ -z "$(git status --porcelain -- state/firms.json state/firms_cells.json state/air.json state/air.jsonl)" ] && { echo unchanged; exit 0; }  # 신규 파일도 변경으로 본다
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add state/firms.json $(ls state/air.json state/air.jsonl 2>/dev/null)
+          git add state/firms.json $(ls state/firms_cells.json state/air.json state/air.jsonl 2>/dev/null)
           git commit -m "firms: $(date -u +%FT%H:%MZ)"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
           exit 1

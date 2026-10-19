@@ -1,0 +1,25 @@
+{
+ "source": "NASA GIBS WMTS (EPSG:3857) — https://nasa-gibs.github.io/gibs-api-docs/ · 키 불필요",
+ "checked_at": "2026-10-19T05:54:00Z",
+ "note": "정본 설정(화면 미연결). 지도 연결은 시안 확인 뒤 별도 작업. 시각은 10분 단위 UTC — 「default」를 넣으면 GIBS 최신 판이 나온다",
+ "attribution": "We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services (GIBS), part of NASA's Earth Science Data and Information System (ESDIS).",
+ "attribution_short": "Himawari-9 AHI · NASA GIBS",
+ "template": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/{layer}/default/{time}/{tms}/{z}/{y}/{x}.png",
+ "time": {
+  "param": "{time}",
+  "format": "YYYY-MM-DDTHH:MM:00Z",
+  "step_min": 10,
+  "default_keyword": "default",
+  "latency_min_observed": 44,
+  "latency_note": "2026-10-19 05:54Z 에 Capabilities 기본 시각 05:10Z(약 44분). 고정 시각을 쓸 때는 now − 60분을 10분 단위로 내림하면 404 를 피한다(이 여유값은 1회 실측 기반 — 운영하며 조정)",
+  "verified": "time=default 로 z5 타일 200(2026-10-19)"
+ },
+ "layers": [
+  {"id": "Himawari_AHI_Band13_Clean_Infrared", "label": "적외(10.4µm, 주야)", "tms": "GoogleMapsCompatible_Level6", "max_zoom": 6, "format": "png",
+   "use": "구름·대류 — 주야 공통"},
+  {"id": "Himawari_AHI_Band3_Red_Visible_1km", "label": "가시광(적, 1km)", "tms": "GoogleMapsCompatible_Level7", "max_zoom": 7, "format": "png",
+   "use": "주간 연기·운량 — 야간은 어둡다"},
+  {"id": "Himawari_AHI_Air_Mass", "label": "기단 RGB", "tms": "GoogleMapsCompatible_Level6", "max_zoom": 6, "format": "png",
+   "use": "기단·제트 — 참고용"}
+ ]
+}

@@ -1,53 +1,55 @@
 {
   "coverage": {
     "troop_movement": [
-      "한국어 troop_movement",
-      "English troop_movement"
+      "북한 troop_movement",
+      "North Korea troop_movement"
     ],
     "nuclear": [
-      "한국어 nuclear",
-      "English nuclear"
+      "북한 nuclear",
+      "North Korea nuclear"
     ],
     "logistics": [
-      "한국어 logistics",
-      "English logistics"
+      "북한 logistics",
+      "North Korea logistics"
     ],
     "border_clash": [
-      "한국어 border_clash",
-      "English border_clash"
+      "북한 border_clash",
+      "North Korea border_clash"
     ],
     "electronic_cyber": [
-      "한국어 electronic_cyber",
-      "English electronic_cyber"
+      "북한 electronic_cyber",
+      "North Korea electronic_cyber"
     ],
     "foreign_forces": [
-      "한국어 foreign_forces",
-      "English foreign_forces"
+      "북한 foreign_forces",
+      "North Korea foreign_forces"
     ],
     "parade_massing": [
-      "한국어 parade_massing",
-      "English parade_massing"
+      "북한 parade_massing",
+      "North Korea parade_massing"
     ],
     "nk_internal": [
-      "한국어 nk_internal",
-      "English nk_internal"
+      "북한 nk_internal",
+      "North Korea nk_internal"
     ],
     "gov_warning": [
-      "한국어 gov_warning",
-      "English gov_warning"
+      "북한 gov_warning",
+      "North Korea gov_warning"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/rss/northkorea.xml",
+    "https://www.yna.co.kr/view/AKR20261019074000504",
     "https://www.yna.co.kr/view/AKR20261019008600504",
-    "https://www.yna.co.kr/view/AKR20261019065400062",
     "https://www.yna.co.kr/view/AKR20261018059600009",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.nknews.org/feed/"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 북한 군사 징후는 없다. 연합뉴스 북한 속보는 북러 수교 기념 연회, 원산 유람선, 접경 교류 등 정례·비군사 기사뿐이다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 북한 군사 징후는 없다. 연합뉴스·NK News 최신 기사는 북러 수교 연회, 육군 GOP 경비여단 창설 계획 등 정례·비군사 내용이다.",
   "items": {
     "troop_movement": {
-      "status": "none"
+      "status": "none",
+      "summary": "육군의 GOP경비여단 창설 추진(연합뉴스 10/19)은 계획 발표로 병력 이동 징후가 아니다."
     },
     "nuclear": {
       "status": "none"
@@ -57,7 +59,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "서해 열점 1건(NOAA20, FRP 1.1)은 포격·화재 보도가 없어 근거로 쓰지 않는다."
+      "summary": "서해 열점 1건은 포격·화재 보도가 없어 근거로 쓰지 않는다."
     },
     "electronic_cyber": {
       "status": "none"
@@ -76,7 +78,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T02:09:18+00:00",
+  "checked_at": "2026-10-19T03:09:17+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],

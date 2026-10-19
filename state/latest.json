@@ -1,56 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 troop_movement 동향",
-      "North Korea troop_movement"
+      "북한 전방 병력 이동 증강",
+      "North Korea troops buildup border"
     ],
     "nuclear": [
-      "북한 nuclear 동향",
-      "North Korea nuclear"
+      "북한 핵시설 풍계리 영변",
+      "North Korea nuclear test site Yongbyon"
     ],
     "logistics": [
-      "북한 logistics 동향",
-      "North Korea logistics"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipments"
     ],
     "border_clash": [
-      "북한 border_clash 동향",
-      "North Korea border_clash"
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "강화 해안 북 유실 추정 지뢰"
     ],
     "electronic_cyber": [
-      "북한 electronic_cyber 동향",
-      "North Korea electronic_cyber"
+      "북한 GPS 교란 해킹",
+      "North Korea GPS jamming cyberattack"
     ],
     "foreign_forces": [
-      "북한 foreign_forces 동향",
-      "North Korea foreign_forces"
+      "북러 군사협력 파병",
+      "North Korea Russia troops Reuters"
     ],
     "parade_massing": [
-      "북한 parade_massing 동향",
-      "North Korea parade_massing"
+      "북한 열병식 준비 병력 집결",
+      "North Korea parade preparations"
     ],
     "nk_internal": [
-      "북한 nk_internal 동향",
-      "North Korea nk_internal"
+      "북한 준전시 등화관제 대피훈련",
+      "North Korea mobilization blackout"
     ],
     "gov_warning": [
-      "북한 gov_warning 동향",
-      "North Korea gov_warning"
+      "합참 전통문 진돗개 데프콘",
+      "北朝鮮 ミサイル 発射 防衛省"
     ],
     "linkage:taiwan": [
       "대만 중국 군사훈련"
+    ],
+    "linkage:korea": [
+      "북러 군사협력"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/rss/northkorea.xml",
+    "https://www.yna.co.kr/view/AKR20261019132700065",
+    "https://www.segye.com/newsView/20261019517511",
     "https://www.yna.co.kr/view/AKR20261019144700504",
-    "https://www.yna.co.kr/view/AKR20261019008600504",
+    "https://www.yna.co.kr/view/AKR20261019159200504",
     "https://www.nknews.org/feed/",
     "https://www.nknews.org/2026/10/rok-kicks-off-exercise-on-countering-north-korea-postponed-drills-with-us/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/cxj0ly1m3q81o",
-    "https://www.bbc.co.uk/news/articles/crwyd02yz22vo"
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 북한 군사 징후는 없다. 한국군 호국훈련(10/19~30 정례)과 북러 수교 기념 연회 등 정례 활동만 보도돼 직전 회차와 판단이 같다.",
+  "overall_summary": "새로 확인된 군사 징후는 없고, 강화 볼음도 해안의 북 유실 추정 반보병지뢰 발견(군 폭파 처리, 인명 피해 없음)만 정례 범주로 보도됐다. 호국훈련(10/19~30)과 북러 사법 교류는 정례·배경이며 직전 회차와 판단이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,7 +65,32 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "corroborated",
+      "routine": true,
+      "region": "인천 강화군 볼음도",
+      "lat": 37.65,
+      "lon": 126.35,
+      "summary": "19일 오전 강화군 볼음도 조갯골 해안에서 북 유실 추정 반보병지뢰 1발이 발견돼 해병대 2사단 EOD가 폭파 처리했고 인명·물적 피해는 없었다(이달 4번째).",
+      "meaning": "여름 호우로 떠내려온 유실 지뢰의 반복 발견으로 의도된 도발 근거는 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261019132700065"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261019517511"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "해병대 2사단 발표, 인명·물적 피해 없음"
+      ],
+      "speculation": [
+        "호우로 북측에서 유실된 것으로 군 추정"
+      ]
     },
     "electronic_cyber": {
       "status": "none"
@@ -80,9 +108,9 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T08:09:28+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-10-19T09:10:44+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": [],
   "world": [
     {

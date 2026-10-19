@@ -1,0 +1,237 @@
+{
+ "fetched_at": "2026-10-19T08:09:17+00:00",
+ "status": "ok",
+ "status_detail": "",
+ "last_ok_at": "2026-10-19T08:09:17+00:00",
+ "window_h": 72,
+ "counts": {
+  "feeds": 17,
+  "feeds_failed": 0,
+  "fetched": 1341,
+  "hits": 40,
+  "clusters": 31,
+  "by_group": {
+   "border": 18,
+   "mine": 5,
+   "defect": 3,
+   "drone_balloon": 4,
+   "fire": 5,
+   "alert": 1
+  }
+ },
+ "outlets": {
+  "연합뉴스": {
+   "feeds": 5,
+   "failed": 0,
+   "count": 582,
+   "hits": 32
+  },
+  "SBS": {
+   "feeds": 3,
+   "failed": 0,
+   "count": 159,
+   "hits": 6
+  },
+  "조선일보": {
+   "feeds": 2,
+   "failed": 0,
+   "count": 200,
+   "hits": 7
+  },
+  "동아일보": {
+   "feeds": 2,
+   "failed": 0,
+   "count": 100,
+   "hits": 8
+  },
+  "국민일보": {
+   "feeds": 2,
+   "failed": 0,
+   "count": 200,
+   "hits": 23
+  },
+  "세계일보": {
+   "feeds": 2,
+   "failed": 0,
+   "count": 40,
+   "hits": 3
+  },
+  "국방일보": {
+   "feeds": 1,
+   "failed": 0,
+   "count": 60,
+   "hits": 10
+  }
+ },
+ "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
+ "groups": {
+  "border": {
+   "clusters": 18,
+   "max_independent": 3,
+   "latest": "2026-10-19T08:09:17+00:00"
+  },
+  "mine": {
+   "clusters": 5,
+   "max_independent": 3,
+   "latest": "2026-10-19T08:09:17+00:00"
+  },
+  "defect": {
+   "clusters": 3,
+   "max_independent": 1,
+   "latest": "2026-10-19T08:09:17+00:00"
+  },
+  "drone_balloon": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-10-19T08:09:17+00:00"
+  },
+  "fire": {
+   "clusters": 5,
+   "max_independent": 1,
+   "latest": "2026-10-18T15:00:00+00:00"
+  },
+  "alert": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-10-16T15:46:00+00:00"
+  }
+ },
+ "feeds": [
+  {
+   "outlet": "연합뉴스",
+   "section": "북한",
+   "url": "https://www.yna.co.kr/rss/northkorea.xml",
+   "ok": true,
+   "count": 102,
+   "hits": 21
+  },
+  {
+   "outlet": "연합뉴스",
+   "section": "정치",
+   "url": "https://www.yna.co.kr/rss/politics.xml",
+   "ok": true,
+   "count": 120,
+   "hits": 5
+  },
+  {
+   "outlet": "연합뉴스",
+   "section": "사회",
+   "url": "https://www.yna.co.kr/rss/society.xml",
+   "ok": true,
+   "count": 120,
+   "hits": 3
+  },
+  {
+   "outlet": "연합뉴스",
+   "section": "지방",
+   "url": "https://www.yna.co.kr/rss/local.xml",
+   "ok": true,
+   "count": 120,
+   "hits": 2
+  },
+  {
+   "outlet": "연합뉴스",
+   "section": "전체",
+   "url": "https://www.yna.co.kr/rss/news.xml",
+   "ok": true,
+   "count": 120,
+   "hits": 1
+  },
+  {
+   "outlet": "SBS",
+   "section": "정치",
+   "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
+   "ok": true,
+   "count": 29,
+   "hits": 2
+  },
+  {
+   "outlet": "SBS",
+   "section": "사회",
+   "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03&plink=RSSREADER",
+   "ok": true,
+   "count": 29,
+   "hits": 1
+  },
+  {
+   "outlet": "SBS",
+   "section": "속보",
+   "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
+   "ok": true,
+   "count": 101,
+   "hits": 3
+  },
+  {
+   "outlet": "조선일보",
+   "section": "정치",
+   "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/politics/?outputType=xml",
+   "ok": true,
+   "count": 100,
+   "hits": 5
+  },
+  {
+   "outlet": "조선일보",
+   "section": "사회",
+   "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/national/?outputType=xml",
+   "ok": true,
+   "count": 100,
+   "hits": 2
+  },
+  {
+   "outlet": "동아일보",
+   "section": "정치",
+   "url": "https://rss.donga.com/politics.xml",
+   "ok": true,
+   "count": 50,
+   "hits": 5
+  },
+  {
+   "outlet": "동아일보",
+   "section": "사회",
+   "url": "https://rss.donga.com/national.xml",
+   "ok": true,
+   "count": 50,
+   "hits": 3
+  },
+  {
+   "outlet": "국민일보",
+   "section": "정치",
+   "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
+   "ok": true,
+   "count": 100,
+   "hits": 21
+  },
+  {
+   "outlet": "국민일보",
+   "section": "사회",
+   "url": "https://www.kmib.co.kr/rss/data/kmibSocRss.xml",
+   "ok": true,
+   "count": 100,
+   "hits": 2
+  },
+  {
+   "outlet": "세계일보",
+   "section": "정치",
+   "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
+   "ok": true,
+   "count": 20,
+   "hits": 2
+  },
+  {
+   "outlet": "세계일보",
+   "section": "사회",
+   "url": "https://www.segye.com/Articles/RSSList/segye_society.xml",
+   "ok": true,
+   "count": 20,
+   "hits": 1
+  },
+  {
+   "outlet": "국방일보",
+   "section": "국방",
+   "url": "https://kookbang.dema.mil.kr/dema_xml/dema0010010000.xml",
+   "ok": true,
+   "count": 60,
+   "hits": 10
+  }
+ ]
+}

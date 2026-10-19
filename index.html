@@ -82,6 +82,14 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 }
 @media (max-width:759px){.id{padding-right:64px} .pushctl .lf{display:none} .pushctl .ls{display:inline}}
 .meta .lag{color:var(--g3);display:none} .meta .lag.on{display:inline}
+/* 다중 시계(10/20): 상황실의 가장 큰 글자는 시각 — KST 옆에 UTC·워싱턴(미 동부). 휴대폰은 KST 만 */
+.clk small{font-size:11px;color:var(--dim);margin-left:10px} .clk small b{color:var(--fog)}
+@media (max-width:759px){.clk small{display:none}}
+/* 사건 타임라인 띠(10/20): 등급이 바뀐 회차·알림을 추이 아래 한 줄 + 추이 위 세로선 */
+.tl{grid-column:2;display:flex;gap:14px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;font:400 10px/1.4 var(--data);color:var(--fog);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)} .tl::-webkit-scrollbar{display:none}  /* 넘치면 가로로 민다(잘라 숨기지 않는다) */
+.tl span{flex:none} .tl b{font-weight:500} .tl .nt{color:var(--dim)} .tl .em{color:var(--dim)}
+.tl .n{position:sticky;left:0;background:var(--panel);padding-right:6px;color:var(--ice)}  /* 변화 횟수는 고정 — 띠를 밀어야 더 보인다는 표식 */
+#trace .ev{stroke-width:1;vector-effect:non-scaling-stroke;opacity:.55}
 .tag{font:500 10px/1 var(--data);padding:4px 8px;border:1px solid var(--g1);color:var(--g1);letter-spacing:.04em}
 .tag[hidden]{display:none}
 
@@ -237,7 +245,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 
 /* 추이: 왼쪽 40px 축 이름, 계단선 */
 #trend-p{height:200px}
-.trend{display:grid;grid-template-columns:40px minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;gap:4px 8px;height:100%}
+.trend{display:grid;grid-template-columns:40px minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto auto;gap:4px 8px;height:100%}
 .yax{display:flex;flex-direction:column-reverse;justify-content:space-between;font:400 10px/1 var(--data);color:var(--dim);padding:0}
 .trend svg{width:100%;height:100%;display:block}
 .xax{grid-column:2;display:flex;justify-content:space-between;font:400 10px/1 var(--data);color:var(--dim)}
@@ -663,7 +671,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   <div class="id"><img class="mark" src="assets/jis-mark.svg" width="28" height="28" alt="">
     <div><h1>JIS <span class="sub">북한 전쟁·핵 징후 감시</span></h1><small>JAGOK-DONG INTELLIGENCE SERVICE · OSINT · 비공식</small></div></div>
   <div class="meta">
-    <span>KST <b id="now">--:--:--</b></span>
+    <span class="clk">KST <b id="now">--:--:--</b><small>UTC <b id="nowU">--:--</b></small><small title="미 동부(워싱턴 DC) 시각">워싱턴 <b id="nowW">--:--</b></small></span>
     <span>최종 확인 <b id="checked">—</b></span>
     <span id="views" hidden title="GoatCounter 대시보드 「전체 기간」 방문자 수와 같은 값(같은 사람의 새로고침은 세지 않음 · 반영에 수 분) · 1분마다 갱신">누적 방문 <b id="viewsN">—</b></span>
     <nav class="qnav" aria-label="바로가기"><a href="#sources" id="srcOpen" class="srclink">출처 <b id="srcN">—</b></a><a href="forecast.html" class="srclink">예측 ›</a><a href="live.html" class="srclink">라이브 ›</a><a href="#world-p" class="srclink">세계<span class="lg"> 브리핑</span> ↓</a><a href="shelter.html" class="srclink">대피<span class="lg"> 안내</span> ›</a></nav>
@@ -717,7 +725,8 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
     <div class="pb fc"><div class="trend" title="등급 추이 · 최근 72회(1시간 간격)">
       <div class="yax"><span>평시</span><span>주의</span><span>경계</span><span>위험</span></div>
       <svg id="trace" viewBox="0 0 720 120" preserveAspectRatio="none"></svg>
-      <div class="xax"><span id="t0">—</span><span>등급 · 지금</span></div></div>
+      <div class="xax"><span id="t0">—</span><span>등급 · 지금</span></div>
+      <div class="tl" id="tl" title="등급이 바뀐 회차(최근 72회) — 최신이 왼쪽"></div></div>
       <a class="fcr go-row" href="forecast.html" id="fcr"><span class="fct">발사 흐름을 불러오는 중</span></a></div>
   </section>
 
@@ -936,7 +945,12 @@ function render(latest,events){
     if(e.status==="unverified"){pen=false;dots+=`<rect x="${x+step/2-2}" y="${H/2-2}" width="4" height="4" fill="var(--unk)"/>`;return}
     d+=(pen?`H${x}V${y(e.grade)}`:`M${x} ${y(e.grade)}`)+`H${x+step}`;pen=true});
   const grid=[0,1,2,3].map(gr=>`<line x1="0" x2="${W}" y1="${y(gr)}" y2="${y(gr)}" stroke="var(--line)" stroke-width="1" vector-effect="non-scaling-stroke"/>`).join("");
-  $("trace").innerHTML=grid+`<path d="${d}" fill="none" stroke="var(--gc)" stroke-width="2" vector-effect="non-scaling-stroke"/>`+dots;
+  // 타임라인: 등급이 바뀐 회차 = 추이 위 세로선 + 아래 한 줄(최신이 왼쪽, 알림 간 회차는 「알림」)
+  const tr=[];rec.forEach((e,i)=>{if(e.status!=="ok"||e.prev_grade==null||e.grade===e.prev_grade)return;tr.push({x:(i+off)*step,e})});
+  const marks=tr.map(({x,e})=>`<line class="ev" x1="${x}" x2="${x}" y1="0" y2="${H}" stroke="${C(e.grade)}"/>`).join("");
+  $("trace").innerHTML=grid+marks+`<path d="${d}" fill="none" stroke="var(--gc)" stroke-width="2" vector-effect="non-scaling-stroke"/>`+dots;
+  $("tl").innerHTML=tr.length?`<span class="n">변화 ${tr.length}회</span>`+tr.slice().reverse().map(({e})=>`<span title="${esc(e.summary||"")}">${short(e.checked_at)} <b style="color:${C(e.grade)}">${LABEL[e.grade]}${e.grade>e.prev_grade?"↑":"↓"}</b>${e.notified?'<span class="nt"> 알림</span>':""}</span>`).join("")
+    :`<span class="em">최근 72회 등급 변화 없음</span>`;
   $("t0").textContent=rec.length?short(rec[0].checked_at):"—";
   // 이번 주 = 지난 7일. 계산식은 scripts/weekly_summary.py(일요일 알림)와 같다
   const wk=events.filter(e=>Date.now()-new Date(e.checked_at)<7*864e5),wo=wk.filter(e=>e.status==="ok");
@@ -1341,7 +1355,8 @@ function drawPins(items){
       .on("click",()=>location.hash="item="+k);
   });
 }
-function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"});setNext();tickElapsed()}
+const hm=tz=>new Date().toLocaleTimeString("en-GB",{timeZone:tz,hour:"2-digit",minute:"2-digit",hour12:false});
+function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-digit",second:"2-digit"});$("nowU").textContent=hm("UTC");$("nowW").textContent=hm("America/New_York");setNext();tickElapsed()}
 (async()=>{
   const get=async(p,t)=>{const r=await fetch(base+p+"?t="+Date.now());if(!r.ok)throw r.status;return t?r.text():r.json()};
   let latest=null,events=[];

@@ -4,9 +4,9 @@
   "https://www.data.go.kr/data/15057792/openapi.do",
   "https://www.data.go.kr/data/15058193/openapi.do"
  ],
- "fetched_at": "2026-10-19T07:20:15.824855+00:00",
+ "fetched_at": "2026-10-19T07:23:00.118622+00:00",
  "status": "error",
- "status_detail": "응답 형식 오류(XML·JSON 아님): <?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SE",
+ "status_detail": "URLError: <urlopen error timed out>",
  "last_ok_at": null,
  "warnings": [],
  "counts": {},

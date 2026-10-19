@@ -190,6 +190,31 @@ def relaunch(days: set[date], years: range, today: date, ks: tuple[int, ...] = (
 KIND_RANK = {"nuclear": 0, "missile": 1, "other": 2}
 
 
+# CSIS 사건명(영어) → 화면에 쓰는 우리말. 앞에서부터 처음 맞는 것 — 구체적인 것을 일반적인 것보다 먼저 둔다.
+# 못 맞추면 None(화면은 원문 event 를 그대로 보인다)
+EVENT_KO = (
+    (r"Submarine[- ]Launched Ballistic", "잠수함 발사 탄도미사일"),
+    (r"Submarine[- ]Launched Cruise", "잠수함 발사 순항미사일"),
+    (r"Intercontinental|ICBM", "대륙간 탄도미사일 발사"),
+    (r"Intermediate[- ]range", "중거리 탄도미사일 발사"),
+    (r"Short[- ]range Ballistic", "단거리 탄도미사일 발사"),
+    (r"Hypersonic", "극초음속 미사일 발사"),
+    (r"Multiple Launch Rocket|MLRS", "다연장로켓 시험"),
+    (r"Cruise Missile", "순항미사일 발사"),
+    (r"Satellite", "위성 발사"),
+    (r"Nuclear Test", "핵실험"),
+    (r"Ballistic Missile", "탄도미사일 발사"),
+    (r"Missile", "미사일 발사"),
+)
+
+
+def event_ko(event: str | None) -> str | None:
+    for pat, ko in EVENT_KO:
+        if event and re.search(pat, event, re.I):
+            return ko
+    return None
+
+
 def tempo(csis: list[dict], today: date, years: range, base_years: range | None = None) -> dict:
     """최근 30일 발사한 날 수 — CSIS 만 쓴다(CNS 는 2024-11 에서 끝나 최근과 비교 기준이 달라진다).
     per_year = 연도별 종류별 날 수. 한 날에 종류가 겹치면 핵 > 미사일 > 기타 하나로(누적 막대 합 = 도발한 날 수).
@@ -213,7 +238,8 @@ def tempo(csis: list[dict], today: date, years: range, base_years: range | None 
         c = {k: sum(1 for x, v in kind.items() if x.year == y and v == k) for k in KIND_RANK}
         per_year[str(y)] = {**c, "launch": c["missile"] + c["nuclear"]}
     return {"last30": len(last), "avg30": round(base, 1), "ratio": round(len(last) / base, 1) if base else None,
-            "recent": [{"date": x.isoformat(), "event": d[x]["event"], "src": d[x]["src"]} for x in last],
+            "recent": [{"date": x.isoformat(), "event": d[x]["event"], "event_ko": event_ko(d[x]["event"]), "src": d[x]["src"]}
+                       for x in last],
             "per_year": per_year, "basis": f"CSIS 미사일·핵 도발 날짜, 평소 = {base_years.start}~{base_years.stop - 1} 평균"}
 
 

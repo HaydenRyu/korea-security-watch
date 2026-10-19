@@ -168,6 +168,9 @@
 - 상황판 「긴장 국면」 한 줄과 예측 화면의 사다리에 쓰는 **단계 이름표**다. 등급·알림·이력에 쓰지 않는다. `items` 판정을 바꾸지 않는다.
   **우리 확률(%)을 쓰지 않는다.** 국면 계산(가장 높은 단계·유지·만료)은 코드가 한다(`diff_state.py` `update_ladder` → `state/ladder.json`).
 - 정본은 `data/escalation_ladder.json` 이다. 회차 시작에 `indicators[]` 의 `id`·`stage`·`met`(충족 기준)·`sources`(볼 곳)를 읽는다.
+  `met`·`sources` 는 화면에 그대로 나가는 쉬운 말이다. 판정 용어로 읽을 때: 「서로 다른 기관 2곳 이상」= `corroborated` · 「늘 있던 일이 아닌 접경 사건」= routine 아닌 `border_clash` ·
+  「임박 신호의 북 예고」= `signals` `nk_threat` · 「임박 신호의 항행경보」= `nav_warning` · 「상황판의 최후통첩 기준」= `items` `ultimatum` 플래그 ·
+  「사상자·영토 피격 기준」= `fatalities`·`territory_hit` 플래그 · 「늘 있던 일이 아닌 북한 내부 동향」= `nk_internal` 비정례 · 「조선중앙통신(북한 주장으로만 인용)」= KCNA Watch(D 등급) · 「상황판 지난 기록」= `state/history`.
   `state/ladder.json`(없으면 건너뜀)의 `indicators` 는 직전까지 충족된 지표다 — 지속 상태(`ongoing`)면 해제 여부를 확인할 대상으로 본다.
 - **충족된 지표만 쓴다.** 없으면 `ladder` 를 생략한다. 억지로 채우지 않는다. 확인된 사례 1건이면 그 지표는 충족이다(횟수 문턱 없음).
 - `status` 는 3절과 같은 기준이다: `single` = A~C 1곳, `corroborated` = **서로 다른 기관** 2곳 이상(같은 통신 재인용은 1곳).

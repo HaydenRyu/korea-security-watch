@@ -78,3 +78,11 @@ def test_signal_check_skips_unfinished_db_and_reports_baseline():
     r = rc.signal_check(doc, {date(2026, 10, 5)}, today, data_last=date(2026, 11, 10), base_years=range(2026, 2027))
     assert r["kinds"]["nk_threat"] == {"n": 1, "hit": 1}  # 11-01 신호는 DB(11-10)가 14일을 다 덮지 못해 보류
     assert 0 < r["baseline"] < 1
+
+
+def test_event_ko_specific_before_general():
+    assert rc.event_ko("Short-range Ballistic Missile Launch") == "단거리 탄도미사일 발사"
+    assert rc.event_ko("Submarine Launched Cruise Missile Launch") == "잠수함 발사 순항미사일"
+    assert rc.event_ko("Multiple Launch Rocket System (MLRS) Test") == "다연장로켓 시험"
+    assert rc.event_ko("Ballistic Missile Launch") == "탄도미사일 발사"
+    assert rc.event_ko("Something Else") is None and rc.event_ko(None) is None

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>JIS 예측</title>
-<meta name="description" content="북한 발사 흐름·달별 계절성·재발사 간격과 앞으로 90일 도발 위험 일정 — 공개 DB(CSIS·CNS)로 센 과거 기록. 전쟁 확률은 만들지 않는다.">
+<meta name="description" content="지금 긴장 국면·임박 신호·발사 흐름·다가오는 위험 일정을 한눈에 — 공개 자료로 센 과거 기록. 전쟁 확률은 만들지 않는다.">
 <link rel="icon" href="assets/jis-mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@87.5..112.5,300..700&display=swap" rel="stylesheet">
@@ -9,251 +9,390 @@
 <script src="forecast.js"></script>
 <script data-goatcounter="https://jis.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
-/* 토큰은 상황판(index.html)과 같은 값 */
+/* 토큰은 상황판(index.html) :root 와 같은 값. 세로 간격은 --s4·8·12·16·24 만 쓴다(예외: 연도 칸 사이 2px · AI 칩 안쪽 3px — 상황판 컴포넌트 그대로) */
 :root{--ink:#05080e;--panel:#0a1019;--head:#0d1520;--line:#1a2331;--line-2:#2a3649;--ice:#dbe5f1;--fog:#8091a8;--dim:#4c5a6e;
-  --g0:#5fd0b8;--g1:#f2c14e;--amber:var(--g1);--data:'Martian Mono',ui-monospace,monospace;
-  --text:'Pretendard Variable',Pretendard,system-ui,sans-serif;--pad:12px;--side:16px;--ease:cubic-bezier(.2,.8,.2,1);
-  /* 간격 토큰 — 상황판(index.html)과 같은 값·같은 역할: 행 안 줄 4 · 촘촘한 행·목록 항목 8 · 행 위아래·블록 12 · 칸 사이 16 */
+  --g0:#5fd0b8;--g1:#f2c14e;--g2:#ff8a3d;--g3:#ff4d5e;--amber:var(--g1);--gc:var(--fog);
+  --data:'Martian Mono',ui-monospace,monospace;--text:'Pretendard Variable',Pretendard,system-ui,sans-serif;
+  --pad:12px;--hh:32px;--side:16px;--ease:cubic-bezier(.2,.8,.2,1);
   --s4:4px;--s8:8px;--s12:12px;--s16:16px;--s24:24px;
-  /* 도발 종류(연도 막대 누적) — 핵은 가장 무거운 종류라 위험색, 기타(풍선·포격 등)는 판단 집계 밖이라 흐리게 */
-  --k-mis:var(--fog);--k-nuc:#ff4d5e;--k-oth:var(--line-2)}
-*{box-sizing:border-box}html,body{margin:0}
-body{background:var(--ink);color:var(--ice);font:14px/1.55 var(--text)}
-a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line-2);transition:text-decoration-color 120ms var(--ease)}
-a:hover{text-decoration-color:var(--fog)}
-@media (prefers-reduced-motion:reduce){a{transition:none}}
-.top{display:flex;align-items:center;gap:12px;padding:12px var(--side);border-bottom:1px solid var(--line)}
-.top h1{margin:0;font:700 16px/1.2 var(--text)}.top a{margin-left:auto;font:500 12px/1 var(--data);color:var(--fog)}
-main{max-width:960px;margin:0 auto;padding:16px var(--side) 48px;display:grid;gap:16px}
-.p{background:var(--panel);border:1px solid var(--line);min-width:0}
-.ph{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;min-height:32px;padding:6px var(--pad);background:var(--head);border-bottom:1px solid var(--line);font:500 11px/1.4 var(--data);color:var(--fog)}
-.ph .k{color:var(--ice)}.ph .r{margin-left:auto;color:var(--dim)}
-.pb{padding:12px var(--pad)}
-.big{display:flex;gap:8px 24px;flex-wrap:wrap;align-items:baseline}
-.big b{font:600 28px/1 var(--data)}.big b.hot{color:var(--amber)}.big span{color:var(--fog);font-size:12px}
-.bars{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px;align-items:end;height:64px;margin-top:16px}
+  --k-mis:var(--fog);--k-nuc:#ff4d5e;--k-oth:var(--line-2);--ai:#b69cff;--ai-2:#5cc8ff}
+*{box-sizing:border-box}html,body{margin:0}[hidden]{display:none!important}
+body{background:var(--ink);color:var(--ice);font:14px/1.55 var(--text);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim);transition:text-decoration-color 120ms var(--ease)}
+a:hover{text-decoration-color:var(--ice)}
+:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
+.band{height:3px;background:var(--gc)}
+.top{display:flex;align-items:center;gap:var(--s8) var(--s12);padding:var(--s12) var(--side);border-bottom:1px solid var(--line)}
+.top h1{margin:0;font:700 16px/1.2 var(--text)}
+.top a{margin-left:auto;font:500 12px/1 var(--data);color:var(--fog);text-decoration:none}.top a:hover{color:var(--ice)}
+main{max-width:960px;margin:0 auto;padding:var(--s16) var(--side) var(--s24);display:grid;gap:var(--s16);grid-template-columns:minmax(0,1fr);align-items:start}
+.p{background:var(--panel);border:1px solid var(--line);min-width:0;scroll-margin-top:var(--s16)}
+.ph{display:flex;align-items:center;gap:var(--s8) var(--s12);flex-wrap:wrap;min-height:var(--hh);padding:var(--s8) var(--pad);background:var(--head);border-bottom:1px solid var(--line);font:500 11px/1.4 var(--data);color:var(--fog);letter-spacing:.02em}
+.ph .k{color:var(--ice)}.ph .r{margin-left:auto;color:var(--dim);font-weight:400}
+.pb{padding:var(--s12) var(--pad)}
+.note{margin:var(--s12) 0 0;font-size:12px;line-height:1.6;color:var(--fog)}
+.note:first-child{margin-top:0}
+.tag{display:inline-block;font:500 10px/1 var(--data);padding:var(--s4) var(--s8);border:1px solid var(--line-2);color:var(--fog);white-space:nowrap;vertical-align:1px}
+.tag.hi{border-color:var(--amber);color:var(--amber)}.tag.lo{color:var(--dim)}.tag.ok{border-color:var(--g0);color:var(--g0)}
+.ai{display:inline-flex;align-items:center;gap:3px;font:600 10px/1 var(--data);color:#d9ccff;padding:3px 6px;margin-right:6px;vertical-align:1px;cursor:help;white-space:nowrap;
+  border:1px solid color-mix(in srgb,var(--ai) 55%,transparent);background:linear-gradient(90deg,color-mix(in srgb,var(--ai) 22%,transparent),color-mix(in srgb,var(--ai-2) 14%,transparent))}
+.ai::before{content:"✦";font-size:9px;background:linear-gradient(135deg,var(--ai),var(--ai-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+/* 펼침 — 상황판과 같은 표식(오른쪽 끝 꺾쇠, 120ms 회전), 줄이기 설정이면 끔 */
+details>summary{list-style:none;cursor:pointer;position:relative;padding-right:28px}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"";position:absolute;right:12px;top:50%;width:6px;height:6px;margin-top:-5px;border-right:1.5px solid var(--fog);border-bottom:1.5px solid var(--fog);transform:rotate(45deg);transition:transform 120ms var(--ease),border-color 120ms var(--ease)}
+details[open]>summary::after{transform:translateY(3px) rotate(-135deg)}
+details>summary:hover{background:rgba(219,229,241,.05)}details>summary:hover::after{border-color:var(--ice)}
+.more{margin-top:var(--s12);border-top:1px solid var(--line)}
+.more>summary{min-height:40px;display:flex;align-items:center;font:500 12px/1.4 var(--text);color:var(--fog)}
+.more>summary:hover{color:var(--ice)}
+@media (prefers-reduced-motion:reduce){a,details>summary::after{transition:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* ── 지금 한눈에 ── 같은 줄 칸끼리 이름·값·바닥 링크가 같은 높이(바닥 링크는 칸 바닥에 붙인다) */
+.nw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s8)}
+.nt{display:flex;flex-direction:column;gap:var(--s4);min-width:0;padding:var(--s12);border:1px solid var(--line);background:var(--ink)}
+.nt .nl{font:500 10px/16px var(--data);color:var(--fog);letter-spacing:.04em;white-space:nowrap}
+.nt .nv{font:700 20px/28px var(--text);color:var(--ice);white-space:nowrap}
+.nt .nv.g0{color:var(--g0)}.nt .nv.up{color:var(--amber)}.nt .nv.d{font-family:var(--data);font-weight:600}
+.nt .ns{font-size:12px;line-height:1.5;color:var(--fog)}
+.nt .ns b{color:var(--ice);font-weight:600}
+.nt .nf{margin-top:auto;white-space:nowrap;padding-top:var(--s8);font:500 11px/16px var(--data);color:var(--fog)}
+.nt .nf a{text-decoration:none}.nt .nf a:hover{color:var(--ice)}
+.todo{display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--s4) var(--s12);margin-top:var(--s12);padding-top:var(--s12);border-top:1px solid var(--line);font-size:13px}
+.todo b{font:600 11px/20px var(--data);color:var(--ink);background:var(--amber);padding:0 var(--s8);align-self:start}
+.todo b.calm{background:var(--g0)}
+.todo small{grid-column:2;color:var(--fog);font-size:12px}
+@media (min-width:760px){.nw{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* ── 목록 행(일정·달력·배경 요인) — 좁은 화면은 2줄, 넓으면 한 줄 ── */
+.rows{list-style:none;margin:0;padding:0}
+.rw{display:grid;grid-template-columns:88px minmax(0,1fr);gap:var(--s4) var(--s12);padding:var(--s12) 0;border-bottom:1px solid var(--line);font-size:13px}
+.rw:first-child{padding-top:0}.rw:last-child{border-bottom:0;padding-bottom:0}
+.rw .d{font:500 12px/1.55 var(--data);color:var(--ice);white-space:nowrap}
+.rw .d small{display:block;font-size:10px;color:var(--amber)}
+.rw .nm small{display:block;margin-top:var(--s4);font-size:12px;color:var(--fog)}
+.rw .st{grid-column:2;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s4) var(--s8);font-size:12px;color:var(--fog)}
+.rw .st b{color:var(--ice);font-weight:600}
+.yrs{display:inline-flex;gap:2px}
+.yrs a,.yrs i{display:block;width:8px;height:12px;background:var(--line-2);text-decoration:none}
+.yrs a.h{background:var(--ice)}.yrs a.h:hover{background:var(--amber)}.yrs i.x{background:none;box-shadow:inset 0 0 0 1px var(--line-2)}
+.leg{display:flex;flex-wrap:wrap;gap:var(--s4) var(--s12);margin-top:var(--s12);font-size:11px;color:var(--fog)}
+.leg i{display:inline-block;width:8px;height:12px;margin-right:var(--s4);vertical-align:-2px;background:var(--line-2)}
+.leg i.h{background:var(--ice)}.leg i.x{background:none;box-shadow:inset 0 0 0 1px var(--line-2)}
+
+/* 임박 신호 */
+.sg{list-style:none;margin:0;padding:0}
+.sg li{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s4);padding:var(--s12) 0;border-bottom:1px solid var(--line)}
+.sg li:first-child{padding-top:0}.sg li:last-child{border-bottom:0}
+.sg .kd{font:500 11px/1.6 var(--data);color:var(--amber)}
+.sg p{margin:0;font-size:13px}.sg .mt{font-size:12px;color:var(--fog)}.sg .mt b{color:var(--ice);font-weight:500}
+.none{margin:0;font-size:13px;color:var(--fog)}
+.ck{margin:var(--s12) 0 0;padding-top:var(--s12);border-top:1px solid var(--line);font-size:12px;color:var(--fog);line-height:1.6}
+.ck b{color:var(--ice);font-weight:600;margin-right:var(--s8)}
+
+/* 긴장 국면 — 5단계 띠. 같은 역할(이름·지표 수)은 칸마다 같은 높이: 이름 자리를 2줄로 잡는다 */
+.lst{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s4)}
+.lst li{display:flex;flex-direction:column;gap:var(--s4);padding-top:var(--s8);border-top:3px solid var(--line-2);min-width:0}
+.lst .sn{font:600 12px/18px var(--text);color:var(--fog);min-height:36px}
+.lst .sc{font:400 10px/16px var(--data);color:var(--dim);white-space:nowrap}
+.lst li.past{border-top-color:var(--fog)}
+.lst li.cur{border-top-color:var(--gc)}.lst li.cur .sn{color:var(--ice)}.lst li.cur .sc{color:var(--fog)}
+.lst li .sc b{color:var(--amber);font-weight:500}
+.lnow{margin:var(--s12) 0 0;font-size:13px}.lnow b{font-weight:700;color:var(--gc)}
+.lnow small{display:block;margin-top:var(--s4);font:400 11px/1.6 var(--data);color:var(--fog)}
+.lnext{margin:var(--s12) 0 0;font-size:12px;color:var(--fog)}.lnext b{color:var(--ice);font-weight:600}
+.lnext ul{margin:var(--s4) 0 0;padding-left:var(--s16)}
+.lhist{margin:var(--s8) 0 0;font-size:12px;color:var(--fog)}
+.stg{padding:var(--s12) 0;border-top:1px solid var(--line)}
+.stg:first-child{border-top:0}
+.stg h3{margin:0;font:600 13px/1.5 var(--text);color:var(--ice)}.stg h3 small{margin-left:var(--s8);font:400 10px/1 var(--data);color:var(--dim)}
+.stg>p{margin:var(--s4) 0 0;font-size:13px;color:var(--fog)}
+.ind{list-style:none;margin:var(--s8) 0 0;padding:0;display:grid;gap:var(--s8)}
+.ind li{padding-left:var(--s8);border-left:2px solid var(--line-2);font-size:13px}
+.ind li.on{border-left-color:var(--amber)}.ind li.ck2{border-left-color:var(--fog)}
+.ind li b{font-weight:600}.ind .tag{margin-left:var(--s8)}
+.ind .mt{display:block;margin-top:var(--s4);font-size:12px;line-height:1.5;color:var(--fog)}
+.ind .src{display:block;margin-top:var(--s4);font-size:11px;line-height:1.5;color:var(--dim)}
+.ind .nowv{display:block;margin-top:var(--s4);font-size:12px;line-height:1.5;color:var(--ice)}
+.act{margin:var(--s8) 0 0;font-size:12px;color:var(--fog)}.act b{color:var(--ice);font-weight:600;margin-right:var(--s8)}
+.ev{margin-top:var(--s8)}
+.ev>summary{min-height:32px;display:flex;align-items:center;font:500 11px/1.4 var(--text);color:var(--fog)}
+.evl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.evl li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--s4) var(--s8);padding:var(--s8) 0;border-bottom:1px solid var(--line);font-size:12px;line-height:1.5}
+.evl .ec{font:500 11px/1.5 var(--data);color:var(--fog)}.evl .el{font:400 11px/1.5 var(--data);color:var(--fog);text-align:right}
+.evl .eo,.evl .es{grid-column:1/-1}.evl .es{display:flex;flex-wrap:wrap;gap:var(--s4) var(--s8);align-items:center;font-size:11px;color:var(--dim)}
+
+/* 발사 흐름 */
+.big{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s8) var(--s12)}
+.big div{display:flex;flex-direction:column;gap:var(--s4);min-width:0}
+.big b{font:600 22px/28px var(--data);white-space:nowrap}.big b.hot{color:var(--amber)}.big span{font-size:12px;line-height:1.5;color:var(--fog)}
+.bars{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:var(--s4);align-items:end;height:64px;margin-top:var(--s16)}
 .bars i{display:flex;flex-direction:column-reverse;min-height:1px;font-style:normal}
 .bars i u{display:block;text-decoration:none}.bars u.mis{background:var(--k-mis)}.bars u.nuc{background:var(--k-nuc)}.bars u.oth{background:var(--k-oth)}
-.bx{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px;font:400 10px/1.6 var(--data);color:var(--dim);text-align:center}
+.bx{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:var(--s4);font:400 10px/1.6 var(--data);color:var(--dim);text-align:center}
 .bx .now{color:var(--amber)}
-/* 21년 칸이라 좁은 화면은 한 해 걸러 이름만(막대는 전부) — 첫해(짝수)·올해가 남는다 */
 @media (max-width:520px){.bx span:nth-child(even){visibility:hidden}}
-.lg{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:8px;font:400 10px/1.6 var(--data);color:var(--fog)}
-.lg span::before{content:"";display:inline-block;width:8px;height:8px;margin-right:4px;vertical-align:-1px;background:var(--c)}
-/* 재발사 간격: 한 줄 결론 + 7·14·30일 */
-.rl{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
-.rl p{margin:0;font-size:13px}.rl p b{font:600 15px/1 var(--data);color:var(--ice)}
-.rl .ks{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:6px;font:400 11px/1.6 var(--data);color:var(--fog)}
-/* 달별: 막대 = 20년 발사한 날 수 합 · 가로선 = 평소라면(달 길이 비례) · 지금 달·다음 달 강조 */
-.mo{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;align-items:end;height:80px;margin-top:4px}
+.lg{display:flex;flex-wrap:wrap;gap:var(--s4) var(--s12);margin-top:var(--s8);font:400 10px/1.6 var(--data);color:var(--fog)}
+.lg span::before{content:"";display:inline-block;width:8px;height:8px;margin-right:var(--s4);vertical-align:-1px;background:var(--c)}
+.rl{margin-top:var(--s12);padding-top:var(--s12);border-top:1px solid var(--line);font-size:13px}
+.rl p{margin:0}.rl p b{font:600 15px/1 var(--data)}
+.rl .ks{display:flex;flex-wrap:wrap;gap:var(--s4) var(--s16);margin-top:var(--s4);font:400 11px/1.6 var(--data);color:var(--fog)}
+.recent{list-style:none;margin:0;padding:0;font-size:12px;color:var(--fog)}
+.recent li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:var(--s8);padding:var(--s4) 0}
+.recent .d{font:500 11px/1.6 var(--data);color:var(--ice)}
+/* 달별 */
+.mo{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s4);align-items:end;height:80px}
 .mo i{position:relative;display:block;height:100%;font-style:normal}
 .mo i u{position:absolute;left:0;right:0;bottom:0;background:var(--line-2);min-height:1px}
 .mo i.now u{background:var(--amber)}.mo i.nx u{background:color-mix(in srgb,var(--amber) 45%,var(--line-2))}
-.mo i s{position:absolute;left:-2px;right:-2px;height:0;border-top:1px dashed var(--fog)}
-.mx{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;font:400 10px/1.6 var(--data);color:var(--dim);text-align:center}
+.mo i s{position:absolute;left:0;right:0;height:0;border-top:1px dashed var(--fog)}
+.mx{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s4);font:400 10px/1.6 var(--data);color:var(--dim);text-align:center}
 .mx .now,.mx .nx{color:var(--amber)}
-.mo-sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 24px;margin-top:12px}
-.mo-sum div{font-size:12px;color:var(--fog)}.mo-sum b{display:block;font:600 13px/1.5 var(--data);color:var(--ice)}
-.wrap{overflow-x:auto}.wrap table{min-width:640px}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{font:500 11px/1.4 var(--data);color:var(--fog);text-align:left;padding:8px;border-bottom:1px solid var(--line-2)}
-td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
-td.n{font:500 12px/1.5 var(--data);white-space:nowrap}
-.tag{font:500 10px/1 var(--data);padding:3px 6px;border:1px solid var(--line-2);color:var(--fog);white-space:nowrap}
-.tag.hi{border-color:var(--amber);color:var(--amber)}.tag.lo{color:var(--dim)}
-/* 연도 칸: 채움 = 그 기간 발사 있음(누르면 첫 발사 출처) · 빈 칸 = 없음 · 점선 = 훈련 미실시 */
-.yrs{display:inline-flex;gap:2px;vertical-align:middle;margin-left:6px}
-.yrs a,.yrs i{display:block;width:8px;height:12px;background:var(--line-2);text-decoration:none}
-.yrs a.h{background:var(--ice)}.yrs a.h:hover{background:var(--amber)}.yrs i.x{background:none;box-shadow:inset 0 0 0 1px var(--line-2)}
-.fx{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.fx:last-child{border-bottom:0}.fx b{font:600 18px/1 var(--data);text-align:right;color:var(--fog)}.fx small{grid-column:1/-1;color:var(--fog);font-size:12px}
-.note{font-size:12px;color:var(--fog);line-height:1.7;margin:12px 0 0}.note li{margin-bottom:4px}
-ul.note{padding-left:18px;margin:0}
-/* 임박 신호 — AI 칩은 상황판(index.html)과 같은 컴포넌트 */
-:root{--ai:#b69cff;--ai-2:#5cc8ff}
-.ai{display:inline-flex;align-items:center;gap:3px;font:600 10px/1 var(--data);letter-spacing:.02em;color:#d9ccff;padding:3px 6px;margin-right:6px;vertical-align:1px;cursor:help;white-space:nowrap;
-  border:1px solid color-mix(in srgb,var(--ai) 55%,transparent);background:linear-gradient(90deg,color-mix(in srgb,var(--ai) 22%,transparent),color-mix(in srgb,var(--ai-2) 14%,transparent))}
-.ai::before{content:"✦";font-size:9px;background:linear-gradient(135deg,var(--ai),var(--ai-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.sg{list-style:none;margin:0;padding:0}
-.sg li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.sg li:first-child{padding-top:0}.sg li:last-child{border-bottom:0}
-.sg .kd{font:500 11px/1.6 var(--data);color:var(--amber)}
-.sg p{margin:0;font-size:13px}.sg .mt{display:block;margin-top:4px;font:400 11px/1.6 var(--data);color:var(--fog)}
-.sg .mt b{font-weight:500;color:var(--ice)}
-.sg-none{margin:0;font-size:13px;color:var(--fog)}
-.sg-ck{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--fog);line-height:1.7}
-.sg-ck b{font:500 11px var(--data);color:var(--ice);margin-right:6px}
-@media (max-width:520px){.sg li{grid-template-columns:minmax(0,1fr)}}
-.recent{margin:12px 0 0;padding:0;list-style:none;font-size:12px;color:var(--fog)}.recent li{padding:2px 0}.recent .d{font:500 11px var(--data);color:var(--ice);margin-right:8px}
-/* ── 긴장 국면 사다리 · 외부 전문가 시각 · 배경 요인 검증 (10/19) ── 간격은 --s* 토큰만 */
-.ld-now{display:flex;align-items:baseline;gap:var(--s4) var(--s12);flex-wrap:wrap}
-.ld-now .nk{font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em}
-.ld-now b{font:700 24px/1.1 var(--text);color:var(--g0)} .ld-now b.up{color:var(--amber)} .ld-now b.no{font-size:16px;color:var(--fog);font-weight:500}
-.ld-now .nm{font:400 12px/1.4 var(--data);color:var(--fog)}
-.ld-l{list-style:none;margin:var(--s12) 0 0;padding:0}
-.ld-s{display:grid;grid-template-columns:104px minmax(0,1fr);gap:var(--s4) var(--s12);padding:var(--s12) 0;border-top:1px solid var(--line)}
-.ld-s .sn{font:600 13px/1.5 var(--text);color:var(--fog)} .ld-s .sn small{display:block;font:400 10px/1.6 var(--data);color:var(--dim)}
-.ld-s.cur .sn{color:var(--ice)}
-.ld-s p{margin:0;font-size:13px}
-.ld-i{list-style:none;margin:var(--s8) 0 0;padding:0;display:grid;gap:var(--s8)}
-.ld-i li{padding-left:var(--s8);border-left:2px solid var(--line-2);font-size:13px}
-.ld-i li.on{border-left-color:var(--amber)} .ld-i li.ck{border-left-color:var(--fog)}
-.ld-i li b{font-weight:600}
-.ld-i .mt{display:block;margin-top:var(--s4);font-size:12px;line-height:1.5;color:var(--fog)}
-.ld-i .now{display:block;margin-top:var(--s4);font-size:12px;line-height:1.5;color:var(--ice)}
-.ld-i .tag{margin-left:var(--s8)}
-.ld-e{margin-top:var(--s8)}
-.ld-e>summary{cursor:pointer;list-style:none;font:500 11px/32px var(--data);color:var(--fog);min-height:32px}
-.ld-e>summary::-webkit-details-marker{display:none}
-.ld-e>summary::after{content:" ⌄"} .ld-e[open]>summary::after{content:" ⌃"}
-.ld-e>summary:hover{color:var(--ice)}
-.ld-v{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.ld-v li{display:grid;grid-template-columns:112px minmax(0,1fr) 120px;gap:var(--s4) var(--s8);padding:var(--s8) 0;border-bottom:1px solid var(--line);font-size:12px;line-height:1.5}
-.ld-v .ec{font:500 11px/1.5 var(--data);color:var(--fog)} .ld-v .eo{color:var(--ice)} .ld-v .el{font:400 11px/1.5 var(--data);color:var(--fog);text-align:right}
-.ld-v .es{grid-column:2/-1;display:flex;flex-wrap:wrap;gap:var(--s4) var(--s8);align-items:baseline;font:400 10px/1.5 var(--data);color:var(--dim);overflow-wrap:anywhere}
-.ld-a{margin:var(--s8) 0 0;font-size:12px;color:var(--fog)} .ld-a b{font:500 11px var(--data);color:var(--ice);margin-right:var(--s8)}
-.cfr-t{display:flex;gap:var(--s8) var(--s16);align-items:center;flex-wrap:wrap;font-size:12px;color:var(--fog)} .cfr-t b{color:var(--ice);font-weight:600}
+.mos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s8) var(--s12);margin-top:var(--s12)}
+.mos div{font-size:12px;color:var(--fog)}.mos b{display:block;font:600 13px/1.5 var(--data);color:var(--ice)}
+/* 외부 전문가 */
+.cfr-t{display:flex;gap:var(--s8) var(--s16);align-items:center;flex-wrap:wrap;font-size:12px;color:var(--fog)}.cfr-t b{color:var(--ice);font-weight:600}
 .cfr-q{margin:var(--s8) 0 0;font-size:14px;line-height:1.6}
-@media (max-width:520px){.ld-s{grid-template-columns:minmax(0,1fr)}
-  .ld-v li{grid-template-columns:minmax(0,1fr) auto}.ld-v .ec{grid-column:1}.ld-v .el{grid-row:1;grid-column:2}.ld-v .eo,.ld-v .es{grid-column:1/-1}}
+/* 판정 기준·자료 */
+#method>summary{min-height:var(--hh);padding:var(--s8) var(--pad);padding-right:28px;display:flex;align-items:center;gap:var(--s8) var(--s12);background:var(--head);font:500 11px/1.4 var(--data);color:var(--fog)}
+#method>summary .k{color:var(--ice)}
+#method[open]>summary{border-bottom:1px solid var(--line)}
+.mth h3{margin:var(--s16) 0 var(--s8);font:600 13px/1.5 var(--text);color:var(--ice)}.mth h3:first-child{margin-top:0}
+.mth ul{margin:0;padding-left:var(--s16);font-size:12px;line-height:1.7;color:var(--fog)}.mth li{margin-bottom:var(--s4)}
+
+@media (min-width:760px){
+  .rw{grid-template-columns:104px minmax(0,1fr) minmax(0,auto)}
+  .rw .st{grid-column:3;justify-content:flex-end;align-self:start}
+  .big b{font-size:28px;line-height:32px}
+  .sg li{grid-template-columns:96px minmax(0,1fr)}
+}
+/* 1180 이상: 판단에 쓰는 순서대로 2열 짝 — 지금 한눈에·긴장 국면·기준은 가로 전체 */
+@media (min-width:1180px){
+  main{max-width:1240px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  #now,#ladder,#cfr,#method{grid-column:1/-1}
+  .rw{grid-template-columns:96px minmax(0,1fr)}
+  .rw .st{grid-column:2;justify-content:flex-start}
+}
 </style></head><body>
+<div class="band" id="band"></div>
 <header class="top"><h1>JIS 예측</h1><a href="./">← 상황판</a></header>
 <main>
 
-<section class="p" id="ladder"><div class="ph"><span class="k">긴장 국면 · 과거 위기가 밟은 순서</span><span class="r">등급(평시~위험)과 별개 · 확률 아님</span></div>
-<div class="pb" id="lad"><p class="note" style="margin:0">불러오는 중</p></div></section>
+<section class="p" id="now"><div class="ph"><span class="k">지금 한눈에</span><span class="r" id="nowat">—</span></div>
+<div class="pb"><div class="nw" id="nw"><p class="none">불러오는 중</p></div><div id="todo"></div></div></section>
+
+<section class="p" id="sigp"><div class="ph"><span class="k">임박 신호 · 기사로 본 앞으로의 단서</span><span class="tag hi" id="sigsample" hidden>예시 데이터 · 실제 상황 아님</span><span class="r" id="sigat">—</span></div>
+<div class="pb"><div id="sig"><p class="none">불러오는 중</p></div><p class="ck" id="sigck" hidden></p></div></section>
+
+<section class="p" id="upc"><div class="ph"><span class="k">다가오는 위험 일정 · 앞으로 90일</span><span class="r" id="uprange">—</span></div>
+<div class="pb"><ul class="rows" id="up"><li class="none">불러오는 중</li></ul>
+<div class="leg"><span><i class="h"></i>그해 이 기간 발사 있음(누르면 출처)</span><span><i></i>없음</span><span><i class="x"></i>훈련 안 함</span></div></div></section>
+
+<section class="p" id="ladder"><div class="ph"><span class="k">긴장 국면 · 과거 위기가 밟은 순서</span><span class="r">상황판 등급과 별개 · 확률 아님</span></div>
+<div class="pb" id="lad"><p class="none">불러오는 중</p></div></section>
+
+<section class="p" id="tempo-p"><div class="ph"><span class="k">발사 흐름</span><span class="r" id="tbasis">발사한 날 수</span></div>
+<div class="pb" id="tempo"><p class="none">불러오는 중</p></div></section>
+
+<section class="p" id="season-p"><div class="ph"><span class="k">달별 · 어느 달에 잦았나</span><span class="r" id="mobasis">—</span></div>
+<div class="pb" id="season"><p class="none">불러오는 중</p></div></section>
+
+<section class="p" id="yr-p"><div class="ph"><span class="k">1년 달력 · 이 시기에 도발이 잦았나</span><span class="r" id="lb">—</span></div>
+<div class="pb"><ul class="rows" id="yr"></ul></div></section>
+
+<section class="p" id="factors"><div class="ph"><span class="k">배경 요인 · 과거 20년에 발사를 늘렸나</span><span class="r" id="fvb">—</span></div>
+<div class="pb" id="fv"><p class="none">불러오는 중</p></div></section>
 
 <section class="p" id="cfr"><div class="ph"><span class="k">외부 전문가 시각</span><span class="r">연 1회 · 확률 아님</span></div>
-<div class="pb" id="cfrb"><p class="note" style="margin:0">불러오는 중</p></div></section>
+<div class="pb" id="cfrb"><p class="none">불러오는 중</p></div></section>
 
-<section class="p" id="sigp"><div class="ph"><span class="k">기사로 본 임박 신호</span><span class="tag" id="sigsample" hidden>예시 데이터 · 실제 상황 아님</span><span class="r" id="sigat">—</span></div>
-<div class="pb"><div id="sig"><p class="sg-none">불러오는 중</p></div><p class="sg-ck" id="sigck" hidden></p></div></section>
-
-<section class="p" id="factors"><div class="ph"><span class="k">배경 요인 · 과거 20년 검증</span><span class="r" id="fvb">—</span></div>
-<div class="pb wrap" id="fv"><p class="note" style="margin:0">불러오는 중</p></div></section>
-
-<section class="p"><div class="ph"><span class="k">지금 흐름</span><span class="r" id="tbasis">발사한 날 수 · CSIS 도발 DB</span></div>
-<div class="pb" id="tempo"><p class="note">불러오는 중</p></div></section>
-
-<section class="p"><div class="ph"><span class="k">달별 · 어느 달에 잦았나</span><span class="r" id="mobasis">—</span></div>
-<div class="pb" id="season"><p class="note">불러오는 중</p></div></section>
-
-<section class="p"><div class="ph"><span class="k">앞으로 90일</span><span class="r" id="uprange">—</span></div>
-<div class="pb wrap"><table><thead><tr><th>날짜</th><th>일정</th><th>과거 ±7일 발사</th><th>판단</th><th>출처</th></tr></thead><tbody id="up"></tbody></table></div></section>
-
-<section class="p"><div class="ph"><span class="k">1년 달력 · 이 시기에 도발이 잦았나</span><span class="r" id="lb">—</span></div>
-<div class="pb wrap"><table><thead><tr><th>시기</th><th>일정</th><th>발사 있던 해</th><th>평소라면</th><th>판단</th></tr></thead><tbody id="yr"></tbody></table>
-<p class="note">칸 하나 = 1년(왼쪽이 오래된 해). 채운 칸 = 그 기간에 발사 있음 — 누르면 그 발사의 출처로 간다 · 빈 칸 = 없음 · 점선 = 훈련 미실시.
-「평소라면」 = 그해 아무 때나 같은 길이 기간을 골랐을 때 발사가 들어 있었을 확률을 해마다 더한 값. 실제 해 수가 평소와 우연으로 보기 어려울 만큼(10% 기준) 많거나 적을 때만 「평소보다 잦음」·「오히려 드묾」.</p></div></section>
-
-<section class="p"><div class="ph"><span class="k">집계 기준</span><span class="r" id="upd">—</span></div>
-<div class="pb"><ul class="note">
-  <li>발사 = <a href="https://beyondparallel.csis.org/database-north-korean-provocations/" target="_blank" rel="noopener">CSIS Beyond Parallel 도발 DB ↗</a> 의 미사일·핵 도발 날짜 ∪ <a href="https://www.nti.org/analysis/articles/cns-north-korea-missile-test-database/" target="_blank" rel="noopener">CNS 미사일 시험 DB ↗</a>(2024.11 까지). 같은 날 여러 발 = 1일. 풍선·포격 등은 세지 않는다.</li>
-  <li>판단 기준 = 해마다 「그 길이 기간에 발사가 들어 있었을 확률」이 다르므로, 그 확률들로 「발사 있던 해 수」가 우연히 나올 범위를 정확히 계산한다. 실제 값이 그 범위 끝 10% 밖일 때만 「평소보다 잦음」·「오히려 드묾」 — 우연으로 보기 어려운 정도(10% 기준). 20년 표본이라 차이가 작으면 「평소 수준」으로 남는다.</li>
-  <li>재발사 비율·달별 막대는 지난 20년에 실제 있었던 빈도다. 다음 발사의 예측 확률이 아니다.</li>
-  <li>연도 막대의 기타(풍선·포격·GPS 교란 등, CSIS Other Provocation)는 보여 주기만 하고 「최근 30일」·「평소」·일정별 판단에는 넣지 않는다 — 종류가 섞여 해마다 기준이 흔들린다.</li>
-  <li>훈련 날짜 = 연도별 보도 원문으로 확인한 값(출처는 연도 칸 · 정본 <a href="https://github.com/HaydenRyu/korea-security-watch/blob/main/data/risk_calendar.json" target="_blank" rel="noopener">data/risk_calendar.json ↗</a>). 훈련이 없던 해는 세지 않는다. 봄 훈련 창은 2006~2018 키리졸브+독수리 전체 기간, 2019~ 지휘소 연습 기간이다(독수리 폐지). 2010 봄 종료일·2008 여름(사전 발표값)은 불확실, 일부 해는 GlobalSecurity 정리 페이지 기준.</li>
-  <li>우리는 「전쟁 확률 %」를 만들지 않는다 — 전례가 거의 없어 그럴듯한 숫자만 나온다. 이 페이지는 「언제 더 자주 볼지」를 정하는 데 쓴다.</li>
-  <li>외부 예측 시장(Metaculus·Polymarket·Manifold)은 싣지 않는다 — 토큰 필요·한국 접속 차단·참여자 수십 명 수준이라 판단 근거가 못 된다(2026-10-18 실측).</li>
-  <li>임박 신호 = 매시간 루틴이 읽은 기사에서 「앞으로의 도발」을 가리키는 단서(항행경보·북한 예고·시설 동향·발사대 이동·공표 일정)를 AI 가 뽑은 문장이다. 실제로 연 원문만 근거이고, 등급·알림과 무관하다. 사실 확인은 출처 원문으로. 과거 적중 = 만료된 신호마다 처음 본 날부터 14일 안에 미사일·핵 발사가 있었는지 센 건수이며(종류별 5건 미만은 「집계 중」), 확률이 아니다.</li>
-  <li>갱신 = 매일 아침 6시 DB 를 다시 받아 다시 센다(scripts/risk_calendar.py).</li>
-</ul></div></section>
+<details class="p" id="method"><summary><span class="k">판정 기준·자료</span><span id="upd">—</span></summary>
+<div class="pb mth" id="mth"></div></details>
 </main>
 <script>
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const lnk=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${t} ↗</a>`:"";
-const tag=v=>`<span class="tag ${v==="more"?"hi":v==="less"?"lo":""}">${FC_VERDICT[v]}</span>`;
-function yrs(s){return `<span class="yrs">${s.rows.map(r=>r.held===false?`<i class="x" title="${r.year} 훈련 미실시"></i>`
-  :r.n?`<a class="h" href="${esc(r.src||"#")}" target="_blank" rel="noopener" title="${r.year} · ${r.n}일 발사 · 첫 발사 ${r.first}"></a>`:`<i title="${r.year} · 발사 없음"></i>`).join("")}</span>`}
+const VTAG={more:'<span class="tag hi">평소보다 잦음</span>',usual:'<span class="tag">평소 수준</span>',less:'<span class="tag lo">오히려 드묾</span>'};
+const tag=v=>VTAG[v]||'<span class="tag lo">집계 없음</span>';
+const yrs=s=>`<span class="yrs" aria-label="해마다 발사 여부">${s.rows.map(r=>r.held===false?`<i class="x" title="${r.year} 훈련 안 함"></i>`
+  :r.n?`<a class="h" href="${esc(r.src||"#")}" target="_blank" rel="noopener" title="${r.year} · ${r.n}일 발사 · 첫 발사 ${r.first}"></a>`:`<i title="${r.year} · 발사 없음"></i>`).join("")}</span>`;
 const SAMPLE=new URLSearchParams(location.search).has("sample"),SB=SAMPLE?"state/sample/":"state/";
 const AI_TAG='<span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 사실 확인은 출처 원문으로 하세요.">AI</span>';
 const jf=u=>fetch(u,{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null);
 const hhmm=iso=>{if(!iso)return"";const p=Object.fromEntries(new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date(iso)).map(x=>[x.type,x.value]));return`${p.month}.${p.day} ${p.hour}:${p.minute}`};
-// 임박 신호 칸: 먼저 그린다(판단에 가장 먼저 필요한 「지금 임박한 것」). 실패해도 아래 칸에 영향 없음
-Promise.all([jf(SB+"signals.json"),jf(SB+"latest.json"),jf("data/risk_calendar.json")]).then(([sg,lt,cal])=>{
+const GRADE=[["평시","--g0"],["주의","--g1"],["경계","--g2"],["위험","--g3"]];
+
+/* ── 자료 한 번에 읽고, 칸마다 그린다(한 칸 실패가 다른 칸을 막지 않는다) ── */
+Promise.all([jf(SB+"signals.json"),jf(SB+"latest.json"),jf("data/risk_calendar.json"),jf("data/escalation_ladder.json"),jf(SB+"ladder.json"),jf("data/factors_validation.json")])
+.then(([sg,lt,cal,cat,st,fv])=>{
+  if(st&&(typeof st!=="object"||typeof st.stage!=="number"))st=null;
+  const t=fcKST(new Date());
+  for(const[f,a]of[[drawSummary,[sg,lt,cal,cat,st,t]],[drawSignals,[sg,lt,cal]],[drawUpcoming,[cal,t]],[drawLadder,[cat,st]],[drawTempo,[cal,t]],[drawYear,[cal]],[drawFactors,[fv]],[drawCfr,[cat]],[drawMethod,[cal,cat]]])
+    try{f(...a)}catch(e){console.error(f.name,e)}
+});
+
+function drawSummary(sg,lt,cal,cat,st,t){
+  const g=GRADE[lt?.grade]||null;
+  if(g)document.documentElement.style.setProperty("--gc",`var(${g[1]})`);
+  $("nowat").textContent=lt?.checked_at?`${hhmm(lt.checked_at)} 확인 · 확률 아님`:"확률 아님";
+  const sig=fcSignals(sg,new Date(),!SAMPLE),tp=cal?.tempo,hot=tp&&tp.ratio>=2;
+  const stage=st?cat?.stages?.[st.stage]:null,total=st?.total||cat?.indicators?.length||0;
+  const met=(st?.met||[]).length,chk=(st?.checking||[]).length;
+  const up=cal?fcUpcoming(cal):[],nx=up.find(u=>u.stat&&u.start>=fcISO(t))||up.find(u=>u.stat),ongo=up.filter(u=>u.start<=fcISO(t)&&(u.end||u.start)>=fcISO(t));
+  const tiles=[
+    {l:"긴장 국면",v:stage?esc(stage.name):"판정 기록 없음",c:stage?(st.stage>0?"up":"g0"):"",
+     s:(stage?`지표 ${total}개 중 충족 <b>${met}</b>${chk?` · 확인 중 ${chk}`:""}`:"매시간 확인이 다음에 판정합니다")+(g?`<br><a href="./">상황판 등급 <b style="color:var(${g[1]})">${g[0]}</b> ›</a>`:""),
+     f:`<a href="#ladder">5단계 보기 ↓</a>`},
+    {l:"임박 신호",v:!sg?"미확인":sig.length?`${sig.length}건`:"없음",c:sig.length?"up":"",
+     s:!sg?"신호 자료를 불러오지 못함":sig.length?`가장 가까운 시점 <b>${fcSigWhen(sig[0])}</b> · ${FC_SIG_KIND[sig[0].kind]||""}`:"기사에서 앞으로의 도발 단서를 찾지 못함",
+     f:`<a href="#sigp">신호 보기 ↓</a>`},
+    {l:"발사 흐름",v:tp?(hot?`평소의 ${tp.ratio}배`:"평소 범위"):"미확인",c:hot?"up":"",
+     s:tp?`최근 30일 <b>${tp.last30}일</b> 발사 · 평소 30일 ${tp.avg30}일`:"",
+     f:`<a href="#tempo-p">흐름 보기 ↓</a>`},
+    {l:"다음 위험 일정",v:nx?`${fcMD(nx.start)}`:"없음",c:"d",
+     s:(nx?`<b>${esc(nx.name)}</b> — 지난 ${nx.stat.years}년 중 ${nx.stat.hit}년 앞뒤 7일 안 발사(평소라면 ${nx.stat.expected}년) · ${{more:"평소보다 잦음",usual:"평소 수준",less:"오히려 드묾"}[nx.stat.verdict]}`:"앞으로 90일 안 과거 집계가 있는 일정 없음")+(ongo.length?`<br>지금 진행 중 ${ongo.length}건 · 그중 과거 집계 없음 ${ongo.filter(u=>!u.stat).length}건`:""),
+     f:`<a href="#upc">일정 ${up.length}건 보기 ↓</a>`}
+  ];
+  $("nw").innerHTML=tiles.map(x=>`<div class="nt"><span class="nl">${x.l}</span><span class="nv ${x.c}">${x.v}</span><span class="ns">${x.s}</span><span class="nf">${x.f}</span></div>`).join("");
+  // 할 일 한 줄: 국면 1단계 이상이면 그 단계의 할 일이 먼저, 아니면 흐름·신호, 아니면 평상 할 일
+  let todo,why,calm=false;
+  if(stage&&st.stage>0){todo=stage.action;why=`긴장 국면이 「${stage.name}」 단계`}
+  else if(hot){todo="평소보다 자주 상황판을 본다.";why=`최근 30일 발사가 평소의 ${tp.ratio}배 — 발사가 몰리는 시기엔 다음 발사도 가깝다`}
+  else if(sig.length){todo="신호가 가리키는 시점 전후로 상황판을 더 자주 본다.";why=`임박 신호 ${sig.length}건`}
+  else{todo=cat?.stages?.[0]?.action||"평소 주기로 본다.";why="국면·흐름·신호 모두 평소";calm=true}
+  $("todo").innerHTML=`<div class="todo"><b class="${calm?"calm":""}">할 일</b><span>${esc(todo)}</span><small>${esc(why)}. 이 페이지는 전쟁 확률을 만들지 않는다.</small></div>`;
+}
+
+function drawSignals(sg,lt,cal){
   $("sigsample").hidden=!SAMPLE;
   const list=fcSignals(sg,new Date(),!SAMPLE),chk=fcSigCheck(cal?.signal_check),at=hhmm(lt?.checked_at||sg?.updated_at);
   $("sigat").textContent=at?`마지막 확인 ${at}`:"—";
-  $("sig").innerHTML=!sg?'<p class="sg-none">신호 자료를 불러오지 못했습니다.</p>'
-    :list.length?`<ul class="sg">${list.map(s=>`<li><span class="kd">${FC_SIG_KIND[s.kind]||esc(s.kind)}</span><div><p>${AI_TAG}${esc(s.summary)}</p>
-      <span class="mt">${s.window?.start?`시점 <b>${fcSigWhen(s)}</b>`:`<b>${fcSigWhen(s)}</b>`} · ${FC_SIG_LEVEL[s.level]||""} · ${lnk(s.source?.url,esc(s.source?.publisher||"출처"))}${(s.also||[]).length?` 외 ${s.also.length}곳 보도`:""} · ${fcMD(s.first_seen.slice(0,10))} 확인${s.expires?` · ${fcMD(s.expires)}까지`:""}</span></div></li>`).join("")}</ul>`
-    :`<p class="sg-none">현재 유효한 임박 신호 없음${at?` — 마지막 확인 ${at}`:""}</p>`;
+  $("sig").innerHTML=!sg?'<p class="none">신호 자료를 불러오지 못했습니다(미확인).</p>'
+    :list.length?`<ul class="sg">${list.map(s=>`<li><span class="kd">${FC_SIG_KIND[s.kind]||"기타"}</span><div><p>${AI_TAG}${esc(s.summary)}</p>
+      <span class="mt">시점 <b>${fcSigWhen(s)}</b> · ${FC_SIG_LEVEL[s.level]||""} · ${lnk(s.source?.url,esc(s.source?.publisher||"출처"))}${(s.also||[]).length?` 외 ${s.also.length}곳 보도`:""} · ${fcMD(s.first_seen.slice(0,10))} 처음 봄${s.expires?` · ${fcMD(s.expires)}까지 유효`:""}</span></div></li>`).join("")}</ul>`
+    :`<p class="none">지금 유효한 임박 신호 없음 — 매시간 기사를 읽어 항행경보·북한 예고·시설 동향·발사대 이동·공표 일정을 찾는다.</p>`;
   const ck=$("sigck");ck.hidden=false;
-  ck.innerHTML=`<b>과거 적중</b>`+(chk.length?`${chk.map(esc).join(" · ")}<br>신호를 처음 본 날부터 ${cal.signal_check.window_days}일 안 발사 여부 — 지난 건수이며 다음 발사의 확률이 아니다.`
-    :`집계 중 — 만료된 신호가 쌓이면 종류별로 보여 줍니다(종류별 ${cal?.signal_check?.min_n||5}건부터 비율).`);
-});
-// ── 긴장 국면 사다리(10/19): 정본 data/escalation_ladder.json + 판정 state/ladder.json(diff_state.update_ladder). 등급·알림과 무관 ──
-const LD_ST={corroborated:"충족",single:"확인 중"};
-Promise.all([jf("data/escalation_ladder.json"),jf(SB+"ladder.json")]).then(([cat,st])=>{
-  if(!cat?.stages){$("lad").innerHTML='<p class="note" style="margin:0">사다리 자료를 불러오지 못했습니다.</p>';$("cfrb").innerHTML='<p class="note" style="margin:0">자료를 불러오지 못했습니다.</p>';return}
-  if(st&&(typeof st!=="object"||typeof st.stage!=="number"))st=null;
-  const inds=st?.indicators&&typeof st.indicators==="object"?st.indicators:{},tot=cat.indicators.length;
-  const ev=e=>`<li><span class="ec">${esc(e.case)}</span><span class="eo">${esc(e.observed)}</span><span class="el">${esc(e.lead||"—")}</span><span class="es">${e.url?lnk(e.url,esc(e.publisher||(()=>{try{return new URL(e.url).hostname.replace(/^www\./,"")}catch(_){return"출처"}})())):""}${e.status!=="verified"?`<span class="tag lo" title="${esc(e.note||"원문으로 확인하지 못함")}">미확인</span>`:""}${e.public_at_time===false?'<span class="tag" title="당시엔 공개되지 않았고 나중에 밝혀진 정보 — 실시간 감시로는 볼 수 없었다">당시 기밀</span>':""}</span></li>`;
-  const now=st?`<span class="nk">지금</span><b class="${st.stage>0?"up":""}">${esc(st.stage_name||cat.stages[st.stage]?.name||"")}</b><span class="nm">충족 지표 ${(st.met||[]).length} / ${st.total||tot}${(st.checking||[]).length?` · 확인 중 ${st.checking.length}`:""}${st.updated_at?` · ${hhmm(st.updated_at)} 기준`:""}</span>`
-    :`<span class="nk">지금</span><b class="no">판정 기록 없음</b><span class="nm">매시간 루틴이 다음 확인부터 국면을 판정합니다</span>`;
+  ck.innerHTML=`<b>과거에 맞았나</b>`+(chk.length?`${chk.map(esc).join(" · ")}<br>신호를 처음 본 날부터 ${cal.signal_check.window_days}일 안에 발사가 있었는지 센 건수 — 다음 발사의 확률이 아니다.`
+    :`집계 중 — 기한이 지난 신호가 종류별 ${cal?.signal_check?.min_n||5}건 쌓이면 비율을 보여 준다.`);
+}
+
+function drawUpcoming(cal,t){
+  if(!cal){$("up").innerHTML='<li class="none">일정 자료를 불러오지 못했습니다.</li>';return}
+  const cfg=cal.config,up=fcUpcoming(cal),today=fcISO(t);
+  $("uprange").textContent=`${fcMD(today)}–${fcMD(fcISO(new Date(t.getTime()+cfg.horizon_days*FC_DAY)))}`;
+  $("up").innerHTML=up.length?up.map(u=>{const on=u.start<=today&&(u.end||u.start)>=today;
+    return `<li class="rw"><span class="d">${fcMD(u.start)}${u.end?"–"+fcMD(u.end):""}${on?"<small>진행 중</small>":""}</span>
+    <span class="nm">${esc(u.name)} ${lnk(u.src,"원문")}${u.note?`<small>${esc(u.note)}</small>`:""}</span>
+    <span class="st">${u.stat?`지난 ${u.stat.years}년 중 <b>${u.stat.hit}년</b> 앞뒤 7일 안 발사 · 평소라면 ${u.stat.expected}년 ${yrs(u.stat)} ${tag(u.stat.verdict)}`:`<span class="tag lo">과거 집계 없음</span>`}</span></li>`}).join("")
+    :`<li class="none">앞으로 ${cfg.horizon_days}일 안 주요 일정 없음</li>`;
+}
+
+function drawLadder(cat,st){
+  if(!cat?.stages){$("lad").innerHTML='<p class="none">긴장 국면 자료를 불러오지 못했습니다.</p>';return}
+  const inds=st?.indicators&&typeof st.indicators==="object"?st.indicators:{},cur=st?st.stage:-1;
+  const cnt=n=>{const l=cat.indicators.filter(i=>i.stage===n);return{n:l.length,on:l.filter(i=>inds[i.id]?.status==="corroborated").length,ck:l.filter(i=>inds[i.id]&&inds[i.id].status!=="corroborated").length}};
+  const strip=`<ol class="lst" aria-label="긴장 국면 5단계">${cat.stages.map(s=>{const c=cnt(s.n);
+    return `<li class="${s.n===cur?"cur":s.n<cur?"past":""}"${s.n===cur?' aria-current="step"':""}><span class="sn">${esc(s.name)}</span><span class="sc">${s.n===0?"기본":`충족 <b>${c.on}</b>/${c.n}${c.ck?` · 확인 ${c.ck}`:""}`}</span></li>`}).join("")}</ol>`;
+  const sg=cur>=0?cat.stages[cur]:null;
+  const nowTxt=sg?`<p class="lnow">지금 <b>${esc(sg.name)}</b> — ${esc(sg.desc)}<small>지표 ${st.total||cat.indicators.length}개 중 충족 ${(st.met||[]).length}${(st.checking||[]).length?` · 확인 중 ${st.checking.length}`:""}${st.updated_at?` · ${hhmm(st.updated_at)} 기준`:""}</small></p><p class="act"><b>할 일</b>${esc(sg.action)}</p>`
+    :`<p class="lnow"><b>판정 기록 없음</b><small>매시간 확인이 다음 회차부터 국면을 판정합니다</small></p>`;
+  const nxt=cat.stages[cur+1];
+  const nxtTxt=nxt?`<div class="lnext">다음 단계 <b>${esc(nxt.name)}</b>로 올리는 신호<ul>${cat.indicators.filter(i=>i.stage===nxt.n).map(i=>`<li>${esc(i.label)}</li>`).join("")}</ul></div>`:"";
   const hist=(Array.isArray(st?.history)?st.history:[]).slice(-3).reverse();
-  $("lad").innerHTML=`<div class="ld-now">${now}</div>
-    <p class="note">${esc(cat.rule?.stage_of_run||"")} ${esc(cat.rule?.hold||"")}</p>
-    ${hist.length?`<p class="note" style="margin-top:var(--s4)">최근 변화: ${hist.map(h=>`${hhmm(h.at)} ${esc(cat.stages[h.from]?.name||h.from)} → ${esc(cat.stages[h.to]?.name||h.to)}${h.why?` (${esc(h.why)})`:""}`).join(" · ")}</p>`:""}
-    <ol class="ld-l">${cat.stages.slice().reverse().map(sg=>{const list=cat.indicators.filter(i=>i.stage===sg.n),evs=list.flatMap(i=>i.evidence||[]);
-      return `<li class="ld-s${st&&st.stage===sg.n?" cur":""}"><div class="sn">${esc(sg.name)}<small>${sg.n}단계</small></div><div><p>${esc(sg.desc)}</p>
-      ${list.length?`<ul class="ld-i">${list.map(i=>{const x=inds[i.id];return `<li class="${x?(x.status==="corroborated"?"on":"ck"):""}"><b>${esc(i.label)}</b>${x?`<span class="tag${x.status==="corroborated"?" hi":""}">${LD_ST[x.status]||"확인 중"}</span>`:""}<span class="mt">${esc(i.met)}</span>${x?`<span class="now">${AI_TAG}${esc(x.summary||"")} · ${(x.sources||[]).map(s=>lnk(s.url,esc(s.publisher||"출처"))).join(" · ")} · ${hhmm(x.last_seen)} 마지막 확인</span>`:""}</li>`}).join("")}</ul>`:""}
-      ${evs.length?`<details class="ld-e"><summary>과거 사례 근거 ${evs.length}건</summary><ul class="ld-v">${evs.map(ev).join("")}</ul></details>`:""}
-      <p class="ld-a"><b>할 일</b>${esc(sg.action)}</p></div></li>`}).join("")}</ol>
-    ${(cat.skips||[]).length?`<details class="ld-e"><summary>단계를 건너뛰고 터진 사례 ${cat.skips.length}건 — 사다리로 못 잡는 경우</summary><ul class="ld-v">${cat.skips.map(ev).join("")}</ul></details>`:""}`;
-  const c=cat.external?.cfr;
-  $("cfrb").innerHTML=c?`<div class="cfr-t"><span class="tag">${esc(c.tier)}</span><span>가능성 <b>${esc(c.likelihood)}</b></span><span>영향 <b>${esc(c.impact)}</b></span></div>
-    <p class="cfr-q">「${esc(c.wording)}」</p><p class="note" style="margin-top:var(--s4)">${lnk(c.url,"CFR Preventive Priorities Survey 2026")} · ${esc(c.published)} · ${esc(c.note)}</p>`
-    :'<p class="note" style="margin:0">외부 평가 자료 없음</p>';
-});
-// ── 배경 요인 검증(10/19): data/factors_validation.json — 상황판 「배경 요인」이 등급과 무관한 근거 ──
-jf("data/factors_validation.json").then(fv=>{
-  if(!fv?.rows){$("fv").innerHTML='<p class="note" style="margin:0">검증 자료를 불러오지 못했습니다.</p>';return}
-  const sv=fv.sensitivity;
-  $("fvb").textContent=`발사한 날 ${fv.launch_days}일 · ±${fv.window_days}일`;
-  $("fv").innerHTML=`<table><thead><tr><th>요인</th><th>사건</th><th>발사 있던 사건</th><th>평소라면</th><th>판단</th><th>날짜 출처</th></tr></thead><tbody>`
-    +fv.rows.map(r=>`<tr><td>${esc(r.name)}${sv&&r.name===sv.name?" ¹":""}</td><td class="n">${r.events}</td><td class="n">${r.hit}</td><td class="n">${r.expected}</td><td>${tag(r.verdict)}</td><td>${esc(r.date_source)}</td></tr>`).join("")
-    +(fv.unverified||[]).map(u=>`<tr><td>${esc(u.name)}</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td><span class="tag lo">미검증</span></td><td>${esc(u.reason)}</td></tr>`).join("")
-    +`</tbody></table><p class="note">기준은 아래 「1년 달력」과 같다(사건마다 그해 아무 날 같은 길이 창의 발사 확률, 한쪽 10%). 「평소 수준」 = 이 요인이 있을 때 발사가 늘었다는 근거가 없다는 뜻 — 상황판 「배경 요인」을 등급·알림에 쓰지 않는 이유다. ${esc(fv.basis||"")}`
-    +(fv.control?`<br>대조: ${esc(fv.control.name)} ${fv.control.hit}/${fv.control.events}(평소 ${fv.control.expected}) — ${esc(fv.control.note)}.`:"")
-    +(sv?`<br>¹ 참고: ${esc(sv.note)}`:"")+`</p>`;
-});
-fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.json()).then(doc=>{
-  const tp=doc.tempo,cfg=doc.config,py=tp.per_year,ys=Object.keys(py),thisY=ys[ys.length-1];
-  const tot=y=>py[y].missile+py[y].nuclear+py[y].other,mx=Math.max(...ys.map(tot)),hot=tp.ratio>=2,rl=doc.relaunch,nY=cfg.lookback[1]-cfg.lookback[0]+1;
+  const histTxt=hist.length?`<p class="lhist">최근 변화: ${hist.map(h=>`${hhmm(h.at)} ${esc(cat.stages[h.from]?.name||h.from)} → ${esc(cat.stages[h.to]?.name||h.to)}${h.why?` (${esc(h.why)})`:""}`).join(" · ")}</p>`:"";
+  const ev=e=>`<li><span class="ec">${esc(e.case)}</span><span class="el">${esc(e.lead)}</span><span class="eo">${esc(e.observed)}</span><span class="es">${e.url?lnk(e.url,esc(e.publisher||(()=>{try{return new URL(e.url).hostname.replace(/^www\./,"")}catch(_){return"출처"}})())):""}${e.status!=="verified"?'<span class="tag lo" title="원문으로 확인하지 못함">미확인</span>':""}${e.public_at_time===false?'<span class="tag" title="당시엔 공개되지 않았고 나중에 밝혀진 정보 — 실시간 감시로는 볼 수 없었다">당시 비공개</span>':""}</span></li>`;
+  const stages=cat.stages.filter(s=>s.n>0).map(s=>{const list=cat.indicators.filter(i=>i.stage===s.n),evs=list.flatMap(i=>i.evidence||[]);
+    return `<div class="stg"><h3>${esc(s.name)}<small>${s.n}단계</small></h3><p>${esc(s.desc)}</p>
+    <ul class="ind">${list.map(i=>{const x=inds[i.id],on=x?.status==="corroborated";return `<li class="${x?(on?"on":"ck2"):""}"><b>${esc(i.label)}</b>${x?`<span class="tag${on?" hi":""}">${on?"충족":"확인 중"}</span>`:""}<span class="mt">${esc(i.met)}</span><span class="src">보는 곳: ${(i.sources||[]).map(esc).join(" · ")}</span>${x?`<span class="nowv">${AI_TAG}${esc(x.summary||"")} · ${(x.sources||[]).map(z=>lnk(z.url,esc(z.publisher||"출처"))).join(" · ")} · ${hhmm(x.last_seen)} 마지막 확인</span>`:""}</li>`}).join("")}</ul>
+    <p class="act"><b>할 일</b>${esc(s.action)}</p>
+    ${evs.length?`<details class="ev"><summary>과거 사례 ${evs.length}건 — 언제 이 신호가 나왔나</summary><ul class="evl">${evs.map(ev).join("")}</ul></details>`:""}</div>`}).join("");
+  $("lad").innerHTML=strip+nowTxt+nxtTxt+histTxt
+    +`<details class="more"><summary>단계별 지표 ${cat.indicators.length}개·과거 사례 보기</summary>${stages}</details>`
+    +((cat.skips||[]).length?`<details class="more"><summary>단계를 건너뛰고 터진 사례 ${cat.skips.length}건 — 이 단계표로 못 잡는 경우</summary><ul class="evl">${cat.skips.map(ev).join("")}</ul></details>`:"");
+}
+
+function drawTempo(cal,t){
+  if(!cal?.tempo){$("tempo").innerHTML='<p class="none">자료를 불러오지 못했습니다.</p>';$("season").innerHTML="";return}
+  const tp=cal.tempo,cfg=cal.config,py=tp.per_year,ys=Object.keys(py),thisY=ys[ys.length-1];
+  const tot=y=>py[y].missile+py[y].nuclear+py[y].other,mx=Math.max(...ys.map(tot)),hot=tp.ratio>=2,rl=cal.relaunch,nY=cfg.lookback[1]-cfg.lookback[0]+1,rk=k=>rl?.rate?.[k];
   const seg=(y,k,c)=>py[y][k]?`<u class="${c}" style="height:${py[y][k]/tot(y)*100}%"></u>`:"";
-  const rk=k=>rl?.rate?.[k];
-  $("tbasis").textContent=tp.basis;
-  $("tempo").innerHTML=`<div class="big"><div><b class="${hot?"hot":""}">${tp.last30}일</b><span> 최근 30일</span></div><div><b>${tp.avg30}일</b><span> 평소 30일</span></div><div><b>${py[thisY].launch}일</b><span> ${thisY}년 누적</span></div></div>
-   <div class="bars" role="img" aria-label="연도별 도발한 날 수(미사일·핵·기타 누적)">${ys.map(y=>`<i style="height:${Math.round(tot(y)/mx*100)}%" title="${y}년 · 미사일 ${py[y].missile}일 · 핵 ${py[y].nuclear}일 · 기타 ${py[y].other}일">${seg(y,"missile","mis")}${seg(y,"nuclear","nuc")}${seg(y,"other","oth")}</i>`).join("")}</div>
-   <div class="bx">${ys.map(y=>`<span class="${y===thisY?"now":""}">${y.slice(2)}</span>`).join("")}</div>
-   <div class="lg"><span style="--c:var(--k-mis)">미사일</span><span style="--c:var(--k-nuc)">핵</span><span style="--c:var(--k-oth)">기타(표시만 · 판단 집계 밖)</span><span>CSIS 날짜 기준</span></div>
-   <p class="note">${hot?`최근 30일 발사가 평소의 ${tp.ratio}배 — 발사가 몰리는 시기엔 다음 발사도 가깝다. 평소보다 자주 상황판을 본다.`:"최근 30일은 평소 범위."} ${thisY}년(노란 글자)은 진행 중.</p>
+  $("tbasis").textContent=`발사한 날 수 · 평소 = ${cfg.tempo_baseline[0]}~${cfg.tempo_baseline[1]} 평균`;
+  $("tempo").innerHTML=`<div class="big"><div><b class="${hot?"hot":""}">${tp.last30}일</b><span>최근 30일</span></div><div><b>${tp.avg30}일</b><span>평소 30일</span></div><div><b>${py[thisY].launch}일</b><span>${thisY}년 누적</span></div></div>
+   <p class="note">${hot?`최근 30일 발사가 평소의 ${tp.ratio}배 — 발사가 몰리는 시기엔 다음 발사도 가깝다.`:"최근 30일은 평소 범위."}</p>
    ${rl&&rk("14")?`<div class="rl"><p>지난 ${nY}년, 발사 뒤 14일 안에 또 쏜 경우 <b>${rk("14").pct}%</b> · 마지막 발사 <b>${fcMD(rl.last)}</b>(${rl.since}일 전)</p>
    <div class="ks"><span>7일 안 ${rk("7").pct}%</span><span>14일 안 ${rk("14").pct}%</span><span>30일 안 ${rk("30").pct}%</span><span>발사한 날 ${rk("14").n}일 기준</span></div>
-   <p class="note" style="margin-top:4px">과거에 실제 있었던 빈도다 — 다음 발사의 예측 확률이 아니다.</p></div>`:""}
-   <ul class="recent">${tp.recent.map(e=>`<li><span class="d">${fcMD(e.date)}</span>${esc(e.event)} ${lnk(e.src,"출처")}</li>`).join("")}</ul>`;
-  const t=fcKST(new Date());
-  const ss=doc.season;
-  if(ss){const ms=ss.months,cm=t.getMonth()+1,nm=cm%12+1,top=Math.max(...ms.map(r=>Math.max(r.days,r.expected)));
-    const sum=r=>`<div><b>${r.m}월${r.m===cm?" · 이번 달":" · 다음 달"}</b>${ss.years}년 중 ${r.years}년 발사 · 발사한 날 ${r.days}일(평소라면 ${r.expected}일)</div>`;
-    $("mobasis").textContent=`${cfg.lookback[0]}~${cfg.lookback[1]} · 발사한 날 수 합`;
-    $("season").innerHTML=`<div class="mo" role="img" aria-label="달별 발사한 날 수(지난 ${ss.years}년 합)">${ms.map(r=>`<i class="${r.m===cm?"now":r.m===nm?"nx":""}" title="${r.m}월 · 발사한 날 ${r.days}일 · ${ss.years}년 중 ${r.years}년 · 평소라면 ${r.expected}일"><u style="height:${r.days/top*100}%"></u><s style="bottom:${r.expected/top*100}%"></s></i>`).join("")}</div>
-     <div class="mx">${ms.map(r=>`<span class="${r.m===cm?"now":r.m===nm?"nx":""}">${r.m}월</span>`).join("")}</div>
-     <div class="mo-sum">${sum(ms[cm-1])}${sum(ms[nm-1])}</div>
-     <p class="note">막대 = 지난 ${ss.years}년 그달에 발사한 날 수 합 · 점선 = 평소라면(그해 발사한 날 수를 달 길이로 나눈 기대치의 합). 막대가 점선보다 높으면 그달에 몰렸다는 뜻. 지난 빈도이지 올해 예측이 아니다.</p>`;}
-  const up=fcUpcoming(doc);
-  $("uprange").textContent=`${fcMD(fcISO(t))}–${fcMD(fcISO(new Date(t.getTime()+cfg.horizon_days*FC_DAY)))}`;
-  $("up").innerHTML=up.length?up.map(u=>`<tr><td class="n">${fcMD(u.start)}${u.end?"–"+fcMD(u.end):""}</td><td>${esc(u.name)}${u.note?`<br><small style="color:var(--fog)">${esc(u.note)}</small>`:""}</td>
-    <td>${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년${yrs(u.stat)}`:"—"}</td><td>${u.stat?tag(u.stat.verdict):'<span class="tag lo">집계 없음</span>'}</td><td>${lnk(u.src,"원문")}</td></tr>`).join("")
-    :`<tr><td colspan="5">앞으로 ${cfg.horizon_days}일 안 주요 일정 없음</td></tr>`;
-  $("lb").textContent=`${cfg.lookback[0]}~${cfg.lookback[1]} · 기준일 ±${cfg.window_days}일`;
-  const when=a=>a.md?a.md.replace("-","."):a.id==="fs"?"03월":a.id==="ufs"?"08월":a.id==="us_election"?"11월(짝수 해)":"—";
+   <p class="note" style="margin-top:var(--s4)">과거에 실제 있었던 빈도다 — 다음 발사의 확률이 아니다.</p></div>`:""}
+   <details class="more"><summary>최근 발사 ${tp.recent.length}건·연도별 막대</summary>
+   <ul class="recent">${tp.recent.map(e=>`<li><span class="d">${fcMD(e.date)}</span><span>${esc(e.event_ko||e.event)} ${lnk(e.src,"출처")}</span></li>`).join("")}</ul>
+   <div class="bars" role="img" aria-label="연도별 도발한 날 수(미사일·핵·기타 누적)">${ys.map(y=>`<i style="height:${Math.round(tot(y)/mx*100)}%" title="${y}년 · 미사일 ${py[y].missile}일 · 핵 ${py[y].nuclear}일 · 기타 ${py[y].other}일">${seg(y,"missile","mis")}${seg(y,"nuclear","nuc")}${seg(y,"other","oth")}</i>`).join("")}</div>
+   <div class="bx">${ys.map(y=>`<span class="${y===thisY?"now":""}">${y.slice(2)}</span>`).join("")}</div>
+   <div class="lg"><span style="--c:var(--k-mis)">미사일</span><span style="--c:var(--k-nuc)">핵</span><span style="--c:var(--k-oth)">기타(풍선·포격 등, 판단에 안 씀)</span></div>
+   <p class="note">${thisY}년(노란 글자)은 진행 중. 출처: 미 전략국제문제연구소(CSIS) 도발 기록.</p></details>`;
+  const ss=cal.season;if(!ss)return;
+  const ms=ss.months,cm=t.getMonth()+1,nm=cm%12+1,top=Math.max(...ms.map(r=>Math.max(r.days,r.expected)));
+  const sum=r=>`<div><b>${r.m}월${r.m===cm?" · 이번 달":" · 다음 달"}</b>${ss.years}년 중 ${r.years}년 발사 · 발사한 날 ${r.days}일(평소라면 ${r.expected}일)</div>`;
+  $("mobasis").textContent=`${cfg.lookback[0]}~${cfg.lookback[1]} 합`;
+  $("season").innerHTML=`<div class="mo" role="img" aria-label="달별 발사한 날 수(지난 ${ss.years}년 합)">${ms.map(r=>`<i class="${r.m===cm?"now":r.m===nm?"nx":""}" title="${r.m}월 · 발사한 날 ${r.days}일 · ${ss.years}년 중 ${r.years}년 · 평소라면 ${r.expected}일"><u style="height:${r.days/top*100}%"></u><s style="bottom:${r.expected/top*100}%"></s></i>`).join("")}</div>
+   <div class="mx">${ms.map(r=>`<span class="${r.m===cm?"now":r.m===nm?"nx":""}">${r.m}</span>`).join("")}</div>
+   <div class="mos">${sum(ms[cm-1])}${sum(ms[nm-1])}</div>
+   <p class="note">막대 = 지난 ${ss.years}년 그달 발사한 날 수 합 · 점선 = 평소라면(그해 발사한 날 수를 달 길이로 나눈 기대치). 막대가 점선보다 높으면 그달에 몰렸다는 뜻 — 지난 빈도이지 올해 예측이 아니다.</p>`;
+}
+
+function drawYear(cal){
+  if(!cal)return;
+  const cfg=cal.config;
+  $("lb").textContent=`${cfg.lookback[0]}~${cfg.lookback[1]} · 앞뒤 ${cfg.window_days}일`;
+  const when=a=>a.md?a.md.replace("-","."):a.id==="fs"?"3월":a.id==="ufs"?"8월":a.id==="us_election"?"11월 짝수 해":"—";
   const order=a=>a.md||({fs:"03",ufs:"08",us_election:"11"}[a.id]||"99");
-  $("yr").innerHTML=doc.anchors.filter(a=>doc.stats[a.id]).sort((p,q)=>order(p).localeCompare(order(q))).map(a=>{const s=doc.stats[a.id];
-    return `<tr><td class="n">${when(a)}</td><td>${esc(a.name)}</td><td>${s.years}년 중 ${s.hit}년${yrs(s)}</td><td class="n">${s.expected}년</td><td>${tag(s.verdict)}</td></tr>`}).join("");
-  $("upd").textContent=`갱신 ${doc.data.updated_at.slice(0,10)} · CSIS ${doc.data.csis_last}까지`;
-}).catch(()=>{$("tempo").innerHTML='<p class="note">자료를 불러오지 못했습니다.</p>'});
+  $("yr").innerHTML=cal.anchors.filter(a=>cal.stats[a.id]).sort((p,q)=>order(p).localeCompare(order(q))).map(a=>{const s=cal.stats[a.id];
+    return `<li class="rw"><span class="d">${when(a)}</span><span class="nm">${esc(a.name)}</span><span class="st">${s.years}년 중 <b>${s.hit}년</b> 발사 · 평소라면 ${s.expected}년 ${yrs(s)} ${tag(s.verdict)}</span></li>`}).join("");
+}
+
+function drawFactors(fv){
+  if(!fv?.rows){$("fv").innerHTML='<p class="none">검증 자료를 불러오지 못했습니다.</p>';return}
+  const sv=fv.sensitivity;
+  $("fvb").textContent=`앞뒤 ${fv.window_days}일 · 발사한 날 ${fv.launch_days}일`;
+  $("fv").innerHTML=`<p class="note" style="margin:0 0 var(--s12)">상황판의 「배경 요인」(선거·당 회의 등)이 있을 때 발사가 늘었는지 지난 20년으로 셌다. 「평소 수준」 = 늘었다는 근거가 없다 — 그래서 등급·알림에 쓰지 않는다.</p>
+  <ul class="rows">${fv.rows.map(r=>`<li class="rw"><span class="d">${r.events}번</span><span class="nm">${esc(r.name)}${sv&&r.name===sv.name?" ¹":""}<small>날짜: ${esc(r.date_source)}</small></span><span class="st">그중 <b>${r.hit}번</b> 발사 · 평소라면 ${r.expected}번 ${tag(r.verdict)}</span></li>`).join("")}
+  ${(fv.unverified||[]).map(u=>`<li class="rw"><span class="d">—</span><span class="nm">${esc(u.name)}<small>${esc(u.reason)}</small></span><span class="st"><span class="tag lo">미검증</span></span></li>`).join("")}</ul>
+  ${fv.control?`<p class="note">대조: ${esc(fv.control.name)} ${fv.control.events}번 중 ${fv.control.hit}번(평소라면 ${fv.control.expected}번) — 아래 기준과 같은 방법으로 다시 세어 「1년 달력」의 미국 선거일 값과 같은지 확인했다.</p>`:""}
+  ${sv?`<p class="note">¹ 참고: 앞뒤 ${sv.window_days}일로 넓히면 ${sv.events}번 중 ${sv.hit}번(평소라면 ${sv.expected}번)으로 「잦음」이 나오지만, 18번 비교한 가운데 하나뿐이라 여러 번 비교하면 우연히 나올 수 있는 수준을 넘지 못한다. 표본 ${sv.events}건 — 참고로만 두고 예측에 쓰지 않는다.</p>`:""}`;
+}
+
+function drawCfr(cat){
+  const c=cat?.external?.cfr;
+  const KO={"Tier I":"1등급(가장 우려)","Tier II":"2등급","Tier III":"3등급",Low:"낮음",Moderate:"중간",High:"높음"};
+  $("cfrb").innerHTML=c?`<div class="cfr-t"><span class="tag hi">${esc(KO[c.tier]||c.tier)}</span><span>일어날 가능성 <b>${esc(KO[c.likelihood]||c.likelihood)}</b></span><span>미국에 미칠 영향 <b>${esc(KO[c.impact]||c.impact)}</b></span></div>
+    <p class="cfr-q">「${esc(c.wording_ko||c.wording)}」</p>
+    <p class="note" style="margin-top:var(--s4)">미국 외교협회(CFR) 전문가 설문 · ${esc(c.published)} 발표 · ${esc(c.note)} · 우리말은 원문(영어)을 옮긴 것 — ${lnk(c.url,"원문")}</p>`
+    :'<p class="none">외부 평가 자료 없음</p>';
+}
+
+function drawMethod(cal,cat){
+  if(cal)$("upd").textContent=`갱신 ${cal.data.updated_at.slice(0,10)} · 발사 기록 ${cal.data.csis_last}까지`;
+  $("mth").innerHTML=`<h3>발사 기록</h3><ul>
+  <li>발사 = ${lnk("https://beyondparallel.csis.org/database-north-korean-provocations/","미 전략국제문제연구소(CSIS) 도발 기록")}의 미사일·핵 도발 날짜와 ${lnk("https://www.nti.org/analysis/articles/cns-north-korea-missile-test-database/","미 제임스마틴 비확산연구센터(CNS) 미사일 시험 기록")}(2024년 11월까지)을 합친 것. 같은 날 여러 발은 1일로 센다. 풍선·포격 등은 세지 않는다.</li>
+  <li>연도 막대의 「기타」(풍선·포격·GPS 교란 등)는 보여 주기만 하고 최근 30일·평소·일정별 판단에는 넣지 않는다 — 종류가 섞여 해마다 기준이 흔들린다.</li>
+  <li>재발사 비율·달별 막대는 지난 20년에 실제 있었던 빈도다. 다음 발사의 확률이 아니다.</li></ul>
+  <h3>「평소보다 잦음」 판단</h3><ul>
+  <li>해마다 「그 길이 기간에 발사가 들어 있었을 가능성」이 다르므로, 그 값들로 「발사 있던 해 수」가 우연히 나올 범위를 정확히 계산한다. 실제 값이 그 범위의 끝 10% 밖일 때만 「평소보다 잦음」·「오히려 드묾」이라 쓴다. 20년 표본이라 차이가 작으면 「평소 수준」으로 남는다.</li>
+  <li>훈련 날짜는 연도별 보도 원문으로 확인한 값이다(출처는 연도 칸을 누르면 나온다 · ${lnk("https://github.com/HaydenRyu/korea-security-watch/blob/main/data/risk_calendar.json","날짜·출처 전체 목록")}). 훈련이 없던 해는 세지 않는다. 봄 훈련은 2006~2018년 키리졸브·독수리 전체 기간, 2019년부터는 지휘소 연습 기간이다(독수리 폐지). 2010년 봄 종료일·2008년 여름(사전 발표값)은 불확실하고, 일부 해는 원문이 아닌 정리 사이트(GlobalSecurity) 기준이다.</li></ul>
+  <h3>긴장 국면</h3><ul>
+  <li>지표는 공개 보도로 볼 수 있는 신호를 과거 위기가 밟은 순서대로 묶은 것이다. 상황판 등급(평시~위험)과 따로 판정하고, 알림에도 쓰지 않는다.</li>
+  <li>지금 국면 = 서로 다른 기관 2곳 이상이 보도해 확인된 지표 가운데 가장 높은 단계. 같은 통신사 기사를 옮겨 실은 것은 1곳으로 센다. 한 곳만 보도한 지표는 「확인 중」으로만 보여 주고 국면을 올리지 않는다(상황판 등급과 같은 규칙). 지표 하나는 확인된 사례 1건이면 충족된다.</li>
+  <li>위기가 끝났거나 누그러졌다는 근거가 나오면 국면을 바로 내린다. 그 밖의 지표는 마지막으로 확인된 뒤 72시간이 지나면 빠지고, 국면도 그만큼 내려간다.</li>
+  <li>준전시 선포처럼 해제 전까지 이어지는 상태와 시한이 붙은 최후통첩은 해제 근거가 나오거나, 시한이 있으면 시한 뒤 24시간이 지날 때까지 유지한다(상황판 등급과 같은 유지 규칙). 시한이 없으면 해제 근거가 나올 때까지 이어진다.</li>
+  <li>국면이 낮다고 안전하다는 뜻이 아니다 — 단계를 건너뛰고 터진 사례가 있다(긴장 국면 칸 맨 아래).</li>
+  <li>과거 사례 ${cat?._counts?.evidence??"—"}건 중 원문으로 확인 못 한 ${cat?._counts?.unverified??"—"}건은 「미확인」, 당시엔 공개되지 않고 나중에 밝혀진 정보는 「당시 비공개」로 표시했다.</li></ul>
+  <h3>임박 신호</h3><ul>
+  <li>매시간 기사를 읽어 「앞으로의 도발」을 가리키는 단서(항행경보·북한 예고·시설 동향·발사대 이동·공표 일정)를 AI가 뽑은 문장이다. 실제로 연 원문만 근거로 쓰고, 등급·알림과 무관하다. 사실 확인은 출처 원문으로.</li>
+  <li>「과거에 맞았나」 = 기한이 지난 신호마다 처음 본 날부터 14일 안에 미사일·핵 발사가 있었는지 센 건수다. 종류별 5건 미만이면 「집계 중」. 확률이 아니다.</li></ul>
+  <h3>싣지 않는 것</h3><ul>
+  <li>우리는 「전쟁 확률 %」를 만들지 않는다 — 전례가 거의 없어 그럴듯한 숫자만 나온다. 이 페이지는 「언제 더 자주 볼지」를 정하는 데 쓴다.</li>
+  <li>외부 예측 시장(Metaculus·Polymarket·Manifold)은 싣지 않는다 — 접속에 인증이 필요하거나 한국에서 막혀 있고, 참여자가 수십 명 수준이라 판단 근거가 못 된다(2026-10-18 확인).</li></ul>
+  <h3>갱신</h3><ul><li>발사 기록은 매일 아침 6시에 다시 받아 다시 센다. 임박 신호·긴장 국면은 매시간 확인한다.</li></ul>`;
+}
 </script>
 </body></html>

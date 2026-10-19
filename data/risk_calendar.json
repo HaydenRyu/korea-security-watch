@@ -1602,26 +1602,31 @@
    {
     "date": "2026-10-14",
     "event": "Submarine Launched Cruise Missile Launch",
+    "event_ko": "잠수함 발사 순항미사일",
     "src": "https://en.yna.co.kr/view/AEN20261015000751315"
    },
    {
     "date": "2026-10-12",
     "event": "Ballistic Missile Launch",
+    "event_ko": "탄도미사일 발사",
     "src": "https://en.yna.co.kr/view/AEN20261012002700315?section=national/defense"
    },
    {
     "date": "2026-10-03",
     "event": "Intermediate-range Ballistic Missile Launch",
+    "event_ko": "중거리 탄도미사일 발사",
     "src": "https://www.koreajoongangdaily.com/korea/kim-jongun-watches-missile-drill-with-daughter-vows-to-rapidly-advance-nuclear-war-deterrentnbsp/12903879 "
    },
    {
     "date": "2026-09-22",
     "event": "Multiple Launch Rocket System (MLRS) Test",
+    "event_ko": "다연장로켓 시험",
     "src": "https://www.chosun.com/english/national-en/2026/09/24/RJQMLNFDGVHBRHXSLJLSDV67JQ/ "
    },
    {
     "date": "2026-09-20",
     "event": "Short-range Ballistic Missile Launch",
+    "event_ko": "단거리 탄도미사일 발사",
     "src": "https://www.reuters.com/world/asia-pacific/north-korea-says-it-tests-new-combat-weapon-system-kcna-reports-2026-09-21/"
    }
   ],

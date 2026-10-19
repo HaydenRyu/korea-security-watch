@@ -4,8 +4,8 @@
  "status": "운영 — 루틴(prompts/monitor.md 4-3)이 run.ladder 를 내고 scripts/diff_state.py update_ladder 가 state/ladder.json 을 쓴다. 등급·알림과 무관",
  "updated": "2026-10-19",
  "rule": {
-  "stage_of_run": "국면 = corroborated(서로 다른 기관 2곳 이상, 같은 통신 재인용은 1곳)로 충족된 지표 중 가장 높은 단계. single 만이면 「확인 중」으로 표시하고 국면은 올리지 않는다(items 등급과 같은 규칙). 지표 하나는 확인된 사례 1건으로 충족된다.",
-  "hold": "국면 하락은 해제 근거(ended·deescalation)가 있거나, 마지막 충족 뒤 CRISIS_FLOOR_H(72시간, diff_state.py 기존 상수)가 지나면. 새 상수는 만들지 않는다. 지속 상태(ongoing·ultimatum until)는 기존 carry 규칙을 그대로 따른다."
+  "stage_of_run": "국면 = 서로 다른 기관 2곳 이상이 보도해 확인된 지표 가운데 가장 높은 단계(같은 통신사 기사를 옮겨 실은 것은 1곳). 한 곳만 보도한 지표는 「확인 중」으로만 보여 주고 국면을 올리지 않는다(상황판 등급과 같은 규칙). 지표 하나는 확인된 사례 1건으로 충족된다.",
+  "hold": "위기가 끝났거나 누그러졌다는 근거가 나오면 국면을 바로 내린다. 그 밖의 지표는 마지막으로 확인된 뒤 72시간이 지나면 빠지고 국면도 그만큼 내려간다. 준전시 선포처럼 해제 전까지 이어지는 상태와 시한이 붙은 최후통첩은 해제 근거가 나오거나, 시한이 있으면 시한 뒤 24시간이 지날 때까지 유지한다(상황판과 같은 유지 규칙)."
  },
  "stages": [
   {
@@ -45,9 +45,9 @@
    "stage": 1,
    "label": "고위급 「전쟁 임박」 성명",
    "key": "gov_warning",
-   "met": "김정은·총참모부·국방성·외무성 명의로 「전쟁 준비 완료」「언제든 전쟁」처럼 전쟁 개시가 임박했다고 주장하는 성명. 통상 규탄·「강력 대응」 표현은 제외.",
+   "met": "김정은·총참모부·국방성·외무성 이름으로 「전쟁 준비 완료」「언제든 전쟁」처럼 전쟁이 곧 시작된다고 주장하는 성명. 늘 하는 규탄·「강력 대응」 표현은 빼고 센다.",
    "sources": [
-    "KCNA Watch(D — 주장으로만)",
+    "조선중앙통신(북한 주장으로만 인용)",
     "연합뉴스 북한 속보",
     "NK News"
    ],
@@ -55,7 +55,7 @@
     {
      "case": "1976 도끼만행",
      "observed": "8/5 DMZ 총격 몇 시간 뒤 「미·한 전쟁 준비 완료」 고위급 성명 — 1969년 이후 이 급 처음",
-     "lead": "D-13",
+     "lead": "13일 전",
      "url": "https://history.state.gov/historicaldocuments/frus1969-76ve12/d282",
      "status": "verified",
      "public_at_time": true
@@ -88,11 +88,11 @@
    "stage": 1,
    "label": "대상·시점 지목 위협",
    "key": "border_clash",
-   "met": "대상(지명·시설)과 수단 또는 시점 중 둘 이상을 명시한 군사행동 예고. 시한이 붙으면 3단계 최후통첩으로 올린다. 기존 signals.nk_threat 와 같은 기준.",
+   "met": "공격 대상(지명·시설)과 수단 또는 시점 가운데 두 가지 이상을 밝힌 군사행동 예고. 시한까지 붙으면 3단계 「시한 있는 최후통첩」으로 올린다. 「임박 신호」의 「북 예고」와 같은 기준.",
    "sources": [
     "합참·통일부 발표",
     "연합뉴스",
-    "Reuters/AP"
+    "로이터·AP"
    ],
    "evidence": [
     {
@@ -123,7 +123,7 @@
    "stage": 1,
    "label": "조약·기구 이탈 선언",
    "key": "nuclear",
-   "met": "NPT·IAEA·남북 군사합의 등에서 탈퇴·파기·사찰 거부를 공식 선언.",
+   "met": "핵확산금지조약(NPT)·국제원자력기구(IAEA)·남북 군사합의 등에서 탈퇴·파기·사찰 거부를 공식 선언.",
    "sources": [
     "IAEA",
     "외교부·통일부",
@@ -159,11 +159,11 @@
    "stage": 2,
    "label": "비정례 접경 사건",
    "key": "border_clash",
-   "met": "routine 아닌 border_clash 가 corroborated 로 1건(침범·사격·지뢰). 횟수 문턱은 두지 않는다 — 「30일 2회」는 근거 없는 값이라 뺐다(10/19 소유자 결정). 과거 근거는 「사건이 잦아지는 흐름」을 보여 주는 참고다.",
+   "met": "늘 있던 일이 아닌 접경 사건(침범·사격·지뢰)이 서로 다른 기관 2곳 이상의 보도로 1건 확인되면 충족. 횟수 기준은 두지 않는다 — 「30일에 2회」 같은 값은 근거가 없어 뺐다. 과거 사례는 사건이 잦아지던 흐름을 보여 주는 참고다.",
    "sources": [
     "합참 발표",
     "연합뉴스",
-    "state/history(코드 집계)"
+    "상황판 지난 기록"
    ],
    "evidence": [
     {
@@ -198,7 +198,7 @@
    "stage": 2,
    "label": "NLL 항행금지구역 + 해안포",
    "key": "border_clash",
-   "met": "북한이 NLL 인근에 항행금지·사격구역을 선포하거나 해안포를 NLL 쪽으로 사격. 항행경보(nav_warning) 중 서해 NLL 인접 구역이면 해당.",
+   "met": "북한이 서해 북방한계선(NLL) 근처에 항행금지·사격구역을 선포하거나 해안포를 NLL 쪽으로 쏨. 「임박 신호」의 항행경보 가운데 서해 NLL 근처 구역이면 해당.",
    "sources": [
     "합참",
     "연합뉴스",
@@ -229,7 +229,7 @@
    "stage": 2,
    "label": "사상자·영토 피격",
    "key": "border_clash",
-   "met": "이번 24시간 안 충돌로 사망·중상이 나거나 남측 영토·함정 피격(기존 fatalities·territory_hit 플래그와 같은 기준).",
+   "met": "최근 24시간 안 충돌로 사망자·중상자가 나거나 남측 영토·함정이 피격됨(상황판이 사상자·영토 피격을 판단하는 기준과 같다).",
    "sources": [
     "합참·국방부",
     "연합뉴스"
@@ -259,17 +259,17 @@
    "stage": 3,
    "label": "시한 있는 최후통첩",
    "key": "border_clash",
-   "met": "시한 + 표적 + 군사행동을 모두 명시한 전통문·성명(기존 ultimatum 플래그). 시한까지 지속 상태.",
+   "met": "시한·표적·군사행동을 모두 밝힌 전통문·성명(상황판의 최후통첩 기준과 같다). 해제 근거가 나오거나 시한 뒤 24시간이 지날 때까지 충족 상태가 이어진다.",
    "sources": [
     "합참·국방부(전통문 공개)",
     "연합뉴스",
-    "Reuters/AP"
+    "로이터·AP"
    ],
    "evidence": [
     {
      "case": "2015 목함지뢰",
      "observed": "8/20 「48시간 안 확성기 중단, 아니면 군사행동」(시한 8/22 17시)",
-     "lead": "D-2",
+     "lead": "2일 전",
      "url": "https://www.reuters.com/article/us-northkorea-southkorea-border/north-korea-goes-on-war-footing-against-south-korea-as-deadline-looms-idUSKCN0QQ08H20150821",
      "status": "verified",
      "public_at_time": true,
@@ -290,7 +290,7 @@
     {
      "case": "2022 우크라이나",
      "observed": "12/17 러시아 조약 초안 공개·NATO 확장 중단 요구",
-     "lead": "D-69",
+     "lead": "69일 전",
      "url": "https://aljazeera.com/news/2021/12/17/russia-demands-ukraine-ex-soviet-nations-barred-from-nato",
      "status": "verified",
      "public_at_time": true
@@ -302,9 +302,9 @@
    "stage": 3,
    "label": "준전시·전투태세 선포",
    "key": "nk_internal",
-   "met": "북한이 준전시·전시상태 또는 전선부대 완전무장을 공식 선포(기존 ongoing — 해제 전까지 유지).",
+   "met": "북한이 준전시·전시상태 또는 전선부대 완전무장을 공식 선포. 해제될 때까지 충족 상태가 이어진다.",
    "sources": [
-    "KCNA Watch(D)",
+    "조선중앙통신(북한 주장으로만 인용)",
     "합참 확인",
     "연합뉴스"
    ],
@@ -312,7 +312,7 @@
     {
      "case": "2015 목함지뢰",
      "observed": "김정은이 전선부대 완전무장·「준전시상태」 선포",
-     "lead": "D-1(시한 기준)",
+     "lead": "1일 전(시한 기준)",
      "url": "https://www.koreaherald.com/article/634060",
      "status": "verified",
      "public_at_time": true
@@ -355,8 +355,8 @@
    "evidence": [
     {
      "case": "1976 도끼만행",
-     "observed": "사건 다음 날(8/19) DEFCON 3 발효, F-4 대대·F-111·B-52 전개",
-     "lead": "사건 뒤 대응(D+1)",
+     "observed": "사건 다음 날(8/19) 데프콘 3(대비태세 3단계) 발효, F-4 대대·F-111·B-52 전개",
+     "lead": "사건 뒤 대응(1일 뒤)",
      "url": "https://history.state.gov/historicaldocuments/frus1969-76ve12/d284",
      "status": "verified",
      "public_at_time": false
@@ -392,7 +392,7 @@
     {
      "case": "2022 우크라이나",
      "observed": "Maxar 위성사진: 우크라이나 국경 인근 기갑·전차·자주포 집결(11/1 보도)",
-     "lead": "D-115",
+     "lead": "115일 전",
      "url": "https://www.politico.com/news/2021/11/01/satellite-russia-ukraine-military-518337",
      "status": "verified",
      "public_at_time": true,
@@ -406,7 +406,7 @@
     {
      "case": "1950 개전",
      "observed": "CIA: 전차·중포를 최근 몇 달 사이 38선 근처로 이동",
-     "lead": "D-6",
+     "lead": "6일 전",
      "url": "https://history.state.gov/historicaldocuments/frus1950v07/d57",
      "status": "verified",
      "public_at_time": false,
@@ -428,8 +428,8 @@
    "evidence": [
     {
      "case": "2022 우크라이나",
-     "observed": "미 정보: 최대 17.5만 명·100개 BTG, 2022년 초 공세(WaPo 보도)",
-     "lead": "D-83",
+     "observed": "미 정보: 최대 17.5만 명·100개 대대전술단, 2022년 초 공세(워싱턴포스트 보도)",
+     "lead": "83일 전",
      "url": "https://www.washingtonpost.com/national-security/russia-ukraine-invasion/2021/12/03/98a3760e-546b-11ec-8769-2f4ecdf7a2ad_story.html",
      "status": "verified",
      "public_at_time": true,
@@ -441,8 +441,8 @@
     },
     {
      "case": "2022 우크라이나",
-     "observed": "미 당국자: 전면 침공 소요 전력의 70%, 83개 BTG",
-     "lead": "D-19",
+     "observed": "미 당국자: 전면 침공 소요 전력의 70%, 83개 대대전술단",
+     "lead": "19일 전",
      "url": "https://www.congress.gov/crs-product/IN11806",
      "status": "verified",
      "public_at_time": true,
@@ -461,14 +461,14 @@
    "key": "logistics",
    "met": "주요 통신·정부가 혈액·야전병원·의료물자의 전방 이동을 보도. 정례 훈련 지원은 제외.",
    "sources": [
-    "Reuters/AP",
+    "로이터·AP",
     "국방부"
    ],
    "evidence": [
     {
      "case": "2022 우크라이나",
      "observed": "혈액 공급품 전방 이동(Reuters, 「최근 몇 주」)",
-     "lead": "D-27",
+     "lead": "27일 전",
      "url": "https://www.reuters.com/world/europe/exclusive-russia-moves-blood-supplies-near-ukraine-adding-us-concern-officials-2022-01-28/",
      "status": "verified",
      "public_at_time": true,
@@ -485,7 +485,7 @@
    "stage": 4,
    "label": "대사관 철수·비전투원 소개 「실행」",
    "key": "gov_warning",
-   "met": "서울(또는 평양) 주재 대사관의 가족 출국 명령·직원 철수, 또는 주한미군 비전투원 소개 명령이 공식 발표됨. 논의·훈련(Courageous Channel)·가짜 문자는 해당 없음.",
+   "met": "서울(또는 평양) 주재 대사관의 가족 출국 명령·직원 철수, 또는 주한미군 비전투원 소개 명령이 공식 발표됨. 논의·소개 훈련·가짜 문자는 해당 없음.",
    "sources": [
     "미 국무부 여행경보",
     "주한미군",
@@ -495,7 +495,7 @@
     {
      "case": "2022 우크라이나",
      "observed": "미 국무부 키이우 대사관 가족 출국 명령·직원 자발 출국 허가(1/23)",
-     "lead": "D-32",
+     "lead": "32일 전",
      "url": "https://2021-2025.state.gov/senior-state-department-officials-on-posture-of-u-s-embassy-kyiv",
      "status": "verified",
      "public_at_time": true,
@@ -509,7 +509,7 @@
     {
      "case": "2022 우크라이나",
      "observed": "직원 대부분 출국 명령(2/12), 영사업무 중단",
-     "lead": "D-12",
+     "lead": "12일 전",
      "url": "https://2021-2025.state.gov/a-senior-state-department-official-on-our-diplomatic-presence-in-ukraine/",
      "status": "verified",
      "public_at_time": true,
@@ -522,7 +522,7 @@
     },
     {
      "case": "2017 위기(반대 사례)",
-     "observed": "가짜 소개 문자에 주한미군 「USFK did NOT issue this message」(2017-09-21) — 논의만 있고 실행 없음",
+     "observed": "가짜 소개 문자에 주한미군 공지 「주한미군이 보낸 문자가 아니다」(2017-09-21) — 논의만 있고 실행 없음",
      "lead": "—",
      "url": "https://www.stripes.com/news/pacific/us-forces-korea-warns-of-fake-evacuation-messages-1.488792",
      "status": "verified",
@@ -542,7 +542,7 @@
    "key": "nk_internal",
    "met": "북한이 한국·미국의 영토 침범·공격을 공식 주장하고 보복·군사행동을 공표(외무성·총참모부·국방성 명의). 정례 비난은 제외. 우크라이나의 「분리지역 승인 법령」에 해당하는 한반도 조치.",
    "sources": [
-    "KCNA Watch(D)",
+    "조선중앙통신(북한 주장으로만 인용)",
     "통일부",
     "연합뉴스"
    ],
@@ -581,8 +581,8 @@
     },
     {
      "case": "2022 우크라이나",
-     "observed": "DNR·LNR 독립 승인 법령 서명(2/21)",
-     "lead": "D-3",
+     "observed": "도네츠크·루한스크 분리지역 독립 승인 법령 서명(2/21)",
+     "lead": "3일 전",
      "url": "http://en.kremlin.ru/events/president/news/67829",
      "status": "verified",
      "public_at_time": true,
@@ -600,7 +600,7 @@
    "stage": 4,
    "label": "북한 내부 전시 조치",
    "key": "nk_internal",
-   "met": "등화관제·주민 대피의 실제 시행, 노농적위군 대규모 동원, 평양 외국 공관 철수(기존 nk_internal 비정례 기준).",
+   "met": "등화관제·주민 대피의 실제 시행, 노농적위군 대규모 동원, 평양 외국 공관 철수(늘 있던 일이 아닌 북한 내부 동향만).",
    "sources": [
     "주요 언론",
     "평양 주재 공관 발표"
@@ -653,7 +653,7 @@
   {
    "case": "2023 하마스",
    "observed": "40쪽 공격계획 「Jericho Wall」 입수 후 「희망사항」으로 기각",
-   "lead": "D-1년 이상",
+   "lead": "1년 이상 전",
    "url": "https://www.nytimes.com/2023/11/30/world/middleeast/israel-hamas-attack-intelligence.html",
    "status": "verified",
    "public_at_time": false,
@@ -666,7 +666,7 @@
   {
    "case": "2023 하마스",
    "observed": "관측병이 약 170명 「매우 이례적」 훈련 보고, 「또 하나의 훈련」으로 기각",
-   "lead": "D-4",
+   "lead": "4일 전",
    "url": "https://www.timesofisrael.com/surveillance-troops-spotted-highly-irregular-hamas-drill-4-days-before-oct-7/",
    "status": "verified",
    "public_at_time": false
@@ -681,13 +681,14 @@
    "tier": "Tier I",
    "likelihood": "Moderate",
    "impact": "High",
-   "note": "응답 약 620명(약 15,000명 발송) · 2025년보다 올라 Tier I 에 새로 들어간 유일한 항목",
+   "note": "응답 약 620명(약 15,000명 발송) · 2025년보다 올라 1등급에 새로 들어간 유일한 항목",
    "quote": "one rose in the rankings to Tier I (North Korea) whereas four fell to Tier II (Haiti, Lebanon, Mexico, and the South China Sea)",
-   "status": "verified"
+   "status": "verified",
+   "wording_ko": "북한이 핵실험을 다시 시작해 한반도 긴장이 높아지고, 주변 강대국과 미국이 얽힌 무력 충돌로 번지는 경우"
   },
   "dropped": {
-   "ViEWS": "값이 0에 붙어 정보량 없음(10/19 소유자 결정으로 제외)",
-   "Metaculus": "API·페이지 403, 토큰 필요",
+   "ViEWS": "값이 0에 붙어 정보량 없음(제외)",
+   "Metaculus": "API·페이지 403, 접속에 인증 필요",
    "GDELT": "90일 중 23% 결측·톤 429"
   }
  },

@@ -660,7 +660,8 @@ function drawDial(g){
 // 다음 확인까지 남은 시간 — 매초 줄어드는 mm:ss(10/18 hayden). 시계 tick 이 매초 부른다
 function setNext(){
   const left=lastCheck?Math.ceil((60*60000-(Date.now()-new Date(lastCheck)))/1000):null;
-  $("next").textContent=left==null?"—":left>=0?`${String(Math.floor(Math.min(3600,left)/60)).padStart(2,"0")}:${String(Math.min(3600,left)%60).padStart(2,"0")} 남음`:"지연";
+  // 회차는 커밋·배포까지 몇 분 걸린다 — 예정 시각을 넘겨도 20분까지는 「확인 중」(10/19 「지금도 지연」 오인)
+  $("next").textContent=left==null?"—":left>=0?`${String(Math.floor(Math.min(3600,left)/60)).padStart(2,"0")}:${String(Math.min(3600,left)%60).padStart(2,"0")} 남음`:left>-1200?"확인 중":"지연";
 }
 
 function render(latest,events){
@@ -670,7 +671,7 @@ function render(latest,events){
   if(g!=null){
     document.documentElement.style.setProperty("--gc",C(g));
     $("gnum").textContent=g;$("glabel").textContent=LABEL[g];
-    document.querySelectorAll("#scale span")[g].classList.add("on");
+    document.querySelectorAll("#scale span").forEach((e,i)=>e.classList.toggle("on",i===g));  // 다시 그릴 때도 맞게(자동 갱신)
     $("summary").innerHTML=latest.overall_summary?AI_TAG+esc(latest.overall_summary):"";
     // 내림 보류: 이번 확인은 더 낮게 산정됐지만 두 회차 연속일 때만 내린다(diff_state.py)
     const h=latest.held;
@@ -685,7 +686,7 @@ function render(latest,events){
       `<span class="held">해제 미확인 — ${ur.map(esc).join(" · ")}: 해제·원인 발표가 나올 때까지 징후로 유지합니다.</span>`);
   }
   $("checked").textContent=lastCheck?short(lastCheck):"—";
-  if(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3)$("lag").classList.add("on");
+  $("lag").classList.toggle("on",!!(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3));
   drawDial(g);
   $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("")
     +(g!=null?`<div class="todo"><b>지금 할 일</b><span>${TODO[g]}</span><a href="#todo-p" class="go" id="todoJump">비상용품·대피 요령 보기<span class="dn"> ↓</span></a></div>`:"");
@@ -955,6 +956,15 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
   try{const r=await fetch("data/cctv.json");if(r.ok)drawCctv(await r.json())}catch(e){}
   try{const r=await fetch("data/shelters.json");if(r.ok)drawShelters(await r.json())}catch(e){}
   setInterval(tick,1000);setInterval(()=>drawDial(latest?.grade??null),60000);
+  // 자동 갱신: 열어 둔 화면이 첫 로드 값에 머물러 「지연」으로 보이던 문제(10/19). 3분마다·화면으로 돌아올 때 새 회차면 다시 그린다
+  const refresh=async()=>{
+    if(sample||document.hidden)return;
+    try{const l=await get("latest.json"),ev=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(x=>JSON.parse(x));
+      if(ev.length&&ev[ev.length-1].checked_at===events[events.length-1]?.checked_at&&l.checked_at===latest?.checked_at)return;
+      latest=l;events=ev;DATA={latest,events};render(latest,events);drawPins(latest?.items);drawDial(latest?.grade??null);
+    }catch(e){}
+  };
+  setInterval(refresh,180e3);document.addEventListener("visibilitychange",refresh);
 })();
 // 오프라인 캐시(sw.js) — 통신이 끊겨도 이 화면·대피소·행동요령을 다시 열 수 있게. 실패해도 페이지는 그대로 동작한다
 if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));

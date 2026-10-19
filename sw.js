@@ -21,12 +21,16 @@
 //     자곡동 반경 z13~16 만 받아도 수백 장(수 MB)이고, 그마저 정책 위반이다.
 //   - 대신 shelter.html 이 외부 타일 없는 SVG 지도(대피소 점·기준점·축척)를 그린다. 오프라인 지도 역할은 그쪽이 한다.
 // · 그 밖(goatcounter·ntfy·CCTV relay·항공기 등 외부 API, POST) : 손대지 않는다.
+//
+// ── 웹 푸시 ──────────────────────────────────────────────────────────
+// 상황판 「알림 받기」로 구독한 방문자에게 Worker(jis-cctv /push/send)가 보낸 등급 알림을 띄운다.
+// 무엇을 언제 보내는지는 scripts/diff_state.py 의 지인(friends) 정책 — 경계 이상 알림 · 경계 아래로 해제.
 
-const VERSION = "jis-2026-10-18a";
+const VERSION = "jis-2026-10-19a";
 const NET_TIMEOUT_MS = 4000;
 
 const PRECACHE = [
-  "index.html", "shelter.html",
+  "index.html", "shelter.html", "manifest.webmanifest",
   "data/prep.json", "data/shelters.json", "data/places.json", "data/dmz.json",
   "data/cctv.json", "data/sources.json", "data/context_2026.json",
   "state/latest.json", "state/events.jsonl", "state/firms.json", "state/air.json",
@@ -100,4 +104,41 @@ self.addEventListener("fetch", e => {
   } else if (CDN_HOSTS.includes(u.hostname)) {
     e.respondWith(cacheFirst(req));
   }
+});
+
+// ── 웹 푸시 수신 ──
+const PUSH_API = "https://jis-cctv.jis-probe.workers.dev/push/";
+const ICON = new URL("assets/apple-touch-icon.png", SCOPE).href;  // 안드로이드 알림은 SVG 아이콘을 못 그린다 — PNG
+
+self.addEventListener("push", e => {
+  let d = {};
+  try { d = e.data ? e.data.json() : {}; } catch (_) { d = { body: e.data ? e.data.text() : "" }; }
+  const url = typeof d.url === "string" && d.url.startsWith("https://haydenryu.github.io/") ? d.url : SCOPE;
+  e.waitUntil(self.registration.showNotification(d.title || "JIS 알림", {
+    body: d.body || "상황판에서 확인하세요.", icon: ICON, badge: new URL("assets/favicon-32.png", SCOPE).href,
+    tag: d.tag || "jis-grade", renotify: true, requireInteraction: (d.priority || 3) >= 5, data: { url },
+  }));
+});
+
+self.addEventListener("notificationclick", e => {
+  e.notification.close();
+  const url = e.notification.data?.url || SCOPE;
+  e.waitUntil((async () => {
+    const wins = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
+    const w = wins.find(c => c.url.startsWith(SCOPE) && !/shelter|forecast|live/.test(c.url)) || wins.find(c => c.url.startsWith(SCOPE));
+    if (w) { await w.focus(); if (w.navigate && w.url !== url) { try { await w.navigate(url); } catch (_) {} } return; }
+    await self.clients.openWindow(url);
+  })());
+});
+
+// 브라우저가 구독을 갈아 끼우면(만료·키 교체) 새 구독을 다시 등록한다 — 안 그러면 조용히 알림이 끊긴다
+self.addEventListener("pushsubscriptionchange", e => {
+  e.waitUntil((async () => {
+    const key = e.oldSubscription?.options?.applicationServerKey;
+    const sub = e.newSubscription || (key && await self.registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key }));
+    if (e.oldSubscription) await fetch(PUSH_API + "unsubscribe", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ endpoint: e.oldSubscription.endpoint }) }).catch(() => {});
+    if (sub) await fetch(PUSH_API + "subscribe", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(sub.toJSON()) }).catch(() => {});
+  })());
 });

@@ -1,5 +1,7 @@
 name: notify
 # 루틴이 state/outbox.json 을 바꿔 push 하면 ntfy 로 발송한다(본인 주제 · 지인 주제).
+# 방문자(public) 메시지는 상황판에서 「알림 받기」를 누른 방문자에게 웹 푸시로 보낸다(Worker /push/send). 주의 이상부터.
+# 두 발송은 독립이다 — 한쪽이 실패해도 다른 쪽은 돈다(실패한 쪽이 잡을 빨갛게 만든다).
 on:
   push:
     branches: [main]
@@ -25,6 +27,10 @@ jobs:
       - name: send outbox
         if: github.event_name == 'push'
         run: python3 scripts/ntfy_send.py outbox state/outbox.json
+      - name: web push (visitors)
+        if: ${{ !cancelled() && github.event_name == 'push' }}
+        env: { PUSH_TOKEN: "${{ secrets.PUSH_TOKEN }}" }
+        run: python3 scripts/push_send.py outbox state/outbox.json
       - name: send test
         if: github.event_name == 'workflow_dispatch'
         env: { TEXT: "${{ inputs.text }}" }

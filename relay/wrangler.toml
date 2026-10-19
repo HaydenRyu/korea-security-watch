@@ -7,3 +7,12 @@ compatibility_date = "2026-09-01"
 [[kv_namespaces]]
 binding = "SNAP"
 id = "ce01ea0a2a534387b33293ec1e7eec55"
+
+# 상황판 방문자 웹 푸시 구독(키 sub:<endpoint 해시>, 값·메타데이터 = 구독 JSON). push.js
+[[kv_namespaces]]
+binding = "PUSH"
+id = "feea062f97744a6f85632dbae0400b82"
+
+[vars]
+# VAPID 공개키(공개해도 된다 — index.html 의 applicationServerKey 와 같아야 한다). 개인키는 secret VAPID_PRIVATE
+VAPID_PUBLIC = "BD0HNSxw5eI_ygJVkNC5jwQg6Llpu-_AY4edJZ1Mw8Hf2ou_6BxZyTD_NSdQ95xqUMNRXhefLWbyb8a7e6exEyE"

@@ -2,11 +2,14 @@
 // GET /snap.json → 카메라별 이름·촬영 시각 / GET /img/<n>.jpg → 사진 / GET /live.json → 라이브 방송 국내 채널의 현재 영상 ID
 // GET /air.json → 한반도 상공 항공기(맥이 5분마다 사진과 같이 올린다). adsb.lol 지도 iframe 은 봇 차단 쿠키(SameSite=Lax)가
 //   다른 사이트 안에서 안 실려 깨지고, API 는 CORS 가 없고 Cloudflare 출구엔 503(adsb.fi 403) — 10/18 실측. 그래서 한국 맥이 받는다
+// /push/* → push.js (상황판 방문자 웹 푸시 — 구독 저장·발송)
+import { handlePush } from "./push.js";
 const CORS = { "Access-Control-Allow-Origin": "*" };
 const MAX_BYTES = 3_000_000;
 export default {
   async fetch(req, env) {
     const url = new URL(req.url);
+    if (url.pathname.startsWith("/push/")) return handlePush(req, env, url.pathname);
     if (req.method === "POST" && url.pathname === "/upload") {
       if (req.headers.get("Authorization") !== `Bearer ${env.UPLOAD_TOKEN}`) return new Response("forbidden", { status: 403 });
       const body = await req.text();

@@ -8,6 +8,8 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">  <!-- iOS 는 홈 화면에 추가한 앱에서만 웹 푸시를 받는다 -->
+<meta name="theme-color" content="#05080e">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="JIS">
 <meta property="og:title" content="JIS · 북한 전쟁·핵 징후 감시">
@@ -58,6 +60,24 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .meta{display:flex;gap:4px 20px;flex-wrap:wrap;margin-left:auto;font:400 11px/1.4 var(--data);color:var(--fog)}
 .meta b{color:var(--ice);font-weight:500;font-variant-numeric:tabular-nums}
 .qnav{display:contents}
+/* 알림 받기(웹 푸시) — 바로가기 칩과 같은 모양. 상태: 미지원·꺼짐·켜짐·차단됨·iOS 홈 화면 필요 */
+.pushctl{display:inline-flex;align-items:center;min-width:0;position:relative}
+.pushctl .srclink{font:inherit;cursor:pointer;background:none}
+.pushctl .srclink[disabled]{cursor:default;color:var(--fog);border-color:var(--line)}
+.pushctl .srclink svg{flex:none}
+.pushctl .srclink[aria-pressed="true"]{border-color:var(--g0)} .pushctl .srclink[aria-pressed="true"] svg{color:var(--g0)}
+/* 설명은 상시 줄로 두지 않는다(머리가 2줄이 된다) — 누른 뒤 결과·안내만 버튼 아래 말풍선으로, 8초 뒤 닫힘 */
+.pushctl .note{position:absolute;top:calc(100% + 6px);right:0;z-index:30;width:max-content;max-width:min(280px,calc(100vw - 32px));
+  padding:8px 10px;background:var(--head);border:1px solid var(--line-2);font:400 11px/1.5 var(--text);color:var(--ice);word-break:keep-all;white-space:normal}
+.pushctl .note:empty{display:none}
+.pushctl .note.warn{color:var(--amber);border-color:var(--amber)}
+.pushctl .ls{display:none}
+/* 1180 미만(휴대폰·태블릿): 머리 오른쪽 위, 제목 줄과 같은 높이 — 정보 줄·바로가기 사이에 끼면 떠 보인다. 휴대폰은 이름을 짧게 */
+@media (max-width:1179px){
+  .top{position:relative} .id{padding-right:104px}
+  .pushctl{position:absolute;top:12px;right:var(--side)} .pushctl .srclink{margin:0;padding:6px 10px;white-space:nowrap}
+}
+@media (max-width:759px){.id{padding-right:64px} .pushctl .lf{display:none} .pushctl .ls{display:inline}}
 .meta .lag{color:var(--g3);display:none} .meta .lag.on{display:inline}
 .tag{font:500 10px/1 var(--data);padding:4px 8px;border:1px solid var(--g1);color:var(--g1);letter-spacing:.04em}
 .tag[hidden]{display:none}
@@ -470,6 +490,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
     <span>최종 확인 <b id="checked">—</b></span>
     <span id="views" hidden title="GoatCounter 대시보드 「전체 기간」 방문자 수와 같은 값(같은 사람의 새로고침은 세지 않음 · 반영에 수 분) · 1분마다 갱신">누적 방문 <b id="viewsN">—</b></span>
     <nav class="qnav" aria-label="바로가기"><a href="#sources" id="srcOpen" class="srclink">출처 <b id="srcN">—</b></a><a href="forecast.html" class="srclink">예측 ›</a><a href="live.html" class="srclink">라이브 ›</a><a href="#world-p" class="srclink">세계<span class="lg"> 브리핑</span> ↓</a><a href="shelter.html" class="srclink">대피<span class="lg"> 안내</span> ›</a></nav>
+    <span class="pushctl" id="pushCtl"><button type="button" class="srclink" id="pushBtn" disabled><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 11V7a4 4 0 0 1 8 0v4l1.5 1.5h-11z"/><path d="M6.5 14a1.5 1.5 0 0 0 3 0"/></svg><span id="pushLbl"><span class="lf">알림 받기</span><span class="ls">알림</span></span></button><span class="note" id="pushNote" aria-live="polite"></span></span>
     <span>다음 확인 <b id="next">—</b></span>
     <span class="lag" id="lag">감시 지연</span>
     <span class="tag" id="sampletag" hidden>예시 데이터 · 실제 상황 아님</span>
@@ -937,6 +958,67 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
 })();
 // 오프라인 캐시(sw.js) — 통신이 끊겨도 이 화면·대피소·행동요령을 다시 열 수 있게. 실패해도 페이지는 그대로 동작한다
 if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+
+// ── 알림 받기(웹 푸시) ── 발송은 notify.yml → Worker /push/send 만 할 수 있다(Bearer 토큰·VAPID 서명).
+// 보내는 경우 = scripts/diff_state.py 의 outbox.public: 평시를 벗어날 때(주의 이상 진입·격상) · 주의 이상에서 새 징후 · 평시 복귀.
+const PUSH_API="https://jis-cctv.jis-probe.workers.dev/push/";
+const VAPID_PUB="BD0HNSxw5eI_ygJVkNC5jwQg6Llpu-_AY4edJZ1Mw8Hf2ou_6BxZyTD_NSdQ95xqUMNRXhefLWbyb8a7e6exEyE";  // relay/wrangler.toml VAPID_PUBLIC 과 같아야 한다
+const PUSH_NOTE="평시를 벗어날 때·새 징후·평시 복귀 때만 보냅니다";
+const PUSH_RESYNC_MS=7*864e5;  // 켜진 구독은 7일마다 다시 등록(서버에서 지워졌어도 되살아나게)
+const pushPost=(p,b)=>fetch(PUSH_API+p,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}).then(r=>{if(!r.ok)throw r.status;return r.json()});
+function pushSet(state,note,warn){
+  const L={unsupported:["알림 미지원","미지원"],ios:["알림 받기","알림"],off:["알림 받기","알림"],on:["알림 켜짐","켜짐"],denied:["알림 차단됨","차단"],busy:["설정 중…","…"]};  // [긴 이름, 1180 미만 짧은 이름]
+  const b=$("pushBtn");$("pushLbl").innerHTML=`<span class="lf">${L[state][0]}</span><span class="ls">${L[state][1]}</span>`;b.dataset.state=state;
+  b.disabled=state==="unsupported"||state==="busy";
+  b.setAttribute("aria-pressed",state==="on"?"true":"false");
+  b.title=state==="on"?"누르면 알림을 끕니다":state==="off"?"누르면 브라우저가 알림 허용을 묻습니다":"";
+  const n=$("pushNote");n.textContent=note||"";n.classList.toggle("warn",!!warn);
+  clearTimeout(pushSet.t);if(note)pushSet.t=setTimeout(()=>{n.textContent=""},8000);
+}
+async function pushReg(){  // 서비스워커 등록 대기 — 실패·지연이면 null(무한 대기 금지)
+  try{return await Promise.race([navigator.serviceWorker.register("sw.js").then(()=>navigator.serviceWorker.ready),new Promise(r=>setTimeout(()=>r(null),8000))])}catch(_){return null}
+}
+const b64uBytes=s=>{const t=s.replace(/-/g,"+").replace(/_/g,"/");const b=atob(t+"=".repeat((4-t.length%4)%4));return Uint8Array.from(b,c=>c.charCodeAt(0))};
+async function pushInit(){
+  const ios=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+  const standalone=matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;
+  const ok="serviceWorker" in navigator&&"PushManager" in window&&"Notification" in window;
+  if(!ok){
+    if(ios&&!standalone)return pushSet("ios");
+    return pushSet("unsupported");
+  }
+  if(Notification.permission==="denied")return pushSet("denied");
+  const reg=await pushReg();
+  if(!reg)return pushSet("unsupported");
+  const sub=await reg.pushManager.getSubscription();
+  pushSet(sub?"on":"off");$("pushBtn").title+=" · "+PUSH_NOTE;
+  if(sub){let at=0;try{at=+localStorage.getItem("pushSyncAt")||0}catch(_){}
+    if(Date.now()-at>PUSH_RESYNC_MS)pushPost("subscribe",sub.toJSON()).then(()=>{try{localStorage.setItem("pushSyncAt",Date.now())}catch(_){}}).catch(()=>{});}
+}
+$("pushBtn").addEventListener("click",async()=>{
+  const st=$("pushBtn").dataset.state;
+  if(st==="ios")return pushSet("ios","Safari 공유 버튼 → 「홈 화면에 추가」 → 그 아이콘으로 열고 「알림 받기」를 누르세요");
+  if(st==="denied")return pushSet("denied","주소창 왼쪽 사이트 설정(자물쇠)에서 알림을 「허용」으로 바꾼 뒤 새로고침하세요",true);
+  const reg=await pushReg();if(!reg)return pushSet("off","알림 준비 실패 — 새로고침해 주세요",true);
+  pushSet("busy","");
+  try{
+    if(st==="on"){
+      const sub=await reg.pushManager.getSubscription();
+      if(sub){await pushPost("unsubscribe",{endpoint:sub.endpoint}).catch(()=>{});await sub.unsubscribe()}
+      try{localStorage.removeItem("pushSyncAt")}catch(_){}
+      return pushSet("off","알림을 껐습니다 · "+PUSH_NOTE);
+    }
+    const perm=await Notification.requestPermission();
+    if(perm==="denied")return pushSet("denied","알림이 차단됐습니다 — 브라우저 사이트 설정에서 허용할 수 있습니다",true);
+    if(perm!=="granted")return pushSet("off");
+    const sub=await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64uBytes(VAPID_PUB)});
+    try{await pushPost("subscribe",sub.toJSON())}catch(e){await sub.unsubscribe().catch(()=>{});throw e}  // 서버 등록이 안 되면 켜진 척하지 않는다
+    try{localStorage.setItem("pushSyncAt",Date.now())}catch(_){}
+    pushSet("on","알림을 켰습니다 · "+PUSH_NOTE);
+  }catch(e){pushSet(st==="on"?"on":"off","설정 실패 — 잠시 뒤 다시 눌러 주세요",true)}
+});
+addEventListener("load",()=>pushInit().catch(()=>pushSet("unsupported")));
+$("pushNote").addEventListener("click",e=>{e.currentTarget.textContent=""});
 
 // ── 출처(정본 data/sources.json — 루틴과 같은 파일) · 추가 요청은 본인 요청 주제(ntfy)로 ──
 const REQ_TOPIC="ksw-req-5c0d1b934d8cb1a6";

@@ -597,9 +597,12 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     outbox = None
     if notify:
         me, fr = alert_messages(run, grade, new_keys, released or calmed, prev_grade, friends)
+        # 방문자(웹 푸시): 평시를 벗어날 때부터 — 주의 진입·격상·새 징후·평시 복귀 전부(10/19 hayden 「특히 평시 아닐 때」).
+        # 본문은 지인 문구와 같은 틀(「지인 주제에도 발송됨」 꼬리 없음). 지인(ntfy) 기준은 그대로 경계 이상
+        public = fr or me
         if calmed:
             me, fr = {**me, "priority": 2}, None
-        outbox = {"id": now, "grade": grade, "link": DASHBOARD_URL, "me": me}
+        outbox = {"id": now, "grade": grade, "link": DASHBOARD_URL, "me": me, "public": public}
         if fr:
             outbox["friends"] = fr
     return new_latest, event, outbox

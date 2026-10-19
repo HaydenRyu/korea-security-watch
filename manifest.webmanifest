@@ -1,0 +1,15 @@
+{
+  "name": "JIS 북한 전쟁·핵 징후 감시",
+  "short_name": "JIS",
+  "description": "공개정보로 매시간 확인하는 비공식 개인 감시판",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#05080e",
+  "theme_color": "#05080e",
+  "lang": "ko",
+  "icons": [
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

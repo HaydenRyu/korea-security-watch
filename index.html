@@ -199,7 +199,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .fleg span{display:inline-flex;align-items:center;gap:var(--s4);white-space:nowrap}
 .fleg b{font-weight:500;color:var(--ice)}
 .fleg i{display:inline-block;width:8px;height:8px;border-radius:50%;flex:none}
-.fleg .fx{box-shadow:inset 0 0 0 2px #c9d4e3,0 0 0 1.5px #05080e} .fleg .bu{background:var(--g2)} .fleg .un{background:var(--g1);outline:1px dashed var(--g1);outline-offset:1px}
+.fleg .fx{box-shadow:inset 0 0 0 2px #c084fc,0 0 0 1.5px #05080e} .fleg .bu{background:var(--g2)} .fleg .un{background:var(--g1);outline:1px dashed var(--g1);outline-offset:1px}
 .fleg .nk{width:12px;height:12px;box-shadow:inset 0 0 0 1.5px var(--ice)}
 @media (max-width:759px){.fleg{bottom:8px}}  /* 휴대폰은 좌표 표시가 없다 */
 /* 위성 분석 탭(세계 칸 셋째) */
@@ -1191,7 +1191,7 @@ function nearPlace(places,lat,lon){
   return`${c} · ${name} ${DIR8[Math.round(deg/45)%8]}쪽 ${Math.round(best.k)}km`;
 }
 // 유형·근거 문구는 scripts/firms.py 가 정한다(이름 없는 OSM 태그의 우리말 표기 포함) — 화면은 받은 문구를 그대로 쓴다
-const KIND={fixed:{c:"#c9d4e3",lbl:"상시 열원 추정"},burn:{c:"#ff8a3d",lbl:"산불·소각 추정"},unknown:{c:"#f2c14e",lbl:"미상"}};
+const KIND={fixed:{c:"#c084fc",lbl:"상시 열원 추정"},burn:{c:"#ff8a3d",lbl:"산불·소각 추정"},unknown:{c:"#f2c14e",lbl:"미상"}};
 const kindOf=p=>KIND[p.kind]?p.kind:"unknown";
 function firmsPop(p,where){
   const k=kindOf(p),why=p.kind_why||[];
@@ -1211,7 +1211,7 @@ function drawFirms(doc){
     // 구름(흰색)·바다(검정) 양쪽에서 보이도록 모든 표지 밑에 어두운 테를 깐다(10/19 hayden — 회색 고리가 구름에 묻혔다)
     const R=big?6:4.5,halo=(r,w)=>L.circleMarker([p.lat,p.lon],{renderer:hitR(),radius:r,weight:w,fill:false,interactive:false,color:"#05080e",opacity:.75}).addTo(layers.firms);
     if(p.north){halo(9,3.5);L.circleMarker([p.lat,p.lon],{renderer:hitR(),radius:9,weight:1.5,fill:false,interactive:false,
-      color:k==="fixed"?"#c9d4e3":"#ffffff",opacity:1,dashArray:k==="fixed"?"2 3":null}).addTo(layers.firms)}
+      color:k==="fixed"?"#c084fc":"#ffffff",opacity:1,dashArray:k==="fixed"?"2 3":null}).addTo(layers.firms)}
     halo(R,k==="fixed"?4:2.5);
     const st=k==="fixed"?{radius:R,weight:2,color:c,fill:false}
       :{radius:R,weight:k==="unknown"?1:0,color:c,dashArray:k==="unknown"?"2 2":null,fillColor:c,fillOpacity:1};

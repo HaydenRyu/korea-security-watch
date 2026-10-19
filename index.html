@@ -295,6 +295,27 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .wi p{margin:0;font-size:13px;color:var(--ice)}
 .wi .wk2,.ye .wk2{font-size:12px;color:var(--fog)} .wi .wk2 b,.ye .wk2 b{font:500 10px/1.4 var(--data);letter-spacing:.04em;margin-right:8px}
 .wi .wm{font:400 10px/1.4 var(--data);color:var(--dim)}
+/* 예측 요약(10/19): 큰 화면(≥1800×860) 넷째 칸에서만 보인다 — 그 밖의 폭에선 흐름·예측 띠의 요약(#fcr)이 같은 역할 */
+#fc4-p{display:none}
+#fc4{padding:0}
+.f4s{padding:8px var(--pad) 12px;border-bottom:1px solid var(--line)}
+.f4s:last-child{border-bottom:0}
+.f4h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:4px;font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em}
+.f4h small{font:400 10px/1.4 var(--text);color:var(--dim);letter-spacing:0;white-space:nowrap}
+.f4k{margin:0;display:grid;grid-template-columns:max-content minmax(0,1fr);gap:0 12px;font-size:12px;line-height:22px}
+.f4k dt{color:var(--fog)} .f4k dd{margin:0;min-width:0;color:var(--ice)}
+.f4k b{font:600 13px/1 var(--data)} .f4k b.hot{color:var(--amber)} .f4k small{font-size:11px;color:var(--fog)}
+.f4n{margin:4px 0 0;font-size:11px;line-height:1.5;color:var(--dim)}
+.f4e{margin:0;font-size:12px;line-height:22px;color:var(--fog)}
+/* 일정·신호 행: 날짜 · 이름 · 과거 집계 세 칸이 모든 행에서 같은 x 에 선다(한 줄 22px) */
+.f4u,.f4g{list-style:none;margin:0;padding:0}
+.f4u li,.f4g li{display:grid;grid-template-columns:88px minmax(0,1fr) auto;gap:8px;align-items:baseline;font-size:12px;line-height:22px}
+.f4g li{grid-template-columns:88px minmax(0,1fr);line-height:1.5;padding:3px 0}
+.f4u .d,.f4g .d{font:500 11px/22px var(--data);color:var(--fog);white-space:nowrap}
+.f4u .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ice)}
+.f4g .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--ice)}
+.f4u .s{font:400 11px/22px var(--data);color:var(--fog);white-space:nowrap} .f4u .s.no{color:var(--dim)}
+.f4u .hi{color:var(--amber)}
 #todo-p .pb{padding:0}
 .tnow{padding:12px var(--pad);border-bottom:1px solid var(--line);display:grid;gap:4px}
 .tnow b{font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em} .tnow b em{font-style:normal;color:var(--gc)}
@@ -422,6 +443,23 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   .ops{--bot:160px}  /* 기록은 쌓이는 목록이라 스크롤 */
   .row .src{display:none}  /* 낮은 화면: 출처 줄은 항목 상세에서 — 감시 항목 9행이 다 보이게 */
   .row .what{line-height:18px}
+}
+/* ── 큰 화면 ≥1800 · 높이 ≥860 (10/19 「화면이 큰 만큼 다른 것들도 한번에」) : 넷째 칸 ──
+   세 칸 격자(.ops)는 그대로 두고 오른쪽에 .more 를 세로로 세운다: 예측 요약(내용 높이) → 세계 안보 브리핑 → 지금 할 일(둘은 남는 높이를 나누고 안에서 스크롤).
+   폭 1800 = 넷째 칸 최소 400 + 지도 칸이 1280 노트북 지도(608)보다 좁아지지 않는 선. 넷째 칸은 22vw(400~560).
+   흐름·예측 띠의 요약(#fcr)은 넷째 칸이 같은 내용을 더 길게 보여 주므로 숨기고 띠는 등급 추이만. 4개 칸의 위·아래 끝은 같은 y. */
+@media (min-width:1800px) and (min-height:860px){
+  #main{display:grid;grid-template-columns:minmax(0,1fr) var(--c4);grid-template-rows:minmax(0,1fr);column-gap:var(--gap);--c4:clamp(400px,22vw,560px)}
+  .ops{padding-right:0}
+  .more{display:flex;flex-direction:column;gap:var(--gap);min-height:0;padding:var(--gap) var(--side) var(--gap) 0}
+  #fc4-p{display:flex;flex:none;max-height:50%}
+  #world-p,#todo-p{flex:1 1 0;min-height:0}
+  #todo-p>.pb{flex:1 1 0;min-height:0;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+  #todo-p .tnow{display:none}  /* 등급 기준 칸의 「지금 할 일」 한 줄과 같은 문장 */
+  .todo .dn{display:none}  /* 「지금 할 일」 칸이 아래가 아니라 오른쪽에 보인다 */
+  .qnav a[href="#world-p"]{display:none}  /* 브리핑이 이미 화면에 있다 */
+  #fcr,#trend-p .fcall{display:none} .fc{grid-template-columns:minmax(0,1fr)}
+  #world-p .ph{padding:8px var(--pad);row-gap:4px}  /* 넷째 칸 폭(400~)에선 머리띠가 두 줄 — 위아래 8px */
 }
 
 /* 항목 상세 */
@@ -563,6 +601,11 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   </div>
 </div>
 <div class="more">
+  <!-- 예측 요약: 큰 화면 넷째 칸에서만 보인다(CSS). 내용은 흐름·예측 띠와 같은 데이터(risk_calendar.json · signals.json) -->
+  <section class="p" id="fc4-p" aria-label="예측 요약">
+    <div class="ph"><span class="k">예측 요약</span><span class="wk">과거 빈도 · 확률 아님</span><a class="r fcall" href="forecast.html">예측 전체 ›</a></div>
+    <div class="pb scroll" id="fc4"><p class="empty">예측 자료를 불러오는 중</p></div>
+  </section>
   <section class="p" id="world-p" aria-label="세계 안보 브리핑">
     <div class="ph"><span class="k">세계 안보 브리핑</span><a class="fcall" href="live.html#us">해외 뉴스 라이브 ›</a><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 선별·요약</span><span id="worldAt"></span><span class="r">참고 · 등급 판정과 무관</span></div>
     <div class="pb" id="world"></div>
@@ -1139,11 +1182,26 @@ $("srcReq").addEventListener("submit",async e=>{e.preventDefault();const f=e.tar
 // 임박 신호(기사로 본 앞으로의 단서)는 유효분이 있을 때만 1줄 — 일정을 1건으로 줄여 칸 높이(200px)를 그대로 둔다. 없으면 아무것도 더하지 않는다
 Promise.all([fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.ok?r.json():null),
   fetch(base+"signals.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)]).then(([doc,sg])=>{
-  if(!doc?.tempo)return;
+  if(!doc?.tempo){$("fc4").innerHTML=`<p class="empty">예측 자료를 불러오지 못했습니다 · <a href="forecast.html">예측 전체 ›</a></p>`;return}
   const tp=doc.tempo,hot=tp.ratio!=null&&tp.ratio>=2,up=fcUpcoming(doc),sig=fcSignals(sg,new Date(),!sample);
   const sigLi=sig.length?`<li><span class="d">${sig[0].window?.start?fcMD(sig[0].window.start)+(sig[0].window.end&&sig[0].window.end!==sig[0].window.start?"~":""):"임박"}</span><span class="t"><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 사실 확인은 출처 원문으로 하세요.">AI</span>${esc(FC_SIG_KIND[sig[0].kind]||"신호")} · ${esc(sig[0].summary)}${sig.length>1?` <small>외 ${sig.length-1}건</small>`:""}</span></li>`:"";
   $("fcr").innerHTML=`<span class="fct">최근 30일 발사 <b class="${hot?"":"q"}">${tp.last30}일</b> · 평소 ${tp.avg30}일<small>${hot?`평소의 ${tp.ratio}배 — 발사가 몰릴 땐 다음 발사도 가깝다`:"평소 범위"}</small></span>`+
     `<ul class="fcu">${up.length?up.slice(0,sig.length?1:2).map(u=>`<li><span class="d">${fcMD(u.start)}${u.end?"~":""}</span><span class="t"><span class="${u.stat?.verdict==="more"?"hi":""}">${esc(u.name)}</span> <small>· ${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년 발사(평소 ${u.stat.expected})`:"과거 집계 없음"}</small></span></li>`).join(""):`<li><span class="d">—</span><span class="t">앞으로 ${doc.config?.horizon_days||90}일 안 주요 일정 없음</span></li>`}${sigLi}</ul>`;
+  // 예측 요약(큰 화면 넷째 칸) — 같은 자료를 자르지 않고: 발사 흐름 · 재발사 빈도 · 임박 신호 전부 · 앞으로 일정 전부. 문구는 forecast.html 과 같은 뜻
+  const rl=doc.relaunch,rk=k=>rl?.rate?.[k],lb=doc.config?.lookback,nY=lb?lb[1]-lb[0]+1:null,hz=doc.config?.horizon_days||90;
+  const AIB=`<span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 사실 확인은 출처 원문으로 하세요.">AI</span>`;
+  $("fc4").innerHTML=`<div class="f4s"><div class="f4h">발사 흐름</div><dl class="f4k">`
+    +`<dt>최근 30일 발사</dt><dd><b class="${hot?"hot":""}">${tp.last30}일</b> <small>· 평소 ${tp.avg30}일${hot?` · ${tp.ratio}배`:" · 평소 범위"}</small></dd>`
+    +(rl&&rk("14")?`<dt>마지막 발사</dt><dd><b>${fcMD(rl.last)}</b> <small>· ${rl.since}일 전</small></dd>`
+      +`<dt>발사 뒤 14일 안 또 발사</dt><dd><b>${rk("14").pct}%</b> <small>· 7일 ${rk("7").pct}% · 30일 ${rk("30").pct}%</small></dd>`:"")
+    +`</dl><p class="f4n">${hot?"발사가 몰릴 땐 다음 발사도 가깝다. ":""}${nY?`지난 ${nY}년 `:"과거 "}실제 빈도이며 다음 발사의 예측 확률이 아니다.</p></div>`
+    +`<div class="f4s"><div class="f4h">임박 신호<small>${sig.length}건 · 기사로 본 앞으로의 단서</small></div>`
+    +(sig.length?`<ul class="f4g">${sig.map(s=>`<li><span class="d">${esc(fcSigWhen(s))}</span><span class="t" title="${esc(s.summary)}">${AIB}${esc(FC_SIG_KIND[s.kind]||"신호")} · ${esc(s.summary)}</span></li>`).join("")}</ul>`
+      :`<p class="f4e">지금 유효한 신호 없음</p>`)+`</div>`
+    +`<div class="f4s"><div class="f4h">앞으로 ${hz}일 일정<small>오른쪽 = 과거 같은 시기 발사한 해</small></div><ul class="f4u">`
+    +(up.length?up.map(u=>{const hi=u.stat?.verdict==="more"?" hi":"";
+      return `<li title="${esc(fcStatText(u.stat))}"><span class="d">${fcMD(u.start)}${u.end?"–"+fcMD(u.end):""}</span><span class="t${hi}">${esc(u.name)}</span><span class="s${u.stat?hi:" no"}">${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년`:"집계 없음"}</span></li>`}).join("")
+      :`<li><span class="d">—</span><span class="t">주요 일정 없음</span><span class="s"></span></li>`)+`</ul></div>`;
 }).catch(()=>{});
 // 누적 조회(GoatCounter, 쿠키 없음). 대시보드 설정 「visitor counts」가 꺼져 있으면 조용히 숨긴다
 // 누적 방문자(GoatCounter 는 같은 사람의 새로고침을 세지 않고, 집계 반영에 수 분 걸린다) — 1분마다 다시 읽는다. 응답이 cache-control:public 이라 매번 다른 쿼리로 우회

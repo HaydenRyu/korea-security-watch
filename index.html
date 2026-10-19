@@ -1205,7 +1205,10 @@ Promise.all([fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.ok?r.
 }).catch(()=>{});
 // 누적 조회(GoatCounter, 쿠키 없음). 대시보드 설정 「visitor counts」가 꺼져 있으면 조용히 숨긴다
 // 누적 방문자(GoatCounter 는 같은 사람의 새로고침을 세지 않고, 집계 반영에 수 분 걸린다) — 1분마다 다시 읽는다. 응답이 cache-control:public 이라 매번 다른 쿼리로 우회
-const views=()=>fetch(`https://jis.goatcounter.com/counter/TOTAL.json?t=${Date.now()}`,{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if(d?.count){$("viewsN").textContent=d.count;$("views").hidden=false}}).catch(()=>{});
+// GoatCounter 응답은 CDN 이 최대 수 시간 캐시하고 ?t= 는 캐시 키에 안 들어간다(10/19 실측 age 6545s · 83 vs 실제 87).
+// start(집계 시작일)는 캐시 키에 들어간다 → 사이트 개설(2026-10) 전 날짜를 분마다 바꿔 넣는다. 개설 전이라 합계는 같다
+const viewsStart=()=>new Date(Date.UTC(2024,0,1)+(Math.floor(Date.now()/60000)%600)*864e5).toISOString().slice(0,10);
+const views=()=>fetch(`https://jis.goatcounter.com/counter/TOTAL.json?start=${viewsStart()}`,{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if(d?.count){$("viewsN").textContent=d.count;$("views").hidden=false}}).catch(()=>{});
 views();setInterval(()=>{if(!document.hidden)views()},60000);
 // 최근 출처 요청 처리 결과(루틴이 data/source_requests.jsonl 에 남긴다)
 async function loadReqLog(){try{const r=await fetch("data/source_requests.jsonl?t="+Date.now());if(!r.ok)return;

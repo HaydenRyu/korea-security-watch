@@ -699,7 +699,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   「AI 요약」 표시 문장은 AI가 공개 기사를 읽고 쓴 것입니다. 등급은 코드 규칙이 정하며, 사실은 출처 원문으로 확인하세요.
   정례 훈련·미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다.
   위성 영상은 NASA GIBS 하루 단위 영상(약 250m)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다.
-  열점은 NASA FIRMS 위성 열 감지(최근 48시간)로 산불·소각·공장 열원도 포함하며, 접경 구역은 근사 범위입니다.
+  열점은 NASA FIRMS 위성 열 감지(최근 48시간)로 산불·소각·공장 열원도 포함하며, 접경 구역은 군사분계선에서 20km 이내입니다.
   붉은 선은 군사분계선(MDL, OpenStreetMap 국경선), 양옆 점선은 비무장지대 한계선입니다(개략 자료라 크게 확대하면 숨깁니다).
   CCTV 는 국가교통정보센터 영상을 5분마다 한 장씩 찍은 사진이라 실제보다 최대 6분 늦습니다.
   항공기 지도는 신호를 켠 기체만 보이고 등급 판단에는 쓰지 않습니다. 공식 경보는 행정안전부 재난문자를 따르세요.
@@ -1083,7 +1083,7 @@ function nearPlace(places,lat,lon){
 }
 function firmsPop(p,where){
   return `<div class="pop"><div class="ph2"><b>위성 열점</b>${p.border?'<span class="btag">접경 구역</span>':""}</div>
-    <dl><dt>위치</dt><dd>${where?esc(where):'<span class="dim">위치 확인 중</span>'}</dd><dt>감지</dt><dd>${short(p.t)} KST</dd><dt>위성</dt><dd>${esc(p.sat||"—")}</dd></dl>
+    <dl><dt>위치</dt><dd>${where?esc(where):'<span class="dim">위치 확인 중</span>'}</dd><dt>감지</dt><dd>${short(p.t)} KST</dd><dt>위성</dt><dd>${esc(p.sat||"—")}</dd>${p.mdl_km!=null?`<dt>군사분계선</dt><dd>약 ${Math.round(p.mdl_km)}km</dd>`:""}</dl>
     <p>NASA 위성이 감지한 지표 열원입니다. 산불·소각·공장도 잡힙니다. 같은 곳의 포격·화재 보도가 있을 때만 판정 근거로 씁니다.</p></div>`;
 }
 const HOVER=matchMedia("(hover:hover) and (pointer:fine)").matches;  // 휴대폰은 누르면 팝업만(툴팁과 겹치지 않게)

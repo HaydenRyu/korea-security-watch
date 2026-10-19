@@ -1,61 +1,53 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 전방 병력 이동 증강",
-      "North Korea troops buildup border"
-    ],
-    "nuclear": [
-      "북한 핵시설 풍계리 영변",
-      "North Korea nuclear test site Yongbyon"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipments"
-    ],
     "border_clash": [
       "목함지뢰 해안 발견 DMZ 귀순",
       "김여정 남부국경 확성기 경고사격"
     ],
+    "troop_movement": [
+      "연합뉴스 북한 속보 RSS(northkorea.xml)",
+      "NK News 피드"
+    ],
+    "nuclear": [
+      "NK News 피드 최근 글",
+      "news_kr 수집 결과"
+    ],
+    "logistics": [
+      "NK News 피드 최근 글",
+      "news_kr 수집 결과"
+    ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹",
-      "North Korea GPS jamming cyberattack"
+      "NK News 피드 GPS 교란 기사",
+      "news_kr 수집 결과"
     ],
     "foreign_forces": [
-      "북러 군사협력 파병",
-      "North Korea Russia troops Reuters"
+      "연합뉴스 북한 속보 RSS",
+      "NK News 피드 북러"
     ],
     "parade_massing": [
-      "북한 열병식 준비 병력 집결",
-      "North Korea parade preparations"
+      "연합뉴스 북한 속보 RSS",
+      "NK News 피드"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 대피훈련",
-      "North Korea mobilization blackout"
+      "연합뉴스 북한단신 RSS",
+      "NK News 피드"
     ],
     "gov_warning": [
-      "합참 전통문 진돗개 데프콘",
-      "北朝鮮 ミサイル 発射 防衛省"
-    ],
-    "linkage:taiwan": [
-      "대만 중국 군사훈련"
-    ],
-    "linkage:korea": [
-      "북러 군사협력"
+      "연합뉴스 북한 속보 RSS",
+      "news_kr 수집 결과"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://www.yna.co.kr/view/AKR20261019167400504",
-    "https://www.chosun.com/politics/politics_general/2026/10/19/6LMMJ5GMLVHG3FC3UNAS4JRXWI/",
-    "https://www.yna.co.kr/view/AKR20261019132700065",
-    "https://www.segye.com/newsView/20261019517511",
-    "https://www.yna.co.kr/view/AKR20261019144700504",
-    "https://www.yna.co.kr/view/AKR20261019159200504",
     "https://www.nknews.org/feed/",
+    "https://www.yna.co.kr/view/AKR20261019167451504",
+    "https://www.yna.co.kr/view/AKR20261019132700065",
+    "https://www.segye.com/newsView/20261019519617",
+    "https://www.yna.co.kr/view/AKR20261019159300504",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.aljazeera.com/xml/rss/all.xml"
   ],
-  "overall_summary": "김여정 담화(10/19 18시경, 조선중앙통신 보도)가 MDL 경고사격에 반발해 남부 국경 전술 타격수단 증강 배치·대남 확성기 재개를 「검토」한다고 위협했으나 시한·표적이 없는 위협 발언이라 정례 범주다. 강화 해안 유실 추정 지뢰 발견(이달 4번째)도 정례로 직전 회차와 판단이 같다.",
+  "overall_summary": "김여정 담화(10/19, 대남 확성기 재개 검토·남부 국경 타격수단 증강 위협)와 강화 볼음도 유실 추정 지뢰 발견(이달 4번째)이 이어졌으나 시한·표적이 없고 의도된 도발 근거가 없어 직전 회차와 같은 정례 판단이다. 그 밖의 항목에 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,7 +64,7 @@
       "region": "인천 강화군 볼음도·군사분계선 일대",
       "lat": 37.65,
       "lon": 126.35,
-      "summary": "19일 강화 볼음도 해안에서 북 유실 추정 반보병지뢰가 발견돼 군이 폭파 처리했고(인명 피해 없음), 같은 날 김여정이 MDL 경고사격에 반발해 전술 타격수단 증강 배치·대남 확성기 방송 재개를 검토한다는 담화를 냈다.",
+      "summary": "19일 강화 볼음도 해안에서 북 유실 추정 반보병지뢰가 발견돼 군이 폭파했고(피해 없음), 같은 날 김여정이 MDL 경고사격에 반발해 대남 확성기 재개·전술 타격수단 증강을 검토한다는 담화를 냈다.",
       "meaning": "유실 지뢰는 의도된 도발 근거가 없고, 김여정 담화는 시한·표적 없는 위협 발언이라 정례 범주이나 접경 긴장 어조가 높아졌다.",
       "sources": [
         {
@@ -81,19 +73,14 @@
           "url": "https://www.yna.co.kr/view/AKR20261019132700065"
         },
         {
+          "name": "연합뉴스(김여정 담화 종합)",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261019167451504"
+        },
+        {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261019517511"
-        },
-        {
-          "name": "연합뉴스(김여정 담화)",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261019167400504"
-        },
-        {
-          "name": "조선일보(김여정 담화)",
-          "tier": "B",
-          "url": "https://www.chosun.com/politics/politics_general/2026/10/19/6LMMJ5GMLVHG3FC3UNAS4JRXWI/"
+          "url": "https://www.segye.com/newsView/20261019519617"
         }
       ],
       "confidence": "높음",
@@ -124,7 +111,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T10:10:12+00:00",
+  "checked_at": "2026-10-19T11:20:37+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

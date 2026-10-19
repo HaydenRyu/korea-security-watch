@@ -53,7 +53,7 @@ ZONE_REFRESH_DAYS = 7
 NO_WINDOW_KEEP_DAYS = 7  # 알림일을 못 읽은 문서는 처음 본 뒤 7일만 유효로 둔다
 ROWS = 100
 TIMEOUT = 30             # 10/19 GHA 실측: 20초 timed out 1회 — 해외 러너→data.go.kr 지연
-RETRIES = 2              # 통신 오류·시간초과만 재시도(키·한도 오류는 즉시)
+RETRIES = 3              # 통신 오류·시간초과·SERVICETIMEOUT(05)만 재시도(키·한도 오류는 즉시)
 BUDGET_S = 180           # 회차 상한 — 넘으면 받은 상세까지 캐시하고 다음 회차에 이어 받는다(firms 잡 8분 안)
 KEY_ERRORS = ("SERVICE_KEY_IS_NOT_REGISTERED", "SERVICE_ACCESS_DENIED", "SERVICE_KEY_IS_NULL",
               "UNREGISTERED_IP", "DEADLINE_HAS_EXPIRED")
@@ -77,14 +77,19 @@ def redact(text: str, key: str | None) -> str:
 
 
 def _http(url: str, params: dict, key: str) -> str:
+    """통신 오류·시간초과·게이트웨이 SERVICETIMEOUT(05)만 재시도. 오류 문구에 오퍼레이션·인자(키 제외)를 붙인다."""
+    where = url.rsplit("/", 1)[1] + "(" + ",".join(f"{k}={v}" for k, v in params.items() if k in ("date", "doc_num", "pageNo")) + ")"
     for i in range(RETRIES):
         try:
-            return _http1(url, params, key)
+            body = _http1(url, params, key)
+            parse_response(body)  # 게이트웨이 오류면 여기서 ApiError
+            return body
         except ApiError as e:
-            if e.status != "error" or e.detail.startswith("HTTP") or i == RETRIES - 1:
-                raise
-            time.sleep(3)
-    raise ApiError("error", "재시도 소진")
+            retry = e.status == "error" and not e.detail.startswith("HTTP") and ("code 05" in e.detail or "Error" in e.detail or "timed out" in e.detail)
+            if not retry or i == RETRIES - 1:
+                raise ApiError(e.status, f"{where}: {e.detail}") from None
+            time.sleep(5)
+    raise ApiError("error", f"{where}: 재시도 소진")
 
 
 def _http1(url: str, params: dict, key: str) -> str:

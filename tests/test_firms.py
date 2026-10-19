@@ -52,23 +52,60 @@ def test_classify_labels_are_estimates_with_reasons():
         assert "추정" in k or k == "미상"
 
 
-def test_enrich_osm_caches_and_stops_on_failure():
+def test_split_batch_assigns_results_per_cell():
+    # 10/19 실측 응답 형태(make 요약 원소). 이름 우선 ko → name → en, 이름 없으면 태그값, n=0 은 「시설 없음」
+    els = [
+        {"type": "c", "id": 1, "tags": {"cell": "a", "n": "2", "ko": "현대제철 당진공장", "nm": "현대제철 당진공장;삼우 당진2공장",
+                                         "en": "Hyundai Steel Dangjin Plant", "pw": "", "mm": "works", "lu": "industrial"}},
+        {"type": "c", "id": 2, "tags": {"cell": "b", "n": "0", "ko": "", "nm": "", "en": "", "pw": "", "mm": "", "lu": ""}},
+        {"type": "c", "id": 3, "tags": {"cell": "c", "n": "1", "ko": "", "nm": "", "en": "", "pw": "plant", "mm": "", "lu": "industrial"}},
+        {"type": "c", "id": 4, "tags": {"cell": "zz", "n": "1", "nm": "남의 칸"}},
+    ]
+    got = f.split_batch(els, ["a", "b", "c", "d"])
+    assert got["a"] == ["현대제철 당진공장", "삼우 당진2공장", "Hyundai Steel Dangjin Plant"]
+    assert got["b"] == [] and got["c"] == ["plant"]
+    assert "d" not in got and "zz" not in got           # 응답에 없는 칸 = 미조회로 남김, 요청 밖 칸은 버림
+    q = f._batch_query([("a", 36.985, 126.69), ("b", 34.915, 127.755)])
+    assert q.count("make c cell=") == 2 and 'cell="b"' in q and "around:750,34.915,127.755" in q
+
+
+def test_enrich_osm_batches_caches_and_stops_on_failure():
     now = datetime(2026, 10, 19, tzinfo=timezone.utc)
     cells = {}
-    f.update_cells(cells, [_pt(36.985, 126.69, "2026-10-18"), _pt(34.915, 127.755, "2026-10-19")], "2026-10-19")
+    pts = [_pt(36.985 + i * 0.01, 126.69, "2026-10-18") for i in range(5)] + [_pt(34.915, 127.755, "2026-10-19")]
+    f.update_cells(cells, pts, "2026-10-19")
     calls = []
 
-    def boom(lat, lon):
-        calls.append((lat, lon))
+    def boom(items):
+        calls.append(len(items))
         raise OSError("502")
-    assert f.enrich_osm(cells, now, lookup=boom) == 0 and len(calls) == 1      # 첫 실패에서 멈춤
+    assert f.enrich_osm(cells, now, lookup=boom, batch=2) == 0 and calls == [2]   # 첫 묶음 실패에서 멈춤
     assert all("osm_checked" not in c for c in cells.values())                 # 실패는 캐시하지 않는다
-    f.time.sleep, orig = (lambda s: None), f.time.sleep
+
+    def fake(items):
+        calls.append(len(items))
+        return {k: (["X"] if lat < 35 else []) for k, lat, lon in items[:-1]}  # 마지막 칸은 응답 누락
+    calls.clear()
+    pri = {f.cell_key(36.985, 126.69)}
+    assert f.enrich_osm(cells, now, lookup=fake, priority=pri, batch=4) == 4 and calls == [4, 2]
+    assert sum("osm_checked" in c for c in cells.values()) == 4                 # 누락 2칸은 미조회 유지
+    assert cells[f.cell_key(36.985, 126.69)]["osm"] == []                      # 우선 칸이 첫 묶음에 들어갔다
+    assert cells[f.cell_key(34.915, 127.755)]["osm"] == ["X"]
+    calls.clear()
+    f.enrich_osm(cells, now, lookup=fake, batch=4)
+    assert calls == [2]                                                         # TTL 안 칸은 재조회 없음
+
+
+def test_typed_keeps_hotspots_when_overpass_fails(tmp=None):
+    import tempfile
+    from pathlib import Path
+    orig = f.osm_batch
+    f.osm_batch = lambda items: (_ for _ in ()).throw(OSError("504"))
     try:
-        assert f.enrich_osm(cells, now, lookup=lambda a, b: ["X"]) == 2
-        assert f.enrich_osm(cells, now, lookup=boom) == 0                       # TTL 안 → 재조회 없음
+        with tempfile.TemporaryDirectory() as d:
+            pts = [_pt(36.985, 126.69, "2026-10-19") | {"border": False}]
+            cells = f.typed(pts, Path(d) / "cells.json", datetime(2026, 10, 19, 6, tzinfo=timezone.utc))
+            assert cells is not None and len(cells) == 1                       # 이력은 쌓인다
+            assert pts[0]["kind"] == "unknown" and "OSM 시설 미조회" in pts[0]["kind_why"]
     finally:
-        f.time.sleep = orig
-    pts = [_pt(36.985, 126.69, "2026-10-18")]
-    f.annotate(pts, cells)
-    assert pts[0]["kind"] == "fixed" and pts[0]["kind_label"] == "상시 열원 추정" and pts[0]["north"] is False
+        f.osm_batch = orig

@@ -9,7 +9,7 @@
 - 실패 시 기존 파일을 건드리지 않고 rc 3. 키가 없으면 rc 0(건너뜀).
 - 유형 추정(10/19): 점마다 kind(fixed 상시 열원 추정 · burn 산불·소각 추정 · unknown 미상)와 근거(kind_why)를 붙인다.
   근거 = 같은 격자(0.005° ≈ 550m, 이웃 8칸 포함) 감지 일수(state/firms_cells.json 누적, CELL_KEEP_DAYS 보관)
-  + OSM 시설(Overpass, 시설 경계 OSM_RADIUS_M 이내 · 격자별 OSM_TTL_DAYS 캐시 · 회차당 OSM_MAX_PER_RUN 칸).
+  + OSM 시설(Overpass, 시설 경계 OSM_RADIUS_M 이내 · 격자별 OSM_TTL_DAYS 캐시 · OSM_BATCH 칸 묶음 질의 · 회차 OSM_BUDGET_S 초).
   북측(data/nk_boundary.json, Natural Earth) 은 OSM 시설 자료가 희박해 「시설 없음」을 근거로 쓰지 않는다.
   추정이다 — 단정 표현을 쓰지 않는다. Overpass 실패는 유형만 비우고 열점 갱신은 그대로 한다.
 """
@@ -45,8 +45,9 @@ FIXED_MIN_DAYS = 2        # 시설 근처에서 이 일수 이상이면 신뢰 �
 REPEAT_MIN_DAYS = 3       # 시설 없이 이 일수 이상 반복되면 산불·소각으로 보지 않는다(→ 미상)
 OSM_RADIUS_M = 750        # 시설 경계까지 거리. Overpass around 는 way 선분 기준 = 경계 거리. 375m 화소 2개 폭
 OSM_TTL_DAYS = 30
-OSM_MAX_PER_RUN = 20      # 공용 Overpass 부하 배려(10/19 실측: 25지점 한 질의는 502)
-OSM_BUDGET_S = 120        # 회차당 Overpass 총 시간 상한 — firms 잡 timeout 5분 안에 끝낸다
+OSM_BATCH = 60            # 한 질의에 묶는 칸 수. 10/19 실측: make 요약 방식 60칸 = 53초(칸별 호출은 칸당 ~25초)
+OSM_BATCH_TIMEOUT_S = 60  # 묶음 1회 서버 timeout
+OSM_BUDGET_S = 120        # 회차당 Overpass 총 시간 상한 — 묶음은 경과 ≤ 60초일 때만 시작(최대 2묶음 ≈ 120칸)
 OVERPASS = "https://overpass-api.de/api/interpreter"
 UA = "korea-security-watch/1.0 (personal OSINT dashboard; github actions)"
 KIND_LABEL = {"fixed": "상시 열원 추정", "burn": "산불·소각 추정", "unknown": "미상"}
@@ -104,41 +105,73 @@ def days_seen(cells: dict, key: str) -> int:
     return len({d for n in _neighbors(key) for d in cells.get(n, {}).get("dates", [])})
 
 
-def osm_facilities(lat: float, lon: float) -> list[str]:
-    """반경 OSM_RADIUS_M 안 산업·발전 시설 이름(없으면 태그값). 실패는 예외로 올린다(호출부가 캐시 미기록)."""
-    a = f"around:{OSM_RADIUS_M},{lat},{lon}"
-    q = (f"[out:json][timeout:25];(nwr({a})[landuse=industrial];nwr({a})[power=plant];"
-         f'nwr({a})[man_made~"^(works|kiln|flare|chimney)$"];);out tags 20;')
+def _batch_query(items: list[tuple[str, float, float]]) -> str:
+    """칸마다 around 검색 → make 로 칸 키를 붙인 요약 원소 1개. 응답이 칸 단위라 결과를 다시 나눌 때 거리 계산이 필요 없다."""
+    parts = []
+    for k, lat, lon in items:
+        a = f"around:{OSM_RADIUS_M},{lat},{lon}"
+        parts.append(f'(nwr({a})[landuse=industrial];nwr({a})[power=plant];nwr({a})[man_made~"^(works|kiln|flare|chimney)$"];);'
+                     f'make c cell="{k}",n=count(nwr),ko=set(t["name:ko"]),nm=set(t["name"]),en=set(t["name:en"]),'
+                     f'pw=set(t["power"]),mm=set(t["man_made"]),lu=set(t["landuse"]);out;')
+    return f"[out:json][timeout:{OSM_BATCH_TIMEOUT_S}];" + "".join(parts)
+
+
+def split_batch(elements: list[dict], keys: list[str]) -> dict[str, list[str]]:
+    """묶음 응답 → {칸 키: 시설 이름[]}. 응답에 없는 칸은 결과에 넣지 않는다(= 미조회로 남아 다음 회차 재조회)."""
+    want, out = set(keys), {}
+    for e in elements:
+        tg = e.get("tags", {})
+        k = tg.get("cell")
+        if k not in want:
+            continue
+        if tg.get("n", "0") in ("", "0"):
+            out[k] = []
+            continue
+        names = []
+        for f in ("ko", "nm", "en"):
+            for n in (tg.get(f) or "").split(";"):
+                if n and n not in names:
+                    names.append(n)
+        if not names:  # 이름 없는 시설 — 태그값으로(industrial·plant·works 등)
+            names = [v for f in ("pw", "mm", "lu") for v in (tg.get(f) or "").split(";") if v][:1] or ["시설"]
+        out[k] = names[:5]
+    return out
+
+
+def osm_batch(items: list[tuple[str, float, float]]) -> dict[str, list[str]]:
+    """칸 묶음 1회 질의. 실패는 예외로 올린다(호출부가 캐시 미기록)."""
+    q = _batch_query(items)
     req = urllib.request.Request(OVERPASS, data=urllib.parse.urlencode({"data": q}).encode(), headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        els = json.load(r)["elements"]
-    names = []
-    for e in els:
-        t = e.get("tags", {})
-        n = t.get("name:ko") or t.get("name") or t.get("name:en") or t.get("power") or t.get("man_made") or t.get("landuse")
-        if n and n not in names:
-            names.append(n)
-    return names[:5]
+    with urllib.request.urlopen(req, timeout=OSM_BATCH_TIMEOUT_S + 15) as r:
+        return split_batch(json.load(r)["elements"], [k for k, _, _ in items])
 
 
-def enrich_osm(cells: dict, now: datetime, lookup=osm_facilities, limit: int = OSM_MAX_PER_RUN) -> int:
-    """OSM 미조회·만료 격자를 최근 감지 순으로 limit 칸까지 조회. 첫 실패에서 멈춘다(그 칸은 미조회로 남음)."""
+def enrich_osm(cells: dict, now: datetime, lookup=None, priority: set[str] | None = None,
+               batch: int = OSM_BATCH) -> int:
+    """OSM 미조회·만료 칸을 묶음(batch 칸) 단위로 조회해 칸별로 캐시한다.
+    순서 = 이번 회차 열점이 있는 칸 → 최근 감지 순. 새 묶음은 경과 시간이 OSM_BUDGET_S − OSM_BATCH_TIMEOUT_S 이하일 때만
+    시작한다(묶음 하나가 상한을 넘지 않게). 묶음 실패에서 멈춘다 — 그 칸들은 미조회로 남고 열점 갱신은 계속된다."""
+    lookup = lookup or osm_batch
     stale = (now - timedelta(days=OSM_TTL_DAYS)).isoformat()
+    pri = priority or set()
     todo = sorted((k for k, c in cells.items() if c.get("osm_checked", "") < stale),
-                  key=lambda k: cells[k]["dates"][-1], reverse=True)
+                  key=lambda k: (k in pri, cells[k]["dates"][-1]), reverse=True)
     done, t0 = 0, time.monotonic()
-    for k in todo[:limit]:
-        if time.monotonic() - t0 > OSM_BUDGET_S:
-            print("overpass 시간 상한 — 다음 회차로")
+    for i in range(0, len(todo), batch):
+        if time.monotonic() - t0 > OSM_BUDGET_S - OSM_BATCH_TIMEOUT_S:
+            print(f"overpass 시간 상한 — 남은 {len(todo) - i}칸 다음 회차로")
             break
+        chunk = todo[i:i + batch]
         try:
-            cells[k]["osm"] = lookup(cells[k]["lat"], cells[k]["lon"])
+            got = lookup([(k, cells[k]["lat"], cells[k]["lon"]) for k in chunk])
         except Exception as e:  # noqa: BLE001 — Overpass 혼잡(429·502·504)·불통
-            print(f"overpass 중단: {e}")
+            print(f"overpass 중단({len(chunk)}칸 묶음): {e}")
             break
-        cells[k]["osm_checked"] = now.isoformat()
-        done += 1
-        time.sleep(1)
+        for k, names in got.items():
+            if k in cells:
+                cells[k]["osm"] = names
+                cells[k]["osm_checked"] = now.isoformat()
+                done += 1
     return done
 
 
@@ -256,7 +289,7 @@ def typed(points: list[dict], cells_path: Path, now: datetime, osm: bool = True)
         cells = json.loads(cells_path.read_text())["cells"] if cells_path.exists() else {}
         update_cells(cells, points, now.date().isoformat())
         if osm:
-            print(f"overpass {enrich_osm(cells, now)}칸 조회")
+            print(f"overpass {enrich_osm(cells, now, priority={cell_key(p['lat'], p['lon']) for p in points})}칸 조회")
         annotate(points, cells)
         return cells
     except Exception as e:  # noqa: BLE001

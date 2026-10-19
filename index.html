@@ -1519,7 +1519,7 @@ function initAirMap(){
   airTrail=L.layerGroup().addTo(airMap);airLayer=L.layerGroup().addTo(airMap);
   $("airCardX").addEventListener("click",()=>{$("airCard").hidden=true});
   airMap.on("click",()=>{$("airCard").hidden=true});
-  $("airTw").addEventListener("click",()=>{airOnTw=!airOnTw;airUser=true;airMap.fitBounds(airOnTw?TWB:[[SOUTH[0],SOUTH[2]],[SOUTH[1],SOUTH[3]]]);twCap()});
+  $("airTw").addEventListener("click",()=>{airOnTw=!airOnTw;airUser=true;if(airOnTw)airMap.fitBounds(TWB);else airHome();twCap()});
 }
 function twCap(n,m){if(n!=null)$("airTwCap").dataset.s=`대만 해협 <b>${n}</b>대${m?` · 군용 <b>${m}</b>`:""}`;$("airTwCap").innerHTML=airOnTw?"← 한반도로":($("airTwCap").dataset.s||"대만 해협")}
 function showCard(a){
@@ -1582,7 +1582,9 @@ setInterval(()=>airRing(),15e3);
 new IntersectionObserver(es=>{airSeen=es.some(e=>e.isIntersecting);if(airSeen){initAirMap();airFit();loadAirLive()}}).observe($("air-p"));
 // 칸 높이는 한 화면 격자(.side flex)가 늦게 정한다 — 크기가 바뀔 때마다 다시 맞춘다(사용자가 움직인 뒤엔 위치 유지)
 let airUser=false;
-function airFit(){if(!airMap)return;const short=$("airMap").clientHeight<240;$("air").classList.toggle("short",short);airMap.invalidateSize();if(!short&&airTwMap){airTwMap.invalidateSize();airTwMap.fitBounds(TWB)}if(!airUser)airMap.fitBounds([[SOUTH[0],SOUTH[2]],[SOUTH[1],SOUTH[3]]])}
+// 첫 화면은 자곡동이 한가운데(10/20 hayden): 축척은 남한 상자(SOUTH)를 다 넣는 값 그대로, 중심만 집으로 — 거리환 25·50·100km 가 화면 중앙에 오고 접경(50km 환)이 위로 보인다
+function airHome(){airMap.fitBounds([[SOUTH[0],SOUTH[2]],[SOUTH[1],SOUTH[3]]],{animate:false});airMap.setView([HOME.lat,HOME.lon],airMap.getZoom(),{animate:false})}
+function airFit(){if(!airMap)return;const short=$("airMap").clientHeight<240;$("air").classList.toggle("short",short);airMap.invalidateSize();if(!short&&airTwMap){airTwMap.invalidateSize();airTwMap.fitBounds(TWB)}if(!airUser)airHome()}
 new ResizeObserver(airFit).observe($("airMap"));
 ["pointerdown","wheel"].forEach(t=>$("airMap").addEventListener(t,()=>{airUser=true},{passive:true}));
 setInterval(loadAirLive,60e3);

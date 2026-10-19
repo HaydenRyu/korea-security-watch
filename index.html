@@ -278,12 +278,22 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 #airMap{position:absolute;inset:0;background:#05080e}
 #air .airx{position:absolute;right:8px;bottom:8px;z-index:500;font:500 11px/1 var(--data);color:var(--ice);background:var(--head);border:1px solid var(--line-2);padding:6px 8px;text-decoration:none}
 #air .airx:hover{border-color:var(--fog)}
-.acft{color:var(--ac-etc)} .acft svg{display:block;width:12px;height:12px;overflow:visible}
+.acft{color:var(--ac-etc);cursor:pointer} .acft svg{display:block;width:16px;height:16px;overflow:visible}
 /* 항공기 색(10/18): 군용 = 주황(크게) · 민항기 = 등록국별(ICAO 주소 블록, scripts/cctv_snap.icao_cc). 범례가 곧 대수 */
 :root{--ac-kr:#6ea8ff;--ac-cn:#ff8fab;--ac-jp:#c39bff;--ac-us:#5ee0ef;--ac-tw:#b5e35a;--ac-ru:#e8b4a0;--ac-kp:#ffffff;--ac-etc:#7d8aa0}
 .acft.KR{color:var(--ac-kr)} .acft.CN{color:var(--ac-cn)} .acft.JP{color:var(--ac-jp)} .acft.US{color:var(--ac-us)}
 .acft.TW{color:var(--ac-tw)} .acft.RU{color:var(--ac-ru)} .acft.KP{color:var(--ac-kp)}
-.acft.mil{color:var(--amber);z-index:1000!important} .acft.mil svg{width:16px;height:16px}
+.acft.mil{color:var(--amber);z-index:1000!important} .acft.mil svg{width:22px;height:22px}
+/* 10/20 복원: 기체 실루엣·클릭 사진(planespotters)·최근 30분 궤적·자곡동 거리환 — adsb.lol iframe 을 버리며(10/18) 사라졌던 것 */
+.ringl{background:none;border:0;box-shadow:none;color:var(--fog);font:500 10px/1 var(--data);white-space:nowrap;opacity:.8}
+#air .acard{position:absolute;right:8px;top:8px;z-index:510;width:200px;background:var(--head);border:1px solid var(--line-2);font:400 11px/1.4 var(--text);color:var(--fog)}
+#air .acard img{display:block;width:100%;height:110px;object-fit:cover;background:#0b1220}
+#air .acard .t{padding:6px 24px 6px 8px;word-break:keep-all} #air .acard b{color:var(--ice);font-weight:500} #air .acard a{color:var(--fog)}
+#air .acard button{position:absolute;right:2px;top:2px;width:20px;height:20px;border:0;background:rgba(5,8,14,.6);color:var(--ice);font:14px/1 var(--data);cursor:pointer}
+#air .ains{position:absolute;left:8px;bottom:8px;z-index:500;width:150px;margin:0;border:1px solid var(--line-2);background:var(--head);cursor:pointer}
+#air .ains:hover{border-color:var(--fog)} #airTwMap{height:92px;background:#05080e} #airTwMap .acft{cursor:default} #airTwMap .acft svg{width:9px;height:9px} #airTwMap .acft.mil svg{width:13px;height:13px}
+#air .ains figcaption{padding:3px 6px;font:500 10px/1.3 var(--data);color:var(--fog);white-space:nowrap;overflow:hidden;text-overflow:ellipsis} #air .ains b{color:var(--ice)}
+#air.short .ains{width:auto} #air.short #airTwMap{display:none}  /* 한 화면 격자처럼 지도가 낮으면 작은 지도는 접고 대수 줄만(누르면 큰 지도가 대만으로) */
 #air .aleg{position:absolute;left:8px;top:8px;z-index:500;display:flex;flex-wrap:wrap;gap:4px 10px;max-width:calc(100% - 16px);margin:0;padding:6px 8px;
   background:color-mix(in srgb,var(--head) 88%,transparent);border:1px solid var(--line-2);font:500 11px/1.3 var(--data);color:var(--fog);white-space:nowrap}
 #air .aleg li{display:flex;align-items:center;gap:4px} #air .aleg i{width:8px;height:8px;border-radius:50%;background:currentColor}
@@ -711,7 +721,9 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
     <div class="pb" id="air">
       <div class="aq"><span class="al" title="위험이 커지면 항공사가 정부 발표보다 먼저 운항을 줄이거나 우회합니다. 지난 7일 같은 시각보다 30% 넘게 줄면 주황색으로 표시합니다. 공개 수신망이라 수신 공백으로도 줄 수 있습니다.">남한 상공 민항기</span><b id="airN">—</b><span id="airR" class="ar">기록을 불러오는 중</span></div>
       <div class="am"><span class="al">신호 켠 군용기</span><ul id="airMil"><li>—</li></ul></div>
-      <div class="awrap"><div id="airMap" role="img" aria-label="한반도 상공 항공기 위치(신호를 켠 기체만, 1분마다 갱신)"></div>
+      <div class="awrap"><div id="airMap" role="img" aria-label="한반도 상공 항공기 위치(신호를 켠 기체만, 1분마다 갱신) · 자곡동 기준 25·50·100km 거리환 · 최근 30분 궤적"></div>
+        <div class="acard" id="airCard" hidden><button type="button" id="airCardX" aria-label="닫기">×</button><img id="airImg" alt=""><div class="t" id="airCardT"></div></div>
+        <figure class="ains" id="airTw" title="대만 해협 — 신호를 켠 기체만. 중국군 기체는 신호를 끄므로 민항 통항 지표로만 본다. 누르면 큰 지도를 대만 해협으로" hidden><div id="airTwMap"></div><figcaption id="airTwCap">대만 해협</figcaption></figure>
         <ul class="aleg" id="airLeg" title="군용 = 신호를 켠 군용기 · 나머지는 기체 등록국(ICAO 주소 기준, 리스기는 항공사 국적과 다를 수 있음)" hidden></ul>
         <a class="airx" href="https://adsb.lol/?lat=37.9&lon=127.3&zoom=7" target="_blank" rel="noopener">adsb.lol 에서 크게 보기 ↗</a></div>
     </div>
@@ -1441,27 +1453,57 @@ loadAir();
 // 항공기 위치 — 한국 맥(cctv_snap.py)이 5분마다 Worker 에 올린 것을 1분마다 다시 읽는다. 칸이 화면에 있을 때만
 const SOUTH=[33.0,38.6,124.5,130.0];  // scripts/air_count.py SOUTH 와 같다 — 시간별 기준값과 같은 정의로 센다
 const AC_NAME={mil:"군용",KR:"한국",CN:"중국",JP:"일본",US:"미국",TW:"대만",RU:"러시아",KP:"북한",etc:"기타"};
-let airMap,airLayer,airSeen=false;  // CAM 은 아래(CCTV)에서 선언 — 호출 시점엔 정의돼 있다
+let airMap,airLayer,airTrail,airTwMap,airTwLayer,airOnTw=false,airSeen=false;  // CAM 은 아래(CCTV)에서 선언 — 호출 시점엔 정의돼 있다
+// 기체 실루엣(위에서 본 여객기, 10/20) — 삼각형은 방향만 보였다. 군용은 같은 모양을 크게·주황
+const PLANE="M0-7.5 1.1-5.2 1.1-1.6 7.2 1.8 7.2 3 1.1 1.9 .9 4.8 2.9 6.2 2.9 7.1 0 6.4-2.9 7.1-2.9 6.2-.9 4.8-1.1 1.9-7.2 3-7.2 1.8-1.1-1.6-1.1-5.2z";
+const TWB=[[21.5,117.5],[27.0,123.5]];  // 대만 해협 작은 창 범위(cctv_snap.TW_AREA 반경 250km 안)
+const acIcon=(a,sz)=>L.divIcon({className:"acft "+(a.mil?"mil":a.cc||"etc"),iconSize:[sz,sz],
+  html:`<svg viewBox="-8 -8 16 16" style="transform:rotate(${a.trk==null?0:Math.round(a.trk)}deg)"><path d="${PLANE}" fill="currentColor" stroke="#05080e" stroke-width=".8"/></svg>`});
 function initAirMap(){
   if(!window.L||airMap)return;
-  airMap=L.map("airMap",{zoomControl:false,attributionControl:true,minZoom:5,maxZoom:10,zoomSnap:.25}).setView([36,127.3],6);
+  airMap=L.map("airMap",{zoomControl:false,attributionControl:true,minZoom:4,maxZoom:10,zoomSnap:.25}).setView([36,127.3],6);
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:10,className:"street",
-    attribution:'© <a href="https://www.openstreetmap.org/copyright">OSM</a> · 항공기 <a href="https://adsb.lol">adsb.lol</a>'}).addTo(airMap);
-  airLayer=L.layerGroup().addTo(airMap);
+    attribution:'<a href="https://www.openstreetmap.org/copyright">OSM</a> · <a href="https://adsb.lol">adsb.lol</a> · <a href="https://www.planespotters.net">planespotters</a>'}).addTo(airMap);
+  // 거리환: 자곡동 기준 25·50·100km — 「어디쯤 왔나」를 좌표 없이 읽게. 판문점까지 약 55km 라 50km 환이 접경 기준선 노릇을 한다
+  const rings=L.layerGroup().addTo(airMap);
+  for(const k of [25,50,100]){L.circle([HOME.lat,HOME.lon],{radius:k*1000,color:"#5ee0ef",weight:.8,opacity:.45,fill:false,dashArray:"3 4",interactive:false}).addTo(rings);
+    L.marker([HOME.lat+k/111,HOME.lon],{icon:L.divIcon({className:"ringl",html:k+"km",iconSize:[34,10],iconAnchor:[17,5]}),interactive:false,keyboard:false}).addTo(rings)}
+  L.circleMarker([HOME.lat,HOME.lon],{radius:2.5,color:"#5ee0ef",fillOpacity:1,interactive:false}).addTo(rings);
+  airTrail=L.layerGroup().addTo(airMap);airLayer=L.layerGroup().addTo(airMap);
+  $("airCardX").addEventListener("click",()=>{$("airCard").hidden=true});
+  airMap.on("click",()=>{$("airCard").hidden=true});
+  $("airTw").addEventListener("click",()=>{airOnTw=!airOnTw;airUser=true;airMap.fitBounds(airOnTw?TWB:[[SOUTH[0],SOUTH[2]],[SOUTH[1],SOUTH[3]]]);twCap()});
+}
+function twCap(n,m){if(n!=null)$("airTwCap").dataset.s=`대만 해협 <b>${n}</b>대${m?` · 군용 <b>${m}</b>`:""}`;$("airTwCap").innerHTML=airOnTw?"← 한반도로":($("airTwCap").dataset.s||"대만 해협")}
+function showCard(a){
+  const name=[a.call||"호출부호 미송출",a.t,a.alt?`${Math.round(a.alt/100)*100}ft`:"지상"].filter(Boolean).join(" · ");
+  const who=a.mil?"군용"+(a.name?` · ${a.name}`:""):a.cc?`${AC_NAME[a.cc]} 등록`:"등록국 미상";
+  const img=$("airImg");if(a.photo?.src){img.src=a.photo.src;img.alt=`${a.t||"기체"} 사진`;img.hidden=false}else{img.removeAttribute("src");img.hidden=true}
+  $("airCardT").innerHTML=`<b>${esc(name)}</b><br>${esc(who)}`+(a.photo?.src?`<br>사진 ${esc(a.photo.by||"")} · <a href="${esc(a.photo.link||"https://www.planespotters.net")}" target="_blank" rel="noopener">planespotters.net ↗</a>`:"<br>등록된 사진 없음");
+  $("airCard").hidden=false;
 }
 async function loadAirLive(){
   if(document.hidden||!airSeen)return;
   initAirMap();
   let d=null;try{const r=await fetch(CAM+"/air.json");if(r.ok)d=await r.json()}catch(e){}
   if(!d?.ac)return;  // 실패하면 시간별 기록(state/air.json) 표시를 그대로 둔다
-  airLayer.clearLayers();
+  airLayer.clearLayers();airTrail.clearLayers();
   for(const a of d.ac){
-    const rot=a.trk==null?0:Math.round(a.trk);
-    const tip=[a.call,a.t,a.alt?`${Math.round(a.alt/100)*100}ft`:"지상"].filter(Boolean).join(" · ")+(a.mil?" · 군용":a.cc?` · ${AC_NAME[a.cc]} 등록`:"");
-    const sz=a.mil?16:12;
-    L.marker([a.lat,a.lon],{interactive:true,keyboard:false,zIndexOffset:a.mil?1000:0,icon:L.divIcon({className:"acft "+(a.mil?"mil":a.cc||"etc"),iconSize:[sz,sz],
-      html:`<svg viewBox="-6 -6 12 12" style="transform:rotate(${rot}deg)"><path d="M0-6 4.5 5 0 2.5-4.5 5z" fill="currentColor" stroke="#05080e" stroke-width="1"/></svg>`})})
-      .bindTooltip(esc(tip),{className:"tip"}).addTo(airLayer);
+    const tip=[a.call,a.t,a.alt?`${Math.round(a.alt/100)*100}ft`:"지상"].filter(Boolean).join(" · ")+(a.mil?" · 군용":a.cc?` · ${AC_NAME[a.cc]} 등록`:"")+" · 누르면 사진";
+    // 궤적 = 맥이 5분마다 저장한 최근 35분 위치(cctv_snap.merge_trail). 점선이 아니라 점+선: 간격이 곧 속도
+    if(a.tr?.length){const pts=[...a.tr,[a.lat,a.lon]],c=a.mil?"#f2c14e":"#6ea8ff";
+      L.polyline(pts,{color:c,weight:1,opacity:.45,interactive:false}).addTo(airTrail);
+      a.tr.forEach(p=>L.circleMarker(p,{radius:1.3,stroke:false,fillColor:c,fillOpacity:.55,interactive:false}).addTo(airTrail))}
+    L.marker([a.lat,a.lon],{interactive:true,keyboard:false,zIndexOffset:a.mil?1000:0,icon:acIcon(a,a.mil?22:16)})
+      .bindTooltip(esc(tip),{className:"tip"}).on("click",()=>showCard(a)).addTo(airLayer);
+  }
+  // 대만 해협 작은 창 — 한반도와 같은 「민항 통항」 지표. 중국군 기체는 신호를 안 켜므로 「군용 0」은 없음이 아니라 미송출
+  if(d.tw?.ac){
+    if(!airTwMap){airTwMap=L.map("airTwMap",{zoomControl:false,attributionControl:false,dragging:false,scrollWheelZoom:false,doubleClickZoom:false,touchZoom:false,boxZoom:false,keyboard:false});
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:8,className:"street"}).addTo(airTwMap);airTwLayer=L.layerGroup().addTo(airTwMap);$("airTw").hidden=false;airTwMap.fitBounds(TWB)}
+    airTwLayer.clearLayers();
+    for(const a of d.tw.ac)L.marker([a.lat,a.lon],{interactive:false,keyboard:false,icon:acIcon(a,a.mil?13:9)}).addTo(airTwLayer);
+    twCap(d.tw.ac.length,d.tw.ac.filter(a=>a.mil).length);
   }
   // 범례 = 지도 안 대수(군용은 0이어도 보인다 — 「없음」도 정보)
   const cnt={};for(const a of d.ac){const k=a.mil?"mil":a.cc||"etc";cnt[k]=(cnt[k]||0)+1}
@@ -1478,7 +1520,7 @@ async function loadAirLive(){
 new IntersectionObserver(es=>{airSeen=es.some(e=>e.isIntersecting);if(airSeen){initAirMap();airFit();loadAirLive()}}).observe($("air-p"));
 // 칸 높이는 한 화면 격자(.side flex)가 늦게 정한다 — 크기가 바뀔 때마다 다시 맞춘다(사용자가 움직인 뒤엔 위치 유지)
 let airUser=false;
-function airFit(){if(!airMap)return;airMap.invalidateSize();if(!airUser)airMap.fitBounds([[SOUTH[0],SOUTH[2]],[SOUTH[1],SOUTH[3]]])}
+function airFit(){if(!airMap)return;const short=$("airMap").clientHeight<240;$("air").classList.toggle("short",short);airMap.invalidateSize();if(!short&&airTwMap){airTwMap.invalidateSize();airTwMap.fitBounds(TWB)}if(!airUser)airMap.fitBounds([[SOUTH[0],SOUTH[2]],[SOUTH[1],SOUTH[3]]])}
 new ResizeObserver(airFit).observe($("airMap"));
 ["pointerdown","wheel"].forEach(t=>$("airMap").addEventListener(t,()=>{airUser=true},{passive:true}));
 setInterval(loadAirLive,60e3);

@@ -44,6 +44,14 @@ MIN_REFETCH = 10 * 60    # 실패 재조회 사이 최소 간격(초) — 재생
 QUOTA_MARK = Path.home() / "Library" / "Caches" / "jis-its-quota"   # 월 호출 한도 초과(4001) — 다음 달 1일까지 CCTV 조회 중단
 KICK_MARK = Path.home() / "Library" / "Caches" / "jis-kick"   # 워크플로별 마지막 깨운 시각(파일 mtime)
 REPO = "HaydenRyu/korea-security-watch"
+# 공역 지도(10/20): 기체 모양·사진·최근 궤적 복원(adsb.lol iframe 을 버리며 삼각형만 남았었다) + 대만 해협 작은 창
+TW_AREA = "https://api.adsb.lol/v2/lat/24.5/lon/120.5/dist/250"   # 대만 해협 — 한반도와 같은 「민항 통항」 지표용(중국군 기체는 ADS-B 를 안 켠다)
+TRAIL_CACHE = Path.home() / "Library" / "Caches" / "jis-air-trail.json"   # hex → [[ts, lat, lon], …] 최근 35분
+TRAIL_KEEP = 35 * 60
+PHOTO_CACHE = Path.home() / "Library" / "Caches" / "jis-plane-photos.json"  # hex → {"p": {src,link,by}|None, "at": ts}
+PHOTO_API = "https://api.planespotters.net/pub/photos/hex/{hex}"   # 공개 API — 서버 UA 에 연락처 URL 필수(없으면 403)
+PHOTO_UA = "jis-watch/1.0 (+https://haydenryu.github.io/korea-security-watch/)"
+PHOTO_TTL, PHOTO_NEG_TTL, PHOTO_MAX_NEW = 30 * 86400, 7 * 86400, 15   # 있음 30일·없음 7일 캐시, 회차당 새 조회 15건
 
 
 def live_ids() -> dict | None:
@@ -189,6 +197,80 @@ def icao_cc(hexid: str | None) -> str | None:
     return next((cc for cc, lo, hi in ICAO_CC if lo <= n <= hi), None)
 
 
+def _json_cache(path: Path) -> dict:
+    try:
+        return json.loads(path.read_text())
+    except (OSError, ValueError):
+        return {}
+
+
+def _save_cache(path: Path, doc: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(doc))
+    path.chmod(0o600)
+
+
+def merge_trail(prev: dict, ac: list[dict], now: float, keep: int = TRAIL_KEEP) -> dict:
+    """hex 별 최근 위치 목록을 이번 회차 위치로 잇는다. keep 초보다 오래된 점과 사라진 기체는 버린다."""
+    out = {}
+    for h, pts in prev.items():
+        pts = [p for p in pts if p[0] >= now - keep]
+        if pts:
+            out[h] = pts
+    for a in ac:
+        if a.get("hex"):
+            pts = out.setdefault(a["hex"], [])
+            if not pts or pts[-1][1:] != [a["lat"], a["lon"]]:
+                pts.append([round(now), a["lat"], a["lon"]])
+    return out
+
+
+def photo_entry(doc: dict | None) -> dict | None:
+    """planespotters 응답에서 첫 사진(큰 썸네일·링크·촬영자)만. 촬영자 표기는 API 약관."""
+    ph = (doc or {}).get("photos") or []
+    if not ph:
+        return None
+    x = ph[0]
+    src = (x.get("thumbnail_large") or x.get("thumbnail") or {}).get("src")
+    return {"src": src, "link": x.get("link"), "by": x.get("photographer")} if src else None
+
+
+def fetch_photo(hexid: str) -> dict | None:
+    req = urllib.request.Request(PHOTO_API.format(hex=hexid), headers={"User-Agent": PHOTO_UA})
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return {"photos": []}
+        raise
+
+
+def photos_for(hexes: list[str], cache: dict, now: float, fetch=fetch_photo, max_new: int = PHOTO_MAX_NEW) -> dict:
+    """캐시에 없거나 만료된 기체만 조회(회차당 max_new 건) — 조회 실패(404 외)는 캐시에 안 남겨 다음 회차에 다시."""
+    new = 0
+    for h in hexes:
+        c = cache.get(h)
+        if c and now - c["at"] < (PHOTO_TTL if c["p"] else PHOTO_NEG_TTL):
+            continue
+        if new >= max_new:
+            break
+        new += 1
+        try:
+            cache[h] = {"p": photo_entry(fetch(h)), "at": round(now)}
+        except (OSError, ValueError):
+            continue
+    return cache
+
+
+def _pack(a: dict, mil: bool, name: str | None) -> dict:
+    alt = a.get("alt_baro")
+    return {"hex": a.get("hex"), "lat": round(a["lat"], 3), "lon": round(a["lon"], 3), "trk": a.get("track", a.get("true_heading")),
+            "alt": 0 if alt == "ground" else alt, "t": a.get("t"),
+            "call": (a.get("flight") or "").replace("@", "").strip() or None, "mil": mil or None,
+            "name": name, "cc": icao_cc(a.get("hex"))}
+
+
 def air_snapshot() -> dict | None:
     """상황판 공역 지도용 항공기 목록(범위·군용 판정은 air_count.py 와 같은 상수)."""
     sys.path.insert(0, str(ROOT / "scripts"))
@@ -202,12 +284,30 @@ def air_snapshot() -> dict | None:
         if a.get("hex") in seen or a.get("lat") is None or a.get("lon") is None:
             continue
         seen.add(a.get("hex"))
-        alt = a.get("alt_baro")
-        out.append({"lat": round(a["lat"], 3), "lon": round(a["lon"], 3), "trk": a.get("track", a.get("true_heading")),
-                    "alt": 0 if alt == "ground" else alt, "t": a.get("t"),
-                    "call": (a.get("flight") or "").replace("@", "").strip() or None, "mil": (a.get("hex") in milhex) or None,
-                    "name": ac.NAMED.get(a.get("t") or "") if a.get("hex") in milhex else None, "cc": icao_cc(a.get("hex"))})
-    return {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "src": "adsb.lol", "ac": out}
+        is_mil = a.get("hex") in milhex
+        out.append(_pack(a, is_mil, ac.NAMED.get(a.get("t") or "") if is_mil else None))
+    doc = {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "src": "adsb.lol", "ac": out}
+    now = time.time()
+    try:   # 궤적·사진·대만은 부가 정보 — 실패해도 위치는 올라간다
+        trail = merge_trail(_json_cache(TRAIL_CACHE), out, now)
+        _save_cache(TRAIL_CACHE, trail)
+        for a in out:
+            pts = trail.get(a["hex"] or "", [])
+            if len(pts) > 1:
+                a["tr"] = [[p[1], p[2]] for p in pts[:-1]]
+        photos = photos_for([a["hex"] for a in out if a["hex"]], _json_cache(PHOTO_CACHE), now)
+        _save_cache(PHOTO_CACHE, photos)
+        for a in out:
+            if (c := photos.get(a["hex"] or "")) and c["p"]:
+                a["photo"] = c["p"]
+    except (OSError, ValueError, KeyError, TypeError) as e:
+        print(json.dumps({"air_extra": str(e)[:200]}))
+    try:
+        tw = [_pack(a, bool(a.get("dbFlags", 0) & 1), None) for a in ac.get(TW_AREA)["ac"] if a.get("lat") is not None and a.get("lon") is not None]
+        doc["tw"] = {"src": "adsb.lol", "ac": tw}
+    except (OSError, ValueError, KeyError):
+        pass
+    return doc
 
 
 def ffmpeg() -> str:

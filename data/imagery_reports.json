@@ -1,0 +1,128 @@
+{
+ "fetched_at": "2026-10-19T06:07:49.901024+00:00",
+ "note": "제목·링크·날짜만. 본문·이미지 전재 금지(각 사이트 이용 조건)",
+ "sources": {
+  "38north": {
+   "name": "38 North",
+   "feed": "https://www.38north.org/tag/satellite-imagery/feed/",
+   "ok": true,
+   "count": 8
+  },
+  "beyondparallel": {
+   "name": "CSIS Beyond Parallel",
+   "feed": "https://beyondparallel.csis.org/tag/satellite-imagery/feed/",
+   "ok": true,
+   "count": 10
+  }
+ },
+ "items": [
+  {
+   "source": "38north",
+   "title": "Several Naval Construction Projects Underway",
+   "link": "https://www.38north.org/2026/10/several-naval-construction-projects-underway/",
+   "date": "2026-10-02T13:31:30+00:00"
+  },
+  {
+   "source": "38north",
+   "title": "Land Clearance Could Signal Drone Base Expansion",
+   "link": "https://www.38north.org/2026/09/land-clearance-could-signal-drone-base-expansion/",
+   "date": "2026-09-30T21:02:25+00:00"
+  },
+  {
+   "source": "38north",
+   "title": "Signs of Life at New Sinuiju-Dandong Crossing",
+   "link": "https://www.38north.org/2026/09/signs-of-life-at-new-sinuiju-dandong-crossing/",
+   "date": "2026-09-28T17:58:35+00:00"
+  },
+  {
+   "source": "38north",
+   "title": "New North Korea-China Link Appears Close to Opening",
+   "link": "https://www.38north.org/2026/09/new-north-korea-china-link-appears-close-to-opening/",
+   "date": "2026-09-10T13:56:36+00:00"
+  },
+  {
+   "source": "38north",
+   "title": "North Korea Makes Significant Progress on New Trade Facility With China",
+   "link": "https://www.38north.org/2026/09/north-korea-makes-significant-progress-on-new-trade-facility-with-china/",
+   "date": "2026-09-01T20:42:54+00:00"
+  },
+  {
+   "source": "38north",
+   "title": "North Korea-Russia Bridge Could Open on Revised Deadline",
+   "link": "https://www.38north.org/2026/08/north-korea-russia-bridge-could-open-on-revised-deadline/",
+   "date": "2026-08-24T18:45:00+00:00"
+  },
+  {
+   "source": "38north",
+   "title": "Russian Construction Makes Progress Toward Bridge Opening",
+   "link": "https://www.38north.org/2026/08/russian-construction-makes-progress-toward-bridge-opening/",
+   "date": "2026-08-05T17:09:37+00:00"
+  },
+  {
+   "source": "38north",
+   "title": "Opening of New Road Link With Russia Unlikely in Near-Term",
+   "link": "https://www.38north.org/2026/06/opening-of-new-road-link-with-russia-unlikely-in-near-term/",
+   "date": "2026-06-30T15:09:58+00:00"
+  },
+  {
+   "source": "beyondparallel",
+   "title": "Suspected Uranium Enrichment Building at Yongbyon Complete",
+   "link": "https://beyondparallel.csis.org/suspected-uranium-enrichment-building-at-yongbyon-complete/",
+   "date": "2026-04-13T19:09:42+00:00"
+  },
+  {
+   "source": "beyondparallel",
+   "title": "A Closer Look at the Yelabuga UAV Factory",
+   "link": "https://beyondparallel.csis.org/a-closer-look-at-the-yelabuga-uav-factory/",
+   "date": "2026-03-09T21:02:14+00:00"
+  },
+  {
+   "source": "beyondparallel",
+   "title": "North Korean UAVs at Panghyon",
+   "link": "https://beyondparallel.csis.org/north-korean-uavs-at-panghyon/",
+   "date": "2026-03-03T15:19:39+00:00"
+  },
+  {
+   "source": "beyondparallel",
+   "title": "China Relocates PMZ Structure to Weihai Shipyard",
+   "link": "https://beyondparallel.csis.org/china-relocates-pmz-structure-to-weihai-shipyard/",
+   "date": "2026-02-02T22:54:54+00:00"
+  },
+  {
+   "source": "beyondparallel",
+   "title": "China Begins Relocating Structure from PMZ",
+   "link": "https://beyondparallel.csis.org/china-begins-relocating-structure-from-pmz/",
+   "date": "2026-01-28T04:06:20+00:00"
+  },
+  {
+   "source": "beyondparallel",
+   "title": "Chinese Buoys Near the South Korea-China PMZ",
+   "link": "https://beyondparallel.csis.org/chinese-buoys-near-the-south-korea-china-pmz/",
+   "date": "2025-12-15T18:12:56+00:00"
+  },
+  {
+   "source": "beyondparallel",
+   "title": "Progress at the Much-Delayed New Yalu River Bridge",
+   "link": "https://beyondparallel.csis.org/progress-at-the-much-delayed-new-yalu-river-bridge/",
+   "date": "2025-12-11T16:50:13+00:00"
+  },
+  {
+   "source": "beyondparallel",
+   "title": "Significant Progress of the North Korea-Russia Road Bridge",
+   "link": "https://beyondparallel.csis.org/significant-progress-of-the-north-korea-russia-road-bridge/",
+   "date": "2025-10-27T18:11:59+00:00"
+  },
+  {
+   "source": "beyondparallel",
+   "title": "Korea-China Standoffs in the PMZ",
+   "link": "https://beyondparallel.csis.org/korea-china-standoffs-in-the-pmz/",
+   "date": "2025-10-27T18:11:43+00:00"
+  },
+  {
+   "source": "beyondparallel",
+   "title": "Engine Test Preparations and Modernization at Sohae Satellite Launching Station",
+   "link": "https://beyondparallel.csis.org/engine-test-preparations-and-modernization-at-sohae-satellite-launching-station/",
+   "date": "2025-10-02T18:55:25+00:00"
+  }
+ ]
+}

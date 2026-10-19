@@ -14,16 +14,15 @@
     ],
     "border_clash": [
       "목함지뢰 해안 발견",
-      "지뢰 발견 DMZ 귀순",
-      "김여정 확성기 재개 검토"
+      "지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 공격",
+      "북한 GPS 교란",
       "North Korea cyber attack"
     ],
     "foreign_forces": [
-      "North Korea troops Russia",
-      "북러 군사협력 파병"
+      "북러 군사협력 파병",
+      "North Korea troops Russia"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -41,8 +40,7 @@
   "opened": [
     "https://www.nknews.org/feed/",
     "https://www.segye.com/newsView/20261019519617",
-    "https://www.yna.co.kr/view/AKR20261019132700065",
-    "https://www.yna.co.kr/view/AKR20261019164300504"
+    "https://kookbang.dema.mil.kr/newsWeb/20261019/1/ATCE_CTGR_0010010000/view.do"
   ],
   "overall_summary": "직전 회차 이후 새 징후는 없다. 강화 유실 추정 지뢰(이달 4번째)와 김여정 확성기 재개 검토 담화는 정례 범주로 유지한다.",
   "items": {
@@ -56,19 +54,14 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "인천 강화군 해안",
       "lat": 37.65,
       "lon": 126.4,
-      "summary": "강화 해안에서 북측 유실 추정 지뢰가 이달 네 번째로 발견됐고, 김여정은 남부국경 불안정을 거론하며 대남 확성기 방송 재개 검토를 밝혔다.",
-      "meaning": "군이 유실로 추정하고 인명 피해가 없는 반복 사례이며 위협 발언만 있어 정례 범주다.",
+      "summary": "강화 해안에서 북측 유실 추정 지뢰가 이달 네 번째로 발견됐고, 김여정은 대남 확성기 방송 재개 검토를 밝혔다.",
+      "meaning": "유실 추정이고 인명 피해가 없는 반복 사례이며 위협 발언만 있어 정례 범주다.",
       "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261019132700065"
-        },
         {
           "name": "NK News",
           "tier": "C",
@@ -77,8 +70,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "강화군 해안 지뢰 발견 이달 4번째(연합뉴스·NK News)",
-        "김여정 확성기방송 재개 검토 담화(연합뉴스 속보)"
+        "강화군 해안 지뢰 발견 이달 4번째(NK News)",
+        "김여정 확성기 방송 재개 검토 담화(NK News)"
       ],
       "speculation": []
     },
@@ -98,7 +91,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T19:11:33+00:00",
+  "checked_at": "2026-10-19T20:12:34+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

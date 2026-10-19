@@ -255,6 +255,15 @@ def is_exercise(doc: dict) -> bool:
     return bool(re.search(r"사격|훈련", text)) and bool(KR_UNIT.search(who)) and not FOREIGN.search(who + " " + text)
 
 
+def is_foreign_relay(doc: dict) -> bool:
+    """외국 기관 경보의 중계 — 발령 부대가 한국 기관이 아니고(공란 포함) 제목·분류·근거에 외국 표기가 있을 때.
+    지도(index.html drawNavwarn)가 이 값으로 「외국 경보 중계」를 표시한다 — 화면 쪽에 판정 사본을 두지 않는다(10/19).
+    발령 부대 공란 + 외국 표기 없음은 중계가 아니라 「발령 기관 미기재」(False)."""
+    who = str(doc.get("unit", ""))
+    text = " ".join(str(doc.get(k, "")) for k in ("noti_cat", "doc_type", "title", "basis"))
+    return not KR_UNIT.search(who) and bool(FOREIGN.search(who + " " + text))
+
+
 def valid_now(doc: dict, now: datetime) -> tuple[bool, bool]:
     """(유효 = 끝나지 않음, 진행 중)"""
     ws = [w for a in doc.get("areas", []) for w in a.get("windows", [])]
@@ -313,7 +322,7 @@ def run(key: str | None, prev: dict, now: datetime, get=None) -> tuple[dict, int
         for d in cache.values():
             ok, active = valid_now(d, now)
             if ok:
-                cur.append({k: v for k, v in d.items()} | {"active_now": active, "exercise": is_exercise(d)})
+                cur.append({k: v for k, v in d.items()} | {"active_now": active, "exercise": is_exercise(d), "foreign_relay": is_foreign_relay(d)})
         cur.sort(key=lambda d: (not d["active_now"], d["doc_num"]))
         kinds = {}
         for d in cur:

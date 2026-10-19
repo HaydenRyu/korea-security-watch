@@ -213,3 +213,11 @@ def test_firms_workflow_runs_navwarn_kr_without_blocking_hotspots():
     i, j = y.index("scripts/firms.py"), y.index("scripts/navwarn_kr.py")
     assert i < j and "continue-on-error: true" in y[y.rfind("- name", 0, j):j]
     assert "DATA_GO_KR_KEY: \"${{ secrets.DATA_GO_KR_KEY }}\"" in y and "state/navwarn_kr.json" in y
+
+
+def test_foreign_relay_flag_is_separate_from_blank_unit():
+    """중계 = 외국 표기 있음(발령 부대 공란·외국 기관) / 공란 + 외국 표기 없음 = 미기재(중계 아님) / 한국 기관 = 중계 아님."""
+    assert k.is_foreign_relay({"noti_cat": "해상사격", "doc_type": "상설", "unit": "", "title": "일본 해상보안청 항행경보 알림"})
+    assert k.is_foreign_relay({"noti_cat": "해상사격", "unit": "", "title": "항행경보 알림", "basis": "일본 해상보안청 항행경보(No.26-1844)"})
+    assert not k.is_foreign_relay({"noti_cat": "해상사격", "unit": "", "title": "해상사격훈련 실시 알림"})
+    assert not k.is_foreign_relay({"noti_cat": "해상사격", "unit": "합동참모본부", "title": "한미 연합 해상사격훈련 알림"})

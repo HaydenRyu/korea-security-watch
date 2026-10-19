@@ -221,3 +221,28 @@ def test_foreign_relay_flag_is_separate_from_blank_unit():
     assert k.is_foreign_relay({"noti_cat": "해상사격", "unit": "", "title": "항행경보 알림", "basis": "일본 해상보안청 항행경보(No.26-1844)"})
     assert not k.is_foreign_relay({"noti_cat": "해상사격", "unit": "", "title": "해상사격훈련 실시 알림"})
     assert not k.is_foreign_relay({"noti_cat": "해상사격", "unit": "합동참모본부", "title": "한미 연합 해상사격훈련 알림"})
+
+
+def test_gateway_timeout_retries_with_backoff_then_succeeds():
+    """SERVICETIMEOUT(05) 가 두 번 이어져도 백오프(5·25·60초 창) 안에 살아나면 성공, 끝까지 05 면 4회 뒤 실패."""
+    err05 = '<response><header><resultCode>05</resultCode><resultMsg>SERVICETIMEOUT_ERROR</resultMsg></header></response>'
+    orig_http1, orig_sleep = k._http1, k.time.sleep
+
+    def run(bodies):
+        waits, n = [], [0]
+
+        def http1(url, params, key):
+            n[0] += 1
+            return bodies[min(n[0], len(bodies)) - 1]
+        k._http1, k.time.sleep = http1, lambda s: waits.append(s)
+        try:
+            return k._http(k.EP_ZONE, {"pageNo": 1}, "k"), waits, n[0]
+        except k.ApiError as e:
+            return e, waits, n[0]
+    try:
+        body, waits, n = run([err05, err05, ZONE_XML])
+        assert body == ZONE_XML and waits == [5, 25] and n == 3
+        err, waits, n = run([err05])
+        assert isinstance(err, k.ApiError) and "code 05" in err.detail and waits == [5, 25, 60] and n == 4
+    finally:
+        k._http1, k.time.sleep = orig_http1, orig_sleep

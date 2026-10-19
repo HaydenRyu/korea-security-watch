@@ -54,7 +54,8 @@ ZONE_REFRESH_DAYS = 7
 NO_WINDOW_KEEP_DAYS = 7  # 알림일을 못 읽은 문서는 처음 본 뒤 7일만 유효로 둔다
 ROWS = 100
 TIMEOUT = 30             # 10/19 GHA 실측: 20초 timed out 1회 — 해외 러너→data.go.kr 지연
-RETRIES = 3              # 통신 오류·시간초과·SERVICETIMEOUT(05)만 재시도(키·한도 오류는 즉시)
+RETRY_WAITS = (5, 25, 60)  # 재시도 간격(초) — 10/19 16:14Z 회차는 5초×2 = 15초 창 안에 게이트웨이 SERVICETIMEOUT(05) 3연속이라 실패. 1~2분짜리 지연은 넘기도록 90초 창
+RETRIES = len(RETRY_WAITS) + 1  # 통신 오류·시간초과·SERVICETIMEOUT(05)만 재시도(키·한도 오류는 즉시)
 BUDGET_S = 180           # 회차 상한 — 넘으면 받은 상세까지 캐시하고 다음 회차에 이어 받는다(firms 잡 8분 안)
 KEY_ERRORS = ("SERVICE_KEY_IS_NOT_REGISTERED", "SERVICE_ACCESS_DENIED", "SERVICE_KEY_IS_NULL",
               "UNREGISTERED_IP", "DEADLINE_HAS_EXPIRED")
@@ -86,10 +87,11 @@ def _http(url: str, params: dict, key: str) -> str:
             parse_response(body)  # 게이트웨이 오류면 여기서 ApiError
             return body
         except ApiError as e:
-            retry = e.status == "error" and not e.detail.startswith("HTTP") and ("code 05" in e.detail or "Error" in e.detail or "timed out" in e.detail)
+            d = e.detail.lower()
+            retry = e.status == "error" and not e.detail.startswith("HTTP") and ("code 05" in d or "error" in d or "timed out" in d)
             if not retry or i == RETRIES - 1:
                 raise ApiError(e.status, f"{where}: {e.detail}") from None
-            time.sleep(5)
+            time.sleep(RETRY_WAITS[i])
     raise ApiError("error", f"{where}: 재시도 소진")
 
 
@@ -167,7 +169,7 @@ def _raise_gateway(msg: str, code: str):
 def _check_result(code: str, msg: str):
     if code in ("", "00", "0", "03"):  # 03 = NODATA_ERROR → 정상 0건
         return
-    if code in ("20", "22", "30", "31", "32"):
+    if code in ("05", "20", "22", "30", "31", "32"):  # 05 = SERVICETIMEOUT — 본문 header 로 와도 cmmMsgHeader 와 같은 문구(「… (code 05)」)로 맞춰야 _http 가 재시도한다(10/20: 이 경로는 재시도 조건에 안 걸려 즉시 실패했다)
         _raise_gateway(msg, code)
     raise ApiError("error", f"resultCode {code} {msg}")
 

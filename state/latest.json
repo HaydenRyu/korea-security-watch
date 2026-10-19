@@ -15,7 +15,7 @@
     "border_clash": [
       "목함지뢰 해안 발견",
       "NLL 귀순 월선",
-      "김여정 확성기 담화"
+      "합참 발표 10월 19일 지뢰 귀순 NLL"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
@@ -35,7 +35,7 @@
     ],
     "gov_warning": [
       "진돗개 데프콘 발령",
-      "합참 북한 발표 10월 19일"
+      "North Korea Reuters AP October 19 2026"
     ]
   },
   "opened": [
@@ -44,9 +44,11 @@
     "https://www.segye.com/newsView/20261019519617",
     "https://www.nknews.org/2026/10/another-north-korean-mine-found-on-south-korean-island-fourth-in-last-month/",
     "https://www.nknews.org/2026/10/kim-yo-jong-threatens-restart-of-north-korean-loudspeakers-amid-border-tensions/",
+    "https://www.nknews.org/2026/10/rok-kicks-off-exercise-on-countering-north-korea-postponed-drills-with-us/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.aljazeera.com/xml/rss/all.xml"
   ],
-  "overall_summary": "직전 회차 이후 새 징후는 없다. 강화 볼음도 유실 추정 지뢰(인명 피해 없음)와 김여정의 확성기 재개 검토 담화(시한·표적 없음)는 정례 범주이며 브런슨 DMZ 발언은 한미 정치 논란이다.",
+  "overall_summary": "직전 회차 이후 새 징후는 없다. 강화 볼음도 유실 추정 지뢰(피해 없음)와 김여정의 확성기 재개 검토 담화(시한·표적 없음)는 정례 범주이며, 합참 호국훈련(10/30까지)은 연례 정례 훈련이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -109,7 +111,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T14:15:22+00:00",
+  "checked_at": "2026-10-19T15:13:48+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -137,6 +139,6 @@
       }
     }
   ],
-  "world_context": "미·러 제재 협상과 중동 분쟁 재점화가 미국의 전력 배분과 대북 제재 환경에 간접적으로 연결된다.",
-  "world_at": "2026-10-19T12:16:15+00:00"
+  "world_context": "미·러 제재 유예와 중동 분쟁 재점화가 국제 안보 환경의 주된 변수다.",
+  "world_at": "2026-10-19T15:13:48+00:00"
 }

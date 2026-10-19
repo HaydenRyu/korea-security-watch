@@ -1,24 +1,24 @@
 {
- "at": "2026-10-19T06:09:57+00:00",
- "south": 73,
- "area": 98,
+ "at": "2026-10-19T06:18:40+00:00",
+ "south": 79,
+ "area": 101,
  "baseline": null,
  "ratio": null,
- "samples": 0,
+ "samples": 1,
  "mil": [
   {
    "type": "SURN",
    "name": null,
    "call": "KNP970",
-   "lat": 37.45,
-   "lon": 126.99
+   "lat": 37.44,
+   "lon": 126.98
   },
   {
    "type": "C17",
    "name": "C-17 수송기",
    "call": "RCH720",
-   "lat": 36.84,
-   "lon": 127.29
+   "lat": 36.17,
+   "lon": 128.17
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

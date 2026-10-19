@@ -579,7 +579,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 @media (min-width:760px){
   /* 세계 칸 머리띠(탭·링크·AI·시각·참고)는 760 이상 모든 폭에서 두 줄로 접힌다 — 휴대폰 규칙(.ph 위아래 8 · 줄 사이 8)과 같은 값.
      전에는 넷째 칸만 위아래 8·줄 사이 4 였고 834~1799 는 위아래 0 이었다(10/19 통일) */
-  #world-p .ph{padding:var(--s8) var(--pad);row-gap:var(--s8)}
+  #world-p .ph,#map-p .ph{padding:var(--s8) var(--pad);row-gap:var(--s8)}  /* 10/20: 지도 머리띠도 834~1470 전부 두 줄(제목 줄 + 레이어 8개)인데 위아래 0 이라 제목이 위에 2px·버튼이 바닥에 1px 붙어 있었다(hayden) */
   #fac-p{grid-column:1/-1}
   .fa-g{grid-template-columns:repeat(2,minmax(0,1fr))}
   /* 카드가 나란히 서면 근거 줄 수(0~2)와 무관하게 수준·근거·출처가 같은 y — 근거 칸은 2줄 자리를 잡는다 */
@@ -692,7 +692,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
         <div><div class="lbl" id="glabel">대기</div>
           <div class="ladder" id="scale"><span>평시</span><span>주의</span><span>경계</span><span>위험</span></div></div>
       </div>
-      <div class="elapsed"><div><b id="eG">—</b><span id="eGs">등급 유지</span></div><div><b id="eS">—</b><span id="eSs">징후 경과</span></div></div>
+      <div class="elapsed"><div><b id="eG">—</b><span id="eGs" title="지금 등급이 이어진 시간(남은 시간이 아니다)">등급 유지</span></div><div><b id="eS">—</b><span id="eSs">징후 경과</span></div></div>
       <p id="summary">첫 분석 결과를 기다리는 중입니다.</p>
       <a class="phs" id="phase" href="forecast.html#ladder"><span class="pk">긴장 국면</span><b class="no">불러오는 중</b><span class="px">사다리 ›</span></a>
     </div>
@@ -843,8 +843,8 @@ function sinceOf(events,latest){const g=latest?.grade;G_SINCE=null;S_SINCE=null;
   for(let i=events.length-1;i>=0;i--){const e=events[i];if(e.status!=="ok")continue;if(!(e.sources||[]).some(x=>on.has(x.item)))break;S_SINCE=e.checked_at}}
 const dur=t=>{const m=Math.max(0,Math.round((Date.now()-new Date(t))/60000)),h=Math.floor(m/60),d=Math.floor(h/24);return d?`${d}<small>일</small>${h%24}<small>시간</small>`:`${h}<small>시간</small>${String(m%60).padStart(2,"0")}<small>분</small>`};
 function tickElapsed(){const g=$("gnum").textContent,L=LABEL[+g];
-  $("eG").innerHTML=G_SINCE?dur(G_SINCE):"—";$("eGs").innerHTML=G_SINCE?`<i>${L}</i> · ${short(G_SINCE)}부터`:"등급 유지";
-  $("eS").innerHTML=S_SINCE?dur(S_SINCE):"—";$("eSs").textContent=S_SINCE?`징후 · ${short(S_SINCE)}부터`:"징후 없음"}
+  $("eG").innerHTML=G_SINCE?dur(G_SINCE):"—";$("eGs").innerHTML=G_SINCE?`<i>${L}</i> 유지 중 · ${short(G_SINCE)}부터`:"등급 유지";
+  $("eS").innerHTML=S_SINCE?dur(S_SINCE):"—";$("eSs").textContent=S_SINCE?`징후 지속 중 · ${short(S_SINCE)}부터`:"징후 없음"}
 // 정례 판정 = diff_state.is_routine 과 같은 식(최후통첩은 정례 아님, 상공 통과 경보는 정례)
 const isRoutine=it=>it.ultimatum===true?false:it.overflight_alert===true?true:!!it.routine;
 // 휴대폰 손가락 표적: 열점 점 지름 5px·CCTV 10px 이라 눌리지 않았다(10/18 hayden) → 터치 기기에서만 누르는 범위를 넓힌다(보이는 크기 그대로)
@@ -1543,7 +1543,10 @@ async function loadAirLive(){
     if(!airTwMap){airTwMap=L.map("airTwMap",{zoomControl:false,attributionControl:false,dragging:false,scrollWheelZoom:false,doubleClickZoom:false,touchZoom:false,boxZoom:false,keyboard:false});
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:8,className:"street"}).addTo(airTwMap);airTwLayer=L.layerGroup().addTo(airTwMap);$("airTw").hidden=false;airTwMap.fitBounds(TWB)}
     airTwLayer.clearLayers();
-    for(const a of d.tw.ac)L.marker([a.lat,a.lon],{interactive:false,keyboard:false,icon:acIcon(a,a.mil?13:9)}).addTo(airTwLayer);
+    for(const a of d.tw.ac){L.marker([a.lat,a.lon],{interactive:false,keyboard:false,icon:acIcon(a,a.mil?13:9)}).addTo(airTwLayer);
+      // 큰 지도에도 같이 둔다 — 작은 창을 눌러 큰 지도를 대만으로 돌렸을 때 빈 바다가 아니라 같은 기체가 보이도록(10/20 hayden)
+      const tip=[a.call,a.t,a.alt?`${Math.round(a.alt/100)*100}ft`:"지상"].filter(Boolean).join(" · ")+(a.mil?" · 군용":a.cc?` · ${AC_NAME[a.cc]} 등록`:"")+" · 누르면 상세";
+      L.marker([a.lat,a.lon],{interactive:true,keyboard:false,zIndexOffset:a.mil?1000:0,icon:acIcon(a,a.mil?22:16)}).bindTooltip(esc(tip),{className:"tip"}).on("click",()=>showCard(a)).addTo(airLayer)}
     twCap(d.tw.ac.length,d.tw.ac.filter(a=>a.mil).length);
   }
   // 범례 = 지도 안 대수(군용은 0이어도 보인다 — 「없음」도 정보)

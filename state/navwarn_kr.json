@@ -4,10 +4,10 @@
   "https://www.data.go.kr/data/15057792/openapi.do",
   "https://www.data.go.kr/data/15058193/openapi.do"
  ],
- "fetched_at": "2026-10-19T10:39:03.753423+00:00",
+ "fetched_at": "2026-10-19T11:16:43.718247+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-19T10:39:03.753423+00:00",
+ "last_ok_at": "2026-10-19T11:16:43.718247+00:00",
  "warnings": [
   {
    "doc_num": "26-352",
@@ -2641,7 +2641,8 @@
    "source": "국립해양조사원 항행경보(공공데이터포털)",
    "url": "https://www.data.go.kr/data/15057792/openapi.do",
    "active_now": true,
-   "exercise": true
+   "exercise": true,
+   "foreign_relay": false
   },
   {
    "doc_num": "26-353",
@@ -2931,7 +2932,8 @@
    "source": "국립해양조사원 항행경보(공공데이터포털)",
    "url": "https://www.data.go.kr/data/15057792/openapi.do",
    "active_now": true,
-   "exercise": true
+   "exercise": true,
+   "foreign_relay": false
   },
   {
    "doc_num": "26-355",
@@ -4306,7 +4308,8 @@
    "source": "국립해양조사원 항행경보(공공데이터포털)",
    "url": "https://www.data.go.kr/data/15057792/openapi.do",
    "active_now": true,
-   "exercise": true
+   "exercise": true,
+   "foreign_relay": false
   },
   {
    "doc_num": "26-356",
@@ -4491,7 +4494,8 @@
    "source": "국립해양조사원 항행경보(공공데이터포털)",
    "url": "https://www.data.go.kr/data/15057792/openapi.do",
    "active_now": true,
-   "exercise": true
+   "exercise": true,
+   "foreign_relay": false
   },
   {
    "doc_num": "26-358",
@@ -4960,7 +4964,8 @@
    "source": "국립해양조사원 항행경보(공공데이터포털)",
    "url": "https://www.data.go.kr/data/15057792/openapi.do",
    "active_now": true,
-   "exercise": true
+   "exercise": true,
+   "foreign_relay": false
   },
   {
    "doc_num": "26-323",
@@ -5160,7 +5165,8 @@
    "source": "국립해양조사원 항행경보(공공데이터포털)",
    "url": "https://www.data.go.kr/data/15057792/openapi.do",
    "active_now": false,
-   "exercise": true
+   "exercise": true,
+   "foreign_relay": false
   },
   {
    "doc_num": "26-332",
@@ -5332,7 +5338,8 @@
    "source": "국립해양조사원 항행경보(공공데이터포털)",
    "url": "https://www.data.go.kr/data/15057792/openapi.do",
    "active_now": false,
-   "exercise": false
+   "exercise": false,
+   "foreign_relay": true
   }
  ],
  "counts": {

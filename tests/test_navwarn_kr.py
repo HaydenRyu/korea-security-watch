@@ -116,6 +116,17 @@ def test_key_never_appears_in_output_logs_or_errors():
     assert k.redact(f"a?serviceKey={KEY}&b=1", KEY) == "a?serviceKey=***&b=1"
 
 
+def test_xml_with_bare_ampersand_and_control_chars_still_parses():
+    body = LIST_XML.replace("해상사격훈련이 아래와", "R&D 해역 \x01사격훈련이 아래와")
+    items, total = k.parse_response(body)
+    assert total == 1 and items[0]["content"].startswith("R&D 해역")
+    try:
+        k.parse_response("<response><header><resultCode>00</resultCode></header><body><items><item>")
+        raise AssertionError
+    except k.ApiError as e:
+        assert e.status == "error" and "XML" in e.detail
+
+
 def test_windows_cross_midnight_and_reuse_last_time():
     w = k.windows("2026-10-19,2026-10-20", "20:00 ~ 02:00")
     assert w[0] == {"from": "2026-10-19T11:00:00+00:00", "to": "2026-10-19T17:00:00+00:00"} and len(w) == 2

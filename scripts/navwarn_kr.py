@@ -106,15 +106,32 @@ def parse_response(body: str) -> tuple[list[dict], int]:
         it = it.get("item", []) if isinstance(it, dict) else it
         it = [it] if isinstance(it, dict) else (it or [])
         return [{k: ("" if v is None else str(v)) for k, v in x.items()} for x in it], int(bd.get("totalCount") or 0)
-    try:
-        root = ET.fromstring(b)
-    except ET.ParseError:
-        raise ApiError("error", "응답 형식 오류(XML·JSON 아님): " + re.sub(r"\s+", " ", b)[:120]) from None
+    root = _xml(b)
     if root.tag == "OpenAPI_ServiceResponse":
         _raise_gateway(root.findtext(".//errMsg") or "", root.findtext(".//returnReasonCode") or "")
     _check_result(root.findtext(".//header/resultCode") or "", root.findtext(".//header/resultMsg") or "")
     items = [{c.tag: (c.text or "").strip() for c in it} for it in root.iter("item")]
     return items, int(root.findtext(".//totalCount") or 0)
+
+
+_BARE_AMP = re.compile(r"&(?!(?:amp|lt|gt|quot|apos|#\d+|#x[0-9a-fA-F]+);)")
+_CTRL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
+
+
+def _xml(b: str):
+    """KHOA 본문 XML 은 내용 속 「&」·제어문자를 이스케이프하지 않은 채 오기도 한다(10/19 실측: 정상 응답이 ParseError)
+    → 실패하면 맨 「&」를 &amp; 로·제어문자를 지우고 한 번 더. 그래도 안 되면 오류 위치 주변을 남긴다."""
+    try:
+        return ET.fromstring(b)
+    except ET.ParseError:
+        pass
+    fixed = _CTRL.sub(" ", _BARE_AMP.sub("&amp;", b))
+    try:
+        return ET.fromstring(fixed)
+    except ET.ParseError as e:
+        line, col = e.position
+        ln = fixed.splitlines()[line - 1] if 0 < line <= len(fixed.splitlines()) else ""
+        raise ApiError("error", f"응답 XML 해석 실패({e}): …{ln[max(0, col - 60):col + 60]}…") from None
 
 
 def _raise_gateway(msg: str, code: str):

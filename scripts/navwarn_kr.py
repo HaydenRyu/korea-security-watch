@@ -330,6 +330,7 @@ def run(key: str | None, prev: dict, now: datetime, get=None) -> tuple[dict, int
     # 3) 고정 구역: 주 1회. 실패해도 경보는 유지(zones.status 로 드러낸다)
     z = doc["zones"]
     stale = not z.get("fetched_at") or now - datetime.fromisoformat(z["fetched_at"]) > timedelta(days=ZONE_REFRESH_DAYS)
+    stale = stale or any("radius_km" not in i for i in z.get("items", []))  # 원형 다각형화 이전 판
     if stale or z.get("status") != "ok":
         try:
             items = [zone_of(x) for x in fetch_all(get, EP_ZONE, {})]

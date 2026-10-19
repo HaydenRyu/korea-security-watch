@@ -1035,6 +1035,7 @@ function initMap(){
       <p>지하철역은 민방위 대피소로 지정된 곳이 많습니다. 지정 여부는 대피소 레이어·국민재난안전포털에서 확인하세요.</p></div>`,{className:"jpop",maxWidth:280})
     .bindTooltip(`${x[0]} · ${x[1]}`,{className:"tip",direction:"top",offset:[0,-6]})));
   toggle(document.querySelector("[data-layer=subway]"),layers.subway);
+  document.querySelector("[data-layer=subway]").click();  // 기본 켬(10/19 hayden: 열점·대피소·지하철 기본 켬)
   document.addEventListener("click",ev=>{if(!ev.target.closest(".findSubway"))return;ev.preventDefault();
     const sb=document.querySelector("[data-layer=subway]");if(sb.getAttribute("aria-pressed")!=="true")sb.click();
     map.flyToBounds(L.latLngBounds(SUBWAY.map(x=>[x[2],x[3]]).concat([[HOME.lat,HOME.lon]])).pad(.2),{duration:.8,maxZoom:14});
@@ -1050,6 +1051,7 @@ function drawShelters(doc){
   doc.shelters.forEach(x=>L.circleMarker([x.lat,x.lon],{renderer:hitR(),radius:6,color:"#05080e",weight:1.5,fillColor:"#5fd0b8",fillOpacity:1})  // 캔버스는 CSS 변수를 못 읽는다 — var() 를 주면 검정으로 칠해진다(10/18). 값 = --g0
     .bindTooltip(`${esc(x.name)}<br><span style="color:var(--fog)">${x.dong?`${esc(x.dong)} · `:""}${esc(x.addr)} · ${x.dist_m}m</span>`,{className:"tip"}).addTo(layers.shelter));
   toggle(b,layers.shelter);map.attributionControl.addAttribution("대피소 © 국민재난안전포털");
+  if(b.getAttribute("aria-pressed")!=="true")b.click();  // 기본 켬(10/19)
   document.querySelectorAll(".findShelter").forEach(fl=>fl.textContent=shelterLabel());
   document.addEventListener("click",ev=>{if(!ev.target.closest(".findShelter"))return;ev.preventDefault();
     if(b.getAttribute("aria-pressed")!=="true")b.click();
@@ -1100,7 +1102,7 @@ function drawFirms(doc){
     if(HOVER)m.bindTooltip(()=>`위성 열점 · ${short(p.t)}${p.border?" · 접경 구역":""}${p._w?`<br><span style="color:var(--fog)">${esc(p._w)}</span>`:""}<br><span style="color:var(--fog)">누르면 설명</span>`,{className:"tip"});
   });
   toggle(b,layers.firms);
-  if(doc.border_count){b.setAttribute("aria-pressed","true");layers.firms.addTo(map)} // 접경 열점이 있으면 기본으로 켠다
+  b.setAttribute("aria-pressed","true");layers.firms.addTo(map);  // 기본 켬(10/19 hayden) — 전엔 접경 열점이 있을 때만
 }
 function drawPins(items){
   if(!map)return;pinLayer.clearLayers();

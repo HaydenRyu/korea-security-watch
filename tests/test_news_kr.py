@@ -168,7 +168,7 @@ def test_sources_feeds_are_tier_b_and_https():
     feeds = m.load_feeds(json.loads((ROOT / "data" / "sources.json").read_text()))
     src = json.loads((ROOT / "data" / "sources.json").read_text())
     outlets = {f["outlet"] for f in feeds}
-    assert len(outlets) >= 7 and all(f["tier"] == "B" and f["url"].startswith("https://") for f in feeds)
+    assert len(outlets) >= 6 and all(f["tier"] == "B" and f["url"].startswith("https://") for f in feeds)
     excluded = {x["name"] for x in src["news_feed_audit"]["excluded"]}
     assert not outlets & excluded and all(x["reason"] for x in src["news_feed_audit"]["excluded"])  # 제외 매체는 수집하지 않는다
 
@@ -181,3 +181,65 @@ def test_time_budget_marks_remaining_feeds_failed():
     finally:
         m.BUDGET_S = old
     assert doc["status"] == "error" and all("예산" in f["error"] for f in doc["feeds"])
+
+
+# ── 이용 제한 표시 → 여는 순서 ───────────────────────────────────────
+def test_sources_restrict_codes_are_defined_and_known():
+    src = json.loads((ROOT / "data" / "sources.json").read_text())
+    codes = src["news_feed_audit"]["restrict_codes"]
+    feeds = m.load_feeds(src)
+    by = {f["outlet"]: f["restrict"] for f in feeds}
+    assert set(codes) == set(m.RESTRICT_RANK)  # 정의된 코드와 수집기 등급표가 같다
+    assert all(set(r) <= set(codes) for r in by.values())
+    assert by["연합뉴스"] == ["ai_use"] and by["동아일보"] == ["ai_use"] and by["SBS"] == ["ai_use"]
+    assert by["국민일보"] == ["claude_user_blocked"] and by["세계일보"] == [] and by["국방일보"] == []
+    assert "조선일보" not in by  # 약관 제21조 — 자동화 도구 활용 불허
+    v = {x["name"]: x for x in src["news_feed_audit"]["verified"]}
+    assert {"조선일보", "국민일보", "국방일보"} <= set(v) and all(x["clause"] and x["verdict"] for x in v.values())
+
+
+def _clu(arts, restrict):
+    by = {k: v for k, v in restrict.items()}
+    for a in arts:
+        a["restrict"] = m.restrict_of(a, by)
+    return m.cluster(arts)
+
+
+R = {"연합뉴스": ["ai_use"], "동아일보": ["ai_use"], "국민일보": ["claude_user_blocked"], "세계일보": [], "국방일보": []}
+
+
+def test_cluster_orders_unrestricted_original_first():
+    t = "강화 해안서 北 유실 추정 지뢰 또 발견"
+    cs = _clu([_art("연합뉴스", t, "https://a/1", "2026-10-19T06:00:00+00:00"),
+               _art("국민일보", t, "https://d/1", "2026-10-19T06:10:00+00:00"),
+               _art("동아일보", t, "https://b/1", "2026-10-19T06:20:00+00:00"),
+               _art("국방일보", t, "https://k/1", "2026-10-19T07:30:00+00:00")], R)
+    c = cs[0]
+    assert [a["outlet"] for a in c["articles"]] == ["국방일보", "연합뉴스", "동아일보", "국민일보"]
+    assert c["unrestricted"] is True and c["openable"] is True
+    assert "restrict" not in c["articles"][0] and c["articles"][1]["restrict"] == ["ai_use"]
+    assert c["first"] == "2026-10-19T06:00:00+00:00"  # 묶음 시각은 정렬과 무관
+
+
+def test_wire_copy_of_restricted_wire_inherits_restriction():
+    t = "강화 해안서 北 유실 추정 지뢰 또 발견"
+    cs = _clu([_art("연합뉴스", t, "https://a/1", "2026-10-19T06:00:00+00:00"),
+               _art("세계일보", t, "https://e/1", "2026-10-19T06:10:00+00:00", wire="연합뉴스")], R)
+    c = cs[0]
+    assert c["unrestricted"] is False and c["openable"] is True  # 세계일보 연합 전재는 제한 없는 원문이 아니다
+    assert all(a["restrict"] == ["ai_use"] for a in c["articles"])
+
+
+def test_blocked_only_cluster_is_not_openable_and_unknown_code_is_not_rank0():
+    t = "강화 해안서 北 유실 추정 지뢰 또 발견"
+    c = _clu([_art("국민일보", t, "https://d/1", "2026-10-19T06:00:00+00:00")], R)[0]
+    assert c["unrestricted"] is False and c["openable"] is False
+    assert m.open_rank({"restrict": ["new_code"]}) == 1 and m.open_rank({}) == 0
+
+
+def test_collect_marks_restrict_from_feed_config():
+    feeds = [{"outlet": "연합뉴스", "tier": "B", "section": "사회", "url": "ok", "restrict": ["ai_use"]}]
+    doc = m.collect(feeds, KW, {}, NOW, fetcher=_fetcher)
+    a = doc["clusters"][0]["articles"][0]
+    assert a["restrict"] == ["ai_use"] and doc["clusters"][0]["unrestricted"] is False
+    assert "restrict" not in json.dumps(m.public(doc))  # 공개판은 기사 단위 정보가 없다

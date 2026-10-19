@@ -204,6 +204,9 @@
       {
        "name": "연합뉴스",
        "url": "https://www.yna.co.kr",
+       "restrict": [
+        "ai_use"
+       ],
        "note": "북한 기사가 사회·지방면으로도 나간다(2026-10-19 강화 해안 지뢰는 북한 피드에 없고 사회·지방 피드에만 있었다). RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
        "feeds": [
         {
@@ -246,6 +249,9 @@
       {
        "name": "SBS",
        "url": "https://news.sbs.co.kr",
+       "restrict": [
+        "ai_use"
+       ],
        "note": "RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
        "feeds": [
         {
@@ -263,23 +269,11 @@
        ]
       },
       {
-       "name": "조선일보",
-       "url": "https://www.chosun.com",
-       "note": "이용약관 미확인 — 온라인신문협회 디지털뉴스 이용규칙(개인 구독 한정)을 따른다. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
-       "feeds": [
-        {
-         "section": "정치",
-         "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/politics/?outputType=xml"
-        },
-        {
-         "section": "사회",
-         "url": "https://www.chosun.com/arc/outboundfeeds/rss/category/national/?outputType=xml"
-        }
-       ]
-      },
-      {
        "name": "동아일보",
        "url": "https://www.donga.com",
+       "restrict": [
+        "ai_use"
+       ],
        "note": "RSS 안내: 개인 이용자의 비상업적 사용에만 허용, AI 학습 이용 금지. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
        "feeds": [
         {
@@ -295,7 +289,10 @@
       {
        "name": "국민일보",
        "url": "https://www.kmib.co.kr",
-       "note": "이용약관 미확인 — 협회 이용규칙(개인 구독 한정). robots.txt 가 Claude-User 를 막는다: 루틴은 원문을 열지 않고(curl 우회 금지) 다른 매체로 확인한다. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
+       "restrict": [
+        "claude_user_blocked"
+       ],
+       "note": "회원약관(29조)에 자동수집·RSS·AI 조항 없음(2026-10-19 확인) — 협회 이용규칙(개인 구독 한정)을 따른다. robots.txt 가 Claude-User 를 막는다: 루틴은 원문을 열지 않고(curl 우회 금지) 다른 매체로 확인한다. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
        "feeds": [
         {
          "section": "정치",
@@ -325,7 +322,7 @@
       {
        "name": "국방일보",
        "url": "https://kookbang.dema.mil.kr",
-       "note": "국방홍보원 발행(국방부 소속) — 군 공식 입장 보도라 A 가 아니라 B 로 둔다. 날짜만 있는 일간 피드. 이용약관 미확인. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
+       "note": "국방홍보원 발행(국방부 소속) — 군 공식 입장 보도라 A 가 아니라 B 로 둔다. 날짜만 있는 일간 피드. 국방일보·국방홍보원 사이트에 이용약관·저작권정책 페이지가 없다(2026-10-19 확인, 하단 링크는 개인정보처리방침·이메일 무단수집 거부뿐). RSS 안내는 「자동으로 확인」하는 구독 서비스로 소개한다. RSS 는 개인·비상업 구독만 허용 — 피드 내용(제목·링크)을 레포에 올리지 않는다(scripts/news_kr.py 공개 모드는 건수만)",
        "feeds": [
         {
          "section": "국방",
@@ -493,7 +490,16 @@
  "news_feed_audit": {
   "checked": "2026-10-19",
   "note": "국내 언론 피드 자동 수집(scripts/news_kr.py) 판정. 채택 매체는 tiers B 의 feeds 에 있다. 아래는 제외 매체와 사유 — 약관·robots 가 바뀌면 다시 본다.",
+  "restrict_codes": {
+   "ai_use": "매체가 「AI 학습 및 활용 금지」「AI학습 이용 금지」를 표기한다(연합 RSS copyright·동아·SBS 기사 하단). 키워드 거르기(결정론)는 그대로 돌리되, 루틴은 같은 사건 묶음의 제한 없는 매체 원문을 먼저 열고 이 매체 원문은 대체 매체가 없을 때만 연다. 연합 전재(wire_copy)도 연합 표기가 따라와 같은 등급",
+   "claude_user_blocked": "robots.txt 가 Claude-User 를 막는다 — 루틴은 원문을 열지 않는다(curl 우회 금지). 제목은 후보 신호로만 쓰고 다른 매체로 확인한다"
+  },
   "excluded": [
+   {
+    "name": "조선일보",
+    "url": "https://www.chosun.com/subscribe/term/",
+    "reason": "이용약관 제21조(인공지능 학습 및 대량 크롤링) ①「사전에 합의되지 않거나 계약 되지 않은 로봇, 매크로, 스파이더, 스크래퍼 등 자동화 도구를 통해 활용하는 행위를 허용하지 않습니다」 ③「공익 및 비영리 목적으로 … 활용하는 경우에도 반드시 사전에 회사의 동의를 받아야 합니다」. 2026-10-19 첫 채택(피드 politics·national) 당일 약관 확인 후 제외 — 루틴도 조선 원문을 자동으로 열지 않는다"
+   },
    {
     "name": "MBC",
     "url": "https://imnews.imbc.com",
@@ -543,6 +549,29 @@
     "name": "중앙일보",
     "url": "https://www.joongang.co.kr",
     "reason": "공식 RSS 없음(사이트맵만). robots.txt 가 Claude-User 차단. 이용약관 미확인"
+   }
+  ],
+  "verified": [
+   {
+    "name": "국민일보",
+    "url": "https://www.kmib.co.kr/member/policy",
+    "checked": "2026-10-19",
+    "clause": "회원약관 29조 전문에 자동수집·크롤링·RSS·AI 조항 없음. 제21조(금지행위)는 지식재산권 침해·해킹 등이며 크롤링 항목 없음. RSS 안내(https://www.kmib.co.kr/rss)에 이용 조건 없음",
+    "verdict": "유지(robots.txt 의 Claude-User 차단은 restrict claude_user_blocked 로 따로 지킨다)"
+   },
+   {
+    "name": "국방일보",
+    "url": "https://kookbang.dema.mil.kr/newsWeb/rss.do",
+    "checked": "2026-10-19",
+    "clause": "이용약관·저작권정책 페이지 없음 — kookbang.dema.mil.kr 하단(개인정보처리방침·고충처리·윤리강령), dema.mil.kr 하단(개인정보처리방침·이메일 무단수집 거부 등) 모두 확인. robots.txt 는 /search.do 만 막는다. RSS 안내: 「새로운 소식이 업데이트 될 때마다 바로 바로 자동으로 확인」",
+    "verdict": "유지(금지 조항 없음 — 약관 자체가 게시돼 있지 않다)"
+   },
+   {
+    "name": "조선일보",
+    "url": "https://www.chosun.com/subscribe/term/",
+    "checked": "2026-10-19",
+    "clause": "이용약관 제21조 ①③ — 합의·계약 없는 자동화 도구 활용 불허, 비영리도 사전 동의 필요",
+    "verdict": "제외(feeds 삭제, excluded 로 이동)"
    }
   ]
  }

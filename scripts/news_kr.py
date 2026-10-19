@@ -43,17 +43,21 @@ BUDGET_S = 90          # 피드 전체 시간 예산 — 넘으면 남은 피드
 WIRES = ("연합뉴스", "뉴시스", "뉴스1")
 WIRE_RE = re.compile(r"[\(\[]\s*[^\)\]\s=]{1,12}\s*=\s*(연합뉴스|뉴시스|뉴스1)\s*[\)\]]")
 DROP_PARAMS = re.compile(r"^(utm_.*|plink|cooper|from|ref|rss|sns|section_code)$", re.I)
+# 매체 이용 제한 코드(정본 = sources.json 항목의 restrict, 뜻은 news_feed_audit.restrict_codes).
+# 루틴이 원문을 여는 순서: 0 제한 없음 → 1 ai_use(AI 활용 금지 표기 — 대체 매체가 없을 때만) → 2 claude_user_blocked(열지 않는다)
+RESTRICT_RANK = {"ai_use": 1, "claude_user_blocked": 2}
 
 
 # ── 입력 ─────────────────────────────────────────────────────────────
 def load_feeds(sources: dict) -> list[dict]:
-    """sources.json 에서 feeds 가 있는 항목 → [{outlet, tier, section, url}]."""
+    """sources.json 에서 feeds 가 있는 항목 → [{outlet, tier, section, url, restrict}]."""
     out = []
     for tier in sources.get("tiers", []):
         for g in tier.get("groups", []):
             for it in g.get("items", []):
                 for f in it.get("feeds") or []:
-                    out.append({"outlet": it["name"], "tier": tier.get("id"), "section": f.get("section", ""), "url": f["url"]})
+                    out.append({"outlet": it["name"], "tier": tier.get("id"), "section": f.get("section", ""), "url": f["url"],
+                                "restrict": sorted(it.get("restrict") or [])})
     return out
 
 
@@ -165,6 +169,18 @@ def wire_of(outlet: str, title: str, desc: str) -> str | None:
     return m.group(1) if m and m.group(1) != outlet else None
 
 
+def restrict_of(a: dict, by_outlet: dict[str, list[str]]) -> list[str]:
+    """기사 원문의 이용 제한 — 실은 매체의 제한 + 통신사 전재면 그 통신사의 제한(연합 전재는 연합 표기가 따라온다)."""
+    r = set(by_outlet.get(a["outlet"], []))
+    if a.get("wire_copy"):
+        r |= set(by_outlet.get(a["wire_copy"], []))
+    return sorted(r)
+
+
+def open_rank(a: dict) -> int:
+    return max((RESTRICT_RANK.get(x, 1) for x in a.get("restrict") or []), default=0)  # 모르는 코드는 ai_use 와 같이 뒤로
+
+
 # ── 묶음 ─────────────────────────────────────────────────────────────
 def _grams(title: str) -> set[str]:
     t = re.sub(r"\[[^\]]{0,12}\]|\([^)]{0,12}\)|속보|단독|종합|포토|영상", " ", title)
@@ -211,11 +227,15 @@ def cluster(articles: list[dict]) -> list[dict]:
         independent = sorted({m.get("wire_copy") or m["outlet"] for m in members})
         groups = sorted({g for m in members for g in m["groups"]})
         items = sorted({x for m in members for x in m["items"]})
+        # 기사 순서 = 루틴이 여는 순서(제한 없는 원문 먼저, 같은 등급 안에서는 먼저 난 기사부터)
+        ordered = sorted(members, key=lambda m: (open_rank(m), _when(m), m["link"]))
         out.append({"id": first["link"], "title": first["title"], "groups": groups, "items": items,
                     "first": _when(first), "last": max(_when(m) for m in members),
                     "n_outlets": len(outlets), "outlets": outlets, "independent": independent,
+                    "unrestricted": any(open_rank(m) == 0 for m in members),
+                    "openable": any(open_rank(m) < 2 for m in members),
                     "articles": [{k: m[k] for k in ("outlet", "title", "link", "published", "first_seen", "groups", "items",
-                                                    "terms", "wire_copy") if m.get(k)} for m in members]})
+                                                    "terms", "wire_copy", "restrict") if m.get(k)} for m in ordered]})
     out.sort(key=lambda c: (c["last"], c["n_outlets"]), reverse=True)
     return out
 
@@ -261,6 +281,9 @@ def collect(feeds: list[dict], kw: dict, prev: dict, now: datetime, fetcher=fetc
         stat.append(row)
     cutoff = (now - timedelta(hours=WINDOW_H)).isoformat(timespec="seconds")
     kept = [a for a in articles.values() if a.get("groups") and _when(a) >= cutoff]
+    by_outlet = {f["outlet"]: f.get("restrict") or [] for f in feeds}
+    for a in kept:  # 이어 온 기사도 이번 sources.json 기준으로 다시 매긴다
+        a["restrict"] = restrict_of(a, by_outlet)
     clusters = cluster(kept)
     failed = [s for s in stat if not s["ok"]]
     status = "ok" if not failed else ("error" if len(failed) == len(stat) else "partial")
@@ -282,7 +305,9 @@ def collect(feeds: list[dict], kw: dict, prev: dict, now: datetime, fetcher=fetc
         "last_ok_at": now_s if status == "ok" else prev.get("last_ok_at"),
         "window_h": WINDOW_H,
         "note": "루틴 세션 전용(레포에 올리지 않는다). 제목·링크·시각·적중어만, 본문·요약 전재 없음. 판정 아님 — 루틴이 원문을 열어 판정한다. "
-                "independent = 통신사 전재를 통신사 1곳으로 접은 매체 목록(교차확인 계수용).",
+                "independent = 통신사 전재를 통신사 1곳으로 접은 매체 목록(교차확인 계수용). "
+                "articles 는 여는 순서로 정렬(restrict 없는 원문 먼저 — ai_use 는 대체 매체가 없을 때만, claude_user_blocked 는 열지 않는다). "
+                "unrestricted = 제한 없는 원문이 묶음 안에 있다.",
         "counts": {"feeds": len(stat), "feeds_failed": len(failed), "fetched": fetched,
                    "hits": len(kept), "clusters": len(clusters), "by_group": by_group},
         "outlets": outlets,

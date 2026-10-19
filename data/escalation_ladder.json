@@ -1,0 +1,728 @@
+{
+ "_doc": "긴장 국면 사다리 v2 — 공개 보도로 관측 가능한 징후를 과거 사례 순서로 묶었다. 기존 「등급(평시~위험)」과 별개이고, 화면에는 숫자 대신 국면 이름만 쓴다. 우리 확률(%)은 만들지 않는다. 국면이 없다고 안전하다는 뜻이 아니다(skips).",
+ "name": "긴장 국면",
+ "status": "운영 — 루틴(prompts/monitor.md 4-3)이 run.ladder 를 내고 scripts/diff_state.py update_ladder 가 state/ladder.json 을 쓴다. 등급·알림과 무관",
+ "updated": "2026-10-19",
+ "rule": {
+  "stage_of_run": "국면 = corroborated(서로 다른 기관 2곳 이상, 같은 통신 재인용은 1곳)로 충족된 지표 중 가장 높은 단계. single 만이면 「확인 중」으로 표시하고 국면은 올리지 않는다(items 등급과 같은 규칙). 지표 하나는 확인된 사례 1건으로 충족된다.",
+  "hold": "국면 하락은 해제 근거(ended·deescalation)가 있거나, 마지막 충족 뒤 CRISIS_FLOOR_H(72시간, diff_state.py 기존 상수)가 지나면. 새 상수는 만들지 않는다. 지속 상태(ongoing·ultimatum until)는 기존 carry 규칙을 그대로 따른다."
+ },
+ "stages": [
+  {
+   "n": 0,
+   "name": "평상",
+   "desc": "정례 시험 발사·통상 비난. 아래 지표 중 충족된 것 없음.",
+   "action": "평소 주기로 본다."
+  },
+  {
+   "n": 1,
+   "name": "수사 격화",
+   "desc": "고위급의 전쟁 임박 주장, 대상·시점을 지목한 위협, 조약·기구 이탈.",
+   "action": "하루 두 번 확인. 실제 사건(2단계)이 뒤따르는지 본다."
+  },
+  {
+   "n": 2,
+   "name": "국지 도발",
+   "desc": "접경(DMZ·NLL·JSA) 사건이 잦아지거나 사상자·영토 피격이 난다.",
+   "action": "재난문자·합참 발표를 켜 둔다. 접경 지역 일정은 재확인."
+  },
+  {
+   "n": 3,
+   "name": "대치·동원",
+   "desc": "시한 있는 최후통첩, 준전시 선포, 전력 기지 이탈, 한미 태세 격상.",
+   "action": "대피소·비상물품 확인(대피 안내 화면). 시한까지 매시간 본다."
+  },
+  {
+   "n": 4,
+   "name": "전쟁 준비",
+   "desc": "「실행 준비」 축 — 집결의 지속, 의료·혈액 이동, 대사관 철수 실행, 명분 조치.",
+   "action": "정부 대피 권고를 따른다. 해외 체류·이동 계획을 정부 안내 기준으로 정한다."
+  }
+ ],
+ "indicators": [
+  {
+   "id": "high_level_war_claim",
+   "stage": 1,
+   "label": "고위급 「전쟁 임박」 성명",
+   "key": "gov_warning",
+   "met": "김정은·총참모부·국방성·외무성 명의로 「전쟁 준비 완료」「언제든 전쟁」처럼 전쟁 개시가 임박했다고 주장하는 성명. 통상 규탄·「강력 대응」 표현은 제외.",
+   "sources": [
+    "KCNA Watch(D — 주장으로만)",
+    "연합뉴스 북한 속보",
+    "NK News"
+   ],
+   "evidence": [
+    {
+     "case": "1976 도끼만행",
+     "observed": "8/5 DMZ 총격 몇 시간 뒤 「미·한 전쟁 준비 완료」 고위급 성명 — 1969년 이후 이 급 처음",
+     "lead": "D-13",
+     "url": "https://history.state.gov/historicaldocuments/frus1969-76ve12/d282",
+     "status": "verified",
+     "public_at_time": true
+    },
+    {
+     "case": "1968 1·21",
+     "observed": "김일성 1966-10-05 연설: 전쟁 준비 확대·공세 전술",
+     "lead": "약 15개월 전",
+     "url": "https://history.state.gov/historicaldocuments/frus1964-68v29p1/d123",
+     "status": "verified",
+     "public_at_time": true
+    },
+    {
+     "case": "1994 핵위기",
+     "observed": "1993-12-24 최광 총참모장, 전군에 「금세기말까지 … 무력으로」 통일 촉구(평양방송 인용)",
+     "lead": "약 6개월 전(불바다 발언 기준)",
+     "url": "https://m.seoul.co.kr/news/1993/12/25/19931225001006",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://www.everycrsreport.com/reports/RL30004.html",
+     "publisher": "서울신문(AFP-연합)",
+     "quote": "북한군총참모장 최광(차솔)은 24일 전군에 금세기말까지 두개의 한국을 「무력으로」 통일하도록 촉구했다고",
+     "date_confirmed": "1993-12-24",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Contemporaneous wire report. The date is 24 Dec 1993, at the 2nd-anniversary event of Kim Jong Il becoming Supreme Commander. Wording: the original CRS RL30004 (Apr 20, 2007, 'North Korean Actions, 19"
+    }
+   ]
+  },
+  {
+   "id": "targeted_threat",
+   "stage": 1,
+   "label": "대상·시점 지목 위협",
+   "key": "border_clash",
+   "met": "대상(지명·시설)과 수단 또는 시점 중 둘 이상을 명시한 군사행동 예고. 시한이 붙으면 3단계 최후통첩으로 올린다. 기존 signals.nk_threat 와 같은 기준.",
+   "sources": [
+    "합참·통일부 발표",
+    "연합뉴스",
+    "Reuters/AP"
+   ],
+   "evidence": [
+    {
+     "case": "2017 위기",
+     "observed": "8/9 괌 「포위사격」 작전계획 검토 성명(「화염과 분노」 다음 날)",
+     "lead": "실제 사격 없음 — 상승 없이 끝난 예",
+     "url": "https://www.cbsnews.com/news/north-korea-threatens-attack-guam",
+     "status": "verified",
+     "public_at_time": true
+    },
+    {
+     "case": "1994 핵위기",
+     "observed": "1994-03-19 판문점 제8차 남북 실무접촉에서 북측 단장 「서울 불바다」 발언",
+     "lead": "6/15 동결 합의로 해소",
+     "url": "https://m.seoul.co.kr/news/1994/03/20/19940320001002",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://www.everycrsreport.com/reports/RL30004.html",
+     "publisher": "서울신문",
+     "quote": "「서울 불바다 될것」 극언/북 박단장 … 정부는 19일 판문점에서 열린 제8차 남북한 실무접촉에서 북한 대표들이 전쟁위협을 한 사실을 중시",
+     "date_confirmed": "1994-03-19",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Contemporaneous Korean daily (headline + body). NYT and UPI 1994 archives are not fetchable (403). CRS RL30004 gives only '03/1994' and the English quote 'Seoul will turn into a sea of fire', with no "
+    }
+   ]
+  },
+  {
+   "id": "institutional_exit",
+   "stage": 1,
+   "label": "조약·기구 이탈 선언",
+   "key": "nuclear",
+   "met": "NPT·IAEA·남북 군사합의 등에서 탈퇴·파기·사찰 거부를 공식 선언.",
+   "sources": [
+    "IAEA",
+    "외교부·통일부",
+    "Arms Control Association"
+   ],
+   "evidence": [
+    {
+     "case": "1994 핵위기",
+     "observed": "1993-03-12 NPT 탈퇴 통보(90일 예고)",
+     "lead": "위기 정점(1994-06) 약 15개월 전",
+     "url": "https://www.un.org/french/docs/cs/repertoire/93-95/CHAPTER%208/ASIA/15%20-%20Letters%20dated%2012%20and%2019%20March%2093.pdf",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://www.everycrsreport.com/reports/IB91141.html",
+     "publisher": "UN 안보리 Repertoire(S/25405)",
+     "quote": "the Minister for Foreign Affairs informed the Council that the Government of the DPRK had decided, on 12 March 1993, to withdraw from the Treaty on the NonProliferation of Nuclear Weapons (NPT)",
+     "date_confirmed": "1993-03-12",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Official UN record. The letter itself is UN doc S/25405 (digitallibrary.un.org), which was not opened. IAEA blocks fetch (403). IB91141 is not in the congress.gov API.",
+     "note": "IAEA 원문은 403 — 유엔 기록으로 확인"
+    },
+    {
+     "case": "1994 핵위기",
+     "observed": "1994-06-13 IAEA 탈퇴",
+     "lead": "카터 방북·동결(6/15) 2일 전",
+     "url": "https://www.armscontrol.org/factsheets/dprkchron",
+     "status": "verified",
+     "public_at_time": true
+    }
+   ]
+  },
+  {
+   "id": "border_incident_surge",
+   "stage": 2,
+   "label": "비정례 접경 사건",
+   "key": "border_clash",
+   "met": "routine 아닌 border_clash 가 corroborated 로 1건(침범·사격·지뢰). 횟수 문턱은 두지 않는다 — 「30일 2회」는 근거 없는 값이라 뺐다(10/19 소유자 결정). 과거 근거는 「사건이 잦아지는 흐름」을 보여 주는 참고다.",
+   "sources": [
+    "합참 발표",
+    "연합뉴스",
+    "state/history(코드 집계)"
+   ],
+   "evidence": [
+    {
+     "case": "1968 1·21",
+     "observed": "DMZ 사건 1966년 37건 → 1967년(7월 말까지) 286건, 교전 30 → 132",
+     "lead": "습격 약 6개월 전 집계",
+     "url": "https://history.state.gov/historicaldocuments/frus1964-68v29p1/d123",
+     "status": "verified",
+     "public_at_time": false,
+     "note": "당시 기밀 집계(FRUS 로 사후 공개). 국무부 다른 집계는 1966년 42건"
+    },
+    {
+     "case": "1950 개전",
+     "observed": "1949-05-03 개성부터 38선 충돌, 대사가 「계속·가속」 전망",
+     "lead": "약 13개월 전",
+     "url": "https://history.state.gov/historicaldocuments/frus1949v07p2/d262",
+     "status": "verified",
+     "public_at_time": false
+    },
+    {
+     "case": "1976 도끼만행",
+     "observed": "6월 JSA 안 미군 괴롭힘 여러 차례(사상자 없음)",
+     "lead": "약 2개월 전",
+     "url": "https://history.state.gov/historicaldocuments/frus1969-76ve12/d282",
+     "status": "verified",
+     "public_at_time": false
+    }
+   ]
+  },
+  {
+   "id": "naval_zone_fire",
+   "stage": 2,
+   "label": "NLL 항행금지구역 + 해안포",
+   "key": "border_clash",
+   "met": "북한이 NLL 인근에 항행금지·사격구역을 선포하거나 해안포를 NLL 쪽으로 사격. 항행경보(nav_warning) 중 서해 NLL 인접 구역이면 해당.",
+   "sources": [
+    "합참",
+    "연합뉴스",
+    "해상보안청·해사국 항행경보"
+   ],
+   "evidence": [
+    {
+     "case": "2010 천안함",
+     "observed": "백령도 인근 NLL 북쪽 항행금지구역 2곳 선포 다음 날 해안포 사격",
+     "lead": "천안함 약 2개월 전",
+     "url": "https://www.koreajoongangdaily.com/korea/north-fires-artillery-near-south-territory/10546623",
+     "status": "verified",
+     "public_at_time": true,
+     "note": "사격일(통상 1/27)은 이 기사만으로 미확인"
+    },
+    {
+     "case": "2010 천안함",
+     "observed": "2009-11-10 대청해전(함정 교전)",
+     "lead": "천안함 약 4.5개월 전",
+     "url": "https://www.38north.org/?p=1232",
+     "status": "verified",
+     "public_at_time": true
+    }
+   ]
+  },
+  {
+   "id": "lethal_clash",
+   "stage": 2,
+   "label": "사상자·영토 피격",
+   "key": "border_clash",
+   "met": "이번 24시간 안 충돌로 사망·중상이 나거나 남측 영토·함정 피격(기존 fatalities·territory_hit 플래그와 같은 기준).",
+   "sources": [
+    "합참·국방부",
+    "연합뉴스"
+   ],
+   "evidence": [
+    {
+     "case": "2015 목함지뢰",
+     "observed": "DMZ 지뢰 폭발로 한국군 2명 중상 → 확성기 재개 → 8/20 포격",
+     "lead": "정점(8/22 시한) 약 18일 전",
+     "url": "https://www.pbs.org/newshour/world/north-south-korea-come-agreement",
+     "status": "verified",
+     "public_at_time": true,
+     "note": "8/4 날짜는 이 페이지에 없음(「earlier in August」)"
+    },
+    {
+     "case": "2010 연평도",
+     "observed": "11/23 14:34 해안포·곡사포 포격, 해병 2명 사망",
+     "lead": "—(사건 자체)",
+     "url": "https://www.yna.co.kr/view/AKR20101123266500043",
+     "status": "verified",
+     "public_at_time": true
+    }
+   ]
+  },
+  {
+   "id": "ultimatum",
+   "stage": 3,
+   "label": "시한 있는 최후통첩",
+   "key": "border_clash",
+   "met": "시한 + 표적 + 군사행동을 모두 명시한 전통문·성명(기존 ultimatum 플래그). 시한까지 지속 상태.",
+   "sources": [
+    "합참·국방부(전통문 공개)",
+    "연합뉴스",
+    "Reuters/AP"
+   ],
+   "evidence": [
+    {
+     "case": "2015 목함지뢰",
+     "observed": "8/20 「48시간 안 확성기 중단, 아니면 군사행동」(시한 8/22 17시)",
+     "lead": "D-2",
+     "url": "https://www.reuters.com/article/us-northkorea-southkorea-border/north-korea-goes-on-war-footing-against-south-korea-as-deadline-looms-idUSKCN0QQ08H20150821",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://www.globalsecurity.org/wmd/library/news/dprk/2015/dprk-150820-pdo02.htm",
+     "publisher": "Reuters",
+     "quote": "Its 48-hour ultimatum, delivered in a letter to the South Korean Defense Ministry, was also uncharacteristically specific ... The deadline is around 5 p.m. on Saturday in Seoul",
+     "date_confirmed": "2015-08-20",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Verified through Wayback snapshot 20171101125842. Companion piece, Reuters 2015-08-20 'Tensions rise as North and South Korea exchange fire' (idUSKCN0QP0RO20150820): 'warned Seoul in a letter that it "
+    },
+    {
+     "case": "2010 연평도",
+     "observed": "11/23 08:20 호국훈련 사격 중단 요구 전통문",
+     "lead": "포격 약 6시간 전",
+     "url": "https://www.yna.co.kr/view/AKR20101123266500043",
+     "status": "verified",
+     "public_at_time": true
+    },
+    {
+     "case": "2022 우크라이나",
+     "observed": "12/17 러시아 조약 초안 공개·NATO 확장 중단 요구",
+     "lead": "D-69",
+     "url": "https://aljazeera.com/news/2021/12/17/russia-demands-ukraine-ex-soviet-nations-barred-from-nato",
+     "status": "verified",
+     "public_at_time": true
+    }
+   ]
+  },
+  {
+   "id": "quasi_war_state",
+   "stage": 3,
+   "label": "준전시·전투태세 선포",
+   "key": "nk_internal",
+   "met": "북한이 준전시·전시상태 또는 전선부대 완전무장을 공식 선포(기존 ongoing — 해제 전까지 유지).",
+   "sources": [
+    "KCNA Watch(D)",
+    "합참 확인",
+    "연합뉴스"
+   ],
+   "evidence": [
+    {
+     "case": "2015 목함지뢰",
+     "observed": "김정은이 전선부대 완전무장·「준전시상태」 선포",
+     "lead": "D-1(시한 기준)",
+     "url": "https://www.koreaherald.com/article/634060",
+     "status": "verified",
+     "public_at_time": true
+    }
+   ]
+  },
+  {
+   "id": "force_dispersal",
+   "stage": 3,
+   "label": "전력 기지 이탈·포병 증강",
+   "key": "troop_movement",
+   "met": "합참·주요 언론이 잠수함·함정의 대량 기지 이탈, 전방 포병 증강, 전방 배치 이동을 보도.",
+   "sources": [
+    "합참",
+    "연합뉴스",
+    "38 North"
+   ],
+   "evidence": [
+    {
+     "case": "2015 목함지뢰",
+     "observed": "잠수함 약 50척(70%) 기지 이탈, 사격 대기 포병 인원 약 2배",
+     "lead": "시한 직후 보도(8/23) — 합의 2일 전",
+     "url": "https://www.koreaherald.com/article/634060",
+     "status": "verified",
+     "public_at_time": true
+    }
+   ]
+  },
+  {
+   "id": "allied_posture_up",
+   "stage": 3,
+   "label": "한미 태세 격상",
+   "key": "gov_warning",
+   "met": "합참·국방부 발표 또는 주요 언론 보도로 확인된 진돗개 둘 이상·데프콘 격상·전략자산 긴급 전개. 비공개 군사정보 추정은 쓰지 않는다.",
+   "sources": [
+    "합참·국방부",
+    "주한미군",
+    "연합뉴스"
+   ],
+   "evidence": [
+    {
+     "case": "1976 도끼만행",
+     "observed": "사건 다음 날(8/19) DEFCON 3 발효, F-4 대대·F-111·B-52 전개",
+     "lead": "사건 뒤 대응(D+1)",
+     "url": "https://history.state.gov/historicaldocuments/frus1969-76ve12/d284",
+     "status": "verified",
+     "public_at_time": false
+    },
+    {
+     "case": "2017 위기",
+     "observed": "2017-08-31 B-1B·F-35B 가 일본 F-15J·한국 F-15K 와 한반도 상공 연합 비행(8/9 괌 위협 뒤)",
+     "lead": "상승 없이 끝난 예",
+     "url": "https://www.pacaf.af.mil/News/Article-Display/Article/1295862/us-fifth-generation-fighters-strategic-bombers-conduct-show-of-force-with-allie/",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://taskandpurpose.com/news/north-korea-threatens-guam-us-runs-joint-bomber-drills-guam/",
+     "publisher": "PACAF(미 태평양공군)",
+     "quote": "U.S. Air Force B-1B Lancer prepares for take off for a mission from Andersen Air Force Base, Guam, into Japanese airspace and over the Korean Pennisula, Aug. 31, 2017.",
+     "date_confirmed": "2017-08-31",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Verified through a Wayback 2017 snapshot (af.mil blocks direct fetch). Mission: 2 B-1B + 4 USMC F-35B with JASDF F-15J and ROKAF F-15K, in response to the 28 Aug IRBM over Japan. This came after the 8",
+     "note": "8/7~8 B-1B 비행은 괌 위협 이전이라 근거로 쓰지 않는다"
+    }
+   ]
+  },
+  {
+   "id": "sustained_massing",
+   "stage": 4,
+   "label": "대규모 집결의 지속",
+   "key": "troop_movement",
+   "met": "공개 위성사진(38 North·CSIS·상업위성) 또는 정부 공개 발표로 전방 대규모 병력·장비 집결이 2주 이상 이어짐. 열병식·정례 훈련 기간이면 제외.",
+   "sources": [
+    "38 North",
+    "CSIS Beyond Parallel",
+    "국방부·국정원 공개 브리핑"
+   ],
+   "evidence": [
+    {
+     "case": "2022 우크라이나",
+     "observed": "Maxar 위성사진: 우크라이나 국경 인근 기갑·전차·자주포 집결(11/1 보도)",
+     "lead": "D-115",
+     "url": "https://www.politico.com/news/2021/11/01/satellite-russia-ukraine-military-518337",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://newswav.com/article/A2112_h2ve6b",
+     "publisher": "POLITICO",
+     "quote": "The new images taken by Maxar Technologies and shared with POLITICO show a buildup of armored units, tanks and self-propelled artillery along with ground troops massing near the Russian town of Yelnya",
+     "date_confirmed": "2021-11-01",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Verified through a Wayback 2021 snapshot. Caveat: Politico names the '1st Guards Tank Army', not the 41st Army. The 41st CAA to Yelnya link comes from CRS IN11806 ('41st CAA ... to Yelnya') and analys",
+     "note": "원문 부대명은 1근위전차군. 「41군·옐냐」는 CRS IN11806 근거로만 남긴다"
+    },
+    {
+     "case": "1950 개전",
+     "observed": "CIA: 전차·중포를 최근 몇 달 사이 38선 근처로 이동",
+     "lead": "D-6",
+     "url": "https://history.state.gov/historicaldocuments/frus1950v07/d57",
+     "status": "verified",
+     "public_at_time": false,
+     "note": "당시 기밀. 같은 문서는 임박 침공을 경고하지 않았다"
+    }
+   ]
+  },
+  {
+   "id": "quantified_gov_warning",
+   "stage": 4,
+   "label": "정부의 수치 있는 공개 경고",
+   "key": "gov_warning",
+   "met": "한·미·일 정부가 병력 규모·시기를 명시해 공격 가능성을 공개 경고.",
+   "sources": [
+    "미 국무부·국방부",
+    "국방부",
+    "통합막료감부"
+   ],
+   "evidence": [
+    {
+     "case": "2022 우크라이나",
+     "observed": "미 정보: 최대 17.5만 명·100개 BTG, 2022년 초 공세(WaPo 보도)",
+     "lead": "D-83",
+     "url": "https://www.washingtonpost.com/national-security/russia-ukraine-invasion/2021/12/03/98a3760e-546b-11ec-8769-2f4ecdf7a2ad_story.html",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://aa.com.tr/en/world/russia-planning-175-000-troops-offensive-against-ukraine-report/2438252",
+     "publisher": "Washington Post",
+     "quote": "The Russian plans call for a military offensive against Ukraine as soon as early 2022 ... extensive movement of 100 battalion tactical groups with an estimated 175,000 personnel",
+     "date_confirmed": "2021-12-03",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Paywalled. Verified through Wayback snapshot 20211204004021."
+    },
+    {
+     "case": "2022 우크라이나",
+     "observed": "미 당국자: 전면 침공 소요 전력의 70%, 83개 BTG",
+     "lead": "D-19",
+     "url": "https://www.congress.gov/crs-product/IN11806",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://www.everycrsreport.com/files/2022-02-07_IN11806_cc36e34e47672af4e4648e5536eed5a8d060e9e6.html",
+     "publisher": "CRS(congress.gov)",
+     "quote": "On February 5, U.S. officials told media outlets that Russia had 70% of the forces it would need to conduct a full-scale invasion, with 83 Battalion Tactical Groups (BTGs) deployed and 14 more in transit",
+     "date_confirmed": "2022-02-07",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — The congress.gov page returns 403 to bots. Text and publishDate 2022-02-07 were confirmed through the official api.congress.gov/v3/crsreport/IN11806 (status Archived, version 5). PDF: https://www.cong"
+    }
+   ]
+  },
+  {
+   "id": "medical_blood",
+   "stage": 4,
+   "label": "혈액·의료물자 전방 이동",
+   "key": "logistics",
+   "met": "주요 통신·정부가 혈액·야전병원·의료물자의 전방 이동을 보도. 정례 훈련 지원은 제외.",
+   "sources": [
+    "Reuters/AP",
+    "국방부"
+   ],
+   "evidence": [
+    {
+     "case": "2022 우크라이나",
+     "observed": "혈액 공급품 전방 이동(Reuters, 「최근 몇 주」)",
+     "lead": "D-27",
+     "url": "https://www.reuters.com/world/europe/exclusive-russia-moves-blood-supplies-near-ukraine-adding-us-concern-officials-2022-01-28/",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://www.brainerddispatch.com/news/world/russia-moves-blood-supplies-near-ukraine-adding-to-us-concern-officials-say",
+     "publisher": "Reuters",
+     "quote": "Exclusive: Russia moves blood supplies near Ukraine, adding to U.S. concern",
+     "date_confirmed": "2022-01-28",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Verified through Wayback snapshot 20220128185756. Also cited in CRS IN11806."
+    }
+   ]
+  },
+  {
+   "id": "embassy_drawdown",
+   "stage": 4,
+   "label": "대사관 철수·비전투원 소개 「실행」",
+   "key": "gov_warning",
+   "met": "서울(또는 평양) 주재 대사관의 가족 출국 명령·직원 철수, 또는 주한미군 비전투원 소개 명령이 공식 발표됨. 논의·훈련(Courageous Channel)·가짜 문자는 해당 없음.",
+   "sources": [
+    "미 국무부 여행경보",
+    "주한미군",
+    "외교부"
+   ],
+   "evidence": [
+    {
+     "case": "2022 우크라이나",
+     "observed": "미 국무부 키이우 대사관 가족 출국 명령·직원 자발 출국 허가(1/23)",
+     "lead": "D-32",
+     "url": "https://2021-2025.state.gov/senior-state-department-officials-on-posture-of-u-s-embassy-kyiv",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2022/ukraine-220123-sputnik01.htm",
+     "publisher": "미 국무부",
+     "quote": "department has ordered the departure of family members of U.S. Government employees at the U.S. Embassy in Kyiv ... Family members, however, are required to depart the country",
+     "date_confirmed": "2022-01-23",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Official archive. travel.state.gov 'Status of Consular Services in Kyiv' says the same but returns 403 to fetch.",
+     "note": "메인 재확인: 이 맥에서 직접 열기 실패(차단) — 서브에이전트 열람 기록에 의존"
+    },
+    {
+     "case": "2022 우크라이나",
+     "observed": "직원 대부분 출국 명령(2/12), 영사업무 중단",
+     "lead": "D-12",
+     "url": "https://2021-2025.state.gov/a-senior-state-department-official-on-our-diplomatic-presence-in-ukraine/",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://bal.com/bal-news/united-states-u-s-state-department-suspends-consular-services-in-ukraine",
+     "publisher": "미 국무부",
+     "quote": "late on February 11 in Washington ... we directed most remaining embassy staff still located in Ukraine to depart the country immediately ... As of Sunday, February 13, we are suspending consular services at Embassy Ukraine",
+     "date_confirmed": "2022-02-12",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Decision late Feb 11 (Washington time), briefed Feb 12, consular services suspended from Feb 13.",
+     "note": "결정은 2/11 밤(워싱턴), 브리핑 2/12, 영사 업무 2/13 중단"
+    },
+    {
+     "case": "2017 위기(반대 사례)",
+     "observed": "가짜 소개 문자에 주한미군 「USFK did NOT issue this message」(2017-09-21) — 논의만 있고 실행 없음",
+     "lead": "—",
+     "url": "https://www.stripes.com/news/pacific/us-forces-korea-warns-of-fake-evacuation-messages-1.488792",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://www.foxnews.com/world/fake-evacuation-orders-sent-to-us-military-personnel-in-south-korea",
+     "publisher": "Stars and Stripes",
+     "quote": "Several U.S. servicemembers or their family members received fake messages s[aying an evacuation order had been issued]",
+     "date_confirmed": "2017-09-21",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Replace Fox with Stars and Stripes, which quotes the 8th Army / USFK post 'USFK did NOT issue this message'. Date is 2017-09-21."
+    }
+   ]
+  },
+  {
+   "id": "legal_pretext",
+   "stage": 4,
+   "label": "명분 조치(법·영토 선언)",
+   "key": "nk_internal",
+   "met": "북한이 한국·미국의 영토 침범·공격을 공식 주장하고 보복·군사행동을 공표(외무성·총참모부·국방성 명의). 정례 비난은 제외. 우크라이나의 「분리지역 승인 법령」에 해당하는 한반도 조치.",
+   "sources": [
+    "KCNA Watch(D)",
+    "통일부",
+    "연합뉴스"
+   ],
+   "evidence": [
+    {
+     "case": "2024-10 무인기 평양 침투 주장",
+     "observed": "10/11 외무성: 한국 무인기가 평양에 전단 살포(10/3·9·10 주장) → 10/12 총참모부 포병 8개 여단 사격대기(기한 10/13 20시) → 10/15 남북 연결 도로 폭파 → 10/17 헌법상 「적대국가」 보도",
+     "lead": "전쟁으로 이어지지 않음(상승 없이 끝난 예)",
+     "url": "https://www.bbc.com/news/articles/cvgw8vq2xxyo",
+     "publisher": "BBC",
+     "quote": "On 11 October, North Korea's foreign ministry accused the South of sending drones to Pyongyang at night over the course of two weeks.",
+     "also": [
+      {
+       "url": "https://www.koreajoongangdaily.com/korea/north-korea-issues-directive-for-artillery-brigades-as-tensions-with-south-rise/12285807",
+       "publisher": "Korea JoongAng Daily",
+       "quote": "the North Korean Foreign Ministry claimed Seoul sent unmanned aerial vehicles (UAVs) carrying propaganda leaflets to its capital on Oct. 3 and Wednesday and Thursday of last week"
+      },
+      {
+       "url": "https://www.koreajoongangdaily.com/korea/north-korea-issues-directive-for-artillery-brigades-as-tensions-with-south-rise/12285807",
+       "publisher": "Korea JoongAng Daily (citing KCNA)",
+       "quote": "transfer eight artillery brigades fully armed to the wartime readiness level to a firing standby by 8 p.m. on Sunday"
+      },
+      {
+       "url": "https://www.reuters.com/world/asia-pacific/north-korea-blows-up-parts-inter-korean-roads-its-side-s-korean-military-says-2024-10-15/",
+       "publisher": "Reuters (Hyunsu Yim",
+       "quote": "North Korea blew up sections of inter-Korean roads and rail lines on its side of the heavily fortified border between the two Koreas on Tuesday"
+      },
+      {
+       "url": "https://www.bbc.com/news/articles/c1wnxlxxwq2o",
+       "publisher": "BBC News",
+       "quote": "North Korea's constitution now defines the South as a \"hostile state\", according to state media"
+      }
+     ],
+     "status": "verified",
+     "public_at_time": true
+    },
+    {
+     "case": "2022 우크라이나",
+     "observed": "DNR·LNR 독립 승인 법령 서명(2/21)",
+     "lead": "D-3",
+     "url": "http://en.kremlin.ru/events/president/news/67829",
+     "status": "verified",
+     "public_at_time": true,
+     "old_url": "https://rubryka.com/en/2022/02/21/putin-vyznav-nezalezhnist-tak-zvanyh-dnr-i-lnr/",
+     "publisher": "러시아 대통령실(kremlin.ru)",
+     "quote": "The President of Russia signed the Executive Order On the Recognition of the Donetsk People's Republic and the Executive Order On the Recognition of the Lugansk People's Republic.",
+     "date_confirmed": "2022-02-21",
+     "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Companion: Address by the President, en.kremlin.ru/events/president/news/67828 (2022-02-21 22:35).",
+     "note": "메인 재확인: 이 맥에서 직접 열기 실패(차단) — 서브에이전트 열람 기록에 의존"
+    }
+   ]
+  },
+  {
+   "id": "wartime_civil_measures",
+   "stage": 4,
+   "label": "북한 내부 전시 조치",
+   "key": "nk_internal",
+   "met": "등화관제·주민 대피의 실제 시행, 노농적위군 대규모 동원, 평양 외국 공관 철수(기존 nk_internal 비정례 기준).",
+   "sources": [
+    "주요 언론",
+    "평양 주재 공관 발표"
+   ],
+   "evidence": [
+    {
+     "case": "1950 개전",
+     "observed": "38선 인근 북측 민간인 소개",
+     "lead": "—",
+     "url": "",
+     "status": "미확인",
+     "public_at_time": true,
+     "note": "연 출처에서 확인 못 함(미 육군 공간사 403)"
+    }
+   ]
+  }
+ ],
+ "skips": [
+  {
+   "case": "1950 개전",
+   "observed": "유엔 한국위원회: 「경고 없이, 도발 없이」 개시(6/25 보고)",
+   "lead": "—",
+   "url": "https://www.trumanlibrary.gov/library/public-papers/193/special-message-congress-reporting-situation-korea",
+   "status": "verified",
+   "public_at_time": true,
+   "old_url": "https://www.everycrsreport.com/reports/RL30004.html",
+   "publisher": "Truman Library",
+   "quote": "On June 25th, within a few hours after the invasion was launched from the north, the Commission reported to the United Nations that the attack had come without warning and without provocation.",
+   "date_confirmed": "1950-06-25",
+   "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Partial. The Truman source confirms 'without warning and without provocation' (UNCOK report of 25 June). The full phrase '... in execution of a carefully prepared plan' is in the UNCOK report of 4 Sep",
+   "note": "「치밀한 계획에 따라」는 UNCOK 1950-09 보고서(A/1350) 문구 — 원문 미열람"
+  },
+  {
+   "case": "2010 천안함",
+   "observed": "표적·시점을 지목한 사전 공개 경고를 찾지 못함",
+   "lead": "—",
+   "url": "",
+   "status": "미확인",
+   "public_at_time": true,
+   "note": "조사자 추론 — 근거 문서 없음"
+  },
+  {
+   "case": "1968 1·21",
+   "observed": "DMZ 안 무장 30여 명 목격 나무꾼 신고가 직전 유일한 현지 신호",
+   "lead": "직전(날짜 미확인)",
+   "url": "https://adst.org/2013/01/the-uss-pueblo-incident-assassins-in-seoul-a-spy-ship-captured/",
+   "status": "verified",
+   "public_at_time": true
+  },
+  {
+   "case": "2023 하마스",
+   "observed": "40쪽 공격계획 「Jericho Wall」 입수 후 「희망사항」으로 기각",
+   "lead": "D-1년 이상",
+   "url": "https://www.nytimes.com/2023/11/30/world/middleeast/israel-hamas-attack-intelligence.html",
+   "status": "verified",
+   "public_at_time": false,
+   "old_url": "https://www.fox5dc.com/news/israel-knew-about-hamas-attack-new-york-times",
+   "publisher": "New York Times",
+   "quote": "Israeli officials obtained Hamas's battle plan for the Oct. 7 terrorist attack more than a year before it happened ... dismissed the plan as aspirational ... The approximately 40-page document",
+   "date_confirmed": "2023-11-30",
+   "verified_by": "서브에이전트 원문 열람(인용문·날짜 대조) — Verified through Wayback snapshot 20231231215325 (NYT blocks fetch)."
+  },
+  {
+   "case": "2023 하마스",
+   "observed": "관측병이 약 170명 「매우 이례적」 훈련 보고, 「또 하나의 훈련」으로 기각",
+   "lead": "D-4",
+   "url": "https://www.timesofisrael.com/surveillance-troops-spotted-highly-irregular-hamas-drill-4-days-before-oct-7/",
+   "status": "verified",
+   "public_at_time": false
+  }
+ ],
+ "external": {
+  "cfr": {
+   "url": "https://www.cfr.org/reports/conflicts-watch-2026",
+   "pdf": "https://assets.cfr.org/images/PPS26_Full_SinglePages_2025-12-17/PPS26_Full_SinglePages_2025-12-17.pdf",
+   "published": "2025-12-18",
+   "wording": "A resumption of North Korean nuclear weapons tests heightens tensions on the Korean Peninsula, triggering an armed confrontation involving other regional powers and the United States",
+   "tier": "Tier I",
+   "likelihood": "Moderate",
+   "impact": "High",
+   "note": "응답 약 620명(약 15,000명 발송) · 2025년보다 올라 Tier I 에 새로 들어간 유일한 항목",
+   "quote": "one rose in the rankings to Tier I (North Korea) whereas four fell to Tier II (Haiti, Lebanon, Mexico, and the South China Sea)",
+   "status": "verified"
+  },
+  "dropped": {
+   "ViEWS": "값이 0에 붙어 정보량 없음(10/19 소유자 결정으로 제외)",
+   "Metaculus": "API·페이지 403, 토큰 필요",
+   "GDELT": "90일 중 23% 결측·톤 429"
+  }
+ },
+ "_counts": {
+  "evidence": 37,
+  "verified": 35,
+  "unverified": 2,
+  "indicators": 16,
+  "weak_sources_before": 15,
+  "weak_sources_after": 0,
+  "replaced": 15,
+  "weak_list_before": [
+   "https://aa.com.tr/en/world/russia-planning-175-000-troops-offensive-against-ukraine-report/2438252",
+   "https://bal.com/bal-news/united-states-u-s-state-department-suspends-consular-services-in-ukraine",
+   "https://newswav.com/article/A2112_h2ve6b",
+   "https://rubryka.com/en/2022/02/21/putin-vyznav-nezalezhnist-tak-zvanyh-dnr-i-lnr/",
+   "https://taskandpurpose.com/news/north-korea-threatens-guam-us-runs-joint-bomber-drills-guam/",
+   "https://www.brainerddispatch.com/news/world/russia-moves-blood-supplies-near-ukraine-adding-to-us-concern-officials-say",
+   "https://www.everycrsreport.com/files/2022-02-07_IN11806_cc36e34e47672af4e4648e5536eed5a8d060e9e6.html",
+   "https://www.everycrsreport.com/reports/IB91141.html",
+   "https://www.everycrsreport.com/reports/RL30004.html",
+   "https://www.fox5dc.com/news/israel-knew-about-hamas-attack-new-york-times",
+   "https://www.foxnews.com/world/fake-evacuation-orders-sent-to-us-military-personnel-in-south-korea",
+   "https://www.globalsecurity.org/wmd/library/news/dprk/2015/dprk-150820-pdo02.htm",
+   "https://www.globalsecurity.org/wmd/library/news/ukraine/2022/ukraine-220123-sputnik01.htm"
+  ],
+  "indicators_without_verified_evidence": [
+   "wartime_civil_measures"
+  ],
+  "kept_not_reopened": [
+   "cbsnews.com(2017 괌 위협)",
+   "timesofisrael.com(하마스 D-4)",
+   "aljazeera.com(2021-12 러 조약 초안 — mid.ru 차단)",
+   "adst.org(1968)"
+  ],
+  "main_recheck": "메인이 직접 다시 연 5건 중 3건 일치(BBC 2024-10-15·JoongAng 2024-10-13·서울신문 1994-03-20), 2건은 이 맥에서 차단(kremlin.ru·2021-2025.state.gov)"
+ }
+}

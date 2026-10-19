@@ -39,6 +39,9 @@
   --data:'Martian Mono',ui-monospace,monospace;
   --text:'Pretendard Variable',Pretendard,system-ui,sans-serif;
   --gap:12px; --pad:12px; --hh:32px; --side:16px;
+  /* 간격 토큰(10/19): 4·8·12·16·24 만 쓴다. 역할 — 한 행 안 줄 사이 4 · 촘촘한 행(넷째 칸)·목록 항목 사이 8 ·
+     테두리 있는 행의 위아래·칸 안 블록 사이·각주 12 · 페이지 단위 16·24. 새 칸(긴장 국면·배경 요인·분쟁 현황)은 이 토큰만 쓴다 */
+  --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s24:24px;
   --ease:cubic-bezier(.2,.8,.2,1);
 }
 *{box-sizing:border-box}
@@ -459,7 +462,76 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   .todo .dn{display:none}  /* 「지금 할 일」 칸이 아래가 아니라 오른쪽에 보인다 */
   .qnav a[href="#world-p"]{display:none}  /* 브리핑이 이미 화면에 있다 */
   #fcr,#trend-p .fcall{display:none} .fc{grid-template-columns:minmax(0,1fr)}
-  #world-p .ph{padding:8px var(--pad);row-gap:4px}  /* 넷째 칸 폭(400~)에선 머리띠가 두 줄 — 위아래 8px */
+}
+
+/* ── 긴장 국면 · 배경 요인 · 분쟁 현황 (10/19) ── 참고 칸 — 등급·알림과 무관. 간격은 --s* 토큰만
+   역할: 테두리 있는 행 위아래 12(.wi·.tnow·.disc 와 같다) · 행 안 줄 사이 4 · 넷째 칸 촘촘한 행 8 · 머리 행 4 */
+.phs{display:flex;align-items:baseline;gap:var(--s8);margin-top:var(--s12);padding-top:var(--s12);border-top:1px solid var(--line);
+  font-size:12px;line-height:20px;color:var(--fog);text-decoration:none;min-width:0}
+.phs .pk{font:500 10px/20px var(--data);letter-spacing:.04em;white-space:nowrap}
+.phs b{color:var(--ice);font-weight:600;font-size:13px;white-space:nowrap} .phs b.up{color:var(--amber)} .phs b.no{color:var(--dim);font-weight:400}
+.phs .pm{font:400 11px/20px var(--data);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.phs .px{margin-left:auto;white-space:nowrap;transition:color 120ms var(--ease)}
+.phs:hover .px{color:var(--ice)}
+#phase4{display:none}
+#fac-p .pb{padding:0}
+.fa-g{display:grid;grid-template-columns:minmax(0,1fr)}
+.fa-x{display:grid;gap:var(--s4);padding:var(--s12) var(--pad);border-bottom:1px solid var(--line);min-width:0}
+.fa-h{display:flex;align-items:center;gap:var(--s8);min-width:0}
+.fa-h b{font:600 13px/20px var(--text);color:var(--ice);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fa-lv{margin-left:auto;font:600 10px/1 var(--data);padding:var(--s4);border:1px solid currentColor;white-space:nowrap;text-align:center}
+.fa-lv.lo{color:var(--g0)} .fa-lv.mid{color:var(--fog)} .fa-lv.hi{color:var(--amber)}
+.fa-r{margin:0;font-size:12px;line-height:18px;color:var(--ice);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.fa-s{display:flex;justify-content:space-between;gap:var(--s8);font:400 10px/16px var(--data);color:var(--dim);white-space:nowrap;overflow:hidden;min-width:0}
+.fa-s span:first-child{overflow:hidden;text-overflow:ellipsis} .fa-s a{color:var(--fog)}
+.fa-e{margin:0;padding:var(--s12) var(--pad);border-bottom:1px solid var(--line);font-size:13px;color:var(--fog)}
+.fa-ns{display:none}
+.wtab{display:inline-flex;border:1px solid var(--line-2)}
+.wtab button{all:unset;cursor:pointer;font:500 11px/16px var(--data);color:var(--fog);padding:var(--s4) var(--s8);white-space:nowrap;
+  transition:color 120ms var(--ease),background-color 120ms var(--ease)}
+.wtab button:hover{color:var(--ice)}
+.wtab button[aria-selected="true"]{color:var(--ink);background:var(--ice)}
+.wtab button:focus-visible{outline:1px solid var(--g0);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.wtab button,.phs .px{transition:none}}
+#world[hidden],#conf[hidden]{display:none!important}
+#conf{padding:0}
+.cf-h,.cf{display:grid;grid-template-columns:minmax(0,1fr) 64px 64px;column-gap:var(--s8);align-items:baseline;padding:0 var(--pad)}
+.cf-h{padding-top:var(--s4);padding-bottom:var(--s4);border-bottom:1px solid var(--line);font:500 10px/16px var(--data);color:var(--dim)}
+.cf-h span+span{text-align:right}
+.cf-l{list-style:none;margin:0;padding:0}
+.cf{padding-top:var(--s12);padding-bottom:var(--s12);row-gap:var(--s4);border-bottom:1px solid var(--line)}
+.cf-n{min-width:0;display:flex;gap:var(--s8);align-items:baseline}
+.cf-n b{font:600 13px/20px var(--text);color:var(--ice);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cf-n span{font-size:11px;line-height:20px;color:var(--fog);white-space:nowrap}
+.cf-v{text-align:right;font:600 12px/20px var(--data);color:var(--ice);white-space:nowrap}
+.cf-p{text-align:right;font:400 11px/20px var(--data);color:var(--fog);white-space:nowrap}
+.cf-k{grid-column:1/-1;font-size:12px;line-height:1.5;color:var(--fog)}
+.cf-k b{font:500 10px/1.4 var(--data);letter-spacing:.04em;margin-right:var(--s8)}
+@media (max-width:759px){#fac-p{order:7}}  /* 세계 칸(7) 바로 앞 — DOM 순서가 앞이라 먼저 온다 */
+@media (min-width:760px){
+  /* 세계 칸 머리띠(탭·링크·AI·시각·참고)는 760 이상 모든 폭에서 두 줄로 접힌다 — 휴대폰 규칙(.ph 위아래 8 · 줄 사이 8)과 같은 값.
+     전에는 넷째 칸만 위아래 8·줄 사이 4 였고 834~1799 는 위아래 0 이었다(10/19 통일) */
+  #world-p .ph{padding:var(--s8) var(--pad);row-gap:var(--s8)}
+  #fac-p{grid-column:1/-1}
+  .fa-g{grid-template-columns:repeat(2,minmax(0,1fr))}
+  /* 카드가 나란히 서면 근거 줄 수(0~2)와 무관하게 수준·근거·출처가 같은 y — 근거 칸은 2줄 자리를 잡는다 */
+  .fa-x{grid-template-rows:20px 36px 16px;border-right:1px solid var(--line)} .fa-x:nth-child(2n){border-right:0}
+}
+@media (min-width:1180px){
+  .fa-g{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .fa-x:nth-child(2n){border-right:1px solid var(--line)} .fa-x:last-child{border-right:0}
+}
+@media (min-width:1800px) and (min-height:860px){
+  #fac-p{flex:none}
+  #fac-p .ph{padding:var(--s8) var(--pad);row-gap:var(--s8)}  /* 넷째 칸 폭에선 두 줄 — 세계 칸 머리띠와 같은 값 */
+  #phase4{display:flex;flex:none;margin:0;padding:var(--s8) var(--pad);border-top:0;border-bottom:1px solid var(--line)}
+  .fa-g{grid-template-columns:minmax(0,1fr)}
+  .fa-g .fa-x{grid-template-columns:104px 44px minmax(0,1fr);grid-template-rows:auto;align-items:center;gap:var(--s8);padding:var(--s8) var(--pad);border-right:0}
+  .fa-h{display:contents} .fa-h b{font-size:12px} .fa-lv{margin-left:0}
+  .fa-r{-webkit-line-clamp:1}
+  .fa-s{display:none}
+  .fa-e{padding:var(--s8) var(--pad)}
+  .fa-n{padding:var(--s8) var(--pad);white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .fa-nl{display:none} .fa-ns{display:inline}  /* 넷째 칸: 각주는 한 줄 — 브리핑·할 일 칸 높이를 덜 먹게 */
 }
 
 /* 항목 상세 */
@@ -546,6 +618,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
           <div class="ladder" id="scale"><span>평시</span><span>주의</span><span>경계</span><span>위험</span></div></div>
       </div>
       <p id="summary">첫 분석 결과를 기다리는 중입니다.</p>
+      <a class="phs" id="phase" href="forecast.html#ladder"><span class="pk">긴장 국면</span><b class="no">불러오는 중</b><span class="px">사다리 ›</span></a>
     </div>
   </section>
 
@@ -604,11 +677,18 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   <!-- 예측 요약: 큰 화면 넷째 칸에서만 보인다(CSS). 내용은 흐름·예측 띠와 같은 데이터(risk_calendar.json · signals.json) -->
   <section class="p" id="fc4-p" aria-label="예측 요약">
     <div class="ph"><span class="k">예측 요약</span><span class="wk">과거 빈도 · 확률 아님</span><a class="r fcall" href="forecast.html">예측 전체 ›</a></div>
+    <a class="phs" id="phase4" href="forecast.html#ladder"><span class="pk">긴장 국면</span><b class="no">불러오는 중</b><span class="px">사다리 ›</span></a>
     <div class="pb scroll" id="fc4"><p class="empty">예측 자료를 불러오는 중</p></div>
   </section>
+  <!-- 배경 요인(10/19): 루틴이 08·14·20시 회차에 네 영역을 완화·보통·긴장으로 판정(state/factors.json). 등급·알림과 무관 -->
+  <section class="p" id="fac-p" aria-label="배경 요인">
+    <div class="ph"><span class="k">배경 요인</span><span class="ai" title="AI가 공개 기사를 읽고 쓴 판정입니다. 등급과 알림에는 쓰지 않습니다.">AI 판정</span><span class="r">참고 · 등급과 무관 · 하루 3회(08·14·20시)</span></div>
+    <div class="pb" id="fac"><p class="fa-e">불러오는 중</p></div>
+  </section>
   <section class="p" id="world-p" aria-label="세계 안보 브리핑">
-    <div class="ph"><span class="k">세계 안보 브리핑</span><a class="fcall" href="live.html#us">해외 뉴스 라이브 ›</a><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 선별·요약</span><span id="worldAt"></span><span class="r">참고 · 등급 판정과 무관</span></div>
-    <div class="pb" id="world"></div>
+    <div class="ph"><div class="wtab" role="tablist" aria-label="세계 칸"><button type="button" role="tab" id="wt-world" aria-controls="world" aria-selected="true" data-t="world">오늘 브리핑</button><button type="button" role="tab" id="wt-conf" aria-controls="conf" aria-selected="false" tabindex="-1" data-t="conf">분쟁 현황</button></div><a class="fcall" href="live.html#us">해외 뉴스 라이브 ›</a><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 선별·요약</span><span id="worldAt"></span><span class="r">참고 · 등급 판정과 무관</span></div>
+    <div class="pb" id="world" role="tabpanel" aria-labelledby="wt-world"></div>
+    <div class="pb" id="conf" role="tabpanel" aria-labelledby="wt-conf" hidden><p class="fa-e">불러오는 중</p></div>
   </section>
   <section class="p" id="todo-p" aria-label="지금 할 일">
     <div class="ph"><span class="k">지금 할 일</span><span class="r">개인 준비 · 국민재난안전포털 행동요령 참고</span></div>
@@ -821,6 +901,52 @@ function renderWorld(latest){
       <div class="wm">${[x.region,s.name].filter(Boolean).map(esc).join(" · ")}</div></div>`}).join("")+'</div><div id="year"></div>';
   loadYear(false);
 }
+// ── 긴장 국면(10/19): state/ladder.json (diff_state.update_ladder). 단계 이름·충족 수만 — 지표·근거는 forecast.html#ladder ──
+function renderPhase(lad){
+  if(lad&&(typeof lad!=="object"||Array.isArray(lad)))lad=null;
+  const tot=lad?.total||16;
+  const html=lad&&typeof lad.stage==="number"
+    ?`<span class="pk">긴장 국면</span><b class="${lad.stage>0?"up":""}">${esc(lad.stage_name||"")}</b><span class="pm">충족 ${(lad.met||[]).length}/${tot}${(lad.checking||[]).length?` · 확인 중 ${lad.checking.length}`:""}</span><span class="px">사다리 ›</span>`
+    :`<span class="pk">긴장 국면</span><b class="no">판정 기록 없음</b><span class="pm">다음 확인부터</span><span class="px">사다리 ›</span>`;
+  const tip=lad&&typeof lad.stage==="number"?`과거 위기가 밟은 순서 중 지금 단계 · 등급과 별개 · ${lad.updated_at?short(lad.updated_at)+" 기준":""}`:"루틴이 아직 국면을 판정하지 않았습니다";
+  for(const id of ["phase","phase4"]){const el=$(id);if(el){el.innerHTML=html;el.title=tip}}
+}
+// ── 배경 요인(10/19): state/factors.json (diff_state.update_factors). 참고 — 등급·알림과 무관 ──
+const FAC=[["nk_domestic","북한 내부"],["inter_korean","남북·한국 정치"],["great_powers","주변국 외교"],["public_opinion","사회·여론"]];
+const FAC_LV={"완화":"lo","보통":"mid","긴장":"hi"};
+function renderFactors(f){
+  const dom=f&&typeof f.domains==="object"&&!Array.isArray(f.domains)?f.domains:{};
+  const foot=`<p class="disc fa-n"><span class="fa-nl">과거 20년 발사 기록으로 확인한 결과 네 영역 모두 「이때 발사가 잦았다」는 근거가 없어 등급에 쓰지 않습니다</span><span class="fa-ns">20년 발사 기록상 근거 없음 · 등급에 안 씀</span> — <a href="forecast.html#factors">검증 결과 ›</a></p>`;
+  if(!FAC.some(([k])=>dom[k])){$("fac").innerHTML=`<p class="fa-e">아직 판정 전입니다 — 루틴이 08·14·20시 회차부터 네 영역을 완화·보통·긴장으로 판정합니다.</p>`+foot;return}
+  $("fac").innerHTML=`<div class="fa-g">${FAC.map(([k,n])=>{const d=dom[k];
+    if(!d)return `<div class="fa-x"><div class="fa-h"><b>${n}</b><span class="fa-lv mid">—</span></div><p class="fa-r">이 영역은 아직 판정 전</p><div class="fa-s"><span></span><span></span></div></div>`;
+    const src=(Array.isArray(d.sources)?d.sources:[]).filter(x=>x&&x.url).map(s=>`<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.publisher||(()=>{try{return new URL(s.url).hostname.replace(/^www\./,"")}catch(e){return"출처"}})())}</a>`).join(" · ");
+    return `<div class="fa-x"><div class="fa-h"><b>${n}</b><span class="fa-lv ${FAC_LV[d.level]||"mid"}">${esc(d.level)}</span></div><p class="fa-r" title="${esc(d.summary||"")}">${esc(d.summary||"특이 보도 없음")}</p><div class="fa-s"><span>${src||"출처 없음(보통)"}</span><span>${d.at?short(d.at):""}</span></div></div>`}).join("")}</div>`+foot;
+}
+// ── 분쟁 현황(10/19): data/conflicts.json (scripts/ucdp_month.py, 월 1회) + data/conflict_links.json(근거 있는 한반도 연결만) ──
+let CONF=null;
+async function loadConflicts(){
+  if(CONF)return;
+  const [c,l]=await Promise.all(["data/conflicts.json","data/conflict_links.json"].map(u=>fetch(u,{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)));
+  const links=l?.links||{},more=(l?.more||[]).map(x=>`<a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener" title="${esc(x.note||"")}">${esc(x.name)} ↗</a>`).join(" · ");
+  const mo=m=>m?+m.slice(5,7)+"월":"";
+  if(!c?.rows?.length){$("conf").innerHTML=`<p class="fa-e">분쟁 자료가 아직 없습니다 — 매달 21~28일 UCDP 잠정치를 받아 채웁니다.</p><p class="disc">다른 곳에서 보기: ${more}</p>`;return}
+  CONF=c;
+  $("conf").innerHTML=`<div class="tnow"><b>분쟁 현황</b><span>${c.month.slice(0,4)}년 ${mo(c.month)} 나라별 사망 추정(잠정) 상위 ${c.rows.length}곳</span></div>`
+    +`<div class="cf-h"><span>나라·지역</span><span>${mo(c.month)}</span><span>${c.prev_month?mo(c.prev_month):"전달"}</span></div>`
+    +`<ul class="cf-l">${c.rows.map(r=>{const k=links[r.key];return `<li class="cf"><div class="cf-n"><b title="${esc(r.name_en)}">${esc(r.name)}</b><span>${esc(r.region)}</span></div>`
+      +`<span class="cf-v">${r.best.toLocaleString("ko-KR")}</span><span class="cf-p">${r.prev_best==null?"—":r.prev_best.toLocaleString("ko-KR")}</span>`
+      +(k?`<div class="cf-k"><b>한반도 연결</b>${esc(k.line)} <a href="${esc(safeUrl(k.url))}" target="_blank" rel="noopener">${esc(k.publisher||"출처")} ↗</a></div>`:"")+`</li>`}).join("")}</ul>`
+    +`<p class="disc">사망 = <a href="${esc(safeUrl(c.page))}" target="_blank" rel="noopener">UCDP Candidate Events Dataset ${esc(c.version)} ↗</a>(Uppsala Conflict Data Program, CC BY 4.0) · 사건 시작일 기준 월, 나라 안 사건의 최선 추정 합 · 잠정치라 다음 판에서 바뀔 수 있다 · 악화·개선은 판정하지 않고 두 달 값만 나란히 둔다 · 한반도 연결은 원문으로 확인한 것만.<br>다른 곳에서 보기: ${more}</p>`;
+}
+document.querySelector("#world-p .wtab").addEventListener("click",e=>{const b=e.target.closest("button[data-t]");if(b)setWorldTab(b.dataset.t,false)});
+document.querySelector("#world-p .wtab").addEventListener("keydown",e=>{if(e.key!=="ArrowLeft"&&e.key!=="ArrowRight")return;
+  e.preventDefault();setWorldTab($("wt-world").getAttribute("aria-selected")==="true"?"conf":"world",true)});
+function setWorldTab(t,focus){
+  for(const k of ["world","conf"]){const b=$("wt-"+k),on=k===t;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1;$(k).hidden=!on;if(on&&focus)b.focus()}
+  if(t==="conf")loadConflicts();
+}
+
 // ── 올해 흐름: data/context_2026.json (원문 확인한 사건만, 수동 갱신). 감시 기록이 쌓이기 전의 맥락 ──
 let YEAR=null;
 async function loadYear(open){
@@ -995,6 +1121,9 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
   try{latest=await get("latest.json")}catch(e){}
   try{events=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(l=>JSON.parse(l))}catch(e){}
   DATA={latest,events};render(latest,events);initMap();drawPins(latest?.items);route();tick();
+  // 참고 블록(긴장 국면·배경 요인) — 파일이 없거나 깨져도 빈 상태로 그린다. 등급 화면과 따로 읽는다
+  const refs=()=>Promise.all(["ladder.json","factors.json"].map(p=>get(p).catch(()=>null))).then(([l,f])=>{renderPhase(l);renderFactors(f)});
+  refs();
   try{drawFirms(await get("firms.json"))}catch(e){}
   try{const r=await fetch("data/cctv.json");if(r.ok)drawCctv(await r.json())}catch(e){}
   try{const r=await fetch("data/shelters.json");if(r.ok)drawShelters(await r.json())}catch(e){}
@@ -1005,6 +1134,7 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
     try{const l=await get("latest.json"),ev=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(x=>JSON.parse(x));
       if(ev.length&&ev[ev.length-1].checked_at===events[events.length-1]?.checked_at&&l.checked_at===latest?.checked_at)return;
       latest=l;events=ev;DATA={latest,events};render(latest,events);drawPins(latest?.items);drawDial(latest?.grade??null);
+      refs();
     }catch(e){}
   };
   setInterval(refresh,180e3);document.addEventListener("visibilitychange",refresh);

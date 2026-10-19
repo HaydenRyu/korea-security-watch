@@ -1,0 +1,117 @@
+{
+ "_doc": "배경 요인 과거 검증(2026-10-19) — 요인이 있던 때 ±7일 안에 발사가 평소보다 잦았는지. risk_calendar.py 의 chance·verdict(한쪽 10%)를 그대로 썼다. 확률이 아니다. 화면(forecast.html #factors) 표시용 정본.",
+ "updated": "2026-10-19",
+ "basis": "발사한 날 = CSIS 미사일·핵 ∪ CNS(270일, 2006~2025) · 창 ±7일 · verdict = risk_calendar.verdict(한쪽 10%)",
+ "launch_days": 270,
+ "window_days": 7,
+ "rows": [
+  {
+   "id": "rok_presidential_election",
+   "name": "한국 대선",
+   "domain": "inter_korean",
+   "events": 5,
+   "hit": 3,
+   "expected": 2.0,
+   "verdict": "usual",
+   "p_ge": 0.306,
+   "date_source": "Wikipedia 선거 문서"
+  },
+  {
+   "id": "rok_parliamentary_election",
+   "name": "한국 총선",
+   "domain": "inter_korean",
+   "events": 5,
+   "hit": 3,
+   "expected": 1.6,
+   "verdict": "usual",
+   "p_ge": 0.166,
+   "date_source": "Wikipedia 선거 문서"
+  },
+  {
+   "id": "rok_local_election",
+   "name": "한국 지방선거",
+   "domain": "inter_korean",
+   "events": 5,
+   "hit": 1,
+   "expected": 1.1,
+   "verdict": "usual",
+   "p_ge": 0.804,
+   "date_source": "Wikipedia 선거 문서"
+  },
+  {
+   "id": "rok_inauguration",
+   "name": "한국 정부 교체(취임)",
+   "domain": "inter_korean",
+   "events": 5,
+   "hit": 2,
+   "expected": 2.0,
+   "verdict": "usual",
+   "p_ge": 0.705,
+   "date_source": "Wikipedia 대통령 목록"
+  },
+  {
+   "id": "nk_plenum",
+   "name": "북한 당 전원회의",
+   "domain": "nk_domestic",
+   "events": 21,
+   "hit": 9,
+   "expected": 8.8,
+   "verdict": "usual",
+   "p_ge": 0.565,
+   "date_source": "Wikipedia 6·7·8기 중앙위 문서"
+  },
+  {
+   "id": "nk_congress_conference",
+   "name": "북한 당대회·대표자회",
+   "domain": "nk_domestic",
+   "events": 4,
+   "hit": 1,
+   "expected": 1.1,
+   "verdict": "usual",
+   "p_ge": 0.785,
+   "date_source": "Wikipedia 6·7·8기 중앙위 문서"
+  },
+  {
+   "id": "leaflet_loudspeaker_start",
+   "name": "전단·확성기 국면 시작",
+   "domain": "inter_korean",
+   "events": 5,
+   "hit": 2,
+   "expected": 2.5,
+   "verdict": "usual",
+   "p_ge": 0.845,
+   "date_source": "연합뉴스 계열·Al Jazeera·Korea Herald 등"
+  }
+ ],
+ "unverified": [
+  {
+   "name": "북한 쌀값·환율 급등",
+   "reason": "20년을 덮는 공개 시계열 없음(Asia Press 2017~ · Daily NK 재사용 금지)"
+  },
+  {
+   "name": "숙청·후계",
+   "reason": "날짜가 보도 시점에 좌우돼 날짜 원장을 만들 기준이 없음"
+  },
+  {
+   "name": "유엔 제재 결의",
+   "reason": "대부분 발사·핵실험 뒤에 나와 「요인 → 발사」 방향 검정이 성립하지 않음"
+  }
+ ],
+ "sensitivity": {
+  "name": "한국 총선",
+  "window_days": 14,
+  "events": 5,
+  "hit": 5,
+  "expected": 2.4,
+  "p_ge": 0.009,
+  "note": "±14일로 넓히면 5/5(평소 2.4)로 「잦음」이 나오지만 18개 검정 중 하나뿐이고 다중 비교 보정(0.1/18)을 넘지 못한다. 표본 5건 — 참고로만 두고 예측에 쓰지 않는다."
+ },
+ "control": {
+  "name": "미국 선거(대조)",
+  "events": 10,
+  "hit": 2,
+  "expected": 2.8,
+  "verdict": "usual",
+  "note": "같은 방법으로 다시 센 값이 data/risk_calendar.json stats.us_election 과 같다"
+ }
+}

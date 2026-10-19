@@ -115,13 +115,26 @@
      "level": "official|report|analysis",
      "source": {"url": "<기사 원문 URL, opened 에 있음>", "title": "<기사 제목>", "publisher": "<매체명>"},
      "expires": "YYYY-MM-DD"}
-  ]
+  ],
+  "ladder": [
+    {"id": "<data/escalation_ladder.json indicators[].id>", "status": "single|corroborated",
+     "summary": "<한국어 1문장 — 어떤 사건이 그 지표의 충족 기준(met)에 맞는가>",
+     "sources": [{"url": "<opened 에 있는 원문>", "publisher": "<매체명>"}],
+     "ongoing": true, "until": "<선택 — 시한 ISO 시각>", "ended": true}
+  ],
+  "factors": {
+    "<nk_domestic|inter_korean|great_powers|public_opinion>": {
+      "level": "완화|보통|긴장", "summary": "<한국어 1문장 — 무엇 때문인가>",
+      "sources": [{"url": "<opened 에 있는 원문>", "publisher": "<매체명>"}],
+      "changed": "<선택 — 직전과 level 이 다르면 이유 1문장>"}
+  }
 }
 ```
 - 9개 키를 모두 쓴다. `none` 인 항목은 `{"status":"none"}` 만 써도 된다(직전에 징후였던 항목은 `summary` 에 none 이유를 함께 쓴다).
 - `sources` 에는 실제로 열어 본 URL 만 넣는다.
 - `ongoing`~`overflight_alert`·`deescalation` 은 **해당할 때만** 쓴다(3절·3-1절). 해당하지 않으면 키를 생략한다 — `false` 를 채울 필요 없다.
 - `signals` 는 선택이다(4-2절). 없으면 키를 생략하거나 빈 배열.
+- `ladder`(4-3절)·`factors`(4-4절)도 선택이다. 해당이 없거나 요인 회차가 아니면 키를 생략한다.
 - `lat`·`lon` 은 보도된 지역의 대략적 좌표(소수 2자리)다. 지역이 특정되지 않으면 생략한다. 지도 핀으로 쓰인다.
 
 ## 4-1. 세계 안보 브리핑 (`world`, 선택 · 판정과 무관)
@@ -151,6 +164,39 @@
   같은 기사·같은 사건의 재인용은 건너뛴다(코드도 같은 종류·같은 URL 은 막는다). 사건이 **바뀐 경우**(시점이 당겨졌다·구역이 넓어졌다)만 새 신호로 쓴다.
 - 한 회차에 최대 5건. 해당하는 것이 없으면 `signals` 를 생략한다 — 억지로 채우지 않는다.
 
+## 4-3. 긴장 국면 지표 (`ladder`, 선택 · 등급·알림과 무관)
+- 상황판 「긴장 국면」 한 줄과 예측 화면의 사다리에 쓰는 **단계 이름표**다. 등급·알림·이력에 쓰지 않는다. `items` 판정을 바꾸지 않는다.
+  **우리 확률(%)을 쓰지 않는다.** 국면 계산(가장 높은 단계·유지·만료)은 코드가 한다(`diff_state.py` `update_ladder` → `state/ladder.json`).
+- 정본은 `data/escalation_ladder.json` 이다. 회차 시작에 `indicators[]` 의 `id`·`stage`·`met`(충족 기준)·`sources`(볼 곳)를 읽는다.
+  `state/ladder.json`(없으면 건너뜀)의 `indicators` 는 직전까지 충족된 지표다 — 지속 상태(`ongoing`)면 해제 여부를 확인할 대상으로 본다.
+- **충족된 지표만 쓴다.** 없으면 `ladder` 를 생략한다. 억지로 채우지 않는다. 확인된 사례 1건이면 그 지표는 충족이다(횟수 문턱 없음).
+- `status` 는 3절과 같은 기준이다: `single` = A~C 1곳, `corroborated` = **서로 다른 기관** 2곳 이상(같은 통신 재인용은 1곳).
+  국면은 `corroborated` 로 충족된 지표만 올린다. `single` 은 화면에 「확인 중」으로만 보인다. 코드도 `sources` 의 사이트가 2곳 미만이면 single 로 낮춘다.
+- 근거는 **이번 회차에 실제로 연 원문(`opened`)만**이다. 이미 `items` 에 올린 사건이 지표 기준에도 맞으면 같은 URL 로 `ladder` 에도 적는다(예: 최후통첩 → `ultimatum`, 사상자 충돌 → `lethal_clash`).
+- 지표별 주의:
+  - `legal_pretext`(한반도판 명분 조치) = 북한이 외무성·총참모부·국방성 명의로 **한국·미국의 영토 침범·공격을 공식 주장하고 보복·군사행동을 예고**한 것. 정례 비난은 제외(예: 2024-10 평양 무인기 침투 주장 → 포병 사격대기).
+  - `embassy_drawdown` 은 **발표된 명령**만 해당한다. 논의·의원 발언·훈련(Courageous Channel)·가짜 문자는 해당하지 않는다.
+  - 정례 훈련 기간(`data/risk_calendar.json` anchors)의 집결·열병식 준비는 `sustained_massing` 이 아니다.
+  - `border_incident_surge` 는 routine 아닌 `border_clash` 사건 1건(침범·사격·지뢰)이다. 횟수를 세지 않는다.
+- 지속 상태(최후통첩·준전시 선포)는 `ongoing: true`(시한이 있으면 `until`)를 붙이고, 해제가 보도되면 `{"id": "<id>", "ended": true, "summary": "<해제 근거>"}` 를 낸다.
+  그 밖의 지표는 마지막 충족 뒤 72시간(`CRISIS_FLOOR_H`)이 지나면 코드가 내린다. 회차 `deescalation` 이 있으면 전부 내린다.
+- 실패하면 생략한다. 회차를 막지 않는다(직전 국면이 72시간 규칙대로 남는다).
+
+## 4-4. 배경 요인 (`factors`, 선택 · 등급·알림과 무관 · 하루 2~3회)
+- 상황판 「배경 요인」 칸의 **참고 판정**이다. 과거 20년 발사 기록으로 검증한 결과 네 영역 모두 「평소 수준」이라 등급·알림·`items` 에 쓰지 않는다.
+- **요인 회차일 때만 쓴다**: `TZ=Asia/Seoul date +%H` 가 `08`·`14`·`20` 이거나, `state/factors.json` 이 없거나 그 `at` 이 **10시간**보다 오래됐을 때. 그 밖의 회차는 `factors` 를 생략한다(코드가 직전 값을 잇는다).
+- 4개 영역(키 고정)을 아래 기준으로 `완화`·`보통`·`긴장` 중 하나로 본다:
+  | 키 | 영역 | 긴장 예 | 완화 예 |
+  |---|---|---|---|
+  | `nk_domestic` | 북한 내부(당 회의·숙청·후계·식량/물가/환율·제재·북러 교역) | 당 회의가 대남·대미 「강대강」 노선 결정 · 고위 간부 숙청 공식 보도 · 쌀값·환율 「급등」 보도(수치는 기사 값 그대로) | 경제 우선·대화 언급을 공식 노선으로 결정 |
+  | `inter_korean` | 남북·한국 정치(대북 정책·선거·전단/확성기/오물풍선·탈북) | 전단 살포·확성기 재개·오물풍선 · 북한의 전단 보복 예고 · 군사합의 효력 정지 | 확성기 중단·철거 · 대북 특사·연락 채널 복원 |
+  | `great_powers` | 주변국 외교(미·중·러 정상 접촉·미 대북 발언·유엔 제재) | 북러·북중 군사 협력의 새 합의 · 미 정부의 군사 옵션 언급 · 유엔 제재 감시 기구 무력화 | 미·북 또는 남·북 정상·고위급 접촉 공식 발표 |
+  | `public_opinion` | 사회·여론(남한 갈등 이슈·북 대남 선전 수위) | 북 관영 매체의 대남 비난이 특정 인물·시설을 지목 · 남한 내 대북 정책 충돌이 공식 조치로 이어짐 | 대남 비난 중단 보도 |
+- `긴장`·`완화` 는 **공식 발표 또는 A~C 출처가 보도한 사실**이 있고, 그 원문이 `opened` 에 있을 때만 쓴다(`sources` 필수 — 없으면 코드가 그 영역을 버린다). 근거가 없으면 `보통` 이다. 바꿀 근거가 없으면 직전 level 을 그대로 낸다.
+- 영역마다 한국어·영어 검색어를 1개 이상 써서 `coverage` 에 `"factor:<키>": [...]` 로 남긴다. 판정용으로 이미 연 원문을 먼저 쓰고, 추가로 여는 원문은 4건 안으로 줄인다.
+- 수치(쌀값·환율 등)는 기사에 적힌 값만 옮기고 출처를 붙인다. 우리 추정치·확률을 쓰지 않는다. 쌀값·환율을 따로 찾아 판정 근거로 삼지 않는다(공개 장기 자료가 없어 검증되지 않았다).
+- 실패하면 생략한다. 회차를 막지 않는다(직전 판정이 남는다).
+
 ## 5. 회차 절차
 0. 위성 열점은 GitHub Actions `firms` 가 매시간 `state/firms.json` 에 갱신한다. 이 세션에서 firms.py 를 실행하지 않는다. 파일이 없거나 `fetched_at` 이 3시간보다 오래됐으면 열점 근거를 쓰지 않는다.
    - 출력의 `border_count` 가 0보다 크면 `state/firms.json` 의 `border: true` 지점을 확인한다.
@@ -165,6 +211,8 @@
    - `sources` 에는 `opened` 에 있는 URL 만 넣는다. 둘 다 `diff_state.py` 가 검사하며, 어기면 회차가 판정 불가로 기록된다.
 1-1. **세계 안보 브리핑(4-1절)을 채운다** — 판정 검색이 끝난 뒤, 국제면(Reuters World·AP World·BBC World·NHK World 중 2곳 이상)을 열어 `opened` 에 넣고 `world` 3~5건과 `world_context` 를 쓴다. 판정용으로 이미 연 원문도 쓸 수 있다. `source.url` 이 `opened` 에 없으면 버려진다. 실패해도 회차는 계속한다.
 1-2. **임박 신호(4-2절)를 채운다** — 판정·브리핑 검색에서 이미 연 원문 중 항행경보·북한 예고·시설 동향·발사대 이동·공표 일정을 가리키는 기사를 골라 `signals` 에 쓴다. 먼저 `state/signals.json`(없으면 건너뜀)의 `active` 와 대조해 같은 사건을 빼고, 항행경보(일본 해상보안청·중국 해사국)와 38 North 최근 글은 이 단계에서 확인한다. 실패해도 회차는 계속한다.
+1-3. **긴장 국면 지표(4-3절)를 확인한다** — 판정 검색에서 이미 연 원문을 `data/escalation_ladder.json` 의 `indicators[].met` 와 대조해 충족된 것만 `ladder` 에 쓴다. 추가로 여는 원문은 2건 안으로 줄인다. 실패해도 회차는 계속한다.
+1-4. **요인 회차면(4-4절) `factors` 를 채운다.** 요인 회차가 아니면 건너뛴다. 실패해도 회차는 계속한다.
 2. `python3 scripts/diff_state.py run.json` 를 실행하고 출력을 확인한다. 스키마 위반이면 스크립트가 unverified 로 기록한다.
 3. `rm run.json` 후 `git add state/ data/sources.json $(ls data/source_requests.jsonl 2>/dev/null) && git commit -m "watch: <등급 또는 unverified> <시각>"` 를 실행한다.
 4. `git pull --rebase origin main && git push origin HEAD:main`. 거절되면 한 번 더 pull --rebase 후 push 한다. 그래도 실패하면 사유를 출력하고 끝낸다.

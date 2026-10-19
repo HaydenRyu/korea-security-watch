@@ -13,6 +13,8 @@
 :root{--ink:#05080e;--panel:#0a1019;--head:#0d1520;--line:#1a2331;--line-2:#2a3649;--ice:#dbe5f1;--fog:#8091a8;--dim:#4c5a6e;
   --g0:#5fd0b8;--g1:#f2c14e;--amber:var(--g1);--data:'Martian Mono',ui-monospace,monospace;
   --text:'Pretendard Variable',Pretendard,system-ui,sans-serif;--pad:12px;--side:16px;--ease:cubic-bezier(.2,.8,.2,1);
+  /* 간격 토큰 — 상황판(index.html)과 같은 값·같은 역할: 행 안 줄 4 · 촘촘한 행·목록 항목 8 · 행 위아래·블록 12 · 칸 사이 16 */
+  --s4:4px;--s8:8px;--s12:12px;--s16:16px;--s24:24px;
   /* 도발 종류(연도 막대 누적) — 핵은 가장 무거운 종류라 위험색, 기타(풍선·포격 등)는 판단 집계 밖이라 흐리게 */
   --k-mis:var(--fog);--k-nuc:#ff4d5e;--k-oth:var(--line-2)}
 *{box-sizing:border-box}html,body{margin:0}
@@ -83,12 +85,52 @@ ul.note{padding-left:18px;margin:0}
 .sg-ck b{font:500 11px var(--data);color:var(--ice);margin-right:6px}
 @media (max-width:520px){.sg li{grid-template-columns:minmax(0,1fr)}}
 .recent{margin:12px 0 0;padding:0;list-style:none;font-size:12px;color:var(--fog)}.recent li{padding:2px 0}.recent .d{font:500 11px var(--data);color:var(--ice);margin-right:8px}
+/* ── 긴장 국면 사다리 · 외부 전문가 시각 · 배경 요인 검증 (10/19) ── 간격은 --s* 토큰만 */
+.ld-now{display:flex;align-items:baseline;gap:var(--s4) var(--s12);flex-wrap:wrap}
+.ld-now .nk{font:500 10px/1.4 var(--data);color:var(--fog);letter-spacing:.04em}
+.ld-now b{font:700 24px/1.1 var(--text);color:var(--g0)} .ld-now b.up{color:var(--amber)} .ld-now b.no{font-size:16px;color:var(--fog);font-weight:500}
+.ld-now .nm{font:400 12px/1.4 var(--data);color:var(--fog)}
+.ld-l{list-style:none;margin:var(--s12) 0 0;padding:0}
+.ld-s{display:grid;grid-template-columns:104px minmax(0,1fr);gap:var(--s4) var(--s12);padding:var(--s12) 0;border-top:1px solid var(--line)}
+.ld-s .sn{font:600 13px/1.5 var(--text);color:var(--fog)} .ld-s .sn small{display:block;font:400 10px/1.6 var(--data);color:var(--dim)}
+.ld-s.cur .sn{color:var(--ice)}
+.ld-s p{margin:0;font-size:13px}
+.ld-i{list-style:none;margin:var(--s8) 0 0;padding:0;display:grid;gap:var(--s8)}
+.ld-i li{padding-left:var(--s8);border-left:2px solid var(--line-2);font-size:13px}
+.ld-i li.on{border-left-color:var(--amber)} .ld-i li.ck{border-left-color:var(--fog)}
+.ld-i li b{font-weight:600}
+.ld-i .mt{display:block;margin-top:var(--s4);font-size:12px;line-height:1.5;color:var(--fog)}
+.ld-i .now{display:block;margin-top:var(--s4);font-size:12px;line-height:1.5;color:var(--ice)}
+.ld-i .tag{margin-left:var(--s8)}
+.ld-e{margin-top:var(--s8)}
+.ld-e>summary{cursor:pointer;list-style:none;font:500 11px/32px var(--data);color:var(--fog);min-height:32px}
+.ld-e>summary::-webkit-details-marker{display:none}
+.ld-e>summary::after{content:" ⌄"} .ld-e[open]>summary::after{content:" ⌃"}
+.ld-e>summary:hover{color:var(--ice)}
+.ld-v{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.ld-v li{display:grid;grid-template-columns:112px minmax(0,1fr) 120px;gap:var(--s4) var(--s8);padding:var(--s8) 0;border-bottom:1px solid var(--line);font-size:12px;line-height:1.5}
+.ld-v .ec{font:500 11px/1.5 var(--data);color:var(--fog)} .ld-v .eo{color:var(--ice)} .ld-v .el{font:400 11px/1.5 var(--data);color:var(--fog);text-align:right}
+.ld-v .es{grid-column:2/-1;display:flex;flex-wrap:wrap;gap:var(--s4) var(--s8);align-items:baseline;font:400 10px/1.5 var(--data);color:var(--dim);overflow-wrap:anywhere}
+.ld-a{margin:var(--s8) 0 0;font-size:12px;color:var(--fog)} .ld-a b{font:500 11px var(--data);color:var(--ice);margin-right:var(--s8)}
+.cfr-t{display:flex;gap:var(--s8) var(--s16);align-items:center;flex-wrap:wrap;font-size:12px;color:var(--fog)} .cfr-t b{color:var(--ice);font-weight:600}
+.cfr-q{margin:var(--s8) 0 0;font-size:14px;line-height:1.6}
+@media (max-width:520px){.ld-s{grid-template-columns:minmax(0,1fr)}
+  .ld-v li{grid-template-columns:minmax(0,1fr) auto}.ld-v .ec{grid-column:1}.ld-v .el{grid-row:1;grid-column:2}.ld-v .eo,.ld-v .es{grid-column:1/-1}}
 </style></head><body>
 <header class="top"><h1>JIS 예측</h1><a href="./">← 상황판</a></header>
 <main>
 
+<section class="p" id="ladder"><div class="ph"><span class="k">긴장 국면 · 과거 위기가 밟은 순서</span><span class="r">등급(평시~위험)과 별개 · 확률 아님</span></div>
+<div class="pb" id="lad"><p class="note" style="margin:0">불러오는 중</p></div></section>
+
+<section class="p" id="cfr"><div class="ph"><span class="k">외부 전문가 시각</span><span class="r">연 1회 · 확률 아님</span></div>
+<div class="pb" id="cfrb"><p class="note" style="margin:0">불러오는 중</p></div></section>
+
 <section class="p" id="sigp"><div class="ph"><span class="k">기사로 본 임박 신호</span><span class="tag" id="sigsample" hidden>예시 데이터 · 실제 상황 아님</span><span class="r" id="sigat">—</span></div>
 <div class="pb"><div id="sig"><p class="sg-none">불러오는 중</p></div><p class="sg-ck" id="sigck" hidden></p></div></section>
+
+<section class="p" id="factors"><div class="ph"><span class="k">배경 요인 · 과거 20년 검증</span><span class="r" id="fvb">—</span></div>
+<div class="pb wrap" id="fv"><p class="note" style="margin:0">불러오는 중</p></div></section>
 
 <section class="p"><div class="ph"><span class="k">지금 흐름</span><span class="r" id="tbasis">발사한 날 수 · CSIS 도발 DB</span></div>
 <div class="pb" id="tempo"><p class="note">불러오는 중</p></div></section>
@@ -140,6 +182,42 @@ Promise.all([jf(SB+"signals.json"),jf(SB+"latest.json"),jf("data/risk_calendar.j
   const ck=$("sigck");ck.hidden=false;
   ck.innerHTML=`<b>과거 적중</b>`+(chk.length?`${chk.map(esc).join(" · ")}<br>신호를 처음 본 날부터 ${cal.signal_check.window_days}일 안 발사 여부 — 지난 건수이며 다음 발사의 확률이 아니다.`
     :`집계 중 — 만료된 신호가 쌓이면 종류별로 보여 줍니다(종류별 ${cal?.signal_check?.min_n||5}건부터 비율).`);
+});
+// ── 긴장 국면 사다리(10/19): 정본 data/escalation_ladder.json + 판정 state/ladder.json(diff_state.update_ladder). 등급·알림과 무관 ──
+const LD_ST={corroborated:"충족",single:"확인 중"};
+Promise.all([jf("data/escalation_ladder.json"),jf(SB+"ladder.json")]).then(([cat,st])=>{
+  if(!cat?.stages){$("lad").innerHTML='<p class="note" style="margin:0">사다리 자료를 불러오지 못했습니다.</p>';$("cfrb").innerHTML='<p class="note" style="margin:0">자료를 불러오지 못했습니다.</p>';return}
+  if(st&&(typeof st!=="object"||typeof st.stage!=="number"))st=null;
+  const inds=st?.indicators&&typeof st.indicators==="object"?st.indicators:{},tot=cat.indicators.length;
+  const ev=e=>`<li><span class="ec">${esc(e.case)}</span><span class="eo">${esc(e.observed)}</span><span class="el">${esc(e.lead||"—")}</span><span class="es">${e.url?lnk(e.url,esc(e.publisher||(()=>{try{return new URL(e.url).hostname.replace(/^www\./,"")}catch(_){return"출처"}})())):""}${e.status!=="verified"?`<span class="tag lo" title="${esc(e.note||"원문으로 확인하지 못함")}">미확인</span>`:""}${e.public_at_time===false?'<span class="tag" title="당시엔 공개되지 않았고 나중에 밝혀진 정보 — 실시간 감시로는 볼 수 없었다">당시 기밀</span>':""}</span></li>`;
+  const now=st?`<span class="nk">지금</span><b class="${st.stage>0?"up":""}">${esc(st.stage_name||cat.stages[st.stage]?.name||"")}</b><span class="nm">충족 지표 ${(st.met||[]).length} / ${st.total||tot}${(st.checking||[]).length?` · 확인 중 ${st.checking.length}`:""}${st.updated_at?` · ${hhmm(st.updated_at)} 기준`:""}</span>`
+    :`<span class="nk">지금</span><b class="no">판정 기록 없음</b><span class="nm">매시간 루틴이 다음 확인부터 국면을 판정합니다</span>`;
+  const hist=(Array.isArray(st?.history)?st.history:[]).slice(-3).reverse();
+  $("lad").innerHTML=`<div class="ld-now">${now}</div>
+    <p class="note">${esc(cat.rule?.stage_of_run||"")} ${esc(cat.rule?.hold||"")}</p>
+    ${hist.length?`<p class="note" style="margin-top:var(--s4)">최근 변화: ${hist.map(h=>`${hhmm(h.at)} ${esc(cat.stages[h.from]?.name||h.from)} → ${esc(cat.stages[h.to]?.name||h.to)}${h.why?` (${esc(h.why)})`:""}`).join(" · ")}</p>`:""}
+    <ol class="ld-l">${cat.stages.slice().reverse().map(sg=>{const list=cat.indicators.filter(i=>i.stage===sg.n),evs=list.flatMap(i=>i.evidence||[]);
+      return `<li class="ld-s${st&&st.stage===sg.n?" cur":""}"><div class="sn">${esc(sg.name)}<small>${sg.n}단계</small></div><div><p>${esc(sg.desc)}</p>
+      ${list.length?`<ul class="ld-i">${list.map(i=>{const x=inds[i.id];return `<li class="${x?(x.status==="corroborated"?"on":"ck"):""}"><b>${esc(i.label)}</b>${x?`<span class="tag${x.status==="corroborated"?" hi":""}">${LD_ST[x.status]||"확인 중"}</span>`:""}<span class="mt">${esc(i.met)}</span>${x?`<span class="now">${AI_TAG}${esc(x.summary||"")} · ${(x.sources||[]).map(s=>lnk(s.url,esc(s.publisher||"출처"))).join(" · ")} · ${hhmm(x.last_seen)} 마지막 확인</span>`:""}</li>`}).join("")}</ul>`:""}
+      ${evs.length?`<details class="ld-e"><summary>과거 사례 근거 ${evs.length}건</summary><ul class="ld-v">${evs.map(ev).join("")}</ul></details>`:""}
+      <p class="ld-a"><b>할 일</b>${esc(sg.action)}</p></div></li>`}).join("")}</ol>
+    ${(cat.skips||[]).length?`<details class="ld-e"><summary>단계를 건너뛰고 터진 사례 ${cat.skips.length}건 — 사다리로 못 잡는 경우</summary><ul class="ld-v">${cat.skips.map(ev).join("")}</ul></details>`:""}`;
+  const c=cat.external?.cfr;
+  $("cfrb").innerHTML=c?`<div class="cfr-t"><span class="tag">${esc(c.tier)}</span><span>가능성 <b>${esc(c.likelihood)}</b></span><span>영향 <b>${esc(c.impact)}</b></span></div>
+    <p class="cfr-q">「${esc(c.wording)}」</p><p class="note" style="margin-top:var(--s4)">${lnk(c.url,"CFR Preventive Priorities Survey 2026")} · ${esc(c.published)} · ${esc(c.note)}</p>`
+    :'<p class="note" style="margin:0">외부 평가 자료 없음</p>';
+});
+// ── 배경 요인 검증(10/19): data/factors_validation.json — 상황판 「배경 요인」이 등급과 무관한 근거 ──
+jf("data/factors_validation.json").then(fv=>{
+  if(!fv?.rows){$("fv").innerHTML='<p class="note" style="margin:0">검증 자료를 불러오지 못했습니다.</p>';return}
+  const sv=fv.sensitivity;
+  $("fvb").textContent=`발사한 날 ${fv.launch_days}일 · ±${fv.window_days}일`;
+  $("fv").innerHTML=`<table><thead><tr><th>요인</th><th>사건</th><th>발사 있던 사건</th><th>평소라면</th><th>판단</th><th>날짜 출처</th></tr></thead><tbody>`
+    +fv.rows.map(r=>`<tr><td>${esc(r.name)}${sv&&r.name===sv.name?" ¹":""}</td><td class="n">${r.events}</td><td class="n">${r.hit}</td><td class="n">${r.expected}</td><td>${tag(r.verdict)}</td><td>${esc(r.date_source)}</td></tr>`).join("")
+    +(fv.unverified||[]).map(u=>`<tr><td>${esc(u.name)}</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td><span class="tag lo">미검증</span></td><td>${esc(u.reason)}</td></tr>`).join("")
+    +`</tbody></table><p class="note">기준은 아래 「1년 달력」과 같다(사건마다 그해 아무 날 같은 길이 창의 발사 확률, 한쪽 10%). 「평소 수준」 = 이 요인이 있을 때 발사가 늘었다는 근거가 없다는 뜻 — 상황판 「배경 요인」을 등급·알림에 쓰지 않는 이유다. ${esc(fv.basis||"")}`
+    +(fv.control?`<br>대조: ${esc(fv.control.name)} ${fv.control.hit}/${fv.control.events}(평소 ${fv.control.expected}) — ${esc(fv.control.note)}.`:"")
+    +(sv?`<br>¹ 참고: ${esc(sv.note)}`:"")+`</p>`;
 });
 fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.json()).then(doc=>{
   const tp=doc.tempo,cfg=doc.config,py=tp.per_year,ys=Object.keys(py),thisY=ys[ys.length-1];

@@ -487,6 +487,202 @@ def update_signals(run: dict, doc: dict | None, now: str) -> dict:
     return {"version": 1, "updated_at": now, "active": keep, "expired": exp}
 
 
+def _load_safe(path: Path):
+    """참고 블록용 읽기 — 파일이 없거나 깨졌으면 None(예외를 내지 않는다)."""
+    try:
+        return json.loads(path.read_text()) if path.exists() else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def _clean_sources(raw, opened: set[str], limit: int = 3) -> list[dict]:
+    """[{url, publisher|name}] → 실제로 연 원문만, URL 중복 제거. 단일 dict(source)도 받는다."""
+    if isinstance(raw, dict):
+        raw = [raw]
+    out, seen = [], set()
+    for s in raw if isinstance(raw, list) else []:
+        if not isinstance(s, dict):
+            continue
+        u = s.get("url")
+        if not isinstance(u, str) or u not in opened or u in seen:
+            continue
+        name = s.get("publisher") or s.get("name")
+        out.append({"url": u, "publisher": name.strip()[:60] if isinstance(name, str) and name.strip() else site(u)})
+        seen.add(u)
+        if len(out) >= limit:
+            break
+    return out
+
+
+# ── 긴장 국면(ladder, 선택 · 등급·알림과 무관) ─────────────────────────────────────────
+# 정본 data/escalation_ladder.json(지표 16개·과거 근거). 루틴은 충족된 지표만 run.ladder 로 낸다.
+# 국면 = corroborated 로 충족된 지표 중 가장 높은 stage. single 만이면 「확인 중」(국면을 올리지 않는다).
+# 유지: 마지막 충족 뒤 CRISIS_FLOOR_H(기존 상수) — 지속 상태(ongoing)는 해제(ended) 또는 시한(until)+DEADLINE_GRACE_H 까지.
+# 해제 근거(run.deescalation)가 있으면 전부 내린다. 새 상수는 표시용 길이 제한뿐이다.
+LADDER_FILE = ROOT / "data" / "escalation_ladder.json"
+LADDER_STATUSES = ("single", "corroborated")
+LADDER_HISTORY_MAX = 60  # 국면 변화 이력 — 화면 표시용, 판정에 쓰지 않는다
+LADDER_SOURCES_MAX = 5
+
+
+def ladder_catalog(path: Path = LADDER_FILE) -> dict:
+    """{ids: {id: stage}, names: {stage: 이름}, total} — 읽을 수 없으면 빈 카탈로그."""
+    doc = _load_safe(path)
+    try:
+        ids = {i["id"]: int(i["stage"]) for i in doc["indicators"] if isinstance(i.get("id"), str)}
+        names = {int(s["n"]): str(s["name"]) for s in doc.get("stages") or []}
+        return {"ids": ids, "names": names, "total": len(ids)}
+    except Exception:  # noqa: BLE001
+        return {"ids": {}, "names": {}, "total": 0}
+
+
+def clean_ladder(run: dict, catalog: dict) -> dict:
+    """run.ladder → {id: row}. 모르는 id·잘못된 status·연 원문 없는 지표는 그것만 버린다.
+    corroborated 인데 서로 다른 사이트가 2곳 미만이면 single 로 낮춘다(items 와 같은 확인 기준).
+    ended=true 행은 출처 없이도 받는다(해제 근거 summary). 어떤 입력에도 예외를 내지 않는다."""
+    try:
+        raw, ids, opened, out = run.get("ladder"), catalog.get("ids") or {}, _opened(run), {}
+        if not isinstance(raw, list):
+            return {}
+        for r in raw[:len(ids) * 2 or 32]:
+            if not isinstance(r, dict) or r.get("id") not in ids:
+                continue
+            summ = r.get("summary").strip()[:200] if isinstance(r.get("summary"), str) else ""
+            srcs = _clean_sources(r.get("sources", r.get("source")), opened, LADDER_SOURCES_MAX)
+            if _flag(r, "ended"):
+                out[r["id"]] = {"ended": True, "summary": summ, "sources": srcs}
+                continue
+            st = r.get("status")
+            if st not in LADDER_STATUSES or not srcs or not summ:
+                continue
+            if st == "corroborated" and len({site(s["url"]) for s in srcs}) < 2:
+                st = "single"
+            row = {"status": st, "summary": summ, "sources": srcs}
+            if _flag(r, "ongoing"):
+                row["ongoing"] = True
+                if _dt(r.get("until")):
+                    row["until"] = r["until"]
+            prev = out.get(r["id"])  # 같은 id 가 두 번 오면 확인 수가 높은 쪽
+            if prev and not prev.get("ended") and prev["status"] == "corroborated" and st == "single":
+                continue
+            out[r["id"]] = row
+        return out
+    except Exception:  # noqa: BLE001 — 참고 블록이 회차를 깨뜨리면 안 된다
+        return {}
+
+
+def _ladder_alive(ind: dict, t_now: datetime) -> bool:
+    if ind.get("ongoing"):
+        until = _dt(ind.get("until"))
+        return not (until and t_now >= until + timedelta(hours=DEADLINE_GRACE_H))
+    last = _dt(ind.get("last_seen"))
+    return bool(last and t_now - last <= timedelta(hours=CRISIS_FLOOR_H))
+
+
+def update_ladder(run: dict, doc: dict | None, now: str, catalog: dict | None = None) -> dict:
+    """state/ladder.json = {version, updated_at, judged_at, stage, stage_name, total, met[], checking[],
+    indicators{id: {stage,status,summary,sources,first_seen,last_seen,ongoing?,until?}}, history[]}.
+    판정 불가 회차(run={})에도 시간 경과로 만료만 반영한다. 어떤 입력에도 예외를 내지 않는다."""
+    doc = doc if isinstance(doc, dict) else {}
+    try:
+        cat = catalog if catalog is not None else ladder_catalog()
+        ids, names = cat.get("ids") or {}, cat.get("names") or {}
+        if not ids:  # 카탈로그를 못 읽으면 직전 상태를 그대로 둔다(지표를 지우지 않는다)
+            return {**doc, "updated_at": now, "error": "catalog"}
+        t_now = _dt(now) or datetime.now(timezone.utc)
+        run = run if isinstance(run, dict) else {}
+        prev_ind = doc.get("indicators") if isinstance(doc.get("indicators"), dict) else {}
+        inds = {k: dict(v) for k, v in prev_ind.items() if k in ids and isinstance(v, dict)}
+        why = ""
+        d = run.get("deescalation")
+        if isinstance(d, str) and d.strip():
+            inds, why = {}, "해제 근거: " + d.strip()[:120]
+        for k, row in clean_ladder(run, cat).items():
+            if row.get("ended"):
+                if inds.pop(k, None) is not None:
+                    why = why or f"{k} 해제" + (f": {row['summary']}" if row.get("summary") else "")
+                continue
+            old = inds.get(k) or {}
+            st = "corroborated" if "corroborated" in (row["status"], old.get("status")) else "single"
+            srcs = list(old.get("sources") or [])
+            for s in row["sources"]:
+                if s["url"] not in {x.get("url") for x in srcs}:
+                    srcs.append(s)
+            new = {"stage": ids[k], "status": st, "summary": row["summary"], "sources": srcs[-LADDER_SOURCES_MAX:],
+                   "first_seen": old.get("first_seen") or now, "last_seen": now}
+            if row.get("ongoing"):
+                new["ongoing"] = True
+                if row.get("until"):
+                    new["until"] = row["until"]
+            inds[k] = new
+        inds = {k: v for k, v in inds.items() if _ladder_alive(v, t_now)}
+        met = sorted((k for k, v in inds.items() if v.get("status") == "corroborated"), key=lambda k: (-ids[k], k))
+        checking = sorted((k for k, v in inds.items() if v.get("status") != "corroborated"), key=lambda k: (-ids[k], k))
+        stage = max((ids[k] for k in met), default=0)
+        hist = [h for h in doc.get("history") or [] if isinstance(h, dict)]
+        prev_stage = doc.get("stage") if isinstance(doc.get("stage"), int) else 0
+        if stage != prev_stage:
+            hist.append({"at": now, "from": prev_stage, "to": stage, "why": why or ("만료(마지막 충족 뒤 72시간)" if stage < prev_stage else "")})
+        out = {"version": 1, "updated_at": now, "judged_at": now if run.get("checked_at") else doc.get("judged_at"),
+               "stage": stage, "stage_name": names.get(stage, ""), "total": len(ids), "met": met, "checking": checking,
+               "indicators": inds, "history": hist[-LADDER_HISTORY_MAX:]}
+        return out
+    except Exception as e:  # noqa: BLE001
+        return {**doc, "updated_at": now, "error": str(e)[:120]}
+
+
+# ── 배경 요인(factors, 선택 · 등급·알림과 무관) ─────────────────────────────────────────
+# 4개 영역을 완화·보통·긴장으로 본 참고 판정(루틴이 KST 08·14·20시 회차, 또는 state/factors.json 이 10시간보다 오래됐을 때 낸다).
+# 과거 20년 발사 기록으로 검증한 결과 네 영역 모두 「평소 수준」이라 등급·알림에 쓰지 않는다.
+FACTOR_KEYS = ("nk_domestic", "inter_korean", "great_powers", "public_opinion")
+FACTOR_LEVELS = ("완화", "보통", "긴장")
+_FACTOR_LEN = {"summary": 200, "changed": 160}
+FACTOR_HISTORY_MAX = 60  # 변화 이력 — 화면이 「언제부터」를 보여 주는 데만 쓴다
+
+
+def clean_factors(run: dict) -> dict:
+    """run.factors → {키: row}. 키·level 이 틀리면 그 영역만 버린다. 완화·긴장은 연 원문과 근거 문장이 있어야 한다
+    (근거가 없으면 보통 — 루틴 규칙). 어떤 입력에도 예외를 내지 않는다."""
+    try:
+        raw, opened, out = run.get("factors"), _opened(run), {}
+        if not isinstance(raw, dict):
+            return {}
+        for k in FACTOR_KEYS:
+            it = raw.get(k)
+            if not isinstance(it, dict) or it.get("level") not in FACTOR_LEVELS:
+                continue
+            row = {"level": it["level"], "sources": _clean_sources(it.get("sources"), opened)}
+            for f, n in _FACTOR_LEN.items():
+                v = it.get(f)
+                if isinstance(v, str) and v.strip():
+                    row[f] = v.strip()[:n]
+            if it["level"] != "보통" and (not row["sources"] or "summary" not in row):
+                continue
+            out[k] = row
+        return out
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+def update_factors(run: dict, doc: dict | None, now: str) -> dict:
+    """state/factors.json = {version, at, domains{키: {level, summary, sources, at, since}}, history[]}.
+    since = 지금 level 이 시작된 시각. 빠진 영역은 직전 값을 잇는다. at = 마지막으로 요인을 받은 회차."""
+    doc = doc if isinstance(doc, dict) else {}
+    try:
+        dom = {k: v for k, v in (doc.get("domains") or {}).items() if k in FACTOR_KEYS and isinstance(v, dict)}
+        hist = [h for h in doc.get("history") or [] if isinstance(h, dict)]
+        new = clean_factors(run if isinstance(run, dict) else {})
+        for k, row in new.items():
+            prev = dom.get(k) or {}
+            if prev.get("level") and prev["level"] != row["level"]:
+                hist.append({"at": now, "key": k, "from": prev["level"], "to": row["level"], "why": row.get("changed", "")})
+            since = prev.get("since") if prev.get("level") == row["level"] else now
+            dom[k] = {**{f: v for f, v in row.items() if f != "changed"}, "at": now, "since": since or now}
+        return {"version": 1, "at": now if new else doc.get("at"), "domains": dom, "history": hist[-FACTOR_HISTORY_MAX:]}
+    except Exception as e:  # noqa: BLE001
+        return {**doc, "error": str(e)[:120]}
+
+
 def last_verified(events: list[dict]) -> dict | None:
     """판정 불가 회차를 건너뛴 직전 판정 회차."""
     return next((e for e in reversed(events) if e.get("status") == "ok"), None)
@@ -581,7 +777,7 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     notify = notify or released or calmed
 
     new_latest = {**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)}
-    for k in ("unresolved", "floor", "signals"):  # signals 는 state/signals.json 에 따로 쌓는다
+    for k in ("unresolved", "floor", "signals", "ladder", "factors"):  # 참고 블록은 state/signals·ladder·factors.json 에 따로 쌓는다
         new_latest.pop(k, None)
     unres = unresolved_keys(items)
     if unres:
@@ -634,6 +830,21 @@ def main(argv: list[str]) -> int:
         event["signals"] = {"raw": len(run["signals"]) if isinstance(run.get("signals"), list) else 0, "active": len(sig["active"])}
     except Exception as e:  # noqa: BLE001
         event["signals"] = {"error": str(e)[:120]}
+    ok = run if event.get("status") == "ok" and isinstance(run, dict) else {}
+    try:  # 긴장 국면 — 등급·알림과 무관. 판정 불가 회차는 시간 경과(만료)만 반영
+        lad = update_ladder(ok, _load_safe(STATE / "ladder.json"), event["checked_at"])
+        (STATE / "ladder.json").write_text(json.dumps(lad, ensure_ascii=False, indent=2) + "\n")
+        event["ladder"] = {"raw": len(ok["ladder"]) if isinstance(ok.get("ladder"), list) else 0,
+                           "stage": lad.get("stage"), "met": len(lad.get("met") or []), "checking": len(lad.get("checking") or [])}
+    except Exception as e:  # noqa: BLE001
+        event["ladder"] = {"error": str(e)[:120]}
+    try:  # 배경 요인 — 등급·알림과 무관. 요인 회차가 아니면 직전 값을 그대로 쓴다
+        fac = update_factors(ok, _load_safe(STATE / "factors.json"), event["checked_at"])
+        (STATE / "factors.json").write_text(json.dumps(fac, ensure_ascii=False, indent=2) + "\n")
+        event["factors"] = {"raw": len(ok["factors"]) if isinstance(ok.get("factors"), dict) else 0,
+                            "kept": len(clean_factors(ok))}
+    except Exception as e:  # noqa: BLE001
+        event["factors"] = {"error": str(e)[:120]}
     if new_latest is not None:
         (STATE / "latest.json").write_text(json.dumps(new_latest, ensure_ascii=False, indent=2) + "\n")
     with events_path.open("a") as f:

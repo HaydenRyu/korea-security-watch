@@ -1,51 +1,50 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troop movement"
+      "한국어 troop_movement",
+      "English troop_movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear"
+      "한국어 nuclear",
+      "English nuclear"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea logistics ammunition"
+      "한국어 logistics",
+      "English logistics"
     ],
     "border_clash": [
-      "북한 합참 발표 10월 19일",
-      "North Korea Reuters October 19 2026"
+      "한국어 border_clash",
+      "English border_clash"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 사이버",
-      "North Korea GPS jamming cyber"
+      "한국어 electronic_cyber",
+      "English electronic_cyber"
     ],
     "foreign_forces": [
-      "북러 군사협력 파병",
-      "North Korea Russia military cooperation"
+      "한국어 foreign_forces",
+      "English foreign_forces"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "한국어 parade_massing",
+      "English parade_massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "한국어 nk_internal",
+      "English nk_internal"
     ],
     "gov_warning": [
-      "진돗개 데프콘 합참 발표",
-      "US travel advisory Korea"
+      "한국어 gov_warning",
+      "English gov_warning"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
     "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.yna.co.kr/view/AKR20261019008600504",
-    "https://www.yna.co.kr/view/AKR20261019006500504",
+    "https://www.yna.co.kr/view/AKR20261019065400062",
     "https://www.yna.co.kr/view/AKR20261018059600009",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 북한 군사 징후는 없다. 10/17 어뢰 시험 주장은 첫 보도 후 24시간이 지나 배경으로 내렸다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 북한 군사 징후는 없다. 연합뉴스 북한 속보는 북러 수교 기념 연회, 원산 유람선, 접경 교류 등 정례·비군사 기사뿐이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,7 +57,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "24시간 경과 — 10/17 KCNA 어뢰 시험 주장(NK News 10/17)은 첫 보도 후 하루가 지났고 후속 보도가 없다."
+      "summary": "서해 열점 1건(NOAA20, FRP 1.1)은 포격·화재 보도가 없어 근거로 쓰지 않는다."
     },
     "electronic_cyber": {
       "status": "none"
@@ -77,7 +76,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T01:10:30+00:00",
+  "checked_at": "2026-10-19T02:09:18+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],
@@ -92,19 +91,8 @@
         "url": "https://www.bbc.co.uk/news/articles/c3eweygrjzd7o",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
-    },
-    {
-      "title": "트럼프, 대러 제재 일부 일시 면제",
-      "summary": "BBC는 트럼프 대통령이 의회가 통과시킨 대러 제재 일부를 일시 면제했다고 전했다.",
-      "link_korea": "대러 제재 기조 변화는 북러 무기 거래 대응에도 영향을 줄 수 있다.",
-      "region": "미국·러시아",
-      "source": {
-        "name": "BBC",
-        "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
     }
   ],
-  "world_context": "러시아 전쟁과 대러 제재 동향이 북러 협력 환경에 영향을 주는 국면이다.",
-  "world_at": "2026-10-18T20:09:06+00:00"
+  "world_context": "러시아 본토 공격과 제재 조정 등 러시아 관련 동향이 북러 협력 평가의 배경이다.",
+  "world_at": "2026-10-19T02:09:18+00:00"
 }

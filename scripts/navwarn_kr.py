@@ -27,6 +27,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -51,7 +52,9 @@ CACHE_DAYS = 14          # 상세(문서번호별)는 바뀌지 않으므로 캐
 ZONE_REFRESH_DAYS = 7
 NO_WINDOW_KEEP_DAYS = 7  # 알림일을 못 읽은 문서는 처음 본 뒤 7일만 유효로 둔다
 ROWS = 100
-TIMEOUT = 20
+TIMEOUT = 30             # 10/19 GHA 실측: 20초 timed out 1회 — 해외 러너→data.go.kr 지연
+RETRIES = 2              # 통신 오류·시간초과만 재시도(키·한도 오류는 즉시)
+BUDGET_S = 180           # 회차 상한 — 넘으면 받은 상세까지 캐시하고 다음 회차에 이어 받는다(firms 잡 8분 안)
 KEY_ERRORS = ("SERVICE_KEY_IS_NOT_REGISTERED", "SERVICE_ACCESS_DENIED", "SERVICE_KEY_IS_NULL",
               "UNREGISTERED_IP", "DEADLINE_HAS_EXPIRED")
 QUOTA_ERRORS = ("LIMITED_NUMBER_OF_SERVICE_REQUESTS",)
@@ -74,6 +77,17 @@ def redact(text: str, key: str | None) -> str:
 
 
 def _http(url: str, params: dict, key: str) -> str:
+    for i in range(RETRIES):
+        try:
+            return _http1(url, params, key)
+        except ApiError as e:
+            if e.status != "error" or e.detail.startswith("HTTP") or i == RETRIES - 1:
+                raise
+            time.sleep(3)
+    raise ApiError("error", "재시도 소진")
+
+
+def _http1(url: str, params: dict, key: str) -> str:
     q = urllib.parse.urlencode({"serviceKey": key, **params})
     req = urllib.request.Request(f"{url}?{q}", headers={"User-Agent": "korea-security-watch/1.0"})
     try:
@@ -233,6 +247,8 @@ def run(key: str | None, prev: dict, now: datetime, get=None) -> tuple[dict, int
         doc.update(status="key_missing", status_detail="env DATA_GO_KR_KEY 없음")
         return doc, 3
     get = get or (lambda url, params: _http(url, params, key))
+    t0 = time.monotonic()
+    cache = dict(doc["cache"])
     try:
         # 1) 현황: 최근 LOOKBACK_DAYS 일 문서번호
         listed = {}
@@ -242,12 +258,14 @@ def run(key: str | None, prev: dict, now: datetime, get=None) -> tuple[dict, int
                 if x.get("doc_num"):
                     listed.setdefault(x["doc_num"], x)
         # 2) 상세: 캐시에 없는 문서만
-        cache = {k: v for k, v in doc["cache"].items()
+        cache = {k: v for k, v in cache.items()
                  if now - datetime.fromisoformat(v["first_seen"]) <= timedelta(days=CACHE_DAYS)}
         new = 0
         for dn, x in listed.items():
             if dn in cache and cache[dn].get("areas"):
                 continue
+            if time.monotonic() - t0 > BUDGET_S:
+                raise ApiError("error", f"시간 상한 {BUDGET_S}초 — 상세 {new}건까지 받음, 나머지는 다음 회차")
             det = fetch_all(get, EP_DETAIL, {"doc_num": dn})
             cache[dn] = doc_of(x, [area_of(a) for a in det], cache.get(dn, {}).get("first_seen") or now.isoformat())
             new += 1
@@ -263,11 +281,11 @@ def run(key: str | None, prev: dict, now: datetime, get=None) -> tuple[dict, int
         doc.update(cache=cache, warnings=cur, last_ok_at=now.isoformat(),
                    counts={"listed_docs": len(listed), "new_details": new, "valid": len(cur),
                            "active_now": sum(d["active_now"] for d in cur), "by_kind": kinds})
-    except ApiError as e:
-        doc.update(status=e.status, status_detail=redact(e.detail, key))
+    except ApiError as e:  # 받은 상세는 캐시에 남긴다(다음 회차가 이어 받는다). 경보 목록·last_ok_at 은 그대로
+        doc.update(status=e.status, status_detail=redact(e.detail, key), cache=cache)
         return doc, 3
     except Exception as e:  # noqa: BLE001
-        doc.update(status="error", status_detail=redact(f"{type(e).__name__}: {e}", key))
+        doc.update(status="error", status_detail=redact(f"{type(e).__name__}: {e}", key), cache=cache)
         return doc, 3
     # 3) 고정 구역: 주 1회. 실패해도 경보는 유지(zones.status 로 드러낸다)
     z = doc["zones"]

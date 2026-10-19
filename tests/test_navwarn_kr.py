@@ -135,6 +135,15 @@ def test_foreign_relay_is_not_kr_exercise():
     assert not k.is_exercise({"noti_cat": "선박사고", "unit": "해양경찰청", "title": "좌초 선박 알림"})
 
 
+def test_truncated_page_retries_with_smaller_rows():
+    seen = []
+
+    def get(url, params):
+        seen.append(params["numOfRows"])
+        return ZONE_XML[:-40] if params["numOfRows"] > 25 else ZONE_XML   # 큰 쪽은 서버가 중간에 자른다
+    assert len(k.fetch_all(get, k.EP_ZONE, {})) == 1 and seen == [100, 25]
+
+
 def test_xml_with_bare_lt_parses():
     items, _ = k.parse_response(ZONE_XML.replace("무한대", "<3000ft"))
     assert items[0]["hight"] == "<3000ft"

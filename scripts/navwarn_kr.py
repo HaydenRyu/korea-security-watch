@@ -171,12 +171,18 @@ def _check_result(code: str, msg: str):
     raise ApiError("error", f"resultCode {code} {msg}")
 
 
-def fetch_all(get, url: str, params: dict) -> list[dict]:
+def fetch_all(get, url: str, params: dict, rows: int = ROWS) -> list[dict]:
+    """쪽 넘김. 응답이 중간에 잘려 오면(10/19 실측: 구역 100행 = 19,415자에서 「</ite」로 끊김) 쪽 크기를 줄여 처음부터."""
     out, page = [], 1
     while True:
-        items, total = parse_response(get(url, {**params, "numOfRows": ROWS, "pageNo": page}))
+        try:
+            items, total = parse_response(get(url, {**params, "numOfRows": rows, "pageNo": page}))
+        except ApiError as e:
+            if "XML 해석 실패" in e.detail and rows > 5:
+                return fetch_all(get, url, params, max(5, rows // 4))
+            raise
         out += items
-        if not items or len(out) >= total or page >= 20:
+        if not items or len(out) >= total or page >= 100:
             return out
         page += 1
 

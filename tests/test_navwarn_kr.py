@@ -127,6 +127,19 @@ def test_xml_with_bare_ampersand_and_control_chars_still_parses():
         assert e.status == "error" and "XML" in e.detail
 
 
+def test_foreign_relay_is_not_kr_exercise():
+    # 10/19 실측 형태: KHOA 가 일본 경보를 「해상사격」으로 중계(사격부대 공란) — 억제 입력이 되면 안 된다
+    assert not k.is_exercise({"noti_cat": "해상사격", "doc_type": "상설", "unit": "", "title": "일본 해상보안청 항행경보 알림"})
+    assert k.is_exercise({"noti_cat": "해상사격", "doc_type": "상설", "unit": "합동참모본부", "title": "10월 4주 해상사격훈련(합동참모본부) 실시 알림"})
+    assert k.is_exercise({"noti_cat": "해상훈련", "doc_type": "해상훈련", "unit": "해군작전사령부", "title": "소해임무장비 해상시험 실시 알림"})
+    assert not k.is_exercise({"noti_cat": "선박사고", "unit": "해양경찰청", "title": "좌초 선박 알림"})
+
+
+def test_xml_with_bare_lt_parses():
+    items, _ = k.parse_response(ZONE_XML.replace("무한대", "<3000ft"))
+    assert items[0]["hight"] == "<3000ft"
+
+
 def test_windows_cross_midnight_and_reuse_last_time():
     w = k.windows("2026-10-19,2026-10-20", "20:00 ~ 02:00")
     assert w[0] == {"from": "2026-10-19T11:00:00+00:00", "to": "2026-10-19T17:00:00+00:00"} and len(w) == 2

@@ -134,6 +134,7 @@ def parse_response(body: str) -> tuple[list[dict], int]:
 
 
 _BARE_AMP = re.compile(r"&(?!(?:amp|lt|gt|quot|apos|#\d+|#x[0-9a-fA-F]+);)")
+_BARE_LT = re.compile(r"<(?![A-Za-z_/?!])")  # 내용 속 「<3000ft」 같은 맨 부등호
 _CTRL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
 
 
@@ -144,13 +145,13 @@ def _xml(b: str):
         return ET.fromstring(b)
     except ET.ParseError:
         pass
-    fixed = _CTRL.sub(" ", _BARE_AMP.sub("&amp;", b))
+    fixed = _CTRL.sub(" ", _BARE_LT.sub("&lt;", _BARE_AMP.sub("&amp;", b)))
     try:
         return ET.fromstring(fixed)
     except ET.ParseError as e:
         line, col = e.position
         ln = fixed.splitlines()[line - 1] if 0 < line <= len(fixed.splitlines()) else ""
-        raise ApiError("error", f"응답 XML 해석 실패({e}): …{ln[max(0, col - 60):col + 60]}…") from None
+        raise ApiError("error", f"응답 XML 해석 실패({e}, 본문 {len(b)}자, 끝 「{b[-40:]}」): …{ln[max(0, col - 80):col + 80]}…") from None
 
 
 def _raise_gateway(msg: str, code: str):
@@ -219,8 +220,17 @@ def doc_of(x: dict, areas: list[dict], seen: str) -> dict:
             "first_seen": seen, "source": "국립해양조사원 항행경보(공공데이터포털)", "url": SRC_PAGE}
 
 
+KR_UNIT = re.compile(r"합동참모본부|합참|해군|해병|육군|공군|해양경찰|국방과학연구소|국방부|사령부|함대|군단|사단|전단")
+FOREIGN = re.compile(r"일본|해상보안청|중국|러시아|미국|북한|외국|JCG|NAVAREA", re.I)
+
+
 def is_exercise(doc: dict) -> bool:
-    return bool(re.search(r"사격|훈련", " ".join(str(doc.get(k, "")) for k in ("noti_cat", "doc_type", "title"))))
+    """한국군·해경의 사격·훈련 경보만 True — 오탐 억제(navwarn_parse.apply_kr)에 쓰인다.
+    KHOA 는 외국 경보도 「해상사격」 분류로 중계한다(10/19 실측: 26-332 「일본 해상보안청 항행경보 알림」, 사격부대 공란).
+    중계 경보가 억제에 쓰이면 실제 북한 발사 통보를 지울 수 있다 → 발령 부대가 한국 기관이고 외국 표기가 없을 때만."""
+    text = " ".join(str(doc.get(k, "")) for k in ("noti_cat", "doc_type", "title"))
+    who = str(doc.get("unit", ""))
+    return bool(re.search(r"사격|훈련", text)) and bool(KR_UNIT.search(who)) and not FOREIGN.search(who + " " + text)
 
 
 def valid_now(doc: dict, now: datetime) -> tuple[bool, bool]:

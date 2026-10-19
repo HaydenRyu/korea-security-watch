@@ -35,17 +35,22 @@
     "gov_warning": [
       "북한 gov_warning 동향",
       "North Korea gov_warning"
+    ],
+    "linkage:taiwan": [
+      "대만 중국 군사훈련"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://www.yna.co.kr/view/AKR20261019074000504",
+    "https://www.yna.co.kr/view/AKR20261019144700504",
+    "https://www.yna.co.kr/view/AKR20261019008600504",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/north-korea-tests-new-high-precision-ai-equipped-torpedo-state-media/",
+    "https://www.nknews.org/2026/10/rok-kicks-off-exercise-on-countering-north-korea-postponed-drills-with-us/",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/c9p8gz7zx4peo"
+    "https://www.bbc.co.uk/news/articles/cxj0ly1m3q81o",
+    "https://www.bbc.co.uk/news/articles/crwyd02yz22vo"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 북한 군사 징후는 없다. 연합뉴스·NK News 최신 보도는 GOP경비여단 창설 계획, 북중 무역, 아시안패러게임 참가 등 정례·비군사 내용이며 직전 회차와 판단이 같다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 북한 군사 징후는 없다. 한국군 호국훈련(10/19~30 정례)과 북러 수교 기념 연회 등 정례 활동만 보도돼 직전 회차와 판단이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,11 +80,22 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T07:16:58+00:00",
+  "checked_at": "2026-10-19T08:09:28+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],
   "world": [
+    {
+      "title": "캐나다 군 기지 대형 화재, 4명 사망",
+      "summary": "캐나다 군 기지에서 대형 화재가 나 4명이 숨지고 수십 명이 다쳤다고 BBC가 보도했다.",
+      "link_korea": "직접 연관은 없으나 서방 군 시설 안전 사안으로 참고한다.",
+      "region": "캐나다",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cxj0ly1m3q81o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
     {
       "title": "트럼프, 대러 제재 유예 \"평화협상 유지 위해\"",
       "summary": "트럼프 미 대통령이 대러 제재 시행을 유예했으며 평화협상을 이어 가기 위해서라고 밝혔다.",
@@ -90,30 +106,8 @@
         "url": "https://www.bbc.co.uk/news/articles/c9p8gz7zx4peo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
-    },
-    {
-      "title": "상트페테르부르크 석유시설 야간 공격",
-      "summary": "러시아 상트페테르부르크의 석유 시설이 밤사이 공격을 받아 사상자가 발생했다고 BBC가 보도했다.",
-      "link_korea": "러-우 전쟁 장기화는 북한군 파병·무기 이전 등 북러 협력의 배경이다.",
-      "region": "러시아",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c3eweygrjzd7o",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "러시아 내부 반푸틴 사보타주 동향",
-      "summary": "BBC가 러시아 내부에서 벌어지는 반푸틴 사보타주 활동을 보도했다.",
-      "link_korea": "러시아 내부 불안정은 북러 군사협력의 지속성 평가와 연결된다.",
-      "region": "러시아",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6pwgzkj8zzgo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
     }
   ],
-  "world_context": "러시아 전쟁과 제재 동향이 북러 협력 평가의 배경으로 이어진다.",
-  "world_at": "2026-10-19T07:16:58+00:00"
+  "world_context": "대러 제재와 서방 군 관련 사안이 이어지나 한반도 직접 영향은 제한적이다.",
+  "world_at": "2026-10-19T08:09:28+00:00"
 }

@@ -152,7 +152,10 @@ def stale_alert() -> str | None:
     try:
         with urllib.request.urlopen(f"https://haydenryu.github.io/korea-security-watch/state/latest.json?t={int(time.time())}",
                                     timeout=20) as r:
-            last = json.loads(r.read())["checked_at"]
+            doc = json.loads(r.read())
+        # 「보류」 회차(내림 히스테리시스)는 checked_at 을 그대로 두고 held.at 만 쓴다 — 둘 중 늦은 쪽이 마지막 확인
+        # (10/19 00:08 보류 회차를 못 보고 01:00 대에 정지 오경보)
+        last = max([doc["checked_at"], (doc.get("held") or {}).get("at") or doc["checked_at"]], key=datetime.fromisoformat)
         age = (datetime.now(timezone.utc) - datetime.fromisoformat(last)).total_seconds() / 60
         sent = STALE_MARK.read_text().strip() if STALE_MARK.exists() else ""
         if age >= STALE_MIN and sent != last:

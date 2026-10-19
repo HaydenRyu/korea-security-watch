@@ -52,6 +52,21 @@ def test_classify_labels_are_estimates_with_reasons():
         assert "추정" in k or k == "미상"
 
 
+def test_facility_labels_translate_bare_osm_tags():
+    # 이름 없는 시설은 태그값만 캐시된다 → 근거·표시 문구는 우리말. 질의하는 태그값 전부가 매핑돼야 한다
+    for v in ("industrial", "plant", "works", "kiln", "flare", "chimney", "시설"):
+        assert v in f.OSM_TAG_KO and "이름 없음" in f.OSM_TAG_KO[v]
+    assert f.facility_labels(["industrial", "plant"]) == ["공업 지역(이름 없음)", "발전소(이름 없음)"]
+    assert f.facility_labels(["상원세멘트련합기업소", "chimney"]) == ["상원세멘트련합기업소", "굴뚝(이름 없음)"]
+    assert f.facility_labels(["works", "works"]) == ["공장(이름 없음)"]
+    cells = {f.cell_key(36.95, 126.62): {"dates": ["2026-10-19"], "osm": ["industrial"], "osm_checked": "2026-10-19"}}
+    pts = [{"lat": 36.95, "lon": 126.62}]
+    f.annotate(pts, cells)
+    assert pts[0]["osm"] == ["공업 지역(이름 없음)"] and "industrial" not in " ".join(pts[0]["kind_why"])
+    assert any("공업 지역(이름 없음)" in w for w in pts[0]["kind_why"])
+    assert cells[f.cell_key(36.95, 126.62)]["osm"] == ["industrial"]   # 캐시는 원본 그대로
+
+
 def test_split_batch_assigns_results_per_cell():
     # 10/19 실측 응답 형태(make 요약 원소). 이름 우선 ko → name → en, 이름 없으면 태그값, n=0 은 「시설 없음」
     els = [

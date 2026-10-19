@@ -53,6 +53,20 @@ OSM_BUDGET_S = 120        # 회차당 Overpass 총 시간 상한 — 새 묶음�
 OVERPASS = "https://overpass-api.de/api/interpreter"
 UA = "korea-security-watch/1.0 (personal OSINT dashboard; github actions)"
 KIND_LABEL = {"fixed": "상시 열원 추정", "burn": "산불·소각 추정", "unknown": "미상"}
+# 이름 없는 OSM 시설은 질의 태그값만 남는다(split_batch) — 화면·근거 문구에는 우리말로(10/19 hayden 「권장대로」).
+# 키 = 질의하는 태그값 전부(landuse=industrial · power=plant · man_made=works|kiln|flare|chimney) + 태그도 없을 때의 「시설」
+OSM_TAG_KO = {"industrial": "공업 지역(이름 없음)", "plant": "발전소(이름 없음)", "works": "공장(이름 없음)",
+              "kiln": "가마(이름 없음)", "flare": "플레어 굴뚝(이름 없음)", "chimney": "굴뚝(이름 없음)", "시설": "시설(이름 없음)"}
+
+
+def facility_labels(osm: list[str]) -> list[str]:
+    """캐시의 시설 목록(이름 또는 태그값) → 표시 문구. 이름은 그대로, 태그값은 우리말, 같은 문구는 하나로."""
+    out = []
+    for v in osm:
+        t = OSM_TAG_KO.get(v, v)
+        if t not in out:
+            out.append(t)
+    return out
 
 
 def nk_polygons() -> list[list[list[tuple[float, float]]]]:
@@ -207,6 +221,7 @@ def annotate(points: list[dict], cells: dict) -> None:
         osm = c.get("osm") if "osm_checked" in c else None
         north = in_nk(p["lat"], p["lon"])
         n = days_seen(cells, k)
+        osm = None if osm is None else facility_labels(osm)
         kind, conf, why = classify(n, osm, north)
         p.update({"days_seen": n, "north": north, "osm": osm or [], "kind": kind,
                   "kind_label": KIND_LABEL[kind], "kind_conf": conf, "kind_why": why})

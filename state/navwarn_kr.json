@@ -1,0 +1,19 @@
+{
+ "source": "국립해양조사원(KHOA) 항행경보 · 해상사격훈련구역 — 공공데이터포털 API",
+ "source_pages": [
+  "https://www.data.go.kr/data/15057792/openapi.do",
+  "https://www.data.go.kr/data/15058193/openapi.do"
+ ],
+ "fetched_at": "2026-10-19T07:20:15.824855+00:00",
+ "status": "error",
+ "status_detail": "응답 형식 오류(XML·JSON 아님): <?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><response><header><resultCode>00</resultCode><resultMsg>NORMAL SE",
+ "last_ok_at": null,
+ "warnings": [],
+ "counts": {},
+ "zones": {
+  "fetched_at": null,
+  "status": null,
+  "items": []
+ },
+ "cache": {}
+}

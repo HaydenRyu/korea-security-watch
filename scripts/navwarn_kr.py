@@ -24,6 +24,7 @@ API(키 = env DATA_GO_KR_KEY, data.go.kr 「일반 인증키(Decoding)」 — �
 from __future__ import annotations
 
 import json
+import math
 import os
 import re
 import sys
@@ -212,9 +213,24 @@ def windows(alarm_date: str, alarm_time: str) -> list[dict]:
     return out
 
 
+def circle(center, shape: str) -> tuple[list, float | None]:
+    """「좌표를 중심으로 반경 4NM」 → 16각형 근사(10/19 실측: 유효 경보 구역 90곳 중 21곳이 원형). 반경을 못 읽으면 점 그대로."""
+    m = re.search(r"반경\s*(\d+(?:\.\d+)?)\s*(NM|해리|M|m|KM|km)", shape or "")
+    if not m or not center:
+        return [list(center)] if center else [], None
+    r_km = float(m[1]) * {"NM": 1.852, "해리": 1.852, "KM": 1, "km": 1, "M": .001, "m": .001}[m[2]]
+    la, lo = center
+    pts = [[round(la + r_km / 110.57 * math.cos(math.radians(a)), 4),
+            round(lo + r_km / (111.32 * math.cos(math.radians(la))) * math.sin(math.radians(a)), 4)] for a in range(0, 360, 22)]
+    return pts[:16], round(r_km, 2)
+
+
 def area_of(x: dict) -> dict:
     poly = [list(p) for p in coords(x.get("position", ""))]
-    return {"area": x.get("area", ""), "name": x.get("position_nm", ""), "polygon": poly,
+    radius = None
+    if len(poly) == 1:
+        poly, radius = circle(poly[0], x.get("position_desc", ""))
+    return {"area": x.get("area", ""), "name": x.get("position_nm", ""), "polygon": poly, "radius_km": radius,
             "shape": x.get("position_desc", ""), "windows": windows(x.get("alarm_date", ""), x.get("alarm_time", "")),
             "chart": x.get("sea_pos", "")}
 
@@ -251,8 +267,11 @@ def valid_now(doc: dict, now: datetime) -> tuple[bool, bool]:
 
 def zone_of(x: dict) -> dict:
     c = coords(f"{x.get('centerZoneY', '')} {x.get('centerZoneX', '')}".replace(" N", "N").replace(" E", "E"))
+    poly, radius = [list(p) for p in coords(x.get("zoneCrdnt", ""))], None
+    if len(poly) <= 1 and (poly or c):
+        poly, radius = circle(poly[0] if poly else list(c[0]), x.get("zoneDesc", ""))
     return {"code": x.get("posCd", ""), "name": x.get("crdnt", ""), "kind": x.get("tnzone", ""),
-            "polygon": [list(p) for p in coords(x.get("zoneCrdnt", ""))], "center": list(c[0]) if c else None,
+            "polygon": poly, "radius_km": radius, "center": list(c[0]) if c else None,
             "shape": x.get("zoneDesc", ""), "altitude": x.get("hight", ""), "revised": x.get("reviym", "")}
 
 
@@ -283,8 +302,8 @@ def run(key: str | None, prev: dict, now: datetime, get=None) -> tuple[dict, int
                  if now - datetime.fromisoformat(v["first_seen"]) <= timedelta(days=CACHE_DAYS)}
         new = 0
         for dn, x in listed.items():
-            if dn in cache and cache[dn].get("areas"):
-                continue
+            if dn in cache and cache[dn].get("areas") and all("radius_km" in a for a in cache[dn]["areas"]):
+                continue  # radius_km 없는 캐시 = 원형 구역 다각형화(10/19) 이전 판 → 한 번 다시 받는다
             if time.monotonic() - t0 > BUDGET_S:
                 raise ApiError("error", f"시간 상한 {BUDGET_S}초 — 상세 {new}건까지 받음, 나머지는 다음 회차")
             det = fetch_all(get, EP_DETAIL, {"doc_num": dn})

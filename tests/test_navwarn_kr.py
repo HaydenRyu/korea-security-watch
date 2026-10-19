@@ -144,6 +144,14 @@ def test_truncated_page_retries_with_smaller_rows():
     assert len(k.fetch_all(get, k.EP_ZONE, {})) == 1 and seen == [100, 25]
 
 
+def test_circle_area_becomes_polygon():
+    a = k.area_of({"area": "3", "position": "36-00-00.0N,125-00-00.0E", "position_desc": "좌표를 중심으로 반경 5NM",
+                   "alarm_date": "2026-10-19", "alarm_time": "08:00 ~ 17:00"})
+    assert len(a["polygon"]) == 16 and a["radius_km"] == 9.26
+    assert nw.shapes_overlap([(36.05, 125.02)], [tuple(p) for p in a["polygon"]])        # 반경 안(약 6km)
+    assert not nw.shapes_overlap([(36.2, 125.0)], [tuple(p) for p in a["polygon"]])      # 반경 밖(약 22km)
+
+
 def test_xml_with_bare_lt_parses():
     items, _ = k.parse_response(ZONE_XML.replace("무한대", "<3000ft"))
     assert items[0]["hight"] == "<3000ft"

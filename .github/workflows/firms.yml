@@ -1,5 +1,6 @@
 name: firms
 # 매시간 NASA FIRMS 열점(state/firms.json + 유형 추정 이력 state/firms_cells.json, 키 시크릿 FIRMS_KEY)과 한반도 항공 지표(state/air.json, 키 불필요)를 갱신한다.
+# 국내 항행경보(state/navwarn_kr.json, 키 시크릿 DATA_GO_KR_KEY — KHOA 해상사격훈련, 북한 발사 통보 오탐 억제용)도 같은 잡에서 받는다.
 # 감시 루틴은 :07 에 돈다. 그 전에 끝나도록 :45 에 받는다.
 on:
   schedule: [{ cron: "45 * * * *" }]
@@ -19,12 +20,17 @@ jobs:
         run: python3 scripts/firms.py
       - name: air
         run: python3 scripts/air_count.py   # 실패해도 기존 파일 유지(rc 0)
+      - name: navwarn_kr
+        # 실패(rc 3: 키 미활성·한도·통신)는 이 스텝을 실패로 표시하되 열점 커밋은 계속한다. 상태는 산출물 status 에도 남는다
+        continue-on-error: true
+        env: { DATA_GO_KR_KEY: "${{ secrets.DATA_GO_KR_KEY }}" }
+        run: python3 scripts/navwarn_kr.py
       - name: commit
         run: |
-          [ -z "$(git status --porcelain -- state/firms.json state/firms_cells.json state/air.json state/air.jsonl)" ] && { echo unchanged; exit 0; }  # 신규 파일도 변경으로 본다
+          [ -z "$(git status --porcelain -- state/firms.json state/firms_cells.json state/air.json state/air.jsonl state/navwarn_kr.json)" ] && { echo unchanged; exit 0; }  # 신규 파일도 변경으로 본다
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add state/firms.json $(ls state/firms_cells.json state/air.json state/air.jsonl 2>/dev/null)
+          git add state/firms.json $(ls state/firms_cells.json state/air.json state/air.jsonl state/navwarn_kr.json 2>/dev/null)
           git commit -m "firms: $(date -u +%FT%H:%MZ)"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
           exit 1

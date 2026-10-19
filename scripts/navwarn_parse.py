@@ -1,6 +1,7 @@
 """항행경보 → 발사 예고 후보 JSON
 
 상태(2026-10-19): 워크플로 미연결 — 일본 해상보안청 海しる(MSIL) 개별 키를 받은 뒤 firms.yml 에 붙인다.
+  국내 KHOA 경보(억제 입력)는 scripts/navwarn_kr.py 가 firms.yml 에서 매시 state/navwarn_kr.json 으로 받는다.
 NGA 공개 API 는 2024-05-10 이후 갱신이 없어 실시간 소스가 아니다(회귀 기준 자료로만 쓴다: tests/fixtures).
 조사 경위 = _sea_sat_research.md
 
@@ -8,6 +9,7 @@ NGA 공개 API 는 2024-05-10 이후 갱신이 없어 실시간 소스가 아니
   --nga  <NGA msi broadcast-warn JSON>   (msi.nga.mil /api/publications/broadcast-warn 응답 형식)
   --msil <海しる navigational-warnings GeoJSON>  (api.msil.go.jp/navigational-warnings/v2/MapServer/{n}/query 응답)
   --khoa <KHOA getNavigationalWarningInfo XML>   (apis.data.go.kr/1192136/NavigationalWarning 응답)
+  --kr   <state/navwarn_kr.json>                 (scripts/navwarn_kr.py 산출 — 한국군 사격훈련 오탐 억제, 없으면 억제 없이 동작)
 출력: JSON 배열 [{id, source, issued, window_from, window_to, areas, points, text_excerpt, url,
                   korea_related, launch_related, exercise_related, dprk_pattern, flags}]
 
@@ -18,6 +20,11 @@ NGA 공개 API 는 2024-05-10 이후 갱신이 없어 실시간 소스가 아니
 - dprk_pattern  : launch_related ∧ 황해 낙하구역(YELLOW_BOX) ∧ 필리핀 동방 낙하구역(LUZON_E_BOX) 동시 존재
                    = 2023-05/08/11 북한 위성 발사 통보(NAVAREA XI 187/23·288/23·408/23)의 공통 형상.
   경보 본문에는 「북한」이 나오지 않는다(발신 당국 미기재) — 형상으로만 식별된다.
+- kr_exercise_overlap / dprk_candidate (--kr 를 줄 때):
+    발사 관련 ∧ 한반도 경보의 한반도 구역마다 같은 시간·같은 구역(다각형 겹침)의 한국군 사격·훈련 경보(KHOA)가 있으면
+    그 구역은 한국군 훈련으로 설명된다 → 한반도 구역 전부가 설명되면 dprk_candidate=False(오탐 억제).
+    경보 기간을 못 읽은 경보는 시간 대조가 안 되므로 억제하지 않는다(kr_check="time_unknown").
+    --kr 가 없거나 KHOA 자료가 없으면 dprk_candidate = dprk_pattern 그대로(kr_check="no_input").
 """
 from __future__ import annotations
 
@@ -129,6 +136,80 @@ def classify(rec: dict, text: str) -> dict:
     return rec
 
 
+def _in_poly(p, poly) -> bool:
+    """(lat, lon) 이 다각형 안인가 — 반직선 교차."""
+    y, x, inside = p[0], p[1], False
+    for i in range(len(poly)):
+        (y1, x1), (y2, x2) = poly[i - 1], poly[i]
+        if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1):
+            inside = not inside
+    return inside
+
+
+def _cross(a, b, c, d) -> bool:
+    def o(p, q, r):
+        v = (q[1] - p[1]) * (r[0] - p[0]) - (q[0] - p[0]) * (r[1] - p[1])
+        return (v > 0) - (v < 0)
+    return o(a, b, c) * o(a, b, d) < 0 and o(c, d, a) * o(c, d, b) < 0
+
+
+def shapes_overlap(a, b) -> bool:
+    """두 구역(꼭짓점 목록, 1~2점이면 점·선)이 겹치는가 — bbox → 꼭짓점 포함 → 변 교차."""
+    if not a or not b:
+        return False
+    if max(p[0] for p in a) < min(p[0] for p in b) or max(p[0] for p in b) < min(p[0] for p in a) or \
+       max(p[1] for p in a) < min(p[1] for p in b) or max(p[1] for p in b) < min(p[1] for p in a):
+        return False
+    if len(b) >= 3 and any(_in_poly(p, b) for p in a):
+        return True
+    if len(a) >= 3 and any(_in_poly(p, a) for p in b):
+        return True
+    ea = list(zip(a, a[1:] + a[:1])) if len(a) >= 3 else list(zip(a, a[1:]))
+    eb = list(zip(b, b[1:] + b[:1])) if len(b) >= 3 else list(zip(b, b[1:]))
+    return any(_cross(p, q, r, s) for p, q in ea for r, s in eb)
+
+
+def kr_exercises(kr: dict | None) -> list[dict]:
+    """state/navwarn_kr.json → 사격·훈련 경보 구역 [{doc_num, area, name, polygon, from, to}] (기간별 1행)."""
+    out = []
+    for d in (kr or {}).get("warnings", []):
+        if not d.get("exercise"):
+            continue
+        for a in d.get("areas", []):
+            poly = [tuple(p) for p in a.get("polygon", [])]
+            for w in a.get("windows", []):
+                if poly:
+                    out.append({"doc_num": d.get("doc_num"), "area": a.get("area"), "name": a.get("name"),
+                                "polygon": poly, "from": w["from"], "to": w["to"]})
+    return out
+
+
+def apply_kr(recs: list[dict], kr: dict | None) -> list[dict]:
+    """같은 시간·구역 한국군 사격훈련으로 설명되는 발사 경보를 「북한 발사 통보 후보」에서 뺀다(제자리)."""
+    ex = kr_exercises(kr)
+    src = "no_input" if not kr or not kr.get("warnings") and kr.get("status") != "ok" else \
+        ("ok" if kr.get("status") == "ok" else f"stale:{kr.get('status')}")
+    for r in recs:
+        r["kr_exercise_overlap"], r["kr_check"] = [], src
+        r["dprk_candidate"] = bool(r.get("dprk_pattern"))
+        if src == "no_input" or not (r.get("launch_related") and r.get("korea_related")):
+            continue
+        if not (r.get("window_from") and r.get("window_to")):
+            r["kr_check"] = "time_unknown"
+            continue
+        rf, rt = datetime.fromisoformat(r["window_from"]), datetime.fromisoformat(r["window_to"])
+        kareas = [a for a in r.get("areas", []) if any(in_box(p, KOREA_BOX) for p in a)]
+        explained = 0
+        for a in kareas:
+            hits = [e for e in ex if shapes_overlap([tuple(p) for p in a], e["polygon"])
+                    and datetime.fromisoformat(e["from"]) <= rt and rf <= datetime.fromisoformat(e["to"])]
+            r["kr_exercise_overlap"] += [f"{e['doc_num']}/{e['area']} {e['name']}" for e in hits]
+            explained += bool(hits)
+        if kareas and explained == len(kareas):
+            r["dprk_candidate"] = False
+    return recs
+
+
 def _load(path: str):
     with (gzip.open(path, "rt", encoding="utf-8") if str(path).endswith(".gz") else open(path, encoding="utf-8")) as fh:
         return json.load(fh)
@@ -187,12 +268,21 @@ def main(argv=None) -> int:
     ap.add_argument("--nga", action="append", default=[])
     ap.add_argument("--msil", action="append", default=[])
     ap.add_argument("--khoa", action="append", default=[])
-    ap.add_argument("--only", choices=["launch", "korea", "dprk", "all"], default="launch")
+    ap.add_argument("--kr", help="state/navwarn_kr.json — 없거나 못 읽으면 억제 없이 동작")
+    ap.add_argument("--only", choices=["launch", "korea", "dprk", "candidate", "all"], default="launch")
     a = ap.parse_args(argv)
     recs = [r for p in a.nga for r in from_nga(p)] + [r for p in a.msil for r in from_msil(p)] + \
            [r for p in a.khoa for r in from_khoa(p)]
+    kr = None
+    if a.kr:
+        try:
+            kr = _load(a.kr)
+        except (OSError, ValueError):
+            kr = None
+    apply_kr(recs, kr)
     keep = {"launch": lambda r: r["launch_related"], "korea": lambda r: r["korea_related"],
-            "dprk": lambda r: r["dprk_pattern"], "all": lambda r: True}[a.only]
+            "dprk": lambda r: r["dprk_pattern"],
+            "candidate": lambda r: r["dprk_candidate"], "all": lambda r: True}[a.only]
     json.dump([r for r in recs if keep(r)], sys.stdout, ensure_ascii=False, indent=1, default=str)
     print()
     return 0

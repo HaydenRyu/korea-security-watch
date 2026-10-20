@@ -1,48 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 전방 병력 증강",
-      "North Korea troop movement border"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear site"
+      "North Korea nuclear test site"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea munitions shipment"
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 합참",
-      "DMZ NLL 귀순 합참 북한",
-      "North Korea Reuters AP October 20 2026"
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ NLL 귀순 합참",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "GPS 교란 서북도서 북한",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 20일",
-      "kp 도메인 접속장애 해킹 북한 사이트"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "랜섬웨어 공격",
+      "North Korea GPS jamming cyber"
     ],
     "foreign_forces": [
       "북러 군사협력",
-      "North Korea troops Russia"
+      "North Korea Russia troops"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
+      "북한 열병식 병력 집결",
       "North Korea parade"
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
-      "North Korea civil defense drill"
+      "North Korea mobilization"
     ],
     "gov_warning": [
       "진돗개 데프콘 발령",
-      "DEFCON Korea raised"
+      "DEFCON Korea alert"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261020508155",
-    "https://www.newstong.co.kr/view3.aspx?seq=14759198"
+    "https://www.newstong.co.kr/view3.aspx?seq=14759198",
+    "https://www.nknews.org/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261020519147"
   ],
   "overall_summary": "김여정 담화 이후 국방부·합참의장·통일부의 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. kp 도메인 접속장애는 귀속 미확인이며 직전 회차와 판정이 같다.",
   "items": {
@@ -120,7 +124,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-20T10:12:06+00:00",
+  "checked_at": "2026-10-20T11:10:48+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,23 +1,26 @@
 {
   "coverage": {
     "troop_movement": [
-      "전방 증강 병력 이동 합참",
+      "합참 전방 병력 증강",
       "North Korea troop movement border"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear site 38 North"
+      "North Korea nuclear site"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea munitions shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참 10월 20일",
-      "North Korea Reuters border Kim Yo Jong loudspeaker"
+      "지뢰 발견 목함지뢰 해안 합참",
+      "DMZ NLL 귀순 합참 북한",
+      "North Korea Reuters AP October 20 2026"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 사이버 공격 북한"
+      "GPS 교란 서북도서 북한",
+      "해킹 개인정보 유출 10월 20일",
+      "kp 도메인 접속장애 해킹 북한 사이트"
     ],
     "foreign_forces": [
       "북러 군사협력",
@@ -38,11 +41,10 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261020508155",
-    "https://www.segye.com/newsView/20261020510358",
-    "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml"
+    "https://www.pbs.org/newshour/world/north-korea-threatens-to-restart-propaganda-loudspeaker-broadcasts-and-deploy-more-weapons-at-south-korea-border",
+    "https://www.newstong.co.kr/view3.aspx?seq=14759198"
   ],
-  "overall_summary": "김여정 담화 이후 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. 직전 회차와 판정이 같다.",
+  "overall_summary": "김여정 담화 이후 합참의장·통일부 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. 북한 kp 도메인 사이트 무더기 접속장애는 원인·귀속 미확인이며 직전 회차와 등급 판정은 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -51,9 +53,6 @@
       "status": "none"
     },
     "logistics": {
-      "status": "none"
-    },
-    "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
@@ -76,6 +75,14 @@
       "lon": 127.9,
       "summary": "김여정 19일 담화 이후 합참의장·통일부의 말 공방만 이어지고 새 교전·최후통첩은 없다(첫 보도 10/19~20).",
       "meaning": "MDL 월선·경고사격을 둘러싼 말 공방이 이어지나 시한·표적을 담은 최후통첩이나 새 교전은 없다.",
+      "confidence": "중간",
+      "facts": [
+        "진영승 합참의장 10/20 5군단 방문, 추가 도발 시 단호 대응 지시",
+        "AP 10/19: 김여정, 대남 확성기 재개·접경 무기 증강 위협"
+      ],
+      "speculation": [
+        "북측 확성기 방송 재개·전술 타격수단 증강 시점은 미정"
+      ],
       "sources": [
         {
           "name": "세계일보",
@@ -83,22 +90,37 @@
           "url": "https://www.segye.com/newsView/20261020508155"
         },
         {
-          "name": "세계일보",
+          "name": "AP(PBS)",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261020510358"
+          "url": "https://www.pbs.org/newshour/world/north-korea-threatens-to-restart-propaganda-loudspeaker-broadcasts-and-deploy-more-weapons-at-south-korea-border"
+        }
+      ]
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "북한 kp 도메인",
+      "summary": "귀속 미확인 — 북한 외무성·조선중앙통신 등 kp 도메인 사이트 40여 개가 20일 오전 11시께부터 접속 불가·불안정, 원인 미확인(첫 보도 10/20).",
+      "meaning": "북한 대외 웹사이트 장애로 한국 대상 공격은 아니며 군사 징후와 직접 연결되지 않는다.",
+      "sources": [
+        {
+          "name": "연합뉴스(뉴스통 전재)",
+          "tier": "B",
+          "url": "https://www.newstong.co.kr/view3.aspx?seq=14759198"
         }
       ],
-      "confidence": "중간",
+      "confidence": "낮음",
       "facts": [
-        "진영승 합참의장 10/20 5군단 방문, 추가 도발 시 단호 대응 지시",
-        "통일부 10/20 북측 정전협정 위반 행위 중단 촉구"
+        "텔레콤 옵저버가 북한 인터넷 라우팅 불안정 관측",
+        "구체적 해킹 정황은 포착되지 않음"
       ],
       "speculation": [
-        "북측 확성기 방송 재개·전술 타격수단 증강 시점은 미정"
+        "외부 해커 집단의 DDoS 가능성 거론"
       ]
     }
   },
-  "checked_at": "2026-10-20T08:10:07+00:00",
+  "checked_at": "2026-10-20T09:11:49+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

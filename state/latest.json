@@ -13,13 +13,11 @@
       "North Korea munitions shipment"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 10월 20일",
-      "합참 북한 김여정 담화 MDL 경고사격 대응",
-      "North Korea Kim Yo Jong loudspeaker border Reuters"
+      "북한 지뢰 발견 DMZ 귀순 합참 10월 20일",
+      "North Korea Reuters border Kim Yo Jong loudspeaker"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 사이버 공격 해킹",
-      "North Korea cyber attack"
+      "GPS 교란 해킹 사이버 공격 북한"
     ],
     "foreign_forces": [
       "북러 군사협력",
@@ -41,11 +39,10 @@
   "opened": [
     "https://www.segye.com/newsView/20261020508155",
     "https://www.segye.com/newsView/20261020510358",
-    "https://kookbang.dema.mil.kr/newsWeb/20261019/1/ATCE_CTGR_0010010000/view.do",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+    "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+    "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "김여정 19일 담화 이후 합참의장·통일부의 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. 직전 회차와 판정이 같다.",
+  "overall_summary": "김여정 담화 이후 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. 직전 회차와 판정이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -77,7 +74,7 @@
       "region": "중부전선 MDL 일대",
       "lat": 38.3,
       "lon": 127.9,
-      "summary": "김여정 19일 담화 이후 합참의장(20일 5군단)의 단호 대응 지시와 통일부의 정전협정 위반 중단 촉구가 이어졌으나 새 교전·최후통첩은 없다.",
+      "summary": "김여정 19일 담화 이후 합참의장·통일부의 말 공방만 이어지고 새 교전·최후통첩은 없다(첫 보도 10/19~20).",
       "meaning": "MDL 월선·경고사격을 둘러싼 말 공방이 이어지나 시한·표적을 담은 최후통첩이나 새 교전은 없다.",
       "sources": [
         {
@@ -101,7 +98,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-20T07:10:10+00:00",
+  "checked_at": "2026-10-20T08:10:07+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

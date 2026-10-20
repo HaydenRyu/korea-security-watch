@@ -1,7 +1,7 @@
 {
-  "name": "JIS 북한 전쟁·핵 징후 감시",
+  "name": "JIS 한반도 안보 상황판",
   "short_name": "JIS",
-  "description": "공개정보로 매시간 확인하는 비공식 개인 감시판",
+  "description": "북한 전쟁·핵 징후 · 공역·위성·해상 · 대만 연동 — 공개정보로 매시간 확인하는 비공식 개인 상황판",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

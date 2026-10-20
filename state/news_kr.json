@@ -1,21 +1,21 @@
 {
- "fetched_at": "2026-10-20T22:10:19+00:00",
+ "fetched_at": "2026-10-20T23:24:52+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-20T22:10:19+00:00",
+ "last_ok_at": "2026-10-20T23:24:52+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1141,
-  "hits": 42,
-  "clusters": 35,
+  "fetched": 1139,
+  "hits": 41,
+  "clusters": 34,
   "by_group": {
    "alert": 2,
    "border": 22,
    "drone_balloon": 14,
    "fire": 7,
-   "mine": 9,
+   "mine": 8,
    "gps": 1,
    "defect": 2
   }
@@ -24,8 +24,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 581,
-   "hits": 24
+   "count": 579,
+   "hits": 23
   },
   "SBS": {
    "feeds": 3,
@@ -63,25 +63,25 @@
   "alert": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-10-20T22:10:19+00:00"
+   "latest": "2026-10-20T23:24:52+00:00"
   },
   "border": {
    "clusters": 22,
    "max_independent": 2,
-   "latest": "2026-10-20T22:10:19+00:00"
+   "latest": "2026-10-20T23:24:52+00:00"
   },
   "drone_balloon": {
    "clusters": 14,
    "max_independent": 2,
-   "latest": "2026-10-20T22:10:19+00:00"
+   "latest": "2026-10-20T23:24:52+00:00"
   },
   "fire": {
    "clusters": 7,
    "max_independent": 2,
-   "latest": "2026-10-20T22:10:19+00:00"
+   "latest": "2026-10-20T23:24:52+00:00"
   },
   "mine": {
-   "clusters": 9,
+   "clusters": 8,
    "max_independent": 2,
    "latest": "2026-10-20T19:30:00+00:00"
   },
@@ -102,7 +102,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 101,
+   "count": 99,
    "hits": 19
   },
   {
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "SBS",

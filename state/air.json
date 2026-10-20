@@ -1,24 +1,17 @@
 {
- "at": "2026-10-20T01:06:47+00:00",
- "south": 67,
- "area": 85,
+ "at": "2026-10-20T01:16:53+00:00",
+ "south": 61,
+ "area": 79,
  "baseline": null,
  "ratio": null,
- "samples": 0,
+ "samples": 1,
  "mil": [
-  {
-   "type": "GLEX",
-   "name": "정찰용 비즈니스젯 가능",
-   "call": "",
-   "lat": 33.91,
-   "lon": 126.33
-  },
   {
    "type": "H60",
    "name": null,
    "call": "HOIST88",
-   "lat": 36.93,
-   "lon": 127.07
+   "lat": 37.15,
+   "lon": 126.89
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

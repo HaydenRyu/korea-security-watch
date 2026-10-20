@@ -1,24 +1,17 @@
 {
- "at": "2026-10-20T07:52:08+00:00",
- "south": 74,
- "area": 91,
- "baseline": 77,
- "ratio": 0.96,
- "samples": 9,
+ "at": "2026-10-20T08:05:56+00:00",
+ "south": 66,
+ "area": 80,
+ "baseline": null,
+ "ratio": null,
+ "samples": 1,
  "mil": [
   {
    "type": "H60",
    "name": null,
-   "call": "CARD99",
-   "lat": 36.73,
-   "lon": 127.15
-  },
-  {
-   "type": "H60",
-   "name": null,
    "call": "CARD47",
-   "lat": 37.36,
-   "lon": 127.23
+   "lat": 37.1,
+   "lon": 127.17
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

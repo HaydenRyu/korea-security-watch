@@ -105,6 +105,18 @@ def validate(run: dict) -> None:
 
 ATTRIBUTIONS = {"nk", "cn", "ru", "unknown"}
 
+# 국내 해킹 단독 검색어(10/20): 「북한 GPS 교란 해킹」처럼 북한어와 묶으면 귀속 미확인 국내 사고(개인정보 유출 등)가
+# 결과에 안 뜬다 — 10/18~20 41회차가 전부 묶어 써서 0건이었다. 회차를 막지는 않고(핵·병력 판정까지 멈춘다) 계수만 남긴다.
+_HACK_RE = re.compile(r"해킹|사이버|개인정보|유출|랜섬|디도스|DDoS|hack|cyber|breach|ransomware", re.I)
+_NK_RE = re.compile(r"북한|북측|North Korea|N\.? ?Korea|DPRK|Pyongyang|GPS|교란|jamming", re.I)
+
+
+def cyber_domestic_queries(cov: dict | None) -> int:
+    """electronic_cyber coverage 중 북한·GPS 어휘 없이 해킹·유출만 담은 검색어 수."""
+    qs = (cov or {}).get("electronic_cyber") or []
+    qs = qs if isinstance(qs, list) else [qs]
+    return sum(1 for q in qs if isinstance(q, str) and _HACK_RE.search(q) and not _NK_RE.search(q))
+
 
 def normalize_attribution(items: dict) -> dict:
     """귀속(attribution) 정규화 — 값은 ATTRIBUTIONS 만, 「unknown」이면 등급에 안 쓰도록 routine 강제(표시는 화면 칩).
@@ -980,6 +992,8 @@ def main(argv: list[str]) -> int:
     raw = run.get("world") if isinstance(run, dict) else None
     kept = clean_world(run) if isinstance(run, dict) else None
     event["world"] = {"raw": len(raw) if isinstance(raw, list) else 0, "kept": len(kept[0]) if kept else 0}
+    if event.get("status") == "ok":  # 국내 해킹 단독 검색 여부 — 판정과 무관한 진단
+        event["cyber_domestic"] = cyber_domestic_queries(run.get("coverage"))
     STATE.mkdir(exist_ok=True)
     try:  # 임박 신호는 판정과 무관 — 실패해도 회차를 막지 않는다
         sig = update_signals(run if event.get("status") == "ok" else {}, _load(STATE / "signals.json", None), event["checked_at"])

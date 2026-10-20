@@ -537,3 +537,10 @@ def test_signals_same_event_merges_as_extra_source():
                       {"kind": "nav_warning", "summary": "다른 표현", "level": "report", "window": None, "same_as": sid, "source": {"url": "https://c.kr/3"}}]
     doc = d.update_signals(run, doc, now)
     assert len(doc["active"]) == 1 and [a["url"] for a in doc["active"][0]["also"]] == ["https://b.cn/2", "https://c.kr/3"]
+
+
+def test_cyber_domestic_query_counts_only_standalone():
+    cov = {"electronic_cyber": ["북한 GPS 교란 해킹 사이버 공격", "North Korea cyber attack", "해킹 개인정보 유출", "랜섬웨어 공격"]}
+    assert d.cyber_domestic_queries(cov) == 2
+    assert d.cyber_domestic_queries({"electronic_cyber": ["북한 GPS 교란 해킹"]}) == 0
+    assert d.cyber_domestic_queries(None) == 0

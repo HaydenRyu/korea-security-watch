@@ -2,20 +2,20 @@
   "coverage": {
     "border_clash": [
       "김여정 담화 MDL 경고사격 합참",
-      "North Korea Kim Yo Jong warning shots MDL South Korea",
-      "목함지뢰 해안 발견 지뢰 발견"
+      "목함지뢰 해안 지뢰 발견 귀순 NLL 합참",
+      "North Korea Kim Yo Jong loudspeaker border Reuters"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 해킹 공격"
+      "북한 GPS 교란 해킹 공격 사이버 공격 10월 20일"
     ],
     "foreign_forces": [
       "North Korea troops Russia 북러 군사협력"
     ],
-    "troop_movement": [
-      "news_kr 수집 결과(전방 병력 이동 키워드) 확인"
-    ],
     "nuclear": [
-      "news_kr 수집 결과 핵 키워드 확인"
+      "North Korea troops Russia 북러 군사협력 핵 풍계리 영변"
+    ],
+    "troop_movement": [
+      "news_kr 수집 결과(병력 키워드) 확인"
     ],
     "logistics": [
       "news_kr 수집 결과 확인"
@@ -34,6 +34,7 @@
     "https://www.segye.com/newsView/20261020508155",
     "https://www.segye.com/newsView/20261020510358",
     "https://www.segye.com/newsView/20261020503020",
+    "https://www.yna.co.kr/view/AKR20261019167451504",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
   "overall_summary": "직전 회차와 같이 김여정 담화를 둘러싼 합참·통일부의 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. 정례 범주를 유지한다.",
@@ -53,7 +54,7 @@
       "region": "중부전선 MDL 일대",
       "lat": 38.3,
       "lon": 127.9,
-      "summary": "합참의장이 5군단을 방문해 전날 김여정 담화를 적반하장이라 규정하고 추가 도발 시 단호 대응을 지시했으며, 통일부는 북측의 정전협정 위반 중단과 MDL 소통체계 마련을 촉구했다.",
+      "summary": "김여정이 19일 담화에서 MDL 경고사격에 반발해 군사력 증강·대남 확성기방송 재개를 검토한다고 밝혔고, 합참의장(20일)은 추가 도발 시 단호 대응을, 통일부는 정전협정 위반 중단을 촉구했다.",
       "meaning": "MDL 월선·경고사격을 둘러싼 말 공방이 이어지나 시한·표적을 담은 최후통첩이나 새 교전은 없다.",
       "sources": [
         {
@@ -65,6 +66,11 @@
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261020510358"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261019167451504"
         }
       ],
       "confidence": "중간",
@@ -92,7 +98,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-20T03:10:02+00:00",
+  "checked_at": "2026-10-20T04:11:00+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -132,5 +138,5 @@
     }
   ],
   "world_context": "미국의 대우크라이나 지원 조정과 대러 제재 보류, 중동 분쟁이 겹치며 미국의 전력·정책 우선순위가 쟁점이다.",
-  "world_at": "2026-10-20T03:10:02+00:00"
+  "world_at": "2026-10-20T04:11:00+00:00"
 }

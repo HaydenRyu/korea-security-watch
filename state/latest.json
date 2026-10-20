@@ -2,7 +2,7 @@
   "coverage": {
     "troop_movement": [
       "북한 4군단 서북도서 병력 변화 해병대",
-      "North Korea Reuters AP October 20 2026"
+      "North Korea troops border islands NK News"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
@@ -10,25 +10,25 @@
     ],
     "logistics": [
       "북한 군수 물자 수송",
-      "North Korea Reuters AP October 20 2026"
+      "North Korea Reuters AP October 21 2026"
     ],
     "border_clash": [
       "목함지뢰 해안 발견",
       "DMZ NLL 귀순 합참",
-      "North Korea loudspeaker DMZ NK News"
+      "북한 합참 발표 10월 21일"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 합참",
-      "해킹 개인정보 유출",
+      "해킹 개인정보 유출 침해사고",
       "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
       "북러 군사협력",
-      "NHK 北朝鮮"
+      "North Korea troops Russia"
     ],
     "parade_massing": [
       "북한 열병식 집결",
-      "North Korea Reuters AP October 20 2026"
+      "North Korea parade massing"
     ],
     "nk_internal": [
       "북한 등화관제 준전시",
@@ -40,16 +40,15 @@
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261020519217",
     "https://www.segye.com/newsView/20261020519221",
-    "https://www.yna.co.kr/view/AKR20261020157851504",
+    "https://www.nknews.org/feed/",
     "https://www.nknews.org/2026/10/north-korea-has-made-various-changes-to-forces-facing-border-islands-rok/",
     "https://www.nknews.org/2026/10/seoul-vows-to-punish-north-korean-provocations-after-loudspeaker-threat/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml",
-    "https://www.nknews.org/feed/"
+    "https://www.nknews.org/2026/10/canada-can-help-seoul-counter-north-koreas-new-ways-of-war-military-chief/",
+    "https://www.yna.co.kr/rss/northkorea.xml"
   ],
-  "overall_summary": "김여정 담화 이후 국방부·합참의 응징 경고와 통일부의 소통 촉구가 오가는 말 공방이 이어지며, 해병대사령관이 북 4군단의 서북도서 정면 부대 변화를 언급한 점이 새롭다. 북 관영 kp 도메인 접속장애는 귀속 미확인이며 직전 대비 큰 변화는 없다.",
+  "overall_summary": "김여정 담화 이후 국방부·합참의 응징 경고와 통일부의 소통 촉구가 이어지는 말 공방 국면으로 새 교전·최후통첩은 없다. 해병대사령관이 북 4군단의 서북도서 정면 부대 변화를 언급한 점은 직전과 같고, kp 도메인 접속장애는 귀속 미확인이다.",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -90,14 +89,14 @@
       "meaning": "말 공방 수준이며 확성기 재개나 타격수단 배치는 확인되지 않았다.",
       "sources": [
         {
-          "name": "국방일보",
-          "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
-        },
-        {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261020519221"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/10/seoul-vows-to-punish-north-korean-provocations-after-loudspeaker-threat/"
         }
       ],
       "confidence": "중간",
@@ -105,7 +104,9 @@
         "국방부는 추가 도발 시 단호 응징을 경고",
         "통일부·외교부는 소통과 외교적 해법 강조"
       ],
-      "speculation": []
+      "speculation": [
+        "겨울 전 국경 공사 방해 경고사격 축소 압박 의도라는 전문가 해석"
+      ]
     },
     "electronic_cyber": {
       "status": "single",
@@ -114,21 +115,21 @@
       "region": "북한 kp 도메인",
       "lat": 39.02,
       "lon": 125.75,
-      "summary": "귀속 미확인 — 북한 외무성·조선중앙통신 등 kp 도메인 40여 개가 약 8시간 접속장애를 겪었으나 보안업계는 공격 또는 회선 장애 가능성만 거론하고 구체적 해킹 정황은 없다.",
+      "summary": "귀속 미확인 — 북한 외무성·조선중앙통신 등 kp 도메인 40여 개가 약 8시간 접속장애를 겪었으나 구체적 해킹 정황은 없다(연합뉴스 북한 피드 제목 확인).",
       "meaning": "북한을 겨냥한 사이버 공격 가능성이 있으나 확인되지 않았다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261020157851504"
+          "url": "https://www.yna.co.kr/rss/northkorea.xml"
         }
       ],
       "confidence": "낮음",
       "facts": [
-        "10/20 11시~19시 접속 불가·불안정"
+        "10/20 접속 불가·불안정"
       ],
       "speculation": [
-        "공격 또는 중국 회선 장애"
+        "공격 또는 회선 장애"
       ]
     },
     "foreign_forces": {
@@ -144,7 +145,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-20T19:10:54+00:00",
+  "checked_at": "2026-10-20T20:10:22+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

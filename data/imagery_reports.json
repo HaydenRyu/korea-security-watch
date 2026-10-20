@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-19T06:07:49.901024+00:00",
+ "fetched_at": "2026-10-20T00:15:41.009287+00:00",
  "note": "제목·링크·날짜만. 본문·이미지 전재 금지(각 사이트 이용 조건)",
  "sources": {
   "38north": {
@@ -11,8 +11,8 @@
   "beyondparallel": {
    "name": "CSIS Beyond Parallel",
    "feed": "https://beyondparallel.csis.org/tag/satellite-imagery/feed/",
-   "ok": true,
-   "count": 10
+   "ok": false,
+   "error": "not well-formed (invalid token): line 1, column 5"
   }
  },
  "items": [

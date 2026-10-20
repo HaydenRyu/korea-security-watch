@@ -19,7 +19,7 @@
     ],
     "electronic_cyber": [
       "GPS 교란 서북도서 북한",
-      "해킹 개인정보 유출 10월 20일",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 20일",
       "kp 도메인 접속장애 해킹 북한 사이트"
     ],
     "foreign_forces": [
@@ -40,11 +40,11 @@
     ]
   },
   "opened": [
+    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261020508155",
-    "https://www.pbs.org/newshour/world/north-korea-threatens-to-restart-propaganda-loudspeaker-broadcasts-and-deploy-more-weapons-at-south-korea-border",
     "https://www.newstong.co.kr/view3.aspx?seq=14759198"
   ],
-  "overall_summary": "김여정 담화 이후 합참의장·통일부 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. 북한 kp 도메인 사이트 무더기 접속장애는 원인·귀속 미확인이며 직전 회차와 등급 판정은 같다.",
+  "overall_summary": "김여정 담화 이후 국방부·합참의장·통일부의 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. kp 도메인 접속장애는 귀속 미확인이며 직전 회차와 판정이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,25 +55,13 @@
     "logistics": {
       "status": "none"
     },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
     "border_clash": {
       "status": "single",
       "routine": true,
       "region": "중부전선 MDL 일대",
       "lat": 38.3,
       "lon": 127.9,
-      "summary": "김여정 19일 담화 이후 합참의장·통일부의 말 공방만 이어지고 새 교전·최후통첩은 없다(첫 보도 10/19~20).",
+      "summary": "김여정 19일 담화 이후 합참의장·국방부·통일부의 말 공방만 이어지고 새 교전·최후통첩은 없다(첫 보도 10/19~20).",
       "meaning": "MDL 월선·경고사격을 둘러싼 말 공방이 이어지나 시한·표적을 담은 최후통첩이나 새 교전은 없다.",
       "confidence": "중간",
       "facts": [
@@ -90,9 +78,9 @@
           "url": "https://www.segye.com/newsView/20261020508155"
         },
         {
-          "name": "AP(PBS)",
+          "name": "국방일보",
           "tier": "B",
-          "url": "https://www.pbs.org/newshour/world/north-korea-threatens-to-restart-propaganda-loudspeaker-broadcasts-and-deploy-more-weapons-at-south-korea-border"
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
         }
       ]
     },
@@ -118,9 +106,21 @@
       "speculation": [
         "외부 해커 집단의 DDoS 가능성 거론"
       ]
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-10-20T09:11:49+00:00",
+  "checked_at": "2026-10-20T10:12:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

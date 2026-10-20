@@ -1,20 +1,20 @@
 {
- "fetched_at": "2026-10-20T14:40:08+00:00",
+ "fetched_at": "2026-10-20T15:53:15+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-20T14:40:08+00:00",
+ "last_ok_at": "2026-10-20T15:53:15+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1140,
+  "fetched": 1141,
   "hits": 42,
   "clusters": 34,
   "by_group": {
+   "alert": 4,
    "border": 20,
    "drone_balloon": 14,
    "fire": 8,
-   "alert": 4,
    "mine": 7,
    "gps": 1,
    "defect": 2
@@ -25,12 +25,12 @@
    "feeds": 5,
    "failed": 0,
    "count": 581,
-   "hits": 27
+   "hits": 26
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
-   "count": 159,
+   "count": 160,
    "hits": 3
   },
   "동아일보": {
@@ -43,7 +43,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 19
+   "hits": 17
   },
   "세계일보": {
    "feeds": 2,
@@ -60,25 +60,25 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "alert": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-10-20T15:53:15+00:00"
+  },
   "border": {
    "clusters": 20,
    "max_independent": 3,
-   "latest": "2026-10-20T14:40:08+00:00"
+   "latest": "2026-10-20T15:53:15+00:00"
   },
   "drone_balloon": {
    "clusters": 14,
    "max_independent": 3,
-   "latest": "2026-10-20T14:40:08+00:00"
+   "latest": "2026-10-20T15:53:15+00:00"
   },
   "fire": {
    "clusters": 8,
    "max_independent": 2,
-   "latest": "2026-10-20T14:40:08+00:00"
-  },
-  "alert": {
-   "clusters": 4,
-   "max_independent": 1,
-   "latest": "2026-10-20T14:40:08+00:00"
+   "latest": "2026-10-20T15:53:15+00:00"
   },
   "mine": {
    "clusters": 7,
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 3
   },
   {
    "outlet": "SBS",
@@ -158,7 +158,7 @@
    "section": "속보",
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
-   "count": 101,
+   "count": 102,
    "hits": 2
   },
   {
@@ -183,7 +183,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 18
+   "hits": 16
   },
   {
    "outlet": "국민일보",

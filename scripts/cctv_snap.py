@@ -395,7 +395,7 @@ def grab(ff: str, url: str, out: Path) -> bool:
         return False
 
 
-BUSY = ("daily_content_writer", "run_daily_naver", "auto_rewrite_runner")  # 맥부기의 회사 작업 — 도는 중이면 이 회차는 건너뛴다
+BUSY = ("daily_content_writer", "run_daily_naver", "auto_rewrite_runner")  # 맥부기의 회사 작업 — 도는 중이면 무거운 단계(ffmpeg 18대·라이브 ID·워크플로 깨우기)만 건너뛴다. 공역(GET 3번 + 업로드)은 계속 — 13:00 발행이 한 시간 넘게 돌면 공역이 그만큼 멎었다(10/20 실측 12:59→13:09)
 
 
 def busy() -> str | None:
@@ -407,12 +407,12 @@ def busy() -> str | None:
 
 def main() -> int:
     dry = "--dry" in sys.argv
-    if (b := busy()) and not dry:
-        print(json.dumps({"skip": b}))
-        return 0
+    light = busy() if not dry else None   # 회사 작업 중 = 가벼운 회차(공역만)
+    if light:
+        print(json.dumps({"light": light}))
     if not dry and (sa := stale_alert()):
         print(json.dumps({"stale": sa}, ensure_ascii=False))
-    if not dry and (k := kick_workflows()):
+    if not dry and not light and (k := kick_workflows()):
         print(json.dumps({"kick": k}))
     key = (CONF / "its_key").read_text().strip()
     cams = json.loads((ROOT / "data" / "cctv.json").read_text())["cameras"]
@@ -422,7 +422,7 @@ def main() -> int:
         print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 건너뜀"}, ensure_ascii=False))
     shots = [{"name": c["name"], "at": None, "img": None} for c in cams]
     with tempfile.TemporaryDirectory() as td:
-        for n in range(0 if quota else 2):          # 1바퀴(캐시 주소 우선) + 실패분 1바퀴(새 주소 — 재생 서버 403 이 잦다)
+        for n in range(0 if (quota or light) else 2):          # 1바퀴(캐시 주소 우선) + 실패분 1바퀴(새 주소 — 재생 서버 403 이 잦다)
             todo = [i for i, sh in enumerate(shots) if not sh["img"]]
             if not todo or time.monotonic() - t0 > BUDGET:
                 break
@@ -456,7 +456,7 @@ def main() -> int:
     bundle = {"captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "shots": shots}
     if quota:
         bundle["paused"] = {"reason": "교통정보센터 월 호출 한도 초과", "until": quota}
-    if not dry and (lv := live_ids()):  # 못 찾은 채널은 빠진다 — 상황판이 data/live.json 의 fb 로 메운다
+    if not dry and not light and (lv := live_ids()):  # 못 찾은 채널은 빠진다 — 상황판이 data/live.json 의 fb 로 메운다
         bundle["live"], bundle["live_at"] = lv, bundle["captured_at"]
     if not dry and (air := air_snapshot()):
         bundle["air"] = air

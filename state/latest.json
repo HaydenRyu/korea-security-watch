@@ -13,14 +13,13 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
+      "목함지뢰 해안 발견 해병대",
       "DMZ NLL 귀순",
-      "North Korea Kim Yo Jong loudspeaker border"
+      "North Korea Kim Yo Jong loudspeaker South Korea warning shots MDL"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
-      "kp 도메인 북한 사이트 접속장애 해킹"
+      "해킹 공격 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "북러 군사협력",
@@ -41,10 +40,12 @@
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261020519147",
+    "https://www.segye.com/newsView/20261020519221",
+    "https://www.segye.com/newsView/20261020519217",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "김여정 담화 이후 국방부·합참의 경고성 발언 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. 직전 회차와 판정이 같고, kp 도메인 접속장애는 원문을 열지 못해 판정에서 뺐다.",
+  "overall_summary": "김여정 담화 이후 국방부·합참의 경고와 통일·외교부의 소통 강조가 오가는 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. 직전 회차와 판정이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,29 +62,34 @@
       "region": "DMZ·MDL 일대",
       "lat": 37.95,
       "lon": 126.9,
-      "summary": "국방부가 북한의 대남 확성기 재개 거론에 「추가 도발 시 단호히 응징」을 경고하고 합참의장이 DMZ 주도권 강화를 지시했으나 새 교전·최후통첩은 없다(첫 보도 10/19~20).",
-      "meaning": "북측 발언과 남측 경고가 오가는 말 공방 단계로, 실제 군사행동 징후는 아니다.",
+      "summary": "국방부·합참이 김여정 담화(확성기 재개 거론)에 「추가 도발 시 단호 응징」을 경고하고 통일부·외교부는 소통을 강조했으나 새 교전·최후통첩은 없다(첫 보도 10/19~20).",
+      "meaning": "말 공방과 남측 강온 병행 단계로 실제 군사행동 징후는 아니다.",
       "sources": [
         {
           "name": "국방일보",
           "tier": "B",
           "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261020519221"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "국방부가 MDL 일대 경고방송·경고사격은 방어적 조치라고 설명",
-        "확성기 재개·타격수단 증강은 북측이 거론한 내용"
+        "국방부·군은 단호한 응징 강조, 통일부·외교부는 긴장 완화 강조",
+        "확성기 재개·무력 증강은 북측이 거론한 내용"
       ],
       "speculation": []
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "직전 회차의 kp 도메인 접속장애 건은 연합뉴스(ai_use) 원문을 열 수 없고 대체 매체 원문도 찾지 못해 이번 회차 근거로 쓰지 않는다."
+      "summary": "kp 도메인 접속장애 건은 연합(ai_use) 외 대체 원문을 찾지 못해 근거로 쓰지 않는다."
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "NHK가 한국의 주우크라이나 대사관 직원 일부 철수(북한군 포로 송환 갈등)를 보도했으나 새 북러 군사협력 확인은 아니어서 배경으로만 둔다."
+      "summary": "NHK가 주우크라이나 한국 대사관 직원 일부 철수(북한군 포로 송환 갈등)를 보도했으나 새 북러 군사협력 확인은 아니어서 배경으로만 둔다."
     },
     "parade_massing": {
       "status": "none"
@@ -95,7 +101,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-20T12:11:28+00:00",
+  "checked_at": "2026-10-20T13:15:53+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

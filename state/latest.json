@@ -13,16 +13,16 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "합참 북한 목함지뢰 DMZ NLL 귀순 진돗개",
+      "북한 합참 지뢰 발견 DMZ 귀순 10월 20일",
       "강화 해안 지뢰 발견"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 공격 사이버 공격 10월 19일",
+      "GPS 교란 북한 사이버 공격 해킹",
       "North Korea cyber attack"
     ],
     "foreign_forces": [
-      "North Korea Reuters Russia troops October 2026",
-      "북러 군사협력 파병"
+      "북러 군사협력 파병 North Korea troops Russia",
+      "North Korea Reuters October 20 2026"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -34,13 +34,13 @@
     ],
     "gov_warning": [
       "진돗개 데프콘 발령",
-      "합참 북한 목함지뢰 DMZ NLL 귀순 진돗개"
+      "합참 북한 DMZ NLL 귀순"
     ],
     "linkage:taiwan": [
       "东部战区 台岛 联合演习 PLA drills around Taiwan"
     ],
     "linkage:korea": [
-      "North Korea Reuters Russia troops October 2026"
+      "북러 군사협력 파병 North Korea troops Russia"
     ]
   },
   "opened": [
@@ -48,7 +48,7 @@
     "https://www.nknews.org/feed/",
     "https://kookbang.dema.mil.kr/newsWeb/20261019/1/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "직전 회차 이후 새 징후는 없다. 강화 유실 추정 지뢰(이달 4번째)와 김여정 확성기 재개 검토 담화는 정례 범주로 유지한다.",
+  "overall_summary": "직전 회차 이후 새 징후는 없다. 김여정 확성기 재개·증강 배치 검토 담화(시한 없음)와 강화 유실 추정 지뢰는 정례 범주로 유지한다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -102,7 +102,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-19T23:10:32+00:00",
+  "checked_at": "2026-10-20T00:10:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

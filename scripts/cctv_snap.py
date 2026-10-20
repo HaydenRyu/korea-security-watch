@@ -22,6 +22,8 @@ import tempfile
 import time
 import urllib.error
 import urllib.request
+from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -31,7 +33,13 @@ RELAY = "https://jis-cctv.jis-probe.workers.dev/upload"
 API = ("https://openapi.its.go.kr:9443/cctvInfo?apiKey={key}&type={t}&cctvType=4"
        "&minX={x0}&maxX={x1}&minY={y0}&maxY={y1}&getType=json")
 GRAB_TIMEOUT = 20   # 카메라 1대 상한(초)
-BUDGET = 150        # 회차 전체 상한(초) — 5분 주기의 절반
+BUDGET = 200        # 사진 단계 상한(초) — 18대 = 5대 묶음 4개 + 회복 대기 3회 ≈ 120초(10/20 맥부기 실측 118초), 나머지 100초는 라이브·공역·업로드
+# 10/20 맥부기 실측: 재생 서버(cctvsec.ktict.co.kr)는 한 호스트가 짧은 창에 열 수 있는 재생 세션이 5~6개 — 그 뒤엔 모든 주소에 403(0.1초),
+# 마지막 세션 뒤 35~40초면 전부 200 으로 돌아온다. 연속 18대 → 앞 5~6대만 찍히던 원인(매칭·ffmpeg 아님, 주소 만료도 아님).
+# 마스터 재생목록 GET 은 세션을 열지 않아(21회 연속 200) 회복 확인에 쓴다.
+SESSION_CAP = 5      # 한 묶음에 동시에 여는 재생 세션(병렬 ffmpeg) 수
+RECOVER_MAX = 60     # 묶음 사이 회복 대기 상한(초) — 넘기면 세션 상한이 아니라 주소 만료(403)로 보고 재조회 단계로
+RECOVER_POLL = 5     # 회복 확인 간격(초)
 LIVE_EVERY = 3600   # 라이브 ID 재조회 간격(초)
 LIVE_MARK = Path.home() / "Library" / "Caches" / "jis-live-at"   # 마지막 조회 시각(파일 mtime)
 # 10/18 실측: firms(:45 매시)는 하루 1회만, weekly(일 11:00Z)는 아예 안 돌았다 → 주간 요약 알림 누락
@@ -417,14 +425,75 @@ def nearest(cam: dict, live: list[dict]) -> str | None:
     return best if dist < 300 else None
 
 
-def grab(ff: str, url: str, out: Path) -> bool:
+def grab(ff: str, url: str, out: Path) -> tuple[bool, str]:
+    """(성공, 사유). 사유는 ffmpeg stderr·결과 파일 크기로 가른다 — ok · 403(재생 서버 거부) · timeout · error · small."""
     try:
-        subprocess.run([ff, "-nostdin", "-loglevel", "error", "-y", "-i", url, "-frames:v", "1",
-                        "-vf", "scale=480:-2", "-q:v", "7", str(out)],
-                       timeout=GRAB_TIMEOUT, check=True, capture_output=True)
-        return out.exists() and out.stat().st_size > 2000
+        r = subprocess.run([ff, "-nostdin", "-loglevel", "error", "-y", "-i", url, "-frames:v", "1",
+                            "-vf", "scale=480:-2", "-q:v", "7", str(out)],
+                           timeout=GRAB_TIMEOUT, capture_output=True)
+    except subprocess.TimeoutExpired:
+        return False, "timeout"
     except (subprocess.SubprocessError, OSError):
+        return False, "error"
+    if r.returncode:
+        return False, "403" if b"403" in r.stderr else "error"
+    return (True, "ok") if out.exists() and out.stat().st_size > 2000 else (False, "small")
+
+
+def playable(url: str) -> bool:
+    """마스터 재생목록이 200 인가 — 세션을 열지 않으므로 세션 상한을 소모하지 않는다(10/20 실측). 403·오류·타임아웃 = False."""
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=10) as r:
+            return r.status == 200
+    except (urllib.error.HTTPError, OSError, ValueError):
         return False
+
+
+def wait_recover(url: str, deadline: float, probe=playable, sleep=time.sleep, clock=time.monotonic) -> bool:
+    """세션 상한이 풀릴 때까지 기다린다(RECOVER_MAX 와 회차 예산 중 이른 쪽까지). 안 풀리면 False = 주소 만료로 본다."""
+    end = min(deadline, clock() + RECOVER_MAX)
+    while clock() < end:
+        sleep(RECOVER_POLL)
+        if probe(url):
+            return True
+    return False
+
+
+def rotated(seq: list, slot: int) -> list:
+    """회차마다 시작 카메라를 돌린다 — 예산·차단으로 뒤가 잘려도 같은 카메라만 굶지 않게(상태 파일 없이 시각으로)."""
+    if not seq:
+        return seq
+    k = slot % len(seq)
+    return seq[k:] + seq[:k]
+
+
+def grab_batches(ff: str, jobs: list[tuple[int, str, Path]], deadline: float,
+                 grab=grab, wait=wait_recover, clock=time.monotonic) -> dict[int, str]:
+    """SESSION_CAP 대씩 병렬로 찍고, 묶음 사이에는 재생 서버가 다시 받는지 확인한 뒤 넘어간다.
+    403 은 세션 상한일 수 있어 뒤로 보내 1회 더. 반환 {카메라 i: 사유} — ok · 403 · timeout · error · small ·
+    budget(예산 소진으로 못 시도) · blocked(회복 대기 안에 서버가 안 풀림 = 주소 만료 의심)."""
+    out: dict[int, str] = {}
+    retried: set[int] = set()
+    queue = list(jobs)
+    while queue:
+        batch, queue = queue[:SESSION_CAP], queue[SESSION_CAP:]
+        with ThreadPoolExecutor(len(batch)) as ex:
+            res = list(ex.map(lambda j: grab(ff, j[1], j[2]), batch))
+        for (i, url, path), (ok, why) in zip(batch, res):
+            if not ok and why == "403" and i not in retried:
+                retried.add(i)
+                queue.append((i, url, path))   # 상한에 걸린 것이면 회복 뒤 한 번 더
+                continue
+            out[i] = why
+        if not queue:
+            break
+        if clock() > deadline:
+            out.update({i: "budget" for i, _, _ in queue})
+            break
+        if not wait(queue[0][1], deadline):
+            out.update({i: "blocked" for i, _, _ in queue})
+            break
+    return out
 
 
 BUSY = ("daily_content_writer", "run_daily_naver", "auto_rewrite_runner")  # 맥부기의 회사 작업 — 도는 중이면 무거운 단계(ffmpeg 18대·라이브 ID·워크플로 깨우기)만 건너뛴다. 공역(GET 3번 + 업로드)은 계속 — 13:00 발행이 한 시간 넘게 돌면 공역이 그만큼 멎었다(10/20 실측 12:59→13:09)
@@ -456,9 +525,11 @@ def main() -> int:
     if quota:
         print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 건너뜀"}, ensure_ascii=False))
     shots = [{"name": c["name"], "at": None, "img": None} for c in cams]
+    why: dict[int, str] = {}   # 카메라별 마지막 실패 사유(자기 신고 아님 — ffmpeg stderr·HTTP 로 가른 것)
+    stage: dict[str, int] = {}
     with tempfile.TemporaryDirectory() as td:
-        for n in range(0 if (quota or light) else 2):          # 1바퀴(캐시 주소 우선) + 실패분 1바퀴(새 주소 — 재생 서버 403 이 잦다)
-            todo = [i for i, sh in enumerate(shots) if not sh["img"]]
+        for n in range(0 if (quota or light) else 2):          # 1바퀴(캐시 주소 우선) + 실패분 1바퀴(새 주소 — 주소 만료 403)
+            todo = rotated([i for i, sh in enumerate(shots) if not sh["img"]], int(time.time() // 300))
             if not todo or time.monotonic() - t0 > BUDGET:
                 break
             last, urls = url_cache()
@@ -479,24 +550,37 @@ def main() -> int:
                     break
                 except (OSError, ValueError, KeyError):
                     break
+            jobs = []
             for i in todo:
-                if time.monotonic() - t0 > BUDGET:
-                    break
-                c, p = cams[i], Path(td) / f"{i}.jpg"
-                url = nearest(c, urls.get(c.get("road", "its"), []))
-                if url and grab(ff, url, p):
+                url = nearest(cams[i], urls.get(cams[i].get("road", "its"), []))
+                if url:
+                    jobs.append((i, url, Path(td) / f"{i}.jpg"))
+                else:
+                    why[i] = "nomatch"
+            for i, w in grab_batches(ff, jobs, t0 + BUDGET).items():
+                why[i] = w
+                if w == "ok":
+                    p = Path(td) / f"{i}.jpg"
                     shots[i]["img"] = base64.b64encode(p.read_bytes()).decode()
                     shots[i]["at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    stage["grab"] = round(time.monotonic() - t0)
     ok = sum(1 for s in shots if s["img"])
+    fail = Counter(w for i, w in why.items() if not shots[i]["img"])
     bundle = {"captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "shots": shots}
     if quota:
         bundle["paused"] = {"reason": "교통정보센터 월 호출 한도 초과", "until": quota}
+    t1 = time.monotonic()
     if not dry and not light and (lv := live_ids()):  # 못 찾은 채널은 빠진다 — 상황판이 data/live.json 의 fb 로 메운다
         bundle["live"], bundle["live_at"] = lv, bundle["captured_at"]
+    stage["live"], t1 = round(time.monotonic() - t1), time.monotonic()
     if not dry and (air := air_snapshot()):
         bundle["air"] = air
+    stage["air"] = round(time.monotonic() - t1)
     size = len(json.dumps(bundle))
-    print(json.dumps({"ok": ok, "total": len(shots), "bytes": size, "sec": round(time.monotonic() - t0)}))
+    line = {"ok": ok, "total": len(shots), "bytes": size, "sec": round(time.monotonic() - t0), "stage": stage}
+    if fail:
+        line["fail"] = dict(fail)   # 회차가 길거나 대수가 줄면 이 줄로 단계·사유를 가른다(10/20 477초 회차는 단계 기록이 없어 원인 미확정)
+    print(json.dumps(line))
     if dry or (ok == 0 and "air" not in bundle):
         return 0 if ok else 1   # 올릴 게 없다 — 사진 전부 실패는 Worker 가 칸마다 직전 사진을 시각과 함께 남긴다
     req = urllib.request.Request(RELAY, data=json.dumps(bundle).encode(), method="POST", headers={

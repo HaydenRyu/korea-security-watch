@@ -6,24 +6,24 @@
     ],
     "nuclear": [
       "북한 핵시설 영변 풍계리",
-      "North Korea nuclear 38 North"
+      "North Korea nuclear"
     ],
     "logistics": [
       "북한 탄약 군수 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 해안 10월 20일 합참",
-      "합참의장 北 적반하장 추가 도발시 단호 대응 군 작전 MDL",
+      "합참의장 MDL 이남 지뢰 매설 장병 부상 도발 5군단",
+      "North Korea Kim Yo Jong loudspeakers JCS warning shots MDL",
       "DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 해킹 공격 사이버 공격",
+      "GPS 교란 해킹 공격 사이버 공격 북한 10월 20일",
       "North Korea cyber attack"
     ],
     "foreign_forces": [
-      "북러 군사협력 North Korea troops Russia",
-      "North Korea Reuters Russia"
+      "북러 군사협력",
+      "North Korea troops Russia"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -36,21 +36,15 @@
     "gov_warning": [
       "진돗개 데프콘 발령",
       "합참 북한 DMZ NLL 귀순"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan 东部战区 台岛 联合演习"
-    ],
-    "linkage:korea": [
-      "북러 군사협력 North Korea troops Russia"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261019523494",
-    "https://www.segye.com/newsView/20261020507381",
-    "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/kim-yo-jong-threatens-restart-of-north-korean-loudspeakers-amid-border-tensions/"
+    "https://www.segye.com/newsView/20261020508155",
+    "https://www.segye.com/newsView/20261020508316",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://kookbang.dema.mil.kr/newsWeb/20261019/1/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "직전 회차 이후 새 징후는 없다. 김여정 확성기 재개 검토 담화에 군이 단호 대응 입장을 밝혔으나 시한·표적이 없는 발언 수준이라 정례 범주로 유지한다.",
+  "overall_summary": "직전 회차 이후 새 징후는 없다. 합참의장이 김여정 확성기 재개 검토 담화에 전방 5군단에서 단호 대응을 지시했으나 시한·표적이 없는 발언 수준이라 정례 범주로 유지한다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,29 +56,29 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
-      "region": "인천 강화군 해안·MDL 일대",
-      "lat": 37.65,
-      "lon": 126.4,
-      "summary": "김여정이 MDL 경고사격을 비난하며 확성기 재개·증강 배치를 검토한다고 밝혔고(시한 없음), 군은 단호 대응 입장을 냈으며 강화 해안 유실 추정 지뢰는 이달 네 번째 발견이다.",
-      "meaning": "시한 없는 검토 발언과 인명 피해 없는 유실 추정 지뢰라 정례 범주다.",
+      "region": "중부전선 MDL 일대",
+      "lat": 38.2,
+      "lon": 127.6,
+      "summary": "합참의장이 5군단을 찾아 김여정 담화를 적반하장이라 규정하고 북한 추가 도발 시 단호 대응을 지시했다(9/21 서부전선 MDL 이남 북한 지뢰 부상 사건은 10/5 합참 최종 판단된 배경).",
+      "meaning": "시한·표적이 없는 대응 지시와 담화 공방이라 정례 범주다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261019523494"
+          "url": "https://www.segye.com/newsView/20261020508316"
         },
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/kim-yo-jong-threatens-restart-of-north-korean-loudspeakers-amid-border-tensions/"
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261020508155"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "김여정 담화(10/19): 확성기 방송 재개·병력 증강 배치 검토, 시한 없음",
-        "강화 해안 의심 지뢰 이달 4번째 발견(NK News 피드)"
+        "진영승 합참의장 10/20 5군단 방문, 추가 도발 시 단호 대응 지시",
+        "김여정 담화(10/19) 확성기 방송 재개 검토, 시한 없음"
       ],
       "speculation": []
     },
@@ -104,7 +98,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-20T01:10:03+00:00",
+  "checked_at": "2026-10-20T02:09:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

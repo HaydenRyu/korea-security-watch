@@ -46,6 +46,8 @@ ITS_MONTHLY_CAP = 1000   # 인증키 상세정보의 월 호출 한도(hayden 10
 ITS_BUDGET = int(ITS_MONTHLY_CAP * 0.9)   # 우리 쪽 상한 — 서버 4001 을 받기 전에 멈춘다(실패 호출도 센다)
 CALL_LOG = Path.home() / "Library" / "Caches" / "jis-its-calls.json"   # {"month": "YYYY-MM", "n": 호출 수}
 QUOTA_MARK = Path.home() / "Library" / "Caches" / "jis-its-quota"   # 월 호출 한도 초과(4001) — 다음 달 1일까지 CCTV 조회 중단
+PROBE_MARK = Path.home() / "Library" / "Caches" / "jis-its-probe"   # 한도 초과 중 마지막으로 두드려 본 시각(mtime)
+PROBE_EVERY = 24 * 3600   # 하루 1회(호출 2회) — 증설 승인은 its.go.kr 안에서만 보여 자동으로 알 길이 없다(10/20 신청·대기)
 KICK_MARK = Path.home() / "Library" / "Caches" / "jis-kick"   # 워크플로별 마지막 깨운 시각(파일 mtime)
 REPO = "HaydenRyu/korea-security-watch"
 # 공역 지도(10/20): 기체 모양·사진·최근 궤적 복원(adsb.lol iframe 을 버리며 삼각형만 남았었다) + 대만 해협 작은 창
@@ -121,16 +123,17 @@ def _month() -> str:
     return datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m")
 
 
-def calls_this_month(path: Path = CALL_LOG) -> int:
+def calls_this_month(path: Path | None = None) -> int:
     try:
-        d = json.loads(path.read_text())
+        d = json.loads((path or CALL_LOG).read_text())
         return int(d["n"]) if d.get("month") == _month() else 0
     except (OSError, ValueError, KeyError, TypeError):
         return 0
 
 
-def note_call(path: Path = CALL_LOG) -> int:
+def note_call(path: Path | None = None) -> int:
     """ITS 호출 1회를 이번 달 장부에 더한다(성공·실패 무관 — 서버는 둘 다 센다고 본다). 달이 바뀌면 0부터."""
+    path = path or CALL_LOG
     n = calls_this_month(path) + 1
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({"month": _month(), "n": n}))
@@ -143,6 +146,38 @@ def block_quota() -> str:
     QUOTA_MARK.parent.mkdir(parents=True, exist_ok=True)
     QUOTA_MARK.write_text(until)
     return until
+
+
+def probe_quota(key: str, cams: list[dict]) -> str | None:
+    """서버가 막은(4001) 동안 하루 1회 실제로 두드려 본다. 풀렸으면(증설 승인) 표시를 지우고 그 회차부터 재개하며 본인 주제로 1회 알린다.
+    우리 장부가 상한이면 서버가 아니라 우리가 멈춘 것이라 두드리지 않는다. 실패 호출도 장부에 센다(area_urls 안)."""
+    if calls_this_month() >= ITS_BUDGET:
+        return None
+    if PROBE_MARK.exists() and time.time() - PROBE_MARK.stat().st_mtime < PROBE_EVERY:
+        return None
+    PROBE_MARK.parent.mkdir(parents=True, exist_ok=True)
+    PROBE_MARK.touch()
+    try:
+        urls = area_urls(key, cams)
+    except (urllib.error.HTTPError, OSError, ValueError, KeyError):
+        return "still"
+    save_url_cache(urls)
+    QUOTA_MARK.unlink(missing_ok=True)
+    ntfy("CCTV 재개", "교통정보센터 월 호출 한도가 풀렸습니다(증설 승인으로 보임). 이번 회차부터 사진을 다시 올립니다.", 3)
+    return "resumed"
+
+
+def ntfy(title: str, message: str, priority: int) -> bool:
+    """본인 주제로 알림. 실패는 조용히(사진이 본업)."""
+    try:
+        topic = (CONF / "ntfy_me").read_text().strip()
+        req = urllib.request.Request("https://ntfy.sh", headers={"Content-Type": "application/json"}, method="POST",
+                                     data=json.dumps({"topic": topic, "title": title, "message": message, "priority": priority,
+                                                      "click": "https://haydenryu.github.io/korea-security-watch/"}, ensure_ascii=False).encode())
+        urllib.request.urlopen(req, timeout=20).close()
+        return True
+    except (OSError, ValueError):
+        return False
 
 
 def kick_workflows() -> dict:
@@ -196,11 +231,8 @@ def stale_alert() -> str | None:
             msg = ("안보 감시 재개", "감시 루틴이 다시 돌고 있습니다.", 2)
         else:
             return None
-        topic = (CONF / "ntfy_me").read_text().strip()
-        req = urllib.request.Request("https://ntfy.sh", headers={"Content-Type": "application/json"}, method="POST",
-                                     data=json.dumps({"topic": topic, "title": msg[0], "message": msg[1], "priority": msg[2],
-                                                      "click": "https://haydenryu.github.io/korea-security-watch/"}, ensure_ascii=False).encode())
-        urllib.request.urlopen(req, timeout=20).close()
+        if not ntfy(*msg):
+            return None
         STALE_MARK.parent.mkdir(parents=True, exist_ok=True)
         STALE_MARK.write_text(last if msg[2] == 4 else "ok")
         return msg[0]
@@ -418,6 +450,9 @@ def main() -> int:
     cams = json.loads((ROOT / "data" / "cctv.json").read_text())["cameras"]
     ff, t0 = ffmpeg(), time.monotonic()
     quota = quota_blocked()
+    if quota and not light and not dry and (pr := probe_quota(key, cams)):
+        print(json.dumps({"probe": pr}))
+        quota = None if pr == "resumed" else quota
     if quota:
         print(json.dumps({"cctv": f"ITS 월 호출 한도 초과 — {quota} 까지 건너뜀"}, ensure_ascii=False))
     shots = [{"name": c["name"], "at": None, "img": None} for c in cams]

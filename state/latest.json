@@ -1,41 +1,36 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup border"
+      "북한 김여정 확성기 DMZ 합참 오늘",
+      "North Korea Reuters AP October 20 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "North Korea Reuters AP October 20 2026",
+      "news_kr 수집기 묶음 확인"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "North Korea Reuters AP October 20 2026",
+      "news_kr 수집기 묶음 확인"
     ],
     "border_clash": [
       "목함지뢰 해안 발견 해병대",
-      "DMZ NLL 귀순",
-      "North Korea Kim Yo Jong loudspeaker South Korea warning shots MDL"
+      "북한 김여정 확성기 DMZ 합참 오늘"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 공격 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 20일"
     ],
     "foreign_forces": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "북러 군사협력 North Korea troops Russia"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea military parade"
+      "North Korea Reuters AP October 20 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea wartime mobilization"
+      "North Korea Reuters AP October 20 2026"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 합참",
-      "US State Department Korea travel advisory"
+      "진돗개 데프콘 상향 합참 US State Department Korea travel advisory"
     ]
   },
   "opened": [
@@ -45,7 +40,7 @@
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "김여정 담화 이후 국방부·합참의 경고와 통일·외교부의 소통 강조가 오가는 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. 직전 회차와 판정이 같다.",
+  "overall_summary": "김여정 담화 이후 국방부·합참의 경고와 통일·외교부의 소통 강조가 오가는 말 공방이 이어질 뿐 새 교전·최후통첩·핵·병력 징후는 없다. 직전 회차와 판정이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,6 +50,23 @@
     },
     "logistics": {
       "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none",
+      "summary": "kp 도메인 접속장애 건은 연합(ai_use) 외 대체 원문을 찾지 못해 근거로 쓰지 않는다."
+    },
+    "foreign_forces": {
+      "status": "none",
+      "summary": "NHK가 주우크라이나 한국 대사관 직원 일부 철수(북한군 포로 송환 갈등)를 보도했으나 새 북러 군사협력 확인은 아니어서 배경으로만 둔다."
     },
     "border_clash": {
       "status": "single",
@@ -82,26 +94,9 @@
         "확성기 재개·무력 증강은 북측이 거론한 내용"
       ],
       "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "none",
-      "summary": "kp 도메인 접속장애 건은 연합(ai_use) 외 대체 원문을 찾지 못해 근거로 쓰지 않는다."
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "NHK가 주우크라이나 한국 대사관 직원 일부 철수(북한군 포로 송환 갈등)를 보도했으나 새 북러 군사협력 확인은 아니어서 배경으로만 둔다."
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-10-20T13:15:53+00:00",
+  "checked_at": "2026-10-20T14:14:47+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,18 +1,10 @@
 {
- "at": "2026-10-20T03:51:58+00:00",
- "south": 55,
+ "at": "2026-10-20T05:24:19+00:00",
+ "south": 61,
  "area": 78,
  "baseline": null,
  "ratio": null,
- "samples": 1,
- "mil": [
-  {
-   "type": "C560",
-   "name": null,
-   "call": "NINJA85",
-   "lat": 33.62,
-   "lon": 130.43
-  }
- ],
+ "samples": 2,
+ "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

@@ -13,6 +13,8 @@
       "North Korea Reuters AP October 21 2026"
     ],
     "border_clash": [
+      "목함지뢰 해안 발견 합참",
+      "합참 북 추가 도발 단호 대응 DMZ 주도권 강화",
       "목함지뢰 해안 발견",
       "DMZ NLL 귀순 합참",
       "북한 합참 발표 10월 21일"
@@ -20,7 +22,8 @@
     "electronic_cyber": [
       "북한 GPS 교란 합참",
       "해킹 개인정보 유출 침해사고",
-      "사이버 공격 랜섬웨어 공격"
+      "사이버 공격 랜섬웨어 공격",
+      "해킹 개인정보 유출 침해사고 10월 20일"
     ],
     "foreign_forces": [
       "북러 군사협력",
@@ -36,17 +39,16 @@
     ],
     "gov_warning": [
       "진돗개 데프콘 상향 합참",
-      "합참 북 통지문 전통문"
+      "합참 북 통지문 전통문",
+      "North Korea Reuters AP Kim Yo Jong loudspeaker"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261020519217",
-    "https://www.segye.com/newsView/20261020519221",
+    "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/north-korea-has-made-various-changes-to-forces-facing-border-islands-rok/",
+    "https://www.segye.com/newsView/20261020519221",
     "https://www.nknews.org/2026/10/seoul-vows-to-punish-north-korean-provocations-after-loudspeaker-threat/",
-    "https://www.nknews.org/2026/10/canada-can-help-seoul-counter-north-koreas-new-ways-of-war-military-chief/",
-    "https://www.yna.co.kr/rss/northkorea.xml"
+    "https://www.nknews.org/2026/10/north-korea-has-made-various-changes-to-forces-facing-border-islands-rok/"
   ],
   "overall_summary": "김여정 담화 이후 국방부·합참의 응징 경고와 통일부의 소통 촉구가 이어지는 말 공방 국면으로 새 교전·최후통첩은 없다. 해병대사령관이 북 4군단의 서북도서 정면 부대 변화를 언급한 점은 직전과 같고, kp 도메인 접속장애는 귀속 미확인이다.",
   "items": {
@@ -145,7 +147,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-20T20:10:22+00:00",
+  "checked_at": "2026-10-20T21:11:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

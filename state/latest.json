@@ -1,50 +1,42 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵시설 영변 풍계리",
-      "North Korea nuclear"
-    ],
-    "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "합참의장 MDL 이남 지뢰 매설 장병 부상 도발 5군단",
-      "North Korea Kim Yo Jong loudspeakers JCS warning shots MDL",
-      "DMZ 귀순"
+      "김여정 담화 MDL 경고사격 합참",
+      "North Korea Kim Yo Jong warning shots MDL South Korea",
+      "목함지뢰 해안 발견 지뢰 발견"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 공격 사이버 공격 북한 10월 20일",
-      "North Korea cyber attack"
+      "GPS 교란 북한 해킹 공격"
     ],
     "foreign_forces": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "North Korea troops Russia 북러 군사협력"
+    ],
+    "troop_movement": [
+      "news_kr 수집 결과(전방 병력 이동 키워드) 확인"
+    ],
+    "nuclear": [
+      "news_kr 수집 결과 핵 키워드 확인"
+    ],
+    "logistics": [
+      "news_kr 수집 결과 확인"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "news_kr 수집 결과 확인"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "news_kr 수집 결과 확인"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "합참 북한 DMZ NLL 귀순"
+      "합참의장 5군단 지시 보도 확인"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261020508155",
-    "https://www.segye.com/newsView/20261020508316",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://kookbang.dema.mil.kr/newsWeb/20261019/1/ATCE_CTGR_0010010000/view.do"
+    "https://www.segye.com/newsView/20261020510358",
+    "https://www.segye.com/newsView/20261020503020",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차 이후 새 징후는 없다. 합참의장이 김여정 확성기 재개 검토 담화에 전방 5군단에서 단호 대응을 지시했으나 시한·표적이 없는 발언 수준이라 정례 범주로 유지한다.",
+  "overall_summary": "직전 회차와 같이 김여정 담화를 둘러싼 합참·통일부의 말 공방만 이어지고 새 교전·최후통첩·핵·병력 징후는 없다. 정례 범주를 유지한다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,28 +51,30 @@
       "status": "single",
       "routine": true,
       "region": "중부전선 MDL 일대",
-      "lat": 38.2,
-      "lon": 127.6,
-      "summary": "합참의장이 5군단을 찾아 김여정 담화를 적반하장이라 규정하고 북한 추가 도발 시 단호 대응을 지시했다(9/21 서부전선 MDL 이남 북한 지뢰 부상 사건은 10/5 합참 최종 판단된 배경).",
-      "meaning": "시한·표적이 없는 대응 지시와 담화 공방이라 정례 범주다.",
+      "lat": 38.3,
+      "lon": 127.9,
+      "summary": "합참의장이 5군단을 방문해 전날 김여정 담화를 적반하장이라 규정하고 추가 도발 시 단호 대응을 지시했으며, 통일부는 북측의 정전협정 위반 중단과 MDL 소통체계 마련을 촉구했다.",
+      "meaning": "MDL 월선·경고사격을 둘러싼 말 공방이 이어지나 시한·표적을 담은 최후통첩이나 새 교전은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261020508316"
+          "url": "https://www.segye.com/newsView/20261020508155"
         },
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261020508155"
+          "url": "https://www.segye.com/newsView/20261020510358"
         }
       ],
       "confidence": "중간",
       "facts": [
         "진영승 합참의장 10/20 5군단 방문, 추가 도발 시 단호 대응 지시",
-        "김여정 담화(10/19) 확성기 방송 재개 검토, 시한 없음"
+        "통일부 10/20 북측 정전협정 위반 행위 중단 촉구"
       ],
-      "speculation": []
+      "speculation": [
+        "북측 확성기 방송 재개·전술 타격수단 증강 시점은 미정"
+      ]
     },
     "electronic_cyber": {
       "status": "none"
@@ -98,23 +92,45 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-20T02:09:52+00:00",
+  "checked_at": "2026-10-20T03:10:02+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "브런슨 사령관 DMZ 발언 파문",
-      "summary": "주한미군사령관의 영토 관련 발언에 국방부가 우려를 전했고 미측이 공감을 표했다.",
-      "link_korea": "한미 동맹 내 영토·전작권 논란이다.",
-      "region": "한국",
+      "title": "우크라이나 \"미국의 정보 공유 제한으로 인명 피해\"",
+      "summary": "젤렌스키 고문이 BBC에 미국의 정보 공유 제한 때문에 미사일 공습 경고 시간이 부족하다고 밝혔다.",
+      "link_korea": "미국의 동맹 지원 축소 논란은 한미 동맹 신뢰와 북러 군사협력 대응에도 시사점을 준다.",
+      "region": "우크라이나",
       "source": {
-        "name": "세계일보",
-        "url": "https://www.segye.com/newsView/20261019519617",
-        "via": "https://www.segye.com/newsView/20261019519617"
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cmj47yx572z5o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "트럼프, 대러 제재 시행 이틀 전 보류",
+      "summary": "트럼프 대통령이 평화 협상 유지를 이유로 시행 예정이던 대러 제재를 막았다.",
+      "link_korea": "대러 제재 완화는 북러 군사·경제 협력의 환경에 영향을 줄 수 있다.",
+      "region": "미국·러시아",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c9p8gz7zx4peo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "예멘 샤브와 훈련소에 후티 미사일, 보안요원 모집병 50명 사망",
+      "summary": "현지 당국은 후티 미사일 3발이 정부 통제 지역 훈련소를 타격해 50명이 숨졌다고 밝혔다.",
+      "link_korea": "중동 분쟁 확산은 미군 전력 배치와 해상 안보 부담에 영향을 준다.",
+      "region": "예멘",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cv0ld6lrr2zeo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "한미 간 DMZ 발언 논란이 이어지고 있다.",
-  "world_at": "2026-10-19T21:10:37+00:00"
+  "world_context": "미국의 대우크라이나 지원 조정과 대러 제재 보류, 중동 분쟁이 겹치며 미국의 전력·정책 우선순위가 쟁점이다.",
+  "world_at": "2026-10-20T03:10:02+00:00"
 }

@@ -26,6 +26,7 @@ export default {
       return new Response("ok");
     }
     if (req.method !== "GET") return new Response("method", { status: 405 });
+    if (url.pathname === "/views") return views(env);
     const b = await env.SNAP.get("bundle", { type: "json", cacheTtl: 60 });
     if (!b) return new Response("no data", { status: 404, headers: CORS });
     if (url.pathname === "/live.json")
@@ -45,4 +46,32 @@ export default {
     return new Response(bin, { headers: { ...CORS, "Content-Type": "image/jpeg", "Cache-Control": "public, max-age=60" } });
   },
 };
+
+// GET /views → 누적 방문자. 공개 카운터(counter/TOTAL.json)는 CDN 이 몇 시간 캐시해서(10/20 실측 age 19438s) 인증 API 로 읽는다.
+// 토큰 = secret GOATCOUNTER_TOKEN(Read statistics 만). 1분 캐시 — API 한도 보호. 실패하면 공개 카운터로 물러난다(늦어도 빈칸보단 낫다)
+const GC = "https://jis.goatcounter.com";
+const GC_START = "2026-10-18T00:00:00Z";   // 카운터를 단 날(10/18 14:35 KST) — 대시보드 「전체 기간」과 같은 범위
+async function views(env) {
+  const key = new Request(`${GC}/__views_cache`);
+  const hit = await caches.default.match(key);
+  if (hit) return hit;
+  let count = null, src = "api", err = null;
+  try {
+    const end = new Date(Date.now() + 3600e3).toISOString().slice(0, 13) + ":00:00Z";
+    const r = await fetch(`${GC}/api/v0/stats/total?start=${GC_START}&end=${end}`,
+      { headers: { Authorization: `Bearer ${env.GOATCOUNTER_TOKEN}`, "Content-Type": "application/json" } });
+    if (r.ok) count = (await r.json()).total ?? null;
+    else err = `api ${r.status} ${(await r.text()).slice(0, 120)}`;
+  } catch (e) { err = `api ${e}`; }
+  if (count == null) {
+    src = "public";
+    try { const r = await fetch(`${GC}/counter/TOTAL.json`); if (r.ok) count = +(await r.json()).count || null; } catch {}
+  }
+  if (count == null) return new Response("unavailable", { status: 502, headers: CORS });
+  // 물러난 값은 캐시하지 않는다 — 다음 요청이 API 를 다시 두드린다(10/20 첫 호출 실패값이 1분간 고정된 실측)
+  const res = Response.json({ count, src, at: new Date().toISOString(), ...(err && { err }) },
+    { headers: { ...CORS, "Cache-Control": `public, max-age=${src === "api" ? 60 : 0}` } });
+  if (src === "api") await caches.default.put(key, res.clone());
+  return res;
+}
 

@@ -1,24 +1,17 @@
 {
- "at": "2026-10-20T12:13:14+00:00",
- "south": 65,
- "area": 80,
+ "at": "2026-10-20T13:27:24+00:00",
+ "south": 48,
+ "area": 55,
  "baseline": null,
  "ratio": null,
- "samples": 2,
+ "samples": 1,
  "mil": [
   {
-   "type": "H60",
-   "name": null,
-   "call": "HOIST26",
-   "lat": 37.19,
-   "lon": 127.04
-  },
-  {
-   "type": "H60",
-   "name": null,
-   "call": "HOIST10",
-   "lat": 36.82,
-   "lon": 127.12
+   "type": "GLEX",
+   "name": "정찰용 비즈니스젯 가능",
+   "call": "",
+   "lat": 37.52,
+   "lon": 127.33
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

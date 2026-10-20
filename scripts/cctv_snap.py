@@ -39,8 +39,12 @@ KICK = {"firms.yml": ("hourly", 70 * 60), "watchdog.yml": ("hourly", 7 * 3600), 
 # 받은 재생 주소 재사용 — 5분마다 2~4회 조회(월 1.7만~3.5만)는 한도 해제 뒤 다시 바닥난다(10/18).
 # 주소(인증키 서명 포함)는 이 맥 캐시에만 둔다(600). 유효 시간은 실측 전 — 11/1 뒤 성공률로 URL_TTL 을 조정한다
 URL_CACHE = Path.home() / "Library" / "Caches" / "jis-its-urls.json"
-URL_TTL = 30 * 60        # 캐시 주소를 쓰는 최대 나이(초)
-MIN_REFETCH = 10 * 60    # 실패 재조회 사이 최소 간격(초) — 재생 서버 403 이 잦아도 조회를 몰아 쓰지 않는다
+# 10/20 실측(4001 문구): 인증키 월 호출 한도 1,000 — 30분 TTL(월 1,440+) 로도 넘친다. 100분 TTL(주소는 2시간 만료) · 재조회 60분 → 최악 24회/일 ≈ 744/월
+URL_TTL = 100 * 60       # 캐시 주소를 쓰는 최대 나이(초)
+MIN_REFETCH = 60 * 60    # 실패 재조회 사이 최소 간격(초) — 재생 서버 403 이 잦아도 조회를 몰아 쓰지 않는다
+ITS_MONTHLY_CAP = 1000   # 인증키 상세정보의 월 호출 한도(hayden 10/20 확인) — 증설하면 여기만 올린다
+ITS_BUDGET = int(ITS_MONTHLY_CAP * 0.9)   # 우리 쪽 상한 — 서버 4001 을 받기 전에 멈춘다(실패 호출도 센다)
+CALL_LOG = Path.home() / "Library" / "Caches" / "jis-its-calls.json"   # {"month": "YYYY-MM", "n": 호출 수}
 QUOTA_MARK = Path.home() / "Library" / "Caches" / "jis-its-quota"   # 월 호출 한도 초과(4001) — 다음 달 1일까지 CCTV 조회 중단
 KICK_MARK = Path.home() / "Library" / "Caches" / "jis-kick"   # 워크플로별 마지막 깨운 시각(파일 mtime)
 REPO = "HaydenRyu/korea-security-watch"
@@ -111,6 +115,26 @@ def quota_blocked() -> str | None:
         return None
     until = QUOTA_MARK.read_text().strip()
     return until if datetime.now(timezone(timedelta(hours=9))).date().isoformat() < until else None
+
+
+def _month() -> str:
+    return datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m")
+
+
+def calls_this_month(path: Path = CALL_LOG) -> int:
+    try:
+        d = json.loads(path.read_text())
+        return int(d["n"]) if d.get("month") == _month() else 0
+    except (OSError, ValueError, KeyError, TypeError):
+        return 0
+
+
+def note_call(path: Path = CALL_LOG) -> int:
+    """ITS 호출 1회를 이번 달 장부에 더한다(성공·실패 무관 — 서버는 둘 다 센다고 본다). 달이 바뀌면 0부터."""
+    n = calls_this_month(path) + 1
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({"month": _month(), "n": n}))
+    return n
 
 
 def block_quota() -> str:
@@ -340,6 +364,7 @@ def area_urls(key: str, cams: list[dict]) -> dict[str, list[dict]]:
         cs = [c for c in cams if c.get("road", "its") == road]
         box = dict(x0=min(c["lon"] for c in cs) - .005, x1=max(c["lon"] for c in cs) + .005,
                    y0=min(c["lat"] for c in cs) - .005, y1=max(c["lat"] for c in cs) + .005)
+        note_call()
         with urllib.request.urlopen(API.format(key=key, t=road, **box), timeout=30) as r:
             data = json.loads(r.read())["response"]["data"]
         out[road] = [data] if isinstance(data, dict) else data
@@ -405,6 +430,10 @@ def main() -> int:
             if n or not urls:
                 if time.time() - last < MIN_REFETCH:
                     break   # 방금 받은 주소로도 실패 — 다음 회차에(Worker 가 직전 사진을 남긴다)
+                if calls_this_month() >= ITS_BUDGET:
+                    quota = block_quota()   # 우리 장부가 상한에 닿으면 서버 4001 전에 멈춘다
+                    print(json.dumps({"cctv": f"ITS 월 호출 {calls_this_month()}회 — 상한 {ITS_BUDGET} 도달, {quota} 까지 중단"}, ensure_ascii=False))
+                    break
                 try:
                     urls = area_urls(key, cams)   # 전 카메라 상자 — 캐시가 다음 회차 전부를 덮게
                     save_url_cache(urls)

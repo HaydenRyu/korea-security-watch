@@ -1,9 +1,9 @@
 {
- "version": "v26_0_8",
- "month": "2026-08",
- "prev_month": "2026-07",
- "fetched_at": "2026-10-19T04:35:22+00:00",
- "source_url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_8.csv",
+ "version": "v26_0_9",
+ "month": "2026-09",
+ "prev_month": null,
+ "fetched_at": "2026-10-20T23:48:10+00:00",
+ "source_url": "https://ucdp.uu.se/downloads/candidateged/GEDEvent_v26_0_9.csv",
  "page": "https://ucdp.uu.se/downloads/",
  "license": "CC BY 4.0 — UCDP Candidate Events Dataset (Uppsala Conflict Data Program)",
  "basis": "국가별 사건의 best 사망 추정 합(잠정치) · 사건 시작일 기준 월 · 우크라이나·러시아 영토 사건은 한 행",
@@ -13,135 +13,135 @@
    "name": "러-우 전쟁",
    "name_en": "Ukraine + Russia",
    "region": "유럽",
-   "best": 5702,
-   "events": 317,
-   "prev_best": 4891
+   "best": 6232,
+   "events": 257,
+   "prev_best": null
   },
   {
    "key": "Yemen (North Yemen)",
    "name": "예멘",
    "name_en": "Yemen (North Yemen)",
    "region": "중동",
-   "best": 1380,
-   "events": 119,
-   "prev_best": 166
-  },
-  {
-   "key": "Nigeria",
-   "name": "나이지리아",
-   "name_en": "Nigeria",
-   "region": "아프리카",
-   "best": 1015,
-   "events": 161,
-   "prev_best": 608
+   "best": 2924,
+   "events": 232,
+   "prev_best": null
   },
   {
    "key": "Pakistan",
    "name": "파키스탄",
    "name_en": "Pakistan",
    "region": "아시아",
-   "best": 551,
-   "events": 152,
-   "prev_best": 744
+   "best": 667,
+   "events": 149,
+   "prev_best": null
   },
   {
    "key": "Ethiopia",
    "name": "에티오피아",
    "name_en": "Ethiopia",
    "region": "아프리카",
-   "best": 311,
-   "events": 67,
-   "prev_best": 231
+   "best": 609,
+   "events": 119,
+   "prev_best": null
+  },
+  {
+   "key": "Nigeria",
+   "name": "나이지리아",
+   "name_en": "Nigeria",
+   "region": "아프리카",
+   "best": 451,
+   "events": 143,
+   "prev_best": null
   },
   {
    "key": "Sudan",
    "name": "수단",
    "name_en": "Sudan",
    "region": "아프리카",
-   "best": 272,
-   "events": 47,
-   "prev_best": 314
-  },
-  {
-   "key": "Colombia",
-   "name": "콜롬비아",
-   "name_en": "Colombia",
-   "region": "아메리카",
-   "best": 259,
-   "events": 203,
-   "prev_best": 244
+   "best": 277,
+   "events": 45,
+   "prev_best": null
   },
   {
    "key": "Mexico",
    "name": "멕시코",
    "name_en": "Mexico",
    "region": "아메리카",
-   "best": 214,
-   "events": 181,
-   "prev_best": 157
+   "best": 262,
+   "events": 235,
+   "prev_best": null
   },
   {
-   "key": "DR Congo (Zaire)",
-   "name": "콩고민주공화국",
-   "name_en": "DR Congo (Zaire)",
-   "region": "아프리카",
-   "best": 172,
-   "events": 44,
-   "prev_best": 273
-  },
-  {
-   "key": "Burkina Faso",
-   "name": "부르키나파소",
-   "name_en": "Burkina Faso",
-   "region": "아프리카",
-   "best": 171,
-   "events": 47,
-   "prev_best": 139
-  },
-  {
-   "key": "Somalia",
-   "name": "소말리아",
-   "name_en": "Somalia",
-   "region": "아프리카",
-   "best": 147,
-   "events": 37,
-   "prev_best": 322
-  },
-  {
-   "key": "Myanmar (Burma)",
-   "name": "미얀마",
-   "name_en": "Myanmar (Burma)",
-   "region": "아시아",
-   "best": 122,
-   "events": 47,
-   "prev_best": 81
-  },
-  {
-   "key": "South Sudan",
-   "name": "남수단",
-   "name_en": "South Sudan",
-   "region": "아프리카",
-   "best": 109,
-   "events": 2,
-   "prev_best": 49
-  },
-  {
-   "key": "Israel",
-   "name": "이스라엘·가자",
-   "name_en": "Israel",
-   "region": "중동",
-   "best": 102,
-   "events": 61,
-   "prev_best": 176
+   "key": "Colombia",
+   "name": "콜롬비아",
+   "name_en": "Colombia",
+   "region": "아메리카",
+   "best": 242,
+   "events": 203,
+   "prev_best": null
   },
   {
    "key": "Mali",
    "name": "말리",
    "name_en": "Mali",
    "region": "아프리카",
-   "best": 96,
-   "events": 59,
-   "prev_best": 272
+   "best": 194,
+   "events": 76,
+   "prev_best": null
+  },
+  {
+   "key": "Somalia",
+   "name": "소말리아",
+   "name_en": "Somalia",
+   "region": "아프리카",
+   "best": 194,
+   "events": 25,
+   "prev_best": null
+  },
+  {
+   "key": "Myanmar (Burma)",
+   "name": "미얀마",
+   "name_en": "Myanmar (Burma)",
+   "region": "아시아",
+   "best": 177,
+   "events": 56,
+   "prev_best": null
+  },
+  {
+   "key": "Afghanistan",
+   "name": "아프가니스탄",
+   "name_en": "Afghanistan",
+   "region": "아시아",
+   "best": 134,
+   "events": 19,
+   "prev_best": null
+  },
+  {
+   "key": "Israel",
+   "name": "이스라엘·가자",
+   "name_en": "Israel",
+   "region": "중동",
+   "best": 130,
+   "events": 96,
+   "prev_best": null
+  },
+  {
+   "key": "DR Congo (Zaire)",
+   "name": "콩고민주공화국",
+   "name_en": "DR Congo (Zaire)",
+   "region": "아프리카",
+   "best": 121,
+   "events": 43,
+   "prev_best": null
+  },
+  {
+   "key": "South Africa",
+   "name": "South Africa",
+   "name_en": "South Africa",
+   "region": "아프리카",
+   "best": 76,
+   "events": 21,
+   "prev_best": null
   }
  ]
 }

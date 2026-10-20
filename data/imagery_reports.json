@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-20T00:15:41.009287+00:00",
+ "fetched_at": "2026-10-20T23:48:11.664234+00:00",
  "note": "제목·링크·날짜만. 본문·이미지 전재 금지(각 사이트 이용 조건)",
  "sources": {
   "38north": {
@@ -11,11 +11,23 @@
   "beyondparallel": {
    "name": "CSIS Beyond Parallel",
    "feed": "https://beyondparallel.csis.org/tag/satellite-imagery/feed/",
-   "ok": false,
-   "error": "not well-formed (invalid token): line 1, column 5"
+   "ok": true,
+   "count": 10
   }
  },
  "items": [
+  {
+   "source": "38north",
+   "title": "At Long Last, Trucks Traverse New DPRK-Friendship Bridge",
+   "link": "https://www.38north.org/2026/10/at-long-last-trucks-traverse-dprk-friendship-bridge/",
+   "date": "2026-10-20T19:05:34+00:00"
+  },
+  {
+   "source": "38north",
+   "title": "Across the Border: North Koreans Work on the Southern Border Fence",
+   "link": "https://www.38north.org/2026/10/across-the-border-north-koreans-work-on-the-southern-border-fence/",
+   "date": "2026-10-20T15:29:04+00:00"
+  },
   {
    "source": "38north",
    "title": "Several Naval Construction Projects Underway",

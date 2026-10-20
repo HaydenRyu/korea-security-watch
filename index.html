@@ -81,6 +81,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
   .pushctl{position:absolute;top:12px;right:var(--side)} .pushctl .srclink{margin:0;padding:6px 10px;white-space:nowrap}
 }
 @media (max-width:759px){.id{padding-right:64px} .pushctl .lf{display:none} .pushctl .ls{display:inline}}
+@media (max-width:759px){.id small .org{display:none}}  /* 휴대폰은 작은 줄이 3줄(10/20) — 로고·「JIS」가 이미 있는 기관명을 접고 범위·OSINT·비공식은 남긴다(2줄) */
 .meta .lag{color:var(--g3);display:none} .meta .lag.on{display:inline}
 /* 다중 시계(10/20): 상황실의 가장 큰 글자는 시각 — KST 옆에 UTC·워싱턴(미 동부). 휴대폰은 KST 만 */
 .clk small{font-size:11px;color:var(--dim);margin-left:10px} .clk small b{color:var(--fog)}
@@ -673,7 +674,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 <div class="band"></div>
 <header class="top">
   <div class="id"><img class="mark" src="assets/jis-mark.svg" width="28" height="28" alt="">
-    <div><h1>JIS <span class="sub">한반도 안보 상황판</span></h1><small>북한 전쟁·핵 징후 · 공역·위성·해상 · 대만 연동 · JAGOK-DONG INTELLIGENCE SERVICE · OSINT · 비공식</small></div></div>
+    <div><h1>JIS <span class="sub">한반도 안보 상황판</span></h1><small>북한 전쟁·핵 징후 · 공역·위성·해상 · 대만 연동 · <span class="org">JAGOK-DONG INTELLIGENCE SERVICE · </span>OSINT · 비공식</small></div></div>
   <div class="meta">
     <span class="clk">KST <b id="now">--:--:--</b><small>UTC <b id="nowU">--:--</b></small><small title="미 동부(워싱턴 DC) 시각">워싱턴 <b id="nowW">--:--</b></small></span>
     <span>최종 확인 <b id="checked">—</b></span>

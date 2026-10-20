@@ -6,7 +6,7 @@
     ],
     "nuclear": [
       "North Korea Reuters AP",
-      "38 North 최근 글"
+      "38 North 최근 글(차단)"
     ],
     "logistics": [
       "North Korea Reuters AP",
@@ -14,7 +14,7 @@
     ],
     "border_clash": [
       "목함지뢰 해안 발견 DMZ 귀순",
-      "북한 김여정 확성기 DMZ 합참"
+      "합참 북 통지문 전통문"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 합참",
@@ -39,10 +39,11 @@
   "opened": [
     "https://www.segye.com/newsView/20261020519221",
     "https://www.segye.com/newsView/20261020519217",
+    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "김여정 담화 이후 국방부·합참의 응징 경고와 통일·외교부의 소통 강조가 오가는 말 공방이 이어질 뿐 새 교전·최후통첩·핵·병력 징후는 없다. 직전 회차와 판정이 같다.",
+  "overall_summary": "김여정 담화 이후 국방부·합참의 응징 경고와 통일부의 소통 촉구가 오가는 말 공방이 이어질 뿐 새 교전·최후통첩·핵·병력 징후는 없다. 직전 회차와 판정이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -76,24 +77,29 @@
       "region": "DMZ·MDL 일대",
       "lat": 37.95,
       "lon": 126.9,
-      "summary": "국방부·합참이 김여정 담화(확성기 재개 거론)에 「추가 도발 시 단호 응징」을 경고하고 통일부·외교부는 소통을 강조했으나 새 교전·최후통첩은 없다(첫 보도 10/19~20).",
+      "summary": "국방부·합참이 김여정 담화(확성기 재개·전술타격수단 증강 거론)에 「추가 도발 시 단호 응징」을 재차 경고하고 통일부는 MDL 소통채널 설치를 촉구했으나 새 교전·최후통첩은 없다(첫 보도 10/19~20).",
       "meaning": "말 공방과 남측 강온 병행 단계로 실제 군사행동 징후는 아니다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261020519221"
+        },
+        {
+          "name": "국방일보",
+          "tier": "B",
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "국방부·군은 단호한 응징 강조, 통일부·외교부는 긴장 완화 강조",
-        "확성기 재개·무력 증강은 북측이 거론한 내용"
+        "합참의장이 5군단에 추가 도발 시 단호 대응 지시",
+        "통일부는 MDL 소통채널 설치 촉구, 확성기 재개 반대"
       ],
       "speculation": []
     }
   },
-  "checked_at": "2026-10-20T15:14:42+00:00",
+  "checked_at": "2026-10-20T16:11:54+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -133,5 +139,5 @@
     }
   ],
   "world_context": "우크라이나 전쟁 협상과 드론전 확산이 북러 협력과 한반도 안보 환경에 간접 영향을 준다.",
-  "world_at": "2026-10-20T15:14:42+00:00"
+  "world_at": "2026-10-20T16:11:54+00:00"
 }

@@ -522,6 +522,10 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   .more{display:flex;flex-direction:column;gap:var(--gap);min-height:0;padding:var(--gap) var(--side) var(--gap) 0}
   #fc4-p{display:flex;flex:none;max-height:calc(50% - 40px)}  /* 10/21: 배경 요인 칸에 육상 사격 한 줄(.drl-1, 37px)이 더해졌다 — 그만큼 예측 요약(안에서 스크롤)이 양보해 1800×860 에서 브리핑·할 일 머리띠가 눌리지 않게 */
   #world-p,#todo-p{flex:1 1 0;min-height:0}
+  /* 10/21: 낮은 화면(1800×860·1920×900·2048×864)에서 브리핑·할 일이 머리띠만 남거나 0 높이로 눌렸다 — 칸은 최소 높이를 지키고 모자라면 넷째 칸이 세로로 스크롤.
+     브리핑 155 = 테두리 2 + 머리띠 두 줄 69 + 「오늘 브리핑」 요약(라벨 + 두 줄) 83.3 · 할 일 158 = 테두리 2 + 머리띠 32 + 접힌 항목 3줄(41.1×3) — 1800~2048 실측 */
+  .more{overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+  #world-p{min-height:155px} #todo-p{min-height:158px}
   #todo-p>.pb{flex:1 1 0;min-height:0;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
   #todo-p .tnow{display:none}  /* 등급 기준 칸의 「지금 할 일」 한 줄과 같은 문장 */
   .todo .dn{display:none}  /* 「지금 할 일」 칸이 아래가 아니라 오른쪽에 보인다 */

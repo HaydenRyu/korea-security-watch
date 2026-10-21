@@ -1,31 +1,31 @@
 {
- "at": "2026-10-21T05:20:04+00:00",
- "south": 83,
- "area": 102,
- "baseline": 66.5,
- "ratio": 1.25,
- "samples": 4,
+ "at": "2026-10-21T06:34:04+00:00",
+ "south": 74,
+ "area": 90,
+ "baseline": 79,
+ "ratio": 0.94,
+ "samples": 5,
  "mil": [
   {
-   "type": "BE20",
+   "type": "H60",
    "name": null,
-   "call": "CATS00",
-   "lat": 35.6,
-   "lon": 126.92
+   "call": "CARD11",
+   "lat": 37.45,
+   "lon": 127.11
   },
   {
-   "type": "C130",
-   "name": "C-130 수송기",
-   "call": "CNV7122",
-   "lat": 32.75,
-   "lon": 131.36
+   "type": "H60",
+   "name": null,
+   "call": "CARD12",
+   "lat": 37.45,
+   "lon": 127.11
   },
   {
-   "type": "BE20",
+   "type": "H60",
    "name": null,
-   "call": "HABU11",
-   "lat": 32.95,
-   "lon": 131.5
+   "call": "CARD58",
+   "lat": 37.62,
+   "lon": 127.14
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

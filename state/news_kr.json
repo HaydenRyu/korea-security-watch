@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-10-21T05:22:31+00:00",
+ "fetched_at": "2026-10-21T06:34:41+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-21T05:22:31+00:00",
+ "last_ok_at": "2026-10-21T06:34:41+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1136,
-  "hits": 39,
-  "clusters": 33,
+  "fetched": 1135,
+  "hits": 38,
+  "clusters": 32,
   "by_group": {
    "alert": 3,
-   "border": 20,
+   "border": 19,
    "drone_balloon": 13,
-   "fire": 7,
-   "defect": 3,
-   "mine": 7,
+   "fire": 5,
+   "defect": 4,
+   "mine": 6,
    "gps": 1
   }
  },
@@ -24,8 +24,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 577,
-   "hits": 24
+   "count": 576,
+   "hits": 22
   },
   "SBS": {
    "feeds": 3,
@@ -37,13 +37,13 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 8
+   "hits": 7
   },
   "국민일보": {
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 16
+   "hits": 17
   },
   "세계일보": {
    "feeds": 2,
@@ -63,30 +63,30 @@
   "alert": {
    "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-10-21T05:22:31+00:00"
+   "latest": "2026-10-21T06:34:41+00:00"
   },
   "border": {
-   "clusters": 20,
+   "clusters": 19,
    "max_independent": 2,
-   "latest": "2026-10-21T05:22:31+00:00"
+   "latest": "2026-10-21T06:34:41+00:00"
   },
   "drone_balloon": {
    "clusters": 13,
    "max_independent": 2,
-   "latest": "2026-10-21T05:22:31+00:00"
+   "latest": "2026-10-21T06:34:41+00:00"
   },
   "fire": {
-   "clusters": 7,
+   "clusters": 5,
    "max_independent": 1,
-   "latest": "2026-10-21T05:22:31+00:00"
+   "latest": "2026-10-21T06:34:41+00:00"
   },
   "defect": {
-   "clusters": 3,
+   "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-10-21T01:59:49+00:00"
+   "latest": "2026-10-21T06:05:11+00:00"
   },
   "mine": {
-   "clusters": 7,
+   "clusters": 6,
    "max_independent": 2,
    "latest": "2026-10-20T19:30:00+00:00"
   },
@@ -102,7 +102,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 97,
+   "count": 96,
    "hits": 20
   },
   {
@@ -111,7 +111,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "연합뉴스",
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "SBS",
@@ -175,7 +175,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "국민일보",
@@ -183,7 +183,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 15
+   "hits": 16
   },
   {
    "outlet": "국민일보",

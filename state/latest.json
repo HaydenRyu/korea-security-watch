@@ -2,11 +2,11 @@
   "coverage": {
     "troop_movement": [
       "북한 전방 병력 증강",
-      "North Korea troops Russia OR missile OR nuclear October 21 2026"
+      "North Korea troops Russia OR missile OR nuclear October 22 2026"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea troops Russia OR missile OR nuclear October 21 2026"
+      "North Korea troops Russia OR missile OR nuclear October 22 2026"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
@@ -18,11 +18,11 @@
     ],
     "electronic_cyber": [
       "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 21일"
     ],
     "foreign_forces": [
       "북러 파병 군사협력",
-      "North Korea troops Russia OR missile OR nuclear October 21 2026"
+      "North Korea troops Russia"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -37,7 +37,7 @@
       "North Korea missile launch October 2026"
     ],
     "linkage:taiwan": [
-      "PLA drills around Taiwan"
+      "PLA drills around Taiwan October 2026"
     ],
     "linkage:korea": [
       "북러 군사협력"
@@ -45,13 +45,11 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261021524132",
-    "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/north-korea-has-made-various-changes-to-forces-facing-border-islands-rok/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-    "https://www.aljazeera.com/xml/rss/all.xml",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/feed/"
   ],
-  "overall_summary": "김여정의 10월 중 대남 확성기 가동 예고와 경고사격 시 강경 대응 위협이 이어지지만 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
+  "overall_summary": "김여정이 10월 중 전 국경선 대남 확성기 가동을 예고하고 경고사격 시 강경 대응을 위협했으나 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,6 +58,21 @@
       "status": "none"
     },
     "logistics": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
       "status": "none"
     },
     "border_clash": {
@@ -85,28 +98,13 @@
       "confidence": "중간",
       "facts": [
         "김여정이 21일 담화에서 10월 중 전 국경선 대남 심리전 확성기 가동을 예고",
-        "한국군 경고사격·방송 주장은 북한 측 주장이며 독립 확인 없음",
-        "해병대사령관이 20일 국감에서 북 4군단 등 접경 도서 대면 전력에 '여러 변화'가 있다고 밝혔으나 세부는 비공개(NK News)"
+        "한국군 경고사격·방송 주장은 북한 측 주장",
+        "국방부는 20일 MDL 경고사격을 방어적 조치로 설명하고 추가 도발 시 단호 응징 경고(국방일보)"
       ],
       "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-10-21T19:10:15+00:00",
+  "checked_at": "2026-10-21T20:10:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

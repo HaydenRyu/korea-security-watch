@@ -520,7 +520,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   #main{display:grid;grid-template-columns:minmax(0,1fr) var(--c4);grid-template-rows:minmax(0,1fr);column-gap:var(--gap);--c4:clamp(400px,22vw,560px)}
   .ops{padding-right:0}
   .more{display:flex;flex-direction:column;gap:var(--gap);min-height:0;padding:var(--gap) var(--side) var(--gap) 0}
-  #fc4-p{display:flex;flex:none;max-height:50%}
+  #fc4-p{display:flex;flex:none;max-height:calc(50% - 40px)}  /* 10/21: 배경 요인 칸에 육상 사격 한 줄(.drl-1, 37px)이 더해졌다 — 그만큼 예측 요약(안에서 스크롤)이 양보해 1800×860 에서 브리핑·할 일 머리띠가 눌리지 않게 */
   #world-p,#todo-p{flex:1 1 0;min-height:0}
   #todo-p>.pb{flex:1 1 0;min-height:0;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
   #todo-p .tnow{display:none}  /* 등급 기준 칸의 「지금 할 일」 한 줄과 같은 문장 */
@@ -559,7 +559,8 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 .lk-n{font:600 12px/20px var(--data);color:var(--ice);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .lk-n small{font-weight:400;font-size:11px;color:var(--fog)} .lk-n a{color:var(--fog);font-weight:400}
 #lk .lk-1{display:none}
-#drl{border-top:1px solid var(--line)}  /* 육상 사격훈련 — 제목 줄 .lk-t · 카드 .fa-g/.fa-x 재사용, 새 클래스 없음 */
+#drl{border-top:1px solid var(--line)}  /* 육상 사격훈련 — 제목 줄 .lk-t · 카드 .fa-g/.fa-x 재사용. 넷째 칸(1800+) 한 줄 .drl-1 은 .phs 재사용 */
+#drl .drl-1{display:none}
 .wtab{display:inline-flex;border:1px solid var(--line-2)}
 .wtab button{all:unset;cursor:pointer;font:500 11px/16px var(--data);color:var(--fog);padding:var(--s4) var(--s8);white-space:nowrap;
   transition:color 120ms var(--ease),background-color 120ms var(--ease)}
@@ -606,8 +607,10 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   .fa-g .fa-x{grid-template-columns:104px 44px minmax(0,1fr);grid-template-rows:auto;align-items:center;gap:var(--s8);padding:var(--s8) var(--pad);border-right:0}
   .fa-h{display:contents} .fa-h b{font-size:12px} .fa-lv{margin-left:0}
   .fa-r{-webkit-line-clamp:1}
-  /* 육상 사격훈련(10/21): 배지 「오늘 사격」(46px)·제목 「철원 10/19~10/23」이 배경 요인 열(104·44)보다 넓다 — 1920 에서 배지 글자가 테두리 밖으로 삐졌다(hayden) */
-  #drl .fa-g .fa-x{grid-template-columns:128px 56px minmax(0,1fr)}
+  /* 육상 사격훈련(10/21): 넷째 칸에서는 카드 대신 한 줄(연동 위기 .lk-1 과 같은 방식). 카드 3줄이 칸 높이를 먹어
+     1800×860 에서 세계 브리핑·지금 할 일이 0 높이로 눌려 머리띠가 31px 겹쳤다(hayden). 배지 넘침(1920)도 카드가 없어지며 해소 */
+  #drl .fa-g{display:none}
+  #drl .drl-1{display:flex;margin:0;padding:var(--s8) var(--pad);border-top:0;border-bottom:1px solid var(--line)}
   .fa-s{display:none}
   .fa-e{padding:var(--s8) var(--pad)}
   .fa-n{padding:var(--s8) var(--pad);white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .fa-nl{display:none} .fa-ns{display:inline}
@@ -1319,7 +1322,11 @@ function renderDrills(d){
   if(!d||!Array.isArray(d.posts)){el.innerHTML=head+`<p class="fa-e">사격훈련 공지를 불러오지 못했습니다</p>`;return}
   const up=d.posts.filter(p=>p.last&&p.last>=today).sort((a,b)=>(b.active_now-a.active_now)||a.first.localeCompare(b.first)).slice(0,4);
   if(!up.length){el.innerHTML=head+`<p class="fa-e">앞으로 공지된 사격훈련이 없습니다(철원·고성·파주·화천)</p>`;return}
-  el.innerHTML=head+`<div class="fa-g">${up.map(p=>{
+  // 넷째 칸 한 줄 요약 — 오늘 사격 시군 · 다음 예정
+  const on=up.filter(p=>p.active_now).map(p=>DRL_SRC[p.source]||p.source),nx=up.find(p=>!p.active_now);
+  const one=`<a class="phs drl-1" href="${esc(up[0].url)}" target="_blank" rel="noopener" title="육상 사격훈련 — 지자체 주민 안내 · 등급과 무관"><span class="pk">육상 사격</span>`
+    +`<b class="${on.length?"up":""}">${on.length?`오늘 ${on.length}곳`:"오늘 없음"}</b><span class="pm">${esc([on.join("·"),nx?`예정 ${DRL_SRC[nx.source]||nx.source} ${md(nx.first)}`:""].filter(Boolean).join(" · "))}</span><span class="px">›</span></a>`;
+  el.innerHTML=head+one+`<div class="fa-g">${up.map(p=>{
     const [lb,cl]=p.active_now?["오늘 사격","hi"]:today<p.first?["예정","mid"]:["기간 중","mid"];
     const what=[(p.places||[]).join(" · "),(p.arms||[]).join(", ")].filter(Boolean).join(" · ")||p.title;
     return `<div class="fa-x"><div class="fa-h"><b>${esc(DRL_SRC[p.source]||p.source)} ${md(p.first)}${p.last!==p.first?"~"+md(p.last):""}</b><span class="fa-lv ${cl}">${lb}</span></div>`

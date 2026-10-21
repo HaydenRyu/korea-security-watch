@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-20T23:24:52+00:00",
+ "fetched_at": "2026-10-21T00:08:57+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-20T23:24:52+00:00",
+ "last_ok_at": "2026-10-21T00:08:57+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -12,9 +12,9 @@
   "clusters": 34,
   "by_group": {
    "alert": 2,
-   "border": 22,
+   "border": 21,
    "drone_balloon": 14,
-   "fire": 7,
+   "fire": 8,
    "mine": 8,
    "gps": 1,
    "defect": 2
@@ -25,7 +25,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 579,
-   "hits": 23
+   "hits": 22
   },
   "SBS": {
    "feeds": 3,
@@ -37,7 +37,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 9
+   "hits": 10
   },
   "국민일보": {
    "feeds": 2,
@@ -63,22 +63,22 @@
   "alert": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-10-20T23:24:52+00:00"
+   "latest": "2026-10-21T00:08:57+00:00"
   },
   "border": {
-   "clusters": 22,
+   "clusters": 21,
    "max_independent": 2,
-   "latest": "2026-10-20T23:24:52+00:00"
+   "latest": "2026-10-21T00:08:57+00:00"
   },
   "drone_balloon": {
    "clusters": 14,
    "max_independent": 2,
-   "latest": "2026-10-20T23:24:52+00:00"
+   "latest": "2026-10-21T00:08:57+00:00"
   },
   "fire": {
-   "clusters": 7,
+   "clusters": 8,
    "max_independent": 2,
-   "latest": "2026-10-20T23:24:52+00:00"
+   "latest": "2026-10-21T00:08:57+00:00"
   },
   "mine": {
    "clusters": 8,
@@ -127,7 +127,7 @@
    "url": "https://www.yna.co.kr/rss/local.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "연합뉴스",
@@ -167,7 +167,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 5
+   "hits": 6
   },
   {
    "outlet": "동아일보",

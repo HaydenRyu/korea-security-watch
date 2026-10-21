@@ -40,12 +40,14 @@
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261021520379",
     "https://www.segye.com/newsView/20261021518482",
     "https://www.nknews.org/feed/",
     "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
+    "https://www.nknews.org/2026/10/north-korea-has-made-various-changes-to-forces-facing-border-islands-rok/",
     "https://www.yna.co.kr/view/AKR20261020157800504"
   ],
-  "overall_summary": "김여정 확성기 재개 담화 이후 국방부·합참의 응징 경고와 북한의 남부국경 요새화 시찰·즉시 반격 공언이 이어지는 말 공방 국면이다. 신규 교전·최후통첩·발사는 확인되지 않았다.",
+  "overall_summary": "김여정 담화 이후 국방부·합참의 응징 경고와 북한의 남부국경 요새화 시찰·즉시 반격 공언이 이어지는 말 공방 국면으로 직전 회차와 같다. 신규 교전·최후통첩·발사는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -74,7 +76,7 @@
       "region": "DMZ·MDL 중부전선·남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "국방부·합참이 김여정 담화에 추가 도발 시 단호 응징을 경고했고, 21일 북한은 박정천·김여정이 남부국경 요새화 현장을 시찰했다고 보도하며 도발 시 즉시 반격을 공언했다(말 공방, 신규 교전 없음).",
+      "summary": "국방부·합참이 김여정 담화에 추가 도발 시 단호 응징을 경고했고, 21일 조선중앙통신은 박정천·김여정이 남부국경 요새화 현장을 시찰하며 도발 시 즉시 반격을 공언했다고 보도했다(말 공방, 신규 교전·최후통첩 없음).",
       "meaning": "국경선 요새화와 상호 경고가 이어지는 말 공방 수준이며 최후통첩·실제 충돌은 확인되지 않았다.",
       "sources": [
         {
@@ -85,7 +87,7 @@
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261021518482"
+          "url": "https://www.segye.com/newsView/20261021520379"
         },
         {
           "name": "NK News",
@@ -125,7 +127,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-21T09:11:21+00:00",
+  "checked_at": "2026-10-21T10:10:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

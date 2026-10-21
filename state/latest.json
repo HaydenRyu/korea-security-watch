@@ -13,13 +13,12 @@
       "North Korea Reuters AP October 21 2026"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 경고사격",
-      "북한 합참 발표 10월 21일",
-      "귀순 DMZ 월선"
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "북한 합참 발표 10월 21일"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 공격 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
       "북러 군사협력",
@@ -42,9 +41,9 @@
     "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261020519221",
     "https://www.nknews.org/feed/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.nknews.org/2026/10/north-korea-has-made-various-changes-to-forces-facing-border-islands-rok/",
     "https://www.nknews.org/2026/10/seoul-vows-to-punish-north-korean-provocations-after-loudspeaker-threat/",
+    "https://www.nknews.org/2026/10/trump-appears-to-cast-doubt-on-prospects-for-meeting-kim-jong-un-next-month/",
     "https://www.yna.co.kr/view/AKR20261020157851504"
   ],
   "overall_summary": "김여정 확성기 재개 담화 이후 국방부·합참의 응징 경고와 DMZ 주도권 강화 지시가 이어지는 말 공방 국면이며 새 교전·최후통첩은 없다. 직전 회차 대비 새 사건은 확인되지 않았다.",
@@ -149,7 +148,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-21T05:10:04+00:00",
+  "checked_at": "2026-10-21T06:18:59+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

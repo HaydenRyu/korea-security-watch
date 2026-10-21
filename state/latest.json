@@ -6,20 +6,19 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "North Korea nuclear October 2026"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "DMZ NLL 귀순",
-      "North Korea Kim Yo Jong loudspeakers border"
+      "북한 지뢰 발견 목함지뢰 해안",
+      "DMZ NLL 귀순 김여정 확성기"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출"
+      "GPS 교란 북한 서북도서",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "북러 파병 군사협력",
@@ -34,8 +33,8 @@
       "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea when:1d"
+      "합참 북한 통지문 진돗개 데프콘",
+      "North Korea missile launch OR troops OR nuclear October 2026"
     ],
     "linkage:taiwan": [
       "PLA drills around Taiwan"
@@ -45,11 +44,10 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261021524132",
+    "https://www.segye.com/newsView/20261021524627",
+    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-    "https://www.yna.co.kr/view/AKR20261021174000504",
-    "https://www.nknews.org/feed/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/feed/"
   ],
   "overall_summary": "김여정이 21일 국경 요새화 시찰 후 10월 중 전 국경선 대남 확성기 가동을 예고하고 경고사격 시 강경 대응을 위협했으나 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
   "items": {
@@ -74,7 +72,7 @@
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261021524132"
+          "url": "https://www.segye.com/newsView/20261021524627"
         },
         {
           "name": "NK News",
@@ -105,7 +103,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-21T17:10:27+00:00",
+  "checked_at": "2026-10-21T18:11:22+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

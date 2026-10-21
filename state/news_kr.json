@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-21T15:33:01+00:00",
+ "fetched_at": "2026-10-21T15:42:40+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-21T15:33:01+00:00",
+ "last_ok_at": "2026-10-21T15:42:40+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -63,27 +63,27 @@
   "defect": {
    "clusters": 5,
    "max_independent": 1,
-   "latest": "2026-10-21T15:33:01+00:00"
+   "latest": "2026-10-21T15:42:40+00:00"
   },
   "border": {
    "clusters": 24,
    "max_independent": 4,
-   "latest": "2026-10-21T15:33:01+00:00"
+   "latest": "2026-10-21T15:42:40+00:00"
   },
   "drone_balloon": {
    "clusters": 17,
    "max_independent": 4,
-   "latest": "2026-10-21T15:33:01+00:00"
+   "latest": "2026-10-21T15:42:40+00:00"
   },
   "fire": {
    "clusters": 7,
    "max_independent": 3,
-   "latest": "2026-10-21T15:33:01+00:00"
+   "latest": "2026-10-21T15:42:40+00:00"
   },
   "mine": {
    "clusters": 12,
    "max_independent": 4,
-   "latest": "2026-10-21T15:33:01+00:00"
+   "latest": "2026-10-21T15:42:40+00:00"
   },
   "alert": {
    "clusters": 3,

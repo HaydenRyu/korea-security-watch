@@ -1,51 +1,51 @@
 {
   "coverage": {
-    "border_clash": [
-      "합참 경고사격 접경 북한 10월 21일",
-      "North Korea Reuters Kim Yo Jong loudspeakers warning shots",
-      "news_kr.py 지뢰·DMZ·귀순 묶음"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격",
-      "news_kr.py GPS 묶음"
-    ],
     "troop_movement": [
-      "news_kr.py 수집 결과 대조"
+      "북한 전방 병력 증강",
+      "North Korea troop buildup border"
     ],
     "nuclear": [
-      "NK News 피드 대조"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "news_kr.py 수집 결과 대조"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순 NLL",
+      "김여정 확성기 경고사격",
+      "North Korea DMZ border Kim Yo Jong"
+    ],
+    "electronic_cyber": [
+      "GPS 교란 서북도서",
+      "북한 해킹 공격 개인정보 유출 사이버 공격",
+      "랜섬웨어 공격 해킹 사고"
     ],
     "foreign_forces": [
-      "NK News 피드 대조(북러 교육 교류 AI)"
+      "북한 미사일 발사 합참 파병",
+      "North Korea troops Russia"
     ],
     "parade_massing": [
-      "news_kr.py 수집 결과 대조"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "NK News 피드 대조"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "news_kr.py alert 묶음 대조"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan"
-    ],
-    "factor:inter_korean": [
-      "Kim Yo Jong loudspeakers 확성기 재개"
+      "진돗개 발령 데프콘",
+      "North Korea Reuters October 21 2026"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261021524132",
-    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/feed/",
+    "https://www.segye.com/newsView/20261021524627",
+    "https://www.segye.com/newsView/20261021520379",
     "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-    "https://www.aljazeera.com/xml/rss/all.xml",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.imaeil.com/page/view/2026101916020694455"
   ],
-  "overall_summary": "김여정이 21일 담화로 10월 중 전 국경선 대남 확성기 가동을 예고하고 한국군 경고사격에 '사정없이 처치' 하겠다고 위협했으나 말 공방 수준이며 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "김여정이 21일 국경 요새화 시찰 후 10월 중 전 국경선 대남 확성기 가동을 예고하고 즉시 반격을 위협했으나 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,13 +62,13 @@
       "region": "DMZ·MDL 남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "김여정이 21일 담화에서 10월 중 전 국경선 확성기 가동을 예고하고, 한국군 경고사격이 장병 안전을 해치면 '사정없이 처치'하겠다고 위협했다(말 공방, 신규 교전·최후통첩 없음).",
+      "summary": "김여정이 21일 담화에서 10월 중 전 국경선 확성기 가동을 예고하고, 박정천은 안전을 위협하는 도발 시 즉시 반격을 지시했다(말 공방, 신규 교전·최후통첩 없음).",
       "meaning": "요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261021524132"
+          "url": "https://www.segye.com/newsView/20261021524627"
         },
         {
           "name": "NK News",
@@ -78,8 +78,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "김여정이 21일 새벽 박정천과 국경 요새화 현장 시찰 후 담화 발표",
-        "한국군이 접경 두 곳 이상에서 경고방송·경고사격을 했다는 것은 북한 측 주장"
+        "김여정이 21일 새벽 박정천과 남부국경 요새화 현장을 시찰하고 담화 발표",
+        "한국군 경고방송·경고사격 주장은 북한 측 주장이며 독립 확인 없음"
       ],
       "speculation": []
     },
@@ -99,7 +99,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-21T13:20:59+00:00",
+  "checked_at": "2026-10-21T14:18:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

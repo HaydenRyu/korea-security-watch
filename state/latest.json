@@ -2,25 +2,24 @@
   "coverage": {
     "troop_movement": [
       "북한 전방 병력 증강",
-      "North Korea troops Russia deployment October 2026"
+      "North Korea troops Russia nuclear Yongbyon October 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향"
+      "North Korea troops Russia nuclear Yongbyon October 2026"
     ],
     "logistics": [
-      "North Korea ammunition shipment"
+      "North Korea troops Russia nuclear Yongbyon October 2026"
     ],
     "border_clash": [
-      "북한 지뢰 발견 목함지뢰 해안 10월 22일",
-      "김여정 새 대응수단 임무대기 확성기 수일내",
-      "North Korea Kim Yo Jong border loudspeakers Reuters"
+      "합참 북한 MDL 경고사격 지뢰 발견 DMZ 귀순",
+      "North Korea Kim Yo Jong loudspeakers border Reuters"
     ],
     "electronic_cyber": [
       "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea troops Russia deployment October 2026"
+      "North Korea troops Russia nuclear Yongbyon October 2026"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -29,21 +28,21 @@
       "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "합참 북한 통지문 진돗개 데프콘"
+      "합참 북한 MDL 경고사격 지뢰 발견 DMZ 귀순"
     ],
     "linkage:taiwan": [
       "PLA drills around Taiwan Eastern Theater Command"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261021524132",
-    "https://www.segye.com/newsView/20261021520379",
+    "https://www.segye.com/newsView/20261022504448",
+    "https://www.segye.com/newsView/20261021524453",
+    "https://www.yna.co.kr/view/AKR20261022011400504",
+    "https://www.yna.co.kr/view/AKR20261021162800504",
     "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-    "https://www.yna.co.kr/view/AKR20261022011400504"
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports"
   ],
-  "overall_summary": "김여정이 요새화 현장 시찰 뒤 확성기 가동과 즉시 반격을 거듭 위협했으나 신규 교전·발사·시한부 최후통첩은 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
+  "overall_summary": "김여정이 확성기 가동과 새 대응수단 임무대기를 거듭 위협했으나 신규 교전·발사·시한부 최후통첩은 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,13 +74,13 @@
       "region": "DMZ·MDL 남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "김여정이 20일 박정천 등과 남부 국경 요새화 현장을 시찰하고 21일 담화에서 10월 중 전 국경선 확성기 가동과 경고사격 시 즉시 반격을 위협했으며, 밤 속보에서 「새 대응수단 임무대기·확성기 수일 내 대기」를 거론했다(말 공방, 신규 교전·시한부 최후통첩 없음).",
+      "summary": "김여정이 21일 남부 국경 요새화 현장 시찰 후 10월 중 전 국경선 확성기 가동을 예고했고, 22일 조선중앙통신 보도로 「전 국경선 새 대응수단 임무대기·확성기 수일 내 대기」를 밝혔다(말 공방, 신규 교전·시한부 최후통첩 없음).",
       "meaning": "요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261021524132"
+          "url": "https://www.segye.com/newsView/20261022504448"
         },
         {
           "name": "국방일보",
@@ -89,14 +88,9 @@
           "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
         },
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/"
-        },
-        {
-          "name": "연합뉴스",
+          "name": "Reuters(Internazionale 전재)",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261022011400504"
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports"
         }
       ],
       "confidence": "중간",
@@ -110,7 +104,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-21T22:11:30+00:00",
+  "checked_at": "2026-10-21T23:11:10+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

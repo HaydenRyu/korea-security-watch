@@ -13,15 +13,16 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순 NLL",
-      "North Korea Kim Yo Jong loudspeakers border missile launch"
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ NLL 귀순",
+      "North Korea Kim Yo Jong loudspeakers border"
     ],
     "electronic_cyber": [
-      "GPS 교란 서북도서",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "GPS 교란",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "북한 미사일 발사 합참 파병",
+      "북러 파병 군사협력",
       "North Korea troops Russia"
     ],
     "parade_massing": [
@@ -34,17 +35,23 @@
     ],
     "gov_warning": [
       "진돗개 발령 데프콘",
-      "North Korea Reuters October 21 2026"
+      "North Korea when:1d"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan"
+    ],
+    "linkage:korea": [
+      "북러 군사협력"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261021524627",
-    "https://www.segye.com/newsView/20261021520379",
+    "https://www.segye.com/newsView/20261021524132",
     "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
     "https://www.yna.co.kr/view/AKR20261021174000504",
-    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
+    "https://www.nknews.org/feed/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "김여정이 21일 국경 요새화 시찰 후 10월 중 전 국경선 대남 확성기 가동을 예고하고 즉시 반격을 위협했으나 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
+  "overall_summary": "김여정이 21일 국경 요새화 시찰 후 10월 중 전 국경선 대남 확성기 가동을 예고하고 경고사격 시 강경 대응을 위협했으나 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,13 +68,13 @@
       "region": "DMZ·MDL 남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "김여정이 21일 담화에서 10월 중 전 국경선 확성기 가동을 예고하고, 박정천은 안전을 위협하는 도발 시 즉시 반격을 지시했다(말 공방, 신규 교전·최후통첩 없음).",
+      "summary": "김여정이 21일 담화에서 10월 중 전 국경선 대남 확성기 가동을 예고하고 한국군 경고사격에 강경 대응을 위협했다(말 공방, 신규 교전·최후통첩 없음).",
       "meaning": "요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261021524627"
+          "url": "https://www.segye.com/newsView/20261021524132"
         },
         {
           "name": "NK News",
@@ -77,8 +84,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "김여정이 21일 새벽 박정천과 남부국경 요새화 현장을 시찰하고 담화 발표",
-        "한국군 경고방송·경고사격 주장은 북한 측 주장이며 독립 확인 없음"
+        "김여정이 21일 담화에서 10월 중 전 국경선 대남 심리전 확성기 가동을 예고",
+        "한국군 경고사격·방송 주장은 북한 측 주장이며 독립 확인 없음"
       ],
       "speculation": []
     },
@@ -98,7 +105,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-21T15:10:25+00:00",
+  "checked_at": "2026-10-21T16:12:42+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

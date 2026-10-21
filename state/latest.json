@@ -14,13 +14,11 @@
     ],
     "border_clash": [
       "지뢰 발견 목함지뢰 해안 DMZ 귀순 NLL",
-      "김여정 확성기 경고사격",
-      "North Korea DMZ border Kim Yo Jong"
+      "North Korea Kim Yo Jong loudspeakers border missile launch"
     ],
     "electronic_cyber": [
       "GPS 교란 서북도서",
-      "북한 해킹 공격 개인정보 유출 사이버 공격",
-      "랜섬웨어 공격 해킹 사고"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
       "북한 미사일 발사 합참 파병",
@@ -43,7 +41,8 @@
     "https://www.segye.com/newsView/20261021524627",
     "https://www.segye.com/newsView/20261021520379",
     "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-    "https://www.imaeil.com/page/view/2026101916020694455"
+    "https://www.yna.co.kr/view/AKR20261021174000504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
   ],
   "overall_summary": "김여정이 21일 국경 요새화 시찰 후 10월 중 전 국경선 대남 확성기 가동을 예고하고 즉시 반격을 위협했으나 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
   "items": {
@@ -99,7 +98,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-21T14:18:40+00:00",
+  "checked_at": "2026-10-21T15:10:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

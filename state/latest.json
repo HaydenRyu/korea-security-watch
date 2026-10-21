@@ -13,13 +13,13 @@
       "North Korea munitions shipment"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 합참 귀순 DMZ",
-      "North Korea Kim Yo Jong loudspeakers border October",
-      "DMZ 경고사격 월선 귀순"
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "North Korea Kim Yo Jong border loudspeakers Reuters",
+      "북한 김여정 확성기 국경 합참 10월 21일"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
       "북러 군사협력",
@@ -39,16 +39,12 @@
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261021520379",
     "https://www.segye.com/newsView/20261021518482",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-    "https://www.yna.co.kr/view/AKR20261021169500504",
-    "https://www.yna.co.kr/view/AKR20261020157800504",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.yna.co.kr/view/AKR20261021124500504",
+    "https://www.yna.co.kr/view/AKR20261021169500504"
   ],
-  "overall_summary": "김여정이 10월 중 대남 확성기를 전 국경선에서 가동하겠다고 밝히고 북한이 국경 요새화 현장에서 즉시 반격을 공언하는 말 공방이 이어진다. 신규 교전·최후통첩·발사는 확인되지 않아 직전 회차와 같은 수준이다.",
+  "overall_summary": "박정천·김여정이 남부국경 요새화 현장을 시찰하며 도발 시 즉시 반격을 공언하고 10월 중 대남 확성기 가동을 예고했으나, 말 공방 수준이며 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,6 +54,37 @@
     },
     "logistics": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "DMZ·MDL 중부전선·남부국경",
+      "lat": 38.3,
+      "lon": 127.2,
+      "summary": "박정천·김여정이 20일 남부국경 요새화 현장을 시찰하고 도발 시 즉시 반격을 공언했으며 김여정은 10월 중 대남 확성기를 전 국경선에서 가동하겠다고 밝혔다(말 공방, 신규 교전·최후통첩 없음).",
+      "meaning": "국경선 요새화와 상호 경고가 이어지는 말 공방 수준이며 실제 충돌은 확인되지 않았다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261021518482"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261021124500504"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "북한 관영매체가 21일 요새화 현장 시찰과 즉시 반격 발언을 보도",
+        "김여정 10월 중 확성기 가동 예고"
+      ],
+      "speculation": []
+    },
+    "electronic_cyber": {
+      "status": "none",
+      "summary": "24시간 경과 — kp 도메인 접속장애 첫 보도 10/20 11시(UTC), 귀속 미확인이며 후속 확인 보도 없음"
     },
     "foreign_forces": {
       "status": "none"
@@ -70,71 +97,9 @@
     },
     "gov_warning": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "DMZ·MDL 중부전선·남부국경",
-      "lat": 38.3,
-      "lon": 127.2,
-      "summary": "김여정이 21일 국경 시찰 뒤 10월 중 대남 확성기를 전 국경선에서 가동하겠다고 밝혔고, 박정천·김여정은 요새화 현장에서 도발 시 즉시 반격을 공언했다(말 공방, 신규 교전·최후통첩 없음).",
-      "meaning": "국경선 요새화와 상호 경고가 이어지는 말 공방 수준이며 최후통첩·실제 충돌은 확인되지 않았다.",
-      "sources": [
-        {
-          "name": "국방일보",
-          "tier": "A",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261021520379"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261021169500504"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "국방부는 추가 도발 시 단호 응징을 경고, 합참의장은 DMZ 주도권 강화 작전을 지시",
-        "조선중앙통신 21일 보도: 박정천·김여정이 20일 남부국경 요새화 현장 시찰",
-        "김여정: 10월 중 대남 확성기 전 국경선 가동 상태 진입(연합 속보 21일)"
-      ],
-      "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "북한 kp 도메인",
-      "lat": 39.02,
-      "lon": 125.75,
-      "summary": "귀속 미확인 — 북한 kp 도메인 사이트들이 20일 무더기 접속장애를 겪었으나 원인은 확인되지 않았다.",
-      "meaning": "북한을 겨냥한 사이버 공격 가능성이 거론되나 확인되지 않았다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261020157800504"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "kp 도메인 접속장애, 원인 미확인"
-      ],
-      "speculation": [
-        "해킹 공격 가능성"
-      ]
     }
   },
-  "checked_at": "2026-10-21T11:10:36+00:00",
+  "checked_at": "2026-10-21T12:10:47+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

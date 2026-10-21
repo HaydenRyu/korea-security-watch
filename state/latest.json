@@ -2,23 +2,25 @@
   "coverage": {
     "troop_movement": [
       "북한 4군단 서북도서 병력 변화",
-      "North Korea troops border islands NK News"
+      "North Korea troops border NK News"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea Reuters AP October 21 2026"
+      "North Korea nuclear Reuters October 21 2026"
     ],
     "logistics": [
       "북한 군수 물자 수송",
-      "North Korea Reuters AP October 21 2026"
+      "North Korea munitions shipment"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순",
-      "북한 합참 발표 10월 21일"
+      "목함지뢰 해안 발견",
+      "DMZ NLL 귀순 합참 발표",
+      "북한 남부국경 요새화 박정천 시찰"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 공격"
+      "해킹 개인정보 유출 공격",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
       "북러 군사협력",
@@ -34,19 +36,19 @@
     ],
     "gov_warning": [
       "합참 진돗개 데프콘",
-      "北朝鮮 ミサイル 防衛省 発表"
+      "北朝鮮 弾道ミサイル 防衛省 10月21日"
     ]
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261020519221",
+    "https://www.yna.co.kr/view/AKR20261021124500504",
+    "https://www.yna.co.kr/view/AKR20261021097000504",
+    "https://www.yna.co.kr/view/AKR20261020157800504",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/north-korea-has-made-various-changes-to-forces-facing-border-islands-rok/",
-    "https://www.nknews.org/2026/10/seoul-vows-to-punish-north-korean-provocations-after-loudspeaker-threat/",
-    "https://www.nknews.org/2026/10/trump-appears-to-cast-doubt-on-prospects-for-meeting-kim-jong-un-next-month/",
-    "https://www.yna.co.kr/view/AKR20261020157851504"
+    "https://www.nknews.org/2026/10/canada-can-help-seoul-counter-north-koreas-new-ways-of-war-military-chief/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "김여정 확성기 재개 담화 이후 국방부·합참의 응징 경고와 DMZ 주도권 강화 지시가 이어지는 말 공방 국면이며 새 교전·최후통첩은 없다. 직전 회차 대비 새 사건은 확인되지 않았다.",
+  "overall_summary": "김여정 확성기 재개 담화 이후 국방부·합참의 응징 경고가 이어지는 가운데, 21일 조선중앙통신이 박정천·김여정의 남부국경 요새화 현장 시찰을 보도했다. 말 공방 국면이 이어지며 신규 교전·최후통첩·발사는 확인되지 않았다.",
   "items": {
     "nuclear": {
       "status": "none"
@@ -67,36 +69,17 @@
       "status": "none"
     },
     "troop_movement": {
-      "status": "single",
-      "routine": false,
-      "region": "서북도서 정면 북 4군단",
-      "lat": 37.8,
-      "lon": 125.6,
-      "summary": "주일석 해병대사령관이 국정감사에서 북한군 4군단의 서북도서 정면 부대에 「여러 변화」가 있다고 밝혔으나 세부는 비공개했다.",
-      "meaning": "서북도서 정면 전력 조정 가능성이나 구체 내용은 확인되지 않았다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/north-korea-has-made-various-changes-to-forces-facing-border-islands-rok/"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "해병대사령관이 국감에서 4군단 관련 변화를 언급, 세부 비공개"
-      ],
-      "speculation": [
-        "김여정 담화와 연관 가능성"
-      ]
+      "status": "none",
+      "summary": "24시간 경과 — 4군단 서북도서 정면 「여러 변화」 첫 보도 10/20 07시(NK News), 후속 신규 사실 없음."
     },
     "border_clash": {
       "status": "corroborated",
       "routine": true,
-      "region": "DMZ·MDL 중부전선",
+      "region": "DMZ·MDL 중부전선·남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "국방부·합참이 김여정 확성기 재개 담화에 추가 도발 시 단호 응징을 경고했고 합참의장이 중부전선에서 DMZ 주도권 강화 작전을 지시했다(말 공방, 신규 교전 없음).",
-      "meaning": "말 공방 수준이며 확성기 재개나 타격수단 배치는 확인되지 않았다.",
+      "summary": "국방부·합참이 김여정 담화에 추가 도발 시 단호 응징을 경고했고, 21일 북한은 박정천·김여정이 남부국경 요새화 현장을 시찰했다고 보도하며 도발 시 즉시 반격을 공언했다(말 공방, 신규 교전 없음).",
+      "meaning": "국경선 요새화와 상호 경고가 이어지는 말 공방 수준이며 최후통첩·실제 충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "국방일보",
@@ -104,24 +87,17 @@
           "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
         },
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/seoul-vows-to-punish-north-korean-provocations-after-loudspeaker-threat/"
-        },
-        {
-          "name": "세계일보",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261020519221"
+          "url": "https://www.yna.co.kr/view/AKR20261021124500504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "국방부는 추가 도발 시 단호 응징 경고",
-        "통일부·외교부는 긴장 완화·외교적 해법 강조"
+        "국방부는 추가 도발 시 단호 응징을 경고, 합참의장은 DMZ 주도권 강화 작전을 지시",
+        "조선중앙통신 21일 보도: 박정천·리일환·김여정이 20일 남부국경 요새화 현장 시찰"
       ],
-      "speculation": [
-        "경고사격 축소 압박 의도라는 전문가 해석"
-      ]
+      "speculation": []
     },
     "electronic_cyber": {
       "status": "single",
@@ -130,13 +106,13 @@
       "region": "북한 kp 도메인",
       "lat": 39.02,
       "lon": 125.75,
-      "summary": "귀속 미확인 — 북한 외무성·조선중앙통신 등 kp 도메인 사이트들이 20일 한나절 접속장애를 겪었으나 해킹 정황은 확인되지 않았다.",
-      "meaning": "북한을 겨냥한 사이버 공격 가능성이 있으나 확인되지 않았다.",
+      "summary": "귀속 미확인 — 북한 외무성·조선중앙통신 등 kp 도메인 40여 개 사이트가 20일 접속장애를 겪었으나 원인은 확인되지 않았다.",
+      "meaning": "북한을 겨냥한 사이버 공격 가능성이 거론되나 확인되지 않았다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261020157851504"
+          "url": "https://www.yna.co.kr/view/AKR20261020157800504"
         }
       ],
       "confidence": "낮음",
@@ -148,17 +124,26 @@
       ]
     }
   },
-  "checked_at": "2026-10-21T06:18:59+00:00",
+  "checked_at": "2026-10-21T07:11:42+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [
-    "troop_movement"
-  ],
+  "active": [],
   "world": [
     {
-      "title": "수단군 드론, 조문객·연료시장 공격해 300여 명 사망 보도",
-      "summary": "BBC는 수단 정부군 드론이 조문객과 연료 시장을 타격해 300명 넘게 숨졌다고 소식통을 인용해 전했다.",
-      "link_korea": "드론 무기의 비정규전 확산은 한국군의 드론 대응 전력 논의와 이어진다.",
+      "title": "미 특사 위트코프, 푸틴 면담 앞서 러시아 도착",
+      "summary": "스티브 위트코프 미 특사가 상트페테르부르크에 도착해 우크라이나 전쟁 종식 방안을 논의한다.",
+      "link_korea": "러·우 전쟁 향방은 북러 군사협력과 북한군 파병 문제에 직결된다.",
+      "region": "러시아",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cq5ynkx3xy11o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "수단군 드론, 장례 행렬·유류시장 공격해 300여 명 사망",
+      "summary": "수단 정부군 드론이 장례 차량과 시장을 타격해 300명 넘게 숨졌다는 보도가 나왔다.",
+      "link_korea": "무인기 분쟁 확산은 한국군의 북한 대응 해군력·무인기 전력 논의와 맞닿는다.",
       "region": "수단",
       "source": {
         "name": "BBC",
@@ -167,28 +152,17 @@
       }
     },
     {
-      "title": "젤렌스키 \"미국 정보 공유 이제 작동\"… 오슬로서 트럼프 특사와 회담",
-      "summary": "젤렌스키 대통령은 오슬로에서 트럼프 특사와 회담한 뒤 미국의 정보 공유가 다시 작동한다고 말했다.",
-      "link_korea": "러시아-우크라이나 전쟁 향방은 북러 군사협력과 북한군 파병 문제에 영향을 준다.",
-      "region": "우크라이나",
+      "title": "캐나다 합참의장, 북한의 우크라 전쟁 실전 경험 평가",
+      "summary": "캐나다 군 수뇌부가 북한이 우크라이나전에서 얻은 이득과 한국의 새로운 전쟁 방식 대응 협력을 언급했다.",
+      "link_korea": "북한군의 실전 경험이 한반도 군사 균형에 미치는 영향을 다룬다.",
+      "region": "한반도·캐나다",
       "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cq5ynkx3xy11o",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "북한, 김정은 사진 공개… 사망설 되풀이되는 이유",
-      "summary": "BBC는 북한이 김정은 사진을 공개했음에도 사망설이 되풀이되는 배경을 분석했다.",
-      "link_korea": "북한 지도부 동향은 한반도 안보 평가의 기본 변수다.",
-      "region": "북한",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cmvg6qv1jdydo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "name": "NK News",
+        "url": "https://www.nknews.org/2026/10/canada-can-help-seoul-counter-north-koreas-new-ways-of-war-military-chief/",
+        "via": "https://www.nknews.org/feed/"
       }
     }
   ],
-  "world_context": "우크라이나 협상과 중동·아프리카 분쟁이 이어지는 가운데 북한 지도부 동향 보도도 나왔다.",
-  "world_at": "2026-10-21T01:11:21+00:00"
+  "world_context": "러·우 종전 협상과 무인기 중심 분쟁 확산이 북러 협력과 한국군 대응 논의에 연결되어 있다.",
+  "world_at": "2026-10-21T07:11:42+00:00"
 }

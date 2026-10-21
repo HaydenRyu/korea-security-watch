@@ -112,11 +112,23 @@ def unit_of(title: str, body: str) -> str:
     return re.sub(r"\s+", "", m.group(0)) if m else ""
 
 
+_PLACE = re.compile(r"^(?:-\s*(.+)|.*훈련장소\s*:\s*(.+))$", re.M)
+_ARMS = re.compile(r"\d+\s*mm\s*[가-힣]*\s*\d*\s*여?\s*발|\d+\s*여\s*발|개인화기|박격포|자주포")
+
+
+def derive(title: str, body: str) -> dict:
+    """화면 표시용 요약 — 날짜·장소·화기. 판정은 여기 한 곳(상황판은 받은 값만 그린다)."""
+    days = drill_dates(body)
+    places = [re.sub(r"\s+", " ", (a or b).strip()) for a, b in _PLACE.findall(body)]
+    places = list(dict.fromkeys(x for x in places if not drill_dates(x) and not re.search(r"\d{1,2}:\d{2}", x)))  # 「- 2026. 9. 8.(화) 08:30」 은 장소가 아니다
+    arms = list(dict.fromkeys(re.sub(r"\s+", "", m) for m in _ARMS.findall(title + "\n" + body)))
+    return {"unit": unit_of(title, body), "first": days[0] if days else None, "last": days[-1] if days else None,
+            "days": days, "places": places[:4], "arms": arms[:3]}
+
+
 def post(src: str, title: str, url: str, posted: str, body: str) -> dict:
     body = body[:BODY_MAX]
-    days = drill_dates(body)
-    return {"source": src, "title": title.strip(), "url": url, "posted": posted, "unit": unit_of(title, body),
-            "first": days[0] if days else None, "last": days[-1] if days else None, "days": days, "body": body}
+    return {"source": src, "title": title.strip(), "url": url, "posted": posted, "body": body} | derive(title, body)
 
 
 # ── 철원: RSS 한 번에 본문까지 ─────────────────────────────────
@@ -151,6 +163,7 @@ def parse_goseong_view(page: str) -> tuple[str | None, str]:
     m = re.search(r"<i>등록일</i>\s*(\d{4}-\d{2}-\d{2})", page)
     i = page.find("bbs--view--content")
     j = page.find("kogl--mask", i) if i >= 0 else -1
+    j = page.rfind("<", i, j) if j > i else j  # 「<div class="kogl--mask」 의 여는 꺾쇠에서 자른다(태그 조각이 본문에 남지 않게)
     body = text_of(page[page.find(">", i) + 1:j]) if i >= 0 and j > i else ""
     return (m.group(1) if m else None), body
 
@@ -189,6 +202,8 @@ def run(prev: dict, now: datetime, fetchers: dict | None = None) -> tuple[dict, 
             got, rc = old[k], 3
             srcs[k].update(status="error", status_detail=str(e)[:160])
         posts += got
+    for p in posts:  # 캐시된 글도 요약 규칙을 지금 판으로 다시 적용
+        p.update(derive(p.get("title", ""), p.get("body", "")))
     posts = [p for p in posts if keep(p, today)]
     for p in posts:  # 표시용 — 오늘이 공지된 사격일이면 진행 중(첫날~마지막 날 사이의 빈 날은 아니다)
         p["active_now"] = today.isoformat() in (p.get("days") or [])

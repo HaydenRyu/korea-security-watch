@@ -95,3 +95,11 @@ def test_old_posts_dropped_and_interval_respected():
     assert not k.due({"sources": {"cheorwon": ok, "goseong": ok}}, NOW)
     assert k.due({"sources": {"cheorwon": ok, "goseong": dict(ok, status="error")}}, NOW)
     assert k.due({}, NOW)
+
+
+def test_derive_places_and_arms():
+    r = k.derive("'26년 10월 제53보병여단 박격포 사격 훈련 일정 안내",
+                 "○ 훈련기간 : 26. 10. 08.(목) 06:30 ~ 11:00 / 60mm고폭탄 50발\n○ 훈련장소 : 냉천리 사격장 / 오소령 표적지")
+    assert r["places"] == ["냉천리 사격장 / 오소령 표적지"] and "박격포" in r["arms"] and "60mm고폭탄50발" in r["arms"]
+    r = k.derive("개인화기 사격훈련", "- 2026. 9. 8.(화) 08:30 ~ 16:00\n- 문혜리 사격장")
+    assert r["places"] == ["문혜리 사격장"]

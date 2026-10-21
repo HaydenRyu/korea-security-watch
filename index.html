@@ -559,6 +559,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 .lk-n{font:600 12px/20px var(--data);color:var(--ice);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .lk-n small{font-weight:400;font-size:11px;color:var(--fog)} .lk-n a{color:var(--fog);font-weight:400}
 #lk .lk-1{display:none}
+#drl{border-top:1px solid var(--line)}  /* 육상 사격훈련 — 제목 줄 .lk-t · 카드 .fa-g/.fa-x 재사용, 새 클래스 없음 */
 .wtab{display:inline-flex;border:1px solid var(--line-2)}
 .wtab button{all:unset;cursor:pointer;font:500 11px/16px var(--data);color:var(--fog);padding:var(--s4) var(--s8);white-space:nowrap;
   transition:color 120ms var(--ease),background-color 120ms var(--ease)}
@@ -772,6 +773,8 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
     <div class="pb" id="fac"><p class="fa-e">불러오는 중</p></div>
     <!-- 연동 위기(10/19): 대만 해협·러-우 전쟁·한반도 연결. state/linkage.json(루틴) + data/linkage.json(정본·과거 검정) + data/conflicts.json. 등급·알림과 무관 -->
     <div class="pb" id="lk" aria-label="연동 위기"><p class="fa-e">불러오는 중</p></div>
+    <!-- 육상 사격훈련(10/21): state/drills_kr.json(scripts/drills_kr.py — 철원·고성 지자체 주민 안내). 요약·진행 판정은 수집기가 정한다. 등급·알림과 무관 -->
+    <div class="pb" id="drl" aria-label="육상 사격훈련"><p class="fa-e">불러오는 중</p></div>
   </section>
   <section class="p" id="world-p" aria-label="세계 안보 브리핑">
     <div class="ph"><div class="wtab" role="tablist" aria-label="세계 칸"><button type="button" role="tab" id="wt-world" aria-controls="world" aria-selected="true" data-t="world">오늘 브리핑</button><button type="button" role="tab" id="wt-conf" aria-controls="conf" aria-selected="false" tabindex="-1" data-t="conf">분쟁 현황</button><button type="button" role="tab" id="wt-satr" aria-controls="satr" aria-selected="false" tabindex="-1" data-t="satr">위성 분석</button></div><a class="fcall" href="live.html#us">해외 뉴스 라이브 ›</a><span class="ai" id="worldAi" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 선별·요약</span><span id="worldAt"></span><span class="r">참고 · 등급 판정과 무관</span></div>
@@ -1303,6 +1306,24 @@ function drawFirms(doc){
 }
 
 const flegSync=()=>{$("fleg").hidden=$("fleg-f").hidden&&$("fleg-n").hidden};
+// ── 육상 사격훈련(10/21): 철원·고성 지자체 주민 안내. 앞으로·오늘 사격만 최대 4장. 진행 판정(active_now)·장소·화기는 수집기 값만 쓴다 ──
+const DRL_SRC={cheorwon:"철원",goseong:"고성"};
+function renderDrills(d){
+  const el=$("drl");if(!el)return;
+  const md=x=>x?`${+x.slice(5,7)}/${+x.slice(8,10)}`:"";
+  const today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
+  const bad=Object.entries(d?.sources||{}).filter(([,v])=>v.status!=="ok").map(([k])=>DRL_SRC[k]||k);
+  const head=`<div class="lk-t">육상 사격훈련<span>철원·고성 지자체 주민 안내 · 참고 · 등급과 무관${bad.length?` · ${esc(bad.join("·"))} 수집 실패(직전 값)`:""}</span></div>`;
+  if(!d||!Array.isArray(d.posts)){el.innerHTML=head+`<p class="fa-e">사격훈련 공지를 불러오지 못했습니다</p>`;return}
+  const up=d.posts.filter(p=>p.last&&p.last>=today).sort((a,b)=>(b.active_now-a.active_now)||a.first.localeCompare(b.first)).slice(0,4);
+  if(!up.length){el.innerHTML=head+`<p class="fa-e">앞으로 공지된 사격훈련이 없습니다(철원·고성)</p>`;return}
+  el.innerHTML=head+`<div class="fa-g">${up.map(p=>{
+    const [lb,cl]=p.active_now?["오늘 사격","hi"]:today<p.first?["예정","mid"]:["기간 중","mid"];
+    const what=[(p.places||[]).join(" · "),(p.arms||[]).join(", ")].filter(Boolean).join(" · ")||p.title;
+    return `<div class="fa-x"><div class="fa-h"><b>${esc(DRL_SRC[p.source]||p.source)} ${md(p.first)}${p.last!==p.first?"~"+md(p.last):""}</b><span class="fa-lv ${cl}">${lb}</span></div>`
+      +`<p class="fa-r" title="${esc(p.title)}">${esc(what)}</p>`
+      +`<div class="fa-s"><span>${esc(p.unit||"부대 미기재")}</span><a href="${esc(p.url)}" target="_blank" rel="noopener">원문 ›</a></div></div>`}).join("")}</div>`;
+}
 // ── 항행경보 구역(10/19 hayden 권장대로): state/navwarn_kr.json(scripts/navwarn_kr.py). 캔버스는 CSS 변수를 못 읽는다 — 색은 값으로 ──
 // 사격 보라·훈련 파랑 = 빨강(징후·MDL)·주황/노랑(열점)·청록(대피소)과 겹치지 않는 색. 진행 중 = 반투명 채움 · 예정만 = 점선 · 외국 중계 = 점선·채움 없음·흐리게
 const NWC={"해상사격":"#c084fc","해상훈련":"#6aa8ff"};
@@ -1373,9 +1394,10 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
   DATA={latest,events};render(latest,events);initMap();drawPins(latest?.items);route();tick();
   // 참고 블록(긴장 국면·배경 요인) — 파일이 없거나 깨져도 빈 상태로 그린다. 등급 화면과 따로 읽는다
   const jget=u=>fetch(u,{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null);
-  const refs=()=>Promise.all([...["ladder.json","factors.json","linkage.json"].map(p=>get(p).catch(()=>null)),
+  const refs=()=>Promise.all([...["ladder.json","factors.json","linkage.json","drills_kr.json"].map(p=>get(p).catch(()=>null)),
     ...["data/linkage.json","data/conflicts.json","data/conflict_links.json"].map(jget)])
-    .then(([l,f,k,kd,cf,cl])=>{renderPhase(l);renderFactors(f);try{renderLinkage(k,kd,cf,cl)}catch(e){console.error("renderLinkage",e)}});
+    .then(([l,f,k,dr,kd,cf,cl])=>{renderPhase(l);renderFactors(f);try{renderLinkage(k,kd,cf,cl)}catch(e){console.error("renderLinkage",e)}
+      try{renderDrills(dr)}catch(e){console.error("renderDrills",e)}});
   refs();
   try{drawFirms(await get("firms.json"))}catch(e){}
   try{const r=await fetch("data/cctv.json");if(r.ok)drawCctv(await r.json())}catch(e){}

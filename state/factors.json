@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "at": "2026-10-21T01:11:21+00:00",
+  "at": "2026-10-21T13:20:59+00:00",
   "domains": {
     "inter_korean": {
       "level": "긴장",
       "sources": [
         {
-          "url": "https://www.segye.com/newsView/20261020519221",
+          "url": "https://www.segye.com/newsView/20261021524132",
           "publisher": "세계일보"
         },
         {
-          "url": "https://www.nknews.org/2026/10/seoul-vows-to-punish-north-korean-provocations-after-loudspeaker-threat/",
+          "url": "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
           "publisher": "NK News"
         }
       ],
-      "summary": "김여정이 대남 확성기 재개와 무력 증강 검토를 거론했고 국방부는 단호 응징을 경고했다.",
-      "at": "2026-10-21T01:11:21+00:00",
+      "summary": "김여정이 10월 중 전 국경선 대남 확성기 가동을 예고하고 경고사격에 강경 대응을 위협했다.",
+      "at": "2026-10-21T13:20:59+00:00",
       "since": "2026-10-21T01:11:21+00:00"
     }
   },

@@ -6,7 +6,7 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear NK News"
+      "North Korea Reuters AP"
     ],
     "logistics": [
       "북한 군수 물자 수송",
@@ -18,7 +18,7 @@
     ],
     "electronic_cyber": [
       "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "북러 군사협력",
@@ -34,16 +34,16 @@
     ],
     "gov_warning": [
       "진돗개 데프콘 상향 합참",
-      "합참 경고 확성기"
+      "합참 발표 북한 10월 21일"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/feed/",
     "https://www.segye.com/newsView/20261020519221",
+    "https://www.yna.co.kr/view/AKR20261020157851504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/2026/10/north-korea-has-made-various-changes-to-forces-facing-border-islands-rok/",
-    "https://www.nknews.org/2026/10/seoul-vows-to-punish-north-korean-provocations-after-loudspeaker-threat/",
-    "https://www.yna.co.kr/view/AKR20261020157851504"
+    "https://www.nknews.org/2026/10/seoul-vows-to-punish-north-korean-provocations-after-loudspeaker-threat/"
   ],
   "overall_summary": "김여정 담화 이후 국방부·합참의 응징 경고와 통일부의 소통 촉구가 이어지는 말 공방 국면이며 새 교전·최후통첩은 없다. 직전 회차 이후 새 사건은 확인되지 않았다.",
   "items": {
@@ -82,7 +82,7 @@
       "region": "DMZ·MDL 중부전선",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "국방부·합참이 김여정 담화(확성기 재개·무력 증강 거론)에 「추가 도발 시 단호 응징」을 경고했으나 새 교전·최후통첩은 없다(첫 보도 10/19~20).",
+      "summary": "국방부·합참이 김여정 담화(확성기 재개·무력 증강 거론)에 「추가 도발 시 단호 응징」을 경고했고 합참의장이 5군단에 단호 대응을 지시했으나 새 교전·최후통첩은 없다(첫 보도 10/19~20).",
       "meaning": "말 공방 수준이며 확성기 재개나 타격수단 배치는 확인되지 않았다.",
       "sources": [
         {
@@ -147,7 +147,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-20T23:11:21+00:00",
+  "checked_at": "2026-10-21T00:11:08+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

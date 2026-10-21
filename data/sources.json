@@ -482,6 +482,11 @@
    "note": "접경 도로 카메라 위치"
   },
   {
+   "name": "접경 지자체 사격훈련 공지(철원군·고성군)",
+   "url": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
+   "note": "군 사격훈련 주민 안내 — 6시간마다, 참고 자료(등급 무관). 김포·연천은 robots 차단, 파주·화천·양구는 첨부(HWP·PDF·xlsx)만이라 미수집"
+  },
+  {
    "name": "국민재난안전포털 민방위 대피소",
    "url": "https://www.safekorea.go.kr",
    "note": "자곡동 반경 2km"

@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-10-21T15:42:40+00:00",
+ "fetched_at": "2026-10-21T16:54:47+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-21T15:42:40+00:00",
+ "last_ok_at": "2026-10-21T16:54:47+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1144,
   "hits": 58,
-  "clusters": 40,
+  "clusters": 39,
   "by_group": {
    "defect": 5,
    "border": 24,
-   "drone_balloon": 17,
+   "drone_balloon": 16,
    "fire": 7,
    "mine": 12,
    "alert": 3,
@@ -31,7 +31,7 @@
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 5
+   "hits": 7
   },
   "동아일보": {
    "feeds": 2,
@@ -49,7 +49,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 4
+   "hits": 3
   },
   "국방일보": {
    "feeds": 1,
@@ -63,27 +63,27 @@
   "defect": {
    "clusters": 5,
    "max_independent": 1,
-   "latest": "2026-10-21T15:42:40+00:00"
+   "latest": "2026-10-21T16:54:47+00:00"
   },
   "border": {
    "clusters": 24,
    "max_independent": 4,
-   "latest": "2026-10-21T15:42:40+00:00"
+   "latest": "2026-10-21T16:54:47+00:00"
   },
   "drone_balloon": {
-   "clusters": 17,
+   "clusters": 16,
    "max_independent": 4,
-   "latest": "2026-10-21T15:42:40+00:00"
+   "latest": "2026-10-21T16:54:47+00:00"
   },
   "fire": {
    "clusters": 7,
-   "max_independent": 3,
-   "latest": "2026-10-21T15:42:40+00:00"
+   "max_independent": 2,
+   "latest": "2026-10-21T16:54:47+00:00"
   },
   "mine": {
    "clusters": 12,
    "max_independent": 4,
-   "latest": "2026-10-21T15:42:40+00:00"
+   "latest": "2026-10-21T16:54:47+00:00"
   },
   "alert": {
    "clusters": 3,
@@ -143,7 +143,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 3
+   "hits": 4
   },
   {
    "outlet": "SBS",
@@ -159,7 +159,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "동아일보",
@@ -199,7 +199,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 4
+   "hits": 3
   },
   {
    "outlet": "세계일보",

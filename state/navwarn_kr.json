@@ -4,10 +4,10 @@
   "https://www.data.go.kr/data/15057792/openapi.do",
   "https://www.data.go.kr/data/15058193/openapi.do"
  ],
- "fetched_at": "2026-10-21T15:37:52.053662+00:00",
- "status": "error",
- "status_detail": "getNavigationalWarningInfo(date=20261020,pageNo=1): TimeoutError: The read operation timed out",
- "last_ok_at": "2026-10-21T14:19:03.782220+00:00",
+ "fetched_at": "2026-10-21T16:54:14.258699+00:00",
+ "status": "ok",
+ "status_detail": "",
+ "last_ok_at": "2026-10-21T16:54:14.258699+00:00",
  "warnings": [
   {
    "doc_num": "26-352",

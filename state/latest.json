@@ -6,7 +6,7 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters October 21 2026"
+      "North Korea nuclear Yongbyon Punggye-ri October 2026"
     ],
     "logistics": [
       "북한 군수 물자 수송",
@@ -14,8 +14,8 @@
     ],
     "border_clash": [
       "목함지뢰 해안 발견",
-      "DMZ NLL 귀순 합참 발표",
-      "북한 남부국경 요새화 박정천 시찰"
+      "합참 진돗개 데프콘 북한 귀순 DMZ",
+      "North Korea Reuters Kim Yo Jong border fortification counterattack"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
@@ -24,7 +24,7 @@
     ],
     "foreign_forces": [
       "북러 군사협력",
-      "North Korea troops Russia NK News"
+      "North Korea troops Russia deployment new"
     ],
     "parade_massing": [
       "북한 열병식 집결",
@@ -42,14 +42,15 @@
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261021124500504",
-    "https://www.yna.co.kr/view/AKR20261021097000504",
     "https://www.yna.co.kr/view/AKR20261020157800504",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/canada-can-help-seoul-counter-north-koreas-new-ways-of-war-military-chief/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/2026/10/canada-can-help-seoul-counter-north-koreas-new-ways-of-war-military-chief/"
   ],
-  "overall_summary": "김여정 확성기 재개 담화 이후 국방부·합참의 응징 경고가 이어지는 가운데, 21일 조선중앙통신이 박정천·김여정의 남부국경 요새화 현장 시찰을 보도했다. 말 공방 국면이 이어지며 신규 교전·최후통첩·발사는 확인되지 않았다.",
+  "overall_summary": "김여정 확성기 재개 담화 이후 국방부·합참의 응징 경고와 북한의 남부국경 요새화 시찰·즉시 반격 공언이 이어지는 말 공방 국면이다. 신규 교전·최후통첩·발사는 확인되지 않았다.",
   "items": {
+    "troop_movement": {
+      "status": "none"
+    },
     "nuclear": {
       "status": "none"
     },
@@ -67,10 +68,6 @@
     },
     "gov_warning": {
       "status": "none"
-    },
-    "troop_movement": {
-      "status": "none",
-      "summary": "24시간 경과 — 4군단 서북도서 정면 「여러 변화」 첫 보도 10/20 07시(NK News), 후속 신규 사실 없음."
     },
     "border_clash": {
       "status": "corroborated",
@@ -124,7 +121,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-21T07:11:42+00:00",
+  "checked_at": "2026-10-21T08:11:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

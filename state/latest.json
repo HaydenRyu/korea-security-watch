@@ -2,23 +2,24 @@
   "coverage": {
     "troop_movement": [
       "북한 전방 병력 증강",
-      "North Korea troops Russia OR missile OR nuclear October 22 2026"
+      "North Korea troops Russia missile"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea troops Russia OR missile OR nuclear October 22 2026"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 목함지뢰 해안 DMZ 귀순",
+      "북한 지뢰 발견 목함지뢰 해안",
       "DMZ NLL 귀순 김여정 확성기"
     ],
     "electronic_cyber": [
       "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 21일"
+      "해킹 개인정보 유출",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
       "북러 파병 군사협력",
@@ -45,11 +46,12 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261021524132",
+    "https://www.segye.com/newsView/20261021520379",
     "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-    "https://www.nknews.org/feed/"
+    "https://www.nknews.org/feed/",
+    "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/"
   ],
-  "overall_summary": "김여정이 10월 중 전 국경선 대남 확성기 가동을 예고하고 경고사격 시 강경 대응을 위협했으나 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
+  "overall_summary": "김여정이 10월 중 전 국경선 대남 확성기 가동과 경고사격 시 반격을 위협했으나 신규 교전·최후통첩·발사는 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -90,6 +92,11 @@
           "url": "https://www.segye.com/newsView/20261021524132"
         },
         {
+          "name": "국방일보",
+          "tier": "A",
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
+        },
+        {
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/"
@@ -97,14 +104,15 @@
       ],
       "confidence": "중간",
       "facts": [
-        "김여정이 21일 담화에서 10월 중 전 국경선 대남 심리전 확성기 가동을 예고",
-        "한국군 경고사격·방송 주장은 북한 측 주장",
-        "국방부는 20일 MDL 경고사격을 방어적 조치로 설명하고 추가 도발 시 단호 응징 경고(국방일보)"
+        "김여정, 전 국경선 대남 확성기 10월 중 가동 예고",
+        "경고사격 시 즉시 반격 위협, 명시적 시한 없음"
       ],
-      "speculation": []
+      "speculation": [
+        "심리전 재개로 상호 확성기 공방 확대 가능성"
+      ]
     }
   },
-  "checked_at": "2026-10-21T20:10:33+00:00",
+  "checked_at": "2026-10-21T21:10:29+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

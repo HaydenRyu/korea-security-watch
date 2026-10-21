@@ -1308,17 +1308,17 @@ function drawFirms(doc){
 }
 
 const flegSync=()=>{$("fleg").hidden=$("fleg-f").hidden&&$("fleg-n").hidden};
-// ── 육상 사격훈련(10/21): 철원·고성 지자체 주민 안내. 앞으로·오늘 사격만 최대 4장. 진행 판정(active_now)·장소·화기는 수집기 값만 쓴다 ──
-const DRL_SRC={cheorwon:"철원",goseong:"고성"};
+// ── 육상 사격훈련(10/21): 철원·고성·파주·화천 지자체 주민 안내. 앞으로·오늘 사격만 최대 4장. 진행 판정(active_now)·장소·화기는 수집기 값만 쓴다 ──
+const DRL_SRC={cheorwon:"철원",goseong:"고성",paju:"파주",hwacheon:"화천"};
 function renderDrills(d){
   const el=$("drl");if(!el)return;
   const md=x=>x?`${+x.slice(5,7)}/${+x.slice(8,10)}`:"";
   const today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
   const bad=Object.entries(d?.sources||{}).filter(([,v])=>v.status!=="ok").map(([k])=>DRL_SRC[k]||k);
-  const head=`<div class="lk-t">육상 사격훈련<span>철원·고성 지자체 주민 안내 · 참고 · 등급과 무관${bad.length?` · ${esc(bad.join("·"))} 수집 실패(직전 값)`:""}</span></div>`;
+  const head=`<div class="lk-t">육상 사격훈련<span>철원·고성·파주·화천 지자체 주민 안내 · 참고 · 등급과 무관${bad.length?` · ${esc(bad.join("·"))} 수집 실패(직전 값)`:""}</span></div>`;
   if(!d||!Array.isArray(d.posts)){el.innerHTML=head+`<p class="fa-e">사격훈련 공지를 불러오지 못했습니다</p>`;return}
   const up=d.posts.filter(p=>p.last&&p.last>=today).sort((a,b)=>(b.active_now-a.active_now)||a.first.localeCompare(b.first)).slice(0,4);
-  if(!up.length){el.innerHTML=head+`<p class="fa-e">앞으로 공지된 사격훈련이 없습니다(철원·고성)</p>`;return}
+  if(!up.length){el.innerHTML=head+`<p class="fa-e">앞으로 공지된 사격훈련이 없습니다(철원·고성·파주·화천)</p>`;return}
   el.innerHTML=head+`<div class="fa-g">${up.map(p=>{
     const [lb,cl]=p.active_now?["오늘 사격","hi"]:today<p.first?["예정","mid"]:["기간 중","mid"];
     const what=[(p.places||[]).join(" · "),(p.arms||[]).join(", ")].filter(Boolean).join(" · ")||p.title;

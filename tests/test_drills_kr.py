@@ -103,3 +103,25 @@ def test_derive_places_and_arms():
     assert r["places"] == ["냉천리 사격장 / 오소령 표적지"] and "박격포" in r["arms"] and "60mm고폭탄50발" in r["arms"]
     r = k.derive("개인화기 사격훈련", "- 2026. 9. 8.(화) 08:30 ~ 16:00\n- 문혜리 사격장")
     assert r["places"] == ["문혜리 사격장"]
+
+
+def test_yearless_dates_and_ranges_use_posted_year():
+    body = "일시 및 장소 : 8. 4.(화) ~ 8. 6.(목) 05:00 / 장단면\n붙임 1. 계획 1부\n7. 10.(금), 7. 23.(목) 07:00"
+    assert k.drill_dates(body, 2026) == ["2026-07-10", "2026-07-23", "2026-08-04", "2026-08-05", "2026-08-06"]
+    assert k.drill_dates(body) == []  # 게시 연도 없으면 연도 없는 표기는 버린다
+    assert k.drill_dates("\u201826. 10. 2.( ) 08:00") == ["2026-10-02"]  # 화천 PDF 추출 표기
+
+
+def test_table_places_skip_headers():
+    r = k.derive("2026년 10월 포병훈련장 사격일정", "구 분\n훈련장명\n강북훈련장\n사격부대 사격장\n화천군 상서면 적근동 사격장", "2026-10-12")
+    assert r["places"] == ["강북훈련장", "적근동 사격장"]
+
+
+def test_hwpx_text():
+    import io
+    import zipfile
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as z:
+        z.writestr("Contents/section0.xml", '<hp:sec><hp:p><hp:run><hp:t>\u201926.10.22.(목)</hp:t></hp:run></hp:p>'
+                                            '<hp:p><hp:run><hp:t>강북</hp:t><hp:t>훈련장</hp:t></hp:run></hp:p></hp:sec>')
+    assert k.hwpx_text(buf.getvalue()) == "\u201926.10.22.(목)\n강북훈련장"

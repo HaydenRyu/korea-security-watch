@@ -5,7 +5,10 @@
 출처는 일반인이 쓰는 공개 게시판만 — robots.txt 가 막지 않고 본문이 글로 있는 곳(10/21 접경 10개 시군 조사).
   철원  공지사항 RSS(본문 전체 포함)  https://www.cwg.go.kr/rssBbsNtt.do?bbsNo=24
   고성  공지사항 검색(POST, 검색어 「사격」) → 글 본문  https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/
-제외: 김포·연천(robots 가 일반 수집 전면 차단) · 옹진·강화·인제(최근 게시 없음) · 파주(HWP)·화천(PDF)·양구(연 1회 xlsx)는 첨부 파싱이 필요해 미구현.
+  파주  새소식(재난안전) 검색 → 글 본문 + HWP 첨부(월간 포병훈련장 사격일정 표)  https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=2001
+  화천  공지사항 제목 검색 → PDF 첨부(월간 포탄사격 계획 표)  https://www.ihc.go.kr/www/selectBbsNttList.do?bbsNo=11&key=2338
+제외: 김포·연천(robots 가 일반 수집 전면 차단) · 옹진·강화·인제(최근 게시 없음) · 양구(연 1회 xlsx, 사이트 검색으로 글을 못 찾음 — 12월 말 게시 때 재검토).
+첨부 해석 의존성: olefile(HWP 5.x OLE) · pypdf(PDF) — firms.yml 이 설치한다. 없으면 그 첨부만 건너뛰고 본문만 쓴다.
 
   python3 scripts/drills_kr.py          # firms.yml 매시 — 직전 성공 MIN_INTERVAL_H 안이면 받지 않는다
 
@@ -32,7 +35,7 @@ TIMEOUT = 40              # 철원은 간헐적으로 30초 넘게 응답이 없
 RETRY_WAITS = (10, 30)
 MIN_INTERVAL_H = 6        # 공지는 주 1~2회 — 매시 받지 않는다
 KEEP_DAYS = 45            # 훈련 마지막 날(없으면 게시일)이 이보다 오래면 버린다
-BODY_MAX = 1500
+BODY_MAX = 4000          # 첨부 표(파주 HWP·화천 PDF)는 1,000~2,000자 — 자르면 뒤쪽 날짜가 빠진다
 KEYWORD = re.compile(r"사격")
 
 CW_RSS = "https://www.cwg.go.kr/rssBbsNtt.do?bbsNo=24"
@@ -42,7 +45,12 @@ GS_PAGE = GS_BASE + "list.do"
 SOURCES = {
     "cheorwon": {"name": "철원군", "page": CW_PAGE},
     "goseong": {"name": "고성군", "page": GS_PAGE},
+    "paju": {"name": "파주시", "page": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=2001"},
+    "hwacheon": {"name": "화천군", "page": "https://www.ihc.go.kr/www/selectBbsNttList.do?bbsNo=11&key=2338"},
 }
+PJ = "https://www.paju.go.kr"
+HC = "https://www.ihc.go.kr/www/"
+TITLE_KEEP = re.compile(r"사격|훈련")  # 파주는 「제1보병사단 8월 주요 훈련 일정」처럼 사격이 제목에 없는 훈련 예고도 같은 게시판에 올린다
 
 
 # TLS(10/21 실측) — 인증서 검증은 끄지 않는다.
@@ -64,6 +72,10 @@ def _ctx(url: str) -> ssl.SSLContext:
 
 
 def _http(url: str, data: dict | None = None) -> str:
+    return _fetch(url, data).decode("utf-8", "replace")
+
+
+def _fetch(url: str, data: dict | None = None) -> bytes:
     body = urllib.parse.urlencode(data).encode() if data else None
     last = None
     for wait in (0, *RETRY_WAITS):
@@ -72,7 +84,7 @@ def _http(url: str, data: dict | None = None) -> str:
         try:
             req = urllib.request.Request(url, data=body, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=TIMEOUT, context=_ctx(url)) as r:
-                return r.read().decode("utf-8", "replace")
+                return r.read()
         except Exception as e:  # noqa: BLE001 — 통신 오류·시간초과는 재시도
             last = e
     raise RuntimeError(f"{type(last).__name__}: {str(last)[:120]}")
@@ -87,24 +99,32 @@ def text_of(fragment: str) -> str:
     return "\n".join(l for l in lines if l).strip()
 
 
-_D4 = re.compile(r"(20\d{2})\s*[.\-/]\s*(\d{1,2})\s*[.\-/]\s*(\d{1,2})")
-_D2 = re.compile(r"(?<![\d.])(\d{2})\s*\.\s*(\d{1,2})\s*\.\s*(\d{1,2})\s*\.?\s*\(")  # 「26. 10. 15.(목)」
+# 날짜 토큰 — 「2026. 10. 19.」·「'26.10.22.(목)」·「26. 10. 15.(목)」·연도 없는 「8. 11.(화)」(게시 연도로 보충).
+# 연도 없는 표기는 요일 괄호가 붙은 것만 날짜로 본다(「붙임 1.」·버전 번호 오탐 방지). 문의 전화번호(031) 539-…)는 걸리지 않는다.
+_DATE = re.compile(r"(?<![\d.])(?:(20\d{2})\s*[.\-/]\s*(\d{1,2})\s*[.\-/]\s*(\d{1,2})"
+                   r"|(\d{2})\s*\.\s*(\d{1,2})\s*\.\s*(\d{1,2})\s*\.?\s*(?=\()"
+                   r"|(\d{1,2})\s*\.\s*(\d{1,2})\s*\.?\s*(?=\([월화수목금토일 ]*\)))"
+                   r"\.?\s*(?:\([월화수목금토일 ]*\))?")
+RANGE_MAX_DAYS = 62  # 「8. 4.(화) ~ 8. 27.(목)」 처럼 기간으로 공지한 훈련은 그 사이 날을 모두 훈련일로 본다
 
 
-def drill_dates(body: str) -> list[str]:
-    """본문의 훈련 날짜(YYYY-MM-DD) — 4자리 연도 표기와 「26. 10. 15.(목)」 표기. 문의 전화번호(031) 539-…)는 걸리지 않는다."""
-    out = set()
-    for y, m, d in _D4.findall(body):
-        out.add((int(y), int(m), int(d)))
-    for y, m, d in _D2.findall(body):
-        out.add((2000 + int(y), int(m), int(d)))
-    days = []
-    for y, m, d in out:
+def drill_dates(body: str, year: int | None = None) -> list[str]:
+    """본문의 훈련 날짜(YYYY-MM-DD). 「A ~ B」 기간은 펼친다. year = 연도 없는 표기에 쓸 게시 연도."""
+    toks = []
+    for m in _DATE.finditer(body):
+        g = m.groups()
+        y, mo, d = (g[0], g[1], g[2]) if g[0] else (("20" + g[3]), g[4], g[5]) if g[3] else (year, g[6], g[7])
+        if y is None:
+            continue
         try:
-            days.append(date(y, m, d).isoformat())
+            toks.append((m.start(), m.end(), date(int(y), int(mo), int(d))))
         except ValueError:
             continue
-    return sorted(days)
+    out = {t[2] for t in toks}
+    for (s0, e0, d0), (s1, e1, d1) in zip(toks, toks[1:]):
+        if re.fullmatch(r"\s*[~∼～\-]\s*", body[e0:s1]) and 0 < (d1 - d0).days <= RANGE_MAX_DAYS:
+            out.update(d0 + timedelta(days=i) for i in range((d1 - d0).days + 1))
+    return sorted(x.isoformat() for x in out)
 
 
 def unit_of(title: str, body: str) -> str:
@@ -116,11 +136,17 @@ _PLACE = re.compile(r"^(?:-\s*(.+)|.*훈련장소\s*:\s*(.+))$", re.M)
 _ARMS = re.compile(r"\d+\s*mm\s*[가-힣]*\s*\d*\s*여?\s*발|\d+\s*여\s*발|개인화기|박격포|자주포")
 
 
-def derive(title: str, body: str) -> dict:
+def derive(title: str, body: str, posted: str | None = None) -> dict:
     """화면 표시용 요약 — 날짜·장소·화기. 판정은 여기 한 곳(상황판은 받은 값만 그린다)."""
-    days = drill_dates(body)
+    days = drill_dates(body, int(posted[:4]) if posted else None)
     places = [re.sub(r"\s+", " ", (a or b).strip()) for a, b in _PLACE.findall(body)]
+    places = [x for x in places if not re.fullmatch(r"[가-힣]+\s*:.*", x)]
     places = list(dict.fromkeys(x for x in places if not drill_dates(x) and not re.search(r"\d{1,2}:\d{2}", x)))  # 「- 2026. 9. 8.(화) 08:30」 은 장소가 아니다
+    if not places:  # 첨부 표(파주 HWP·화천 PDF)는 「- 」·「훈련장소 :」 줄이 없다 — 사격장·훈련장 이름만 모은다
+        # 띄어쓰기는 공백 한 칸만(줄바꿈을 넘으면 표 머리글 「구 분 / 훈련장명」이 「분 훈련장」으로 붙는다).
+        # 일반 명사·머리글(「포병훈련장 사격일정」·「사격부대 사격장」·「박격포 표적지」)은 장소가 아니다
+        places = list(dict.fromkeys(x for x in re.findall(r"[가-힣0-9]+ ?(?:사격장|훈련장|피탄지|표적지)", body)
+                                    if not re.match(r"(포병|사격|사격부대|분|구분|박격포) ?(사격장|훈련장|피탄지|표적지)$", x)))
     arms = list(dict.fromkeys(re.sub(r"\s+", "", m) for m in _ARMS.findall(title + "\n" + body)))
     return {"unit": unit_of(title, body), "first": days[0] if days else None, "last": days[-1] if days else None,
             "days": days, "places": places[:4], "arms": arms[:3]}
@@ -128,7 +154,7 @@ def derive(title: str, body: str) -> dict:
 
 def post(src: str, title: str, url: str, posted: str, body: str) -> dict:
     body = body[:BODY_MAX]
-    return {"source": src, "title": title.strip(), "url": url, "posted": posted, "body": body} | derive(title, body)
+    return {"source": src, "title": title.strip(), "url": url, "posted": posted, "body": body} | derive(title, body, posted)
 
 
 # ── 철원: RSS 한 번에 본문까지 ─────────────────────────────────
@@ -181,6 +207,144 @@ def fetch_goseong(cached: dict[str, dict], get=_http) -> list[dict]:
     return out
 
 
+# ── 첨부: HWP 5.x(OLE + zlib 레코드) · PDF ─────────────────────
+def hwp_text(data: bytes) -> str:
+    """HWP 5.x 본문 문단 텍스트(HWPTAG_PARA_TEXT=67). 표 칸은 한 줄씩 나온다. 인라인·확장 컨트롤 문자(8 WCHAR)는 건너뛴다."""
+    import io
+    import struct
+    import zlib
+    import olefile
+    ole = olefile.OleFileIO(io.BytesIO(data))
+    compressed = bool(struct.unpack("<I", ole.openstream("FileHeader").read()[36:40])[0] & 1)
+    out = []
+    for sec in sorted((e for e in ole.listdir() if e[0] == "BodyText"), key=lambda e: int(e[1][7:])):
+        b = ole.openstream(sec).read()
+        b = zlib.decompress(b, -15) if compressed else b
+        i = 0
+        while i + 4 <= len(b):
+            h = struct.unpack("<I", b[i:i + 4])[0]
+            i += 4
+            tag, size = h & 0x3FF, (h >> 20) & 0xFFF
+            if size == 0xFFF:
+                size = struct.unpack("<I", b[i:i + 4])[0]
+                i += 4
+            if tag == 67:
+                t, j, line = b[i:i + size].decode("utf-16le", "replace"), 0, []
+                while j < len(t):
+                    c = ord(t[j])
+                    if c < 32:
+                        j += 8 if c in (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23) else 1
+                        continue
+                    line.append(t[j])
+                    j += 1
+                out.append("".join(line).strip())
+            i += size
+    return "\n".join(x for x in out if x)
+
+
+def hwpx_text(data: bytes) -> str:
+    """HWPX(zip + OWPML) 본문 — Contents/section*.xml 의 문단(hp:p)마다 글자(hp:t)를 잇는다. 표준 라이브러리만."""
+    import io
+    import zipfile
+    out = []
+    with zipfile.ZipFile(io.BytesIO(data)) as z:
+        for n in sorted(x for x in z.namelist() if re.match(r"Contents/section\d+\.xml$", x)):
+            x = z.read(n).decode("utf-8", "replace")
+            for para in re.findall(r"<hp:p\b.*?</hp:p>", x, re.S):
+                t = "".join(html.unescape(m) for m in re.findall(r"<hp:t\b[^>]*>(.*?)</hp:t>", para, re.S))
+                if t.strip():
+                    out.append(re.sub(r"<[^>]+>", "", t).strip())
+    return "\n".join(out)
+
+
+def pdf_text(data: bytes) -> str:
+    import io
+    import pypdf
+    return "\n".join(p.extract_text() or "" for p in pypdf.PdfReader(io.BytesIO(data)).pages)
+
+
+def attach_text(name: str, data: bytes) -> str:
+    """첨부 1건 → 평문. 해석기가 없거나 깨진 파일이면 빈 문자열(본문만 쓴다)."""
+    try:
+        if name.lower().endswith(".hwp"):
+            return hwp_text(data)
+        if name.lower().endswith(".hwpx"):
+            return hwpx_text(data)
+        if name.lower().endswith(".pdf"):
+            return pdf_text(data)
+    except Exception:  # noqa: BLE001
+        return ""
+    return ""
+
+
+# ── 파주: 새소식 검색 → 본문 + HWP ─────────────────────────────
+def parse_paju_list(page: str) -> list[tuple[str, str]]:
+    rows = re.findall(r"jsView\('2001',\s*'(\d+)'[^)]*\)[^>]*>(.*?)</a>", page, re.S)
+    out = []
+    for seq, t in rows:
+        title = text_of(t).split("\n")[0].strip()
+        if TITLE_KEEP.search(title):
+            out.append((seq, title))
+    return out
+
+
+def parse_paju_view(page: str) -> tuple[str | None, str, list[tuple[str, str]]]:
+    m = re.search(r"작성일</span>\s*(\d{4})/(\d{2})/(\d{2})", page)
+    i = page.find('class="article-conetnt"')  # 사이트 표기 그대로(conetnt)
+    body = text_of(page[page.find(">", i) + 1:page.find("</div>", i)]) if i >= 0 else ""
+    files = [(html.unescape(n).strip(), u) for u, n in
+             re.findall(r'href="(/component/file/ND_fileDownload\.do\?id=[^"]+)"[^>]*>([^<]+)</a>', page)]
+    return (f"{m.group(1)}-{m.group(2)}-{m.group(3)}" if m else None), body, files
+
+
+def fetch_paju(cached: dict[str, dict], get=_http, getb=_fetch) -> list[dict]:
+    rows = parse_paju_list(get(PJ + "/user/board/BD_board.list.do?" + urllib.parse.urlencode({"bbsCd": "2001", "q_searchVal": "사격"})))
+    out = []
+    for seq, title in rows:
+        url = f"{PJ}/user/board/BD_board.view.do?bbsCd=2001&seq={seq}"
+        if url in cached:
+            out.append(cached[url])
+            continue
+        posted, body, files = parse_paju_view(get(url))
+        att = "\n".join(attach_text(n, getb(PJ + u)) for n, u in files if n.lower().endswith((".hwp", ".hwpx")))
+        out.append(post("paju", title, url, posted, "\n".join(x for x in (body, att) if x)))
+    return out
+
+
+# ── 화천: 공지 제목 검색 → PDF ────────────────────────────────
+def parse_hwacheon_list(page: str) -> list[tuple[str, str]]:
+    rows = re.findall(r'href="\./selectBbsNttView\.do\?[^"]*nttNo=(\d+)[^"]*"[^>]*>(.*?)</a>', page, re.S)
+    out = []
+    for n, t in rows:
+        title = re.sub(r"\s*핫이슈\s*$", "", text_of(t).replace("\n", " ")).strip()
+        if KEYWORD.search(title):
+            out.append((n, title))
+    return out
+
+
+def parse_hwacheon_view(page: str) -> tuple[str | None, str, list[tuple[str, str]]]:
+    m = re.search(r"작성일\s*<strong>(\d{4}-\d{2}-\d{2})", page)
+    i = page.find('class="bbs_content"')
+    body = text_of(page[page.find(">", i) + 1:page.find("</td>", i)]) if i >= 0 else ""
+    files = [(html.unescape(nm).strip(), u) for u, nm in
+             re.findall(r'href="/www/(downloadBbsFile\.do\?atchmnflNo=\d+)"[^>]*>(?:\s|<[^>]+>)*([^<]+)', page)]
+    return (m.group(1) if m else None), body, files
+
+
+def fetch_hwacheon(cached: dict[str, dict], get=_http, getb=_fetch) -> list[dict]:
+    q = urllib.parse.urlencode({"bbsNo": "11", "key": "2338", "searchCnd": "SJ", "searchKrwd": "사격"})
+    out = []
+    for n, title in parse_hwacheon_list(get(HC + "selectBbsNttList.do?" + q))[:6]:  # 월 1~2건 — 최근 6건이면 45일을 덮는다
+        url = f"{HC}selectBbsNttView.do?key=2338&bbsNo=11&nttNo={n}"
+        if url in cached:
+            out.append(cached[url])
+            continue
+        posted, body, files = parse_hwacheon_view(get(url))
+        att = "\n".join(attach_text(nm, getb(HC + u)) for nm, u in files if nm.lower().endswith(".pdf"))
+        out.append(post("hwacheon", title, url, posted, "\n".join(x for x in (body, att) if x)))
+    return out
+
+
 # ── 실행 ─────────────────────────────────────────────────────
 def keep(p: dict, today: date) -> bool:
     ref = p.get("last") or p.get("posted")
@@ -192,7 +356,9 @@ def run(prev: dict, now: datetime, fetchers: dict | None = None) -> tuple[dict, 
     srcs = {k: dict(prev.get("sources", {}).get(k, {}), **v) for k, v in SOURCES.items()}
     old = {k: [p for p in prev.get("posts", []) if p.get("source") == k] for k in SOURCES}
     fetchers = fetchers or {"cheorwon": lambda cache: fetch_cheorwon(),
-                            "goseong": lambda cache: fetch_goseong(cache)}
+                            "goseong": lambda cache: fetch_goseong(cache),
+                            "paju": lambda cache: fetch_paju(cache),
+                            "hwacheon": lambda cache: fetch_hwacheon(cache)}
     posts, rc = [], 0
     for k in SOURCES:
         try:
@@ -203,12 +369,12 @@ def run(prev: dict, now: datetime, fetchers: dict | None = None) -> tuple[dict, 
             srcs[k].update(status="error", status_detail=str(e)[:160])
         posts += got
     for p in posts:  # 캐시된 글도 요약 규칙을 지금 판으로 다시 적용
-        p.update(derive(p.get("title", ""), p.get("body", "")))
+        p.update(derive(p.get("title", ""), p.get("body", ""), p.get("posted")))
     posts = [p for p in posts if keep(p, today)]
     for p in posts:  # 표시용 — 오늘이 공지된 사격일이면 진행 중(첫날~마지막 날 사이의 빈 날은 아니다)
         p["active_now"] = today.isoformat() in (p.get("days") or [])
     posts.sort(key=lambda p: (not p["active_now"], -(date.fromisoformat(p["last"] or p["posted"] or "2000-01-01").toordinal())))
-    doc = {"source": "접경 지자체 공지(철원군 RSS · 고성군 공지사항) — 군 사격훈련 주민 안내",
+    doc = {"source": "접경 지자체 공지(철원 RSS · 고성 공지 · 파주 새소식+HWP · 화천 공지+PDF) — 군 사격훈련 주민 안내",
            "note": "참고 자료 · 등급 판정과 무관. 일정은 부대 사정·기상으로 바뀔 수 있다.",
            "fetched_at": now.isoformat(), "sources": srcs, "posts": posts}
     return doc, rc

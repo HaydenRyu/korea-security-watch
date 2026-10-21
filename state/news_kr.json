@@ -1,21 +1,21 @@
 {
- "fetched_at": "2026-10-21T13:01:21+00:00",
- "status": "partial",
- "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
- "last_ok_at": "2026-10-21T10:09:39+00:00",
+ "fetched_at": "2026-10-21T14:19:17+00:00",
+ "status": "ok",
+ "status_detail": "",
+ "last_ok_at": "2026-10-21T14:19:17+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 1,
-  "fetched": 1082,
-  "hits": 55,
-  "clusters": 39,
+  "feeds_failed": 0,
+  "fetched": 1143,
+  "hits": 59,
+  "clusters": 41,
   "by_group": {
    "defect": 5,
-   "border": 23,
-   "drone_balloon": 16,
-   "fire": 7,
-   "mine": 11,
+   "drone_balloon": 17,
+   "border": 24,
+   "fire": 8,
+   "mine": 12,
    "alert": 3,
    "gps": 2
   }
@@ -24,8 +24,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 583,
-   "hits": 37
+   "count": 584,
+   "hits": 40
   },
   "SBS": {
    "feeds": 3,
@@ -37,7 +37,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 13
+   "hits": 14
   },
   "국민일보": {
    "feeds": 2,
@@ -53,9 +53,9 @@
   },
   "국방일보": {
    "feeds": 1,
-   "failed": 1,
-   "count": 0,
-   "hits": 0
+   "failed": 0,
+   "count": 60,
+   "hits": 7
   }
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
@@ -63,27 +63,27 @@
   "defect": {
    "clusters": 5,
    "max_independent": 1,
-   "latest": "2026-10-21T13:01:21+00:00"
-  },
-  "border": {
-   "clusters": 23,
-   "max_independent": 4,
-   "latest": "2026-10-21T13:01:21+00:00"
+   "latest": "2026-10-21T14:19:17+00:00"
   },
   "drone_balloon": {
-   "clusters": 16,
+   "clusters": 17,
    "max_independent": 4,
-   "latest": "2026-10-21T13:01:21+00:00"
+   "latest": "2026-10-21T14:19:17+00:00"
+  },
+  "border": {
+   "clusters": 24,
+   "max_independent": 4,
+   "latest": "2026-10-21T14:19:17+00:00"
   },
   "fire": {
-   "clusters": 7,
+   "clusters": 8,
    "max_independent": 3,
-   "latest": "2026-10-21T13:01:21+00:00"
+   "latest": "2026-10-21T14:19:17+00:00"
   },
   "mine": {
-   "clusters": 11,
-   "max_independent": 2,
-   "latest": "2026-10-21T13:01:21+00:00"
+   "clusters": 12,
+   "max_independent": 4,
+   "latest": "2026-10-21T14:19:17+00:00"
   },
   "alert": {
    "clusters": 3,
@@ -102,8 +102,8 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 103,
-   "hits": 24
+   "count": 104,
+   "hits": 25
   },
   {
    "outlet": "연합뉴스",
@@ -111,7 +111,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 8
+   "hits": 9
   },
   {
    "outlet": "연합뉴스",
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 5
+   "hits": 6
   },
   {
    "outlet": "SBS",
@@ -175,7 +175,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "국민일보",
@@ -213,8 +213,9 @@
    "outlet": "국방일보",
    "section": "국방",
    "url": "https://kookbang.dema.mil.kr/dema_xml/dema0010010000.xml",
-   "ok": false,
-   "error": "URLError: <urlopen error timed out>"
+   "ok": true,
+   "count": 60,
+   "hits": 7
   }
  ]
 }

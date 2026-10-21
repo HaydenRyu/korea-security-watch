@@ -3,6 +3,7 @@
 LLM 은 항목별 관측만 낸다(run.json). 등급·발송 여부는 이 파일의 코드가 정한다.
 
 사용: python3 scripts/diff_state.py <run.json>
+      python3 scripts/diff_state.py --check <run.json>   형식 검사만(state/ 에 아무것도 쓰지 않는다). rc 0 통과 · 1 위반
   - state/latest.json   직전 *검증된* 판정 (unverified 회차는 덮지 않는다)
   - state/events.jsonl  회차 이력 1줄씩 추가
   - state/outbox.json   이번 회차에 보낼 메시지 — Actions 가 이 파일 변경을 보고 ntfy 로 발송
@@ -973,7 +974,25 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     return new_latest, event, outbox
 
 
+def check(path: str) -> int:
+    """기록 없는 사전 검사. 루틴이 고칠 수 있는 형식 오류를 본 실행 전에 걸러, 스스로 고친 시도가
+    events.jsonl 에 판정 불가로 남지 않게 한다(10/19~21 「판정 불가 → 1분 뒤 정상」 3회).
+    고치지 못한 채 본 실행에 넣으면 지금처럼 판정 불가로 기록되고 연속 계수에 들어간다."""
+    try:
+        run = json.loads(Path(path).read_text())
+        if not isinstance(run, dict):
+            raise RunError("run.json 최상위는 객체여야 한다")
+        validate(run)
+    except (RunError, ValueError, OSError) as e:
+        print(json.dumps({"check": "fail", "error": f"schema: {e}"}, ensure_ascii=False))
+        return 1
+    print(json.dumps({"check": "ok"}, ensure_ascii=False))
+    return 0
+
+
 def main(argv: list[str]) -> int:
+    if len(argv) == 3 and argv[1] == "--check":
+        return check(argv[2])
     if len(argv) != 2:
         print(__doc__)
         return 2

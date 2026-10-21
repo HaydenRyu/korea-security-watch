@@ -544,3 +544,43 @@ def test_cyber_domestic_query_counts_only_standalone():
     assert d.cyber_domestic_queries(cov) == 2
     assert d.cyber_domestic_queries({"electronic_cyber": ["북한 GPS 교란 해킹"]}) == 0
     assert d.cyber_domestic_queries(None) == 0
+
+
+def _main_in(tmp: Path, r: dict, *flags: str) -> int:
+    import json
+    f = tmp / "run.json"
+    f.write_text(json.dumps(r, ensure_ascii=False))
+    old = d.STATE
+    d.STATE = tmp / "state"
+    try:
+        return d.main(["diff_state.py", *flags, str(f)])
+    finally:
+        d.STATE = old
+
+
+def test_check_mode_writes_nothing(tmp_path=None):
+    import tempfile
+    tmp = Path(tmp_path or tempfile.mkdtemp())
+    bad = run(border_clash={"status": "single", "sources": [{"name": "x", "url": "https://never.example"}]})
+    assert _main_in(tmp, bad, "--check") == 1
+    assert _main_in(tmp, run(), "--check") == 0
+    assert _main_in(tmp, {"status": "unverified", "reason": "search failed"}, "--check") == 0
+    assert not (tmp / "state").exists()  # events·latest·outbox·signals 어느 것도 만들지 않는다
+
+
+def test_unfixed_schema_error_still_recorded_and_alerts_on_third(tmp_path=None):
+    import json
+    import tempfile
+    tmp = Path(tmp_path or tempfile.mkdtemp())
+    bad = run(border_clash={"status": "single", "sources": [{"name": "x", "url": "https://never.example"}]})
+    sent = []
+    for i in range(3):
+        assert _main_in(tmp, bad, "--check") == 1  # 사전 검사는 계수에 들어가지 않는다
+        assert _main_in(tmp, bad) == 0
+        ob = tmp / "state" / "outbox.json"
+        sent.append(json.loads(ob.read_text())["me"]["title"] if ob.exists() else None)
+    evs = [json.loads(l) for l in (tmp / "state" / "events.jsonl").read_text().splitlines()]
+    assert [e["status"] for e in evs] == ["unverified"] * 3
+    assert [e["streak"] for e in evs] == [1, 2, 3]
+    assert evs[0]["reason"].startswith("schema: border_clash: 열어 보지 않은 출처")
+    assert sent == [None, None, "안보 감시 중단"]

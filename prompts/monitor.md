@@ -259,14 +259,21 @@
    - 공통 확인처: 0-2 국내 언론 수집 결과, 합참·국방부 최근 발표(**북→남 군 통지문·전통문 공개 여부를 반드시 확인** — 최후통첩 판정 근거), 연합뉴스 북한 속보, Reuters·AP North Korea, NHK·교도·지지통신 북한(北朝鮮) 속보, 38 North·NK News 최근 글, 미 국무부 한국 여행경보, 일본 방위성 발사 발표.
    - 검색 결과 목록만 보고 판정하지 않는다. 원문을 **3건 이상** WebFetch 로 열고, 연 URL 을 `opened` 에 남긴다.
    - WebFetch 가 "unable to fetch"·403 이면(robots.txt 가 Claude-User 를 막는다고 `data/sources.json` note 에 적힌 매체는 제외) 같은 URL 을 Bash 로 연다: `curl -sL -A 'Mozilla/5.0' --max-time 20 <URL> | sed 's/<[^>]*>/ /g' | tr -s ' \n' | head -c 6000`. 본문이 나오면 연 것으로 친다.
-   - 원문은 한 매체에 몰리지 않게 **서로 다른 사이트 2곳 이상**에서 연다(예: NK News + 연합뉴스·합참·Reuters 중 하나). `diff_state.py` 가 검사하며, 한 사이트뿐이면 판정 불가로 기록된다.
+   - 원문은 한 매체에 몰리지 않게 **서로 다른 사이트 2곳 이상**에서 연다(예: NK News + 연합뉴스·합참·Reuters 중 하나). `diff_state.py` 가 검사하며, 한 사이트뿐이면 판정 불가로 기록된다(5절 2단계 `--check` 로 기록 전에 미리 잡는다).
    - `sources` 에는 `opened` 에 있는 URL 만 넣는다. 둘 다 `diff_state.py` 가 검사하며, 어기면 회차가 판정 불가로 기록된다.
 1-1. **세계 안보 브리핑(4-1절)을 채운다** — 판정 검색이 끝난 뒤, 국제면(Reuters World·AP World·BBC World·NHK World 중 2곳 이상)을 열어 `opened` 에 넣고 `world` 3~5건과 `world_context` 를 쓴다. 판정용으로 이미 연 원문도 쓸 수 있다. `source.url` 이 `opened` 에 없으면 버려진다. 실패해도 회차는 계속한다.
 1-2. **임박 신호(4-2절)를 채운다** — 판정·브리핑 검색에서 이미 연 원문 중 항행경보·북한 예고·시설 동향·발사대 이동·공표 일정을 가리키는 기사를 골라 `signals` 에 쓴다. 먼저 `state/signals.json`(없으면 건너뜀)의 `active` 와 대조해 같은 사건을 빼고, 항행경보(일본 해상보안청·중국 해사국)와 38 North 최근 글은 이 단계에서 확인한다. 실패해도 회차는 계속한다.
 1-3. **긴장 국면 지표(4-3절)를 확인한다** — 판정 검색에서 이미 연 원문을 `data/escalation_ladder.json` 의 `indicators[].met` 와 대조해 충족된 것만 `ladder` 에 쓴다. 추가로 여는 원문은 2건 안으로 줄인다. 실패해도 회차는 계속한다.
 1-4. **요인 회차면(4-4절) `factors` 를 채운다.** 요인 회차가 아니면 건너뛴다. 실패해도 회차는 계속한다.
 1-5. **연동 위기(4-5절)를 확인한다** — 대만 해협 훈련과 한반도 연결 사실을 검색해 `linkage` 에 쓴다. 판정·브리핑에서 이미 연 원문을 먼저 쓰고, 추가로 여는 원문은 2건 안으로 줄인다. 해당이 없으면 생략한다. 실패해도 회차는 계속한다.
-2. `python3 scripts/diff_state.py run.json` 를 실행하고 출력을 확인한다. 스키마 위반이면 스크립트가 unverified 로 기록한다.
+2. **먼저 형식을 검사한다** — `python3 scripts/diff_state.py --check run.json`. 아무것도 기록하지 않는다(rc 0 통과 · 1 위반, 위반 사유는 출력의 `error`).
+   위반이면 사유대로 `run.json` 을 고치고 다시 검사한다(최대 2번). **고치는 방법은 사실대로만** 한다:
+   - 「열어 보지 않은 출처」 → 그 URL 을 실제로 열어 `opened` 에 넣는다. 열 수 없으면 `sources` 에서 빼고, 남은 출처로 status 를 다시 판정한다(출처 0이면 `none`, 1곳이면 `single`).
+     **열지 않은 URL 을 `opened` 에만 끼워 넣지 않는다.**
+   - 「원문 3건 미만」·「사이트 2곳 미만」 → 원문을 더 연다. 못 열면 그대로 둔다.
+   - 키·status 값·출처 수 오류 → 3절 규칙대로 고친다.
+   2번 안에 못 고치면 고치지 않은 채로 다음 단계로 간다 — 판정 불가로 기록되고 연속 계수(3회 연속이면 「감시 중단」 알림)에 들어간다. 검색 자체가 실패한 회차는 검사 없이 `{"status":"unverified",...}` 를 그대로 낸다.
+2-1. `python3 scripts/diff_state.py run.json` 을 실행하고 출력을 확인한다. 스키마 위반이 남아 있으면 스크립트가 unverified 로 기록한다.
 3. `rm run.json` 후 `git add state/ data/sources.json $(ls data/source_requests.jsonl 2>/dev/null) && git commit -m "watch: <등급 또는 unverified> <시각>"` 를 실행한다.
 4. `git pull --rebase origin main && git push origin HEAD:main`. 거절되면 한 번 더 pull --rebase 후 push 한다. 그래도 실패하면 사유를 출력하고 끝낸다.
    - 알림 발송은 GitHub Actions 가 `state/outbox.json` 변경을 보고 ntfy 로 처리한다. 이 세션에서 ntfy 를 직접 부르지 않는다.

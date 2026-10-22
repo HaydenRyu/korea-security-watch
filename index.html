@@ -723,13 +723,15 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
     <div class="ph"><span class="k">상황 지도</span><span class="taphint">표지를 누르면 상세</span><span id="imgdate">위성 영상 —</span><span id="nwerr" hidden role="status"></span>
       <div class="layers" role="group" aria-label="지도 레이어">
         <button type="button" class="base" data-layer="day" aria-pressed="true" title="어제 낮 VIIRS 영상(해상도 약 375m)">어제 위성</button>
-        <button type="button" class="base" data-layer="night" aria-pressed="false">야간 조명</button>
+        <button type="button" class="base" data-layer="night" aria-pressed="false" title="가장 최근 밤의 야간광(VIIRS NOAA-20, 구름·달빛 보정, 1~2일 전). 평소보다 어두우면 정전·등화관제, 밝으면 야간 활동">야간 조명</button>
         <button type="button" class="base" data-layer="hima" aria-pressed="false" title="히마와리-9 적외 영상 — 10분 간격, 약 1시간 늦게 올라온다(해상도 약 2km). 밤에도 구름이 보인다">히마와리</button>
         <button type="button" data-layer="shelter" aria-pressed="false" disabled title="세곡·자곡·율현동 + 자곡동 반경 2km 민방위 대피소(국민재난안전포털)">대피소</button>
         <button type="button" data-layer="subway" aria-pressed="false" disabled title="자곡동 가까운 지하철역 5곳">지하철</button>
         <button type="button" data-layer="cctv" aria-pressed="false" disabled title="접경 도로 CCTV 위치(국가교통정보센터)">CCTV</button>
         <button type="button" data-layer="firms" aria-pressed="false" disabled title="위성 열점 — NASA 위성이 감지한 열원(최근 48시간, 산불·소각 포함). 점을 누르면 위치·설명">열점</button>
         <button type="button" data-layer="navwarn" aria-pressed="false" disabled title="국내 항행경보(국립해양조사원) — 해상사격·해상훈련 구역. 구역을 누르면 발령 기관·기간·출처">항행경보</button>
+        <button type="button" data-layer="s3" aria-pressed="false" disabled title="Sentinel-3 열점(최근 7일, EU GWIS) — NASA 열점과 다른 위성의 감지라 교차확인용. 점 상세는 없음">S3 열점</button>
+        <button type="button" data-layer="fwi" aria-pressed="false" disabled title="어제 화재기상지수(ECMWF FWI, EU GWIS) — 높을수록 자연 산불이 번지기 쉬운 날씨. 열점이 산불인지 판단할 때 참고">화재기상</button>
       </div></div>
     <div class="pb"><div id="map"></div><div class="reticle"></div><span class="corner a"></span><span class="corner b"></span>
       <div class="hud bl" id="coord">37.80N 127.50E</div><div class="fleg" id="fleg" hidden aria-label="지도 범례"><div class="lr" id="fleg-f" hidden></div><div class="lr" id="fleg-n" hidden></div></div></div>
@@ -835,7 +837,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 // 키·순서는 scripts/diff_state.py ITEMS 와 같다
 const ITEMS={troop_movement:"병력 이동·동원",nuclear:"핵·전략무기",logistics:"군수 비축·수송",border_clash:"DMZ·NLL 충돌",
   electronic_cyber:"전자전·사이버",foreign_forces:"외국군·북러·북중 협력",parade_massing:"기념일 전후 집결",
-  nk_internal:"북 내부 전시태세",gov_warning:"정부 긴급 경고"};
+  nk_internal:"북 내부 전시태세",gov_warning:"정부 긴급 경고",hybrid_ops:"혼합위협 · 귀속 확정"};
 const NI=Object.keys(ITEMS).length;
 const LABEL=["평시","주의","경계","위험"];
 // 한 줄 요약(칸 높이 고정). 전체 문장은 title 로
@@ -852,7 +854,7 @@ const STAT={none:"이상 없음",single:"단일 출처",corroborated:"교차확�
 // 확인 상태 = diff_state 와 같은 기준(corroborated = 서로 다른 사이트 2곳 이상). 「상충」은 루틴 출력에 conflict 필드가 생기면 켠다(판정 정의 변경 — 승인 뒤)
 const nsite=it=>new Set((it.sources||[]).map(x=>{try{return new URL(x.url).hostname.replace(/^www\./,"")}catch(e){return x.name}})).size;
 const vf=it=>it.status==="none"?"이상 없음":it.status==="unverified"?`<i class="vf unk">판정 불가</i>`
-  :it.attribution==="unknown"?`<i class="vf unk" title="정부가 북한·중국 소행으로 발표하지 않은 사고 — 등급에 쓰지 않음">귀속 미확인</i>`:it.conflict?`<i class="vf bad" title="${esc(it.conflict_what||"")}">상충</i>`:it.status==="corroborated"?`<i class="vf ok">확인됨 ${nsite(it)}곳</i>`:`<i class="vf one">미확인 1곳</i>`;
+  :it.attribution==="unknown"?`<i class="vf unk" title="정부가 북한·중국 소행으로 발표하지 않은 사고 — 등급에 쓰지 않음">귀속 미확인</i>`:it.attributed_by?`<i class="vf ok" title="수사기관·법원·정부·우방 정부가 북한 또는 외국 정보기관 연계를 공식 발표한 사건. 기관명은 아래 줄">귀속 확정</i>`:it.conflict?`<i class="vf bad" title="${esc(it.conflict_what||"")}">상충</i>`:it.status==="corroborated"?`<i class="vf ok">확인됨 ${nsite(it)}곳</i>`:`<i class="vf one">미확인 1곳</i>`;
 // 경과 시간 — 등급이 지금 값으로 바뀐 회차(events)부터, 징후는 지금 징후 항목의 출처가 처음 실린 회차부터
 let G_SINCE=null,S_SINCE=null;
 function sinceOf(events,latest){const g=latest?.grade;G_SINCE=null;S_SINCE=null;if(g==null)return;
@@ -950,7 +952,7 @@ function render(latest,events){
     const s=it.status!=="none"&&isRoutine(it)?"routine":it.status;
     if(it.status!=="none")n++;
     const src=(it.sources||[])[0];
-    const meta=[it.carried&&`${short(it.carried_since)}부터 유지 · 해제 보도 전`,src&&src.name,it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
+    const meta=[it.attributed_by&&`귀속 ${it.attributed_by.name}(${it.attributed_by.tier})`,it.carried&&`${short(it.carried_since)}부터 유지 · 해제 보도 전`,src&&src.name,it.region,it.confidence&&`신뢰도 ${it.confidence}`].filter(Boolean).map(esc).join(" · ");
     const body=it.status==="none"?"":`<div class="what">${esc(it.summary)}</div>${meta?`<div class="src">${meta}</div>`:""}`;
     return `<a class="row${it.status!=="none"?" on":""}" href="#item=${k}"><span class="name">${name}</span>
       <span class="st">${latest?vf(it):"분석 전"}</span><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${body}</a>`}).join("")
@@ -1169,7 +1171,7 @@ function renderDetail(k){
     <div class="dhead"><h2>${name}</h2><div class="st"><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${STAT[s]}${meta?" · "+meta:""}</div></div>
     <p class="dsum">${it.status==="none"?(DATA.latest?"현재 보고된 이상 징후가 없습니다.":"첫 분석 전입니다."):AI_TAG+esc(it.summary)}</p>
     ${it.status==="none"&&it.summary?`<p class="dmean">판정 메모 — ${esc(it.summary)}</p>`:""}
-    ${it.meaning?`<p class="dmean">군사적 의미 — ${esc(it.meaning)}</p>`:""}
+    ${it.attributed_by?`<p class="dmean">귀속 — ${esc(it.attributed_by.name)}(${esc(it.attributed_by.tier)} 등급)${it.attributed_by.what?" · "+esc(it.attributed_by.what):""}${it.category?" · "+esc(it.category):""}. 이 항목은 공식 귀속 발표만 올리고 화재·범죄 건수는 쓰지 않습니다.</p>`:""}${it.attribution_dropped?`<p class="dmean">배경으로 둠 — ${esc(it.attribution_dropped)}</p>`:""}${it.meaning?`<p class="dmean">군사적 의미 — ${esc(it.meaning)}</p>`:""}
     <div class="cols">${P("확인된 사실","",li(it.facts))}${P("추정","",li(it.speculation,"spec"))}</div>
     ${P("출처",`${(it.sources||[]).length}곳`,`<div class="srcs">${(it.sources||[]).length?it.sources.map(x=>`
       <a class="s" href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener"><span class="tier" data-t="${esc(x.tier||"")}">${esc(x.tier||"–")}</span>
@@ -1199,7 +1201,20 @@ function initMap(){
     L.tileLayer(G("VIIRS_NOAA20_CorrectedReflectance_TrueColor",d,9,"jpg"),{maxNativeZoom:9,className:"sat",attribution:attr}),
     L.tileLayer(G("VIIRS_SNPP_CorrectedReflectance_TrueColor",d,9,"jpg"),{maxNativeZoom:9,className:"sat"})
       .on("add",e=>{e.target.getContainer().style.mixBlendMode="lighten"})]).addTo(map);
-  layers.night=L.tileLayer(G("VIIRS_Black_Marble","2016-01-01",8,"png"),{maxNativeZoom:8,className:"sat",attribution:attr});
+  // 야간광: 2016 정적 Black Marble → 일별(VIIRS NOAA-20 GapFilled, 1~2일 지연). 없는 날짜는 404 라 최근 1~4일 중 첫 200 을 쓴다(CORS 허용·404 실측 10/23)
+  const NIGHT="VIIRS_NOAA20_GapFilled_BRDF_Corrected_DayNightBand_Radiance";let nightDate=null;
+  const nightLbl=()=>`야간광 ${nightDate||"날짜 확인 중"} · VIIRS`;
+  const nightLayer=t=>L.tileLayer(G(NIGHT,t,8,"png"),{maxNativeZoom:8,attribution:attr});  // .sat 필터(어둡게)는 야간광에 안 건다
+  layers.night=nightLayer(new Date(Date.now()-2*864e5).toISOString().slice(0,10));
+  (async()=>{for(let k=1;k<=4;k++){const t=new Date(Date.now()-k*864e5).toISOString().slice(0,10);
+      try{const r=await fetch(G(NIGHT,t,8,"png").replace("{z}/{y}/{x}","6/24/54"),{method:"HEAD"});if(r.ok){nightDate=t;break}}catch(e){}}
+    if(!nightDate)return;const on=map.hasLayer(layers.night);if(on)map.removeLayer(layers.night);
+    layers.night=nightLayer(nightDate);if(on){layers.night.addTo(map);$("imgdate").textContent=nightLbl()}})();
+  // EU GWIS(JRC) WMS — 키 없음, CC BY 4.0. s3.hs.week = Sentinel-3 열점 7일 · ecmwf.fwi 는 time 없이 빈 타일(10/23 실측). nrt.ba 연소면적은 동아시아 빈 타일이라 안 쓴다
+  const GWIS="https://maps.effis.emergency.copernicus.eu/gwis",gattr='© European Union, <a href="https://gwis.jrc.ec.europa.eu/">JRC/GWIS</a> CC BY 4.0';
+  layers.s3=L.tileLayer.wms(GWIS,{layers:"s3.hs.week",styles:"default",format:"image/png",transparent:true,version:"1.3.0",attribution:gattr});
+  layers.fwi=L.tileLayer.wms(GWIS,{layers:"ecmwf.fwi",styles:"default",format:"image/png",transparent:true,version:"1.3.0",time:new Date(Date.now()-864e5).toISOString().slice(0,10),opacity:.55,attribution:gattr});
+  toggle(document.querySelector("[data-layer=s3]"),layers.s3);toggle(document.querySelector("[data-layer=fwi]"),layers.fwi);
   // 히마와리-9 적외(data/himawari_layers.json 첫 레이어, 기본 꺼짐). 시각 = 지금 − 60분을 10분 단위로 내림(404 회피 여유, 정본 note).
   // 위성 이름은 머리띠에만 — 출처 줄이 길어지면 1280 에서 좌표 표시를 덮었다
   const ht=new Date(Math.floor((Date.now()-60*6e4)/6e5)*6e5);
@@ -1225,7 +1240,7 @@ function initMap(){
     const k=b.dataset.layer;
     ["day","night","hima"].forEach(o=>{const on=o===k;document.querySelector(`[data-layer=${o}]`).setAttribute("aria-pressed",on);
       if(on)layers[o].addTo(map);else map.removeLayer(layers[o])});
-    $("imgdate").textContent=k==="night"?"야간 조명 · Black Marble":k==="hima"?himaLbl():`어제 위성 ${d} · VIIRS`;
+    $("imgdate").textContent=k==="night"?nightLbl():k==="hima"?himaLbl():`어제 위성 ${d} · VIIRS`;
   }));
   pinLayer=L.layerGroup().addTo(map);
   layers.subway=L.layerGroup(SUBWAY.map(x=>L.marker([x[2],x[3]],{title:x[0],icon:L.divIcon({className:"hit",iconSize:[12,12],

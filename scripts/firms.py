@@ -29,7 +29,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 API = "https://firms.modaps.eosdis.nasa.gov/api/area/csv/{key}/{src}/124,33,131,43/2"
-SOURCES = ["VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT", "VIIRS_NOAA21_NRT"]
+SOURCES = ["VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT", "VIIRS_NOAA21_NRT", "MODIS_NRT"]  # MODIS = Terra·Aqua 1km, 통과 시각이 VIIRS 와 달라 하루 2회 추가(10/23)
 WINDOW_H = 48
 # 접경지역 지원 특별법 시행령 지정 기준 「민통선과의 거리 20km 이내」(2024 개정안 · 뉴시스 2024-12-12)를 MDL 기준으로 근사.
 # 민통선은 MDL 남쪽에 있어 법정 범위보다 좁다(보수적) — 북측에도 같은 거리를 쓴다
@@ -251,6 +251,11 @@ def in_border(lat: float, lon: float) -> bool:
     return mdl_km(lat, lon) <= BORDER_KM
 
 
+def sat_label(src: str) -> str:
+    """FIRMS 소스명 → 위성 표기. VIIRS_NOAA20_NRT → NOAA20, MODIS_NRT → MODIS(Terra·Aqua 는 CSV satellite 열이 갈라 주지만 표기는 하나로)."""
+    return "MODIS" if src.startswith("MODIS") else src.split("_")[1]
+
+
 def fetch(key: str, src: str) -> list[dict]:
     for attempt in range(3):  # 러너 네트워크 일시 불통(Errno 101) 실측 — 짧게 재시도
         try:
@@ -284,7 +289,7 @@ def main(argv: list[str]) -> int:
                 lat, lon = float(r["latitude"]), float(r["longitude"])
                 points.append({"lat": round(lat, 3), "lon": round(lon, 3), "t": t.isoformat(),
                                "frp": float(r.get("frp") or 0), "conf": r.get("confidence", ""),
-                               "sat": src.split("_")[1], "mdl_km": round(mdl_km(lat, lon), 1),
+                               "sat": sat_label(src), "mdl_km": round(mdl_km(lat, lon), 1),
                                "border": in_border(lat, lon)})
     except Exception as e:  # noqa: BLE001 — 실패는 rc 3 으로 알리고 기존 파일 유지
         print(f"FIRMS 실패: {e}")

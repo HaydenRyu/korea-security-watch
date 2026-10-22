@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19",
+ "updated": "2026-10-23",
  "note": "감시 루틴(prompts/monitor.md)과 상황판 「출처」 화면이 함께 읽는 정본. 추가 요청은 검토 후 여기에 반영한다.",
  "tiers": [
   {
@@ -41,6 +41,16 @@
        "name": "항공정보통합관리(AIM Korea) NOTAM",
        "url": "https://aim.koca.go.kr",
        "note": "공역 폐쇄·위험구역 사전 공고. 발사·훈련 직전 신호 — 단독으로는 single 상한"
+      },
+      {
+       "name": "경찰청 보도자료",
+       "url": "https://www.police.go.kr",
+       "note": "간첩(국가보안법)·북한 연계 사건 구속·송치 발표 — hybrid_ops 귀속 발표 기관"
+      },
+      {
+       "name": "대검찰청 보도자료",
+       "url": "https://www.spo.go.kr",
+       "note": "국가보안법 기소·공소 유지 발표 — hybrid_ops 귀속"
       }
      ]
     },
@@ -176,6 +186,46 @@
        "name": "일본 공안조사청 내외정세 회고와 전망",
        "url": "https://www.moj.go.jp/psia/",
        "note": "발표가 드물고 사후 정리 성격 — 배경 근거로만, 단독으로 등급을 올리지 않는다"
+      }
+     ]
+    },
+    {
+     "name": "우방 공식(귀속 발표)",
+     "items": [
+      {
+       "name": "미 FBI 보도자료·PSA",
+       "url": "https://www.fbi.gov",
+       "note": "북한 해킹 조직 귀속 성명(가상자산 탈취 등) — electronic_cyber·hybrid_ops 귀속"
+      },
+      {
+       "name": "미 CISA 사이버보안 권고",
+       "url": "https://www.cisa.gov",
+       "note": "북한 위협행위자 공동 권고(FBI·NSA·Five Eyes) — 귀속 근거"
+      },
+      {
+       "name": "미 법무부 보도자료",
+       "url": "https://www.justice.gov",
+       "note": "북한 IT 노동자·해킹 기소·압수 발표"
+      },
+      {
+       "name": "미 재무부 OFAC 제재 지정",
+       "url": "https://home.treasury.gov",
+       "note": "북한 연계 개인·단체 제재 — 귀속 근거"
+      },
+      {
+       "name": "일본 경찰청(警察庁)",
+       "url": "https://www.npa.go.jp",
+       "note": "북한 해킹 조직 귀속 공표(2024-12 DMM Bitcoin 미·일 공동) — 귀속"
+      },
+      {
+       "name": "일본 내각사이버보안센터(NISC)",
+       "url": "https://www.nisc.go.jp",
+       "note": "북한 사이버 주의 환기·귀속 공표"
+      },
+      {
+       "name": "영국 NCSC",
+       "url": "https://www.ncsc.gov.uk",
+       "note": "북한 위협행위자 공동 권고 — 귀속 근거"
       }
      ]
     }

@@ -205,8 +205,8 @@ def test_release_fires_once_when_drop_applied():
 
 
 def test_new_items_are_normal_signals():
-    assert {"electronic_cyber", "nk_internal"} <= set(d.ITEMS) and len(d.ITEMS) == 9
-    assert not {"electronic_cyber", "nk_internal"} & d.CRITICAL
+    assert {"electronic_cyber", "nk_internal", "hybrid_ops"} <= set(d.ITEMS) and len(d.ITEMS) == 10
+    assert not {"electronic_cyber", "nk_internal", "hybrid_ops"} & d.CRITICAL
     r = run(electronic_cyber={"status": "corroborated", "sources": SRC2},
             nk_internal={"status": "single", "sources": SRC1})
     latest, _, _ = d.step(r, None, [])

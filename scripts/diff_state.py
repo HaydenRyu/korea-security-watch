@@ -34,6 +34,7 @@ ITEMS = {
     "parade_massing": "기념일 전후 집결",
     "nk_internal": "북 내부 전시태세",
     "gov_warning": "정부 긴급 경고",
+    "hybrid_ops": "혼합위협 · 귀속 확정",
 }
 # 이 중 하나가 교차확인되고 다른 항목 징후가 동시에 있으면 등급 3.
 # 전자전·사이버, 북 내부 전시태세는 일반 징후다 — 다른 항목과 겹치면 등급을 올리지만 단독으로 위험을 만들지 않는다.
@@ -105,6 +106,7 @@ def validate(run: dict) -> None:
             raise RunError(f"{key}: corroborated 인데 출처가 2곳 미만이다")
     normalize_conflict(items)
     normalize_attribution(items)
+    normalize_attributed_by(items)
 
 
 ATTRIBUTIONS = {"nk", "cn", "ru", "unknown"}
@@ -137,6 +139,64 @@ def normalize_attribution(items: dict) -> dict:
         if a == "unknown" and it.get("status") != "none" and not it.get("routine"):
             it["routine"] = True
             it["routine_forced"] = "attribution unknown"
+    return items
+
+
+ATTRIBUTION_GATED = {"hybrid_ops"}  # 공식 귀속 발표가 없으면 징후가 아니라 배경이다(10/22 hayden: 사건 건수는 입력이 아니다)
+HYBRID_CATEGORIES = {"간첩", "사이버", "가상자산", "마약", "무기", "방화", "테러"}
+_A_SITES: set[str] | None = None
+
+
+def a_tier_sites() -> set[str]:
+    """data/sources.json A 등급(공식) 사이트 집합. 못 읽으면 빈 집합 — 도메인 검사만 건너뛴다(회차를 막지 않는다)."""
+    global _A_SITES
+    if _A_SITES is None:
+        try:
+            doc = json.loads((ROOT / "data" / "sources.json").read_text())
+            _A_SITES = {site(i["url"]) for t in doc["tiers"] if t["id"] == "A" for g in t["groups"] for i in g["items"] if i.get("url")}
+        except Exception:  # noqa: BLE001
+            _A_SITES = set()
+    return _A_SITES
+
+
+def attributed_ok(it: dict) -> bool:
+    """귀속 확정 = attributed_by{name, tier A} + A 등급 출처 1곳 이상(사이트가 sources.json A 등급에 있을 때)."""
+    ab = it.get("attributed_by")
+    if not isinstance(ab, dict) or str(ab.get("tier", "")).strip().upper() != "A" or not str(ab.get("name", "")).strip():
+        return False
+    a_sites = a_tier_sites()
+    for s in it.get("sources") or []:
+        if str(s.get("tier", "")).strip().upper() != "A":
+            continue
+        if not a_sites or site(s.get("url") or "") in a_sites:
+            return True
+    return False
+
+
+def normalize_attributed_by(items: dict) -> dict:
+    """귀속 발표 정규화(10/22). attributed_by 가 A 등급이 아니면 지운다. ATTRIBUTION_GATED 항목은 귀속 확정이 아니면
+    status 를 none 으로 내리고(summary 는 판정 메모로 남는다) 사유를 attribution_dropped 에 적는다 — 화재·범죄 통계나
+    귀속 없는 사건이 징후로 올라오는 길을 코드가 막는다. 프롬프트는 확률만 올린다."""
+    for key, it in items.items():
+        if not isinstance(it, dict):
+            continue
+        ok = attributed_ok(it)
+        if ok:
+            ab = it["attributed_by"]
+            clean = {"name": str(ab["name"]).strip()[:60], "tier": "A"}
+            if str(ab.get("what") or "").strip():
+                clean["what"] = str(ab["what"]).strip()[:120]
+            it["attributed_by"] = clean
+        else:
+            it.pop("attributed_by", None)
+        cat = str(it.get("category") or "").strip()
+        if cat and cat not in HYBRID_CATEGORIES:
+            it.pop("category", None)
+        if key in ATTRIBUTION_GATED and it.get("status") != "none" and not ok:
+            it["status"] = "none"
+            it["attribution_dropped"] = "A 등급 기관의 귀속 발표 없음"
+            if it.get("summary") and not str(it["summary"]).startswith("귀속 미확정"):
+                it["summary"] = "귀속 미확정 — " + str(it["summary"])
     return items
 
 

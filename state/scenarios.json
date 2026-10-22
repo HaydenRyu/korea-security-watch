@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-22T05:10:57+00:00",
+  "tilt": "hold",
+  "scenarios": [
+    {
+      "id": "calm",
+      "name": "완화",
+      "tone": 0,
+      "desc": "대화 재개·접경 긴장 완화",
+      "indicators": [
+        {
+          "id": "dialogue_offer",
+          "label": "남북·북미 대화 제안·수용",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "channel_restored",
+          "label": "통신선·연락채널 복원",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "provocation_halt",
+          "label": "확성기·오물풍선 중단 발표",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "talks_scheduled",
+          "label": "고위급 회담 일정 공표",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "no_launch_30",
+          "label": "30일간 발사 없음",
+          "state": "off",
+          "note": "마지막 발사 10/15"
+        }
+      ],
+      "on": 0,
+      "known": 5
+    },
+    {
+      "id": "hold",
+      "name": "현상 유지",
+      "tone": 1,
+      "desc": "정례 수준의 반복 도발",
+      "indicators": [
+        {
+          "id": "tempo_up",
+          "label": "최근 30일 발사가 평소 이상",
+          "state": "on",
+          "note": "평소의 3.6배"
+        },
+        {
+          "id": "signal",
+          "label": "임박 신호 1건 이상",
+          "state": "on",
+          "note": "2건"
+        },
+        {
+          "id": "grade",
+          "label": "상황판 주의 이상",
+          "state": "on",
+          "note": "주의"
+        },
+        {
+          "id": "ladder_low",
+          "label": "긴장 국면 0~1단계",
+          "state": "on",
+          "note": "평상"
+        }
+      ],
+      "on": 4,
+      "known": 4
+    },
+    {
+      "id": "esc",
+      "name": "격화",
+      "tone": 2,
+      "desc": "국지 충돌·대치로 번짐",
+      "indicators": [
+        {
+          "id": "high_level_war_claim",
+          "label": "고위급 「전쟁 임박」 성명",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "targeted_threat",
+          "label": "대상·시점 지목 위협",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "institutional_exit",
+          "label": "조약·기구 이탈 선언",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "border_incident_surge",
+          "label": "비정례 접경 사건",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "naval_zone_fire",
+          "label": "NLL 항행금지구역 + 해안포",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "lethal_clash",
+          "label": "사상자·영토 피격",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "ultimatum",
+          "label": "시한 있는 최후통첩",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "quasi_war_state",
+          "label": "준전시·전투태세 선포",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "force_dispersal",
+          "label": "전력 기지 이탈·포병 증강",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "allied_posture_up",
+          "label": "한미 태세 격상",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "sustained_massing",
+          "label": "대규모 집결의 지속",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "quantified_gov_warning",
+          "label": "정부의 수치 있는 공개 경고",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "medical_blood",
+          "label": "혈액·의료물자 전방 이동",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "embassy_drawdown",
+          "label": "대사관 철수·비전투원 소개 「실행」",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "legal_pretext",
+          "label": "명분 조치(법·영토 선언)",
+          "state": "off",
+          "note": ""
+        },
+        {
+          "id": "wartime_civil_measures",
+          "label": "북한 내부 전시 조치",
+          "state": "off",
+          "note": ""
+        }
+      ],
+      "on": 0,
+      "known": 16
+    }
+  ],
+  "calm": {},
+  "calm_judged_at": "2026-10-22T05:10:57+00:00",
+  "history": [
+    {
+      "date": "2026-10-22",
+      "tilt": "hold",
+      "on": {
+        "calm": 0,
+        "hold": 4,
+        "esc": 0
+      }
+    }
+  ]
+}

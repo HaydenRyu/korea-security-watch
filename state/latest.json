@@ -4,37 +4,39 @@
       "북한 전방 병력 증강(수집기 묶음)"
     ],
     "nuclear": [
-      "North Korea Reuters missile troops October 22 2026"
+      "North Korea Reuters"
     ],
     "logistics": [
-      "North Korea Reuters missile troops October 22 2026"
+      "North Korea Reuters"
     ],
     "border_clash": [
-      "목함지뢰 발견 해안 귀순 DMZ"
+      "목함지뢰 해안 발견",
+      "김여정 확성기 국경(수집기 묶음)"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
+      "북한 GPS 교란(수집기 묶음)",
       "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "북러 군사협력 파병 North Korea Russia troops new"
+      "North Korea Reuters"
     ],
     "parade_massing": [
-      "North Korea Reuters missile troops October 22 2026"
+      "North Korea Reuters"
     ],
     "nk_internal": [
       "수집기 묶음 확인"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 합참"
+      "통일부 입장문 확성기(수집기 묶음)"
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261022512673",
     "https://www.segye.com/newsView/20261022506761",
     "https://www.segye.com/newsView/20261022506928",
-    "https://www.nknews.org/"
+    "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
   ],
-  "overall_summary": "김여정이 22일 조선중앙통신으로 전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기를 재차 밝혔고, 정부는 우발충돌 위험을 지적하며 대화를 촉구했다. 신규 교전·발사·시한부 최후통첩은 없어 직전 회차와 같은 말 공방 수준이다.",
+  "overall_summary": "김여정의 확성기 재가동 예고와 통일부의 중단 촉구가 이어지는 말 공방 수준이다. 신규 교전·발사·시한부 최후통첩은 없어 직전 회차와 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,42 +63,36 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "DMZ·MDL 남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "김여정이 22일 「전 국경선 새 대응수단 임무대기·확성기 수일 내 대기」를 재차 밝혔고 북측은 유엔 총회 제1위원회에서도 한국군 경고사격을 비난했으며 정부는 우발충돌 위험을 지적했다(말 공방, 신규 교전·시한부 최후통첩 없음).",
+      "summary": "김여정이 22일 「전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기」를 재차 밝혔고 통일부는 충돌 위험 행위 중단을 촉구했다(말 공방, 신규 교전·시한부 최후통첩 없음).",
       "meaning": "국경 요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261022506761"
+          "url": "https://www.segye.com/newsView/20261022512673"
         },
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261022506928"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
+          "url": "https://www.segye.com/newsView/20261022506761"
         }
       ],
       "confidence": "중간",
       "facts": [
         "김여정 담화(조선중앙통신 22일): 전 국경선 새 대응수단 임무대기, 확성기 수일 내 대기",
-        "북 대표 유엔총회 제1위원회에서 경고방송·경고사격 비난",
-        "정부 22일 우발충돌 위험 지적·대화 촉구"
+        "통일부 22일 입장문: 정전협정 위반·충돌 위험 행위 중단 촉구"
       ],
       "speculation": [
         "확성기 가동 시 상호 심리전 확대 가능성"
       ]
     }
   },
-  "checked_at": "2026-10-22T04:10:57+00:00",
+  "checked_at": "2026-10-22T05:10:57+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

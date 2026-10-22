@@ -581,13 +581,14 @@ LADDER_SOURCES_MAX = 5
 
 
 def ladder_catalog(path: Path = LADDER_FILE) -> dict:
-    """{ids: {id: stage}, names: {stage: 이름}, labels: {id: 지표 이름}, total} — 읽을 수 없으면 빈 카탈로그."""
+    """{ids: {id: stage}, names: {stage: 이름}, labels: {id: 지표 이름}, actions: {stage: 할 일}, total} — 읽을 수 없으면 빈 카탈로그."""
     doc = _load_safe(path)
     try:
         ids = {i["id"]: int(i["stage"]) for i in doc["indicators"] if isinstance(i.get("id"), str)}
         names = {int(s["n"]): str(s["name"]) for s in doc.get("stages") or []}
         labels = {i["id"]: str(i.get("label") or i["id"]) for i in doc["indicators"] if isinstance(i.get("id"), str)}
-        return {"ids": ids, "names": names, "labels": labels, "total": len(ids)}
+        actions = {int(s["n"]): str(s.get("action") or "") for s in doc.get("stages") or []}
+        return {"ids": ids, "names": names, "labels": labels, "actions": actions, "total": len(ids)}
     except Exception:  # noqa: BLE001
         return {"ids": {}, "names": {}, "labels": {}, "total": 0}
 
@@ -680,7 +681,7 @@ def update_ladder(run: dict, doc: dict | None, now: str, catalog: dict | None = 
         if stage != prev_stage:
             hist.append({"at": now, "from": prev_stage, "to": stage, "why": why or ("만료(마지막 충족 뒤 72시간)" if stage < prev_stage else "")})
         out = {"version": 1, "updated_at": now, "judged_at": now if run.get("checked_at") else doc.get("judged_at"),
-               "stage": stage, "stage_name": names.get(stage, ""), "total": len(ids), "met": met, "checking": checking,
+               "stage": stage, "stage_name": names.get(stage, ""), "stage_action": (cat.get("actions") or {}).get(stage, ""), "total": len(ids), "met": met, "checking": checking,
                "indicators": inds, "history": hist[-LADDER_HISTORY_MAX:]}
         return out
     except Exception as e:  # noqa: BLE001

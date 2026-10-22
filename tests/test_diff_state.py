@@ -637,3 +637,14 @@ def test_scenario_history_one_row_per_kst_day():
 def test_scenarios_never_raise_on_garbage():
     sc = d.update_scenarios({"calm": "x"}, {"calm": [1]}, "bad", None, "x", 5, None, {"ids": {}})
     assert isinstance(sc, dict)
+
+
+def test_ladder_carries_stage_action_from_catalog():
+    cat = {"ids": {"lethal_clash": 2}, "names": {0: "평상", 2: "국지 도발"}, "labels": {}, "actions": {0: "평소", 2: "재난문자 켜기"}}
+    run = {"checked_at": "2026-10-22T03:00:00+00:00", "opened": ["https://a.example", "https://b.example"],
+           "ladder": [{"id": "lethal_clash", "status": "corroborated", "summary": "s",
+                       "sources": [{"url": "https://a.example"}, {"url": "https://b.example"}]}]}
+    lad = d.update_ladder(run, None, "2026-10-22T03:00:00+00:00", cat)
+    assert lad["stage"] == 2 and lad["stage_action"] == "재난문자 켜기"
+    assert d.update_ladder({}, None, "2026-10-22T03:00:00+00:00", cat)["stage_action"] == "평소"
+    assert d.ladder_catalog()["actions"][0]  # 정본 escalation_ladder.json 에 단계별 할 일이 있다

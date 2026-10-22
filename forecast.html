@@ -49,8 +49,7 @@ details>summary:hover{background:rgba(219,229,241,.05)}details>summary:hover::af
 @media (prefers-reduced-motion:reduce){a,details>summary::after{transition:none}html{scroll-behavior:auto}}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 
-/* ── 지금 한눈에 ── 같은 줄 칸끼리 이름·값·바닥 링크가 같은 높이(바닥 링크는 칸 바닥에 붙인다) */
-.nw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s8)}
+/* ── 숫자 칸(.nt, 발사 확률) — 같은 줄 칸끼리 이름·값·바닥 줄이 같은 높이 ── */
 .nt{display:flex;flex-direction:column;gap:var(--s4);min-width:0;padding:var(--s12);border:1px solid var(--line);background:var(--ink)}
 .nt .nl{font:500 10px/16px var(--data);color:var(--fog);letter-spacing:.04em;white-space:nowrap}
 .nt .nv{font:700 20px/28px var(--text);color:var(--ice);white-space:nowrap}
@@ -63,7 +62,7 @@ details>summary:hover{background:rgba(219,229,241,.05)}details>summary:hover::af
 .todo b{font:600 11px/20px var(--data);color:var(--ink);background:var(--amber);padding:0 var(--s8);align-self:start}
 .todo b.calm{background:var(--g0)}
 .todo small{grid-column:2;color:var(--fog);font-size:12px}
-@media (min-width:760px){.nw{grid-template-columns:repeat(4,minmax(0,1fr))}}
+#now .todo{margin-top:0;padding-top:0;border-top:0}  /* 10/22: 「지금 한눈에」 4칸(상황판과 중복)을 빼고 할 일 한 줄만 */
 
 /* ── 발사 확률(신설) — 값은 --ice(등급색 아님: 확률이 경보로 읽히지 않게). 막대 = 지금 값, 눈금 = 과거 이 수준일 때 실제 ── */
 .pbx{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s8)}
@@ -203,8 +202,8 @@ details>summary:hover{background:rgba(219,229,241,.05)}details>summary:hover::af
 <header class="top"><h1>JIS 예측</h1><a href="./">← 상황판</a></header>
 <main>
 
-<section class="p" id="now"><div class="ph"><span class="k">지금 한눈에</span><span class="r" id="nowat">—</span></div>
-<div class="pb"><div class="nw" id="nw"><p class="none">불러오는 중</p></div><div id="todo"></div></div></section>
+<section class="p" id="now"><div class="ph"><span class="k">지금 할 일 · 상황판과 같은 기준</span><span class="r" id="nowat">—</span></div>
+<div class="pb"><div id="todo"><p class="none">불러오는 중</p></div></div></section>
 
 <section class="p" id="prob"><div class="ph"><span class="k">발사 확률 · 지난 1년 빈도로 본 다음 7·30일</span><span class="r" id="pbat">—</span></div>
 <div class="pb"><div class="pbx" id="pbx"><p class="none">불러오는 중</p></div>
@@ -265,7 +264,7 @@ Promise.all([jf(SB+"signals.json"),jf(SB+"latest.json"),jf("data/risk_calendar.j
 .then(([sg,lt,cal,cat,st,fv,lk,pb,sc])=>{
   if(st&&(typeof st!=="object"||typeof st.stage!=="number"))st=null;
   const t=fcKST(new Date());
-  for(const[f,a]of[[drawSummary,[sg,lt,cal,cat,st,t]],[drawProb,[pb]],[drawScen,[sc]],[drawSignals,[sg,lt,cal]],[drawUpcoming,[cal,t]],[drawLadder,[cat,st]],[drawTempo,[cal,t]],[drawYear,[cal]],[drawFactors,[fv]],[drawLinkage,[lk]],[drawCfr,[cat]],[drawMethod,[cal,cat]]])
+  for(const[f,a]of[[drawSummary,[lt,st]],[drawProb,[pb]],[drawScen,[sc]],[drawSignals,[sg,lt,cal]],[drawUpcoming,[cal,t]],[drawLadder,[cat,st]],[drawTempo,[cal,t]],[drawYear,[cal]],[drawFactors,[fv]],[drawLinkage,[lk]],[drawCfr,[cat]],[drawMethod,[cal,cat]]])
     try{f(...a)}catch(e){console.error(f.name,e)}
 });
 
@@ -299,36 +298,13 @@ function drawScen(sc){
     <span class="st"><span class="chips">${(off?ind.slice(0,6):ind).map(i=>`<span class="chip ${i.state==="on"?"on":i.state==="pre"?"pre":""}"${i.note?` title="${esc(i.note)}"`:""}>${esc(i.label)}${noteShown(c,i)?` · ${esc(i.note)}`:""}</span>`).join("")}${off&&ind.length>6?`<span class="chip">외 ${ind.length-6}개</span>`:""}</span></span></li>`}).join("");
 }
 
-function drawSummary(sg,lt,cal,cat,st,t){
+function drawSummary(lt,st){
   const g=GRADE[lt?.grade]||null;
   if(g)document.documentElement.style.setProperty("--gc",`var(${g[1]})`);
-  $("nowat").textContent=lt?.checked_at?`${hhmm(lt.checked_at)} 확인`:"—";
-  const sig=fcSignals(sg,new Date(),!SAMPLE),tp=cal?.tempo,hot=tp&&tp.ratio>=2;
-  const stage=st?cat?.stages?.[st.stage]:null,total=st?.total||cat?.indicators?.length||0;
-  const met=(st?.met||[]).length,chk=(st?.checking||[]).length;
-  const up=cal?fcUpcoming(cal):[],nx=up.find(u=>u.stat&&u.start>=fcISO(t))||up.find(u=>u.stat),ongo=up.filter(u=>u.start<=fcISO(t)&&(u.end||u.start)>=fcISO(t));
-  const tiles=[
-    {l:"긴장 국면",v:stage?esc(stage.name):"판정 기록 없음",c:stage?(st.stage>0?"up":"g0"):"",
-     s:(stage?`지표 ${total}개 중 충족 <b>${met}</b>${chk?` · 확인 중 ${chk}`:""}`:"매시간 확인이 다음에 판정합니다")+(g?`<br><a href="./">상황판 등급 <b style="color:var(${g[1]})">${g[0]}</b> ›</a>`:""),
-     f:`<a href="#ladder">5단계 보기 ↓</a>`},
-    {l:"임박 신호",v:!sg?"미확인":sig.length?`${sig.length}건`:"없음",c:sig.length?"up":"",
-     s:!sg?"신호 자료를 불러오지 못함":sig.length?`가장 가까운 시점 <b>${fcSigWhen(sig[0])}</b> · ${FC_SIG_KIND[sig[0].kind]||""}`:"기사에서 앞으로의 도발 단서를 찾지 못함",
-     f:`<a href="#sigp">신호 보기 ↓</a>`},
-    {l:"발사 흐름",v:tp?(hot?`평소의 ${tp.ratio}배`:"평소 범위"):"미확인",c:hot?"up":"",
-     s:tp?`최근 30일 <b>${tp.last30}일</b> 발사 · 평소 30일 ${tp.avg30}일`:"",
-     f:`<a href="#tempo-p">흐름 보기 ↓</a>`},
-    {l:"다음 위험 일정",v:nx?`${fcMD(nx.start)}`:"없음",c:"d",
-     s:(nx?`<b>${esc(nx.name)}</b> — 지난 ${nx.stat.years}년 중 ${nx.stat.hit}년 앞뒤 7일 안 발사(평소라면 ${nx.stat.expected}년) · ${{more:"평소보다 잦음",usual:"평소 수준",less:"오히려 드묾"}[nx.stat.verdict]}`:"앞으로 90일 안 과거 집계가 있는 일정 없음")+(ongo.length?`<br>지금 진행 중 ${ongo.length}건 · 그중 과거 집계 없음 ${ongo.filter(u=>!u.stat).length}건`:""),
-     f:`<a href="#upc">일정 ${up.length}건 보기 ↓</a>`}
-  ];
-  $("nw").innerHTML=tiles.map(x=>`<div class="nt"><span class="nl">${x.l}</span><span class="nv ${x.c}">${x.v}</span><span class="ns">${x.s}</span><span class="nf">${x.f}</span></div>`).join("");
-  // 할 일 한 줄: 국면 1단계 이상이면 그 단계의 할 일이 먼저, 아니면 흐름·신호, 아니면 평상 할 일
-  let todo,why,calm=false;
-  if(stage&&st.stage>0){todo=stage.action;why=`긴장 국면이 「${stage.name}」 단계`}
-  else if(hot){todo="평소보다 자주 상황판을 본다.";why=`최근 30일 발사가 평소의 ${tp.ratio}배 — 발사가 몰리는 시기엔 다음 발사도 가깝다`}
-  else if(sig.length){todo="신호가 가리키는 시점 전후로 상황판을 더 자주 본다.";why=`임박 신호 ${sig.length}건`}
-  else{todo=cat?.stages?.[0]?.action||"평소 주기로 본다.";why="국면·흐름·신호 모두 평소";calm=true}
-  $("todo").innerHTML=`<div class="todo"><b class="${calm?"calm":""}">할 일</b><span>${esc(todo)}</span><small>${esc(why)}. 전쟁 확률은 만들지 않는다.</small></div>`;
+  $("nowat").innerHTML=lt?.checked_at?`${hhmm(lt.checked_at)} 확인 · <a href="./">상황판 등급 <b style="color:var(${g?g[1]:"--fog"})">${g?g[0]:"—"}</b> ›</a>`:"—";
+  const td=fcTodo(lt?.grade??null,st);
+  $("todo").innerHTML=td?`<div class="todo"><b>할 일</b><span>${esc(td.text)}</span><small>${esc(td.why)} 기준 — 상황판 「지금 할 일」과 같은 문장. 국면이 등급보다 높을 때만 국면 할 일이 앞선다.</small></div>`
+    :`<p class="none">첫 분석 결과를 기다리는 중입니다.</p>`;
 }
 
 function drawSignals(sg,lt,cal){

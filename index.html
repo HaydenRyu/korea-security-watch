@@ -772,7 +772,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 <div class="more">
   <!-- 예측 요약: 큰 화면 넷째 칸에서만 보인다(CSS). 내용은 흐름·예측 띠와 같은 데이터(risk_calendar.json · signals.json) -->
   <section class="p" id="fc4-p" aria-label="예측 요약">
-    <div class="ph"><span class="k">예측 요약</span><span class="wk">과거 빈도 · 확률 아님</span><a class="r fcall" href="forecast.html">예측 전체 ›</a></div>
+    <div class="ph"><span class="k">예측 요약</span><span class="wk">지난 1년 빈도 · 시나리오는 확률 아님</span><a class="r fcall" href="forecast.html">예측 전체 ›</a></div>
     <a class="phs" id="phase4" href="forecast.html#ladder"><span class="pk">긴장 국면</span><b class="no">불러오는 중</b><span class="px">사다리 ›</span></a>
     <div class="pb scroll" id="fc4"><p class="empty">예측 자료를 불러오는 중</p></div>
   </section>
@@ -839,10 +839,8 @@ const NI=Object.keys(ITEMS).length;
 const LABEL=["평시","주의","경계","위험"];
 // 한 줄 요약(칸 높이 고정). 전체 문장은 title 로
 // 등급별 개인 준비 — 이 감시판의 권고일 뿐이다. 실제 대피는 정부 경보(재난문자·사이렌)를 따른다.
-const TODO=["가까운 지하 대피소 위치를 한 번 알아 둡니다.",
-  "뉴스로 상황만 확인합니다. 따로 할 일은 없습니다.",
-  "비상용품(물·식량·상비약·라디오·보조배터리)을 점검하고 가족 연락 방법을 정해 둡니다.",
-  "재난문자·TV·라디오의 정부 안내를 확인하고, 경보가 울리면 가까운 지하 대피소로 갑니다."];
+// 지금 할 일 문장은 forecast.js FC_TODO·fcTodo(상황판·예측 공용, 국면이 등급보다 높으면 국면 할 일)
+let LADDER=null;
 const CRIT=[["징후 없음","징후 없음"],
   ["단일 징후 · 정례 활동만","단일 징후, 또는 정례 훈련·미사일 시험·위협 발언만 있음"],
   ["징후 2개 항목 이상 · 교차확인","일상 활동이 아닌 징후가 2개 항목 이상, 또는 교차확인된 징후 1개 이상"],
@@ -929,7 +927,7 @@ function render(latest,events){
   $("lag").classList.toggle("on",!!(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3));
   drawDial(g);
   $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("")
-    +(g!=null?`<div class="todo"><b>지금 할 일</b><span>${TODO[g]}</span><a href="#todo-p" class="go" id="todoJump">비상용품·대피 요령 보기<span class="dn"> ↓</span></a></div>`:"");
+    +(g!=null?`<div class="todo"><b>지금 할 일</b><span id="todoTxt">${fcTodo(g,LADDER).text}</span><a href="#todo-p" class="go" id="todoJump">비상용품·대피 요령 보기<span class="dn"> ↓</span></a></div>`:"");
   renderTodo(g);renderWorld(latest);
 
   // 「이상 없음」의 근거 — 이번 회차에 실제로 돌린 검색어(coverage)와 연 원문(opened). 루틴이 coverage 게이트로 남기는 값이라 추정이 아니다
@@ -997,9 +995,13 @@ function shelterLabel(){const d=SHEL?.dongs?.length?SHEL.dongs.map(x=>x.replace(
   return`대피소 ${SHEL.shelters.length}곳 · ${d} ${n}곳 포함`}
 const CK="jisPrep";
 function ckGet(){try{return JSON.parse(localStorage.getItem(CK)||"{}")}catch(_){return{}}}
+const tnowHtml=g=>{const t=fcTodo(g,LADDER);return t?`<b><em>${esc(t.why)}</em> 기준</b><span>${esc(t.text)}</span>`:`<b>분석 전</b><span>첫 분석 결과를 기다리는 중입니다.</span>`};
+// 국면(state/ladder.json)이 등급보다 늦게 도착하면 할 일 두 곳을 다시 쓴다
+function paintTodo(){const g=DATA.latest?.grade??null,t=fcTodo(g,LADDER);if(!t)return;
+  if($("todoTxt"))$("todoTxt").textContent=t.text;if($("todoNow"))$("todoNow").innerHTML=tnowHtml(g)}
 function renderTodo(g){
   const ck=ckGet(),open=k=>(g>=2&&(k==="supplies"||k==="family"))||(g>=3&&k==="air");
-  $("todo").innerHTML=`<div class="tnow"><b>현재 등급 <em>${g!=null?LABEL[g]:"분석 전"}</em> 기준</b><span>${g!=null?TODO[g]:"첫 분석 결과를 기다리는 중입니다."}</span></div>`
+  $("todo").innerHTML=`<div class="tnow" id="todoNow">${tnowHtml(g)}</div>`
     +(PREP_OK?"":`<div class="tnow"><span>행동요령을 불러오지 못했습니다. 새로고침하거나 <a href="${SHELTER_URL}" target="_blank" rel="noopener">국민재난안전포털</a>에서 확인하세요.</span></div>`)
     +PREP.map(([k,t,sub,isCk,list])=>`<details class="tsec" data-k="${k}"${open(k)?" open":""}><summary>${t}<small>${sub}</small></summary><ul>`
       +list.map((x,i)=>isCk?`<li class="ck"><label><input type="checkbox" data-ck="${k}${i}"${ck[k+i]?" checked":""}>${x}</label></li>`:`<li>${x}</li>`).join("")+`</ul></details>`).join("")
@@ -1026,6 +1028,7 @@ function renderWorld(latest){
 // ── 긴장 국면(10/19): state/ladder.json (diff_state.update_ladder). 단계 이름·충족 수만 — 지표·근거는 forecast.html#ladder ──
 function renderPhase(lad){
   if(lad&&(typeof lad!=="object"||Array.isArray(lad)))lad=null;
+  LADDER=lad;paintTodo();
   const tot=lad?.total||16;
   const html=lad&&typeof lad.stage==="number"
     ?`<span class="pk">긴장 국면</span><b class="${lad.stage>0?"up":""}">${esc(lad.stage_name||"")}</b><span class="pm">충족 ${(lad.met||[]).length}/${tot}${(lad.checking||[]).length?` · 확인 중 ${lad.checking.length}`:""}</span><span class="px">사다리 ›</span>`
@@ -1657,23 +1660,32 @@ $("srcReq").addEventListener("submit",async e=>{e.preventDefault();const f=e.tar
     if(!r.ok)throw r.status;m.textContent="요청을 보냈습니다. 검토 후 반영합니다.";f.reset();
     try{localStorage.setItem("srcReqAt",Date.now())}catch(_){}}
   catch(_){m.textContent="보내지 못했습니다. 잠시 뒤 다시 시도해 주세요."}finally{b.disabled=false}});
-// 흐름·예측 칸: 최근 30일 발사한 날 vs 평소 + 앞으로 90일 중 가까운 일정 2건(전체는 forecast.html). 매일 06:10 갱신되는 파일이라 한 번만 읽는다
-// 임박 신호(기사로 본 앞으로의 단서)는 유효분이 있을 때만 1줄 — 일정을 1건으로 줄여 칸 높이(200px)를 그대로 둔다. 없으면 아무것도 더하지 않는다
-Promise.all([fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.ok?r.json():null),
-  fetch(base+"signals.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)]).then(([doc,sg])=>{
+// 흐름·예측 칸(10/22 개편): 발사 확률(data/forecast_prob.json, 매일 06:10) · 시나리오 기울기(state/scenarios.json, 매시간) ·
+// 임박 신호가 있으면 신호 1줄, 없으면 가장 가까운 일정 1줄. 칸 높이(200/168/160px)는 그대로 — 줄 수(제목 2줄 + 목록 2줄)를 늘리지 않는다
+// 확률 자료가 없으면 예전처럼 최근 30일 발사 줄로 물러난다. 전체는 forecast.html
+const jsonOr=u=>fetch(u,{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null);
+const SCN_C=["--g0","--ice","--g2"];
+Promise.all([jsonOr("data/risk_calendar.json"),jsonOr(base+"signals.json"),jsonOr("data/forecast_prob.json"),jsonOr(base+"scenarios.json")]).then(([doc,sg,pb,sc])=>{
   if(!doc?.tempo){$("fc4").innerHTML=`<p class="empty">예측 자료를 불러오지 못했습니다 · <a href="forecast.html">예측 전체 ›</a></p>`;return}
   const tp=doc.tempo,hot=tp.ratio!=null&&tp.ratio>=2,up=fcUpcoming(doc),sig=fcSignals(sg,new Date(),!sample);
-  const sigLi=sig.length?`<li><span class="d">${sig[0].window?.start?fcMD(sig[0].window.start)+(sig[0].window.end&&sig[0].window.end!==sig[0].window.start?"~":""):"임박"}</span><span class="t"><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 사실 확인은 출처 원문으로 하세요.">AI</span>${esc(FC_SIG_KIND[sig[0].kind]||"신호")} · ${esc(sig[0].summary)}${sig.length>1?` <small>외 ${sig.length-1}건</small>`:""}</span></li>`:"";
-  $("fcr").innerHTML=`<span class="fct">최근 30일 발사 <b class="${hot?"":"q"}">${tp.last30}일</b> · 평소 ${tp.avg30}일<small>${hot?`평소의 ${tp.ratio}배 — 발사가 몰릴 땐 다음 발사도 가깝다`:"평소 범위"}</small></span>`+
-    `<ul class="fcu">${up.length?up.slice(0,sig.length?1:2).map(u=>`<li><span class="d">${fcMD(u.start)}${u.end?"~":""}</span><span class="t"><span class="${u.stat?.verdict==="more"?"hi":""}">${esc(u.name)}</span> <small>· ${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년 발사(평소 ${u.stat.expected})`:"과거 집계 없음"}</small></span></li>`).join(""):`<li><span class="d">—</span><span class="t">앞으로 ${doc.config?.horizon_days||90}일 안 주요 일정 없음</span></li>`}${sigLi}</ul>`;
-  // 예측 요약(큰 화면 넷째 칸) — 같은 자료를 자르지 않고: 발사 흐름 · 재발사 빈도 · 임박 신호 전부 · 앞으로 일정 전부. 문구는 forecast.html 과 같은 뜻
-  const rl=doc.relaunch,rk=k=>rl?.rate?.[k],lb=doc.config?.lookback,nY=lb?lb[1]-lb[0]+1:null,hz=doc.config?.horizon_days||90;
+  const p7=fcProb(pb,7),p30=fcProb(pb,30),tl=fcTilt(sc);
   const AIB=`<span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 사실 확인은 출처 원문으로 하세요.">AI</span>`;
-  $("fc4").innerHTML=`<div class="f4s"><div class="f4h">발사 흐름</div><dl class="f4k">`
-    +`<dt>최근 30일 발사</dt><dd><b class="${hot?"hot":""}">${tp.last30}일</b> <small>· 평소 ${tp.avg30}일${hot?` · ${tp.ratio}배`:" · 평소 범위"}</small></dd>`
-    +(rl&&rk("14")?`<dt>마지막 발사</dt><dd><b>${fcMD(rl.last)}</b> <small>· ${rl.since}일 전</small></dd>`
-      +`<dt>발사 뒤 14일 안 또 발사</dt><dd><b>${rk("14").pct}%</b> <small>· 7일 ${rk("7").pct}% · 30일 ${rk("30").pct}%</small></dd>`:"")
-    +`</dl><p class="f4n">${hot?"발사가 몰릴 땐 다음 발사도 가깝다. ":""}${nY?`지난 ${nY}년 `:"과거 "}실제 빈도이며 다음 발사의 예측 확률이 아니다.</p></div>`
+  const upLi=u=>`<li><span class="d">${fcMD(u.start)}${u.end?"~":""}</span><span class="t"><span class="${u.stat?.verdict==="more"?"hi":""}">${esc(u.name)}</span> <small>· ${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년 발사(평소 ${u.stat.expected})`:"과거 집계 없음"}</small></span></li>`;
+  const tiltLi=tl?`<li><span class="d">기울기</span><span class="t"><span style="color:var(${SCN_C[tl.tone]})">${esc(tl.name)} ${tl.on}/${tl.known}</span> <small>· ${tl.rows.filter(c=>c.id!==tl.id).map(c=>`${esc(c.name)} ${c.on}`).join(" · ")}</small></span></li>`:"";
+  const sigLi=sig.length?`<li><span class="d">${sig[0].window?.start?fcMD(sig[0].window.start)+(sig[0].window.end&&sig[0].window.end!==sig[0].window.start?"~":""):"임박"}</span><span class="t">${AIB}${esc(FC_SIG_KIND[sig[0].kind]||"신호")} · ${esc(sig[0].summary)}${sig.length>1?` <small>외 ${sig.length-1}건</small>`:""}</span></li>`:"";
+  const head=p7?`<span class="fct">7일 안 발사 <b class="q">${p7.pct}%</b>${p30?` · 30일 ${p30.pct}%`:""}<small>지난 1년 빈도${p7.actual!=null?` · 과거 이 수준일 때 실제 <span style="color:var(--amber)">${p7.actual}%</span>`:""}</small></span>`
+    :`<span class="fct">최근 30일 발사 <b class="${hot?"":"q"}">${tp.last30}일</b> · 평소 ${tp.avg30}일<small>${hot?`평소의 ${tp.ratio}배 — 발사가 몰릴 땐 다음 발사도 가깝다`:"평소 범위"}</small></span>`;
+  const rest=[tiltLi,sigLi||(up.length?upLi(up[0]):"")].filter(Boolean);
+  $("fcr").innerHTML=head+`<ul class="fcu">${rest.join("")||`<li><span class="d">—</span><span class="t">앞으로 ${doc.config?.horizon_days||90}일 안 주요 일정 없음</span></li>`}</ul>`;
+  // 예측 요약(큰 화면 넷째 칸): 발사 확률 → 시나리오 → 임박 신호 전부 → 앞으로 일정 전부. 문구는 forecast.html 과 같은 뜻
+  const hz=doc.config?.horizon_days||90,rl=doc.relaunch;
+  const pdd=p=>p?`<b>${p.pct}%</b> <small>· 과거 이 수준일 때 실제 ${p.actual!=null?`<span style="color:var(--amber)">${p.actual}%</span>`:"기록 없음"}</small>`:`<small>자료 없음</small>`;
+  $("fc4").innerHTML=`<div class="f4s"><div class="f4h">발사 확률<small>지난 1년 빈도 · ${pb?.as_of?fcMD(pb.as_of)+" 자료":"자료 없음"}</small></div><dl class="f4k">`
+    +`<dt>7일 안</dt><dd>${pdd(p7)}</dd><dt>30일 안</dt><dd>${pdd(p30)}</dd>`
+    +`<dt>최근 30일 발사</dt><dd><b class="${hot?"hot":""}">${tp.last30}일</b> <small>· 평소 ${tp.avg30}일${rl?.last?` · 마지막 ${fcMD(rl.last)}`:""}</small></dd>`
+    +`</dl></div>`
+    +(tl?`<div class="f4s"><div class="f4h">시나리오<small>확률 아님 · 지표 충족 수</small></div><dl class="f4k">`
+      +tl.rows.map(c=>`<dt style="color:var(${SCN_C[c.tone]})">${esc(c.name)}${c.id===tl.id?" ◀":""}</dt><dd><b>${c.on}</b><small>/${c.known} · ${esc(c.desc)}</small></dd>`).join("")+`</dl></div>`:"")
     +`<div class="f4s"><div class="f4h">임박 신호<small>${sig.length}건 · 기사로 본 앞으로의 단서</small></div>`
     +(sig.length?`<ul class="f4g">${sig.map(s=>`<li><span class="d">${esc(fcSigWhen(s))}</span><span class="t" title="${esc(s.summary)}">${AIB}${esc(FC_SIG_KIND[s.kind]||"신호")} · ${esc(s.summary)}</span></li>`).join("")}</ul>`
       :`<p class="f4e">지금 유효한 신호 없음</p>`)+`</div>`
@@ -1681,7 +1693,7 @@ Promise.all([fetch("data/risk_calendar.json",{cache:"no-store"}).then(r=>r.ok?r.
     +(up.length?up.map(u=>{const hi=u.stat?.verdict==="more"?" hi":"";
       return `<li title="${esc(fcStatText(u.stat))}"><span class="d">${fcMD(u.start)}${u.end?"–"+fcMD(u.end):""}</span><span class="t${hi}">${esc(u.name)}</span><span class="s${u.stat?hi:" no"}">${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년`:"집계 없음"}</span></li>`}).join("")
       :`<li><span class="d">—</span><span class="t">주요 일정 없음</span><span class="s"></span></li>`)+`</ul></div>`;
-}).catch(()=>{});
+}).catch(e=>console.error("forecast strip",e));
 // 누적 방문자(GoatCounter, 쿠키 없음 · 같은 사람의 새로고침은 세지 않음) — 1분마다 다시 읽는다.
 // 공개 카운터(counter/TOTAL.json)는 CDN 이 몇 시간 캐시해서(10/20 실측 age 19438s · 121 vs 실제 134) Worker /views 가 인증 API 로 대신 읽는다(1분 캐시).
 // Worker 가 API 에 실패하면 공개 카운터(옛 값)로 물러난다 → 화면 숫자는 줄지 않게 큰 값만 받는다

@@ -1595,9 +1595,9 @@
   }
  },
  "tempo": {
-  "last30": 5,
+  "last30": 4,
   "avg30": 1.4,
-  "ratio": 3.6,
+  "ratio": 2.9,
   "recent": [
    {
     "date": "2026-10-15",
@@ -1622,12 +1622,6 @@
     "event": "Intermediate-range Ballistic Missile Launch",
     "event_ko": "중거리 탄도미사일 발사",
     "src": "https://www.koreajoongangdaily.com/korea/kim-jongun-watches-missile-drill-with-daughter-vows-to-rapidly-advance-nuclear-war-deterrentnbsp/12903879 "
-   },
-   {
-    "date": "2026-09-22",
-    "event": "Multiple Launch Rocket System (MLRS) Test",
-    "event_ko": "다연장로켓 시험",
-    "src": "https://www.chosun.com/english/national-en/2026/09/24/RJQMLNFDGVHBRHXSLJLSDV67JQ/ "
    }
   ],
   "per_year": {
@@ -1761,7 +1755,7 @@
   "basis": "CSIS 미사일·핵 도발 날짜, 평소 = 2016~2025 평균"
  },
  "data": {
-  "updated_at": "2026-10-22T04:59:01+00:00",
+  "updated_at": "2026-10-22T23:57:35+00:00",
   "csis_rows": 509,
   "csis_last": "2026-10-15",
   "cns_days": 153,
@@ -2022,7 +2016,7 @@
    }
   },
   "last": "2026-10-15",
-  "since": 7,
+  "since": 8,
   "basis": "발사한 날 228일(2006~2025) 각각의 다음 발사까지 간격"
  },
  "signal_check": {

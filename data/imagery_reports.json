@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-22T04:59:06.594824+00:00",
+ "fetched_at": "2026-10-22T23:57:43.123958+00:00",
  "note": "제목·링크·날짜만. 본문·이미지 전재 금지(각 사이트 이용 조건)",
  "sources": {
   "38north": {
@@ -16,6 +16,12 @@
   }
  },
  "items": [
+  {
+   "source": "38north",
+   "title": "Across The Border: An Area Awaiting Rural Development",
+   "link": "https://www.38north.org/2026/10/across-the-border-an-area-awaiting-rural-development/",
+   "date": "2026-10-22T14:19:09+00:00"
+  },
   {
    "source": "38north",
    "title": "At Long Last, Trucks Traverse New DPRK-Friendship Bridge",

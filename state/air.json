@@ -1,17 +1,31 @@
 {
- "at": "2026-10-21T22:45:51+00:00",
- "south": 51,
- "area": 53,
- "baseline": null,
- "ratio": null,
- "samples": 2,
+ "at": "2026-10-22T00:06:20+00:00",
+ "south": 59,
+ "area": 74,
+ "baseline": 61,
+ "ratio": 0.97,
+ "samples": 3,
  "mil": [
   {
-   "type": "H60",
+   "type": "P8",
+   "name": "P-8 초계기",
+   "call": "",
+   "lat": 37.41,
+   "lon": 126.32
+  },
+  {
+   "type": "R135",
    "name": null,
-   "call": "STARS02",
-   "lat": 37.53,
-   "lon": 126.99
+   "call": "COBRA45",
+   "lat": 34.88,
+   "lon": 126.86
+  },
+  {
+   "type": "KC2",
+   "name": null,
+   "call": "GRACE03",
+   "lat": 33.71,
+   "lon": 131.74
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

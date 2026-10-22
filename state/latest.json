@@ -13,15 +13,15 @@
       "North Korea ammunition shipments Russia"
     ],
     "border_clash": [
-      "목함지뢰 발견 해안 DMZ 귀순 합참",
-      "North Korea Reuters Kim Yo Jong loudspeakers border"
+      "목함지뢰 발견 DMZ 귀순 합참",
+      "North Korea Reuters loudspeakers border Kim Yo Jong"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "북러 군사협력 파병",
+      "북러 군사협력 파병 북한 병력 이동 핵",
       "North Korea troops Russia"
     ],
     "parade_massing": [
@@ -41,15 +41,16 @@
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261022506761",
+    "https://www.segye.com/newsView/20261022506928",
     "https://www.segye.com/newsView/20261022504448",
     "https://www.segye.com/newsView/20261021524453",
     "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports"
+    "https://www.yna.co.kr/view/AKR20261022011400504",
+    "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "김여정의 전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기 예고가 이어지나 신규 교전·발사·시한부 최후통첩은 없다. 직전 회차와 같은 말 공방 수준이다.",
+  "overall_summary": "김여정이 22일 조선중앙통신으로 전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기를 재차 밝혔고 유엔에서도 대남 비난을 이어갔으나 신규 교전·발사·시한부 최후통첩은 없다. 직전 회차와 같은 말 공방 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -81,23 +82,23 @@
       "region": "DMZ·MDL 남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "김여정이 21일 남부 국경 요새화 현장 시찰 후 10월 중 전 국경선 확성기 가동을 예고했고, 22일 조선중앙통신 보도로 「전 국경선 새 대응수단 임무대기·확성기 수일 내 대기」를 밝혔다(말 공방, 신규 교전·시한부 최후통첩 없음).",
+      "summary": "김여정이 22일 조선중앙통신으로 「전 국경선 새 대응수단 임무대기·확성기 수일 내 대기」를 재차 밝혔고 북측은 유엔 총회 제1위원회에서도 한국군 경고사격을 비난했다(말 공방, 신규 교전·시한부 최후통첩 없음).",
       "meaning": "요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261022504448"
+          "url": "https://www.segye.com/newsView/20261022506761"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261022011400504"
         },
         {
           "name": "국방일보",
           "tier": "A",
           "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261021524453"
         }
       ],
       "confidence": "중간",
@@ -111,7 +112,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-22T01:11:17+00:00",
+  "checked_at": "2026-10-22T02:10:19+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

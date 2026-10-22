@@ -1,20 +1,20 @@
 {
- "fetched_at": "2026-10-22T18:52:00+00:00",
+ "fetched_at": "2026-10-22T20:02:08+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-22T18:52:00+00:00",
+ "last_ok_at": "2026-10-22T20:02:08+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1138,
-  "hits": 72,
+  "hits": 75,
   "clusters": 56,
   "by_group": {
-   "border": 34,
-   "drone_balloon": 31,
+   "border": 35,
+   "drone_balloon": 32,
    "mine": 21,
-   "fire": 11,
+   "fire": 10,
    "spy": 1,
    "defect": 3,
    "alert": 2,
@@ -32,13 +32,13 @@
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 9
+   "hits": 10
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 12
+   "hits": 16
   },
   "국민일보": {
    "feeds": 2,
@@ -62,24 +62,24 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "border": {
-   "clusters": 34,
+   "clusters": 35,
    "max_independent": 3,
-   "latest": "2026-10-22T18:52:00+00:00"
+   "latest": "2026-10-22T20:02:08+00:00"
   },
   "drone_balloon": {
-   "clusters": 31,
+   "clusters": 32,
    "max_independent": 2,
-   "latest": "2026-10-22T18:52:00+00:00"
+   "latest": "2026-10-22T20:02:08+00:00"
   },
   "mine": {
    "clusters": 21,
    "max_independent": 3,
-   "latest": "2026-10-22T18:52:00+00:00"
+   "latest": "2026-10-22T20:02:08+00:00"
   },
   "fire": {
-   "clusters": 11,
+   "clusters": 10,
    "max_independent": 2,
-   "latest": "2026-10-22T18:52:00+00:00"
+   "latest": "2026-10-22T20:02:08+00:00"
   },
   "spy": {
    "clusters": 1,
@@ -165,7 +165,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 5
+   "hits": 6
   },
   {
    "outlet": "동아일보",
@@ -173,7 +173,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 10
+   "hits": 11
   },
   {
    "outlet": "동아일보",
@@ -181,7 +181,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 2
+   "hits": 5
   },
   {
    "outlet": "국민일보",

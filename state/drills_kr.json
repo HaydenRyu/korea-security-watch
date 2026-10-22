@@ -1,14 +1,14 @@
 {
  "source": "접경 지자체 공지(철원 RSS · 고성 공지 · 파주 새소식+HWP · 화천 공지+PDF) — 군 사격훈련 주민 안내",
  "note": "참고 자료 · 등급 판정과 무관. 일정은 부대 사정·기상으로 바뀔 수 있다.",
- "fetched_at": "2026-10-22T11:32:37.205569+00:00",
+ "fetched_at": "2026-10-22T15:50:21.553212+00:00",
  "sources": {
   "cheorwon": {
    "name": "철원군",
    "page": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-22T11:32:37.205569+00:00",
+   "last_ok_at": "2026-10-22T15:50:21.553212+00:00",
    "count": 10
   },
   "goseong": {
@@ -16,7 +16,7 @@
    "page": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/list.do",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-22T11:32:37.205569+00:00",
+   "last_ok_at": "2026-10-22T15:50:21.553212+00:00",
    "count": 9
   },
   "paju": {
@@ -24,14 +24,14 @@
    "page": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=2001",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-22T11:32:37.205569+00:00",
+   "last_ok_at": "2026-10-22T15:50:21.553212+00:00",
    "count": 8
   },
   "hwacheon": {
    "name": "화천군",
    "page": "https://www.ihc.go.kr/www/selectBbsNttList.do?bbsNo=11&key=2338",
    "status": "error",
-   "status_detail": "RemoteDisconnected: Remote end closed connection without response",
+   "status_detail": "URLError: <urlopen error timed out>",
    "last_ok_at": "2026-10-21T15:33:25.555755+00:00",
    "count": 6
   }
@@ -91,24 +91,6 @@
    "active_now": true
   },
   {
-   "source": "paju",
-   "title": "2026년 10월 포병훈련장 사격일정 사전 알림",
-   "url": "https://www.paju.go.kr/user/board/BD_board.view.do?bbsCd=2001&seq=20261012130615737",
-   "posted": "2026-10-12",
-   "body": "2026년도 10월 포병훈련장 사격일정을 붙임과 같이 알려드리오니,\n현지 주민 및 업무 관련자들께서는 필히 참고하시기 바랍니다.\n붙임 1. 훈련계획 1부. 끝.\n'26년 10월 포병사격훈련 계획 전파\n□강북훈련장\n구 분\n훈련장명\n지 역\n훈련내용\n훈련부대\n사격계획\n비고\n일자\n시간\n1\n강북훈련장\n파주시 진동면\n동파리\n포병사격\n8958·6536부대\n'26.10.22.(목)\n08:00~12:00",
-   "unit": "",
-   "first": "2026-10-22",
-   "last": "2026-10-22",
-   "days": [
-    "2026-10-22"
-   ],
-   "places": [
-    "강북훈련장"
-   ],
-   "arms": [],
-   "active_now": true
-  },
-  {
    "source": "goseong",
    "title": "'26년 11월 제56보병여단 포병사격 훈련 일정 안내",
    "url": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/view.do?nttId=B000000081005Vk5eG7c",
@@ -126,6 +108,24 @@
    "arms": [
     "57여발"
    ],
+   "active_now": false
+  },
+  {
+   "source": "paju",
+   "title": "2026년 10월 포병훈련장 사격일정 사전 알림",
+   "url": "https://www.paju.go.kr/user/board/BD_board.view.do?bbsCd=2001&seq=20261012130615737",
+   "posted": "2026-10-12",
+   "body": "2026년도 10월 포병훈련장 사격일정을 붙임과 같이 알려드리오니,\n현지 주민 및 업무 관련자들께서는 필히 참고하시기 바랍니다.\n붙임 1. 훈련계획 1부. 끝.\n'26년 10월 포병사격훈련 계획 전파\n□강북훈련장\n구 분\n훈련장명\n지 역\n훈련내용\n훈련부대\n사격계획\n비고\n일자\n시간\n1\n강북훈련장\n파주시 진동면\n동파리\n포병사격\n8958·6536부대\n'26.10.22.(목)\n08:00~12:00",
+   "unit": "",
+   "first": "2026-10-22",
+   "last": "2026-10-22",
+   "days": [
+    "2026-10-22"
+   ],
+   "places": [
+    "강북훈련장"
+   ],
+   "arms": [],
    "active_now": false
   },
   {

@@ -1,48 +1,37 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 전방 병력 증강",
-      "North Korea troop buildup DMZ"
+      "북한 전방 병력 증강(수집기 묶음)"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea nuclear Yongbyon missile launch troops"
+      "North Korea Reuters missile troops October 22 2026"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipments Russia"
+      "North Korea Reuters missile troops October 22 2026"
     ],
     "border_clash": [
-      "목함지뢰 발견 해안 DMZ 귀순",
-      "North Korea Reuters Kim Yo Jong loudspeakers border"
+      "목함지뢰 발견 해안 귀순 DMZ"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "북러 군사협력 파병 북한 병력",
-      "North Korea troops Russia"
+      "북러 군사협력 파병 North Korea Russia troops new"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "North Korea Reuters missile troops October 22 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout wartime"
+      "수집기 묶음 확인"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향",
-      "South Korea Jindo dog alert DEFCON"
+      "진돗개 발령 데프콘 상향 합참"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261022506761",
     "https://www.segye.com/newsView/20261022506928",
-    "https://www.segye.com/newsView/20261021524453",
-    "https://www.yna.co.kr/view/AKR20261022097300504",
-    "https://www.yna.co.kr/view/AKR20261022011400504",
     "https://www.nknews.org/"
   ],
   "overall_summary": "김여정이 22일 조선중앙통신으로 전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기를 재차 밝혔고, 정부는 우발충돌 위험을 지적하며 대화를 촉구했다. 신규 교전·발사·시한부 최후통첩은 없어 직전 회차와 같은 말 공방 수준이다.",
@@ -91,9 +80,9 @@
           "url": "https://www.segye.com/newsView/20261022506928"
         },
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261022097300504"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
@@ -107,7 +96,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-22T03:11:04+00:00",
+  "checked_at": "2026-10-22T04:10:57+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

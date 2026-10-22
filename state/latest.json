@@ -13,17 +13,15 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "귀순 NLL 북한",
-      "North Korea Kim Yo Jong loudspeaker border Reuters"
+      "지뢰 발견 귀순 NLL 합참",
+      "North Korea Reuters border loudspeaker"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 서북도서",
-      "해킹 개인정보 유출 사이버 공격 10월 22일"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "북러 군사협력 North Korea troops Russia"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -41,9 +39,11 @@
   "opened": [
     "https://www.segye.com/newsView/20261022520485",
     "https://www.segye.com/newsView/20261022521984",
-    "https://www.nknews.org/"
+    "https://www.segye.com/newsView/20261022520469",
+    "https://www.segye.com/newsView/20261022520427",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "김여정이 새 대응수단·확성기 수일 내 가동을 재차 예고하고 정부는 안보리 의장 서한을 보내기로 하는 등 말과 외교전이 이어지나 신규 교전이나 병력·핵 징후는 없다. 직전 회차와 같은 주의 수준이다.",
+  "overall_summary": "김여정의 새 대응수단·확성기 수일 내 가동 예고와 정부의 안보리 의장 서한 발송 등 말과 외교전이 이어지나 신규 교전이나 병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 주의 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -52,6 +52,22 @@
       "status": "none"
     },
     "logistics": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none",
+      "summary": "이번 회차 검색에서 24시간 안의 신규 GPS 교란·국내 해킹 보도를 확인하지 못함."
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
       "status": "none"
     },
     "border_clash": {
@@ -80,41 +96,36 @@
         "신규 교전·사격 보도 없음"
       ],
       "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "none",
-      "summary": "이번 회차 원문 재확인 없이 근거 부족 — 북한 웹사이트 장애 건은 10/20 보도로 24시간 경과, 당일 국내 해킹 신규 보도 확인 안 됨"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-10-22T12:19:02+00:00",
+  "checked_at": "2026-10-22T13:15:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "러·우·미 3국 고위급 협의 11월 재개 가능성",
-      "summary": "푸틴 대통령이 위트코프 미 특사와 회담하고 11월 3국 고위급 협의 재개 용의를 밝혔다고 NHK가 보도했다.",
-      "link_korea": "러시아 전쟁 종결 논의는 북러 군사협력과 북한군 파병의 향방에 영향을 줄 수 있다.",
-      "region": "러시아·우크라이나",
+      "title": "키이우 미사일 공격, 러시아는 미국의 우크라이나 평화협상 재개 요청 수용",
+      "summary": "BBC에 따르면 러시아가 미국의 협상 재개 요청에 동의한 직후 키이우에 미사일이 떨어졌다.",
+      "link_korea": "러-우 종전 협의 향방은 북러 군사협력과 북한군 파병에 영향을 줄 수 있다.",
+      "region": "우크라이나",
       "source": {
-        "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261022de63271",
-        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "사우디 동부 공항 공격으로 2명 사망",
+      "summary": "BBC는 사우디아라비아 동부 공항에 대한 공격으로 2명이 숨졌다고 당국 발표를 전했다.",
+      "link_korea": "중동 분쟁 확산은 미군 전략자산의 한반도 가용성과 에너지 시장에 영향을 줄 수 있다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cqwy71ww156ro",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "러-우 종전 협의 동향이 북러 협력에 미칠 영향이 관건이다.",
-  "world_at": "2026-10-22T01:11:17+00:00"
+  "world_context": "러-우 협상과 중동 분쟁 동향이 북러 협력과 미군 전력 배치에 미칠 영향이 관건이다.",
+  "world_at": "2026-10-22T13:15:25+00:00"
 }

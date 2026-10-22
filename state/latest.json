@@ -14,11 +14,11 @@
     ],
     "border_clash": [
       "목함지뢰 발견 해안 DMZ 귀순 합참",
-      "North Korea Reuters October 22 2026"
+      "North Korea Reuters Kim Yo Jong loudspeakers border"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "북러 군사협력 파병",
@@ -46,9 +46,10 @@
     "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml"
+    "https://www.nhk.or.jp/rss/news/cat6.xml",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports"
   ],
-  "overall_summary": "김여정의 확성기·새 대응수단 임무대기 예고가 이어졌으나 신규 교전·발사·시한부 최후통첩은 없다. 직전 회차와 같은 말 공방 수준이다.",
+  "overall_summary": "김여정의 전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기 예고가 이어지나 신규 교전·발사·시한부 최후통첩은 없다. 직전 회차와 같은 말 공방 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -110,7 +111,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-22T00:11:05+00:00",
+  "checked_at": "2026-10-22T01:11:17+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -128,5 +129,5 @@
     }
   ],
   "world_context": "러-우 종전 협의 동향이 북러 협력에 미칠 영향이 관건이다.",
-  "world_at": "2026-10-22T00:11:05+00:00"
+  "world_at": "2026-10-22T01:11:17+00:00"
 }

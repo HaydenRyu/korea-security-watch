@@ -5,24 +5,24 @@
       "North Korea troop buildup border"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri satellite imagery October 2026",
-      "북한 핵 영변 풍계리"
+      "북한 핵 영변 풍계리",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 탄약 군수 수송",
       "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 국경선 새 대응수단 확성기 합참 발표",
+      "북한 김여정 확성기 국경선 합참 발표",
       "목함지뢰 해안 발견 DMZ 귀순 NLL",
-      "North Korea Kim Yo Jong border loudspeakers Reuters"
+      "North Korea Reuters Kim Yo Jong loudspeaker border mine"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "북한 GPS 교란 서북도서 10월",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "North Korea Russia troops military cooperation",
+      "North Korea Russia troops military cooperation October 2026",
       "북러 군사협력"
     ],
     "parade_massing": [
@@ -38,27 +38,21 @@
       "South Korea government warning evacuation"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속 간첩 혐의 북한 공작",
       "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan 东部战区 台岛 联合演习"
-    ],
-    "linkage:korea": [
-      "North Korea troops Russia"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261022520485",
     "https://www.segye.com/newsView/20261022521984",
+    "https://www.segye.com/newsView/20261022520427",
     "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "김여정의 새 대응수단·확성기 수일 내 대기 예고와 정부의 안보리 서한·NSC 회의 등 말과 외교전이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 주의 수준이다.",
+  "overall_summary": "김여정의 새 대응수단·확성기 수일 내 대기 예고와 정부의 안보리 서한 발송 등 말과 외교전이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 주의 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -123,7 +117,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-22T19:12:56+00:00",
+  "checked_at": "2026-10-22T20:10:54+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -19,11 +19,11 @@
     ],
     "electronic_cyber": [
       "북한 GPS 교란 서북도서",
-      "북한 해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea troops Russia missile transfer October 2026",
-      "북러 군사협력"
+      "북러 군사협력",
+      "North Korea troops Russia"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -43,11 +43,12 @@
     "https://www.segye.com/newsView/20261022520485",
     "https://www.segye.com/newsView/20261022521984",
     "https://www.segye.com/newsView/20261022520469",
+    "https://www.nknews.org/",
     "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/",
     "https://www.nknews.org/pro/nearly-all-north-korean-websites-go-offline-in-mysterious-outage/",
-    "https://www.nknews.org/"
+    "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "김여정의 확성기·새 대응수단 예고와 정부의 안보리 서한 등 말과 외교전이 이어지나 신규 교전이나 병력·핵 징후는 없다. 직전 회차와 같은 경계 수준이다.",
+  "overall_summary": "김여정의 새 대응수단·확성기 가동 예고와 정부의 안보리 서한 등 말과 외교전이 이어지나 신규 교전이나 병력·핵 징후는 없다. 직전 회차와 같은 경계 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -126,7 +127,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-22T10:10:34+00:00",
+  "checked_at": "2026-10-22T11:13:01+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,5 +1,5 @@
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -86,3 +86,43 @@ def test_event_ko_specific_before_general():
     assert rc.event_ko("Multiple Launch Rocket System (MLRS) Test") == "다연장로켓 시험"
     assert rc.event_ko("Ballistic Missile Launch") == "탄도미사일 발사"
     assert rc.event_ko("Something Else") is None and rc.event_ko(None) is None
+
+
+def _ds(*iso):
+    return sorted(date.fromisoformat(x) for x in iso)
+
+
+def test_hit_is_after_start_within_h():
+    ds = _ds("2026-01-10")
+    assert rc._hit(ds, date(2026, 1, 3), 7) and not rc._hit(ds, date(2026, 1, 2), 7)
+    assert not rc._hit(ds, date(2026, 1, 10), 7)  # 시작일 당일은 안 센다(다음 날부터)
+
+
+def test_year_rate_counts_only_finished_windows():
+    ds = _ds("2025-12-31")
+    k, n = rc.year_rate(ds, date(2026, 1, 1), 7)
+    assert n == 359 and k == 2  # 끝이 1/1 이하인 기간만 — 12/31 을 품는 건 12/24·12/25 시작 2개
+
+
+def test_track_record_bins_and_reports_actual():
+    ds = sorted(date(2010, 1, 1) + timedelta(d) for d in range(0, 6000, 10))  # 열흘마다 발사 → 7일 기간 70%
+    tr = rc.track_record(ds, 0.7, 7, 2012, date(2015, 6, 1))
+    assert (tr["lo"], tr["hi"]) == (0.6, 0.8) and tr["n"] > 1000 and 0.6 <= tr["actual"] <= 0.8
+
+
+def test_ledger_appends_once_per_day_and_scores_after_window():
+    ds = _ds("2026-10-20")
+    rows = rc.update_ledger([], {7: 0.4, 30: 0.9}, date(2026, 10, 15), ds, date(2026, 10, 15))
+    rows = rc.update_ledger(rows, {7: 0.5, 30: 0.9}, date(2026, 10, 15), ds, date(2026, 10, 15))
+    assert len(rows) == 2 and rows[0]["p"] == 0.4 and all(r["hit"] is None for r in rows)
+    rows = rc.update_ledger(rows, {7: 0.4, 30: 0.9}, date(2026, 10, 23), ds, date(2026, 10, 22))
+    r7 = next(r for r in rows if r["date"] == "2026-10-15" and r["days"] == 7)
+    assert r7["hit"] is True  # 10/16~10/22 안 10/20 발사, DB 가 10/22 까지라 채점
+    assert next(r for r in rows if r["date"] == "2026-10-15" and r["days"] == 30)["hit"] is None
+
+
+def test_ledger_summary_brier():
+    s = rc.ledger_summary([{"date": "2026-10-01", "days": 7, "p": 0.8, "hit": True},
+                           {"date": "2026-10-02", "days": 7, "p": 0.2, "hit": False},
+                           {"date": "2026-10-03", "days": 7, "p": 0.5, "hit": None}])
+    assert s == {"since": "2026-10-01", "scored": 2, "brier": 0.04}

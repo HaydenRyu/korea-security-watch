@@ -581,14 +581,15 @@ LADDER_SOURCES_MAX = 5
 
 
 def ladder_catalog(path: Path = LADDER_FILE) -> dict:
-    """{ids: {id: stage}, names: {stage: 이름}, total} — 읽을 수 없으면 빈 카탈로그."""
+    """{ids: {id: stage}, names: {stage: 이름}, labels: {id: 지표 이름}, total} — 읽을 수 없으면 빈 카탈로그."""
     doc = _load_safe(path)
     try:
         ids = {i["id"]: int(i["stage"]) for i in doc["indicators"] if isinstance(i.get("id"), str)}
         names = {int(s["n"]): str(s["name"]) for s in doc.get("stages") or []}
-        return {"ids": ids, "names": names, "total": len(ids)}
+        labels = {i["id"]: str(i.get("label") or i["id"]) for i in doc["indicators"] if isinstance(i.get("id"), str)}
+        return {"ids": ids, "names": names, "labels": labels, "total": len(ids)}
     except Exception:  # noqa: BLE001
-        return {"ids": {}, "names": {}, "total": 0}
+        return {"ids": {}, "names": {}, "labels": {}, "total": 0}
 
 
 def clean_ladder(run: dict, catalog: dict) -> dict:
@@ -682,6 +683,88 @@ def update_ladder(run: dict, doc: dict | None, now: str, catalog: dict | None = 
                "stage": stage, "stage_name": names.get(stage, ""), "total": len(ids), "met": met, "checking": checking,
                "indicators": inds, "history": hist[-LADDER_HISTORY_MAX:]}
         return out
+    except Exception as e:  # noqa: BLE001
+        return {**doc, "updated_at": now, "error": str(e)[:120]}
+
+
+# ── 시나리오(10/22, 확률 없음 · 등급·알림과 무관) ─────────────────────────────────────────
+# 완화·현상 유지·격화 3줄. 시나리오마다 지표 충족 수만 센다. 지금 기울기 = 확인된 지표 중 충족 비율이 가장 높은 시나리오
+# (동률·전부 0이면 현상 유지). 격화 = 긴장 국면 지표 그대로(met), 현상 유지 = 기존 값에서 코드 판정,
+# 완화 = 루틴의 calm(대화 제안 등, 열어 본 출처 필수, 마지막 확인 뒤 72시간 만료) + 30일간 발사 없음.
+CALM = {"dialogue_offer": "남북·북미 대화 제안·수용", "channel_restored": "통신선·연락채널 복원",
+        "provocation_halt": "확성기·오물풍선 중단 발표", "talks_scheduled": "고위급 회담 일정 공표"}
+SCEN_HISTORY_MAX = 60  # 하루 한 줄 — 화면의 「14일 전 대비」에만 쓴다
+CAL_FILE = ROOT / "data" / "risk_calendar.json"
+
+
+def clean_calm(run: dict) -> dict:
+    """run.calm = [{id, summary, sources}] → {id: {summary, sources}}. 열어 보지 않은 출처는 버리고, 출처가 없으면 버린다."""
+    out = {}
+    raw = run.get("calm") if isinstance(run, dict) else None
+    if not isinstance(raw, list):
+        return out
+    opened = _opened(run)
+    for r in raw:
+        if not isinstance(r, dict) or r.get("id") not in CALM:
+            continue
+        srcs = _clean_sources(r.get("sources"), opened)
+        if srcs:
+            out[r["id"]] = {"summary": str(r.get("summary") or "")[:200], "sources": srcs}
+    return out
+
+
+def _ind(i: str, label: str, on: bool | None, note: str = "") -> dict:
+    return {"id": i, "label": label, "state": "pre" if on is None else ("on" if on else "off"), "note": note}
+
+
+def update_scenarios(run: dict, doc: dict | None, now: str, latest: dict | None, ladder: dict | None,
+                     signals: dict | None, cal: dict | None, catalog: dict | None = None) -> dict:
+    """state/scenarios.json = {version, updated_at, tilt, scenarios[{id,name,tone,desc,indicators[],on,known}],
+    calm{id: {...,first_seen,last_seen}}, calm_judged_at, history[{date,tilt,on{}}]}. 어떤 입력에도 예외를 내지 않는다."""
+    doc = doc if isinstance(doc, dict) else {}
+    try:
+        t_now = _dt(now) or datetime.now(timezone.utc)
+        run = run if isinstance(run, dict) else {}
+        calm = {k: dict(v) for k, v in (doc.get("calm") or {}).items() if k in CALM and isinstance(v, dict)}
+        for k, row in clean_calm(run).items():
+            calm[k] = {**row, "first_seen": (calm.get(k) or {}).get("first_seen") or now, "last_seen": now}
+        calm = {k: v for k, v in calm.items() if _ladder_alive(v, t_now)}
+        judged = now if "calm" in run else doc.get("calm_judged_at")
+        fresh = bool(_dt(judged) and t_now - _dt(judged) <= timedelta(hours=CRISIS_FLOOR_H))
+        tp = (cal or {}).get("tempo") or {}
+        recent = tp.get("recent") or []
+        last30 = tp.get("last30")
+        calm_ind = [_ind(k, v, (k in calm) if fresh else None, (calm.get(k) or {}).get("summary", "")) for k, v in CALM.items()]
+        calm_ind.append(_ind("no_launch_30", "30일간 발사 없음", None if last30 is None else last30 == 0,
+                             f"마지막 발사 {recent[0]['date'][5:].replace('-', '/')}" if recent and recent[0].get("date") else ""))
+        ratio, grade = tp.get("ratio"), (latest or {}).get("grade")
+        nsig = len((signals or {}).get("active") or []) if isinstance(signals, dict) else None
+        stage = (ladder or {}).get("stage") if isinstance(ladder, dict) else None
+        hold_ind = [
+            _ind("tempo_up", "최근 30일 발사가 평소 이상", None if ratio is None else ratio >= 1, f"평소의 {ratio}배" if ratio is not None else ""),
+            _ind("signal", "임박 신호 1건 이상", None if nsig is None else nsig >= 1, f"{nsig}건" if nsig is not None else ""),
+            _ind("grade", "상황판 주의 이상", None if grade is None else grade >= 1, GRADE_LABEL.get(grade, "") if grade is not None else ""),
+            _ind("ladder_low", "긴장 국면 0~1단계", None if stage is None else stage <= 1, (ladder or {}).get("stage_name", "")),
+        ]
+        cat = catalog if catalog is not None else ladder_catalog()
+        met = set((ladder or {}).get("met") or []) if isinstance(ladder, dict) else set()
+        names = {i: n for i, n in (cat.get("labels") or {}).items()}
+        esc_ind = [_ind(i, names.get(i, i), None if stage is None else i in met) for i in (cat.get("ids") or {})]
+        scen = []
+        for sid, name, tone, desc, ind in (("calm", "완화", 0, "대화 재개·접경 긴장 완화", calm_ind),
+                                           ("hold", "현상 유지", 1, "정례 수준의 반복 도발", hold_ind),
+                                           ("esc", "격화", 2, "국지 충돌·대치로 번짐", esc_ind)):
+            known = [x for x in ind if x["state"] != "pre"]
+            scen.append({"id": sid, "name": name, "tone": tone, "desc": desc, "indicators": ind,
+                         "on": sum(x["state"] == "on" for x in ind), "known": len(known)})
+        rate = {s["id"]: (s["on"] / s["known"] if s["known"] else 0.0) for s in scen}
+        top = max(rate.values())
+        tilt = "hold" if top == 0 or rate["hold"] == top else max(rate, key=rate.get)
+        day = (t_now + timedelta(hours=9)).date().isoformat()
+        hist = [h for h in doc.get("history") or [] if isinstance(h, dict) and h.get("date") != day]
+        hist.append({"date": day, "tilt": tilt, "on": {s["id"]: s["on"] for s in scen}})
+        return {"version": 1, "updated_at": now, "tilt": tilt, "scenarios": scen, "calm": calm,
+                "calm_judged_at": judged, "history": hist[-SCEN_HISTORY_MAX:]}
     except Exception as e:  # noqa: BLE001
         return {**doc, "updated_at": now, "error": str(e)[:120]}
 
@@ -947,7 +1030,7 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     notify = notify or released or calmed
 
     new_latest = {**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)}
-    for k in ("unresolved", "floor", "signals", "ladder", "factors", "linkage"):  # 참고 블록은 state/signals·ladder·factors·linkage.json 에 따로 쌓는다
+    for k in ("unresolved", "floor", "signals", "ladder", "factors", "linkage", "calm"):  # 참고 블록은 state/signals·ladder·factors·linkage·scenarios.json 에 따로 쌓는다
         new_latest.pop(k, None)
     unres = unresolved_keys(items)
     if unres:
@@ -1042,6 +1125,14 @@ def main(argv: list[str]) -> int:
                             "korea": len(lk.get("korea") or [])}
     except Exception as e:  # noqa: BLE001
         event["linkage"] = {"error": str(e)[:120]}
+    try:  # 시나리오 — 등급·알림과 무관. 판정 불가 회차는 시간 경과(만료)와 다른 칸 값만 반영
+        sc = update_scenarios(ok, _load_safe(STATE / "scenarios.json"), event["checked_at"],
+                              new_latest if new_latest is not None else latest, _load_safe(STATE / "ladder.json"),
+                              _load_safe(STATE / "signals.json"), _load_safe(CAL_FILE))
+        (STATE / "scenarios.json").write_text(json.dumps(sc, ensure_ascii=False, indent=2) + "\n")
+        event["scenarios"] = {"tilt": sc.get("tilt"), "calm": len(sc.get("calm") or {})} if not sc.get("error") else {"error": sc["error"]}
+    except Exception as e:  # noqa: BLE001
+        event["scenarios"] = {"error": str(e)[:120]}
     if new_latest is not None:
         (STATE / "latest.json").write_text(json.dumps(new_latest, ensure_ascii=False, indent=2) + "\n")
     with events_path.open("a") as f:

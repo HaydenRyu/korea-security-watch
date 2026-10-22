@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>JIS 예측</title>
-<meta name="description" content="지금 긴장 국면·임박 신호·발사 흐름·다가오는 위험 일정을 한눈에 — 공개 자료로 센 과거 기록. 전쟁 확률은 만들지 않는다.">
+<meta name="description" content="지금 긴장 국면·임박 신호·발사 흐름·다가오는 위험 일정을 한눈에 — 공개 자료로 센 과거 기록. 미사일 발사 확률은 지난 1년 빈도와 그 과거 적중 기록으로, 전쟁은 확률 대신 시나리오 지표로.">
 <link rel="icon" href="assets/jis-mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@87.5..112.5,300..700&display=swap" rel="stylesheet">
@@ -64,6 +64,28 @@ details>summary:hover{background:rgba(219,229,241,.05)}details>summary:hover::af
 .todo b.calm{background:var(--g0)}
 .todo small{grid-column:2;color:var(--fog);font-size:12px}
 @media (min-width:760px){.nw{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* ── 발사 확률(신설) — 값은 --ice(등급색 아님: 확률이 경보로 읽히지 않게). 막대 = 지금 값, 눈금 = 과거 이 수준일 때 실제 ── */
+.pbx{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s8)}
+.pbx .nt .nv{font-family:var(--data);font-weight:600}
+.pbx .nt .nf{white-space:normal}
+.pm{position:relative;height:8px;margin:var(--s4) 0;background:var(--line)}
+.pm i{position:absolute;left:0;top:0;bottom:0;background:var(--fog)}
+.pm b{position:absolute;top:-4px;bottom:-4px;width:2px;margin-left:-1px;background:var(--amber)}
+.pm-leg{display:flex;flex-wrap:wrap;gap:var(--s4) var(--s12);margin-top:var(--s12);font-size:11px;color:var(--fog)}
+.pm-leg i{display:inline-block;width:12px;height:8px;background:var(--fog);margin-right:var(--s4);vertical-align:0}
+.pm-leg b{display:inline-block;width:2px;height:12px;background:var(--amber);margin:0 var(--s8) 0 5px;vertical-align:-2px}
+@media (min-width:760px){.pbx{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* ── 시나리오(신설) — 확률 없음. 지표 충족 수만. 색: 완화 g0 · 유지 fog · 격화 g2 ── */
+.sc-tilt{margin:0 0 var(--s12);font-size:13px}.sc-tilt b{font-weight:700}
+.sc .rw{grid-template-columns:88px minmax(0,1fr)}
+.sc .d{font:600 12px/1.55 var(--text)}
+.sc .d.t0{color:var(--g0)}.sc .d.t1{color:var(--fog)}.sc .d.t2{color:var(--g2)}
+.sc .cnt{font:600 12px/1.55 var(--data);color:var(--ice)}
+.chips{display:flex;flex-wrap:wrap;gap:var(--s4)}
+.chip{font:500 11px/1 var(--text);padding:var(--s4) var(--s8);border:1px solid var(--line-2);color:var(--dim);white-space:nowrap}
+.chip.on{border-color:var(--ice);color:var(--ice)}
+.chip.pre{border-style:dashed}
 
 /* ── 목록 행(일정·달력·배경 요인) — 좁은 화면은 2줄, 넓으면 한 줄 ── */
 .rows{list-style:none;margin:0;padding:0}
@@ -184,6 +206,15 @@ details>summary:hover{background:rgba(219,229,241,.05)}details>summary:hover::af
 <section class="p" id="now"><div class="ph"><span class="k">지금 한눈에</span><span class="r" id="nowat">—</span></div>
 <div class="pb"><div class="nw" id="nw"><p class="none">불러오는 중</p></div><div id="todo"></div></div></section>
 
+<section class="p" id="prob"><div class="ph"><span class="k">발사 확률 · 지난 1년 빈도로 본 다음 7·30일</span><span class="r" id="pbat">—</span></div>
+<div class="pb"><div class="pbx" id="pbx"><p class="none">불러오는 중</p></div>
+<div class="pm-leg"><span><i></i>지금 값</span><span><b></b>과거에 이 수준일 때 실제로 발사가 있었던 비율</span></div>
+<p class="note" id="pbn"></p></div></section>
+
+<section class="p" id="scen"><div class="ph"><span class="k">시나리오 · 지금 어느 쪽으로 기우나</span><span class="r">확률 아님 · 지표 충족 수</span></div>
+<div class="pb"><p class="sc-tilt" id="sct"></p><ul class="rows sc" id="scl"><li class="none">불러오는 중</li></ul>
+<div class="pm-leg"><span><span class="chip on">충족</span></span><span><span class="chip">미충족</span></span><span><span class="chip pre">기록 전</span> 최근 72시간 안에 확인한 기록이 없음</span></div></div></section>
+
 <section class="p" id="sigp"><div class="ph"><span class="k">임박 신호 · 기사로 본 앞으로의 단서</span><span class="tag hi" id="sigsample" hidden>예시 데이터 · 실제 상황 아님</span><span class="r" id="sigat">—</span></div>
 <div class="pb"><div id="sig"><p class="none">불러오는 중</p></div><p class="ck" id="sigck" hidden></p></div></section>
 
@@ -230,18 +261,48 @@ const hhmm=iso=>{if(!iso)return"";const p=Object.fromEntries(new Intl.DateTimeFo
 const GRADE=[["평시","--g0"],["주의","--g1"],["경계","--g2"],["위험","--g3"]];
 
 /* ── 자료 한 번에 읽고, 칸마다 그린다(한 칸 실패가 다른 칸을 막지 않는다) ── */
-Promise.all([jf(SB+"signals.json"),jf(SB+"latest.json"),jf("data/risk_calendar.json"),jf("data/escalation_ladder.json"),jf(SB+"ladder.json"),jf("data/factors_validation.json"),jf("data/linkage.json")])
-.then(([sg,lt,cal,cat,st,fv,lk])=>{
+Promise.all([jf(SB+"signals.json"),jf(SB+"latest.json"),jf("data/risk_calendar.json"),jf("data/escalation_ladder.json"),jf(SB+"ladder.json"),jf("data/factors_validation.json"),jf("data/linkage.json"),jf("data/forecast_prob.json"),jf(SB+"scenarios.json")])
+.then(([sg,lt,cal,cat,st,fv,lk,pb,sc])=>{
   if(st&&(typeof st!=="object"||typeof st.stage!=="number"))st=null;
   const t=fcKST(new Date());
-  for(const[f,a]of[[drawSummary,[sg,lt,cal,cat,st,t]],[drawSignals,[sg,lt,cal]],[drawUpcoming,[cal,t]],[drawLadder,[cat,st]],[drawTempo,[cal,t]],[drawYear,[cal]],[drawFactors,[fv]],[drawLinkage,[lk]],[drawCfr,[cat]],[drawMethod,[cal,cat]]])
+  for(const[f,a]of[[drawSummary,[sg,lt,cal,cat,st,t]],[drawProb,[pb]],[drawScen,[sc]],[drawSignals,[sg,lt,cal]],[drawUpcoming,[cal,t]],[drawLadder,[cat,st]],[drawTempo,[cal,t]],[drawYear,[cal]],[drawFactors,[fv]],[drawLinkage,[lk]],[drawCfr,[cat]],[drawMethod,[cal,cat]]])
     try{f(...a)}catch(e){console.error(f.name,e)}
 });
+
+/* ── 발사 확률(10/22) — data/forecast_prob.json(risk_calendar.py, 매일 06:10). 지난 1년 빈도 그대로 + 과거 이 수준일 때 실제 비율 ── */
+function drawProb(pb){
+  if(!pb||!Array.isArray(pb.h)||!pb.h.length){$("pbat").textContent="—";$("pbx").innerHTML=`<p class="none">확률 자료를 불러오지 못함</p>`;$("pbn").textContent="";return}
+  const age=Math.floor((Date.now()-new Date(pb.updated_at))/864e5);  // 갱신 잡이 멈췄을 때만(공개 DB 자체의 지연은 기준일로 보인다)
+  $("pbat").innerHTML=`${fcMD(pb.as_of)} 자료 기준`+(age>=2?` <span class="tag hi">갱신 ${age}일 멈춤</span>`:"");
+  $("pbx").innerHTML=pb.h.map(h=>{const pc=Math.round(h.p*100),tr=h.track||{},ok=tr.n&&tr.actual!=null,ac=ok?Math.round(tr.actual*100):null;
+    return `<div class="nt"><span class="nl">${h.days}일 안 미사일·핵 발사</span><span class="nv">${pc}%</span>
+      <div class="pm" role="img" aria-label="지금 ${pc}%${ok?`, 과거 이 수준일 때 실제 ${ac}%`:""}"><i style="width:${pc}%"></i>${ok?`<b style="left:${ac}%"></b>`:""}</div>
+      <span class="ns">지난 1년의 ${h.days}일 기간 ${h.n}개 중 <b>${h.hits}개</b>에 발사</span>
+      <span class="nf">${ok?`과거 ${Math.round(tr.lo*100)}~${Math.round(tr.hi*100)}%일 때 실제 <b style="color:var(--amber)">${ac}%</b> · ${esc(pb.basis_years)} ${tr.n}일`:"과거 같은 수준 기록 없음"}</span></div>`}).join("");
+  const lg=pb.ledger||{};
+  $("pbn").innerHTML=`지난 1년 빈도를 그대로 쓴 숫자다. 높게 나올 때는 과거에 실제보다 컸다(노란 눈금). 임박 신호·훈련·기념일은 아직 숫자에 넣지 않는다 — 과거 자료로 넣어 본 계산이 이 단순한 숫자를 이기지 못했다(${esc(pb.basis_years)} 백테스트). 신호 기록이 종류별 20건 쌓이면 다시 판정한다.<br>우리 예측 채점: ${lg.scored>=5?`기한 지난 ${lg.scored}건 · Brier ${lg.brier}(0에 가까울수록 정확, 늘 50%라 말하면 0.25)`:`${lg.since?fcMD(lg.since)+"부터 기록":"기록 시작 전"} · 기간이 끝난 예측 ${lg.scored||0}건(5건부터 집계)`}.`;
+}
+/* ── 시나리오(10/22) — state/scenarios.json(diff_state.py, 매시간). 확률 아님 · 지표 충족 수 ── */
+const SCN_C=["--g0","--ice","--g2"];
+// 칩 옆 값: 코드 판정 지표만(완화의 기사 지표는 문장이라 title 로만)
+const noteShown=(c,i)=>!!i.note&&i.state!=="pre"&&(c.id!=="calm"||i.id==="no_launch_30");
+function drawScen(sc){
+  const rows=Array.isArray(sc?.scenarios)?sc.scenarios:null;
+  if(!rows){$("sct").textContent="";$("scl").innerHTML=`<li class="none">시나리오 기록 없음 — 매시간 확인이 다음에 판정합니다</li>`;return}
+  const top=rows.find(c=>c.id===sc.tilt)||rows[1],h=sc.history||[],now=h[h.length-1];
+  const past=h.slice().reverse().find(x=>now&&(new Date(now.date)-new Date(x.date))>=14*864e5);
+  const arrow=c=>{if(!past||past.on?.[c.id]==null)return"";const d=c.on-past.on[c.id];return d>0?` <span style="color:var(--amber)">▲${d}</span>`:d<0?` <span style="color:var(--g0)">▼${-d}</span>`:" ="};
+  $("sct").innerHTML=`지금 기울기: <b style="color:var(${SCN_C[top.tone]})">${esc(top.name)}</b> — 확인된 지표의 충족 비율이 가장 높은 시나리오. `+(past?`▲▼ = 14일 전(${fcMD(past.date)}) 대비 충족 수 변화.`:"14일 전 대비 변화는 기록이 14일 쌓인 뒤부터.");
+  $("scl").innerHTML=rows.map(c=>{const ind=c.indicators||[],off=c.id==="esc"&&!c.on,pre=ind.length-c.known;
+    return `<li class="rw"><span class="d t${c.tone}">${esc(c.name)}<small style="display:block;font:500 11px/1.4 var(--data);color:var(--fog)"><span class="cnt">${c.on}</span>/${c.known}${arrow(c)}${pre?`<br>기록 전 ${pre}`:""}</small></span>
+    <span class="nm">${esc(c.desc)}<small>${c.id==="esc"?"긴장 국면 지표 그대로 · 아래 「긴장 국면」 칸과 같은 판정":c.id==="calm"?"대화·채널·중단 발표·회담 일정 = 매시간 기사 확인(AI) · 30일 공백 = 코드":"충족은 코드가 매시간 판정"}</small></span>
+    <span class="st"><span class="chips">${(off?ind.slice(0,6):ind).map(i=>`<span class="chip ${i.state==="on"?"on":i.state==="pre"?"pre":""}"${i.note?` title="${esc(i.note)}"`:""}>${esc(i.label)}${noteShown(c,i)?` · ${esc(i.note)}`:""}</span>`).join("")}${off&&ind.length>6?`<span class="chip">외 ${ind.length-6}개</span>`:""}</span></span></li>`}).join("");
+}
 
 function drawSummary(sg,lt,cal,cat,st,t){
   const g=GRADE[lt?.grade]||null;
   if(g)document.documentElement.style.setProperty("--gc",`var(${g[1]})`);
-  $("nowat").textContent=lt?.checked_at?`${hhmm(lt.checked_at)} 확인 · 확률 아님`:"확률 아님";
+  $("nowat").textContent=lt?.checked_at?`${hhmm(lt.checked_at)} 확인`:"—";
   const sig=fcSignals(sg,new Date(),!SAMPLE),tp=cal?.tempo,hot=tp&&tp.ratio>=2;
   const stage=st?cat?.stages?.[st.stage]:null,total=st?.total||cat?.indicators?.length||0;
   const met=(st?.met||[]).length,chk=(st?.checking||[]).length;
@@ -267,7 +328,7 @@ function drawSummary(sg,lt,cal,cat,st,t){
   else if(hot){todo="평소보다 자주 상황판을 본다.";why=`최근 30일 발사가 평소의 ${tp.ratio}배 — 발사가 몰리는 시기엔 다음 발사도 가깝다`}
   else if(sig.length){todo="신호가 가리키는 시점 전후로 상황판을 더 자주 본다.";why=`임박 신호 ${sig.length}건`}
   else{todo=cat?.stages?.[0]?.action||"평소 주기로 본다.";why="국면·흐름·신호 모두 평소";calm=true}
-  $("todo").innerHTML=`<div class="todo"><b class="${calm?"calm":""}">할 일</b><span>${esc(todo)}</span><small>${esc(why)}. 이 페이지는 전쟁 확률을 만들지 않는다.</small></div>`;
+  $("todo").innerHTML=`<div class="todo"><b class="${calm?"calm":""}">할 일</b><span>${esc(todo)}</span><small>${esc(why)}. 전쟁 확률은 만들지 않는다.</small></div>`;
 }
 
 function drawSignals(sg,lt,cal){
@@ -415,7 +476,7 @@ function drawMethod(cal,cat){
   <li>매시간 기사를 읽어 「앞으로의 도발」을 가리키는 단서(항행경보·북한 예고·시설 동향·발사대 이동·공표 일정)를 AI가 뽑은 문장이다. 실제로 연 원문만 근거로 쓰고, 등급·알림과 무관하다. 사실 확인은 출처 원문으로.</li>
   <li>「과거에 맞았나」 = 기한이 지난 신호마다 처음 본 날부터 14일 안에 미사일·핵 발사가 있었는지 센 건수다. 종류별 5건 미만이면 「집계 중」. 확률이 아니다.</li></ul>
   <h3>싣지 않는 것</h3><ul>
-  <li>우리는 「전쟁 확률 %」를 만들지 않는다 — 전례가 거의 없어 그럴듯한 숫자만 나온다. 이 페이지는 「언제 더 자주 볼지」를 정하는 데 쓴다.</li>
+  <li>확률은 자주 있는 도발(미사일·핵 발사)에만 붙인다. 핵실험·국지전·전면전은 전례가 적어 확률을 붙이지 않고 시나리오 지표로만 본다.</li>
   <li>외부 예측 시장(Metaculus·Polymarket·Manifold)은 싣지 않는다 — 접속에 인증이 필요하거나 한국에서 막혀 있고, 참여자가 수십 명 수준이라 판단 근거가 못 된다(2026-10-18 확인).</li></ul>
   <h3>갱신</h3><ul><li>발사 기록은 매일 아침 6시에 다시 받아 다시 센다. 임박 신호·긴장 국면은 매시간 확인한다.</li></ul>`;
 }

@@ -54,10 +54,10 @@ jobs:
         run: python3 scripts/imagery_feeds.py
       - name: commit
         run: |
-          [ -z "$(git status --porcelain -- data/risk_calendar.json data/conflicts.json data/imagery_reports.json)" ] && { echo unchanged; exit 0; }
+          [ -z "$(git status --porcelain -- data/risk_calendar.json data/forecast_prob.json data/forecast_ledger.jsonl data/conflicts.json data/imagery_reports.json)" ] && { echo unchanged; exit 0; }
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add data/risk_calendar.json $(ls data/conflicts.json data/imagery_reports.json 2>/dev/null)
+          git add data/risk_calendar.json data/forecast_prob.json data/forecast_ledger.jsonl $(ls data/conflicts.json data/imagery_reports.json 2>/dev/null)
           git commit -m "calendar: $(date -u +%FT%H:%MZ)"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
           exit 1

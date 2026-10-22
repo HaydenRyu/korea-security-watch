@@ -20,6 +20,7 @@
 """
 from __future__ import annotations
 
+import bisect
 import html
 import io
 import json
@@ -277,6 +278,78 @@ def signal_check(sig_doc: dict | None, launch: set[date], today: date,
             "basis": f"신호를 처음 본 날부터 {SIGNAL_WINDOW_D}일 안 CSIS 미사일·핵 발사 여부 · 기간이 다 지난 신호만"}
 
 
+# ── 발사 확률(10/22) ─────────────────────────────────────────────────────────────────────
+# 숫자 = 지난 1년의 H일 기간 중 발사가 든 비율(그대로). 신호·훈련·계절을 넣은 모델과 단조 보정은 2012~2025 전진 검증에서
+# 이 단순한 숫자를 이기지 못했다(scripts/forecast_backtest.py). 대신 「과거에 이 수준일 때 실제 비율」을 함께 낸다.
+PROB_FILE = ROOT / "data" / "forecast_prob.json"
+LEDGER_FILE = ROOT / "data" / "forecast_ledger.jsonl"
+PROB_HORIZONS = (7, 30)
+PROB_TEST_FROM = 2012  # 과거 적중 집계 첫 해(백테스트와 같은 범위)
+PROB_BIN = 0.2
+
+
+def _hit(ds: list[date], a: date, h: int) -> bool:
+    """a 다음 날부터 h 일 안(a < d <= a+h)에 발사가 있었나. ds 는 정렬된 발사일."""
+    i = bisect.bisect_right(ds, a)
+    return i < len(ds) and ds[i] <= a + timedelta(h)
+
+
+def year_rate(ds: list[date], t: date, h: int) -> tuple[int, int]:
+    """t 까지 다 끝난(끝 ≤ t) h 일 기간 중 지난 1년 안에서 시작한 것들 → (발사 든 기간 수, 기간 수)."""
+    starts = [t - timedelta(365) + timedelta(i) for i in range(365 - h + 1)]
+    return sum(_hit(ds, s, h) for s in starts), len(starts)
+
+
+def track_record(ds: list[date], p: float, h: int, first: int, until: date) -> dict:
+    """PROB_TEST_FROM~작년의 매일 같은 계산을 했을 때, p 가 속한 구간(0.2 폭)의 평균 숫자와 실제 비율."""
+    b = min(int(p / PROB_BIN), round(1 / PROB_BIN) - 1)
+    said, hit, n = 0.0, 0, 0
+    t = date(first, 1, 1)
+    while t.year < until.year and t + timedelta(h) <= until:
+        k, m = year_rate(ds, t, h)
+        q = k / m
+        if min(int(q / PROB_BIN), round(1 / PROB_BIN) - 1) == b:
+            said += q; hit += _hit(ds, t, h); n += 1
+        t += timedelta(1)
+    return {"lo": round(b * PROB_BIN, 1), "hi": round((b + 1) * PROB_BIN, 1),
+            "said": round(said / n, 2) if n else None, "actual": round(hit / n, 2) if n else None, "n": n}
+
+
+def update_ledger(rows: list[dict], probs: dict[int, float], today: date, ds: list[date], db_last: date) -> list[dict]:
+    """매일 한 줄씩 남기고(같은 날·같은 기간은 한 번), 기간이 DB 마지막 날 안으로 다 들어온 줄은 적중을 채운다."""
+    have = {(r.get("date"), r.get("days")) for r in rows}
+    for h, p in probs.items():
+        if (today.isoformat(), h) not in have:
+            rows.append({"date": today.isoformat(), "days": h, "p": round(p, 3), "hit": None})
+    for r in rows:
+        if r.get("hit") is None:
+            d0 = date.fromisoformat(r["date"])
+            if d0 + timedelta(r["days"]) <= db_last:
+                r["hit"] = _hit(ds, d0, r["days"])
+    return rows
+
+
+def ledger_summary(rows: list[dict]) -> dict:
+    done = [r for r in rows if r.get("hit") is not None]
+    return {"since": min((r["date"] for r in rows), default=None), "scored": len(done),
+            "brier": round(sum((r["p"] - r["hit"]) ** 2 for r in done) / len(done), 4) if done else None}
+
+
+def forecast_prob(days: dict, as_of: date, today: date, ledger: list[dict]) -> tuple[dict, list[dict]]:
+    ds = sorted(days)
+    hs, probs = [], {}
+    for h in PROB_HORIZONS:
+        k, m = year_rate(ds, as_of, h)
+        probs[h] = k / m
+        hs.append({"days": h, "hits": k, "n": m, "p": round(k / m, 3), "track": track_record(ds, k / m, h, PROB_TEST_FROM, as_of)})
+    ledger = update_ledger(ledger, probs, today, ds, as_of)
+    doc = {"_doc": "발사 확률 = 지난 1년의 같은 길이 기간 중 발사(CSIS ∪ CNS)가 든 비율. track = 과거 이 수준일 때 실제 비율. "
+                   "원장 data/forecast_ledger.jsonl 이 매일 숫자를 남기고 기간이 끝나면 채점한다.",
+           "as_of": as_of.isoformat(), "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+           "basis_years": f"{PROB_TEST_FROM}~{as_of.year - 1}", "h": hs, "ledger": ledger_summary(ledger)}
+    return doc, ledger
+
+
 def main() -> int:
     doc = json.loads(DOC.read_text())
     cfg = doc["config"]
@@ -310,8 +383,13 @@ def main() -> int:
     top = sorted(doc["season"]["months"], key=lambda r: -r["days"])[:3]
     print(json.dumps({"tempo": {k: doc["tempo"][k] for k in ("last30", "avg30", "ratio")}, "stats": summary,
                       "season_top3": top, "relaunch": doc["relaunch"], "data": doc["data"]}, ensure_ascii=False, indent=1))
+    ledger = [json.loads(l) for l in LEDGER_FILE.read_text().splitlines() if l.strip()] if LEDGER_FILE.exists() else []
+    prob, ledger = forecast_prob(days, date.fromisoformat(doc["data"]["csis_last"]), today, ledger)
+    print(json.dumps({"prob": [(h["days"], h["p"], h["track"]) for h in prob["h"]], "ledger": prob["ledger"]}, ensure_ascii=False))
     if "--dry" not in sys.argv:
         DOC.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
+        PROB_FILE.write_text(json.dumps(prob, ensure_ascii=False, indent=1) + "\n")
+        LEDGER_FILE.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in ledger))
     return 0
 
 

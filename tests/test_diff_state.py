@@ -584,3 +584,56 @@ def test_unfixed_schema_error_still_recorded_and_alerts_on_third(tmp_path=None):
     assert [e["streak"] for e in evs] == [1, 2, 3]
     assert evs[0]["reason"].startswith("schema: border_clash: 열어 보지 않은 출처")
     assert sent == [None, None, "안보 감시 중단"]
+
+
+CAT = {"ids": {"lethal_clash": 2, "ultimatum": 3}, "names": {}, "labels": {"lethal_clash": "사상자", "ultimatum": "최후통첩"}}
+CAL = {"tempo": {"ratio": 2.9, "last30": 4, "recent": [{"date": "2026-10-15"}]}}
+
+
+def _scen(run=None, doc=None, now="2026-10-22T03:00:00+00:00", ladder=None, latest=None, signals=None, cal=CAL):
+    return d.update_scenarios(run or {}, doc, now, latest or {"grade": 1}, ladder or {"stage": 0, "met": []},
+                              signals or {"active": [1]}, cal, CAT)
+
+
+def _by(doc, sid):
+    return next(s for s in doc["scenarios"] if s["id"] == sid)
+
+
+def test_scenarios_default_tilt_is_hold_and_calm_pre_until_judged():
+    sc = _scen()
+    assert sc["tilt"] == "hold" and _by(sc, "hold")["on"] == 4
+    calm = _by(sc, "calm")
+    assert [i["state"] for i in calm["indicators"]][:4] == ["pre"] * 4 and calm["known"] == 1  # 30일 공백만 판정
+    assert _by(sc, "esc")["known"] == 2 and _by(sc, "esc")["on"] == 0
+
+
+def test_calm_needs_opened_source_and_expires_after_72h():
+    run = {"opened": ["https://a.example"], "calm": [
+        {"id": "dialogue_offer", "summary": "s", "sources": [{"url": "https://a.example"}]},
+        {"id": "talks_scheduled", "summary": "s", "sources": [{"url": "https://never.example"}]},
+        {"id": "made_up", "sources": [{"url": "https://a.example"}]}]}
+    sc = _scen(run)
+    states = {i["id"]: i["state"] for i in _by(sc, "calm")["indicators"]}
+    assert states["dialogue_offer"] == "on" and states["talks_scheduled"] == "off" and set(sc["calm"]) == {"dialogue_offer"}
+    later = _scen({"calm": []}, sc, now="2026-10-25T04:00:00+00:00")  # 73시간 뒤, 루틴은 확인함(빈 배열)
+    assert "dialogue_offer" not in later["calm"] and {i["state"] for i in _by(later, "calm")["indicators"][:4]} == {"off"}
+    stale = _scen({}, sc, now="2026-10-25T04:00:00+00:00")  # 72시간 넘게 calm 키 없음 → 기록 전
+    assert _by(stale, "calm")["indicators"][0]["state"] == "pre"
+
+
+def test_escalation_tilt_when_ladder_met():
+    sc = _scen(ladder={"stage": 3, "met": ["lethal_clash", "ultimatum"]}, latest={"grade": 0}, signals={"active": []},
+               cal={"tempo": {"ratio": 0.5, "last30": 1, "recent": []}})
+    assert sc["tilt"] == "esc" and _by(sc, "esc")["on"] == 2 and _by(sc, "hold")["on"] == 0
+
+
+def test_scenario_history_one_row_per_kst_day():
+    sc = _scen(now="2026-10-22T03:00:00+00:00")
+    sc = _scen(doc=sc, now="2026-10-22T10:00:00+00:00")  # KST 같은 날(19시)
+    sc = _scen(doc=sc, now="2026-10-22T16:00:00+00:00")  # KST 10/23 01시
+    assert [h["date"] for h in sc["history"]] == ["2026-10-22", "2026-10-23"]
+
+
+def test_scenarios_never_raise_on_garbage():
+    sc = d.update_scenarios({"calm": "x"}, {"calm": [1]}, "bad", None, "x", 5, None, {"ids": {}})
+    assert isinstance(sc, dict)

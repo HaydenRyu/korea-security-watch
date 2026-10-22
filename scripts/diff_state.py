@@ -5,7 +5,9 @@ LLM 은 항목별 관측만 낸다(run.json). 등급·발송 여부는 이 파�
 사용: python3 scripts/diff_state.py <run.json>
       python3 scripts/diff_state.py --check <run.json>   형식 검사만(state/ 에 아무것도 쓰지 않는다). rc 0 통과 · 1 위반
   - state/latest.json   직전 *검증된* 판정 (unverified 회차는 덮지 않는다)
-  - state/events.jsonl  회차 이력 1줄씩 추가
+  - state/events.jsonl  회차 이력 1줄씩 추가. 같은 회차 안에서 판정 불가 뒤 RETRY_WINDOW_MIN 안에 판정이 성공하면
+                        앞의 판정 불가 줄에 superseded(성공 회차 시각)를 적는다 — 기록은 남기되 화면·주간 요약은 세지 않는다
+  - .commit_msg         이번 회차의 커밋 메시지(루틴이 git commit -F 로 그대로 쓴다 — 등급 문구를 모델이 짓지 않는다)
   - state/outbox.json   이번 회차에 보낼 메시지 — Actions 가 이 파일 변경을 보고 ntfy 로 발송
                         me = 본인 주제(주의 이상·해제·감시 중단), friends = 지인 주제(경계 이상·해제)
 """
@@ -46,6 +48,7 @@ DASHBOARD_URL = "https://haydenryu.github.io/korea-security-watch/"
 # 위기 바닥: 최근 이 시간 안에 위험(3)이 있었으면 해제 근거 없이 경계(2) 아래로 내리지 않는다.
 # 근거: 2015-08 백테스트 — 24시간 만료로 최후통첩 시한 22시간 전에 「위험 해제」, 시한 당일 아침 「평시」가 나갔다.
 CRISIS_FLOOR_H = 72
+RETRY_WINDOW_MIN = 15  # 판정 불가 뒤 이 안에 성공한 판정은 같은 회차의 재시도 — 앞 줄을 superseded 로
 CRISIS_FLOOR_GRADE = 2
 DEADLINE_GRACE_H = 24  # 시한(until)이 있는 지속 상태는 시한 뒤 이 시간까지만 이어 간다(시한 + 24h)
 
@@ -1074,6 +1077,35 @@ def check(path: str) -> int:
     return 0
 
 
+def supersede_retries(events: list[dict], event: dict) -> int:
+    """성공 회차가 붙기 직전의 연속 판정 불가 줄 중 RETRY_WINDOW_MIN 안의 것에 superseded 를 적는다.
+    루틴이 스키마 거절 뒤 출처를 더 열어 같은 회차에 다시 돌린 흔적이라, 「판정 불가」로 세면 노이즈다(10/18~10/21 4건 전부)."""
+    if event.get("status") != "ok":
+        return 0
+    now = _dt(event["checked_at"])
+    n = 0
+    for e in reversed(events):
+        if e.get("status") != "unverified" or e.get("superseded"):
+            break
+        if (now - _dt(e["checked_at"])).total_seconds() > RETRY_WINDOW_MIN * 60:
+            break
+        e["superseded"] = event["checked_at"]
+        n += 1
+    return n
+
+
+def commit_message(event: dict) -> str:
+    """git 이력의 등급 문구는 코드가 정한다(모델이 쓰면 '경계'·'관심' 같은 오표기가 섞인다 — 10/22 실측)."""
+    t = event["checked_at"].replace("+00:00", "Z")
+    if event.get("status") != "ok":
+        return f"watch: unverified {t}"
+    g = event["grade"]
+    tag = f"{GRADE_LABEL[g]}({g})"
+    if event.get("notified"):
+        tag += " 알림"
+    return f"watch: {tag} {t}"
+
+
 def main(argv: list[str]) -> int:
     if len(argv) == 3 and argv[1] == "--check":
         return check(argv[2])
@@ -1136,11 +1168,15 @@ def main(argv: list[str]) -> int:
         event["scenarios"] = {"error": str(e)[:120]}
     if new_latest is not None:
         (STATE / "latest.json").write_text(json.dumps(new_latest, ensure_ascii=False, indent=2) + "\n")
-    with events_path.open("a") as f:
-        f.write(json.dumps(event, ensure_ascii=False) + "\n")
+    if supersede_retries(events, event):
+        events_path.write_text("".join(json.dumps(e, ensure_ascii=False) + "\n" for e in [*events, event]))
+    else:
+        with events_path.open("a") as f:
+            f.write(json.dumps(event, ensure_ascii=False) + "\n")
+    (STATE.parent / ".commit_msg").write_text(commit_message(event) + "\n")
     if outbox is not None:
         (STATE / "outbox.json").write_text(json.dumps(outbox, ensure_ascii=False, indent=2) + "\n")
-    print(json.dumps({"event": event, "notify": outbox is not None}, ensure_ascii=False))
+    print(json.dumps({"event": event, "notify": outbox is not None, "commit": commit_message(event)}, ensure_ascii=False))
     return 0
 
 

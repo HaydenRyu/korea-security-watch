@@ -971,10 +971,10 @@ function render(latest,events){
     :`<span class="em">최근 72회 등급 변화 없음</span>`;
   $("t0").textContent=rec.length?short(rec[0].checked_at):"—";
   // 이번 주 = 지난 7일. 계산식은 scripts/weekly_summary.py(일요일 알림)와 같다
-  const wk=events.filter(e=>Date.now()-new Date(e.checked_at)<7*864e5),wo=wk.filter(e=>e.status==="ok");
-  $("week").innerHTML=wo.length?`이번 주 최고 <b style="color:${C(Math.max(...wo.map(e=>e.grade)))}">${LABEL[Math.max(...wo.map(e=>e.grade))]}</b> · 알림 ${wo.filter(e=>e.notified).length} · 판정 불가 ${wk.length-wo.length}`:`이번 주 판정 0회`;
+  const wk=events.filter(e=>Date.now()-new Date(e.checked_at)<7*864e5),wo=wk.filter(e=>e.status==="ok"),wu=wk.filter(e=>e.status!=="ok"&&!e.superseded);
+  $("week").innerHTML=wo.length?`이번 주 최고 <b style="color:${C(Math.max(...wo.map(e=>e.grade)))}">${LABEL[Math.max(...wo.map(e=>e.grade))]}</b> · 알림 ${wo.filter(e=>e.notified).length} · 판정 불가 ${wu.length}`:`이번 주 판정 0회`;
 
-  const rows=events.filter(e=>e.notified||e.status==="unverified").slice(-30).reverse();
+  const rows=events.filter(e=>e.notified||(e.status==="unverified"&&!e.superseded)).slice(-30).reverse();  // superseded = 같은 회차 재시도로 곧 판정된 줄(diff_state.supersede_retries)
   $("log").innerHTML=rows.length?rows.map(e=>{const u=e.status==="unverified";
     const src=(e.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name||x.url)}</a>`).join("");
     return `<details class="evd"><summary class="ev"><span class="t">${short(e.checked_at)}</span><span class="g" style="color:${u?"var(--fog)":C(e.grade)}">${u?"판정 불가":LABEL[e.grade]+" 알림"}</span>

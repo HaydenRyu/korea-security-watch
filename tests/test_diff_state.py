@@ -648,3 +648,27 @@ def test_ladder_carries_stage_action_from_catalog():
     assert lad["stage"] == 2 and lad["stage_action"] == "재난문자 켜기"
     assert d.update_ladder({}, None, "2026-10-22T03:00:00+00:00", cat)["stage_action"] == "평소"
     assert d.ladder_catalog()["actions"][0]  # 정본 escalation_ladder.json 에 단계별 할 일이 있다
+
+
+def test_retry_within_window_supersedes_unverified_row(tmp_path=None):
+    import json
+    import tempfile
+    tmp = Path(tmp_path or tempfile.mkdtemp())
+    bad = run(border_clash={"status": "single", "sources": [{"name": "x", "url": "https://never.example"}]})
+    assert _main_in(tmp, bad) == 0
+    assert _main_in(tmp, run(border_clash={"status": "single", "sources": SRC1})) == 0
+    rows = [json.loads(l) for l in (tmp / "state" / "events.jsonl").read_text().splitlines()]
+    assert [r["status"] for r in rows] == ["unverified", "ok"]
+    assert rows[0]["superseded"] == rows[1]["checked_at"]  # 같은 회차 재시도 — 화면·주간 요약은 세지 않는다
+    assert "superseded" not in rows[1]
+    assert (tmp / ".commit_msg").read_text() == "watch: 주의(1) 알림 " + rows[1]["checked_at"].replace("+00:00", "Z") + "\n"
+
+
+def test_old_unverified_row_is_not_superseded():
+    ev = [{"checked_at": "2026-10-20T00:10:00+00:00", "status": "unverified", "reason": "x"}]
+    ok = {"checked_at": "2026-10-20T01:10:00+00:00", "status": "ok", "grade": 1}
+    assert d.supersede_retries(ev, ok) == 0 and "superseded" not in ev[0]
+    ev2 = [{"checked_at": "2026-10-20T00:58:00+00:00", "status": "unverified", "reason": "x"}]
+    assert d.supersede_retries(ev2, ok) == 1 and ev2[0]["superseded"] == ok["checked_at"]
+    assert d.supersede_retries(ev2, ok) == 0  # 이미 적힌 줄은 다시 세지 않는다
+    assert d.commit_message({"checked_at": "2026-10-20T01:10:00+00:00", "status": "unverified"}) == "watch: unverified 2026-10-20T01:10:00Z"

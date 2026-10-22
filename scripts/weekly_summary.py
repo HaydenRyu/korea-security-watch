@@ -19,7 +19,7 @@ TOP = 3
 def summarize(events: list[dict], now: datetime) -> dict:
     week = [e for e in events if datetime.fromisoformat(e["checked_at"]) >= now - timedelta(days=7)]
     ok = [e for e in week if e.get("status") == "ok"]
-    unv = len(week) - len(ok)
+    unv = sum(1 for e in week if e.get("status") != "ok" and not e.get("superseded"))  # 같은 회차 재시도는 세지 않는다
     if not ok:
         return {"title": "JIS 주간 요약", "message": f"지난 7일 판정 0회(판정 불가 {unv}회). 루틴 상태를 확인하세요."}
     grades = [e["grade"] for e in ok]

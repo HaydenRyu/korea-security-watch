@@ -4,3 +4,4 @@ __pycache__/
 .DS_Store
 relay/.wrangler/
 news_kr.local.json
+.commit_msg

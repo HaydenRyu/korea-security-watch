@@ -289,6 +289,6 @@
    - 키·status 값·출처 수 오류 → 3절 규칙대로 고친다.
    2번 안에 못 고치면 고치지 않은 채로 다음 단계로 간다 — 판정 불가로 기록되고 연속 계수(3회 연속이면 「감시 중단」 알림)에 들어간다. 검색 자체가 실패한 회차는 검사 없이 `{"status":"unverified",...}` 를 그대로 낸다.
 2-1. `python3 scripts/diff_state.py run.json` 을 실행하고 출력을 확인한다. 스키마 위반이 남아 있으면 스크립트가 unverified 로 기록한다.
-3. `rm run.json` 후 `git add state/ data/sources.json $(ls data/source_requests.jsonl 2>/dev/null) && git commit -m "watch: <등급 또는 unverified> <시각>"` 를 실행한다.
+3. `rm run.json` 후 `git add state/ data/sources.json $(ls data/source_requests.jsonl 2>/dev/null) && git commit -F .commit_msg` 를 실행한다. 커밋 메시지는 `diff_state.py` 가 `.commit_msg` 에 써 둔 것을 그대로 쓴다(등급 문구를 직접 짓지 않는다).
 4. `git pull --rebase origin main && git push origin HEAD:main`. 거절되면 한 번 더 pull --rebase 후 push 한다. 그래도 실패하면 사유를 출력하고 끝낸다.
    - 알림 발송은 GitHub Actions 가 `state/outbox.json` 변경을 보고 ntfy 로 처리한다. 이 세션에서 ntfy 를 직접 부르지 않는다.

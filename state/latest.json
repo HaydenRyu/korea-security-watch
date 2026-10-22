@@ -6,33 +6,32 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon 38 North"
     ],
     "logistics": [
       "북한 탄약 군수 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "NSC 상임위 북한 지뢰 확성기 대응 합참",
-      "지뢰 발견 귀순 NLL 합참",
-      "North Korea Kim Yo Jong loudspeaker border Reuters"
+      "북한 지뢰 발견 DMZ 귀순 NLL 합참",
+      "North Korea Reuters Kim Yo Jong loudspeaker"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
       "북러 군사협력",
       "North Korea troops Russia"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 병력 이동 전방 증강 열병식"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 핵 풍계리 영변 병력 이동 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 합참"
+      "북한 GPS 교란 진돗개 데프콘 상향"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
@@ -43,7 +42,7 @@
     "https://www.segye.com/newsView/20261022521984",
     "https://www.segye.com/newsView/20261022520427",
     "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://kookbang.dema.mil.kr/newsWeb/20261023/5/ATCE_CTGR_0010010000/view.do"
   ],
   "overall_summary": "김여정의 새 대응수단·확성기 수일 내 가동 예고와 정부의 안보리 의장 서한 발송 등 말과 외교전이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 주의 수준이다.",
   "items": {
@@ -58,7 +57,7 @@
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "북한 GPS 교란 신규 보도 없음, 국내 은행권 해킹은 10월 초 사고로 귀속 미확인·24시간 밖"
+      "summary": "북한 GPS 교란 신규 보도 없음, 국내 해킹은 24시간 안 신규 사고 확인 안 됨"
     },
     "foreign_forces": {
       "status": "none"
@@ -100,7 +99,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-22T14:13:54+00:00",
+  "checked_at": "2026-10-22T15:14:46+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

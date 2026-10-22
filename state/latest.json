@@ -5,23 +5,23 @@
       "North Korea troop buildup DMZ"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리 동향",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 영변 풍계리",
+      "North Korea nuclear Yongbyon missile launch troops"
     ],
     "logistics": [
       "북한 탄약 군수 수송",
       "North Korea ammunition shipments Russia"
     ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순 합참",
-      "North Korea Reuters loudspeakers border Kim Yo Jong"
+      "목함지뢰 발견 해안 DMZ 귀순",
+      "North Korea Reuters Kim Yo Jong loudspeakers border"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
+      "북한 GPS 교란",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "북러 군사협력 파병 북한 병력 이동 핵",
+      "북러 군사협력 파병 북한 병력",
       "North Korea troops Russia"
     ],
     "parade_massing": [
@@ -35,22 +35,17 @@
     "gov_warning": [
       "진돗개 발령 데프콘 상향",
       "South Korea Jindo dog alert DEFCON"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan Eastern Theater Command"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261022506761",
     "https://www.segye.com/newsView/20261022506928",
-    "https://www.segye.com/newsView/20261022504448",
     "https://www.segye.com/newsView/20261021524453",
-    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/",
+    "https://www.yna.co.kr/view/AKR20261022097300504",
     "https://www.yna.co.kr/view/AKR20261022011400504",
-    "https://www.nhk.or.jp/rss/news/cat6.xml"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "김여정이 22일 조선중앙통신으로 전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기를 재차 밝혔고 유엔에서도 대남 비난을 이어갔으나 신규 교전·발사·시한부 최후통첩은 없다. 직전 회차와 같은 말 공방 수준이다.",
+  "overall_summary": "김여정이 22일 조선중앙통신으로 전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기를 재차 밝혔고, 정부는 우발충돌 위험을 지적하며 대화를 촉구했다. 신규 교전·발사·시한부 최후통첩은 없어 직전 회차와 같은 말 공방 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -82,8 +77,8 @@
       "region": "DMZ·MDL 남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "김여정이 22일 조선중앙통신으로 「전 국경선 새 대응수단 임무대기·확성기 수일 내 대기」를 재차 밝혔고 북측은 유엔 총회 제1위원회에서도 한국군 경고사격을 비난했다(말 공방, 신규 교전·시한부 최후통첩 없음).",
-      "meaning": "요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
+      "summary": "김여정이 22일 「전 국경선 새 대응수단 임무대기·확성기 수일 내 대기」를 재차 밝혔고 북측은 유엔 총회 제1위원회에서도 한국군 경고사격을 비난했으며 정부는 우발충돌 위험을 지적했다(말 공방, 신규 교전·시한부 최후통첩 없음).",
+      "meaning": "국경 요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
@@ -91,28 +86,28 @@
           "url": "https://www.segye.com/newsView/20261022506761"
         },
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261022011400504"
+          "url": "https://www.segye.com/newsView/20261022506928"
         },
         {
-          "name": "국방일보",
-          "tier": "A",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261022097300504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "김여정, 전 국경선 대남 확성기 10월 중 가동 예고",
-        "경고사격 시 즉시 반격 위협, 명시적 시한 없음",
-        "연합 속보(22일 06시): 김여정 「전국경선 새 대응수단 임무대기…확성기도 수일내 대기」"
+        "김여정 담화(조선중앙통신 22일): 전 국경선 새 대응수단 임무대기, 확성기 수일 내 대기",
+        "북 대표 유엔총회 제1위원회에서 경고방송·경고사격 비난",
+        "정부 22일 우발충돌 위험 지적·대화 촉구"
       ],
       "speculation": [
-        "심리전 재개로 상호 확성기 공방 확대 가능성"
+        "확성기 가동 시 상호 심리전 확대 가능성"
       ]
     }
   },
-  "checked_at": "2026-10-22T02:10:19+00:00",
+  "checked_at": "2026-10-22T03:11:04+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

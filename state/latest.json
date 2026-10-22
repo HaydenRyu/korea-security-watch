@@ -2,58 +2,52 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
+      "North Korea troop movement DMZ"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리 동향",
+      "북한 핵 풍계리 영변 동향",
       "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipments"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
       "지뢰 발견 DMZ",
-      "귀순 NLL MDL 경고사격",
-      "North Korea Kim Yo Jong loudspeakers border October 22"
+      "귀순 NLL 북한",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 10월 22일"
+      "북한 GPS 교란 서북도서",
+      "북한 해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "북러 군사협력 북한 파병",
-      "North Korea troops Russia"
+      "North Korea troops Russia missile transfer October 2026",
+      "북러 군사협력"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "North Korea US Japan warning"
+      "진돗개 데프콘 상향 합참",
+      "북한 미사일 발사 합참 10월 22일"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
-    ],
-    "factor:inter_korean": [
-      "김여정 대남 확성기",
-      "Kim Yo Jong loudspeakers"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261022512673",
-    "https://www.segye.com/newsView/20261022518362",
+    "https://www.segye.com/newsView/20261022520485",
+    "https://www.segye.com/newsView/20261022521984",
+    "https://www.segye.com/newsView/20261022520469",
     "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/",
-    "https://www.nknews.org/",
     "https://www.nknews.org/pro/nearly-all-north-korean-websites-go-offline-in-mysterious-outage/",
-    "https://www.nknews.org/2026/10/north-korean-russian-prosecutors-sign-deal-on-combating-terrorism-smuggling/"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "김여정의 확성기 수일 내 가동 예고, 통일부·외교부의 대응 등 말·외교 공방이 이어지나 신규 교전·병력·핵 징후는 없다. 직전 회차와 같은 경계 수준의 국경 긴장이다.",
+  "overall_summary": "김여정의 확성기·새 대응수단 예고와 정부의 안보리 서한 등 말과 외교전이 이어지나 신규 교전이나 병력·핵 징후는 없다. 직전 회차와 같은 경계 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,12 +58,47 @@
     "logistics": {
       "status": "none"
     },
+    "border_clash": {
+      "status": "single",
+      "routine": true,
+      "region": "DMZ·MDL 남부국경",
+      "lat": 38.3,
+      "lon": 127.2,
+      "summary": "김여정이 국경선 새 대응수단 임무대기와 확성기 수일 내 가동을 재차 예고했고 국방부는 비례적 조치를, 외교부는 안보리 의장 서한 발송을 밝혔다(신규 교전·시한부 최후통첩 없음).",
+      "meaning": "국경 요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261022520485"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261022521984"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "10/22 김여정 KCNA 담화: 새 대응수단 대기·확성기 수일 내 가동",
+        "신규 교전·사격 보도 없음"
+      ],
+      "speculation": [
+        "확성기 재개는 심리전 압박 목적이라는 분석"
+      ]
+    },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 북한 거의 전 웹사이트가 하루 넘게 접속 불능이나 원인(점검·외부 공격 등)은 확인되지 않았다.",
-      "region": "평양",
+      "region": "북한",
+      "summary": "귀속 미확인 — 북한 거의 전 웹사이트가 10/20 이후 접속 불능이며 원인(점검·외부 공격 등)은 확인되지 않았다.",
+      "meaning": "북한 내부 통신망 장애로 외부 공격 증거는 없다.",
       "sources": [
         {
           "name": "NK News",
@@ -79,11 +108,10 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "10/20 오전 11시경부터 KCNA 등 북한 사이트 접속 불능"
+        "10/20 11시경부터 KCNA·노동신문 등 동시 장애",
+        "책임 주장 단체 없음"
       ],
-      "speculation": [
-        "점검 또는 외부 공격 가능성(근거 없음)"
-      ]
+      "speculation": []
     },
     "foreign_forces": {
       "status": "none"
@@ -96,40 +124,9 @@
     },
     "gov_warning": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "DMZ·MDL 남부국경",
-      "lat": 38.3,
-      "lon": 127.2,
-      "summary": "김여정이 국경선 새 대응수단 임무대기·확성기 수일 내 가동을 재차 예고했고 통일부는 충돌 위험 행위 중단을 촉구했으며 외교부는 안보리 의장 서한을 보냈다(신규 교전·시한부 최후통첩 없음).",
-      "meaning": "국경 요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261022512673"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261022518362"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "신규 교전·사격 보도 없음"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-10-22T09:13:00+00:00",
+  "checked_at": "2026-10-22T10:10:34+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

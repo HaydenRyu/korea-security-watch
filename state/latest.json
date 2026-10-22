@@ -15,12 +15,11 @@
     "border_clash": [
       "지뢰 발견 DMZ",
       "귀순 NLL MDL 경고사격",
-      "북한 김여정 확성기 국경 합참 10월 22일",
-      "North Korea Kim Yo Jong loudspeakers border Reuters"
+      "North Korea Kim Yo Jong loudspeakers border October 22"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격 10월 22일"
     ],
     "foreign_forces": [
       "북러 군사협력 북한 파병",
@@ -40,16 +39,21 @@
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
+    ],
+    "factor:inter_korean": [
+      "김여정 대남 확성기",
+      "Kim Yo Jong loudspeakers"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261022512673",
-    "https://www.segye.com/newsView/20261022506761",
     "https://www.segye.com/newsView/20261022518362",
-    "https://www.yna.co.kr/view/AKR20261022164000504",
-    "https://www.yna.co.kr/view/AKR20261022135600504"
+    "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/",
+    "https://www.nknews.org/",
+    "https://www.nknews.org/pro/nearly-all-north-korean-websites-go-offline-in-mysterious-outage/",
+    "https://www.nknews.org/2026/10/north-korean-russian-prosecutors-sign-deal-on-combating-terrorism-smuggling/"
   ],
-  "overall_summary": "김여정 담화·통일부 입장·외교부 안보리 서한 등 말·외교 공방이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 경계 수준의 국경 긴장이다.",
+  "overall_summary": "김여정의 확성기 수일 내 가동 예고, 통일부·외교부의 대응 등 말·외교 공방이 이어지나 신규 교전·병력·핵 징후는 없다. 직전 회차와 같은 경계 수준의 국경 긴장이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,8 +65,25 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "이번 회차 국내외 검색에서 신규 사건 확인 못함"
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "summary": "귀속 미확인 — 북한 거의 전 웹사이트가 하루 넘게 접속 불능이나 원인(점검·외부 공격 등)은 확인되지 않았다.",
+      "region": "평양",
+      "sources": [
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/pro/nearly-all-north-korean-websites-go-offline-in-mysterious-outage/"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "10/20 오전 11시경부터 KCNA 등 북한 사이트 접속 불능"
+      ],
+      "speculation": [
+        "점검 또는 외부 공격 가능성(근거 없음)"
+      ]
     },
     "foreign_forces": {
       "status": "none"
@@ -82,7 +103,7 @@
       "region": "DMZ·MDL 남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "김여정이 22일 「전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기」를 재차 밝혔고, 통일부는 충돌 위험 행위 중단을 촉구했으며, 외교부는 안보리 의장 서한 발송과 주한외교단 설명회를 했다(말·외교 공방, 신규 교전·시한부 최후통첩 없음).",
+      "summary": "김여정이 국경선 새 대응수단 임무대기·확성기 수일 내 가동을 재차 예고했고 통일부는 충돌 위험 행위 중단을 촉구했으며 외교부는 안보리 의장 서한을 보냈다(신규 교전·시한부 최후통첩 없음).",
       "meaning": "국경 요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
       "sources": [
         {
@@ -93,36 +114,22 @@
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261022506761"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
           "url": "https://www.segye.com/newsView/20261022518362"
         },
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261022164000504"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261022135600504"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "김여정 담화(조선중앙통신 22일): 전 국경선 새 대응수단 임무대기, 확성기 수일 내 대기",
-        "통일부 22일 입장문: 정전협정 위반·충돌 위험 행위 중단 촉구",
-        "외교부, 안보리 의장에 북 지뢰·DMZ 긴장고조 관련 서한 발송(연합 22일)"
+        "신규 교전·사격 보도 없음"
       ],
-      "speculation": [
-        "확성기 가동 시 상호 심리전 확대 가능성"
-      ]
+      "speculation": []
     }
   },
-  "checked_at": "2026-10-22T08:12:12+00:00",
+  "checked_at": "2026-10-22T09:13:00+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "at": "2026-10-21T13:20:59+00:00",
+  "at": "2026-10-22T09:13:00+00:00",
   "domains": {
     "inter_korean": {
       "level": "긴장",
       "sources": [
         {
-          "url": "https://www.segye.com/newsView/20261021524132",
-          "publisher": "세계일보"
+          "url": "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/",
+          "publisher": "NK News"
         },
         {
-          "url": "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-          "publisher": "NK News"
+          "url": "https://www.segye.com/newsView/20261022512673",
+          "publisher": "세계일보"
         }
       ],
-      "summary": "김여정이 10월 중 전 국경선 대남 확성기 가동을 예고하고 경고사격에 강경 대응을 위협했다.",
-      "at": "2026-10-21T13:20:59+00:00",
+      "summary": "김여정이 확성기를 수일 내 가동하겠다고 재차 예고했다.",
+      "at": "2026-10-22T09:13:00+00:00",
       "since": "2026-10-21T01:11:21+00:00"
     }
   },

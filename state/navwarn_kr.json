@@ -4,10 +4,10 @@
   "https://www.data.go.kr/data/15057792/openapi.do",
   "https://www.data.go.kr/data/15058193/openapi.do"
  ],
- "fetched_at": "2026-10-22T14:01:08.651212+00:00",
+ "fetched_at": "2026-10-22T15:19:15.314130+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-22T14:01:08.651212+00:00",
+ "last_ok_at": "2026-10-22T15:19:15.314130+00:00",
  "warnings": [
   {
    "doc_num": "26-352",
@@ -5650,7 +5650,7 @@
   }
  ],
  "counts": {
-  "listed_docs": 16,
+  "listed_docs": 13,
   "new_details": 0,
   "valid": 9,
   "active_now": 3,

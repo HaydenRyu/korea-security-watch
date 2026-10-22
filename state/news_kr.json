@@ -1,20 +1,20 @@
 {
- "fetched_at": "2026-10-22T14:01:19+00:00",
+ "fetched_at": "2026-10-22T15:21:35+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-22T14:01:19+00:00",
+ "last_ok_at": "2026-10-22T15:21:35+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1137,
+  "fetched": 1138,
   "hits": 71,
-  "clusters": 56,
+  "clusters": 55,
   "by_group": {
-   "drone_balloon": 32,
-   "border": 34,
-   "fire": 12,
-   "mine": 21,
+   "border": 33,
+   "drone_balloon": 31,
+   "mine": 20,
+   "fire": 11,
    "spy": 1,
    "defect": 3,
    "alert": 2,
@@ -26,12 +26,12 @@
    "feeds": 5,
    "failed": 0,
    "count": 578,
-   "hits": 47
+   "hits": 46
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
-   "count": 159,
+   "count": 160,
    "hits": 8
   },
   "동아일보": {
@@ -61,25 +61,25 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
-  "drone_balloon": {
-   "clusters": 32,
-   "max_independent": 2,
-   "latest": "2026-10-22T14:01:19+00:00"
-  },
   "border": {
-   "clusters": 34,
+   "clusters": 33,
    "max_independent": 4,
-   "latest": "2026-10-22T14:01:19+00:00"
+   "latest": "2026-10-22T15:21:35+00:00"
   },
-  "fire": {
-   "clusters": 12,
+  "drone_balloon": {
+   "clusters": 31,
    "max_independent": 2,
-   "latest": "2026-10-22T14:01:19+00:00"
+   "latest": "2026-10-22T15:21:35+00:00"
   },
   "mine": {
-   "clusters": 21,
+   "clusters": 20,
    "max_independent": 4,
-   "latest": "2026-10-22T14:01:19+00:00"
+   "latest": "2026-10-22T15:21:35+00:00"
+  },
+  "fire": {
+   "clusters": 11,
+   "max_independent": 2,
+   "latest": "2026-10-22T15:21:35+00:00"
   },
   "spy": {
    "clusters": 1,
@@ -141,7 +141,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 5
+   "hits": 4
   },
   {
    "outlet": "SBS",
@@ -164,7 +164,7 @@
    "section": "속보",
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
-   "count": 101,
+   "count": 102,
    "hits": 4
   },
   {

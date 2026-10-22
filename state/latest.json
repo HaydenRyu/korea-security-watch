@@ -1,42 +1,53 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 전방 병력 증강(수집기 묶음)"
+      "북한 전방 병력 증강(수집기 묶음)",
+      "North Korea troops border"
     ],
     "nuclear": [
-      "North Korea Reuters"
+      "North Korea Reuters Kim Yo Jong loudspeakers border",
+      "북한 핵 동향"
     ],
     "logistics": [
-      "North Korea Reuters"
+      "North Korea Reuters Kim Yo Jong loudspeakers border"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견",
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순",
       "김여정 확성기 국경(수집기 묶음)"
     ],
     "electronic_cyber": [
       "북한 GPS 교란(수집기 묶음)",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "North Korea Reuters"
+      "North Korea Reuters Kim Yo Jong loudspeakers border",
+      "북러 군사협력"
     ],
     "parade_massing": [
-      "North Korea Reuters"
+      "North Korea Reuters Kim Yo Jong loudspeakers border"
     ],
     "nk_internal": [
       "수집기 묶음 확인"
     ],
     "gov_warning": [
       "통일부 입장문 확성기(수집기 묶음)"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan Eastern Theater Command"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261022512673",
     "https://www.segye.com/newsView/20261022506761",
     "https://www.segye.com/newsView/20261022506928",
-    "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+    "https://www.segye.com/newsView/20261021524453",
+    "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "김여정의 확성기 재가동 예고와 통일부의 중단 촉구가 이어지는 말 공방 수준이다. 신규 교전·발사·시한부 최후통첩은 없어 직전 회차와 같다.",
+  "overall_summary": "김여정의 확성기 재가동 예고와 통일부의 중단 촉구, 북한의 유엔 대남 비난이 이어지는 말 공방 수준이다. 신규 교전·발사·시한부 최후통첩은 없어 직전 회차와 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,7 +79,7 @@
       "region": "DMZ·MDL 남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "김여정이 22일 「전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기」를 재차 밝혔고 통일부는 충돌 위험 행위 중단을 촉구했다(말 공방, 신규 교전·시한부 최후통첩 없음).",
+      "summary": "김여정이 22일 「전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기」를 재차 밝혔고 통일부는 충돌 위험 행위 중단을 촉구했으며 북한은 유엔 군축위에서 한국군 경고사격을 비난했다(말 공방, 신규 교전·시한부 최후통첩 없음).",
       "meaning": "국경 요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
       "sources": [
         {
@@ -79,20 +90,21 @@
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261022506761"
+          "url": "https://www.segye.com/newsView/20261022506928"
         }
       ],
       "confidence": "중간",
       "facts": [
         "김여정 담화(조선중앙통신 22일): 전 국경선 새 대응수단 임무대기, 확성기 수일 내 대기",
-        "통일부 22일 입장문: 정전협정 위반·충돌 위험 행위 중단 촉구"
+        "통일부 22일 입장문: 정전협정 위반·충돌 위험 행위 중단 촉구",
+        "북한 대표, 유엔총회 제1위원회에서 한국군 경고방송·경고사격 비난"
       ],
       "speculation": [
         "확성기 가동 시 상호 심리전 확대 가능성"
       ]
     }
   },
-  "checked_at": "2026-10-22T05:10:57+00:00",
+  "checked_at": "2026-10-22T06:13:37+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

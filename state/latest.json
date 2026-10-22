@@ -1,29 +1,28 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 증강 전방 이동 합참",
+      "합참 북한 병력 이동 군수 비축 전쟁 징후 10월",
       "North Korea troop buildup border"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea nuclear Yongbyon"
+      "North Korea missile launch OR troops Russia OR nuclear Yongbyon news",
+      "북한 핵 영변 풍계리"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
+      "합참 북한 병력 이동 군수 비축 전쟁 징후 10월",
       "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 김여정 확성기 국경선 합참 발표",
-      "목함지뢰 해안 발견 DMZ 귀순 NLL",
-      "North Korea Reuters Kim Yo Jong loudspeaker border mine"
+      "북한 김여정 확성기 국경선 새 대응수단",
+      "North Korea Kim Yo Jong loudspeaker border mine Reuters",
+      "지뢰 발견 DMZ 귀순 (news_kr 수집)"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 서북도서 10월",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "북한 GPS 교란 서북도서",
+      "해킹 개인정보 유출 사이버 공격 10월 22일"
     ],
     "foreign_forces": [
-      "North Korea Russia troops military cooperation October 2026",
-      "북러 군사협력"
+      "북러 군사협력 파병 North Korea Russia troops October 2026"
     ],
     "parade_massing": [
       "북한 열병식 집결",
@@ -38,21 +37,21 @@
       "South Korea government warning evacuation"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 공작",
-      "North Korea attributed FBI"
+      "국가보안법 간첩 혐의 구속 북한 해킹 귀속 FBI North Korea attributed"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261022520485",
     "https://www.segye.com/newsView/20261022521984",
+    "https://www.segye.com/newsView/20261022520469",
     "https://www.segye.com/newsView/20261022520427",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports",
-    "https://www.nknews.org/"
+    "https://www.yna.co.kr/view/AKR20261022197300001",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports"
   ],
-  "overall_summary": "김여정의 새 대응수단·확성기 수일 내 대기 예고와 정부의 안보리 서한 발송 등 말과 외교전이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 주의 수준이다.",
+  "overall_summary": "김여정 담화 이후 확성기 재개 예고와 정부의 외교 대응이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 주의 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -87,7 +86,7 @@
       "region": "MDL 중서부·DMZ",
       "lat": 38.0,
       "lon": 127.0,
-      "summary": "김여정이 전 국경선 새 대응수단 임무대기와 확성기 수일 내 대기를 재차 예고했고 국방부는 비례적 조치, 외교부는 안보리 의장 서한 발송을 밝혔다(신규 교전·시한부 최후통첩 없음).",
+      "summary": "김여정의 새 대응수단 임무대기·확성기 수일 내 대기 예고에 정부가 NSC 상임위와 안보리 의장 서한으로 대응했으나 신규 교전·시한부 최후통첩은 없다.",
       "meaning": "말과 외교전이 이어지나 신규 충돌·병력 증강 확인은 없다.",
       "sources": [
         {
@@ -101,6 +100,11 @@
           "url": "https://www.segye.com/newsView/20261022521984"
         },
         {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261022197300001"
+        },
+        {
           "name": "Reuters(Internazionale 전재)",
           "tier": "B",
           "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports"
@@ -108,16 +112,15 @@
       ],
       "confidence": "중간",
       "facts": [
-        "10/22 조선중앙통신 담화: 새 대응수단 임무대기·확성기 수일 내 대기",
-        "국방부: 확성기 가동 시 비례적 조치",
-        "외교부: 안보리 의장 서한 발송"
+        "10/22 북한 담화: 새 대응수단 임무대기·확성기 수일 내 대기",
+        "정부: NSC 상임위 개최, 안보리 의장 서한 발송"
       ],
       "speculation": [
         "확성기 재개 시 맞대응 가능성"
       ]
     }
   },
-  "checked_at": "2026-10-22T20:10:54+00:00",
+  "checked_at": "2026-10-22T21:10:46+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

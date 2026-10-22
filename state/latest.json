@@ -1,52 +1,49 @@
 {
   "coverage": {
+    "border_clash": [
+      "North Korea Kim Yo Jong loudspeakers border mine",
+      "목함지뢰 해안 발견 귀순 NLL",
+      "news_kr 수집(지뢰·DMZ 묶음)"
+    ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement DMZ"
+      "합참 북한 병력 이동 군사분계선 10월 22일"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear Yongbyon 38 North"
-    ],
-    "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
-    ],
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL 합참",
-      "North Korea Kim Yo Jong border loudspeaker mine DMZ"
+      "North Korea nuclear Yongbyon Punggye-ri satellite imagery October 2026"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 22일"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "North Korea Russia troops military cooperation new",
+      "미군 전략자산 한반도 전개 진돗개 데프콘"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의"
+    ],
+    "gov_warning": [
+      "미군 전략자산 한반도 전개 진돗개 데프콘"
+    ],
+    "logistics": [
+      "North Korea Reuters"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘 상향"
-    ],
-    "hybrid_ops": [
-      "간첩 혐의 국가보안법 구속 북한 해킹 귀속 FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "North Korea civil defense blackout evacuation war footing"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261022520469",
     "https://www.segye.com/newsView/20261022520485",
-    "https://www.segye.com/newsView/20261022520427",
-    "https://www.nknews.org/"
+    "https://www.segye.com/newsView/20261022521984",
+    "https://www.yna.co.kr/view/AKR20261022127751504",
+    "https://www.yna.co.kr/view/AKR20261022197300001",
+    "https://www.nknews.org/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "김여정의 새 대응수단·확성기 수일 내 대기 예고와 정부의 안보리 의장 서한 등 말과 외교전이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 주의 수준이다.",
+  "overall_summary": "김여정의 새 대응수단·확성기 수일 내 대기 예고와 정부의 안보리 의장 서한·NSC 회의 등 말과 외교전이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 주의 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,9 +54,46 @@
     "logistics": {
       "status": "none"
     },
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "DMZ·MDL 남부국경",
+      "lat": 38.3,
+      "lon": 127.2,
+      "summary": "김여정이 국경선 새 대응수단 임무대기와 확성기 수일 내 대기를 재차 예고했고 국방부는 비례적 조치, 정부는 안보리 의장 서한 발송·NSC 상임위 개최를 밝혔다(신규 교전·시한부 최후통첩 없음).",
+      "meaning": "말과 외교전, 국경 요새화가 이어지나 실제 충돌은 확인되지 않았다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261022520485"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261022521984"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261022127751504"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261022197300001"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "10/22 김여정 KCNA 담화: 새 대응수단 임무대기·확성기 수일 내 대기",
+        "정부 안보리 의장 서한 발송, NSC 상임위 대응방안 논의",
+        "신규 교전·사격 보도 없음, 시한 명시 최후통첩 없음"
+      ],
+      "speculation": []
+    },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "북한 GPS 교란 신규 보도 없음, 국내 해킹 24시간 안 신규 사고 확인 안 됨"
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none"
@@ -75,36 +109,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "DMZ·MDL 남부국경",
-      "lat": 38.3,
-      "lon": 127.2,
-      "summary": "김여정이 국경선 새 대응수단 임무대기와 확성기 수일 내 대기를 재차 예고했고 국방부는 비례적 조치를, 정부는 안보리 의장 서한 발송을 밝혔다(신규 교전·시한부 최후통첩 없음).",
-      "meaning": "국경 요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261022520485"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261022520427"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "10/22 김여정 KCNA 담화: 새 대응수단 임무대기·확성기 수일 내 대기",
-        "신규 교전·사격 보도 없음, 시한 명시 최후통첩 없음"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-10-22T17:10:35+00:00",
+  "checked_at": "2026-10-22T18:12:03+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

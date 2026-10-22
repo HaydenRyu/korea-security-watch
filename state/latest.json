@@ -15,11 +15,11 @@
     "border_clash": [
       "지뢰 발견 DMZ",
       "귀순 NLL 북한",
-      "North Korea DMZ border"
+      "North Korea Kim Yo Jong loudspeaker border Reuters"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 서북도서",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 10월 22일"
     ],
     "foreign_forces": [
       "북러 군사협력",
@@ -32,8 +32,7 @@
       "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 합참",
-      "북한 미사일 발사 합참 10월 22일"
+      "진돗개 데프콘 상향 합참"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
@@ -42,13 +41,9 @@
   "opened": [
     "https://www.segye.com/newsView/20261022520485",
     "https://www.segye.com/newsView/20261022521984",
-    "https://www.segye.com/newsView/20261022520469",
-    "https://www.nknews.org/",
-    "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/",
-    "https://www.nknews.org/pro/nearly-all-north-korean-websites-go-offline-in-mysterious-outage/",
-    "https://www.nhk.or.jp/rss/news/cat6.xml"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "김여정의 새 대응수단·확성기 가동 예고와 정부의 안보리 서한 등 말과 외교전이 이어지나 신규 교전이나 병력·핵 징후는 없다. 직전 회차와 같은 경계 수준이다.",
+  "overall_summary": "김여정이 새 대응수단·확성기 수일 내 가동을 재차 예고하고 정부는 안보리 의장 서한을 보내기로 하는 등 말과 외교전이 이어지나 신규 교전이나 병력·핵 징후는 없다. 직전 회차와 같은 주의 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -77,11 +72,6 @@
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261022521984"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
         }
       ],
       "confidence": "중간",
@@ -89,30 +79,11 @@
         "10/22 김여정 KCNA 담화: 새 대응수단 대기·확성기 수일 내 가동",
         "신규 교전·사격 보도 없음"
       ],
-      "speculation": [
-        "확성기 재개는 심리전 압박 목적이라는 분석"
-      ]
+      "speculation": []
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "북한",
-      "summary": "귀속 미확인 — 북한 거의 전 웹사이트가 10/20 이후 접속 불능이며 원인(점검·외부 공격 등)은 확인되지 않았다.",
-      "meaning": "북한 내부 통신망 장애로 외부 공격 증거는 없다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/pro/nearly-all-north-korean-websites-go-offline-in-mysterious-outage/"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "10/20 11시경부터 KCNA·노동신문 등 동시 장애",
-        "책임 주장 단체 없음"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "이번 회차 원문 재확인 없이 근거 부족 — 북한 웹사이트 장애 건은 10/20 보도로 24시간 경과, 당일 국내 해킹 신규 보도 확인 안 됨"
     },
     "foreign_forces": {
       "status": "none"
@@ -127,7 +98,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-22T11:13:01+00:00",
+  "checked_at": "2026-10-22T12:19:02+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -2,33 +2,39 @@
   "coverage": {
     "troop_movement": [
       "북한 전방 병력 증강",
-      "North Korea troops Russia nuclear Yongbyon October 2026"
+      "North Korea troop buildup DMZ"
     ],
     "nuclear": [
-      "North Korea troops Russia nuclear Yongbyon October 2026"
+      "북한 핵 영변 풍계리 동향",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "North Korea troops Russia nuclear Yongbyon October 2026"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipments Russia"
     ],
     "border_clash": [
-      "합참 북한 MDL 경고사격 지뢰 발견 DMZ 귀순",
-      "North Korea Kim Yo Jong loudspeakers border Reuters"
+      "목함지뢰 발견 해안 DMZ 귀순 합참",
+      "North Korea Reuters October 22 2026"
     ],
     "electronic_cyber": [
       "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "North Korea troops Russia nuclear Yongbyon October 2026"
+      "북러 군사협력 파병",
+      "North Korea troops Russia"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea blackout wartime"
     ],
     "gov_warning": [
-      "합참 북한 MDL 경고사격 지뢰 발견 DMZ 귀순"
+      "진돗개 발령 데프콘 상향",
+      "South Korea Jindo dog alert DEFCON"
     ],
     "linkage:taiwan": [
       "PLA drills around Taiwan Eastern Theater Command"
@@ -37,12 +43,12 @@
   "opened": [
     "https://www.segye.com/newsView/20261022504448",
     "https://www.segye.com/newsView/20261021524453",
-    "https://www.yna.co.kr/view/AKR20261022011400504",
-    "https://www.yna.co.kr/view/AKR20261021162800504",
     "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports"
+    "https://www.nknews.org/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "김여정이 확성기 가동과 새 대응수단 임무대기를 거듭 위협했으나 신규 교전·발사·시한부 최후통첩은 확인되지 않았다. 직전 회차와 같은 말 공방 수준이다.",
+  "overall_summary": "김여정의 확성기·새 대응수단 임무대기 예고가 이어졌으나 신규 교전·발사·시한부 최후통첩은 없다. 직전 회차와 같은 말 공방 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -88,9 +94,9 @@
           "url": "https://kookbang.dema.mil.kr/newsWeb/20261021/6/ATCE_CTGR_0010010000/view.do"
         },
         {
-          "name": "Reuters(Internazionale 전재)",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports"
+          "url": "https://www.segye.com/newsView/20261021524453"
         }
       ],
       "confidence": "중간",
@@ -104,23 +110,23 @@
       ]
     }
   },
-  "checked_at": "2026-10-21T23:11:10+00:00",
+  "checked_at": "2026-10-22T00:11:05+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "이란 농축우라늄 문제, 미국과의 협상 쟁점으로 재부상",
-      "summary": "알자지라는 이란의 농축우라늄 처리가 미국과의 협상에서 다시 쟁점이 되고 있다고 보도했다.",
-      "link_korea": "핵 비확산 체제와 북핵 협상 선례에 영향을 줄 수 있다.",
-      "region": "중동",
+      "title": "러·우·미 3국 고위급 협의 11월 재개 가능성",
+      "summary": "푸틴 대통령이 위트코프 미 특사와 회담하고 11월 3국 고위급 협의 재개 용의를 밝혔다고 NHK가 보도했다.",
+      "link_korea": "러시아 전쟁 종결 논의는 북러 군사협력과 북한군 파병의 향방에 영향을 줄 수 있다.",
+      "region": "러시아·우크라이나",
       "source": {
-        "name": "알자지라",
-        "url": "https://www.aljazeera.com/news/2026/10/21/irans-enriched-uranium-re-emerges-as-point-of-contention-in-us-talks",
-        "via": "https://www.aljazeera.com/xml/rss/all.xml"
+        "name": "NHK",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261022de63271",
+        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
       }
     }
   ],
-  "world_context": "이란 핵 협상 등 비확산 현안이 이어지고 있다.",
-  "world_at": "2026-10-21T19:10:15+00:00"
+  "world_context": "러-우 종전 협의 동향이 북러 협력에 미칠 영향이 관건이다.",
+  "world_at": "2026-10-22T00:11:05+00:00"
 }

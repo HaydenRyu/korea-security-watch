@@ -5,7 +5,7 @@
       "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리 동향 10월",
+      "북한 핵 영변 풍계리 동향",
       "North Korea nuclear Yongbyon"
     ],
     "logistics": [
@@ -14,7 +14,9 @@
     ],
     "border_clash": [
       "지뢰 발견 DMZ",
-      "귀순 NLL MDL 경고사격"
+      "귀순 NLL MDL 경고사격",
+      "북한 김여정 확성기 국경 합참 10월 22일",
+      "North Korea Kim Yo Jong loudspeakers border Reuters"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -43,10 +45,9 @@
   "opened": [
     "https://www.segye.com/newsView/20261022512673",
     "https://www.segye.com/newsView/20261022506761",
-    "https://www.segye.com/newsView/20261022506928",
-    "https://www.yna.co.kr/view/AKR20261022127751504",
-    "https://www.yna.co.kr/view/AKR20261022135600504",
-    "https://www.yna.co.kr/view/AKR20261022131000065"
+    "https://www.segye.com/newsView/20261022518362",
+    "https://www.yna.co.kr/view/AKR20261022164000504",
+    "https://www.yna.co.kr/view/AKR20261022135600504"
   ],
   "overall_summary": "김여정 담화·통일부 입장·외교부 안보리 서한 등 말·외교 공방이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 경계 수준의 국경 긴장이다.",
   "items": {
@@ -81,7 +82,7 @@
       "region": "DMZ·MDL 남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "김여정이 22일 「전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기」를 재차 밝혔고, 통일부는 충돌 위험 행위 중단을 촉구했으며, 외교부는 지뢰·DMZ 긴장 관련 안보리 의장 서한 발송을 결정했다(말·외교 공방, 신규 교전·시한부 최후통첩 없음).",
+      "summary": "김여정이 22일 「전 국경선 새 대응수단 임무대기·확성기 수일 내 가동 대기」를 재차 밝혔고, 통일부는 충돌 위험 행위 중단을 촉구했으며, 외교부는 안보리 의장 서한 발송과 주한외교단 설명회를 했다(말·외교 공방, 신규 교전·시한부 최후통첩 없음).",
       "meaning": "국경 요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
       "sources": [
         {
@@ -95,9 +96,19 @@
           "url": "https://www.segye.com/newsView/20261022506761"
         },
         {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261022518362"
+        },
+        {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261022127751504"
+          "url": "https://www.yna.co.kr/view/AKR20261022164000504"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261022135600504"
         }
       ],
       "confidence": "중간",
@@ -111,7 +122,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-22T07:12:20+00:00",
+  "checked_at": "2026-10-22T08:12:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

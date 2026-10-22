@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-22T15:50:00+00:00",
+ "fetched_at": "2026-10-22T16:57:21+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-22T15:50:00+00:00",
+ "last_ok_at": "2026-10-22T16:57:21+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -64,22 +64,22 @@
   "border": {
    "clusters": 33,
    "max_independent": 3,
-   "latest": "2026-10-22T15:50:00+00:00"
+   "latest": "2026-10-22T16:57:21+00:00"
   },
   "drone_balloon": {
    "clusters": 31,
    "max_independent": 2,
-   "latest": "2026-10-22T15:50:00+00:00"
+   "latest": "2026-10-22T16:57:21+00:00"
   },
   "mine": {
    "clusters": 20,
    "max_independent": 3,
-   "latest": "2026-10-22T15:50:00+00:00"
+   "latest": "2026-10-22T16:57:21+00:00"
   },
   "fire": {
    "clusters": 11,
    "max_independent": 2,
-   "latest": "2026-10-22T15:50:00+00:00"
+   "latest": "2026-10-22T16:57:21+00:00"
   },
   "spy": {
    "clusters": 1,

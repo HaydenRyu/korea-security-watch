@@ -13,25 +13,29 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 NLL 합참",
-      "North Korea Reuters Kim Yo Jong loudspeaker"
+      "지뢰 발견 DMZ 귀순 NLL 합참",
+      "North Korea Kim Yo Jong border loudspeaker mine DMZ",
+      "북한 합참 발표 오늘 NLL 귀순 월선"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 22일"
     ],
     "foreign_forces": [
       "북러 군사협력",
       "North Korea troops Russia"
     ],
     "parade_massing": [
-      "북한 병력 이동 전방 증강 열병식"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 핵 풍계리 영변 병력 이동 등화관제"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "북한 GPS 교란 진돗개 데프콘 상향"
+      "진돗개 데프콘 상향"
+    ],
+    "hybrid_ops": [
+      "간첩 혐의 국가보안법 구속 북한 해킹 귀속 FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
@@ -44,7 +48,7 @@
     "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/north-korea-s-kim-yo-jong-says-loudspeaker-broadcasts-toward-seoul-being-considered-kcna-reports",
     "https://kookbang.dema.mil.kr/newsWeb/20261023/5/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "김여정의 새 대응수단·확성기 수일 내 가동 예고와 정부의 안보리 의장 서한 발송 등 말과 외교전이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 주의 수준이다.",
+  "overall_summary": "김여정의 새 대응수단·확성기 수일 내 대기 예고와 정부의 안보리 의장 서한 발송 등 말과 외교전이 이어지나 신규 교전·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 주의 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,13 +75,16 @@
     "gov_warning": {
       "status": "none"
     },
+    "hybrid_ops": {
+      "status": "none"
+    },
     "border_clash": {
       "status": "single",
       "routine": true,
       "region": "DMZ·MDL 남부국경",
       "lat": 38.3,
       "lon": 127.2,
-      "summary": "김여정이 국경선 새 대응수단 임무대기와 확성기 수일 내 가동을 재차 예고했고 국방부는 비례적 조치를, 외교부는 안보리 의장 서한 발송을 밝혔다(신규 교전·시한부 최후통첩 없음).",
+      "summary": "김여정이 국경선 새 대응수단 임무대기와 확성기 수일 내 대기를 재차 예고했고 국방부는 비례적 조치를, 외교부는 안보리 의장 서한 발송을 밝혔다(신규 교전·시한부 최후통첩 없음).",
       "meaning": "국경 요새화와 상호 경고가 이어지는 수준이며 실제 충돌은 확인되지 않았다.",
       "sources": [
         {
@@ -93,13 +100,13 @@
       ],
       "confidence": "중간",
       "facts": [
-        "10/22 김여정 KCNA 담화: 새 대응수단 대기·확성기 수일 내 대기",
-        "신규 교전·사격 보도 없음"
+        "10/22 김여정 KCNA 담화: 새 대응수단 임무대기·확성기 수일 내 대기",
+        "신규 교전·사격 보도 없음, 시한 명시 최후통첩 없음"
       ],
       "speculation": []
     }
   },
-  "checked_at": "2026-10-22T15:14:46+00:00",
+  "checked_at": "2026-10-22T16:11:27+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

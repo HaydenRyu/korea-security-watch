@@ -19,7 +19,8 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<script src="forecast.js"></script>
+<!-- 공용 스크립트는 주소에 판을 붙인다: Pages 캐시(max-age=600) 동안 새 페이지가 옛 forecast.js 와 섞여 멈추지 않게(10/22). forecast.js 를 고치면 v 를 올린다 -->
+<script src="forecast.js?v=2026-10-22b"></script>
 <script data-goatcounter="https://jis.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@87.5..112.5,300..700&display=swap" rel="stylesheet">
@@ -841,6 +842,8 @@ const LABEL=["평시","주의","경계","위험"];
 // 등급별 개인 준비 — 이 감시판의 권고일 뿐이다. 실제 대피는 정부 경보(재난문자·사이렌)를 따른다.
 // 지금 할 일 문장은 forecast.js FC_TODO·fcTodo(상황판·예측 공용, 국면이 등급보다 높으면 국면 할 일)
 let LADDER=null;
+// forecast.js 가 옛 판이면(캐시) fcTodo 가 없다 — 할 일만 등급 문장 없이 비우고 상황판 본체는 그린다
+const todoOf=g=>typeof fcTodo==="function"?fcTodo(g,LADDER):null;
 const CRIT=[["징후 없음","징후 없음"],
   ["단일 징후 · 정례 활동만","단일 징후, 또는 정례 훈련·미사일 시험·위협 발언만 있음"],
   ["징후 2개 항목 이상 · 교차확인","일상 활동이 아닌 징후가 2개 항목 이상, 또는 교차확인된 징후 1개 이상"],
@@ -927,7 +930,7 @@ function render(latest,events){
   $("lag").classList.toggle("on",!!(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3));
   drawDial(g);
   $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("")
-    +(g!=null?`<div class="todo"><b>지금 할 일</b><span id="todoTxt">${fcTodo(g,LADDER).text}</span><a href="#todo-p" class="go" id="todoJump">비상용품·대피 요령 보기<span class="dn"> ↓</span></a></div>`:"");
+    +(g!=null?`<div class="todo"><b>지금 할 일</b><span id="todoTxt">${esc(todoOf(g)?.text||"")}</span><a href="#todo-p" class="go" id="todoJump">비상용품·대피 요령 보기<span class="dn"> ↓</span></a></div>`:"");
   renderTodo(g);renderWorld(latest);
 
   // 「이상 없음」의 근거 — 이번 회차에 실제로 돌린 검색어(coverage)와 연 원문(opened). 루틴이 coverage 게이트로 남기는 값이라 추정이 아니다
@@ -995,9 +998,9 @@ function shelterLabel(){const d=SHEL?.dongs?.length?SHEL.dongs.map(x=>x.replace(
   return`대피소 ${SHEL.shelters.length}곳 · ${d} ${n}곳 포함`}
 const CK="jisPrep";
 function ckGet(){try{return JSON.parse(localStorage.getItem(CK)||"{}")}catch(_){return{}}}
-const tnowHtml=g=>{const t=fcTodo(g,LADDER);return t?`<b><em>${esc(t.why)}</em> 기준</b><span>${esc(t.text)}</span>`:`<b>분석 전</b><span>첫 분석 결과를 기다리는 중입니다.</span>`};
+const tnowHtml=g=>{const t=todoOf(g);return t?`<b><em>${esc(t.why)}</em> 기준</b><span>${esc(t.text)}</span>`:`<b>분석 전</b><span>첫 분석 결과를 기다리는 중입니다.</span>`};
 // 국면(state/ladder.json)이 등급보다 늦게 도착하면 할 일 두 곳을 다시 쓴다
-function paintTodo(){const g=DATA.latest?.grade??null,t=fcTodo(g,LADDER);if(!t)return;
+function paintTodo(){const g=DATA.latest?.grade??null,t=todoOf(g);if(!t)return;
   if($("todoTxt"))$("todoTxt").textContent=t.text;if($("todoNow"))$("todoNow").innerHTML=tnowHtml(g)}
 function renderTodo(g){
   const ck=ckGet(),open=k=>(g>=2&&(k==="supplies"||k==="family"))||(g>=3&&k==="air");
@@ -1668,7 +1671,7 @@ const SCN_C=["--g0","--ice","--g2"];
 Promise.all([jsonOr("data/risk_calendar.json"),jsonOr(base+"signals.json"),jsonOr("data/forecast_prob.json"),jsonOr(base+"scenarios.json")]).then(([doc,sg,pb,sc])=>{
   if(!doc?.tempo){$("fc4").innerHTML=`<p class="empty">예측 자료를 불러오지 못했습니다 · <a href="forecast.html">예측 전체 ›</a></p>`;return}
   const tp=doc.tempo,hot=tp.ratio!=null&&tp.ratio>=2,up=fcUpcoming(doc),sig=fcSignals(sg,new Date(),!sample);
-  const p7=fcProb(pb,7),p30=fcProb(pb,30),tl=fcTilt(sc);
+  const hasFc=typeof fcProb==="function",p7=hasFc?fcProb(pb,7):null,p30=hasFc?fcProb(pb,30):null,tl=hasFc?fcTilt(sc):null;
   const AIB=`<span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 사실 확인은 출처 원문으로 하세요.">AI</span>`;
   const upLi=u=>`<li><span class="d">${fcMD(u.start)}${u.end?"~":""}</span><span class="t"><span class="${u.stat?.verdict==="more"?"hi":""}">${esc(u.name)}</span> <small>· ${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년 발사(평소 ${u.stat.expected})`:"과거 집계 없음"}</small></span></li>`;
   const tiltLi=tl?`<li><span class="d">기울기</span><span class="t"><span style="color:var(${SCN_C[tl.tone]})">${esc(tl.name)} ${tl.on}/${tl.known}</span> <small>· ${tl.rows.filter(c=>c.id!==tl.id).map(c=>`${esc(c.name)} ${c.on}`).join(" · ")}</small></span></li>`:"";

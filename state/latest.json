@@ -1,56 +1,47 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
       "지뢰 발견",
-      "DMZ 군사회담 제안",
-      "North Korea DMZ mine talks"
+      "DMZ 군사회담",
+      "news_kr 접경 묶음"
+    ],
+    "nuclear": [
+      "북한 미사일 발사 합참 10월 23일",
+      "North Korea Reuters AP October 23 2026"
+    ],
+    "troop_movement": [
+      "북한 미사일 발사 합참 10월 23일"
+    ],
+    "logistics": [
+      "North Korea Reuters AP October 23 2026"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea GPS jamming"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "North Korea Reuters AP October 23 2026"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "North Korea Reuters AP October 23 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea wartime mobilization"
+      "North Korea Reuters AP October 23 2026"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "DEFCON Korea"
+      "북한 미사일 발사 합참 10월 23일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 군사회담 제안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261023512593",
     "https://www.segye.com/newsView/20261023509680",
-    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/"
+    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
   "overall_summary": "국방부의 군사회담 재제안과 김여정의 확성기 재개 위협이 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
   "items": {
@@ -61,24 +52,6 @@
       "status": "none"
     },
     "logistics": {
-      "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
       "status": "none"
     },
     "border_clash": {
@@ -114,9 +87,27 @@
       "speculation": [
         "북한이 지난해 11월 제안처럼 응하지 않을 가능성"
       ]
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-10-23T12:11:24+00:00",
+  "checked_at": "2026-10-23T13:11:38+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

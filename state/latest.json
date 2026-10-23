@@ -2,42 +2,44 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 접경",
-      "North Korea troop movement Reuters"
+      "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea missile launch OR troops OR Kim Jong Un Reuters"
+      "North Korea nuclear missile Reuters"
     ],
     "logistics": [
       "북한 군수 수송",
-      "North Korea ammunition shipment"
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한 10월 23일",
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ NLL 귀순 북한",
       "North Korea border mine talks"
     ],
     "electronic_cyber": [
       "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 공격 10월 23일",
-      "North Korea cyber attack"
+      "해킹 개인정보 유출",
+      "North Korea hackers attributed"
     ],
     "foreign_forces": [
-      "북러 군사협력 북한군 파병 North Korea troops Russia"
+      "북러 군사협력 파병",
+      "North Korea troops Russia"
     ],
     "parade_massing": [
       "북한 열병식",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
+      "국정원 김정은 사망설",
       "North Korea Kim Jong Un health rumor"
     ],
     "gov_warning": [
-      "북한 미사일 발사 합참",
+      "북한 합참 미사일 발사",
       "South Korea alert North Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
+      "국가보안법 구속 간첩",
       "North Korea attributed FBI"
     ],
     "calm": [
@@ -49,9 +51,13 @@
     "https://www.segye.com/newsView/20261023512593",
     "https://www.segye.com/newsView/20261023509680",
     "https://www.nknews.org/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261023/5/ATCE_CTGR_0010010000/view.do"
+    "https://kookbang.dema.mil.kr/newsWeb/20261023/5/ATCE_CTGR_0010010000/view.do",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.bbc.co.uk/news/articles/c6ev38dj1g8zo",
+    "https://www.bbc.co.uk/news/articles/cq74pjpmx0e8o",
+    "https://www.bbc.co.uk/news/articles/c6vgxkvl4w5eo"
   ],
-  "overall_summary": "국방부 군사회담 재제안과 김여정의 확성기 재개 예고가 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
+  "overall_summary": "국방부 군사회담 공식 제안과 김여정의 확성기 재개 예고가 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,14 +77,15 @@
     "parade_massing": {
       "status": "none"
     },
-    "nk_internal": {
-      "status": "none"
-    },
     "gov_warning": {
       "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "nk_internal": {
+      "status": "none",
+      "summary": "국정원이 김정은 사망설을 허위로 국회에 보고했으나 북한 내부 전시태세 징후는 없다(배경)."
     },
     "border_clash": {
       "status": "corroborated",
@@ -86,7 +93,7 @@
       "region": "MDL 중서부·DMZ",
       "lat": 38.0,
       "lon": 127.0,
-      "summary": "국방부가 MDL 상호확인·군통신선 복원 군사회담을 북에 재차 공식 제안(23일)했으나 북의 공식 반응은 없고, 김여정의 확성기 재개 예고는 이어지나 신규 교전·시한부 최후통첩·새 매설 확인은 없다.",
+      "summary": "국방부가 MDL 상호확인·군통신선 복원 군사회담을 북에 공식 제안(23일)했으나 북의 반응은 없고, 김여정의 확성기 재개 예고와 DMZ 지뢰 매설 추정 보도가 이어지나 신규 교전·최후통첩·새 매설 확인은 없다.",
       "meaning": "지뢰·확성기를 둘러싼 말과 외교전 국면이 지속되며 신규 충돌 확인은 없다.",
       "sources": [
         {
@@ -110,7 +117,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-23T18:10:10+00:00",
+  "checked_at": "2026-10-23T19:10:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -150,5 +157,5 @@
     }
   ],
   "world_context": "러-우 전황과 휴전 동향이 북러 협력과 한국의 안보 환경에 간접 영향을 줄 수 있다.",
-  "world_at": "2026-10-23T16:12:34+00:00"
+  "world_at": "2026-10-23T19:10:55+00:00"
 }

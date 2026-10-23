@@ -2,11 +2,11 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement border Reuters"
+      "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Punggye-ri Yongbyon 38 North"
+      "North Korea nuclear Punggye-ri Yongbyon"
     ],
     "logistics": [
       "북러 군사협력 탄약 수송",
@@ -15,60 +15,48 @@
     "border_clash": [
       "지뢰 발견 목함지뢰 해안",
       "DMZ NLL 귀순 합참",
-      "North Korea Reuters October 23 2026"
+      "남북 군사회담 MDL"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
       "북러 군사협력 북한군 파병",
-      "North Korea Russia prosecutors deal NK News"
+      "North Korea Russia prosecutors deal"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
     ],
     "nk_internal": [
       "북한 등화관제 준전시",
-      "North Korea internal wartime posture"
+      "North Korea wartime posture"
     ],
     "gov_warning": [
-      "北朝鮮 弾道ミサイル 発射 防衛省",
-      "진돗개 데프콘 발령"
+      "北朝鮮 ミサイル",
+      "북한 미사일 발사 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 지령",
-      "North Korea attributed FBI hackers"
+      "국가보안법 구속 간첩",
+      "North Korea Reuters"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 통신선 복원"
     ],
     "linkage:taiwan": [
       "PLA drills around Taiwan"
     ],
     "linkage:korea": [
       "북러 군사협력 북한군 파병"
-    ],
-    "factor:nk_domestic": [
-      "North Korea party plenary economy 2026"
-    ],
-    "factor:inter_korean": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
-    ],
-    "factor:great_powers": [
-      "North Korea Reuters October 23 2026"
-    ],
-    "factor:public_opinion": [
-      "김여정 담화 대남 비난"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261023508613",
-    "https://www.segye.com/newsView/20261023506746",
+    "https://www.segye.com/newsView/20261023509389",
+    "https://www.segye.com/newsView/20261023507100",
     "https://www.nknews.org/feed/",
-    "https://www.yna.co.kr/view/AKR20261023103000504"
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "DMZ 지뢰 96만발 추정 보고, 김여정의 확성기·새 대응수단 예고 등 말과 외교전 국면이 이어지는 가운데, 국방부가 군사분계선 관련 남북 군사회담을 재차 제의했다. 신규 교전·병력·핵 징후는 없어 직전과 같은 주의 수준이다.",
+  "overall_summary": "국방부의 남북 군사회담 재제의와 김여정의 확성기·새 대응수단 위협이 맞서는 말·외교전 국면이 직전과 같이 이어진다. 신규 교전·병력·핵 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -103,35 +91,35 @@
       "region": "MDL 중서부·DMZ",
       "lat": 38.0,
       "lon": 127.0,
-      "summary": "군이 북한의 2024년 이후 DMZ 지뢰 매설을 96만발로 추정한다고 국회에 보고(23일)하고 국방부가 MDL 관련 군사회담을 재차 제의했으며, 김여정의 확성기 가동·새 대응수단 예고는 이어지나 신규 교전·시한부 최후통첩은 없다.",
+      "summary": "국방부가 MDL 상호확인·군통신선 복원을 위한 남북 군사회담을 재차 제의(23일)하고 정부가 북한의 정전협정 위반을 유엔에 서한으로 알렸으며, 김여정의 확성기 재개·새 대응수단 위협은 이어지나 신규 교전·시한부 최후통첩은 없다.",
       "meaning": "지뢰·확성기를 둘러싼 말과 외교전 국면이 지속되며 신규 충돌 확인은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261023508613"
+          "url": "https://www.segye.com/newsView/20261023509389"
         },
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261023506746"
+          "url": "https://www.segye.com/newsView/20261023507100"
         },
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261023103000504"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/feed/"
         }
       ],
       "confidence": "높음",
       "facts": [
-        "군이 국회에 북한의 DMZ 지뢰 매설 약 96만발 추정 보고(세계일보 23일)",
-        "국방부가 군사분계선 관련 남북 군사회담 재차 제의(연합 23일)",
-        "김여정 담화: 이달 중 전 국경선 확성기 가동, 새로운 대응 수단 준비(22일 보도)"
+        "국방부가 군사분계선 관련 남북 군사회담을 재차 제의(세계일보 23일)",
+        "정부가 북한 정전협정 위반을 유엔 서한으로 제기(세계일보 23일)",
+        "김여정이 확성기 재개 방침을 밝히고 남측 의원을 비난(NK News 22일)"
       ],
       "speculation": []
     }
   },
-  "checked_at": "2026-10-23T05:10:46+00:00",
+  "checked_at": "2026-10-23T06:15:21+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -16,7 +16,8 @@
       "North Korea Reuters AP October 23 2026"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격",
+      "GPS 교란"
     ],
     "foreign_forces": [
       "North Korea Reuters AP October 23 2026"
@@ -31,7 +32,8 @@
       "북한 미사일 발사 합참 10월 23일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
       "남북 군사회담 제안"
@@ -40,8 +42,7 @@
   "opened": [
     "https://www.segye.com/newsView/20261023512593",
     "https://www.segye.com/newsView/20261023509680",
-    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/"
   ],
   "overall_summary": "국방부의 군사회담 재제안과 김여정의 확성기 재개 위협이 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
   "items": {
@@ -82,7 +83,7 @@
       "confidence": "중간",
       "facts": [
         "국방부가 23일 남북 군사회담을 공식 제안했고 북한 호응은 아직 없다",
-        "9/21 DMZ 지뢰 폭발 부상 이후의 후속 조치이며 신규 교전 보도 없음"
+        "9월 DMZ 지뢰 폭발 부상 이후의 후속 조치이며 신규 교전 보도 없음"
       ],
       "speculation": [
         "북한이 지난해 11월 제안처럼 응하지 않을 가능성"
@@ -107,7 +108,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-23T13:11:38+00:00",
+  "checked_at": "2026-10-23T14:18:37+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

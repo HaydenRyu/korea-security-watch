@@ -5,21 +5,21 @@
       "North Korea troop buildup border"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리"
+      "North Korea Reuters missile launch OR troops OR nuclear October 2026"
     ],
     "logistics": [
       "북한 군수 탄약 비축"
     ],
     "border_clash": [
-      "지뢰 발견 귀순 NLL",
-      "North Korea Kim Yo Jong loudspeaker border DMZ mine"
+      "북한 김여정 확성기 DMZ 지뢰 합참 10월 23일",
+      "지뢰 발견 귀순 NLL"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 10월"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "북러 군사협력 파병 North Korea troops Russia"
+      "북러 군사협력 North Korea troops Russia"
     ],
     "parade_massing": [
       "북한 열병식 집결"
@@ -31,20 +31,28 @@
       "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan"
+    ],
+    "linkage:korea": [
+      "North Korea troops Russia"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261022521984",
     "https://www.segye.com/newsView/20261022520485",
-    "https://kookbang.dema.mil.kr/newsWeb/20261023/5/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/",
-    "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
+    "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/",
+    "https://www.nknews.org/2026/10/north-korean-russian-prosecutors-sign-deal-on-combating-terrorism-smuggling/",
+    "https://www.nknews.org/feed/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "DMZ 지뢰 사건을 둘러싼 정부의 안보리 서한과 김여정의 확성기·국경선 위협 공방이 이어지나 신규 교전·병력·핵 징후는 없다. 직전 회차와 같은 주의 수준이다.",
+  "overall_summary": "DMZ 지뢰 사건을 둘러싼 안보리 서한 발송과 김여정의 확성기·국경 대응수단 대기 예고 공방이 이어지나 신규 교전·병력·핵 징후는 없다. 직전 회차와 같은 주의 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -82,8 +90,9 @@
       ],
       "confidence": "높음",
       "facts": [
-        "외교부가 유엔 안보리 의장에 서한 발송",
-        "김여정 담화: 국경선 새 대응수단 임무대기, 확성기 수일 내 대기"
+        "외교부가 유엔 안보리 의장에 서한 발송(22일 뉴욕시간)",
+        "김여정 담화: 국경선 새 대응수단 임무대기, 확성기 수일 내 대기",
+        "국방부: 확성기 가동 시 비례적 조치"
       ],
       "speculation": []
     },
@@ -106,14 +115,14 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-22T23:10:03+00:00",
+  "checked_at": "2026-10-23T00:11:30+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
       "title": "키이우 미사일 공격, 러시아는 미국의 우크라이나 평화협상 재개 요청 수용",
-      "summary": "BBC에 따르면 러시아가 미국의 협상 재개 요청에 동의한 직후 키이우에 미사일이 떨어졌다.",
+      "summary": "BBC에 따르면 러시아가 협상 재개에 원칙적으로 준비됐다고 밝힌 직후 키이우에 미사일이 떨어졌다.",
       "link_korea": "러-우 종전 협의 향방은 북러 군사협력과 북한군 파병에 영향을 줄 수 있다.",
       "region": "우크라이나",
       "source": {
@@ -124,7 +133,7 @@
     },
     {
       "title": "사우디 동부 공항 공격으로 2명 사망",
-      "summary": "BBC는 사우디아라비아 동부 공항에 대한 공격으로 2명이 숨졌다고 당국 발표를 전했다.",
+      "summary": "BBC는 후티 반군의 사우디 동부 공항 공격으로 2명이 숨졌다고 당국 발표를 전했다.",
       "link_korea": "중동 분쟁 확산은 미군 전략자산의 한반도 가용성과 에너지 시장에 영향을 줄 수 있다.",
       "region": "중동",
       "source": {
@@ -135,5 +144,5 @@
     }
   ],
   "world_context": "러-우 협상과 중동 분쟁 동향이 북러 협력과 미군 전력 배치에 미칠 영향이 관건이다.",
-  "world_at": "2026-10-22T13:15:25+00:00"
+  "world_at": "2026-10-23T00:11:30+00:00"
 }

@@ -5,57 +5,52 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea nuclear Punggye-ri Yongbyon October 2026",
-      "북한 핵 풍계리 영변"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "North Korea troops Russia munitions",
-      "북러 탄약 수송"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 귀순",
-      "국방부 군사회담 MDL",
-      "North Korea DMZ mines"
+      "지뢰 발견",
+      "DMZ 군사회담 제안",
+      "North Korea DMZ mine talks"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 10월 23일",
+      "GPS 교란",
+      "해킹 개인정보 유출",
       "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "North Korea troops Russia munitions",
-      "북러 군사협력 북한군 파병"
+      "북러 군사협력",
+      "North Korea troops Russia"
     ],
     "parade_massing": [
-      "북한 열병식 등화관제 준전시 노농적위군",
+      "북한 열병식 병력 집결",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 열병식 등화관제 준전시 노농적위군",
-      "North Korea martial state"
+      "북한 준전시 등화관제",
+      "North Korea wartime mobilization"
     ],
     "gov_warning": [
-      "북한 미사일 발사 합참 10월 23일",
-      "North Korea Reuters October 23 2026"
+      "진돗개 발령 데프콘",
+      "DEFCON Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 2026년 10월",
-      "North Korea IT worker police investigating"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan Eastern Theater Command October 2026"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261023512593",
     "https://www.segye.com/newsView/20261023509680",
-    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
-    "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/police-investigating-if-north-korean-it-worker-infiltrated-rok-organization/",
-    "https://www.nknews.org/2026/10/chinese-officials-visit-north-korea-to-mark-chinas-entry-into-korean-war/"
+    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/"
   ],
   "overall_summary": "국방부의 군사회담 재제안과 김여정의 확성기 재개 위협이 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
   "items": {
@@ -121,7 +116,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-23T11:10:49+00:00",
+  "checked_at": "2026-10-23T12:11:24+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

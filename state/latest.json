@@ -1,19 +1,18 @@
 {
   "coverage": {
-    "border_clash": [
-      "지뢰 발견",
-      "DMZ 군사회담",
-      "news_kr 접경 묶음"
+    "troop_movement": [
+      "북한 미사일 발사 합참 10월 23일"
     ],
     "nuclear": [
       "북한 미사일 발사 합참 10월 23일",
       "North Korea Reuters AP October 23 2026"
     ],
-    "troop_movement": [
-      "북한 미사일 발사 합참 10월 23일"
-    ],
     "logistics": [
       "North Korea Reuters AP October 23 2026"
+    ],
+    "border_clash": [
+      "지뢰 발견 DMZ 귀순",
+      "news_kr 접경 묶음"
     ],
     "electronic_cyber": [
       "해킹 개인정보 유출 사이버 공격",
@@ -108,7 +107,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-23T14:18:37+00:00",
+  "checked_at": "2026-10-23T15:12:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

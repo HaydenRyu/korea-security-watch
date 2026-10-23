@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T14:18:37+00:00",
+  "updated_at": "2026-10-23T15:12:40+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -13,7 +13,7 @@
           "id": "dialogue_offer",
           "label": "남북·북미 대화 제안·수용",
           "state": "on",
-          "note": "국방부가 23일 MDL 상호확인·군통신선 복원을 위한 남북 군사당국회담을 북측에 공식 제안했다."
+          "note": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 북측에 공식 제안했다."
         },
         {
           "id": "channel_restored",
@@ -186,22 +186,18 @@
   ],
   "calm": {
     "dialogue_offer": {
-      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원을 위한 남북 군사당국회담을 북측에 공식 제안했다.",
+      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 북측에 공식 제안했다.",
       "sources": [
         {
           "url": "https://www.segye.com/newsView/20261023512593",
           "publisher": "세계일보"
-        },
-        {
-          "url": "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
-          "publisher": "NK News"
         }
       ],
       "first_seen": "2026-10-23T05:10:46+00:00",
-      "last_seen": "2026-10-23T13:11:38+00:00"
+      "last_seen": "2026-10-23T15:12:40+00:00"
     }
   },
-  "calm_judged_at": "2026-10-23T14:18:37+00:00",
+  "calm_judged_at": "2026-10-23T15:12:40+00:00",
   "history": [
     {
       "date": "2026-10-22",
@@ -214,6 +210,15 @@
     },
     {
       "date": "2026-10-23",
+      "tilt": "hold",
+      "on": {
+        "calm": 1,
+        "hold": 4,
+        "esc": 0
+      }
+    },
+    {
+      "date": "2026-10-24",
       "tilt": "hold",
       "on": {
         "calm": 1,

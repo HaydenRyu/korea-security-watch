@@ -1,17 +1,24 @@
 {
- "at": "2026-10-23T17:28:39+00:00",
- "south": 11,
- "area": 16,
- "baseline": 9.0,
- "ratio": 1.22,
- "samples": 4,
+ "at": "2026-10-23T18:41:12+00:00",
+ "south": 15,
+ "area": 18,
+ "baseline": 13,
+ "ratio": 1.15,
+ "samples": 5,
  "mil": [
+  {
+   "type": "H60",
+   "name": null,
+   "call": "EVAC16",
+   "lat": 37.08,
+   "lon": 127.14
+  },
   {
    "type": "GLEX",
    "name": "정찰용 비즈니스젯 가능",
    "call": "",
-   "lat": 37.39,
-   "lon": 127.0
+   "lat": 37.6,
+   "lon": 127.54
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

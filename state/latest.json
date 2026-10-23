@@ -1,47 +1,58 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 접경 묶음",
-      "북한 합참 발표 미사일 NLL 귀순"
+      "접경 병력 이동 북한",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Reuters AP",
-      "북한 합참 발표 미사일 NLL 귀순"
+      "북한 핵 풍계리 영변",
+      "North Korea Reuters"
     ],
     "logistics": [
-      "North Korea Reuters AP"
+      "북한 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "news_kr 지뢰·접경 묶음",
-      "북한 합참 발표 미사일 NLL 귀순"
+      "지뢰 발견",
+      "DMZ 군사회담 북한",
+      "North Korea border mine talks"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 랜섬웨어 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "North Korea cyber attack"
     ],
     "foreign_forces": [
-      "North Korea Reuters AP"
+      "북러 군사협력",
+      "North Korea troops Russia"
     ],
     "parade_massing": [
-      "North Korea Reuters AP"
+      "북한 열병식",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "North Korea Reuters AP"
+      "북한 준전시 등화관제",
+      "North Korea Kim Jong Un health rumor"
     ],
     "gov_warning": [
-      "북한 합참 발표 미사일 NLL 귀순"
+      "진돗개 발령 데프콘",
+      "South Korea alert North Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 군사회담 제안"
+      "남북 군사회담 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261023512593",
     "https://www.segye.com/newsView/20261023509680",
     "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/",
+    "https://www.donga.com/news/Politics/article/all/20261023/134899794/2"
   ],
   "overall_summary": "국방부의 군사회담 재제안과 김여정의 확성기 재개 위협이 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
   "items": {
@@ -107,7 +118,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-23T16:12:34+00:00",
+  "checked_at": "2026-10-23T17:11:18+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

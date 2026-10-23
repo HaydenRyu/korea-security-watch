@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T17:11:18+00:00",
+  "updated_at": "2026-10-23T18:10:10+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -13,7 +13,7 @@
           "id": "dialogue_offer",
           "label": "남북·북미 대화 제안·수용",
           "state": "on",
-          "note": "국방부가 23일 MDL 상호확인·군통신선 복원을 위한 남북 군사회담을 북측에 공식 제안했다(북한 호응 없음)."
+          "note": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 북측에 공식 제안했다(북 수용 아님, 제안 사실)."
         },
         {
           "id": "channel_restored",
@@ -186,18 +186,22 @@
   ],
   "calm": {
     "dialogue_offer": {
-      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원을 위한 남북 군사회담을 북측에 공식 제안했다(북한 호응 없음).",
+      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 북측에 공식 제안했다(북 수용 아님, 제안 사실).",
       "sources": [
         {
           "url": "https://www.segye.com/newsView/20261023512593",
           "publisher": "세계일보"
+        },
+        {
+          "url": "https://www.segye.com/newsView/20261023509680",
+          "publisher": "세계일보"
         }
       ],
       "first_seen": "2026-10-23T05:10:46+00:00",
-      "last_seen": "2026-10-23T17:11:18+00:00"
+      "last_seen": "2026-10-23T18:10:10+00:00"
     }
   },
-  "calm_judged_at": "2026-10-23T17:11:18+00:00",
+  "calm_judged_at": "2026-10-23T18:10:10+00:00",
   "history": [
     {
       "date": "2026-10-22",

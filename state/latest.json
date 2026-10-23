@@ -19,7 +19,7 @@
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 10월 23일",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
       "North Korea GPS jamming"
     ],
     "foreign_forces": [
@@ -40,8 +40,8 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea Reuters Kim Jong Un",
-      "North Korea attributed FBI"
+      "North Korea attributed FBI",
+      "North Korea Reuters"
     ],
     "calm": [
       "남북 군사회담 제안 통신선 복원"
@@ -49,12 +49,11 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261023509389",
-    "https://www.segye.com/newsView/20261023509680",
     "https://www.segye.com/newsView/20261023508613",
     "https://www.nknews.org/feed/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/2026/10/police-investigating-if-north-korean-it-worker-infiltrated-rok-organization/"
   ],
-  "overall_summary": "국방부의 군사회담 공식 제안과 DMZ 지뢰 96만발 추정 보고, 김여정의 확성기·새 대응수단 위협이 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵 징후는 확인되지 않았다.",
+  "overall_summary": "국방부의 군사회담 재제안과 DMZ 지뢰 96만발 추정 보고, 김여정의 확성기 재개 위협이 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,7 +70,7 @@
       "region": "MDL 중서부·DMZ",
       "lat": 38.0,
       "lon": 127.0,
-      "summary": "국방부가 MDL 상호확인·군통신선 복원 군사회담을 북에 공식 제안(23일)하고 군이 북의 DMZ 지뢰 매설을 96만발로 추정해 보고했으며, 김여정의 확성기 재개·새 대응수단 위협은 이어지나 신규 교전·시한부 최후통첩은 없다.",
+      "summary": "국방부가 MDL 상호확인·군통신선 복원 군사회담을 북에 재차 공식 제안(23일)하고 군이 북 DMZ 지뢰 매설을 96만발로 추정해 국회에 보고했으며, 김여정의 확성기 재개 위협은 이어지나 신규 교전·시한부 최후통첩은 없다.",
       "meaning": "지뢰·확성기를 둘러싼 말과 외교전 국면이 지속되며 신규 충돌 확인은 없다.",
       "sources": [
         {
@@ -92,9 +91,8 @@
       ],
       "confidence": "높음",
       "facts": [
-        "국방부가 남북 군사당국 회담을 북측에 공식 제안(세계일보 23일)",
-        "군이 2024년 이후 북한이 DMZ에 지뢰 약 96만발을 매설한 것으로 추정(세계일보 23일)",
-        "NK News: 서울이 국경선 협의를 재차 제안"
+        "국방부가 남북 군사회담을 북측에 재차 제의(세계일보 23일)",
+        "군이 2024년 이후 북 DMZ 지뢰 약 96만발 추정, 국회 보고(세계일보)"
       ],
       "speculation": []
     },
@@ -114,10 +112,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "북한 IT인력 위장취업 의심 건은 경찰이 수사 중이며 북한 연계 공식 확정 발표가 없어 배경으로만 둔다."
     }
   },
-  "checked_at": "2026-10-23T08:09:50+00:00",
+  "checked_at": "2026-10-23T09:10:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,51 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 핵실험 풍계리 영변 군수 열병식 진돗개 데프콘",
-      "North Korea troops Russia nuclear Punggye-ri Yongbyon parade wartime drill"
+      "북한 병력 이동 전방 증강",
+      "North Korea troops Russia nuclear Punggye-ri Yongbyon"
     ],
     "nuclear": [
-      "북한 병력 이동 핵실험 풍계리 영변 군수 열병식 진돗개 데프콘",
-      "North Korea troops Russia nuclear Punggye-ri Yongbyon parade wartime drill"
+      "북한 핵 풍계리 영변",
+      "North Korea troops Russia nuclear Punggye-ri Yongbyon"
     ],
     "logistics": [
-      "북한 병력 이동 핵실험 풍계리 영변 군수 열병식 진돗개 데프콘",
-      "North Korea troops Russia nuclear Punggye-ri Yongbyon parade wartime drill"
-    ],
-    "parade_massing": [
-      "북한 병력 이동 핵실험 풍계리 영변 군수 열병식 진돗개 데프콘",
-      "North Korea troops Russia nuclear Punggye-ri Yongbyon parade wartime drill"
-    ],
-    "nk_internal": [
-      "북한 병력 이동 핵실험 풍계리 영변 군수 열병식 진돗개 데프콘",
-      "North Korea troops Russia nuclear Punggye-ri Yongbyon parade wartime drill"
-    ],
-    "gov_warning": [
-      "북한 병력 이동 핵실험 풍계리 영변 군수 열병식 진돗개 데프콘",
-      "North Korea troops Russia nuclear Punggye-ri Yongbyon parade wartime drill"
-    ],
-    "foreign_forces": [
-      "북한 병력 이동 핵실험 풍계리 영변 군수 열병식 진돗개 데프콘",
-      "North Korea troops Russia nuclear Punggye-ri Yongbyon parade wartime drill"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "북한 확성기 김여정 국경선 오늘",
-      "북한 GPS 교란 목함지뢰 해안 귀순 NLL",
+      "목함지뢰 해안 발견 귀순 NLL 10월 23일",
       "North Korea Reuters AP October 23 2026"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 목함지뢰 해안 귀순 NLL",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격 10월 23일"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 10월 23일"
+    ],
+    "foreign_forces": [
+      "North Korea troops Russia nuclear Punggye-ri Yongbyon",
+      "북러 군사협력"
+    ],
+    "parade_massing": [
+      "북한 열병식 병력 집결"
+    ],
+    "nk_internal": [
+      "북한 등화관제 준전시"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 발령",
+      "北朝鮮 ミサイル 発射 防衛省"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hackers"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hackers"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "확성기 방송 중단"
+    ],
+    "linkage:taiwan": [
+      "대만 중국 군사훈련"
+    ],
+    "linkage:korea": [
+      "북러 군사협력"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261023502110",
-    "https://www.segye.com/newsView/20261022521984",
+    "https://www.segye.com/newsView/20261023507100",
+    "https://www.segye.com/newsView/20261023506746",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/north-korean-russian-prosecutors-sign-deal-on-combating-terrorism-smuggling/",
     "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
   ],
   "overall_summary": "DMZ 지뢰 사건을 둘러싼 안보리 서한과 김여정의 확성기 수일 내 가동 예고, 군의 북한 DMZ 지뢰 96만발 추정 보고 등 말과 외교전 국면이 이어지나 신규 교전·병력·핵 징후는 없다. 직전 회차와 같은 주의 수준이다.",
@@ -58,39 +66,6 @@
     },
     "logistics": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "MDL 중서부·DMZ",
-      "lat": 38.0,
-      "lon": 127.0,
-      "summary": "군이 2024년 이후 북한의 DMZ 지뢰 매설을 96만발로 추정한다고 국회에 보고했고(23일 보도), 외교부 안보리 의장 서한과 김여정의 확성기 수일 내 가동 예고가 이어졌으나 신규 교전·시한부 최후통첩은 없다.",
-      "meaning": "DMZ 지뢰·확성기를 둘러싼 말과 외교전 국면이 지속되며 신규 충돌 확인은 없다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261023502110"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261022521984"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "외교부가 유엔 안보리 의장국(그리스) 앞 서한 발송(22일 뉴욕시간)",
-        "김여정 담화(KCNA 22일): 확성기 수일 내 가동",
-        "군이 2024년 이후 북한의 DMZ 지뢰 매설을 96만발로 추정한다고 국회에 보고(23일 보도)"
-      ],
-      "speculation": []
     },
     "electronic_cyber": {
       "status": "none"
@@ -109,9 +84,42 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "MDL 중서부·DMZ",
+      "lat": 38.0,
+      "lon": 127.0,
+      "summary": "정부가 22일(현지) 안보리 의장에 북한 지뢰 사건을 정전협정 위반으로 규정한 서한을 보냈고, 군의 DMZ 지뢰 96만발 추정 보고(23일)와 김여정의 확성기 수일 내 가동 예고가 이어졌으나 신규 교전·시한부 최후통첩은 없다.",
+      "meaning": "DMZ 지뢰·확성기를 둘러싼 말과 외교전 국면이 지속되며 신규 충돌 확인은 없다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261023502110"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261023507100"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "외교부가 유엔 안보리 의장국(그리스) 앞 서한 발송(22일 뉴욕시간)",
+        "김여정 담화(KCNA 22일): 확성기 수일 내 가동",
+        "군이 2024년 이후 북한의 DMZ 지뢰 매설을 96만발로 추정한다고 국회에 보고(23일 보도)"
+      ],
+      "speculation": []
     }
   },
-  "checked_at": "2026-10-23T02:10:58+00:00",
+  "checked_at": "2026-10-23T03:09:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

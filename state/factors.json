@@ -1,38 +1,47 @@
 {
   "version": 1,
-  "at": "2026-10-23T22:13:07+00:00",
+  "at": "2026-10-23T23:11:00+00:00",
   "domains": {
     "inter_korean": {
       "level": "긴장",
       "sources": [
         {
-          "url": "https://www.segye.com/newsView/20261023509680",
+          "url": "https://www.segye.com/newsView/20261023512593",
           "publisher": "세계일보"
+        },
+        {
+          "url": "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
+          "publisher": "NK News"
         }
       ],
-      "summary": "김여정이 22일 접경 시찰 뒤 대남 확성기 가동을 예고했다.",
-      "at": "2026-10-23T22:13:07+00:00",
+      "summary": "김여정이 10월 중 전 국경선 대남 확성기 가동을 예고했고 국방부의 군사회담 제안에는 반응이 없다.",
+      "at": "2026-10-23T23:11:00+00:00",
       "since": "2026-10-21T01:11:21+00:00"
     },
     "nk_domestic": {
       "level": "보통",
       "sources": [],
-      "summary": "공식 노선 변화나 숙청 보도는 확인되지 않았다.",
-      "at": "2026-10-23T22:13:07+00:00",
+      "summary": "새로 확인된 노선 변화나 간부 숙청 보도는 없다.",
+      "at": "2026-10-23T23:11:00+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     },
     "great_powers": {
       "level": "보통",
-      "sources": [],
-      "summary": "새로 확인된 북러·북중 군사 합의나 미 군사옵션 언급은 없다.",
-      "at": "2026-10-23T22:13:07+00:00",
+      "sources": [
+        {
+          "url": "https://www.nknews.org/2026/10/chinese-officials-visit-north-korea-to-mark-chinas-entry-into-korean-war/",
+          "publisher": "NK News"
+        }
+      ],
+      "summary": "중국 퇴역군인사무부 대표단이 참전 기념 계기로 평양을 방문했으나 군사 합의 보도는 없다.",
+      "at": "2026-10-23T23:11:00+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     },
     "public_opinion": {
       "level": "보통",
       "sources": [],
-      "summary": "대남 비난은 이어지나 새 공식 조치로 이어진 정황은 없다.",
-      "at": "2026-10-23T22:13:07+00:00",
+      "summary": "국정원이 김정은 사망설은 허위라고 밝혔고 새로운 공식 조치는 없다.",
+      "at": "2026-10-23T23:11:00+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     }
   },

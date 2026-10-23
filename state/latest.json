@@ -1,43 +1,69 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집기",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 증강",
+      "North Korea troops border buildup"
     ],
     "nuclear": [
-      "news_kr 수집기",
-      "NK News 최근 헤드라인"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "news_kr 수집기",
-      "NK News 최근 헤드라인"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipments Russia"
     ],
     "border_clash": [
-      "목함지뢰 발견 해안 북한 10월",
-      "news_kr 수집기 DMZ·군사회담",
-      "NK News 최근 헤드라인"
+      "지뢰 발견",
+      "목함지뢰 해안",
+      "DMZ 군사분계선 경고사격",
+      "NLL 귀순"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 공격 2026년 10월"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea troops Russia October 2026"
+      "North Korea troops Russia October 2026",
+      "북러 군사협력"
     ],
     "parade_massing": [
-      "news_kr 수집기"
+      "북한 열병식 기념일 병력 집결"
     ],
     "nk_internal": [
-      "news_kr 수집기 김정은 사망설"
+      "북한 준전시 등화관제 대피"
     ],
     "gov_warning": [
-      "북한 미사일 발사 합참 10월 23일",
-      "North Korea Reuters October 23 2026"
+      "진돗개 데프콘 상향 합참",
+      "미 국무부 한국 여행경보"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 2026"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan Eastern Theater Command"
+    ],
+    "linkage:korea": [
+      "북러 군사협력",
+      "North Korea troops Russia"
     ],
     "calm": [
-      "news_kr 수집기 군사회담 제안"
+      "남북 대화 제안",
+      "확성기 방송 중단"
+    ],
+    "factor:inter_korean": [
+      "김여정 확성기 대남방송",
+      "Kim Yo Jong loudspeakers"
+    ],
+    "factor:nk_domestic": [
+      "북한 당 전원회의 식량 제재"
+    ],
+    "factor:great_powers": [
+      "North Korea China Russia talks",
+      "미 대북 군사옵션"
+    ],
+    "factor:public_opinion": [
+      "북한 대남 비난 담화"
     ]
   },
   "opened": [
@@ -46,7 +72,7 @@
     "https://www.nknews.org/",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "국방부가 23일 군사회담을 공식 제안했으나 북측 반응은 없고 확성기 재개 예고와 지뢰 매설 보도가 이어지는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
+  "overall_summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 공식 제안했으나 북측 반응은 없고, 김여정의 확성기 가동 예고가 이어지는 말·외교전 국면으로 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,7 +89,7 @@
       "region": "MDL 중서부·DMZ",
       "lat": 38.0,
       "lon": 127.0,
-      "summary": "국방부가 MDL 상호확인·군통신선 복원 군사회담을 북에 공식 제안(23일)했으나 북의 반응은 없고, 김여정의 확성기 재개 예고와 DMZ 지뢰 매설 추정 보도가 이어지나 신규 교전·최후통첩·새 매설 확인은 없다.",
+      "summary": "국방부가 MDL 상호확인·군통신선 복원 군사회담을 북에 공식 제안(23일)했으나 북의 반응은 없고, 김여정의 확성기 가동 예고와 DMZ 지뢰 매설 보도가 이어지나 신규 교전·최후통첩·새 매설 확인은 없다.",
       "meaning": "지뢰·확성기를 둘러싼 말과 외교전 국면이 지속되며 신규 충돌 확인은 없다.",
       "sources": [
         {
@@ -84,13 +110,12 @@
       ],
       "confidence": "중간",
       "facts": [
-        "국방부 정책실장이 23일 MDL 위치 상호확인·군통신선 복원·우발충돌 방지 군사회담을 공식 제안(유엔사 포함 3자 가능)",
-        "북측 공식 반응 미보도",
-        "22일 김여정이 전 국경선 대남 확성기 가동 대기를 예고",
-        "강화 해안 유실 추정 지뢰는 10월에만 4발, 군은 여름 호우 유실로 추정"
+        "김홍철 국방부 정책실장이 23일 MDL 위치 상호확인·군통신선 복원·우발충돌 방지 군사회담을 공식 제안했다.",
+        "북측 공식 반응은 보도되지 않았다.",
+        "유엔사는 정전협정 유지에 전념한다는 입장을 냈다."
       ],
       "speculation": [
-        "북이 이번에도 호응하지 않을 가능성"
+        "작년 11월 제안에 무응답이었던 만큼 이번에도 외면할 가능성이 있다."
       ]
     },
     "electronic_cyber": {
@@ -104,7 +129,7 @@
     },
     "nk_internal": {
       "status": "none",
-      "summary": "국정원이 김정은 사망설을 허위로 국회에 보고했으나 북한 내부 전시태세 징후는 없다(배경)."
+      "summary": "국정원이 김정은 사망설을 허위로 보고했고 내부 전시태세 징후는 없다(배경)."
     },
     "gov_warning": {
       "status": "none"
@@ -113,37 +138,26 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-23T21:11:02+00:00",
+  "checked_at": "2026-10-23T22:13:07+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "파리 인근 총격, 테러 혐의로 수사",
-      "summary": "BBC에 따르면 파리 인근 총격 사건을 프랑스 당국이 테러 범죄로 수사 중이다.",
-      "link_korea": "서방 대테러·치안 동향으로 한반도와 직접 연결은 약하다.",
-      "region": "유럽",
+      "title": "UAE 해변에 유조선 피격 기름 유출",
+      "summary": "유조선 피격 여파로 아랍에미리트 해변에 기름이 밀려왔다고 BBC가 전했다.",
+      "link_korea": "중동 해상 수송로 불안은 한국의 에너지 수입과 해군 파견 여건에 직결된다.",
+      "region": "중동",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6ev38dj1g8zo",
+        "url": "https://www.bbc.co.uk/news/articles/c6rey3n974g5o",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "우크라이나 \"스타링크 제한 여전\"",
-      "summary": "BBC에 따르면 우크라이나는 트럼프의 제한 해제 발언 뒤에도 스타링크가 여전히 제한된다고 밝혔다.",
-      "link_korea": "러-우 전황은 북러 군사협력과 북한군 파병 향방에 영향을 준다.",
-      "region": "우크라이나",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cq74pjpmx0e8o",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "백악관, 우크라이나 도시 휴전 중재 발표",
-      "summary": "BBC에 따르면 백악관은 멜라니아 트럼프가 우크라이나의 한 도시를 위한 휴전을 중재했다고 밝혔다.",
-      "link_korea": "러-우 휴전 동향은 북러 협력의 전제 환경에 영향을 준다.",
+      "title": "백악관 \"멜라니아 여사가 우크라이나 도시 휴전 중재\"",
+      "summary": "백악관은 멜라니아 트럼프 여사가 파국 직전의 우크라이나 도시에 대한 휴전을 중재했다고 밝혔다.",
+      "link_korea": "러-우 전쟁의 향방은 북한군 파병과 북러 군사협력의 지속 여부에 영향을 준다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
@@ -152,6 +166,6 @@
       }
     }
   ],
-  "world_context": "러-우 전황과 휴전 동향이 북러 협력과 한국의 안보 환경에 간접 영향을 줄 수 있다.",
-  "world_at": "2026-10-23T20:09:26+00:00"
+  "world_context": "중동 해상 불안과 러-우 전쟁 중재 소식이 겹쳐 있다.",
+  "world_at": "2026-10-23T22:13:07+00:00"
 }

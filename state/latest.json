@@ -2,61 +2,74 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troops Russia nuclear Punggye-ri Yongbyon"
+      "North Korea troops border Kim Yo Jong tactical units"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea troops Russia nuclear Punggye-ri Yongbyon"
+      "North Korea nuclear Punggye-ri Yongbyon 38 North satellite imagery October 2026",
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment Russia"
+      "North Korea Reuters AP news October 23 2026",
+      "북러 군사협력 북한군 파병 10월"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 귀순 NLL 10월 23일",
-      "North Korea Reuters AP October 23 2026"
+      "북한 DMZ 지뢰 귀순 NLL 합참 10월 23일",
+      "North Korea Reuters AP news October 23 2026"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 10월 23일"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "North Korea troops Russia nuclear Punggye-ri Yongbyon",
-      "북러 군사협력"
+      "북러 군사협력 북한군 파병 10월",
+      "North Korea Russia prosecutors deal NK News"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 등화관제 준전시",
+      "North Korea Reuters AP news October 23 2026"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "北朝鮮 ミサイル 発射 防衛省"
+      "북한 미사일 발사 합참 防衛省 北朝鮮 弾道ミサイル",
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속 간첩 혐의 북한 지령",
       "North Korea attributed FBI hackers"
     ],
     "calm": [
-      "남북 대화 제안",
-      "확성기 방송 중단"
+      "남북 대화 제안 통일부 통신선 확성기 방송 중단"
     ],
     "linkage:taiwan": [
-      "대만 중국 군사훈련"
+      "东部战区 台岛 联合演习 PLA drills around Taiwan"
     ],
     "linkage:korea": [
-      "북러 군사협력"
+      "북러 군사협력 북한군 파병 10월"
+    ],
+    "factor:inter_korean": [
+      "남북 대화 제안 통일부 통신선 확성기 방송 중단"
+    ],
+    "factor:great_powers": [
+      "North Korea Reuters AP news October 23 2026"
+    ],
+    "factor:nk_domestic": [
+      "North Korea nuclear Punggye-ri Yongbyon 38 North satellite imagery October 2026"
+    ],
+    "factor:public_opinion": [
+      "North Korea Reuters AP news October 23 2026"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261023502110",
     "https://www.segye.com/newsView/20261023507100",
-    "https://www.segye.com/newsView/20261023506746",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
+    "https://www.aljazeera.com/news/2026/10/22/north-korea-to-resume-propaganda-broadcasts-south-korea-urges-dialogue",
+    "https://www.nknews.org/2026/10/north-korean-russian-prosecutors-sign-deal-on-combating-terrorism-smuggling/",
+    "https://www.dailysecu.com/news/articleView.html?idxno=209013"
   ],
-  "overall_summary": "DMZ 지뢰 사건을 둘러싼 안보리 서한과 김여정의 확성기 수일 내 가동 예고, 군의 북한 DMZ 지뢰 96만발 추정 보고 등 말과 외교전 국면이 이어지나 신규 교전·병력·핵 징후는 없다. 직전 회차와 같은 주의 수준이다.",
+  "overall_summary": "DMZ 지뢰 사건을 둘러싼 안보리 서한과 김여정의 확성기 가동 예고, 군의 북한 DMZ 지뢰 96만발 추정 보고 등 말과 외교전 국면이 이어지나 신규 교전·병력·핵 징후는 없다. 직전 회차와 같은 주의 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -105,21 +118,21 @@
           "url": "https://www.segye.com/newsView/20261023507100"
         },
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
+          "name": "Al Jazeera",
+          "tier": "B",
+          "url": "https://www.aljazeera.com/news/2026/10/22/north-korea-to-resume-propaganda-broadcasts-south-korea-urges-dialogue"
         }
       ],
       "confidence": "높음",
       "facts": [
         "외교부가 유엔 안보리 의장국(그리스) 앞 서한 발송(22일 뉴욕시간)",
-        "김여정 담화(KCNA 22일): 확성기 수일 내 가동",
+        "김여정 담화(KCNA 22일): 전 국경선 확성기 가동, 전술부대 새 위치 점령",
         "군이 2024년 이후 북한의 DMZ 지뢰 매설을 96만발로 추정한다고 국회에 보고(23일 보도)"
       ],
       "speculation": []
     }
   },
-  "checked_at": "2026-10-23T03:09:55+00:00",
+  "checked_at": "2026-10-23T04:11:01+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

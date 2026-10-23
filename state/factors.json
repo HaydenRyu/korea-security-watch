@@ -1,22 +1,48 @@
 {
   "version": 1,
-  "at": "2026-10-22T09:13:00+00:00",
+  "at": "2026-10-23T04:11:01+00:00",
   "domains": {
     "inter_korean": {
       "level": "긴장",
       "sources": [
         {
-          "url": "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/",
-          "publisher": "NK News"
+          "url": "https://www.segye.com/newsView/20261023507100",
+          "publisher": "세계일보"
         },
         {
-          "url": "https://www.segye.com/newsView/20261022512673",
-          "publisher": "세계일보"
+          "url": "https://www.aljazeera.com/news/2026/10/22/north-korea-to-resume-propaganda-broadcasts-south-korea-urges-dialogue",
+          "publisher": "Al Jazeera"
         }
       ],
-      "summary": "김여정이 확성기를 수일 내 가동하겠다고 재차 예고했다.",
-      "at": "2026-10-22T09:13:00+00:00",
+      "summary": "김여정이 전 국경선 대남 확성기 가동을 예고했고 정부는 안보리 서한으로 맞섰다.",
+      "at": "2026-10-23T04:11:01+00:00",
       "since": "2026-10-21T01:11:21+00:00"
+    },
+    "nk_domestic": {
+      "level": "보통",
+      "sources": [],
+      "summary": "새로 확인된 북한 내부 공식 노선 변화나 숙청 보도는 없다.",
+      "at": "2026-10-23T04:11:01+00:00",
+      "since": "2026-10-23T04:11:01+00:00"
+    },
+    "great_powers": {
+      "level": "보통",
+      "sources": [
+        {
+          "url": "https://www.nknews.org/2026/10/north-korean-russian-prosecutors-sign-deal-on-combating-terrorism-smuggling/",
+          "publisher": "NK News"
+        }
+      ],
+      "summary": "북러 검찰이 테러·밀수 대응 협정을 갱신했으나 군사 합의는 아니다.",
+      "at": "2026-10-23T04:11:01+00:00",
+      "since": "2026-10-23T04:11:01+00:00"
+    },
+    "public_opinion": {
+      "level": "보통",
+      "sources": [],
+      "summary": "대남 비난은 기존 수위이며 새로 지목된 인물·시설은 확인되지 않았다.",
+      "at": "2026-10-23T04:11:01+00:00",
+      "since": "2026-10-23T04:11:01+00:00"
     }
   },
   "history": []

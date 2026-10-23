@@ -1,47 +1,38 @@
 {
   "version": 1,
-  "at": "2026-10-23T04:11:01+00:00",
+  "at": "2026-10-23T05:10:46+00:00",
   "domains": {
     "inter_korean": {
       "level": "긴장",
       "sources": [
         {
-          "url": "https://www.segye.com/newsView/20261023507100",
+          "url": "https://www.segye.com/newsView/20261023506746",
           "publisher": "세계일보"
-        },
-        {
-          "url": "https://www.aljazeera.com/news/2026/10/22/north-korea-to-resume-propaganda-broadcasts-south-korea-urges-dialogue",
-          "publisher": "Al Jazeera"
         }
       ],
-      "summary": "김여정이 전 국경선 대남 확성기 가동을 예고했고 정부는 안보리 서한으로 맞섰다.",
-      "at": "2026-10-23T04:11:01+00:00",
+      "summary": "김여정이 이달 중 전 국경선 대남 확성기 가동과 새 대응 수단을 예고했다.",
+      "at": "2026-10-23T05:10:46+00:00",
       "since": "2026-10-21T01:11:21+00:00"
     },
     "nk_domestic": {
       "level": "보통",
       "sources": [],
-      "summary": "새로 확인된 북한 내부 공식 노선 변화나 숙청 보도는 없다.",
-      "at": "2026-10-23T04:11:01+00:00",
+      "summary": "김정은 사망설은 근거 없는 SNS 주장으로 당국도 확인하지 못했다.",
+      "at": "2026-10-23T05:10:46+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     },
     "great_powers": {
       "level": "보통",
-      "sources": [
-        {
-          "url": "https://www.nknews.org/2026/10/north-korean-russian-prosecutors-sign-deal-on-combating-terrorism-smuggling/",
-          "publisher": "NK News"
-        }
-      ],
-      "summary": "북러 검찰이 테러·밀수 대응 협정을 갱신했으나 군사 합의는 아니다.",
-      "at": "2026-10-23T04:11:01+00:00",
+      "sources": [],
+      "summary": "새로 확인된 북러·북중 군사 합의나 미 군사옵션 언급은 없다.",
+      "at": "2026-10-23T05:10:46+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     },
     "public_opinion": {
       "level": "보통",
       "sources": [],
-      "summary": "대남 비난은 기존 수위이며 새로 지목된 인물·시설은 확인되지 않았다.",
-      "at": "2026-10-23T04:11:01+00:00",
+      "summary": "대남 비난은 이어지나 새 공식 조치로 이어진 정황은 없다.",
+      "at": "2026-10-23T05:10:46+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     }
   },

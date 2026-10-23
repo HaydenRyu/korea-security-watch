@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T04:11:01+00:00",
+  "updated_at": "2026-10-23T05:10:46+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -12,8 +12,8 @@
         {
           "id": "dialogue_offer",
           "label": "남북·북미 대화 제안·수용",
-          "state": "off",
-          "note": ""
+          "state": "on",
+          "note": "국방부가 군사분계선 관련 남북 군사회담을 재차 제의했다."
         },
         {
           "id": "channel_restored",
@@ -40,7 +40,7 @@
           "note": "마지막 발사 10/15"
         }
       ],
-      "on": 0,
+      "on": 1,
       "known": 5
     },
     {
@@ -184,8 +184,20 @@
       "known": 16
     }
   ],
-  "calm": {},
-  "calm_judged_at": "2026-10-23T04:11:01+00:00",
+  "calm": {
+    "dialogue_offer": {
+      "summary": "국방부가 군사분계선 관련 남북 군사회담을 재차 제의했다.",
+      "sources": [
+        {
+          "url": "https://www.yna.co.kr/view/AKR20261023103000504",
+          "publisher": "연합뉴스"
+        }
+      ],
+      "first_seen": "2026-10-23T05:10:46+00:00",
+      "last_seen": "2026-10-23T05:10:46+00:00"
+    }
+  },
+  "calm_judged_at": "2026-10-23T05:10:46+00:00",
   "history": [
     {
       "date": "2026-10-22",
@@ -200,7 +212,7 @@
       "date": "2026-10-23",
       "tilt": "hold",
       "on": {
-        "calm": 0,
+        "calm": 1,
         "hold": 4,
         "esc": 0
       }

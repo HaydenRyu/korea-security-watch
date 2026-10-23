@@ -35,25 +35,29 @@
       "North Korea martial state"
     ],
     "gov_warning": [
-      "북한 미사일 발사 합참",
-      "North Korea missile launch Japan"
+      "북한 미사일 발사 합참 10월 23일",
+      "North Korea Reuters October 23 2026"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI",
-      "North Korea Reuters"
+      "North Korea attributed FBI"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan"
     ],
     "calm": [
       "남북 군사회담 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261023509389",
-    "https://www.segye.com/newsView/20261023508613",
+    "https://www.segye.com/newsView/20261023512593",
+    "https://www.segye.com/newsView/20261023509680",
+    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
     "https://www.nknews.org/feed/",
+    "https://www.segye.com/newsView/20261023509389",
     "https://www.nknews.org/2026/10/police-investigating-if-north-korean-it-worker-infiltrated-rok-organization/"
   ],
-  "overall_summary": "국방부의 군사회담 재제안과 DMZ 지뢰 96만발 추정 보고, 김여정의 확성기 재개 위협이 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵 징후는 확인되지 않았다.",
+  "overall_summary": "국방부의 군사회담 재제안과 김여정의 확성기 재개 위협이 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,31 +74,33 @@
       "region": "MDL 중서부·DMZ",
       "lat": 38.0,
       "lon": 127.0,
-      "summary": "국방부가 MDL 상호확인·군통신선 복원 군사회담을 북에 재차 공식 제안(23일)하고 군이 북 DMZ 지뢰 매설을 96만발로 추정해 국회에 보고했으며, 김여정의 확성기 재개 위협은 이어지나 신규 교전·시한부 최후통첩은 없다.",
+      "summary": "국방부가 MDL 상호확인·군통신선 복원 군사회담을 북에 재차 공식 제안(23일)했고 김여정의 확성기 재개 위협은 이어지나 신규 교전·시한부 최후통첩·새 매설 확인은 없다.",
       "meaning": "지뢰·확성기를 둘러싼 말과 외교전 국면이 지속되며 신규 충돌 확인은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261023509389"
+          "url": "https://www.segye.com/newsView/20261023512593"
         },
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261023508613"
+          "url": "https://www.segye.com/newsView/20261023509680"
         },
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/feed/"
+          "url": "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/"
         }
       ],
       "confidence": "높음",
       "facts": [
-        "국방부가 남북 군사회담을 북측에 재차 제의(세계일보 23일)",
-        "군이 2024년 이후 북 DMZ 지뢰 약 96만발 추정, 국회 보고(세계일보)"
+        "국방부 국방정책실장이 23일 남북 군사당국회담을 북에 공식 제안",
+        "9/21 DMZ 지뢰 폭발 부상은 북이 MDL 이남에 매설한 지뢰로 확인된 기존 사건"
       ],
-      "speculation": []
+      "speculation": [
+        "북이 회담에 호응할지는 불투명"
+      ]
     },
     "electronic_cyber": {
       "status": "none"
@@ -113,10 +119,10 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "summary": "북한 IT인력 위장취업 의심 건은 경찰이 수사 중이며 북한 연계 공식 확정 발표가 없어 배경으로만 둔다."
+      "summary": "북 IT인력 국내 위장취업 의혹은 경찰이 수사 중인 단계로 공식 귀속 발표가 없어 배경으로만 둔다."
     }
   },
-  "checked_at": "2026-10-23T09:10:41+00:00",
+  "checked_at": "2026-10-23T10:11:23+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

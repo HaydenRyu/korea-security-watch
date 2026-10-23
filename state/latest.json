@@ -1,50 +1,43 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 접경",
+      "news_kr 수집기",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters"
+      "news_kr 수집기",
+      "NK News 최근 헤드라인"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea ammunition shipment Russia"
+      "news_kr 수집기",
+      "NK News 최근 헤드라인"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "DMZ NLL 귀순 북한",
-      "North Korea border mine talks"
+      "목함지뢰 발견 해안 북한 10월",
+      "news_kr 수집기 DMZ·군사회담",
+      "NK News 최근 헤드라인"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 공격",
-      "North Korea hackers attributed"
+      "해킹 개인정보 유출 공격 2026년 10월"
     ],
     "foreign_forces": [
-      "북러 군사협력 파병",
-      "North Korea troops Russia"
+      "North Korea troops Russia October 2026"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "news_kr 수집기"
     ],
     "nk_internal": [
-      "국정원 김정은 사망설",
-      "North Korea Kim Jong Un health"
+      "news_kr 수집기 김정은 사망설"
     ],
     "gov_warning": [
-      "북한 미사일 발사 합참",
-      "South Korea alert North Korea"
+      "북한 미사일 발사 합참 10월 23일",
+      "North Korea Reuters October 23 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 2026"
     ],
     "calm": [
-      "남북 군사회담 제안",
-      "North Korea talks offer"
+      "news_kr 수집기 군사회담 제안"
     ]
   },
   "opened": [
@@ -53,7 +46,7 @@
     "https://www.nknews.org/",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "국방부의 군사회담 공식 제안(23일)에 북측 반응이 아직 없고 확성기 재개 예고와 지뢰 매설 보도가 이어지는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
+  "overall_summary": "국방부가 23일 군사회담을 공식 제안했으나 북측 반응은 없고 확성기 재개 예고와 지뢰 매설 보도가 이어지는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,25 +56,6 @@
     },
     "logistics": {
       "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none",
-      "summary": "국정원이 김정은 사망설을 허위로 국회에 보고했으나 북한 내부 전시태세 징후는 없다(배경)."
     },
     "border_clash": {
       "status": "corroborated",
@@ -101,21 +75,45 @@
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261023509680"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "국방부 정책실장이 23일 MDL 위치 상호확인·군통신선 복원·우발충돌 방지 군사회담을 공식 제안",
+        "국방부 정책실장이 23일 MDL 위치 상호확인·군통신선 복원·우발충돌 방지 군사회담을 공식 제안(유엔사 포함 3자 가능)",
         "북측 공식 반응 미보도",
-        "유엔사는 발표를 인지하고 정전협정 유지에 전념한다고 밝힘",
-        "NK News: 북 관영매체는 접경 긴장을 주민에게 거의 알리지 않음(23일)"
+        "22일 김여정이 전 국경선 대남 확성기 가동 대기를 예고",
+        "강화 해안 유실 추정 지뢰는 10월에만 4발, 군은 여름 호우 유실로 추정"
       ],
       "speculation": [
         "북이 이번에도 호응하지 않을 가능성"
       ]
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none",
+      "summary": "국정원이 김정은 사망설을 허위로 국회에 보고했으나 북한 내부 전시태세 징후는 없다(배경)."
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-10-23T20:09:26+00:00",
+  "checked_at": "2026-10-23T21:11:02+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

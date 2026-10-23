@@ -5,33 +5,33 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Punggye-ri"
+      "North Korea nuclear Punggye-ri Yongbyon October 2026",
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "북러 군사협력 탄약 수송",
-      "North Korea Russia munitions"
+      "North Korea troops Russia munitions",
+      "북러 탄약 수송"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "DMZ NLL 귀순 합참",
+      "지뢰 발견 목함지뢰 해안 귀순",
+      "국방부 군사회담 MDL",
       "North Korea DMZ mines"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "해킹 개인정보 유출 10월 23일",
       "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "북러 군사협력 북한군 파병",
-      "North Korea troops Russia"
+      "North Korea troops Russia munitions",
+      "북러 군사협력 북한군 파병"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
+      "북한 열병식 등화관제 준전시 노농적위군",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
+      "북한 열병식 등화관제 준전시 노농적위군",
       "North Korea martial state"
     ],
     "gov_warning": [
@@ -39,14 +39,14 @@
       "North Korea Reuters October 23 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 2026년 10월",
+      "North Korea IT worker police investigating"
     ],
     "linkage:taiwan": [
-      "PLA drills around Taiwan"
+      "PLA drills around Taiwan Eastern Theater Command October 2026"
     ],
     "calm": [
-      "남북 군사회담 제안 통신선 복원"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
@@ -54,8 +54,8 @@
     "https://www.segye.com/newsView/20261023509680",
     "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
     "https://www.nknews.org/feed/",
-    "https://www.segye.com/newsView/20261023509389",
-    "https://www.nknews.org/2026/10/police-investigating-if-north-korean-it-worker-infiltrated-rok-organization/"
+    "https://www.nknews.org/2026/10/police-investigating-if-north-korean-it-worker-infiltrated-rok-organization/",
+    "https://www.nknews.org/2026/10/chinese-officials-visit-north-korea-to-mark-chinas-entry-into-korean-war/"
   ],
   "overall_summary": "국방부의 군사회담 재제안과 김여정의 확성기 재개 위협이 맞서는 말·외교전 국면이 직전과 같다. 신규 교전·병력·핵·미사일 징후는 확인되지 않았다.",
   "items": {
@@ -66,6 +66,24 @@
       "status": "none"
     },
     "logistics": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "border_clash": {
@@ -93,36 +111,17 @@
           "url": "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/"
         }
       ],
-      "confidence": "높음",
+      "confidence": "중간",
       "facts": [
-        "국방부 국방정책실장이 23일 남북 군사당국회담을 북에 공식 제안",
-        "9/21 DMZ 지뢰 폭발 부상은 북이 MDL 이남에 매설한 지뢰로 확인된 기존 사건"
+        "국방부가 23일 남북 군사회담을 공식 제안했고 북한 호응은 아직 없다",
+        "9/21 DMZ 지뢰 폭발 부상 이후의 후속 조치이며 신규 교전 보도 없음"
       ],
       "speculation": [
-        "북이 회담에 호응할지는 불투명"
+        "북한이 지난해 11월 제안처럼 응하지 않을 가능성"
       ]
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none",
-      "summary": "북 IT인력 국내 위장취업 의혹은 경찰이 수사 중인 단계로 공식 귀속 발표가 없어 배경으로만 둔다."
     }
   },
-  "checked_at": "2026-10-23T10:11:23+00:00",
+  "checked_at": "2026-10-23T11:10:49+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

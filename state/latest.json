@@ -2,11 +2,11 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "North Korea troops deployment border"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear"
+      "North Korea nuclear Yongbyon Punggye-ri activity",
+      "북한 핵 영변 풍계리 위성사진"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
@@ -14,48 +14,41 @@
     ],
     "border_clash": [
       "지뢰 발견 DMZ 귀순",
-      "목함지뢰 해안",
-      "North Korea DMZ landmine"
+      "북한 합참 발표 10월 24일",
+      "목함지뢰 해안 발견"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 랜섬웨어 공격",
-      "북한 해킹 라자루스 PHP"
+      "North Korea GPS jamming",
+      "해킹 개인정보 유출 공격 사이버"
     ],
     "foreign_forces": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "북러 군사협력 파병",
+      "North Korea Reuters October 24 2026"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "State Department Korea travel advisory"
+      "진돗개 발령 데프콘 상향 North Korea alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "확성기 방송 중단"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hackers indictment"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261024025300504",
-    "https://www.yna.co.kr/view/AKR20261024019600017",
     "https://www.segye.com/newsView/20261023512593",
     "https://www.segye.com/newsView/20261023509680",
     "https://www.donga.com/news/Politics/article/all/20261023/134899797/2",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.yna.co.kr/view/AKR20261024019600017",
+    "https://www.donga.com/news/Economy/article/all/20261024/134900580/1",
+    "https://www.donga.com/news/Politics/article/all/20261024/134900718/1"
   ],
-  "overall_summary": "국방부의 군사회담 제안(23일)에 북은 24일 오전까지 무반응이고 김정은은 중대장대회에서 강군건설을 강조했다. 신규 교전·최후통첩·새 매설 확인은 없어 직전과 같다.",
+  "overall_summary": "국방부의 군사회담 제안(23일)에 북은 24일 오전까지 무반응이며 신규 교전·최후통첩·새 매설은 확인되지 않아 직전과 같다. 라자루스 PHP 공격 준비 정황은 보안업체 보고로 실제 침해는 미확인이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -105,7 +98,7 @@
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "attribution": "unknown",
       "region": "전국",
@@ -116,6 +109,11 @@
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261024019600017"
+        },
+        {
+          "name": "동아일보",
+          "tier": "B",
+          "url": "https://www.donga.com/news/Economy/article/all/20261024/134900580/1"
         }
       ],
       "confidence": "낮음",
@@ -142,7 +140,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-24T03:09:38+00:00",
+  "checked_at": "2026-10-24T04:11:04+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

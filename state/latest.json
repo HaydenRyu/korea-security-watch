@@ -19,7 +19,7 @@
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
+      "해킹 개인정보 유출 랜섬웨어 공격",
       "북한 해킹 라자루스 PHP"
     ],
     "foreign_forces": [
@@ -39,17 +39,23 @@
       "State Department Korea travel advisory"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
+      "국가보안법 구속 간첩 혐의 북한",
       "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
+    "https://www.yna.co.kr/view/AKR20261024025300504",
+    "https://www.yna.co.kr/view/AKR20261024019600017",
     "https://www.segye.com/newsView/20261023512593",
     "https://www.segye.com/newsView/20261023509680",
-    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/"
+    "https://www.donga.com/news/Politics/article/all/20261023/134899797/2",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "국방부가 23일 군사회담을 북에 공식 제안했으나 북 반응은 없고 김여정의 확성기 가동 대기 예고가 이어진다. 신규 교전·최후통첩·새 매설 확인은 없어 직전과 같다.",
+  "overall_summary": "국방부의 군사회담 제안(23일)에 북은 24일 오전까지 무반응이고 김정은은 중대장대회에서 강군건설을 강조했다. 신규 교전·최후통첩·새 매설 확인은 없어 직전과 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -66,7 +72,7 @@
       "region": "DMZ 중서부",
       "lat": 37.95,
       "lon": 126.9,
-      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 북에 공식 제안했으나 북 반응은 없고, 김여정의 대남 확성기 가동 대기 예고가 이어지나 신규 교전·최후통첩·새 매설 확인은 없다.",
+      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 북에 공식 제안했으나 북은 24일 오전까지 관영매체·담화 모두 무반응이며 신규 교전·최후통첩·새 매설 확인은 없다.",
       "meaning": "우발충돌 방지 협의 제안으로 긴장 관리 국면이나 북의 국경 요새화가 계속된다.",
       "sources": [
         {
@@ -80,20 +86,45 @@
           "url": "https://www.segye.com/newsView/20261023509680"
         },
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/"
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261024025300504"
+        },
+        {
+          "name": "동아일보",
+          "tier": "B",
+          "url": "https://www.donga.com/news/Politics/article/all/20261023/134899797/2"
         }
       ],
       "confidence": "높음",
       "facts": [
         "국방부 국방정책실장이 23일 군사당국회담을 공식 제안",
-        "9/21 DMZ 지뢰 폭발은 북 매설로 확인됨"
+        "9/21 DMZ 지뢰 폭발은 북 매설로 확인됨",
+        "24일 오전까지 북 관영매체 관련 보도 없음"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "전국",
+      "summary": "귀속 미확인 — 보안업체 사이퍼마가 한국어 사용 조직이 PHP 취약점으로 대규모 공격을 모의하는 정황을 포착했고 라자루스 연계 가능성(신뢰도 중간)을 제기했으나 직접 연결고리는 미확인이다.",
+      "meaning": "정부·금융망이 표적으로 지목됐으나 실제 피해·정부 귀속 발표는 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261024019600017"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "사이퍼마가 I2P에서 공격 모의 정황 포착"
+      ],
+      "speculation": [
+        "라자루스 연계 가능성"
+      ]
     },
     "foreign_forces": {
       "status": "none"
@@ -111,7 +142,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-24T02:09:01+00:00",
+  "checked_at": "2026-10-24T03:09:38+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

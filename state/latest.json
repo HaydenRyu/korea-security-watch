@@ -1,57 +1,71 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
+      "북한 병력 이동 전방",
       "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "North Korea ammunition shipment",
+      "북한 탄약 군수 수송"
     ],
     "border_clash": [
       "지뢰 발견 목함지뢰 해안",
-      "북한 군사회담 제의 MDL DMZ 귀순",
+      "DMZ 귀순 NLL",
       "DMZ NLL North Korea"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참 발표",
-      "해킹 개인정보 유출 공격 10월 24일"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit Dandong Wang Huning"
+      "김정은 방러",
+      "서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 준비",
+      "북한 열병식",
       "North Korea parade"
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "North Korea mobilization blackout"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
+      "진돗개 데프콘",
       "US State Department Korea travel advisory"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hackers"
     ],
     "calm": [
-      "남북 대화 제안 군사회담 제의"
+      "통신선 복원 확성기 중단",
+      "North Korea talks offer"
+    ],
+    "linkage:korea": [
+      "북러 군사협력",
+      "주한미군 대만"
+    ],
+    "linkage:taiwan": [
+      "东部战区 台岛 联合演习",
+      "PLA drills around Taiwan"
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261024506372",
     "https://www.segye.com/newsView/20261024506322",
+    "https://www.segye.com/newsView/20261024506108",
     "https://www.segye.com/newsView/20261024503020",
-    "https://www.segye.com/newsView/20261023507276",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008812739",
-    "https://www.yna.co.kr/view/AKR20261024035153504"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008813155",
+    "https://www.yna.co.kr/view/AKR20261024025300504",
+    "https://www.straitstimes.com/asia/east-asia/north-koreas-kim-calls-for-military-to-train-to-be-worlds-strongest"
   ],
-  "overall_summary": "김정은이 24일 신압록강대교로 단둥을 당일 방문해 왕후닝과 회동했으나(리창 총리설은 정정) 군사 협정·무기 협력 발표는 없다. 신규 군사 징후는 확인되지 않아 직전과 큰 변화 없다.",
+  "overall_summary": "김정은이 24일 당일치기로 단둥을 방문해 왕후닝과 회동하고 귀국했으나 군사 협정·무기 협력 발표는 없다. 국방부의 MDL 군사회담 제의에 북한은 무반응이고 김정은은 중대장대회에서 '강군 건설'을 강조했을 뿐 신규 군사 징후는 없어 직전과 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -99,12 +113,12 @@
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261024506322"
+          "url": "https://www.segye.com/newsView/20261024506372"
         },
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261024035153504"
+          "url": "https://www.segye.com/newsView/20261024506322"
         }
       ],
       "confidence": "중간",
@@ -130,7 +144,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-24T15:12:05+00:00",
+  "checked_at": "2026-10-24T16:11:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

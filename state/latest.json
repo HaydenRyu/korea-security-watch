@@ -1,58 +1,41 @@
 {
   "coverage": {
     "troop_movement": [
-      "North Korea missile launch OR troops OR nuclear October 2026"
+      "북한 합참 발표 10월 24일",
+      "North Korea Reuters October 24 2026"
     ],
     "nuclear": [
-      "North Korea missile launch OR troops OR nuclear October 2026"
+      "North Korea Reuters October 24 2026"
     ],
     "logistics": [
-      "북러 군사협력 North Korea troops Russia"
+      "North Korea Reuters October 24 2026"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "진돗개 데프콘 상향 합참 귀순 NLL",
-      "북한 합참 발표 10월 24일"
+      "북한 합참 발표 10월 24일",
+      "지뢰 발견 목함지뢰 해안(0-2 수집기)",
+      "DMZ 군사회담 제안(수집기)"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "GPS 교란(수집기)"
     ],
     "foreign_forces": [
-      "북러 군사협력 North Korea troops Russia"
+      "North Korea Reuters October 24 2026"
     ],
     "parade_massing": [
-      "North Korea missile launch OR troops OR nuclear October 2026"
+      "North Korea Reuters October 24 2026"
     ],
     "nk_internal": [
-      "North Korea missile launch OR troops OR nuclear October 2026"
+      "북한 합참 발표 10월 24일"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 합참 귀순 NLL"
+      "북한 합참 발표 10월 24일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan Eastern Theater Command"
-    ],
-    "linkage:korea": [
-      "북러 군사협력 North Korea troops Russia"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 North Korea attributed FBI"
     ],
     "calm": [
-      "North Korea Kim Yo Jong loudspeakers military talks proposal"
-    ],
-    "factor:inter_korean": [
-      "North Korea Kim Yo Jong loudspeakers military talks proposal"
-    ],
-    "factor:great_powers": [
-      "북러 군사협력 North Korea troops Russia"
-    ],
-    "factor:nk_domestic": [
-      "North Korea missile launch OR troops OR nuclear October 2026"
-    ],
-    "factor:public_opinion": [
-      "North Korea Kim Yo Jong loudspeakers military talks proposal"
+      "국방부 군사회담 제안(수집기)"
     ]
   },
   "opened": [
@@ -60,12 +43,9 @@
     "https://www.segye.com/newsView/20261023509680",
     "https://www.nknews.org/",
     "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
-    "https://www.nknews.org/2026/10/chinese-officials-visit-north-korea-to-mark-chinas-entry-into-korean-war/",
-    "https://www.nknews.org/2026/10/police-investigating-if-north-korean-it-worker-infiltrated-rok-organization/",
-    "https://www.aljazeera.com/xml/rss/all.xml",
     "https://kookbang.dema.mil.kr/newsWeb/20261023/5/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "국방부의 군사회담 제안에 북 반응이 없고 김여정의 확성기 가동 예고가 이어지는 말·외교전 국면으로 직전과 같다. 신규 교전·병력·핵 징후는 확인되지 않았다.",
+  "overall_summary": "국방부의 군사회담 공식 제안에 북 반응은 아직 없고 김여정의 확성기 가동 예고가 이어지는 말·외교전 국면으로 직전과 같다. 신규 교전·병력·핵 징후나 미사일 발사는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -74,6 +54,24 @@
       "status": "none"
     },
     "logistics": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "border_clash": {
@@ -103,34 +101,13 @@
       ],
       "confidence": "중간",
       "facts": [
-        "김홍철 국방정책실장이 23일 MDL 위치 상호확인·군통신선 복원·우발충돌 방지 군사회담을 공식 제안했다.",
-        "북측 공식 반응은 보도되지 않았다(작년 11월 제안에도 무응답).",
-        "9월 21일 DMZ 수색 중 지뢰 폭발로 장병이 부상했다."
+        "국방부 정책실장이 23일 군사회담 공식 제안",
+        "북 공식 반응 보도 없음"
       ],
-      "speculation": [
-        "이번에도 북이 외면할 가능성이 있다."
-      ]
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
+      "speculation": []
     }
   },
-  "checked_at": "2026-10-23T23:11:00+00:00",
+  "checked_at": "2026-10-24T00:10:00+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

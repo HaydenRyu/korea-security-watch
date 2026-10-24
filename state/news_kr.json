@@ -1,37 +1,37 @@
 {
- "fetched_at": "2026-10-24T09:48:03+00:00",
+ "fetched_at": "2026-10-24T11:01:50+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-24T09:48:03+00:00",
+ "last_ok_at": "2026-10-24T11:01:50+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1156,
-  "hits": 59,
-  "clusters": 44,
+  "fetched": 1159,
+  "hits": 57,
+  "clusters": 43,
   "by_group": {
-   "border": 29,
+   "alert": 2,
+   "border": 27,
    "gps": 4,
    "hybrid": 4,
    "drone_balloon": 19,
-   "mine": 18,
-   "fire": 6,
-   "alert": 1
+   "mine": 17,
+   "fire": 6
   }
  },
  "outlets": {
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 597,
-   "hits": 50
+   "count": 600,
+   "hits": 51
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 7
+   "hits": 6
   },
   "동아일보": {
    "feeds": 2,
@@ -60,8 +60,13 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "alert": {
+   "clusters": 2,
+   "max_independent": 2,
+   "latest": "2026-10-24T10:35:58+00:00"
+  },
   "border": {
-   "clusters": 29,
+   "clusters": 27,
    "max_independent": 2,
    "latest": "2026-10-24T07:24:00+00:00"
   },
@@ -81,7 +86,7 @@
    "latest": "2026-10-24T03:27:26+00:00"
   },
   "mine": {
-   "clusters": 18,
+   "clusters": 17,
    "max_independent": 2,
    "latest": "2026-10-24T03:27:26+00:00"
   },
@@ -89,11 +94,6 @@
    "clusters": 6,
    "max_independent": 2,
    "latest": "2026-10-23T20:38:46+00:00"
-  },
-  "alert": {
-   "clusters": 1,
-   "max_independent": 2,
-   "latest": "2026-10-23T07:46:26+00:00"
   }
  },
  "feeds": [
@@ -102,8 +102,8 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 117,
-   "hits": 37
+   "count": 120,
+   "hits": 38
   },
   {
    "outlet": "연합뉴스",
@@ -143,7 +143,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "SBS",

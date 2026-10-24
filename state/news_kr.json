@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-24T03:46:19+00:00",
+ "fetched_at": "2026-10-24T05:03:51+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-24T03:46:19+00:00",
+ "last_ok_at": "2026-10-24T05:03:51+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -26,19 +26,19 @@
    "feeds": 5,
    "failed": 0,
    "count": 589,
-   "hits": 53
+   "hits": 52
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 9
+   "hits": 8
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 14
+   "hits": 12
   },
   "국민일보": {
    "feeds": 2,
@@ -89,7 +89,7 @@
   "fire": {
    "clusters": 9,
    "max_independent": 2,
-   "latest": "2026-10-23T13:09:15+00:00"
+   "latest": "2026-10-23T20:38:46+00:00"
   },
   "alert": {
    "clusters": 2,
@@ -133,7 +133,7 @@
    "url": "https://www.yna.co.kr/rss/local.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "연합뉴스",
@@ -165,7 +165,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 5
+   "hits": 4
   },
   {
    "outlet": "동아일보",
@@ -181,7 +181,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 6
+   "hits": 4
   },
   {
    "outlet": "국민일보",

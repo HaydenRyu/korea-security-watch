@@ -1,12 +1,9 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 지뢰 발견 귀순 NLL DMZ 10월 24일",
-      "국방부 남북 군사회담 제안 북 반응"
-    ],
-    "foreign_forces": [
-      "North Korea Reuters October 24 2026",
-      "news_kr 수집기"
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ NLL 귀순 군사회담",
+      "North Korea loudspeaker DMZ"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -15,36 +12,50 @@
       "라자루스 PHP 취약점"
     ],
     "troop_movement": [
-      "news_kr 수집기 전방·병력 묶음"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "news_kr 수집기"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "news_kr 수집기"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
+    ],
+    "foreign_forces": [
+      "북러 군사협력",
+      "North Korea Reuters"
     ],
     "parade_massing": [
-      "news_kr 수집기"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "news_kr 수집기"
+      "북한 준전시 등화관제",
+      "North Korea internal mobilization"
     ],
     "gov_warning": [
-      "news_kr 수집기 alert 묶음"
+      "진돗개 발령 데프콘",
+      "North Korea warning alert"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
-      "news_kr 수집기 hybrid 묶음"
+      "북한 해킹 귀속 North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261024503020",
     "https://www.segye.com/newsView/20261023512593",
-    "https://www.segye.com/newsView/20261023509680",
-    "https://www.yna.co.kr/view/AKR20261024025300504",
-    "https://www.donga.com/news/Economy/article/all/20261024/134900580/1",
-    "https://www.yna.co.kr/view/AKR20261024019600017"
+    "https://www.nknews.org/",
+    "https://www.nknews.org/2026/10/north-korea-tests-new-high-precision-ai-equipped-torpedo-state-media/",
+    "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
   ],
-  "overall_summary": "국방부의 군사회담 제안(23일)에 북은 24일 오전까지 무반응이며 신규 교전·최후통첩·새 매설은 확인되지 않아 직전과 같다. 라자루스 PHP 공격 준비 정황은 보안업체 보고로 실제 침해는 미확인이다.",
+  "overall_summary": "국방부의 군사회담 제안(23일)에 북은 즉각 반응이 없고 김여정의 대남 확성기 가동 예고(며칠 내)가 이어지나 신규 교전·최후통첩·새 매설은 없다. 라자루스 PHP 공격 준비 정황은 보안업체 보고 1건으로 실제 침해는 미확인이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,8 +72,8 @@
       "region": "DMZ 중서부",
       "lat": 37.95,
       "lon": 126.9,
-      "summary": "국방부의 23일 군사회담 제안에 북은 24일 오전까지 즉각 반응이 없고 신규 교전·최후통첩·새 매설은 확인되지 않았다.",
-      "meaning": "우발충돌 방지 협의 제안으로 긴장 관리 국면이나 북의 국경 요새화가 계속된다.",
+      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 제안했으나 북은 즉각 반응이 없고, 김여정은 대남 확성기를 며칠 내 가동하겠다고 예고했으며 신규 교전·최후통첩·새 매설은 확인되지 않았다.",
+      "meaning": "우발충돌 방지 협의 제안으로 긴장 관리 국면이나 북의 국경 요새화와 확성기 재개 예고가 이어진다.",
       "sources": [
         {
           "name": "세계일보",
@@ -70,46 +81,36 @@
           "url": "https://www.segye.com/newsView/20261023512593"
         },
         {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261023509680"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261024025300504"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
         }
       ],
-      "confidence": "높음",
+      "confidence": "중간",
       "facts": [
-        "국방부 국방정책실장이 23일 군사당국회담을 공식 제안",
-        "9/21 DMZ 지뢰 폭발은 북 매설로 확인됨",
-        "24일 오전까지 북 관영매체 관련 보도 없음"
+        "국방부 23일 군사당국회담 공식 제안",
+        "9/21 DMZ 서부 지뢰 폭발로 장병 부상(북 매설)",
+        "김여정 담화(22일): 확성기 며칠 내 가동"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "전국",
-      "summary": "귀속 미확인 — 보안업체 사이퍼마가 한국어 사용 조직이 PHP 취약점으로 대규모 공격을 모의하는 정황을 포착했고 라자루스 연계 가능성(신뢰도 중간)을 제기했으나 직접 연결고리는 미확인이다.",
-      "meaning": "정부·금융망이 표적으로 지목됐으나 실제 피해·정부 귀속 발표는 없다.",
+      "summary": "귀속 미확인 — 보안업체 사이퍼마가 한국어 사용 조직의 PHP 취약점 공격 모의 정황을 포착해 라자루스 연계 가능성(신뢰도 중간)을 제기했으나 실제 침해·직접 증거는 없다.",
+      "meaning": "정부·금융이 표적으로 지목됐으나 피해·정부 귀속 발표는 없다.",
       "sources": [
         {
-          "name": "동아일보",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.donga.com/news/Economy/article/all/20261024/134900580/1"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261024019600017"
+          "url": "https://www.segye.com/newsView/20261024503020"
         }
       ],
       "confidence": "낮음",
       "facts": [
-        "사이퍼마가 I2P에서 공격 모의 정황 포착"
+        "PHP 긴급 패치 21일, 과기정통부·KISA 22일 주의 경보"
       ],
       "speculation": [
         "라자루스 연계 가능성"
@@ -131,7 +132,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-24T07:09:44+00:00",
+  "checked_at": "2026-10-24T08:10:51+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

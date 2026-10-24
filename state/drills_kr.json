@@ -1,22 +1,22 @@
 {
  "source": "접경 지자체 공지(철원 RSS · 고성 공지 · 파주 새소식+HWP · 화천 공지+PDF) — 군 사격훈련 주민 안내",
  "note": "참고 자료 · 등급 판정과 무관. 일정은 부대 사정·기상으로 바뀔 수 있다.",
- "fetched_at": "2026-10-24T05:04:13.409146+00:00",
+ "fetched_at": "2026-10-24T12:12:57.009613+00:00",
  "sources": {
   "cheorwon": {
    "name": "철원군",
    "page": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-24T05:04:13.409146+00:00",
-   "count": 10
+   "last_ok_at": "2026-10-24T12:12:57.009613+00:00",
+   "count": 11
   },
   "goseong": {
    "name": "고성군",
    "page": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/list.do",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-24T05:04:13.409146+00:00",
+   "last_ok_at": "2026-10-24T12:12:57.009613+00:00",
    "count": 9
   },
   "paju": {
@@ -24,14 +24,14 @@
    "page": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=2001",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-24T05:04:13.409146+00:00",
+   "last_ok_at": "2026-10-24T12:12:57.009613+00:00",
    "count": 8
   },
   "hwacheon": {
    "name": "화천군",
    "page": "https://www.ihc.go.kr/www/selectBbsNttList.do?bbsNo=11&key=2338",
-   "status": "ok",
-   "status_detail": "",
+   "status": "error",
+   "status_detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>",
    "last_ok_at": "2026-10-24T05:04:13.409146+00:00",
    "count": 6
   }
@@ -55,6 +55,27 @@
    "arms": [
     "57여발"
    ],
+   "active_now": false
+  },
+  {
+   "source": "cheorwon",
+   "title": "'26년 10월 5주차 포탄사격 훈련일정 안내",
+   "url": "https://www.cwg.go.kr/www/selectBbsNttView.do?key=206&bbsNo=24&nttNo=313460",
+   "posted": "2026-10-24",
+   "body": "2026년 10월 5주차 포탄사격 훈련일정을 아래와 같이 안내드립니다.\n○ 2026. 10. 27. (화) 08:00~12:00\n- 동막리 사격장 → 용화동 피탄지\n○ 2026. 10. 29. (목) 08:00~12:00\n- 문혜리 사격장 → 용화동 피탄지\n○ 2026. 10. 30. (금) 08:00~12:00\n- 동막리 사격장 → 용화동 피탄지\n* 훈련 일정은 부대 사정에 따라 변경될 수 있으며, 주민 및 등산객께서는 피탄지 인근 출입을 자제하여 주시기 바랍니다.\n* 총기·탄약·폭발물·군용물 발견 시 또는 이를 불법 취급하거나 관리 중인 사람을 발견시에는 지역경찰서 또는 5군단 군사경찰에 신고 바랍니다.\n(국군 방첩사령부 국번 없이 : 1337 / 5군단 군사경찰 : 031) 539-7654 / 경찰서 : 112)\n※문의 : 제5포병여단 031) 539-7151",
+   "unit": "제5포병여단",
+   "first": "2026-10-27",
+   "last": "2026-10-30",
+   "days": [
+    "2026-10-27",
+    "2026-10-29",
+    "2026-10-30"
+   ],
+   "places": [
+    "동막리 사격장 → 용화동 피탄지",
+    "문혜리 사격장 → 용화동 피탄지"
+   ],
+   "arms": [],
    "active_now": false
   },
   {
@@ -82,6 +103,24 @@
     "수피령 사격장",
     "마현리 사격장",
     "백마골 표적지"
+   ],
+   "arms": [],
+   "active_now": false
+  },
+  {
+   "source": "cheorwon",
+   "title": "'26년 11월 승진 과학화훈련장 사격 일정 안내",
+   "url": "https://www.cwg.go.kr/www/selectBbsNttView.do?key=206&bbsNo=24&nttNo=313459",
+   "posted": "2026-10-24",
+   "body": "2026년 11월 승진 과학화훈련장 사격 일정을 붙임과 같이 안내드립니다.\n○ 협조사항\n- 훈련장 1km 이내는 소음과 각종 위험요소가 산재 되었으니, 출입을 금지합니다.\n- 등산도중 길을 잃거나, 훈련장 근처 접근시 안전통제 인원 및 경고간판에 대한 통제를 적극 협조해주시기 바랍니다.\n- 총기·탄약·폭발물·군용물 발견 시 또는 이를 불법 취급하거나 관리 중인 사람을 발견시에는 경찰서 또는 주민 신고망으로 신고 바랍니다.\n(5군단 지휘통제실 주민신고망 : (031) 530-0301",
+   "unit": "",
+   "first": null,
+   "last": null,
+   "days": [],
+   "places": [
+    "훈련장 1km 이내는 소음과 각종 위험요소가 산재 되었으니, 출입을 금지합니다.",
+    "등산도중 길을 잃거나, 훈련장 근처 접근시 안전통제 인원 및 경고간판에 대한 통제를 적극 협조해주시기 바랍니다.",
+    "총기·탄약·폭발물·군용물 발견 시 또는 이를 불법 취급하거나 관리 중인 사람을 발견시에는 경찰서 또는 주민 신고망으로 신고 바랍니다."
    ],
    "arms": [],
    "active_now": false

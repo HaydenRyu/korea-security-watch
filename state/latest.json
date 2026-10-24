@@ -1,14 +1,18 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 합참 발표 10월 24일 지뢰 DMZ 귀순"
+      "북한 지뢰 발견 귀순 NLL 10월 24일",
+      "국방부 남북 군사회담 제안 북 반응"
     ],
     "foreign_forces": [
-      "North Korea Reuters October 24 2026"
+      "North Korea Reuters October 24 2026",
+      "news_kr 수집기"
     ],
     "electronic_cyber": [
-      "North Korea GPS jamming OR missile launch OR Kim Yo Jong",
-      "news_kr 수집기 해킹 묶음(라자루스 PHP)"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "라자루스 PHP 취약점"
     ],
     "troop_movement": [
       "news_kr 수집기 전방·병력 묶음"
@@ -29,17 +33,16 @@
       "news_kr 수집기 alert 묶음"
     ],
     "hybrid_ops": [
+      "국가보안법 구속",
       "news_kr 수집기 hybrid 묶음"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261023512593",
-    "https://www.yna.co.kr/view/AKR20261024025300504",
-    "https://www.yna.co.kr/view/AKR20261024019600017",
-    "https://www.donga.com/news/Politics/article/all/20261024/134900718/1",
     "https://www.segye.com/newsView/20261023509680",
-    "https://www.donga.com/news/Politics/article/all/20261023/134899797/2",
-    "https://www.donga.com/news/Economy/article/all/20261024/134900580/1"
+    "https://www.yna.co.kr/view/AKR20261024025300504",
+    "https://www.donga.com/news/Economy/article/all/20261024/134900580/1",
+    "https://www.yna.co.kr/view/AKR20261024019600017"
   ],
   "overall_summary": "국방부의 군사회담 제안(23일)에 북은 24일 오전까지 무반응이며 신규 교전·최후통첩·새 매설은 확인되지 않아 직전과 같다. 라자루스 PHP 공격 준비 정황은 보안업체 보고로 실제 침해는 미확인이다.",
   "items": {
@@ -75,11 +78,6 @@
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261024025300504"
-        },
-        {
-          "name": "동아일보",
-          "tier": "B",
-          "url": "https://www.donga.com/news/Politics/article/all/20261023/134899797/2"
         }
       ],
       "confidence": "높음",
@@ -99,14 +97,14 @@
       "meaning": "정부·금융망이 표적으로 지목됐으나 실제 피해·정부 귀속 발표는 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261024019600017"
-        },
-        {
           "name": "동아일보",
           "tier": "B",
           "url": "https://www.donga.com/news/Economy/article/all/20261024/134900580/1"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261024019600017"
         }
       ],
       "confidence": "낮음",
@@ -133,7 +131,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-24T05:09:42+00:00",
+  "checked_at": "2026-10-24T06:10:05+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

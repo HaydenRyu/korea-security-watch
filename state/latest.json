@@ -1,43 +1,46 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 NLL"
+      "북한 합참 지뢰 발견 DMZ NLL 귀순",
+      "news_kr 접경·지뢰 묶음"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit Dandong"
-    ],
-    "nuclear": [
-      "North Korea Reuters nuclear military October 24 2026"
-    ],
-    "troop_movement": [
-      "북한 미사일 발사 합참 오늘"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "North Korea Reuters Kim Jong Un China visit Dandong military",
+      "news_kr 김정은 방중 묶음"
     ],
     "electronic_cyber": [
       "라자루스 PHP 취약점 (news_kr 수집 묶음)"
     ],
+    "nuclear": [
+      "news_kr 수집 묶음 점검"
+    ],
+    "troop_movement": [
+      "news_kr 수집 묶음 점검"
+    ],
     "logistics": [
-      "북한 군수 물자 탄약 수송 동향"
+      "news_kr 수집 묶음 점검"
     ],
     "parade_massing": [
-      "북한 열병식 준비 병력 집결 위성사진"
+      "news_kr 수집 묶음 점검"
     ],
     "nk_internal": [
-      "북한 전시태세 등화관제 노농적위군 동원"
+      "news_kr 수집 묶음 점검"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 한미일 긴급 경고"
+      "news_kr 수집 묶음 점검"
+    ],
+    "hybrid_ops": [
+      "news_kr hybrid 묶음 점검"
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261024506322",
     "https://www.segye.com/newsView/20261024506606",
     "https://www.segye.com/newsView/20261024503020",
-    "https://www.segye.com/newsView/20261024506108",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008813155",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "김정은의 당일 단둥 방문(왕후닝 회담)이 이번 회차 유일한 새 사건이며 군사 협정·무기 협력 발표는 없는 외교 일정이다. 접경 도발·핵·병력 징후는 새로 확인되지 않았고 직전 회차와 같은 수준이다.",
+  "overall_summary": "김정은의 당일 단둥 방문(왕후닝 회담)은 군사 협정·무기 협력 발표가 없는 외교 일정이다. 국방부의 MDL 군사회담 제의에 북한이 즉각 반응하지 않았고 새 접경 도발·핵·병력 징후는 확인되지 않아 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -89,11 +92,6 @@
           "url": "https://www.segye.com/newsView/20261024506606"
         },
         {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261024506108"
-        },
-        {
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/"
@@ -121,7 +119,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-24T22:10:23+00:00",
+  "checked_at": "2026-10-24T23:10:56+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,41 +1,41 @@
 {
   "coverage": {
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "북한 군사회담 김여정 대남방송",
-      "North Korea loudspeaker DMZ"
+      "목함지뢰 해안 발견 10월",
+      "국방부 군사회담 제안 북한 반응",
+      "NK News DMZ loudspeaker"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 공격"
     ],
     "nuclear": [
-      "North Korea nuclear missile launch October 2026"
-    ],
-    "foreign_forces": [
-      "북러 군사협력",
-      "North Korea Reuters"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘 발령"
+      "북한 미사일 발사 합참",
+      "North Korea Reuters October 24 2026"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "국방부 군사회담 제안"
+    ],
+    "troop_movement": [
+      "북한 미사일 발사 합참"
     ],
     "logistics": [
-      "북한 열병식 병력 집결 군수 수송 탄약"
+      "북한 미사일 발사 합참"
+    ],
+    "foreign_forces": [
+      "North Korea Reuters October 24 2026"
+    ],
+    "gov_warning": [
+      "북한 미사일 발사 합참"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결 군수 수송 탄약"
+      "북한 미사일 발사 합참"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "NK News 북한 내부"
     ]
   },
   "opened": [
@@ -44,7 +44,7 @@
     "https://www.nknews.org/",
     "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
   ],
-  "overall_summary": "국방부의 군사회담 제안(23일)에 북은 즉각 반응이 없고 김여정의 대남 확성기 가동 예고가 이어지나 신규 교전·최후통첩·새 매설은 없다. 라자루스 PHP 공격 준비 정황은 보안업체 보고뿐이며 실제 침해는 미확인이다.",
+  "overall_summary": "국방부의 군사회담 제안(23일)에 북은 아직 반응이 없고 확성기 가동 예고가 이어지나 신규 교전·최후통첩·새 매설은 없다. 라자루스 PHP 공격 준비 정황은 보안업체 보고뿐이며 실제 침해·정부 귀속은 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -76,7 +76,7 @@
       "region": "DMZ 중서부",
       "lat": 37.95,
       "lon": 126.9,
-      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 제안했으나 북은 즉각 반응이 없고, 김여정은 대남 확성기를 며칠 내 가동하겠다고 예고했으며 신규 교전·최후통첩·새 매설은 확인되지 않았다.",
+      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 제안했으나 북은 24일 현재 즉각 반응이 없고, 김여정의 대남 확성기 가동 예고(22일)가 이어지며 신규 교전·최후통첩·새 매설은 확인되지 않았다.",
       "meaning": "우발충돌 방지 협의 제안으로 긴장 관리 국면이나 북의 국경 요새화와 확성기 재개 예고가 이어진다.",
       "sources": [
         {
@@ -121,7 +121,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-24T09:10:46+00:00",
+  "checked_at": "2026-10-24T10:09:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

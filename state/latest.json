@@ -2,60 +2,49 @@
   "coverage": {
     "border_clash": [
       "지뢰 발견 목함지뢰 해안",
-      "DMZ NLL 귀순 군사회담",
+      "북한 군사회담 김여정 대남방송",
       "North Korea loudspeaker DMZ"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "라자루스 PHP 취약점"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출"
     ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
+      "North Korea nuclear missile launch October 2026"
     ],
     "foreign_forces": [
       "북러 군사협력",
       "North Korea Reuters"
     ],
-    "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea internal mobilization"
-    ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning alert"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "북한 해킹 귀속 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
+      "남북 대화 제안 통신선 복원"
+    ],
+    "logistics": [
+      "북한 열병식 병력 집결 군수 수송 탄약"
+    ],
+    "parade_massing": [
+      "북한 열병식 병력 집결 군수 수송 탄약"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 노농적위군"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261024503020",
     "https://www.segye.com/newsView/20261023512593",
     "https://www.nknews.org/",
-    "https://www.nknews.org/2026/10/north-korea-tests-new-high-precision-ai-equipped-torpedo-state-media/",
     "https://www.nknews.org/2026/10/kim-yo-jong-denounces-south-korean-lawmaker-who-criticized-loudspeaker-plans/"
   ],
-  "overall_summary": "국방부의 군사회담 제안(23일)에 북은 즉각 반응이 없고 김여정의 대남 확성기 가동 예고(며칠 내)가 이어지나 신규 교전·최후통첩·새 매설은 없다. 라자루스 PHP 공격 준비 정황은 보안업체 보고 1건으로 실제 침해는 미확인이다.",
+  "overall_summary": "국방부의 군사회담 제안(23일)에 북은 즉각 반응이 없고 김여정의 대남 확성기 가동 예고가 이어지나 신규 교전·최후통첩·새 매설은 없다. 라자루스 PHP 공격 준비 정황은 보안업체 보고뿐이며 실제 침해는 미확인이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,6 +53,21 @@
       "status": "none"
     },
     "logistics": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "border_clash": {
@@ -115,24 +119,9 @@
       "speculation": [
         "라자루스 연계 가능성"
       ]
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-10-24T08:10:51+00:00",
+  "checked_at": "2026-10-24T09:10:46+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

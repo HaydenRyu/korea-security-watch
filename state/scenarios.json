@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-24T16:11:41+00:00",
+  "updated_at": "2026-10-24T17:10:47+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -13,7 +13,7 @@
           "id": "dialogue_offer",
           "label": "남북·북미 대화 제안·수용",
           "state": "on",
-          "note": "국방부가 MDL 불일치 문제 해소를 위한 남북 군사당국 회담을 제의했으나 북한은 24일 오전까지 반응이 없다."
+          "note": "국방부가 MDL 상호확인·군통신선 복원을 위한 남북 군사당국 회담을 북측에 제의했으나 북한은 즉각 반응하지 않았다."
         },
         {
           "id": "channel_restored",
@@ -186,22 +186,18 @@
   ],
   "calm": {
     "dialogue_offer": {
-      "summary": "국방부가 MDL 불일치 문제 해소를 위한 남북 군사당국 회담을 제의했으나 북한은 24일 오전까지 반응이 없다.",
+      "summary": "국방부가 MDL 상호확인·군통신선 복원을 위한 남북 군사당국 회담을 북측에 제의했으나 북한은 즉각 반응하지 않았다.",
       "sources": [
-        {
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008813155",
-          "publisher": "SBS"
-        },
         {
           "url": "https://www.yna.co.kr/view/AKR20261024025300504",
           "publisher": "연합뉴스"
         }
       ],
       "first_seen": "2026-10-23T05:10:46+00:00",
-      "last_seen": "2026-10-24T16:11:41+00:00"
+      "last_seen": "2026-10-24T17:10:47+00:00"
     }
   },
-  "calm_judged_at": "2026-10-24T16:11:41+00:00",
+  "calm_judged_at": "2026-10-24T17:10:47+00:00",
   "history": [
     {
       "date": "2026-10-22",

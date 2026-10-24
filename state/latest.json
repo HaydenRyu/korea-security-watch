@@ -1,46 +1,49 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
+      "북한 병력 이동",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설 동향",
-      "North Korea nuclear test site Yongbyon"
+      "북한 핵시설 영변 풍계리",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
+      "북한 군수 탄약",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견",
-      "DMZ NLL 귀순",
+      "지뢰 발견 해안",
+      "귀순 NLL",
       "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
+      "GPS 교란",
       "해킹 개인정보 유출",
+      "사이버 공격",
       "North Korea hacking Lazarus"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
+      "북한 열병식",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
+      "북한 준전시",
       "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
+      "진돗개 데프콘",
       "DEFCON South Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "linkage:taiwan": [
@@ -53,18 +56,20 @@
     ],
     "calm": [
       "남북 대화 제안",
-      "확성기 방송 중단"
+      "확성기 방송",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261024506372",
+    "https://www.segye.com/newsView/20261024506322",
+    "https://www.segye.com/newsView/20261024506108",
+    "https://www.segye.com/newsView/20261024505013",
     "https://www.segye.com/newsView/20261024503020",
-    "https://www.segye.com/newsView/20261024506182",
+    "https://www.segye.com/newsView/20261024506372",
     "https://www.yna.co.kr/view/AKR20261024025300504",
-    "https://news.mtn.co.kr/news-detail/2026100218194990987",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008813155"
   ],
-  "overall_summary": "김정은이 24일 당일치기로 단둥을 방문했으나 군사 협정·무기 협력 발표는 없다. 국방부의 MDL 군사회담 제의에 북한은 무반응이며 신규 군사 징후는 없어 직전과 같다.",
+  "overall_summary": "김정은이 24일 당일치기로 단둥을 방문해 왕후닝과 회담하고 귀국했으나 군사 협정·무기 협력 발표는 없다. 국방부의 MDL 군사회담 제의에 북한은 반응이 없고 신규 군사 징후는 없어 직전과 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -82,8 +87,8 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 사이퍼마가 라자루스 연계 가능성(중간 신뢰도)을 제기한 PHP2Shell 취약점 공격 준비 정황이 보도됐고 과기정통부·KISA가 주의 경보를 냈으나 실제 피해와 정부 귀속은 없다.",
-      "meaning": "정부·금융기관 대상 공격 준비 정황이나 피해가 없어 평소 범위의 사이버 위협이다.",
+      "summary": "귀속 미확인 — 라자루스 연계 가능성이 제기된 PHP 취약점 공격 준비 정황이 보도됐으나 북한과의 직접 연결고리는 확인되지 않았고 실제 피해·정부 귀속은 없다.",
+      "meaning": "공격 준비 정황 단계로 평소 범위의 사이버 위협이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -93,11 +98,11 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "사이퍼마가 I2P에서 한국어 사용자의 PHP 취약점 공격 모의 정황을 포착",
-        "과기정통부·KISA 22일 주의 경보 발령"
+        "싱가포르 보안기업이 PHP 취약점 공격 모의 정황을 포착",
+        "북한 조직과의 직접 연결고리는 미확인"
       ],
       "speculation": [
-        "라자루스 연계 가능성은 전문가들이 근거 부족으로 신중론"
+        "라자루스 연계 여부는 신중론"
       ]
     },
     "foreign_forces": {
@@ -106,23 +111,27 @@
       "region": "중국 단둥",
       "lat": 40.12,
       "lon": 124.38,
-      "summary": "김정은이 24일 신압록강대교로 중국 단둥을 당일 방문해 왕후닝과 회동했고(초기 리창 총리설은 정정) 청와대가 동향을 주시한다고 밝혔으나 군사 협정·무기 협력 발표는 없다.",
+      "summary": "김정은이 24일 신압록강대교로 중국 단둥을 당일 방문해 청와대가 동향을 주시한다고 밝혔고, 군사 협정·무기 협력 발표는 없다.",
       "meaning": "북중 고위급 외교 일정으로 군사 협력 발표가 없어 정례 외교 범위다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261024506372"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261024506108"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "신압록강대교 경유 단둥 도착, 당일 귀국 유력",
-        "연합뉴스는 왕후닝 회동으로 보도(세계일보 초기 기사는 리창)",
-        "중국 관영 보도는 세계일보 기사 시점에는 없었음"
+        "신압록강대교(15일 개통) 경유 단둥 방문",
+        "단둥 당국이 도로 통제 등 경비 강화(복수 대북 소식통)"
       ],
       "speculation": [
-        "경제 지원·신용 연장 논의 가능성(베이징대 교수 의견)"
+        "경제 협력 논의 가능성"
       ]
     },
     "parade_massing": {
@@ -138,7 +147,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-24T17:10:47+00:00",
+  "checked_at": "2026-10-24T18:11:28+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

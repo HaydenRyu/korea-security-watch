@@ -1,7 +1,7 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 지뢰 발견 귀순 NLL 10월 24일",
+      "북한 지뢰 발견 귀순 NLL DMZ 10월 24일",
       "국방부 남북 군사회담 제안 북 반응"
     ],
     "foreign_forces": [
@@ -131,7 +131,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-24T06:10:05+00:00",
+  "checked_at": "2026-10-24T07:09:44+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

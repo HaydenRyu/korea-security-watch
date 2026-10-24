@@ -6,7 +6,7 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters October 2026"
+      "North Korea nuclear"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
@@ -19,9 +19,8 @@
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격 북한 해킹",
-      "North Korea hacking"
+      "해킹 개인정보 유출 사이버 공격",
+      "북한 해킹 라자루스 PHP"
     ],
     "foreign_forces": [
       "북러 군사협력",
@@ -48,11 +47,9 @@
   "opened": [
     "https://www.segye.com/newsView/20261023512593",
     "https://www.segye.com/newsView/20261023509680",
-    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
-    "https://www.donga.com/news/Politics/article/all/20261023/134899794/2",
-    "https://www.yna.co.kr/view/AKR20261024019600017"
+    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/"
   ],
-  "overall_summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 북에 공식 제안했으나 북 반응은 없고 김여정의 확성기 재개 예고가 이어진다. 신규 교전·최후통첩·새 매설 확인은 없고 국정원은 김정은 사망설을 허위로 밝혔다.",
+  "overall_summary": "국방부가 23일 군사회담을 북에 공식 제안했으나 북 반응은 없고 김여정의 확성기 가동 대기 예고가 이어진다. 신규 교전·최후통첩·새 매설 확인은 없어 직전과 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -69,7 +66,7 @@
       "region": "DMZ 중서부",
       "lat": 37.95,
       "lon": 126.9,
-      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 북에 공식 제안했으나 북 반응은 없고, 김여정의 확성기 가동 예고와 DMZ 지뢰 매설 문제가 이어지나 신규 교전·최후통첩·새 매설 확인은 없다.",
+      "summary": "국방부가 23일 MDL 상호확인·군통신선 복원 군사회담을 북에 공식 제안했으나 북 반응은 없고, 김여정의 대남 확성기 가동 대기 예고가 이어지나 신규 교전·최후통첩·새 매설 확인은 없다.",
       "meaning": "우발충돌 방지 협의 제안으로 긴장 관리 국면이나 북의 국경 요새화가 계속된다.",
       "sources": [
         {
@@ -96,8 +93,7 @@
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "연합뉴스가 라자루스 PHP 취약점 공격 준비 정황을 보도했으나 실제 피해·귀속 발표는 확인하지 못해 배경으로만 둔다."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none"
@@ -109,14 +105,13 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none",
-      "summary": "국정원이 김정은 사망설은 허위라고 국회 정보위에 보고했으며 경고·대피 조치는 없다."
+      "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-10-24T01:10:41+00:00",
+  "checked_at": "2026-10-24T02:09:01+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

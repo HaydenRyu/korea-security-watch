@@ -1678,7 +1678,7 @@ $("srcReq").addEventListener("submit",async e=>{e.preventDefault();const f=e.tar
     if(!r.ok)throw r.status;m.textContent="요청을 보냈습니다. 검토 후 반영합니다.";f.reset();
     try{localStorage.setItem("srcReqAt",Date.now())}catch(_){}}
   catch(_){m.textContent="보내지 못했습니다. 잠시 뒤 다시 시도해 주세요."}finally{b.disabled=false}});
-// 흐름·예측 칸(10/22 개편): 발사 확률(data/forecast_prob.json, 매일 06:10) · 시나리오 기울기(state/scenarios.json, 매시간) ·
+// 흐름·예측 칸(10/22 개편): 발사 확률(data/forecast_prob.json, 6시간마다) · 시나리오 기울기(state/scenarios.json, 매시간) ·
 // 임박 신호가 있으면 신호 1줄, 없으면 가장 가까운 일정 1줄. 칸 높이(200/168/160px)는 그대로 — 줄 수(제목 2줄 + 목록 2줄)를 늘리지 않는다
 // 확률 자료가 없으면 예전처럼 최근 30일 발사 줄로 물러난다. 전체는 forecast.html
 const jsonOr=u=>fetch(u,{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null);

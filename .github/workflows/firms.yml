@@ -3,9 +3,10 @@ name: firms
 # 국내 언론 RSS 키워드 건수(state/news_kr.json, 공개판 — 제목·링크 없음)도 받는다.
 # 국내 항행경보(state/navwarn_kr.json, 키 시크릿 DATA_GO_KR_KEY — KHOA 해상사격훈련, 북한 발사 통보 오탐 억제용)도 같은 잡에서 받는다.
 # 접경 지자체 육상 사격훈련 공지(state/drills_kr.json, 키 불필요)도 받는다.
-# 감시 루틴은 :07 에 돈다. 그 전에 끝나도록 :45 에 받는다.
+# 15분 주기(10/24 hayden — 수집은 공개 레포 GHA 무료). :45 회차가 :07 감시 루틴 직전 판을 만든다.
+# 항공 기준선은 「같은 시각대 지난 7일 중앙값」이라 회차가 늘어도 의미가 같다. Overpass 는 회차당 120s 상한 + 격자 캐시.
 on:
-  schedule: [{ cron: "45 * * * *" }]
+  schedule: [{ cron: "0,15,30,45 * * * *" }]
   workflow_dispatch:
 
 permissions: { contents: write }
@@ -49,5 +50,6 @@ jobs:
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add state/firms.json $(ls state/firms_cells.json state/air.json state/air.jsonl state/navwarn_kr.json state/news_kr.json state/drills_kr.json 2>/dev/null)
           git commit -m "firms: $(date -u +%FT%H:%MZ)"
-          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          # 루틴·calendar 커밋과 경합한다(10/24 실측 60회 중 4회 실패) — 6회·무작위 대기로 재시도
+          for i in 1 2 3 4 5 6; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((RANDOM % 15 + 5)); done
           exit 1

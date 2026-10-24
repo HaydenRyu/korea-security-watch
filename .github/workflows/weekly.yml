@@ -1,12 +1,12 @@
 name: weekly
 #  summary  — 일요일 20:00 KST, 지난 7일 이력 요약을 본인 주제로 1통(우선순위 2 — 조용히). claude 미사용
-#  calendar — 매일 06:10 KST, 도발 위험 일정 집계(scripts/risk_calendar.py → data/risk_calendar.json, 공개 DB·키 불필요)
+#  calendar — 6시간마다(00:10·06:10·12:10·18:10 KST, 10/24 — CSIS DB 갱신을 하루 늦게 받지 않게), 도발 위험 일정 집계(scripts/risk_calendar.py → data/risk_calendar.json, 공개 DB·키 불필요)
 #             최근 30일 발사 빈도·앞으로 30일 일정이 날마다 바뀌어 매일 돈다(10/18 hayden)
 #  imagery  — 같은 calendar 잡 안, 매일: 38 North·Beyond Parallel satellite-imagery 태그 RSS → data/imagery_reports.json(제목·링크·날짜만)
 #  conflicts — 같은 calendar 잡 안, 매달 21~28일(KST)만: UCDP Candidate 월간 CSV → data/conflicts.json(scripts/ucdp_month.py, 키 불필요·CC BY 4.0)
 #             판은 월말 뒤 약 3주에 나온다. 이미 받은 판이면 받지 않는다. 실패해도 달력 커밋은 그대로 간다(이전 값 유지)
 on:
-  schedule: [{ cron: "0 11 * * 0" }, { cron: "10 21 * * *" }]
+  schedule: [{ cron: "0 11 * * 0" }, { cron: "10 3,9,15,21 * * *" }]
   workflow_dispatch:
     inputs:
       job:
@@ -32,7 +32,7 @@ jobs:
           python3 scripts/ntfy_send.py me "$(jq -r .title /tmp/w.json)" "$(jq -r .message /tmp/w.json)" 2
 
   calendar:
-    if: (github.event_name == 'schedule' && github.event.schedule == '10 21 * * *') || (github.event_name == 'workflow_dispatch' && inputs.job != 'summary')
+    if: (github.event_name == 'schedule' && github.event.schedule == '10 3,9,15,21 * * *') || (github.event_name == 'workflow_dispatch' && inputs.job != 'summary')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions: { contents: write }
@@ -59,5 +59,5 @@ jobs:
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add data/risk_calendar.json data/forecast_prob.json data/forecast_ledger.jsonl $(ls data/conflicts.json data/imagery_reports.json 2>/dev/null)
           git commit -m "calendar: $(date -u +%FT%H:%MZ)"
-          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          for i in 1 2 3 4 5 6; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((RANDOM % 15 + 5)); done
           exit 1

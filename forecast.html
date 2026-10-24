@@ -269,7 +269,7 @@ Promise.all([jf(SB+"signals.json"),jf(SB+"latest.json"),jf("data/risk_calendar.j
     try{f(...a)}catch(e){console.error(f.name,e)}
 });
 
-/* ── 발사 확률(10/22) — data/forecast_prob.json(risk_calendar.py, 매일 06:10). 지난 1년 빈도 그대로 + 과거 이 수준일 때 실제 비율 ── */
+/* ── 발사 확률(10/22) — data/forecast_prob.json(risk_calendar.py, 6시간마다). 지난 1년 빈도 그대로 + 과거 이 수준일 때 실제 비율 ── */
 function drawProb(pb){
   if(!pb||!Array.isArray(pb.h)||!pb.h.length){$("pbat").textContent="—";$("pbx").innerHTML=`<p class="none">확률 자료를 불러오지 못함</p>`;$("pbn").textContent="";return}
   const age=Math.floor((Date.now()-new Date(pb.updated_at))/864e5);  // 갱신 잡이 멈췄을 때만(공개 DB 자체의 지연은 기준일로 보인다)

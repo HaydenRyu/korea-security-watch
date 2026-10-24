@@ -1,14 +1,14 @@
 {
  "source": "접경 지자체 공지(철원 RSS · 고성 공지 · 파주 새소식+HWP · 화천 공지+PDF) — 군 사격훈련 주민 안내",
  "note": "참고 자료 · 등급 판정과 무관. 일정은 부대 사정·기상으로 바뀔 수 있다.",
- "fetched_at": "2026-10-24T12:12:57.009613+00:00",
+ "fetched_at": "2026-10-24T16:13:19.362481+00:00",
  "sources": {
   "cheorwon": {
    "name": "철원군",
    "page": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-24T12:12:57.009613+00:00",
+   "last_ok_at": "2026-10-24T16:13:19.362481+00:00",
    "count": 11
   },
   "goseong": {
@@ -16,7 +16,7 @@
    "page": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/list.do",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-24T12:12:57.009613+00:00",
+   "last_ok_at": "2026-10-24T16:13:19.362481+00:00",
    "count": 9
   },
   "paju": {
@@ -24,7 +24,7 @@
    "page": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=2001",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-24T12:12:57.009613+00:00",
+   "last_ok_at": "2026-10-24T16:13:19.362481+00:00",
    "count": 8
   },
   "hwacheon": {
@@ -588,25 +588,6 @@
    "arms": [
     "개인화기"
    ],
-   "active_now": false
-  },
-  {
-   "source": "cheorwon",
-   "title": "'26년 9월 2주차 포탄사격 훈련일정 안내",
-   "url": "https://www.cwg.go.kr/www/selectBbsNttView.do?key=206&bbsNo=24&nttNo=291404",
-   "posted": "2026-09-03",
-   "body": "2026년 9월 2주차 포탄사격 훈련일정을 아래과 같이 안내드립니다.\n○ 2026. 9. 8.(수) 08:00~12:00\n- 문혜리 사격장 → 용화동 피탄지\n○ 2026. 9. 9.(목) 08:00~12:00\n- 문혜리 사격장 → 용화동 피탄지\n* 훈련 일정은 부대 사정에 따라 변경될 수 있으며, 주민 및 등산객께서는 피탄지 인근 출입을 자제하여 주시기 바랍니다.\n* 총기·탄약·폭발물·군용물 발견 시 또는 이를 불법 취급하거나 관리 중인 사람을 발견시에는 지역경찰서 또는 5군단 군사경찰에 신고 바랍니다.\n(국군 방첩사령부 국번 없이 : 1337 / 5군단 군사경찰 : 031) 539-7654 / 경찰서 : 112)\n※문의 : 제5포병여단 031) 539-7151",
-   "unit": "제5포병여단",
-   "first": "2026-09-08",
-   "last": "2026-09-09",
-   "days": [
-    "2026-09-08",
-    "2026-09-09"
-   ],
-   "places": [
-    "문혜리 사격장 → 용화동 피탄지"
-   ],
-   "arms": [],
    "active_now": false
   }
  ]

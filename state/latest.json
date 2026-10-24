@@ -5,58 +5,47 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 탄약 군수 수송"
     ],
     "border_clash": [
       "지뢰 발견 목함지뢰 해안",
-      "DMZ NLL 귀순",
-      "North Korea DMZ border"
+      "DMZ NLL 귀순 북한 주민"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hacking Lazarus"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
       "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 준전시 등화관제"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 열병식 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "국방부 합참 긴급 경고"
+      "진돗개 발령 데프콘 합참 긴급"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
+      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261024506372",
-    "https://www.segye.com/newsView/20261024506108",
     "https://www.segye.com/newsView/20261024503020",
-    "https://www.segye.com/newsView/20261023507276",
-    "https://www.segye.com/newsView/20261024506322",
-    "https://www.segye.com/newsView/20261024506182",
-    "https://www.nknews.org/2026/10/north-koreas-kim-jong-un-visits-chinese-border-city-seoul/",
-    "https://www.nknews.org/feed/"
+    "https://www.nknews.org/feed/",
+    "https://www.nknews.org/2026/10/kim-jong-un-rallies-junior-commanders-to-build-worlds-strongest-army/",
+    "https://www.nknews.org/2026/10/north-koreas-kim-jong-un-visits-chinese-border-city-seoul/"
   ],
-  "overall_summary": "김정은의 24일 당일 단둥 방중(왕후닝·리창 회동 보도)은 외교 일정으로 군사 협정·무기 협력 발표는 없다. 접경은 국방부의 MDL 군사회담 제의에 북 무반응, 김여정 확성기 예고(10/21~22)가 이어지나 새 충돌·발견 보도는 없다.",
+  "overall_summary": "김정은의 24일 당일 단둥 방문은 외교 일정이며 군사 협정·무기 협력 발표는 없다. 접경에서 새 충돌·지뢰 발견 보도는 없고 군사회담 제의에 북 무반응이 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -69,14 +58,14 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 충돌·지뢰 발견 보도 없음 — MDL 군사회담 제의와 확성기 예고는 10/22~23 첫 보도로 24시간 경과(신호 칸에 기록 중)."
+      "summary": "새 충돌·지뢰 발견 보도 없음 — MDL 군사회담 제의와 확성기 예고는 10/22~23 첫 보도로 24시간 경과."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "전국",
-      "summary": "귀속 미확인 — 라자루스 연계 가능성이 제기된 PHP 취약점 공격 준비 정황이 보도됐으나 북한과의 직접 연결고리는 확인되지 않았고 실제 피해·정부 귀속은 없다.",
+      "summary": "귀속 미확인 — 라자루스 연계 가능성이 제기된 PHP 취약점 공격 준비 정황이 보도됐으나 직접 연결고리·실제 피해는 확인되지 않았다.",
       "meaning": "실제 피해 없는 준비 정황이라 등급 영향 없음.",
       "sources": [
         {
@@ -100,7 +89,7 @@
       "region": "중국 단둥",
       "lat": 40.12,
       "lon": 124.38,
-      "summary": "김정은이 24일 신압록강대교로 단둥을 당일 방문해 중국 고위인사(왕후닝·리창 보도)와 회동했고 청와대는 동향을 주시한다고 밝혔으며, 군사 협정·무기 협력 발표는 없다.",
+      "summary": "김정은이 24일 신압록강대교로 단둥을 당일 방문해 중국 고위인사와 회동했고 군사 협정·무기 협력 발표는 없다.",
       "meaning": "북중 외교 일정으로 군사 협력 발표가 없어 정례로 본다.",
       "sources": [
         {
@@ -136,7 +125,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-24T19:11:17+00:00",
+  "checked_at": "2026-10-24T20:10:38+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

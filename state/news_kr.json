@@ -1,31 +1,31 @@
 {
- "fetched_at": "2026-10-24T08:39:12+00:00",
+ "fetched_at": "2026-10-24T09:48:03+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-24T08:39:12+00:00",
+ "last_ok_at": "2026-10-24T09:48:03+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1154,
-  "hits": 62,
-  "clusters": 46,
+  "fetched": 1156,
+  "hits": 59,
+  "clusters": 44,
   "by_group": {
-   "border": 30,
+   "border": 29,
    "gps": 4,
    "hybrid": 4,
-   "drone_balloon": 20,
-   "mine": 19,
-   "fire": 8,
-   "alert": 2
+   "drone_balloon": 19,
+   "mine": 18,
+   "fire": 6,
+   "alert": 1
   }
  },
  "outlets": {
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 595,
-   "hits": 51
+   "count": 597,
+   "hits": 50
   },
   "SBS": {
    "feeds": 3,
@@ -37,7 +37,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 11
+   "hits": 10
   },
   "국민일보": {
    "feeds": 2,
@@ -61,7 +61,7 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "border": {
-   "clusters": 30,
+   "clusters": 29,
    "max_independent": 2,
    "latest": "2026-10-24T07:24:00+00:00"
   },
@@ -76,22 +76,22 @@
    "latest": "2026-10-24T06:04:44+00:00"
   },
   "drone_balloon": {
-   "clusters": 20,
-   "max_independent": 2,
-   "latest": "2026-10-24T03:27:26+00:00"
-  },
-  "mine": {
    "clusters": 19,
    "max_independent": 2,
    "latest": "2026-10-24T03:27:26+00:00"
   },
+  "mine": {
+   "clusters": 18,
+   "max_independent": 2,
+   "latest": "2026-10-24T03:27:26+00:00"
+  },
   "fire": {
-   "clusters": 8,
+   "clusters": 6,
    "max_independent": 2,
    "latest": "2026-10-23T20:38:46+00:00"
   },
   "alert": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 2,
    "latest": "2026-10-23T07:46:26+00:00"
   }
@@ -102,7 +102,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 115,
+   "count": 117,
    "hits": 37
   },
   {
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "SBS",
@@ -167,7 +167,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 8
+   "hits": 7
   },
   {
    "outlet": "동아일보",

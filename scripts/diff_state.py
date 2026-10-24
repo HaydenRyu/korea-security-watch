@@ -143,7 +143,7 @@ def normalize_attribution(items: dict) -> dict:
 
 
 ATTRIBUTION_GATED = {"hybrid_ops"}  # 공식 귀속 발표가 없으면 징후가 아니라 배경이다(10/22 hayden: 사건 건수는 입력이 아니다)
-HYBRID_CATEGORIES = {"간첩", "사이버", "가상자산", "마약", "무기", "방화", "테러"}
+HYBRID_CATEGORIES = {"간첩", "사이버", "가상자산", "마약", "무기", "방화", "테러", "영향력 공작", "제재 위반"}  # 10/24 영향력 공작·제재 위반 추가(공식 귀속·적발 발표만)
 _A_SITES: set[str] | None = None
 
 

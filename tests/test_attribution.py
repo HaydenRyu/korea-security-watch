@@ -80,3 +80,16 @@ def test_real_sources_json_lists_official_sites():
     d._A_SITES = None
     s = d.a_tier_sites()
     assert "police.go.kr" in s and "fbi.gov" in s and "npa.go.jp" in s
+
+
+def test_new_hybrid_categories_kept_and_still_gated():
+    import diff_state as d
+    d._A_SITES = {"police.go.kr", "kcg.go.kr"}
+    for cat, src in (("제재 위반", "https://www.kcg.go.kr/x"), ("영향력 공작", "https://www.police.go.kr/y")):
+        items = _hyb(attributed_by={"name": "기관", "tier": "A"}, category=cat,
+                     sources=[{"name": "기관", "tier": "A", "url": src}])
+        d.normalize_attributed_by(items)
+        assert items["hybrid_ops"]["category"] == cat and items["hybrid_ops"]["status"] == "single"
+    items = _hyb(category="영향력 공작", sources=[{"name": "언론", "tier": "B", "url": "https://www.yna.co.kr/z"}])
+    d.normalize_attributed_by(items)  # 해외 시위 자금 「의혹」 보도만 있으면 배경
+    assert items["hybrid_ops"]["status"] == "none"

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23",
+ "updated": "2026-10-24",
  "note": "감시 루틴(prompts/monitor.md)과 상황판 「출처」 화면이 함께 읽는 정본. 추가 요청은 검토 후 여기에 반영한다.",
  "tiers": [
   {
@@ -51,6 +51,21 @@
        "name": "대검찰청 보도자료",
        "url": "https://www.spo.go.kr",
        "note": "국가보안법 기소·공소 유지 발표 — hybrid_ops 귀속"
+      },
+      {
+       "name": "해양경찰청 보도자료",
+       "url": "https://www.kcg.go.kr",
+       "note": "서해 중국 구조물 대치·북한 연계 밀수·환적 적발 — foreign_forces·hybrid_ops(제재 위반)"
+      },
+      {
+       "name": "관세청 보도자료",
+       "url": "https://www.customs.go.kr",
+       "note": "대북 제재 품목 밀수 적발 — hybrid_ops(제재 위반)"
+      },
+      {
+       "name": "중앙선거관리위원회 보도자료",
+       "url": "https://www.nec.go.kr",
+       "note": "외국 세력 선거 개입·허위정보 공식 발표 — hybrid_ops(영향력 공작)"
       }
      ]
     },

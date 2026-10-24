@@ -1,17 +1,17 @@
 {
- "fetched_at": "2026-10-24T14:08:03+00:00",
+ "fetched_at": "2026-10-24T14:57:19+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-24T14:08:03+00:00",
+ "last_ok_at": "2026-10-24T14:57:19+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1159,
-  "hits": 117,
-  "clusters": 71,
+  "hits": 122,
+  "clusters": 72,
   "by_group": {
-   "summit": 28,
+   "summit": 29,
    "alert": 2,
    "defect": 1,
    "fire": 7,
@@ -28,7 +28,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 600,
-   "hits": 106
+   "hits": 114
   },
   "SBS": {
    "feeds": 3,
@@ -64,9 +64,9 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "summit": {
-   "clusters": 28,
+   "clusters": 29,
    "max_independent": 5,
-   "latest": "2026-10-24T13:46:05+00:00"
+   "latest": "2026-10-24T14:48:45+00:00"
   },
   "alert": {
    "clusters": 2,
@@ -121,7 +121,7 @@
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
    "count": 120,
-   "hits": 59
+   "hits": 63
   },
   {
    "outlet": "연합뉴스",
@@ -129,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 21
+   "hits": 22
   },
   {
    "outlet": "연합뉴스",
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 24
+   "hits": 27
   },
   {
    "outlet": "SBS",

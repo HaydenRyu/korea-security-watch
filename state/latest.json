@@ -1,28 +1,26 @@
 {
   "coverage": {
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL 합참",
-      "news_kr 접경·지뢰 묶음"
-    ],
-    "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit Reuters",
-      "서해 구조물 주한미군 감축 김정은 방중"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
-    ],
-    "nuclear": [
-      "NK News 최신 헤드라인"
-    ],
     "troop_movement": [
       "NK News 최신 헤드라인",
       "news_kr 수집 묶음"
     ],
+    "nuclear": [
+      "NK News 최신 헤드라인"
+    ],
     "logistics": [
       "news_kr 수집 묶음"
+    ],
+    "border_clash": [
+      "북한 합참 지뢰 DMZ NLL 귀순",
+      "news_kr 접경·지뢰 묶음"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "GPS 교란"
+    ],
+    "foreign_forces": [
+      "Kim Jong Un China Russia visit Dandong Reuters",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "news_kr 수집 묶음"
@@ -33,17 +31,18 @@
     "gov_warning": [
       "news_kr alert 묶음 점검"
     ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의"
+    ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261024506606",
-    "https://www.segye.com/newsView/20261024503020",
-    "https://www.yna.co.kr/view/AKR20261025006000072",
-    "https://www.yna.co.kr/view/AKR20261025004100504",
     "https://www.nknews.org/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.segye.com/newsView/20261024506606",
+    "https://www.yna.co.kr/view/AKR20261025006000072",
+    "https://www.segye.com/newsView/20261024503020"
   ],
   "overall_summary": "김정은의 단둥 당일 방문은 경제협력 중심 외교 일정이고 군사협력 발표는 없다. 새 접경 도발·핵·병력 징후는 없어 직전 회차와 같은 수준이다.",
   "items": {
@@ -109,9 +108,9 @@
           "url": "https://www.segye.com/newsView/20261024506606"
         },
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261025004100504"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
@@ -123,7 +122,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-25T02:10:07+00:00",
+  "checked_at": "2026-10-25T03:10:20+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

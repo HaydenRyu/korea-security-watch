@@ -1,8 +1,8 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
+      "북한 자주포 개풍군 애기봉 전진 배치",
+      "North Korea self-propelled artillery border Kim Yo Jong loudspeaker"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변 동향",
@@ -13,15 +13,15 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순 10월 25일",
+      "지뢰 발견 DMZ 귀순",
       "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
+      "북한 GPS 교란",
       "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중 군사협력",
+      "김정은 방중",
       "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
@@ -48,15 +48,36 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261025506573",
-    "https://www.yna.co.kr/view/AKR20261025006000072",
+    "https://www.yna.co.kr/view/AKR20261025045900504",
+    "https://www.segye.com/newsView/20261025509764",
     "https://www.yna.co.kr/rss/northkorea.xml",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "새 군사 징후는 없다. 김정은 단둥 방문과 유엔 남북 설전은 외교·발언 수준으로 직전 회차와 같은 평시 판단을 유지한다.",
+  "overall_summary": "북한군 122㎜ 자주포가 개풍군 해안 접경에서 육안 관측될 만큼 전진한 모습이 연합뉴스 단독 보도로 나왔으나 독립 확인이 없다. 그 밖에는 김정은 단둥 방문 후속과 남북 설전뿐이라 평시 판단을 유지한다.",
   "items": {
     "troop_movement": {
-      "status": "none"
+      "status": "single",
+      "routine": false,
+      "region": "경기 김포 맞은편 황해도 개풍군",
+      "lat": 37.78,
+      "lon": 126.67,
+      "summary": "연합뉴스가 10/25 애기봉 전망대에서 개풍군 해안 접경에 남측을 향한 북한군 122㎜ 자주포 추정 전력이 배치된 모습을 촬영해 보도했다.",
+      "meaning": "김여정이 예고한 접경 전술 타격수단 증강과 맞물리는 전진 배치 정황이나 군 당국의 확인은 아직 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261025045900504"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "애기봉 전망대 촬영 사진에 자주포와 훈련하는 병사가 포착됐다.",
+        "자주포가 보인 것은 최근 일로 알려졌다."
+      ],
+      "speculation": [
+        "전문가는 무력시위 성격이며 추가 전력 배치가 이어질 수 있다고 평가했다."
+      ]
     },
     "nuclear": {
       "status": "none"
@@ -66,14 +87,14 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 접경 사건 없음 — 유엔 남북 설전(10/24~25)은 발언 배경이다."
+      "summary": "새 접경 사건 없음 — 유엔 남북 설전은 발언 배경이다."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김정은 단둥 방문은 외교 일정이고 군사협력·군 인사 동행 보도가 없어 직전 회차대로 배경으로 둔다."
+      "summary": "김정은 단둥 방문은 외교 일정이고 군사협력 보도가 없어 직전 회차대로 배경으로 둔다."
     },
     "parade_massing": {
       "status": "none"
@@ -88,15 +109,17 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T10:11:03+00:00",
-  "grade": 0,
-  "grade_label": "평시",
-  "active": [],
+  "checked_at": "2026-10-25T11:10:11+00:00",
+  "grade": 1,
+  "grade_label": "주의",
+  "active": [
+    "troop_movement"
+  ],
   "world": [
     {
       "title": "머스크, 우크라이나 스타링크 제한 인정 후 서비스 복구",
       "summary": "머스크가 스페이스X가 우크라이나의 스타링크 연결을 제한했다고 밝혔고 서비스는 복구됐다고 BBC가 전했다.",
-      "link_korea": "러-우 전쟁의 전장 통신·드론 운용 여건은 북러 군사협력과 파병 규모에 영향을 준다.",
+      "link_korea": "전장 통신·드론 운용 문제는 북러 군사협력과 한반도 안보 환경 분석에 참고가 된다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
@@ -105,6 +128,6 @@
       }
     }
   ],
-  "world_context": "러-우 전쟁 통신 문제가 부각된 가운데 한반도에는 새 군사 징후가 없다.",
-  "world_at": "2026-10-25T10:11:03+00:00"
+  "world_context": "러-우 전쟁 통신 문제가 부각된 가운데 접경 포병 동향이 한반도의 새 관심사다.",
+  "world_at": "2026-10-25T11:10:11+00:00"
 }

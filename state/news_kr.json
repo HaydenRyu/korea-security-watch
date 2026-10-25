@@ -1,26 +1,26 @@
 {
- "fetched_at": "2026-10-25T19:01:40+00:00",
+ "fetched_at": "2026-10-25T20:12:00+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-25T19:01:40+00:00",
+ "last_ok_at": "2026-10-25T20:12:00+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1160,
-  "hits": 115,
-  "clusters": 71,
+  "hits": 118,
+  "clusters": 72,
   "by_group": {
-   "summit": 41,
+   "summit": 43,
    "border": 18,
-   "influence": 1,
    "fire": 5,
-   "mine": 9,
+   "influence": 1,
+   "mine": 8,
    "defect": 1,
    "drone_balloon": 9,
    "alert": 2,
-   "gps": 3,
-   "hybrid": 3
+   "gps": 2,
+   "hybrid": 2
   }
  },
  "outlets": {
@@ -40,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 22
+   "hits": 25
   },
   "국민일보": {
    "feeds": 2,
@@ -64,27 +64,27 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "summit": {
-   "clusters": 41,
+   "clusters": 43,
    "max_independent": 4,
-   "latest": "2026-10-25T19:01:40+00:00"
+   "latest": "2026-10-25T20:12:00+00:00"
   },
   "border": {
    "clusters": 18,
    "max_independent": 2,
-   "latest": "2026-10-25T15:00:00+00:00"
+   "latest": "2026-10-25T20:00:02+00:00"
+  },
+  "fire": {
+   "clusters": 5,
+   "max_independent": 1,
+   "latest": "2026-10-25T19:30:00+00:00"
   },
   "influence": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-10-25T11:56:02+00:00"
   },
-  "fire": {
-   "clusters": 5,
-   "max_independent": 1,
-   "latest": "2026-10-25T10:22:00+00:00"
-  },
   "mine": {
-   "clusters": 9,
+   "clusters": 8,
    "max_independent": 2,
    "latest": "2026-10-25T02:02:48+00:00"
   },
@@ -104,12 +104,12 @@
    "latest": "2026-10-24T10:10:19+00:00"
   },
   "gps": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
    "latest": "2026-10-24T05:20:00+00:00"
   },
   "hybrid": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
    "latest": "2026-10-24T05:20:00+00:00"
   }
@@ -185,7 +185,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 18
+   "hits": 20
   },
   {
    "outlet": "동아일보",
@@ -193,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "국민일보",

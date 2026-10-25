@@ -1,66 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 자주포 개풍군 애기봉 합참",
-      "North Korea artillery border"
+      "북한군 자주포 서부전선 접경 포구 남측 향해 훈련 10월 25일"
     ],
     "nuclear": [
-      "북한 핵 동향 38 North"
-    ],
-    "border_clash": [
-      "목함지뢰 발견 DMZ 귀순 10월 25일",
-      "국방부 MDL 군사회담"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 10월 25일"
-    ],
-    "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit Dandong",
-      "서해 구조물"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
-    ],
-    "gov_warning": [
-      "합참 진돗개 발령"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제"
+      "news_kr 수집기 결과 대조(핵 관련 묶음 없음)"
     ],
     "logistics": [
-      "북한 군수 수송 탄약"
+      "news_kr 수집기 결과 대조(군수 관련 묶음 없음)"
+    ],
+    "border_clash": [
+      "합참 북한 지뢰 발견 DMZ 귀순 NLL"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 GPS 교란 서해 구조물 주한미군 감축"
+    ],
+    "foreign_forces": [
+      "North Korea Kim Jong Un China Russia visit Dandong"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "news_kr 수집기 결과 대조(열병식 관련 묶음 없음)"
+    ],
+    "nk_internal": [
+      "NK News 피드 최근 글 확인"
+    ],
+    "gov_warning": [
+      "news_kr 수집기 결과 대조(alert 묶음 2건 검토)"
+    ],
+    "hybrid_ops": [
+      "NK News 피드(IT worker 수사 기사) 확인"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
+      "NK News Seoul again proposes talks"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261025045900504",
-    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
-    "https://www.nknews.org/2026/10/kim-jong-un-says-north-korea-inspired-by-chinas-success-in-border-city-visit/",
-    "https://www.segye.com/newsView/20261025509764",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/rss/northkorea.xml",
+    "https://www.segye.com/newsView/20261025509764",
+    "https://www.segye.com/newsView/20261025509761",
+    "https://www.segye.com/newsView/20261025509774",
     "https://www.nknews.org/feed/",
+    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "연합뉴스 단독으로 북한군 자주포의 서부전선 전진 모습이 보도됐으나 독립 확인이 없어 단일 출처 징후로 유지한다. 김정은 단둥 방문 후속과 남북 설전·군사회담 제안 외에 새 군사 징후는 없다.",
+  "overall_summary": "연합뉴스가 애기봉에서 북한군 122㎜ 자주포의 접경지 전진 배치를 포착했으나 독립 확인이 없어 단일 출처 징후로 유지한다. 김정은 단둥 당일 방문은 외교 일정(정례)이며, 국방부의 MDL 군사회담 재제안에 북은 무반응이라 직전과 큰 변화는 없다.",
   "items": {
     "troop_movement": {
       "status": "single",
       "routine": false,
       "region": "경기 김포 맞은편 황해도 개풍군",
       "lat": 37.78,
-      "lon": 126.67,
-      "summary": "연합뉴스가 10/25 서부전선에서 남측으로 포구를 향한 북한군 자주포와 훈련 병력이 한국 언론 카메라에 포착됐다고 보도했다.",
-      "meaning": "북한이 예고한 MDL 일대 화력 강화와 맞물린 전진 배치 정황이나 군 당국의 확인은 없다.",
+      "lon": 126.68,
+      "summary": "연합뉴스가 10/25 애기봉 전망대 촬영 사진으로 북한군 122㎜ 자주포가 개풍군 해안 접경지에 전진 배치돼 훈련하는 모습을 보도했다.",
+      "meaning": "김여정이 예고한 전술적 타격수단 증강과 맞물린 무력시위 또는 추가 전력 배치 가능성이 있다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -68,12 +61,13 @@
           "url": "https://www.yna.co.kr/view/AKR20261025045900504"
         }
       ],
-      "confidence": "낮음",
+      "confidence": "중간",
       "facts": [
-        "연합뉴스가 해안 접경에서 자주포 훈련하는 북한군 사진을 보도했다."
+        "자주포 장갑에 반미 선전 문구, 병력이 깃발 신호로 훈련하는 모습 포착",
+        "한국 언론 망원 카메라에 잡힐 만큼 가까운 배치는 이례적이라는 평가"
       ],
       "speculation": [
-        "무력시위 성격이며 추가 배치가 이어질 수 있다는 해석이 있다."
+        "KODEF 사무총장은 추가 전력 배치가 이어질 가능성을 언급"
       ]
     },
     "nuclear": {
@@ -84,14 +78,44 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 접경 사건 없음 — 국방부 MDL 군사회담 제안(10/23)과 북의 무반응이 배경이다."
+      "summary": "국방부의 MDL 군사회담 재제안과 유엔 남북 설전만 있고 새 접경 충돌·지뢰 발견 보도는 없다."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "김정은 단둥 방문(10/24 첫 보도)은 외교 일정이고 24시간이 지났으며 군사협력 발표가 없어 배경으로 둔다."
+      "status": "corroborated",
+      "routine": true,
+      "region": "중국 단둥",
+      "lat": 40.12,
+      "lon": 124.38,
+      "summary": "김정은이 10/24 신압록강대교를 건너 단둥을 당일 방문해 항미원조기념관 헌화·왕후닝 회동 후 귀국했고 군사협정 서명이나 무기 협력 발표는 없었다.",
+      "meaning": "외교 일정 성격의 북중 밀착 과시이며 군사 협력의 새 합의는 확인되지 않는다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261025509761"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/feed/"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/rss/northkorea.xml"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "시진핑 회담 없이 서열 4위 왕후닝과 회동",
+        "신압록강대교 경협 의지 확인"
+      ],
+      "speculation": [
+        "APEC 전후 북미대화 협상력 제고 의도라는 해석"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -106,7 +130,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T12:11:58+00:00",
+  "checked_at": "2026-10-25T13:12:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

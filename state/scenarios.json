@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-25T12:11:58+00:00",
+  "updated_at": "2026-10-25T13:12:55+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -13,7 +13,7 @@
           "id": "dialogue_offer",
           "label": "남북·북미 대화 제안·수용",
           "state": "on",
-          "note": "국방부가 MDL 상호 확인을 위한 남북 군사회담을 북에 재제안했다(10/23~24)."
+          "note": "국방부가 10/24 MDL 위치 확인 등을 위한 남북 군사회담과 군통신선 복원 논의를 북에 다시 공식 제안했다."
         },
         {
           "id": "channel_restored",
@@ -186,22 +186,18 @@
   ],
   "calm": {
     "dialogue_offer": {
-      "summary": "국방부가 MDL 상호 확인을 위한 남북 군사회담을 북에 재제안했다(10/23~24).",
+      "summary": "국방부가 10/24 MDL 위치 확인 등을 위한 남북 군사회담과 군통신선 복원 논의를 북에 다시 공식 제안했다.",
       "sources": [
         {
           "url": "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
           "publisher": "NK News"
-        },
-        {
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-          "publisher": "국방일보"
         }
       ],
       "first_seen": "2026-10-23T05:10:46+00:00",
-      "last_seen": "2026-10-25T12:11:58+00:00"
+      "last_seen": "2026-10-25T13:12:55+00:00"
     }
   },
-  "calm_judged_at": "2026-10-25T12:11:58+00:00",
+  "calm_judged_at": "2026-10-25T13:12:55+00:00",
   "history": [
     {
       "date": "2026-10-22",

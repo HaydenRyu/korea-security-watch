@@ -13,18 +13,16 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순 10월",
-      "국방부 MDL 군사회담",
+      "목함지뢰 발견 DMZ 귀순",
       "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참 10월 25일",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
-      "North Korea GPS jamming cyber"
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit military",
       "김정은 방중 군사협력",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -36,25 +34,26 @@
       "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "한미일 긴급 경고 대피"
+      "진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "North Korea attributed FBI hackers"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan 대만 중국 군사훈련"
     ],
     "calm": [
-      "남북 대화 제안 군사회담"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261025504327",
-    "https://www.yna.co.kr/view/AKR20261025006000072",
-    "https://www.yna.co.kr/view/AKR20261025020800504",
-    "https://www.segye.com/newsView/20261025506573"
+    "https://www.segye.com/newsView/20261025506573",
+    "https://www.segye.com/newsView/20261025505375",
+    "https://www.yna.co.kr/view/AKR20261025006000072"
   ],
-  "overall_summary": "김정은의 단둥 당일 방문은 24시간이 지나 배경이 됐고 새 접경·핵·병력 징후는 없다. 국방부가 MDL 군사회담을 제의했으나 북의 응답은 보도되지 않았다.",
+  "overall_summary": "새 군사 징후는 없고 김정은 단둥 방문은 24시간이 지나 배경이 됐다. 유엔에서 남북 설전이 있었으나 발언 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,7 +66,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 접경 사건 없음 — 국방부의 MDL 군사회담 제의(10/23)와 유엔 남북 설전은 외교·발언 배경이다."
+      "summary": "새 접경 사건 없음 — 유엔 남북 설전(10/24~25)은 발언 배경이다."
     },
     "electronic_cyber": {
       "status": "none",
@@ -75,7 +74,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "24시간 경과 — 김정은 단둥 방문 첫 보도 10/24 오후, 25일 후속 보도에도 군사협력 언급 없음(배경)."
+      "summary": "24시간 경과 — 김정은 단둥 방문 첫 보도 10/24, 25일 세계일보 원문에도 군사협력·군 인사 동행 언급 없음(배경)."
     },
     "parade_massing": {
       "status": "none"
@@ -90,7 +89,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T08:10:37+00:00",
+  "checked_at": "2026-10-25T09:11:12+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],

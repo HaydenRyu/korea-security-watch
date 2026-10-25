@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-25T17:46:31+00:00",
+ "fetched_at": "2026-10-25T19:01:40+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-25T17:46:31+00:00",
+ "last_ok_at": "2026-10-25T19:01:40+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -66,7 +66,7 @@
   "summit": {
    "clusters": 41,
    "max_independent": 4,
-   "latest": "2026-10-25T17:46:31+00:00"
+   "latest": "2026-10-25T19:01:40+00:00"
   },
   "border": {
    "clusters": 18,

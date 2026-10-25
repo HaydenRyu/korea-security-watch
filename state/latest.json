@@ -1,53 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 자주포 접경지 전진",
-      "North Korea artillery border deployment"
+      "북한군 자주포 접경지 전진",
+      "North Korea troops artillery border Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변"
+      "북한 풍계리 영변 핵 동향",
+      "North Korea nuclear Yongbyon Punggye-ri 38 North"
     ],
     "logistics": [
-      "북한 탄약 군수 수송"
+      "북한 탄약 군수 수송 러시아",
+      "North Korea munitions Russia shipments"
     ],
     "border_clash": [
       "지뢰 발견 목함지뢰 해안 DMZ 귀순",
-      "국방부 MDL 군사회담 제안"
+      "북한 안보리 서한 지뢰폭발 자위권"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 랜섬웨어 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit Reuters",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 집결 위성"
     ],
     "nk_internal": [
       "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 발령 데프콘 상향",
+      "North Korea Japan Defense Ministry missile launch this week"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hackers"
     ],
     "calm": [
       "남북 대화 제안 군사회담"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261025509779",
+    "https://www.yna.co.kr/view/AKR20261026007400504",
+    "https://www.yna.co.kr/view/AKR20261025006000072",
     "https://www.yna.co.kr/view/AKR20261025045900504",
     "https://www.yna.co.kr/view/AKR20261025020800504",
+    "https://www.segye.com/newsView/20261025509779",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008814330",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo"
+    "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo"
   ],
-  "overall_summary": "북한군 자주포 접경 전진 보도(연합 10/25)가 단일 출처 징후로 남고, 김정은 단둥 방문은 경협·외교 성격의 정례 일정이다. 국방부 MDL 군사회담 제안(10/23)에 북측 반응은 아직 없으며 새 교전·도발 징후는 없다.",
+  "overall_summary": "북한군 자주포 접경 전진 보도(연합 10/25)가 단일 출처 징후로 남고, 북한이 안보리 의장에 「지뢰폭발은 자작극·영토 침범 시 자위권」 서한을 보냈으나 위협 발언 수준이다. 김정은 단둥 방문은 외교 일정이며 새 교전·발사 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -66,7 +72,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "연합 10/25: 애기봉에서 122㎜ 자주포 남하 배치 확인, 무력시위·추가 전력 배치 가능성 평가"
+        "연합 10/25: 애기봉에서 122㎜ 자주포 남하 배치 확인, 전문가는 김여정 예고에 따른 전진 배치로 평가"
       ],
       "speculation": [
         "무력시위 목적일 수 있음"
@@ -79,8 +85,26 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "국방부의 MDL 군사회담 제안(10/23)은 24시간 경과 배경이며 이번 회차에 새 월선·교전·지뢰 발견 보도는 없다."
+      "status": "single",
+      "routine": true,
+      "region": "DMZ·MDL 일대",
+      "lat": 37.95,
+      "lon": 126.68,
+      "summary": "조선중앙통신은 주유엔 대표가 안보리 의장에 서한을 보내 「지뢰폭발은 한국 자작극, 영토 1㎜ 침범 시 자위권 행사」라고 주장했다고 연합이 10/26 보도했다.",
+      "meaning": "시한·표적을 특정한 최후통첩이 아닌 외교 서한상 위협 발언이다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261026007400504"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "한국이 10/22 안보리 의장에 정전협정 위반 서한을 보낸 데 대한 맞대응",
+        "새 월선·교전·지뢰 발견 보도는 없음"
+      ],
+      "speculation": []
     },
     "electronic_cyber": {
       "status": "none"
@@ -91,7 +115,7 @@
       "region": "중국 단둥",
       "lat": 40.12,
       "lon": 124.38,
-      "summary": "김정은이 10/24 당일치기로 단둥을 방문해 왕후닝 정협 주석과 회동했고 시진핑 회담·군 인사 동행·군사 협정 발표는 없었다.",
+      "summary": "김정은이 10/24 당일치기로 단둥을 방문해 왕후닝과 회동했고 시진핑 회담·군 인사 동행·군사 협정 발표는 없었다.",
       "meaning": "경협·외교 성격의 정상급 방문으로 군사 협력 신호는 확인되지 않았다.",
       "sources": [
         {
@@ -107,11 +131,10 @@
       ],
       "confidence": "높음",
       "facts": [
-        "왕후닝 회동, 항미원조 기념관·자동차 공장 시찰",
-        "동행자는 당·정·외교 인사"
+        "신압록강대교 경협 부각, 시진핑 회담 없음"
       ],
       "speculation": [
-        "북미 정상회담 사전 조율 가능성(분석가)"
+        "북미대화 사전 조율 가능성(분석가)"
       ]
     },
     "parade_massing": {
@@ -127,7 +150,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T21:11:31+00:00",
+  "checked_at": "2026-10-25T22:11:24+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [
@@ -135,17 +158,17 @@
   ],
   "world": [
     {
-      "title": "세르비아 부치치, 학생 주도 시위 운동에 선거 패배 인정",
-      "summary": "BBC가 세르비아 부치치 대통령이 선거 패배를 인정했다고 보도했다.",
-      "link_korea": "유럽 정세 변화가 미·중·러 외교 구도에 영향을 줄 수 있다.",
-      "region": "세르비아",
+      "title": "머스크, 우크라이나 스타링크 접속 제한 인정",
+      "summary": "스페이스X가 우크라이나의 군사 활동 사용을 이유로 스타링크 연결을 제한했다가 서비스를 복구했다고 BBC가 보도했다.",
+      "link_korea": "러·우 전쟁의 통신·드론전 양상은 북러 군사협력과 파병 규모 평가의 배경이다.",
+      "region": "우크라이나",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo",
+        "url": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "유럽 정치 변동 속에서 북·중 밀착 외교가 이어지고 있다.",
-  "world_at": "2026-10-25T21:11:31+00:00"
+  "world_context": "유럽 정치 불안과 러·우 전쟁 속에서 북·중 밀착 외교가 이어지고 있다.",
+  "world_at": "2026-10-25T22:11:24+00:00"
 }

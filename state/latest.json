@@ -1,65 +1,61 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집 묶음",
-      "North Korea troops Russia"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "NK News 최신 헤드라인",
-      "North Korea nuclear"
+      "북한 핵실험 풍계리 영변",
+      "North Korea nuclear 38 North"
     ],
     "logistics": [
-      "news_kr 수집 묶음",
-      "North Korea ammunition shipment"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ NLL 귀순 북한 10월 25일",
-      "목함지뢰 해안"
+      "합참 북한 지뢰 발견 DMZ 귀순",
+      "North Korea Reuters missile launch DMZ"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격 10월"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축",
-      "김정은 방중"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "news_kr 수집 묶음"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "NK News 최신 헤드라인"
+      "북한 준전시 등화관제 노농적위군",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "news_kr alert 묶음 점검"
+      "진돗개 데프콘 북한",
+      "North Korea warning"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan 대만 중국 군사훈련"
-    ],
-    "linkage:korea": [
-      "북러 군사협력"
-    ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
-    ],
-    "factor:great_powers": [
-      "김정은 방중",
-      "Kim Jong Un Dandong"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://www.nknews.org/2026/10/north-korea-tests-new-high-precision-ai-equipped-torpedo-state-media/",
     "https://www.segye.com/newsView/20261025504327",
-    "https://www.segye.com/newsView/20261024503020",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/",
+    "https://www.segye.com/newsView/20261025506573",
+    "https://www.segye.com/newsView/20261025505375",
+    "https://www.segye.com/newsView/20261024503020"
   ],
-  "overall_summary": "김정은의 단둥 당일 방문은 경제협력·혈맹 과시 중심 외교 일정이고 군사협력 발표는 없다. 새 접경 도발·핵·병력 징후는 없어 직전 회차와 같은 수준이다.",
+  "overall_summary": "김정은의 단둥 당일 방문은 경협·혈맹 과시 중심 외교 일정으로 군사협력 발표는 없다. 새 접경 도발·핵·병력 징후는 없어 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,27 +68,15 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "남북 유엔 설전과 MDL 군사회담 제의 무반응은 발언·외교 수준이며 새 접경 사건은 확인되지 않았다."
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
+      "summary": "새 접경 사건 없음 — 9월 DMZ 지뢰 폭발·군사회담 제의 무반응은 24시간 이전 배경."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "한국",
-      "summary": "귀속 미확인 — PHP 취약점을 악용한 대규모 공격 준비 정황이 포착됐고 라자루스 연계 가능성이 제기됐으나 직접 연결고리와 실제 피해는 확인되지 않았다.",
-      "meaning": "금융·정부 대상 공격 준비 가능성이나 현재는 피해 없는 정황 단계다.",
+      "summary": "귀속 미확인 — PHP 취약점(PHP2Shell) 악용 공격 준비 정황이 사이퍼마 보고로 알려졌고 라자루스 연계 가능성(신뢰도 중간)이 제기됐으나 직접 증거와 실제 피해는 확인되지 않았다.",
+      "meaning": "정부·금융 대상 공격 준비 가능성이나 현재는 피해 없는 정황 단계다.",
       "sources": [
         {
           "name": "세계일보",
@@ -102,7 +86,7 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "PHP 취약점 악용 공격 준비 정황 포착"
+        "과기정통부·KISA 22일 주의 경보, PHP 긴급 업데이트 21일"
       ],
       "speculation": [
         "라자루스 연계 가능성"
@@ -114,7 +98,7 @@
       "region": "중국 단둥",
       "lat": 40.13,
       "lon": 124.38,
-      "summary": "김정은이 24일 단둥을 당일 방문해 왕후닝과 경협·우호를 논의하고 귀국했으며 군사협력 언급은 없다.",
+      "summary": "김정은이 24일 단둥을 당일 방문해 왕후닝과 경협·우호를 논의하고 귀국했으며 군사협력 언급은 없다(첫 보도 24일).",
       "meaning": "북중 관계 과시 성격의 외교 일정이다.",
       "sources": [
         {
@@ -130,14 +114,26 @@
       ],
       "confidence": "중간",
       "facts": [
-        "왕후닝과 회담, 신압록강대교 이용 당일 귀국"
+        "왕후닝과 회담, 신압록강대교 이용 당일 귀국, 시진핑 회담 없음"
       ],
       "speculation": [
         "북미대화 전 조율 해석"
       ]
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-10-25T04:10:35+00:00",
+  "checked_at": "2026-10-25T05:09:59+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

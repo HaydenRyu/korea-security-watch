@@ -1,50 +1,54 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한군 자주포 서부전선 접경 포구 남측 향해 훈련 10월 25일"
+      "북한군 자주포 접경 전진 배치 애기봉",
+      "North Korea artillery border deployment"
     ],
     "nuclear": [
-      "news_kr 수집기 결과 대조(핵 관련 묶음 없음)"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "news_kr 수집기 결과 대조(군수 관련 묶음 없음)"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순 NLL"
+      "합참 북한 지뢰 발견 DMZ 귀순 NLL",
+      "North Korea DMZ landmine"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란 서해 구조물 주한미군 감축"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit Dandong"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "news_kr 수집기 결과 대조(열병식 관련 묶음 없음)"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "NK News 피드 최근 글 확인"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "news_kr 수집기 결과 대조(alert 묶음 2건 검토)"
+      "진돗개 발령 데프콘",
+      "South Korea emergency warning"
     ],
     "hybrid_ops": [
-      "NK News 피드(IT worker 수사 기사) 확인"
-    ],
-    "calm": [
-      "NK News Seoul again proposes talks"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261025045900504",
     "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.segye.com/newsView/20261025509764",
-    "https://www.segye.com/newsView/20261025509761",
-    "https://www.segye.com/newsView/20261025509774",
-    "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/feed/"
   ],
-  "overall_summary": "연합뉴스가 애기봉에서 북한군 122㎜ 자주포의 접경지 전진 배치를 포착했으나 독립 확인이 없어 단일 출처 징후로 유지한다. 김정은 단둥 당일 방문은 외교 일정(정례)이며, 국방부의 MDL 군사회담 재제안에 북은 무반응이라 직전과 큰 변화는 없다.",
+  "overall_summary": "연합뉴스가 애기봉에서 북한군 122㎜ 자주포의 접경지 전진 배치를 포착했으나 독립 확인이 없어 단일 출처 징후로 유지한다. 김정은 단둥 당일 방문은 외교 일정(정례)이며 직전 회차와 큰 변화는 없다.",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -63,11 +67,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "자주포 장갑에 반미 선전 문구, 병력이 깃발 신호로 훈련하는 모습 포착",
-        "한국 언론 망원 카메라에 잡힐 만큼 가까운 배치는 이례적이라는 평가"
+        "자주포 장갑에 반미 선전 문구, 병력이 깃발 신호로 훈련하는 모습 포착"
       ],
       "speculation": [
-        "KODEF 사무총장은 추가 전력 배치가 이어질 가능성을 언급"
+        "KODEF 사무총장은 추가 전력 배치 가능성을 언급"
       ]
     },
     "nuclear": {
@@ -78,7 +81,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "국방부의 MDL 군사회담 재제안과 유엔 남북 설전만 있고 새 접경 충돌·지뢰 발견 보도는 없다."
+      "summary": "새 접경 충돌·지뢰 발견 보도 없음, 유엔 남북 설전과 MDL 군사회담 재제안 무반응만 확인."
     },
     "electronic_cyber": {
       "status": "none"
@@ -89,13 +92,13 @@
       "region": "중국 단둥",
       "lat": 40.12,
       "lon": 124.38,
-      "summary": "김정은이 10/24 신압록강대교를 건너 단둥을 당일 방문해 항미원조기념관 헌화·왕후닝 회동 후 귀국했고 군사협정 서명이나 무기 협력 발표는 없었다.",
+      "summary": "김정은이 10/24 단둥을 당일 방문해 왕후닝과 회동 후 귀국했고 군사협정·무기 협력 발표는 없었다.",
       "meaning": "외교 일정 성격의 북중 밀착 과시이며 군사 협력의 새 합의는 확인되지 않는다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261025509761"
+          "url": "https://www.segye.com/newsView/20261025509764"
         },
         {
           "name": "NK News",
@@ -110,11 +113,10 @@
       ],
       "confidence": "높음",
       "facts": [
-        "시진핑 회담 없이 서열 4위 왕후닝과 회동",
-        "신압록강대교 경협 의지 확인"
+        "시진핑 회담 없이 왕후닝과 회동"
       ],
       "speculation": [
-        "APEC 전후 북미대화 협상력 제고 의도라는 해석"
+        "북미대화 전 협상력 제고 해석"
       ]
     },
     "parade_massing": {
@@ -130,7 +132,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T13:12:55+00:00",
+  "checked_at": "2026-10-25T14:11:16+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

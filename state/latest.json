@@ -1,85 +1,71 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한군 자주포 접경 전진 배치",
-      "North Korea artillery border Reuters"
+      "북한 자주포 접경지 전진 서부전선 합참",
+      "North Korea artillery border deployment"
     ],
     "nuclear": [
-      "북한 풍계리 영변 핵 활동 38 North"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "북한 군수 물자 수송 비축",
+      "북한 탄약 군수 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 목함지뢰 DMZ 귀순 합참",
-      "North Korea DMZ border clash"
+      "목함지뢰 해안 발견 DMZ 귀순 10월 25일",
+      "MDL 경고사격 NLL"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출 2026년 10월 사이버 공격",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Dandong visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 대피"
+      "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
       "진돗개 발령 데프콘",
-      "합참 국방부 북한 경고"
+      "国防 北朝鮮 ミサイル 発射 防衛省 10月25日"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hackers"
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 중단 North Korea talks offer"
+      "남북 대화 제안 군사회담"
+    ],
+    "factor:inter_korean": [
+      "김여정 확성기 대남 방송 재개",
+      "North Korea loudspeaker"
+    ],
+    "factor:great_powers": [
+      "김정은 단둥 왕후닝",
+      "Kim Jong Un Dandong"
+    ],
+    "factor:nk_domestic": [
+      "북한 당 전원회의 노선"
+    ],
+    "factor:public_opinion": [
+      "북한 대남 비난 담화"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261025045900504",
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261025509764",
-    "https://www.nknews.org/feed/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nknews.org/2026/10/kim-jong-un-rallies-junior-commanders-to-build-worlds-strongest-army/"
+    "https://www.segye.com/newsView/20261025509779",
+    "https://www.yna.co.kr/view/AKR20261025045900504",
+    "https://www.yna.co.kr/view/AKR20261025020800504"
   ],
-  "overall_summary": "연합뉴스가 10/25 보도한 북한군 자주포 접경 전진 배치가 단일 출처 징후로 유지된다. 국방부의 MDL 관련 남북 군사회담 제안(10/23) 외에 새 도발·교전 징후는 확인되지 않았다.",
+  "overall_summary": "북한군 자주포 접경 전진 보도(연합 10/25)가 단일 출처 징후로 이어지고, 김정은 단둥 방문은 경협·외교 성격의 정례 외교 일정이다. 국방부가 MDL 관련 군사회담을 제안(10/23)했으나 새 교전·도발 징후는 없다.",
   "items": {
-    "nuclear": {
-      "status": "none"
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "border_clash": {
-      "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "김정은 단둥 당일 방문(10/24 첫 보도)은 24시간 경과, 군사협정·무기 협력 발표 없이 외교 일정으로 배경 처리."
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
-    },
     "troop_movement": {
       "status": "single",
       "routine": false,
@@ -97,14 +83,68 @@
       ],
       "confidence": "중간",
       "facts": [
-        "연합뉴스 10/25 19:29(KST) 기사: 서부전선 북한군 자주포가 한국 언론 카메라에 포착됐다"
+        "연합뉴스 10/25 기사: 서부전선 북한군 자주포가 한국 언론 카메라에 포착됐다"
       ],
       "speculation": [
         "MDL 일대 화력 강화 예고의 이행 여부는 미확인"
       ]
+    },
+    "nuclear": {
+      "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none",
+      "summary": "국방부의 MDL 군사회담 제안(10/23)은 24시간 경과 배경이며 이번 회차에 새 월선·교전·지뢰 발견 보도는 없다."
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "중국 단둥",
+      "lat": 40.12,
+      "lon": 124.38,
+      "summary": "김정은이 10/24 당일치기로 단둥을 방문해 왕후닝 정협 주석과 회동했고 시진핑 회담·군 인사 동행·군사 협정 발표는 없었다.",
+      "meaning": "경협 중심의 외교 일정으로 군사협력 발표는 확인되지 않는다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261025509779"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261025020800504"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "왕후닝과 항미원조기념관에서 회동, 시진핑과 회담 없음",
+        "군 인사 동행·협정 체결 언급 없음"
+      ],
+      "speculation": [
+        "APEC 앞둔 북미 대화 사전 조율 관측(분석)"
+      ]
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-10-25T19:10:55+00:00",
+  "checked_at": "2026-10-25T20:11:23+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

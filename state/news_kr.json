@@ -1,17 +1,17 @@
 {
- "fetched_at": "2026-10-25T20:25:42+00:00",
+ "fetched_at": "2026-10-25T21:42:26+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-25T20:25:42+00:00",
+ "last_ok_at": "2026-10-25T21:42:26+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1160,
-  "hits": 118,
-  "clusters": 72,
+  "hits": 117,
+  "clusters": 74,
   "by_group": {
-   "summit": 43,
+   "summit": 45,
    "border": 18,
    "fire": 5,
    "influence": 1,
@@ -28,13 +28,13 @@
    "feeds": 5,
    "failed": 0,
    "count": 600,
-   "hits": 95
+   "hits": 94
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 21
+   "hits": 20
   },
   "동아일보": {
    "feeds": 2,
@@ -64,9 +64,9 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "summit": {
-   "clusters": 43,
+   "clusters": 45,
    "max_independent": 4,
-   "latest": "2026-10-25T20:25:42+00:00"
+   "latest": "2026-10-25T21:42:26+00:00"
   },
   "border": {
    "clusters": 18,
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 6
+   "hits": 5
   },
   {
    "outlet": "SBS",
@@ -161,7 +161,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 15
+   "hits": 14
   },
   {
    "outlet": "SBS",

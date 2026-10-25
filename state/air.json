@@ -1,10 +1,25 @@
 {
- "at": "2026-10-25T20:25:30+00:00",
- "south": 31,
- "area": 34,
- "baseline": 28,
- "ratio": 1.11,
- "samples": 9,
- "mil": [],
+ "at": "2026-10-25T21:42:14+00:00",
+ "south": 48,
+ "area": 49,
+ "baseline": 38.5,
+ "ratio": 1.25,
+ "samples": 6,
+ "mil": [
+  {
+   "type": "E737",
+   "name": null,
+   "call": "",
+   "lat": 36.93,
+   "lon": 126.27
+  },
+  {
+   "type": "Q4",
+   "name": "RQ-4 무인정찰기",
+   "call": "MALUS20",
+   "lat": 37.3,
+   "lon": 127.12
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

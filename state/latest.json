@@ -1,43 +1,55 @@
 {
   "coverage": {
     "troop_movement": [
-      "애기봉 북한군 자주포 접경지",
-      "North Korea artillery border deployment October 2026"
+      "북한군 자주포 접경 전진 배치",
+      "North Korea artillery border Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear test site Yongbyon 38 North"
+      "풍계리 영변 핵 활동",
+      "North Korea nuclear test site 38 North"
     ],
     "logistics": [
-      "북한 군수 수송 탄약 러시아"
+      "북한 군수 물자 수송 비축",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 합참",
-      "North Korea DMZ landmine NLL defector"
+      "지뢰 발견 DMZ 합참",
+      "목함지뢰 해안",
+      "NLL 귀순 월선",
+      "North Korea DMZ border clash"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 10월 25일"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어 공격",
+      "North Korea hackers attributed"
     ],
     "foreign_forces": [
+      "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결(수집기 묶음 확인)"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 대피"
+      "북한 준전시 등화관제 대피",
+      "North Korea wartime mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향"
+      "진돗개 발령 데프콘",
+      "합참 국방부 북한 경고"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hackers"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 확성기 방송 중단 통신선"
+      "남북 대화 제안",
+      "국방부 MDL 군사회담 제안 북측 반응"
     ]
   },
   "opened": [
@@ -46,21 +58,18 @@
     "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.segye.com/newsView/20261025509764",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/kim-jong-un-says-north-korea-inspired-by-chinas-success-in-border-city-visit/",
-    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "애기봉에서 포착된 북한군 자주포 전진 배치는 연합뉴스 단독 보도로 단일 출처 징후를 유지하고, 김정은 단둥 당일 방문은 외교 일정(정례)이다. 국방부의 MDL 군사회담 제안에 북측 반응은 아직 없고 새로운 도발 징후는 없다.",
+  "overall_summary": "연합뉴스가 10/25 보도한 북한군 자주포 접경 전진 배치는 단일 출처 징후로 유지되고, 김정은 단둥 방문은 첫 보도 24시간이 지나 배경으로 내렸다. 새로운 도발·교전 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "single",
       "routine": false,
-      "region": "경기 김포 맞은편 황해도 개풍군",
+      "region": "경기 파주·개풍군 접경",
       "lat": 37.78,
-      "lon": 126.68,
-      "summary": "연합뉴스가 10/25 애기봉 전망대 촬영 사진으로 북한군 자주포가 개풍군 해안 접경지에서 남측으로 포구를 향한 채 훈련하는 모습을 보도했다.",
-      "meaning": "북한이 예고한 MDL 일대 화력 강화와 맞물린 무력시위 또는 추가 전력 배치 가능성이 있다.",
+      "lon": 126.67,
+      "summary": "연합뉴스가 10/25 북한군 자주포가 서부전선 접경지에서 한국 언론 카메라에 포착될 만큼 전진했다고 보도했다(북측 MDL 일대 화력 강화 예고 중).",
+      "meaning": "전방 화력 증강 예고와 맞물린 포병 전진 배치로 접경 긴장이 높아졌다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -70,10 +79,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "남측으로 포구를 향한 자주포들과 훈련하는 북한군 포착"
+        "연합뉴스 10/25 19:29(KST) 기사: 서부전선 북한군 자주포가 한국 언론 카메라에 포착됐다"
       ],
       "speculation": [
-        "추가 전력 배치 가능성"
+        "MDL 일대 화력 강화 예고의 이행 여부는 미확인"
       ]
     },
     "nuclear": {
@@ -89,37 +98,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "중국 단둥",
-      "lat": 40.12,
-      "lon": 124.38,
-      "summary": "김정은이 10/24 단둥을 당일 방문해 왕후닝과 회동 후 귀국했고 군사협정·무기 협력 발표는 없었다.",
-      "meaning": "외교 일정 성격의 북중 밀착 과시이며 군사 협력의 새 합의는 확인되지 않는다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261025509764"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/kim-jong-un-says-north-korea-inspired-by-chinas-success-in-border-city-visit/"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/rss/northkorea.xml"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "시진핑 회담 없이 왕후닝과 회동"
-      ],
-      "speculation": [
-        "북미대화 전 협상력 제고 해석"
-      ]
+      "status": "none",
+      "summary": "24시간 경과 — 김정은 단둥 방문 첫 보도 10/24 06시Z이고 군사협정·무기 협력 발표는 없었다."
     },
     "parade_massing": {
       "status": "none"
@@ -134,7 +114,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T16:11:20+00:00",
+  "checked_at": "2026-10-25T17:10:53+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

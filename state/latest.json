@@ -1,7 +1,7 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한군 자주포 접경 전진 배치 애기봉",
+      "애기봉 북한군 자주포",
       "North Korea artillery border deployment"
     ],
     "nuclear": [
@@ -13,11 +13,11 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순 NLL",
+      "지뢰 발견 DMZ 귀순 합참",
       "North Korea DMZ landmine"
     ],
     "electronic_cyber": [
-      "GPS 교란",
+      "북한 GPS 교란",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
@@ -40,15 +40,25 @@
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
+    ],
+    "linkage:korea": [
+      "북러 군사협력",
+      "North Korea troops Russia"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "남북 군사회담 제안"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261025045900504",
     "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.segye.com/newsView/20261025509764",
-    "https://www.nknews.org/feed/"
+    "https://www.nknews.org/feed/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "연합뉴스가 애기봉에서 북한군 122㎜ 자주포의 접경지 전진 배치를 포착했으나 독립 확인이 없어 단일 출처 징후로 유지한다. 김정은 단둥 당일 방문은 외교 일정(정례)이며 직전 회차와 큰 변화는 없다.",
+  "overall_summary": "애기봉에서 포착된 북한군 자주포 전진 배치는 연합뉴스 단독 보도로 단일 출처 징후를 유지하고, 김정은 단둥 당일 방문은 외교 일정(정례)으로 직전과 변화가 없다. 국방부가 MDL 관련 남북 군사회담을 제안했으나 북측 반응은 없다.",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -81,7 +91,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 접경 충돌·지뢰 발견 보도 없음, 유엔 남북 설전과 MDL 군사회담 재제안 무반응만 확인."
+      "summary": "새 접경 충돌·지뢰 발견 보도 없음. 국방부가 10/23 MDL 확인·군 통신선 복원을 위한 남북 군사회담을 제안했으나 북측 반응은 보도되지 않았다."
     },
     "electronic_cyber": {
       "status": "none"
@@ -132,7 +142,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T14:11:16+00:00",
+  "checked_at": "2026-10-25T15:12:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [
@@ -140,9 +150,9 @@
   ],
   "world": [
     {
-      "title": "머스크, 우크라이나 스타링크 제한 인정 후 서비스 복구",
-      "summary": "머스크가 스페이스X가 우크라이나의 스타링크 연결을 제한했다고 밝혔고 서비스는 복구됐다고 BBC가 전했다.",
-      "link_korea": "전장 통신·드론 운용 문제는 북러 군사협력과 한반도 안보 환경 분석에 참고가 된다.",
+      "title": "머스크, 우크라이나 스타링크 접속 제한은 약관 위반 때문",
+      "summary": "머스크는 우크라이나가 스타링크를 군사 활동에 쓴 것이 약관 위반이라며 접속을 제한했다가 서비스를 복구했다고 밝혔다.",
+      "link_korea": "북러 군사협력 속에서 위성통신·드론 전력의 전장 의존도를 보여 주는 사례다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
@@ -151,6 +161,6 @@
       }
     }
   ],
-  "world_context": "러-우 전쟁 통신 문제가 부각된 가운데 접경 포병 동향이 한반도의 새 관심사다.",
-  "world_at": "2026-10-25T11:10:11+00:00"
+  "world_context": "우크라이나 전쟁의 통신·드론 쟁점이 이어지고 있다.",
+  "world_at": "2026-10-25T15:12:14+00:00"
 }

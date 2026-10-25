@@ -1,18 +1,10 @@
 {
- "at": "2026-10-25T06:36:03+00:00",
- "south": 71,
- "area": 92,
- "baseline": 74,
- "ratio": 0.96,
- "samples": 9,
- "mil": [
-  {
-   "type": "B350",
-   "name": null,
-   "call": "JGR3059",
-   "lat": 33.11,
-   "lon": 130.33
-  }
- ],
+ "at": "2026-10-25T07:50:12+00:00",
+ "south": 70,
+ "area": 88,
+ "baseline": 74.0,
+ "ratio": 0.95,
+ "samples": 14,
+ "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

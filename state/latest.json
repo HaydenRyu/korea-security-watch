@@ -1,29 +1,26 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 자주포 접경지 전진 서부전선 합참",
+      "북한 자주포 접경지 전진",
       "North Korea artillery border deployment"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 탄약 군수 수송"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순 10월 25일",
-      "MDL 경고사격 NLL"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순",
+      "국방부 MDL 군사회담 제안"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 2026년 10월 사이버 공격",
-      "랜섬웨어 공격"
+      "해킹 개인정보 유출 랜섬웨어 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Dandong visit",
+      "North Korea Kim Jong Un China Russia visit Reuters",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -33,38 +30,24 @@
       "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "国防 北朝鮮 ミサイル 発射 防衛省 10月25日"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "calm": [
       "남북 대화 제안 군사회담"
-    ],
-    "factor:inter_korean": [
-      "김여정 확성기 대남 방송 재개",
-      "North Korea loudspeaker"
-    ],
-    "factor:great_powers": [
-      "김정은 단둥 왕후닝",
-      "Kim Jong Un Dandong"
-    ],
-    "factor:nk_domestic": [
-      "북한 당 전원회의 노선"
-    ],
-    "factor:public_opinion": [
-      "북한 대남 비난 담화"
     ]
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261025509779",
     "https://www.yna.co.kr/view/AKR20261025045900504",
-    "https://www.yna.co.kr/view/AKR20261025020800504"
+    "https://www.yna.co.kr/view/AKR20261025020800504",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo"
   ],
-  "overall_summary": "북한군 자주포 접경 전진 보도(연합 10/25)가 단일 출처 징후로 이어지고, 김정은 단둥 방문은 경협·외교 성격의 정례 외교 일정이다. 국방부가 MDL 관련 군사회담을 제안(10/23)했으나 새 교전·도발 징후는 없다.",
+  "overall_summary": "북한군 자주포 접경 전진 보도(연합 10/25)가 단일 출처 징후로 남고, 김정은 단둥 방문은 경협·외교 성격의 정례 일정이다. 국방부 MDL 군사회담 제안(10/23)에 북측 반응은 아직 없으며 새 교전·도발 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -72,8 +55,8 @@
       "region": "경기 파주·개풍군 접경",
       "lat": 37.78,
       "lon": 126.67,
-      "summary": "연합뉴스가 10/25 북한군 자주포가 서부전선 접경지에서 한국 언론 카메라에 포착될 만큼 전진했다고 보도했다(북측 MDL 일대 화력 강화 예고 중).",
-      "meaning": "전방 화력 증강 예고와 맞물린 포병 전진 배치로 접경 긴장이 높아졌다.",
+      "summary": "연합뉴스가 10/25 서부전선 애기봉에서 북한군 122㎜ 자주포가 남하 배치된 것이 확인된다고 보도했다.",
+      "meaning": "전방 화력 전진 배치로 접경 긴장이 높아졌으나 단일 출처다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -83,10 +66,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "연합뉴스 10/25 기사: 서부전선 북한군 자주포가 한국 언론 카메라에 포착됐다"
+        "연합 10/25: 애기봉에서 122㎜ 자주포 남하 배치 확인, 무력시위·추가 전력 배치 가능성 평가"
       ],
       "speculation": [
-        "MDL 일대 화력 강화 예고의 이행 여부는 미확인"
+        "무력시위 목적일 수 있음"
       ]
     },
     "nuclear": {
@@ -109,7 +92,7 @@
       "lat": 40.12,
       "lon": 124.38,
       "summary": "김정은이 10/24 당일치기로 단둥을 방문해 왕후닝 정협 주석과 회동했고 시진핑 회담·군 인사 동행·군사 협정 발표는 없었다.",
-      "meaning": "경협 중심의 외교 일정으로 군사협력 발표는 확인되지 않는다.",
+      "meaning": "경협·외교 성격의 정상급 방문으로 군사 협력 신호는 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
@@ -122,13 +105,13 @@
           "url": "https://www.yna.co.kr/view/AKR20261025020800504"
         }
       ],
-      "confidence": "중간",
+      "confidence": "높음",
       "facts": [
-        "왕후닝과 항미원조기념관에서 회동, 시진핑과 회담 없음",
-        "군 인사 동행·협정 체결 언급 없음"
+        "왕후닝 회동, 항미원조 기념관·자동차 공장 시찰",
+        "동행자는 당·정·외교 인사"
       ],
       "speculation": [
-        "APEC 앞둔 북미 대화 사전 조율 관측(분석)"
+        "북미 정상회담 사전 조율 가능성(분석가)"
       ]
     },
     "parade_massing": {
@@ -144,7 +127,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T20:11:23+00:00",
+  "checked_at": "2026-10-25T21:11:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [
@@ -152,17 +135,17 @@
   ],
   "world": [
     {
-      "title": "머스크, 우크라이나 스타링크 접속 제한은 약관 위반 때문",
-      "summary": "머스크는 우크라이나가 스타링크를 군사 활동에 쓴 것이 약관 위반이라며 접속을 제한했다가 서비스를 복구했다고 밝혔다.",
-      "link_korea": "북러 군사협력 속에서 위성통신·드론 전력의 전장 의존도를 보여 주는 사례다.",
-      "region": "우크라이나",
+      "title": "세르비아 부치치, 학생 주도 시위 운동에 선거 패배 인정",
+      "summary": "BBC가 세르비아 부치치 대통령이 선거 패배를 인정했다고 보도했다.",
+      "link_korea": "유럽 정세 변화가 미·중·러 외교 구도에 영향을 줄 수 있다.",
+      "region": "세르비아",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo",
+        "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "우크라이나 전쟁의 통신·드론 쟁점이 이어지고 있다.",
-  "world_at": "2026-10-25T19:10:55+00:00"
+  "world_context": "유럽 정치 변동 속에서 북·중 밀착 외교가 이어지고 있다.",
+  "world_at": "2026-10-25T21:11:31+00:00"
 }

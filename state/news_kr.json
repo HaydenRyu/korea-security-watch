@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-10-25T14:16:28+00:00",
- "status": "partial",
- "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
- "last_ok_at": "2026-10-25T13:41:49+00:00",
+ "fetched_at": "2026-10-25T15:30:57+00:00",
+ "status": "ok",
+ "status_detail": "",
+ "last_ok_at": "2026-10-25T15:30:57+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 1,
-  "fetched": 1099,
-  "hits": 114,
-  "clusters": 70,
+  "feeds_failed": 0,
+  "fetched": 1160,
+  "hits": 115,
+  "clusters": 71,
   "by_group": {
    "summit": 41,
+   "border": 18,
    "influence": 1,
-   "border": 17,
    "fire": 5,
    "mine": 9,
    "defect": 1,
@@ -28,12 +28,12 @@
    "feeds": 5,
    "failed": 0,
    "count": 600,
-   "hits": 96
+   "hits": 95
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
-   "count": 159,
+   "count": 160,
    "hits": 21
   },
   "동아일보": {
@@ -56,9 +56,9 @@
   },
   "국방일보": {
    "feeds": 1,
-   "failed": 1,
-   "count": 0,
-   "hits": 0
+   "failed": 0,
+   "count": 60,
+   "hits": 8
   }
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
@@ -66,17 +66,17 @@
   "summit": {
    "clusters": 41,
    "max_independent": 4,
-   "latest": "2026-10-25T14:16:28+00:00"
+   "latest": "2026-10-25T15:30:57+00:00"
+  },
+  "border": {
+   "clusters": 18,
+   "max_independent": 2,
+   "latest": "2026-10-25T15:00:00+00:00"
   },
   "influence": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-10-25T11:56:02+00:00"
-  },
-  "border": {
-   "clusters": 17,
-   "max_independent": 2,
-   "latest": "2026-10-25T10:29:48+00:00"
   },
   "fire": {
    "clusters": 5,
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 7
+   "hits": 6
   },
   {
    "outlet": "SBS",
@@ -176,7 +176,7 @@
    "section": "속보",
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
-   "count": 101,
+   "count": 102,
    "hits": 6
   },
   {
@@ -231,8 +231,9 @@
    "outlet": "국방일보",
    "section": "국방",
    "url": "https://kookbang.dema.mil.kr/dema_xml/dema0010010000.xml",
-   "ok": false,
-   "error": "URLError: <urlopen error timed out>"
+   "ok": true,
+   "count": 60,
+   "hits": 8
   }
  ]
 }

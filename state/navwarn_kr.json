@@ -4,10 +4,10 @@
   "https://www.data.go.kr/data/15057792/openapi.do",
   "https://www.data.go.kr/data/15058193/openapi.do"
  ],
- "fetched_at": "2026-10-25T03:04:07.841839+00:00",
+ "fetched_at": "2026-10-25T04:21:42.257099+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-25T03:04:07.841839+00:00",
+ "last_ok_at": "2026-10-25T04:21:42.257099+00:00",
  "warnings": [
   {
    "doc_num": "26-323",
@@ -5151,7 +5151,7 @@
    "first_seen": "2026-10-19T07:25:20.175657+00:00",
    "source": "국립해양조사원 항행경보(공공데이터포털)",
    "url": "https://www.data.go.kr/data/15057792/openapi.do",
-   "active_now": false,
+   "active_now": true,
    "exercise": true,
    "foreign_relay": false
   }
@@ -5160,7 +5160,7 @@
   "listed_docs": 11,
   "new_details": 0,
   "valid": 6,
-  "active_now": 5,
+  "active_now": 6,
   "by_kind": {
    "해상훈련": 2,
    "해상사격": 4

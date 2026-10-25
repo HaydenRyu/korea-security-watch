@@ -14,7 +14,7 @@
     ],
     "border_clash": [
       "지뢰 발견 목함지뢰 해안 DMZ 귀순",
-      "북한 안보리 서한 지뢰폭발 자위권"
+      "북한 안보리 서한 지뢰폭발"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
@@ -37,20 +37,45 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hackers"
+      "North Korea hackers attributed FBI"
     ],
     "calm": [
       "남북 대화 제안 군사회담"
+    ],
+    "factor:inter_korean": [
+      "남북 군사회담 제안 확성기",
+      "North Korea loudspeakers South Korea talks"
+    ],
+    "factor:nk_domestic": [
+      "북한 당 전원회의 숙청 쌀값",
+      "North Korea party plenary economy"
+    ],
+    "factor:great_powers": [
+      "북중 정상 미국 대북 발언",
+      "US North Korea talks China Kim"
+    ],
+    "factor:public_opinion": [
+      "북한 대남 비난 담화",
+      "North Korea propaganda South Korea"
+    ],
+    "linkage:taiwan": [
+      "대만 중국 군사훈련"
+    ],
+    "linkage:korea": [
+      "북러 군사협력"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261026007400504",
+    "https://www.yna.co.kr/view/AKR20261026012000504",
+    "https://www.segye.com/newsView/20261025509764",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.yna.co.kr/view/AKR20261025006000072",
     "https://www.yna.co.kr/view/AKR20261025045900504",
     "https://www.yna.co.kr/view/AKR20261025020800504",
     "https://www.segye.com/newsView/20261025509779",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008814330",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo"
   ],
   "overall_summary": "북한군 자주포 접경 전진 보도(연합 10/25)가 단일 출처 징후로 남고, 북한이 안보리 의장에 「지뢰폭발은 자작극·영토 침범 시 자위권」 서한을 보냈으나 위협 발언 수준이다. 김정은 단둥 방문은 외교 일정이며 새 교전·발사 징후는 없다.",
@@ -150,7 +175,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T22:11:24+00:00",
+  "checked_at": "2026-10-25T23:10:29+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [
@@ -170,5 +195,5 @@
     }
   ],
   "world_context": "유럽 정치 불안과 러·우 전쟁 속에서 북·중 밀착 외교가 이어지고 있다.",
-  "world_at": "2026-10-25T22:11:24+00:00"
+  "world_at": "2026-10-25T23:10:29+00:00"
 }

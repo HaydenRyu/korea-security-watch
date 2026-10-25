@@ -1,18 +1,10 @@
 {
- "at": "2026-10-25T04:21:41+00:00",
- "south": 73,
+ "at": "2026-10-25T05:20:13+00:00",
+ "south": 71,
  "area": 96,
- "baseline": 71.0,
- "ratio": 1.03,
- "samples": 4,
- "mil": [
-  {
-   "type": "KC2",
-   "name": null,
-   "call": "JF306",
-   "lat": 32.64,
-   "lon": 131.15
-  }
- ],
+ "baseline": 71.5,
+ "ratio": 0.99,
+ "samples": 8,
+ "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

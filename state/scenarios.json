@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-25T06:09:39+00:00",
+  "updated_at": "2026-10-25T07:10:58+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -13,7 +13,7 @@
           "id": "dialogue_offer",
           "label": "남북·북미 대화 제안·수용",
           "state": "on",
-          "note": "한국 국방부가 접경선(MDL) 논의 군사회담을 다시 제의했으나 북은 즉각 반응하지 않았다."
+          "note": "국방부가 10/23 MDL 위치 확인·군통신선 복원 등을 위한 남북 군사회담을 북측에 공식 제의했고 북은 아직 응답하지 않았다."
         },
         {
           "id": "channel_restored",
@@ -186,18 +186,18 @@
   ],
   "calm": {
     "dialogue_offer": {
-      "summary": "한국 국방부가 접경선(MDL) 논의 군사회담을 다시 제의했으나 북은 즉각 반응하지 않았다.",
+      "summary": "국방부가 10/23 MDL 위치 확인·군통신선 복원 등을 위한 남북 군사회담을 북측에 공식 제의했고 북은 아직 응답하지 않았다.",
       "sources": [
         {
-          "url": "https://www.nknews.org/",
-          "publisher": "NK News"
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+          "publisher": "국방일보"
         }
       ],
       "first_seen": "2026-10-23T05:10:46+00:00",
-      "last_seen": "2026-10-24T21:11:22+00:00"
+      "last_seen": "2026-10-25T07:10:58+00:00"
     }
   },
-  "calm_judged_at": "2026-10-25T06:09:39+00:00",
+  "calm_judged_at": "2026-10-25T07:10:58+00:00",
   "history": [
     {
       "date": "2026-10-22",

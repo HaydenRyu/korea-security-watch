@@ -5,55 +5,56 @@
       "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear 38 North"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear test site 38 North"
     ],
     "logistics": [
       "북한 군수 수송 탄약",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "국방부 북한 군사회담 제의 MDL"
+      "목함지뢰 발견 DMZ 귀순 10월",
+      "국방부 MDL 군사회담",
+      "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 랜섬웨어 공격"
+      "북한 GPS 교란 합참 10월 25일",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "North Korea GPS jamming cyber"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit military",
+      "김정은 방중 군사협력",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 준비 병력 집결",
+      "North Korea parade preparations"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제 노농적위군",
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "진돗개 데프콘 북한",
-      "North Korea warning"
+      "진돗개 데프콘 상향",
+      "한미일 긴급 경고 대피"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
+      "남북 대화 제안 군사회담"
     ]
   },
   "opened": [
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261025504327",
-    "https://www.segye.com/newsView/20261025506573",
-    "https://www.segye.com/newsView/20261024503020",
-    "https://www.nknews.org/"
+    "https://www.yna.co.kr/view/AKR20261025006000072",
+    "https://www.yna.co.kr/view/AKR20261025020800504",
+    "https://www.segye.com/newsView/20261025506573"
   ],
-  "overall_summary": "김정은의 단둥 당일 방문 후속 보도가 이어졌으나 군사협력 언급은 없고, 새 접경 도발·핵·병력 징후도 없어 직전 회차와 같은 수준이다. 국방부의 MDL 군사회담 제의에 북은 무응답이다.",
+  "overall_summary": "김정은의 단둥 당일 방문은 24시간이 지나 배경이 됐고 새 접경·핵·병력 징후는 없다. 국방부가 MDL 군사회담을 제의했으나 북의 응답은 보도되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,57 +66,16 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "새 접경 사건 없음 — 국방부의 MDL 군사회담 제의(10/23)와 유엔 남북 설전은 외교·발언 배경이다."
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "한국",
-      "summary": "귀속 미확인 — PHP2Shell 취약점 악용 공격 준비 정황이 사이퍼마 보고로 알려졌고 라자루스 연계 가능성(중간)이 제기됐으나 실제 피해는 확인되지 않았다(첫 보도 24일 15시).",
-      "meaning": "정부·금융 대상 공격 준비 가능성이나 피해 없는 정황 단계다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261024503020"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "PHP 긴급 패치 21일, 과기정통부·KISA 22일 주의 경보, 피해 보고 없음"
-      ],
-      "speculation": [
-        "라자루스 연계 가능성"
-      ]
+      "status": "none",
+      "summary": "24시간 경과 — PHP2Shell 공격 준비 정황 첫 보도 10/24 15시, 이후 피해 확인·귀속 보도 없음."
     },
     "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "중국 단둥",
-      "lat": 40.13,
-      "lon": 124.38,
-      "summary": "김정은이 24일 단둥을 당일 방문해 왕후닝과 경협·우호를 논의하고 귀국했으며 군사협력 언급은 없다(첫 보도 24일).",
-      "meaning": "북중 관계 과시 성격의 외교 일정이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261025504327"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "왕후닝과 회담, 신압록강대교 이용 당일 귀국, 시진핑 회담 없음"
-      ],
-      "speculation": [
-        "북미대화 전 조율 해석"
-      ]
+      "status": "none",
+      "summary": "24시간 경과 — 김정은 단둥 방문 첫 보도 10/24 오후, 25일 후속 보도에도 군사협력 언급 없음(배경)."
     },
     "parade_massing": {
       "status": "none"
@@ -130,9 +90,9 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T06:09:39+00:00",
-  "grade": 1,
-  "grade_label": "주의",
+  "checked_at": "2026-10-25T08:10:37+00:00",
+  "grade": 0,
+  "grade_label": "평시",
   "active": [],
   "world": [
     {
@@ -159,11 +119,5 @@
     }
   ],
   "world_context": "중동 해상 불안과 러-우 전쟁 중재 소식이 겹쳐 있다.",
-  "world_at": "2026-10-23T22:13:07+00:00",
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-10-25T07:10:58+00:00",
-    "summary": "김정은 단둥 당일 방문은 24시간이 지나 배경으로 내렸고, 새 접경 도발·핵·병력 징후는 없다. 국방부의 MDL 군사회담 제의에 북은 아직 응답하지 않았다."
-  }
+  "world_at": "2026-10-23T22:13:07+00:00"
 }

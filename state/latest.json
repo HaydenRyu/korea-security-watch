@@ -1,21 +1,28 @@
 {
   "coverage": {
     "border_clash": [
-      "지뢰 발견 DMZ 합참",
+      "지뢰 발견 DMZ 합참 귀순 NLL",
       "news_kr 접경·지뢰 묶음"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "North Korea Kim Jong Un China Russia visit Reuters",
+      "서해 구조물 주한미군 감축 김정은 방중",
       "news_kr 김정은 방중 묶음"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격",
-      "라자루스 PHP 취약점"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란",
+      "news_kr gps 묶음"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 10월",
+      "news_kr hybrid 묶음"
     ],
     "nuclear": [
+      "NK News 최신 헤드라인",
       "news_kr 수집 묶음 점검"
     ],
     "troop_movement": [
+      "NK News 최신 헤드라인",
       "news_kr 수집 묶음 점검"
     ],
     "logistics": [
@@ -25,24 +32,23 @@
       "news_kr 수집 묶음 점검"
     ],
     "nk_internal": [
+      "NK News 최신 헤드라인",
       "news_kr 수집 묶음 점검"
     ],
     "gov_warning": [
-      "news_kr 수집 묶음 점검"
+      "news_kr alert 묶음 점검"
     ],
-    "hybrid_ops": [
-      "news_kr hybrid 묶음 점검"
+    "calm": [
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261024506606",
-    "https://www.segye.com/newsView/20261024503020",
     "https://www.segye.com/newsView/20261024506372",
-    "https://www.nknews.org/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.aljazeera.com/xml/rss/all.xml"
+    "https://www.segye.com/newsView/20261024503020",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "김정은의 당일 단둥 방문은 경제협력 중심 외교 일정으로 군사 협력 발표가 없다. 새 접경 도발·핵·병력 징후는 없어 직전 회차와 같은 수준이다.",
+  "overall_summary": "김정은의 당일 단둥 방문은 왕후닝과의 경제협력 중심 외교 일정이고 군사협력 발표는 없다. 새 접경 도발·핵·병력 징후는 없어 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,7 +61,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "국방부의 MDL 군사회담 제의에 북한 무반응, 유엔 남북 설전은 발언 수준이며 새 접경 사건은 없다."
+      "summary": "MDL 군사회담 제의에 북한 무반응, 유엔 남북 설전은 발언 수준이며 새 접경 사건은 없다."
     },
     "parade_massing": {
       "status": "none"
@@ -74,7 +80,7 @@
       "routine": true,
       "attribution": "unknown",
       "region": "한국",
-      "summary": "귀속 미확인 — 사이퍼마가 라자루스 연계 가능성을 제기한 PHP 취약점 공격 준비 정황이 보도됐으나 실제 피해는 확인되지 않았다.",
+      "summary": "귀속 미확인 — 사이퍼마가 라자루스 연계 가능성(신뢰도 중간)을 제기한 PHP 취약점 공격 준비 정황이 보도됐으나 실제 피해는 확인되지 않았다.",
       "meaning": "금융·정부 대상 공격 준비 가능성이나 현재는 피해 없는 정황 단계다.",
       "sources": [
         {
@@ -85,7 +91,7 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "과기정통부·KISA 주의 경보"
+        "과기정통부·KISA 22일 주의 경보"
       ],
       "speculation": [
         "라자루스 연계 가능성"
@@ -115,7 +121,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-25T00:10:14+00:00",
+  "checked_at": "2026-10-25T01:10:47+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

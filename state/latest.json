@@ -1,64 +1,57 @@
 {
   "coverage": {
     "troop_movement": [
-      "애기봉 북한군 자주포",
-      "North Korea artillery border deployment"
+      "애기봉 북한군 자주포 접경지",
+      "North Korea artillery border deployment October 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear test site Yongbyon 38 North"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
+      "북한 군수 수송 탄약 러시아"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "North Korea DMZ landmine"
+      "지뢰 발견 목함지뢰 해안 합참",
+      "North Korea DMZ landmine NLL defector"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 10월 25일"
     ],
     "foreign_forces": [
-      "김정은 방중",
       "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 집결(수집기 묶음 확인)"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제 대피"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "South Korea emergency warning"
+      "진돗개 발령 데프콘 상향"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "linkage:korea": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "North Korea attributed FBI hackers"
     ],
     "calm": [
-      "남북 대화 제안",
-      "남북 군사회담 제안"
+      "남북 대화 제안 확성기 방송 중단 통신선"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261025045900504",
+    "https://www.yna.co.kr/view/AKR20261025006000072",
     "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.segye.com/newsView/20261025509764",
     "https://www.nknews.org/feed/",
+    "https://www.nknews.org/2026/10/kim-jong-un-says-north-korea-inspired-by-chinas-success-in-border-city-visit/",
+    "https://www.nknews.org/2026/10/seoul-again-proposes-talks-with-north-korea-on-border-lines-amid-rising-tensions/",
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "애기봉에서 포착된 북한군 자주포 전진 배치는 연합뉴스 단독 보도로 단일 출처 징후를 유지하고, 김정은 단둥 당일 방문은 외교 일정(정례)으로 직전과 변화가 없다. 국방부가 MDL 관련 남북 군사회담을 제안했으나 북측 반응은 없다.",
+  "overall_summary": "애기봉에서 포착된 북한군 자주포 전진 배치는 연합뉴스 단독 보도로 단일 출처 징후를 유지하고, 김정은 단둥 당일 방문은 외교 일정(정례)이다. 국방부의 MDL 군사회담 제안에 북측 반응은 아직 없고 새로운 도발 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -66,8 +59,8 @@
       "region": "경기 김포 맞은편 황해도 개풍군",
       "lat": 37.78,
       "lon": 126.68,
-      "summary": "연합뉴스가 10/25 애기봉 전망대 촬영 사진으로 북한군 122㎜ 자주포가 개풍군 해안 접경지에 전진 배치돼 훈련하는 모습을 보도했다.",
-      "meaning": "김여정이 예고한 전술적 타격수단 증강과 맞물린 무력시위 또는 추가 전력 배치 가능성이 있다.",
+      "summary": "연합뉴스가 10/25 애기봉 전망대 촬영 사진으로 북한군 자주포가 개풍군 해안 접경지에서 남측으로 포구를 향한 채 훈련하는 모습을 보도했다.",
+      "meaning": "북한이 예고한 MDL 일대 화력 강화와 맞물린 무력시위 또는 추가 전력 배치 가능성이 있다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -77,10 +70,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "자주포 장갑에 반미 선전 문구, 병력이 깃발 신호로 훈련하는 모습 포착"
+        "남측으로 포구를 향한 자주포들과 훈련하는 북한군 포착"
       ],
       "speculation": [
-        "KODEF 사무총장은 추가 전력 배치 가능성을 언급"
+        "추가 전력 배치 가능성"
       ]
     },
     "nuclear": {
@@ -90,8 +83,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "새 접경 충돌·지뢰 발견 보도 없음. 국방부가 10/23 MDL 확인·군 통신선 복원을 위한 남북 군사회담을 제안했으나 북측 반응은 보도되지 않았다."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -113,7 +105,7 @@
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/feed/"
+          "url": "https://www.nknews.org/2026/10/kim-jong-un-says-north-korea-inspired-by-chinas-success-in-border-city-visit/"
         },
         {
           "name": "연합뉴스",
@@ -142,7 +134,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-25T15:12:14+00:00",
+  "checked_at": "2026-10-25T16:11:20+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

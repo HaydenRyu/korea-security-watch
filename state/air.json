@@ -1,45 +1,17 @@
 {
- "at": "2026-10-25T23:57:44+00:00",
- "south": 65,
- "area": 78,
- "baseline": 58,
- "ratio": 1.12,
- "samples": 3,
+ "at": "2026-10-26T01:55:39+00:00",
+ "south": 77,
+ "area": 93,
+ "baseline": 68.0,
+ "ratio": 1.13,
+ "samples": 8,
  "mil": [
-  {
-   "type": "E737",
-   "name": null,
-   "call": "",
-   "lat": 37.08,
-   "lon": 126.97
-  },
-  {
-   "type": "H60",
-   "name": null,
-   "call": "CARD42",
-   "lat": 37.44,
-   "lon": 127.06
-  },
-  {
-   "type": "H60",
-   "name": null,
-   "call": "CARD41",
-   "lat": 37.44,
-   "lon": 127.06
-  },
   {
    "type": "Q4",
    "name": "RQ-4 무인정찰기",
    "call": "MALUS20",
-   "lat": 37.57,
-   "lon": 127.54
-  },
-  {
-   "type": "C17",
-   "name": "C-17 수송기",
-   "call": "RCH347",
-   "lat": 33.76,
-   "lon": 129.69
+   "lat": 37.23,
+   "lon": 127.07
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

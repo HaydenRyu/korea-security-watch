@@ -13,7 +13,7 @@
       "North Korea munitions Russia shipments"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순",
+      "합참 북한 지뢰 발견 DMZ 귀순 10월 26일",
       "목함지뢰 해안 발견"
     ],
     "electronic_cyber": [
@@ -45,12 +45,14 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261026504608",
+    "https://www.segye.com/newsView/20261026505989",
     "https://www.segye.com/newsView/20261026501836",
-    "https://www.yna.co.kr/view/AKR20261025045900504",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.yna.co.kr/view/AKR20261026007400504",
+    "https://www.yna.co.kr/view/AKR20261026076100504",
+    "https://www.yna.co.kr/view/AKR20261025045900504",
     "https://www.segye.com/newsView/20261026500169",
-    "https://www.yna.co.kr/view/AKR20261025020800504"
+    "https://www.yna.co.kr/view/AKR20261025020800504",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
   "overall_summary": "북한군 자주포 접경 전진(연합 10/25)이 단일 출처 징후로 남고, 북한이 안보리 의장에 「지뢰폭발은 자작극·영토 침범 시 자위권」 서한을 보냈으나 위협 발언 수준이다. 김정은 단둥 방문 후속 외교 보도 외에 새 교전·발사 징후는 없다.",
   "items": {
@@ -136,7 +138,8 @@
       ],
       "confidence": "높음",
       "facts": [
-        "신압록강대교 경협 부각, 시진핑 회담 없음"
+        "신압록강대교 경협 부각, 시진핑 회담 없음",
+        "연합 10/26: 통일부 「김정은 방중이 한반도 평화·대화 재개에 기여하길 기대」"
       ],
       "speculation": [
         "북미대화 사전 조율 가능성(분석가)"
@@ -155,7 +158,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-26T02:11:21+00:00",
+  "checked_at": "2026-10-26T03:11:15+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [
@@ -175,5 +178,5 @@
     }
   ],
   "world_context": "유럽 정치 불안과 러·우 전쟁 속에서 북·중 밀착 외교가 이어지고 있다.",
-  "world_at": "2026-10-26T01:11:00+00:00"
+  "world_at": "2026-10-26T03:11:15+00:00"
 }

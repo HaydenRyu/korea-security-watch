@@ -16,7 +16,8 @@
       "지뢰 발견 DMZ",
       "목함지뢰 해안",
       "귀순 NLL",
-      "North Korea DMZ landmine letter UN"
+      "North Korea DMZ landmine letter UN",
+      "북한 지뢰 발견 DMZ 귀속 NLL 합참"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 합참",
@@ -165,7 +166,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-26T20:12:32+00:00",
+  "checked_at": "2026-10-26T22:11:22+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -185,11 +186,5 @@
     }
   ],
   "world_context": "이번 회차 세계 브리핑은 BBC 국제면 한 건만 확인했다.",
-  "world_at": "2026-10-26T20:12:32+00:00",
-  "held": {
-    "raw_grade": 1,
-    "raw_label": "주의",
-    "at": "2026-10-26T21:13:03+00:00",
-    "summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전과 접경 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 국방부 군사회담 제안(10/23)에 북한 응답은 아직 없다."
-  }
+  "world_at": "2026-10-26T22:11:22+00:00"
 }

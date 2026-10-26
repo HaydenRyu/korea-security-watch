@@ -1,66 +1,24 @@
 {
- "at": "2026-10-26T04:23:48+00:00",
- "south": 77,
- "area": 99,
- "baseline": 73,
- "ratio": 1.05,
- "samples": 5,
+ "at": "2026-10-26T05:26:28+00:00",
+ "south": 62,
+ "area": 84,
+ "baseline": 71,
+ "ratio": 0.87,
+ "samples": 9,
  "mil": [
   {
-   "type": "BE20",
-   "name": null,
-   "call": "CATS67",
-   "lat": 35.03,
-   "lon": 126.57
-  },
-  {
-   "type": "?",
-   "name": null,
-   "call": "PSSMB",
-   "lat": 34.52,
-   "lon": 126.64
-  },
-  {
-   "type": "BE20",
-   "name": null,
-   "call": "CATS13",
-   "lat": 35.44,
-   "lon": 126.73
-  },
-  {
-   "type": "C560",
-   "name": null,
-   "call": "NINJA91",
-   "lat": 36.9,
-   "lon": 127.02
+   "type": "GLEX",
+   "name": "정찰용 비즈니스젯 가능",
+   "call": "",
+   "lat": 34.49,
+   "lon": 126.59
   },
   {
    "type": "H60",
    "name": null,
-   "call": "SESSY",
+   "call": "CARD94",
    "lat": 37.45,
    "lon": 127.11
-  },
-  {
-   "type": "H60",
-   "name": null,
-   "call": "CARD97",
-   "lat": 37.35,
-   "lon": 127.32
-  },
-  {
-   "type": "E737",
-   "name": null,
-   "call": "",
-   "lat": 36.85,
-   "lon": 127.36
-  },
-  {
-   "type": "C30J",
-   "name": "C-130J 수송기",
-   "call": "SUMO30",
-   "lat": 33.84,
-   "lon": 130.87
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

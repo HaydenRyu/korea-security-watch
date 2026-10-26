@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-26T11:24:56+00:00",
+ "fetched_at": "2026-10-26T12:41:18+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-26T11:24:56+00:00",
+ "last_ok_at": "2026-10-26T12:41:18+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -13,9 +13,9 @@
   "by_group": {
    "border": 21,
    "summit": 39,
-   "mine": 8,
-   "alert": 2,
    "drone_balloon": 7,
+   "mine": 9,
+   "alert": 2,
    "gps": 2,
    "fire": 2,
    "defect": 1,
@@ -29,19 +29,19 @@
    "feeds": 5,
    "failed": 0,
    "count": 600,
-   "hits": 85
+   "hits": 84
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 16
+   "hits": 14
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 15
+   "hits": 17
   },
   "국민일보": {
    "feeds": 2,
@@ -67,27 +67,27 @@
   "border": {
    "clusters": 21,
    "max_independent": 4,
-   "latest": "2026-10-26T11:24:56+00:00"
+   "latest": "2026-10-26T12:41:18+00:00"
   },
   "summit": {
    "clusters": 39,
    "max_independent": 3,
-   "latest": "2026-10-26T11:24:56+00:00"
+   "latest": "2026-10-26T12:41:18+00:00"
+  },
+  "drone_balloon": {
+   "clusters": 7,
+   "max_independent": 1,
+   "latest": "2026-10-26T12:33:00+00:00"
   },
   "mine": {
-   "clusters": 8,
+   "clusters": 9,
    "max_independent": 4,
-   "latest": "2026-10-26T11:16:00+00:00"
+   "latest": "2026-10-26T12:15:00+00:00"
   },
   "alert": {
    "clusters": 2,
    "max_independent": 1,
    "latest": "2026-10-26T11:13:00+00:00"
-  },
-  "drone_balloon": {
-   "clusters": 7,
-   "max_independent": 1,
-   "latest": "2026-10-26T11:08:00+00:00"
   },
   "gps": {
    "clusters": 2,
@@ -159,7 +159,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "SBS",
@@ -167,7 +167,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 7
+   "hits": 6
   },
   {
    "outlet": "SBS",
@@ -175,7 +175,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "SBS",
@@ -191,7 +191,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 13
+   "hits": 14
   },
   {
    "outlet": "동아일보",
@@ -199,7 +199,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "국민일보",

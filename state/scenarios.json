@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T10:14:19+00:00",
+  "updated_at": "2026-10-26T11:15:40+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -65,7 +65,7 @@
           "id": "grade",
           "label": "상황판 주의 이상",
           "state": "on",
-          "note": "주의"
+          "note": "경계"
         },
         {
           "id": "ladder_low",
@@ -197,7 +197,7 @@
       "last_seen": "2026-10-26T05:11:42+00:00"
     }
   },
-  "calm_judged_at": "2026-10-26T10:14:19+00:00",
+  "calm_judged_at": "2026-10-26T11:15:40+00:00",
   "history": [
     {
       "date": "2026-10-22",

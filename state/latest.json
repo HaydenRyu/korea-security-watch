@@ -1,67 +1,117 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한군 자주포 전진 배치 접경",
-      "North Korea artillery frontline deployment"
+      "북한군 자주포 애기봉",
+      "North Korea artillery border"
     ],
     "nuclear": [
-      "북한 영변 풍계리 핵시설 동향",
-      "North Korea nuclear Yongbyon 38 North"
+      "북한 핵실험장 풍계리 동향",
+      "North Korea Kim Jong Un China visit Reuters"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 비축",
-      "North Korea ammunition logistics"
+      "북한 군수 탄약 수송 러시아 컨테이너"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ NLL 귀순 합참",
-      "North Korea DMZ mine NLL defector"
+      "MDL 군사회담 제안",
+      "DMZ 귀순 GOP",
+      "목함지뢰 발견"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격",
-      "North Korea GPS jamming"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
-    ],
-    "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
+      "김정은 방중 주한미군 감축 서해 구조물",
+      "North Korea Kim Jong Un China visit Reuters"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군",
-      "North Korea wartime mobilization"
+      "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "DEFCON Jindo dog alert Korea"
+      "진돗개 발령 데프콘 상향 한반도"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hacking"
+      "북한 해킹 귀속 FBI"
     ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+    "parade_massing": [
+      "북한 열병식 병력 집결"
     ]
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261026504833",
-    "https://www.segye.com/newsView/20261026509506",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
+    "https://www.yna.co.kr/view/AKR20261026007400504",
     "https://www.yna.co.kr/view/AKR20261025045900504",
-    "https://www.yna.co.kr/view/AKR20261026007400504"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008814793"
   ],
-  "overall_summary": "MDL 지뢰 폭발을 둘러싼 남북 안보리 서한전과 접경 북한군 자주포 전진 보도가 이어지나 새 교전·최후통첩은 없다. 직전 회차와 판정 변화 없음.",
+  "overall_summary": "MDL 지뢰 폭발을 둘러싼 남북 서한전과 접경 북한군 자주포 노출 보도가 이어지나 새 교전·최후통첩은 없다. 직전 회차와 판정 변화 없음(troop_movement는 SBS 보도로 교차확인).",
   "items": {
+    "troop_movement": {
+      "status": "corroborated",
+      "routine": false,
+      "region": "서부전선 애기봉 접경",
+      "lat": 37.69,
+      "lon": 126.67,
+      "summary": "연합뉴스(10/25)와 SBS(10/26)가 애기봉 건너편 개풍군 해안에 122㎜ 자주포 약 3대가 노출돼 포신을 움직이는 모습이 포착됐다고 보도했다.",
+      "meaning": "접경 화력 전진 배치로 무력시위 성격이 강하나 교전은 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261025045900504"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "애기봉 전망대에서 약 1.5km 거리 북측 해안에 122㎜ 자주포 3대 노출(SBS)"
+      ],
+      "speculation": [
+        "보여주기식 무력시위라는 평가"
+      ]
+    },
     "nuclear": {
       "status": "none"
     },
     "logistics": {
       "status": "none"
     },
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "DMZ·유엔",
+      "lat": 37.95,
+      "lon": 126.9,
+      "summary": "북한이 안보리 의장에 서한을 보내 지뢰폭발은 한국 자작극이라 주장했다고 연합이 10/26 보도했고, 국방부는 10/23 MDL 관련 남북 군사회담을 제안했다(국방일보).",
+      "meaning": "MDL 지뢰 폭발을 둘러싼 서한전·회담 제안으로 새 교전·최후통첩은 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261026007400504"
+        },
+        {
+          "name": "국방일보",
+          "tier": "B",
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "국방부가 10/23 MDL 확인·통신선 복원을 위한 군사당국회담을 제안, 북한 반응 보도 없음",
+        "민통선 넘어 GOP 철책에 접근한 30대 여성 신병 확보, 간첩 혐의점 없다는 보도(북한 연계 없어 징후 아님)"
+      ],
+      "speculation": []
+    },
     "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
       "status": "none"
     },
     "parade_massing": {
@@ -75,67 +125,11 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "김정은 방중은 24시간 경과 — 첫 보도 10/24~25, 배경으로만 기록"
-    },
-    "troop_movement": {
-      "status": "single",
-      "routine": false,
-      "region": "서부전선 애기봉 접경",
-      "lat": 37.69,
-      "lon": 126.67,
-      "summary": "연합뉴스가 10/25 서부전선 애기봉 건너편에서 북한군 122㎜ 자주포가 남하 배치된 것이 한국 언론 카메라에 포착됐다고 보도했다.",
-      "meaning": "접경 화력 전진 배치로 무력시위 또는 추가 전력 배치 가능성이 제기되나 교전은 없다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261025045900504"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "애기봉에서 북한군 122㎜ 자주포 남하 배치 확인(연합 보도)"
-      ],
-      "speculation": [
-        "무력시위·추가 전력 배치 가능성 평가"
-      ]
-    },
-    "border_clash": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "DMZ·유엔",
-      "lat": 37.95,
-      "lon": 126.9,
-      "summary": "조선중앙통신은 주유엔 대표가 안보리 의장에 서한을 보내 「지뢰폭발은 한국 자작극, 영토 침범 시 자위권 행사」라고 주장했다고 연합·세계일보가 10/26 보도했다.",
-      "meaning": "MDL 지뢰 폭발을 둘러싼 남북 서한전으로 위협 발언 수준이며 새 교전·최후통첩은 없다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261026007400504"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261026504833"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "북한이 안보리 의장에 서한 발송, 지뢰폭발은 한국 자작극이라 주장",
-        "한국 정부는 22일 정전협정 위반 서한 발송",
-        "철원 GOP 철책 접근 30대 여성은 신병 확보, 대공혐의점 없는 듯(세계일보) — 북한 연계 없어 징후로 세지 않음",
-        "국방부는 10/23 MDL 관련 남북 군사당국회담을 제안했으나 북한 반응 없음(국방일보)"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-10-26T10:14:19+00:00",
-  "grade": 1,
-  "grade_label": "주의",
+  "checked_at": "2026-10-26T11:15:40+00:00",
+  "grade": 2,
+  "grade_label": "경계",
   "active": [
     "troop_movement"
   ],

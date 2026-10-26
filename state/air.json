@@ -1,17 +1,17 @@
 {
- "at": "2026-10-26T01:55:39+00:00",
- "south": 77,
- "area": 93,
- "baseline": 68.0,
- "ratio": 1.13,
- "samples": 8,
+ "at": "2026-10-26T03:13:01+00:00",
+ "south": 73,
+ "area": 92,
+ "baseline": 67,
+ "ratio": 1.09,
+ "samples": 7,
  "mil": [
   {
-   "type": "Q4",
-   "name": "RQ-4 무인정찰기",
-   "call": "MALUS20",
-   "lat": 37.23,
-   "lon": 127.07
+   "type": "C30J",
+   "name": "C-130J 수송기",
+   "call": "SUMO30",
+   "lat": 33.06,
+   "lon": 131.64
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

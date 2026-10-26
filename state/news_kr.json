@@ -1,26 +1,27 @@
 {
- "fetched_at": "2026-10-26T01:56:13+00:00",
+ "fetched_at": "2026-10-26T03:14:43+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-26T01:56:13+00:00",
+ "last_ok_at": "2026-10-26T03:14:43+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1160,
-  "hits": 117,
-  "clusters": 76,
+  "fetched": 1159,
+  "hits": 105,
+  "clusters": 71,
   "by_group": {
-   "summit": 46,
+   "summit": 42,
+   "border": 21,
    "defect": 2,
-   "border": 22,
-   "drone_balloon": 8,
+   "hybrid": 2,
+   "mine": 8,
+   "spy": 1,
+   "drone_balloon": 7,
    "influence": 2,
-   "mine": 9,
    "fire": 2,
    "alert": 2,
-   "gps": 1,
-   "hybrid": 1
+   "gps": 1
   }
  },
  "outlets": {
@@ -33,26 +34,26 @@
   "SBS": {
    "feeds": 3,
    "failed": 0,
-   "count": 160,
-   "hits": 16
+   "count": 159,
+   "hits": 13
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 29
+   "hits": 20
   },
   "국민일보": {
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 24
+   "hits": 25
   },
   "세계일보": {
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 8
+   "hits": 5
   },
   "국방일보": {
    "feeds": 1,
@@ -64,22 +65,37 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "summit": {
-   "clusters": 46,
+   "clusters": 42,
    "max_independent": 4,
-   "latest": "2026-10-26T01:56:13+00:00"
+   "latest": "2026-10-26T03:14:43+00:00"
+  },
+  "border": {
+   "clusters": 21,
+   "max_independent": 5,
+   "latest": "2026-10-26T03:05:00+00:00"
   },
   "defect": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-10-26T01:48:00+00:00"
+   "latest": "2026-10-26T03:04:53+00:00"
   },
-  "border": {
-   "clusters": 22,
+  "hybrid": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-10-26T02:01:46+00:00"
+  },
+  "mine": {
+   "clusters": 8,
    "max_independent": 5,
-   "latest": "2026-10-26T01:45:00+00:00"
+   "latest": "2026-10-26T02:01:46+00:00"
+  },
+  "spy": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-10-26T02:01:46+00:00"
   },
   "drone_balloon": {
-   "clusters": 8,
+   "clusters": 7,
    "max_independent": 2,
    "latest": "2026-10-26T01:37:43+00:00"
   },
@@ -88,11 +104,6 @@
    "max_independent": 1,
    "latest": "2026-10-26T01:09:00+00:00"
   },
-  "mine": {
-   "clusters": 9,
-   "max_independent": 5,
-   "latest": "2026-10-26T00:59:53+00:00"
-  },
   "fire": {
    "clusters": 2,
    "max_independent": 1,
@@ -100,15 +111,10 @@
   },
   "alert": {
    "clusters": 2,
-   "max_independent": 2,
+   "max_independent": 1,
    "latest": "2026-10-24T10:10:19+00:00"
   },
   "gps": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-10-24T01:30:00+00:00"
-  },
-  "hybrid": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-10-24T01:30:00+00:00"
@@ -121,7 +127,7 @@
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
    "count": 120,
-   "hits": 71
+   "hits": 72
   },
   {
    "outlet": "연합뉴스",
@@ -129,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 15
+   "hits": 14
   },
   {
    "outlet": "연합뉴스",
@@ -161,7 +167,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 10
+   "hits": 7
   },
   {
    "outlet": "SBS",
@@ -176,7 +182,7 @@
    "section": "속보",
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
-   "count": 102,
+   "count": 101,
    "hits": 6
   },
   {
@@ -185,7 +191,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 21
+   "hits": 17
   },
   {
    "outlet": "동아일보",
@@ -193,7 +199,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 8
+   "hits": 3
   },
   {
    "outlet": "국민일보",
@@ -209,7 +215,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibSocRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 1
+   "hits": 2
   },
   {
    "outlet": "세계일보",
@@ -217,7 +223,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 6
+   "hits": 3
   },
   {
    "outlet": "세계일보",

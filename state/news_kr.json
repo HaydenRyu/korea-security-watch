@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-26T19:58:42+00:00",
+ "fetched_at": "2026-10-26T21:14:54+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-26T19:58:42+00:00",
+ "last_ok_at": "2026-10-26T21:14:54+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -12,8 +12,8 @@
   "clusters": 65,
   "by_group": {
    "border": 19,
-   "summit": 37,
-   "mine": 10,
+   "summit": 38,
+   "mine": 9,
    "alert": 2,
    "drone_balloon": 7,
    "gps": 2,
@@ -28,13 +28,13 @@
    "feeds": 5,
    "failed": 0,
    "count": 600,
-   "hits": 84
+   "hits": 86
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 16
+   "hits": 15
   },
   "동아일보": {
    "feeds": 2,
@@ -66,15 +66,15 @@
   "border": {
    "clusters": 19,
    "max_independent": 4,
-   "latest": "2026-10-26T19:58:42+00:00"
+   "latest": "2026-10-26T21:14:54+00:00"
   },
   "summit": {
-   "clusters": 37,
+   "clusters": 38,
    "max_independent": 2,
-   "latest": "2026-10-26T19:58:42+00:00"
+   "latest": "2026-10-26T21:14:54+00:00"
   },
   "mine": {
-   "clusters": 10,
+   "clusters": 9,
    "max_independent": 4,
    "latest": "2026-10-26T19:30:00+00:00"
   },
@@ -129,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 7
+   "hits": 8
   },
   {
    "outlet": "연합뉴스",
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "SBS",
@@ -177,7 +177,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 9
+   "hits": 8
   },
   {
    "outlet": "동아일보",

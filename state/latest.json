@@ -1,73 +1,63 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집 묶음 확인(자주포·접경 화력)",
-      "SBS·연합 원문 열람"
+      "news_kr 수집 묶음(자주포·접경 화력)",
+      "SBS 원문 열람",
+      "North Korea artillery border"
     ],
     "nuclear": [
-      "news_kr 수집 묶음 확인(해당 후보 없음)"
+      "news_kr 수집 묶음(후보 없음)",
+      "North Korea nuclear Punggye-ri"
     ],
     "logistics": [
-      "news_kr 수집 묶음 확인(해당 후보 없음)"
+      "news_kr 수집 묶음(후보 없음)",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 안보리 서한",
-      "국방부 군사회담 제안 MDL",
-      "news_kr border·mine 묶음"
+      "지뢰 발견 DMZ",
+      "목함지뢰 해안 발견",
+      "귀순 NLL",
+      "North Korea DMZ landmine letter Security Council"
     ],
     "electronic_cyber": [
-      "news_kr gps 묶음 확인(해당 사건 없음)"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중 중국 외교부",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중 방러 후속",
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "news_kr 수집 묶음 확인(해당 후보 없음)"
+      "news_kr 수집 묶음(후보 없음)",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "news_kr 수집 묶음 확인(해당 후보 없음)"
+      "news_kr 수집 묶음(후보 없음)",
+      "North Korea nationwide blackout mobilization"
     ],
     "gov_warning": [
-      "news_kr alert 묶음 확인(해당 후보 없음)"
+      "news_kr alert 묶음 확인",
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "news_kr spy·hybrid 묶음 확인(귀속 발표 없음)"
-    ],
-    "factor:inter_korean": [
-      "국방부 군사회담 제안"
-    ],
-    "factor:great_powers": [
-      "중국 외교부 북중관계"
-    ],
-    "factor:nk_domestic": [
-      "안보리 서한 조선중앙통신"
-    ],
-    "factor:public_opinion": [
-      "안보리 서한 조선중앙통신"
-    ],
-    "linkage:taiwan": [
-      "(이번 회차 대만 검색 생략)"
-    ],
-    "linkage:korea": [
-      "(이번 회차 생략)"
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 FBI North Korea attributed"
     ],
     "calm": [
-      "남북 군사회담 제안"
+      "남북 군사회담 제안 북한 응답"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261027001300072",
-    "https://www.yna.co.kr/view/AKR20261026007400504",
     "https://www.yna.co.kr/view/AKR20261026143700083",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815701",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
-    "https://www.donga.com/news/Politics/article/all/20261026/134908259/1",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/cm4g14n1e5wko"
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "북한의 안보리 서한전과 접경 자주포 노출이 이어지나 새 교전·최후통첩은 없고 직전 회차와 같은 수준이다. 국방부의 군사회담 제안에 북한은 아직 응답하지 않았다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전이 회람 단계로 이어지고 접경 자주포 노출이 계속되나 새 교전·최후통첩은 없다. 국방부의 군사회담 제안(10/23)에 북한은 아직 응답하지 않았다.",
   "items": {
     "nuclear": {
       "status": "none"
@@ -172,7 +162,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-26T17:14:50+00:00",
+  "checked_at": "2026-10-26T18:11:40+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

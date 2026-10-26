@@ -1,20 +1,20 @@
 {
- "fetched_at": "2026-10-26T15:06:04+00:00",
+ "fetched_at": "2026-10-26T17:28:36+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-26T15:06:04+00:00",
+ "last_ok_at": "2026-10-26T17:28:36+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1160,
-  "hits": 92,
+  "hits": 93,
   "clusters": 69,
   "by_group": {
    "border": 21,
    "summit": 38,
+   "mine": 10,
    "alert": 2,
-   "mine": 9,
    "drone_balloon": 7,
    "gps": 2,
    "fire": 2,
@@ -29,13 +29,13 @@
    "feeds": 5,
    "failed": 0,
    "count": 600,
-   "hits": 83
+   "hits": 84
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 14
+   "hits": 16
   },
   "동아일보": {
    "feeds": 2,
@@ -67,27 +67,27 @@
   "border": {
    "clusters": 21,
    "max_independent": 4,
-   "latest": "2026-10-26T15:06:04+00:00"
+   "latest": "2026-10-26T17:28:36+00:00"
   },
   "summit": {
    "clusters": 38,
-   "max_independent": 3,
-   "latest": "2026-10-26T15:06:04+00:00"
+   "max_independent": 2,
+   "latest": "2026-10-26T17:28:36+00:00"
+  },
+  "mine": {
+   "clusters": 10,
+   "max_independent": 4,
+   "latest": "2026-10-26T16:32:00+00:00"
   },
   "alert": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-10-26T13:48:00+00:00"
-  },
-  "mine": {
-   "clusters": 9,
-   "max_independent": 4,
-   "latest": "2026-10-26T13:48:00+00:00"
+   "latest": "2026-10-26T15:37:00+00:00"
   },
   "drone_balloon": {
    "clusters": 7,
    "max_independent": 1,
-   "latest": "2026-10-26T13:45:00+00:00"
+   "latest": "2026-10-26T15:34:00+00:00"
   },
   "gps": {
    "clusters": 2,
@@ -159,7 +159,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 2
   },
   {
    "outlet": "SBS",
@@ -167,7 +167,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 6
+   "hits": 7
   },
   {
    "outlet": "SBS",
@@ -183,7 +183,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 8
+   "hits": 9
   },
   {
    "outlet": "동아일보",

@@ -1,66 +1,78 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집 묶음(자주포·접경 화력)",
+      "애기봉 자주포 접경 화력",
       "North Korea artillery border"
     ],
     "nuclear": [
-      "news_kr 수집 묶음(후보 없음)",
+      "북한 핵 풍계리 영변",
       "North Korea nuclear Punggye-ri"
     ],
     "logistics": [
-      "news_kr 수집 묶음(후보 없음)",
+      "북한 탄약 수송 러시아",
       "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ",
+      "북한 합참 발표 지뢰 DMZ 귀순 NLL",
       "목함지뢰 해안",
-      "귀순 NLL",
-      "North Korea DMZ landmine letter UN",
-      "북한 지뢰 발견 DMZ 귀속 NLL 합참"
+      "North Korea DMZ landmine letter UN"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출",
-      "사이버 공격 랜섬웨어"
+      "북한 GPS 교란 서해 구조물 주한미군 감축",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
+      "김정은 방중",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "news_kr 수집 묶음(후보 없음)",
+      "북한 열병식 집결",
       "North Korea parade massing"
     ],
     "nk_internal": [
-      "news_kr 수집 묶음(후보 없음)",
+      "북한 등화관제 준전시",
       "North Korea blackout mobilization"
     ],
     "gov_warning": [
-      "news_kr alert 묶음 확인",
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 발령",
+      "news_kr alert 묶음 확인"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 군사당국회담 제안 북한 응답"
+      "남북 대화 제안 통신선 복원"
+    ],
+    "factor:inter_korean": [
+      "확성기 군사회담 제안 북한 응답",
+      "North Korea loudspeaker talks"
+    ],
+    "factor:nk_domestic": [
+      "북한 당 전원회의 숙청",
+      "North Korea party plenum"
+    ],
+    "factor:great_powers": [
+      "김정은 방중 중국 외교부",
+      "Kim Jong Un China visit"
+    ],
+    "factor:public_opinion": [
+      "북한 대남 비난 담화",
+      "North Korea KCNA South Korea criticism"
     ]
   },
   "opened": [
+    "https://www.yna.co.kr/view/AKR20261026007400504",
     "https://www.yna.co.kr/view/AKR20261027001300072",
     "https://www.yna.co.kr/view/AKR20261026143700083",
-    "https://www.yna.co.kr/view/AKR20261027004300098",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815728",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/2026/10/north-korea-accuses-south-of-fabricating-dmz-land-mine-blasts-in-letter-to-un/",
     "https://www.nknews.org/feed/",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전과 서부전선 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 국방부 군사회담 제안(10/23)에 북한 응답은 아직 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전(10/26 회람)과 애기봉 건너편 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 국방부 군사회담 제안에 북한 응답은 아직 없고, 김정은 방중에 대한 중국 입장은 원론에 그쳤다.",
   "items": {
     "nuclear": {
       "status": "none"
@@ -166,7 +178,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-26T22:11:22+00:00",
+  "checked_at": "2026-10-26T23:12:59+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

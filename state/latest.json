@@ -51,10 +51,9 @@
     "https://www.segye.com/newsView/20261026504833",
     "https://www.segye.com/newsView/20261026509506",
     "https://www.yna.co.kr/view/AKR20261025045900504",
-    "https://www.yna.co.kr/view/AKR20261026007400504",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.yna.co.kr/view/AKR20261026007400504"
   ],
-  "overall_summary": "MDL 지뢰 폭발을 둘러싼 남북 안보리 서한전과 북한군 자주포 전진은 이어지나 새 교전·최후통첩은 없다. 직전 회차와 판정 변화 없음.",
+  "overall_summary": "MDL 지뢰 폭발을 둘러싼 남북 안보리 서한전과 접경 북한군 자주포 전진 보도가 이어지나 새 교전·최후통첩은 없다. 직전 회차와 판정 변화 없음.",
   "items": {
     "nuclear": {
       "status": "none"
@@ -134,7 +133,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-26T09:12:30+00:00",
+  "checked_at": "2026-10-26T10:14:19+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

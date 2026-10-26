@@ -1,13 +1,13 @@
 {
- "fetched_at": "2026-10-26T13:55:31+00:00",
+ "fetched_at": "2026-10-26T15:06:04+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-26T13:55:31+00:00",
+ "last_ok_at": "2026-10-26T15:06:04+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1159,
+  "fetched": 1160,
   "hits": 92,
   "clusters": 69,
   "by_group": {
@@ -34,7 +34,7 @@
   "SBS": {
    "feeds": 3,
    "failed": 0,
-   "count": 159,
+   "count": 160,
    "hits": 14
   },
   "동아일보": {
@@ -67,12 +67,12 @@
   "border": {
    "clusters": 21,
    "max_independent": 4,
-   "latest": "2026-10-26T13:55:31+00:00"
+   "latest": "2026-10-26T15:06:04+00:00"
   },
   "summit": {
    "clusters": 38,
    "max_independent": 3,
-   "latest": "2026-10-26T13:55:31+00:00"
+   "latest": "2026-10-26T15:06:04+00:00"
   },
   "alert": {
    "clusters": 2,
@@ -182,7 +182,7 @@
    "section": "속보",
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
-   "count": 101,
+   "count": 102,
    "hits": 8
   },
   {

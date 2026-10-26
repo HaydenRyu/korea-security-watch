@@ -55,9 +55,11 @@
     "https://www.yna.co.kr/view/AKR20261025034700704",
     "https://www.yna.co.kr/view/AKR20261026143700083",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml"
+    "https://www.nhk.or.jp/rss/news/cat6.xml",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815701",
+    "https://www.yna.co.kr/view/AKR20261026007400504"
   ],
-  "overall_summary": "접경 북한군 자주포 노출과 MDL 지뢰폭발을 둘러싼 남북 서한전이 이어지고 국방부가 군사회담을 제안했으나 새 교전·최후통첩은 없다. 김정은 단둥 당일 방중은 외교 일정으로 직전 회차와 판정 변화 없음.",
+  "overall_summary": "접경 자주포 노출과 MDL 지뢰폭발·GOP 철책 훼손 공방이 이어지고 국방부의 군사회담 제안에 북한은 무응답이나 새 교전·최후통첩은 없다. 김정은 단둥 방중은 외교 일정으로 직전 회차와 판정 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -165,7 +167,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-26T13:32:56+00:00",
+  "checked_at": "2026-10-26T14:13:54+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

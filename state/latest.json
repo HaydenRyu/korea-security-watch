@@ -1,65 +1,69 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한군 자주포 애기봉",
-      "North Korea artillery border"
+      "북한 자주포 접경 전진 배치",
+      "North Korea artillery border Reuters"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설 동향",
-      "North Korea nuclear Punggye-ri"
+      "북한 핵실험 풍계리 영변 동향",
+      "North Korea nuclear Yongbyon 38 North"
     ],
     "logistics": [
-      "북한 군수 탄약 수송 러시아",
-      "North Korea munitions Russia"
+      "북한 탄약 수송 군수 비축",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "목함지뢰 발견",
-      "DMZ 귀순 GOP",
-      "MDL 군사회담 제안"
+      "북한 지뢰 발견 DMZ 귀순",
+      "목함지뢰 해안",
+      "North Korea DMZ landmine"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란 서북도서",
+      "해킹 개인정보 유출",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방중 서해 구조물 주한미군 감축",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "북러 군사협력 North Korea troops Russia"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 준비 병력 집결",
+      "North Korea parade preparation"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시 노농적위군"
+      "북한 등화관제 준전시 노농적위군",
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향"
+      "진돗개 데프콘 상향 발령",
+      "State Department Korea travel advisory"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 지령",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hacking"
     ],
-    "calm": [
-      "남북 대화 제안 군사회담"
+    "linkage:taiwan": [
+      "PLA drills around Taiwan 东部战区 台岛 联合演习"
     ],
     "linkage:korea": [
-      "북러 군사협력"
+      "북러 군사협력 North Korea troops Russia"
+    ],
+    "calm": [
+      "대북 확성기 방송 중단 남북 대화 제안 통신선"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261026007400504",
+    "https://www.donga.com/news/Politics/article/all/20261026/134912750/1",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815702",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815728",
-    "https://www.yna.co.kr/view/AKR20261025045900504",
-    "https://www.yna.co.kr/view/AKR20261025034700704",
-    "https://www.yna.co.kr/view/AKR20261026143700083",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815701",
-    "https://www.yna.co.kr/view/AKR20261026007400504"
+    "https://www.yna.co.kr/view/AKR20261026143700083",
+    "https://www.yna.co.kr/view/AKR20261025045900504",
+    "https://www.donga.com/news/Politics/article/all/20261026/134906494/1",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "접경 자주포 노출과 MDL 지뢰폭발·GOP 철책 훼손 공방이 이어지고 국방부의 군사회담 제안에 북한은 무응답이나 새 교전·최후통첩은 없다. 김정은 단둥 방중은 외교 일정으로 직전 회차와 판정 변화 없음.",
+  "overall_summary": "접경 긴장(자주포 노출·MDL 지뢰 서한전)이 이어지나 교전·최후통첩은 없고 직전 회차와 같은 수준이다. 김정은 방중은 외교 일정 성격이며 군사 합의 발표는 없다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -67,7 +71,7 @@
       "region": "서부전선 애기봉 접경",
       "lat": 37.69,
       "lon": 126.67,
-      "summary": "연합뉴스(10/25)와 SBS(10/26)가 애기봉 건너편 개풍군 해안에 122㎜ 자주포 약 3대가 노출돼 포신을 움직이는 모습이 포착됐다고 보도했다.",
+      "summary": "연합뉴스(10/25)와 SBS·동아(10/26)가 애기봉 건너편 개풍군 해안에 122㎜ 자주포 약 3대가 노출돼 포신을 움직이는 모습이 포착됐다고 보도했다.",
       "meaning": "접경 화력 전진 배치로 무력시위 성격이 강하나 교전은 없다.",
       "sources": [
         {
@@ -79,6 +83,11 @@
           "name": "SBS",
           "tier": "B",
           "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700"
+        },
+        {
+          "name": "동아일보",
+          "tier": "B",
+          "url": "https://www.donga.com/news/Politics/article/all/20261026/134906494/1"
         }
       ],
       "confidence": "중간",
@@ -86,7 +95,7 @@
         "애기봉 전망대에서 약 1.5km 거리 북측 해안에 122㎜ 자주포 3대 노출(SBS)"
       ],
       "speculation": [
-        "보여주기식 무력시위라는 평가"
+        "보여주기식 무력시위라는 평가(전문가)"
       ]
     },
     "nuclear": {
@@ -101,24 +110,28 @@
       "region": "DMZ·유엔",
       "lat": 37.95,
       "lon": 126.9,
-      "summary": "북한이 유엔 안보리 의장에 서한을 보내 MDL 지뢰폭발은 한국 자작극이라 주장했다고 SBS가 10/26 보도했고, 국방부는 10/23 MDL 관련 군사회담을 제안했다(국방일보); 철원 민통선 월선 30대 여성 건은 간첩 혐의 없는 국내 사건.",
-      "meaning": "MDL 지뢰 폭발을 둘러싼 서한전·회담 제안으로 새 교전·최후통첩은 없다.",
+      "summary": "북한이 유엔 안보리 의장에 서한을 보내 MDL 지뢰폭발은 한국 자작극이라 주장하고 영토 침범 시 자위권을 행사하겠다고 위협했다(조선중앙통신 인용 연합 10/26); 국방부는 10/23 군사당국회담을 제안했고 북한은 아직 응답하지 않았다. 철원 민통선 월선 30대 여성 건은 간첩 혐의 없는 국내 사건.",
+      "meaning": "서한전·회담 제안으로 새 교전이나 시한부 최후통첩은 없다.",
       "sources": [
         {
-          "name": "SBS",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815702"
+          "url": "https://www.yna.co.kr/view/AKR20261026007400504"
         },
         {
           "name": "국방일보",
           "tier": "B",
           "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815701"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "국방부가 10/23 MDL 확인·통신선 복원을 위한 군사당국회담을 제안, 북한 반응 보도 없음",
-        "민통선 넘어 GOP 철책에 접근한 30대 여성 신병 확보, 간첩 혐의점 없다는 보도(북한 연계 없어 징후 아님)"
+        "국방부 10/23 군사당국회담 공식 제안, 북한 반응 없음(SBS)"
       ],
       "speculation": []
     },
@@ -131,28 +144,21 @@
       "region": "중국 단둥·신압록강대교",
       "lat": 40.12,
       "lon": 124.38,
-      "summary": "김정은이 10/24 시진핑 회담 없이 단둥을 당일 방문했고 중국 외교부는 '북중관계 발전은 확고부동한 방침'이라고만 답했다(연합뉴스).",
+      "summary": "김정은이 10/24 단둥을 당일 방문했고 중국 외교부는 10/26 '북중관계 발전은 확고부동한 방침'이라고만 답했다(연합뉴스).",
       "meaning": "외교 일정 성격이며 군사 협정·무기 협력 발표는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261026143700083"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261025034700704"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "왕후닝과 회담 후 당일 귀국",
-        "중국 외교부는 방중 초청·제안 여부에 답하지 않음"
+        "왕후닝 영접·항미원조기념관 참관 후 당일 귀국",
+        "중국 외교부는 초청·제안 여부에 답하지 않음"
       ],
-      "speculation": [
-        "북미 대화 전 조율 가능성이라는 분석(SBS)"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -167,7 +173,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-26T14:13:54+00:00",
+  "checked_at": "2026-10-26T15:11:31+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

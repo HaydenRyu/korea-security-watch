@@ -1,60 +1,98 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한군 자주포 애기봉 남하 배치 접경 긴장",
-      "North Korea troops artillery border Reuters"
+      "북한군 자주포 접경",
+      "North Korea artillery border"
     ],
     "nuclear": [
-      "북한 풍계리 영변 핵 동향",
-      "North Korea nuclear Yongbyon 38 North"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "North Korea Russia munitions shipments troops",
-      "북한 탄약 군수 수송 러시아"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 GPS 교란 지뢰 발견 DMZ 귀순",
-      "북한 합참 발표 10월 26일",
-      "목함지뢰 해안 발견"
+      "목함지뢰 해안",
+      "지뢰 발견",
+      "DMZ MDL 경고사격",
+      "NLL 귀순",
+      "North Korea DMZ mine"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 26일"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "김정은 방러 OR 방중 후속 North Korea Kim Jong Un China Russia visit",
-      "진돗개 발령 북한 등화관제 준전시 서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축",
+      "북러 군사협력"
     ],
     "parade_massing": [
-      "북한 열병식 집결 위성"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "진돗개 발령 북한 등화관제 준전시 서해 구조물 주한미군 감축"
+      "북한 준전시 등화관제",
+      "North Korea martial mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 북한 등화관제 준전시 서해 구조물 주한미군 감축",
-      "North Korea Reuters October 26 2026"
+      "진돗개 발령",
+      "DEFCON Korea warning"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 군사회담",
-      "통신선 복원"
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단",
+      "North Korea talks offer"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan",
+      "대만 중국 군사훈련"
+    ],
+    "linkage:korea": [
+      "북러 군사협력",
+      "North Korea troops Russia"
+    ],
+    "factor:nk_domestic": [
+      "북한 당 회의",
+      "North Korea party plenary"
+    ],
+    "factor:inter_korean": [
+      "확성기 전단 오물풍선",
+      "North Korea loudspeaker"
+    ],
+    "factor:great_powers": [
+      "김정은 방중",
+      "US North Korea talks"
+    ],
+    "factor:public_opinion": [
+      "북한 대남 비난",
+      "North Korea denounces South"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261026504833",
-    "https://www.segye.com/newsView/20261026505989",
-    "https://www.segye.com/newsView/20261026500169",
     "https://www.yna.co.kr/view/AKR20261025045900504",
-    "https://www.yna.co.kr/view/AKR20261026007400504",
     "https://www.yna.co.kr/view/AKR20261026076100504",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.yna.co.kr/view/AKR20261026055800060",
+    "https://www.yna.co.kr/view/AKR20261026007400504",
+    "https://www.segye.com/newsView/20261026504833",
+    "https://www.segye.com/newsView/20261026504608",
+    "https://www.segye.com/newsView/20261026500169",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.nknews.org/feed/"
   ],
-  "overall_summary": "북한군 자주포 접경 전진(연합 10/25)이 단일 출처 징후로 남아 있고, 북한의 안보리 서한은 시한 없는 조건부 경고라 위협 발언 수준이다. 김정은 단둥 방문 후속 외교 보도와 국방부의 군사회담 제안 외에 새 교전·발사 징후는 없다.",
+  "overall_summary": "MDL 지뢰 폭발을 둘러싼 남북 안보리 서한전과 북한군 자주포 전진이 이어지나 새 교전·최후통첩은 없다. 직전 회차와 판정 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -109,7 +147,8 @@
       "facts": [
         "한국이 10/22 안보리 의장에 보낸 서한에 대한 맞대응",
         "시한·구체 표적 없음",
-        "새 월선·교전·지뢰 발견 보도 없음"
+        "새 월선·교전·지뢰 발견 보도 없음",
+        "철원 GOP 철책 접근 30대 여성은 합참이 신병 확보, 조사 중(북한 연계 언급 없음)"
       ],
       "speculation": []
     },
@@ -156,7 +195,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-26T04:11:33+00:00",
+  "checked_at": "2026-10-26T05:11:42+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

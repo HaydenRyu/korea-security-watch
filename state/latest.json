@@ -1,84 +1,56 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한군 자주포 접경",
-      "North Korea artillery border"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "목함지뢰 해안",
-      "지뢰 발견",
-      "DMZ MDL 경고사격 귀순",
-      "NLL 귀순"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "북한 지뢰 발견 DMZ NLL 귀순 합참"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit"
+    ],
+    "electronic_cyber": [
+      "GPS 교란 해킹 개인정보 유출 사이버 공격 랜섬웨어"
+    ],
+    "nuclear": [
+      "North Korea missile nuclear Yongbyon Punggye-ri 38 North"
+    ],
+    "news_kr": [
+      "scripts/news_kr.py 수집 묶음 60건"
+    ],
+    "troop_movement": [
+      "북한군 병력 이동 전방 증강 자주포"
+    ],
+    "logistics": [
+      "North Korea military logistics ammunition stockpile"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결 10월"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea martial mobilization"
+      "북한 준전시 등화관제 노농적위군 동원"
     ],
     "gov_warning": [
-      "진돗개 발령",
-      "DEFCON Korea warning"
+      "진돗개 데프콘 상향 한미일 경고"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "확성기 방송 중단",
-      "North Korea talks offer"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan",
-      "대만 중국 군사훈련"
-    ],
-    "linkage:korea": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261025045900504",
     "https://www.yna.co.kr/view/AKR20261026007400504",
     "https://www.segye.com/newsView/20261026504833",
+    "https://www.yna.co.kr/view/AKR20261025045900504",
     "https://www.segye.com/newsView/20261026504608",
-    "https://www.segye.com/newsView/20261026509506",
-    "https://www.nknews.org/feed/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.yna.co.kr/view/AKR20261026084500504"
   ],
   "overall_summary": "MDL 지뢰 폭발을 둘러싼 남북 안보리 서한전과 북한군 자주포 전진이 이어지나 새 교전·최후통첩은 없다. 직전 회차와 판정 변화 없음(김정은 방중은 24시간 경과로 배경 처리).",
   "items": {
     "troop_movement": {
       "status": "single",
       "routine": false,
-      "region": "경기 파주·개풍군 접경",
-      "lat": 37.78,
+      "region": "서부전선 애기봉 접경",
+      "lat": 37.69,
       "lon": 126.67,
-      "summary": "연합뉴스가 10/25 서부전선에서 북한군 자주포가 남측으로 포구를 향한 채 한국 언론 카메라에 포착됐다고 보도했다.",
-      "meaning": "전방 화력 전진 배치로 접경 긴장이 높아졌으나 단일 출처다.",
+      "summary": "연합뉴스가 10/25 서부전선 애기봉 건너편에서 북한군 122㎜ 자주포가 남하 배치된 것이 한국 언론 카메라에 포착됐다고 보도했다.",
+      "meaning": "접경 화력 전진 배치로 무력시위 또는 추가 전력 배치 가능성이 제기되나 교전은 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -88,10 +60,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "연합 10/25: 북한의 MDL 일대 화력 강화 예고 속에 서부전선 자주포가 한국 언론 카메라에 포착"
+        "애기봉에서 북한군 122㎜ 자주포 남하 배치 확인(연합 보도)"
       ],
       "speculation": [
-        "무력시위 목적일 수 있음"
+        "무력시위·추가 전력 배치 가능성 평가"
       ]
     },
     "nuclear": {
@@ -103,11 +75,11 @@
     "border_clash": {
       "status": "corroborated",
       "routine": true,
-      "region": "DMZ·MDL 일대",
+      "region": "DMZ·유엔",
       "lat": 37.95,
-      "lon": 126.68,
+      "lon": 126.9,
       "summary": "조선중앙통신은 주유엔 대표가 안보리 의장에 서한을 보내 「지뢰폭발은 한국 자작극, 영토 침범 시 자위권 행사」라고 주장했다고 연합·세계일보가 10/26 보도했다.",
-      "meaning": "시한이 없는 조건부 경고로 최후통첩이 아닌 외교 서한상 위협 발언이다.",
+      "meaning": "MDL 지뢰 폭발을 둘러싼 남북 서한전으로 위협 발언 수준이며 새 교전·최후통첩은 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -122,10 +94,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "한국이 10/22 안보리 의장에 보낸 서한에 대한 맞대응",
-        "시한·구체 표적 없음",
-        "새 월선·교전·지뢰 발견 보도 없음",
-        "철원 GOP 철책 접근 30대 여성은 합참이 신병 확보, 조사 중(북한 연계 언급 없음)"
+        "북한이 안보리 의장에 서한 발송, 지뢰폭발은 한국 자작극이라 주장",
+        "한국 정부는 22일 정전협정 위반 서한 발송"
       ],
       "speculation": []
     },
@@ -133,8 +103,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "24시간 경과 — 김정은 단둥 방문 첫 보도 10/24, 이후 새 협정·군사 협력 발표 없음(NK News 피드 확인)."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -149,7 +118,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-26T06:20:03+00:00",
+  "checked_at": "2026-10-26T07:24:27+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

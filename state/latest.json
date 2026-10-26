@@ -45,20 +45,21 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 군사회담 제안 북한 응답"
+      "남북 군사당국회담 제안 북한 응답"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261027001300072",
     "https://www.yna.co.kr/view/AKR20261026143700083",
+    "https://www.yna.co.kr/view/AKR20261027004300098",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815728",
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/2026/10/north-korea-accuses-south-of-fabricating-dmz-land-mine-blasts-in-letter-to-un/",
-    "https://www.nknews.org/2026/10/woman-entered-restricted-area-near-north-korea-border-damaged-fencing-seoul/",
     "https://www.nknews.org/feed/",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전과 접경 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 국방부 군사회담 제안(10/23)에 북한은 아직 응답하지 않았고, 철원 GOP 철책 훼손 30대 여성(북한 연관 확인 없음)이 새로 보도됐다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전과 서부전선 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 국방부 군사회담 제안(10/23)에 북한 응답은 아직 없다.",
   "items": {
     "nuclear": {
       "status": "none"
@@ -148,7 +149,7 @@
       "region": "중국 단둥",
       "lat": 40.12,
       "lon": 124.38,
-      "summary": "김정은의 10/24 단둥 방문에 대해 중국 외교부가 10/26 '북중관계 발전은 확고부동한 방침'이라고만 밝혔고 초청 여부엔 답하지 않았다(연합뉴스).",
+      "summary": "김정은의 10/24 단둥 방문에 대해 중국 외교부가 10/26 '북중관계 발전은 확고부동한 방침'이라고만 밝혔고 초청 여부엔 답하지 않았다(연합뉴스). 스위스 외무장관의 10/29 방북·평양 외교사무소 개소식은 외교 일정이다.",
       "meaning": "외교 일정 성격이며 군사 협정·무기 협력 발표는 없다.",
       "sources": [
         {
@@ -164,7 +165,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-26T19:12:31+00:00",
+  "checked_at": "2026-10-26T20:12:32+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -184,5 +185,5 @@
     }
   ],
   "world_context": "이번 회차 세계 브리핑은 BBC 국제면 한 건만 확인했다.",
-  "world_at": "2026-10-26T17:14:50+00:00"
+  "world_at": "2026-10-26T20:12:32+00:00"
 }

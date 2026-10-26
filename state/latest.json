@@ -5,12 +5,12 @@
       "North Korea artillery border"
     ],
     "nuclear": [
-      "북한 핵실험장 풍계리 동향",
-      "North Korea nuclear test site Punggye-ri"
+      "풍계리 영변 핵시설 동향",
+      "North Korea nuclear Punggye-ri"
     ],
     "logistics": [
-      "북한 군수 탄약 수송 러시아 컨테이너",
-      "North Korea munitions shipment Russia"
+      "북한 군수 탄약 수송 러시아",
+      "North Korea munitions Russia"
     ],
     "border_clash": [
       "목함지뢰 발견",
@@ -19,12 +19,12 @@
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -33,21 +33,31 @@
       "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 한반도"
+      "진돗개 발령 데프콘 상향"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속 간첩 혐의 북한 지령",
       "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 군사회담"
+    ],
+    "linkage:korea": [
+      "북러 군사협력"
     ]
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815702",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815728",
     "https://www.yna.co.kr/view/AKR20261025045900504",
-    "https://www.bbc.co.uk/news/world"
+    "https://www.yna.co.kr/view/AKR20261025034700704",
+    "https://www.yna.co.kr/view/AKR20261026143700083",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "접경 북한군 자주포 노출과 MDL 지뢰폭발을 둘러싼 남북 서한전이 이어지나 새 교전·최후통첩은 없다. 직전 회차와 판정 변화 없음.",
+  "overall_summary": "접경 북한군 자주포 노출과 MDL 지뢰폭발을 둘러싼 남북 서한전이 이어지고 국방부가 군사회담을 제안했으나 새 교전·최후통첩은 없다. 김정은 단둥 당일 방중은 외교 일정으로 직전 회차와 판정 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -114,7 +124,33 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "중국 단둥·신압록강대교",
+      "lat": 40.12,
+      "lon": 124.38,
+      "summary": "김정은이 10/24 시진핑 회담 없이 단둥을 당일 방문했고 중국 외교부는 '북중관계 발전은 확고부동한 방침'이라고만 답했다(연합뉴스).",
+      "meaning": "외교 일정 성격이며 군사 협정·무기 협력 발표는 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261026143700083"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261025034700704"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "왕후닝과 회담 후 당일 귀국",
+        "중국 외교부는 방중 초청·제안 여부에 답하지 않음"
+      ],
+      "speculation": [
+        "북미 대화 전 조율 가능성이라는 분석(SBS)"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -129,7 +165,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-26T12:20:25+00:00",
+  "checked_at": "2026-10-26T13:32:56+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -137,17 +173,39 @@
   ],
   "world": [
     {
-      "title": "머스크, 우크라이나 스타링크 접속 제한 후 복구",
-      "summary": "일론 머스크는 우크라이나가 군사 활동에 스타링크를 써 약관을 위반했다며 접속을 제한했다가 서비스가 복구됐다고 밝혔다.",
-      "link_korea": "러·우 전쟁의 장기화는 북한군 파병·무기 지원과 맞물린 북러 군사협력의 배경이다.",
-      "region": "우크라이나",
+      "title": "중국 공산당 전체회의 개막, 시진핑 당 규율 강화 주목",
+      "summary": "BBC는 비공개로 나흘간 열리는 중국 공산당 전체회의가 월요일 베이징에서 시작됐으며 시진핑이 당 규율을 조일 수 있다고 전했다.",
+      "link_korea": "김정은 방중 직후 열려 북중 관계와 대북 정책 방향에 영향을 줄 수 있다.",
+      "region": "중국",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo",
+        "url": "https://www.bbc.co.uk/news/articles/c6n8djd1078ro",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "일본, 완성 방위장비 첫 OSA 무상 공여로 필리핀에 해안감시레이더 추진",
+      "summary": "NHK는 일본 정부가 안보협력 틀인 OSA로 완성된 방위장비인 해안감시레이더를 필리핀에 공여하는 방향으로 조율에 들어갔다고 보도했다.",
+      "link_korea": "동북아 해상 안보 구도에서 일본의 역내 군사협력 확대로 한미일 공조와 맞물린다.",
+      "region": "일본·필리핀",
+      "source": {
+        "name": "NHK",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261026de66000",
+        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
+      }
+    },
+    {
+      "title": "일본 정부, 외국대리인 등록제 도입 방향 제시",
+      "summary": "NHK는 정부가 외국 정부 등의 부당한 간섭을 막기 위해 외국대리인 등록제를 도입하는 정보기능 강화 법정비 방향을 밝혔다고 전했다.",
+      "link_korea": "외국 영향력 공작 대응이라는 점에서 한국의 혼합위협 대응 논의와 비교된다.",
+      "region": "일본",
+      "source": {
+        "name": "NHK",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261026de66011",
+        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
       }
     }
   ],
-  "world_context": "러·우 전쟁의 통신·전력 변수가 이어지는 가운데 북·중 밀착 외교가 계속되고 있다.",
-  "world_at": "2026-10-26T04:11:33+00:00"
+  "world_context": "중국 정치 일정과 일본의 안보 법제·역내 협력 강화가 김정은 방중 이후 동북아 구도에 겹쳐 있다.",
+  "world_at": "2026-10-26T13:32:56+00:00"
 }

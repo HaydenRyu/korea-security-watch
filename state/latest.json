@@ -14,11 +14,12 @@
     ],
     "border_clash": [
       "지뢰 발견 목함지뢰 해안 DMZ 귀순",
-      "북한 안보리 서한 지뢰폭발"
+      "북한 안보리 서한 지뢰폭발",
+      "북한 자주포 접경 합참 지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 공격"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
@@ -40,7 +41,8 @@
       "North Korea hackers attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 군사회담"
+      "남북 대화 제안 군사회담",
+      "국방부 MDL 군사회담 제안"
     ],
     "factor:inter_korean": [
       "남북 군사회담 제안 확성기",
@@ -72,7 +74,8 @@
     "https://www.segye.com/newsView/20261026500169",
     "https://www.yna.co.kr/view/AKR20261025020800504",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo"
+    "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
   ],
   "overall_summary": "북한군 자주포 접경 전진(연합 10/25)이 단일 출처 징후로 남고, 북한이 안보리 의장에 「지뢰폭발은 자작극·영토 침범 시 자위권」 서한을 보냈으나 위협 발언 수준이다. 김정은 단둥 방문은 외교 일정이며 새 교전·발사 징후는 없다.",
   "items": {
@@ -171,7 +174,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-26T00:10:58+00:00",
+  "checked_at": "2026-10-26T01:11:00+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [
@@ -191,5 +194,5 @@
     }
   ],
   "world_context": "유럽 정치 불안과 러·우 전쟁 속에서 북·중 밀착 외교가 이어지고 있다.",
-  "world_at": "2026-10-26T00:10:58+00:00"
+  "world_at": "2026-10-26T01:11:00+00:00"
 }

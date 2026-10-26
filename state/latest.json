@@ -55,15 +55,14 @@
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261026007400504",
-    "https://www.donga.com/news/Politics/article/all/20261026/134912750/1",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815701",
     "https://www.yna.co.kr/view/AKR20261026143700083",
     "https://www.yna.co.kr/view/AKR20261025045900504",
     "https://www.donga.com/news/Politics/article/all/20261026/134906494/1",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://www.aljazeera.com/xml/rss/all.xml"
   ],
-  "overall_summary": "접경 긴장(자주포 노출·MDL 지뢰 서한전)이 이어지나 교전·최후통첩은 없고 직전 회차와 같은 수준이다. 김정은 방중은 외교 일정 성격이며 군사 합의 발표는 없다.",
+  "overall_summary": "접경 긴장(자주포 노출·MDL 지뢰 서한전)이 이어지나 새 교전이나 최후통첩은 없고 직전 회차와 같은 수준이다. 김정은 방중은 외교 일정 성격이며 군사 합의 발표는 없다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -122,11 +121,6 @@
           "name": "국방일보",
           "tier": "B",
           "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
-        },
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815701"
         }
       ],
       "confidence": "중간",
@@ -173,7 +167,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-26T15:11:31+00:00",
+  "checked_at": "2026-10-26T16:16:39+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -181,39 +175,28 @@
   ],
   "world": [
     {
-      "title": "중국 공산당 전체회의 개막, 시진핑 당 규율 강화 주목",
-      "summary": "BBC는 비공개로 나흘간 열리는 중국 공산당 전체회의가 월요일 베이징에서 시작됐으며 시진핑이 당 규율을 조일 수 있다고 전했다.",
-      "link_korea": "김정은 방중 직후 열려 북중 관계와 대북 정책 방향에 영향을 줄 수 있다.",
-      "region": "중국",
+      "title": "이집트 의회, 사우디에 군사 지원 승인",
+      "summary": "알자지라는 이집트 의회가 사우디아라비아에 대한 군사 지원을 승인했다고 보도했다.",
+      "link_korea": "중동 안보 불안이 미군 전력 배치와 에너지 공급에 영향을 줄 수 있다.",
+      "region": "중동",
       "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6n8djd1078ro",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "name": "알자지라",
+        "url": "https://www.aljazeera.com/news/2026/10/26/egyptian-parliament-authorises-military-aid-for-saudi-arabia",
+        "via": "https://www.aljazeera.com/xml/rss/all.xml"
       }
     },
     {
-      "title": "일본, 완성 방위장비 첫 OSA 무상 공여로 필리핀에 해안감시레이더 추진",
-      "summary": "NHK는 일본 정부가 안보협력 틀인 OSA로 완성된 방위장비인 해안감시레이더를 필리핀에 공여하는 방향으로 조율에 들어갔다고 보도했다.",
-      "link_korea": "동북아 해상 안보 구도에서 일본의 역내 군사협력 확대로 한미일 공조와 맞물린다.",
-      "region": "일본·필리핀",
+      "title": "메카 방위동맹 대표단, 이란·미국·예멘 긴장 완화 위해 테헤란 방문",
+      "summary": "알자지라는 메카 방위동맹 회원국 대표단이 이란·미국·예멘 간 긴장 완화를 위해 테헤란을 찾았다고 보도했다.",
+      "link_korea": "미국의 중동 군사 부담이 한반도 미군 전력 운용에 영향을 줄 수 있다.",
+      "region": "이란",
       "source": {
-        "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261026de66000",
-        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
-      }
-    },
-    {
-      "title": "일본 정부, 외국대리인 등록제 도입 방향 제시",
-      "summary": "NHK는 정부가 외국 정부 등의 부당한 간섭을 막기 위해 외국대리인 등록제를 도입하는 정보기능 강화 법정비 방향을 밝혔다고 전했다.",
-      "link_korea": "외국 영향력 공작 대응이라는 점에서 한국의 혼합위협 대응 논의와 비교된다.",
-      "region": "일본",
-      "source": {
-        "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261026de66011",
-        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
+        "name": "알자지라",
+        "url": "https://www.aljazeera.com/news/2026/10/26/mecca-defence-alliance-members-in-tehran-to-defuse-iran-us-yemen-tensions",
+        "via": "https://www.aljazeera.com/xml/rss/all.xml"
       }
     }
   ],
-  "world_context": "중국 정치 일정과 일본의 안보 법제·역내 협력 강화가 김정은 방중 이후 동북아 구도에 겹쳐 있다.",
-  "world_at": "2026-10-26T13:32:56+00:00"
+  "world_context": "중동 긴장 완화 외교가 이어지는 가운데 미군 전력 배분이 한반도 억제 태세와 연결된다.",
+  "world_at": "2026-10-26T16:16:39+00:00"
 }

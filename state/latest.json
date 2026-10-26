@@ -2,7 +2,6 @@
   "coverage": {
     "troop_movement": [
       "news_kr 수집 묶음(자주포·접경 화력)",
-      "SBS 원문 열람",
       "North Korea artillery border"
     ],
     "nuclear": [
@@ -15,18 +14,18 @@
     ],
     "border_clash": [
       "지뢰 발견 DMZ",
-      "목함지뢰 해안 발견",
+      "목함지뢰 해안",
       "귀순 NLL",
-      "North Korea DMZ landmine letter Security Council"
+      "North Korea DMZ landmine letter UN"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
+      "북한 GPS 교란 합참",
       "해킹 개인정보 유출",
       "사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 후속",
-      "North Korea Kim Jong Un China Russia visit",
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -35,7 +34,7 @@
     ],
     "nk_internal": [
       "news_kr 수집 묶음(후보 없음)",
-      "North Korea nationwide blackout mobilization"
+      "North Korea blackout mobilization"
     ],
     "gov_warning": [
       "news_kr alert 묶음 확인",
@@ -43,7 +42,7 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 FBI North Korea attributed"
+      "North Korea attributed FBI"
     ],
     "calm": [
       "남북 군사회담 제안 북한 응답"
@@ -52,12 +51,14 @@
   "opened": [
     "https://www.yna.co.kr/view/AKR20261027001300072",
     "https://www.yna.co.kr/view/AKR20261026143700083",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815701",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/2026/10/north-korea-accuses-south-of-fabricating-dmz-land-mine-blasts-in-letter-to-un/",
+    "https://www.nknews.org/2026/10/woman-entered-restricted-area-near-north-korea-border-damaged-fencing-seoul/",
+    "https://www.nknews.org/feed/",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전이 회람 단계로 이어지고 접경 자주포 노출이 계속되나 새 교전·최후통첩은 없다. 국방부의 군사회담 제안(10/23)에 북한은 아직 응답하지 않았다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전과 접경 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 국방부 군사회담 제안(10/23)에 북한은 아직 응답하지 않았고, 철원 GOP 철책 훼손 30대 여성(북한 연관 확인 없음)이 새로 보도됐다.",
   "items": {
     "nuclear": {
       "status": "none"
@@ -118,9 +119,9 @@
       "meaning": "서한전·회담 제안 단계로 새 교전이나 시한부 최후통첩은 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261027001300072"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/10/north-korea-accuses-south-of-fabricating-dmz-land-mine-blasts-in-letter-to-un/"
         },
         {
           "name": "국방일보",
@@ -128,15 +129,16 @@
           "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
         },
         {
-          "name": "SBS",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815701"
+          "url": "https://www.yna.co.kr/view/AKR20261027001300072"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "북한 안보리 서한 회람(연합 10/27 01:24 KST)",
-        "국방부 군사회담 제안에 북한 무응답(SBS·국방일보)"
+        "북한 유엔대표부가 안보리 의장에 서한, KCNA 10/26 공개(NK News)",
+        "국방부 군사회담 제안(10/23) 보도에 북한 응답 없음(국방일보)",
+        "철원 민통선 북쪽 GOP 철책 훼손 30대 여성 신병 확보 — 북한 연관 확인 없음(NK News), 배경"
       ],
       "speculation": []
     },
@@ -162,7 +164,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-26T18:11:40+00:00",
+  "checked_at": "2026-10-26T19:12:31+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

@@ -15,22 +15,18 @@
     "border_clash": [
       "목함지뢰 해안",
       "지뢰 발견",
-      "DMZ MDL 경고사격",
-      "NLL 귀순",
-      "North Korea DMZ mine"
+      "DMZ MDL 경고사격 귀순",
+      "NLL 귀순"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "North Korea GPS jamming"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
       "Kim Jong Un China Russia visit",
       "서해 구조물",
-      "주한미군 감축",
-      "북러 군사협력"
+      "주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결",
@@ -62,37 +58,18 @@
     "linkage:korea": [
       "북러 군사협력",
       "North Korea troops Russia"
-    ],
-    "factor:nk_domestic": [
-      "북한 당 회의",
-      "North Korea party plenary"
-    ],
-    "factor:inter_korean": [
-      "확성기 전단 오물풍선",
-      "North Korea loudspeaker"
-    ],
-    "factor:great_powers": [
-      "김정은 방중",
-      "US North Korea talks"
-    ],
-    "factor:public_opinion": [
-      "북한 대남 비난",
-      "North Korea denounces South"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261025045900504",
-    "https://www.yna.co.kr/view/AKR20261026076100504",
-    "https://www.yna.co.kr/view/AKR20261026055800060",
     "https://www.yna.co.kr/view/AKR20261026007400504",
     "https://www.segye.com/newsView/20261026504833",
     "https://www.segye.com/newsView/20261026504608",
-    "https://www.segye.com/newsView/20261026500169",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nknews.org/feed/"
+    "https://www.segye.com/newsView/20261026509506",
+    "https://www.nknews.org/feed/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "MDL 지뢰 폭발을 둘러싼 남북 안보리 서한전과 북한군 자주포 전진이 이어지나 새 교전·최후통첩은 없다. 직전 회차와 판정 변화 없음.",
+  "overall_summary": "MDL 지뢰 폭발을 둘러싼 남북 안보리 서한전과 북한군 자주포 전진이 이어지나 새 교전·최후통첩은 없다. 직전 회차와 판정 변화 없음(김정은 방중은 24시간 경과로 배경 처리).",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -156,31 +133,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "중국 단둥",
-      "lat": 40.12,
-      "lon": 124.38,
-      "summary": "김정은이 10/24 당일치기로 단둥을 방문해 왕후닝과 회동했고 시진핑 회담·군 인사 동행·군사 협정 발표는 없었다.",
-      "meaning": "경협·외교 성격의 정상급 방문으로 군사 협력 신호는 확인되지 않았다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261026500169"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261026076100504"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "신압록강대교 경협 부각, 시진핑 회담 없음",
-        "연합 10/26: 통일부 「김정은 방중이 대화 재개에 기여하길 기대」"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 김정은 단둥 방문 첫 보도 10/24, 이후 새 협정·군사 협력 발표 없음(NK News 피드 확인)."
     },
     "parade_massing": {
       "status": "none"
@@ -195,7 +149,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-26T05:11:42+00:00",
+  "checked_at": "2026-10-26T06:20:03+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

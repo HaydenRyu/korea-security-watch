@@ -1,21 +1,17 @@
 {
   "version": 1,
-  "at": "2026-10-27T11:16:00+00:00",
+  "at": "2026-10-27T23:10:39+00:00",
   "domains": {
     "inter_korean": {
       "level": "긴장",
       "sources": [
         {
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-          "publisher": "국방일보"
-        },
-        {
-          "url": "https://www.segye.com/newsView/20261027510501",
+          "url": "https://www.segye.com/newsView/20261027516201",
           "publisher": "세계일보"
         }
       ],
-      "summary": "국방부가 MDL 관련 군사회담을 제안했으나 북은 응답하지 않고 합참은 북 자주포 노출과 MDL 근접 작업을 주시 중이다.",
-      "at": "2026-10-27T11:16:00+00:00",
+      "summary": "합참이 북 자주포 노출과 MDL 근접 작업을 주시 중이다.",
+      "at": "2026-10-27T23:10:39+00:00",
       "since": "2026-10-21T01:11:21+00:00"
     },
     "nk_domestic": {
@@ -27,9 +23,14 @@
     },
     "great_powers": {
       "level": "보통",
-      "sources": [],
-      "summary": "김정은 방중 관련 군사 합의 발표는 없다.",
-      "at": "2026-10-27T11:16:00+00:00",
+      "sources": [
+        {
+          "url": "https://www.segye.com/newsView/20261027516199",
+          "publisher": "세계일보"
+        }
+      ],
+      "summary": "장관들은 김정은 방중에서 북미대화 논의 가능성을 언급했으나 공식 합의 발표는 없다.",
+      "at": "2026-10-27T23:10:39+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     },
     "public_opinion": {

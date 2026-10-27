@@ -5,37 +5,32 @@
       "North Korea artillery border"
     ],
     "nuclear": [
-      "북한 영변 핵",
-      "North Korea nuclear Yongbyon"
+      "북한 영변 핵"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 탄약 수송"
     ],
     "border_clash": [
       "목함지뢰 발견 해안",
-      "DMZ 귀순 합참",
-      "North Korea DMZ"
+      "DMZ 귀순 합참"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "DEFCON Korea"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -44,17 +39,22 @@
     "calm": [
       "남북 대화 제안 통신선",
       "North Korea talks offer"
+    ],
+    "factor:inter_korean": [
+      "확성기 전단 오물풍선 북한"
+    ],
+    "factor:great_powers": [
+      "Kim Jong Un China visit US talks"
     ]
   },
   "opened": [
     "https://www.nknews.org/feed/",
     "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
+    "https://www.segye.com/newsView/20261027516201",
     "https://www.segye.com/newsView/20261027516199",
-    "https://www.segye.com/newsView/20261027511311",
-    "https://www.yna.co.kr/view/AKR20261027093000504",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/2026/10/swiss-foreign-minister-to-visit-north-korea-this-week-to-open-political-office/"
   ],
-  "overall_summary": "접경 구형포 노출 보도가 이어지나 새 충돌·병력 증강·핵 징후는 없어 직전과 같은 경계 수준이다. 국감 지뢰 공방과 주한미군 사령관 발언 항의는 배경이다.",
+  "overall_summary": "접경 구형포 노출 보도가 이어지나 새 충돌·병력 증강·핵 징후는 없어 직전과 같은 경계 수준이다. 김정은 방중 후속·국감 지뢰 공방은 배경이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -62,7 +62,7 @@
       "region": "경기 김포 건너 개풍군",
       "lat": 37.7,
       "lon": 126.5,
-      "summary": "합참이 10/27 정례브리핑에서 북한이 MDL 일대 해안에 구형포를 노출 배치하고 근접 작업이 계속된다고 확인했고, NK News도 개풍군 122mm 자주포 배치를 보도했다.",
+      "summary": "합참이 10/27 정례브리핑에서 북한이 개풍군 해안에 구형포를 노출 배치하고 MDL 근접 작업이 계속된다고 밝혔고, NK News도 애기봉에서 122mm 자주포 배치를 보도했다.",
       "meaning": "전방 포병 전력의 가시적 노출로 대남 압박 의도가 있으나 병력 증강 근거는 아직 없다.",
       "sources": [
         {
@@ -71,18 +71,18 @@
           "url": "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
         },
         {
-          "name": "연합뉴스(합참 브리핑)",
+          "name": "세계일보(합참 브리핑)",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261027093000504"
+          "url": "https://www.segye.com/newsView/20261027516201"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "합참: 북한군이 구형포를 해안에 배치·노출, MDL 근접 작업 지속, 새 무기체계는 아님",
-        "NK News: 애기봉 전망대에서 조강 북안 122mm 자주포(M-1981) 최소 3문 확인, 인근 병사는 보이지 않음"
+        "합참: 구형포를 해안에 노출, MDL 근접 작업 지속, 김여정 담화의 신형 무기는 아님, 의도 파악 중",
+        "NK News: 애기봉에서 조강 북안 122mm 자주포 최소 3문 확인, 주변 병사는 보이지 않음"
       ],
       "speculation": [
-        "국방부 장관: 배치에 의도와 목적이 없을 수 없음(의도는 미확정)"
+        "북한 의도는 합참도 미확정"
       ]
     },
     "nuclear": {
@@ -93,15 +93,15 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "국감 지뢰 공방·민간인 GOP 철책 훼손 조사는 새 충돌이 아니라 배경이다."
+      "summary": "국감 지뢰 공방과 민간인 GOP 철책 훼손 조사는 새 충돌이 아니라 배경이다(10/24~25 사건, 24시간 경과)."
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "24시간 경과 — 미래에셋생명 유출 첫 보도 10/26, 새 사고·귀속 발표 없음."
+      "summary": "24시간 경과 — 새 사고·귀속 발표 없음."
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김정은 방중(10/24) 후속 보도는 24시간 경과한 외교 일정 배경이다."
+      "summary": "김정은 방중(10/24)은 24시간 경과한 외교 일정 배경이며 새 군사 합의 발표는 없다."
     },
     "parade_massing": {
       "status": "none"
@@ -116,7 +116,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T22:10:30+00:00",
+  "checked_at": "2026-10-27T23:10:39+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

@@ -14,18 +14,18 @@
     ],
     "border_clash": [
       "지뢰 발견",
+      "GOP 철책 훼손 민간인 합참 조사",
       "DMZ 귀순",
       "North Korea DMZ MDL"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
+      "해킹 개인정보 유출 사이버 공격",
       "North Korea hacking attributed"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "주한미군 감축"
+      "김정은 방중 서해 구조물 주한미군 감축",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -56,12 +56,13 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261027510420",
-    "https://www.segye.com/newsView/20261027510501",
     "https://www.segye.com/newsView/20261027511311",
+    "https://www.segye.com/newsView/20261027516199",
+    "https://www.segye.com/newsView/20261027510501",
+    "https://www.yna.co.kr/view/AKR20261027093000504",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "MDL 인근 구형 자주포 노출과 지뢰 폭발을 둘러싼 국감 공방이 이어지나 새 무력 충돌은 없다. 직전 회차와 큰 변화 없는 경계 수준의 정례 국면이다.",
+  "overall_summary": "합참이 서부전선 해안의 북한군 구형 자주포 노출과 MDL 근접 작업을 확인했고, 국감에서는 DMZ 지뢰와 김정은 방중 해석이 쟁점이나 새 무력 충돌은 없다. 직전 회차와 같은 경계 수준의 정례 국면이다.",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -69,7 +70,7 @@
       "region": "경기 김포 건너 개풍군",
       "lat": 37.7,
       "lon": 126.5,
-      "summary": "합참이 북한군이 서부전선 전방에 구형 122㎜ 자주포 추정 화기를 노출했고 MDL 근접 작업이 진행 중이라고 밝혔다(세계일보 전재, 10/27).",
+      "summary": "합참 공보실장이 27일 정례브리핑에서 북한군이 서부전선 최전방 해안에 구형 122㎜ 추정 자주포를 노출 배치했고 MDL 근접 작업이 진행 중이라고 밝혔다.",
       "meaning": "전방 포병 전력의 가시적 노출로 대남 압박 의도가 있으나 병력 증강 근거는 아직 없다.",
       "sources": [
         {
@@ -98,13 +99,18 @@
       "region": "DMZ 서부",
       "lat": 38.0,
       "lon": 126.9,
-      "summary": "정동영 통일부 장관이 국감에서 9월 DMZ 지뢰 폭발을 도발로 규정했고(고의 여부는 확인 필요), 국방부가 제안한 MDL 군사당국회담에 북한 응답은 보도되지 않았으며 새 무력 충돌은 없다.",
+      "summary": "국감에서 정부가 북한군 DMZ 지뢰 매설을 정전협정 위반으로 본다고 밝혔고, 철원 GOP 철책 훼손은 30대 여성 민간인 사건으로 합참이 대공 혐의점 없다고 밝혔으며 새 무력 충돌은 없다.",
       "meaning": "외교전·여론전 국면이며 새 무력 충돌은 보도되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261027510420"
+          "url": "https://www.segye.com/newsView/20261027516199"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261027093000504"
         }
       ],
       "confidence": "중간",
@@ -118,7 +124,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 24일 방중은 24시간 경과, 27일 국감 논평만 있어 배경으로 둔다(첫 보도 10/24)."
     },
     "parade_massing": {
       "status": "none"
@@ -127,14 +134,13 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none",
-      "summary": "한·미 간 주한미군사령관 발언 항의 등 외교 마찰만 있고 긴급 경고·동원 조치는 없다."
+      "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T09:11:03+00:00",
+  "checked_at": "2026-10-27T10:12:35+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

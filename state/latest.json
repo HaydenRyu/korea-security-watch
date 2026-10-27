@@ -1,7 +1,7 @@
 {
   "coverage": {
     "troop_movement": [
-      "애기봉 자주포 접경 화력",
+      "애기봉 자주포",
       "North Korea artillery border"
     ],
     "nuclear": [
@@ -10,12 +10,11 @@
     ],
     "logistics": [
       "북한 탄약 수송 러시아",
-      "North Korea ammunition shipment Russia"
+      "North Korea ammunition Russia"
     ],
     "border_clash": [
-      "북한 합참 지뢰 귀순 NLL 10월 27일",
-      "목함지뢰 해안",
-      "North Korea DMZ landmine letter UN"
+      "북한 지뢰 귀순 NLL 합참 10월 27일",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -23,12 +22,12 @@
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결",
-      "North Korea parade massing"
+      "North Korea parade"
     ],
     "nk_internal": [
       "북한 등화관제 준전시",
@@ -48,16 +47,17 @@
   },
   "opened": [
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/kim-jong-uns-surprise-china-visit-and-rising-tensions-at-the-dmz/",
     "https://www.segye.com/newsView/20261027500455",
+    "https://www.segye.com/newsView/20261027508942",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
-    "https://www.yna.co.kr/view/AKR20261027001300072",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815872",
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261026143700083",
-    "https://www.nknews.org/2026/10/north-korea-accuses-south-of-fabricating-dmz-land-mine-blasts-in-letter-to-un/"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815873",
+    "https://www.donga.com/news/Politics/article/all/20261027/134913203/2",
+    "https://www.nknews.org/2026/10/woman-entered-restricted-area-near-north-korea-border-damaged-fencing-seoul/"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한(이사국 회람)과 애기봉 건너편 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 김정은 방중(10/24 단둥)은 외교 일정이며 군사 합의 발표는 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한 안보리 서한전과 애기봉 건너편 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 김정은 방중은 외교 일정이며 군사 합의 발표는 없다.",
   "items": {
     "nuclear": {
       "status": "none"
@@ -81,23 +81,23 @@
       "status": "none"
     },
     "troop_movement": {
-      "status": "corroborated",
+      "status": "single",
       "routine": false,
       "region": "서부전선 애기봉 접경",
       "lat": 37.69,
       "lon": 126.67,
-      "summary": "SBS가 10/26 서부전선 애기봉 건너편 북측 해안의 자주포 전진 배치를 자체 카메라로 포착해 보도했고 연합이 같은 접경 화력 강화 정황을 전했다.",
+      "summary": "SBS가 10/26 애기봉 건너편 북측 해안의 자주포 노출·포신 이동을 자체 카메라로 포착해 보도했다.",
       "meaning": "접경 화력 전진 배치로 무력시위 성격이 강하나 교전은 없다.",
       "sources": [
         {
           "name": "SBS",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815872"
         },
         {
-          "name": "연합뉴스",
+          "name": "국방일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261027001300072"
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
         }
       ],
       "confidence": "중간",
@@ -118,9 +118,9 @@
       "meaning": "서한전·회담 제안 단계로 새 교전이나 시한부 최후통첩은 없다.",
       "sources": [
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/north-korea-accuses-south-of-fabricating-dmz-land-mine-blasts-in-letter-to-un/"
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261027500455"
         },
         {
           "name": "국방일보",
@@ -157,9 +157,9 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-27T02:10:58+00:00",
-  "grade": 2,
-  "grade_label": "경계",
+  "checked_at": "2026-10-27T04:10:22+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": [
     "troop_movement"
   ],
@@ -177,11 +177,5 @@
     }
   ],
   "world_context": "이번 회차 세계 브리핑은 BBC 국제면 한 건만 확인했다.",
-  "world_at": "2026-10-26T22:11:22+00:00",
-  "held": {
-    "raw_grade": 1,
-    "raw_label": "주의",
-    "at": "2026-10-27T03:10:35+00:00",
-    "summary": "북한의 안보리 서한(DMZ 지뢰 자작극 주장)과 애기봉 맞은편 자주포 노출 등 접경 긴장은 이어지나 새 교전·사상자는 없다. 직전 경계(2) 흐름과 같은 수준이다."
-  }
+  "world_at": "2026-10-26T22:11:22+00:00"
 }

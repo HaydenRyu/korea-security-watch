@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-26T23:08:04+00:00",
+ "fetched_at": "2026-10-27T00:18:39+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-10-26T21:54:41+00:00",
@@ -8,12 +8,12 @@
   "feeds": 15,
   "feeds_failed": 1,
   "fetched": 1100,
-  "hits": 86,
+  "hits": 85,
   "clusters": 60,
   "by_group": {
-   "border": 16,
-   "summit": 36,
-   "mine": 7,
+   "border": 17,
+   "summit": 35,
+   "mine": 8,
    "alert": 2,
    "drone_balloon": 7,
    "gps": 2,
@@ -28,7 +28,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 600,
-   "hits": 82
+   "hits": 79
   },
   "SBS": {
    "feeds": 3,
@@ -40,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 12
+   "hits": 11
   },
   "국민일보": {
    "feeds": 2,
@@ -64,19 +64,19 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "border": {
-   "clusters": 16,
+   "clusters": 17,
    "max_independent": 4,
-   "latest": "2026-10-26T23:08:04+00:00"
+   "latest": "2026-10-27T00:18:39+00:00"
   },
   "summit": {
-   "clusters": 36,
+   "clusters": 35,
    "max_independent": 2,
-   "latest": "2026-10-26T23:08:04+00:00"
+   "latest": "2026-10-27T00:18:39+00:00"
   },
   "mine": {
-   "clusters": 7,
+   "clusters": 8,
    "max_independent": 4,
-   "latest": "2026-10-26T23:01:00+00:00"
+   "latest": "2026-10-26T23:27:00+00:00"
   },
   "alert": {
    "clusters": 2,
@@ -129,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 8
+   "hits": 7
   },
   {
    "outlet": "연합뉴스",
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 0
   },
   {
    "outlet": "SBS",
@@ -193,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "국민일보",

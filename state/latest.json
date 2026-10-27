@@ -13,18 +13,17 @@
       "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "북한 합참 발표 오늘 지뢰 귀순 NLL 확성기",
+      "북한 합참 지뢰 귀순 NLL 10월 27일",
       "목함지뢰 해안",
       "North Korea DMZ landmine letter UN"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 10월 27일",
-      "서해 구조물 주한미군 감축"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "North Korea Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -37,7 +36,7 @@
     ],
     "gov_warning": [
       "진돗개 데프콘 발령",
-      "North Korea missile launch Japan Ministry of Defense October 2026"
+      "North Korea missile launch Japan Ministry of Defense"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -49,14 +48,16 @@
   },
   "opened": [
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/woman-entered-restricted-area-near-north-korea-border-damaged-fencing-seoul/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/2026/10/kim-jong-uns-surprise-china-visit-and-rising-tensions-at-the-dmz/",
+    "https://www.segye.com/newsView/20261027500455",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
-    "https://www.yna.co.kr/view/AKR20261026143700083",
     "https://www.yna.co.kr/view/AKR20261027001300072",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261026143700083",
     "https://www.nknews.org/2026/10/north-korea-accuses-south-of-fabricating-dmz-land-mine-blasts-in-letter-to-un/"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전(10/26 회람)과 애기봉 건너편 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 국방부 군사회담 제안(10/23)에 북한 응답은 아직 없고, 철원 민통선 민간인 철책 훼손은 북한 연계 근거가 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한(이사국 회람)과 애기봉 건너편 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 김정은 방중(10/24 단둥)은 외교 일정이며 군사 합의 발표는 없다.",
   "items": {
     "nuclear": {
       "status": "none"
@@ -156,7 +157,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-27T01:12:21+00:00",
+  "checked_at": "2026-10-27T02:10:58+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

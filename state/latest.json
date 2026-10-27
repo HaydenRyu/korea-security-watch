@@ -20,10 +20,10 @@
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격 북한"
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방중 방러",
       "Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
@@ -56,15 +56,11 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261027511311",
     "https://www.yna.co.kr/view/AKR20261027093000504",
+    "https://www.segye.com/newsView/20261027511311",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/deepfakes-of-north-korean-forces-massing-on-border-go-viral-as-tensions-rise/",
-    "https://www.nknews.org/2026/10/swiss-foreign-minister-to-visit-north-korea-this-week-to-open-political-office/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008817659",
+    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
     "https://www.khan.co.kr/article/202610261921011",
-    "https://www.yna.co.kr/view/AKR20261026007400504",
-    "https://www.yna.co.kr/view/AKR20261027099851504",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
   "overall_summary": "합참이 접경 구형포 노출과 MDL 근접 작업 지속을 확인했으나 새 충돌·병력 증강 근거는 없어 직전과 같은 경계 수준이다. 국내 금융권 연쇄 해킹이 있으나 귀속은 미확인이다.",
@@ -81,7 +77,7 @@
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/2026/10/deepfakes-of-north-korean-forces-massing-on-border-go-viral-as-tensions-rise/"
+          "url": "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
         },
         {
           "name": "연합뉴스(합참 브리핑)",
@@ -92,7 +88,7 @@
       "confidence": "중간",
       "facts": [
         "합참: 북한군이 구형포를 해안에 배치·노출, MDL 근접 작업 지속, 새 무기체계는 아님",
-        "NK News: 개풍군 1.5km 거리 122mm 자주포 배치(과장된 딥페이크가 유포됨)"
+        "NK News: 애기봉 전망대에서 조강 북안 122mm 자주포(M-1981) 최소 3문 확인, 인근 병사는 보이지 않음"
       ],
       "speculation": [
         "국방부 장관: 배치에 의도와 목적이 없을 수 없음(의도는 미확정)"
@@ -148,7 +144,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T18:13:05+00:00",
+  "checked_at": "2026-10-27T19:11:57+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

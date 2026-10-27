@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T11:16:00+00:00",
+  "updated_at": "2026-10-27T12:16:35+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -13,7 +13,7 @@
           "id": "dialogue_offer",
           "label": "남북·북미 대화 제안·수용",
           "state": "on",
-          "note": "국방부가 10/23 담화로 MDL 위치 확인·군통신선 복원을 위한 남북 군사당국회담을 북측에 공식 제안했다."
+          "note": "국방부가 10/23 군사당국회담을 공식 제안했으나 북한은 아직 응답하지 않았다."
         },
         {
           "id": "channel_restored",
@@ -186,18 +186,18 @@
   ],
   "calm": {
     "dialogue_offer": {
-      "summary": "국방부가 10/23 담화로 MDL 위치 확인·군통신선 복원을 위한 남북 군사당국회담을 북측에 공식 제안했다.",
+      "summary": "국방부가 10/23 군사당국회담을 공식 제안했으나 북한은 아직 응답하지 않았다.",
       "sources": [
         {
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-          "publisher": "국방일보"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008817659",
+          "publisher": "SBS"
         }
       ],
       "first_seen": "2026-10-23T05:10:46+00:00",
-      "last_seen": "2026-10-27T11:16:00+00:00"
+      "last_seen": "2026-10-27T12:16:35+00:00"
     }
   },
-  "calm_judged_at": "2026-10-27T11:16:00+00:00",
+  "calm_judged_at": "2026-10-27T12:16:35+00:00",
   "history": [
     {
       "date": "2026-10-22",

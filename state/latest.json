@@ -47,38 +47,21 @@
     "calm": [
       "남북 대화 제안",
       "North Korea talks offer"
-    ],
-    "factor:nk_domestic": [
-      "북한 당 전원회의 숙청",
-      "North Korea party plenum"
-    ],
-    "factor:inter_korean": [
-      "남북 군사당국회담 제안",
-      "확성기 방송"
-    ],
-    "factor:great_powers": [
-      "북미대화 김정은 방중",
-      "North Korea US talks"
-    ],
-    "factor:public_opinion": [
-      "북한 대남 비난 담화",
-      "North Korea statement South"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261027511311",
-    "https://www.segye.com/newsView/20261027516199",
     "https://www.segye.com/newsView/20261027510501",
-    "https://www.yna.co.kr/view/AKR20261027099800504",
-    "https://www.yna.co.kr/view/AKR20261027093900704",
-    "https://www.yna.co.kr/view/AKR20261027085251504",
     "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.nknews.org/feed/",
     "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
+    "https://www.nknews.org/2026/10/kim-jong-uns-surprise-china-visit-and-rising-tensions-at-the-dmz/",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008817659",
+    "https://www.yna.co.kr/view/AKR20261027111300504",
+    "https://www.yna.co.kr/view/AKR20261027158900504",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
+    "https://www.segye.com/newsView/20261027516199"
   ],
-  "overall_summary": "북한군 자주포가 서부전선 해안(김포 애기봉 맞은편)에서 합참 확인과 NK News 사진으로 교차 확인됐으나 새 충돌은 없다. 국감에서 DMZ 지뢰·김정은 방중 해석이 쟁점이며 직전 회차와 같은 경계 수준이다.",
+  "overall_summary": "북한군 구형 자주포·해안포 노출 배치가 합참 확인과 NK News로 이어지고 있으나 새 충돌·병력 증강은 없다. 군사회담 제안에 북한은 무응답이고 국감에서 DMZ 지뢰·김정은 방중 해석이 쟁점으로 직전 회차와 같은 경계 수준이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -121,24 +104,24 @@
       "region": "DMZ 서부",
       "lat": 38.0,
       "lon": 126.9,
-      "summary": "국감에서 정부가 DMZ 북한군 지뢰 매설 문제를 논의했고 철원 GOP 철책 훼손은 민간인 사건으로 군이 민통선 관련 해명에 나섰으나 새 무력 충돌은 없다.",
+      "summary": "북한이 개성 고군리 등 접경 해안에서 해안포 갱도를 열고 포신을 노출한 모습이 포착됐고(SBS), 합참은 구형포 노출이며 새 무기는 아니라고 밝혔다. 새 무력 충돌은 없다.",
       "meaning": "외교전·여론전 국면이며 새 무력 충돌은 보도되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261027516199"
+          "url": "https://www.segye.com/newsView/20261027510501"
         },
         {
-          "name": "국방일보",
+          "name": "SBS",
           "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008817659"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "국방부 10/23 군사당국회담 공식 제안",
-        "북한 응답 확인 안 됨"
+        "SBS 10/27: 개성 고군리 해안포 포문 개방·포신 남향, 합참 「구형포 노출, 새 무기 아님」",
+        "군사회담 제안에 북한 무응답"
       ],
       "speculation": []
     },
@@ -162,7 +145,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T11:16:00+00:00",
+  "checked_at": "2026-10-27T12:16:35+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

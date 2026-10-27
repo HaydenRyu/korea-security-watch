@@ -1,7 +1,6 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집기 접경 묶음",
       "애기봉 北 자주포",
       "North Korea artillery border"
     ],
@@ -14,14 +13,14 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "목함지뢰 해안",
-      "북한 해안포 개방 접경"
+      "목함지뢰 발견 해안",
+      "DMZ 귀순 합참",
+      "North Korea DMZ"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격"
+      "사이버 공격 북한"
     ],
     "foreign_forces": [
       "김정은 방중",
@@ -30,24 +29,24 @@
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea blackout"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 데프콘 발령",
+      "DEFCON Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hackers"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선",
+      "North Korea talks offer"
     ],
     "linkage:korea": [
       "North Korea troops Russia"
@@ -57,15 +56,18 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261027516199",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261027511311",
+    "https://www.yna.co.kr/view/AKR20261027093000504",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
-    "https://www.nknews.org/2026/10/kim-jong-uns-surprise-china-visit-and-rising-tensions-at-the-dmz/",
-    "https://www.yna.co.kr/view/AKR20261027102200704",
+    "https://www.nknews.org/2026/10/deepfakes-of-north-korean-forces-massing-on-border-go-viral-as-tensions-rise/",
+    "https://www.nknews.org/2026/10/swiss-foreign-minister-to-visit-north-korea-this-week-to-open-political-office/",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008817659",
+    "https://www.khan.co.kr/article/202610261921011",
+    "https://www.yna.co.kr/view/AKR20261026007400504",
+    "https://www.yna.co.kr/view/AKR20261027099851504",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "접경 자주포 노출 배치와 국감 지뢰 공방이 이어지나 새 충돌·병력 증강 근거는 없다. 직전 회차와 같은 경계 수준이다.",
+  "overall_summary": "합참이 접경 구형포 노출과 MDL 근접 작업 지속을 확인했으나 새 충돌·병력 증강 근거는 없어 직전과 같은 경계 수준이다. 국내 금융권 연쇄 해킹이 있으나 귀속은 미확인이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -73,27 +75,27 @@
       "region": "경기 김포 건너 개풍군",
       "lat": 37.7,
       "lon": 126.5,
-      "summary": "NK News가 애기봉에서 조강 북측 자주포 최소 3문을 촬영해 보도했고 연합뉴스도 같은 포착 영상을 전했다.",
+      "summary": "합참이 10/27 정례브리핑에서 북한이 MDL 일대 해안에 구형포를 노출 배치하고 근접 작업이 계속된다고 확인했고, NK News도 개풍군 122mm 자주포 배치를 보도했다.",
       "meaning": "전방 포병 전력의 가시적 노출로 대남 압박 의도가 있으나 병력 증강 근거는 아직 없다.",
       "sources": [
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
+          "url": "https://www.nknews.org/2026/10/deepfakes-of-north-korean-forces-massing-on-border-go-viral-as-tensions-rise/"
         },
         {
-          "name": "연합뉴스",
+          "name": "연합뉴스(합참 브리핑)",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261027102200704"
+          "url": "https://www.yna.co.kr/view/AKR20261027093000504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "NK News: 애기봉에서 조강 북측 자주포 최소 3문 확인",
-        "연합뉴스: 1.5km 거리 애기봉 전망대에서 北 자주포 포착"
+        "합참: 북한군이 구형포를 해안에 배치·노출, MDL 근접 작업 지속, 새 무기체계는 아님",
+        "NK News: 개풍군 1.5km 거리 122mm 자주포 배치(과장된 딥페이크가 유포됨)"
       ],
       "speculation": [
-        "대남 무력시위 성격"
+        "국방부 장관: 배치에 의도와 목적이 없을 수 없음(의도는 미확정)"
       ]
     },
     "nuclear": {
@@ -103,14 +105,35 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "국감 지뢰 공방·민간인 GOP 철책 훼손(대공 혐의 없음)·북 안보리 서한은 새 충돌이 아니라 배경이다."
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "서울",
+      "lat": 37.57,
+      "lon": 126.98,
+      "summary": "귀속 미확인 — 미래에셋생명이 10/25 침해사고로 고객 개인정보가 유출됐다고 밝혀 금감원이 긴급 현장점검에 나섰다.",
+      "meaning": "금융권 연쇄 해킹 사고이나 북한 등 소행 발표는 아직 없다.",
+      "sources": [
+        {
+          "name": "경향신문",
+          "tier": "B",
+          "url": "https://www.khan.co.kr/article/202610261921011"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "미래에셋생명 25일 이상 징후 인지, 26일 새벽 개인정보 유출 확인",
+        "보험업권 첫 해킹 유출 신고"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김정은 방중 후속 보도(10/24 방중)는 24시간 경과한 외교 일정 후속이라 배경이다."
+      "summary": "김정은 방중(10/24) 후속 보도는 24시간 경과한 외교 일정 배경이며 스위스 외무장관 방북(10/29 예정)은 군사 사안이 아니다."
     },
     "parade_massing": {
       "status": "none"
@@ -125,7 +148,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T17:11:53+00:00",
+  "checked_at": "2026-10-27T18:13:05+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -133,17 +156,28 @@
   ],
   "world": [
     {
-      "title": "노르웨이·핀란드 정상, 푸틴과 이례적 통화",
-      "summary": "노르웨이·핀란드 정상이 푸틴 대통령과 드문 전화 통화를 했다.",
-      "link_korea": "러시아의 외교 접촉 확대는 북러 협력 환경에도 영향을 준다.",
+      "title": "노르웨이·핀란드 정상, 푸틴과 1년여 만에 직접 통화",
+      "summary": "유럽 정상이 1년 넘게 끊겼던 푸틴 대통령과의 직접 통화에 나섰다.",
+      "link_korea": "러-우 협상 환경 변화는 북러 군사협력의 향방에 영향을 줄 수 있다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
+    },
+    {
+      "title": "우크라이나 올레시키 휴전 시작",
+      "summary": "주민 구호를 위한 올레시키 지역 휴전이 시작됐다고 BBC가 전했다.",
+      "link_korea": "러-우 전선 안정화 여부는 러시아의 북한 병력·탄약 의존도와 연결된다.",
+      "region": "우크라이나",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
     }
   ],
   "world_context": "러-우 협상 접촉이 늘며 북러 군사협력 환경을 지켜볼 필요가 있다.",
-  "world_at": "2026-10-27T17:11:53+00:00"
+  "world_at": "2026-10-27T18:13:05+00:00"
 }

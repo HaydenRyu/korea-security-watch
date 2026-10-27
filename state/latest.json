@@ -13,13 +13,14 @@
       "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 DMZ 귀순 NLL",
+      "북한 합참 발표 오늘 지뢰 귀순 NLL 확성기",
       "목함지뢰 해안",
       "North Korea DMZ landmine letter UN"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 서해 구조물 주한미군 감축",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 10월 27일",
+      "서해 구조물 주한미군 감축"
     ],
     "foreign_forces": [
       "김정은 방중",
@@ -36,7 +37,7 @@
     ],
     "gov_warning": [
       "진돗개 데프콘 발령",
-      "news_kr alert 묶음 확인"
+      "North Korea missile launch Japan Ministry of Defense October 2026"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -44,35 +45,18 @@
     ],
     "calm": [
       "남북 대화 제안 통신선 복원"
-    ],
-    "factor:inter_korean": [
-      "확성기 군사회담 제안 북한 응답",
-      "North Korea loudspeaker talks"
-    ],
-    "factor:nk_domestic": [
-      "북한 당 전원회의 숙청",
-      "North Korea party plenum"
-    ],
-    "factor:great_powers": [
-      "김정은 방중 중국 외교부",
-      "Kim Jong Un China visit"
-    ],
-    "factor:public_opinion": [
-      "북한 대남 비난 담화",
-      "North Korea KCNA South Korea criticism"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261026007400504",
-    "https://www.yna.co.kr/view/AKR20261027001300072",
-    "https://www.yna.co.kr/view/AKR20261026143700083",
-    "https://www.nknews.org/2026/10/north-korea-accuses-south-of-fabricating-dmz-land-mine-blasts-in-letter-to-un/",
     "https://www.nknews.org/feed/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
+    "https://www.nknews.org/2026/10/woman-entered-restricted-area-near-north-korea-border-damaged-fencing-seoul/",
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815700",
+    "https://www.yna.co.kr/view/AKR20261026143700083",
+    "https://www.yna.co.kr/view/AKR20261027001300072",
+    "https://www.nknews.org/2026/10/north-korea-accuses-south-of-fabricating-dmz-land-mine-blasts-in-letter-to-un/"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전(10/26 회람)과 애기봉 건너편 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 국방부 군사회담 제안에 북한 응답은 아직 없고, 김정은 방중에 대한 중국 입장은 원론에 그쳤다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전(10/26 회람)과 애기봉 건너편 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 국방부 군사회담 제안(10/23)에 북한 응답은 아직 없고, 철원 민통선 민간인 철책 훼손은 북한 연계 근거가 없다.",
   "items": {
     "nuclear": {
       "status": "none"
@@ -117,7 +101,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "애기봉 전망대에서 약 1.5km 거리 북측 해안에 122㎜ 자주포 3대 노출(SBS)"
+        "애기봉 전망대에서 약 1.5km 거리 북측 해안에 자주포 노출, 북한군이 포신을 움직이는 모습(SBS)"
       ],
       "speculation": [
         "보여주기식 무력시위라는 평가(전문가)"
@@ -129,7 +113,7 @@
       "region": "DMZ·유엔",
       "lat": 37.95,
       "lon": 126.9,
-      "summary": "북한이 안보리 의장에 서한을 보내 DMZ 지뢰폭발은 한국 자작극이라 주장하고 영토 침범 시 자위권 행사를 경고했으며 이 서한이 10/26(현지) 이사국들에 회람 중이다; 국방부의 군사당국회담 제안(10/23)에 북한은 아직 응답하지 않았다.",
+      "summary": "북한이 안보리 의장에 서한을 보내 DMZ 지뢰폭발은 한국 자작극이라 주장했고 10/26(현지) 이사국에 회람 중이며, 국방부의 군사당국회담 제안(10/23)에 북한 응답은 아직 없다.",
       "meaning": "서한전·회담 제안 단계로 새 교전이나 시한부 최후통첩은 없다.",
       "sources": [
         {
@@ -141,29 +125,23 @@
           "name": "국방일보",
           "tier": "B",
           "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261027001300072"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "북한 유엔대표부가 안보리 의장에 서한, KCNA 10/26 공개(NK News)",
-        "국방부 군사회담 제안(10/23) 보도에 북한 응답 없음(국방일보)",
-        "철원 민통선 북쪽 GOP 철책 훼손 30대 여성 신병 확보 — 북한 연관 확인 없음(NK News), 배경"
+        "국방부 정책실장이 10/23 MDL 위치 확인·군통신선 복원을 의제로 군사회담 제안",
+        "철원 민통선 이북 철책 훼손 민간인 신원 미상 — 북한 연계 보도 없음(NK News)"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 단둥",
-      "lat": 40.12,
-      "lon": 124.38,
-      "summary": "김정은의 10/24 단둥 방문에 대해 중국 외교부가 10/26 '북중관계 발전은 확고부동한 방침'이라고만 밝혔고 초청 여부엔 답하지 않았다(연합뉴스). 스위스 외무장관의 10/29 방북·평양 외교사무소 개소식은 외교 일정이다.",
-      "meaning": "외교 일정 성격이며 군사 협정·무기 협력 발표는 없다.",
+      "region": "북중",
+      "lat": 40.13,
+      "lon": 124.4,
+      "summary": "김정은의 10/24 단둥 방문에 대해 중국 외교부가 10/26 '북중관계 발전은 확고부동한 방침'이라고만 밝혔고 초청 여부엔 답하지 않았다(연합뉴스).",
+      "meaning": "외교 일정이며 군사협정·무기 협력 발표는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -173,12 +151,12 @@
       ],
       "confidence": "중간",
       "facts": [
-        "중국 외교부 정례브리핑 답변"
+        "중국 외교부 10/26 입장 원론"
       ],
       "speculation": []
     }
   },
-  "checked_at": "2026-10-26T23:12:59+00:00",
+  "checked_at": "2026-10-27T01:12:21+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -198,11 +176,5 @@
     }
   ],
   "world_context": "이번 회차 세계 브리핑은 BBC 국제면 한 건만 확인했다.",
-  "world_at": "2026-10-26T22:11:22+00:00",
-  "held": {
-    "raw_grade": 1,
-    "raw_label": "주의",
-    "at": "2026-10-27T00:11:12+00:00",
-    "summary": "직전 회차와 같은 수준이다: 북한의 안보리 서한전과 애기봉 건너편 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 국내 금융권 해킹이 새로 보도됐으나 귀속이 없어 등급에는 반영하지 않는다."
-  }
+  "world_at": "2026-10-26T22:11:22+00:00"
 }

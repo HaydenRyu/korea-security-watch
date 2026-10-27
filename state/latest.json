@@ -1,47 +1,89 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 자주포 해안 노출 합참"
+      "합참 북한 자주포 해안 노출",
+      "North Korea artillery Kaepung coast"
     ],
     "nuclear": [
-      "북한 핵 동향"
+      "북한 핵 동향",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 수송"
+      "북한 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "합참 북한 오늘 발표 DMZ 지뢰 GOP 철책"
+      "지뢰 발견",
+      "DMZ 철책 훼손 합참",
+      "North Korea DMZ mine"
     ],
     "electronic_cyber": [
-      "news_kr 수집 결과 gps 묶음"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea martial"
     ],
     "gov_warning": [
-      "진돗개 발령"
+      "진돗개 발령",
+      "DEFCON Korea"
     ],
     "hybrid_ops": [
-      "news_kr hybrid/spy 묶음"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "linkage:taiwan": [
+      "대만 중국 군사훈련",
+      "PLA drills around Taiwan"
+    ],
+    "linkage:korea": [
+      "북러 군사협력",
+      "North Korea troops Russia"
     ],
     "calm": [
-      "남북 군사당국 회담 제안"
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
+    ],
+    "factor:nk_domestic": [
+      "북한 당 전원회의",
+      "North Korea party plenary"
+    ],
+    "factor:inter_korean": [
+      "확성기 방송 재개",
+      "South Korea North Korea loudspeaker"
+    ],
+    "factor:great_powers": [
+      "북중 정상 접촉",
+      "US North Korea talks"
+    ],
+    "factor:public_opinion": [
+      "북한 대남 비난",
+      "North Korea South Korea propaganda"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261027510056",
-    "https://www.segye.com/newsView/20261027500455",
-    "https://www.donga.com/news/Politics/article/all/20261027/134916571/1",
+    "https://www.segye.com/newsView/20261027510420",
+    "https://www.segye.com/newsView/20261027508994",
+    "https://www.segye.com/newsView/20261027511311",
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261027105700704"
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 합참이 개풍군 해안 구형 자주포 노출의 의도를 살피고 있고 북한 안보리 서한전이 이어지나 새 교전·최후통첩은 없다. 철원 GOP 철책 훼손은 민간인 단독 사건이라 배경으로만 둔다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 합참이 개풍군 해안 구형 자주포 노출의 의도를 살피고 있고 DMZ 지뢰 폭발을 둘러싼 외교전이 이어지나 새 교전·최후통첩은 없다. 철원 GOP 철책 훼손은 민간인 단독 사건이라 배경으로만 둔다.",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -49,7 +91,7 @@
       "region": "경기 김포 애기봉 건너 개풍군",
       "lat": 37.7,
       "lon": 126.5,
-      "summary": "합참이 10/27 정례브리핑에서 북한군이 개풍군 해안에 구형 122㎜ 자주포 추정 화기를 노출했다며 의도를 면밀히 살피는 중이라고 밝혔다.",
+      "summary": "합참이 10/27 정례브리핑에서 북한군이 개풍군 해안에 구형 122㎜ 자주포 추정 화기를 노출했고 MDL 근접 작업이 진행 중이라며 의도를 면밀히 살피는 중이라고 밝혔다.",
       "meaning": "전방 포병 전력의 가시적 노출로 대남 압박 의도가 있으나 병력 증강 근거는 아직 없다.",
       "sources": [
         {
@@ -60,7 +102,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참 공보실장 10/27 국방부 정례브리핑: 개풍군 해안 구형 122㎜ 자주포 추정 화기 노출, 전면에 대남 선전 문구, 신무기는 아니며 MDL 근접 작업 진행"
+        "합참 공보실장 10/27 정례브리핑: 구형 포 해안 노출, 신무기 아님, MDL 근접 작업 진행"
       ],
       "speculation": [
         "대남 무력시위 성격"
@@ -72,18 +114,13 @@
       "region": "DMZ",
       "lat": 38.0,
       "lon": 126.9,
-      "summary": "북한이 DMZ 지뢰 폭발은 한국 자작극이라는 서한을 안보리 의장에게 보내 회람 중이며, 정동영 통일부 장관은 국감에서 지뢰 폭발을 도발로 규정했다(새 무력 충돌 없음).",
+      "summary": "정동영 통일부 장관이 국감에서 DMZ 지뢰 폭발을 도발로 규정했고(고의 여부는 확인 필요), 국방부는 MDL 확인용 군사당국회담을 제안했으나 북한 응답은 없으며 새 무력 충돌은 없다.",
       "meaning": "외교전·여론전 국면이며 새 무력 충돌은 보도되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261027500455"
-        },
-        {
-          "name": "동아일보",
-          "tier": "B",
-          "url": "https://www.donga.com/news/Politics/article/all/20261027/134916571/1"
+          "url": "https://www.segye.com/newsView/20261027510420"
         },
         {
           "name": "국방일보",
@@ -93,27 +130,14 @@
       ],
       "confidence": "중간",
       "facts": [
-        "북한 서한 10/26(현지) 안보리 이사국 회람",
-        "국방부 10/23 군사당국회담 제안, 북한 응답 확인 안 됨"
+        "국방부 10/23 군사당국회담 공식 제안",
+        "북한 응답 확인 안 됨"
       ],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "중국·필리핀해",
-      "summary": "중국 랴오닝함 항모전단이 필리핀해 미·일 연합훈련 방향으로 북상했다는 연합뉴스 보도가 있으나 한반도 직접 연관은 없고, 김정은 방중 후 새 군사 협정 발표도 없다.",
-      "meaning": "주변 해역 동향 배경 정보.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261027105700704"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [],
-      "speculation": []
+      "status": "none",
+      "summary": "랴오닝함 북상 보도는 한반도 직접 연관이 없는 주변 해역 배경이고 이번 회차 원문을 열지 않아 징후로 두지 않는다. 김정은 방중 후 새 군사 협정 발표도 없다."
     },
     "nuclear": {
       "status": "none"
@@ -138,7 +162,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T06:17:25+00:00",
+  "checked_at": "2026-10-27T07:13:13+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

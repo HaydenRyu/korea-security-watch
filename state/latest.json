@@ -2,55 +2,61 @@
   "coverage": {
     "troop_movement": [
       "news_kr 수집기 접경 묶음",
-      "NK News 피드 자주포"
+      "애기봉 北 자주포"
     ],
     "nuclear": [
-      "북한 영변 풍계리 핵",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon ammunition Russia troops October 2026",
+      "북한 영변 핵"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition transfer Russia"
+      "North Korea nuclear Yongbyon ammunition Russia troops October 2026",
+      "북한 군수 탄약 수송"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순 news_kr 접경·지뢰 묶음",
+      "지뢰 발견 DMZ 귀순 10월 27일",
+      "북한 해안포 개방 접경 국감",
       "연합뉴스 북한 RSS"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "북한 GPS 교란 서해 구조물 주한미군 감축 김정은 방러",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "North Korea Kim Jong Un China Russia visit",
+      "북한 GPS 교란 서해 구조물 주한미군 감축 김정은 방러"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "남북 대화 제안 통신선 확성기 방송 중단 북한 준전시 열병식 진돗개"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 대피 훈련"
+      "남북 대화 제안 통신선 확성기 방송 중단 북한 준전시 열병식 진돗개"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "남북 대화 제안 통신선 확성기 방송 중단 북한 준전시 열병식 진돗개"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
       "North Korea attributed FBI hacking"
     ],
     "calm": [
-      "news_kr 수집기 남북 대화 묶음"
+      "남북 대화 제안 통신선 확성기 방송 중단 북한 준전시 열병식 진돗개"
+    ],
+    "linkage:korea": [
+      "North Korea troops Russia"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261027516199",
-    "https://www.nknews.org/2026/10/kim-jong-uns-surprise-china-visit-and-rising-tensions-at-the-dmz/",
-    "https://www.yna.co.kr/view/AKR20261027099800504",
     "https://www.nknews.org/feed/",
     "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
+    "https://www.yna.co.kr/view/AKR20261027099800504",
+    "https://www.yna.co.kr/view/AKR20261028000600071",
+    "https://www.yna.co.kr/view/AKR20261027102200704",
+    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
+    "https://www.nknews.org/2026/10/deepfakes-of-north-korean-forces-massing-on-border-go-viral-as-tensions-rise/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "북한 자주포 노출 배치 보도가 이어지나 새 충돌·병력 증강 근거는 없고 국감 지뢰 공방·김정은 방중 해석이 쟁점이다. 직전 회차와 같은 경계 수준이다.",
+  "overall_summary": "접경 자주포 노출 배치와 국감 지뢰 공방이 이어지나 새 충돌·병력 증강 근거는 없다. 직전 회차와 같은 경계 수준이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -58,18 +64,18 @@
       "region": "경기 김포 건너 개풍군",
       "lat": 37.7,
       "lon": 126.5,
-      "summary": "국방부 국감에서 북한군 자주포 노출 배치가 거론됐고(세계일보), NK News가 애기봉에서 최소 3문의 자주포를 촬영해 보도했다.",
+      "summary": "NK News가 애기봉에서 조강 북측 자주포 최소 3문을 촬영해 보도했고 연합뉴스도 같은 포착 영상을 전했다.",
       "meaning": "전방 포병 전력의 가시적 노출로 대남 압박 의도가 있으나 병력 증강 근거는 아직 없다.",
       "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261027516199"
-        },
         {
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261027102200704"
         }
       ],
       "confidence": "중간",
@@ -94,7 +100,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "미8군사령관의 북한군 우크라 경험 발언은 기존 북러 협력의 반복 보도라 배경이다."
     },
     "parade_massing": {
       "status": "none"
@@ -109,7 +116,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T15:13:53+00:00",
+  "checked_at": "2026-10-27T16:15:33+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -117,39 +124,28 @@
   ],
   "world": [
     {
-      "title": "이스라엘 총선 투표, 1977년 이후 최고 투표율",
-      "summary": "이스라엘에서 중대 총선 투표가 진행 중이며 투표율이 1977년 이후 가장 높다.",
-      "link_korea": "중동 정세는 미군 전략자산 운용 여력과 연결된다.",
-      "region": "중동",
+      "title": "노르웨이·핀란드 정상, 푸틴과 이례적 통화",
+      "summary": "노르웨이·핀란드 정상이 푸틴 대통령과 드문 전화 통화를 했다.",
+      "link_korea": "러시아의 외교 접촉 확대는 북러 협력 환경에도 영향을 준다.",
+      "region": "유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c3j47l4kdez4o",
+        "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "우크라이나 올레시키 휴전 시작",
-      "summary": "주민이 굶주려 온 올레시키에서 휴전이 시작됐다.",
-      "link_korea": "러-우 전쟁 흐름은 북러 군사협력 평가에 영향을 준다.",
+      "title": "우크라이나 도시에서 휴전 개시",
+      "summary": "우크라이나의 한 도시에서 휴전이 시작됐다.",
+      "link_korea": "러-우 전쟁 국면은 북한군 파병과 군수 지원의 배경이다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
-    },
-    {
-      "title": "요르단, 시리아 교회 공격 보복 공습",
-      "summary": "요르단이 교회 공격에 대한 보복으로 시리아를 공습해 사망자가 났다.",
-      "link_korea": "중동 분쟁 확산은 미군 전력 배분과 연결된다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cq8ezg6dy6xlo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
     }
   ],
-  "world_context": "중동과 우크라이나 정세가 미·러 전력 배분과 북러 협력 평가에 영향을 준다.",
-  "world_at": "2026-10-27T13:20:33+00:00"
+  "world_context": "러-우 전쟁의 외교·휴전 움직임이 북러 협력 환경과 맞닿아 있다.",
+  "world_at": "2026-10-27T16:15:33+00:00"
 }

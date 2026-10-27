@@ -2,58 +2,67 @@
   "coverage": {
     "troop_movement": [
       "news_kr 수집기 접경 묶음",
-      "애기봉 北 자주포"
+      "애기봉 北 자주포",
+      "North Korea artillery border"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon ammunition Russia troops October 2026",
-      "북한 영변 핵"
+      "북한 영변 핵",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "North Korea nuclear Yongbyon ammunition Russia troops October 2026",
-      "북한 군수 탄약 수송"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 10월 27일",
-      "북한 해안포 개방 접경 국감",
-      "연합뉴스 북한 RSS"
+      "지뢰 발견 DMZ 귀순 합참",
+      "목함지뢰 해안",
+      "북한 해안포 개방 접경"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 서해 구조물 주한미군 감축 김정은 방러",
-      "해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "북한 GPS 교란 서해 구조물 주한미군 감축 김정은 방러"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "남북 대화 제안 통신선 확성기 방송 중단 북한 준전시 열병식 진돗개"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "남북 대화 제안 통신선 확성기 방송 중단 북한 준전시 열병식 진돗개"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "남북 대화 제안 통신선 확성기 방송 중단 북한 준전시 열병식 진돗개"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
-      "North Korea attributed FBI hacking"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 확성기 방송 중단 북한 준전시 열병식 진돗개"
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ],
     "linkage:korea": [
       "North Korea troops Russia"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261027516199",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/feed/",
-    "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://www.yna.co.kr/view/AKR20261027099800504",
-    "https://www.yna.co.kr/view/AKR20261028000600071",
-    "https://www.yna.co.kr/view/AKR20261027102200704",
     "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
-    "https://www.nknews.org/2026/10/deepfakes-of-north-korean-forces-massing-on-border-go-viral-as-tensions-rise/",
+    "https://www.nknews.org/2026/10/kim-jong-uns-surprise-china-visit-and-rising-tensions-at-the-dmz/",
+    "https://www.yna.co.kr/view/AKR20261027102200704",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
   "overall_summary": "접경 자주포 노출 배치와 국감 지뢰 공방이 이어지나 새 충돌·병력 증강 근거는 없다. 직전 회차와 같은 경계 수준이다.",
@@ -80,8 +89,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "NK News: 애기봉에서 조강 북측 자주포 최소 3문 확인, 인근 병력은 안 보임",
-        "NK News: 개풍군 122㎜ 자주포를 변조한 딥페이크 영상이 확산"
+        "NK News: 애기봉에서 조강 북측 자주포 최소 3문 확인",
+        "연합뉴스: 1.5km 거리 애기봉 전망대에서 北 자주포 포착"
       ],
       "speculation": [
         "대남 무력시위 성격"
@@ -101,7 +110,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "미8군사령관의 북한군 우크라 경험 발언은 기존 북러 협력의 반복 보도라 배경이다."
+      "summary": "김정은 방중 후속 보도(10/24 방중)는 24시간 경과한 외교 일정 후속이라 배경이다."
     },
     "parade_massing": {
       "status": "none"
@@ -116,7 +125,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T16:15:33+00:00",
+  "checked_at": "2026-10-27T17:11:53+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -133,19 +142,8 @@
         "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
-    },
-    {
-      "title": "우크라이나 도시에서 휴전 개시",
-      "summary": "우크라이나의 한 도시에서 휴전이 시작됐다.",
-      "link_korea": "러-우 전쟁 국면은 북한군 파병과 군수 지원의 배경이다.",
-      "region": "우크라이나",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
     }
   ],
-  "world_context": "러-우 전쟁의 외교·휴전 움직임이 북러 협력 환경과 맞닿아 있다.",
-  "world_at": "2026-10-27T16:15:33+00:00"
+  "world_context": "러-우 협상 접촉이 늘며 북러 군사협력 환경을 지켜볼 필요가 있다.",
+  "world_at": "2026-10-27T17:11:53+00:00"
 }

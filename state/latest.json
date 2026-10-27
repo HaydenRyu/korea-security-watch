@@ -1,64 +1,138 @@
 {
   "coverage": {
     "troop_movement": [
-      "애기봉 자주포",
-      "North Korea artillery border"
+      "북한 자주포 해안 노출 합참",
+      "North Korea artillery coast Gaepung"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Punggye-ri"
+      "북한 핵 동향",
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 탄약 수송 러시아",
-      "North Korea ammunition Russia"
+      "북한 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 귀순 NLL 합참 10월 27일",
-      "목함지뢰 해안"
+      "지뢰 발견 DMZ",
+      "DMZ 지뢰 폭발 안보리 서한",
+      "North Korea Security Council letter landmine"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
+      "북한 열병식",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea blackout mobilization"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "North Korea missile launch Japan Ministry of Defense"
+      "진돗개 발령",
+      "DEFCON Korea"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.nknews.org/feed/",
+    "https://www.segye.com/newsView/20261027510056",
     "https://www.segye.com/newsView/20261027500455",
-    "https://www.segye.com/newsView/20261027508942",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815872",
+    "https://www.segye.com/newsView/20261027510420",
+    "https://www.segye.com/newsView/20261027508994",
+    "https://www.segye.com/newsView/20261027510388",
+    "https://www.yna.co.kr/view/AKR20261027083200001",
+    "https://www.donga.com/news/Politics/article/all/20261027/134916571/1",
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261026143700083",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815873",
-    "https://www.donga.com/news/Politics/article/all/20261027/134913203/2",
-    "https://www.nknews.org/2026/10/woman-entered-restricted-area-near-north-korea-border-damaged-fencing-seoul/"
+    "https://www.yna.co.kr/view/AKR20261027105700704"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한 안보리 서한전과 애기봉 건너편 자주포 노출이 이어지나 새 교전·최후통첩은 없다. 김정은 방중은 외교 일정이며 군사 합의 발표는 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 합참이 북한 개풍군 해안 구형 자주포 노출의 의도를 살피고 있으며, 북한 안보리 서한전과 국감 공방이 이어지나 새 교전·최후통첩은 없다. 김정은 방중 관련 새 군사 합의 발표는 확인되지 않았다.",
   "items": {
+    "troop_movement": {
+      "status": "single",
+      "routine": false,
+      "region": "경기 김포 애기봉 건너 개풍군",
+      "lat": 37.7,
+      "lon": 126.5,
+      "summary": "합참이 10/27 정례브리핑에서 북한군이 개풍군 해안에 구형 122㎜ 자주포 추정 화기를 노출했다며 의도를 면밀히 살피는 중이라고 밝혔다.",
+      "meaning": "전방 포병 전력의 가시적 노출로 대남 압박 의도가 있으나 병력 증강 근거는 아직 없다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261027510056"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "합참 공보실장 10/27 브리핑: 구형 포를 해안에서 노출한 것, 여러 의도가 있다고 본다"
+      ],
+      "speculation": [
+        "대남 무력시위 성격"
+      ]
+    },
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "DMZ",
+      "lat": 38.0,
+      "lon": 126.9,
+      "summary": "북한이 DMZ 지뢰 폭발은 한국 자작극이라는 서한을 안보리 의장에게 보내 이사국에 회람 중이며, 정동영 통일부 장관은 국감에서 지뢰 폭발을 도발로 규정했다.",
+      "meaning": "외교전·여론전 국면이며 새 무력 충돌은 보도되지 않았다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261027500455"
+        },
+        {
+          "name": "동아일보",
+          "tier": "B",
+          "url": "https://www.donga.com/news/Politics/article/all/20261027/134916571/1"
+        },
+        {
+          "name": "국방일보",
+          "tier": "A",
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "북한 서한 10/26(현지) 안보리 이사국 회람",
+        "국방부 10/23 군사당국회담 제안, 북한 응답 확인 안 됨"
+      ],
+      "speculation": []
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "중국·필리핀해",
+      "summary": "중국 랴오닝함 항모전단이 필리핀해 미·일 연합훈련 방향으로 북상했다는 연합뉴스 보도가 있으나 한반도 직접 연관은 없고, 김정은 방중 후 새 군사 협정 발표도 없다.",
+      "meaning": "주변 해역 동향 배경 정보.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261027105700704"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [],
+      "speculation": []
+    },
     "nuclear": {
       "status": "none"
     },
@@ -79,85 +153,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "troop_movement": {
-      "status": "single",
-      "routine": false,
-      "region": "서부전선 애기봉 접경",
-      "lat": 37.69,
-      "lon": 126.67,
-      "summary": "SBS가 10/26 애기봉 건너편 북측 해안의 자주포 노출·포신 이동을 자체 카메라로 포착해 보도했다.",
-      "meaning": "접경 화력 전진 배치로 무력시위 성격이 강하나 교전은 없다.",
-      "sources": [
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008815872"
-        },
-        {
-          "name": "국방일보",
-          "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "애기봉 전망대에서 약 1.5km 거리 북측 해안에 자주포 노출, 북한군이 포신을 움직이는 모습(SBS)"
-      ],
-      "speculation": [
-        "보여주기식 무력시위라는 평가(전문가)"
-      ]
-    },
-    "border_clash": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "DMZ·유엔",
-      "lat": 37.95,
-      "lon": 126.9,
-      "summary": "북한이 안보리 의장에 서한을 보내 DMZ 지뢰폭발은 한국 자작극이라 주장했고 10/26(현지) 이사국에 회람 중이며, 국방부의 군사당국회담 제안(10/23)에 북한 응답은 아직 없다.",
-      "meaning": "서한전·회담 제안 단계로 새 교전이나 시한부 최후통첩은 없다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261027500455"
-        },
-        {
-          "name": "국방일보",
-          "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "국방부 정책실장이 10/23 MDL 위치 확인·군통신선 복원을 의제로 군사회담 제안",
-        "철원 민통선 이북 철책 훼손 민간인 신원 미상 — 북한 연계 보도 없음(NK News)"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "북중",
-      "lat": 40.13,
-      "lon": 124.4,
-      "summary": "김정은의 10/24 단둥 방문에 대해 중국 외교부가 10/26 '북중관계 발전은 확고부동한 방침'이라고만 밝혔고 초청 여부엔 답하지 않았다(연합뉴스).",
-      "meaning": "외교 일정이며 군사협정·무기 협력 발표는 없다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261026143700083"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "중국 외교부 10/26 입장 원론"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-10-27T04:10:22+00:00",
+  "checked_at": "2026-10-27T05:12:00+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

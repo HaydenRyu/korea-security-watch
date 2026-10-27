@@ -1,7 +1,7 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한군 자주포 서부전선 합참",
+      "북한 자주포 서부전선 합참",
       "North Korea artillery deployed border"
     ],
     "nuclear": [
@@ -23,7 +23,7 @@
       "North Korea hacking attributed"
     ],
     "foreign_forces": [
-      "김정은 방러",
+      "김정은 방중",
       "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
@@ -50,18 +50,17 @@
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261027516199",
     "https://www.segye.com/newsView/20261027510501",
-    "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://www.nknews.org/feed/",
     "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
-    "https://www.nknews.org/2026/10/kim-jong-uns-surprise-china-visit-and-rising-tensions-at-the-dmz/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008817659",
-    "https://www.yna.co.kr/view/AKR20261027111300504",
-    "https://www.yna.co.kr/view/AKR20261027158900504",
+    "https://www.nknews.org/2026/10/deepfakes-of-north-korean-forces-massing-on-border-go-viral-as-tensions-rise/",
+    "https://www.nknews.org/feed/",
+    "https://www.yna.co.kr/rss/northkorea.xml",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.segye.com/newsView/20261027516199"
+    "https://www.yna.co.kr/view/AKR20261027099800504",
+    "https://www.yna.co.kr/view/AKR20261027085251504"
   ],
-  "overall_summary": "북한군 구형 자주포·해안포 노출 배치가 합참 확인과 NK News로 이어지고 있으나 새 충돌·병력 증강은 없다. 군사회담 제안에 북한은 무응답이고 국감에서 DMZ 지뢰·김정은 방중 해석이 쟁점으로 직전 회차와 같은 경계 수준이다.",
+  "overall_summary": "북한군 자주포 노출 배치(국방부 국감·NK News)가 이어지나 새 충돌·병력 증강은 없다. 김정은 방중 후 북미대화 가능성과 국감 지뢰 공방이 쟁점으로 직전 회차와 같은 경계 수준이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -69,13 +68,13 @@
       "region": "경기 김포 건너 개풍군",
       "lat": 37.7,
       "lon": 126.5,
-      "summary": "합참이 27일 서부전선 최전방 해안에 북한군 구형 자주포 노출 배치와 MDL 근접 작업을 확인했고, NK News도 애기봉에서 최소 3문의 M-1981 122㎜ 자주포를 촬영해 보도했다.",
+      "summary": "국방부 국감에서 북한군 자주포 노출 배치가 거론됐고(세계일보), NK News가 애기봉에서 최소 3문의 자주포를 촬영해 보도했다.",
       "meaning": "전방 포병 전력의 가시적 노출로 대남 압박 의도가 있으나 병력 증강 근거는 아직 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261027510501"
+          "url": "https://www.segye.com/newsView/20261027516199"
         },
         {
           "name": "NK News",
@@ -85,8 +84,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참 공보실장 27일 브리핑: 구형 자주포 노출, MDL 근접 작업",
-        "NK News: 애기봉에서 최소 3문 확인, 인근에 병력은 안 보임"
+        "NK News: 애기봉에서 조강 북측 자주포 최소 3문 확인, 인근 병력은 안 보임",
+        "NK News: 개풍군 122㎜ 자주포를 변조한 딥페이크 영상이 확산"
       ],
       "speculation": [
         "대남 무력시위 성격"
@@ -99,38 +98,14 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "DMZ 서부",
-      "lat": 38.0,
-      "lon": 126.9,
-      "summary": "북한이 개성 고군리 등 접경 해안에서 해안포 갱도를 열고 포신을 노출한 모습이 포착됐고(SBS), 합참은 구형포 노출이며 새 무기는 아니라고 밝혔다. 새 무력 충돌은 없다.",
-      "meaning": "외교전·여론전 국면이며 새 무력 충돌은 보도되지 않았다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261027510501"
-        },
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008817659"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "SBS 10/27: 개성 고군리 해안포 포문 개방·포신 남향, 합참 「구형포 노출, 새 무기 아님」",
-        "군사회담 제안에 북한 무응답"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "직전 회차의 해안포 개방 보도는 새 충돌 없이 배경으로 내림 — 이번 회차 원문에서 새 접경 사건이 확인되지 않음."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "김정은 24일 방중은 24시간 경과, 27일 국감 논평만 있어 배경으로 둔다(첫 보도 10/24)."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -145,7 +120,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T12:16:35+00:00",
+  "checked_at": "2026-10-27T13:20:33+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -187,5 +162,5 @@
     }
   ],
   "world_context": "중동과 우크라이나 정세가 미·러 전력 배분과 북러 협력 평가에 영향을 준다.",
-  "world_at": "2026-10-27T11:16:00+00:00"
+  "world_at": "2026-10-27T13:20:33+00:00"
 }

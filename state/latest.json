@@ -1,66 +1,56 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 자주포 서부전선 합참",
-      "North Korea artillery deployed border"
+      "news_kr 수집기 접경 묶음",
+      "NK News 피드 자주포"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리",
+      "북한 영변 풍계리 핵",
       "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea ammunition transfer"
+      "North Korea ammunition transfer Russia"
     ],
     "border_clash": [
       "지뢰 발견",
-      "목함지뢰 해안 DMZ 귀순",
-      "North Korea DMZ MDL"
+      "DMZ 귀순 news_kr 접경·지뢰 묶음",
+      "연합뉴스 북한 RSS"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "North Korea hacking attributed"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense"
+      "북한 준전시 등화관제 대피 훈련"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "South Korea alert"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hacking"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "news_kr 수집기 남북 대화 묶음"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261027516199",
-    "https://www.segye.com/newsView/20261027510501",
-    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
-    "https://www.nknews.org/2026/10/deepfakes-of-north-korean-forces-massing-on-border-go-viral-as-tensions-rise/",
+    "https://www.nknews.org/2026/10/kim-jong-uns-surprise-china-visit-and-rising-tensions-at-the-dmz/",
+    "https://www.yna.co.kr/view/AKR20261027099800504",
     "https://www.nknews.org/feed/",
     "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.yna.co.kr/view/AKR20261027099800504",
-    "https://www.yna.co.kr/view/AKR20261027085251504"
+    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
   ],
-  "overall_summary": "북한군 자주포 노출 배치(국방부 국감·NK News)가 이어지나 새 충돌·병력 증강은 없다. 김정은 방중 후 북미대화 가능성과 국감 지뢰 공방이 쟁점으로 직전 회차와 같은 경계 수준이다.",
+  "overall_summary": "북한 자주포 노출 배치 보도가 이어지나 새 충돌·병력 증강 근거는 없고 국감 지뢰 공방·김정은 방중 해석이 쟁점이다. 직전 회차와 같은 경계 수준이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -98,8 +88,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "직전 회차의 해안포 개방 보도는 새 충돌 없이 배경으로 내림 — 이번 회차 원문에서 새 접경 사건이 확인되지 않음."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -120,7 +109,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T13:20:33+00:00",
+  "checked_at": "2026-10-27T15:13:53+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -162,11 +151,5 @@
     }
   ],
   "world_context": "중동과 우크라이나 정세가 미·러 전력 배분과 북러 협력 평가에 영향을 준다.",
-  "world_at": "2026-10-27T13:20:33+00:00",
-  "held": {
-    "raw_grade": 1,
-    "raw_label": "주의",
-    "at": "2026-10-27T14:12:43+00:00",
-    "summary": "NK News가 애기봉에서 북한 자주포 노출 배치를 촬영해 보도했으나 단일 출처이고 병력 증강 근거는 없다. 김정은 방중 후 북미대화 가능성과 국감 지뢰 공방이 쟁점이며 GOP 철책 훼손은 민간인 사건으로 대공 혐의가 없다."
-  }
+  "world_at": "2026-10-27T13:20:33+00:00"
 }

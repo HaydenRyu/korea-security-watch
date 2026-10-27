@@ -19,8 +19,7 @@
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
       "김정은 방중 방러 서해 구조물 주한미군 감축",
@@ -45,22 +44,17 @@
     "calm": [
       "남북 대화 제안 통신선",
       "North Korea talks offer"
-    ],
-    "linkage:korea": [
-      "North Korea troops Russia"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan"
     ]
   },
   "opened": [
     "https://www.nknews.org/feed/",
     "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
     "https://www.segye.com/newsView/20261027516199",
+    "https://www.segye.com/newsView/20261027511311",
     "https://www.yna.co.kr/view/AKR20261027093000504",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "접경 구형포 노출 보도가 이어지나 새 충돌·병력 증강·핵 징후는 없어 직전과 같은 경계 수준이다. 국감 지뢰 공방과 김정은 방중 후속은 배경이다.",
+  "overall_summary": "접경 구형포 노출 보도가 이어지나 새 충돌·병력 증강·핵 징후는 없어 직전과 같은 경계 수준이다. 국감 지뢰 공방과 주한미군 사령관 발언 항의는 배경이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -122,7 +116,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T21:12:20+00:00",
+  "checked_at": "2026-10-27T22:10:30+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

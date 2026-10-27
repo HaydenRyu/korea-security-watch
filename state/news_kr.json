@@ -1,17 +1,17 @@
 {
- "fetched_at": "2026-10-27T17:32:04+00:00",
- "status": "ok",
- "status_detail": "",
+ "fetched_at": "2026-10-27T18:18:25+00:00",
+ "status": "partial",
+ "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-10-27T17:32:04+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 0,
-  "fetched": 1160,
-  "hits": 67,
-  "clusters": 54,
+  "feeds_failed": 1,
+  "fetched": 1100,
+  "hits": 66,
+  "clusters": 53,
   "by_group": {
-   "border": 20,
+   "border": 19,
    "mine": 15,
    "summit": 24,
    "fire": 6,
@@ -54,27 +54,27 @@
   },
   "국방일보": {
    "feeds": 1,
-   "failed": 0,
-   "count": 60,
-   "hits": 7
+   "failed": 1,
+   "count": 0,
+   "hits": 0
   }
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "border": {
-   "clusters": 20,
+   "clusters": 19,
    "max_independent": 3,
-   "latest": "2026-10-27T17:32:04+00:00"
+   "latest": "2026-10-27T18:18:25+00:00"
   },
   "mine": {
    "clusters": 15,
    "max_independent": 3,
-   "latest": "2026-10-27T17:32:04+00:00"
+   "latest": "2026-10-27T18:18:25+00:00"
   },
   "summit": {
    "clusters": 24,
    "max_independent": 2,
-   "latest": "2026-10-27T17:32:04+00:00"
+   "latest": "2026-10-27T18:18:25+00:00"
   },
   "fire": {
    "clusters": 6,
@@ -219,9 +219,8 @@
    "outlet": "국방일보",
    "section": "국방",
    "url": "https://kookbang.dema.mil.kr/dema_xml/dema0010010000.xml",
-   "ok": true,
-   "count": 60,
-   "hits": 7
+   "ok": false,
+   "error": "URLError: <urlopen error timed out>"
   }
  ]
 }

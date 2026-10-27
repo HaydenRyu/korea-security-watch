@@ -1748,16 +1748,16 @@
    "2026": {
     "nuclear": 0,
     "missile": 23,
-    "other": 6,
+    "other": 7,
     "launch": 23
    }
   },
   "basis": "CSIS 미사일·핵 도발 날짜, 평소 = 2016~2025 평균"
  },
  "data": {
-  "updated_at": "2026-10-26T16:05:11+00:00",
-  "csis_rows": 510,
-  "csis_last": "2026-10-21",
+  "updated_at": "2026-10-27T00:23:28+00:00",
+  "csis_rows": 511,
+  "csis_last": "2026-10-26",
   "cns_days": 153,
   "cns_last": "2024-11-05",
   "launch_days": 271

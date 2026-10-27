@@ -1,65 +1,47 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 자주포 해안 노출 합참",
-      "North Korea artillery coast Gaepung"
+      "북한 자주포 해안 노출 합참"
     ],
     "nuclear": [
-      "북한 핵 동향",
-      "North Korea nuclear Reuters"
+      "북한 핵 동향"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 수송"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "DMZ 지뢰 폭발 안보리 서한",
-      "North Korea Security Council letter landmine"
+      "합참 북한 오늘 발표 DMZ 지뢰 GOP 철책"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 공격"
+      "news_kr 수집 결과 gps 묶음"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China visit"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령",
-      "DEFCON Korea"
+      "진돗개 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "news_kr hybrid/spy 묶음"
     ],
     "calm": [
-      "남북 대화 제안",
-      "확성기 방송 중단"
+      "남북 군사당국 회담 제안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261027510056",
     "https://www.segye.com/newsView/20261027500455",
-    "https://www.segye.com/newsView/20261027510420",
-    "https://www.segye.com/newsView/20261027508994",
-    "https://www.segye.com/newsView/20261027510388",
-    "https://www.yna.co.kr/view/AKR20261027083200001",
     "https://www.donga.com/news/Politics/article/all/20261027/134916571/1",
     "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261027105700704"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 합참이 북한 개풍군 해안 구형 자주포 노출의 의도를 살피고 있으며, 북한 안보리 서한전과 국감 공방이 이어지나 새 교전·최후통첩은 없다. 김정은 방중 관련 새 군사 합의 발표는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 합참이 개풍군 해안 구형 자주포 노출의 의도를 살피고 있고 북한 안보리 서한전이 이어지나 새 교전·최후통첩은 없다. 철원 GOP 철책 훼손은 민간인 단독 사건이라 배경으로만 둔다.",
   "items": {
     "troop_movement": {
       "status": "single",
@@ -78,7 +60,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참 공보실장 10/27 브리핑: 구형 포를 해안에서 노출한 것, 여러 의도가 있다고 본다"
+        "합참 공보실장 10/27 국방부 정례브리핑: 개풍군 해안 구형 122㎜ 자주포 추정 화기 노출, 전면에 대남 선전 문구, 신무기는 아니며 MDL 근접 작업 진행"
       ],
       "speculation": [
         "대남 무력시위 성격"
@@ -90,7 +72,7 @@
       "region": "DMZ",
       "lat": 38.0,
       "lon": 126.9,
-      "summary": "북한이 DMZ 지뢰 폭발은 한국 자작극이라는 서한을 안보리 의장에게 보내 이사국에 회람 중이며, 정동영 통일부 장관은 국감에서 지뢰 폭발을 도발로 규정했다.",
+      "summary": "북한이 DMZ 지뢰 폭발은 한국 자작극이라는 서한을 안보리 의장에게 보내 회람 중이며, 정동영 통일부 장관은 국감에서 지뢰 폭발을 도발로 규정했다(새 무력 충돌 없음).",
       "meaning": "외교전·여론전 국면이며 새 무력 충돌은 보도되지 않았다.",
       "sources": [
         {
@@ -149,13 +131,14 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none"
+      "status": "none",
+      "summary": "진돗개·데프콘 변동 보도 없음."
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T05:12:00+00:00",
+  "checked_at": "2026-10-27T06:17:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

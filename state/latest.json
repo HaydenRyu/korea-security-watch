@@ -1,12 +1,12 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 자주포 개풍군 합참",
-      "North Korea artillery border deployment"
+      "북한 합참 발표 자주포 병력 이동",
+      "North Korea Reuters October 28 2026"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear Yongbyon Punggye-ri"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
@@ -15,25 +15,23 @@
     "border_clash": [
       "지뢰 발견",
       "목함지뢰 해안",
-      "DMZ MDL 북한군 월선",
-      "North Korea DMZ land mine letter UN"
+      "DMZ 귀순",
+      "North Korea DMZ land mine"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
+      "해킹 공격",
+      "랜섬웨어 공격",
       "North Korea hacking attributed"
     ],
     "foreign_forces": [
       "김정은 방중",
       "김정은 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade Pyongyang"
+      "북한 열병식",
+      "North Korea parade"
     ],
     "nk_internal": [
       "북한 등화관제 준전시",
@@ -41,10 +39,9 @@
     ],
     "gov_warning": [
       "진돗개 발령 데프콘",
-      "합참 북한 통지문 전통문"
+      "합참 북한 통지문"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
       "간첩 혐의",
       "North Korea attributed FBI"
     ],
@@ -56,13 +53,13 @@
   "opened": [
     "https://www.segye.com/newsView/20261028505901",
     "https://www.segye.com/newsView/20261028508478",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008817873",
+    "https://www.segye.com/newsView/20261028517125",
     "https://www.nknews.org/",
     "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
-    "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-    "https://www.yna.co.kr/view/AKR20261028118100002"
+    "https://www.yna.co.kr/view/AKR20261028118100002",
+    "https://www.yna.co.kr/view/AKR20261028099300504"
   ],
-  "overall_summary": "북 구형 자주포 노출과 MDL 근접 작업이 이어지나 신규 증강·충돌 징후는 없다. 통일장관의 군사회담 호응 촉구, 북 해안포 개방 보도, 금융권 북한 IP 스캔(귀속 미확인)이 배경이다.",
+  "overall_summary": "북 구형 자주포 노출과 MDL 근접 작업이 이어지나 신규 증강·충돌 징후는 없다. 통일장관의 군사회담 호응 촉구와 금융권 북한 IP 스캔(귀속 미확인)은 배경 수준이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -139,7 +136,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-28T10:12:48+00:00",
+  "checked_at": "2026-10-28T11:12:43+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

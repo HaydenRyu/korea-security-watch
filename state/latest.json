@@ -1,65 +1,71 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 자주포 개풍 노출",
-      "North Korea artillery Kaepung border"
+      "북한 자주포 접경 개풍군",
+      "North Korea troops border artillery DMZ NLL defector this week"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea nuclear Yongbyon October 2026"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear Yongbyon Punggye-ri 38 North October 2026"
     ],
     "logistics": [
-      "북한 군수 수송 탄약 러시아",
-      "North Korea ammunition shipment Russia"
+      "북한 열병식 병력 이동 군수"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순",
-      "North Korea DMZ border NK News"
+      "북한 지뢰 발견 DMZ 합참",
+      "DMZ NLL 귀순 월선",
+      "North Korea troops border artillery DMZ NLL defector this week"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격 해킹 개인정보 유출 GPS 교란 북한"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 준전시 등화관제 열병식 집결",
-      "North Korea parade massing"
+      "북한 열병식 병력 이동 군수"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 열병식 집결",
-      "North Korea wartime mobilization"
+      "북한 열병식 병력 이동 군수 진돗개"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 북한",
-      "한미일 긴급 경고 북한"
+      "북한 진돗개 데프콘 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hackers"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "북한 해킹 귀속 FBI"
     ],
     "linkage:taiwan": [
-      "PLA drills around Taiwan October 2026"
+      "대만 중국 군사훈련"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261028505901",
+    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
     "https://www.segye.com/newsView/20261027516201",
-    "https://www.nknews.org/",
-    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
+    "https://www.segye.com/newsView/20261028508478",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "접경 개풍군 구형 포 노출·MDL 근접 작업이 이어지나 새 충돌·핵·병력 증강 징후는 없어 직전과 같은 경계 수준이다. 국감 지뢰 공방·김정은 방중 후속은 배경이다.",
+  "overall_summary": "접경 개풍군 구형 포 노출과 MDL 근접 작업이 이어지나 신형 타격수단·충돌·핵·병력 증강 징후는 없어 직전과 같은 경계 수준이다. 통일장관의 군사회담 호응 촉구와 국감 지뢰 공방은 배경이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
       "routine": false,
-      "region": "경기 김포 애기봉 맞은편 개풍군",
-      "lat": 37.67,
+      "region": "경기 김포 맞은편 황해도 개풍군",
+      "lat": 37.66,
       "lon": 126.68,
-      "summary": "합참이 10/27 정례브리핑에서 개풍군 해안에 구형 포가 노출돼 있고 MDL 근접 작업이 계속된다고 밝혔고, NK News도 접경 두 곳의 곡사포 배치를 보도했다.",
-      "meaning": "신형 타격수단은 아니나 접경 포병 노출과 근접 작업이 이어지는 전방 태세 변화다.",
+      "summary": "합참이 10/27 정례브리핑에서 개풍군 해안에 구형 포가 노출되고 MDL 근접 작업이 계속된다고 밝혔고, NK News도 접경 두 곳의 자주포 배치를 확인했다(신형 무기체계는 아니라는 평가).",
+      "meaning": "접경 포병 노출과 MDL 근접 작업이 이어지나 합참은 김여정이 예고한 신형 타격수단과는 다르다고 본다.",
       "sources": [
         {
           "name": "세계일보",
@@ -70,16 +76,21 @@
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261027516201"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "합참: 구형 포 노출, 김여정 담화의 신형 무기는 아님, MDL 근접 작업 지속, 의도 파악 중",
-        "확성기 정비 모습은 담화 이전부터 식별되어 유지 중",
-        "애기봉발 자주포 이미지 중 일부는 AI 생성물로 확인됨"
+        "122mm 자주포 3문 이상이 조강 북안에 노출(NK News)",
+        "합참: 기존 구형 포 노출, MDL 근접 작업 진행 중",
+        "애기봉 스타벅스 촬영 자주포 사진은 AI 생성 가짜로 확인"
       ],
       "speculation": [
-        "북한의 의도는 합참이 여러 가능성을 두고 분석 중"
+        "노출 의도는 합참이 분석 중"
       ]
     },
     "nuclear": {
@@ -104,13 +115,14 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none"
+      "status": "none",
+      "summary": "진돗개·데프콘 상향 보도는 없다."
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-10-28T02:12:09+00:00",
+  "checked_at": "2026-10-28T03:11:34+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -118,10 +130,10 @@
   ],
   "world": [
     {
-      "title": "노르웨이·핀란드 정상, 푸틴과 1년여 만에 직접 통화",
-      "summary": "유럽 정상이 1년 넘게 끊겼던 푸틴 대통령과의 직접 통화에 나섰다.",
-      "link_korea": "러-우 협상 환경 변화는 북러 군사협력의 향방에 영향을 줄 수 있다.",
-      "region": "유럽",
+      "title": "노르웨이·핀란드 정상, 푸틴과 이례적 통화",
+      "summary": "노르웨이와 핀란드 정상이 푸틴 대통령과 드물게 전화 통화를 가졌다고 BBC가 전했다.",
+      "link_korea": "러시아의 외교 접촉 변화는 북러 협력의 국제 환경과 맞닿아 있다.",
+      "region": "북유럽",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo",
@@ -129,17 +141,17 @@
       }
     },
     {
-      "title": "우크라이나 올레시키 휴전 시작",
-      "summary": "주민 구호를 위한 올레시키 지역 휴전이 시작됐다고 BBC가 전했다.",
-      "link_korea": "러-우 전선 안정화 여부는 러시아의 북한 병력·탄약 의존도와 연결된다.",
+      "title": "우크라이나 헤르손 지역 휴전 연장",
+      "summary": "당국자들이 헤르손 지역의 휴전이 연장됐다고 밝혔다고 BBC가 보도했다.",
+      "link_korea": "러-우 전선 상황은 북한군 파병과 북러 군사협력의 배경이다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo",
+        "url": "https://www.bbc.co.uk/news/articles/c6lye1w9p2l8o",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "러-우 협상 접촉이 늘며 북러 군사협력 환경을 지켜볼 필요가 있다.",
-  "world_at": "2026-10-27T21:12:20+00:00"
+  "world_context": "러시아를 둘러싼 외교·휴전 동향이 북러 협력의 배경으로 이어진다.",
+  "world_at": "2026-10-28T03:11:34+00:00"
 }

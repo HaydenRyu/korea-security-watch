@@ -1,24 +1,24 @@
 {
- "fetched_at": "2026-10-28T22:11:04+00:00",
+ "fetched_at": "2026-10-28T23:25:40+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-28T22:11:04+00:00",
+ "last_ok_at": "2026-10-28T23:25:40+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1160,
-  "hits": 52,
-  "clusters": 45,
+  "hits": 51,
+  "clusters": 44,
   "by_group": {
    "hybrid": 4,
    "border": 13,
-   "spy": 4,
+   "spy": 3,
+   "summit": 15,
    "gps": 3,
    "mine": 10,
    "alert": 3,
    "defect": 2,
-   "summit": 15,
    "fire": 1,
    "drone_balloon": 4
   }
@@ -40,13 +40,13 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 15
+   "hits": 14
   },
   "국민일보": {
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 20
+   "hits": 17
   },
   "세계일보": {
    "feeds": 2,
@@ -66,17 +66,22 @@
   "hybrid": {
    "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-10-28T22:11:04+00:00"
+   "latest": "2026-10-28T23:25:40+00:00"
   },
   "border": {
    "clusters": 13,
    "max_independent": 1,
-   "latest": "2026-10-28T22:11:04+00:00"
+   "latest": "2026-10-28T23:25:40+00:00"
   },
   "spy": {
-   "clusters": 4,
+   "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-10-28T22:11:04+00:00"
+   "latest": "2026-10-28T23:25:40+00:00"
+  },
+  "summit": {
+   "clusters": 15,
+   "max_independent": 1,
+   "latest": "2026-10-28T23:20:28+00:00"
   },
   "gps": {
    "clusters": 3,
@@ -97,11 +102,6 @@
    "clusters": 2,
    "max_independent": 3,
    "latest": "2026-10-28T12:25:58+00:00"
-  },
-  "summit": {
-   "clusters": 15,
-   "max_independent": 1,
-   "latest": "2026-10-28T12:22:22+00:00"
   },
   "fire": {
    "clusters": 1,
@@ -193,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 5
+   "hits": 4
   },
   {
    "outlet": "국민일보",
@@ -201,7 +201,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 18
+   "hits": 16
   },
   {
    "outlet": "국민일보",
@@ -209,7 +209,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibSocRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "세계일보",

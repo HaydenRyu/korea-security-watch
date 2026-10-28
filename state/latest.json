@@ -1,91 +1,86 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 자주포 접경 개풍군",
-      "North Korea artillery border Aegibong"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon Punggye-ri October 2026"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea munitions Russia shipment"
-    ],
-    "border_clash": [
-      "북한 지뢰 발견 합참",
-      "DMZ NLL 귀순 월선",
-      "North Korea DMZ mine border clash"
-    ],
     "electronic_cyber": [
-      "북한 GPS 교란 서해",
-      "해킹 개인정보 유출",
-      "North Korea GPS jamming cyber attack"
+      "북한 GPS 교란 합참 발표",
+      "금융권 해킹 시도 북한 IP 다수 확인 당국"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 후속",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "North Korea Kim Jong Un China Russia visit"
     ],
-    "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
+    "border_clash": [
+      "North Korea Reuters artillery DMZ border October 28"
     ],
-    "nk_internal": [
-      "북한 준전시 등화관제 노농적위군 동원",
-      "North Korea wartime mobilization civil defense"
-    ],
-    "gov_warning": [
-      "북한 진돗개 데프콘",
-      "South Korea Jindo dog DEFCON raised"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea hack attributed FBI"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan 东部战区",
-      "대만 중국 군사훈련"
+    "troop_movement": [
+      "news_kr 수집 묶음(border·alert)"
     ],
     "calm": [
-      "남북 대화 제안 확성기 방송 중단 통신선 복원"
+      "news_kr 수집 묶음(남북 군사회담 제안)"
+    ],
+    "nuclear": [
+      "북한 핵실험 풍계리 영변 동향",
+      "North Korea nuclear test preparation Punggye-ri Yongbyon 38 North"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송 러시아 컨테이너",
+      "North Korea munitions shipments Russia logistics"
+    ],
+    "parade_massing": [
+      "북한 열병식 준비 병력 집결 위성사진",
+      "North Korea parade massing troops satellite imagery"
+    ],
+    "nk_internal": [
+      "북한 준전시 노농적위군 등화관제 대피 훈련",
+      "North Korea wartime mobilization civil defense drill"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 상향 합참",
+      "State Department Korea travel advisory North Korea warning"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 국정원",
+      "North Korea attributed FBI hackers indictment"
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261027516201",
     "https://www.segye.com/newsView/20261028505901",
     "https://www.segye.com/newsView/20261028508478",
-    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
-    "https://www.nknews.org/"
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261028118100002",
+    "https://www.yna.co.kr/view/AKR20261028071800009",
+    "https://www.yna.co.kr/view/AKR20261028053900001",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.bbc.co.uk/news/articles/c6vgj813mlelo",
+    "https://www.bbc.co.uk/news/articles/c6lye1w9p2l8o"
   ],
-  "overall_summary": "개풍군 해안 구형 122mm 자주포 노출과 MDL 근접 작업이 이어지나 합참은 김여정이 예고한 신형 수단과 다르다고 보며, 충돌·핵·병력 증강 징후는 없어 직전과 같은 수준이다. 통일장관의 군사회담 호응 촉구, 국감 지뢰 공방, 김정은 방중 후속 논의는 배경이다.",
+  "overall_summary": "개풍군 해안 구형 자주포 노출과 MDL 근접 작업이 이어지나 합참은 예고된 신형 수단이 아니라고 보며 직전과 같은 수준이다. 금융권에 북한 IP 대역 접근이 대량 탐지됐으나 당국은 IP 조작 가능성 때문에 귀속을 유보했다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
       "routine": false,
-      "region": "경기 김포·황해도 개풍군",
-      "lat": 37.77,
-      "lon": 126.67,
-      "summary": "합참이 10/27 브리핑에서 개풍군 해안에 구형 포가 노출되고 MDL 근접 작업이 계속된다고 밝혔고, NK News도 조강 북안 자주포 배치를 확인했다(신형 무기체계는 아니라는 평가).",
-      "meaning": "접경 화력 노출은 심리전·압박 성격이 크나 확성기 재개 예고와 겹쳐 추이를 살펴야 한다.",
+      "region": "황해도 개풍군 해안",
+      "lat": 37.95,
+      "lon": 126.62,
+      "summary": "합참이 개풍군 해안에 구형 포가 노출되고 MDL 근접 작업이 계속된다고 밝혔고 연합뉴스도 접경 자주포 노출 속 확산된 집결 딥페이크를 다뤘다(신형 무기체계는 아니라는 평가).",
+      "meaning": "신규 증강 징후는 아니나 접경 포병 노출과 MDL 작업이 지속된다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261028505901"
+          "url": "https://www.segye.com/newsView/20261027516201"
         },
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261028071800009"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "합참: 구형 122mm 추정 포 노출, MDL 근접 작업 진행",
-        "NK News: 조강 북안 최소 3문 확인, 병력 미식별"
+        "합참 공보실장 27일: 구형 포 노출, MDL 근접 작업 진행 중, 담화의 신형 수단 아님"
       ],
       "speculation": [
-        "노출 의도는 합참이 분석 중"
+        "노출 의도는 합참이 파악 중"
       ]
     },
     "nuclear": {
@@ -95,14 +90,32 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "새 충돌·지뢰 발견 보도 없음; 국감 지뢰 공방과 통일장관 군사회담 촉구는 배경."
+      "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "서울(금융권)",
+      "summary": "귀속 미확인 — 금융권 해킹 시도에서 북한 IP 대역 접근 440만 건이 탐지됐으나 당국은 IP 조작 가능성으로 해커 국적 특정이 어렵다는 공문을 냈다.",
+      "meaning": "스캔성 접근이 다수이며 실제 피해·북한 소행 발표는 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261028118100002"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "북한 IP 대역 접근 약 440만 건 탐지",
+        "당국 '각별 유의' 공문, 국적 특정 어려움"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 방중(10/25)은 24시간 경과, 신압록강대교 개통 후 북한 세관 화물차 증가 보도는 배경이다."
     },
     "parade_massing": {
       "status": "none"
@@ -117,7 +130,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-28T05:10:20+00:00",
+  "checked_at": "2026-10-28T06:18:31+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [
@@ -126,9 +139,9 @@
   "world": [
     {
       "title": "노르웨이·핀란드 정상, 푸틴과 이례적 통화",
-      "summary": "노르웨이와 핀란드 정상이 푸틴 대통령과 드물게 전화 통화를 가졌다고 BBC가 전했다.",
-      "link_korea": "러시아의 외교 접촉 변화는 북러 협력의 국제 환경과 맞닿아 있다.",
-      "region": "북유럽",
+      "summary": "노르웨이와 핀란드 정상이 푸틴 대통령과 드문 통화를 했다고 BBC가 보도했다.",
+      "link_korea": "러시아의 대외 관계 변화는 북러 군사협력 환경과 연결된다.",
+      "region": "북유럽·러시아",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo",
@@ -137,8 +150,8 @@
     },
     {
       "title": "우크라이나 헤르손 지역 휴전 연장",
-      "summary": "당국자들이 헤르손 지역의 휴전이 연장됐다고 밝혔다고 BBC가 보도했다.",
-      "link_korea": "러-우 전선 상황은 북한군 파병과 북러 군사협력의 배경이다.",
+      "summary": "관리들이 헤르손 지역 휴전이 연장됐다고 밝혔다고 BBC가 보도했다.",
+      "link_korea": "러-우 전선 상황은 북한군 파병 및 북러 협력의 배경이다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
@@ -147,6 +160,6 @@
       }
     }
   ],
-  "world_context": "러시아를 둘러싼 외교·휴전 동향이 북러 협력의 배경으로 이어진다.",
-  "world_at": "2026-10-28T03:11:34+00:00"
+  "world_context": "러-우 전선의 휴전 연장과 러시아와 북유럽의 접촉이 북러 협력의 외부 환경으로 이어진다.",
+  "world_at": "2026-10-28T06:18:31+00:00"
 }

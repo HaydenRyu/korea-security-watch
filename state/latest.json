@@ -1,60 +1,60 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 오늘 자주포 MDL 개풍군",
-      "North Korea artillery border NK News"
+      "news_kr 수집(border 묶음)",
+      "North Korea artillery border"
+    ],
+    "electronic_cyber": [
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 사이버 공격 (news_kr)"
+    ],
+    "foreign_forces": [
+      "Kim Jong Un China Russia visit North Korea",
+      "김정은 방중 (news_kr summit 묶음)"
+    ],
+    "border_clash": [
+      "지뢰 (news_kr mine 묶음)",
+      "DMZ 귀순 (news_kr defect 묶음)"
+    ],
+    "calm": [
+      "남북 대화 제안 군사회담 (news_kr)"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear site activity"
+      "North Korea nuclear site"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
+      "news_kr 수집(군수 키워드 무적중)",
       "North Korea ammunition shipment Russia"
     ],
-    "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "DMZ NLL 귀순 합참",
-      "North Korea DMZ land mine"
-    ],
-    "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
-    ],
-    "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
-    ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식 parade mobilization"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 준전시 등화관제 (news_kr)",
+      "North Korea blackout mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "합참 북한 통지문"
+      "진돗개 발령 합참 북한 통지문"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 간첩 혐의 (news_kr spy 묶음)",
       "North Korea attributed FBI"
     ],
-    "calm": [
-      "남북 대화 제안 군사회담 북한 호응"
-    ],
     "incidents": [
-      "실탄 발견 해안 총기 군 감식"
+      "실탄 발견 해안 (news_kr)"
     ]
   },
   "opened": [
-    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
-    "https://www.yna.co.kr/view/AKR20261028118100002",
-    "https://www.yna.co.kr/view/AKR20261028071800009",
+    "https://www.segye.com/newsView/20261028520184",
     "https://www.segye.com/newsView/20261028516997",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.yna.co.kr/view/AKR20261028099300504",
+    "https://www.yna.co.kr/view/AKR20261028071800009",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.nknews.org/",
+    "https://www.yna.co.kr/view/AKR20261028118100002"
   ],
-  "overall_summary": "북 구형 자주포 노출과 MDL 근접 작업이 이어지나 신규 증강·충돌 징후는 없고 직전 회차와 같다. 금융권 북한 IP 접근은 귀속 미확인으로 배경 수준이다.",
+  "overall_summary": "북 구형 자주포 노출·MDL 근접 작업은 직전 회차와 같고 신규 증강·충돌 징후는 없다. 금융권 북한 IP 접근은 귀속 미확인 배경이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -66,14 +66,14 @@
       "meaning": "신규 증강 징후는 아니나 접경 포병 노출과 MDL 작업이 지속된다.",
       "sources": [
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
-        },
-        {
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261028071800009"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
@@ -93,7 +93,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 지뢰 발견·교전 보도는 없고 국방부 MDL 군사회담 제안(10/23)에 북 호응이 없다."
+      "summary": "새 지뢰 발견·교전 보도는 없고 정동영 장관의 군사회담 호응 촉구(10/28)에 북 반응은 없다."
     },
     "electronic_cyber": {
       "status": "single",
@@ -132,7 +132,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-28T14:22:16+00:00",
+  "checked_at": "2026-10-28T15:22:12+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

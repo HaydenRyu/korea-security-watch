@@ -1,17 +1,17 @@
 {
- "fetched_at": "2026-10-28T13:36:07+00:00",
+ "fetched_at": "2026-10-28T14:23:13+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-28T13:36:07+00:00",
+ "last_ok_at": "2026-10-28T14:23:13+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1159,
-  "hits": 55,
-  "clusters": 48,
+  "hits": 56,
+  "clusters": 49,
   "by_group": {
-   "border": 15,
+   "border": 16,
    "alert": 3,
    "gps": 2,
    "spy": 5,
@@ -40,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 11
+   "hits": 12
   },
   "국민일보": {
    "feeds": 2,
@@ -64,9 +64,9 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "border": {
-   "clusters": 15,
+   "clusters": 16,
    "max_independent": 2,
-   "latest": "2026-10-28T13:36:07+00:00"
+   "latest": "2026-10-28T14:23:13+00:00"
   },
   "alert": {
    "clusters": 3,
@@ -185,7 +185,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 7
+   "hits": 8
   },
   {
    "outlet": "동아일보",

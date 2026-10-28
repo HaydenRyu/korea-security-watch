@@ -1,24 +1,24 @@
 {
- "fetched_at": "2026-10-28T19:15:31+00:00",
+ "fetched_at": "2026-10-28T19:46:41+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-28T19:15:31+00:00",
+ "last_ok_at": "2026-10-28T19:46:41+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1160,
-  "hits": 58,
-  "clusters": 51,
+  "hits": 61,
+  "clusters": 52,
   "by_group": {
    "hybrid": 4,
    "border": 14,
-   "spy": 6,
+   "spy": 5,
+   "gps": 3,
+   "mine": 10,
    "alert": 3,
-   "gps": 2,
    "defect": 4,
    "summit": 17,
-   "mine": 10,
    "fire": 1,
    "drone_balloon": 5
   }
@@ -40,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 12
+   "hits": 16
   },
   "국민일보": {
    "feeds": 2,
@@ -66,27 +66,32 @@
   "hybrid": {
    "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-10-28T19:15:31+00:00"
+   "latest": "2026-10-28T19:46:41+00:00"
   },
   "border": {
    "clusters": 14,
    "max_independent": 2,
-   "latest": "2026-10-28T19:15:31+00:00"
+   "latest": "2026-10-28T19:46:41+00:00"
   },
   "spy": {
-   "clusters": 6,
+   "clusters": 5,
    "max_independent": 1,
-   "latest": "2026-10-28T19:15:31+00:00"
+   "latest": "2026-10-28T19:46:41+00:00"
+  },
+  "gps": {
+   "clusters": 3,
+   "max_independent": 3,
+   "latest": "2026-10-28T19:30:00+00:00"
+  },
+  "mine": {
+   "clusters": 10,
+   "max_independent": 2,
+   "latest": "2026-10-28T19:30:00+00:00"
   },
   "alert": {
    "clusters": 3,
    "max_independent": 1,
    "latest": "2026-10-28T13:25:28+00:00"
-  },
-  "gps": {
-   "clusters": 2,
-   "max_independent": 3,
-   "latest": "2026-10-28T13:00:00+00:00"
   },
   "defect": {
    "clusters": 4,
@@ -97,11 +102,6 @@
    "clusters": 17,
    "max_independent": 1,
    "latest": "2026-10-28T12:22:22+00:00"
-  },
-  "mine": {
-   "clusters": 10,
-   "max_independent": 2,
-   "latest": "2026-10-28T09:45:59+00:00"
   },
   "fire": {
    "clusters": 1,
@@ -185,7 +185,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 7
+   "hits": 10
   },
   {
    "outlet": "동아일보",
@@ -193,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 5
+   "hits": 6
   },
   {
    "outlet": "국민일보",

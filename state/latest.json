@@ -1,123 +1,72 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 자주포 MDL 지뢰 10월 28일",
+      "합참 자주포 개풍 애기봉",
       "news_kr 접경 묶음"
     ],
     "nuclear": [
-      "38 North 최근 글(403, 열지 못함)",
-      "NK News 최신 헤드라인"
+      "news_kr 수집 결과"
     ],
     "logistics": [
-      "NK News 최신 헤드라인",
       "news_kr 수집 결과"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참 10월",
-      "NK News 자주포 헤드라인"
+      "지뢰 발견 DMZ 귀순 합참 10월 28일",
+      "news_kr 접경·지뢰 묶음"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
-      "북한 IP 금융권 해킹 SBS"
+      "금융권 해킹 북한 IP",
+      "해킹 개인정보 유출 랜섬웨어 공격 10월 28일"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "NK News 중·러 헤드라인",
-      "서해 구조물·주한미군 감축은 news_kr 묶음 확인"
+      "김정은 방중 방러 북한 합참 발표",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "news_kr 한미 묶음"
     ],
     "parade_massing": [
       "news_kr 수집 결과"
     ],
     "nk_internal": [
-      "NK News 최신 헤드라인"
+      "news_kr 수집 결과"
     ],
     "gov_warning": [
-      "지뢰 발견 DMZ 귀순 합참 10월",
       "news_kr 경보 묶음"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan 东部战区 台岛 联合演习"
-    ],
-    "linkage:korea": [
-      "NK News 북러 헤드라인"
-    ],
     "calm": [
-      "news_kr 남북 대화·통신선 관련 묶음"
-    ],
-    "incidents": [
-      "지뢰 발견 DMZ 귀순 합참 10월"
-    ],
-    "factor:nk_domestic": [
-      "NK News 최신 헤드라인"
-    ],
-    "factor:inter_korean": [
-      "합참 자주포 확성기 세계일보"
-    ],
-    "factor:great_powers": [
-      "North Korea Kim Jong Un China Russia visit"
-    ],
-    "factor:public_opinion": [
-      "news_kr 수집 결과"
+      "news_kr 남북 대화 묶음"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261028505901",
     "https://www.segye.com/newsView/20261028520184",
-    "https://www.segye.com/newsView/20261028516997",
-    "https://www.nknews.org/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008819686"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820012"
   ],
-  "overall_summary": "김포 맞은편 북측 강변의 자주포 배치와 합참의 MDL 근접 작업 주시가 이어지고 있으나 합참은 신형 무기가 아닌 구형 노출로 평가했다. 금융권 해킹은 북한 IP 접근이 확인됐지만 당국이 소행을 특정하지 않아 직전 회차와 같다.",
+  "overall_summary": "김포 애기봉 맞은편 자주포 배치(합참 10/27 브리핑)는 첫 보도 24시간이 지나 배경으로 내렸다. 금융권 해킹은 북한 IP 접근만 확인되고 배후 미특정으로 직전과 같다.",
   "items": {
     "troop_movement": {
-      "status": "corroborated",
-      "routine": false,
-      "region": "김포 애기봉 맞은편 개풍",
-      "lat": 37.68,
-      "lon": 126.67,
-      "summary": "김포 애기봉 맞은편 북측 강변에 북한군 자주포가 배치된 것을 NK News가 촬영 보도했고 합참이 구형 노출·MDL 근접 작업 지속을 확인했다(10/27 첫 보도).",
-      "meaning": "접경 화력 노출이지만 합참은 북 성명이 언급한 신형 체계가 아니라고 평가했다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261028505901"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "합참 공보실장 10/27 브리핑: 구형 자주포 노출, MDL 인근 작업 지속",
-        "애기봉~개풍 약 1.5km"
-      ],
-      "speculation": [
-        "북 의도는 복합적(국방장관 언급)"
-      ]
+      "status": "none",
+      "summary": "24시간 경과 — 합참 10/27 브리핑이 첫 보도이며 신규 병력·화력 변동 보도는 없다."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "서울",
-      "summary": "귀속 미확인 — 금융권 해킹 시도에서 북한 IP 대역 접근이 21일 이후 440만 건 넘게 확인됐으나 대신증권·미래에셋·빗썸 침해의 배후는 특정되지 않았다.",
-      "meaning": "북 IP 접근은 주로 취약점 탐색이며 실제 침해와의 연결은 확인되지 않았다.",
+      "summary": "귀속 미확인 — 금융당국이 21일 이후 북한 IP 대역 접근 440여만 건(주로 스캔성)을 확인했으나 대신증권·빗썸 침해 배후는 특정되지 않았다.",
+      "meaning": "북 IP 접근은 취약점 탐색 위주이며 실제 침해와의 연결은 규명되지 않았다.",
       "sources": [
         {
           "name": "SBS",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008819686"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820012"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "금감원 현장점검, 경찰 수사, 국가안보실 긴급회의"
+        "대신증권 고객 3.8만 명 개인정보 유출, 미래에셋자산운용 시도만 포착"
       ],
       "speculation": []
     },
@@ -146,12 +95,10 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-28T21:13:06+00:00",
-  "grade": 2,
-  "grade_label": "경계",
-  "active": [
-    "troop_movement"
-  ],
+  "checked_at": "2026-10-28T23:11:47+00:00",
+  "grade": 1,
+  "grade_label": "주의",
+  "active": [],
   "world": [
     {
       "title": "노르웨이·핀란드 정상, 푸틴과 이례적 통화",
@@ -177,11 +124,5 @@
     }
   ],
   "world_context": "러-우 전선의 휴전·대화 움직임이 북러 협력의 전제에 영향을 줄 수 있다.",
-  "world_at": "2026-10-28T16:14:38+00:00",
-  "held": {
-    "raw_grade": 1,
-    "raw_label": "주의",
-    "at": "2026-10-28T22:12:07+00:00",
-    "summary": "애기봉 맞은편 자주포 배치(합참 10/27 브리핑, 구형 노출로 평가)는 첫 보도 24시간이 지나 배경으로 내렸다. 금융권 해킹은 북한 IP 접근만 확인되고 배후는 미특정으로 직전과 같다."
-  }
+  "world_at": "2026-10-28T16:14:38+00:00"
 }

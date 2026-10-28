@@ -54,18 +54,20 @@ function renderInc(){
   const n=t=>items.filter(x=>x.tier===t).length;
   $("incsum").textContent=INC?`직접 ${n("direct")} · 간접 ${n("indirect")}`:"최근 30일";
   if(!items.length){
-    $("inc").innerHTML=`<p class="ihead">국내 총기·탄약·마약·방화·해킹 등 사건 중 북한·외국 정보기관과의 연결이 보도된 것만 모읍니다.
-      직접 = 수사기관·법원·정부·우방 공식 발표가 연계를 명시(등급 반영) · 간접 = 공식 확인 전 정황(표시만).</p>
+    $("inc").innerHTML=`<p class="ihead">국내 총기·탄약·마약·방화·해킹 등 사건 중 한반도 안보와의 연결이 보도된 것만 모읍니다.
+      직접 = 수사기관·법원·정부·우방의 공식 귀속 발표 · 간접 = 공식 확인 전 정황(북한제 추정·표류물·연관성 조사 중). 등급은 감시 항목이 정합니다.</p>
       <p class="fa-e">${INC?"최근 30일 기록 없음":"아직 기록이 없습니다 — 매시 회차가 분류를 시작하면 여기 쌓입니다."}</p>`;
     return;
   }
   const row=x=>{const t=TIER[x.tier]||TIER.indirect;
-    const src=(x.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.site||"원문")}</a>`).join(" · ");
-    return`<div class="ie ${esc(x.tier)}"><div class="t"><span class="tier ${esc(x.tier)}" title="${t[1]}">${t[0]}</span><b>${esc(x.what)}</b>`
+    const src=(x.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.publisher||s.site||"원문")}</a>`).join(" · ");
+    const tt=x.attributed_by?`${t[1]} — ${x.attributed_by.name}${x.attributed_by.what?" "+x.attributed_by.what:""}`:(x.downgraded?`${t[1]} (${x.downgraded})`:t[1]);
+    return`<div class="ie ${esc(x.tier)}"><div class="t"><span class="tier ${esc(x.tier)}" title="${esc(tt)}">${t[0]}</span><b>${x.category?`[${esc(x.category)}] `:""}${esc(x.what)}</b>`
       +`<span class="d">발생 ${day(x.when?.occurred)}${x.when?.announced?` · 발표 ${day(x.when.announced)}`:""}</span></div>`
-      +`<div class="k"><em>어디</em>${esc(x.where?.place)} <em>누가</em>${esc(x.who)}</div>`
+      +`<div class="k"><em>어디</em>${esc(x.where?.place)} <em>누가</em>${esc(x.who||"미상")}</div>`
       +(x.how?`<div class="k"><em>어떻게</em>${esc(x.how)}</div>`:"")
-      +`<div class="k"><em>왜 연결</em>${esc(x.why)}</div>`
+      +`<div class="k"><em>왜</em>${esc(x.why||"미상")}</div>`
+      +(x.link?`<div class="k"><em>연결</em>${esc(x.link)}${x.attributed_by?` · ${esc(x.attributed_by.name)} 발표`:""}</div>`:"")
       +(src?`<div class="s">${src} ↗</div>`:"")+`</div>`};
   $("inc").innerHTML=live.map(row).join("")
     +(gone.length?`<details class="tsec"><summary>해소된 사건<small>${gone.length}건 · 무관 판명</small></summary>${gone.map(row).join("")}</details>`:"");
@@ -125,12 +127,28 @@ async function loadSea(){
   const base=d.ys.base;
   $("seaR").textContent=base?`평소 이 시각(${base}척)의 ${Math.round(ships.length/base*100)}%`:"평소 값 쌓는 중(7일)";
   $("seaR").classList.toggle("low",!!(base&&ships.length<base*.7));
-  const m=d.meets||[];
-  $("seaMeet").textContent=m.length?m.map(x=>`${x.a} ↔ ${x.b} · ${x.h}시간`).join(" / "):"없음";
-  $("seaMeet").classList.toggle("hit",m.length>0);
+  const m=d.meets||[],lg=d.log||[],KIND={nk_meet:"북 근접",stop_pair:"근접·정지"};
+  const sm=$("seaMeet");
+  sm.textContent=(m.length?m.map(x=>`${KIND[x.kind]||""} ${x.a} ↔ ${x.b} · ${x.h}시간`).join(" / "):"없음")+(d.log_n?` · 기록 ${d.log_n}건`:"");
+  sm.classList.toggle("hit",m.length>0||lg.some(x=>x.kind==="nk_meet"));
+  sm.title=lg.length?lg.slice(0,8).map(x=>`${new Date(x.at).toLocaleString("ko-KR",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"})} ${KIND[x.kind]} ${x.a.flag} ${x.a.name||x.a.mmsi} ↔ ${x.b.flag} ${x.b.name||x.b.mmsi} ${x.km}km${x.h?` ${x.h}시간`:""}`).join("\n")+"\n누르면 최근 기록을 지도에 다시 그립니다":"";
+  sm.style.cursor=lg.length?"pointer":"";sm.onclick=lg.length?()=>replayMeet(lg[0]):null;
   const leg=$("seaLeg");leg.innerHTML=[...cnt].sort((a,b)=>b[1]-a[1]).map(([n,k])=>`<li style="color:${COL[n]}"><i></i>${n} <b>${k}</b></li>`).join("");
   leg.hidden=!$("seaVf").hidden;
   const at=new Date(d.at);$("seaAt").textContent=isNaN(at)?"—":`${String(at.getHours()).padStart(2,"0")}:${String(at.getMinutes()).padStart(2,"0")} 위치`;
+}
+
+// 근접 기록 다시 그리기 — 기록 시점의 두 배 위치·지난 1시간 항적(스크린샷 대신 저장된 좌표로 재현)
+let meetLy=null;
+function replayMeet(e){
+  if(!seaMap)return;seaArea("ys");
+  if(!meetLy)meetLy=L.layerGroup().addTo(seaMap);meetLy.clearLayers();
+  for(const s of[e.a,e.b]){const[,c]=flagOf(s.mmsi);
+    if(s.tr?.length)L.polyline(s.tr,{color:c,weight:2.5,opacity:.9}).addTo(meetLy);
+    L.circleMarker([s.lat,s.lon],{radius:7,color:"#fff",weight:2,fillColor:c,fillOpacity:1})
+      .bindTooltip(`${esc(s.flag)} ${esc(s.name||s.mmsi)}<br>MMSI ${esc(s.mmsi)}${s.sog!=null?` · ${s.sog}노트`:""}`,{permanent:true}).addTo(meetLy)}
+  seaMap.fitBounds(L.latLngBounds([[e.a.lat,e.a.lon],[e.b.lat,e.b.lon],...(e.a.tr||[]),...(e.b.tr||[])]).pad(.6),{maxZoom:13});
+  setTimeout(()=>{meetLy&&meetLy.clearLayers()},60000);
 }
 
 // ── ④ 지도 레이어 5묶음 ──

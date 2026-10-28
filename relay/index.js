@@ -2,11 +2,15 @@
 // GET /snap.json → 카메라별 이름·촬영 시각 / GET /img/<n>.jpg → 사진 / GET /live.json → 라이브 방송 국내 채널의 현재 영상 ID
 // GET /air.json → 한반도 상공 항공기(맥이 5분마다 사진과 같이 올린다). adsb.lol 지도 iframe 은 봇 차단 쿠키(SameSite=Lax)가
 //   다른 사이트 안에서 안 실려 깨지고, API 는 CORS 가 없고 Cloudflare 출구엔 503(adsb.fi 403) — 10/18 실측. 그래서 한국 맥이 받는다
+// GET /sea.json → 서해 선박·근접 기록(sea.js, cron 이 aisstream 에서 직접 받는다 — 맥 불필요)
 // /push/* → push.js (상황판 방문자 웹 푸시 — 구독 저장·발송)
 import { handlePush } from "./push.js";
+import { collectSea, seaJson } from "./sea.js";
 const CORS = { "Access-Control-Allow-Origin": "*" };
 const MAX_BYTES = 3_000_000;
 export default {
+  // cron 5분 — 서해 선박 수집(sea.js). 키(secret AISSTREAM_KEY)가 없으면 아무것도 안 한다
+  async scheduled(ev, env, ctx) { ctx.waitUntil(collectSea(env)); },
   async fetch(req, env) {
     const url = new URL(req.url);
     if (url.pathname.startsWith("/push/")) return handlePush(req, env, url.pathname);
@@ -27,6 +31,7 @@ export default {
     }
     if (req.method !== "GET") return new Response("method", { status: 405 });
     if (url.pathname === "/views") return views(env);
+    if (url.pathname === "/sea.json") return seaJson(env, CORS);
     const b = await env.SNAP.get("bundle", { type: "json", cacheTtl: 60 });
     if (!b) return new Response("no data", { status: 404, headers: CORS });
     if (url.pathname === "/live.json")

@@ -1000,6 +1000,142 @@ def update_linkage(run: dict, doc: dict | None, now: str) -> dict:
         return {**doc, "updated_at": now, "error": str(e)[:120]}
 
 
+# ── 사건 기록(incidents, 선택 · 등급·알림과 무관) ─────────────────────────────────────
+# 국내 총기·탄약·폭발물·마약·화재·드론·해킹 사건 중 한반도 안보와 연결이 보도된 것을 6하원칙으로 남긴다.
+# tier: direct = A 등급 기관의 공식 귀속 발표(attributed_ok — hybrid_ops 와 같은 판정식) · indirect = 공식 확인 전 정황 ·
+# resolved = 무관 판명(연 원문 필요). direct 근거가 없으면 indirect 로 내리고 downgraded 에 사유를 남긴다.
+# 등급은 이 블록이 아니라 items(hybrid_ops·border_clash)가 정한다 — 같은 사건을 두 번 세지 않는다.
+INCIDENT_TIERS = ("direct", "indirect", "resolved")
+INCIDENT_CATEGORIES = ("총기", "탄약", "폭발물", "마약", "화재·폭발", "드론", "해킹", "간첩", "밀수", "기타")
+INCIDENT_KEEP_DAYS = {"direct": 365, "indirect": 30, "resolved": 30}  # 마지막 확인 뒤 보관 일수
+INCIDENTS_MAX = 200
+INCIDENTS_PER_RUN = 5
+_INC_LEN = {"what": 120, "who": 80, "how": 160, "why": 160, "link": 200, "place": 60}
+# 개인 이름 가리기 — 「홍길동(34)」「홍길동 씨」 꼴만. 나머지는 지시문 규칙(이름 대신 역할·연령대)
+_NAME_AGE = re.compile(r"[가-힣]{2,3}(?=\s?\(\d{1,2}\)|\s?씨\b)")
+
+
+_NOT_NAME = {"남성", "여성", "선원", "선장", "어민", "주민", "군인", "병사", "장병", "학생", "운전자", "직원", "회사원", "피의자", "용의자", "외국인"}
+
+
+def _inc_text(v, n: int) -> str:
+    if not isinstance(v, str) or not v.strip():
+        return ""
+    return _NAME_AGE.sub(lambda m: m.group(0) if m.group(0) in _NOT_NAME else "○○", v.strip())[:n]
+
+
+def _inc_sources(raw, opened: set[str]) -> list[dict]:
+    """연 원문만 · tier 보존(direct 판정에 A 등급 출처가 필요하다)."""
+    out = []
+    for s in raw if isinstance(raw, list) else []:
+        if not isinstance(s, dict) or s.get("url") not in opened or s["url"] in {x["url"] for x in out}:
+            continue
+        name = s.get("publisher") or s.get("name")
+        row = {"url": s["url"], "publisher": name.strip()[:60] if isinstance(name, str) and name.strip() else site(s["url"]),
+               "site": site(s["url"])}
+        t = str(s.get("tier", "")).strip().upper()
+        if t in ("A", "B", "C", "D"):
+            row["tier"] = t
+        out.append(row)
+        if len(out) >= LADDER_SOURCES_MAX:
+            break
+    return out
+
+
+def _coord(v, lo: float, hi: float):
+    return round(float(v), 2) if isinstance(v, (int, float)) and lo <= v <= hi else None
+
+
+def clean_incidents(run: dict) -> list[dict]:
+    """run.incidents → 정리된 줄 목록. 연 원문 없는 줄·필수(what·place·날짜) 빠진 줄은 그것만 버린다. 예외를 내지 않는다."""
+    out = []
+    try:
+        opened = _opened(run)
+        for r in run.get("incidents") if isinstance(run.get("incidents"), list) else []:
+            if not isinstance(r, dict):
+                continue
+            srcs = _inc_sources(r.get("sources"), opened)
+            what = _inc_text(r.get("what"), _INC_LEN["what"])
+            wh = r.get("where") if isinstance(r.get("where"), dict) else {}
+            place = _inc_text(wh.get("place"), _INC_LEN["place"])
+            wn = r.get("when") if isinstance(r.get("when"), dict) else {}
+            when = {f: wn[f][:16] for f in ("occurred", "announced") if isinstance(wn.get(f), str) and _date_ok(wn[f][:10])}
+            if not srcs or not what or not place or not when:
+                continue
+            tier = r.get("tier") if r.get("tier") in INCIDENT_TIERS else "indirect"
+            row = {"tier": tier, "category": r.get("category") if r.get("category") in INCIDENT_CATEGORIES else "기타",
+                   "when": when, "where": {"place": place}, "what": what, "sources": srcs}
+            lat, lon = _coord(wh.get("lat"), 33.0, 43.5), _coord(wh.get("lon"), 124.0, 131.9)
+            if lat is not None and lon is not None:
+                row["where"].update(lat=lat, lon=lon)
+            for f in ("who", "how", "why", "link"):
+                if _inc_text(r.get(f), _INC_LEN[f]):
+                    row[f] = _inc_text(r.get(f), _INC_LEN[f])
+            if tier == "direct":
+                if attributed_ok({"attributed_by": r.get("attributed_by"), "sources": srcs}):
+                    ab = r["attributed_by"]
+                    row["attributed_by"] = {"name": str(ab["name"]).strip()[:60], "tier": "A",
+                                            **({"what": str(ab["what"]).strip()[:60]} if ab.get("what") else {})}
+                else:
+                    row["tier"] = "indirect"
+                    row["downgraded"] = "A 등급 기관의 귀속 발표 없음"
+            if isinstance(r.get("same_as"), str):
+                row["same_as"] = r["same_as"]
+            out.append(row)
+            if len(out) >= INCIDENTS_PER_RUN:
+                break
+    except Exception:  # noqa: BLE001 — 참고 블록이 회차를 깨뜨리면 안 된다
+        return []
+    return out
+
+
+def _inc_same(a: dict, b: dict) -> bool:
+    """같은 사건 = 출처 URL 겹침 또는 (분류 · 장소 · 발생일) 일치."""
+    if {s["url"] for s in a["sources"]} & {s.get("url") for s in b.get("sources") or []}:
+        return True
+    d = lambda x: (x.get("when") or {}).get("occurred", "")[:10]
+    return bool(d(a)) and a["category"] == b.get("category") and a["where"]["place"] == (b.get("where") or {}).get("place") and d(a) == d(b)
+
+
+def update_incidents(run: dict, doc: dict | None, now: str) -> dict:
+    """state/incidents.json = {version, updated_at, judged_at, items[{id, tier, category, when{occurred?,announced?},
+    where{place,lat?,lon?}, what, who?, how?, why?, link?, attributed_by?, downgraded?, sources, first_seen, last_seen,
+    resolved_at?}]}. direct 는 indirect 로 되돌리지 않는다(귀속 발표는 철회 보도가 resolved 로 올 때만 내린다)."""
+    doc = doc if isinstance(doc, dict) else {}
+    try:
+        t_now = _dt(now) or datetime.now(timezone.utc)
+        run = run if isinstance(run, dict) else {}
+        items = [dict(x) for x in doc.get("items") or [] if isinstance(x, dict) and x.get("id") and isinstance(x.get("sources"), list)]
+        for r in clean_incidents(run):
+            hit = next((x for x in items if x["id"] == r.get("same_as") or _inc_same(r, x)), None)
+            r.pop("same_as", None)
+            if not hit:
+                items.append({"id": signal_id("inc", r["sources"][0]["url"], now), **r,
+                              "first_seen": now, "last_seen": now, **({"resolved_at": now} if r["tier"] == "resolved" else {})})
+                continue
+            srcs = _merge_sources(hit["sources"], r["sources"])
+            keep_direct = hit.get("tier") == "direct" and r["tier"] == "indirect"
+            hit.update({k: v for k, v in r.items() if k not in ("sources", "tier", "downgraded", "attributed_by")})
+            hit["sources"], hit["last_seen"] = srcs, now
+            if r["tier"] == "resolved":
+                hit["tier"], hit["resolved_at"] = "resolved", now
+            elif not keep_direct:
+                hit["tier"] = r["tier"]
+                for f in ("attributed_by", "downgraded"):
+                    if f in r:
+                        hit[f] = r[f]
+                    else:
+                        hit.pop(f, None)
+        def alive(x):
+            last = _dt(x.get("resolved_at") or x.get("last_seen"))
+            return bool(last and t_now - last <= timedelta(days=INCIDENT_KEEP_DAYS.get(x.get("tier"), 30)))
+        items = sorted((x for x in items if alive(x)), key=lambda x: x["last_seen"], reverse=True)[:INCIDENTS_MAX]
+        got = isinstance(run.get("incidents"), list)
+        return {"version": 1, "updated_at": now, "judged_at": now if got else doc.get("judged_at"), "items": items}
+    except Exception as e:  # noqa: BLE001
+        return {**doc, "updated_at": now, "error": str(e)[:120]}
+
+
 def last_verified(events: list[dict]) -> dict | None:
     """판정 불가 회차를 건너뛴 직전 판정 회차."""
     return next((e for e in reversed(events) if e.get("status") == "ok"), None)
@@ -1218,6 +1354,13 @@ def main(argv: list[str]) -> int:
                             "korea": len(lk.get("korea") or [])}
     except Exception as e:  # noqa: BLE001
         event["linkage"] = {"error": str(e)[:120]}
+    try:  # 사건 기록 — 등급·알림과 무관. 안 내면 직전 기록을 잇고, 판정 불가 회차는 보관 기한 경과만 반영
+        inc = update_incidents(ok, _load_safe(STATE / "incidents.json"), event["checked_at"])
+        (STATE / "incidents.json").write_text(json.dumps(inc, ensure_ascii=False, indent=2) + "\n")
+        event["incidents"] = {"raw": len(ok["incidents"]) if isinstance(ok.get("incidents"), list) else 0,
+                              "kept": len(clean_incidents(ok)), "total": len(inc.get("items") or [])}
+    except Exception as e:  # noqa: BLE001
+        event["incidents"] = {"error": str(e)[:120]}
     try:  # 시나리오 — 등급·알림과 무관. 판정 불가 회차는 시간 경과(만료)와 다른 칸 값만 반영
         sc = update_scenarios(ok, _load_safe(STATE / "scenarios.json"), event["checked_at"],
                               new_latest if new_latest is not None else latest, _load_safe(STATE / "ladder.json"),

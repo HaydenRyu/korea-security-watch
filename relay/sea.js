@@ -96,12 +96,15 @@ async function receive(env, ships) {
   const r = await fetch(WS, { headers: { Upgrade: "websocket" } });
   const ws = r.webSocket; if (!ws) throw new Error("ws upgrade " + r.status);
   ws.accept();
-  let n = 0;
+  let n = 0, bad = 0, dt = null;
   const done = new Promise(res => {
     const t = setTimeout(() => res("time"), RECV_MS);
-    ws.addEventListener("message", e => {
-      n++;
-      try { ingest(ships, JSON.parse(typeof e.data === "string" ? e.data : new TextDecoder().decode(e.data)), Date.now()); } catch {}
+    ws.addEventListener("message", async e => {
+      n++; dt ||= typeof e.data === "string" ? "string" : e.data?.constructor?.name || typeof e.data;
+      try {
+        const txt = typeof e.data === "string" ? e.data : e.data instanceof Blob ? await e.data.text() : new TextDecoder().decode(e.data);
+        ingest(ships, JSON.parse(txt), Date.now());
+      } catch { bad++; }
       if (n >= MAX_MSG) { clearTimeout(t); res("max"); }
     });
     ws.addEventListener("close", ev => { clearTimeout(t); res("close " + ev.code); });
@@ -109,7 +112,7 @@ async function receive(env, ships) {
   ws.send(JSON.stringify({ APIKey: env.AISSTREAM_KEY, BoundingBoxes: [BOX],
     FilterMessageTypes: ["PositionReport", "StandardClassBPositionReport", "ExtendedClassBPositionReport", "ShipStaticData"] }));
   const why = await done; try { ws.close(1000); } catch {}
-  return { n, why };
+  return { n, bad, dt, why };
 }
 
 export async function collectSea(env) {
@@ -118,6 +121,7 @@ export async function collectSea(env) {
   st.ships ||= {};
   let rx;
   try { rx = await receive(env, st.ships); } catch (e) { rx = { n: 0, why: "err " + String(e).slice(0, 80) }; }
+  rx.pos = Object.values(st.ships).filter(s => s.t && Date.now() - s.t < RECV_MS + 5000).length;
   const added = settle(st, Date.now());
   st.rx = { at: new Date().toISOString(), ...rx };
   await env.SNAP.put("sea", JSON.stringify(st));

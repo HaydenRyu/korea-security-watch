@@ -1,41 +1,41 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 자주포 배치 개풍군 합참",
+      "북한 자주포 배치 접경",
       "North Korea artillery border NK News"
     ],
     "nuclear": [
-      "북한 핵시설 영변 풍계리 동향",
-      "North Korea nuclear Yongbyon 38 North"
+      "North Korea missile nuclear Yongbyon 38 North",
+      "북한 핵시설 영변 풍계리"
     ],
     "logistics": [
       "북한 군수 수송 탄약 러시아",
       "North Korea munitions shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순 10월 28일",
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순",
       "DMZ NLL North Korea border incident"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격 2026년 10월",
+      "해킹 공격 개인정보 유출 사이버 공격 랜섬웨어",
       "North Korea hacking attributed"
     ],
     "foreign_forces": [
-      "북한 김정은 방중 방러 합참 발표",
-      "Kim Jong Un China Russia visit North Korea Reuters",
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
-      "North Korea parade massing satellite"
+      "North Korea parade massing"
     ],
     "nk_internal": [
       "북한 등화관제 준전시 노농적위군",
-      "North Korea mobilization civil defense"
+      "North Korea civil defense mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 격상 합참",
+      "진돗개 데프콘 격상 합참 발표 통지문",
       "USFK DEFCON alert"
     ],
     "hybrid_ops": [
@@ -50,8 +50,8 @@
       "North Korea troops Russia"
     ],
     "calm": [
-      "PLA ... North Korea talks offer 통신선 복원",
       "남북 대화 제안",
+      "통신선 복원",
       "확성기 방송 중단"
     ],
     "incidents": [
@@ -61,13 +61,13 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261028520184",
-    "https://www.segye.com/newsView/20261028517125",
-    "https://www.nknews.org/",
+    "https://www.segye.com/newsView/20261028520215",
     "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
     "https://www.yna.co.kr/view/AKR20261028071800009",
-    "https://www.yna.co.kr/view/AKR20261028118100002"
+    "https://www.yna.co.kr/view/AKR20261028118100002",
+    "https://www.yna.co.kr/view/AKR20261028099300504"
   ],
-  "overall_summary": "직전 회차와 같이 개풍군 해안 북한군 자주포 배치(구형, 신형 아님)와 금융권 해킹 시도의 북한 IP 탐지(귀속 미확인)가 이어지고 있으나 새 군사 징후는 없다. 한·미 SCM 연기와 비자 거부 등 동맹 마찰은 정치 이슈로 배경에 둔다.",
+  "overall_summary": "직전 회차와 같이 개풍군 해안 북한군 자주포 배치와 금융권 해킹 시도의 북한 IP 탐지(귀속 미확인)가 이어지나 새 군사 징후는 없다. 한·미 SCM 내년 초 연기와 전작권 이견은 동맹 정치 이슈로 배경에 둔다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -75,7 +75,7 @@
       "region": "경기 김포·황해도 개풍군",
       "lat": 37.7,
       "lon": 126.65,
-      "summary": "개풍군 해안 구형 122mm 자주포 배치를 연합뉴스와 NK News가 보도했다(신형 무기체계 아님, 직전 회차와 동일).",
+      "summary": "김포 애기봉 맞은편 조강 북측 강변에 북한군 자주포·구축전차형 장비 최소 3문이 배치된 것을 연합뉴스와 NK News가 보도했다(10/27 촬영, 신형 아님).",
       "meaning": "접경 포병 노출이 이어지나 전력 규모 증강 근거는 없다.",
       "sources": [
         {
@@ -91,8 +91,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "김포 애기봉 전망대에서 약 1.5km 거리의 개풍군 해안 자주포 촬영",
-        "딥페이크로 과장된 게시물이 확산"
+        "NK News: 10/27 촬영, 최소 3문 확인, 병력은 사진에 없음",
+        "국경 요새화 작업의 연장선으로 보도됨"
       ],
       "speculation": []
     },
@@ -128,8 +128,7 @@
       ]
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "새로 확인된 북러·북중 협력은 없고 김정은 방중 관련은 배경 보도뿐이다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -144,7 +143,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-28T17:12:23+00:00",
+  "checked_at": "2026-10-28T18:14:06+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

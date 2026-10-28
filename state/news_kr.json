@@ -1,24 +1,24 @@
 {
- "fetched_at": "2026-10-28T12:21:21+00:00",
+ "fetched_at": "2026-10-28T13:36:07+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-28T12:21:21+00:00",
+ "last_ok_at": "2026-10-28T13:36:07+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1159,
-  "hits": 53,
-  "clusters": 47,
+  "hits": 55,
+  "clusters": 48,
   "by_group": {
    "border": 15,
    "alert": 3,
-   "summit": 16,
-   "gps": 1,
-   "spy": 4,
+   "gps": 2,
+   "spy": 5,
    "defect": 4,
+   "summit": 16,
    "mine": 10,
-   "fire": 2,
+   "fire": 1,
    "drone_balloon": 5,
    "hybrid": 3
   }
@@ -28,7 +28,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 600,
-   "hits": 75
+   "hits": 74
   },
   "SBS": {
    "feeds": 3,
@@ -40,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 9
+   "hits": 11
   },
   "국민일보": {
    "feeds": 2,
@@ -52,7 +52,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 3
+   "hits": 4
   },
   "국방일보": {
    "feeds": 1,
@@ -66,32 +66,32 @@
   "border": {
    "clusters": 15,
    "max_independent": 2,
-   "latest": "2026-10-28T12:21:21+00:00"
+   "latest": "2026-10-28T13:36:07+00:00"
   },
   "alert": {
    "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-10-28T11:30:54+00:00"
+   "latest": "2026-10-28T13:25:28+00:00"
+  },
+  "gps": {
+   "clusters": 2,
+   "max_independent": 3,
+   "latest": "2026-10-28T13:00:00+00:00"
+  },
+  "spy": {
+   "clusters": 5,
+   "max_independent": 1,
+   "latest": "2026-10-28T12:34:00+00:00"
+  },
+  "defect": {
+   "clusters": 4,
+   "max_independent": 3,
+   "latest": "2026-10-28T12:25:58+00:00"
   },
   "summit": {
    "clusters": 16,
    "max_independent": 1,
    "latest": "2026-10-28T10:53:02+00:00"
-  },
-  "gps": {
-   "clusters": 1,
-   "max_independent": 3,
-   "latest": "2026-10-28T10:35:00+00:00"
-  },
-  "spy": {
-   "clusters": 4,
-   "max_independent": 1,
-   "latest": "2026-10-28T10:21:18+00:00"
-  },
-  "defect": {
-   "clusters": 4,
-   "max_independent": 2,
-   "latest": "2026-10-28T10:20:17+00:00"
   },
   "mine": {
    "clusters": 10,
@@ -99,7 +99,7 @@
    "latest": "2026-10-28T09:45:59+00:00"
   },
   "fire": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-10-28T08:27:56+00:00"
   },
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 3
   },
   {
    "outlet": "SBS",
@@ -193,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 2
+   "hits": 4
   },
   {
    "outlet": "국민일보",
@@ -225,7 +225,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_society.xml",
    "ok": true,
    "count": 20,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "국방일보",

@@ -1,7 +1,7 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 자주포 MDL 개풍군",
+      "합참 북한 오늘 자주포 MDL 개풍군",
       "North Korea artillery border NK News"
     ],
     "nuclear": [
@@ -13,17 +13,18 @@
       "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "합참 북한 오늘 지뢰 MDL 귀순 경고사격",
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ NLL 귀순 합참",
       "North Korea DMZ land mine"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 사이버 공격 10월 28일"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 귀국 후속",
+      "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 전략적 유연성"
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식"
@@ -36,27 +37,24 @@
       "합참 북한 통지문"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 North Korea attributed FBI hackers"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 군사회담 제안 북한 호응"
+      "남북 대화 제안 군사회담 북한 호응"
     ],
     "incidents": [
-      "합참 북한 오늘 지뢰 MDL 귀순 경고사격"
+      "실탄 발견 해안 총기 군 감식"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
     "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
-    "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-    "https://www.segye.com/newsView/20261028505901",
-    "https://www.segye.com/newsView/20261028520215",
-    "https://www.segye.com/newsView/20261028516997",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261028118100002",
+    "https://www.yna.co.kr/view/AKR20261028071800009",
+    "https://www.segye.com/newsView/20261028516997",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "북 구형 자주포 노출과 MDL 근접 작업이 이어지나 신규 증강·충돌 징후는 없고 직전 회차와 같다. 금융권 북한 IP 해킹 시도는 귀속 미확인으로 배경 수준이다.",
+  "overall_summary": "북 구형 자주포 노출과 MDL 근접 작업이 이어지나 신규 증강·충돌 징후는 없고 직전 회차와 같다. 금융권 북한 IP 접근은 귀속 미확인으로 배경 수준이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -68,14 +66,14 @@
       "meaning": "신규 증강 징후는 아니나 접경 포병 노출과 MDL 작업이 지속된다.",
       "sources": [
         {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261028505901"
-        },
-        {
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261028071800009"
         }
       ],
       "confidence": "중간",
@@ -113,7 +111,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "북한 IP 440만건 탐지, 당국 '국가 특정 불가·우회 가능성 유의' 설명"
+        "금융당국 21일 공문: 북한 IP 대역(175.45.176.0/22) 스캔성 접근 약 440만건 탐지",
+        "실제 침해 피해 신고는 없고 당국은 IP만으로 국적 특정 어려움을 설명"
       ],
       "speculation": []
     },
@@ -133,7 +132,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-28T13:39:18+00:00",
+  "checked_at": "2026-10-28T14:22:16+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

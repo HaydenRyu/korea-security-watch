@@ -6,10 +6,10 @@
     ],
     "nuclear": [
       "북한 핵 영변 풍계리",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon October 2026"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
+      "북한 군수 수송 탄약 러시아",
       "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
@@ -18,30 +18,27 @@
     ],
     "electronic_cyber": [
       "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러 서해 구조물 주한미군 감축",
       "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 준비 병력 집결",
+      "북한 준전시 등화관제 열병식 집결",
       "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군",
+      "북한 준전시 등화관제 열병식 집결",
       "North Korea wartime mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
+      "진돗개 데프콘 상향 북한",
       "한미일 긴급 경고 북한"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI hackers"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원"
     ],
     "linkage:taiwan": [
       "PLA drills around Taiwan October 2026"
@@ -51,12 +48,9 @@
     "https://www.segye.com/newsView/20261028505901",
     "https://www.segye.com/newsView/20261027516201",
     "https://www.nknews.org/",
-    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
-    "https://www.nknews.org/2026/10/kim-yo-jong-north-korean-top-brass-visit-border-and-threaten-counterattack/",
-    "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
   ],
-  "overall_summary": "접경 개풍군 구형 포 노출·확성기 정비가 이어지나 새 충돌·핵·병력 증강 징후는 없어 직전과 같은 경계 수준이다. 국감 지뢰 공방과 김정은 방중 후속은 배경이다.",
+  "overall_summary": "접경 개풍군 구형 포 노출·MDL 근접 작업이 이어지나 새 충돌·핵·병력 증강 징후는 없어 직전과 같은 경계 수준이다. 국감 지뢰 공방·김정은 방중 후속은 배경이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -116,7 +110,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-28T01:09:44+00:00",
+  "checked_at": "2026-10-28T02:12:09+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

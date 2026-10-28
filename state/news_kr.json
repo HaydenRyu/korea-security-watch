@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-28T16:53:15+00:00",
+ "fetched_at": "2026-10-28T18:03:21+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-28T16:53:15+00:00",
+ "last_ok_at": "2026-10-28T18:03:21+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -46,7 +46,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 22
+   "hits": 21
   },
   "세계일보": {
    "feeds": 2,
@@ -66,17 +66,17 @@
   "hybrid": {
    "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-10-28T16:53:15+00:00"
+   "latest": "2026-10-28T18:03:21+00:00"
   },
   "border": {
    "clusters": 15,
    "max_independent": 2,
-   "latest": "2026-10-28T16:53:15+00:00"
+   "latest": "2026-10-28T18:03:21+00:00"
   },
   "spy": {
    "clusters": 7,
    "max_independent": 1,
-   "latest": "2026-10-28T16:53:15+00:00"
+   "latest": "2026-10-28T18:03:21+00:00"
   },
   "alert": {
    "clusters": 3,
@@ -201,7 +201,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 20
+   "hits": 19
   },
   {
    "outlet": "국민일보",

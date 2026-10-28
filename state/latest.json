@@ -1,59 +1,62 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 오늘 10월 28일",
-      "North Korea Reuters October 28"
+      "북한 합참 발표 자주포 개풍 MDL",
+      "North Korean self-propelled howitzer Gaepung coast Aegibong JCS"
     ],
     "nuclear": [
-      "North Korea Reuters October 28",
-      "북한 합참 발표 오늘 10월 28일"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "North Korea Reuters October 28",
-      "북한 합참 발표 오늘 10월 28일"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 합참 발표 오늘 10월 28일",
-      "North Korea Reuters October 28"
+      "지뢰 발견 DMZ 귀순 NLL",
+      "목함지뢰 해안 발견"
     ],
     "electronic_cyber": [
-      "해킹 공격 개인정보 유출 10월 28일",
-      "North Korea Reuters October 28"
+      "GPS 교란",
+      "해킹 공격",
+      "사이버 공격 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중 후속 북미 10월 28일",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중 방러 후속 북중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 발표 오늘 10월 28일",
-      "North Korea Reuters October 28"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 합참 발표 오늘 10월 28일",
-      "North Korea Reuters October 28"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "북한 합참 발표 오늘 10월 28일",
-      "North Korea Reuters October 28"
+      "진돗개 발령 데프콘 상향",
+      "North Korea Reuters October 28 2026"
     ],
     "hybrid_ops": [
-      "해킹 공격 개인정보 유출 10월 28일",
-      "North Korea Reuters October 28"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "북한 해킹 귀속 North Korea attributed FBI"
     ],
     "calm": [
-      "김정은 방중 후속 북미 10월 28일"
+      "남북 대화 제안",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261028505901",
     "https://www.segye.com/newsView/20261028508478",
-    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261028118100002",
+    "https://www.segye.com/newsView/20261028516997",
+    "https://www.koreatimes.co.kr/southkorea/defense/20261005/seoul-concludes-north-korea-responsible-for-dmz-land-mine-explosions",
     "https://www.yna.co.kr/view/AKR20261028071800009",
-    "https://www.yna.co.kr/view/AKR20261028099300504",
+    "https://www.yna.co.kr/view/AKR20261028118100002",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "개풍군 해안 구형 122mm 자주포 노출과 MDL 근접 작업이 이어지나 합참은 신형 타격수단이 아니라고 보며 직전과 같은 수준이다. 금융권에 북한 IP 대역 접근이 대량 탐지됐으나 북한 소행 발표는 없다.",
+  "overall_summary": "북 구형 자주포 노출과 MDL 근접 작업이 이어지나 신규 증강·충돌 징후는 없다. 정부의 군사회담 제안 재촉구와 금융권 북한 IP 스캔(귀속 미확인)이 배경이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -84,6 +87,16 @@
         "합참이 노출 의도를 여러 갈래로 분석 중"
       ]
     },
+    "nuclear": {
+      "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none",
+      "summary": "24시간 안 새 접경 사건 없음 — 군사회담 제안 재촉구 등 배경."
+    },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
@@ -104,34 +117,24 @@
       ],
       "speculation": []
     },
-    "border_clash": {
-      "status": "none",
-      "summary": "24시간 안 새 접경 사건 없음 — 군사회담 제안 재촉구와 북 안보리 서한 등 배경."
-    },
     "foreign_forces": {
       "status": "none",
       "summary": "김정은 방중(10/24~25) 반복 보도뿐이며 24시간 안 새 파병·협정 확인 없음 — 배경."
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
     },
     "gov_warning": {
       "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "nuclear": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-10-28T08:11:48+00:00",
+  "checked_at": "2026-10-28T09:11:29+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

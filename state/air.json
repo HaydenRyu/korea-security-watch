@@ -1,59 +1,52 @@
 {
- "at": "2026-10-28T02:50:04+00:00",
- "south": 74,
- "area": 90,
- "baseline": 73,
- "ratio": 1.01,
- "samples": 3,
+ "at": "2026-10-28T04:07:59+00:00",
+ "south": 72,
+ "area": 97,
+ "baseline": 72.0,
+ "ratio": 1.0,
+ "samples": 6,
  "mil": [
   {
-   "type": "BE20",
+   "type": "F16",
    "name": null,
-   "call": "CATS82",
-   "lat": 35.01,
-   "lon": 126.8
-  },
-  {
-   "type": "BE20",
-   "name": null,
-   "call": "CATS93",
-   "lat": 36.09,
-   "lon": 126.9
-  },
-  {
-   "type": "H60",
-   "name": null,
-   "call": "CARD78T",
-   "lat": 36.81,
-   "lon": 126.97
-  },
-  {
-   "type": "H60",
-   "name": null,
-   "call": "CARD92",
-   "lat": 37.46,
-   "lon": 127.11
-  },
-  {
-   "type": "B190",
-   "name": null,
-   "call": "CATS77",
-   "lat": 35.13,
-   "lon": 127.62
+   "call": "WSI1",
+   "lat": 36.8,
+   "lon": 126.17
   },
   {
    "type": "GLEX",
    "name": "정찰용 비즈니스젯 가능",
    "call": "",
-   "lat": 37.82,
-   "lon": 128.08
+   "lat": 37.32,
+   "lon": 126.27
+  },
+  {
+   "type": "BE20",
+   "name": null,
+   "call": "CATS82",
+   "lat": 35.02,
+   "lon": 126.8
+  },
+  {
+   "type": "E737",
+   "name": null,
+   "call": "ARG0104",
+   "lat": 36.43,
+   "lon": 126.96
   },
   {
    "type": "V22",
    "name": null,
    "call": "JGVN710",
-   "lat": 33.13,
-   "lon": 130.35
+   "lat": 33.05,
+   "lon": 130.29
+  },
+  {
+   "type": "C30J",
+   "name": "C-130J 수송기",
+   "call": "",
+   "lat": 33.74,
+   "lon": 130.57
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

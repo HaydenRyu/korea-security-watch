@@ -1,77 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters"
+      "북한 합참 발표 오늘 10월 28일",
+      "North Korea Reuters October 28"
     ],
     "nuclear": [
-      "North Korea Reuters",
-      "북한 합참 발표 오늘"
+      "North Korea Reuters October 28",
+      "북한 합참 발표 오늘 10월 28일"
     ],
     "logistics": [
-      "North Korea Reuters",
-      "북한 합참 발표 오늘"
+      "North Korea Reuters October 28",
+      "북한 합참 발표 오늘 10월 28일"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순",
-      "북한 합참 발표 오늘"
+      "북한 합참 발표 오늘 10월 28일",
+      "North Korea Reuters October 28"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 28일",
-      "North Korea Reuters"
+      "해킹 공격 개인정보 유출 10월 28일",
+      "North Korea Reuters October 28"
     ],
     "foreign_forces": [
-      "김정은 방중 북미 논의 정상회담 10월 28일",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 10월"
-    ],
-    "parade_massing": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters"
-    ],
-    "nk_internal": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters"
-    ],
-    "gov_warning": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan 대만 중국 군사훈련 东部战区"
-    ],
-    "linkage:korea": [
-      "North Korea troops Russia 북러 군사협력"
-    ],
-    "calm": [
-      "김정은 방중 북미 논의 정상회담 10월 28일"
-    ],
-    "factor:inter_korean": [
-      "북한 합참 발표 오늘"
-    ],
-    "factor:great_powers": [
+      "김정은 방중 후속 북미 10월 28일",
       "Kim Jong Un China Russia visit"
     ],
-    "factor:nk_domestic": [
-      "North Korea Reuters"
+    "parade_massing": [
+      "북한 합참 발표 오늘 10월 28일",
+      "North Korea Reuters October 28"
     ],
-    "factor:public_opinion": [
-      "북한 합참 발표 오늘"
+    "nk_internal": [
+      "북한 합참 발표 오늘 10월 28일",
+      "North Korea Reuters October 28"
+    ],
+    "gov_warning": [
+      "북한 합참 발표 오늘 10월 28일",
+      "North Korea Reuters October 28"
+    ],
+    "hybrid_ops": [
+      "해킹 공격 개인정보 유출 10월 28일",
+      "North Korea Reuters October 28"
+    ],
+    "calm": [
+      "김정은 방중 후속 북미 10월 28일"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261028505901",
     "https://www.segye.com/newsView/20261028508478",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261028118100002",
-    "https://www.yna.co.kr/view/AKR20261028099300504",
     "https://www.yna.co.kr/view/AKR20261028071800009",
-    "https://www.yna.co.kr/view/AKR20261028053900001",
+    "https://www.yna.co.kr/view/AKR20261028099300504",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "개풍군 해안 구형 자주포 노출과 MDL 근접 작업이 이어지나 합참은 신형 수단이 아니라고 보며 직전과 같은 수준이다. 금융권에 북한 IP 대역 스캔성 접근이 대량 탐지됐으나 실제 침해 피해와 북한 소행 발표는 없다.",
+  "overall_summary": "개풍군 해안 구형 122mm 자주포 노출과 MDL 근접 작업이 이어지나 합참은 신형 타격수단이 아니라고 보며 직전과 같은 수준이다. 금융권에 북한 IP 대역 접근이 대량 탐지됐으나 북한 소행 발표는 없다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -79,7 +61,7 @@
       "region": "황해도 개풍군 해안",
       "lat": 37.95,
       "lon": 126.62,
-      "summary": "합참이 개풍군 해안에 구형 122mm 자주포가 노출되고 MDL 근접 작업이 계속된다고 밝혔고 연합뉴스도 같은 포 노출과 확산된 집결 딥페이크를 다뤘다(신형 무기체계는 아니라는 평가).",
+      "summary": "합참이 개풍군 해안에 구형 122mm 자주포가 노출되고 MDL 근접 작업이 계속된다고 밝혔고 연합뉴스도 같은 상황과 확산된 집결 딥페이크를 다뤘다(신형 무기체계는 아니라는 평가).",
       "meaning": "신규 증강 징후는 아니나 접경 포병 노출과 MDL 작업이 지속된다.",
       "sources": [
         {
@@ -95,29 +77,20 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참 공보실장 27일: 구형 포 노출, MDL 근접 작업 진행 중, 김여정 담화의 신형 수단 아님",
-        "포는 애기봉 전망대 북쪽 약 1.5km"
+        "합참 공보실장: 구형 포 노출, MDL 근접 작업 진행 중, 새로운 무기체계로 보지 않음",
+        "애기봉 스타벅스 촬영 자주포 사진은 AI 생성물로 확인"
       ],
       "speculation": [
-        "노출 의도는 합참이 파악 중"
+        "합참이 노출 의도를 여러 갈래로 분석 중"
       ]
-    },
-    "nuclear": {
-      "status": "none"
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "border_clash": {
-      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "서울(금융권)",
-      "summary": "귀속 미확인 — 금융권 대상 북한 IP 대역 스캔성 접근 약 440만 건이 탐지됐으나 실제 침해 피해 신고는 없고 당국은 IP 조작 가능성으로 국적 특정이 어렵다고 밝혔다.",
-      "meaning": "스캔성 접근이 다수이며 실제 피해·북한 소행 발표는 없다.",
+      "region": "서울 금융권",
+      "summary": "귀속 미확인 — 금융권 대상 해킹 시도에서 북한 IP 대역 접근 약 440만 건이 탐지됐으나 당국은 소행을 특정하지 않았다.",
+      "meaning": "IP 조작 가능성이 있어 북한 소행 근거로는 불충분하다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -127,29 +100,38 @@
       ],
       "confidence": "중간",
       "facts": [
-        "21일부터 북한 IP 대역(175.45.176.0/22) 접근 약 440만 건 탐지",
-        "당국 '각별 유의' 공문, 국적 특정 어려움"
+        "북한 IP 대역 접근 대량 탐지, 당국 각별 유의 당부"
       ],
       "speculation": []
     },
+    "border_clash": {
+      "status": "none",
+      "summary": "24시간 안 새 접경 사건 없음 — 군사회담 제안 재촉구와 북 안보리 서한 등 배경."
+    },
     "foreign_forces": {
       "status": "none",
-      "summary": "김정은 방중(10/24~25)은 24시간 경과, 신압록강대교 개통 후 북한 세관 화물차 증가 보도는 배경이다."
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
+      "summary": "김정은 방중(10/24~25) 반복 보도뿐이며 24시간 안 새 파병·협정 확인 없음 — 배경."
     },
     "gov_warning": {
       "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "nuclear": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-10-28T07:11:10+00:00",
+  "checked_at": "2026-10-28T08:11:48+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

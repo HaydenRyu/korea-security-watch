@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T06:18:31+00:00",
+  "updated_at": "2026-10-28T07:11:10+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -13,7 +13,7 @@
           "id": "dialogue_offer",
           "label": "남북·북미 대화 제안·수용",
           "state": "on",
-          "note": "국방부가 10/23 MDL 관련 남북 군사당국회담을 공식 제안했고 통일장관이 28일 북측의 호응을 촉구했다."
+          "note": "정부가 군사분계선 확인·군통신선 복원을 협의할 남북군사회담을 제안했고 통일부 장관이 북측의 호응을 촉구했다."
         },
         {
           "id": "channel_restored",
@@ -186,22 +186,18 @@
   ],
   "calm": {
     "dialogue_offer": {
-      "summary": "국방부가 10/23 MDL 관련 남북 군사당국회담을 공식 제안했고 통일장관이 28일 북측의 호응을 촉구했다.",
+      "summary": "정부가 군사분계선 확인·군통신선 복원을 협의할 남북군사회담을 제안했고 통일부 장관이 북측의 호응을 촉구했다.",
       "sources": [
         {
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
-          "publisher": "국방일보"
-        },
-        {
-          "url": "https://www.segye.com/newsView/20261028508478",
-          "publisher": "세계일보"
+          "url": "https://www.yna.co.kr/view/AKR20261028099300504",
+          "publisher": "연합뉴스"
         }
       ],
       "first_seen": "2026-10-23T05:10:46+00:00",
-      "last_seen": "2026-10-28T06:18:31+00:00"
+      "last_seen": "2026-10-28T07:11:10+00:00"
     }
   },
-  "calm_judged_at": "2026-10-28T06:18:31+00:00",
+  "calm_judged_at": "2026-10-28T07:11:10+00:00",
   "history": [
     {
       "date": "2026-10-22",

@@ -15,7 +15,7 @@ concurrency: { group: firms, cancel-in-progress: false }
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 8   # 유형 추정 Overpass 상한 120s(firms.OSM_BUDGET_S) 포함
+    timeout-minutes: 8   # 유형 추정 Overpass 상한 120s(firms.OSM_BUDGET_S) + 토지피복 상한 60s(firms.LC_BUDGET_S, 10/28 실측 칸당 ≈0.6s) 포함
     steps:
       - uses: actions/checkout@v4
       - name: fetch

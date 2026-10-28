@@ -280,6 +280,7 @@
 0. 위성 열점은 GitHub Actions `firms` 가 매시간 `state/firms.json` 에 갱신한다. 이 세션에서 firms.py 를 실행하지 않는다. 파일이 없거나 `fetched_at` 이 3시간보다 오래됐으면 열점 근거를 쓰지 않는다.
    - 출력의 `border_count` 가 0보다 크면 `state/firms.json` 의 `border: true` 지점을 확인한다.
    - 열점은 산불·소각도 잡는다. 같은 지역·시간대의 포격·화재 **보도가 있을 때만** border_clash 의 보조 근거로 쓴다. 열점만으로 징후를 올리지 않는다.
+   - `kind`(농경지 소각·산불·시가지 열원 등)는 추정이고, `mil`(군사 시설 인근)은 위치 표지일 뿐이다. 둘 다 보도 대조 대상을 고르는 데만 쓰고 징후·등급 근거로 쓰지 않는다.
 0-1. `state/latest.json` 을 읽는다(없으면 건너뛴다). `items` 중 `status` 가 `none` 이 아닌 항목의 키·status·routine·summary·sources 를 메모해 두고, 이번 판정 뒤 3절 「직전 판정과의 일관성」으로 대조한다. `held` 가 있으면 직전 회차에 내림이 보류된 상태다(참고만 한다).
 0-2. **국내 언론 수집 결과를 먼저 만든다** — `python3 scripts/news_kr.py` 를 실행한다(약 1분). 결과는 레포 루트 `news_kr.local.json` 이다(.gitignore — **커밋하지 않는다**. 채택 매체 RSS 는 개인 구독 한정이라 제목·링크를 레포에 올리지 않는다).
    - `status` 가 `ok` 가 아니면 `feeds[].error` 를 보고 나머지 피드 결과만 쓴다. 실행 자체가 실패하면 `state/news_kr.json`(워크플로 공개판, 건수·상태만)으로 수집 상태만 확인하고 기존 검색 절차로 간다.

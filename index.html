@@ -212,6 +212,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .pop dl.k{grid-template-columns:40px minmax(0,1fr)}
 .pop .kc{font:400 10px/1 var(--data);color:var(--fog);padding:var(--s4);border:1px solid var(--line-2)}
 .pop .ntag{font:500 10px/1 var(--data);padding:var(--s4) 6px;border:1px solid var(--ice);color:var(--ice)}
+.pop .mtag{font:500 10px/1 var(--data);padding:var(--s4) 6px;border:1px dashed var(--g1);color:var(--g1)}  /* 군사 시설 인근 표지(10/28) — 판정 아님 */
 .pop ul{margin:0;padding:0;list-style:none;display:grid;gap:var(--s4)}
 .fleg{position:absolute;z-index:500;left:8px;bottom:34px;display:flex;flex-wrap:wrap;gap:var(--s4) var(--s12);max-width:calc(100% - 16px);
   font:400 10px/16px var(--data);color:var(--fog);background:rgba(5,8,14,.78);padding:var(--s4) var(--s8);pointer-events:none}
@@ -219,7 +220,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .fleg span{display:inline-flex;align-items:center;gap:var(--s4);white-space:nowrap}
 .fleg b{font-weight:500;color:var(--ice)}
 .fleg i{display:inline-block;width:8px;height:8px;border-radius:50%;flex:none}
-.fleg .fx{box-shadow:inset 0 0 0 2px #ff8a3d,0 0 0 1.5px #05080e} .fleg .bu{background:var(--g2)} .fleg .un{background:var(--g1);outline:1px dashed var(--g1);outline-offset:1px}
+.fleg .fx{box-shadow:inset 0 0 0 2px #ff8a3d,0 0 0 1.5px #05080e} .fleg .ub{outline:1.5px dashed #ff8a3d;outline-offset:-1.5px} .fleg .bu{background:var(--g2)} .fleg .wf{background:var(--g3)} .fleg .un{background:var(--g1);outline:1px dashed var(--g1);outline-offset:1px}
 .fleg .nk{width:12px;height:12px;box-shadow:inset 0 0 0 1.5px var(--ice)}
 .fleg .ls{display:none}
 @media (max-width:759px){.fleg{bottom:8px} .fleg .lf{display:none} .fleg .ls{display:inline}}  /* 휴대폰은 좌표 표시가 없다 · 범례 줄 이름은 짧게(한 줄에 들어가야 2줄 이내) */
@@ -908,6 +909,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   정례 훈련·미사일 시험·위협 발언만으로는 주의를 넘지 않습니다. 다이얼 바깥 눈금은 다음 확인까지 남은 시간입니다.
   위성 영상은 NASA GIBS 하루 단위 영상(약 250m)이라 병력·차량은 보이지 않으며, 지도 핀은 보도된 사건의 대략적 위치입니다.
   열점은 NASA FIRMS 위성 열 감지(최근 48시간)로 산불·소각·공장 열원도 포함하며, 접경 구역은 군사분계선에서 20km 이내입니다.
+  열점 유형은 추정이며 주변 시설은 © OpenStreetMap contributors(ODbL), 토지피복은 ESA WorldCover 2021 (CC BY 4.0) 자료를 씁니다.
   붉은 선은 군사분계선(MDL, OpenStreetMap 국경선), 양옆 점선은 비무장지대 한계선입니다(개략 자료라 크게 확대하면 숨깁니다).
   CCTV 는 국가교통정보센터 영상을 5분마다 한 장씩 찍은 사진이라 실제보다 최대 6분 늦습니다.
   항공기 지도는 신호를 켠 기체만 보이고 등급 판단에는 쓰지 않습니다. 공식 경보는 행정안전부 재난문자를 따르세요.
@@ -1403,13 +1405,17 @@ function nearPlace(places,lat,lon){
   return`${c} · ${name} ${DIR8[Math.round(deg/45)%8]}쪽 ${Math.round(best.k)}km`;
 }
 // 유형·근거 문구는 scripts/firms.py 가 정한다(이름 없는 OSM 태그의 우리말 표기 포함) — 화면은 받은 문구를 그대로 쓴다
-const KIND={fixed:{c:"#ff8a3d",lbl:"상시 열원 추정"},burn:{c:"#ff8a3d",lbl:"산불·소각 추정"},unknown:{c:"#f2c14e",lbl:"미상"}};
+// 10/28 토지피복(ESA WorldCover 2021)으로 산불·소각을 농경지 소각·산불·시가지 열원으로 나눴다. burn = 피복을 못 읽은 산불·소각
+const KIND={fixed:{c:"#ff8a3d",lbl:"상시 열원 추정",lg:"상시 열원",i:"fx"},urban:{c:"#ff8a3d",lbl:"시가지 열원 추정",lg:"시가지 열원",i:"ub"},
+  wildfire:{c:"#ff4d5e",lbl:"산불 추정",lg:"산불",i:"wf"},farm:{c:"#ff8a3d",lbl:"농경지 소각 추정",lg:"농경지 소각",i:"bu"},
+  burn:{c:"#ff8a3d",lbl:"산불·소각 추정",lg:"산불·소각",i:"bu"},unknown:{c:"#f2c14e",lbl:"미상",lg:"미상",i:"un"}};
+const RING=k=>k==="fixed"||k==="urban";  // 테두리형(상시·시가지 열원)
 const kindOf=p=>KIND[p.kind]?p.kind:"unknown";
 function firmsPop(p,where){
   const k=kindOf(p),why=p.kind_why||[];
-  return `<div class="pop"><div class="ph2"><b>${esc(p.kind_label||KIND[k].lbl)}</b>${p.kind_conf?`<span class="kc">신뢰도 ${esc(p.kind_conf)}</span>`:""}${p.north?'<span class="ntag">북측</span>':""}${p.border?'<span class="btag">접경 구역</span>':""}</div>
+  return `<div class="pop"><div class="ph2"><b>${esc(p.kind_label||KIND[k].lbl)}</b>${p.kind_conf?`<span class="kc">신뢰도 ${esc(p.kind_conf)}</span>`:""}${p.north?'<span class="ntag">북측</span>':""}${p.border?'<span class="btag">접경 구역</span>':""}${p.mil?'<span class="mtag">군사 시설 인근</span>':""}</div>
     <dl class="k">${why.length?`<dt>근거</dt><dd><ul>${why.map(w=>`<li>${esc(w)}</li>`).join("")}</ul></dd>`:""}<dt>위치</dt><dd>${where?esc(where):'<span class="dim">위치 확인 중</span>'}</dd><dt>감지</dt><dd>${short(p.t)} KST · ${esc(p.sat||"—")}</dd>${p.mdl_km!=null?`<dt>분계선</dt><dd>군사분계선에서 약 ${Math.round(p.mdl_km)}km</dd>`:""}</dl>
-    <p>유형은 같은 자리 감지 이력과 주변 시설 지도(OSM)로 추정한 것입니다. 포격·화재 여부는 같은 곳의 보도가 있을 때만 판단합니다.</p></div>`;
+    <p>유형은 같은 자리 감지 이력, 주변 시설 지도(© OpenStreetMap contributors), 토지피복(ESA WorldCover 2021, CC BY 4.0)으로 추정한 것입니다. 「군사 시설 인근」은 위치 표지일 뿐 판정이 아닙니다. 포격·화재 여부는 같은 곳의 보도가 있을 때만 판단합니다.</p></div>`;
 }
 const HOVER=matchMedia("(hover:hover) and (pointer:fine)").matches;  // 휴대폰은 누르면 팝업만(툴팁과 겹치지 않게)
 function drawFirms(doc){
@@ -1417,24 +1423,26 @@ function drawFirms(doc){
   const b=document.querySelector("[data-layer=firms]");
   b.textContent=`열점 ${doc.count}`+(doc.border_count?` · 접경 ${doc.border_count}`:"");
   layers.firms=L.layerGroup();
-  const ord={fixed:0,unknown:1,burn:2};  // 상시 열원을 먼저 그려 산불·미상이 위에 오게
+  const ord={fixed:0,urban:1,unknown:2,farm:3,burn:3,wildfire:4};  // 상시·시가지 열원을 먼저 그려 산불·소각·미상이 위에 오게
   [...doc.points].sort((x,y)=>ord[kindOf(x)]-ord[kindOf(y)]).forEach(p=>{
     const k=kindOf(p),c=KIND[k].c,big=p.border||p.north;
     // 구름(흰색)·바다(검정) 양쪽에서 보이도록 모든 표지 밑에 어두운 테를 깐다(10/19 hayden — 회색 고리가 구름에 묻혔다)
     const R=big?6:4.5,halo=(r,w)=>L.circleMarker([p.lat,p.lon],{renderer:hitR(),radius:r,weight:w,fill:false,interactive:false,color:"#05080e",opacity:.75}).addTo(layers.firms);
     if(p.north){halo(9,3.5);L.circleMarker([p.lat,p.lon],{renderer:hitR(),radius:9,weight:1.5,fill:false,interactive:false,
-      color:k==="fixed"?"#ff8a3d":"#ffffff",opacity:1,dashArray:k==="fixed"?"2 3":null}).addTo(layers.firms)}
-    halo(R,k==="fixed"?4:2.5);
-    const st=k==="fixed"?{radius:R,weight:2,color:c,fill:false}
+      color:RING(k)?"#ff8a3d":"#ffffff",opacity:1,dashArray:RING(k)?"2 3":null}).addTo(layers.firms)}
+    halo(R,RING(k)?4:2.5);
+    const st=RING(k)?{radius:R,weight:2,color:c,fill:false,dashArray:k==="urban"?"3 2":null}
       :{radius:R,weight:k==="unknown"?1:0,color:c,dashArray:k==="unknown"?"2 2":null,fillColor:c,fillOpacity:1};
     const m=L.circleMarker([p.lat,p.lon],{renderer:hitR(),...st}).addTo(layers.firms);
     m.bindPopup(()=>firmsPop(p,p._w),POP())
       .on("popupopen",async()=>{if(p._w!=null)return;p._w=nearPlace(await loadPlaces(),p.lat,p.lon);m.setPopupContent(firmsPop(p,p._w))});
     const fac=(p.osm||[])[0];
-    if(HOVER)m.bindTooltip(()=>`${esc(p.kind_label||KIND[k].lbl)}${fac?` · ${esc(fac)}`:""}${p.north?" · 북측":""}<br><span style="color:var(--fog)">${short(p.t)}${p._w?` · ${esc(p._w)}`:""} · 누르면 근거</span>`,{className:"tip"});
+    if(HOVER)m.bindTooltip(()=>`${esc(p.kind_label||KIND[k].lbl)}${fac?` · ${esc(fac)}`:""}${p.north?" · 북측":""}${p.mil?`<br>군사 시설 인근: ${esc(p.mil)} — 보도 대조 필요`:""}<br><span style="color:var(--fog)">${short(p.t)}${p._w?` · ${esc(p._w)}`:""} · 누르면 근거</span>`,{className:"tip"});
   });
   const n=k=>doc.points.filter(p=>kindOf(p)===k).length,nn=doc.points.filter(p=>p.north).length;
-  const lg=$("fleg-f");lg.innerHTML=`<span><span class="lf">열점 유형(추정)</span><span class="ls">열점</span></span><span><i class="fx"></i>상시 열원 <b>${n("fixed")}</b></span><span><i class="bu"></i>산불·소각 <b>${n("burn")}</b></span><span><i class="un"></i>미상 <b>${n("unknown")}</b></span><span><i class="nk"></i>북측 <b>${nn}</b></span>`;
+  // 범례는 0건 유형을 뺀다(유형 6종 — 휴대폰 2줄 이내 유지). 상시 열원·미상은 0이어도 둔다
+  const lgk=Object.keys(KIND).filter(k=>n(k)||k==="fixed"||k==="unknown"),nm=doc.points.filter(p=>p.mil).length;
+  const lg=$("fleg-f");lg.innerHTML=`<span><span class="lf">열점 유형(추정)</span><span class="ls">열점</span></span>`+lgk.map(k=>`<span><i class="${KIND[k].i}"></i>${KIND[k].lg} <b>${n(k)}</b></span>`).join("")+`<span><i class="nk"></i>북측 <b>${nn}</b></span>`+(nm?`<span title="군사 시설 인근 표지 — 판정 아님, 보도 대조용">군사 인근 <b>${nm}</b></span>`:"");
   toggle(b,layers.firms);
   b.addEventListener("click",()=>{lg.hidden=b.getAttribute("aria-pressed")!=="true";flegSync()});
   b.setAttribute("aria-pressed","true");layers.firms.addTo(map);lg.hidden=false;flegSync();  // 기본 켬(10/19 hayden)

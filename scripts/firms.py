@@ -12,6 +12,11 @@
   + OSM 시설(Overpass, 시설 경계 OSM_RADIUS_M 이내 · 격자별 OSM_TTL_DAYS 캐시 · OSM_BATCH 칸 묶음 질의 · 회차 OSM_BUDGET_S 초).
   북측(data/nk_boundary.json, Natural Earth) 은 OSM 시설 자료가 희박해 「시설 없음」을 근거로 쓰지 않는다.
   추정이다 — 단정 표현을 쓰지 않는다. Overpass 실패는 유형만 비우고 열점 갱신은 그대로 한다.
+- 토지피복(10/28): 격자마다 ESA WorldCover 2021(10m, CC BY 4.0) 최다 분류를 1회 조회해 캐시한다(정적 자료 — 재조회 없음).
+  공개 AWS 버킷 COG 를 HTTP Range 로 읽는다(가입·키 없음, 표준 라이브러리만). 회차당 LC_MAX_PER_RUN 칸 · LC_BUDGET_S 초.
+  산불·소각을 농경지 소각(farm)·산불(wildfire)·시가지 열원(urban)으로 나누고, 북측 미상도 피복으로 추정한다(신뢰 낮음).
+- 군사 시설 인근 표지(10/28): 같은 Overpass 질의에 landuse=military·military=* 를 더하고(요청 추가 없음),
+  data/places.json 의 북측 주요 시설(NK_SITES)과 거리를 잰다. 표지(mil)일 뿐 유형·등급을 바꾸지 않는다 — 보도 대조용.
 """
 from __future__ import annotations
 
@@ -20,10 +25,13 @@ import io
 import json
 import math
 import os
+import struct
 import sys
 import time
 import urllib.parse
 import urllib.request
+import zlib
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -52,11 +60,35 @@ OSM_BATCH_TIMEOUT_S = 50  # 묶음 1회 서버 timeout
 OSM_BUDGET_S = 120        # 회차당 Overpass 총 시간 상한 — 새 묶음은 경과 ≤ 70초일 때만 시작
 OVERPASS = "https://overpass-api.de/api/interpreter"
 UA = "korea-security-watch/1.0 (personal OSINT dashboard; github actions)"
-KIND_LABEL = {"fixed": "상시 열원 추정", "burn": "산불·소각 추정", "unknown": "미상"}
+# burn = 산불·소각 추정이되 토지피복을 못 읽은 경우(10/28 이전 의미 그대로). 새 유형은 피복 근거가 있을 때만
+KIND_LABEL = {"fixed": "상시 열원 추정", "urban": "시가지 열원 추정", "farm": "농경지 소각 추정",
+              "wildfire": "산불 추정", "burn": "산불·소각 추정", "unknown": "미상"}
+NK_URBAN_LABEL = "시설 열원 추정(북측·토지피복)"   # 북측 시가지 반복 열원 — OSM 시설 근거가 없어 라벨을 따로 둔다
 # 이름 없는 OSM 시설은 질의 태그값만 남는다(split_batch) — 화면·근거 문구에는 우리말로(10/19 hayden 「권장대로」).
 # 키 = 질의하는 태그값 전부(landuse=industrial · power=plant · man_made=works|kiln|flare|chimney) + 태그도 없을 때의 「시설」
 OSM_TAG_KO = {"industrial": "공업 지역(이름 없음)", "plant": "발전소(이름 없음)", "works": "공장(이름 없음)",
               "kiln": "가마(이름 없음)", "flare": "플레어 굴뚝(이름 없음)", "chimney": "굴뚝(이름 없음)", "시설": "시설(이름 없음)"}
+
+# ── 토지피복(ESA WorldCover 2021 v200) ──────────────────────────────────────────
+# AWS Open Data 공개 버킷(s3://esa-worldcover) — 3°×3° 타일, 좌하단 위경도 이름, 36000² uint8 · 1024² 타일 · DEFLATE.
+# 10/28 실측: 당진제철 50 · 평양 50 · 동창리 10 · 풍계리 10(북측 타일 N39E123·N39E129 정상 응답)
+WC_URL = "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_{tile}_Map.tif"
+WC_SRC = "ESA WorldCover 2021 (CC BY 4.0)"
+LC_WIN_PX = 20            # ±20화소(10m) ≈ 410m 창의 최다 분류 — VIIRS 375m 화소 1개 폭. 한 화소만 보면 길·논두렁에 흔들린다
+LC_MAX_PER_RUN = 60       # 회차당 새로 읽는 칸 상한(칸당 타일 1개 ≈ 15~90KB)
+LC_BUDGET_S = 60          # 회차당 피복 조회 시간 상한
+LC_KO = {10: "수목", 20: "관목", 30: "초지", 40: "농경지", 50: "시가지", 60: "나지", 70: "눈·얼음",
+         80: "수역", 90: "습지", 95: "맹그로브", 100: "이끼·지의류"}
+LC_VEG = {10, 20, 30}     # 산불 추정
+LC_CROP, LC_BUILT = 40, 50
+
+# ── 군사 시설 인근 표지 ────────────────────────────────────────────────────────
+# 북측 주요 시설 — 좌표는 data/places.json(소수 2자리 대표점)에서 읽는다. 이름이 없으면 건너뛴다.
+NK_SITES = {"풍계리": "핵실험장", "영변": "핵시설", "동창리": "서해위성발사장", "신포": "잠수함 기지"}
+# 대표점 반올림(±0.7km) + 단지 폭 수 km — 단지 끝까지 닿도록 6km. 표지일 뿐이라 넓게 잡아도 판정은 안 바뀐다
+NK_SITE_KM = 6
+MIL_TAG_KO = "군사 시설(이름 없음)"
+_SITES = None
 
 
 def facility_labels(osm: list[str]) -> list[str]:
@@ -129,6 +161,9 @@ def _batch_query(items: list[tuple[str, float, float]]) -> str:
         parts.append(f'(nwr({a})[landuse=industrial];nwr({a})[power=plant];nwr({a})[man_made~"^(works|kiln|flare|chimney)$"];);'
                      f'make c cell="{k}",n=count(nwr),ko=set(t["name:ko"]),nm=set(t["name"]),en=set(t["name:en"]),'
                      f'pw=set(t["power"]),mm=set(t["man_made"]),lu=set(t["landuse"]);out;')
+        # 군사 시설(10/28) — 같은 요청 안에서 칸마다 요약 원소 m 하나 더(요청 수 불변)
+        parts.append(f'(nwr({a})[landuse=military];nwr({a})[military];);'
+                     f'make m cell="{k}",n=count(nwr),ko=set(t["name:ko"]),nm=set(t["name"]),en=set(t["name:en"]);out;')
     return f"[out:json][timeout:{OSM_BATCH_TIMEOUT_S}];" + "".join(parts)
 
 
@@ -138,7 +173,7 @@ def split_batch(elements: list[dict], keys: list[str]) -> dict[str, list[str]]:
     for e in elements:
         tg = e.get("tags", {})
         k = tg.get("cell")
-        if k not in want:
+        if k not in want or e.get("type") == "m":   # m = 군사 시설 요약(split_mil)
             continue
         if tg.get("n", "0") in ("", "0"):
             out[k] = []
@@ -154,12 +189,33 @@ def split_batch(elements: list[dict], keys: list[str]) -> dict[str, list[str]]:
     return out
 
 
-def osm_batch(items: list[tuple[str, float, float]]) -> dict[str, list[str]]:
-    """칸 묶음 1회 질의. 실패는 예외로 올린다(호출부가 캐시 미기록)."""
+def split_mil(elements: list[dict], keys: list[str]) -> dict[str, list[str]]:
+    """묶음 응답의 군사 시설 요약(type m) → {칸 키: 이름[]}. 이름 없으면 「군사 시설(이름 없음)」, n=0 은 []."""
+    want, out = set(keys), {}
+    for e in elements:
+        tg = e.get("tags", {})
+        k = tg.get("cell")
+        if e.get("type") != "m" or k not in want:
+            continue
+        if tg.get("n", "0") in ("", "0"):
+            out[k] = []
+            continue
+        names = []
+        for f in ("ko", "nm", "en"):
+            for n in (tg.get(f) or "").split(";"):
+                if n and n not in names:
+                    names.append(n)
+        out[k] = names[:3] or [MIL_TAG_KO]
+    return out
+
+
+def osm_batch(items: list[tuple[str, float, float]]) -> tuple[dict[str, list[str]], dict[str, list[str]]]:
+    """칸 묶음 1회 질의 → (시설, 군사 시설). 실패는 예외로 올린다(호출부가 캐시 미기록)."""
     q = _batch_query(items)
     req = urllib.request.Request(OVERPASS, data=urllib.parse.urlencode({"data": q}).encode(), headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=OSM_BATCH_TIMEOUT_S + 15) as r:
-        return split_batch(json.load(r)["elements"], [k for k, _, _ in items])
+        els, keys = json.load(r)["elements"], [k for k, _, _ in items]
+    return split_batch(els, keys), split_mil(els, keys)
 
 
 def enrich_osm(cells: dict, now: datetime, lookup=None, priority: set[str] | None = None,
@@ -171,7 +227,8 @@ def enrich_osm(cells: dict, now: datetime, lookup=None, priority: set[str] | Non
     lookup = lookup or osm_batch
     stale = (now - timedelta(days=OSM_TTL_DAYS)).isoformat()
     pri = priority or set()
-    todo = sorted((k for k, c in cells.items() if c.get("osm_checked", "") < stale),
+    # mil 키가 없는 칸 = 10/28 이전 조회분(군사 시설 미조회) — TTL 안이어도 한 번 다시 묻는다(회차 상한 안에서)
+    todo = sorted((k for k, c in cells.items() if c.get("osm_checked", "") < stale or "mil" not in c),
                   key=lambda k: (k in pri, cells[k]["dates"][-1]), reverse=True)
     queue = [sorted(todo[i:i + batch], key=lambda k: (cells[k]["lat"], cells[k]["lon"])) for i in range(0, len(todo), batch)]
     done, t0 = 0, time.monotonic()
@@ -190,41 +247,195 @@ def enrich_osm(cells: dict, now: datetime, lookup=None, priority: set[str] | Non
                 continue
             print(f"overpass 중단({len(chunk)}칸 묶음): {e}")
             break
-        for k, names in got.items():
+        fac, mil = got if isinstance(got, tuple) else (got, {})
+        for k, names in fac.items():
             if k in cells:
                 cells[k]["osm"] = names
+                cells[k]["mil"] = mil.get(k, [])
                 cells[k]["osm_checked"] = now.isoformat()
                 done += 1
     return done
 
 
-def classify(days: int, osm: list[str] | None, north: bool) -> tuple[str, str, list[str]]:
-    """(kind, 신뢰 중·낮음, 근거[]) — 추정 라벨. osm None = 아직 조회 안 함"""
+_WC_HDR: dict = {}
+_WC_TILE: dict = {}
+_WC_TILE_MAX = 48         # 회차 안 내부 타일(압축 해제 1MB) 메모리 캐시 상한
+
+
+def _http_range(url: str, a: int, n: int) -> bytes:
+    req = urllib.request.Request(url, headers={"Range": f"bytes={a}-{a + n - 1}", "User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        if r.status != 206:   # Range 무시(200)면 수백 MB 전체가 온다 — 읽지 않고 실패로
+            raise RuntimeError(f"range 미지원 응답 {r.status}")
+        b = r.read()
+    if len(b) != n:
+        raise RuntimeError(f"range {a}+{n}: {len(b)}바이트")
+    return b
+
+
+def wc_tile_name(lat: float, lon: float) -> tuple[str, int, int]:
+    la0, lo0 = math.floor(lat / 3) * 3, math.floor(lon / 3) * 3
+    return f"{'N' if la0 >= 0 else 'S'}{abs(la0):02d}{'E' if lo0 >= 0 else 'W'}{abs(lo0):03d}", la0, lo0
+
+
+def _wc_header(tile: str, la0: int, lo0: int) -> dict:
+    """COG 첫 IFD(전체 해상도)만 읽는다. 형식이 예상과 다르면 예외 — 잘못 읽은 값을 분류로 쓰지 않는다."""
+    if tile in _WC_HDR:
+        return _WC_HDR[tile]
+    url = WC_URL.format(tile=tile)
+    h = _http_range(url, 0, 65536)
+    if h[:4] != b"II*\x00":
+        raise RuntimeError(f"{tile}: TIFF 아님")
+    off = struct.unpack_from("<I", h, 4)[0]
+    size, fmt = {1: (1, "B"), 3: (2, "H"), 4: (4, "I"), 12: (8, "d")}, {}
+    for i in range(struct.unpack_from("<H", h, off)[0]):
+        tag, typ, cnt, val = struct.unpack_from("<HHII", h, off + 2 + i * 12)
+        if typ not in size:
+            continue
+        n = size[typ][0] * cnt
+        raw = h[off + 10 + i * 12: off + 10 + i * 12 + n] if n <= 4 else (h[val:val + n] if val + n <= len(h) else _http_range(url, val, n))
+        fmt[tag] = struct.unpack(f"<{cnt}{size[typ][1]}", raw)
+    hd = {"url": url, "W": fmt[256][0], "H": fmt[257][0], "tw": fmt[322][0], "th": fmt[323][0], "off": fmt[324], "cnt": fmt[325]}
+    tie, sc = fmt.get(33922, ()), fmt.get(33550, ())
+    if (fmt[259][0], fmt[258][0], fmt.get(317, (1,))[0]) != (8, 8, 1) or tie[3:5] != (lo0, la0 + 3) \
+            or abs(sc[0] * hd["W"] - 3) > 1e-6 or abs(sc[1] * hd["H"] - 3) > 1e-6:
+        raise RuntimeError(f"{tile}: 예상 밖 형식(압축 {fmt[259]}·기준점 {tie[3:5]})")
+    _WC_HDR[tile] = hd
+    return hd
+
+
+def wc_class(lat: float, lon: float) -> tuple[int, int]:
+    """(최다 분류 코드, 창 안 비율 %) — 점 주변 ±LC_WIN_PX 화소. 창은 내부 타일(1024²) 경계에서 자른다."""
+    tile, la0, lo0 = wc_tile_name(lat, lon)
+    hd = _wc_header(tile, la0, lo0)
+    W, H, tw, th = hd["W"], hd["H"], hd["tw"], hd["th"]
+    x, y = min(int((lon - lo0) / 3 * W), W - 1), min(int((la0 + 3 - lat) / 3 * H), H - 1)
+    idx = (y // th) * -(-W // tw) + x // tw
+    key = (tile, idx)
+    if key not in _WC_TILE:
+        if len(_WC_TILE) >= _WC_TILE_MAX:
+            _WC_TILE.pop(next(iter(_WC_TILE)))
+        _WC_TILE[key] = zlib.decompress(_http_range(hd["url"], hd["off"][idx], hd["cnt"][idx]))
+    data, cx, cy = _WC_TILE[key], x % tw, y % th
+    hist = Counter()
+    x0, x1 = max(0, cx - LC_WIN_PX), min(tw, cx + LC_WIN_PX + 1)
+    for r in range(max(0, cy - LC_WIN_PX), min(th, cy + LC_WIN_PX + 1)):
+        hist.update(data[r * tw + x0: r * tw + x1])
+    hist.pop(0, None)                         # 0 = 자료 없음(타일 여백)
+    if not hist:
+        raise RuntimeError("자료 없음 화소뿐")
+    code, n = hist.most_common(1)[0]
+    return code, round(100 * n / sum(hist.values()))
+
+
+def enrich_lc(cells: dict, now: datetime, lookup=None, priority: set[str] | None = None,
+              limit: int = LC_MAX_PER_RUN, budget_s: float = LC_BUDGET_S) -> int:
+    """토지피복 미조회 칸을 회차당 limit 칸까지 조회해 캐시한다(정적 자료 — 한 번 읽은 칸은 다시 묻지 않는다).
+    순서 = 이번 회차 열점 칸 → 최근 감지 순. 실패한 칸은 캐시하지 않아 다음 회차에 다시 묻는다. 3연속 실패면 멈춘다."""
+    lookup = lookup or wc_class
+    pri = priority or set()
+    todo = sorted((k for k, c in cells.items() if "lc_checked" not in c),
+                  key=lambda k: (k in pri, cells[k]["dates"][-1]), reverse=True)[:limit]
+    done, fails, t0 = 0, 0, time.monotonic()
+    for k in todo:
+        if time.monotonic() - t0 > budget_s:
+            print("토지피복 시간 상한 — 남은 칸 다음 회차로")
+            break
+        try:
+            code, pct = lookup(cells[k]["lat"], cells[k]["lon"])
+        except Exception as e:  # noqa: BLE001 — 버킷 불통·형식 이상
+            fails += 1
+            print(f"토지피복 조회 실패({k}): {e}")
+            if fails >= 3:
+                break
+            continue
+        fails = 0
+        cells[k].update({"lc": code, "lc_pct": pct, "lc_checked": now.isoformat()})
+        done += 1
+    return done
+
+
+def lc_text(lc: tuple[int, int]) -> str:
+    code, pct = lc
+    return f"토지피복 {LC_KO.get(code, f'분류 {code}')} {pct}%(반경 약 200m, ESA WorldCover 2021)"
+
+
+def classify(days: int, osm: list[str] | None, north: bool,
+             lc: tuple[int, int] | None = None) -> tuple[str, str, list[str]]:
+    """(kind, 신뢰 중·낮음, 근거[]) — 추정 라벨. osm None = 아직 조회 안 함, lc None = 토지피복 미조회(분류로 쓰지 않음)"""
     why = [f"같은 자리 {days}일 감지(최근 {CELL_KEEP_DAYS}일)"]
     if osm:
         why.append(f"OSM 시설 {OSM_RADIUS_M}m 이내: {', '.join(osm[:3])}")
-        return "fixed", ("중" if days >= FIXED_MIN_DAYS else "낮음"), why
+        return "fixed", ("중" if days >= FIXED_MIN_DAYS else "낮음"), why + ([lc_text(lc)] if lc else [])
     if osm is None:
         return "unknown", "낮음", why + ["OSM 시설 미조회"]
+    lw, code = ([lc_text(lc)], lc[0]) if lc else (["토지피복 미조회"], None)
+    once = days < REPEAT_MIN_DAYS
     if north:
-        return "unknown", "낮음", why + ["북측은 OSM 시설 자료가 희박해 「시설 없음」으로 보지 않음"]
-    if days >= REPEAT_MIN_DAYS:
-        return "unknown", "낮음", why + [f"OSM 시설 없음 · {REPEAT_MIN_DAYS}일 이상 반복 — 산불·소각으로 보기 어려움"]
-    return "burn", "낮음", why + [f"OSM 시설 {OSM_RADIUS_M}m 이내 없음"]
+        why.append("북측은 OSM 시설 자료가 희박해 「시설 없음」으로 보지 않음")
+        if code == LC_BUILT and not once:
+            return "urban", "낮음", why + lw + [f"시가지에서 {REPEAT_MIN_DAYS}일 이상 반복 — 시설 열원 가능성"]
+        if once and code == LC_CROP:
+            return "farm", "낮음", why + lw
+        if once and code in LC_VEG:
+            return "wildfire", "낮음", why + lw
+        return "unknown", "낮음", why + lw
+    why.append(f"OSM 시설 {OSM_RADIUS_M}m 이내 없음")
+    if code == LC_BUILT:   # 지도에 없는 공장·소각장 등 — 반복 여부와 무관하게 시가지 열원으로
+        return "urban", "낮음", why + lw
+    if not once:
+        return "unknown", "낮음", why + lw + [f"{REPEAT_MIN_DAYS}일 이상 반복 — 산불·소각으로 보기 어려움"]
+    if code == LC_CROP:
+        return "farm", "낮음", why + lw
+    if code in LC_VEG:
+        return "wildfire", "낮음", why + lw
+    return "burn", "낮음", why + lw
+
+
+def nk_sites() -> list[tuple[str, float, float]]:
+    """[(표시 이름, lat, lon)] — data/places.json 북측 항목 중 NK_SITES 이름만"""
+    global _SITES
+    if _SITES is None:
+        places = json.loads((ROOT / "data" / "places.json").read_text())["places"]
+        _SITES = [(f"{nm}({NK_SITES[nm]})", float(a), float(b)) for c, nm, a, b in places if c == "북한" and nm in NK_SITES]
+    return _SITES
+
+
+def _km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    return math.hypot((lon2 - lon1) * 111.32 * math.cos(math.radians(lat1)), (lat2 - lat1) * 110.57)
+
+
+def mil_near(lat: float, lon: float, osm_mil: list[str] | None) -> list[str]:
+    """군사 시설 인근 근거 문구[] — OSM 군사 시설(OSM_RADIUS_M) + 북측 주요 시설(NK_SITE_KM)"""
+    out = [f"{n}(OSM {OSM_RADIUS_M}m 이내)" for n in (osm_mil or [])[:2]]
+    for nm, a, b in nk_sites():
+        d = _km(lat, lon, a, b)
+        if d <= NK_SITE_KM:
+            out.append(f"{nm} 약 {max(1, round(d))}km")
+    return out
 
 
 def annotate(points: list[dict], cells: dict) -> None:
-    """점에 kind·kind_label·kind_conf·kind_why·days_seen·north·osm 를 붙인다(제자리)."""
+    """점에 kind·kind_label·kind_conf·kind_why·days_seen·north·osm·lc(·mil) 를 붙인다(제자리).
+    mil 은 표지만 — kind·신뢰도를 바꾸지 않는다."""
     for p in points:
         k = cell_key(p["lat"], p["lon"])
         c = cells.get(k, {})
         osm = c.get("osm") if "osm_checked" in c else None
+        lc = (c["lc"], c.get("lc_pct", 0)) if "lc_checked" in c and c.get("lc") is not None else None
         north = in_nk(p["lat"], p["lon"])
         n = days_seen(cells, k)
         osm = None if osm is None else facility_labels(osm)
-        kind, conf, why = classify(n, osm, north)
-        p.update({"days_seen": n, "north": north, "osm": osm or [], "kind": kind,
-                  "kind_label": KIND_LABEL[kind], "kind_conf": conf, "kind_why": why})
+        kind, conf, why = classify(n, osm, north, lc)
+        label = NK_URBAN_LABEL if kind == "urban" and north else KIND_LABEL[kind]
+        p.update({"days_seen": n, "north": north, "osm": osm or [], "lc": lc[0] if lc else None, "kind": kind,
+                  "kind_label": label, "kind_conf": conf, "kind_why": why})
+        mil = mil_near(p["lat"], p["lon"], c.get("mil"))
+        if mil:
+            p["mil"] = ", ".join(mil)
+            why.append(f"군사 시설 인근: {p['mil']} — 보도 대조 필요")
+        else:
+            p.pop("mil", None)
 
 
 def mdl_lines() -> list[list[tuple[float, float]]]:
@@ -296,11 +507,14 @@ def main(argv: list[str]) -> int:
         return 3
     points.sort(key=lambda p: p["t"], reverse=True)
     cells_path = Path(argv[argv.index("--cells") + 1]) if "--cells" in argv else CELLS
-    cells = typed(points, cells_path, now, osm="--no-osm" not in argv)
+    cells = typed(points, cells_path, now, osm="--no-osm" not in argv, lc="--no-lc" not in argv)
     doc = {"fetched_at": now.isoformat(), "window_h": WINDOW_H, "sources": SOURCES,
            "border_km": BORDER_KM, "count": len(points), "border_count": sum(p["border"] for p in points),
-           "kind_note": "kind 는 추정(감지 일수·OSM 시설 근거)이다. 단독 판정 근거로 쓰지 않는다",
+           "kind_note": "kind 는 추정(감지 일수·OSM 시설·토지피복 근거)이다. 단독 판정 근거로 쓰지 않는다. "
+                        "mil 은 군사 시설 인근 표지(보도 대조용)이며 유형·등급을 바꾸지 않는다",
+           "kind_sources": ["© OpenStreetMap contributors (ODbL)", WC_SRC],
            "kind_count": {k: sum(p.get("kind") == k for p in points) for k in KIND_LABEL},
+           "mil_count": sum("mil" in p for p in points),
            "points": points[:3000]}
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")) + "\n")
@@ -312,13 +526,16 @@ def main(argv: list[str]) -> int:
     return 0
 
 
-def typed(points: list[dict], cells_path: Path, now: datetime, osm: bool = True) -> dict | None:
-    """격자 이력 누적 + OSM 보강 + 점 주석. 실패해도 열점 갱신은 막지 않는다(None = 이력 파일 미갱신)."""
+def typed(points: list[dict], cells_path: Path, now: datetime, osm: bool = True, lc: bool = True) -> dict | None:
+    """격자 이력 누적 + OSM·토지피복 보강 + 점 주석. 실패해도 열점 갱신은 막지 않는다(None = 이력 파일 미갱신)."""
     try:
         cells = json.loads(cells_path.read_text())["cells"] if cells_path.exists() else {}
         update_cells(cells, points, now.date().isoformat())
+        pri = {cell_key(p['lat'], p['lon']) for p in points}
         if osm:
-            print(f"overpass {enrich_osm(cells, now, priority={cell_key(p['lat'], p['lon']) for p in points})}칸 조회")
+            print(f"overpass {enrich_osm(cells, now, priority=pri)}칸 조회")
+        if lc:
+            print(f"토지피복 {enrich_lc(cells, now, priority=pri)}칸 조회")
         annotate(points, cells)
         return cells
     except Exception as e:  # noqa: BLE001

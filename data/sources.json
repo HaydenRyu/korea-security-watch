@@ -534,6 +534,11 @@
    "note": "매시간 수집, 접경 상자 안 열점"
   },
   {
+   "name": "ESA WorldCover 2021 토지피복 (CC BY 4.0)",
+   "url": "https://esa-worldcover.org",
+   "note": "열점 유형 추정(농경지 소각·산불·시가지 열원)용. AWS 공개 버킷 COG 를 격자마다 1회 조회"
+  },
+  {
    "name": "NASA GIBS 위성 영상",
    "url": "https://earthdata.nasa.gov/gibs"
   },

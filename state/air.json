@@ -1,31 +1,59 @@
 {
- "at": "2026-10-28T01:36:46+00:00",
- "south": 81,
- "area": 93,
- "baseline": 75.0,
- "ratio": 1.08,
- "samples": 8,
+ "at": "2026-10-28T02:50:04+00:00",
+ "south": 74,
+ "area": 90,
+ "baseline": 73,
+ "ratio": 1.01,
+ "samples": 3,
  "mil": [
   {
    "type": "BE20",
    "name": null,
    "call": "CATS82",
-   "lat": 37.06,
-   "lon": 127.02
+   "lat": 35.01,
+   "lon": 126.8
   },
   {
    "type": "BE20",
    "name": null,
-   "call": "MAGIC02",
-   "lat": 33.07,
-   "lon": 131.66
+   "call": "CATS93",
+   "lat": 36.09,
+   "lon": 126.9
   },
   {
-   "type": "BE20",
+   "type": "H60",
    "name": null,
-   "call": "MOJO66",
-   "lat": 33.21,
-   "lon": 131.77
+   "call": "CARD78T",
+   "lat": 36.81,
+   "lon": 126.97
+  },
+  {
+   "type": "H60",
+   "name": null,
+   "call": "CARD92",
+   "lat": 37.46,
+   "lon": 127.11
+  },
+  {
+   "type": "B190",
+   "name": null,
+   "call": "CATS77",
+   "lat": 35.13,
+   "lon": 127.62
+  },
+  {
+   "type": "GLEX",
+   "name": "정찰용 비즈니스젯 가능",
+   "call": "",
+   "lat": 37.82,
+   "lon": 128.08
+  },
+  {
+   "type": "V22",
+   "name": null,
+   "call": "JGVN710",
+   "lat": 33.13,
+   "lon": 130.35
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

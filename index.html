@@ -680,6 +680,95 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 }
 #next{font-variant-numeric:tabular-nums}  /* 매초 바뀌는 카운트다운이 흔들리지 않게 */
 </style>
+<style>
+/* ── 배치 v2 (10/28 hayden 「한 화면에」) ──────────────────────
+   ① 등급 기준은 현재 등급 칸 「기준 보기」로 접는다(≥1180) — 「지금 할 일」 한 줄은 현재 등급 칸 아래로
+   ② 감시 칸 = 감시 항목 | 사건 기록 탭 · 신호 칸 = 공역 | 해상 탭
+   ③ 1180~1799: 알림 기록·오늘 브리핑·배경 요인·지금 할 일을 오른쪽 아래 한 칸(#dock-p)의 탭으로 — 스크롤 없는 한 화면
+   ④ 지도 레이어 10+1개는 5묶음 메뉴(board2.js) — 간격은 기존 토큰(4·8·12)만 */
+.ph .critb{all:unset;cursor:pointer;font:500 11px/16px var(--data);color:var(--fog);border:1px solid var(--line-2);padding:var(--s4) var(--s8)}
+.ph .critb:hover,.ph .critb[aria-expanded="true"]{color:var(--ice);border-color:var(--ice)}
+.ph .critb:focus-visible{outline:1px solid var(--g0);outline-offset:2px}
+#status .ph .r{margin-left:auto} #status .ph .critb{margin-left:0}
+#stodo .todo{padding:var(--s8) 0 0;border-top:1px solid var(--line);margin-top:var(--s8)}
+#stodo:empty{display:none}
+/* 지도 머리띠 한 줄(1180~1439): 레이어 5묶음 + 제목 + 영상 날짜가 640px 칸에 들어가게 안내 문구는 뺀다(지도 칸 title 로) */
+@media (min-width:1180px) and (max-width:1799px) and (min-height:680px){#map-p .taphint{display:none} #map-p .layers{flex-wrap:nowrap}}
+#dock-p>#stodo{flex:none;padding:0 var(--pad)} #dock-p>#stodo .todo{margin:0;border-top:0;border-bottom:1px solid var(--line);padding:var(--s8) 0}
+/* 한 화면 격자: 한 줄(라벨 · 문장 말줄임 · 요령 보기) — 두 줄이면 감시 항목 9행이 4행으로 줄었다(10/28 실측 1470×801) */
+@media (min-width:1180px) and (min-height:680px){
+  #stodo .todo{grid-template-columns:auto minmax(0,1fr) auto;gap:var(--s8);padding-top:var(--s8)}
+  #stodo .todo span{grid-column:2;grid-row:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #stodo .todo a.go{grid-column:3}
+}
+@media (max-width:1179px),(max-height:679px){.ph .critb{display:none}}  /* 태블릿·휴대폰은 등급 기준 칸이 아래에 그대로 있다 */
+@media (min-width:1180px) and (min-height:680px){
+  #crit-p{display:none}
+  #crit-p.pop{display:flex;position:fixed;z-index:1200;width:360px;max-width:calc(100vw - 32px);box-shadow:0 8px 24px rgba(0,0,0,.6)}
+  #crit-p.pop .pb{max-height:none}
+}
+#incsum[hidden],#seaAt[hidden],#airAt[hidden]{display:none}
+/* 해상 탭 — 공역(#air)과 같은 규격 */
+#sea{padding:0;display:flex;flex-direction:column}
+#sea .aq,#sea .am{display:flex;align-items:baseline;gap:8px;padding:6px var(--pad);border-bottom:1px solid var(--line);min-width:0}
+#sea .al{flex:none;font:500 11px/1.4 var(--data);color:var(--fog)}
+#sea .aq b{font:600 18px/1 var(--data);color:var(--ice)}
+#sea .ar{font:400 11px/1.4 var(--text);color:var(--fog);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#sea .ar.low,#sea .ar.hit{color:var(--amber)}
+#sea .sarea{display:flex;gap:var(--s4);padding:var(--s8) var(--pad);border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+#sea .sarea button{all:unset;cursor:pointer;flex:none;font:400 10px/1 var(--data);color:var(--fog);border:1px solid var(--line-2);padding:6px 8px;white-space:nowrap}
+#sea .sarea button[aria-pressed="true"]{color:var(--ink);background:var(--ice);border-color:var(--ice)}
+#sea .sarea button:focus-visible{outline:1px solid var(--g0);outline-offset:2px}
+#sea>:not(.awrap){flex:none}  /* 칸이 낮으면 지도만 줄어든다 — 버튼 줄이 14px 로 눌렸다(10/28 1280×800 실측) */
+#sea .awrap{flex:1 1 auto;min-height:100px;position:relative}
+#seaMap,#seaVf{position:absolute;inset:0;background:#05080e}
+#seaVf iframe{border:0;width:100%;height:100%;display:block}
+#sea .aleg{position:absolute;left:8px;top:8px;z-index:500;display:flex;flex-wrap:wrap;gap:4px 10px;max-width:calc(100% - 16px);margin:0;padding:6px 8px;list-style:none;
+  font:400 10px/1.4 var(--data);color:var(--fog);background:color-mix(in srgb,var(--ink) 85%,transparent);border:1px solid var(--line)}
+#sea .aleg li{display:flex;align-items:center;gap:4px} #sea .aleg i{width:8px;height:8px;border-radius:50%;background:currentColor} #sea .aleg b{color:var(--ice);font-weight:600}
+#sea .sempty[hidden]{display:none}
+#sea .sempty{position:absolute;inset:0;display:grid;place-items:center;z-index:450;pointer-events:none;font:400 12px/1.5 var(--text);color:var(--fog);text-align:center;padding:var(--s12)}
+.snote{margin:0;padding:var(--s8) var(--pad);font:400 11px/1.5 var(--text);color:var(--fog);border-top:1px solid var(--line)}
+.snote a{color:var(--ice)} .snote{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 사건 기록 */
+#inc .ie{padding:var(--s12) var(--pad);border-bottom:1px solid var(--line);display:grid;gap:var(--s4);font-size:13px}
+#inc .ie .t{display:flex;align-items:center;gap:var(--s8);min-width:0}
+#inc .ie .t b{font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#inc .ie .d{margin-left:auto;flex:none;font:400 10px/1.4 var(--data);color:var(--fog);white-space:nowrap}
+#inc .ie .k{font:400 11px/1.5 var(--text);color:var(--fog)} #inc .ie .k em{font-style:normal;color:var(--dim);margin-right:4px}
+#inc .ie .s{font:400 11px/1.4 var(--data);color:var(--g0)} #inc .ie .s a{color:inherit}
+#inc .tier{flex:none;font:600 10px/16px var(--data);padding:0 6px;color:var(--ink)}
+#inc .tier.direct{background:var(--g3)} #inc .tier.indirect{background:transparent;color:var(--g1);box-shadow:inset 0 0 0 1px var(--g1)}
+#inc .tier.resolved{background:transparent;color:var(--dim);box-shadow:inset 0 0 0 1px var(--dim)}
+#inc .ie.resolved{opacity:.6}
+#inc .ihead{padding:var(--s8) var(--pad);font:400 11px/1.5 var(--text);color:var(--fog);border-bottom:1px solid var(--line)}
+/* 지도 레이어 묶음 */
+.layers .lgp{position:relative}
+.layers .lgh{font:400 10px/1 var(--data);color:var(--fog);background:transparent;border:1px solid var(--line-2);padding:6px 8px;cursor:pointer;white-space:nowrap}
+.layers .lgh[aria-expanded="true"],.layers .lgh.on{color:var(--ice);border-color:var(--ice)}
+.layers .lgh .n{color:var(--g0);margin-left:4px}
+.layers .lgm{position:absolute;top:calc(100% + 4px);right:0;z-index:1100;display:grid;gap:var(--s4);padding:var(--s8);min-width:140px;background:var(--head);border:1px solid var(--line-2);box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.layers .lgm[hidden]{display:none}
+.layers .lgm button{width:100%;text-align:left}
+@media (max-width:759px){
+  #map-p .layers{display:flex!important;flex-wrap:nowrap;gap:var(--s4);width:100%}
+  #map-p .layers .lgp{flex:1 1 0;min-width:0} #map-p .layers .lgh{width:100%;padding:8px 4px;overflow:hidden;text-overflow:ellipsis}
+  #map-p .layers .lgm button{grid-column:auto!important;padding:8px}
+  .layers .lgp:first-child .lgm{left:0;right:auto}
+}
+/* 오른쪽 아래 탭 칸(#dock-p) — 1180~1799 에서만 board2.js 가 만든다 */
+#dock-p{flex:1 1 0;min-height:0;display:flex;flex-direction:column}
+#dock-p>.ph{flex:none}
+#dock-p .dbody{flex:1 1 0;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+#dock-p .dbody>.p{flex:1 1 0;min-height:0;border:0;display:flex}
+#dock-p .dbody>.p[hidden]{display:none}
+#dock-p .dbody>.p>.ph .k{display:none}  /* 칸 이름은 탭이 대신한다 — AI 표시·각주는 남긴다 */
+#dock-p .dbody>.p>.ph:not(:has(>:not(.k))){display:none}  /* 이름뿐인 머리띠는 통째로 */
+#dock-p .dbody>.p>.pb{overflow:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.side.docked #air-p{flex:1 1 0} .more.docked{display:none}  /* 도킹 여부는 board2.js 가 정한다(1180×680 이상 · 넷째 칸 조건 1800×860 미만) */
+#air[hidden],#sea[hidden],#inc[hidden],#sensors[hidden]{display:none}
+#air-p.sea #airAt,#air-p.sea #airRing{display:none!important}
+</style>
 </head>
 <body>
 <div class="band"></div>
@@ -701,7 +790,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 <main id="main">
 <div class="ops">
   <section class="p" id="status" aria-label="현재 등급">
-    <div class="ph"><span class="k">현재 등급</span><span class="r">4단계 · 코드 판정</span></div>
+    <div class="ph"><span class="k">현재 등급</span><span class="r">4단계 · 코드 판정</span><button type="button" class="critb" id="critBtn" aria-expanded="false" aria-controls="crit-p">기준 보기</button></div>
     <div class="pb">
       <div class="grade">
         <div class="dial" aria-hidden="true"><svg viewBox="-110 -110 220 220" id="dialsvg"></svg><div class="num" id="gnum">–</div></div>
@@ -710,17 +799,22 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
       </div>
       <div class="elapsed"><div><b id="eG">—</b><span id="eGs" title="지금 등급이 이어진 시간(남은 시간이 아니다)">등급 유지</span></div><div><b id="eS">—</b><span id="eSs">징후 경과</span></div></div>
       <p id="summary">첫 분석 결과를 기다리는 중입니다.</p>
+      <div id="stodo"></div>
       <a class="phs" id="phase" href="forecast.html#ladder"><span class="pk">긴장 국면</span><b class="no">불러오는 중</b><span class="px">사다리 ›</span></a>
     </div>
   </section>
 
   <section class="p" id="sensors-p" aria-label="감시 항목">
-    <div class="ph"><span class="k">감시 항목</span><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 판독</span><span class="r" id="sensorsum">9개</span></div>
-    <div class="pb scroll" id="sensors"></div>
+    <div class="ph"><div class="wtab" role="tablist" aria-label="감시 칸"><button type="button" role="tab" id="st-sensors" aria-controls="sensors" aria-selected="true" data-t="sensors">감시 항목</button><button type="button" role="tab" id="st-inc" aria-controls="inc" aria-selected="false" tabindex="-1" data-t="inc">사건 기록</button></div><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 판독</span><span class="r" id="sensorsum">9개</span><span class="r" id="incsum" hidden>최근 30일</span></div>
+    <div class="pb scroll" id="sensors" role="tabpanel" aria-labelledby="st-sensors"></div>
+    <!-- 사건 기록(10/28): state/incidents.json(매시 루틴) — 총기·탄약·마약·방화·해킹 등 국내 사건 중 안보 연결이 있는 것만.
+         직접 = 수사기관·법원·정부·우방 공식 발표가 북한·외국 정보기관 연계를 명시(hybrid_ops 와 같은 게이트, 등급 반영) ·
+         간접 = 공식 귀속 전 정황(표시만, 등급 무관) · 해소 = 무관 판명. 개인 실명은 기록하지 않는다 -->
+    <div class="pb scroll" id="inc" role="tabpanel" aria-labelledby="st-inc" hidden><p class="fa-e">불러오는 중</p></div>
   </section>
 
   <section class="p" id="map-p" aria-label="한반도 지도">
-    <div class="ph"><span class="k">상황 지도</span><span class="taphint">표지를 누르면 상세</span><span id="imgdate">위성 영상 —</span><span id="nwerr" hidden role="status"></span>
+    <div class="ph" title="지도 표지를 누르면 상세"><span class="k">상황 지도</span><span class="taphint">표지를 누르면 상세</span><span id="imgdate">위성 영상 —</span><span id="nwerr" hidden role="status"></span>
       <div class="layers" role="group" aria-label="지도 레이어">
         <button type="button" class="base" data-layer="day" aria-pressed="true" title="어제 낮 VIIRS 영상(해상도 약 375m)">어제 위성</button>
         <button type="button" class="base" data-layer="night" aria-pressed="false" title="가장 최근 밤의 야간광(VIIRS NOAA-20, 구름·달빛 보정, 1~2일 전). 평소보다 어두우면 정전·등화관제, 밝으면 야간 활동">야간 조명</button>
@@ -755,7 +849,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   </section>
 
   <section class="p" id="air-p" aria-label="항공기">
-    <div class="ph"><span class="k">공역</span><span id="airAt">매시간</span><svg id="airRing" class="aring" viewBox="0 0 14 14" hidden aria-hidden="true"><circle cx="7" cy="7" r="5"/><circle cx="7" cy="7" r="5"/></svg><span class="r">참고 · 등급 판정과 무관</span></div>
+    <div class="ph"><div class="wtab" role="tablist" aria-label="신호 칸"><button type="button" role="tab" id="at-air" aria-controls="air" aria-selected="true" data-t="air">공역</button><button type="button" role="tab" id="at-sea" aria-controls="sea" aria-selected="false" tabindex="-1" data-t="sea">해상</button></div><span id="airAt">매시간</span><span id="seaAt" hidden>—</span><svg id="airRing" class="aring" viewBox="0 0 14 14" hidden aria-hidden="true"><circle cx="7" cy="7" r="5"/><circle cx="7" cy="7" r="5"/></svg><span class="r">참고 · 등급 판정과 무관</span></div>
     <div class="pb" id="air">
       <div class="aq"><span class="al" title="위험이 커지면 항공사가 정부 발표보다 먼저 운항을 줄이거나 우회합니다. 지난 7일 같은 시각보다 30% 넘게 줄면 주황색으로 표시합니다. 공개 수신망이라 수신 공백으로도 줄 수 있습니다.">남한 상공 민항기</span><b id="airN">—</b><span id="airR" class="ar">기록을 불러오는 중</span></div>
       <div class="am"><span class="al">신호 켠 군용기</span><ul id="airMil"><li>—</li></ul></div>
@@ -764,6 +858,16 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
         <figure class="ains" id="airTw" title="대만 해협 — 신호를 켠 기체만. 중국군 기체는 신호를 끄므로 민항 통항 지표로만 본다. 누르면 큰 지도를 대만 해협으로" hidden><div id="airTwMap"></div><figcaption id="airTwCap">대만 해협</figcaption></figure>
         <ul class="aleg" id="airLeg" title="군용 = 신호를 켠 군용기 · 나머지는 기체 등록국(ICAO 주소 기준, 리스기는 항공사 국적과 다를 수 있음)" hidden></ul>
         <a class="airx" href="https://adsb.lol/?lat=37.9&lon=127.3&zoom=7" target="_blank" rel="noopener">adsb.lol 에서 크게 보기 ↗</a></div>
+    </div>
+    <!-- 해상(10/28): 서해 = 우리 지도(aisstream, 맥부기 5분 회차 → Worker /sea.json) · 다른 해역 = VesselFinder 공식 임베드(데이터 수집 아님) ·
+         신호 끈 배 = Global Fishing Watch 공개 지도 링크. 북한 연안은 무료 소스 전부 수신 0(10/28 실측) — 칸 아래 고지 -->
+    <div class="pb" id="sea" role="tabpanel" aria-labelledby="at-sea" hidden>
+      <div class="aq"><span class="al" title="서해 NLL 근해(북위 36.5~38.8 · 동경 124~127)에서 신호를 켠 선박. 육상 수신망이라 먼바다는 비고, 수신 공백으로도 줄 수 있습니다.">서해 NLL 근해 선박</span><b id="seaN">—</b><span id="seaR" class="ar">수집 준비 중</span></div>
+      <div class="am"><span class="al" title="500m 안에 붙은 두 척이 모두 2노트 미만으로 2시간 넘게 머문 경우(항구 안 제외)">근접·정지</span><span id="seaMeet" class="ar">—</span></div>
+      <div class="sarea" role="group" aria-label="해역"><button type="button" data-a="ys" aria-pressed="true">서해</button><button type="button" data-a="zs" aria-pressed="false" title="동중국해 저우산 — 해상 환적이 잦은 해역(VesselFinder)">저우산</button><button type="button" data-a="vl" aria-pressed="false" title="블라디보스토크·나홋카(VesselFinder)">블라디보스토크</button><button type="button" data-a="tw" aria-pressed="false" title="대만 해협(VesselFinder)">대만 해협</button></div>
+      <div class="awrap"><div id="seaMap" role="img" aria-label="서해 선박 위치(신호를 켠 배만) · 국적별 색"></div><div id="seaVf" hidden></div>
+        <ul class="aleg" id="seaLeg" hidden></ul></div>
+      <p class="snote" title="북한 연안은 공개 AIS 수신망(aisstream·VesselFinder)에 신호가 거의 잡히지 않습니다(10/28 실측 0척). 신호를 끈 배는 위성 레이더 탐지로만 보이며 3일 이상 늦습니다">북한 연안 수신 거의 없음 · 신호 끈 배 <a href="https://globalfishingwatch.org/map" target="_blank" rel="noopener" id="gfwLink">GFW 위성 탐지 ↗</a></p>
     </div>
   </section>
   <section class="p" id="log-p" aria-label="알림 기록">
@@ -931,8 +1035,9 @@ function render(latest,events){
   $("checked").textContent=lastCheck?short(lastCheck):"—";
   $("lag").classList.toggle("on",!!(lastCheck&&!sample&&Date.now()-new Date(lastCheck)>2*3600e3));
   drawDial(g);
-  $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("")
-    +(g!=null?`<div class="todo"><b>지금 할 일</b><span id="todoTxt">${esc(todoOf(g)?.text||"")}</span><a href="#todo-p" class="go" id="todoJump">비상용품·대피 요령 보기<span class="dn"> ↓</span></a></div>`:"");
+  $("crit").innerHTML=LABEL.map((l,i)=>`<div class="cr${i===g?" on":""}" style="--c:${C(i)}"><i></i><b>${l}</b><span title="${CRIT[i][1]}">${CRIT[i][0]}</span></div>`).join("");
+  // 10/28 배치 v2: 「지금 할 일」 한 줄은 등급 기준 칸에서 현재 등급 칸으로(등급 기준은 「기준 보기」로 접는다)
+  $("stodo").innerHTML=(g!=null?`<div class="todo"><b>지금 할 일</b><span id="todoTxt" title="${esc(todoOf(g)?.text||"")}">${esc(todoOf(g)?.text||"")}</span><a href="#todo-p" class="go" id="todoJump">요령 보기<span class="dn"> ↓</span></a></div>`:"");
   renderTodo(g);renderWorld(latest);
 
   // 「이상 없음」의 근거 — 이번 회차에 실제로 돌린 검색어(coverage)와 연 원문(opened). 루틴이 coverage 게이트로 남기는 값이라 추정이 아니다
@@ -957,7 +1062,7 @@ function render(latest,events){
     return `<a class="row${it.status!=="none"?" on":""}" href="#item=${k}"><span class="name">${name}</span>
       <span class="st">${latest?vf(it):"분석 전"}</span><span class="meter" data-s="${s}"><i></i><i></i><i></i></span>${body}</a>`}).join("")
     +evidence(latest);
-  $("sensorsum").textContent=latest?`${NI}개 중 ${n}개 징후`:`${NI}개`;
+  $("sensorsum").textContent=latest?`징후 ${n}/${NI}`:`${NI}개`;$("sensorsum").title=latest?`감시 ${NI}개 항목 중 ${n}개에서 징후`:"";
 
   const rec=events.slice(-72),W=720,H=120,step=W/72,y=gr=>H-6-gr*((H-12)/3);
   let d="",dots="",pen=false;const off=72-rec.length;
@@ -1725,5 +1830,6 @@ async function loadReqLog(){try{const r=await fetch("data/source_requests.jsonl?
     `<li>${esc(x.name)} <b style="color:${x.decision==="accepted"?"var(--g0)":"var(--fog)"};font-weight:500">${x.decision==="accepted"?"반영":"보류"}</b><span>${esc(x.reason||"")}</span></li>`).join("")}</ul></section>`)}catch(e){}}
 loadNewsKr();loadSources().then(loadReqLog).then(()=>{if(location.hash==="#sources")openSources()});
 </script>
+<script src="board2.js?v=2026-10-28a"></script>
 </body>
 </html>

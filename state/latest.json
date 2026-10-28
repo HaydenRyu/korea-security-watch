@@ -1,88 +1,86 @@
 {
   "coverage": {
     "troop_movement": [
-      "애기봉 北 자주포",
-      "North Korea artillery border"
+      "합참 북한 자주포 개풍 노출",
+      "North Korea artillery Kaepung"
     ],
     "nuclear": [
-      "북한 영변 핵"
+      "북한 핵 영변 풍계리 동향",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 탄약 수송"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "목함지뢰 발견 해안",
-      "DMZ 귀순 합참"
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ 귀순 합참",
+      "North Korea DMZ border Yonhap"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 북러 군사협력 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 준비 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 노농적위군",
+      "North Korea wartime mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 상향",
+      "한미일 긴급 경고 북한"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI hackers"
     ],
     "calm": [
-      "남북 대화 제안 통신선",
-      "North Korea talks offer"
-    ],
-    "factor:inter_korean": [
-      "확성기 전단 오물풍선 북한"
-    ],
-    "factor:great_powers": [
-      "Kim Jong Un China visit US talks"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
     "https://www.segye.com/newsView/20261027516201",
-    "https://www.segye.com/newsView/20261027516199",
-    "https://www.nknews.org/2026/10/swiss-foreign-minister-to-visit-north-korea-this-week-to-open-political-office/"
+    "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
+    "https://www.yna.co.kr/rss/northkorea.xml",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "접경 구형포 노출 보도가 이어지나 새 충돌·병력 증강·핵 징후는 없어 직전과 같은 경계 수준이다. 김정은 방중 후속·국감 지뢰 공방은 배경이다.",
+  "overall_summary": "접경 구형포 노출 보도가 이어지나 새 충돌·핵·병력 증강 징후는 없어 직전과 같은 경계 수준이다. 김정은 방중 후속, 국감 지뢰 공방, GOP 철책 훼손 조사는 배경이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
       "routine": false,
-      "region": "경기 김포 건너 개풍군",
-      "lat": 37.7,
-      "lon": 126.5,
-      "summary": "합참이 10/27 정례브리핑에서 북한이 개풍군 해안에 구형포를 노출 배치하고 MDL 근접 작업이 계속된다고 밝혔고, NK News도 애기봉에서 122mm 자주포 배치를 보도했다.",
-      "meaning": "전방 포병 전력의 가시적 노출로 대남 압박 의도가 있으나 병력 증강 근거는 아직 없다.",
+      "region": "경기 김포 애기봉 맞은편 개풍군",
+      "lat": 37.67,
+      "lon": 126.68,
+      "summary": "합참이 10/27 정례브리핑에서 북한이 개풍군 해안에 구형 포를 노출 배치하고 MDL 근접 작업이 계속된다고 밝혔고, NK News도 조강 북안 122mm 자주포 최소 3문을 보도했다.",
+      "meaning": "신형 타격수단은 아니나 접경 포병 노출과 근접 작업이 이어지는 전방 태세 변화다.",
       "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261027516201"
+        },
         {
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/"
-        },
-        {
-          "name": "세계일보(합참 브리핑)",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261027516201"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "합참: 구형포를 해안에 노출, MDL 근접 작업 지속, 김여정 담화의 신형 무기는 아님, 의도 파악 중",
-        "NK News: 애기봉에서 조강 북안 122mm 자주포 최소 3문 확인, 주변 병사는 보이지 않음"
+        "합참: 구형 포를 해안에 노출, 김여정 담화의 신형 무기는 아님, MDL 근접 작업 지속, 의도 파악 중",
+        "NK News: 애기봉에서 조강 북안 122mm 자주포 최소 3문 확인"
       ],
       "speculation": [
-        "북한 의도는 합참도 미확정"
+        "의도는 합참도 파악 중"
       ]
     },
     "nuclear": {
@@ -92,16 +90,13 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "국감 지뢰 공방과 민간인 GOP 철책 훼손 조사는 새 충돌이 아니라 배경이다(10/24~25 사건, 24시간 경과)."
+      "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "24시간 경과 — 새 사고·귀속 발표 없음."
+      "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "김정은 방중(10/24)은 24시간 경과한 외교 일정 배경이며 새 군사 합의 발표는 없다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -116,7 +111,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-27T23:10:39+00:00",
+  "checked_at": "2026-10-28T00:12:15+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

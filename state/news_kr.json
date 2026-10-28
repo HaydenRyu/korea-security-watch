@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-28T06:17:48+00:00",
+ "fetched_at": "2026-10-28T06:25:52+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-28T06:17:48+00:00",
+ "last_ok_at": "2026-10-28T06:25:52+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -66,17 +66,17 @@
   "border": {
    "clusters": 18,
    "max_independent": 2,
-   "latest": "2026-10-28T06:17:48+00:00"
+   "latest": "2026-10-28T06:25:52+00:00"
   },
   "mine": {
    "clusters": 12,
    "max_independent": 2,
-   "latest": "2026-10-28T06:17:48+00:00"
+   "latest": "2026-10-28T06:25:52+00:00"
   },
   "summit": {
    "clusters": 15,
    "max_independent": 1,
-   "latest": "2026-10-28T06:17:48+00:00"
+   "latest": "2026-10-28T06:25:52+00:00"
   },
   "gps": {
    "clusters": 1,

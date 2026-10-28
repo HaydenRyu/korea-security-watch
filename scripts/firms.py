@@ -331,11 +331,12 @@ def wc_class(lat: float, lon: float) -> tuple[int, int]:
 def enrich_lc(cells: dict, now: datetime, lookup=None, priority: set[str] | None = None,
               limit: int = LC_MAX_PER_RUN, budget_s: float = LC_BUDGET_S) -> int:
     """토지피복 미조회 칸을 회차당 limit 칸까지 조회해 캐시한다(정적 자료 — 한 번 읽은 칸은 다시 묻지 않는다).
-    순서 = 이번 회차 열점 칸 → 최근 감지 순. 실패한 칸은 캐시하지 않아 다음 회차에 다시 묻는다. 3연속 실패면 멈춘다."""
+    순서 = 이번 회차 열점 칸 → OSM 시설 없는 칸(토지피복이 유형을 바꾸는 칸) → 최근 감지 순. 시설 칸은 이미 「상시」라 뒤로 미룬다
+    (10/28 첫 회차가 시설 칸 74개에 상한을 써 산불·소각 136점이 미조회로 남았다). 실패한 칸은 캐시하지 않는다. 3연속 실패면 멈춘다."""
     lookup = lookup or wc_class
     pri = priority or set()
     todo = sorted((k for k, c in cells.items() if "lc_checked" not in c),
-                  key=lambda k: (k in pri, cells[k]["dates"][-1]), reverse=True)[:limit]
+                  key=lambda k: (k in pri, not cells[k].get("osm"), cells[k]["dates"][-1]), reverse=True)[:limit]
     done, fails, t0 = 0, 0, time.monotonic()
     for k in todo:
         if time.monotonic() - t0 > budget_s:

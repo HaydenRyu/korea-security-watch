@@ -279,3 +279,14 @@ def test_military_flag_never_changes_kind():
     f.annotate(far, {})
     assert "mil" not in far[0]
     assert {n.split("(")[0] for n, _, _ in f.nk_sites()} == set(f.NK_SITES)  # places.json 에 4곳 모두 있다
+
+
+def test_lc_priority_skips_facility_cells_first():
+    """토지피복은 OSM 시설 없는 칸부터 — 시설 칸은 이미 「상시」라 유형이 안 바뀐다."""
+    from datetime import datetime, timezone
+    cells = {"a": {"lat": 37.0, "lon": 127.0, "dates": ["2026-10-28"], "osm": ["공장"]},
+             "b": {"lat": 37.1, "lon": 127.1, "dates": ["2026-10-27"], "osm": []}}
+    seen = []
+    f.enrich_lc(cells, datetime(2026, 10, 28, tzinfo=timezone.utc), lookup=lambda la, lo: seen.append(la) or (40, 90),
+                    priority={"a", "b"}, limit=1)
+    assert seen == [37.1]

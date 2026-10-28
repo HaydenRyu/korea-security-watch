@@ -1,65 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 자주포 병력 이동",
-      "North Korea Reuters October 28 2026"
+      "북한 자주포 MDL 합참",
+      "North Korea artillery border NK News"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변 동향"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment Russia"
+      "북한 군수 탄약 수송"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "목함지뢰 해안",
-      "DMZ 귀순",
+      "지뢰 발견 DMZ 귀순",
       "North Korea DMZ land mine"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 공격",
-      "랜섬웨어 공격",
-      "North Korea hacking attributed"
+      "해킹 공격 금융권 북한 IP",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "김정은 방러",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중 방러 북한 동향",
+      "Kim Jong Un China Russia visit North Korea Reuters",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea wartime mobilization"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
       "진돗개 발령 데프콘",
       "합참 북한 통지문"
     ],
     "hybrid_ops": [
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
     ],
     "calm": [
-      "남북 대화 제안",
       "남북 군사회담 제안 북한 호응"
+    ],
+    "incidents": [
+      "지뢰 발견 DMZ 귀순"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261028505901",
-    "https://www.segye.com/newsView/20261028508478",
-    "https://www.segye.com/newsView/20261028517125",
     "https://www.nknews.org/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261026/4/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261028516997",
+    "https://www.segye.com/newsView/20261028505901",
     "https://www.nknews.org/2026/10/photos-capture-north-korean-artillery-deployed-on-south-koreas-doorstep/",
     "https://www.yna.co.kr/view/AKR20261028118100002",
     "https://www.yna.co.kr/view/AKR20261028099300504"
   ],
-  "overall_summary": "북 구형 자주포 노출과 MDL 근접 작업이 이어지나 신규 증강·충돌 징후는 없다. 통일장관의 군사회담 호응 촉구와 금융권 북한 IP 스캔(귀속 미확인)은 배경 수준이다.",
+  "overall_summary": "북 구형 자주포 노출과 MDL 근접 작업이 이어지나 신규 증강·충돌 징후는 없다. 금융권 북한 IP 해킹 시도는 귀속 미확인이며 배경 수준이다.",
   "items": {
     "troop_movement": {
       "status": "corroborated",
@@ -67,7 +61,7 @@
       "region": "황해도 개풍군 해안",
       "lat": 37.95,
       "lon": 126.62,
-      "summary": "합참이 개풍군 해안의 구형 122mm 자주포 노출과 MDL 근접 작업 지속을 밝혔고 NK News도 조강 북안 자주포 배치를 촬영·보도했다(신형 무기체계는 아니라는 평가).",
+      "summary": "합참이 개풍군 해안의 구형 122mm 자주포 노출과 MDL 근접 작업 지속을 밝혔고 NK News도 조강 북안 자주포 배치를 촬영·보도했다(신형 무기체계는 아니라는 평가, 직전 회차와 동일).",
       "meaning": "신규 증강 징후는 아니나 접경 포병 노출과 MDL 작업이 지속된다.",
       "sources": [
         {
@@ -98,7 +92,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "24시간 안 새 접경 사건 없음 — SBS 해안포 개방 관찰·군사회담 제안 재촉구는 배경이다."
+      "summary": "새 지뢰 발견·교전 보도는 없고 9월 DMZ 지뢰 폭발 이후 국방부 군사회담 제안(10/23)과 통일장관의 북 호응 촉구만 이어진다."
     },
     "electronic_cyber": {
       "status": "single",
@@ -136,7 +130,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-28T11:12:43+00:00",
+  "checked_at": "2026-10-28T12:27:11+00:00",
   "grade": 2,
   "grade_label": "경계",
   "active": [

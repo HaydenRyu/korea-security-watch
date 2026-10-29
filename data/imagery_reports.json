@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-28T20:14:29.884343+00:00",
+ "fetched_at": "2026-10-29T00:51:57.197040+00:00",
  "note": "제목·링크·날짜만. 본문·이미지 전재 금지(각 사이트 이용 조건)",
  "sources": {
   "38north": {
@@ -16,6 +16,12 @@
   }
  },
  "items": [
+  {
+   "source": "38north",
+   "title": "North Korea Continues Installing New Fencing",
+   "link": "https://www.38north.org/2026/10/north-korea-continues-installing-new-fencing/",
+   "date": "2026-10-28T20:22:00+00:00"
+  },
   {
    "source": "38north",
    "title": "Across the Border: An Area Awaiting Rural Development",

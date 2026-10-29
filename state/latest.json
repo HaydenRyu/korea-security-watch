@@ -1,7 +1,6 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 자주포 개풍 애기봉",
       "news_kr 접경 묶음"
     ],
     "nuclear": [
@@ -11,17 +10,16 @@
       "news_kr 수집 결과"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참 10월 28일",
+      "지뢰 발견 DMZ 귀순 합참 10월 29일",
       "news_kr 접경·지뢰 묶음"
     ],
     "electronic_cyber": [
-      "금융권 해킹 북한 IP",
-      "해킹 개인정보 유출 랜섬웨어 공격 10월 28일"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 북한 합참 발표",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "news_kr 한미 묶음"
+      "North Korea Kim Jong Un China Russia visit",
+      "김정은 방중 방러"
     ],
     "parade_massing": [
       "news_kr 수집 결과"
@@ -33,29 +31,53 @@
       "news_kr 경보 묶음"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
       "news_kr 남북 대화 묶음"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261028505901",
     "https://www.segye.com/newsView/20261028520184",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820012"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820012",
+    "https://www.yna.co.kr/view/AKR20261029030900504",
+    "https://www.yna.co.kr/view/AKR20261028099300504"
   ],
-  "overall_summary": "김포 애기봉 맞은편 자주포 배치(합참 10/27 브리핑)는 첫 보도 24시간이 지나 배경으로 내렸다. 금융권 해킹은 북한 IP 접근만 확인되고 배후 미특정으로 직전과 같다.",
+  "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 금융권 해킹은 북한 IP 접근만 확인되고 배후 미특정으로 직전과 같다.",
   "items": {
     "troop_movement": {
-      "status": "none",
-      "summary": "24시간 경과 — 합참 10/27 브리핑이 첫 보도이며 신규 병력·화력 변동 보도는 없다."
+      "status": "none"
+    },
+    "nuclear": {
+      "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "서울",
-      "summary": "귀속 미확인 — 금융당국이 21일 이후 북한 IP 대역 접근 440여만 건(주로 스캔성)을 확인했으나 대신증권·빗썸 침해 배후는 특정되지 않았다.",
+      "summary": "귀속 미확인 — 금융당국이 북한 IP 대역 접근 440여만 건(주로 스캔성)을 확인했으나 증권사 침해 배후는 특정되지 않았다.",
       "meaning": "북 IP 접근은 취약점 탐색 위주이며 실제 침해와의 연결은 규명되지 않았다.",
       "sources": [
         {
@@ -66,36 +88,12 @@
       ],
       "confidence": "중간",
       "facts": [
-        "대신증권 고객 3.8만 명 개인정보 유출, 미래에셋자산운용 시도만 포착"
+        "대신증권 고객 개인정보 유출, 북한 IP 접근 다수 확인"
       ],
       "speculation": []
-    },
-    "border_clash": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "nuclear": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-10-28T23:11:47+00:00",
+  "checked_at": "2026-10-29T00:10:36+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

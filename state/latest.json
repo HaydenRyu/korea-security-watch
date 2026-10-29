@@ -1,7 +1,7 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
+      "북한 병력 이동 전방 증강 방사포",
       "North Korea troop movement"
     ],
     "nuclear": [
@@ -15,7 +15,8 @@
     "border_clash": [
       "목함지뢰 발견 해안",
       "합참 NLL DMZ 귀순",
-      "North Korea missile launch Reuters October 29"
+      "국정원 대남방송 재개 사실 아냐",
+      "North Korea missile launch Reuters Kim Jong Un China visit"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
@@ -44,19 +45,35 @@
     "calm": [
       "남북 대화 제안"
     ],
-    "incidents": [
-      "총기 발견 군 감식"
+    "factor:nk_domestic": [
+      "북한 당 전원회의 노선",
+      "North Korea party plenum"
+    ],
+    "factor:inter_korean": [
+      "대남 확성기 방송 재개",
+      "North Korea loudspeaker"
+    ],
+    "factor:great_powers": [
+      "김정은 방중 국정원",
+      "North Korea China US talks"
+    ],
+    "factor:public_opinion": [
+      "북한 대남 비난 담화",
+      "North Korea KCNA South Korea criticism"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261029511245",
+    "https://www.segye.com/newsView/20261029518036",
     "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261029519263",
+    "https://www.segye.com/newsView/20261029511245",
     "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=05254566645617840"
   ],
-  "overall_summary": "원산 SRBM 10여 발 시험 발사와 접경 확성기 시험 방송이 이어졌으나 직전 회차와 같은 시험·심리전 범위다. 새 병력·군수·정부 경고 징후는 확인되지 않았다.",
+  "overall_summary": "원산 SRBM 10여 발 시험 발사와 접경 확성기 시험 방송 보도가 이어지나 직전 회차와 같은 시험·심리전 범위다. 국정원 보고에서 600㎜ 방사포 전방 배치 가능성을 주시한다는 언급이 있으나 확인된 배치는 아니며 새 병력·군수·정부 경고 징후는 없다.",
   "items": {
     "troop_movement": {
-      "status": "none"
+      "status": "none",
+      "summary": "국정원이 600㎜ 초대형 방사포의 전방 배치 가능성을 주시한다고 밝혔으나 실제 배치 확인은 아니어서 배경으로만 둔다."
     },
     "nuclear": {
       "status": "none"
@@ -93,19 +110,18 @@
       "facts": [
         "합참: 10/29 12:30경 원산 일대 동해상 SRBM 10여 발, 약 250㎞ 비행",
         "안보실 긴급안보상황점검회의 개최, 안보리 결의 위반 규탄",
-        "파주 접경지 주민들이 오전 6시부터 대남 확성기 소리를 들었다고 증언"
+        "파주 접경지 주민들이 오전 6시부터 4~5시간 확성기 소리를 들었다고 증언"
       ],
       "speculation": [
-        "국민일보 속보 제목은 국정원이 대남방송 보도를 사실 아니라며 주민 오신고라고 밝힌 것으로 전하나 원문을 열지 못해 미확정(출처 간 상충 가능성)"
+        "국민일보 속보 제목은 국정원이 대남방송 재개를 사실 아니라며 주민 오신고라고 밝힌 것으로 전하나 원문을 열지 못해 미확정"
       ]
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "24시간 경과 — 금융권 해킹 시도 북한 IP 탐지 첫 보도 10/28 05시(UTC)."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "국정원 국회 보고(김정은 방중단 구성)는 원문(연합)을 열지 못해 판정 근거에서 제외했다."
+      "summary": "김정은 10/24 단둥 방문은 24시간 경과 — 29일 국정원 보고(군 인사 없이 외교 간부 위주 동행)는 배경이다."
     },
     "parade_massing": {
       "status": "none"
@@ -120,7 +136,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-29T09:11:39+00:00",
+  "checked_at": "2026-10-29T10:12:20+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

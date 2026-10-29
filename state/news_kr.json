@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-29T17:34:38+00:00",
+ "fetched_at": "2026-10-29T18:44:21+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-10-29T13:03:16+00:00",
@@ -40,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 13
+   "hits": 12
   },
   "국민일보": {
    "feeds": 2,
@@ -66,7 +66,7 @@
   "fire": {
    "clusters": 11,
    "max_independent": 5,
-   "latest": "2026-10-29T17:34:38+00:00"
+   "latest": "2026-10-29T18:44:21+00:00"
   },
   "drone_balloon": {
    "clusters": 7,
@@ -193,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 4
+   "hits": 3
   },
   {
    "outlet": "국민일보",

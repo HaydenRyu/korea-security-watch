@@ -13,20 +13,20 @@
       "North Korea munitions shipments Russia"
     ],
     "border_clash": [
-      "북한 탄도미사일 10여발 원산 합참 일본 방위성",
-      "North Korea ballistic missiles launch Reuters October 29",
+      "북한 대남 확성기 시험 방송 접경지 10월 29일",
+      "North Korea missiles launch Reuters Kim Jong Un loudspeaker October 29 2026",
       "지뢰 발견 DMZ(0-2 수집 결과)",
       "DMZ 귀순 NLL(0-2 수집 결과)"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "금융권 해킹 북한 IP(0-2 수집 결과)",
-      "해킹 개인정보 유출 사이버 공격(0-2 수집 결과)"
+      "북한 GPS 교란 서북도서 10월",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 29일"
     ],
     "foreign_forces": [
-      "김정은 방중 김정은 방러",
-      "Kim Jong Un China Russia visit Wang Huning NIS",
-      "북한 GPS 교란 서해 구조물 주한미군 감축"
+      "김정은 방중 김정은 방러(0-2 수집 결과)",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 중국 주한미군 감축 발표",
+      "북러 군사협력 북한군 파병 10월 29일"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -41,7 +41,7 @@
       "North Korea launch J-Alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
+      "국가보안법 구속 간첩 혐의 북한 지령 검찰",
       "North Korea attributed FBI"
     ],
     "calm": [
@@ -52,16 +52,17 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261029105900504",
-    "https://www.yna.co.kr/view/AKR20261029132800504",
+    "https://www.yna.co.kr/view/AKR20261029146400060",
+    "https://www.segye.com/newsView/20261029511245",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008821497",
     "https://www.yna.co.kr/view/AKR20261029139600001",
     "https://www.yna.co.kr/view/AKR20261029139100001",
-    "https://www.segye.com/newsView/20261029510689",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008821256",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.yna.co.kr/view/AKR20261028118100002"
+    "https://www.yna.co.kr/view/AKR20261028118100002",
+    "https://www.yna.co.kr/view/AKR20261029105900504",
+    "https://www.yna.co.kr/view/AKR20261029132800504",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "10/29 12시 30분경 원산 일대 단거리 탄도미사일 10여 발(약 250㎞ 비행) 발사가 이어지는 가운데 시험·무력시위 성격의 정례로 두며 새 징후는 없다. 국정원이 김정은 방중을 외교 행보 중심으로 보고했다.",
+  "overall_summary": "10/29 12시 30분경 원산 일대 단거리 탄도미사일 10여 발 발사에 더해 오전 파주 접경지에서 북한 대남 확성기 시험 방송이 확인됐으나, 둘 다 김여정 예고·시험 성격의 정례 범위다. 군 수뇌 동행 없는 김정은 방중 보고 등 새 군사 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -87,33 +88,41 @@
     "border_clash": {
       "status": "corroborated",
       "routine": true,
-      "region": "원산·동해",
+      "region": "원산·동해·파주",
       "lat": 39.15,
       "lon": 127.45,
-      "summary": "합참이 10/29 12시 30분경 원산 일대에서 동해상으로 발사된 단거리 탄도미사일 10여 발을 포착했고 약 250㎞ 비행했다고 밝혔으며 일본 방위성도 발사를 발표했다(제원 분석 중).",
-      "meaning": "10/12 전술탄도미사일 시험 이후 17일 만의 연속 발사로 시험·무력시위 성격이며, 한미일은 추가 발사에 대비해 감시·경계를 강화했다.",
+      "summary": "합참이 10/29 12시 30분경 원산 일대에서 동해로 발사된 단거리 탄도미사일 10여 발(약 250㎞ 비행)을 포착했고, 같은 날 오전 6시부터 파주 접경지에서 북한의 대남 확성기 시험 방송이 연합·SBS 보도로 확인됐다.",
+      "meaning": "김여정이 예고한 확성기 가동의 개시와 미사일 시험이 겹치나 사격·월선 없는 시험·심리전 성격이다.",
       "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261029511245"
+        },
         {
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261029105900504"
         },
         {
-          "name": "세계일보",
+          "name": "연합뉴스(확성기)",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261029510689"
+          "url": "https://www.yna.co.kr/view/AKR20261029146400060"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008821497"
         }
       ],
       "confidence": "높음",
       "facts": [
-        "합참: 12시 30분경 원산 일대에서 동해상으로 단거리 탄도미사일 10여 발 포착, 제원·사거리 정밀 분석 중",
-        "올해 17번째 탄도미사일 발사, 10/12 이후 17일 만",
-        "일본 방위성: 탄도미사일 가능성 물체 발사",
-        "합참: 탄도미사일 약 250㎞ 비행, 정확한 제원 분석 중",
-        "안보실, 긴급안보상황회의 개최"
+        "합참: 12:30경 원산 일대 단거리 탄도미사일 10여 발, 약 250㎞ 비행",
+        "파주·대성동 주민: 오전 6시부터 북측 대남방송(소리 작음)",
+        "한미일 정보 공유, 군 감시 강화"
       ],
       "speculation": [
-        "10/23 국방부의 남북군사회담 제안 이후 무력시위라는 해석(언론)"
+        "10/23 국방부 군사회담 제안에 대한 무력시위라는 해석(언론)"
       ]
     },
     "foreign_forces": {
@@ -122,8 +131,8 @@
       "region": "중국·단둥",
       "lat": 40.12,
       "lon": 124.38,
-      "summary": "국정원이 10/24 김정은 단둥 방문(방중)에 대해 항미원조 기념 외 다른 목적이 있는 듯하며 리창 총리 영접이 왕후닝으로 교체됐고 방중단은 군 인사 없이 외교간부 위주였다고 국회에 보고했다.",
-      "meaning": "군 수뇌 동행이 없어 군사협력 합의보다 외교 행보 성격이 강하다.",
+      "summary": "국정원이 10/24 김정은 단둥 방문에 군 주요 인사가 없었고 리창 영접이 왕후닝으로 교체됐다고 국회에 보고했다.",
+      "meaning": "군 수뇌 동행이 없어 군사협력보다 외교 행보 성격이 강하다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -131,18 +140,18 @@
           "url": "https://www.yna.co.kr/view/AKR20261029139600001"
         },
         {
-          "name": "연합뉴스(리창→왕후닝 교체)",
+          "name": "연합뉴스(리창→왕후닝)",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261029139100001"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "국정원: 방중단에 군 주요인사 없음, 외교간부 위주",
-        "국정원: 리창 영접 예정이었다가 왕후닝으로 교체"
+        "국정원: 방중단 군 인사 없음",
+        "국정원: 리창→왕후닝 교체"
       ],
       "speculation": [
-        "국정원: 북미대화 관련 의중 전달 가능성"
+        "국정원: 북미대화 의중 전달 가능성"
       ]
     },
     "electronic_cyber": {
@@ -152,8 +161,8 @@
       "region": "서울",
       "lat": 37.57,
       "lon": 126.98,
-      "summary": "귀속 미확인 — 금융당국이 금융권 해킹 시도에서 북한 IP 대역 접근 440만여 건을 탐지했으나 실제 침해 피해 신고는 없고 배후는 특정되지 않았다.",
-      "meaning": "북한 IP는 조작 가능해 해커 국적 특정이 어렵다.",
+      "summary": "귀속 미확인 — 금융당국이 금융권 해킹 시도에서 북한 IP 대역 접근을 대량 탐지했으나 배후는 특정되지 않았다.",
+      "meaning": "북한 IP는 조작 가능해 소행 특정이 어렵다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -163,40 +172,27 @@
       ],
       "confidence": "중간",
       "facts": [
-        "북한 IP 대역 접근 440만여 건 탐지",
-        "당국: IP 조작 가능, 국적 특정 어려움"
+        "금융권 해킹 시도에서 북한 IP 대역 접근 대량 탐지"
       ],
       "speculation": []
     }
   },
-  "checked_at": "2026-10-29T06:13:57+00:00",
+  "checked_at": "2026-10-29T07:16:48+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "노르웨이·핀란드 정상, 푸틴과 이례적 통화",
-      "summary": "노르웨이와 핀란드 지도자가 푸틴 대통령과 이례적으로 통화했다고 BBC가 전했다.",
-      "link_korea": "러시아의 대외 소통 변화는 북러 군사협력과 대러 제재 논의의 배경이 된다.",
+      "title": "스페인서 고속열차 충돌, 최소 68명 사망",
+      "summary": "스페인에서 고속열차 사고로 최소 68명이 숨졌다고 BBC가 전했다.",
+      "link_korea": "대형 철도 참사 대응은 한국의 재난 대응 비교 사례가 된다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "헤르손 지역 휴전 연장",
-      "summary": "우크라이나 헤르손 지역 휴전이 연장됐으며 러·우 모두 위반이 없다고 밝혔다고 BBC가 전했다.",
-      "link_korea": "러-우 전황 변화는 북한군 파병과 북러 무기 이전 논의에 영향을 준다.",
-      "region": "우크라이나",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6lye1w9p2l8o",
+        "url": "https://www.bbc.co.uk/news/articles/c6p3g84kjqjlo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "러-우 전선의 휴전·대화 움직임이 북러 협력의 전제에 영향을 줄 수 있다.",
-  "world_at": "2026-10-28T16:14:38+00:00"
+  "world_at": "2026-10-29T07:16:48+00:00"
 }

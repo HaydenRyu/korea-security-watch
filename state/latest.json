@@ -1,16 +1,19 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 접경 묶음"
+      "news_kr 접경 묶음",
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "news_kr 수집 결과"
+      "news_kr 수집 결과",
+      "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "news_kr 수집 결과"
+      "news_kr 수집 결과",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참 10월 29일",
+      "지뢰 발견 DMZ 귀순 합참 NLL 10월 29일",
       "news_kr 접경·지뢰 묶음"
     ],
     "electronic_cyber": [
@@ -18,7 +21,7 @@
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "김정은 방중 방러"
     ],
     "parade_massing": [
@@ -31,7 +34,7 @@
       "news_kr 경보 묶음"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ],
     "calm": [
       "news_kr 남북 대화 묶음"
@@ -40,8 +43,8 @@
   "opened": [
     "https://www.segye.com/newsView/20261028520184",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820012",
-    "https://www.yna.co.kr/view/AKR20261029030900504",
-    "https://www.yna.co.kr/view/AKR20261028099300504"
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.bbc.co.uk/news/articles/c6p3g84kjqjlo"
   ],
   "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 금융권 해킹은 북한 IP 접근만 확인되고 배후 미특정으로 직전과 같다.",
   "items": {
@@ -93,7 +96,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-29T00:10:36+00:00",
+  "checked_at": "2026-10-29T01:10:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

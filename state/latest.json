@@ -64,12 +64,12 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261029518036",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261029519263",
     "https://www.segye.com/newsView/20261029511245",
-    "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=05254566645617840"
+    "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=05254566645617840",
+    "https://www.segye.com/newsView/20261029510689"
   ],
-  "overall_summary": "원산 SRBM 10여 발 시험 발사와 접경 확성기 시험 방송 보도가 이어지나 직전 회차와 같은 시험·심리전 범위다. 국정원 보고에서 600㎜ 방사포 전방 배치 가능성을 주시한다는 언급이 있으나 확인된 배치는 아니며 새 병력·군수·정부 경고 징후는 없다.",
+  "overall_summary": "원산 SRBM 10여 발 시험 발사와 접경 확성기 시험 방송 보도가 이어지나 직전 회차와 같은 시험·심리전 범위다. 새 병력·군수·정부 경고 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none",
@@ -96,11 +96,6 @@
           "url": "https://www.segye.com/newsView/20261029511245"
         },
         {
-          "name": "국방일보",
-          "tier": "A",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do"
-        },
-        {
           "name": "이데일리",
           "tier": "B",
           "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=05254566645617840"
@@ -113,7 +108,8 @@
         "파주 접경지 주민들이 오전 6시부터 4~5시간 확성기 소리를 들었다고 증언"
       ],
       "speculation": [
-        "국민일보 속보 제목은 국정원이 대남방송 재개를 사실 아니라며 주민 오신고라고 밝힌 것으로 전하나 원문을 열지 못해 미확정"
+        "국민일보 속보 제목은 국정원이 대남방송 재개를 사실 아니라며 주민 오신고라고 전하나 원문을 열지 못해 미확정",
+        "연합 제목은 軍이 확성기 가동을 미확인이라 전함(원문 미열람)"
       ]
     },
     "electronic_cyber": {
@@ -136,7 +132,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-29T10:12:20+00:00",
+  "checked_at": "2026-10-29T11:21:07+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

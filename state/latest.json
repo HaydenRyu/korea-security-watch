@@ -1,49 +1,54 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 발표 자주포 확성기 29일"
+      "북한 자주포 군사분계선 전진배치 합참 10월 28일"
     ],
     "nuclear": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 핵실험 풍계리 영변 동향 38 North"
     ],
     "logistics": [
-      "합참 북한 발표 자주포 확성기 29일"
+      "North Korea DMZ border artillery landmine warning shots news"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 합참 10월 29일",
-      "김정은 방중 방러 북중 북러 군사협력 귀순 NLL"
+      "북한 지뢰 발견 DMZ 합참",
+      "김여정 확성기 경고사격 북한 접경 10월 29일",
+      "North Korea DMZ border artillery landmine warning shots news"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 서해 서해 구조물 주한미군 감축",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중 방러 북중 북러 군사협력 귀순 NLL",
-      "GPS 교란 북한 서해 서해 구조물 주한미군 감축"
+      "김정은 방중 서해 구조물 주한미군 감축",
+      "북러 군사협력 North Korea troops Russia 파병"
     ],
     "parade_massing": [
-      "합참 북한 발표 자주포 확성기 29일"
+      "북한 자주포 군사분계선 전진배치 합참 10월 28일"
     ],
     "nk_internal": [
-      "합참 북한 발표 자주포 확성기 29일"
+      "진돗개 발령 데프콘 상향 북한 준전시 노농적위군"
     ],
     "gov_warning": [
-      "북한 지뢰 발견 DMZ 합참 10월 29일"
+      "진돗개 발령 데프콘 상향 북한 준전시 노농적위군"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hackers"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+    ],
+    "calm": [
+      "남북 군사회담 제의 정동영"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261028099300504",
     "https://www.yna.co.kr/view/AKR20261028118100002",
-    "https://www.yna.co.kr/view/AKR20261029030900504",
+    "https://www.yna.co.kr/view/AKR20261028099300504",
     "https://www.yna.co.kr/view/AKR20261028071800009",
-    "https://www.segye.com/newsView/20261028520184",
-    "https://www.segye.com/newsView/20261028505901"
+    "https://www.segye.com/newsView/20261028505901",
+    "https://www.segye.com/newsView/20261027516201",
+    "https://www.segye.com/newsView/20261021524132",
+    "https://www.munhwa.com/article/11627038",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008819762"
   ],
-  "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 금융권 해킹은 북한 IP 접근만 확인되고 배후 미특정으로 직전과 같다.",
+  "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 개풍군 해안 자주포 노출(10/25~27 보도)은 합참이 구형 포 노출로 평가했고 금융권 해킹은 북한 IP 접근만 확인돼 직전과 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -53,29 +58,6 @@
     },
     "logistics": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "서울",
-      "summary": "귀속 미확인 — 금융당국이 금융권 해킹 시도에서 북한 IP 대역 접근 440만여 건을 탐지했으나 침해 배후는 특정되지 않았다.",
-      "meaning": "북 IP 접근은 취약점 탐색 위주이며 실제 침해와의 연결은 규명되지 않았다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261028118100002"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "금융권 해킹 시도에서 북한 IP 대역 접근 대량 탐지, 당국 유의 당부"
-      ],
-      "speculation": []
     },
     "foreign_forces": {
       "status": "none"
@@ -91,9 +73,34 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "none",
+      "summary": "개풍군 해안 자주포 노출은 첫 보도 10/25~27로 24시간 경과, 합참도 구형 포 노출로 평가해 징후로 올리지 않는다."
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "서울",
+      "summary": "귀속 미확인 — 금융당국이 금융권 해킹 시도에서 북한 IP 대역 접근 440만여 건을 탐지했으나 침해 배후는 특정되지 않았다.",
+      "meaning": "북한 IP는 조작 가능해 해커 국적 특정이 어렵다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261028118100002"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "북한 IP 대역 접근 440만여 건 탐지",
+        "당국 공문: IP 조작 가능, 국적 특정 어려움"
+      ],
+      "speculation": []
     }
   },
-  "checked_at": "2026-10-29T02:10:47+00:00",
+  "checked_at": "2026-10-29T03:12:11+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

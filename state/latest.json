@@ -66,9 +66,11 @@
     "https://www.segye.com/newsView/20261029518036",
     "https://www.yna.co.kr/view/AKR20261029105900504",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml"
+    "https://www.nhk.or.jp/rss/news/cat6.xml",
+    "https://www.yna.co.kr/view/AKR20261029161100001",
+    "https://www.yna.co.kr/view/AKR20261029146452060"
   ],
-  "overall_summary": "원산 SRBM 10여 발 시험 발사가 있었으나 직전 회차와 같은 시험 범위(routine)이며 새 병력·군수·정부 경고 징후는 없다. 접경 확성기 보도는 국정원이 사실 아니라고 해 미확정이다.",
+  "overall_summary": "원산 SRBM 10여 발 시험 발사 이후 직전 회차와 같은 판단이며(routine), 새 병력·군수·정부 경고 징후는 없다. 접경 확성기 보도는 국정원이 사실 아니라고 해 미확정이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -136,7 +138,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-29T14:34:48+00:00",
+  "checked_at": "2026-10-29T15:30:58+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,45 +1,55 @@
 {
   "coverage": {
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 귀순 DMZ",
-      "news_kr 수집(미사일·지뢰·확성기 묶음)"
-    ],
-    "electronic_cyber": [
-      "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 공격 10월 30일"
+      "지뢰 발견 DMZ",
+      "North Korea missile launch Wonsan Reuters"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Kim Jong Un China Russia visit"
+      "김정은 방중 방러 북한 군사협력",
+      "Kim Jong Un China Russia visit"
     ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "nuclear": [
-      "news_kr 수집(핵·방사포 묶음)"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
     ],
     "troop_movement": [
-      "news_kr 수집(접경 묶음)"
+      "북한 병력 이동 전방",
+      "North Korea troop movement"
     ],
     "logistics": [
-      "news_kr 수집(접경 묶음)"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "parade_massing": [
-      "news_kr 수집(접경 묶음)"
+      "북한 열병식 준비",
+      "North Korea parade preparation"
     ],
     "nk_internal": [
-      "news_kr 수집(확성기 묶음)"
+      "북한 준전시 등화관제",
+      "North Korea blackout mobilization"
     ],
     "gov_warning": [
-      "북한 합참 미사일 발사 후속 10월 30일"
+      "진돗개 발령 데프콘",
+      "DEFCON Korea raised"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261029511245",
+    "https://www.segye.com/newsView/20261029521459",
     "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do"
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "10/29 낮 북한이 원산 일대에서 단거리 탄도미사일 10여 발을 쏴 약 250km 비행했으나 시험·무력시위 범위(routine)이며 병력·핵·정부 경고 징후는 없다. 직전 회차와 판정이 같고 새 징후는 없다.",
+  "overall_summary": "10/29 낮 원산 일대 단거리 탄도미사일 10여 발 발사(약 250km)는 무력시위 범위(routine)이며 병력·핵·정부 경고 징후는 없다. 직전 회차와 판정이 같고 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -48,6 +58,24 @@
       "status": "none"
     },
     "logistics": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "border_clash": {
@@ -75,31 +103,13 @@
         "합참: 10/29 낮 12시30분쯤 원산 일대 동해상 단거리 탄도미사일 10여 발 포착, 약 250km 비행",
         "국가안보실 긴급 안보상황 점검회의, 한·미 제원 정밀 분석 중",
         "직전 발사는 10/12",
-        "강신철 국방장관이 ADMM-Plus에서 MDL 이남 지뢰 폭발을 정전협정 위반으로 규정"
+        "강신철 국방장관이 ADMM-Plus에서 MDL 이남 지뢰 폭발을 정전협정 위반으로 규정",
+        "국정원: 북 대남 확성기 재개는 사실 아님·주민 오인 신고(국민일보 제목, 원문 미열람), 600㎜ 방사포 전방 배치 가능성은 「주시」 수준(연합 제목)"
       ],
       "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none",
-      "summary": "국정원이 대남 확성기 방송 재개 보도를 사실 아님(주민 오신고)으로 확인했고 접경 징후는 없다."
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-10-29T20:12:20+00:00",
+  "checked_at": "2026-10-29T21:11:09+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

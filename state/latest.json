@@ -1,54 +1,44 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 증강 전방 이동 합참",
-      "North Korea DMZ troops artillery"
-    ],
-    "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea nuclear Yongbyon 38 North"
-    ],
-    "logistics": [
-      "북한 탄약 군수 수송 러시아",
-      "North Korea munitions shipments Russia"
-    ],
     "border_clash": [
-      "북한 대남 확성기 시험 방송 접경지 10월 29일",
-      "North Korea missiles launch Reuters Kim Jong Un loudspeaker October 29 2026",
       "지뢰 발견 DMZ(0-2 수집 결과)",
-      "DMZ 귀순 NLL(0-2 수집 결과)"
+      "DMZ 귀순 NLL(0-2 수집 결과)",
+      "대남 확성기 시험 방송(0-2 수집 결과)",
+      "North Korea missile launch Wonsan October 29 2026 Reuters"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 서북도서 10월",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 10월 29일"
+      "해킹 개인정보 유출 사이버 공격(0-2 수집 결과)",
+      "GPS 교란(0-2 수집 결과)"
     ],
     "foreign_forces": [
-      "김정은 방중 김정은 방러(0-2 수집 결과)",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 중국 주한미군 감축 발표",
-      "북러 군사협력 북한군 파병 10월 29일"
-    ],
-    "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout mobilization"
+      "김정은 방중(0-2 수집 결과)",
+      "북러 군사협력(0-2 수집 결과)"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향",
-      "North Korea launch J-Alert"
+      "긴급안보상황회의 탄도미사일(0-2 수집 결과)"
     ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 지령 검찰",
-      "North Korea attributed FBI"
+    "nuclear": [
+      "North Korea nuclear Yongbyon 38 North October 2026",
+      "국정원 ICBM 핵물질 증산(0-2 수집 결과)"
+    ],
+    "troop_movement": [
+      "북한 병력 전방 이동 합참 10월 29일",
+      "600㎜ 방사포 전방 배치 국정원(0-2 수집 결과)"
     ],
     "calm": [
-      "남북 군사회담 제의(0-2 수집 결과)"
+      "군사회담 제의(0-2 수집 결과)"
     ],
-    "linkage:korea": [
-      "북러 군사협력"
+    "logistics": [
+      "북러 무기부품 조달 기술이전 국정원(0-2 수집 결과)"
+    ],
+    "parade_massing": [
+      "북한군 집결 딥페이크(0-2 수집 결과)"
+    ],
+    "nk_internal": [
+      "김주애 후계 국정원(0-2 수집 결과)"
+    ],
+    "hybrid_ops": [
+      "간첩 국가보안법(0-2 수집 결과 spy 묶음)"
     ]
   },
   "opened": [
@@ -60,9 +50,13 @@
     "https://www.yna.co.kr/view/AKR20261028118100002",
     "https://www.yna.co.kr/view/AKR20261029105900504",
     "https://www.yna.co.kr/view/AKR20261029132800504",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.yna.co.kr/view/AKR20261029161100001",
+    "https://www.yna.co.kr/view/AKR20261029154700065",
+    "https://www.yna.co.kr/view/AKR20261029170600001",
+    "https://www.yna.co.kr/view/AKR20261029176400083"
   ],
-  "overall_summary": "10/29 12시 30분경 원산 일대 단거리 탄도미사일 10여 발 발사에 더해 오전 파주 접경지에서 북한 대남 확성기 시험 방송이 확인됐으나, 둘 다 김여정 예고·시험 성격의 정례 범위다. 군 수뇌 동행 없는 김정은 방중 보고 등 새 군사 징후는 없다.",
+  "overall_summary": "10/29 12시 30분경 원산 단거리 탄도미사일 10여 발과 파주 접경 대남 확성기 시험 방송이 이어졌으나 직전 회차와 같은 시험·심리전 범위다. 국정원 국감 보고(600㎜ 방사포 전방 배치 가능성 주시 등)는 전망·평가이며 새 군사 행동은 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -177,7 +171,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-29T07:16:48+00:00",
+  "checked_at": "2026-10-29T08:15:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

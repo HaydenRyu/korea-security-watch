@@ -2,68 +2,66 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 증강 전방 이동 합참",
-      "North Korea DMZ troops artillery Kaepung"
+      "North Korea DMZ troops artillery"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리 동향",
-      "North Korea nuclear Yongbyon Punggye-ri 38 North"
+      "북한 핵 영변 풍계리",
+      "North Korea nuclear Yongbyon 38 North"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 러시아 컨테이너",
+      "북한 탄약 군수 수송 러시아",
       "North Korea munitions shipments Russia"
     ],
     "border_clash": [
-      "북한 미사일 10여발 원산 합참",
-      "North Korea fires ballistic missiles East Sea Reuters Japan Defense Ministry",
-      "지뢰 발견 DMZ 합참(0-2 수집 결과)",
-      "DMZ 귀순 NLL 합참(0-2 수집 결과)"
+      "북한 탄도미사일 10여발 원산 합참 일본 방위성",
+      "North Korea ballistic missiles launch Reuters October 29",
+      "지뢰 발견 DMZ(0-2 수집 결과)",
+      "DMZ 귀순 NLL(0-2 수집 결과)"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "금융권 해킹 북한 IP(0-2 수집 결과)"
+      "금융권 해킹 북한 IP(0-2 수집 결과)",
+      "해킹 개인정보 유출 사이버 공격(0-2 수집 결과)"
     ],
     "foreign_forces": [
       "김정은 방중 김정은 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "Kim Jong Un China Russia visit Wang Huning NIS",
+      "북한 GPS 교란 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결 위성",
-      "North Korea parade massing satellite"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군",
-      "North Korea martial mobilization blackout"
+      "북한 준전시 등화관제",
+      "North Korea blackout mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 정부 경고",
-      "North Korea launch Japan J-Alert"
+      "진돗개 발령 데프콘 상향",
+      "North Korea launch J-Alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hack"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 군사회담 제의 정동영(0-2 수집 결과)",
-      "North Korea talks offer"
+      "남북 군사회담 제의(0-2 수집 결과)"
     ],
     "linkage:korea": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "북러 군사협력"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261029105952504",
     "https://www.yna.co.kr/view/AKR20261029105900504",
-    "https://www.yna.co.kr/view/AKR20261029106500073",
-    "https://www.yna.co.kr/view/AKR20261029105951504",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820988",
-    "https://www.yna.co.kr/view/AKR20261028118100002",
-    "https://www.yna.co.kr/view/AKR20261028099300504",
-    "https://www.segye.com/newsView/20261028505901"
+    "https://www.yna.co.kr/view/AKR20261029132800504",
+    "https://www.yna.co.kr/view/AKR20261029139600001",
+    "https://www.yna.co.kr/view/AKR20261029139100001",
+    "https://www.segye.com/newsView/20261029510689",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008821256",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.yna.co.kr/view/AKR20261028118100002"
   ],
-  "overall_summary": "10/29 낮 12시 30분경 북한이 원산 일대에서 동해상으로 단거리 탄도미사일 10여 발을 발사했다고 합참이 밝혔다(올해 17번째, 10/12 이후 17일 만, 남북군사회담 제안 6일 만). 시험 발사 성격이라 정례로 두며 다른 항목의 새 징후는 없다.",
+  "overall_summary": "10/29 12시 30분경 원산 일대 단거리 탄도미사일 10여 발(약 250㎞ 비행) 발사가 이어지는 가운데 시험·무력시위 성격의 정례로 두며 새 징후는 없다. 국정원이 김정은 방중을 외교 행보 중심으로 보고했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -74,34 +72,77 @@
     "logistics": {
       "status": "none"
     },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
+    },
     "border_clash": {
       "status": "corroborated",
       "routine": true,
       "region": "원산·동해",
       "lat": 39.15,
       "lon": 127.45,
-      "summary": "합참이 10/29 12시 30분경 북한 원산 일대에서 동해상으로 발사된 단거리 탄도미사일 10여 발을 포착했다고 밝혔고 일본 방위성도 탄도미사일 가능성 물체의 발사를 발표했다(제원·사거리 분석 중).",
+      "summary": "합참이 10/29 12시 30분경 원산 일대에서 동해상으로 발사된 단거리 탄도미사일 10여 발을 포착했고 약 250㎞ 비행했다고 밝혔으며 일본 방위성도 발사를 발표했다(제원 분석 중).",
       "meaning": "10/12 전술탄도미사일 시험 이후 17일 만의 연속 발사로 시험·무력시위 성격이며, 한미일은 추가 발사에 대비해 감시·경계를 강화했다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261029105952504"
+          "url": "https://www.yna.co.kr/view/AKR20261029105900504"
         },
         {
-          "name": "SBS",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820988"
+          "url": "https://www.segye.com/newsView/20261029510689"
         }
       ],
       "confidence": "높음",
       "facts": [
         "합참: 12시 30분경 원산 일대에서 동해상으로 단거리 탄도미사일 10여 발 포착, 제원·사거리 정밀 분석 중",
         "올해 17번째 탄도미사일 발사, 10/12 이후 17일 만",
-        "일본 방위성: 탄도미사일 가능성 물체 발사"
+        "일본 방위성: 탄도미사일 가능성 물체 발사",
+        "합참: 탄도미사일 약 250㎞ 비행, 정확한 제원 분석 중",
+        "안보실, 긴급안보상황회의 개최"
       ],
       "speculation": [
         "10/23 국방부의 남북군사회담 제안 이후 무력시위라는 해석(언론)"
+      ]
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "중국·단둥",
+      "lat": 40.12,
+      "lon": 124.38,
+      "summary": "국정원이 10/24 김정은 단둥 방문(방중)에 대해 항미원조 기념 외 다른 목적이 있는 듯하며 리창 총리 영접이 왕후닝으로 교체됐고 방중단은 군 인사 없이 외교간부 위주였다고 국회에 보고했다.",
+      "meaning": "군 수뇌 동행이 없어 군사협력 합의보다 외교 행보 성격이 강하다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261029139600001"
+        },
+        {
+          "name": "연합뉴스(리창→왕후닝 교체)",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261029139100001"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "국정원: 방중단에 군 주요인사 없음, 외교간부 위주",
+        "국정원: 리창 영접 예정이었다가 왕후닝으로 교체"
+      ],
+      "speculation": [
+        "국정원: 북미대화 관련 의중 전달 가능성"
       ]
     },
     "electronic_cyber": {
@@ -126,24 +167,9 @@
         "당국: IP 조작 가능, 국적 특정 어려움"
       ],
       "speculation": []
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-10-29T05:11:14+00:00",
+  "checked_at": "2026-10-29T06:13:57+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

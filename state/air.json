@@ -1,24 +1,59 @@
 {
- "at": "2026-10-29T02:14:17+00:00",
- "south": 76,
- "area": 96,
- "baseline": 74,
- "ratio": 1.03,
- "samples": 3,
+ "at": "2026-10-29T04:18:39+00:00",
+ "south": 85,
+ "area": 102,
+ "baseline": 71.5,
+ "ratio": 1.19,
+ "samples": 6,
  "mil": [
-  {
-   "type": "BE20",
-   "name": null,
-   "call": "CATS09",
-   "lat": 33.87,
-   "lon": 126.57
-  },
   {
    "type": "B190",
    "name": null,
    "call": "CATS77",
-   "lat": 37.62,
-   "lon": 128.26
+   "lat": 37.08,
+   "lon": 126.94
+  },
+  {
+   "type": "H60",
+   "name": null,
+   "call": "CARD42",
+   "lat": 37.16,
+   "lon": 127.08
+  },
+  {
+   "type": "H60",
+   "name": null,
+   "call": "CARD41",
+   "lat": 37.15,
+   "lon": 127.08
+  },
+  {
+   "type": "H60",
+   "name": null,
+   "call": "CARD44",
+   "lat": 37.34,
+   "lon": 127.1
+  },
+  {
+   "type": "H60",
+   "name": null,
+   "call": "CARD43",
+   "lat": 37.33,
+   "lon": 127.1
+  },
+  {
+   "type": "H60",
+   "name": null,
+   "call": "CARD45",
+   "lat": 37.45,
+   "lon": 127.11
+  },
+  {
+   "type": "H60",
+   "name": null,
+   "call": "CARD16",
+   "lat": 37.3,
+   "lon": 127.33
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

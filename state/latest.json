@@ -1,66 +1,52 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한군 집결 전방 증강",
-      "North Korea troop buildup border"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한",
-      "북한 확성기 대남방송 접경 합참",
-      "North Korea Reuters missile launch Kim Jong Un China Russia visit"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "지뢰 발견 DMZ(news_kr 수집 묶음)",
+      "北 탄도미사일 동해 발사 합참",
+      "North Korea ballistic missiles launch October 29 Joint Chiefs of Staff"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
-    ],
-    "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense drill"
+      "김정은 방중 북미대화 국정원",
+      "North Korea China visit Kim Jong Un(news_kr summit 묶음)"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "합참 긴급 경고"
+      "합참 北 발사 긴급안보상황회의(news_kr alert 묶음)"
+    ],
+    "nuclear": [
+      "국정원 北 핵물질 ICBM 고도화(news_kr)"
+    ],
+    "electronic_cyber": [
+      "GPS 교란(news_kr gps 묶음)"
+    ],
+    "troop_movement": [
+      "접경 병력 증강(news_kr)"
+    ],
+    "logistics": [
+      "북한 군수 수송(news_kr)"
+    ],
+    "parade_massing": [
+      "열병식 준비(news_kr)"
+    ],
+    "nk_internal": [
+      "북한 대남 확성기 재개 국정원"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
-    ],
-    "incidents": [
-      "실탄 발견 해안"
+      "간첩 혐의(news_kr spy 묶음)"
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261029511245",
+    "https://www.segye.com/newsView/20261029510689",
     "https://www.segye.com/newsView/20261029521459",
     "https://www.segye.com/newsView/20261029518036",
-    "https://www.segye.com/newsView/20261029510689",
-    "https://news.web.nhk/newsweb/na/nd-20261029de68050",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml"
+    "https://www.segye.com/newsView/20261029519263",
+    "https://www.yna.co.kr/view/AKR20261029105953504",
+    "https://www.yna.co.kr/view/AKR20261029161100001",
+    "https://www.yna.co.kr/view/AKR20261029170600001",
+    "https://www.yna.co.kr/view/AKR20261029146400060",
+    "https://www.yna.co.kr/view/AKR20261029105900504"
   ],
-  "overall_summary": "10/29 원산 일대 단거리 탄도미사일 발사는 시험 발사 범위(routine)이며 남측 표적·병력·군수·정부 경고 징후는 새로 확인되지 않았다. 접경 대남 확성기 시험 방송 보도는 국정원이 잘못된 주민 신고라고 밝혀 징후로 올리지 않는다.",
+  "overall_summary": "10/29 북한이 원산 일대에서 단거리 탄도미사일 10여 발을 쏴 올렸으나 시험·무력시위 범위(routine)이며 병력·핵·정부 경고 징후는 없다. 직전 회차와 판정이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,31 +58,31 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "region": "원산·동해",
       "lat": 39.15,
       "lon": 127.45,
-      "summary": "합참이 10/29 오후 북한의 동해상 발사체(단거리 탄도미사일 추정) 발사를 발표했고 강신철 국방부 장관이 ADMM-Plus 본회의 중 발사가 있었다고 밝혔다.",
-      "meaning": "시험 발사 범위로 남측 표적·실전 배치 근거는 확인되지 않았다.",
+      "summary": "합참이 10/29 낮 12시30분쯤 원산 일대에서 동해상으로 단거리 탄도미사일 10여 발이 발사된 것을 포착했다고 발표했고 약 250km 비행으로 전해졌다.",
+      "meaning": "남측 표적·실전 배치 근거 없는 무력시위성 시험 발사 범위로, 남북 군사회담 제안 6일 만의 발사다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261029510689"
+          "url": "https://www.segye.com/newsView/20261029511245"
         },
         {
-          "name": "세계일보",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261029521459"
+          "url": "https://www.yna.co.kr/view/AKR20261029105953504"
         }
       ],
-      "confidence": "중간",
+      "confidence": "높음",
       "facts": [
-        "합참: 10/29 오후 동해상 미상 발사체, 제원·사거리 분석 중(세계일보)",
-        "직전 발사는 10/12(17일 만)",
-        "강신철 장관이 ADMM-Plus 본회의 중 발사를 언급하고 9월 DMZ 지뢰 폭발을 정전협정 위반으로 규정",
-        "국정원: 대남 확성기 방송 재개 보도는 사실 아님, 주민의 잘못된 신고"
+        "합참: 10/29 낮 12시30분쯤 원산 일대 동해상 단거리 탄도미사일 10여 발 포착(세계일보)",
+        "한·미·일 정보 공유, 추가 발사 대비 경계 강화",
+        "직전 발사는 10/12",
+        "강신철 국방장관이 ADMM-Plus에서 9월 DMZ 지뢰 폭발을 정전협정 위반으로 규정"
       ],
       "speculation": []
     },
@@ -104,14 +90,14 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "24시간 경과 — 김정은 방중(10/24)은 배경이며 국정원이 10/29 북미대화 의중 전달 가능성만 평가했다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
     },
     "nk_internal": {
-      "status": "none"
+      "status": "none",
+      "summary": "국정원은 대남 확성기 방송 재개 보도를 사실 아님(주민 오신고)으로 확인했고 접경 징후는 없다."
     },
     "gov_warning": {
       "status": "none"
@@ -120,7 +106,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-29T17:15:13+00:00",
+  "checked_at": "2026-10-29T18:11:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

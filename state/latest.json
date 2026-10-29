@@ -1,50 +1,47 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 접경 묶음",
-      "북한 병력 이동 전방 증강"
+      "합참 북한 발표 자주포 확성기 29일"
     ],
     "nuclear": [
-      "news_kr 수집 결과",
-      "North Korea nuclear Yongbyon Punggye-ri"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "news_kr 수집 결과",
-      "North Korea ammunition shipment"
+      "합참 북한 발표 자주포 확성기 29일"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참 NLL 10월 29일",
-      "news_kr 접경·지뢰 묶음"
+      "북한 지뢰 발견 DMZ 합참 10월 29일",
+      "김정은 방중 방러 북중 북러 군사협력 귀순 NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란 북한 서해 서해 구조물 주한미군 감축",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중 방러"
+      "김정은 방중 방러 북중 북러 군사협력 귀순 NLL",
+      "GPS 교란 북한 서해 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "news_kr 수집 결과"
+      "합참 북한 발표 자주포 확성기 29일"
     ],
     "nk_internal": [
-      "news_kr 수집 결과"
+      "합참 북한 발표 자주포 확성기 29일"
     ],
     "gov_warning": [
-      "news_kr 경보 묶음"
+      "북한 지뢰 발견 DMZ 합참 10월 29일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
-    ],
-    "calm": [
-      "news_kr 남북 대화 묶음"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hackers"
     ]
   },
   "opened": [
+    "https://www.yna.co.kr/view/AKR20261028099300504",
+    "https://www.yna.co.kr/view/AKR20261028118100002",
+    "https://www.yna.co.kr/view/AKR20261029030900504",
+    "https://www.yna.co.kr/view/AKR20261028071800009",
     "https://www.segye.com/newsView/20261028520184",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820012",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/c6p3g84kjqjlo"
+    "https://www.segye.com/newsView/20261028505901"
   ],
   "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 금융권 해킹은 북한 IP 접근만 확인되고 배후 미특정으로 직전과 같다.",
   "items": {
@@ -60,6 +57,26 @@
     "border_clash": {
       "status": "none"
     },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "서울",
+      "summary": "귀속 미확인 — 금융당국이 금융권 해킹 시도에서 북한 IP 대역 접근 440만여 건을 탐지했으나 침해 배후는 특정되지 않았다.",
+      "meaning": "북 IP 접근은 취약점 탐색 위주이며 실제 침해와의 연결은 규명되지 않았다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261028118100002"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "금융권 해킹 시도에서 북한 IP 대역 접근 대량 탐지, 당국 유의 당부"
+      ],
+      "speculation": []
+    },
     "foreign_forces": {
       "status": "none"
     },
@@ -74,29 +91,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "서울",
-      "summary": "귀속 미확인 — 금융당국이 북한 IP 대역 접근 440여만 건(주로 스캔성)을 확인했으나 증권사 침해 배후는 특정되지 않았다.",
-      "meaning": "북 IP 접근은 취약점 탐색 위주이며 실제 침해와의 연결은 규명되지 않았다.",
-      "sources": [
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820012"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "대신증권 고객 개인정보 유출, 북한 IP 접근 다수 확인"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-10-29T01:10:40+00:00",
+  "checked_at": "2026-10-29T02:10:47+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

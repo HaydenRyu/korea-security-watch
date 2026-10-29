@@ -1,52 +1,52 @@
 {
   "coverage": {
     "border_clash": [
-      "지뢰 발견 DMZ(news_kr 수집 묶음)",
-      "北 탄도미사일 동해 발사 합참",
-      "North Korea ballistic missiles launch October 29 Joint Chiefs of Staff"
-    ],
-    "foreign_forces": [
-      "김정은 방중 북미대화 국정원",
-      "North Korea China visit Kim Jong Un(news_kr summit 묶음)"
-    ],
-    "gov_warning": [
-      "합참 北 발사 긴급안보상황회의(news_kr alert 묶음)"
-    ],
-    "nuclear": [
-      "국정원 北 핵물질 ICBM 고도화(news_kr)"
+      "지뢰 발견 목함지뢰 DMZ 귀순",
+      "news_kr 수집(미사일·지뢰·확성기 묶음)"
     ],
     "electronic_cyber": [
-      "GPS 교란(news_kr gps 묶음)"
+      "GPS 교란 북한 서북도서",
+      "해킹 개인정보 유출 공격 10월 29일"
     ],
-    "troop_movement": [
-      "접경 병력 증강(news_kr)"
-    ],
-    "logistics": [
-      "북한 군수 수송(news_kr)"
-    ],
-    "parade_massing": [
-      "열병식 준비(news_kr)"
-    ],
-    "nk_internal": [
-      "북한 대남 확성기 재개 국정원"
+    "foreign_forces": [
+      "김정은 방중 방러 북한 최신",
+      "North Korea Kim Jong Un China Russia visit missile launch Wonsan",
+      "서해 구조물 주한미군 감축"
     ],
     "hybrid_ops": [
-      "간첩 혐의(news_kr spy 묶음)"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+    ],
+    "nuclear": [
+      "news_kr 수집(핵·방사포 묶음)"
+    ],
+    "troop_movement": [
+      "news_kr 수집(접경 묶음)"
+    ],
+    "logistics": [
+      "news_kr 수집(접경 묶음)"
+    ],
+    "parade_massing": [
+      "news_kr 수집(접경 묶음)"
+    ],
+    "nk_internal": [
+      "news_kr 수집(확성기 묶음)"
+    ],
+    "gov_warning": [
+      "news_kr 수집(경보 묶음)"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261029511245",
-    "https://www.segye.com/newsView/20261029510689",
-    "https://www.segye.com/newsView/20261029521459",
     "https://www.segye.com/newsView/20261029518036",
-    "https://www.segye.com/newsView/20261029519263",
-    "https://www.yna.co.kr/view/AKR20261029105953504",
-    "https://www.yna.co.kr/view/AKR20261029161100001",
-    "https://www.yna.co.kr/view/AKR20261029170600001",
-    "https://www.yna.co.kr/view/AKR20261029146400060",
-    "https://www.yna.co.kr/view/AKR20261029105900504"
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261029519263"
   ],
-  "overall_summary": "10/29 북한이 원산 일대에서 단거리 탄도미사일 10여 발을 쏴 올렸으나 시험·무력시위 범위(routine)이며 병력·핵·정부 경고 징후는 없다. 직전 회차와 판정이 같다.",
+  "overall_summary": "10/29 낮 북한이 원산 일대에서 단거리 탄도미사일 10여 발을 쏴 약 250km 비행했으나 시험·무력시위 범위(routine)이며 병력·핵·정부 경고 징후는 없다. 직전 회차와 판정이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,7 +64,7 @@
       "lat": 39.15,
       "lon": 127.45,
       "summary": "합참이 10/29 낮 12시30분쯤 원산 일대에서 동해상으로 단거리 탄도미사일 10여 발이 발사된 것을 포착했다고 발표했고 약 250km 비행으로 전해졌다.",
-      "meaning": "남측 표적·실전 배치 근거 없는 무력시위성 시험 발사 범위로, 남북 군사회담 제안 6일 만의 발사다.",
+      "meaning": "남측 표적·실전 배치 근거 없는 무력시위성 시험 발사 범위로, 안보실이 긴급 안보상황 점검회의를 열었다.",
       "sources": [
         {
           "name": "세계일보",
@@ -72,17 +72,17 @@
           "url": "https://www.segye.com/newsView/20261029511245"
         },
         {
-          "name": "연합뉴스",
+          "name": "국방일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261029105953504"
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do"
         }
       ],
       "confidence": "높음",
       "facts": [
-        "합참: 10/29 낮 12시30분쯤 원산 일대 동해상 단거리 탄도미사일 10여 발 포착(세계일보)",
-        "한·미·일 정보 공유, 추가 발사 대비 경계 강화",
+        "합참: 10/29 낮 12시30분쯤 원산 일대 동해상 단거리 탄도미사일 10여 발 포착, 약 250km 비행",
+        "국가안보실 긴급 안보상황 점검회의, 한·미 제원 정밀 분석 중",
         "직전 발사는 10/12",
-        "강신철 국방장관이 ADMM-Plus에서 9월 DMZ 지뢰 폭발을 정전협정 위반으로 규정"
+        "강신철 국방장관이 ADMM-Plus에서 MDL 이남 지뢰 폭발을 정전협정 위반으로 규정"
       ],
       "speculation": []
     },
@@ -97,7 +97,7 @@
     },
     "nk_internal": {
       "status": "none",
-      "summary": "국정원은 대남 확성기 방송 재개 보도를 사실 아님(주민 오신고)으로 확인했고 접경 징후는 없다."
+      "summary": "국정원이 대남 확성기 방송 재개 보도를 사실 아님(주민 오신고)으로 확인했고 접경 징후는 없다."
     },
     "gov_warning": {
       "status": "none"
@@ -106,7 +106,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-29T18:11:41+00:00",
+  "checked_at": "2026-10-29T19:14:54+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

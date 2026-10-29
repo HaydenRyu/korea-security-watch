@@ -1,21 +1,21 @@
 {
   "coverage": {
     "troop_movement": [
-      "국정원 방사포 전방 배치",
-      "North Korea troop buildup"
+      "북한군 집결 전방 증강",
+      "North Korea troop buildup border"
     ],
     "nuclear": [
-      "핵 풍계리 영변",
+      "북한 핵 풍계리 영변",
       "North Korea nuclear test site"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
+      "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "DMZ 귀순 NLL",
-      "North Korea missile launch Reuters October 29"
+      "지뢰 발견 DMZ 귀순 북한",
+      "북한 확성기 대남방송 접경 합참",
+      "North Korea Reuters missile launch Kim Jong Un China Russia visit"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -23,22 +23,21 @@
       "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 북러 군사협력",
+      "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
-      "North Korea blackout mobilization"
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "합참 진돗개 데프콘 발령",
-      "North Korea alert DEFCON"
+      "진돗개 발령 데프콘",
+      "합참 긴급 경고"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -47,13 +46,7 @@
     ],
     "calm": [
       "남북 대화 제안",
-      "통신선 복원"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan"
-    ],
-    "linkage:korea": [
-      "북러 군사협력"
+      "North Korea talks offer"
     ],
     "incidents": [
       "실탄 발견 해안"
@@ -61,13 +54,13 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261029521459",
-    "https://www.yna.co.kr/view/AKR20261029105900504",
-    "https://www.yna.co.kr/view/AKR20261029161100001",
+    "https://www.segye.com/newsView/20261029518036",
+    "https://www.segye.com/newsView/20261029510689",
+    "https://news.web.nhk/newsweb/na/nd-20261029de68050",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml",
-    "https://www.segye.com/newsView/20261029518036"
+    "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "10/29 원산 SRBM 10여 발 시험 발사 이후 직전 회차와 같은 판단(routine)이며 새 병력·군수·정부 경고 징후는 없다. 접경 확성기 보도는 국정원이 사실 아니라고 해 미확정이다.",
+  "overall_summary": "10/29 원산 일대 단거리 탄도미사일 발사는 시험 발사 범위(routine)이며 남측 표적·병력·군수·정부 경고 징후는 새로 확인되지 않았다. 접경 대남 확성기 시험 방송 보도는 국정원이 잘못된 주민 신고라고 밝혀 징후로 올리지 않는다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -79,49 +72,40 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "원산·동해",
       "lat": 39.15,
       "lon": 127.45,
-      "summary": "합참이 10/29 12시 30분경 원산 일대에서 동해로 발사된 단거리 탄도미사일 10여 발을 포착했다.",
+      "summary": "합참이 10/29 오후 북한의 동해상 발사체(단거리 탄도미사일 추정) 발사를 발표했고 강신철 국방부 장관이 ADMM-Plus 본회의 중 발사가 있었다고 밝혔다.",
       "meaning": "시험 발사 범위로 남측 표적·실전 배치 근거는 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261029521459"
+          "url": "https://www.segye.com/newsView/20261029510689"
         },
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261029105900504"
+          "url": "https://www.segye.com/newsView/20261029521459"
         }
       ],
-      "confidence": "높음",
+      "confidence": "중간",
       "facts": [
-        "합참: 10/29 12:30경 원산 일대 동해상 단거리 탄도미사일 10여 발",
-        "한미일 정보 공유, 감시·경계 강화",
+        "합참: 10/29 오후 동해상 미상 발사체, 제원·사거리 분석 중(세계일보)",
         "직전 발사는 10/12(17일 만)",
-        "강신철 국방부 장관이 ADMM-Plus 본회의 중 발사가 있었다며 9월 지뢰 폭발을 정전협정 위반이라 규정(세계일보)"
+        "강신철 장관이 ADMM-Plus 본회의 중 발사를 언급하고 9월 DMZ 지뢰 폭발을 정전협정 위반으로 규정",
+        "국정원: 대남 확성기 방송 재개 보도는 사실 아님, 주민의 잘못된 신고"
       ],
-      "speculation": [
-        "접경 대남 확성기 시험 방송 보도는 국정원이 사실 아니라고 해 미확정"
-      ]
+      "speculation": []
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김정은 10/24 단둥 방문은 24시간 경과 — 29일 국정원 보고(북·미 대화 의중 전달 가능성)는 배경이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261029518036"
-        }
-      ]
+      "summary": "24시간 경과 — 김정은 방중(10/24)은 배경이며 국정원이 10/29 북미대화 의중 전달 가능성만 평가했다."
     },
     "parade_massing": {
       "status": "none"
@@ -136,15 +120,15 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-29T16:21:05+00:00",
+  "checked_at": "2026-10-29T17:15:13+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "러 드론, 우크라이나 기차역 공격…최소 14명 사망",
-      "summary": "러시아 드론 공격으로 우크라이나 기차역에서 최소 14명이 숨졌다고 당국이 밝혔다.",
-      "link_korea": "북러 군사협력과 북한군 파병 논의의 배경이 되는 러-우 전쟁 동향이다.",
+      "title": "러시아 드론 공격으로 드니프로 기차역 14명 이상 사망",
+      "summary": "BBC에 따르면 러시아 드론이 우크라이나 중부 드니프로 기차역을 공격해 최소 14명이 숨지고 14명이 다쳤다.",
+      "link_korea": "북러 군사협력이 이어지는 가운데 러시아의 대우크라이나 전쟁 양상을 보여준다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
@@ -153,17 +137,28 @@
       }
     },
     {
-      "title": "ASEAN 국방장관회의, 중국·필리핀 관계 냉각 부각",
-      "summary": "ASEAN 국방장관 확대회의에서 중국과 필리핀의 관계 악화가 드러났다고 NHK가 전했다.",
-      "link_korea": "역내 중국 군사 동향은 주한미군 운용과 한반도 안보 환경에 영향을 준다.",
-      "region": "동남아",
+      "title": "중국 5중전회 폐막, 간부 33명 당적 박탈",
+      "summary": "NHK에 따르면 중국공산당 5중전회가 폐막하며 당내 엄격한 통치 결정을 채택하고 간부 33명의 당적 박탈을 확인했다.",
+      "link_korea": "북중 교류가 확대되는 시기 중국 군·당 지도부 재편은 대북 관계의 변수다.",
+      "region": "중국",
       "source": {
         "name": "NHK",
-        "url": "https://www.nhk.or.jp/rss/news/cat6.xml",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261029de68132",
+        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
+      }
+    },
+    {
+      "title": "ASEAN 확대국방장관회의서 중·필리핀 갈등 부각",
+      "summary": "필리핀에서 열린 ADMM-Plus에서 남중국해를 둘러싼 중국과 필리핀의 관계 냉각이 드러났다.",
+      "link_korea": "같은 회의에서 한국 국방부 장관이 북한 지뢰·미사일 도발을 국제사회에 제기했다.",
+      "region": "필리핀",
+      "source": {
+        "name": "NHK",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261029de68122",
         "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
       }
     }
   ],
-  "world_context": "역내 국방장관회의와 러-우 전쟁 소식이 이어지고 있다.",
-  "world_at": "2026-10-29T14:34:48+00:00"
+  "world_context": "아시아 안보 회의와 중국 지도부 재편, 우크라이나 전쟁이 한반도 정세의 배경을 이룬다.",
+  "world_at": "2026-10-29T17:15:13+00:00"
 }

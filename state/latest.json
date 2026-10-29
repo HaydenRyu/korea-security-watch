@@ -60,13 +60,18 @@
     "factor:public_opinion": [
       "북한 대남 비난 담화",
       "North Korea KCNA South Korea criticism"
+    ],
+    "incidents": [
+      "실탄 발견 해안"
+    ],
+    "linkage:taiwan": [
+      "대만 중국 군사훈련"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261029518036",
-    "https://www.segye.com/newsView/20261029519263",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261029511245",
-    "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=05254566645617840",
+    "https://www.segye.com/newsView/20261029518036",
     "https://www.segye.com/newsView/20261029510689"
   ],
   "overall_summary": "원산 SRBM 10여 발 시험 발사와 접경 확성기 시험 방송 보도가 이어지나 직전 회차와 같은 시험·심리전 범위다. 새 병력·군수·정부 경고 징후는 없다.",
@@ -96,16 +101,16 @@
           "url": "https://www.segye.com/newsView/20261029511245"
         },
         {
-          "name": "이데일리",
+          "name": "국방일보",
           "tier": "B",
-          "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=05254566645617840"
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do"
         }
       ],
       "confidence": "높음",
       "facts": [
-        "합참: 10/29 12:30경 원산 일대 동해상 SRBM 10여 발, 약 250㎞ 비행",
+        "합참: 10/29 12:30경 원산 일대 동해상 SRBM 10여 발, 약 250㎞ 비행(국방일보)",
         "안보실 긴급안보상황점검회의 개최, 안보리 결의 위반 규탄",
-        "파주 접경지 주민들이 오전 6시부터 4~5시간 확성기 소리를 들었다고 증언"
+        "파주 접경지 주민 확성기 소리 증언, 軍은 가동 미확인(연합 제목)"
       ],
       "speculation": [
         "국민일보 속보 제목은 국정원이 대남방송 재개를 사실 아니라며 주민 오신고라고 전하나 원문을 열지 못해 미확정",
@@ -132,7 +137,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-29T11:21:07+00:00",
+  "checked_at": "2026-10-29T12:13:42+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

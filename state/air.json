@@ -1,10 +1,18 @@
 {
- "at": "2026-10-29T05:54:19+00:00",
- "south": 71,
- "area": 95,
+ "at": "2026-10-29T07:06:56+00:00",
+ "south": 73,
+ "area": 94,
  "baseline": 73.0,
- "ratio": 0.97,
+ "ratio": 1.0,
  "samples": 6,
- "mil": [],
+ "mil": [
+  {
+   "type": "A359",
+   "name": null,
+   "call": "GAF933",
+   "lat": 37.61,
+   "lon": 127.14
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

@@ -1,31 +1,24 @@
 {
- "at": "2026-10-29T08:22:40+00:00",
- "south": 80,
- "area": 94,
- "baseline": null,
- "ratio": null,
- "samples": 2,
+ "at": "2026-10-29T09:25:47+00:00",
+ "south": 63,
+ "area": 77,
+ "baseline": 68,
+ "ratio": 0.93,
+ "samples": 5,
  "mil": [
   {
-   "type": "CL60",
+   "type": "H47",
    "name": null,
-   "call": "SUI002",
-   "lat": 39.76,
-   "lon": 125.12
+   "call": "KEEP30",
+   "lat": 36.8,
+   "lon": 127.06
   },
   {
    "type": "H60",
    "name": null,
-   "call": "CARD94",
-   "lat": 37.49,
-   "lon": 127.12
-  },
-  {
-   "type": "BE20",
-   "name": null,
-   "call": "MAGIC17",
-   "lat": 33.61,
-   "lon": 132.14
+   "call": "CARD05",
+   "lat": 36.82,
+   "lon": 127.22
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

@@ -1,54 +1,60 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 자주포 군사분계선 전진배치 합참 10월 28일"
-    ],
-    "nuclear": [
-      "북한 핵실험 풍계리 영변 동향 38 North"
-    ],
-    "logistics": [
-      "North Korea DMZ border artillery landmine warning shots news"
-    ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 합참",
-      "김여정 확성기 경고사격 북한 접경 10월 29일",
-      "North Korea DMZ border artillery landmine warning shots news"
+      "북한 동해상 발사체 합참 10월 29일",
+      "North Korea ballistic missile launch East Sea JCS Japan",
+      "지뢰 발견 DMZ 합참(0-2 수집 결과 대체)",
+      "North Korea DMZ landmine warning shots defector"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란",
+      "금융권 해킹 북한 IP(0-2 수집 결과)"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
       "김정은 방중 서해 구조물 주한미군 감축",
-      "북러 군사협력 North Korea troops Russia 파병"
-    ],
-    "parade_massing": [
-      "북한 자주포 군사분계선 전진배치 합참 10월 28일"
-    ],
-    "nk_internal": [
-      "진돗개 발령 데프콘 상향 북한 준전시 노농적위군"
-    ],
-    "gov_warning": [
-      "진돗개 발령 데프콘 상향 북한 준전시 노농적위군"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "Kim Jong Un China Russia visit"
     ],
     "calm": [
-      "남북 군사회담 제의 정동영"
+      "남북 군사회담 제의 정동영(0-2 수집 결과)"
+    ],
+    "troop_movement": [
+      "북한 병력 증강 전방 이동 합참",
+      "North Korea DMZ landmine warning shots defector"
+    ],
+    "nuclear": [
+      "North Korea nuclear Yongbyon Punggye-ri activity 38 North",
+      "북한 핵 영변 풍계리 동향"
+    ],
+    "logistics": [
+      "북한 탄약 군수 수송 러시아 컨테이너",
+      "North Korea munitions shipments Russia"
+    ],
+    "parade_massing": [
+      "북한 열병식 병력 집결 위성",
+      "North Korea parade massing satellite"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 노농적위군 North Korea martial mobilization"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 상향 정부 경고",
+      "North Korea launch Japan J-Alert"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 / North Korea attributed FBI hack"
     ]
   },
   "opened": [
+    "https://www.yna.co.kr/view/AKR20261029105900504",
+    "https://www.yna.co.kr/view/AKR20261029106500073",
+    "https://www.yna.co.kr/view/AKR20261029105951504",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820988",
     "https://www.yna.co.kr/view/AKR20261028118100002",
     "https://www.yna.co.kr/view/AKR20261028099300504",
-    "https://www.yna.co.kr/view/AKR20261028071800009",
     "https://www.segye.com/newsView/20261028505901",
-    "https://www.segye.com/newsView/20261027516201",
-    "https://www.segye.com/newsView/20261021524132",
-    "https://www.munhwa.com/article/11627038",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008819762"
+    "https://www.nippon.com/en/"
   ],
-  "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 개풍군 해안 자주포 노출(10/25~27 보도)은 합참이 구형 포 노출로 평가했고 금융권 해킹은 북한 IP 접근만 확인돼 직전과 같다.",
+  "overall_summary": "10/29 오후 북한이 동해상으로 미상 발사체(일본 방위성은 탄도미사일 가능성)를 발사해 합참이 분석 중이다. 시험 발사 성격이라 정례로 두며 다른 항목의 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,8 +81,33 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "개풍군 해안 자주포 노출은 첫 보도 10/25~27로 24시간 경과, 합참도 구형 포 노출로 평가해 징후로 올리지 않는다."
+      "status": "corroborated",
+      "routine": true,
+      "region": "동해",
+      "lat": 39.5,
+      "lon": 128.0,
+      "summary": "합참이 10/29 오후 북한의 동해상 미상 발사체 발사를 발표했고 일본 방위성은 탄도미사일 가능성 물체가 이미 낙하한 것으로 추정했다(제원 분석 중).",
+      "meaning": "탄도미사일이면 10/12 전술탄도미사일 시험 이후 17일 만의 발사로, 시험 발사 성격이라 정례로 본다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261029105900504"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008820988"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "합참: 29일 오후 동해상 미상 발사체 발사, 제원·사거리 분석 중",
+        "일본 방위성: 탄도미사일 가능성, 이미 낙하 추정"
+      ],
+      "speculation": [
+        "탄도미사일로 확인되면 17일 만의 발사"
+      ]
     },
     "electronic_cyber": {
       "status": "single",
@@ -100,7 +131,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-10-29T03:12:11+00:00",
+  "checked_at": "2026-10-29T04:11:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,62 +1,59 @@
 {
   "coverage": {
-    "border_clash": [
-      "지뢰 발견 DMZ(0-2 수집 결과)",
-      "DMZ 귀순 NLL(0-2 수집 결과)",
-      "대남 확성기 시험 방송(0-2 수집 결과)",
-      "North Korea missile launch Wonsan October 29 2026 Reuters"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격(0-2 수집 결과)",
-      "GPS 교란(0-2 수집 결과)"
-    ],
-    "foreign_forces": [
-      "김정은 방중(0-2 수집 결과)",
-      "북러 군사협력(0-2 수집 결과)"
-    ],
-    "gov_warning": [
-      "긴급안보상황회의 탄도미사일(0-2 수집 결과)"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon 38 North October 2026",
-      "국정원 ICBM 핵물질 증산(0-2 수집 결과)"
-    ],
-    "troop_movement": [
-      "북한 병력 전방 이동 합참 10월 29일",
-      "600㎜ 방사포 전방 배치 국정원(0-2 수집 결과)"
-    ],
-    "calm": [
-      "군사회담 제의(0-2 수집 결과)"
+      "풍계리 영변 핵 동향",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북러 무기부품 조달 기술이전 국정원(0-2 수집 결과)"
+      "북한 탄약 군수 수송",
+      "North Korea munitions shipment"
+    ],
+    "border_clash": [
+      "목함지뢰 발견 해안",
+      "합참 NLL DMZ 귀순",
+      "North Korea missile launch Reuters October 29"
+    ],
+    "electronic_cyber": [
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어"
+    ],
+    "foreign_forces": [
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한군 집결 딥페이크(0-2 수집 결과)"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "김주애 후계 국정원(0-2 수집 결과)"
+      "북한 등화관제 준전시"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 발령",
+      "US State Department Korea travel advisory"
     ],
     "hybrid_ops": [
-      "간첩 국가보안법(0-2 수집 결과 spy 묶음)"
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 FBI"
+    ],
+    "calm": [
+      "남북 대화 제안"
+    ],
+    "incidents": [
+      "총기 발견 군 감식"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261029146400060",
     "https://www.segye.com/newsView/20261029511245",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008821497",
-    "https://www.yna.co.kr/view/AKR20261029139600001",
-    "https://www.yna.co.kr/view/AKR20261029139100001",
-    "https://www.yna.co.kr/view/AKR20261028118100002",
-    "https://www.yna.co.kr/view/AKR20261029105900504",
-    "https://www.yna.co.kr/view/AKR20261029132800504",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.yna.co.kr/view/AKR20261029161100001",
-    "https://www.yna.co.kr/view/AKR20261029154700065",
-    "https://www.yna.co.kr/view/AKR20261029170600001",
-    "https://www.yna.co.kr/view/AKR20261029176400083"
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
+    "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=05254566645617840"
   ],
-  "overall_summary": "10/29 12시 30분경 원산 단거리 탄도미사일 10여 발과 파주 접경 대남 확성기 시험 방송이 이어졌으나 직전 회차와 같은 시험·심리전 범위다. 국정원 국감 보고(600㎜ 방사포 전방 배치 가능성 주시 등)는 전망·평가이며 새 군사 행동은 확인되지 않았다.",
+  "overall_summary": "원산 SRBM 10여 발 시험 발사와 접경 확성기 시험 방송이 이어졌으나 직전 회차와 같은 시험·심리전 범위다. 새 병력·군수·정부 경고 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -66,6 +63,49 @@
     },
     "logistics": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "원산·파주 접경",
+      "lat": 39.15,
+      "lon": 127.45,
+      "summary": "합참이 10/29 12시 30분경 원산 일대에서 동해로 발사된 단거리 탄도미사일 10여 발(약 250㎞ 비행)을 포착했고, 같은 날 오전 파주 접경지에서 북한의 대남 확성기 시험 방송이 주민 증언으로 보도됐다.",
+      "meaning": "시험 발사와 심리전 재개 단계로 직전 회차와 같은 범위이며 실전 배치·남측 표적 근거는 없다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261029511245"
+        },
+        {
+          "name": "국방일보",
+          "tier": "A",
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do"
+        },
+        {
+          "name": "이데일리",
+          "tier": "B",
+          "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=05254566645617840"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "합참: 10/29 12:30경 원산 일대 동해상 SRBM 10여 발, 약 250㎞ 비행",
+        "안보실 긴급안보상황점검회의 개최, 안보리 결의 위반 규탄",
+        "파주 접경지 주민들이 오전 6시부터 대남 확성기 소리를 들었다고 증언"
+      ],
+      "speculation": [
+        "국민일보 속보 제목은 국정원이 대남방송 보도를 사실 아니라며 주민 오신고라고 밝힌 것으로 전하나 원문을 열지 못해 미확정(출처 간 상충 가능성)"
+      ]
+    },
+    "electronic_cyber": {
+      "status": "none",
+      "summary": "24시간 경과 — 금융권 해킹 시도 북한 IP 탐지 첫 보도 10/28 05시(UTC)."
+    },
+    "foreign_forces": {
+      "status": "none",
+      "summary": "국정원 국회 보고(김정은 방중단 구성)는 원문(연합)을 열지 못해 판정 근거에서 제외했다."
     },
     "parade_massing": {
       "status": "none"
@@ -78,100 +118,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "원산·동해·파주",
-      "lat": 39.15,
-      "lon": 127.45,
-      "summary": "합참이 10/29 12시 30분경 원산 일대에서 동해로 발사된 단거리 탄도미사일 10여 발(약 250㎞ 비행)을 포착했고, 같은 날 오전 6시부터 파주 접경지에서 북한의 대남 확성기 시험 방송이 연합·SBS 보도로 확인됐다.",
-      "meaning": "김여정이 예고한 확성기 가동의 개시와 미사일 시험이 겹치나 사격·월선 없는 시험·심리전 성격이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261029511245"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261029105900504"
-        },
-        {
-          "name": "연합뉴스(확성기)",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261029146400060"
-        },
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008821497"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "합참: 12:30경 원산 일대 단거리 탄도미사일 10여 발, 약 250㎞ 비행",
-        "파주·대성동 주민: 오전 6시부터 북측 대남방송(소리 작음)",
-        "한미일 정보 공유, 군 감시 강화"
-      ],
-      "speculation": [
-        "10/23 국방부 군사회담 제안에 대한 무력시위라는 해석(언론)"
-      ]
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "중국·단둥",
-      "lat": 40.12,
-      "lon": 124.38,
-      "summary": "국정원이 10/24 김정은 단둥 방문에 군 주요 인사가 없었고 리창 영접이 왕후닝으로 교체됐다고 국회에 보고했다.",
-      "meaning": "군 수뇌 동행이 없어 군사협력보다 외교 행보 성격이 강하다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261029139600001"
-        },
-        {
-          "name": "연합뉴스(리창→왕후닝)",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261029139100001"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "국정원: 방중단 군 인사 없음",
-        "국정원: 리창→왕후닝 교체"
-      ],
-      "speculation": [
-        "국정원: 북미대화 의중 전달 가능성"
-      ]
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "서울",
-      "lat": 37.57,
-      "lon": 126.98,
-      "summary": "귀속 미확인 — 금융당국이 금융권 해킹 시도에서 북한 IP 대역 접근을 대량 탐지했으나 배후는 특정되지 않았다.",
-      "meaning": "북한 IP는 조작 가능해 소행 특정이 어렵다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261028118100002"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "금융권 해킹 시도에서 북한 IP 대역 접근 대량 탐지"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-10-29T08:15:55+00:00",
+  "checked_at": "2026-10-29T09:11:39+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

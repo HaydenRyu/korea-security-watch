@@ -8,53 +8,47 @@
     "electronic_cyber": [
       "북한 GPS 교란 합참",
       "해킹 공격",
-      "바이낸스 해킹 북한 TRM랩스",
-      "MS 북한 해킹 AI 피싱"
+      "바이낸스 해킹 북한 TRM랩스"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 10월 30일",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 10월"
+      "김정은 방중"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI 북한 해킹 귀속"
+      "North Korea attributed FBI"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설 동향",
-      "North Korea Yongbyon nuclear"
+      "풍계리 영변 핵시설 동향"
     ],
     "troop_movement": [
-      "북한 전선 병력 증강",
-      "North Korea troops buildup"
+      "북한 전선 병력 증강"
     ],
     "logistics": [
-      "북한 탄약 수송 군수",
-      "North Korea ammunition shipment"
+      "북한 탄약 수송 군수"
     ],
     "gov_warning": [
-      "진돗개 데프콘 격상",
-      "North Korea DEFCON alert"
+      "진돗개 데프콘 격상"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군",
-      "North Korea mobilization civil defense"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "calm": [
-      "남북 대화 제안 통신선 확성기 중단 North Korea talks offer"
+      "남북 대화 제안 통신선 확성기 중단"
     ]
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261030508484",
+    "https://www.segye.com/newsView/20261030510855",
     "https://www.segye.com/newsView/20261030510315",
-    "https://www.segye.com/newsView/20261030509940",
-    "https://www.segye.com/newsView/20261030508484"
+    "https://www.yna.co.kr/view/AKR20261030120900504",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823504"
   ],
-  "overall_summary": "10/29 원산 일대 탄도미사일은 600㎜ 방사포·드론 위력시위로 공개된 정례 범위이며 직전 회차와 판정이 같다. MS가 북한 해킹조직의 AI 활용을 공개했으나 정부 귀속은 없어 배경 수준이다.",
+  "overall_summary": "10/29 원산 탄도미사일 10여 발과 600㎜ 방사포·드론 위력시위는 정례 시험·시위 범위이며 한미일이 대응을 협의했다. 바이낸스 해킹은 민간업체의 북한 배후설 단계로 정부 귀속은 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,51 +65,52 @@
       "region": "원산·동해",
       "lat": 39.15,
       "lon": 127.45,
-      "summary": "합참이 10/29 낮 원산 일대 동해상 단거리 탄도미사일 10여 발(약 250㎞)을 포착했고 북한 매체는 무인기 전시회의 600㎜ 방사포 위력시위로 공개했다.",
-      "meaning": "무인기·방사포 시험 및 무력시위 범위로 남측 표적 실전 배치 근거는 확인되지 않는다.",
+      "summary": "합참이 10/29 원산 일대 동해상 탄도미사일 10여 발을 포착했고 북한은 무인기 전시회의 600㎜ 방사포·자폭드론 위력시위로 공개했으며 한미일 외교당국이 30일 대응을 협의했다.",
+      "meaning": "시험·무력시위 범위로 남측 표적 실전 배치 근거는 확인되지 않는다.",
       "sources": [
-        {
-          "name": "국방일보",
-          "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do"
-        },
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261030510315"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261030120900504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "국방일보 10/30: 합참 10/29 12시30분경 원산 일대 단거리 탄도미사일 10여 발 포착, 비행거리 약 250㎞, 국가안보실 긴급 안보상황 점검회의",
-        "세계일보 10/30: 조선중앙통신이 무인항공기술 전시회에서 600㎜ 방사포 사격·자폭드론의 모형 GP 타격 공개"
+        "연합 10/30: 외교부, 북한이 전날 원산에서 동해로 탄도미사일 10여 발 발사, 한미일 외교당국 유선 협의",
+        "세계일보 10/30: 조선중앙통신이 무인항공기술 전시회 600㎜ 방사포 사격·자폭드론 모형 GP 타격 공개",
+        "세계일보 10/30: 청와대 국가안보실장이 과거 DMZ 지뢰폭발 조사 결과를 언급(신규 사건 아님)"
       ],
       "speculation": []
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
+      "attribution": "unknown",
       "region": "국제·국내",
-      "summary": "MS 위협 인텔리전스가 10/29 북한 해킹조직의 AI 활용 한국 겨냥 피싱 문서 대량 제작을 공개했고 바이낸스 해킹의 북한 배후설은 민간업체 지목 단계다.",
-      "meaning": "북한 연계 사이버 활동 정황이나 정부 귀속·실제 시설 마비가 없어 배경 수준이다.",
+      "summary": "귀속 미확인 — 바이낸스가 10/29 약 63억 달러 해킹 피해를 밝혔고 TRM랩스 등 민간업체가 북한 배후를 지목했으나 정부 귀속은 없다.",
+      "meaning": "북한 연계 가능성이 제기됐으나 공식 귀속이 없어 배경 수준이다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "SBS",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261030509940"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823504"
         }
       ],
-      "confidence": "중간",
+      "confidence": "낮음",
       "facts": [
-        "세계일보 10/30: MS 보고서(10/29)가 북한 해킹조직 8곳의 AI 도입을 분석"
+        "SBS 10/30: 바이낸스 63억 달러 피해 추정, TRM랩스 북한 배후 분석"
       ],
       "speculation": [
-        "바이낸스 해킹의 북한 배후는 민간 분석이며 정부 확인 전이다"
+        "북한 연계 여부는 민간 분석 단계다"
       ]
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "새로 확인된 파병·협정은 없고 방북 스위스 외무 등 외교 일정은 배경이다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -124,14 +119,13 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none",
-      "summary": "진돗개·데프콘 상향 보도는 없고 국가안보실 점검회의는 정례 대응이다."
+      "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-10-30T09:12:07+00:00",
+  "checked_at": "2026-10-30T10:11:11+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

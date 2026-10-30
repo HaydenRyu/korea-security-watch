@@ -1,10 +1,18 @@
 {
- "at": "2026-10-30T07:31:28+00:00",
- "south": 60,
- "area": 80,
- "baseline": 72.5,
- "ratio": 0.83,
- "samples": 6,
- "mil": [],
+ "at": "2026-10-30T08:45:46+00:00",
+ "south": 73,
+ "area": 85,
+ "baseline": 73,
+ "ratio": 1.0,
+ "samples": 3,
+ "mil": [
+  {
+   "type": "SURN",
+   "name": null,
+   "call": "KNP973",
+   "lat": 37.47,
+   "lon": 126.76
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

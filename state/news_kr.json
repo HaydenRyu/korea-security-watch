@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-30T18:17:55+00:00",
+ "fetched_at": "2026-10-30T19:28:50+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-10-30T11:16:01+00:00",
@@ -67,22 +67,22 @@
   "border": {
    "clusters": 15,
    "max_independent": 3,
-   "latest": "2026-10-30T18:17:55+00:00"
+   "latest": "2026-10-30T19:28:50+00:00"
   },
   "drone_balloon": {
    "clusters": 12,
    "max_independent": 2,
-   "latest": "2026-10-30T18:17:55+00:00"
+   "latest": "2026-10-30T19:28:50+00:00"
   },
   "fire": {
    "clusters": 18,
    "max_independent": 3,
-   "latest": "2026-10-30T18:17:55+00:00"
+   "latest": "2026-10-30T19:28:50+00:00"
   },
   "mine": {
    "clusters": 9,
    "max_independent": 3,
-   "latest": "2026-10-30T18:17:55+00:00"
+   "latest": "2026-10-30T19:28:50+00:00"
   },
   "gps": {
    "clusters": 4,

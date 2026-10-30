@@ -3,12 +3,12 @@
     "border_clash": [
       "지뢰 발견 DMZ",
       "NLL 귀순 합참",
-      "북한 대남 확성기 시험 방송 합참",
-      "합참 원산 탄도미사일 10월 29일"
+      "북한 대남 확성기 시험 방송"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
+      "북한 GPS 교란",
       "해킹 공격",
+      "랜섬웨어 공격",
       "North Korea Binance hack attributed FBI"
     ],
     "foreign_forces": [
@@ -17,7 +17,7 @@
       "서해 구조물"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
       "North Korea attributed FBI"
     ],
     "nuclear": [
@@ -44,15 +44,11 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261030508484",
-    "https://www.segye.com/newsView/20261030509940",
-    "https://www.segye.com/newsView/20261030510855",
     "https://www.segye.com/newsView/20261030510315",
-    "https://www.yna.co.kr/view/AKR20261030120900504",
-    "https://www.yna.co.kr/view/AKR20261029146400060",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823504",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.segye.com/newsView/20261030509940",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823504"
   ],
-  "overall_summary": "10/29 원산 탄도미사일 10여 발·600㎜ 방사포·드론 위력시위는 정례 시험·시위 범위이며 한미일이 유선 협의했다. 바이낸스 해킹은 민간업체의 북한 배후설 단계로 정부 귀속이 없다.",
+  "overall_summary": "10/29 원산 탄도미사일 10여 발과 10/29 드론·600㎜ 방사포 위력시위는 시험·시위 범위여서 직전과 같은 수준이다. 바이낸스 해킹은 민간업체의 북한 배후설뿐 정부 귀속이 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,40 +60,35 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "원산·동해",
       "lat": 39.15,
       "lon": 127.45,
-      "summary": "북한이 10/29 원산 일대 동해상 탄도미사일 10여 발을 쏘고 무인기 전시회에서 600㎜ 방사포·자폭드론 위력시위를 공개했으며 한미일 외교당국이 30일 협의했다.",
-      "meaning": "시험·무력시위 범위로 남측 표적 실전 배치 근거는 없다.",
+      "summary": "합참은 10/29 원산 일대에서 단거리 탄도미사일 10여 발이 동해로 약 250㎞ 날았다고 밝혔고 북한은 드론 전시회에서 600㎜ 방사포와 자폭드론 시위를 공개했다.",
+      "meaning": "시험·무력시위 범위로 남측 표적 실전 배치 근거는 확인되지 않는다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261030510315"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261030120900504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "연합 10/30: 외교부, 북한 전날 원산에서 탄도미사일 10여 발 발사, 한미일 유선 협의",
-        "세계일보 10/30: 조선중앙통신이 무인항공기술 전시회 600㎜ 방사포·드론 공개 보도",
-        "연합 10/29: 북한 대남 확성기 시험 방송(파주 접경)"
+        "합참: 원산 일대 단거리 탄도미사일 10여 발, 비행거리 약 250㎞",
+        "조선중앙통신: 무인항공기술 전시회에서 600㎜ 방사포 공개"
       ],
       "speculation": [
-        "무인전력 과시 의도로 풀이"
+        "KN-25 추정",
+        "사진 속 모형 표적이 남측 GP라는 해석은 매체 추정"
       ]
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 바이낸스가 10/29 약 63억 달러 해킹 피해를 밝혔고 민간업체가 북한 배후를 지목했으나 정부 귀속은 없다.",
+      "summary": "귀속 미확인 — 바이낸스가 10/29 약 63억 달러 해킹 피해를 밝혔고 TRM랩스가 북한 조직을 지목했으나 정부 귀속은 없다.",
       "meaning": "정부 귀속 전까지 등급에 반영하지 않는다.",
       "sources": [
         {
@@ -108,10 +99,10 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "SBS 10/30: 바이낸스 입출금 중단·손실 보전 발표"
+        "바이낸스 자체 발표에는 북한 언급 없음"
       ],
       "speculation": [
-        "TRM랩스 등 북한 배후설"
+        "TRM랩스의 TraderTraitor 배후설"
       ]
     },
     "foreign_forces": {
@@ -130,7 +121,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-30T11:12:04+00:00",
+  "checked_at": "2026-10-30T12:11:32+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

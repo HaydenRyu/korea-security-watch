@@ -1,25 +1,29 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement border buildup"
+    ],
+    "nuclear": [
+      "North Korea nuclear Yongbyon Punggye-ri satellite imagery",
+      "북한 핵 영변 풍계리"
+    ],
+    "logistics": [
+      "북한 탄약 수송 군수",
+      "North Korea ammunition shipment Russia"
+    ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL"
+      "지뢰 발견 DMZ 귀순 NLL",
+      "North Korea ballistic missiles East Sea October 29 Joint Chiefs of Staff launches"
     ],
     "electronic_cyber": [
+      "북한 GPS 교란 합참",
       "해킹 개인정보 유출 사이버 공격 10월 30일"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
-    ],
-    "calm": [
-      "news_kr 수집(확성기·대화 묶음)"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강"
-    ],
-    "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri"
-    ],
-    "logistics": [
-      "북한 탄약 수송 군수"
+      "김정은 방중 방러 북러 군사협력 10월 30일",
+      "North Korea troops Russia Kim Jong Un China visit October 2026",
+      "서해 구조물 주한미군 감축 10월 30일"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -31,15 +35,24 @@
       "진돗개 발령 데프콘 북한"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+    ],
+    "calm": [
+      "news_kr 수집(확성기·대화 묶음)"
+    ],
+    "incidents": [
+      "news_kr 수집(지뢰·간첩 묶음)"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261029518036",
     "https://www.segye.com/newsView/20261029521459",
-    "https://www.segye.com/newsView/20261029518036"
+    "https://www.segye.com/newsView/20261030504709",
+    "https://www.yna.co.kr/view/AKR20261029105953504",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008821473",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "10/29 원산 일대 단거리 탄도미사일 10여 발 발사는 600㎜ 방사포 무력시위 범위(routine)로 직전 회차와 판정이 같다. 병력·핵·정부 경고 신규 징후는 없고, 국정원은 대남 확성기 재개 보도를 사실 아님으로 확인했다.",
+  "overall_summary": "10/29 원산 일대 단거리 탄도미사일 10여 발 발사(약 250km)는 600㎜ 방사포 무력시위 범위(routine)로 직전 회차와 판정이 같다. 병력·핵·정부 경고 신규 징후는 없고, 국정원 국감 보고(김정은 방중 때 북·미 대화 의중 전달 가능성)는 분석이라 배경으로만 둔다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -48,25 +61,6 @@
       "status": "none"
     },
     "logistics": {
-      "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "국정원이 김정은 단둥 방문(10/24)을 북·미대화 의중 전달 가능성으로 분석했으나 새 파병·협정 없음 — 배경."
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
       "status": "none"
     },
     "border_clash": {
@@ -79,25 +73,49 @@
       "meaning": "600㎜ 방사포 등 시험·무력시위 범위로 남측 표적 실전 배치 근거는 없다.",
       "sources": [
         {
-          "name": "국방일보",
-          "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do"
-        },
-        {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261029521459"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008821473"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261029105953504"
         }
       ],
       "confidence": "높음",
       "facts": [
-        "합참 10/29 12:30경 원산 일대 단거리 탄도미사일 10여 발 포착",
-        "국방장관이 ADMM-Plus에서 발사 언급"
+        "합참 10/29 12:30경 원산 일대 단거리 탄도미사일 10여 발 포착, 약 250km 비행",
+        "국방장관이 ADMM-Plus 본회의에서 발사 언급"
       ],
       "speculation": []
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none",
+      "summary": "김정은 10/24 방중은 24시간 경과이고 10/29 국정원 국감 보고는 분석이라 배경으로만 둔다."
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-10-30T00:11:11+00:00",
+  "checked_at": "2026-10-30T01:12:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -112,30 +130,8 @@
         "url": "https://www.bbc.co.uk/news/articles/c9p8gdlz1p2ko",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
-    },
-    {
-      "title": "중국 5중전회 폐막, 간부 33명 당적 박탈",
-      "summary": "NHK에 따르면 중국공산당 5중전회가 폐막하며 당내 엄격한 통치 결정을 채택하고 간부 33명의 당적 박탈을 확인했다.",
-      "link_korea": "북중 교류가 확대되는 시기 중국 군·당 지도부 재편은 대북 관계의 변수다.",
-      "region": "중국",
-      "source": {
-        "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261029de68132",
-        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
-      }
-    },
-    {
-      "title": "ASEAN 확대국방장관회의서 중·필리핀 갈등 부각",
-      "summary": "필리핀에서 열린 ADMM-Plus에서 남중국해를 둘러싼 중국과 필리핀의 관계 냉각이 드러났다.",
-      "link_korea": "같은 회의에서 한국 국방부 장관이 북한 지뢰·미사일 도발을 국제사회에 제기했다.",
-      "region": "필리핀",
-      "source": {
-        "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261029de68122",
-        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
-      }
     }
   ],
-  "world_context": "아시아 안보 회의와 중국 지도부 재편, 우크라이나 전쟁이 한반도 정세의 배경을 이룬다.",
-  "world_at": "2026-10-29T17:15:13+00:00"
+  "world_context": "러시아의 대우크라이나 공세는 북러 군사협력의 배경으로 이어진다.",
+  "world_at": "2026-10-30T01:12:12+00:00"
 }

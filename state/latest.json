@@ -1,55 +1,58 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 지뢰 발견 DMZ 10월 30일",
-      "news_kr 수집(지뢰·DMZ·확성기·방사포 묶음)"
+      "합참 북한 오늘 NLL 귀순 지뢰 발견 10월 30일",
+      "DMZ 지뢰 폭발 합참 10월"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격",
-      "news_kr 수집(해킹조직 묶음)"
+      "바이낸스 해킹 8.4조 북한 TRM랩스 거래소 입장",
+      "Binance hack North Korea TRM Labs",
+      "news_kr gps/hybrid 묶음(해킹 AI 피싱)"
     ],
     "foreign_forces": [
-      "김정은 방중 Kim Jong Un China Russia visit"
+      "김정은 방중 북러 군사협력 파병 서해 구조물 주한미군 감축",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI 2026년 10월",
+      "North Korea attributed FBI"
     ],
     "nuclear": [
-      "North Korea Reuters missile launch Japan defense ministry October 30"
-    ],
-    "gov_warning": [
-      "한미일 외교당국 북한 탄도미사일 (news_kr 수집)"
+      "북한 풍계리 영변 핵시설 동향 North Korea nuclear Yongbyon satellite"
     ],
     "troop_movement": [
-      "news_kr 수집"
+      "북한 전선 병력 증강 군수 탄약 수송 North Korea troops buildup ammunition"
     ],
     "logistics": [
-      "news_kr 수집"
+      "북한 전선 병력 증강 군수 탄약 수송 North Korea troops buildup ammunition"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 격상 북한 준전시 열병식 North Korea parade mobilization"
     ],
     "parade_massing": [
-      "news_kr 수집"
+      "진돗개 데프콘 격상 북한 준전시 열병식 North Korea parade mobilization"
     ],
     "nk_internal": [
-      "news_kr 수집"
+      "진돗개 데프콘 격상 북한 준전시 열병식 North Korea parade mobilization"
     ],
     "calm": [
-      "news_kr 수집(summit·확성기 묶음)"
-    ],
-    "incidents": [
-      "news_kr 수집(mine·fire·hybrid 묶음)"
+      "news_kr 수집(확성기 시험방송 정보당국 부인, 북미대화 보도)"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261030013051504",
-    "https://www.yna.co.kr/view/AKR20261030070000001",
+    "https://www.yna.co.kr/view/AKR20261030022452009",
+    "https://www.yna.co.kr/view/AKR20261030022453009",
+    "https://www.yna.co.kr/view/AKR20261030077551001",
+    "https://www.yna.co.kr/view/AKR20261029148552001",
+    "https://www.yna.co.kr/view/AKR20261029161100001",
     "https://www.yna.co.kr/view/AKR20261030120900504",
-    "https://www.yna.co.kr/view/AKR20261029148500001",
-    "https://www.yna.co.kr/view/AKR20261029146400060",
+    "https://www.yna.co.kr/view/AKR20261029146452060",
     "https://www.segye.com/newsView/20261030509940",
-    "https://www.nknews.org/2026/10/kim-jong-un-calls-for-absolute-superiority-in-drones-at-north-korean-uav-expo/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.segye.com/newsView/20261030510315",
+    "https://www.segye.com/newsView/20261030508484"
   ],
-  "overall_summary": "10/29 원산 일대 탄도미사일 발사는 600㎜ 방사포 위력시위로 공개된 정례 범위이며 직전 회차와 판정이 같다. 10/30 청와대의 DMZ 지뢰폭발 대응 발언과 MS의 북한 해킹조직 AI 활용 보고서는 새 징후가 아니다.",
+  "overall_summary": "10/29 원산 일대 탄도미사일 발사는 600㎜ 방사포 위력시위로 공개된 정례 범위이며 직전 회차와 판정이 같다. 바이낸스 대규모 해킹을 민간 분석업체가 북한 소행으로 지목했으나 정부 공식 귀속은 없어 배경 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,25 +78,30 @@
           "url": "https://www.yna.co.kr/view/AKR20261030013051504"
         },
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/kim-jong-un-calls-for-absolute-superiority-in-drones-at-north-korean-uav-expo/"
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261030510315"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "연합뉴스 10/30: 김정은 참관 무인기 전시회에서 초정밀 600㎜ 방사포 첫 공개사격, 자폭드론이 한국 GP·미 에이브럼스 모의표적 타격"
+        "연합뉴스 10/30: 김정은 참관 무인기 전시회에서 초정밀 600㎜ 방사포 공개사격, 자폭드론이 한국 GP·미 에이브럼스 모의표적 타격",
+        "국정원 10/29: 600㎜ 방사포 전방 배치 가능성 주시"
       ],
       "speculation": []
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
-      "attribution": "nk",
-      "region": "한국",
-      "summary": "마이크로소프트 위협 인텔리전스가 10/29 북한 해킹조직이 AI로 한국 겨냥 피싱 문서를 대량 제작한다는 보고서를 공개했다.",
-      "meaning": "민간 보고서 기반의 해킹 동향이며 실제 정부·금융망 마비는 확인되지 않는다.",
+      "region": "국제·국내",
+      "summary": "바이낸스가 10/29 약 63억 달러 해킹 피해를 밝혔고 민간업체 TRM랩스가 북한 트레이더트레이터를 배후로 지목했으나 정부 공식 귀속은 없으며, MS는 북한 해킹조직의 AI 활용 보고서를 공개했다.",
+      "meaning": "북한 연계 가상자산 탈취 정황이지만 정부 귀속이 없어 배경 수준이다.",
       "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261030022453009"
+        },
         {
           "name": "세계일보",
           "tier": "B",
@@ -102,13 +110,16 @@
       ],
       "confidence": "중간",
       "facts": [
-        "세계일보 10/30: MS 보고서 인용, AI 활용이 피싱·악성코드 개발·공급망 공격으로 확대"
+        "연합뉴스: 바이낸스 추정 피해 약 63억 달러, TRM랩스 북한 배후 지목(블룸버그 인용)",
+        "세계일보: MS 위협 인텔리전스 10/29 북한 해킹조직 AI 피싱 보고서"
       ],
-      "speculation": []
+      "speculation": [
+        "TRM랩스의 귀속은 민간 분석이며 정부 확인 전이다"
+      ]
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "10/24 김정은 방중은 24시간 경과 배경이며 10/29 국정원 설명(북미대화 의중 전달 가능성)은 새 군사 협력 징후가 아니다."
+      "summary": "국정원 10/29 국감의 방중·북러 협력 언급은 이미 알려진 배경이며 새로 확인된 파병·협정은 없다."
     },
     "parade_massing": {
       "status": "none"
@@ -118,13 +129,13 @@
     },
     "gov_warning": {
       "status": "none",
-      "summary": "한미일 외교당국의 미사일 대응 논의는 정례 협의로 새 경보·동원이 아니다."
+      "summary": "한미일 외교당국 유선 협의는 정보 공유 수준이며 진돗개·데프콘 상향 보도는 없다."
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-10-30T06:16:30+00:00",
+  "checked_at": "2026-10-30T07:23:47+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

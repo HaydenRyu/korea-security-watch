@@ -1,56 +1,61 @@
 {
   "coverage": {
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "NLL 귀순 합참",
+      "DMZ 지뢰 폭발 북한 합참",
+      "지뢰 발견",
+      "NLL 귀순",
       "대남 확성기"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격",
-      "랜섬웨어 공격"
+      "바이낸스 해킹 북한 정부 발표"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방중 방러",
       "Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "서해 구조물 주한미군 감축"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
       "North Korea attributed FBI"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설"
+      "풍계리 영변 핵시설",
+      "North Korea nuclear test site"
     ],
     "troop_movement": [
-      "북한 전선 병력 증강"
+      "북한 전선 병력 증강",
+      "North Korea troop buildup"
     ],
     "logistics": [
-      "북한 탄약 수송"
+      "북한 탄약 수송",
+      "North Korea munitions shipment"
     ],
     "gov_warning": [
-      "진돗개 데프콘"
+      "진돗개 데프콘",
+      "DEFCON Korea"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea blackout"
     ],
     "calm": [
       "남북 대화 제안 통신선 확성기 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261030508484",
+    "https://www.segye.com/newsView/20261030516780",
     "https://www.segye.com/newsView/20261030510315",
-    "https://www.segye.com/newsView/20261030509940",
     "https://www.segye.com/newsView/20261030510855",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823504",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823420",
-    "https://www.yna.co.kr/view/AKR20261030013052504",
-    "https://www.nknews.org/",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823816",
+    "https://www.yna.co.kr/view/AKR20261030070000001",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823199",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
   "overall_summary": "10/29 원산 탄도미사일과 드론·600㎜ 방사포 위력시위는 시험·시위 범위여서 직전과 같은 수준이다. 바이낸스 해킹은 민간업체의 북한 배후설뿐 정부 귀속이 없다.",
@@ -65,12 +70,12 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "원산·동해",
       "lat": 39.15,
       "lon": 127.45,
-      "summary": "합참은 10/29 원산 일대에서 단거리 탄도미사일 10여 발이 동해로 약 250㎞ 날았다고 밝혔고 북한은 드론 전시회에서 600㎜ 방사포와 자폭드론 시위를 공개했다.",
+      "summary": "합참은 10/29 원산 일대 단거리 탄도미사일 약 250㎞ 비행을 밝혔고 북한은 드론 전시회에서 600㎜ 방사포 시위를 공개했다.",
       "meaning": "시험·무력시위 범위로 남측 표적 실전 배치 근거는 확인되지 않는다.",
       "sources": [
         {
@@ -79,14 +84,9 @@
           "url": "https://www.segye.com/newsView/20261030510315"
         },
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261030013052504"
-        },
-        {
           "name": "SBS",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823420"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823199"
         }
       ],
       "confidence": "중간",
@@ -136,7 +136,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-30T13:19:40+00:00",
+  "checked_at": "2026-10-30T14:16:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -154,5 +154,5 @@
     }
   ],
   "world_context": "러-우 전쟁이 이어지는 가운데 북한은 드론·방사포 전력을 과시했다.",
-  "world_at": "2026-10-30T13:19:40+00:00"
+  "world_at": "2026-10-30T14:16:12+00:00"
 }

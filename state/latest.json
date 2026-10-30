@@ -1,53 +1,56 @@
 {
   "coverage": {
     "border_clash": [
-      "지뢰 발견",
-      "합참 DMZ 지뢰 폭발 북한 NLL 귀순"
+      "목함지뢰 해안 발견 귀순 NLL",
+      "DMZ 지뢰 폭발 합참 북한 10월"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "해킹 개인정보 유출 랜섬웨어 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러 10월 30일",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "Kim Jong Un China Russia visit North Korea Reuters",
+      "서해 구조물 주한미군 감축"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hackers"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon"
-    ],
-    "troop_movement": [
-      "North Korea troops Russia"
-    ],
-    "logistics": [
-      "북한 탄약 수송"
+      "서해 구조물 주한미군 감축 진돗개 북한 핵 영변 풍계리"
     ],
     "gov_warning": [
-      "진돗개 DEFCON"
+      "서해 구조물 주한미군 감축 진돗개 북한 핵 영변 풍계리"
+    ],
+    "troop_movement": [
+      "Kim Jong Un China Russia visit North Korea Reuters"
+    ],
+    "logistics": [
+      "북한 탄약 수송 (국내 수집 결과 대조)"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "김정은 방중 방러 10월 30일"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "국내 언론 수집 결과 대조"
     ],
     "calm": [
-      "남북 대화 제안 통신선 확성기 중단"
+      "남북 대화 제안 통신선 확성기 중단 (국내 수집 결과 대조)"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261030516780",
     "https://www.segye.com/newsView/20261030510315",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823562",
+    "https://www.segye.com/newsView/20261030516780",
     "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/",
-    "https://www.nknews.org/feed/"
+    "https://www.nknews.org/feed/",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823562",
+    "https://www.yna.co.kr/view/AKR20261030077551001",
+    "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.bbc.co.uk/news/articles/c60me298k1yeo"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29 원산 탄도미사일·600㎜ 방사포·드론 위력시위는 시험·시위 범위다. 바이낸스 해킹은 북한 연계 분석만 있고 정부 귀속이 없어 등급에 반영하지 않는다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위는 시험·시위 범위이고, 청와대의 DMZ 지뢰 언급은 9/21 사건의 후속이다. 바이낸스 해킹은 북한 연계 보도뿐 정부 귀속이 없어 등급에 반영하지 않는다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -79,7 +82,7 @@
       "region": "원산·동해",
       "lat": 39.15,
       "lon": 127.45,
-      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 모형 GP 타격 장면을 공개했다.",
+      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 모형 GP 타격 장면을 공개했다(조선중앙통신 10/30 보도).",
       "meaning": "시험·무력시위 범위로 남측 표적 실전 배치 근거는 확인되지 않는다.",
       "sources": [
         {
@@ -114,25 +117,31 @@
           "name": "SBS",
           "tier": "B",
           "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823562"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
         }
       ],
       "confidence": "낮음",
       "facts": [
-        "SBS: 민간 분석이 북한 배후 의심"
+        "SBS·BBC: 바이낸스 약 63억 달러 해킹, 수사 관행상 북한 연계 의심 보도",
+        "FBI는 범인 추적 방침만 밝혔고 북한 귀속 발표는 없음"
       ],
       "speculation": [
         "북한 연계 가능성"
       ]
     }
   },
-  "checked_at": "2026-10-30T17:10:49+00:00",
+  "checked_at": "2026-10-30T18:12:50+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
       "title": "러 점령 올레시키 대피로 열려",
-      "summary": "러시아 점령 올레시키에서 대피 통로가 열렸으나 수백 명이 남기로 했다.",
+      "summary": "러시아 점령 올레시키에서 국지 휴전 속에 수백 명이 대피했다.",
       "link_korea": "러-우 전쟁 장기화는 북러 군사협력 배경이다.",
       "region": "우크라이나",
       "source": {
@@ -143,5 +152,5 @@
     }
   ],
   "world_context": "러-우 전쟁이 이어지는 가운데 북한은 드론·방사포 전력을 과시했다.",
-  "world_at": "2026-10-30T14:16:12+00:00"
+  "world_at": "2026-10-30T18:12:50+00:00"
 }

@@ -1,5 +1,17 @@
 {
   "coverage": {
+    "border_clash": [
+      "지뢰 발견 DMZ 귀순 NLL"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 10월 30일"
+    ],
+    "foreign_forces": [
+      "North Korea Reuters Kim Jong Un China Russia visit"
+    ],
+    "calm": [
+      "news_kr 수집(확성기·대화 묶음)"
+    ],
     "troop_movement": [
       "북한 병력 이동 전방 증강"
     ],
@@ -8,17 +20,6 @@
     ],
     "logistics": [
       "북한 탄약 수송 군수"
-    ],
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "North Korea Reuters missile launch Wonsan"
-    ],
-    "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출"
-    ],
-    "foreign_forces": [
-      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -30,21 +31,15 @@
       "진돗개 발령 데프콘 북한"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hackers"
+      "국가보안법 구속 간첩 혐의"
     ]
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261029510689",
-    "https://www.segye.com/newsView/20261029518036",
     "https://www.segye.com/newsView/20261029521459",
-    "https://www.segye.com/newsView/20261029519263",
-    "https://www.yna.co.kr/view/AKR20261030013000504",
-    "https://www.kmib.co.kr/article/20261029502104"
+    "https://www.segye.com/newsView/20261029518036"
   ],
-  "overall_summary": "10/29 원산 일대 단거리 탄도미사일 발사는 북한이 무인기 전시회에서 공개한 600㎜ 방사포 사격과 맞물린 무력시위 범위(routine)다. 병력·핵·정부 경고 징후는 없고 직전 회차와 판정이 같다.",
+  "overall_summary": "10/29 원산 일대 단거리 탄도미사일 10여 발 발사는 600㎜ 방사포 무력시위 범위(routine)로 직전 회차와 판정이 같다. 병력·핵·정부 경고 신규 징후는 없고, 국정원은 대남 확성기 재개 보도를 사실 아님으로 확인했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -80,37 +75,29 @@
       "region": "원산·동해",
       "lat": 39.15,
       "lon": 127.45,
-      "summary": "합참이 10/29 낮 12시30분쯤 원산 일대 동해상 단거리 탄도미사일 10여 발(약 250km)을 포착했고, 북한은 30일 무인기 전시회에서 600㎜ 방사포 전투사격을 공개했다고 조선중앙통신이 보도했다.",
-      "meaning": "전날 발사체가 600㎜ 초대형 방사포(KN-25)로 추정되는 무력시위·시험 범위로, 남측 표적 실전 배치 근거는 없다.",
+      "summary": "합참이 10/29 낮 12시30분쯤 원산 일대 동해상 단거리 탄도미사일 10여 발(약 250km)을 포착했고 국가안보실이 긴급 안보상황 점검회의를 열었다.",
+      "meaning": "600㎜ 방사포 등 시험·무력시위 범위로 남측 표적 실전 배치 근거는 없다.",
       "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261029510689"
-        },
         {
           "name": "국방일보",
           "tier": "B",
           "url": "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do"
         },
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261030013000504"
+          "url": "https://www.segye.com/newsView/20261029521459"
         }
       ],
       "confidence": "높음",
       "facts": [
-        "합참: 10/29 낮 12시30분쯤 원산 일대 동해상 단거리 탄도미사일 10여 발, 약 250km 비행",
-        "조선중앙통신(북한 주장): 10/29 무인항공기술발전-2026 전시회에서 600㎜ 방사포 전투사격 공개, 무인기 발사 미사일이 섬 표적 100% 명중",
-        "김정은: 무인기 분야 절대적 우세 목표"
+        "합참 10/29 12:30경 원산 일대 단거리 탄도미사일 10여 발 포착",
+        "국방장관이 ADMM-Plus에서 발사 언급"
       ],
-      "speculation": [
-        "연합: 전시 장소는 원산갈마비행장으로 추정"
-      ]
+      "speculation": []
     }
   },
-  "checked_at": "2026-10-29T23:12:08+00:00",
+  "checked_at": "2026-10-30T00:11:11+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

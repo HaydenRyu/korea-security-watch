@@ -1,17 +1,17 @@
 {
- "at": "2026-10-30T08:45:46+00:00",
- "south": 73,
- "area": 85,
- "baseline": 73,
- "ratio": 1.0,
- "samples": 3,
+ "at": "2026-10-30T10:01:19+00:00",
+ "south": 65,
+ "area": 86,
+ "baseline": 67.5,
+ "ratio": 0.96,
+ "samples": 4,
  "mil": [
   {
-   "type": "SURN",
+   "type": "A319",
    "name": null,
-   "call": "KNP973",
-   "lat": 37.47,
-   "lon": 126.76
+   "call": "IAM9004",
+   "lat": 37.31,
+   "lon": 126.6
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

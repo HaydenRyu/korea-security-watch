@@ -3,13 +3,13 @@
     "border_clash": [
       "지뢰 발견 DMZ",
       "NLL 귀순 합참",
-      "북한 대남 확성기 시험 방송"
+      "대남 확성기"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 공격",
-      "랜섬웨어 공격",
-      "North Korea Binance hack attributed FBI"
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
@@ -21,22 +21,22 @@
       "North Korea attributed FBI"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설 동향"
+      "풍계리 영변 핵시설"
     ],
     "troop_movement": [
       "북한 전선 병력 증강"
     ],
     "logistics": [
-      "북한 탄약 수송 군수"
+      "북한 탄약 수송"
     ],
     "gov_warning": [
-      "진돗개 데프콘 격상"
+      "진돗개 데프콘"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 준전시 등화관제"
     ],
     "calm": [
       "남북 대화 제안 통신선 확성기 중단"
@@ -46,9 +46,14 @@
     "https://www.segye.com/newsView/20261030508484",
     "https://www.segye.com/newsView/20261030510315",
     "https://www.segye.com/newsView/20261030509940",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823504"
+    "https://www.segye.com/newsView/20261030510855",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823504",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823420",
+    "https://www.yna.co.kr/view/AKR20261030013052504",
+    "https://www.nknews.org/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "10/29 원산 탄도미사일 10여 발과 10/29 드론·600㎜ 방사포 위력시위는 시험·시위 범위여서 직전과 같은 수준이다. 바이낸스 해킹은 민간업체의 북한 배후설뿐 정부 귀속이 없다.",
+  "overall_summary": "10/29 원산 탄도미사일과 드론·600㎜ 방사포 위력시위는 시험·시위 범위여서 직전과 같은 수준이다. 바이낸스 해킹은 민간업체의 북한 배후설뿐 정부 귀속이 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,7 +65,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "region": "원산·동해",
       "lat": 39.15,
@@ -72,15 +77,24 @@
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261030510315"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261030013052504"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823420"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "합참: 원산 일대 단거리 탄도미사일 10여 발, 비행거리 약 250㎞",
+        "합참: 원산 일대 단거리 탄도미사일 10여 발, 약 250㎞",
         "조선중앙통신: 무인항공기술 전시회에서 600㎜ 방사포 공개"
       ],
       "speculation": [
-        "KN-25 추정",
         "사진 속 모형 표적이 남측 GP라는 해석은 매체 추정"
       ]
     },
@@ -88,6 +102,7 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
+      "region": "국내·해외",
       "summary": "귀속 미확인 — 바이낸스가 10/29 약 63억 달러 해킹 피해를 밝혔고 TRM랩스가 북한 조직을 지목했으나 정부 귀속은 없다.",
       "meaning": "정부 귀속 전까지 등급에 반영하지 않는다.",
       "sources": [
@@ -99,10 +114,10 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "바이낸스 자체 발표에는 북한 언급 없음"
+        "MS 위협 인텔리전스 보고서: 북한 해킹 조직이 AI로 피싱 문서 제작(분석 보고)"
       ],
       "speculation": [
-        "TRM랩스의 TraderTraitor 배후설"
+        "TRM랩스의 북한 배후설"
       ]
     },
     "foreign_forces": {
@@ -121,7 +136,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-30T12:11:32+00:00",
+  "checked_at": "2026-10-30T13:19:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -136,19 +151,8 @@
         "url": "https://www.bbc.co.uk/news/articles/c60me298k1yeo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
-    },
-    {
-      "title": "중국 당 회의서 기록적 숙청, 시진핑 당 규율 강조",
-      "summary": "시진핑이 당 규율을 강조한 중국 정치 회의에서 역대 최다 숙청이 있었다고 BBC가 전했다.",
-      "link_korea": "중국 군·당 인사 동향은 북중 관계와 역내 안보 환경에 영향을 준다.",
-      "region": "중국",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cq5ynw94k7kzo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
     }
   ],
-  "world_context": "러-우 전쟁과 중국 내부 정비가 한반도 주변 안보 환경의 배경이다.",
-  "world_at": "2026-10-30T11:12:04+00:00"
+  "world_context": "러-우 전쟁이 이어지는 가운데 북한은 드론·방사포 전력을 과시했다.",
+  "world_at": "2026-10-30T13:19:40+00:00"
 }

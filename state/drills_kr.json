@@ -1,14 +1,14 @@
 {
  "source": "접경 지자체 공지(철원 RSS · 고성 공지 · 파주 새소식+HWP · 화천 공지+PDF) — 군 사격훈련 주민 안내",
  "note": "참고 자료 · 등급 판정과 무관. 일정은 부대 사정·기상으로 바뀔 수 있다.",
- "fetched_at": "2026-10-30T01:17:55.136029+00:00",
+ "fetched_at": "2026-10-30T07:33:00.491189+00:00",
  "sources": {
   "cheorwon": {
    "name": "철원군",
    "page": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-30T01:17:55.136029+00:00",
+   "last_ok_at": "2026-10-30T07:33:00.491189+00:00",
    "count": 11
   },
   "goseong": {
@@ -16,7 +16,7 @@
    "page": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/list.do",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-30T01:17:55.136029+00:00",
+   "last_ok_at": "2026-10-30T07:33:00.491189+00:00",
    "count": 9
   },
   "paju": {
@@ -24,15 +24,15 @@
    "page": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=2001",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-10-30T01:17:55.136029+00:00",
+   "last_ok_at": "2026-10-30T07:33:00.491189+00:00",
    "count": 8
   },
   "hwacheon": {
    "name": "화천군",
    "page": "https://www.ihc.go.kr/www/selectBbsNttList.do?bbsNo=11&key=2338",
-   "status": "error",
-   "status_detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>",
-   "last_ok_at": "2026-10-29T05:55:22.200330+00:00",
+   "status": "ok",
+   "status_detail": "",
+   "last_ok_at": "2026-10-30T07:33:00.491189+00:00",
    "count": 6
   }
  },

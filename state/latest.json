@@ -44,13 +44,13 @@
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261030013051504",
-    "https://www.yna.co.kr/view/AKR20261030070000001",
     "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261030508484",
+    "https://www.yna.co.kr/view/AKR20261029146400060",
     "https://www.nknews.org/feed/",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "10/29 원산 일대 탄도미사일 10여 발은 북한 매체가 600㎜ 방사포 위력시위로 공개해 routine 범위이며 직전 회차와 판정이 같다. 10/30 청와대의 DMZ 지뢰폭발 관련 언급은 기존 사건의 대응 발언이라 새 징후로 올리지 않는다.",
+  "overall_summary": "10/29 원산 일대 탄도미사일 10여 발은 북한이 600㎜ 방사포 위력시위로 공개한 routine 범위로 직전 회차와 판정이 같다. 10/30 청와대의 DMZ 지뢰폭발 대응 발언과 10/29 대남 확성기 시험방송 보도(국정원은 오인 신고라 부인)는 새 징후로 올리지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -106,10 +106,10 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "summary": "미 재무부 북 IT 인력 제재(10/28 현지 발표)는 24시간 경과이고 A 등급 원문을 열지 못해 배경으로만 둔다."
+      "summary": "미 재무부 북 IT 인력 제재(10/28~29)는 24시간 경과이고 A 등급 원문을 열지 못해 배경으로만 둔다."
     }
   },
-  "checked_at": "2026-10-30T03:10:04+00:00",
+  "checked_at": "2026-10-30T04:10:30+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -127,5 +127,5 @@
     }
   ],
   "world_context": "러시아의 대우크라이나 공세는 북러 군사협력의 배경으로 이어진다.",
-  "world_at": "2026-10-30T01:12:12+00:00"
+  "world_at": "2026-10-30T04:10:30+00:00"
 }

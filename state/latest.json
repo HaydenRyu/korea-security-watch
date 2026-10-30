@@ -1,63 +1,53 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동",
-      "North Korea troops border"
-    ],
-    "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea Reuters AP Kim Jong Un nuclear troops"
-    ],
-    "logistics": [
-      "북한 탄약 수송",
-      "North Korea ammunition"
-    ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ NLL 귀순",
-      "DMZ 지뢰폭발 합참 10월 30일"
+      "국내 언론 수집기 news_kr (지뢰·DMZ·NLL·귀순 묶음)",
+      "NK News 피드"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 10월 30일",
-      "바이낸스 해킹 북한 라자루스 FBI"
+      "국내 언론 수집기 news_kr (해킹·GPS 묶음)",
+      "바이낸스 해킹 북한"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
-    ],
-    "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea martial"
+      "김정은 방중 방러 Kim Jong Un China Russia visit"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "DEFCON Korea"
+      "진돗개 발령 데프콘 DEFCON Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI Binance"
-    ],
-    "linkage:taiwan": [
-      "东部战区 台岛 联合演习 PLA drills around Taiwan 대만 중국 군사훈련"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 확성기 중단"
+      "국내 언론 수집기 news_kr (summit 묶음)"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변 동향"
+    ],
+    "logistics": [
+      "북한 탄약 수송 군수"
+    ],
+    "parade_massing": [
+      "북한 열병식 집결 North Korea parade"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 North Korea martial"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261030510855",
-    "https://www.segye.com/newsView/20261030516780",
+    "https://www.segye.com/newsView/20261030510315",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824004",
+    "https://www.yna.co.kr/view/AKR20261031006800071",
+    "https://www.yna.co.kr/view/AKR20261030182200504",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/north-korea-says-it-launched-barrage-of-600mm-sniper-rockets-at-live-fire-demo/",
-    "https://www.nknews.org/2026/10/us-sanctions-10-north-korean-and-russian-nationals-for-role-in-it-worker-fraud/",
+    "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/",
     "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위와 원산 단거리탄도미사일은 시험·시위 범위다. 신규로 바이낸스 63억 달러 해킹이 북한 연계 의혹으로 보도됐으나 정부 귀속 발표가 없어 귀속 미확인으로 다룬다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·자폭드론 위력시위는 시험·시위 범위이고, 바이낸스 63억 달러 해킹은 업계가 북한 조직을 지목하나 트럼프 대통령이 「모른다, 살펴보고 있다」고 해 정부 귀속은 아직 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,6 +57,57 @@
     },
     "logistics": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "single",
+      "routine": true,
+      "region": "평양·접경",
+      "lat": 37.95,
+      "lon": 126.9,
+      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 한국군 초소·미군 전차 모형 타격 영상을 공개했다(조선중앙통신 10/30 보도).",
+      "meaning": "시험·시위 성격으로 남측 실표적 사격은 아니다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261030510315"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "조선중앙통신이 전시회와 방사포·드론 시연을 보도했다",
+        "한미일 외교당국이 10/30 탄도미사일 발사 관련 유선 협의를 했다"
+      ],
+      "speculation": [
+        "무인전력·정밀타격 과시 의도"
+      ]
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "글로벌(가상자산)",
+      "summary": "귀속 미확인 — 바이낸스에서 10/29 약 63억 달러가 탈취됐고 업계는 북한 조직 연계를 지목하나 트럼프 대통령은 10/30 「모른다, 살펴보고 있다」고 했다.",
+      "meaning": "귀속이 확정되면 역대 최대 북한 가상자산 탈취로 핵·미사일 자금원 의미가 크다.",
+      "sources": [
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "바이낸스가 약 30억 달러를 확보했고 FBI·비밀경호국이 수사·추적 중이다"
+      ],
+      "speculation": [
+        "분석업체들은 북한 해킹 조직 소행을 시사하나 정부 확인은 없다"
+      ]
     },
     "foreign_forces": {
       "status": "none"
@@ -81,61 +122,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "바이낸스 해킹은 민간 분석업체 연계 주장만 있고 정부·수사기관의 북한 귀속 발표가 없어 electronic_cyber 에만 둔다."
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "글로벌(가상자산)",
-      "summary": "귀속 미확인 — 세계 최대 가상자산 거래소 바이낸스에서 약 63억 달러가 탈취됐고 복수의 분석업체가 북한 해킹 조직 연계를 주장하나 미 정부 귀속 발표는 없다(미 비밀경호국 추적 중).",
-      "meaning": "귀속이 확정되면 역대 최대 북한 가상자산 탈취가 되어 핵·미사일 자금원 의미가 크다.",
-      "sources": [
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "바이낸스는 약 30억 달러를 동결했고 FBI와 협력 중이라고 밝혔다",
-        "미 비밀경호국이 자금 추적·회수에 나섰다"
-      ],
-      "speculation": [
-        "분석업체들은 북한 해킹 조직 소행을 시사하나 정부 확인은 없다"
-      ]
-    },
-    "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "평양·접경",
-      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론 시연을 공개했다(조선중앙통신 10/30 보도).",
-      "meaning": "시험·시위 성격으로 남측 실표적 사격은 아니다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/10/north-korea-says-it-launched-barrage-of-600mm-sniper-rockets-at-live-fire-demo/"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261030510855"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "합참은 10/29 오후 원산 일대 탄도미사일 10여 발을 포착했고 한미일 외교당국이 10/30 협의했다",
-        "북한 매체가 600㎜ 방사포·자폭드론·전술순항미사일 시연을 보도했다"
-      ],
-      "speculation": [
-        "무인전력 과시 의도"
-      ]
+      "status": "none"
     }
   },
-  "checked_at": "2026-10-30T21:12:30+00:00",
+  "checked_at": "2026-10-30T22:10:30+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,56 +1,61 @@
 {
   "coverage": {
     "border_clash": [
-      "목함지뢰 해안 발견 귀순 NLL",
-      "DMZ 지뢰 폭발 합참 북한 10월"
+      "목함지뢰 해안 발견",
+      "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 랜섬웨어 공격"
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 10월 30일",
-      "Kim Jong Un China Russia visit North Korea Reuters",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hackers"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "nuclear": [
-      "서해 구조물 주한미군 감축 진돗개 북한 핵 영변 풍계리"
-    ],
-    "gov_warning": [
-      "서해 구조물 주한미군 감축 진돗개 북한 핵 영변 풍계리"
+      "북한 핵 영변 풍계리",
+      "North Korea nuclear Yongbyon"
     ],
     "troop_movement": [
-      "Kim Jong Un China Russia visit North Korea Reuters"
+      "북한 병력 이동",
+      "North Korea troops border"
     ],
     "logistics": [
-      "북한 탄약 수송 (국내 수집 결과 대조)"
+      "북한 탄약 수송",
+      "North Korea ammunition"
     ],
     "parade_massing": [
-      "김정은 방중 방러 10월 30일"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "국내 언론 수집 결과 대조"
+      "북한 등화관제 준전시",
+      "North Korea martial"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘",
+      "DEFCON Korea"
     ],
     "calm": [
-      "남북 대화 제안 통신선 확성기 중단 (국내 수집 결과 대조)"
+      "남북 대화 제안 통신선 확성기 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261030510315",
+    "https://www.segye.com/newsView/20261030510855",
     "https://www.segye.com/newsView/20261030516780",
     "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/",
     "https://www.nknews.org/feed/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823562",
-    "https://www.yna.co.kr/view/AKR20261030077551001",
     "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/c60me298k1yeo"
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위는 시험·시위 범위이고, 청와대의 DMZ 지뢰 언급은 9/21 사건의 후속이다. 바이낸스 해킹은 북한 연계 보도뿐 정부 귀속이 없어 등급에 반영하지 않는다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위는 시험·시위 범위이고 한미일 외교당국이 미사일 발사 관련 유선 협의를 했다. 바이낸스 해킹은 정부 귀속이 없어 등급에 반영하지 않는다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -79,11 +84,9 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "원산·동해",
-      "lat": 39.15,
-      "lon": 127.45,
+      "region": "평양·접경",
       "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 모형 GP 타격 장면을 공개했다(조선중앙통신 10/30 보도).",
-      "meaning": "시험·무력시위 범위로 남측 표적 실전 배치 근거는 확인되지 않는다.",
+      "meaning": "시험·시위 성격으로 남측 실표적 사격은 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -98,11 +101,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신: 10/29 전시회 개최, 600㎜ 방사포 공개",
-        "NK News: 접경 공원 건너편 포 전시 사진(10/27 촬영)"
+        "조선중앙통신 보도를 세계일보·NK News가 받아 전함"
       ],
       "speculation": [
-        "모형 표적이 남측 GP라는 해석은 매체 추정"
+        "무인전력 과시 의도"
       ]
     },
     "electronic_cyber": {
@@ -114,11 +116,6 @@
       "meaning": "정부 귀속 전까지 등급에 반영하지 않는다.",
       "sources": [
         {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823562"
-        },
-        {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
@@ -126,15 +123,14 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "SBS·BBC: 바이낸스 약 63억 달러 해킹, 수사 관행상 북한 연계 의심 보도",
-        "FBI는 범인 추적 방침만 밝혔고 북한 귀속 발표는 없음"
+        "BBC: 바이낸스 약 63억 달러 해킹, 북한 연계 의심 보도"
       ],
       "speculation": [
         "북한 연계 가능성"
       ]
     }
   },
-  "checked_at": "2026-10-30T18:12:50+00:00",
+  "checked_at": "2026-10-30T19:11:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

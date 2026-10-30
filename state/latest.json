@@ -1,53 +1,90 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear Yongbyon"
+    ],
+    "logistics": [
+      "북한 탄약 수송 군수",
+      "North Korea ammunition shipment"
+    ],
     "border_clash": [
-      "국내 언론 수집기 news_kr (지뢰·DMZ·NLL·귀순 묶음)",
-      "NK News 피드"
+      "합참 북한 지뢰 발견 DMZ NLL 귀순",
+      "지뢰 발견 목함지뢰 해안",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "국내 언론 수집기 news_kr (해킹·GPS 묶음)",
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
       "바이낸스 해킹 북한"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit"
-    ],
-    "gov_warning": [
-      "진돗개 발령 데프콘 DEFCON Korea"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
-    ],
-    "calm": [
-      "국내 언론 수집기 news_kr (summit 묶음)"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변 동향"
-    ],
-    "logistics": [
-      "북한 탄약 수송 군수"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결 North Korea parade"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 North Korea martial"
+      "북한 준전시 등화관제",
+      "North Korea martial law blackout"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘",
+      "DEFCON Korea"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
+    ],
+    "incidents": [
+      "총기 발견 군 감식"
+    ],
+    "factor:nk_domestic": [
+      "북한 노동당 전원회의",
+      "North Korea economy"
+    ],
+    "factor:inter_korean": [
+      "대남 확성기 전단",
+      "North Korea loudspeaker"
+    ],
+    "factor:great_powers": [
+      "북러 군사협력",
+      "North Korea Russia China"
+    ],
+    "factor:public_opinion": [
+      "북한 대남 비난",
+      "North Korea KCNA South Korea"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261030510855",
     "https://www.segye.com/newsView/20261030510315",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824004",
     "https://www.yna.co.kr/view/AKR20261031006800071",
+    "https://www.yna.co.kr/view/AKR20261031010200504",
     "https://www.yna.co.kr/view/AKR20261030182200504",
+    "https://www.yna.co.kr/view/AKR20261030070000001",
+    "https://www.yna.co.kr/view/AKR20261030120900504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/feed/",
     "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/",
     "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·자폭드론 위력시위는 시험·시위 범위이고, 바이낸스 63억 달러 해킹은 업계가 북한 조직을 지목하나 트럼프 대통령이 「모른다, 살펴보고 있다」고 해 정부 귀속은 아직 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·자폭드론 위력시위(KCNA 보도)는 시험·시위 범위이고, 바이낸스 63억 달러 해킹은 업계가 북한을 지목하나 트럼프 대통령이 「모른다」고 해 정부 귀속은 아직 없다. 10/29 원산 탄도미사일은 24시간이 지나 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -76,6 +113,11 @@
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824004"
         }
       ],
       "confidence": "중간",
@@ -125,26 +167,26 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-30T22:10:30+00:00",
+  "checked_at": "2026-10-30T23:10:37+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "바이낸스 63억 달러 해킹, 북한 연계 의혹",
-      "summary": "세계 최대 가상자산 거래소 바이낸스가 약 63억 달러 탈취 피해 중 절반가량을 동결했다고 밝혔다. 분석업체들이 북한 해킹 조직 연계를 주장한다.",
-      "link_korea": "북한 가상자산 탈취는 핵·미사일 자금원으로 지적된다.",
-      "region": "글로벌",
+      "title": "미국, 우크라이나에 패트리엇 미사일 500기 판매 승인",
+      "summary": "BBC에 따르면 미국이 우크라이나에 패트리엇 미사일 500기 판매를 승인했다.",
+      "link_korea": "미국 방공 전력 운용 여력과 대북 억제 자산 배분에 영향을 줄 수 있다.",
+      "region": "우크라이나",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
+        "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "러 점령 올레시키 대피로 열려",
-      "summary": "러시아 점령 올레시키에서 국지 휴전 속에 수백 명이 대피했다.",
-      "link_korea": "러-우 전쟁 장기화는 북러 군사협력 배경이다.",
+      "title": "러·우크라이나 국지휴전 속 올레시키 주민 대피",
+      "summary": "드문 국지휴전 중 러시아 점령지 올레시키에서 수백 명이 대피했다.",
+      "link_korea": "러-우 전쟁 동향은 북러 군사협력과 북한군 파병 논의의 배경이다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
@@ -153,6 +195,6 @@
       }
     }
   ],
-  "world_context": "러-우 전쟁이 이어지는 가운데 북한 연계 의혹의 대형 가상자산 해킹이 불거졌다.",
-  "world_at": "2026-10-30T21:12:30+00:00"
+  "world_context": "러-우 전쟁 국지휴전과 미국의 우크라이나 방공 지원이 이어지는 가운데 북한 연계 의혹의 대형 가상자산 해킹이 불거졌다.",
+  "world_at": "2026-10-30T23:10:37+00:00"
 }

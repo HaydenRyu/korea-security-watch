@@ -2,6 +2,7 @@
   "coverage": {
     "border_clash": [
       "목함지뢰 해안 발견",
+      "DMZ 지뢰 폭발 10월 30일 합참",
       "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
@@ -10,13 +11,13 @@
       "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방중 북미 대화",
       "Kim Jong Un China Russia visit",
       "서해 구조물"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "간첩 혐의 국가보안법 구속",
+      "북한 해킹 귀속 FBI"
     ],
     "nuclear": [
       "북한 핵 영변 풍계리",
@@ -50,12 +51,9 @@
     "https://www.segye.com/newsView/20261030510315",
     "https://www.segye.com/newsView/20261030510855",
     "https://www.segye.com/newsView/20261030516780",
-    "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/",
-    "https://www.nknews.org/feed/",
-    "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/feed/"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위는 시험·시위 범위이고 한미일 외교당국이 미사일 발사 관련 유선 협의를 했다. 바이낸스 해킹은 정부 귀속이 없어 등급에 반영하지 않는다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위는 시험·시위 범위이고 10/29 원산 일대 단거리탄도미사일 발사는 24시간이 지난 정례 시험이다. 스위스 외무의 방북 결과 공유 등 외교 움직임이 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -81,11 +79,15 @@
     "hybrid_ops": {
       "status": "none"
     },
+    "electronic_cyber": {
+      "status": "none",
+      "summary": "이번 회차에 바이낸스 해킹 원문을 다시 열지 못했고 정부 귀속 발표도 확인되지 않아 등급 근거에서 뺀다."
+    },
     "border_clash": {
       "status": "single",
       "routine": true,
       "region": "평양·접경",
-      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 모형 GP 타격 장면을 공개했다(조선중앙통신 10/30 보도).",
+      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 10여 발 사격과 자폭드론의 모형 GP 타격 장면을 공개했다(조선중앙통신 10/30 보도).",
       "meaning": "시험·시위 성격으로 남측 실표적 사격은 아니다.",
       "sources": [
         {
@@ -96,41 +98,20 @@
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/"
+          "url": "https://www.nknews.org/feed/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신 보도를 세계일보·NK News가 받아 전함"
+        "합참은 10/29 낮 원산 일대 단거리탄도미사일 포착, 비행거리 약 250㎞",
+        "조선중앙통신 보도를 세계일보·NK News가 전함"
       ],
       "speculation": [
         "무인전력 과시 의도"
       ]
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "국내·해외",
-      "summary": "귀속 미확인 — 바이낸스 대규모 해킹의 배후로 북한을 의심하는 분석이 나왔으나 정부 귀속은 없다.",
-      "meaning": "정부 귀속 전까지 등급에 반영하지 않는다.",
-      "sources": [
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "BBC: 바이낸스 약 63억 달러 해킹, 북한 연계 의심 보도"
-      ],
-      "speculation": [
-        "북한 연계 가능성"
-      ]
     }
   },
-  "checked_at": "2026-10-30T19:11:41+00:00",
+  "checked_at": "2026-10-30T20:13:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

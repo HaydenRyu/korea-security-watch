@@ -1,52 +1,41 @@
 {
   "coverage": {
     "border_clash": [
-      "DMZ 지뢰 폭발 북한 합참",
       "지뢰 발견",
+      "목함지뢰 해안",
       "NLL 귀순",
-      "대남 확성기",
-      "귀순 월선 NLL",
-      "목함지뢰 해안"
+      "DMZ 지뢰 폭발 합참"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
+      "GPS 교란",
       "해킹 개인정보 유출",
-      "바이낸스 해킹 북한 정부 발표",
-      "사이버 공격",
-      "랜섬웨어 공격"
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
+      "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "서해 구조물"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설",
-      "North Korea nuclear test site"
+      "North Korea nuclear Yongbyon"
     ],
     "troop_movement": [
-      "북한 전선 병력 증강",
-      "North Korea troop buildup"
+      "North Korea troops Russia"
     ],
     "logistics": [
-      "북한 탄약 수송",
-      "North Korea munitions shipment"
+      "북한 탄약 수송"
     ],
     "gov_warning": [
-      "진돗개 데프콘",
-      "DEFCON Korea"
+      "진돗개 DEFCON"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout"
+      "북한 준전시 등화관제"
     ],
     "calm": [
       "남북 대화 제안 통신선 확성기 중단"
@@ -55,14 +44,12 @@
   "opened": [
     "https://www.segye.com/newsView/20261030516780",
     "https://www.segye.com/newsView/20261030510315",
-    "https://www.segye.com/newsView/20261030510855",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823504",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823816",
-    "https://www.yna.co.kr/view/AKR20261030070000001",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823199",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823504",
+    "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/",
+    "https://www.nknews.org/feed/"
   ],
-  "overall_summary": "10/29 원산 탄도미사일 10여 발(올해 17번째)과 600㎜ 방사포·드론 위력시위는 시험·시위 범위여서 직전과 같은 수준이다. 한미일 외교당국 협의, 스위스 외무 방북 후 위성락 면담, 바이낸스 해킹(정부 귀속 없음)은 등급을 올리지 않는다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29 원산 탄도미사일·600㎜ 방사포·드론 위력시위는 시험·시위 범위다. 스위스 외무의 방북 결과 공유와 바이낸스 해킹(정부 귀속 없음)은 등급을 올리지 않는다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -140,7 +127,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-30T15:15:26+00:00",
+  "checked_at": "2026-10-30T16:14:45+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

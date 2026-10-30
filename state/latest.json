@@ -10,19 +10,19 @@
     ],
     "logistics": [
       "북한 탄약 수송 군수 (news_kr 수집)",
-      "Overseas North Korean workers Russia military supply chain NK News"
+      "Overseas North Korean workers Russia military supply NK News"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL 10월 30일",
-      "North Korea ballistic missile salvo Wonsan NK News"
+      "지뢰 발견 DMZ 귀순 NLL (news_kr 수집)",
+      "North Korea ballistic missile salvo NK News"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 (news_kr 수집)",
-      "해킹 공격 사이버 공격 랜섬웨어 10월 30일"
+      "해킹 공격 사이버 공격 (news_kr 수집)"
     ],
     "foreign_forces": [
       "김정은 방중 방러 (news_kr 수집)",
-      "Kim Jong Un China Russia visit North Korea troops",
+      "Kim Jong Un China Russia visit NK News",
       "서해 구조물 주한미군 감축 (news_kr 수집)"
     ],
     "parade_massing": [
@@ -35,29 +35,22 @@
       "진돗개 발령 데프콘 (news_kr 수집)"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속 간첩 혐의 (news_kr 수집)",
       "North Korea IT worker sanctions OFAC NK News"
     ],
     "calm": [
       "남북 대화 제안 확성기 방송 (news_kr 수집)"
-    ],
-    "incidents": [
-      "지뢰 간첩 묶음 (news_kr 수집)"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261030013051504",
-    "https://www.yna.co.kr/view/AKR20261029146452060",
+    "https://www.yna.co.kr/view/AKR20261030070000001",
     "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261028118100002",
-    "https://www.yna.co.kr/view/AKR20261029170600001",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/border-city-casts-doubt-on-reports-north-korea-testing-loudspeakers/",
-    "https://www.nknews.org/2026/10/us-sanctions-10-north-korean-and-russian-nationals-for-role-in-it-worker-fraud/",
-    "https://www.segye.com/newsView/20261030504709",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "10/29 원산 일대 탄도미사일(방사포) 10여 발은 북한 매체가 600㎜ 방사포 위력시위로 공개해 routine 범위이며 직전 회차와 판정이 같다. 대남 확성기 시험방송은 국정원·합참이 오인 신고로 확인 불가라 징후로 올리지 않는다.",
+  "overall_summary": "10/29 원산 일대 탄도미사일 10여 발은 북한 매체가 600㎜ 방사포 위력시위로 공개해 routine 범위이며 직전 회차와 판정이 같다. 10/30 청와대의 DMZ 지뢰폭발 관련 언급은 기존 사건의 대응 발언이라 새 징후로 올리지 않는다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,26 +60,6 @@
     },
     "logistics": {
       "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none",
-      "summary": "미 재무부 북 IT 인력 제재(10/28 현지 발표)는 24시간 경과이고 A 등급 원문을 열지 못해 배경으로만 둔다."
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "김정은 10/24 방중은 24시간 경과, 10/29 국정원 보고는 분석이라 배경으로만 둔다."
     },
     "border_clash": {
       "status": "corroborated",
@@ -114,9 +87,29 @@
         "조선중앙통신 10/30 보도: 600㎜ 방사포 전투사격 공개, 무인기가 한국군 GP 모의 표적 타격 연출"
       ],
       "speculation": []
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none",
+      "summary": "김정은 10/24 방중은 24시간 경과, 10/29 국정원 보고는 분석이라 배경으로만 둔다."
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none",
+      "summary": "미 재무부 북 IT 인력 제재(10/28 현지 발표)는 24시간 경과이고 A 등급 원문을 열지 못해 배경으로만 둔다."
     }
   },
-  "checked_at": "2026-10-30T02:11:18+00:00",
+  "checked_at": "2026-10-30T03:10:04+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

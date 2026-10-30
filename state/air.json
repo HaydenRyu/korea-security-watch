@@ -1,45 +1,45 @@
 {
- "at": "2026-10-30T03:40:27+00:00",
- "south": 80,
- "area": 105,
- "baseline": 69,
- "ratio": 1.16,
+ "at": "2026-10-30T04:55:17+00:00",
+ "south": 72,
+ "area": 92,
+ "baseline": 73,
+ "ratio": 0.99,
  "samples": 5,
  "mil": [
+  {
+   "type": "E737",
+   "name": null,
+   "call": "ARG0104",
+   "lat": 36.89,
+   "lon": 127.13
+  },
   {
    "type": "BE20",
    "name": null,
    "call": "CATS09",
-   "lat": 36.86,
-   "lon": 126.89
-  },
-  {
-   "type": "H47",
-   "name": null,
-   "call": "KEEP22T",
-   "lat": 36.81,
-   "lon": 126.95
-  },
-  {
-   "type": "H60",
-   "name": null,
-   "call": "CARD29",
-   "lat": 37.45,
-   "lon": 127.11
+   "lat": 37.1,
+   "lon": 127.18
   },
   {
    "type": "BE20",
    "name": null,
    "call": "CATS13",
-   "lat": 37.09,
-   "lon": 127.29
+   "lat": 37.12,
+   "lon": 127.35
+  },
+  {
+   "type": "B350",
+   "name": null,
+   "call": "TORII11",
+   "lat": 32.7,
+   "lon": 131.32
   },
   {
    "type": "C30J",
    "name": "C-130J 수송기",
-   "call": "HRCLS85",
-   "lat": 34.01,
-   "lon": 129.99
+   "call": "SUMO18",
+   "lat": 32.73,
+   "lon": 131.34
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

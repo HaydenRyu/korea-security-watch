@@ -13,21 +13,17 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ NLL 귀순",
-      "지뢰 발견 목함지뢰 해안",
+      "지뢰 발견 DMZ 귀순 합참",
       "North Korea DMZ border"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격",
-      "바이낸스 해킹 북한"
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 Kim Jong Un China visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결",
@@ -35,15 +31,14 @@
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
-      "North Korea martial law blackout"
+      "North Korea blackout"
     ],
     "gov_warning": [
       "진돗개 발령 데프콘",
       "DEFCON Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
@@ -52,39 +47,18 @@
     ],
     "incidents": [
       "총기 발견 군 감식"
-    ],
-    "factor:nk_domestic": [
-      "북한 노동당 전원회의",
-      "North Korea economy"
-    ],
-    "factor:inter_korean": [
-      "대남 확성기 전단",
-      "North Korea loudspeaker"
-    ],
-    "factor:great_powers": [
-      "북러 군사협력",
-      "North Korea Russia China"
-    ],
-    "factor:public_opinion": [
-      "북한 대남 비난",
-      "North Korea KCNA South Korea"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261030510315",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824004",
-    "https://www.yna.co.kr/view/AKR20261031006800071",
-    "https://www.yna.co.kr/view/AKR20261031010200504",
-    "https://www.yna.co.kr/view/AKR20261030182200504",
-    "https://www.yna.co.kr/view/AKR20261030070000001",
-    "https://www.yna.co.kr/view/AKR20261030120900504",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261030510855",
+    "https://www.segye.com/newsView/20261030516780",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/",
-    "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/2026/10/us-curbed-intel-sharing-over-seouls-disclosure-of-north-korean-nuke-site-nis/",
+    "https://www.nknews.org/2026/10/north-korea-says-it-launched-barrage-of-600mm-sniper-rockets-at-live-fire-demo/",
+    "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·자폭드론 위력시위(KCNA 보도)는 시험·시위 범위이고, 바이낸스 63억 달러 해킹은 업계가 북한을 지목하나 트럼프 대통령이 「모른다」고 해 정부 귀속은 아직 없다. 10/29 원산 탄도미사일은 24시간이 지나 배경이다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위(KCNA 보도)는 시험·시위 범위이고, 바이낸스 63억 달러 해킹은 북한 연계가 거론되나 정부 귀속은 아직 없다. 새로운 군사 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -93,6 +67,21 @@
       "status": "none"
     },
     "logistics": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "border_clash": {
@@ -112,12 +101,7 @@
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/"
-        },
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824004"
+          "url": "https://www.nknews.org/2026/10/north-korea-says-it-launched-barrage-of-600mm-sniper-rockets-at-live-fire-demo/"
         }
       ],
       "confidence": "중간",
@@ -150,24 +134,9 @@
       "speculation": [
         "분석업체들은 북한 해킹 조직 소행을 시사하나 정부 확인은 없다"
       ]
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-10-30T23:10:37+00:00",
+  "checked_at": "2026-10-31T00:10:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

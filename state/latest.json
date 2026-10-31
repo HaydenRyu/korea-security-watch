@@ -13,7 +13,7 @@
       "North Korea munitions shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참 11월 1일",
+      "지뢰 발견 DMZ 귀순 합참",
       "목함지뢰 해안"
     ],
     "electronic_cyber": [
@@ -23,8 +23,8 @@
       "랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중 방러",
+      "North Korea Reuters Kim Jong Un 2026",
       "서해 구조물",
       "주한미군 감축"
     ],
@@ -51,43 +51,18 @@
     ],
     "incidents": [
       "실탄 발견 해안"
-    ],
-    "factor:nk_domestic": [
-      "북한 노동당 전원회의 경제",
-      "North Korea economy sanctions"
-    ],
-    "factor:inter_korean": [
-      "대남 확성기 전단 오물풍선",
-      "South Korea North Korea loudspeaker"
-    ],
-    "factor:great_powers": [
-      "북미 대화 APEC",
-      "US North Korea talks"
-    ],
-    "factor:public_opinion": [
-      "북한 대남 비난 담화",
-      "North Korea propaganda South"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan",
-      "대만 중국 군사훈련"
-    ],
-    "linkage:korea": [
-      "북러 군사협력",
-      "North Korea troops Russia"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261031026400002",
     "https://www.yna.co.kr/view/AKR20261031014600504",
-    "https://www.yna.co.kr/view/AKR20261031010200504",
     "https://www.segye.com/newsView/20261031502724",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
     "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml",
-    "https://news.web.nhk/newsweb/na/nd-20261031de68857"
+    "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 접경 충돌·핵·병력 새 징후는 없고, 가상자산 해킹은 정부 귀속이 없는 민간 추정이다. 10/29 탄도미사일 발사·10/29~30 드론 전시회는 24시간이 지나 배경이다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 접경 충돌·핵·병력 새 징후는 없고, 가상자산 해킹은 정부 귀속이 없는 민간 추정이다. 10/29 탄도미사일 발사·드론 전시회는 24시간이 지나 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -99,8 +74,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "24시간 경과 — 청와대의 DMZ 지뢰폭발(9/21) 후속 대응 발표는 10/30이고 새 충돌·발견은 확인되지 않는다."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
@@ -123,8 +97,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "체이널리시스가 올해 가상자산 해킹 피해액의 89%를 북한 소행으로 추정",
-        "BBC: 분석사 2곳이 북한 국가 후원 조직을 유력 용의자로 지목, 바이낸스는 63억 달러 피해의 90% 보전"
+        "체이널리시스가 올해 가상자산 해킹 피해액의 89%를 북한 소행으로 추정"
       ],
       "speculation": []
     },
@@ -144,7 +117,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-31T17:11:17+00:00",
+  "checked_at": "2026-10-31T18:11:42+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

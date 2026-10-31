@@ -1,48 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 지뢰 발견 NLL 귀순",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 합참 발표 지뢰 발견 NLL 귀순",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear site activity"
     ],
     "logistics": [
-      "북한 합참 발표 지뢰 발견 NLL 귀순",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견 DMZ",
+      "DMZ NLL 귀순",
+      "지뢰 발견 합참 귀순 NLL 북한"
+    ],
+    "electronic_cyber": [
+      "GPS 교란 북한 서북도서",
+      "해킹 개인정보 유출 사이버 공격 2026년 10월 31일"
+    ],
+    "foreign_forces": [
+      "김정은 방중 방러 북한 10월 31일",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 발표 지뢰 발견 NLL 귀순",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 합참 발표 지뢰 발견 NLL 귀순",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "북한 합참 발표 지뢰 발견 NLL 귀순",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "진돗개 데프콘 발령",
+      "DEFCON Korea"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
       "간첩 혐의",
       "North Korea attributed FBI"
-    ],
-    "border_clash": [
-      "북한 합참 발표 지뢰 발견 NLL 귀순",
-      "지뢰 발견 DMZ 귀순 NLL"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
-    ],
-    "foreign_forces": [
-      "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
     ],
     "calm": [
       "남북 대화 제안",
@@ -53,16 +53,11 @@
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261030516780",
     "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261030070000001",
-    "https://www.yna.co.kr/view/AKR20261031026400002",
-    "https://www.bbc.com/news/world",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824004",
+    "https://www.segye.com/newsView/20261030516780"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29 탄도미사일 10여 발(원산 일대, 약 250km)과 10/29 방사포·드론 위력시위는 24시간이 지난 시험·시위 범위이고, 바이낸스 해킹은 정부 귀속이 없다. 24시간 안에 새로운 군사 징후는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29~30 600㎜ 방사포·자폭드론 위력시위는 시험·시위 범위이고 바이낸스 해킹은 정부 귀속이 없다. 24시간 안에 새로운 군사 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -94,55 +89,52 @@
       "region": "경기 접경",
       "lat": 37.95,
       "lon": 126.67,
-      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 한국군 GP·미군 전차 모형 타격 영상을 공개했다(조선중앙통신 10/30 보도); 애기봉 맞은편 북측 야포 전개는 NK News가 정치적 메시지로 분석했다.",
+      "summary": "북한이 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 한국군 GP·K9·미군 전차 모형 타격을 공개했고 남북 군사회담 제안에는 응답하지 않았다(SBS 10/31, NK News 10/30).",
       "meaning": "시험·시위 성격으로 실제 접경 충돌은 확인되지 않았다.",
       "sources": [
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824004"
+        },
         {
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/"
-        },
-        {
-          "name": "국방일보",
-          "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "국방일보: 10/29 국방장관이 ADMM-Plus에서 MDL 이남 지뢰 폭발을 정전협정 위반으로 지적(9월 사건 후속)"
+        "600㎜ 방사포 약 10발 암초 표적 명중, 드론이 GP·K9·M1 모형 타격(SBS)"
       ],
-      "speculation": []
+      "speculation": [
+        "NK News 칼럼은 정치적 적대 표현이지 전쟁 준비는 아니라고 분석"
+      ]
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "해외",
-      "summary": "귀속 미확인 — 바이낸스에서 약 63억 달러가 탈취됐고 BBC는 북한 연계 해킹으로 보도했으나 트럼프는 북한 소행 여부를 「모른다」고 했고 정부 귀속 발표는 없다.",
+      "summary": "귀속 미확인 — NK News는 북한 행위자가 바이낸스에서 63.6억 달러를 탈취했다고 보도했으나 정부의 공식 귀속 발표는 확인되지 않았다.",
       "meaning": "가상자산 탈취 귀속 전까지 등급에 반영하지 않는다.",
       "sources": [
         {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.com/news/world"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
-      "confidence": "중간",
+      "confidence": "낮음",
       "facts": [
-        "트럼프 「모른다…살펴보고 있다」(SBS 10/31)"
+        "NK News 10/30 보도"
       ],
       "speculation": [
         "업계의 북한 연계 지목"
       ]
     }
   },
-  "checked_at": "2026-10-31T05:10:04+00:00",
+  "checked_at": "2026-10-31T06:10:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

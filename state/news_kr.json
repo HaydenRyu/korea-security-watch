@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-31T13:46:08+00:00",
+ "fetched_at": "2026-10-31T14:56:19+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-10-31T12:32:48+00:00",
@@ -8,10 +8,10 @@
   "feeds": 15,
   "feeds_failed": 1,
   "fetched": 1099,
-  "hits": 70,
-  "clusters": 51,
+  "hits": 71,
+  "clusters": 52,
   "by_group": {
-   "alert": 3,
+   "alert": 4,
    "mine": 8,
    "border": 13,
    "drone_balloon": 12,
@@ -30,7 +30,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 600,
-   "hits": 59
+   "hits": 60
   },
   "SBS": {
    "feeds": 3,
@@ -66,9 +66,9 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "alert": {
-   "clusters": 3,
+   "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-10-31T13:43:52+00:00"
+   "latest": "2026-10-31T13:45:46+00:00"
   },
   "mine": {
    "clusters": 8,
@@ -165,7 +165,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "SBS",

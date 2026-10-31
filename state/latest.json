@@ -1,54 +1,68 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 10월 31일",
-      "North Korea Reuters October 31 2026"
+      "북한 합참 발표 지뢰 발견 NLL 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea Reuters October 31 2026",
-      "북한 합참 발표 10월 31일"
+      "북한 합참 발표 지뢰 발견 NLL 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "북한 합참 발표 10월 31일",
-      "North Korea Reuters October 31 2026"
-    ],
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "North Korea Reuters October 31 2026"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란",
-      "바이낸스 해킹 북한"
-    ],
-    "foreign_forces": [
-      "김정은 방중 방러 일정",
-      "North Korea Reuters October 31 2026"
+      "북한 합참 발표 지뢰 발견 NLL 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 합참 발표 10월 31일",
-      "North Korea Reuters October 31 2026"
+      "북한 합참 발표 지뢰 발견 NLL 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nk_internal": [
-      "북한 합참 발표 10월 31일",
-      "North Korea Reuters October 31 2026"
+      "북한 합참 발표 지뢰 발견 NLL 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "gov_warning": [
-      "북한 합참 발표 10월 31일",
-      "North Korea Reuters October 31 2026"
+      "북한 합참 발표 지뢰 발견 NLL 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "hybrid_ops": [
-      "북한 합참 발표 10월 31일",
-      "North Korea Reuters October 31 2026"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "border_clash": [
+      "북한 합참 발표 지뢰 발견 NLL 귀순",
+      "지뢰 발견 DMZ 귀순 NLL"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
+    ],
+    "foreign_forces": [
+      "김정은 방중",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "통신선 복원"
+    ],
+    "incidents": [
+      "실탄 발견 해안"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261030516780",
     "https://www.nknews.org/",
     "https://www.yna.co.kr/view/AKR20261030070000001",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077",
-    "https://www.bbc.com/news/world"
+    "https://www.yna.co.kr/view/AKR20261031026400002",
+    "https://www.bbc.com/news/world",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위(KCNA 보도)는 시험·시위 범위이고, 바이낸스 해킹은 북한 연계가 거론되나 정부 귀속은 없다. 24시간 안에 새로운 군사 징후는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29 탄도미사일 10여 발(원산 일대, 약 250km)과 10/29 방사포·드론 위력시위는 24시간이 지난 시험·시위 범위이고, 바이낸스 해킹은 정부 귀속이 없다. 24시간 안에 새로운 군사 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -128,7 +142,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-31T04:11:00+00:00",
+  "checked_at": "2026-10-31T05:10:04+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

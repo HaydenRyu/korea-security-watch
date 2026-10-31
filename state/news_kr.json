@@ -1,24 +1,24 @@
 {
- "fetched_at": "2026-10-31T22:05:50+00:00",
+ "fetched_at": "2026-10-31T22:44:34+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-31T22:05:50+00:00",
+ "last_ok_at": "2026-10-31T22:44:34+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1160,
   "hits": 72,
-  "clusters": 54,
+  "clusters": 55,
   "by_group": {
+   "gps": 5,
+   "hybrid": 5,
    "fire": 20,
-   "alert": 4,
+   "alert": 3,
    "border": 14,
    "drone_balloon": 12,
    "mine": 8,
    "summit": 6,
-   "gps": 3,
-   "hybrid": 4,
    "sanction": 1,
    "influence": 1,
    "spy": 1,
@@ -30,7 +30,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 600,
-   "hits": 58
+   "hits": 59
   },
   "SBS": {
    "feeds": 3,
@@ -65,15 +65,25 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "gps": {
+   "clusters": 5,
+   "max_independent": 2,
+   "latest": "2026-10-31T22:25:00+00:00"
+  },
+  "hybrid": {
+   "clusters": 5,
+   "max_independent": 1,
+   "latest": "2026-10-31T22:13:01+00:00"
+  },
   "fire": {
    "clusters": 20,
    "max_independent": 2,
    "latest": "2026-10-31T21:34:00+00:00"
   },
   "alert": {
-   "clusters": 4,
+   "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-10-31T13:45:46+00:00"
+   "latest": "2026-10-31T13:43:52+00:00"
   },
   "border": {
    "clusters": 14,
@@ -94,16 +104,6 @@
    "clusters": 6,
    "max_independent": 3,
    "latest": "2026-10-31T06:49:00+00:00"
-  },
-  "gps": {
-   "clusters": 3,
-   "max_independent": 2,
-   "latest": "2026-10-31T06:40:28+00:00"
-  },
-  "hybrid": {
-   "clusters": 4,
-   "max_independent": 1,
-   "latest": "2026-10-31T04:44:35+00:00"
   },
   "sanction": {
    "clusters": 1,
@@ -149,7 +149,7 @@
    "url": "https://www.yna.co.kr/rss/society.xml",
    "ok": true,
    "count": 120,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "연합뉴스",

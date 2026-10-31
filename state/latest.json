@@ -13,7 +13,7 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 합참 귀순 NLL"
+      "북한 지뢰 발견 DMZ 귀순 NLL 합참"
     ],
     "electronic_cyber": [
       "GPS 교란 서북도서",
@@ -22,8 +22,7 @@
     ],
     "foreign_forces": [
       "Kim Jong Un China Russia visit",
-      "김정은 방중",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결",
@@ -50,12 +49,13 @@
     "https://www.segye.com/newsView/20261031502724",
     "https://www.yna.co.kr/view/AKR20261031026400002",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077",
-    "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261030070000001",
     "https://www.yna.co.kr/view/AKR20261031014600504",
+    "https://www.yna.co.kr/view/AKR20261030070000001",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
     "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한 드론·방사포 시위와 바이낸스 해킹은 시험·시위 및 귀속 미확인 범위이며, 대남 확성기 재개 방송은 확인되지 않았다. 24시간 안에 새로운 군사 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한 드론 전시·시위와 바이낸스 해킹은 시험·시위 및 귀속 미확인 범위이며, 10/29 탄도미사일 발사는 24시간이 지난 정례 시험으로 배경이다. 24시간 안에 새로운 군사 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -87,18 +87,13 @@
       "region": "경기 접경",
       "lat": 37.95,
       "lon": 126.67,
-      "summary": "북한이 10/28~29 무인항공기술 전시회에서 자폭드론·스텔스형 기체를 공개하고 600㎜ 방사포 시위를 했으나(세계일보·NK News), 대남 확성기 재개·접경 충돌은 이번 회차에도 확인되지 않았다.",
+      "summary": "북한이 10/28~29 무인항공기술 전시회에서 자폭드론·스텔스형 기체를 공개하고 시범 사격을 했으나(세계일보), 접경 충돌·확성기 재개는 확인되지 않았다.",
       "meaning": "시험·시위 성격이며 실제 접경 충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261031502724"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
@@ -106,7 +101,7 @@
         "북한 통신은 자폭무인기·순항비행탄의 섬 표적 타격 시범을 주장"
       ],
       "speculation": [
-        "스텔스 무인기는 실제 비행 가능한 시제기인지 불명(세계일보)"
+        "스텔스 무인기가 실제 비행 가능한 시제기인지는 불명"
       ]
     },
     "electronic_cyber": {
@@ -130,14 +125,14 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "민간 분석업체 추정"
+        "민간 분석업체 추정, FBI 수사 착수"
       ],
       "speculation": [
-        "북한 연계 조직 지목은 민간 분석"
+        "북한 연계 조직 지목은 업계 분석"
       ]
     }
   },
-  "checked_at": "2026-10-31T10:10:56+00:00",
+  "checked_at": "2026-10-31T11:12:38+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

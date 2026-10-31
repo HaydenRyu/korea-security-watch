@@ -2,7 +2,7 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방",
-      "North Korea troop movement border"
+      "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
@@ -13,19 +13,19 @@
       "North Korea munitions shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순",
-      "북한 합참 발표 지뢰 DMZ 귀순 10월 31일"
+      "지뢰 발견 DMZ 귀순 합참 10월 31일"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격"
+      "사이버 공격",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -50,14 +50,13 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261031026400002",
-    "https://www.yna.co.kr/view/AKR20261030070000001",
-    "https://www.yna.co.kr/view/AKR20261031014600504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261031502724",
     "https://www.segye.com/newsView/20261031504357",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.japantimes.co.jp/"
+    "https://www.yna.co.kr/view/AKR20261031026400002",
+    "https://www.yna.co.kr/view/AKR20261030070000001"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 접경 충돌·핵·병력 징후는 새로 확인되지 않았고, 가상자산 해킹은 귀속 미확인이다. 10/29 미사일 발사와 10/29 확성기 시험 방송은 24시간이 지나 배경이다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 접경 충돌·핵·병력 새 징후는 없고, 가상자산 해킹은 정부 귀속이 없는 민간 추정이다. 10/29 탄도미사일 발사·10/29~30 드론 전시회는 24시간이 지나 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -69,29 +68,16 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "경기 서부 DMZ",
-      "summary": "청와대가 10/30 DMZ 지뢰폭발 사건에 필요조치를 계속하겠다고 밝혔으나 새 충돌은 확인되지 않는다(9/21 사건 후속).",
-      "meaning": "과거 사건의 후속 대응으로 새로운 군사 충돌 징후는 아니다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261030070000001"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "청와대 10/30 DMZ 지뢰폭발 사건 관련 원칙 대응 발표"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 청와대의 DMZ 지뢰폭발(9/21) 후속 대응 발표는 10/30 07시(UTC)이고 새 충돌·발견은 확인되지 않는다."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
+      "attribution": "unknown",
+      "region": "전국",
       "summary": "귀속 미확인 — 체이널리시스가 올해 가상자산 해킹 피해액의 89%를 북한 소행으로 추정했으나 정부의 공식 귀속은 없다.",
-      "meaning": "민간 분석사 추정으로 군사 징후는 아니다.",
+      "meaning": "민간 분석사 추정으로 군사 행동 징후는 아니다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -101,7 +87,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "체이널리시스 보고서 인용 보도"
+        "체이널리시스 보고서가 북한 소행 비중 89%로 추정"
       ],
       "speculation": []
     },
@@ -121,7 +107,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-31T15:10:28+00:00",
+  "checked_at": "2026-10-31T16:11:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

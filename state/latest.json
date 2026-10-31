@@ -13,18 +13,18 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 DMZ 지뢰 합참 귀순 NLL",
-      "DMZ 지뢰 폭발 합참 10월 31일"
+      "북한 지뢰 발견 DMZ 합참 귀순 NLL 10월 31일",
+      "북한 대남 확성기 재개 합참 10월 31일"
     ],
     "electronic_cyber": [
       "GPS 교란 서북도서",
-      "해킹 공격 개인정보 유출 랜섬웨어"
+      "해킹 개인정보 유출",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit",
       "김정은 방중",
-      "서해 구조물",
-      "주한미군 감축"
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결",
@@ -39,8 +39,7 @@
       "DEFCON Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
@@ -49,20 +48,16 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261030124900504",
-    "https://www.yna.co.kr/view/AKR20261030013052504",
-    "https://www.yna.co.kr/view/AKR20261031026400002",
-    "https://www.yna.co.kr/view/AKR20261031026000504",
-    "https://www.yna.co.kr/view/AKR20261031017251071",
-    "https://www.yna.co.kr/view/AKR20261030182252504",
     "https://www.segye.com/newsView/20261031502724",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823816",
+    "https://www.yna.co.kr/view/AKR20261031026400002",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077",
-    "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
+    "https://news.web.nhk/newsweb/na/nd-20261031de68857",
+    "https://news.web.nhk/newsweb/na/nd-20261031de68846",
+    "https://news.web.nhk/newsweb/na/nd-20261031de68862",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한 드론·방사포 시위와 바이낸스 해킹은 시험·시위 및 귀속 미확인 범위이고, 대남 확성기 재개 예고 시한(10/31)은 아직 실행되지 않았다. 24시간 안에 새로운 군사 징후는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한 드론·방사포 시위와 바이낸스 해킹은 시험·시위 및 귀속 미확인 범위이며, 대남 확성기 재개 방송은 이번 회차에도 확인되지 않았다. 24시간 안에 새로운 군사 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -94,31 +89,21 @@
       "region": "경기 접경",
       "lat": 37.95,
       "lon": 126.67,
-      "summary": "북한이 10/28 무인기 전시회에서 자폭드론으로 한·미 모의 표적을 타격하는 시연과 600㎜ 방사포 사격을 공개했고(10/30~31 보도), 대남 확성기 재개 예고 시한(10/31)이 다가오나 아직 방송은 없으며 합참은 확성기 정비 활동을 주시 중이다.",
+      "summary": "북한이 10/28~29 무인항공기술 전시회에서 자폭드론·스텔스형 기체를 공개했고(세계일보 10/31 분석), 대남 확성기 재개 방송은 이번 회차에도 확인되지 않았다.",
       "meaning": "시험·시위 성격이며 실제 접경 충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261031502724"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261030124900504"
-        },
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008823816"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "외교부는 10/30 한미일 유선 협의 사실을 밝혔다(연합)"
+        "북한 통신은 자폭무인기·순항비행탄의 섬 표적 타격 시범을 주장"
       ],
       "speculation": [
-        "실전 운용 능력은 의문(세계일보 분석)"
+        "스텔스 무인기는 실제 비행 가능한 시제기인지 불명(세계일보)"
       ]
     },
     "electronic_cyber": {
@@ -126,18 +111,13 @@
       "routine": true,
       "attribution": "unknown",
       "region": "해외",
-      "summary": "귀속 미확인 — 체이널리시스가 올해 가상자산 해킹 피해액의 89%를 북한 소행으로 추정하고 BBC가 바이낸스 64억달러 탈취를 북한 연계로 보도했으나, 트럼프 대통령은 \"모른다, 살펴보고 있다\"고 했고 정부의 공식 귀속은 없다.",
+      "summary": "귀속 미확인 — 체이널리시스가 올해 가상자산 해킹 피해액의 89%를 북한 소행으로 추정했고, 트럼프 대통령은 바이낸스 해킹의 북한 소행 여부에 \"모른다, 살펴보고 있다\"고 했다.",
       "meaning": "공식 귀속 전까지 등급에 반영하지 않는다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261031026400002"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
         },
         {
           "name": "SBS",
@@ -150,49 +130,49 @@
         "민간 분석업체 추정"
       ],
       "speculation": [
-        "북한 연계 조직 트레이더트레이터 지목"
+        "북한 연계 조직 지목은 민간 분석"
       ]
     }
   },
-  "checked_at": "2026-10-31T08:11:39+00:00",
+  "checked_at": "2026-10-31T09:11:23+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "미국, 우크라이나에 패트리엇 미사일 500발 판매 승인",
-      "summary": "BBC는 미국이 우크라이나에 패트리엇 미사일 500발 판매를 승인했다고 보도했다.",
+      "title": "미국, 우크라이나에 요격미사일 등 21억 달러 판매 방침",
+      "summary": "NHK는 트럼프 정권이 우크라이나에 요격미사일 등을 21억 달러 규모로 판매하기로 했다고 보도했다.",
       "link_korea": "미국 방공 자산의 우크라이나 소요 증가는 주한미군 방공 전력 운용에 영향을 줄 수 있다.",
       "region": "우크라이나",
       "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "name": "NHK",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261031de68846",
+        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
       }
     },
     {
-      "title": "러-우 국지 휴전 속 올레시키 주민 대피",
-      "summary": "BBC는 러시아 점령지 올레시키에서 드문 국지 휴전 중 수백 명이 대피했다고 보도했다.",
-      "link_korea": "북한군의 러시아 지원 여부와 맞물려 전선 상황이 북러 군사협력의 배경이 된다.",
-      "region": "우크라이나",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c60me298k1yeo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "한미일 외교장관 회의, 북한 비핵화 의지 재확인",
-      "summary": "NHK는 일미한 외무장관이 3국 결속이 지역의 요체라며 협력 확대를 밝혔다고 전했다.",
-      "link_korea": "한미일 대북 공조와 대북 제재 틀을 직접 다룬 회의다.",
-      "region": "동아시아",
+      "title": "한미일 외교장관, 3국 결속을 지역의 요체로 확인",
+      "summary": "NHK는 한미일 외교장관이 미국 애틀랜타에서 만나 3국 협력의 범위를 넓히기로 했다고 보도했다.",
+      "link_korea": "대북 억제를 위한 한미일 공조 강화와 직결된다.",
+      "region": "미국",
       "source": {
         "name": "NHK",
         "url": "https://news.web.nhk/newsweb/na/nd-20261031de68857",
         "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
       }
+    },
+    {
+      "title": "미 중간선거 막판, 트럼프 유세 중단 발표 뒤 개최로 번복",
+      "summary": "NHK는 미국 중간선거 최종 국면에서 트럼프 대통령의 유세가 중단 발표 후 다시 열리게 됐다고 보도했다.",
+      "link_korea": "미국 정치 일정은 대북·주한미군 정책 불확실성과 연결된다.",
+      "region": "미국",
+      "source": {
+        "name": "NHK",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261031de68862",
+        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
+      }
     }
   ],
-  "world_context": "우크라이나 지원과 한미일 공조가 같은 날 이어지며 한반도 대북 억제 환경과 연결된다.",
-  "world_at": "2026-10-31T08:11:39+00:00"
+  "world_context": "한미일 공조와 미국의 우크라이나 무기 지원이 같은 날 이어지며 대북 억제 환경과 맞닿아 있다.",
+  "world_at": "2026-10-31T09:11:23+00:00"
 }

@@ -1,58 +1,54 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
+      "북한 합참 발표 10월 31일",
+      "North Korea Reuters October 31 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear Yongbyon"
+      "North Korea Reuters October 31 2026",
+      "북한 합참 발표 10월 31일"
     ],
     "logistics": [
-      "북한 탄약 수송 군수",
-      "North Korea ammunition shipment"
+      "북한 합참 발표 10월 31일",
+      "North Korea Reuters October 31 2026"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "North Korea artillery Aegibong DMZ"
+      "지뢰 발견 DMZ 귀순 NLL",
+      "North Korea Reuters October 31 2026"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란",
+      "바이낸스 해킹 북한"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러 일정",
+      "North Korea Reuters October 31 2026"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 합참 발표 10월 31일",
+      "North Korea Reuters October 31 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout"
+      "북한 합참 발표 10월 31일",
+      "North Korea Reuters October 31 2026"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "DEFCON Korea"
+      "북한 합참 발표 10월 31일",
+      "North Korea Reuters October 31 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "북한 합참 발표 10월 31일",
+      "North Korea Reuters October 31 2026"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261030510315",
-    "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/",
-    "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/",
+    "https://www.yna.co.kr/view/AKR20261030070000001",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077",
+    "https://www.bbc.com/news/world"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위(KCNA 보도)는 시험·시위 범위이고, 바이낸스 해킹은 북한 연계가 거론되나 정부 귀속은 없다. 이후 새 군사 징후는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위(KCNA 보도)는 시험·시위 범위이고, 바이낸스 해킹은 북한 연계가 거론되나 정부 귀속은 없다. 24시간 안에 새로운 군사 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -81,55 +77,58 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "평양·접경",
+      "region": "경기 접경",
       "lat": 37.95,
-      "lon": 126.9,
-      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 한국군 GP·미군 전차 모형 타격 영상을 공개했다(조선중앙통신 10/30 보도); 애기봉 맞은편 북측 야포 전개(10/27 촬영)는 NK News가 정치적 메시지로 분석했다.",
-      "meaning": "시험·시위 성격으로 남측 실표적 사격은 아니다.",
+      "lon": 126.67,
+      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 한국군 GP·미군 전차 모형 타격 영상을 공개했다(조선중앙통신 10/30 보도); 애기봉 맞은편 북측 야포 전개는 NK News가 정치적 메시지로 분석했다.",
+      "meaning": "시험·시위 성격으로 실제 접경 충돌은 확인되지 않았다.",
       "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261030510315"
-        },
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/"
+          "url": "https://www.nknews.org/"
+        },
+        {
+          "name": "국방일보",
+          "tier": "B",
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신이 전시회와 방사포·드론 시연을 보도했다"
+        "국방일보: 10/29 국방장관이 ADMM-Plus에서 MDL 이남 지뢰 폭발을 정전협정 위반으로 지적(9월 사건 후속)"
       ],
-      "speculation": [
-        "무인전력·정밀타격 과시 의도"
-      ]
+      "speculation": []
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "글로벌(가상자산)",
-      "summary": "귀속 미확인 — 바이낸스에서 10/29 약 63억 달러가 탈취됐고 업계는 북한 연계를 지목하나 정부 귀속 발표는 없다.",
-      "meaning": "귀속이 확정되면 역대 최대 북한 가상자산 탈취로 의미가 크다.",
+      "region": "해외",
+      "summary": "귀속 미확인 — 바이낸스에서 약 63억 달러가 탈취됐고 BBC는 북한 연계 해킹으로 보도했으나 트럼프는 북한 소행 여부를 「모른다」고 했고 정부 귀속 발표는 없다.",
+      "meaning": "가상자산 탈취 귀속 전까지 등급에 반영하지 않는다.",
       "sources": [
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077"
+        },
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
+          "url": "https://www.bbc.com/news/world"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "바이낸스가 약 63억 달러 탈취 피해를 밝히고 회수를 시도 중이다"
+        "트럼프 「모른다…살펴보고 있다」(SBS 10/31)"
       ],
       "speculation": [
-        "북한 해킹 조직 소행 가능성"
+        "업계의 북한 연계 지목"
       ]
     }
   },
-  "checked_at": "2026-10-31T03:11:39+00:00",
+  "checked_at": "2026-10-31T04:11:00+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

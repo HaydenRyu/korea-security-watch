@@ -1,8 +1,8 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
+      "북한 병력 이동 전방",
+      "North Korea troop movement border"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
@@ -10,34 +10,34 @@
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "North Korea munitions shipment Russia"
     ],
     "border_clash": [
       "지뢰 발견",
-      "DMZ 월선 경고사격",
-      "DMZ mine explosion"
+      "DMZ 귀순",
+      "북한 합참 발표 지뢰 DMZ 귀순 10월 31일"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "Binance hack North Korea attributed FBI Lazarus"
+      "사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
+      "북한 열병식 병력 집결",
       "North Korea parade"
     ],
     "nk_internal": [
       "북한 등화관제 준전시",
-      "North Korea martial state"
+      "North Korea mobilization"
     ],
     "gov_warning": [
       "진돗개 발령 데프콘",
-      "DEFCON Korea"
+      "South Korea government warning North Korea"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -47,18 +47,17 @@
     "calm": [
       "남북 대화 제안",
       "통신선 복원"
-    ],
-    "incidents": [
-      "실탄 발견 해안"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261031502724",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261031026400002"
+    "https://www.yna.co.kr/view/AKR20261031026400002",
+    "https://www.yna.co.kr/view/AKR20261030070000001",
+    "https://www.yna.co.kr/view/AKR20261031014600504",
+    "https://www.segye.com/newsView/20261031504357",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.japantimes.co.jp/"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한 무인기 전시·시범 사격과 가상자산 해킹은 시험·시위 및 귀속 미확인 범위다. 10/29 단거리탄도미사일 10여발 발사는 24시간이 지나 배경으로 둔다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 접경 충돌·핵·병력 징후는 새로 확인되지 않았고, 가상자산 해킹은 귀속 미확인이다. 10/29 미사일 발사와 10/29 확성기 시험 방송은 24시간이 지나 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,38 +71,27 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "경기 접경",
-      "lat": 37.95,
-      "lon": 126.67,
-      "summary": "북한이 10/28~29 무인항공기술 전시회에서 자폭드론·스텔스형 기체를 공개하고 GP 모형 타격 시연을 했으나(세계일보) 접경 충돌은 확인되지 않았다. 10/29 국방장관의 MDL 이남 지뢰 폭발 언급은 9/21 사건의 후속 발언이다(국방일보).",
-      "meaning": "시험·시위 성격이며 실제 접경 충돌은 확인되지 않았다.",
+      "region": "경기 서부 DMZ",
+      "summary": "청와대가 10/30 DMZ 지뢰폭발 사건에 필요조치를 계속하겠다고 밝혔으나 새 충돌은 확인되지 않는다(9/21 사건 후속).",
+      "meaning": "과거 사건의 후속 대응으로 새로운 군사 충돌 징후는 아니다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261031502724"
-        },
-        {
-          "name": "국방일보",
-          "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do"
+          "url": "https://www.yna.co.kr/view/AKR20261030070000001"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "전시회 안 시연만 있었고 접경 충돌 보도는 없음"
+        "청와대 10/30 DMZ 지뢰폭발 사건 관련 원칙 대응 발표"
       ],
-      "speculation": [
-        "스텔스 무인기가 실제 비행 가능한 시제기인지는 불명"
-      ]
+      "speculation": []
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
-      "attribution": "unknown",
-      "region": "해외",
       "summary": "귀속 미확인 — 체이널리시스가 올해 가상자산 해킹 피해액의 89%를 북한 소행으로 추정했으나 정부의 공식 귀속은 없다.",
-      "meaning": "민간 분석이라 등급에 반영하지 않는다.",
+      "meaning": "민간 분석사 추정으로 군사 징후는 아니다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -111,9 +99,9 @@
           "url": "https://www.yna.co.kr/view/AKR20261031026400002"
         }
       ],
-      "confidence": "낮음",
+      "confidence": "중간",
       "facts": [
-        "민간 분석 기반 보도, 공식 귀속 없음"
+        "체이널리시스 보고서 인용 보도"
       ],
       "speculation": []
     },
@@ -133,7 +121,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-31T14:11:55+00:00",
+  "checked_at": "2026-10-31T15:10:28+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

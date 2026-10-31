@@ -2,25 +2,30 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea missile launch OR drone OR border Reuters Yonhap"
+      "North Korea troops border Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 2026"
+      "북한 미사일 발사 핵 풍계리 영변 동향"
     ],
     "logistics": [
       "북한 군수 탄약 수송 러시아"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 DMZ 귀순 11월 1일"
+      "북한 지뢰 발견 DMZ 귀순 합참",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit"
+      "North Korea Kim Jong Un China Russia visit",
+      "김정은 방중",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결 2026"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
       "북한 등화관제 준전시 노농적위군"
@@ -29,23 +34,34 @@
       "진돗개 발령 데프콘 상향"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한"
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "미 국무부 트럼프 김정은 대화 준비"
+      "남북 대화 제안",
+      "North Korea talks offer"
+    ],
+    "incidents": [
+      "실탄 발견 해안"
+    ],
+    "linkage:taiwan": [
+      "대만 중국 군사훈련"
+    ],
+    "linkage:korea": [
+      "북러 군사협력"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://www.yna.co.kr/view/AKR20261031014600504",
+    "https://www.yna.co.kr/view/AKR20261031037200504",
+    "https://www.yna.co.kr/view/AKR20261031040000504",
     "https://www.yna.co.kr/view/AKR20261101001700071",
+    "https://www.yna.co.kr/view/AKR20261031026400002",
     "https://www.segye.com/newsView/20261031504357",
-    "https://news.bizwatch.co.kr/article/mobile/2026/10/28/0020/",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
-    "https://www.yna.co.kr/view/AKR20261031026400002"
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 새 접경 충돌·핵·병력·정부 경고 징후가 없고, 연합 북한 속보는 스위스 외무 방북 결과·미 국무부 「트럼프 대화 준비」 발언 등 외교 기사뿐이다. 가상자산 해킹 민간 추정은 정부 귀속이 없어 routine 이다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 새 접경 충돌·핵·병력·정부 경고 징후가 없고, 연합 북한 속보는 미 국무장관의 「트럼프 대화 준비」 발언 등 외교 기사뿐이다. 가상자산 해킹 민간 추정은 정부 귀속이 없어 routine 이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,6 +73,21 @@
       "status": "none"
     },
     "border_clash": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "electronic_cyber": {
@@ -83,24 +114,9 @@
         "체이널리시스가 올해 가상자산 해킹 피해액의 89%를 북한 소행으로 추정"
       ],
       "speculation": []
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-10-31T20:11:36+00:00",
+  "checked_at": "2026-10-31T21:10:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -115,30 +131,8 @@
         "url": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
-    },
-    {
-      "title": "한미일 외상, G20 외상회의 계기 회담",
-      "summary": "NHK는 한미일 외상이 미 애틀랜타에서 만나 3국 결속이 지역 평화·안정의 요라고 확인했다고 보도했다.",
-      "link_korea": "한미일 공조는 대북 억제의 핵심 축이다.",
-      "region": "미국",
-      "source": {
-        "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261031de68857",
-        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
-      }
-    },
-    {
-      "title": "미, 우크라이나에 패트리엇 미사일 500발 판매 승인",
-      "summary": "BBC는 미국이 우크라이나에 패트리엇 미사일 500발 판매를 승인했다고 보도했다.",
-      "link_korea": "러시아 전선 소모전은 북러 군사협력 배경이다.",
-      "region": "우크라이나",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
     }
   ],
-  "world_context": "한미일 공조와 가상자산 해킹, 러-우 전쟁이 대북 제재·억제 환경과 맞닿아 있다.",
-  "world_at": "2026-10-31T17:11:17+00:00"
+  "world_context": "가상자산 해킹과 대북 제재 환경이 맞닿아 있다.",
+  "world_at": "2026-10-31T21:10:55+00:00"
 }

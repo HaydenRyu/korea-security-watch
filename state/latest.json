@@ -13,8 +13,7 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 합참 귀순 NLL 10월 31일",
-      "북한 대남 확성기 재개 합참 10월 31일"
+      "북한 지뢰 발견 DMZ 합참 귀순 NLL"
     ],
     "electronic_cyber": [
       "GPS 교란 서북도서",
@@ -22,8 +21,8 @@
       "랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
       "Kim Jong Un China Russia visit",
+      "김정은 방중",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -51,13 +50,12 @@
     "https://www.segye.com/newsView/20261031502724",
     "https://www.yna.co.kr/view/AKR20261031026400002",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077",
-    "https://news.web.nhk/newsweb/na/nd-20261031de68857",
-    "https://news.web.nhk/newsweb/na/nd-20261031de68846",
-    "https://news.web.nhk/newsweb/na/nd-20261031de68862",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml"
+    "https://www.nknews.org/",
+    "https://www.yna.co.kr/view/AKR20261030070000001",
+    "https://www.yna.co.kr/view/AKR20261031014600504",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한 드론·방사포 시위와 바이낸스 해킹은 시험·시위 및 귀속 미확인 범위이며, 대남 확성기 재개 방송은 이번 회차에도 확인되지 않았다. 24시간 안에 새로운 군사 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한 드론·방사포 시위와 바이낸스 해킹은 시험·시위 및 귀속 미확인 범위이며, 대남 확성기 재개 방송은 확인되지 않았다. 24시간 안에 새로운 군사 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -89,13 +87,18 @@
       "region": "경기 접경",
       "lat": 37.95,
       "lon": 126.67,
-      "summary": "북한이 10/28~29 무인항공기술 전시회에서 자폭드론·스텔스형 기체를 공개했고(세계일보 10/31 분석), 대남 확성기 재개 방송은 이번 회차에도 확인되지 않았다.",
+      "summary": "북한이 10/28~29 무인항공기술 전시회에서 자폭드론·스텔스형 기체를 공개하고 600㎜ 방사포 시위를 했으나(세계일보·NK News), 대남 확성기 재개·접경 충돌은 이번 회차에도 확인되지 않았다.",
       "meaning": "시험·시위 성격이며 실제 접경 충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261031502724"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
@@ -134,7 +137,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-31T09:11:23+00:00",
+  "checked_at": "2026-10-31T10:10:56+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

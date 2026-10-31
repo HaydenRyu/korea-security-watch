@@ -14,15 +14,15 @@
     ],
     "border_clash": [
       "지뢰 발견 DMZ 귀순 합참",
-      "North Korea DMZ border"
+      "North Korea DMZ border NLL Reuters"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 10월 31일"
     ],
     "foreign_forces": [
-      "김정은 방중 Kim Jong Un China visit",
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -44,19 +44,16 @@
     "calm": [
       "남북 대화 제안",
       "North Korea talks offer"
-    ],
-    "incidents": [
-      "총기 발견 군 감식"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261030510315",
     "https://www.segye.com/newsView/20261030516780",
-    "https://www.segye.com/newsView/20261030510855",
+    "https://www.segye.com/newsView/20261030510315",
     "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/feed/",
     "https://www.nknews.org/2026/10/north-korea-says-it-launched-barrage-of-600mm-sniper-rockets-at-live-fire-demo/",
-    "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
+    "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
   "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위(KCNA 보도)는 시험·시위 범위이고, 바이낸스 해킹은 북한 연계가 거론되나 정부 귀속은 없다. 이후 새 군사 징후는 확인되지 않았다.",
   "items": {
@@ -90,7 +87,7 @@
       "region": "평양·접경",
       "lat": 37.95,
       "lon": 126.9,
-      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 한국군 초소·미군 전차 모형 타격 영상을 공개했다(조선중앙통신 10/30 보도).",
+      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 한국군 GP·미군 전차 모형 타격 영상을 공개했다(조선중앙통신 10/30 보도); 10/29 동해상 단거리 탄도미사일 발사는 24시간 경과로 배경.",
       "meaning": "시험·시위 성격으로 남측 실표적 사격은 아니다.",
       "sources": [
         {
@@ -136,15 +133,26 @@
       ]
     }
   },
-  "checked_at": "2026-10-31T01:10:43+00:00",
+  "checked_at": "2026-10-31T02:10:29+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "미국, 우크라이나에 패트리엇 미사일 500기 판매 승인",
-      "summary": "BBC에 따르면 미국이 우크라이나에 패트리엇 미사일 500기 판매를 승인했다.",
-      "link_korea": "미국 방공 전력 운용 여력과 대북 억제 자산 배분에 영향을 줄 수 있다.",
+      "title": "바이낸스, 북한 연계 의심 63억 달러 해킹 복구 시도",
+      "summary": "세계 최대 가상자산 거래소 바이낸스가 역대 최대로 추정되는 해킹에서 약 절반을 동결했다고 밝혔다.",
+      "link_korea": "북한 연계가 거론되며 핵·미사일 자금원과 대북 제재에 직결된다.",
+      "region": "글로벌",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "미국, 우크라이나에 패트리엇 미사일 500발 판매 승인",
+      "summary": "미 정부가 러시아 탄도미사일 요격용 패트리엇 500발의 대우크라이나 판매를 승인했다.",
+      "link_korea": "러시아 군사력 소모와 북러 무기 이전 구도에 영향을 준다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
@@ -153,9 +161,9 @@
       }
     },
     {
-      "title": "러·우크라이나 국지휴전 속 올레시키 주민 대피",
-      "summary": "드문 국지휴전 중 러시아 점령지 올레시키에서 수백 명이 대피했다.",
-      "link_korea": "러-우 전쟁 동향은 북러 군사협력과 북한군 파병 논의의 배경이다.",
+      "title": "러·우 국지 휴전 속 올레시키 주민 대피",
+      "summary": "러시아 점령지 올레시키에서 드문 휴전 중 수백 명이 대피했다.",
+      "link_korea": "러-우 전선 변화는 북한군 파병과 북러 협력 평가에 연결된다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
@@ -164,6 +172,6 @@
       }
     }
   ],
-  "world_context": "러-우 전쟁 국지휴전과 미국의 우크라이나 방공 지원이 이어지는 가운데 북한 연계 의혹의 대형 가상자산 해킹이 불거졌다.",
-  "world_at": "2026-10-30T23:10:37+00:00"
+  "world_context": "가상자산 탈취와 러-우 전선 동향이 북한의 자금·군사 협력 환경과 맞물린다.",
+  "world_at": "2026-10-31T02:10:29+00:00"
 }

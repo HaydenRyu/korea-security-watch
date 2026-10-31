@@ -6,24 +6,22 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear site activity"
+      "North Korea nuclear site"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "DMZ NLL 귀순",
-      "지뢰 발견 합참 귀순 NLL 북한"
+      "북한 DMZ 지뢰 합참 귀순 NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 사이버 공격 2026년 10월 31일"
+      "GPS 교란 서북도서",
+      "해킹 공격 개인정보 유출 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 북한 10월 31일",
-      "Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중",
       "서해 구조물",
       "주한미군 감축"
     ],
@@ -47,17 +45,16 @@
     "calm": [
       "남북 대화 제안",
       "통신선 복원"
-    ],
-    "incidents": [
-      "실탄 발견 해안"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824004",
-    "https://www.segye.com/newsView/20261030516780"
+    "https://www.yna.co.kr/view/AKR20261030070000001",
+    "https://www.yna.co.kr/view/AKR20261030120900504",
+    "https://www.yna.co.kr/view/AKR20261031026400002",
+    "https://www.segye.com/newsView/20261031502724",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29~30 600㎜ 방사포·자폭드론 위력시위는 시험·시위 범위이고 바이낸스 해킹은 정부 귀속이 없다. 24시간 안에 새로운 군사 징후는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/28~29 드론 전시·탄도미사일 발사는 시험·시위 범위이고 바이낸스 해킹은 정부 귀속이 없다. 24시간 안에 새로운 군사 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -89,26 +86,26 @@
       "region": "경기 접경",
       "lat": 37.95,
       "lon": 126.67,
-      "summary": "북한이 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 한국군 GP·K9·미군 전차 모형 타격을 공개했고 남북 군사회담 제안에는 응답하지 않았다(SBS 10/31, NK News 10/30).",
-      "meaning": "시험·시위 성격으로 실제 접경 충돌은 확인되지 않았다.",
+      "summary": "북한이 10/28 무인항공기술 전시회에서 자폭드론·순항비행탄으로 한·미 모의 표적을 타격하는 시연을 공개했고(10/29 보도), 10/29 원산 일대 탄도미사일 10여발 발사(올해 17번째)는 시험·시위 범위로 접경 충돌은 없다.",
+      "meaning": "시험·시위 성격이며 실제 접경 충돌은 확인되지 않았다.",
       "sources": [
         {
-          "name": "SBS",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824004"
+          "url": "https://www.segye.com/newsView/20261031502724"
         },
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261030120900504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "600㎜ 방사포 약 10발 암초 표적 명중, 드론이 GP·K9·M1 모형 타격(SBS)"
+        "외교부는 10/30 한미일 유선 협의 사실을 밝혔다(연합)"
       ],
       "speculation": [
-        "NK News 칼럼은 정치적 적대 표현이지 전쟁 준비는 아니라고 분석"
+        "실전 운용 능력은 의문(세계일보 분석)"
       ]
     },
     "electronic_cyber": {
@@ -116,25 +113,30 @@
       "routine": true,
       "attribution": "unknown",
       "region": "해외",
-      "summary": "귀속 미확인 — NK News는 북한 행위자가 바이낸스에서 63.6억 달러를 탈취했다고 보도했으나 정부의 공식 귀속 발표는 확인되지 않았다.",
-      "meaning": "가상자산 탈취 귀속 전까지 등급에 반영하지 않는다.",
+      "summary": "귀속 미확인 — 체이널리시스가 바이낸스 64억달러 탈취를 북한 연계로 추정했으나 트럼프 대통령은 \"모른다, 살펴보고 있다\"고 했고 정부의 공식 귀속은 없다.",
+      "meaning": "공식 귀속 전까지 등급에 반영하지 않는다.",
       "sources": [
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261031026400002"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077"
         }
       ],
       "confidence": "낮음",
       "facts": [
-        "NK News 10/30 보도"
+        "민간 분석업체 추정"
       ],
       "speculation": [
-        "업계의 북한 연계 지목"
+        "북한 연계 조직 트레이더트레이터 지목"
       ]
     }
   },
-  "checked_at": "2026-10-31T06:10:06+00:00",
+  "checked_at": "2026-10-31T07:10:07+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

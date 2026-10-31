@@ -13,7 +13,8 @@
       "North Korea munitions shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참 10월 31일"
+      "지뢰 발견 DMZ 귀순 합참 11월 1일",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -23,7 +24,7 @@
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
     ],
@@ -47,14 +48,44 @@
     "calm": [
       "남북 대화 제안",
       "통신선 복원"
+    ],
+    "incidents": [
+      "실탄 발견 해안"
+    ],
+    "factor:nk_domestic": [
+      "북한 노동당 전원회의 경제",
+      "North Korea economy sanctions"
+    ],
+    "factor:inter_korean": [
+      "대남 확성기 전단 오물풍선",
+      "South Korea North Korea loudspeaker"
+    ],
+    "factor:great_powers": [
+      "북미 대화 APEC",
+      "US North Korea talks"
+    ],
+    "factor:public_opinion": [
+      "북한 대남 비난 담화",
+      "North Korea propaganda South"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan",
+      "대만 중국 군사훈련"
+    ],
+    "linkage:korea": [
+      "북러 군사협력",
+      "North Korea troops Russia"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261031502724",
-    "https://www.segye.com/newsView/20261031504357",
     "https://www.yna.co.kr/view/AKR20261031026400002",
-    "https://www.yna.co.kr/view/AKR20261030070000001"
+    "https://www.yna.co.kr/view/AKR20261031014600504",
+    "https://www.yna.co.kr/view/AKR20261031010200504",
+    "https://www.segye.com/newsView/20261031502724",
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.nhk.or.jp/rss/news/cat6.xml",
+    "https://news.web.nhk/newsweb/na/nd-20261031de68857"
   ],
   "overall_summary": "직전 회차와 같은 수준이다: 접경 충돌·핵·병력 새 징후는 없고, 가상자산 해킹은 정부 귀속이 없는 민간 추정이다. 10/29 탄도미사일 발사·10/29~30 드론 전시회는 24시간이 지나 배경이다.",
   "items": {
@@ -69,7 +100,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "24시간 경과 — 청와대의 DMZ 지뢰폭발(9/21) 후속 대응 발표는 10/30 07시(UTC)이고 새 충돌·발견은 확인되지 않는다."
+      "summary": "24시간 경과 — 청와대의 DMZ 지뢰폭발(9/21) 후속 대응 발표는 10/30이고 새 충돌·발견은 확인되지 않는다."
     },
     "electronic_cyber": {
       "status": "single",
@@ -83,11 +114,17 @@
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261031026400002"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "체이널리시스 보고서가 북한 소행 비중 89%로 추정"
+        "체이널리시스가 올해 가상자산 해킹 피해액의 89%를 북한 소행으로 추정",
+        "BBC: 분석사 2곳이 북한 국가 후원 조직을 유력 용의자로 지목, 바이낸스는 63억 달러 피해의 90% 보전"
       ],
       "speculation": []
     },
@@ -107,23 +144,45 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-31T16:11:14+00:00",
+  "checked_at": "2026-10-31T17:11:17+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "미 중간선거 막판, 트럼프 유세 중단 발표 뒤 개최로 번복",
-      "summary": "NHK는 트럼프 대통령의 접전 주 유세가 중단 발표 후 다시 열리게 됐다고 보도했다.",
-      "link_korea": "미국 정치 일정은 대북·주한미군 정책 불확실성과 연결된다.",
+      "title": "바이낸스, 63억 달러 해킹 피해의 90% 보전",
+      "summary": "BBC는 바이낸스가 해킹 피해액의 90%를 보전한다고 보도했고, 분석사 2곳은 북한 연계 조직을 유력 용의자로 지목했다.",
+      "link_korea": "북한 연계 가상자산 탈취는 대북 제재 우회와 직결된다.",
+      "region": "국제",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "한미일 외상, G20 외상회의 계기 회담",
+      "summary": "NHK는 한미일 외상이 미 애틀랜타에서 만나 3국 결속이 지역 평화·안정의 요라고 확인했다고 보도했다.",
+      "link_korea": "한미일 공조는 대북 억제의 핵심 축이다.",
       "region": "미국",
       "source": {
         "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261031de68862",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261031de68857",
         "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
+      }
+    },
+    {
+      "title": "미, 우크라이나에 패트리엇 미사일 500발 판매 승인",
+      "summary": "BBC는 미국이 우크라이나에 패트리엇 미사일 500발 판매를 승인했다고 보도했다.",
+      "link_korea": "러시아 전선 소모전은 북러 군사협력 배경이다.",
+      "region": "우크라이나",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "미국 중간선거 막판 정치 일정이 대북·동맹 정책의 불확실성과 맞닿아 있다.",
-  "world_at": "2026-10-31T13:11:39+00:00"
+  "world_context": "한미일 공조와 가상자산 해킹, 러-우 전쟁이 대북 제재·억제 환경과 맞닿아 있다.",
+  "world_at": "2026-10-31T17:11:17+00:00"
 }

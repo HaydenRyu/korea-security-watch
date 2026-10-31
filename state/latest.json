@@ -14,11 +14,11 @@
     ],
     "border_clash": [
       "지뢰 발견 DMZ 귀순 합참",
-      "North Korea DMZ border NLL Reuters"
+      "North Korea artillery Aegibong DMZ"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 10월 31일"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
@@ -47,13 +47,10 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261030516780",
     "https://www.segye.com/newsView/20261030510315",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/north-korea-says-it-launched-barrage-of-600mm-sniper-rockets-at-live-fire-demo/",
-    "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/",
+    "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
   ],
   "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위(KCNA 보도)는 시험·시위 범위이고, 바이낸스 해킹은 북한 연계가 거론되나 정부 귀속은 없다. 이후 새 군사 징후는 확인되지 않았다.",
   "items": {
@@ -87,7 +84,7 @@
       "region": "평양·접경",
       "lat": 37.95,
       "lon": 126.9,
-      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 한국군 GP·미군 전차 모형 타격 영상을 공개했다(조선중앙통신 10/30 보도); 10/29 동해상 단거리 탄도미사일 발사는 24시간 경과로 배경.",
+      "summary": "북한이 10/29 무인항공기술 전시회에서 600㎜ 방사포 사격과 자폭드론의 한국군 GP·미군 전차 모형 타격 영상을 공개했다(조선중앙통신 10/30 보도); 애기봉 맞은편 북측 야포 전개(10/27 촬영)는 NK News가 정치적 메시지로 분석했다.",
       "meaning": "시험·시위 성격으로 남측 실표적 사격은 아니다.",
       "sources": [
         {
@@ -98,13 +95,12 @@
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/2026/10/north-korea-says-it-launched-barrage-of-600mm-sniper-rockets-at-live-fire-demo/"
+          "url": "https://www.nknews.org/2026/10/all-the-worlds-a-stage-why-north-korea-put-artillery-on-display-at-the-border/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신이 전시회와 방사포·드론 시연을 보도했다",
-        "한미일 외교당국이 10/30 탄도미사일 발사 관련 유선 협의를 했다"
+        "조선중앙통신이 전시회와 방사포·드론 시연을 보도했다"
       ],
       "speculation": [
         "무인전력·정밀타격 과시 의도"
@@ -115,8 +111,8 @@
       "routine": true,
       "attribution": "unknown",
       "region": "글로벌(가상자산)",
-      "summary": "귀속 미확인 — 바이낸스에서 10/29 약 63억 달러가 탈취됐고 업계는 북한 조직 연계를 지목하나 트럼프 대통령은 10/30 「모른다, 살펴보고 있다」고 했다.",
-      "meaning": "귀속이 확정되면 역대 최대 북한 가상자산 탈취로 핵·미사일 자금원 의미가 크다.",
+      "summary": "귀속 미확인 — 바이낸스에서 10/29 약 63억 달러가 탈취됐고 업계는 북한 연계를 지목하나 정부 귀속 발표는 없다.",
+      "meaning": "귀속이 확정되면 역대 최대 북한 가상자산 탈취로 의미가 크다.",
       "sources": [
         {
           "name": "BBC",
@@ -126,14 +122,14 @@
       ],
       "confidence": "중간",
       "facts": [
-        "바이낸스가 약 30억 달러를 확보했고 FBI·비밀경호국이 수사·추적 중이다"
+        "바이낸스가 약 63억 달러 탈취 피해를 밝히고 회수를 시도 중이다"
       ],
       "speculation": [
-        "분석업체들은 북한 해킹 조직 소행을 시사하나 정부 확인은 없다"
+        "북한 해킹 조직 소행 가능성"
       ]
     }
   },
-  "checked_at": "2026-10-31T02:10:29+00:00",
+  "checked_at": "2026-10-31T03:11:39+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

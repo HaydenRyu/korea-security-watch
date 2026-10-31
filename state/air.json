@@ -1,10 +1,18 @@
 {
- "at": "2026-10-31T01:42:00+00:00",
- "south": 79,
- "area": 95,
- "baseline": 75.0,
- "ratio": 1.05,
- "samples": 6,
- "mil": [],
+ "at": "2026-10-31T02:40:11+00:00",
+ "south": 83,
+ "area": 99,
+ "baseline": 76,
+ "ratio": 1.09,
+ "samples": 5,
+ "mil": [
+  {
+   "type": "BE20",
+   "name": null,
+   "call": "EVAC70",
+   "lat": 33.32,
+   "lon": 130.47
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

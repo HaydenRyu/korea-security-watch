@@ -17,11 +17,10 @@
     ],
     "electronic_cyber": [
       "GPS 교란 서북도서",
-      "해킹 개인정보 유출",
-      "랜섬웨어 공격"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "김정은 방중 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -47,15 +46,10 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261031502724",
-    "https://www.yna.co.kr/view/AKR20261031026400002",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077",
-    "https://www.yna.co.kr/view/AKR20261031014600504",
-    "https://www.yna.co.kr/view/AKR20261030070000001",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한 드론 전시·시위와 바이낸스 해킹은 시험·시위 및 귀속 미확인 범위이며, 10/29 탄도미사일 발사는 24시간이 지난 정례 시험으로 배경이다. 24시간 안에 새로운 군사 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한 무인기 전시·시범 사격과 바이낸스 해킹은 시험·시위 및 귀속 미확인 범위이며, 24시간 안에 새로운 군사 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -109,30 +103,25 @@
       "routine": true,
       "attribution": "unknown",
       "region": "해외",
-      "summary": "귀속 미확인 — 체이널리시스가 올해 가상자산 해킹 피해액의 89%를 북한 소행으로 추정했고, 트럼프 대통령은 바이낸스 해킹의 북한 소행 여부에 \"모른다, 살펴보고 있다\"고 했다.",
+      "summary": "귀속 미확인 — NK News가 바이낸스에서 북한 행위자가 63.6억 달러를 탈취했다고 보도했으나 정부의 공식 귀속은 없다.",
       "meaning": "공식 귀속 전까지 등급에 반영하지 않는다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261031026400002"
-        },
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008824077"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "낮음",
       "facts": [
-        "민간 분석업체 추정, FBI 수사 착수"
+        "민간 분석 기반 보도, 공식 귀속 없음"
       ],
       "speculation": [
-        "북한 연계 조직 지목은 업계 분석"
+        "북한 연계는 업계 분석"
       ]
     }
   },
-  "checked_at": "2026-10-31T11:12:38+00:00",
+  "checked_at": "2026-10-31T12:11:13+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

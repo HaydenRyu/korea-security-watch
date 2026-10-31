@@ -1,21 +1,21 @@
 {
- "fetched_at": "2026-10-31T08:52:56+00:00",
+ "fetched_at": "2026-10-31T10:11:46+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-10-31T08:52:56+00:00",
+ "last_ok_at": "2026-10-31T10:11:46+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1160,
-  "hits": 76,
-  "clusters": 55,
+  "hits": 74,
+  "clusters": 54,
   "by_group": {
-   "border": 15,
-   "mine": 9,
+   "border": 14,
    "drone_balloon": 13,
    "fire": 19,
-   "summit": 7,
+   "mine": 8,
+   "summit": 6,
    "gps": 3,
    "hybrid": 4,
    "sanction": 2,
@@ -54,7 +54,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 3
+   "hits": 2
   },
   "국방일보": {
    "feeds": 1,
@@ -66,27 +66,27 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "border": {
-   "clusters": 15,
+   "clusters": 14,
    "max_independent": 2,
-   "latest": "2026-10-31T08:52:56+00:00"
-  },
-  "mine": {
-   "clusters": 9,
-   "max_independent": 2,
-   "latest": "2026-10-31T08:52:56+00:00"
+   "latest": "2026-10-31T09:35:46+00:00"
   },
   "drone_balloon": {
    "clusters": 13,
    "max_independent": 2,
-   "latest": "2026-10-31T08:52:56+00:00"
+   "latest": "2026-10-31T09:35:46+00:00"
   },
   "fire": {
    "clusters": 19,
    "max_independent": 2,
-   "latest": "2026-10-31T08:52:56+00:00"
+   "latest": "2026-10-31T09:35:46+00:00"
+  },
+  "mine": {
+   "clusters": 8,
+   "max_independent": 2,
+   "latest": "2026-10-31T09:32:43+00:00"
   },
   "summit": {
-   "clusters": 7,
+   "clusters": 6,
    "max_independent": 3,
    "latest": "2026-10-31T06:49:00+00:00"
   },
@@ -229,7 +229,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "세계일보",

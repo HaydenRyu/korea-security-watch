@@ -51,14 +51,14 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261030510315",
-    "https://www.segye.com/newsView/20261030510855",
     "https://www.segye.com/newsView/20261030516780",
+    "https://www.segye.com/newsView/20261030510855",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/10/us-curbed-intel-sharing-over-seouls-disclosure-of-north-korean-nuke-site-nis/",
     "https://www.nknews.org/2026/10/north-korea-says-it-launched-barrage-of-600mm-sniper-rockets-at-live-fire-demo/",
     "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위(KCNA 보도)는 시험·시위 범위이고, 바이낸스 63억 달러 해킹은 북한 연계가 거론되나 정부 귀속은 아직 없다. 새로운 군사 징후는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 10/29 방사포·드론 위력시위(KCNA 보도)는 시험·시위 범위이고, 바이낸스 해킹은 북한 연계가 거론되나 정부 귀속은 없다. 이후 새 군사 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -136,7 +136,7 @@
       ]
     }
   },
-  "checked_at": "2026-10-31T00:10:25+00:00",
+  "checked_at": "2026-10-31T01:10:43+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

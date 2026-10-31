@@ -1,75 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troops border Reuters"
+      "국방일보 최신 발표",
+      "접경 병력 증강 뉴스 수집(news_kr)"
     ],
     "nuclear": [
-      "북한 미사일 발사 핵 풍계리 영변 동향",
-      "North Korea cluster warhead test KCNA"
+      "North Korea cluster warhead tactical ballistic missile KCNA",
+      "집속탄두 위력시험 북한"
     ],
     "logistics": [
-      "북한 군수 탄약 수송 러시아",
-      "North Korea Russia munitions shipment"
+      "news_kr 수집 묶음 확인(해당 보도 없음)"
     ],
     "border_clash": [
-      "목함지뢰 해안",
-      "DMZ 귀순 합참",
-      "North Korea DMZ border Reuters"
+      "북한 DMZ 지뢰 NLL 귀순 합참"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격 랜섬웨어 공격"
+      "FBI Binance North Korea attributed hack",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격",
+      "美FBI 北 가상화폐 63억달러 탈취 배후 이더리움"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
+      "김정은 방중 Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade troops massing"
+      "news_kr 수집 묶음 확인(해당 보도 없음)"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시 노농적위군",
-      "North Korea martial state civil defense"
+      "news_kr 수집 묶음 확인(해당 보도 없음)"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향",
-      "DEFCON Korea raised"
+      "국방일보 긴급 안보상황 점검회의",
+      "news_kr 수집 묶음 확인"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 FBI",
-      "North Korea attributed FBI Binance"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
-    ],
-    "incidents": [
-      "실탄 발견 해안"
-    ],
-    "linkage:taiwan": [
-      "대만 중국 군사훈련"
+      "美FBI 北 가상화폐 63억달러 탈취 배후 이더리움",
+      "FBI Binance North Korea attributed hack"
     ],
     "linkage:korea": [
-      "북러 군사협력"
+      "김정은 방중 Kim Jong Un China Russia visit"
+    ],
+    "calm": [
+      "news_kr 수집 묶음(summit) 확인"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/rss/northkorea.xml",
     "https://www.yna.co.kr/view/AKR20261101005600504",
-    "https://www.yna.co.kr/view/AKR20261101006400071",
-    "https://www.yna.co.kr/view/AKR20261031026400002",
-    "https://www.yna.co.kr/view/AKR20261031001951091",
-    "https://www.hankyung.com/article/2026110178437",
-    "https://www.segye.com/newsView/20261031502724",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
+    "https://www.yna.co.kr/view/AKR20261030165100017",
+    "https://www.yna.co.kr/view/AKR20261101006451071",
+    "https://www.yna.co.kr/view/AKR20261031014600504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261031502724"
   ],
-  "overall_summary": "직전 회차보다 한 단계 눈에 띄는 변화는 두 가지다: 조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력시험을 주장했고(시험 발언 성격, 정례), 미 FBI가 바이낸스 해킹의 북한 배후를 지목했다는 속보가 나왔다(원문 본문 미확인). 접경 충돌·병력·정부 경고 징후는 새로 확인되지 않았다.",
+  "overall_summary": "북한이 10/31 전술탄도미사일 집속탄두 위력평가시험을 했다고 11/1 관영매체가 보도했으나 독립 확인은 없고, 미 FBI가 바이낸스 해킹의 북한 배후를 지목했다는 보도가 있다. 직전과 큰 변화 없이 정례·배경 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -77,11 +61,9 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "평양",
-      "lat": 39.03,
-      "lon": 125.75,
-      "summary": "조선중앙통신이 10/31 미사일총국의 전술탄도미사일 집속탄두(산포전투부) 위력평가시험을 11/1 보도했고 연합뉴스가 전했다(북한 주장, 독립 확인 없음).",
-      "meaning": "집속탄두 4종을 연내 부대 운용 가능하게 하겠다고 밝혀 실전 배치 확대를 예고했으나 시험 발표 성격이다.",
+      "region": "북한",
+      "summary": "조선중앙통신이 10/31 미사일총국의 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 연합뉴스가 전했다(북한 주장, 독립 확인 없음).",
+      "meaning": "집속탄두의 연내 부대 운용을 예고한 시험으로 재래식 전력 다변화 성격이다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -91,11 +73,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA는 10/31 시험을 11/1 보도, 12~13정보 표적구역 초토화 주장",
-        "노동신문에는 실리지 않음"
+        "미사일총국이 10/31 시험 진행, 연내 4종 탄두 부대 운용 예고(조선중앙통신 인용)"
       ],
       "speculation": [
-        "연내 실전 배치 가능성은 연합뉴스 해석"
+        "실전 배치 예고로 해석됨"
       ]
     },
     "logistics": {
@@ -103,31 +84,30 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 접경 충돌·지뢰 발견 보도 없음. 10/30 청와대의 DMZ 지뢰폭발 대응 언급은 24시간 경과한 배경."
+      "summary": "청와대 DMZ 지뢰폭발 관련 발언은 9월 사건의 후속이라 배경이다."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "nk",
-      "region": "해외(바이낸스)",
-      "summary": "연합뉴스와 한국경제가 미 FBI가 바이낸스 60억달러 가상화폐 탈취의 북한 배후를 지목했다는 속보를 전했다(본문 미확인, 앞서 체이널리시스·TRM 등 민간 추정 있음).",
-      "meaning": "북한 가상자산 탈취가 정부 귀속 단계로 올라갔으나 국내 기반시설 마비는 아니다.",
+      "region": "미국·국내",
+      "summary": "연합뉴스가 미 FBI의 바이낸스 해킹 북한 배후 지목을 전했고, 카스퍼스키는 라자루스가 국내 웹사이트를 C2로 악용한 정황을 공개했다(원문은 연합 1곳, FBI 원문 미확인).",
+      "meaning": "가상자산 탈취·국내 기업 대상 사이버 첩보로 정부 시스템 마비는 아니다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261101006400071"
+          "url": "https://www.yna.co.kr/view/AKR20261101006451071"
         },
         {
-          "name": "한국경제",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.hankyung.com/article/2026110178437"
+          "url": "https://www.yna.co.kr/view/AKR20261030165100017"
         }
       ],
-      "confidence": "낮음",
+      "confidence": "중간",
       "facts": [
-        "속보 제목만 확인, FBI 원문 미확인",
-        "10/30 FBI·USSS는 조사 착수를 밝혔다"
+        "카스퍼스키 보고서가 국내 웹사이트를 라자루스 C2 지표로 분류, 침해 범위·유출 여부는 미확인"
       ],
       "speculation": []
     },
@@ -144,34 +124,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "routine": true,
-      "attribution": "nk",
-      "category": "가상자산",
-      "region": "해외(바이낸스)",
-      "summary": "귀속 미확정 — FBI가 바이낸스 60억달러 탈취의 북한 배후를 지목했다는 속보가 연합뉴스·한국경제에 올랐다(FBI 원문 미확인).",
-      "meaning": "가상자산 탈취의 공식 귀속은 제재 우회 자금 조달의 배경이다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261101006400071"
-        },
-        {
-          "name": "한국경제",
-          "tier": "B",
-          "url": "https://www.hankyung.com/article/2026110178437"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "속보 제목만 확인"
-      ],
-      "speculation": [],
-      "attribution_dropped": "A 등급 기관의 귀속 발표 없음"
+      "status": "none"
     }
   },
-  "checked_at": "2026-10-31T22:11:52+00:00",
+  "checked_at": "2026-10-31T23:11:09+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

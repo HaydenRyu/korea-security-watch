@@ -13,15 +13,16 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 NLL 합참"
+      "지뢰 발견 DMZ",
+      "DMZ 지뢰폭발 합참 10월 30일"
     ],
     "electronic_cyber": [
       "GPS 교란 서북도서",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중 서해 구조물 주한미군 감축"
+      "Kim Jong Un China Russia visit North Korea Reuters",
+      "김정은 방중 서해 구조물"
     ],
     "parade_massing": [
       "북한 열병식 집결",
@@ -46,10 +47,12 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261031502724",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do"
+    "https://www.nhk.or.jp/rss/news/cat6.xml",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다: 북한 무인기 전시·시범 사격과 바이낸스 해킹은 시험·시위 및 귀속 미확인 범위이며, 24시간 안에 새로운 군사 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다: 북한 무인기 전시·시범 사격과 바이낸스 해킹은 시험·시위 및 귀속 미확인 범위다. DMZ 지뢰 폭발은 9/21 사건의 후속 발언으로 24시간 안의 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -81,7 +84,7 @@
       "region": "경기 접경",
       "lat": 37.95,
       "lon": 126.67,
-      "summary": "북한이 10/28~29 무인항공기술 전시회에서 자폭드론·스텔스형 기체를 공개하고 시범 사격을 했으나(세계일보), 접경 충돌·확성기 재개는 확인되지 않았다.",
+      "summary": "북한이 10/28~29 무인항공기술 전시회에서 자폭드론·스텔스형 기체를 공개하고 GP 모형 타격 시연을 했으나(세계일보) 접경 충돌은 확인되지 않았다.",
       "meaning": "시험·시위 성격이며 실제 접경 충돌은 확인되지 않았다.",
       "sources": [
         {
@@ -92,7 +95,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "북한 통신은 자폭무인기·순항비행탄의 섬 표적 타격 시범을 주장"
+        "전시회 안 시연만 있었고 접경 충돌 보도는 없음"
       ],
       "speculation": [
         "스텔스 무인기가 실제 비행 가능한 시제기인지는 불명"
@@ -103,7 +106,7 @@
       "routine": true,
       "attribution": "unknown",
       "region": "해외",
-      "summary": "귀속 미확인 — NK News가 바이낸스에서 북한 행위자가 63.6억 달러를 탈취했다고 보도했으나 정부의 공식 귀속은 없다.",
+      "summary": "귀속 미확인 — NK News가 바이낸스에서 북한 행위자의 대규모 탈취를 보도했으나 정부의 공식 귀속은 없다.",
       "meaning": "공식 귀속 전까지 등급에 반영하지 않는다.",
       "sources": [
         {
@@ -121,36 +124,14 @@
       ]
     }
   },
-  "checked_at": "2026-10-31T12:11:13+00:00",
+  "checked_at": "2026-10-31T13:11:39+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "미국, 우크라이나에 요격미사일 등 21억 달러 판매 방침",
-      "summary": "NHK는 트럼프 정권이 우크라이나에 요격미사일 등을 21억 달러 규모로 판매하기로 했다고 보도했다.",
-      "link_korea": "미국 방공 자산의 우크라이나 소요 증가는 주한미군 방공 전력 운용에 영향을 줄 수 있다.",
-      "region": "우크라이나",
-      "source": {
-        "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261031de68846",
-        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
-      }
-    },
-    {
-      "title": "한미일 외교장관, 3국 결속을 지역의 요체로 확인",
-      "summary": "NHK는 한미일 외교장관이 미국 애틀랜타에서 만나 3국 협력의 범위를 넓히기로 했다고 보도했다.",
-      "link_korea": "대북 억제를 위한 한미일 공조 강화와 직결된다.",
-      "region": "미국",
-      "source": {
-        "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261031de68857",
-        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
-      }
-    },
-    {
       "title": "미 중간선거 막판, 트럼프 유세 중단 발표 뒤 개최로 번복",
-      "summary": "NHK는 미국 중간선거 최종 국면에서 트럼프 대통령의 유세가 중단 발표 후 다시 열리게 됐다고 보도했다.",
+      "summary": "NHK는 트럼프 대통령의 접전 주 유세가 중단 발표 후 다시 열리게 됐다고 보도했다.",
       "link_korea": "미국 정치 일정은 대북·주한미군 정책 불확실성과 연결된다.",
       "region": "미국",
       "source": {
@@ -160,6 +141,6 @@
       }
     }
   ],
-  "world_context": "한미일 공조와 미국의 우크라이나 무기 지원이 같은 날 이어지며 대북 억제 환경과 맞닿아 있다.",
-  "world_at": "2026-10-31T09:11:23+00:00"
+  "world_context": "미국 중간선거 막판 정치 일정이 대북·동맹 정책의 불확실성과 맞닿아 있다.",
+  "world_at": "2026-10-31T13:11:39+00:00"
 }

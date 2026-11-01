@@ -6,7 +6,7 @@
     ],
     "nuclear": [
       "집속탄두 위력시험 북한",
-      "North Korea cluster warhead tactical ballistic missile KCNA"
+      "North Korea cluster warhead KCNA"
     ],
     "logistics": [
       "news_kr 수집 묶음 확인",
@@ -14,7 +14,7 @@
     ],
     "border_clash": [
       "지뢰 발견",
-      "북한 합참 지뢰 발견 DMZ NLL 귀순"
+      "북한 DMZ NLL 귀순 합참"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -23,7 +23,7 @@
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -35,8 +35,8 @@
       "North Korea martial alert"
     ],
     "gov_warning": [
-      "국방일보 긴급 안보상황 점검회의",
-      "진돗개 발령"
+      "진돗개 발령",
+      "국방일보 긴급 안보상황 점검회의"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -51,9 +51,10 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261101016700504",
     "https://www.yna.co.kr/view/AKR20261101005600504",
     "https://www.yna.co.kr/view/AKR20261101006451071",
+    "https://www.yna.co.kr/view/AKR20261101016700504",
+    "https://www.yna.co.kr/view/AKR20261101022400009",
     "https://www.segye.com/newsView/20261031502724",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
@@ -62,28 +63,6 @@
   "items": {
     "troop_movement": {
       "status": "none"
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "border_clash": {
-      "status": "none",
-      "summary": "김여정의 10월 확성기 가동 예고에 군이 확인된 바 없다고 했고 새 접경 사건은 없다."
     },
     "nuclear": {
       "status": "single",
@@ -100,9 +79,16 @@
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신 인용: 10/31 산포전투부 위력평가시험"
+        "조선중앙통신 인용: 집속탄두 위력평가시험"
       ],
       "speculation": []
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none",
+      "summary": "신규 접경 사건 없음; 9월 DMZ 지뢰 폭발 건은 후속 외교 설명(조현 G20)뿐이라 배경."
     },
     "electronic_cyber": {
       "status": "corroborated",
@@ -125,12 +111,28 @@
       ],
       "confidence": "중간",
       "facts": [
-        "BBC: FBI가 북한이 해킹 책임이 있다고 밝힘, 바이낸스 피해 90% 보전"
+        "BBC: FBI가 북한 책임이라고 밝힘"
       ],
       "speculation": []
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none",
+      "summary": "김여정 예고 확성기 가동은 軍이 확인된 바 없다고 밝혀 징후 아님."
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-01T02:09:55+00:00",
+  "checked_at": "2026-11-01T03:10:27+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

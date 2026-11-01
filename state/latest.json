@@ -2,26 +2,28 @@
   "coverage": {
     "nuclear": [
       "북한 집속탄두 위력시험",
-      "North Korea Reuters November 1 2026"
+      "North Korea cluster warhead test NHK"
     ],
     "border_clash": [
       "지뢰 발견 DMZ 귀순 합참",
-      "김여정 확성기 귀순"
+      "김여정 확성기 가동"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격"
+      "사이버 공격",
+      "GMO 인터넷 해킹 북한"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
       "간첩 혐의",
-      "North Korea attributed FBI Binance"
+      "North Korea attributed FBI Binance hack"
     ],
     "troop_movement": [
       "북한 병력 이동"
@@ -44,8 +46,24 @@
     ],
     "incidents": [
       "실탄 발견 해안"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan"
+    ],
+    "linkage:korea": [
+      "North Korea troops Russia"
     ]
   },
+  "opened": [
+    "https://www.segye.com/newsView/20261101509205",
+    "https://www.segye.com/newsView/20261101503775",
+    "https://www.segye.com/newsView/20261101509199",
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.nhk.or.jp/rss/news/cat6.xml",
+    "https://www.yna.co.kr/view/AKR20261101049400073"
+  ],
+  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹 귀속 보도가 이어지나 비정례 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -56,7 +74,7 @@
       "region": "평안북도 정주",
       "lat": 39.7,
       "lon": 125.2,
-      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 세계일보가 합참의 서해상 발사 포착을 전했다(북한 주장).",
+      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 세계일보·NHK가 이를 전했다(북한 주장).",
       "meaning": "단거리 탄도미사일 집속탄두의 위력 과시이나 시험 발사 성격이다.",
       "sources": [
         {
@@ -68,7 +86,7 @@
       "confidence": "중간",
       "facts": [
         "KCNA 11/1 보도, 10/31 시험",
-        "합참 정주 일대 서해상 발사 포착"
+        "NHK 11/1 북한 매체 보도로 전함"
       ],
       "speculation": []
     },
@@ -112,24 +130,18 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "FBI의 바이낸스 해킹 북한 책임 발표는 10/31(토) 나온 것으로 첫 보도 24시간 경계에 있어 직전 회차와 같이 배경(world)으로 두고 A 등급 원문은 열지 못했다."
     }
   },
-  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹 귀속 보도가 이어지나 비정례 징후는 없다.",
-  "opened": [
-    "https://www.segye.com/newsView/20261101509205",
-    "https://www.segye.com/newsView/20261101503775",
-    "https://www.bbc.co.uk/news/world",
-    "https://www.yna.co.kr/view/AKR20261101049400073"
-  ],
-  "checked_at": "2026-11-01T21:10:44+00:00",
+  "checked_at": "2026-11-01T22:11:20+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
       "title": "바이낸스, 63억 달러 해킹 피해 90% 보전",
-      "summary": "BBC는 FBI가 북한 책임을 밝힌 해킹에서 바이낸스가 피해의 90%를 보전한다고 보도했다.",
+      "summary": "BBC는 FBI가 북한 책임을 밝힌 해킹에서 바이낸스가 피해의 90%를 보전했고 일부 네트워크 출금이 재개됐다고 보도했다.",
       "link_korea": "북한 연계 가상자산 탈취는 대북 제재 우회와 직결된다.",
       "region": "국제",
       "source": {
@@ -140,5 +152,5 @@
     }
   ],
   "world_context": "가상자산 대형 해킹이 북한 자금 조달과 연결돼 한반도 안보 현안으로 부상했다.",
-  "world_at": "2026-11-01T20:11:15+00:00"
+  "world_at": "2026-11-01T22:11:20+00:00"
 }

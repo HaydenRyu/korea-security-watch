@@ -1,63 +1,99 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement border buildup"
+      "news_kr 수집 묶음 점검",
+      "북한 병력 전방 증강"
     ],
     "nuclear": [
-      "북한 집속탄두 시험 핵",
-      "North Korea nuclear Yongbyon Punggye-ri"
+      "북한 핵 풍계리 영변 동향",
+      "news_kr 집속탄두 묶음"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment Russia"
+      "news_kr 수집 묶음 점검"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ NLL 귀순 11월 1일",
-      "DMZ NLL North Korea border incident"
+      "news_kr 지뢰·DMZ·드론 묶음",
+      "DMZ 지뢰 확성기"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "Binance hack North Korea FBI"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란",
+      "news_kr 해킹 묶음"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit 서해 구조물 주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "news_kr 스위스 외무 방북 묶음"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "news_kr 수집 묶음 점검"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시 노농적위군"
+      "news_kr 수집 묶음 점검"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 경고"
+      "news_kr 경보 묶음"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261101509205",
     "https://www.segye.com/newsView/20261101503775",
     "https://www.segye.com/newsView/20261101509199",
-    "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
-    "https://www.bbc.co.uk/news/articles/cwg7xp8kx4v5o",
-    "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+    "https://www.yna.co.kr/view/AKR20261101049400073"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력평가시험(북한 주장)과 바이낸스 해킹의 FBI 북한 지목이 이어지며 새로운 비정례 징후는 없다.",
+  "overall_summary": "직전 회차와 비슷한 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹의 북한 연계 보도가 이어지나 비정례 징후는 없다. 이번 회차 일반 검색은 결과가 오래된 자료 위주였고 국내 언론 수집 중심으로 판정했다.",
   "items": {
     "troop_movement": {
       "status": "none"
+    },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "region": "북한 평북 정주",
+      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 세계일보가 전했다(북한 주장).",
+      "meaning": "재래식 전력 다변화 성격의 시험이다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261101509205"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "조선중앙통신 인용: 미사일총국 집속탄두 위력평가시험"
+      ],
+      "speculation": []
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "새 비정례 접경 사건 없음; 확성기는 군이 가동 확인 안 됨 발표(세계일보)."
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "일본",
+      "summary": "귀속 미확인 — 일본 GMO 인터넷 그룹 해킹의 배후에 북한이 있을 가능성을 회사가 정부에 보고했다고 연합뉴스가 전했다(교도통신 분석 인용).",
+      "meaning": "민간 서버 침입 사건으로 한반도 기반시설 마비는 아니다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261101049400073"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "교도통신 분석: 접속 IP 5개가 과거 북한 해커 집단과 일치"
+      ],
+      "speculation": [
+        "여러 국가 흔적은 조사 교란용일 수 있다는 교도 추정"
+      ]
     },
     "foreign_forces": {
       "status": "none"
@@ -73,53 +109,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "북한 평북 정주",
-      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 세계일보·NK News가 전했다(북한 주장).",
-      "meaning": "재래식 전력 다변화 성격의 시험이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261101509205"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "조선중앙통신 인용: 집속탄두 위력평가시험, 합참은 정주 일대 서해 방향 발사 탐지"
-      ],
-      "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "nk",
-      "region": "미국·국내",
-      "summary": "바이낸스 63억달러 해킹을 FBI가 북한 소행으로 밝혔다고 BBC가 보도했다.",
-      "meaning": "가상자산 탈취로 정부 시스템 마비는 아니다.",
-      "sources": [
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "BBC: FBI가 10/31 북한 책임이라고 밝힘"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-01T12:11:07+00:00",
+  "checked_at": "2026-11-01T13:13:21+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

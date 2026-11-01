@@ -1,17 +1,17 @@
 {
- "at": "2026-11-01T01:31:47+00:00",
- "south": 75,
- "area": 92,
+ "at": "2026-11-01T02:43:45+00:00",
+ "south": 82,
+ "area": 99,
  "baseline": 76,
- "ratio": 0.99,
- "samples": 7,
+ "ratio": 1.08,
+ "samples": 5,
  "mil": [
   {
-   "type": "A400",
-   "name": null,
-   "call": "TUAF159",
-   "lat": 37.65,
-   "lon": 127.28
+   "type": "C30J",
+   "name": "C-130J 수송기",
+   "call": "HRCLS85",
+   "lat": 32.84,
+   "lon": 130.83
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

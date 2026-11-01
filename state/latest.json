@@ -1,48 +1,60 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집 묶음 점검",
-      "북한 병력 전방 증강"
+      "북한 병력 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변 동향",
-      "news_kr 집속탄두 묶음"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "news_kr 수집 묶음 점검"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "news_kr 지뢰·DMZ·드론 묶음",
-      "DMZ 지뢰 확성기"
+      "목함지뢰 해안",
+      "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란",
-      "news_kr 해킹 묶음"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "news_kr 스위스 외무 방북 묶음"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "news_kr 수집 묶음 점검"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "news_kr 수집 묶음 점검"
+      "북한 준전시 등화관제",
+      "North Korea civil defense"
     ],
     "gov_warning": [
-      "news_kr 경보 묶음"
+      "진돗개 발령 데프콘",
+      "합참 긴급 경고"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261101509205",
-    "https://www.segye.com/newsView/20261101503775",
     "https://www.segye.com/newsView/20261101509199",
+    "https://www.segye.com/newsView/20261101503775",
+    "https://www.segye.com/newsView/20261101509205",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261101049400073"
   ],
-  "overall_summary": "직전 회차와 비슷한 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹의 북한 연계 보도가 이어지나 비정례 징후는 없다. 이번 회차 일반 검색은 결과가 오래된 자료 위주였고 국내 언론 수집 중심으로 판정했다.",
+  "overall_summary": "직전 회차와 비슷한 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹의 북한 연계 추정 보도가 이어지나 비정례 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,7 +74,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신 인용: 미사일총국 집속탄두 위력평가시험"
+        "조선중앙통신 인용: 미사일총국 집속탄두 위력평가시험",
+        "합참이 정주 일대 서해상 발사 포착"
       ],
       "speculation": []
     },
@@ -71,14 +84,14 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 비정례 접경 사건 없음; 확성기는 군이 가동 확인 안 됨 발표(세계일보)."
+      "summary": "새 비정례 접경 사건 없음; 김여정 예고 확성기는 군이 가동 확인 안 됨 발표(세계일보)."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "일본",
-      "summary": "귀속 미확인 — 일본 GMO 인터넷 그룹 해킹의 배후에 북한이 있을 가능성을 회사가 정부에 보고했다고 연합뉴스가 전했다(교도통신 분석 인용).",
+      "summary": "귀속 미확인 — 일본 GMO 인터넷 그룹이 자사 해킹 배후에 북한 연계 조직 가능성이 높다고 당국에 보고했다고 교도통신 인용으로 연합뉴스가 전했다.",
       "meaning": "민간 서버 침입 사건으로 한반도 기반시설 마비는 아니다.",
       "sources": [
         {
@@ -87,13 +100,11 @@
           "url": "https://www.yna.co.kr/view/AKR20261101049400073"
         }
       ],
-      "confidence": "낮음",
+      "confidence": "중간",
       "facts": [
-        "교도통신 분석: 접속 IP 5개가 과거 북한 해커 집단과 일치"
+        "회사 분석: 악성코드 특징·접속 IP 5개가 과거 북한 해커 집단과 일치"
       ],
-      "speculation": [
-        "여러 국가 흔적은 조사 교란용일 수 있다는 교도 추정"
-      ]
+      "speculation": []
     },
     "foreign_forces": {
       "status": "none"
@@ -111,7 +122,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-01T13:13:21+00:00",
+  "checked_at": "2026-11-01T14:14:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

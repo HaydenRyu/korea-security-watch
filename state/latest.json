@@ -53,7 +53,8 @@
     "https://www.segye.com/newsView/20261101509205",
     "https://www.segye.com/newsView/20261101503775",
     "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
   "overall_summary": "직전 회차 이후 새 징후는 없다. 집속탄두 시험 주장과 바이낸스 해킹 북한 지목이 정례·배경 수준으로 이어진다.",
   "items": {
@@ -127,7 +128,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-01T09:10:47+00:00",
+  "checked_at": "2026-11-01T10:09:42+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -145,5 +146,5 @@
     }
   ],
   "world_context": "가상자산 대형 해킹이 북한 자금 조달과 연결돼 한반도 안보 현안으로 부상했다.",
-  "world_at": "2026-11-01T08:10:11+00:00"
+  "world_at": "2026-11-01T10:09:42+00:00"
 }

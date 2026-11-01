@@ -1,10 +1,18 @@
 {
- "at": "2026-10-31T23:59:48+00:00",
- "south": 70,
- "area": 88,
- "baseline": 62.5,
- "ratio": 1.12,
- "samples": 8,
- "mil": [],
+ "at": "2026-11-01T01:11:53+00:00",
+ "south": 66,
+ "area": 83,
+ "baseline": 76.5,
+ "ratio": 0.86,
+ "samples": 6,
+ "mil": [
+  {
+   "type": "A400",
+   "name": null,
+   "call": "TUAF159",
+   "lat": 37.09,
+   "lon": 125.74
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

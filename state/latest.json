@@ -48,13 +48,13 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261101509199",
-    "https://www.segye.com/newsView/20261101503775",
     "https://www.segye.com/newsView/20261101509205",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261101049400073"
+    "https://www.segye.com/newsView/20261101503775",
+    "https://www.segye.com/newsView/20261101509199",
+    "https://www.yna.co.kr/view/AKR20261101049400073",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "직전 회차와 비슷한 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹의 북한 연계 추정 보도가 이어지나 비정례 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹의 북한 연계 추정 보도가 이어지나 비정례 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -122,7 +122,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-01T14:14:40+00:00",
+  "checked_at": "2026-11-01T15:12:29+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

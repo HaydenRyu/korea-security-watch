@@ -53,10 +53,9 @@
   "opened": [
     "https://www.yna.co.kr/view/AKR20261101005651504",
     "https://www.yna.co.kr/view/AKR20261101021151009",
-    "https://www.yna.co.kr/view/AKR20261101011900504",
     "https://www.segye.com/newsView/20261031504156",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
+    "https://www.nknews.org/"
   ],
   "overall_summary": "직전 회차 이후 새 징후는 없다. 집속탄두 시험 주장과 바이낸스 해킹 북한 지목이 정례·배경 수준으로 이어진다.",
   "items": {
@@ -87,7 +86,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "신규 접경 사건 없음; DMZ 지뢰 폭발 건은 외교장관이 G20에서 설명한 후속 보도이고 김여정 예고 확성기 가동은 군이 확인된 바 없다고 했다."
+      "summary": "신규 접경 사건 없음; 김여정 예고 확성기 가동은 군이 확인된 바 없다고 했고 DMZ 지뢰 건은 후속 설명 보도뿐이다."
     },
     "electronic_cyber": {
       "status": "corroborated",
@@ -130,7 +129,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-01T05:11:03+00:00",
+  "checked_at": "2026-11-01T06:10:50+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

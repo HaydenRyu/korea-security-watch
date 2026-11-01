@@ -46,16 +46,6 @@
       "실탄 발견 해안"
     ]
   },
-  "opened": [
-    "https://www.segye.com/newsView/20261101509205",
-    "https://www.segye.com/newsView/20261101503775",
-    "https://www.segye.com/newsView/20261101509199",
-    "https://www.yna.co.kr/view/AKR20261101049400073",
-    "https://www.yna.co.kr/view/AKR20261101011900504",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
-  ],
-  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹 귀속 보도가 이어지나 비정례 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -125,7 +115,14 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-01T20:11:15+00:00",
+  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹 귀속 보도가 이어지나 비정례 징후는 없다.",
+  "opened": [
+    "https://www.segye.com/newsView/20261101509205",
+    "https://www.segye.com/newsView/20261101503775",
+    "https://www.bbc.co.uk/news/world",
+    "https://www.yna.co.kr/view/AKR20261101049400073"
+  ],
+  "checked_at": "2026-11-01T21:10:44+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -9,7 +9,7 @@
       "North Korea cluster warhead KCNA"
     ],
     "logistics": [
-      "news_kr 수집 묶음 확인",
+      "군수 수송 북한 탄약",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
@@ -22,46 +22,43 @@
       "사이버 공격 해킹"
     ],
     "foreign_forces": [
+      "김정은 방중 방러 11월",
       "Kim Jong Un China Russia visit",
-      "김정은 방중",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "news_kr 수집 묶음 확인",
+      "북한 열병식 병력 집결",
       "North Korea parade"
     ],
     "nk_internal": [
-      "news_kr 수집 묶음 확인",
+      "북한 준전시 등화관제",
       "North Korea martial alert"
     ],
     "gov_warning": [
       "진돗개 발령",
-      "국방일보 긴급 안보상황 점검회의"
+      "긴급 안보상황 점검회의"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
-      "North Korea attributed FBI"
+      "North Korea attributed FBI Binance"
     ],
     "calm": [
       "남북 대화 제안",
-      "North Korea talks offer"
+      "North Korea talks offer Trump Binance"
     ],
     "incidents": [
       "실탄 발견 해안"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261101005600504",
-    "https://www.yna.co.kr/view/AKR20261101006451071",
-    "https://www.yna.co.kr/view/AKR20261101016700504",
-    "https://www.yna.co.kr/view/AKR20261101022400009",
-    "https://www.segye.com/newsView/20261031502724",
+    "https://www.yna.co.kr/view/AKR20261101005651504",
+    "https://www.yna.co.kr/view/AKR20261101021151009",
+    "https://www.yna.co.kr/view/AKR20261101011900504",
+    "https://www.segye.com/newsView/20261031504156",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133"
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
   ],
-  "overall_summary": "직전 회차 이후 새 징후는 없다. 집속탄두 시험 주장과 FBI 바이낸스 북한 지목이 정례·배경 수준으로 이어진다.",
+  "overall_summary": "직전 회차 이후 새 징후는 없다. 집속탄두 시험 주장과 바이낸스 해킹 북한 지목이 정례·배경 수준으로 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -76,7 +73,7 @@
         {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261101005600504"
+          "url": "https://www.yna.co.kr/view/AKR20261101005651504"
         }
       ],
       "confidence": "중간",
@@ -90,20 +87,20 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "신규 접경 사건 없음; 김여정 예고 10월 대남 확성기 가동은 군이 확인된 바 없다고 밝혔고, 강화 해안 표류 지뢰는 10월 중순 건으로 24시간 경과."
+      "summary": "신규 접경 사건 없음; DMZ 지뢰 폭발 건은 외교장관이 G20에서 설명한 후속 보도이고 김여정 예고 확성기 가동은 군이 확인된 바 없다고 했다."
     },
     "electronic_cyber": {
       "status": "corroborated",
       "routine": true,
       "attribution": "nk",
       "region": "미국·국내",
-      "summary": "미 FBI가 바이낸스 63억달러 해킹의 북한 배후를 지목했다고 연합뉴스와 BBC가 보도했다(FBI 원문 미확인).",
+      "summary": "바이낸스 63억달러 해킹의 북한 배후 지목이 이어져 BBC와 연합뉴스가 보도했다(트럼프는 소행 확인 시 대화하겠다고 언급, FBI 원문 미확인).",
       "meaning": "가상자산 탈취로 정부 시스템 마비는 아니다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261101006451071"
+          "url": "https://www.yna.co.kr/view/AKR20261101021151009"
         },
         {
           "name": "BBC",
@@ -127,14 +124,13 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none",
-      "summary": "김여정 예고 확성기 가동은 軍이 확인된 바 없다고 밝혀 징후 아님."
+      "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-11-01T04:10:29+00:00",
+  "checked_at": "2026-11-01T05:11:03+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -152,5 +148,5 @@
     }
   ],
   "world_context": "가상자산 대형 해킹이 북한 자금 조달과 연결돼 한반도 안보 현안으로 부상했다.",
-  "world_at": "2026-11-01T04:10:29+00:00"
+  "world_at": "2026-11-01T05:11:03+00:00"
 }

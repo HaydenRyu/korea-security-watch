@@ -51,19 +51,39 @@
     ]
   },
   "opened": [
+    "https://www.yna.co.kr/view/AKR20261101016700504",
     "https://www.yna.co.kr/view/AKR20261101005600504",
     "https://www.yna.co.kr/view/AKR20261101006451071",
-    "https://www.yna.co.kr/view/AKR20261101011900504",
-    "https://www.yna.co.kr/view/AKR20261031014600504",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
     "https://www.segye.com/newsView/20261031502724",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
   ],
-  "overall_summary": "북한이 10/31 집속탄두 위력평가시험을 했다고 11/1 보도했으나 독립 확인은 없고, 미 FBI의 바이낸스 해킹 북한 배후 지목은 연합·BBC 2곳이 전했다. 직전과 큰 변화 없는 정례·배경 수준이다.",
+  "overall_summary": "직전 회차 이후 새 징후는 없다. 북한 집속탄두 시험 주장과 FBI의 바이낸스 해킹 북한 지목이 정례·배경 수준으로 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none",
+      "summary": "김여정의 10월 확성기 가동 예고에 군이 확인된 바 없다고 했고 새 접경 사건은 없다."
     },
     "nuclear": {
       "status": "single",
@@ -83,13 +103,6 @@
         "조선중앙통신 인용: 10/31 산포전투부 위력평가시험"
       ],
       "speculation": []
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "border_clash": {
-      "status": "none",
-      "summary": "조현 외교장관의 G20 DMZ 지뢰 설명은 9월 사건의 후속이라 배경이다."
     },
     "electronic_cyber": {
       "status": "corroborated",
@@ -115,24 +128,9 @@
         "BBC: FBI가 북한이 해킹 책임이 있다고 밝힘, 바이낸스 피해 90% 보전"
       ],
       "speculation": []
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-01T00:09:53+00:00",
+  "checked_at": "2026-11-01T01:10:10+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

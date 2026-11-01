@@ -58,7 +58,7 @@
     "https://feeds.bbci.co.uk/news/world/rss.xml",
     "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
   ],
-  "overall_summary": "직전 회차 이후 새 징후는 없다. 북한 집속탄두 시험 주장과 FBI의 바이낸스 해킹 북한 지목이 정례·배경 수준으로 이어진다.",
+  "overall_summary": "직전 회차 이후 새 징후는 없다. 집속탄두 시험 주장·FBI 바이낸스 북한 지목이 정례·배경 수준으로 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -130,7 +130,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-01T01:10:10+00:00",
+  "checked_at": "2026-11-01T02:09:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -148,5 +148,5 @@
     }
   ],
   "world_context": "가상자산 대형 해킹이 북한 자금 조달과 연결돼 한반도 안보 현안으로 부상했다.",
-  "world_at": "2026-11-01T00:09:53+00:00"
+  "world_at": "2026-11-01T02:09:55+00:00"
 }

@@ -51,11 +51,11 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261101005651504",
-    "https://www.yna.co.kr/view/AKR20261101021151009",
-    "https://www.segye.com/newsView/20261031504156",
+    "https://www.segye.com/newsView/20261101503775",
+    "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/",
     "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
-    "https://www.nknews.org/"
+    "https://www.yna.co.kr/view/AKR20261101005651504",
+    "https://www.yna.co.kr/view/AKR20261101021151009"
   ],
   "overall_summary": "직전 회차 이후 새 징후는 없다. 집속탄두 시험 주장과 바이낸스 해킹 북한 지목이 정례·배경 수준으로 이어진다.",
   "items": {
@@ -66,13 +66,18 @@
       "status": "single",
       "routine": true,
       "region": "북한",
-      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 연합뉴스가 전했다(북한 주장, 독립 확인 없음).",
+      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 연합뉴스·NK News가 전했다(북한 주장, 독립 확인 없음).",
       "meaning": "재래식 전력 다변화 성격의 시험이다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261101005651504"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/"
         }
       ],
       "confidence": "중간",
@@ -86,14 +91,21 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "신규 접경 사건 없음; 김여정 예고 확성기 가동은 군이 확인된 바 없다고 했고 DMZ 지뢰 건은 후속 설명 보도뿐이다."
+      "summary": "신규 접경 사건 없음; 김여정 예고 확성기 가동은 군이 확인된 바 없다고 했다(세계일보).",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261101503775"
+        }
+      ]
     },
     "electronic_cyber": {
       "status": "corroborated",
       "routine": true,
       "attribution": "nk",
       "region": "미국·국내",
-      "summary": "바이낸스 63억달러 해킹의 북한 배후 지목이 이어져 BBC와 연합뉴스가 보도했다(트럼프는 소행 확인 시 대화하겠다고 언급, FBI 원문 미확인).",
+      "summary": "바이낸스 63억달러 해킹의 북한 배후 지목이 이어져 BBC(FBI 발표 인용)와 연합뉴스가 보도했다.",
       "meaning": "가상자산 탈취로 정부 시스템 마비는 아니다.",
       "sources": [
         {
@@ -129,7 +141,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-01T06:10:50+00:00",
+  "checked_at": "2026-11-01T07:10:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

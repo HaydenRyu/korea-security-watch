@@ -5,26 +5,26 @@
       "North Korea Reuters November 1 2026"
     ],
     "border_clash": [
-      "DMZ 지뢰 폭발 북한 합참 11월 1일",
       "지뢰 발견",
-      "김여정 확성기"
+      "DMZ 지뢰 폭발 G20",
+      "김여정 확성기 귀순"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "GMO 해킹 북한 연계 정부 보고 일본",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출",
+      "GMO 해킹 북한",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 11월",
+      "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물"
-    ],
-    "gov_warning": [
-      "합참 발표"
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
-      "North Korea attributed FBI"
+      "간첩 혐의",
+      "North Korea attributed FBI Binance"
     ],
     "troop_movement": [
       "북한 병력 이동"
@@ -38,19 +38,27 @@
     "nk_internal": [
       "북한 준전시 등화관제"
     ],
+    "gov_warning": [
+      "합참 발표"
+    ],
     "calm": [
       "남북 대화 제안",
       "통신선 복원"
+    ],
+    "incidents": [
+      "실탄 발견 해안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261101509205",
     "https://www.segye.com/newsView/20261101503775",
     "https://www.segye.com/newsView/20261101509199",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.yna.co.kr/view/AKR20261101049400073"
+    "https://www.yna.co.kr/view/AKR20261101049400073",
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
+    "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+    "https://www.yna.co.kr/view/AKR20261101011900504"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)과 GMO 해킹의 북한 연계 보고가 이어지나 비정례 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)과 해킹 귀속 보도가 이어지나 비정례 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,7 +70,7 @@
       "lat": 39.7,
       "lon": 125.2,
       "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 세계일보가 합참의 서해상 발사 포착을 전했다(북한 주장).",
-      "meaning": "단거리 탄도미사일 집속탄두의 연내 전력화 예고로 수도권 타격 능력 과시이나 시험 발사 성격이다.",
+      "meaning": "단거리 탄도미사일 집속탄두의 위력 과시이나 시험 발사 성격이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -72,12 +80,9 @@
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 11/1 보도, 10/31 시험",
-        "합참 정주 일대 서해상 발사 포착"
+        "KCNA 11/1 보도, 10/31 시험"
       ],
-      "speculation": [
-        "화성포-11라형 추정"
-      ]
+      "speculation": []
     },
     "logistics": {
       "status": "none"
@@ -119,10 +124,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "FBI의 바이낸스 63억달러 해킹 북한 귀속(BBC, 10/31)은 A 등급 원문을 열지 못해 징후로 올리지 않고 world 배경에만 둔다."
     }
   },
-  "checked_at": "2026-11-01T18:11:33+00:00",
+  "checked_at": "2026-11-01T19:11:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

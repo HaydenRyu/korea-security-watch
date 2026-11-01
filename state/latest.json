@@ -13,17 +13,17 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견",
+      "지뢰 발견 해안",
       "북한 DMZ NLL 귀순 합참"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "FBI Binance North Korea attributed hack"
+      "사이버 공격 해킹"
     ],
     "foreign_forces": [
+      "Kim Jong Un China Russia visit",
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -57,9 +57,11 @@
     "https://www.yna.co.kr/view/AKR20261101022400009",
     "https://www.segye.com/newsView/20261031502724",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
+    "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133"
   ],
-  "overall_summary": "직전 회차 이후 새 징후는 없다. 집속탄두 시험 주장·FBI 바이낸스 북한 지목이 정례·배경 수준으로 이어진다.",
+  "overall_summary": "직전 회차 이후 새 징후는 없다. 집속탄두 시험 주장과 FBI 바이낸스 북한 지목이 정례·배경 수준으로 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -88,7 +90,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "신규 접경 사건 없음; 9월 DMZ 지뢰 폭발 건은 후속 외교 설명(조현 G20)뿐이라 배경."
+      "summary": "신규 접경 사건 없음; 김여정 예고 10월 대남 확성기 가동은 군이 확인된 바 없다고 밝혔고, 강화 해안 표류 지뢰는 10월 중순 건으로 24시간 경과."
     },
     "electronic_cyber": {
       "status": "corroborated",
@@ -132,7 +134,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-01T03:10:27+00:00",
+  "checked_at": "2026-11-01T04:10:29+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -150,5 +152,5 @@
     }
   ],
   "world_context": "가상자산 대형 해킹이 북한 자금 조달과 연결돼 한반도 안보 현안으로 부상했다.",
-  "world_at": "2026-11-01T02:09:55+00:00"
+  "world_at": "2026-11-01T04:10:29+00:00"
 }

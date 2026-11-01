@@ -1,62 +1,56 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 전방 증강",
-      "North Korea troop movement"
-    ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea cluster warhead test"
-    ],
-    "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 집속탄두 위력시험",
+      "North Korea Reuters November 1 2026"
     ],
     "border_clash": [
-      "목함지뢰 해안",
-      "DMZ NLL 귀순"
+      "DMZ 지뢰 폭발 북한 합참 11월 1일",
+      "지뢰 발견",
+      "김여정 확성기"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "GPS 교란",
+      "GMO 해킹 북한 연계 정부 보고 일본",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방중 방러 11월",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense"
+      "서해 구조물"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "합참 긴급 경고"
+      "합참 발표"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
       "North Korea attributed FBI"
+    ],
+    "troop_movement": [
+      "북한 병력 이동"
+    ],
+    "logistics": [
+      "북한 군수 수송"
+    ],
+    "parade_massing": [
+      "북한 열병식 집결"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제"
     ],
     "calm": [
       "남북 대화 제안",
-      "North Korea talks offer"
+      "통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261101509205",
     "https://www.segye.com/newsView/20261101503775",
     "https://www.segye.com/newsView/20261101509199",
-    "https://www.yna.co.kr/view/AKR20261101049400073",
-    "https://www.yna.co.kr/view/AKR20261101011900504",
-    "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.yna.co.kr/view/AKR20261101049400073"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹의 북한 연계 추정 보도가 이어지나 비정례 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)과 GMO 해킹의 북한 연계 보고가 이어지나 비정례 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,9 +58,11 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "북한 평북 정주",
-      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 세계일보·NK News가 전했다(북한 주장).",
-      "meaning": "재래식 전력 다변화 성격의 시험이다.",
+      "region": "평안북도 정주",
+      "lat": 39.7,
+      "lon": 125.2,
+      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 세계일보가 합참의 서해상 발사 포착을 전했다(북한 주장).",
+      "meaning": "단거리 탄도미사일 집속탄두의 연내 전력화 예고로 수도권 타격 능력 과시이나 시험 발사 성격이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -76,25 +72,27 @@
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신 인용: 미사일총국 집속탄두 위력평가시험",
-        "합참이 정주 일대 서해상 발사 포착"
+        "KCNA 11/1 보도, 10/31 시험",
+        "합참 정주 일대 서해상 발사 포착"
       ],
-      "speculation": []
+      "speculation": [
+        "화성포-11라형 추정"
+      ]
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 비정례 접경 사건 없음; 김여정 예고 확성기는 군이 가동 확인 안 됨 발표(세계일보). DMZ 지뢰 폭발은 10/30 이전 보도로 24시간 경과."
+      "summary": "새 충돌·발견 보도 없음; 김여정 10월 확성기 예고는 군이 가동 확인된 바 없다고 밝힘(배경)."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "일본",
-      "summary": "귀속 미확인 — 일본 GMO 인터넷 그룹이 자사 해킹 배후에 북한 연계 조직 가능성이 높다고 당국에 보고했다고 연합뉴스가 전했다.",
-      "meaning": "민간 서버 침입 사건으로 한반도 기반시설 마비는 아니다.",
+      "summary": "귀속 미확인 — 일본 GMO 인터넷 그룹이 자사 해킹 배후에 북한 연계 조직 가능성이 높다고 정부에 보고했다고 연합뉴스가 전했다.",
+      "meaning": "기업 자체 보고로 정부 공식 귀속은 아니다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -104,7 +102,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "회사 분석: 악성코드 특징·접속 IP 5개가 과거 북한 해커 집단과 일치"
+        "GMO 인터넷 그룹 보고"
       ],
       "speculation": []
     },
@@ -124,7 +122,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-01T17:10:40+00:00",
+  "checked_at": "2026-11-01T18:11:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

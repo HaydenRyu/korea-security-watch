@@ -1,59 +1,66 @@
 {
   "coverage": {
     "troop_movement": [
-      "국방일보 최신 발표",
-      "접경 병력 증강 뉴스 수집(news_kr)"
+      "접경 병력 증강 뉴스 수집(news_kr)",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "North Korea cluster warhead tactical ballistic missile KCNA",
-      "집속탄두 위력시험 북한"
+      "집속탄두 위력시험 북한",
+      "North Korea cluster warhead tactical ballistic missile KCNA"
     ],
     "logistics": [
-      "news_kr 수집 묶음 확인(해당 보도 없음)"
+      "news_kr 수집 묶음 확인",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 DMZ 지뢰 NLL 귀순 합참"
+      "지뢰 발견",
+      "북한 합참 지뢰 발견 DMZ NLL 귀순"
     ],
     "electronic_cyber": [
-      "FBI Binance North Korea attributed hack",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격",
-      "美FBI 北 가상화폐 63억달러 탈취 배후 이더리움"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "FBI Binance North Korea attributed hack"
     ],
     "foreign_forces": [
-      "김정은 방중 Kim Jong Un China Russia visit",
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "news_kr 수집 묶음 확인(해당 보도 없음)"
+      "news_kr 수집 묶음 확인",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "news_kr 수집 묶음 확인(해당 보도 없음)"
+      "news_kr 수집 묶음 확인",
+      "North Korea martial alert"
     ],
     "gov_warning": [
       "국방일보 긴급 안보상황 점검회의",
-      "news_kr 수집 묶음 확인"
+      "진돗개 발령"
     ],
     "hybrid_ops": [
-      "美FBI 北 가상화폐 63억달러 탈취 배후 이더리움",
-      "FBI Binance North Korea attributed hack"
-    ],
-    "linkage:korea": [
-      "김정은 방중 Kim Jong Un China Russia visit"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "news_kr 수집 묶음(summit) 확인"
+      "남북 대화 제안",
+      "North Korea talks offer"
+    ],
+    "incidents": [
+      "실탄 발견 해안"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261101005600504",
-    "https://www.yna.co.kr/view/AKR20261030165100017",
     "https://www.yna.co.kr/view/AKR20261101006451071",
+    "https://www.yna.co.kr/view/AKR20261101011900504",
     "https://www.yna.co.kr/view/AKR20261031014600504",
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
+    "https://www.segye.com/newsView/20261031502724",
     "https://kookbang.dema.mil.kr/newsWeb/20261030/3/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261030/9/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261031502724"
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "북한이 10/31 전술탄도미사일 집속탄두 위력평가시험을 했다고 11/1 관영매체가 보도했으나 독립 확인은 없고, 미 FBI가 바이낸스 해킹의 북한 배후를 지목했다는 보도가 있다. 직전과 큰 변화 없이 정례·배경 수준이다.",
+  "overall_summary": "북한이 10/31 집속탄두 위력평가시험을 했다고 11/1 보도했으나 독립 확인은 없고, 미 FBI의 바이낸스 해킹 북한 배후 지목은 연합·BBC 2곳이 전했다. 직전과 큰 변화 없는 정례·배경 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,8 +69,8 @@
       "status": "single",
       "routine": true,
       "region": "북한",
-      "summary": "조선중앙통신이 10/31 미사일총국의 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 연합뉴스가 전했다(북한 주장, 독립 확인 없음).",
-      "meaning": "집속탄두의 연내 부대 운용을 예고한 시험으로 재래식 전력 다변화 성격이다.",
+      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 연합뉴스가 전했다(북한 주장, 독립 확인 없음).",
+      "meaning": "재래식 전력 다변화 성격의 시험이다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -73,26 +80,24 @@
       ],
       "confidence": "중간",
       "facts": [
-        "미사일총국이 10/31 시험 진행, 연내 4종 탄두 부대 운용 예고(조선중앙통신 인용)"
+        "조선중앙통신 인용: 10/31 산포전투부 위력평가시험"
       ],
-      "speculation": [
-        "실전 배치 예고로 해석됨"
-      ]
+      "speculation": []
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
       "status": "none",
-      "summary": "청와대 DMZ 지뢰폭발 관련 발언은 9월 사건의 후속이라 배경이다."
+      "summary": "조현 외교장관의 G20 DMZ 지뢰 설명은 9월 사건의 후속이라 배경이다."
     },
     "electronic_cyber": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "attribution": "nk",
       "region": "미국·국내",
-      "summary": "연합뉴스가 미 FBI의 바이낸스 해킹 북한 배후 지목을 전했고, 카스퍼스키는 라자루스가 국내 웹사이트를 C2로 악용한 정황을 공개했다(원문은 연합 1곳, FBI 원문 미확인).",
-      "meaning": "가상자산 탈취·국내 기업 대상 사이버 첩보로 정부 시스템 마비는 아니다.",
+      "summary": "미 FBI가 바이낸스 63억달러 해킹의 북한 배후를 지목했다고 연합뉴스와 BBC가 보도했다(FBI 원문 미확인).",
+      "meaning": "가상자산 탈취로 정부 시스템 마비는 아니다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -100,14 +105,14 @@
           "url": "https://www.yna.co.kr/view/AKR20261101006451071"
         },
         {
-          "name": "연합뉴스",
+          "name": "BBC",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261030165100017"
+          "url": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "카스퍼스키 보고서가 국내 웹사이트를 라자루스 C2 지표로 분류, 침해 범위·유출 여부는 미확인"
+        "BBC: FBI가 북한이 해킹 책임이 있다고 밝힘, 바이낸스 피해 90% 보전"
       ],
       "speculation": []
     },
@@ -127,14 +132,14 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-10-31T23:11:09+00:00",
+  "checked_at": "2026-11-01T00:09:53+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "바이낸스, 63억 달러 해킹 피해의 90% 보전",
-      "summary": "BBC는 바이낸스가 해킹 피해액의 90%를 보전했고 11/1 출금 재개를 목표로 한다고 보도했다.",
+      "title": "바이낸스, 63억 달러 해킹 피해 90% 보전",
+      "summary": "BBC는 FBI가 북한 책임을 밝힌 해킹에서 바이낸스가 피해의 90%를 보전한다고 보도했다.",
       "link_korea": "북한 연계 가상자산 탈취는 대북 제재 우회와 직결된다.",
       "region": "국제",
       "source": {
@@ -145,5 +150,5 @@
     }
   ],
   "world_context": "가상자산 대형 해킹이 북한 자금 조달과 연결돼 한반도 안보 현안으로 부상했다.",
-  "world_at": "2026-10-31T22:11:52+00:00"
+  "world_at": "2026-11-01T00:09:53+00:00"
 }

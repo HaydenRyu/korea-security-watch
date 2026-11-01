@@ -1,64 +1,77 @@
 {
   "coverage": {
     "troop_movement": [
-      "접경 병력 증강 뉴스 수집(news_kr)",
-      "North Korea troop buildup"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement border buildup"
     ],
     "nuclear": [
-      "집속탄두 위력시험 북한",
-      "North Korea cluster warhead KCNA"
+      "북한 집속탄두 시험 핵",
+      "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "군수 수송 북한 탄약",
-      "North Korea ammunition shipment"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL 합참 11월 1일",
-      "북한 확성기 접경 군 확인"
+      "북한 지뢰 발견 DMZ NLL 귀순 11월 1일",
+      "DMZ NLL North Korea border incident"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
+      "북한 GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격 해킹"
+      "사이버 공격",
+      "Binance hack North Korea FBI"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러 Kim Jong Un China Russia visit 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea martial alert"
+      "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 발령",
-      "긴급 안보상황 점검회의"
+      "진돗개 데프콘 상향 경고"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI Binance"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
-    ],
-    "incidents": [
-      "실탄 발견 해안"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261101509205",
     "https://www.segye.com/newsView/20261101503775",
+    "https://www.segye.com/newsView/20261101509199",
     "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/",
     "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.bbc.co.uk/news/articles/cwg7xp8kx4v5o",
+    "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
   ],
-  "overall_summary": "직전 회차 이후 새 징후는 없다. 집속탄두 시험 주장과 바이낸스 해킹 북한 지목은 정례·배경 수준으로 이어진다.",
+  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력평가시험(북한 주장)과 바이낸스 해킹의 FBI 북한 지목이 이어지며 새로운 비정례 징후는 없다.",
   "items": {
     "troop_movement": {
+      "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "nuclear": {
@@ -85,12 +98,6 @@
       ],
       "speculation": []
     },
-    "logistics": {
-      "status": "none"
-    },
-    "border_clash": {
-      "status": "none"
-    },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
@@ -107,27 +114,12 @@
       ],
       "confidence": "중간",
       "facts": [
-        "BBC: FBI가 북한 책임이라고 밝힘"
+        "BBC: FBI가 10/31 북한 책임이라고 밝힘"
       ],
       "speculation": []
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-01T11:10:55+00:00",
+  "checked_at": "2026-11-01T12:11:07+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

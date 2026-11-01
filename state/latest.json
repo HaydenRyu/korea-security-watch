@@ -1,69 +1,50 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
+    ],
     "nuclear": [
-      "북한 집속탄두 위력시험",
-      "North Korea cluster warhead test NHK"
+      "North Korea nuclear missile launch November 2026",
+      "북한 집속탄두 위력시험"
+    ],
+    "logistics": [
+      "북한 군수 수송"
     ],
     "border_clash": [
       "지뢰 발견 DMZ 귀순 합참",
       "김여정 확성기 가동"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "GMO 인터넷 해킹 북한"
+      "북한 GPS 교란 11월",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
       "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI Binance hack"
-    ],
-    "troop_movement": [
-      "북한 병력 이동"
-    ],
-    "logistics": [
-      "북한 군수 수송"
+      "주한미군 감축 서해 구조물"
     ],
     "parade_massing": [
       "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 대피"
     ],
     "gov_warning": [
-      "합참 발표"
+      "진돗개 발령 합참 발표 경고"
     ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
-    ],
-    "incidents": [
-      "실탄 발견 해안"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan"
-    ],
-    "linkage:korea": [
-      "North Korea troops Russia"
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI Binance hack"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261101509205",
-    "https://www.segye.com/newsView/20261101503775",
     "https://www.segye.com/newsView/20261101509199",
     "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml",
-    "https://www.yna.co.kr/view/AKR20261101049400073"
+    "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)과 일본 GMO 해킹 귀속 보도가 이어지나 비정례 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 수준이다. 집속탄두 위력시험(북한 주장)이 이어지나 비정례 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -95,27 +76,11 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "김여정 예고 확성기 가동은 군이 11/1 확인된 바 없다고 밝혀 새 징후가 없다(세계일보)."
+      "summary": "김여정 예고 확성기 가동은 군이 확인된 바 없다고 밝혀 새 징후가 없다(직전 회차와 동일, 세계일보 계열 보도)."
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "일본",
-      "summary": "귀속 미확인 — 일본 GMO 인터넷 그룹이 자사 해킹 배후에 북한 연계 조직 가능성이 높다고 정부에 보고했다고 연합뉴스가 전했다.",
-      "meaning": "기업 자체 보고로 정부 공식 귀속은 아니다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261101049400073"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "GMO 인터넷 그룹 보고"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "직전 회차의 GMO 해킹 귀속 보도는 연합 원문(ai_use)을 이번에 열지 않아 근거를 유지하지 못했고, 새 24시간 내 국내 사고·GPS 교란 보도도 열지 못했다."
     },
     "foreign_forces": {
       "status": "none"
@@ -131,17 +96,17 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "summary": "FBI의 바이낸스 해킹 북한 책임 발표는 10/31(토) 나온 것으로 첫 보도 24시간 경계에 있어 직전 회차와 같이 배경(world)으로 두고 A 등급 원문은 열지 못했다."
+      "summary": "FBI의 바이낸스 해킹 북한 책임 발표는 10/31 보도로 24시간 경계에 있어 배경(world)으로 두며 A 등급 원문은 열지 못했다."
     }
   },
-  "checked_at": "2026-11-01T22:11:20+00:00",
+  "checked_at": "2026-11-01T23:11:26+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
       "title": "바이낸스, 63억 달러 해킹 피해 90% 보전",
-      "summary": "BBC는 FBI가 북한 책임을 밝힌 해킹에서 바이낸스가 피해의 90%를 보전했고 일부 네트워크 출금이 재개됐다고 보도했다.",
+      "summary": "BBC는 FBI가 북한 책임을 밝힌 해킹에서 바이낸스가 피해의 90%를 보전했다고 보도했다.",
       "link_korea": "북한 연계 가상자산 탈취는 대북 제재 우회와 직결된다.",
       "region": "국제",
       "source": {
@@ -152,5 +117,5 @@
     }
   ],
   "world_context": "가상자산 대형 해킹이 북한 자금 조달과 연결돼 한반도 안보 현안으로 부상했다.",
-  "world_at": "2026-11-01T22:11:20+00:00"
+  "world_at": "2026-11-01T23:11:26+00:00"
 }

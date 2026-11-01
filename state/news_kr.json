@@ -1,18 +1,18 @@
 {
- "fetched_at": "2026-11-01T07:39:11+00:00",
+ "fetched_at": "2026-11-01T08:04:17+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-01T07:39:11+00:00",
+ "last_ok_at": "2026-11-01T08:04:17+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1160,
-  "hits": 73,
-  "clusters": 54,
+  "hits": 70,
+  "clusters": 53,
   "by_group": {
    "drone_balloon": 15,
-   "fire": 16,
+   "fire": 15,
    "gps": 6,
    "alert": 3,
    "border": 14,
@@ -71,7 +71,7 @@
    "latest": "2026-11-01T07:29:47+00:00"
   },
   "fire": {
-   "clusters": 16,
+   "clusters": 15,
    "max_independent": 4,
    "latest": "2026-11-01T06:18:00+00:00"
   },

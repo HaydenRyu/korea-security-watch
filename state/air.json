@@ -1,18 +1,10 @@
 {
- "at": "2026-11-01T07:38:58+00:00",
+ "at": "2026-11-01T08:03:59+00:00",
  "south": 80,
- "area": 98,
- "baseline": 72.5,
- "ratio": 1.1,
- "samples": 6,
- "mil": [
-  {
-   "type": "C30J",
-   "name": "C-130J 수송기",
-   "call": "HRCLS85",
-   "lat": 32.57,
-   "lon": 130.75
-  }
- ],
+ "area": 106,
+ "baseline": 76.5,
+ "ratio": 1.05,
+ "samples": 4,
+ "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

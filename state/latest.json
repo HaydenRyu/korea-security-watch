@@ -13,11 +13,11 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "북한 DMZ NLL 귀순 합참"
+      "지뢰 발견 DMZ 귀순 NLL 합참 11월 1일",
+      "북한 확성기 접경 군 확인"
     ],
     "electronic_cyber": [
-      "GPS 교란",
+      "북한 GPS 교란 합참",
       "해킹 개인정보 유출",
       "사이버 공격 해킹"
     ],
@@ -50,14 +50,10 @@
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261101509205",
     "https://www.segye.com/newsView/20261101503775",
     "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
-    "https://www.yna.co.kr/view/AKR20261101005651504",
-    "https://www.yna.co.kr/view/AKR20261101021151009",
-    "https://www.yna.co.kr/view/AKR20261101022400009",
-    "https://www.yna.co.kr/view/AKR20261101011900504",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
   ],
   "overall_summary": "직전 회차 이후 새 징후는 없다. 집속탄두 시험 주장과 바이낸스 해킹 북한 지목이 정례·배경 수준으로 이어진다.",
   "items": {
@@ -67,14 +63,14 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "북한",
-      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 연합뉴스·NK News가 전했다(북한 주장, 독립 확인 없음).",
+      "region": "북한 평북 정주",
+      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 세계일보·NK News가 전했다(북한 주장).",
       "meaning": "재래식 전력 다변화 성격의 시험이다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261101005651504"
+          "url": "https://www.segye.com/newsView/20261101509205"
         },
         {
           "name": "NK News",
@@ -84,7 +80,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신 인용: 집속탄두 위력평가시험"
+        "조선중앙통신 인용: 집속탄두 위력평가시험, 합참은 정주 일대 서해 방향 발사 탐지"
       ],
       "speculation": []
     },
@@ -93,28 +89,16 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "신규 접경 사건 없음; 김여정 예고 확성기 가동은 군이 확인된 바 없다고 했다(세계일보).",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261101503775"
-        }
-      ]
+      "summary": "신규 접경 사건 없음; 김여정 예고 확성기 가동은 군이 확인된 바 없다고 했다(세계일보)."
     },
     "electronic_cyber": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "attribution": "nk",
       "region": "미국·국내",
-      "summary": "바이낸스 63억달러 해킹의 북한 배후 지목이 이어져 BBC(FBI 발표 인용)와 연합뉴스가 보도했다.",
+      "summary": "바이낸스 63억달러 해킹을 FBI가 북한 소행으로 밝혔다고 BBC가 보도했다.",
       "meaning": "가상자산 탈취로 정부 시스템 마비는 아니다.",
       "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261101021151009"
-        },
         {
           "name": "BBC",
           "tier": "B",
@@ -143,7 +127,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-01T08:10:11+00:00",
+  "checked_at": "2026-11-01T09:10:47+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

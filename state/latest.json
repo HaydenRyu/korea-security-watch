@@ -1,61 +1,46 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement border"
-    ],
-    "nuclear": [
-      "북한 집속탄두 합참 공지",
-      "North Korea cluster warhead KCNA"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea munitions Russia"
-    ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 11월 2일",
-      "North Korea DMZ NLL defector landmine"
-    ],
-    "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 11월",
-      "FBI North Korea Binance hack attribution"
+      "북한 지뢰 발견 DMZ 귀순 11월 2일"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "North Korea Kim Jong Un China Russia visit"
     ],
-    "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout mobilization"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘 상향",
-      "North Korea troops Russia missile launch warning Japan"
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 11월"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의"
+    ],
+    "nuclear": [
+      "0-2 국내 언론 수집 집속탄두 묶음 원문 확인"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
+      "0-2 국내 언론 수집(summit 묶음)"
     ],
-    "incidents": [
-      "실탄 발견 해안"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 North Korea troop movement"
+    ],
+    "logistics": [
+      "북한 병력 이동 전방 증강 North Korea troop movement"
+    ],
+    "parade_massing": [
+      "북한 병력 이동 전방 증강 North Korea troop movement"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 North Korea mobilization"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 상향 North Korea missile launch warning Japan"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261102508552",
+    "https://www.yna.co.kr/view/AKR20261102150800083",
+    "https://www.yna.co.kr/view/AKR20261102078400504",
     "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261101016700504",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008825661"
+    "https://www.segye.com/newsView/20261102508552"
   ],
-  "overall_summary": "새로 확인된 징후는 없다. 집속탄두 시험·바이낸스 해킹 귀속은 배경이며 국방드론본부 창설은 정례 조직 개편이다.",
+  "overall_summary": "새로 확인된 징후는 없다. 집속탄두 시험(10/31)·중국 외교부 반응·합참 미공지 해명은 배경이며 국방드론본부 창설은 정례 조직 개편이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -69,7 +54,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 지뢰·월선 보도 없음; 군은 김여정이 예고한 10월 대남 확성기 가동이 확인되지 않았다고 밝혔다."
+      "summary": "새 지뢰·월선 보도 없음; 군은 김여정이 예고한 대남 확성기 가동이 확인되지 않았다고 밝혔다."
     },
     "electronic_cyber": {
       "status": "none",
@@ -91,7 +76,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-02T07:25:47+00:00",
+  "checked_at": "2026-11-02T08:15:49+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],

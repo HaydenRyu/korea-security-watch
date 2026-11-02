@@ -1,7 +1,7 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 11월 3일",
+      "북한 지뢰 발견 DMZ 귀순 11월 2일",
       "목함지뢰 해안"
     ],
     "foreign_forces": [
@@ -11,7 +11,7 @@
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 공격 사이버 공격 개인정보 유출 11월"
+      "해킹 개인정보 유출 사이버 공격 11월 2일"
     ],
     "troop_movement": [
       "북한 병력 이동 전방 증강"
@@ -35,16 +35,19 @@
       "국가보안법 구속",
       "간첩 혐의",
       "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://www.nknews.org/feed/",
     "https://www.nknews.org/2026/11/north-korea-slams-us-rok-drills-accusing-allies-of-rehearsing-nuclear-use/",
-    "https://www.yna.co.kr/view/AKR20261101016700504",
-    "https://www.yna.co.kr/view/AKR20261102138300005"
+    "https://www.yna.co.kr/view/AKR20261103006200091",
+    "https://www.yna.co.kr/view/AKR20261102078400504",
+    "https://www.segye.com/newsView/20261102516067"
   ],
-  "overall_summary": "24시간 안에 새로 확인된 안보 징후는 없다. 10/31 집속탄두 시험과 북한의 한미 아이언메이스 연습 비난은 배경이며, 하이브 유출은 귀속 미확인이다.",
+  "overall_summary": "24시간 안에 새로 확인된 군사 징후는 없다. 10/31 집속탄두 시험과 한미연습 비난은 배경이며, 북한 연계 바이낸스 자금 세탁 단계 진입만 정례 사이버 동향으로 기록한다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -77,27 +80,25 @@
     "electronic_cyber": {
       "status": "single",
       "routine": true,
-      "attribution": "unknown",
-      "region": "서울",
-      "lat": 37.56,
-      "lon": 126.98,
-      "summary": "귀속 미확인 — 하이브가 사원 여권·카드번호 등 개인정보 유출을 공지하고 사과했다고 11/2 보도됐다.",
-      "meaning": "대기업 정보 유출이나 북한 소행 발표가 없어 안보 등급에는 쓰지 않는다.",
+      "attribution": "nk",
+      "region": "해외",
+      "summary": "북한 연계 세력이 바이낸스 탈취 자금의 2차 세탁 단계에 착수했다고 체이널리시스 등이 11/2 밝혔다.",
+      "meaning": "가상자산 탈취 자금 세탁 동향으로 군사 징후는 아니다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261102138300005"
+          "url": "https://www.yna.co.kr/view/AKR20261103006200091"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "연합뉴스가 11/2 하이브 개인정보 유출 및 사과를 보도했다"
+        "체이널리시스·룩온체인이 임시 지갑 자금의 솔라나 이동을 보고"
       ],
       "speculation": []
     }
   },
-  "checked_at": "2026-11-02T19:12:56+00:00",
+  "checked_at": "2026-11-02T20:12:09+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

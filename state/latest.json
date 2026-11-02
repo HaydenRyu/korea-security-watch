@@ -2,29 +2,29 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement border"
+      "North Korea troop buildup border"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear test site"
+      "북한 핵실험 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 물자 탄약 수송",
-      "North Korea ammunition shipment Russia"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순",
-      "North Korea DMZ landmine"
+      "지뢰 발견 DMZ 귀순",
+      "North Korea DMZ mine defect"
     ],
     "electronic_cyber": [
-      "GPS 교란",
+      "북한 GPS 교란",
       "해킹 개인정보 유출",
-      "랜섬웨어 공격",
-      "North Korea hacking attributed"
+      "North Korea hack attributed"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -32,29 +32,16 @@
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
-      "North Korea mobilization civil defense drill"
+      "North Korea martial wartime state"
     ],
     "gov_warning": [
-      "진돗개 발령",
-      "합참 북한 발사 공지",
-      "North Korea missile warning Japan J-Alert"
+      "진돗개 발령 데프콘",
+      "North Korea warning evacuation"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
       "간첩 혐의",
-      "North Korea attributed FBI",
-      "북한 해킹 귀속"
-    ],
-    "calm": [
-      "North Korea talks offer",
-      "남북 대화 제안"
-    ],
-    "linkage:taiwan": [
-      "대만 중국 군사훈련",
-      "PLA drills around Taiwan"
-    ],
-    "linkage:korea": [
-      "North Korea troops Russia"
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
@@ -62,12 +49,10 @@
     "https://www.yna.co.kr/view/AKR20261102150800083",
     "https://www.yna.co.kr/view/AKR20261102087300704",
     "https://www.yna.co.kr/view/AKR20261102078400504",
-    "https://www.segye.com/newsView/20261102516067",
-    "https://www.nknews.org/2026/11/",
-    "https://www.nknews.org/2026/11/north-korea-slams-us-rok-drills-accusing-allies-of-rehearsing-nuclear-use/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.yna.co.kr/view/AKR20261102174700109",
+    "https://www.segye.com/newsView/20261102516067"
   ],
-  "overall_summary": "24시간 안에 새로 확인된 안보 징후는 없다. 11/2 북한의 한미 도상훈련 비난과 중국의 한미훈련 거론은 발언 수준이며, 국내 기업 해킹(하이브)만 귀속 미확인으로 기록한다.",
+  "overall_summary": "24시간 안에 새로 확인된 안보 징후는 없다. 10/31 집속탄두 시험·FBI의 바이낸스 탈취 북한 귀속 발표는 첫 보도 24시간 경과로 배경이며, 11/2 중국 외교부의 한미훈련 거론은 발언 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -121,7 +106,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-02T14:42:43+00:00",
+  "checked_at": "2026-11-02T15:56:00+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

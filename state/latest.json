@@ -13,7 +13,7 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
+      "북한 지뢰 발견 DMZ 귀순",
       "North Korea DMZ mine defect"
     ],
     "electronic_cyber": [
@@ -22,9 +22,8 @@
       "North Korea hack attributed"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -42,19 +41,29 @@
       "국가보안법 구속",
       "간첩 혐의",
       "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "확성기 방송 중단"
+    ],
+    "incidents": [
+      "실탄 발견 해안"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261102138300005",
     "https://www.yna.co.kr/view/AKR20261102150800083",
-    "https://www.yna.co.kr/view/AKR20261102087300704",
     "https://www.yna.co.kr/view/AKR20261102078400504",
-    "https://www.segye.com/newsView/20261102516067",
+    "https://www.yna.co.kr/view/AKR20261103003600071",
+    "https://www.yna.co.kr/view/AKR20261102153651504",
     "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-    "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+    "https://www.segye.com/newsView/20261102516067",
+    "https://www.nknews.org/feed/",
+    "https://www.nknews.org/2026/11/north-korea-slams-us-rok-drills-accusing-allies-of-rehearsing-nuclear-use/",
+    "https://www.nknews.org/2026/11/north-korean-cluster-warheads-could-threaten-targets-as-far-as-busan-experts/",
+    "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
   ],
-  "overall_summary": "24시간 안에 새로 확인된 안보 징후는 없다. 10/31 집속탄두 시험·FBI의 바이낸스 탈취 북한 귀속 발표는 배경이며, 하이브 해킹은 귀속 미확인이다.",
+  "overall_summary": "24시간 안에 새로 확인된 안보 징후는 없다. 10/31 집속탄두 시험과 북한의 한미훈련 비난은 배경이며, 하이브 해킹은 귀속 미확인이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -107,7 +116,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-02T16:59:58+00:00",
+  "checked_at": "2026-11-02T17:53:56+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

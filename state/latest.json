@@ -1,53 +1,86 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troops border"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement border"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Punggye-ri"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
+      "북한 군수 물자 탄약 수송",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참",
-      "DMZ NLL 귀순"
+      "지뢰 발견",
+      "DMZ",
+      "귀순",
+      "North Korea DMZ landmine"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "랜섬웨어 공격",
+      "North Korea hacking attributed"
     ],
     "foreign_forces": [
-      "서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 준전시 등화관제",
+      "North Korea mobilization civil defense drill"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "North Korea warning evacuation"
+      "진돗개 발령",
+      "합참 북한 발사 공지",
+      "North Korea missile warning Japan J-Alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI",
+      "북한 해킹 귀속"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "North Korea talks offer",
+      "남북 대화 제안"
+    ],
+    "linkage:taiwan": [
+      "대만 중국 군사훈련",
+      "PLA drills around Taiwan"
+    ],
+    "linkage:korea": [
+      "North Korea troops Russia"
+    ],
+    "incidents": [
+      "철원 하사 숨진",
+      "하이브 해킹 개인정보 유출"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://www.segye.com/newsView/20261102508552",
-    "https://kookbang.dema.mil.kr/newsWeb/20261103/10/ATCE_CTGR_0010010000/view.do"
+    "https://www.yna.co.kr/view/AKR20261101005652504",
+    "https://www.yna.co.kr/view/AKR20261102078400504",
+    "https://www.yna.co.kr/view/AKR20261101016700504",
+    "https://www.yna.co.kr/view/AKR20261102087300704",
+    "https://www.yna.co.kr/view/AKR20261102138300005",
+    "https://www.yna.co.kr/view/AKR20261102086500062",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008826820",
+    "https://www.segye.com/newsView/20261102516067",
+    "https://www.nknews.org/2026/11/",
+    "https://www.nknews.org/2026/11/north-korean-cluster-warheads-could-threaten-targets-as-far-as-busan-experts/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo",
+    "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o"
   ],
-  "overall_summary": "24시간 안에 새로 확인된 징후는 없다. 집속탄두 시험(10/31~11/1 보도)과 북한 해킹 귀속(바이낸스)은 배경이고, 국방드론본부 창설(11/2)은 정례 조직 개편이다.",
+  "overall_summary": "24시간 안에 새로 확인된 안보 징후는 없다. 10/31 집속탄두 시험과 FBI의 바이낸스 해킹 북한 귀속(10/31)은 배경이며, 국내 기업 해킹(하이브)만 귀속 미확인으로 기록한다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,10 +92,8 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "10/31 집속탄두 시험은 첫 보도 후 24시간 경과(11/1 00시경)로 배경이며 철원 전방부대 하사 사망(11/2)은 원인 조사 중이고 북한 연관 보도가 없다."
     },
     "foreign_forces": {
       "status": "none"
@@ -78,25 +109,70 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "서울",
+      "lat": 37.56,
+      "lon": 126.98,
+      "summary": "귀속 미확인 — 하이브가 9~10월 내부 시스템 해킹으로 전·현직 직원 주민번호·여권·계좌번호가 유출됐다고 11/2 알려졌다.",
+      "meaning": "대기업 내부망 침해이나 북한 소행 발표가 없어 안보 등급에는 쓰지 않는다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261102138300005"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "하이브가 10/18 홈페이지에 유출을 공지했고 11/2 언론이 보도했다",
+        "유출 시점은 9/12~13, 10/3~5이다"
+      ],
+      "speculation": []
     }
   },
-  "checked_at": "2026-11-02T12:19:03+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-02T13:38:33+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "우크라이나 공습경보 앱 해킹, 러시아 앱도 피해",
-      "summary": "우크라이나 공군은 공습경보 앱이 해킹돼 허위 방사능 경보가 발송됐다고 밝혔고 러시아 당국도 자국 앱이 해킹돼 가짜 경보가 나갔다고 밝혔다.",
-      "link_korea": "민방위 경보 체계를 노린 사이버 공격 사례로 한국 경보 체계 점검에 참고가 된다.",
+      "title": "우크라이나·러시아 공습경보 앱 해킹, 가짜 핵 경보 발령",
+      "summary": "우크라이나와 러시아의 공습경보 앱이 해킹돼 가짜 핵 경보가 나갔으나 양국 모두 배후를 확인하지 않았다.",
+      "link_korea": "경보·민방위 체계에 대한 사이버 공격 위험은 한반도 비상 대응 체계에도 시사점이 있다.",
       "region": "우크라이나·러시아",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
+    },
+    {
+      "title": "바이낸스 해킹 후 이용자 36억 달러 인출",
+      "summary": "역대 최대 규모 암호화폐 해킹 뒤 거래소가 거래를 동결했고 사건은 북한 연계 조직과 연결됐다고 BBC가 전했다.",
+      "link_korea": "북한의 가상자산 탈취는 제재 회피와 무기 개발 자금원으로 지목돼 대북 제재 논의와 이어진다.",
+      "region": "국제",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "북한, 전술탄도미사일 집속탄두 위력시험 공개",
+      "summary": "조선중앙통신은 10/31 시험을 진행했다고 밝혔고 합참은 정주 일대에서 서해상으로 발사된 것을 추적했다고 설명했다.",
+      "link_korea": "남측 비행장·포병진지 모사 표적을 타격한 시험으로 연내 4종 탄두 실전 배치를 예고했다.",
+      "region": "한반도",
+      "source": {
+        "name": "연합뉴스",
+        "url": "https://www.yna.co.kr/view/AKR20261101005652504",
+        "via": "https://www.yna.co.kr/view/AKR20261102078400504"
+      }
     }
   ],
-  "world_context": "전쟁 당사국 민방위 경보 체계에 대한 사이버 공격이 이어지고 있다.",
-  "world_at": "2026-11-02T05:11:07+00:00"
+  "world_context": "사이버 공격과 북한의 무기 시험이 겹친 한 주였다.",
+  "world_at": "2026-11-02T13:38:33+00:00"
 }

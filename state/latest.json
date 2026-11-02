@@ -1,119 +1,87 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집기 접경·병력 묶음",
-      "North Korea (Google News RSS)"
+      "접경 병력 이동 news_kr 묶음",
+      "North Korea troops Reuters"
     ],
     "nuclear": [
-      "North Korea (Google News RSS) cluster warhead",
-      "국내 언론 수집기 집속탄두 묶음"
+      "집속탄두 위력시험",
+      "North Korea cluster warhead"
     ],
     "logistics": [
-      "news_kr 수집기 군수 키워드"
+      "군수 탄약 비축 news_kr",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 DMZ 수집기 묶음(조현 G20 DMZ 지뢰 설명)",
-      "확성기 김여정 군 확인된 바 없어"
+      "지뢰 발견 news_kr 묶음",
+      "DMZ NLL 귀순 news_kr 묶음",
+      "North Korea DMZ"
     ],
     "electronic_cyber": [
-      "GPS 교란 수집기 묶음",
-      "해킹 바이낸스 FBI",
-      "GMO cyberattack North Korea Kyodo"
+      "GPS 교란",
+      "해킹 공격",
+      "North Korea hack Binance FBI"
     ],
     "foreign_forces": [
-      "Russia North Korea test missiles Western Pacific USNI",
-      "스위스 외무 방북"
+      "김여정 김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "news_kr 수집기 열병식 키워드"
+      "열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "news_kr 수집기 북한 내부 키워드"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "news_kr 수집기 alert 묶음"
+      "진돗개 발령 합참",
+      "North Korea alert Japan J-Alert"
     ],
     "hybrid_ops": [
-      "FBI Binance North Korea attributed",
-      "영국 북한 IT 위장취업"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "김여정 확성기 예고 군 확인된 바 없어"
+      "남북 대화 제안",
+      "확성기 방송 중단"
     ],
     "incidents": [
-      "news_kr 수집기 mine·fire 묶음"
+      "실탄 발견 해안",
+      "news_kr 사건 묶음"
     ],
     "linkage:taiwan": [
-      "BBC World RSS 대만 언급 없음"
+      "PLA drills around Taiwan",
+      "대만 중국 군사훈련"
     ],
     "linkage:korea": [
-      "Russia North Korea test missiles Western Pacific"
+      "북러 군사협력",
+      "North Korea troops Russia"
     ]
   },
   "opened": [
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008825430",
-    "https://www.nbcnews.com/business/business-news/fbi-says-north-korea-was-6-billion-binance-crypto-hack-rcna606758",
-    "https://www.segye.com/newsView/20261101509199",
-    "https://english.kyodonews.net/articles/-/90032",
     "https://www.nknews.org/",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008826153",
+    "https://www.segye.com/newsView/20261101509199",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo",
-    "https://www.bbc.co.uk/news/articles/c64g1y90p71eo"
+    "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo"
   ],
-  "overall_summary": "신규 군사 징후는 없고 전날의 집속탄두 위력시험 주장과 FBI의 바이낸스 해킹 북한 귀속(정례 성격)이 이어진다. 일본 GMO 사이버 공격도 북한 연계 가능성이 보도됐으나 정부 귀속은 없다.",
+  "overall_summary": "신규 군사 징후는 없고 10/31~11/1 집속탄두 위력시험 주장(정례 시험)이 이어진다. 합참이 북 발사체를 모두 공지하진 않는다고 밝혔으나 새 발사 확인은 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
-    },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "summary": "조선중앙통신이 전술탄도미사일 집속탄두 위력평가시험(13ha 초토화 주장)을 11/1 보도했고 NK News가 전했다(북한 주장).",
-      "meaning": "탄두 다종화 시도로 시험 성격이며 실전 배치 근거는 없다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "B",
-          "url": "https://www.nknews.org/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "NK News 11/1: 연말까지 군사 운용 계획 주장"
-      ],
-      "speculation": []
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "신규 접경 사건 보도 없음(9월 DMZ 지뢰 폭발은 배경)."
+      "status": "none"
     },
     "electronic_cyber": {
-      "status": "corroborated",
-      "routine": true,
-      "attribution": "nk",
-      "summary": "FBI가 10/31 약 63억 달러 바이낸스 해킹을 북한 소행으로 공식 확인했고 SBS·NBC가 전했으며, 일본 GMO 사이버 공격도 북한 연계 가능성이 교도통신에 보도됐다(일 정부 귀속 아님).",
-      "meaning": "가상자산 탈취·사이버 공작 확인으로 군사 도발 직접 징후는 아니다.",
-      "sources": [
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008825430"
-        },
-        {
-          "name": "NBC News(Reuters)",
-          "tier": "B",
-          "url": "https://www.nbcnews.com/business/business-news/fbi-says-north-korea-was-6-billion-binance-crypto-hack-rcna606758"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "FBI 10/31 성명",
-        "교도 11/1: GMO 공격 북한 연계 해킹조직 가능성(소식통)"
-      ],
-      "speculation": []
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none"
@@ -129,36 +97,43 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "summary": "조선중앙통신이 전술탄도미사일 집속탄두 위력평가시험(13ha 초토화 주장)을 보도했고 NK News가 전했다(북한 주장).",
+      "meaning": "탄두 다종화 시험 성격이며 실전 배치 근거는 없다.",
+      "sources": [
+        {
+          "name": "NK News",
+          "tier": "B",
+          "url": "https://www.nknews.org/"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "NK News: 집속탄두 연말까지 군사 운용 계획 주장"
+      ],
+      "speculation": []
     }
   },
-  "checked_at": "2026-11-02T02:10:56+00:00",
+  "checked_at": "2026-11-02T03:10:58+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
       "title": "우크라이나 공습경보 앱 해킹, 허위 방사능 경보",
-      "summary": "우크라이나 공군은 공습경보 앱이 해킹돼 허위 방사능 위협 경보가 발송됐다고 밝혔고, 러시아도 자국 앱이 해킹됐다고 주장했다.",
-      "link_korea": "국가 연계 사이버 공작이 경보 체계를 노리는 사례로 한반도 사이버 위협 대응에도 참고가 된다.",
-      "region": "우크라이나",
+      "summary": "우크라이나 공군이 공습경보 앱이 해킹돼 허위 방사능 경보가 갔다고 밝혔고, 러시아도 자국 앱이 해킹돼 허위 경보가 전송됐다고 밝혔다.",
+      "link_korea": "민방위 경보 체계를 노린 사이버·허위정보 공격 사례로 한국 경보 체계에도 참고가 된다.",
+      "region": "우크라이나·러시아",
       "source": {
-        "name": "BBC",
+        "name": "BBC News",
         "url": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "헤르손 인도적 휴전 종료, 러시아 공습으로 정전",
-      "summary": "오레시키 민간인 대피를 위한 휴전이 끝난 뒤 러시아 공습으로 우크라이나 수천 가구가 정전됐다.",
-      "link_korea": "북러 군사협력 하에서 러시아 전선 상황은 북한군 파병·무기 이전 맥락과 이어진다.",
-      "region": "우크라이나",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "러시아-우크라이나 전선과 사이버 공작이 이어지며 북러 협력 맥락에서 한반도와 연결된다.",
-  "world_at": "2026-11-02T02:10:56+00:00"
+  "world_context": "민방위 경보 체계를 노린 사이버 공격이 분쟁 지역에서 나타나고 있다.",
+  "world_at": "2026-11-02T03:10:58+00:00"
 }

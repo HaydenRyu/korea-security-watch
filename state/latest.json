@@ -1,87 +1,100 @@
 {
   "coverage": {
     "troop_movement": [
-      "접경 병력 이동 news_kr 묶음",
-      "North Korea troops Reuters"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement border"
     ],
     "nuclear": [
-      "집속탄두 위력시험",
-      "North Korea cluster warhead"
+      "풍계리 영변 핵시설 활동 38 North 위성사진",
+      "North Korea cluster warhead Standard-2 Missile General Bureau KCNA"
     ],
     "logistics": [
-      "군수 탄약 비축 news_kr",
-      "North Korea ammunition shipment"
+      "북한 군수 수송 탄약 비축",
+      "North Korea munitions transfer Russia"
     ],
     "border_clash": [
-      "지뢰 발견 news_kr 묶음",
-      "DMZ NLL 귀순 news_kr 묶음",
-      "North Korea DMZ"
+      "목함지뢰 해안 발견 지뢰 DMZ 귀속 NLL 귀순",
+      "North Korea DMZ NLL defector landmine South Korea military"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 공격",
-      "North Korea hack Binance FBI"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격",
+      "FBI North Korea Binance hack attribution TraderTraitor"
     ],
     "foreign_forces": [
-      "김여정 김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 방러 11월",
+      "Kim Jong Un China Russia visit Reuters",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "열병식 병력 집결",
-      "North Korea parade"
+      "북한 열병식 준비 집결",
+      "North Korea parade preparations"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "진돗개 데프콘 합참 발표 북한 준전시 노농적위군 동원"
     ],
     "gov_warning": [
-      "진돗개 발령 합참",
-      "North Korea alert Japan J-Alert"
+      "진돗개 데프콘 합참 발표",
+      "South Korea Japan US emergency warning North Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
+      "FBI says North Korea responsible Binance theft"
     ],
     "calm": [
       "남북 대화 제안",
-      "확성기 방송 중단"
-    ],
-    "incidents": [
-      "실탄 발견 해안",
-      "news_kr 사건 묶음"
-    ],
-    "linkage:taiwan": [
-      "PLA drills around Taiwan",
-      "대만 중국 군사훈련"
-    ],
-    "linkage:korea": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008826153",
-    "https://www.segye.com/newsView/20261101509199",
+    "https://www.nknews.org/feed/",
+    "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/",
+    "https://www.nknews.org/2026/10/border-city-casts-doubt-on-reports-north-korea-testing-loudspeakers/",
+    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo"
+    "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+    "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo",
+    "https://www.bbc.co.uk/news/articles/c64g1y90p71eo",
+    "https://www.bbc.co.uk/news/articles/cq5ynw94k7kzo"
   ],
-  "overall_summary": "신규 군사 징후는 없고 10/31~11/1 집속탄두 위력시험 주장(정례 시험)이 이어진다. 합참이 북 발사체를 모두 공지하진 않는다고 밝혔으나 새 발사 확인은 없다.",
+  "overall_summary": "북한 집속탄두 시험(10/31, KCNA 11/1 보도)은 24시간이 지나 배경으로 내렸고, 새 징후는 바이낸스 63억 달러 해킹을 FBI가 북한 소행으로 지목했다는 BBC 보도뿐이다. 접경 충돌·병력·정부 경고 등 핵심 항목에는 새 징후가 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
+    },
+    "nuclear": {
+      "status": "none",
+      "summary": "24시간 경과 — 집속탄두 시험은 10/31 실시·KCNA 11/1 보도(첫 보도 11/1 09시 KST 무렵), 전술탄도미사일 탄두 시험이라 핵 배치·사용 준비 근거도 없다."
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "파주 보안 관계자와 국정원이 10/29 북측 대남 확성기 방송 보도를 부인했고 접경 새 충돌 보도는 없다."
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "해외(가상자산 거래소)",
+      "summary": "바이낸스에서 10/29~30 약 63억 달러가 탈취됐고 FBI가 10/31 북한 소행이라고 밝혔다고 BBC가 전했다(트럼프 대통령은 아직 모른다고 언급).",
+      "meaning": "북한 해킹 조직의 역대 최대 가상자산 탈취로 제재 회피 자금원 확대 우려가 있으나 군사 동향과는 직접 연결되지 않는다.",
+      "attribution": "nk",
+      "sources": [
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "BBC: FBI가 토요일(10/31) 북한이 책임이라고 밝혔고 TraderTraitor를 지목",
+        "바이낸스가 손실의 90%를 보전하고 출금을 단계적으로 재개"
+      ],
+      "speculation": [
+        "트럼프 대통령은 북한 소행인지 모른다고 발언해 미 정부 입장 정리는 추가 확인 필요"
+      ]
     },
     "foreign_forces": {
       "status": "none"
@@ -96,44 +109,67 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
-    },
-    "nuclear": {
-      "status": "single",
+      "status": "none",
       "routine": true,
-      "summary": "조선중앙통신이 전술탄도미사일 집속탄두 위력평가시험(13ha 초토화 주장)을 보도했고 NK News가 전했다(북한 주장).",
-      "meaning": "탄두 다종화 시험 성격이며 실전 배치 근거는 없다.",
+      "region": "해외(가상자산 거래소)",
+      "category": "가상자산",
+      "summary": "귀속 미확정 — FBI가 바이낸스 63억 달러 탈취를 북한 TraderTraitor 소행으로 귀속했다고 BBC가 보도했다(FBI 원문은 열지 못함).",
+      "meaning": "우방 정부의 공식 귀속이 나왔으나 진행 중 작전이 아니라 수사 결과 발표 성격이다.",
+      "attribution": "nk",
       "sources": [
         {
-          "name": "NK News",
+          "name": "BBC",
           "tier": "B",
-          "url": "https://www.nknews.org/"
+          "url": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "NK News: 집속탄두 연말까지 군사 운용 계획 주장"
+        "BBC 11/1 갱신본: FBI가 10/31 북한 책임을 밝힘"
       ],
-      "speculation": []
+      "speculation": [],
+      "attribution_dropped": "A 등급 기관의 귀속 발표 없음"
     }
   },
-  "checked_at": "2026-11-02T03:10:58+00:00",
+  "checked_at": "2026-11-02T04:12:49+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "우크라이나 공습경보 앱 해킹, 허위 방사능 경보",
-      "summary": "우크라이나 공군이 공습경보 앱이 해킹돼 허위 방사능 경보가 갔다고 밝혔고, 러시아도 자국 앱이 해킹돼 허위 경보가 전송됐다고 밝혔다.",
-      "link_korea": "민방위 경보 체계를 노린 사이버·허위정보 공격 사례로 한국 경보 체계에도 참고가 된다.",
+      "title": "우크라이나 공습경보 앱 해킹, 러시아 앱도 피해",
+      "summary": "우크라이나 공군은 공습경보 앱이 해킹돼 가짜 방사능 위협 알림이 갔다고 밝혔고, 몇 시간 뒤 러시아 당국도 자국 앱이 해킹됐다고 밝혔다.",
+      "link_korea": "민방위·경보 체계 대상 사이버 공격은 한국 정부 경보 체계 점검 사례로 참고된다.",
       "region": "우크라이나·러시아",
       "source": {
-        "name": "BBC News",
+        "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
+    },
+    {
+      "title": "헤르손 인도적 휴전 종료, 러시아 공습으로 정전",
+      "summary": "올레시키 민간인 대피를 위한 휴전이 끝나고 러시아 공습으로 우크라이나 수천 가구가 전력을 잃었다.",
+      "link_korea": "러시아 전쟁 지속은 북러 군사협력과 북한군 파병 논의의 배경이다.",
+      "region": "우크라이나",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "중국 정치 회의에서 숙청 최다, 시진핑 당 규율 강조",
+      "summary": "중국 정치 회의에서 역대 최다 숙청이 있었고 시진핑 주석은 당 규율을 강조했다.",
+      "link_korea": "중국 군·당 지도부 동향은 북중 관계와 한반도 정책의 변수다.",
+      "region": "중국",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cq5ynw94k7kzo",
+        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+      }
     }
   ],
-  "world_context": "민방위 경보 체계를 노린 사이버 공격이 분쟁 지역에서 나타나고 있다.",
-  "world_at": "2026-11-02T03:10:58+00:00"
+  "world_context": "우크라이나 전쟁 사이버전과 중국 지도부 동향, 북한발 가상자산 탈취가 한반도 안보 환경과 맞닿아 있다.",
+  "world_at": "2026-11-02T04:12:49+00:00"
 }

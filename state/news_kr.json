@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-02T13:37:05+00:00",
+ "fetched_at": "2026-11-02T14:47:49+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-02T13:37:05+00:00",
+ "last_ok_at": "2026-11-02T14:47:49+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1154,
-  "hits": 38,
-  "clusters": 32,
+  "hits": 41,
+  "clusters": 35,
   "by_group": {
    "drone_balloon": 8,
-   "gps": 4,
+   "mine": 4,
+   "gps": 6,
    "summit": 3,
    "border": 4,
    "fire": 10,
-   "mine": 3,
    "defect": 1,
    "hybrid": 3,
    "alert": 2,
@@ -29,19 +29,19 @@
    "feeds": 5,
    "failed": 0,
    "count": 595,
-   "hits": 49
+   "hits": 51
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 4
+   "hits": 5
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 7
+   "hits": 8
   },
   "국민일보": {
    "feeds": 2,
@@ -67,12 +67,17 @@
   "drone_balloon": {
    "clusters": 8,
    "max_independent": 2,
-   "latest": "2026-11-02T13:37:05+00:00"
+   "latest": "2026-11-02T14:47:49+00:00"
+  },
+  "mine": {
+   "clusters": 4,
+   "max_independent": 2,
+   "latest": "2026-11-02T14:12:13+00:00"
   },
   "gps": {
-   "clusters": 4,
+   "clusters": 6,
    "max_independent": 1,
-   "latest": "2026-11-02T12:51:44+00:00"
+   "latest": "2026-11-02T13:59:00+00:00"
   },
   "summit": {
    "clusters": 3,
@@ -86,11 +91,6 @@
   },
   "fire": {
    "clusters": 10,
-   "max_independent": 2,
-   "latest": "2026-11-02T09:46:04+00:00"
-  },
-  "mine": {
-   "clusters": 3,
    "max_independent": 2,
    "latest": "2026-11-02T09:46:04+00:00"
   },
@@ -159,7 +159,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 3
   },
   {
    "outlet": "SBS",
@@ -183,7 +183,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "동아일보",
@@ -191,7 +191,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 7
+   "hits": 8
   },
   {
    "outlet": "동아일보",

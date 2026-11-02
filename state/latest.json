@@ -13,9 +13,7 @@
       "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ",
-      "귀순",
+      "북한 지뢰 발견 DMZ 귀순",
       "North Korea DMZ landmine"
     ],
     "electronic_cyber": [
@@ -25,10 +23,8 @@
       "North Korea hacking attributed"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -59,28 +55,19 @@
     ],
     "linkage:korea": [
       "North Korea troops Russia"
-    ],
-    "incidents": [
-      "철원 하사 숨진",
-      "하이브 해킹 개인정보 유출"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261101005652504",
-    "https://www.yna.co.kr/view/AKR20261102078400504",
-    "https://www.yna.co.kr/view/AKR20261101016700504",
-    "https://www.yna.co.kr/view/AKR20261102087300704",
     "https://www.yna.co.kr/view/AKR20261102138300005",
-    "https://www.yna.co.kr/view/AKR20261102086500062",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008826820",
+    "https://www.yna.co.kr/view/AKR20261102150800083",
+    "https://www.yna.co.kr/view/AKR20261102087300704",
+    "https://www.yna.co.kr/view/AKR20261102078400504",
     "https://www.segye.com/newsView/20261102516067",
     "https://www.nknews.org/2026/11/",
-    "https://www.nknews.org/2026/11/north-korean-cluster-warheads-could-threaten-targets-as-far-as-busan-experts/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo",
-    "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o"
+    "https://www.nknews.org/2026/11/north-korea-slams-us-rok-drills-accusing-allies-of-rehearsing-nuclear-use/",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "24시간 안에 새로 확인된 안보 징후는 없다. 10/31 집속탄두 시험과 FBI의 바이낸스 해킹 북한 귀속(10/31)은 배경이며, 국내 기업 해킹(하이브)만 귀속 미확인으로 기록한다.",
+  "overall_summary": "24시간 안에 새로 확인된 안보 징후는 없다. 11/2 북한의 한미 도상훈련 비난과 중국의 한미훈련 거론은 발언 수준이며, 국내 기업 해킹(하이브)만 귀속 미확인으로 기록한다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -93,7 +80,29 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "10/31 집속탄두 시험은 첫 보도 후 24시간 경과(11/1 00시경)로 배경이며 철원 전방부대 하사 사망(11/2)은 원인 조사 중이고 북한 연관 보도가 없다."
+      "summary": "10/31 집속탄두 시험은 첫 보도 후 24시간 경과로 배경이며 이번 회차 새 지뢰·월선·접경 충돌 보도는 없다."
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "서울",
+      "lat": 37.56,
+      "lon": 126.98,
+      "summary": "귀속 미확인 — 하이브가 9~10월 내부 시스템 해킹으로 전·현직 직원 개인정보가 유출됐다고 11/2 알려졌다.",
+      "meaning": "대기업 내부망 침해이나 북한 소행 발표가 없어 안보 등급에는 쓰지 않는다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261102138300005"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "하이브가 10/18 홈페이지에 유출을 공지했고 11/2 언론이 보도했다"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "none"
@@ -105,36 +114,14 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none"
+      "status": "none",
+      "summary": "합참이 11/2 북한 발사체를 모두 공지하지는 않는다고 밝힌 설명이며 새 경보·진돗개 발령은 없다."
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "서울",
-      "lat": 37.56,
-      "lon": 126.98,
-      "summary": "귀속 미확인 — 하이브가 9~10월 내부 시스템 해킹으로 전·현직 직원 주민번호·여권·계좌번호가 유출됐다고 11/2 알려졌다.",
-      "meaning": "대기업 내부망 침해이나 북한 소행 발표가 없어 안보 등급에는 쓰지 않는다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261102138300005"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "하이브가 10/18 홈페이지에 유출을 공지했고 11/2 언론이 보도했다",
-        "유출 시점은 9/12~13, 10/3~5이다"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-02T13:38:33+00:00",
+  "checked_at": "2026-11-02T14:42:43+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

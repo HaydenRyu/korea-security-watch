@@ -1,60 +1,69 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 11월 2일"
+      "북한 지뢰 발견 DMZ 귀순 NLL",
+      "목함지뢰 해안"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit"
+      "Kim Jong Un China Russia visit",
+      "김정은 방중",
+      "서해 구조물"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 11월"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "랜섬웨어 공격"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "북한 해킹 귀속 FBI"
     ],
     "nuclear": [
-      "0-2 국내 언론 수집 집속탄두 묶음 원문 확인"
-    ],
-    "calm": [
-      "0-2 국내 언론 수집(summit 묶음)"
+      "북한 핵 풍계리 영변"
     ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강 North Korea troop movement"
+      "북한 병력 이동 전방 증강"
     ],
     "logistics": [
-      "북한 병력 이동 전방 증강 North Korea troop movement"
+      "북한 군수 수송 탄약"
     ],
     "parade_massing": [
-      "북한 병력 이동 전방 증강 North Korea troop movement"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 North Korea mobilization"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 North Korea missile launch warning Japan"
+      "진돗개 데프콘 상향"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261102150800083",
-    "https://www.yna.co.kr/view/AKR20261102078400504",
+    "https://www.segye.com/newsView/20261102508552",
     "https://www.nknews.org/",
-    "https://www.segye.com/newsView/20261102508552"
+    "https://www.yna.co.kr/view/AKR20261102078400504"
   ],
-  "overall_summary": "새로 확인된 징후는 없다. 집속탄두 시험(10/31)·중국 외교부 반응·합참 미공지 해명은 배경이며 국방드론본부 창설은 정례 조직 개편이다.",
+  "overall_summary": "새로 확인된 징후는 없다. 집속탄두 시험(10/31)·FBI의 바이낸스 해킹 북한 귀속·국방드론본부 창설은 배경 또는 정례 사안이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
       "status": "none",
-      "summary": "24시간 경과 — 집속탄두 위력시험은 10/31 실시·11/1 KCNA 보도로 배경이며 합참은 한미 정밀분석 중이라고 밝혔다."
+      "summary": "24시간 경과 — 집속탄두 위력시험은 10/31 실시·11/1 보도로 배경이다."
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 지뢰·월선 보도 없음; 군은 김여정이 예고한 대남 확성기 가동이 확인되지 않았다고 밝혔다."
+      "summary": "새 지뢰·월선·귀순 보도 없음; 국방드론본부 창설은 정례 조직 개편이다."
     },
     "electronic_cyber": {
       "status": "none",
@@ -76,7 +85,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-02T08:15:49+00:00",
+  "checked_at": "2026-11-02T09:14:10+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],

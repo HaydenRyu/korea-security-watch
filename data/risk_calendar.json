@@ -1600,6 +1600,12 @@
   "ratio": 3.6,
   "recent": [
    {
+    "date": "2026-11-01",
+    "event": "Ballistic Missile Launch",
+    "event_ko": "탄도미사일 발사",
+    "src": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261101/n-korea-tests-cluster-bomb-mountable-on-tactical-ballistic-missiles"
+   },
+   {
     "date": "2026-10-29",
     "event": "Short-range Ballistic Missile Launch",
     "event_ko": "단거리 탄도미사일 발사",
@@ -1622,12 +1628,6 @@
     "event": "Ballistic Missile Launch",
     "event_ko": "탄도미사일 발사",
     "src": "https://en.yna.co.kr/view/AEN20261012002700315?section=national/defense"
-   },
-   {
-    "date": "2026-10-03",
-    "event": "Intermediate-range Ballistic Missile Launch",
-    "event_ko": "중거리 탄도미사일 발사",
-    "src": "https://www.koreajoongangdaily.com/korea/kim-jongun-watches-missile-drill-with-daughter-vows-to-rapidly-advance-nuclear-war-deterrentnbsp/12903879 "
    }
   ],
   "per_year": {
@@ -1753,20 +1753,20 @@
    },
    "2026": {
     "nuclear": 0,
-    "missile": 24,
-    "other": 7,
-    "launch": 24
+    "missile": 25,
+    "other": 8,
+    "launch": 25
    }
   },
   "basis": "CSIS 미사일·핵 도발 날짜, 평소 = 2016~2025 평균"
  },
  "data": {
-  "updated_at": "2026-11-02T10:55:13+00:00",
-  "csis_rows": 512,
-  "csis_last": "2026-10-29",
+  "updated_at": "2026-11-02T23:05:43+00:00",
+  "csis_rows": 515,
+  "csis_last": "2026-11-01",
   "cns_days": 153,
   "cns_last": "2024-11-05",
-  "launch_days": 272
+  "launch_days": 273
  },
  "_verify": "훈련 연도별 check = 원문 인용·판정(2016~ 2026-10-18 검증 · 2006~2015 2026-10-18 조사 추가). confirmed 36 · start_only 4(note 참고). USFK.mil 은 403 이라 보도·Wayback 으로 대체. GlobalSecurity 정리 페이지는 1차 원문 아님(note 표기)",
  "cns": {
@@ -2021,8 +2021,8 @@
     "pct": 79
    }
   },
-  "last": "2026-10-29",
-  "since": 4,
+  "last": "2026-11-01",
+  "since": 2,
   "basis": "발사한 날 228일(2006~2025) 각각의 다음 발사까지 간격"
  },
  "signal_check": {

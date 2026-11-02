@@ -138,38 +138,22 @@
   "world": [
     {
       "title": "우크라이나 공습경보 앱 해킹, 러시아 앱도 피해",
-      "summary": "우크라이나 공군은 공습경보 앱이 해킹돼 가짜 방사능 위협 알림이 갔다고 밝혔고, 몇 시간 뒤 러시아 당국도 자국 앱이 해킹됐다고 밝혔다.",
-      "link_korea": "민방위·경보 체계 대상 사이버 공격은 한국 정부 경보 체계 점검 사례로 참고된다.",
+      "summary": "우크라이나 공군은 공습경보 앱이 해킹돼 허위 방사능 경보가 발송됐다고 밝혔고 러시아 당국도 자국 앱이 해킹돼 가짜 경보가 나갔다고 밝혔다.",
+      "link_korea": "민방위 경보 체계를 노린 사이버 공격 사례로 한국 경보 체계 점검에 참고가 된다.",
       "region": "우크라이나·러시아",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
-    },
-    {
-      "title": "헤르손 인도적 휴전 종료, 러시아 공습으로 정전",
-      "summary": "올레시키 민간인 대피를 위한 휴전이 끝나고 러시아 공습으로 우크라이나 수천 가구가 전력을 잃었다.",
-      "link_korea": "러시아 전쟁 지속은 북러 군사협력과 북한군 파병 논의의 배경이다.",
-      "region": "우크라이나",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "중국 정치 회의에서 숙청 최다, 시진핑 당 규율 강조",
-      "summary": "중국 정치 회의에서 역대 최다 숙청이 있었고 시진핑 주석은 당 규율을 강조했다.",
-      "link_korea": "중국 군·당 지도부 동향은 북중 관계와 한반도 정책의 변수다.",
-      "region": "중국",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cq5ynw94k7kzo",
-        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
-      }
     }
   ],
-  "world_context": "우크라이나 전쟁 사이버전과 중국 지도부 동향, 북한발 가상자산 탈취가 한반도 안보 환경과 맞닿아 있다.",
-  "world_at": "2026-11-02T04:12:49+00:00"
+  "world_context": "전쟁 당사국 민방위 경보 체계에 대한 사이버 공격이 이어지고 있다.",
+  "world_at": "2026-11-02T05:11:07+00:00",
+  "held": {
+    "raw_grade": 0,
+    "raw_label": "평시",
+    "at": "2026-11-02T05:11:07+00:00",
+    "summary": "새로 확인된 징후는 없다. 집속탄두 시험과 바이낸스 해킹 귀속은 24시간이 지나 배경으로 내렸고 접경·병력·정부 경고 항목은 평시 수준이다."
+  }
 }

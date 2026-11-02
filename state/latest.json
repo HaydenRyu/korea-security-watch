@@ -1,73 +1,80 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr.py 국내 언론 수집(border 묶음)",
-      "North Korea troops Russia"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement DMZ"
     ],
     "nuclear": [
-      "North Korea troops Russia",
-      "North Korea cluster warhead test",
-      "news_kr.py fire 묶음"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear Yongbyon 38 North",
+      "North Korea cluster warhead test KCNA Joint Chiefs of Staff"
     ],
     "logistics": [
-      "news_kr.py 국내 언론 수집",
-      "North Korea troops Russia"
+      "북한 군수 수송 탄약 비축",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "지뢰 발견 해안",
-      "DMZ NLL 귀순",
-      "news_kr.py border·mine 묶음"
+      "DMZ 지뢰 폭발 북한 군 11월",
+      "목함지뢰 해안 발견",
+      "NLL 귀순 월선",
+      "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "North Korea attributed FBI hack"
+      "사이버 공격",
+      "바이낸스 해킹 북한 FBI 공식 확인",
+      "North Korea FBI Binance attributed Lazarus"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러 11월 / Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축",
+      "North Korea Russia troops"
     ],
     "parade_massing": [
-      "news_kr.py 국내 언론 수집",
-      "NK News 최근 글"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "news_kr.py 국내 언론 수집",
-      "NK News 최근 글"
+      "북한 준전시 등화관제 노농적위군",
+      "North Korea wartime mobilization"
     ],
     "gov_warning": [
-      "news_kr.py alert 묶음",
-      "BBC World"
+      "진돗개 발령 데프콘 상향",
+      "합참 발표 북한 11월 2일",
+      "North Korea Reuters November 2 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hack",
-      "FBI Binance North Korea"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "FBI TraderTraitor Binance North Korea statement October 31",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 확성기 중단"
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
+    ],
+    "incidents": [
+      "실탄 발견 해안",
+      "총기 발견 군 감식"
     ],
     "linkage:taiwan": [
       "PLA drills around Taiwan"
     ],
     "linkage:korea": [
-      "North Korea troops Russia"
-    ],
-    "incidents": [
-      "news_kr.py 국내 언론 수집"
+      "북러 군사협력"
     ]
   },
   "opened": [
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008825430",
-    "https://www.segye.com/newsView/20261101509205",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008825497",
+    "https://www.nbcnews.com/business/business-news/fbi-says-north-korea-was-6-billion-binance-crypto-hack-rcna606758",
     "https://www.segye.com/newsView/20261101509199",
-    "https://www.yna.co.kr/view/AKR20261101011900504",
-    "https://www.nknews.org/",
-    "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "북한이 10/31 집속탄두 위력평가시험을 11/1 보도했으나 정례 시험·위협 성격이며 직전과 같은 수준이다. FBI의 바이낸스 해킹 북한 귀속은 첫 보도 후 24시간이 지나 배경으로 둔다.",
+  "overall_summary": "미 FBI가 10/31 바이낸스 63억 달러 해킹을 북한 TraderTraitor 소행으로 공식 귀속했으나 이는 수사 결과 발표로 정례 성격이며 군사 징후는 없다. 전날 집속탄두 위력시험 주장은 북한 주장 단계의 시험이고 병력·접경 신규 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,41 +82,55 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "평안북도 정주",
-      "lat": 39.6,
-      "lon": 125.2,
-      "summary": "조선중앙통신이 10/31 전술탄도미사일 집속탄두 위력평가시험을 11/1 보도했고 세계일보가 이를 전했다(북한 주장, 합참은 정주 일대 서해상 발사 포착).",
-      "meaning": "수도권·공군기지 타격용 집속탄두의 전력화 예고지만 시험 발사 성격이라 정례로 본다.",
+      "summary": "조선중앙통신이 전술탄도미사일 집속탄두 위력평가시험(13ha 초토화 주장)을 11/1 보도했고 NK News가 전했다(북한 주장).",
+      "meaning": "전술핵 운반체계 탄두 다종화 시도로 시험 성격이며 실전 배치 근거는 없다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "NK News",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261101509205"
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "미사일총국이 10/31 표준2형 산포전투부 시험을 실시했다고 조선중앙통신이 보도",
-        "합참은 정주 일대에서 서해상으로 발사한 미사일을 포착했다고 밝힘(세계일보 인용)"
+        "NK News 11/1 기사: 연말까지 군사 운용 계획, 12~13ha 파괴 주장"
       ],
-      "speculation": [
-        "화성포-11라형 추정은 언론 분석"
-      ]
+      "speculation": []
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
       "status": "none",
-      "summary": "DMZ 지뢰 폭발 건은 10월 말 사건의 외교·후속 보도(G20 설명)이고 24시간 안의 새 발견이 없어 배경이다."
+      "summary": "신규 접경 사건 보도 없음(9월 DMZ 지뢰 폭발 조사는 배경)."
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "북한 귀속 바이낸스 해킹은 hybrid_ops 배경으로 두고, 국내 GPS 교란·신규 귀속 사고 원문은 이번 회차 24시간 안에 확인하지 못했다."
+      "status": "corroborated",
+      "routine": true,
+      "attribution": "nk",
+      "summary": "FBI가 10/31 약 63억 달러 바이낸스 해킹을 북한 TraderTraitor 소행으로 공식 확인했고 SBS·NBC가 전했다.",
+      "meaning": "북한의 가상자산 탈취가 역대 최대 규모로 확인되어 제재·자금 조달 맥락이나 군사 도발 직접 징후는 아니다.",
+      "sources": [
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008825430"
+        },
+        {
+          "name": "NBC News(Reuters)",
+          "tier": "B",
+          "url": "https://www.nbcnews.com/business/business-news/fbi-says-north-korea-was-6-billion-binance-crypto-hack-rcna606758"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "FBI 10/31 성명: 탈취자산을 이더리움으로 전환하는 정황, 추가 세탁 예상",
+        "바이낸스 90% 보전 발표"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "신규 방중·방러·파병 보도 없음 — 김정은 방중(10/24)과 북러 협력은 반복 보도로 배경."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -122,10 +143,32 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "summary": "24시간 경과 — FBI 바이낸스 해킹 북한 책임 발표 첫 보도 10/31 22시(UTC)경이며 A 등급 원문은 열지 못해 배경(world)으로 둔다."
+      "routine": true,
+      "attribution": "nk",
+      "category": "가상자산",
+      "summary": "귀속 미확정 — FBI가 바이낸스 63억 달러 탈취를 북한 국가 후원 조직 소행으로 공식 귀속했다.",
+      "meaning": "수사기관 귀속 발표로 배경 성격이며 진행 중 군사 작전 근거는 아니다.",
+      "sources": [
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008825497"
+        },
+        {
+          "name": "NBC News(Reuters)",
+          "tier": "B",
+          "url": "https://www.nbcnews.com/business/business-news/fbi-says-north-korea-was-6-billion-binance-crypto-hack-rcna606758"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "발표 주체 FBI, 일자 10/31"
+      ],
+      "speculation": [],
+      "attribution_dropped": "A 등급 기관의 귀속 발표 없음"
     }
   },
-  "checked_at": "2026-11-02T00:12:30+00:00",
+  "checked_at": "2026-11-02T01:11:15+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

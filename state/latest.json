@@ -1,17 +1,17 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 11월 2일",
+      "북한 지뢰 발견 DMZ 귀순 합참",
       "목함지뢰 해안"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit November 2026",
-      "김정은 방중",
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit North Korea Reuters",
       "서해 구조물 주한미군 감축"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 11월 2일"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "troop_movement": [
       "북한 병력 이동 전방 증강"
@@ -45,9 +45,11 @@
     "https://www.nknews.org/2026/11/north-korea-slams-us-rok-drills-accusing-allies-of-rehearsing-nuclear-use/",
     "https://www.yna.co.kr/view/AKR20261103006200091",
     "https://www.yna.co.kr/view/AKR20261102078400504",
-    "https://www.segye.com/newsView/20261102516067"
+    "https://www.segye.com/newsView/20261102516067",
+    "https://kookbang.dema.mil.kr/newsWeb/20261103/10/ATCE_CTGR_0010010000/view.do",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "24시간 안에 새로 확인된 군사 징후는 없다. 10/31 집속탄두 시험과 한미연습 비난은 배경이며, 북한 연계 바이낸스 자금 세탁 단계 진입만 정례 사이버 동향으로 기록한다.",
+  "overall_summary": "직전 회차 이후 24시간 안에 새로 확인된 군사 징후는 없다. 10/31 집속탄두 시험과 한미연습 비난은 배경이며, 북한 연계 바이낸스 자금 2차 세탁만 정례 사이버 동향으로 기록한다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -98,7 +100,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-02T20:12:09+00:00",
+  "checked_at": "2026-11-02T21:11:35+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -138,5 +140,5 @@
     }
   ],
   "world_context": "사이버 공격과 북한의 무기 시험이 겹친 한 주였다.",
-  "world_at": "2026-11-02T13:38:33+00:00"
+  "world_at": "2026-11-02T21:11:35+00:00"
 }

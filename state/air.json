@@ -1,53 +1,10 @@
 {
- "at": "2026-11-02T11:11:30+00:00",
- "south": 81,
- "area": 104,
- "baseline": 76,
- "ratio": 1.07,
- "samples": 7,
- "mil": [
-  {
-   "type": "GLEX",
-   "name": "정찰용 비즈니스젯 가능",
-   "call": "",
-   "lat": 34.89,
-   "lon": 126.84
-  },
-  {
-   "type": "BE20",
-   "name": null,
-   "call": "CATS42",
-   "lat": 36.34,
-   "lon": 126.95
-  },
-  {
-   "type": "H47",
-   "name": null,
-   "call": "KEEP01",
-   "lat": 36.89,
-   "lon": 126.98
-  },
-  {
-   "type": "H64",
-   "name": null,
-   "call": "MERCS24",
-   "lat": 36.94,
-   "lon": 127.03
-  },
-  {
-   "type": "H64",
-   "name": null,
-   "call": "MERCS40",
-   "lat": 36.94,
-   "lon": 127.05
-  },
-  {
-   "type": "H60",
-   "name": null,
-   "call": "CARD30",
-   "lat": 37.45,
-   "lon": 127.11
-  }
- ],
+ "at": "2026-11-02T12:25:43+00:00",
+ "south": 77,
+ "area": 94,
+ "baseline": 70.0,
+ "ratio": 1.1,
+ "samples": 6,
+ "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

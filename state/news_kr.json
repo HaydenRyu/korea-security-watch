@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-02T18:28:23+00:00",
+ "fetched_at": "2026-11-02T19:44:59+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-02T14:47:49+00:00",
@@ -8,13 +8,13 @@
   "feeds": 15,
   "feeds_failed": 1,
   "fetched": 1096,
-  "hits": 41,
-  "clusters": 35,
+  "hits": 42,
+  "clusters": 36,
   "by_group": {
-   "drone_balloon": 8,
-   "fire": 12,
-   "gps": 7,
-   "hybrid": 4,
+   "drone_balloon": 10,
+   "fire": 10,
+   "gps": 9,
+   "hybrid": 3,
    "mine": 3,
    "summit": 2,
    "border": 3,
@@ -41,7 +41,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 7
+   "hits": 12
   },
   "국민일보": {
    "feeds": 2,
@@ -65,22 +65,22 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "drone_balloon": {
-   "clusters": 8,
+   "clusters": 10,
    "max_independent": 2,
-   "latest": "2026-11-02T18:28:23+00:00"
+   "latest": "2026-11-02T19:44:59+00:00"
   },
   "fire": {
-   "clusters": 12,
+   "clusters": 10,
    "max_independent": 2,
-   "latest": "2026-11-02T18:28:23+00:00"
+   "latest": "2026-11-02T19:44:59+00:00"
   },
   "gps": {
-   "clusters": 7,
+   "clusters": 9,
    "max_independent": 1,
-   "latest": "2026-11-02T15:46:58+00:00"
+   "latest": "2026-11-02T19:30:00+00:00"
   },
   "hybrid": {
-   "clusters": 4,
+   "clusters": 3,
    "max_independent": 1,
    "latest": "2026-11-02T15:46:58+00:00"
   },
@@ -191,7 +191,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 7
+   "hits": 8
   },
   {
    "outlet": "동아일보",
@@ -199,7 +199,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 0
+   "hits": 4
   },
   {
    "outlet": "국민일보",

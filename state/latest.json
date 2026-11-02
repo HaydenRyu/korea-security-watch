@@ -1,67 +1,44 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup border"
-    ],
-    "nuclear": [
-      "북한 핵실험 풍계리 영변",
-      "North Korea nuclear Yongbyon"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순",
-      "North Korea DMZ mine defect"
-    ],
-    "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hack attributed"
+      "북한 지뢰 발견 DMZ 귀순 11월 2일"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "Kim Jong Un China Russia visit North Korea Reuters"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 (news_kr 수집)"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "북한 핵실험 풍계리 영변 North Korea nuclear Yongbyon"
+    ],
+    "logistics": [
+      "(news_kr 수집 결과 확인, 군수 보도 없음)"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
+      "(news_kr 수집 결과 확인, 열병식 집결 보도 없음)"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea martial wartime state"
+      "진돗개 발령 데프콘 북한 준전시 등화관제 국가보안법 구속 간첩 혐의"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning evacuation"
+      "진돗개 발령 데프콘 북한 준전시 등화관제 국가보안법 구속 간첩 혐의"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "확성기 방송 중단"
-    ],
-    "incidents": [
-      "실탄 발견 해안"
+      "진돗개 발령 데프콘 북한 준전시 등화관제 국가보안법 구속 간첩 혐의"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261102138300005",
     "https://www.yna.co.kr/view/AKR20261102150800083",
-    "https://www.yna.co.kr/view/AKR20261102078400504",
     "https://www.yna.co.kr/view/AKR20261103003600071",
-    "https://www.yna.co.kr/view/AKR20261102153651504",
+    "https://www.yna.co.kr/view/AKR20261102078400504",
+    "https://www.yna.co.kr/view/AKR20261102138300005",
     "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://www.segye.com/newsView/20261102516067",
     "https://www.nknews.org/feed/",
-    "https://www.nknews.org/2026/11/north-korea-slams-us-rok-drills-accusing-allies-of-rehearsing-nuclear-use/",
-    "https://www.nknews.org/2026/11/north-korean-cluster-warheads-could-threaten-targets-as-far-as-busan-experts/",
-    "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+    "https://www.nknews.org/2026/11/north-korea-slams-us-rok-drills-accusing-allies-of-rehearsing-nuclear-use/"
   ],
   "overall_summary": "24시간 안에 새로 확인된 안보 징후는 없다. 10/31 집속탄두 시험과 북한의 한미훈련 비난은 배경이며, 하이브 해킹은 귀속 미확인이다.",
   "items": {
@@ -76,7 +53,22 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "10/31 집속탄두 시험은 첫 보도 후 24시간 경과로 배경이며 이번 회차 새 지뢰·월선·접경 충돌 보도는 없다."
+      "summary": "10/31 집속탄두 시험은 24시간 경과로 배경이며 이번 회차 새 지뢰·월선·접경 충돌 보도는 없다."
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
@@ -99,24 +91,9 @@
         "하이브가 10/18 홈페이지에 유출을 공지했고 11/2 언론이 보도했다"
       ],
       "speculation": []
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-02T17:53:56+00:00",
+  "checked_at": "2026-11-02T18:13:51+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

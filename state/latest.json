@@ -13,17 +13,16 @@
       "North Korea munitions Russia"
     ],
     "border_clash": [
-      "북한 목함지뢰 발견 DMZ NLL 귀순 11월 2일",
+      "지뢰 발견 DMZ 귀순 11월 2일",
       "North Korea DMZ NLL defector landmine"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 11월",
       "FBI North Korea Binance hack attribution"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "North Korea Reuters Kim Jong Un China Russia visit November 2026",
+      "김정은 방중 방러 Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -40,7 +39,7 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
       "남북 대화 제안",
@@ -51,16 +50,12 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261102078400504",
-    "https://www.yna.co.kr/view/AKR20261101011900504",
-    "https://www.yna.co.kr/view/AKR20261101016700504",
-    "https://www.yna.co.kr/view/AKR20261101005652504",
     "https://www.segye.com/newsView/20261102508552",
     "https://www.nknews.org/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008825661",
-    "https://www.yna.co.kr/view/AKR20261102098600056"
+    "https://www.yna.co.kr/view/AKR20261101016700504",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008825661"
   ],
-  "overall_summary": "새로 확인된 징후는 없다. 집속탄두 시험·바이낸스 해킹은 배경이며 김여정이 예고한 10월 확성기 가동은 확인되지 않았다.",
+  "overall_summary": "새로 확인된 징후는 없다. 집속탄두 시험·바이낸스 해킹 귀속은 배경이며 국방드론본부 창설은 정례 조직 개편이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -96,7 +91,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-02T06:19:01+00:00",
+  "checked_at": "2026-11-02T07:25:47+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": [],

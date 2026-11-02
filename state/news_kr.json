@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-02T19:44:59+00:00",
+ "fetched_at": "2026-11-02T20:13:00+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-02T14:47:49+00:00",
@@ -7,7 +7,7 @@
  "counts": {
   "feeds": 15,
   "feeds_failed": 1,
-  "fetched": 1096,
+  "fetched": 1097,
   "hits": 42,
   "clusters": 36,
   "by_group": {
@@ -28,7 +28,7 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 596,
+   "count": 597,
    "hits": 54
   },
   "SBS": {
@@ -67,12 +67,12 @@
   "drone_balloon": {
    "clusters": 10,
    "max_independent": 2,
-   "latest": "2026-11-02T19:44:59+00:00"
+   "latest": "2026-11-02T20:13:00+00:00"
   },
   "fire": {
    "clusters": 10,
    "max_independent": 2,
-   "latest": "2026-11-02T19:44:59+00:00"
+   "latest": "2026-11-02T20:13:00+00:00"
   },
   "gps": {
    "clusters": 9,
@@ -126,7 +126,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 116,
+   "count": 117,
    "hits": 44
   },
   {

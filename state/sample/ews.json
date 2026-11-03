@@ -1,0 +1,405 @@
+{
+  "_doc": "예시 데이터 — ?sample=1&ews=ok|withheld|stale|error. 실제 상황 아님.",
+  "ok": {
+    "version": 1,
+    "computed_at": "2026-10-18T05:07:00+00:00",
+    "weights_version": 1,
+    "status": "ok",
+    "ews": 50,
+    "band": "경계 징후",
+    "d": 15,
+    "e": 22,
+    "alpha": 1.0,
+    "grade": 2,
+    "grade_label": "경계",
+    "floored": true,
+    "coverage": {
+      "observed_theaters": 4,
+      "linkage_judged_at": "2026-10-18T05:07:00+00:00",
+      "latest_updated_at": "2026-10-18T05:07:00+00:00"
+    },
+    "theaters": [
+      {
+        "key": "taiwan",
+        "observed": true,
+        "state": 2,
+        "contribution": 11,
+        "channels": [
+          "c1_us_gap",
+          "c3_simul"
+        ],
+        "summary": "예시: 대만 주변 합동훈련 발표",
+        "sources": [
+          {
+            "name": "예시 매체 1",
+            "tier": "B",
+            "url": "https://example.com/sample-1",
+            "published_at": "2026-10-18T01:00:00+00:00"
+          }
+        ]
+      },
+      {
+        "key": "ukraine",
+        "observed": true,
+        "state": 3,
+        "contribution": 8,
+        "channels": [
+          "c2_nk_ru_cn"
+        ],
+        "summary": "예시: 전투 지속 · 북러 군사협력 보도",
+        "sources": [
+          {
+            "name": "예시 매체 2",
+            "tier": "B",
+            "url": "https://example.com/sample-2",
+            "published_at": "2026-10-18T01:00:00+00:00"
+          }
+        ]
+      },
+      {
+        "key": "scs_ecs",
+        "observed": true,
+        "state": 1,
+        "contribution": 3,
+        "channels": [
+          "c4_sea_energy"
+        ],
+        "summary": "예시: 해상 대치 보도",
+        "sources": [
+          {
+            "name": "예시 매체 3",
+            "tier": "B",
+            "url": "https://example.com/sample-3",
+            "published_at": "2026-10-18T01:00:00+00:00"
+          }
+        ]
+      },
+      {
+        "key": "mideast",
+        "observed": true,
+        "state": 0,
+        "contribution": 0,
+        "channels": [],
+        "summary": "예시: 특이 사항 없음",
+        "sources": [
+          {
+            "name": "예시 매체 4",
+            "tier": "B",
+            "url": "https://example.com/sample-4",
+            "published_at": "2026-10-18T01:00:00+00:00"
+          }
+        ]
+      },
+      {
+        "key": "us_posture",
+        "observed": false,
+        "state": null,
+        "contribution": 0,
+        "channels": [],
+        "summary": "",
+        "sources": []
+      }
+    ],
+    "channels": [
+      {
+        "key": "c1_us_gap",
+        "observed": true,
+        "value": 6
+      },
+      {
+        "key": "c2_nk_ru_cn",
+        "observed": true,
+        "value": 8
+      },
+      {
+        "key": "c3_simul",
+        "observed": true,
+        "value": 6
+      },
+      {
+        "key": "c4_sea_energy",
+        "observed": true,
+        "value": 3
+      },
+      {
+        "key": "c5_diplomacy",
+        "observed": false,
+        "value": 0
+      }
+    ],
+    "last_good": {
+      "ews": 50,
+      "band": "경계 징후",
+      "computed_at": "2026-10-18T05:07:00+00:00"
+    }
+  },
+  "withheld": {
+    "version": 1,
+    "computed_at": "2026-10-18T05:07:00+00:00",
+    "weights_version": 1,
+    "status": "ok",
+    "ews": 50,
+    "band": "경계 징후",
+    "d": 15,
+    "e": null,
+    "alpha": 1.0,
+    "grade": 2,
+    "grade_label": "경계",
+    "floored": true,
+    "coverage": {
+      "observed_theaters": 2,
+      "linkage_judged_at": "2026-10-18T05:07:00+00:00",
+      "latest_updated_at": "2026-10-18T05:07:00+00:00"
+    },
+    "theaters": [
+      {
+        "key": "taiwan",
+        "observed": true,
+        "state": 2,
+        "contribution": null,
+        "channels": [
+          "c1_us_gap",
+          "c3_simul"
+        ],
+        "summary": "예시: 대만 주변 합동훈련 발표",
+        "sources": [
+          {
+            "name": "예시 매체 1",
+            "tier": "B",
+            "url": "https://example.com/sample-1",
+            "published_at": "2026-10-18T01:00:00+00:00"
+          }
+        ]
+      },
+      {
+        "key": "ukraine",
+        "observed": true,
+        "state": 3,
+        "contribution": null,
+        "channels": [
+          "c2_nk_ru_cn"
+        ],
+        "summary": "예시: 전투 지속 · 북러 군사협력 보도",
+        "sources": [
+          {
+            "name": "예시 매체 2",
+            "tier": "B",
+            "url": "https://example.com/sample-2",
+            "published_at": "2026-10-18T01:00:00+00:00"
+          }
+        ]
+      },
+      {
+        "key": "scs_ecs",
+        "observed": false,
+        "state": null,
+        "contribution": null,
+        "channels": [],
+        "summary": "",
+        "sources": []
+      },
+      {
+        "key": "mideast",
+        "observed": false,
+        "state": null,
+        "contribution": null,
+        "channels": [],
+        "summary": "",
+        "sources": []
+      },
+      {
+        "key": "us_posture",
+        "observed": false,
+        "state": null,
+        "contribution": null,
+        "channels": [],
+        "summary": "",
+        "sources": []
+      }
+    ],
+    "channels": [
+      {
+        "key": "c1_us_gap",
+        "observed": true,
+        "value": null
+      },
+      {
+        "key": "c2_nk_ru_cn",
+        "observed": true,
+        "value": null
+      },
+      {
+        "key": "c3_simul",
+        "observed": true,
+        "value": null
+      },
+      {
+        "key": "c4_sea_energy",
+        "observed": false,
+        "value": null
+      },
+      {
+        "key": "c5_diplomacy",
+        "observed": false,
+        "value": null
+      }
+    ],
+    "last_good": {
+      "ews": 50,
+      "band": "경계 징후",
+      "computed_at": "2026-10-18T05:07:00+00:00"
+    }
+  },
+  "stale": {
+    "version": 1,
+    "computed_at": "2026-10-18T05:07:00+00:00",
+    "weights_version": 1,
+    "status": "withheld",
+    "ews": null,
+    "band": null,
+    "d": 15,
+    "e": 22,
+    "alpha": 1.0,
+    "grade": 2,
+    "grade_label": "경계",
+    "floored": false,
+    "coverage": {
+      "observed_theaters": 4,
+      "linkage_judged_at": "2026-10-18T05:07:00+00:00",
+      "latest_updated_at": "2026-10-15T05:07:00+00:00"
+    },
+    "theaters": [
+      {
+        "key": "taiwan",
+        "observed": true,
+        "state": 2,
+        "contribution": 11,
+        "channels": [
+          "c1_us_gap",
+          "c3_simul"
+        ],
+        "summary": "예시: 대만 주변 합동훈련 발표",
+        "sources": [
+          {
+            "name": "예시 매체 1",
+            "tier": "B",
+            "url": "https://example.com/sample-1",
+            "published_at": "2026-10-18T01:00:00+00:00"
+          }
+        ]
+      },
+      {
+        "key": "ukraine",
+        "observed": true,
+        "state": 3,
+        "contribution": 8,
+        "channels": [
+          "c2_nk_ru_cn"
+        ],
+        "summary": "예시: 전투 지속 · 북러 군사협력 보도",
+        "sources": [
+          {
+            "name": "예시 매체 2",
+            "tier": "B",
+            "url": "https://example.com/sample-2",
+            "published_at": "2026-10-18T01:00:00+00:00"
+          }
+        ]
+      },
+      {
+        "key": "scs_ecs",
+        "observed": true,
+        "state": 1,
+        "contribution": 3,
+        "channels": [
+          "c4_sea_energy"
+        ],
+        "summary": "예시: 해상 대치 보도",
+        "sources": [
+          {
+            "name": "예시 매체 3",
+            "tier": "B",
+            "url": "https://example.com/sample-3",
+            "published_at": "2026-10-18T01:00:00+00:00"
+          }
+        ]
+      },
+      {
+        "key": "mideast",
+        "observed": true,
+        "state": 0,
+        "contribution": 0,
+        "channels": [],
+        "summary": "예시: 특이 사항 없음",
+        "sources": [
+          {
+            "name": "예시 매체 4",
+            "tier": "B",
+            "url": "https://example.com/sample-4",
+            "published_at": "2026-10-18T01:00:00+00:00"
+          }
+        ]
+      },
+      {
+        "key": "us_posture",
+        "observed": false,
+        "state": null,
+        "contribution": 0,
+        "channels": [],
+        "summary": "",
+        "sources": []
+      }
+    ],
+    "channels": [
+      {
+        "key": "c1_us_gap",
+        "observed": true,
+        "value": 6
+      },
+      {
+        "key": "c2_nk_ru_cn",
+        "observed": true,
+        "value": 8
+      },
+      {
+        "key": "c3_simul",
+        "observed": true,
+        "value": 6
+      },
+      {
+        "key": "c4_sea_energy",
+        "observed": true,
+        "value": 3
+      },
+      {
+        "key": "c5_diplomacy",
+        "observed": false,
+        "value": 0
+      }
+    ],
+    "last_good": {
+      "ews": 22,
+      "band": "안정",
+      "computed_at": "2026-10-18T03:07:00+00:00"
+    }
+  },
+  "error": {
+    "version": 1,
+    "computed_at": "2026-10-18T05:07:00+00:00",
+    "weights_version": 1,
+    "status": "error",
+    "ews": null,
+    "band": null,
+    "d": null,
+    "e": null,
+    "coverage": null,
+    "theaters": [],
+    "channels": [],
+    "last_good": {
+      "ews": 22,
+      "band": "안정",
+      "computed_at": "2026-10-18T03:07:00+00:00"
+    },
+    "error": "KeyError: 'nuclear' (예시 오류 원문)"
+  }
+}

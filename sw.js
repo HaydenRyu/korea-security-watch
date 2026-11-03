@@ -26,7 +26,7 @@
 // 상황판 「알림 받기」로 구독한 방문자에게 Worker(jis-cctv /push/send)가 보낸 등급 알림을 띄운다.
 // 무엇을 언제 보내는지는 scripts/diff_state.py 의 outbox.public — 주의 이상 진입·새 징후·평시 복귀.
 
-const VERSION = "jis-2026-10-19a";
+const VERSION = "jis-2026-11-03a";
 const NET_TIMEOUT_MS = 4000;
 
 const PRECACHE = [

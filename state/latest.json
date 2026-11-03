@@ -1,59 +1,64 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup border"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear test site Yongbyon"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
     "border_clash": [
-      "북한 지뢰 DMZ 합참 11월 3일",
-      "DMZ 귀순 NLL",
-      "목함지뢰 해안"
+      "지뢰 발견 목함지뢰 해안",
+      "NLL 귀순",
+      "North Korea Reuters cluster warhead cruise missile"
+    ],
+    "electronic_cyber": [
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "주한미군 감축"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea Binance hack attributed"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송"
+      "Kim Jong Un China Russia visit November 2026",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea wartime alert civil defense"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 발령 데프콘",
+      "JCS alert DEFCON Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "간첩 혐의 국가보안법 구속",
       "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안",
-      "통신선 복원"
+      "North Korea talks offer"
     ],
     "incidents": [
-      "실탄 발견 해안"
+      "실탄 발견 해안",
+      "총기 발견 군 감식"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261103517017",
-    "https://www.koreaherald.com/article/10923504",
     "https://www.segye.com/newsView/20261103519482",
     "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.yna.co.kr/view/AKR20261103013851504"
   ],
-  "overall_summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 3일 발표했으나 10/31 탄도미사일 집속탄두 시험에 이은 시험 발표로 직전과 같은 수준이다. 김성남 국제비서 방중은 외교 일정이고 직전 회차 이후 새로 확인된 징후는 없다.",
+  "overall_summary": "북한이 10/31·11/2 집속탄두 시험을 관영매체로 발표했고 김성남 국제비서가 방중했으나 모두 정례·외교 범주다. 새 군사적 이상 징후는 없고 직전 회차와 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,11 +72,9 @@
     "border_clash": {
       "status": "corroborated",
       "routine": true,
-      "region": "북한 미사일총국",
-      "lat": 39.0,
-      "lon": 125.75,
-      "summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 조선중앙통신이 3일 발표했고 세계일보·코리아헤럴드가 보도했다(시험 발표).",
-      "meaning": "남측 방어망 압박용 무기 시험이며 표적이 남측 시설이라는 근거는 없다.",
+      "region": "북한 서해상",
+      "summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 조선중앙통신이 3일 발표했고 세계일보·연합뉴스가 보도했다(시험 발표).",
+      "meaning": "탄두 성능 과시 시험으로 즉각적 군사행동 징후는 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -79,14 +82,15 @@
           "url": "https://www.segye.com/newsView/20261103517017"
         },
         {
-          "name": "코리아헤럴드",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.koreaherald.com/article/10923504"
+          "url": "https://www.yna.co.kr/view/AKR20261103013851504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신이 미사일총국의 산포전투부 위력평가·수직타격비행특성시험을 발표"
+        "조선중앙통신이 미사일총국의 10/31 탄도미사일, 11/2 순항미사일 집속탄두 시험을 3일 발표",
+        "합참은 도발 시 압도적 대응 능력·태세 유지라고 밝힘"
       ],
       "speculation": []
     },
@@ -113,11 +117,9 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "베이징",
-      "lat": 39.9,
-      "lon": 116.4,
+      "region": "중국 베이징",
       "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징에 도착했다고 세계일보가 교도통신 인용 보도했다(외교 일정, 군사협정 언급 없음).",
-      "meaning": "북중 고위급 교류 일정이며 군사협력 발표는 없다.",
+      "meaning": "10/24 김정은 단둥 방문 이후 당 차원 교류로 군사협력 징후는 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -127,7 +129,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "교도통신이 외교 소식통을 인용해 보도"
+        "기사에 군사협력 언급 없음"
       ],
       "speculation": []
     },
@@ -138,13 +140,14 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none"
+      "status": "none",
+      "summary": "합참의장이 9/21 DMZ 지뢰 부상 장병을 위문했을 뿐 신규 경보는 없다."
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T16:11:41+00:00",
+  "checked_at": "2026-11-03T17:10:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

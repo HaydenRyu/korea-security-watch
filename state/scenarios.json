@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-03T20:11:25+00:00",
+  "updated_at": "2026-11-03T22:13:05+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -12,8 +12,8 @@
         {
           "id": "dialogue_offer",
           "label": "남북·북미 대화 제안·수용",
-          "state": "on",
-          "note": "마코 루비오 미 국무장관이 트럼프 대통령이 김정은과 대화할 준비가 돼 있으나 아직 회담 일정은 없다고 밝혔다."
+          "state": "off",
+          "note": ""
         },
         {
           "id": "channel_restored",
@@ -37,10 +37,10 @@
           "id": "no_launch_30",
           "label": "30일간 발사 없음",
           "state": "off",
-          "note": "마지막 발사 11/01"
+          "note": "마지막 발사 11/02"
         }
       ],
-      "on": 1,
+      "on": 0,
       "known": 5
     },
     {
@@ -53,7 +53,7 @@
           "id": "tempo_up",
           "label": "최근 30일 발사가 평소 이상",
           "state": "on",
-          "note": "평소의 3.6배"
+          "note": "평소의 4.3배"
         },
         {
           "id": "signal",
@@ -184,20 +184,8 @@
       "known": 16
     }
   ],
-  "calm": {
-    "dialogue_offer": {
-      "summary": "마코 루비오 미 국무장관이 트럼프 대통령이 김정은과 대화할 준비가 돼 있으나 아직 회담 일정은 없다고 밝혔다.",
-      "sources": [
-        {
-          "url": "https://www.yna.co.kr/view/AKR20261101001700071",
-          "publisher": "연합뉴스"
-        }
-      ],
-      "first_seen": "2026-10-23T05:10:46+00:00",
-      "last_seen": "2026-10-31T21:10:55+00:00"
-    }
-  },
-  "calm_judged_at": "2026-11-03T20:11:25+00:00",
+  "calm": {},
+  "calm_judged_at": "2026-11-03T22:13:05+00:00",
   "history": [
     {
       "date": "2026-10-22",
@@ -320,7 +308,7 @@
       "date": "2026-11-04",
       "tilt": "hold",
       "on": {
-        "calm": 1,
+        "calm": 0,
         "hold": 4,
         "esc": 0
       }

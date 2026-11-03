@@ -1,52 +1,49 @@
 {
   "coverage": {
     "troop_movement": [
-      "국내 언론 수집 news_kr(병력·전방 묶음)",
-      "North Korea troops border Reuters"
+      "북한 병력 이동 전방 증강 11월 3일"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "북한 집속탄두 순항미사일 시험 합참",
+      "North Korea nuclear Yongbyon Punggye-ri satellite imagery November 2026"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 탄약 연료 비축 군수 수송 동향"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 월선 경고사격",
-      "NLL 귀순",
-      "북한 집속탄두 시험"
+      "DMZ 지뢰 발견 합참 11월",
+      "news_kr 수집(지뢰·DMZ 묶음)"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "바이낸스 해킹 북한"
+      "북한 GPS 교란 서북도서",
+      "해킹 개인정보 유출 사이버 공격 11월 3일"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "Kim Jong Un China Russia visit November 2026",
+      "news_kr 수집(summit 묶음)"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 준비 집결 평양 주민 대피 등화관제"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea martial state"
+      "북한 열병식 준비 집결 평양 주민 대피 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령",
-      "합참 북한 발사 공지"
+      "진돗개 발령 데프콘 상향 합참 북한 노동신문 전시 준비"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+    ],
+    "calm": [
+      "news_kr 수집(summit 묶음)"
     ]
   },
+  "opened": [
+    "https://www.segye.com/newsView/20261103517017",
+    "https://www.segye.com/newsView/20261103519482",
+    "https://www.bbc.co.uk/news/world"
+  ],
+  "overall_summary": "북한이 10/31·11/2 집속탄두 시험을 3일 발표했고 김성남 국제비서가 베이징을 방문 중이다. 모두 시험·외교 일정이라 정례 범위로, 직전 회차와 큰 변화는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,60 +55,35 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
-      "region": "북한 서해상",
-      "lat": 39.0,
-      "lon": 125.7,
-      "summary": "조선중앙통신이 11/2 순항미사일 집속탄두·수직타격 시험을 3일 발표했고 세계일보·연합뉴스가 보도했다(시험 발표).",
-      "meaning": "탄두 성능 과시 시험으로 즉각적 군사행동 징후는 아니다.",
+      "region": "북한 (미사일총국)",
+      "summary": "조선중앙통신이 11/2 순항미사일 집속탄두·수직타격 시험을 3일 발표했고 세계일보가 보도했다(시험 발표, 연합 보도는 열람하지 않음).",
+      "meaning": "신형 타격수단 시험 과시로 위협 발언·시험 범주다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261103517017"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103013851504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신이 미사일총국의 10/31 탄도미사일, 11/2 순항미사일 집속탄두 시험을 3일 발표",
-        "합참의장은 3일 육군 헬기부대 방문에서 적 도발 억제 즉응태세를 지시(국방일보)"
+        "10/31 탄도미사일용, 11/2 순항미사일용 집속탄두 시험을 KCNA가 11/3 보도",
+        "군은 압도적 대응태세를 유지한다고 밝힘"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "한국·미국",
-      "summary": "귀속 미확인 — 미국이 북한의 '바이낸스 해킹' 부인을 반박하며 북한 사이버범죄를 전지구적 문제라 했다고 연합뉴스가 3일 보도했다(정식 귀속 성명 원문 확인 못 함).",
-      "meaning": "가상자산 탈취는 북한 외화 수입원 논란이나 군사 행동은 아니다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103188300071"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "미국 측 발언을 연합뉴스가 보도"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "이번 회차에 원문을 다시 열지 못해 직전의 미 귀속 반박 보도(연합, 11/3)를 근거 없이 잇지 않았다."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
       "region": "중국 베이징",
-      "lat": 39.9,
-      "lon": 116.4,
-      "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징에 도착했다고 세계일보가 교도통신 인용 보도했다(외교 일정, 군사협정 언급 없음).",
-      "meaning": "10/24 김정은 단둥 방문 이후 당 차원 교류로 군사협력 징후는 없다.",
+      "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징에 도착했다고 세계일보가 교도통신 인용 보도했다(외교 일정, 군사협력 언급 없음).",
+      "meaning": "김정은 단둥 방문 열흘 만의 당 차원 교류다.",
       "sources": [
         {
           "name": "세계일보",
@@ -121,7 +93,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "기사에 군사협력 언급 없음"
+        "교도통신이 외교 소식통 인용"
       ],
       "speculation": []
     },
@@ -138,16 +110,7 @@
       "status": "none"
     }
   },
-  "opened": [
-    "https://www.segye.com/newsView/20261103517017",
-    "https://www.segye.com/newsView/20261103519482",
-    "https://www.yna.co.kr/view/AKR20261103013851504",
-    "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://www.yna.co.kr/view/AKR20261103165200504",
-    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do"
-  ],
-  "overall_summary": "북한이 10/31·11/2 연이어 집속탄두 시험을 했으나 시험·위협 성격의 정례 활동이다. 병력·군수·정부 경고 등 다른 항목에 징후는 없다. 직전 회차 대비 새 징후는 없다.",
-  "checked_at": "2026-11-03T20:11:25+00:00",
+  "checked_at": "2026-11-03T22:13:05+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

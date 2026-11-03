@@ -47,6 +47,14 @@
       "North Korea attributed FBI"
     ]
   },
+  "opened": [
+    "https://www.segye.com/newsView/20261103517017",
+    "https://www.segye.com/newsView/20261103519482",
+    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261103188300071",
+    "https://www.bbc.com/news/world"
+  ],
+  "overall_summary": "북한이 10/31·11/2 연이어 집속탄두 시험을 발표했으나 시험·위협 성격의 정례 활동이다. 김성남 국제비서 방중은 외교 일정이며 다른 항목에 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,29 +66,24 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "북한 서해상",
       "lat": 39.0,
       "lon": 125.7,
-      "summary": "조선중앙통신이 11/2 순항미사일 집속탄두·수직타격 시험을 3일 발표했고 세계일보·연합뉴스가 보도했다(시험 발표).",
+      "summary": "조선중앙통신이 11/2 순항미사일 집속탄두·수직타격 시험을 3일 발표했고 세계일보가 보도했다(시험 발표).",
       "meaning": "탄두 성능 과시 시험으로 즉각적 군사행동 징후는 아니다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261103517017"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103013851504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신이 미사일총국의 10/31 탄도미사일, 11/2 순항미사일 집속탄두 시험을 3일 발표",
-        "합참의장은 3일 육군 헬기부대 방문에서 적 도발 억제 즉응태세를 지시(국방일보)"
+        "미사일총국이 10/31 탄도, 11/2 순항미사일 집속탄두 시험을 3일 발표",
+        "합참의장은 3일 헬기부대 방문에서 도발 억제 즉응태세 지시(국방일보)"
       ],
       "speculation": []
     },
@@ -138,16 +141,7 @@
       "status": "none"
     }
   },
-  "opened": [
-    "https://www.segye.com/newsView/20261103517017",
-    "https://www.segye.com/newsView/20261103519482",
-    "https://www.yna.co.kr/view/AKR20261103013851504",
-    "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://www.yna.co.kr/view/AKR20261103165200504",
-    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do"
-  ],
-  "overall_summary": "북한이 10/31·11/2 연이어 집속탄두 시험을 했으나 시험·위협 성격의 정례 활동이다. 병력·군수·정부 경고 등 다른 항목에 징후는 없다. 직전 회차 대비 새 징후는 없다.",
-  "checked_at": "2026-11-03T20:11:25+00:00",
+  "checked_at": "2026-11-03T21:10:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

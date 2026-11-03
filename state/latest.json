@@ -1,64 +1,63 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup border"
+      "국내 언론 수집 news_kr(병력·전방 묶음)",
+      "North Korea troops border Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
+      "지뢰 발견",
+      "DMZ 월선 경고사격",
       "NLL 귀순",
-      "North Korea cruise missile cluster warhead"
+      "북한 집속탄두 시험"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "바이낸스 해킹 북한"
     ],
     "foreign_forces": [
       "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense alert"
+      "북한 등화관제 준전시",
+      "North Korea martial state"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "JCS alert DEFCON Korea"
+      "진돗개 발령",
+      "합참 북한 발사 공지"
     ],
     "hybrid_ops": [
-      "간첩 혐의 국가보안법 구속",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
-    ],
-    "incidents": [
-      "실탄 발견 해안",
-      "총기 발견 군 감식"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261103517017",
     "https://www.segye.com/newsView/20261103519482",
-    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261103013851504",
-    "https://www.yna.co.kr/view/AKR20261103188300071"
+    "https://www.yna.co.kr/view/AKR20261103188300071",
+    "https://www.yna.co.kr/view/AKR20261103165200504",
+    "https://www.yna.co.kr/view/AKR20261104000900108",
+    "https://www.yna.co.kr/view/AKR20261103120351009",
+    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "북한이 10/31·11/2 집속탄두 시험을 관영매체로 발표했고 김성남 국제비서가 방중했으나 모두 정례·외교 범주다. 새 군사적 이상 징후는 없고 직전 회차와 같다.",
+  "overall_summary": "북한이 10/31·11/2 연이어 집속탄두 시험을 했으나 시험·위협 성격의 정례 활동이다. 병력·군수·정부 경고 등 다른 항목에 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -150,23 +149,23 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T18:11:48+00:00",
+  "checked_at": "2026-11-03T19:12:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "미국, 호르무즈 인근 이란 케슘섬 타격",
-      "summary": "미 당국자들이 이란 혁명수비대의 미군기 사격에 대응한 제한적 타격이라고 밝혔다.",
-      "link_korea": "중동 전선의 미군 전력 소요는 주한미군 태세와 연결된다.",
-      "region": "중동",
+      "title": "러 외무부 \"한미 연합훈련이 한반도 불안정 초래\"",
+      "summary": "러시아 외무부 대변인이 한미 연합군사훈련이 한반도에 불안정을 낳고 있다고 3일 밝혔다.",
+      "link_korea": "북러 밀착 속 러시아의 대한반도 입장을 보여준다.",
+      "region": "러시아",
       "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "name": "연합뉴스",
+        "url": "https://www.yna.co.kr/view/AKR20261104000900108",
+        "via": "https://www.yna.co.kr/view/AKR20261104000900108"
       }
     }
   ],
-  "world_context": "중동 긴장이 이어지는 가운데 북한은 집속탄두 시험을 거듭하고 있다.",
-  "world_at": "2026-11-03T16:11:41+00:00"
+  "world_context": "러시아·중국이 북한 시험 발사에 한미훈련을 거론하는 구도가 이어진다.",
+  "world_at": "2026-11-03T19:12:25+00:00"
 }

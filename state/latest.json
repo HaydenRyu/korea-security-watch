@@ -10,7 +10,8 @@
       "서해 구조물 주한미군 감축 11월 3일"
     ],
     "electronic_cyber": [
-      "북한 바이낸스 해킹 FBI 귀속 North Korea Binance hack attributed"
+      "북한 바이낸스 해킹 FBI 귀속 North Korea Binance hack attributed",
+      "해킹 개인정보 유출"
     ],
     "nuclear": [
       "북한 핵실험 풍계리 영변 동향 North Korea nuclear Yongbyon"
@@ -38,7 +39,9 @@
     "https://www.segye.com/newsView/20261103517017",
     "https://www.segye.com/newsView/20261103519482",
     "https://www.koreaherald.com/article/10923504",
-    "https://www.nknews.org/2026/11/north-korea-claims-first-test-of-smaller-cluster-warheads-on-cruise-missiles/"
+    "https://www.nknews.org/2026/11/north-korea-claims-first-test-of-smaller-cluster-warheads-on-cruise-missiles/",
+    "https://www.yna.co.kr/view/AKR20261103188300071",
+    "https://www.yna.co.kr/view/AKR20261103165200504"
   ],
   "overall_summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 3일 발표했으나 10/31 탄도미사일 집속탄두 시험에 이은 시험 발표로 직전과 같은 수준이다. 김성남 국제비서의 방중은 외교 일정이며 군사협력 언급은 없다.",
   "items": {
@@ -84,8 +87,25 @@
       ]
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "바이낸스 해킹은 민간 분석업체 귀속뿐이고 정부 공식 귀속·원문 확인이 이번 회차에 없어 징후로 올리지 않는다."
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "가상자산·북한",
+      "summary": "귀속 미확인 — 미국이 북한의 '바이낸스 해킹' 부인을 반박하며 북한 사이버범죄를 전지구적 문제라 했다고 연합뉴스가 3일 보도했다(정식 귀속 성명 원문 확인 못 함).",
+      "meaning": "가상자산 탈취 수사·외교 공방 단계로 기반시설 마비는 아니다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261103188300071"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "북한이 바이낸스 해킹 배후 지목을 부인",
+        "미국이 부인을 반박"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "single",
@@ -121,7 +141,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T14:15:07+00:00",
+  "checked_at": "2026-11-03T15:14:20+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,8 +1,7 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 11월 3일"
     ],
     "nuclear": [
       "북한 핵 전략무기 풍계리",
@@ -13,9 +12,7 @@
       "North Korea munitions logistics"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순",
-      "North Korea DMZ border"
+      "지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -63,7 +60,9 @@
     "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
     "https://www.bbc.co.uk/news/articles/cjy56dndlyz0o",
     "https://www.bbc.co.uk/news/articles/cm3wv085ne6po",
-    "https://www.bbc.co.uk/news/articles/c6rey4v53exgo"
+    "https://www.bbc.co.uk/news/articles/c6rey4v53exgo",
+    "https://www.segye.com/newsView/20261103510767",
+    "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
   ],
   "overall_summary": "북한의 집속탄두 시험(주장)과 바이낸스 해킹 귀속 공방, 김성남 국제비서 방중 등 정례·외교성 동향만 있고 병력·핵·접경 충돌 징후는 없다. 직전 회차와 같은 수준이다.",
   "items": {
@@ -157,7 +156,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T07:11:42+00:00",
+  "checked_at": "2026-11-03T08:12:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -197,5 +196,5 @@
     }
   ],
   "world_context": "중동과 우크라이나의 전선 동향이 미 전력 배분과 북러 협력 구도에 간접 영향을 준다.",
-  "world_at": "2026-11-03T07:11:42+00:00"
+  "world_at": "2026-11-03T08:12:14+00:00"
 }

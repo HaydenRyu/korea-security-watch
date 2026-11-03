@@ -24,6 +24,10 @@
 - 지인 주제(`NTFY_TOPIC`): 경계 이상 알림과 해제만
 - 3회 연속 판정 불가면 「감시 중단」을 1회 알린다
 
+## 조기경보 지수(EWS, 참고용)
+`scripts/ews.py` 가 `state/ews.json` 을 쓴다(루틴 2-2단계, 등급·알림과 무관). 세계 5개 전역 판정은 `state/theaters.json`.
+지금은 세계 연동을 합치지 않고(`data/ews_weights.json` alpha 1 — 과거 검정 6건 모두 평소 수준) 공식 단계 구간 아래로 내려가지 않는다. 화면은 `public: false` 동안 `?sample=1` 에서만 보인다.
+
 ## 설정 (최초 1회)
 1. 레포 시크릿을 넣는다. `FIRMS_KEY`(NASA FIRMS MAP_KEY, Actions `firms` 가 매시간 열점 갱신)와 ntfy 주제 두 개다. 값은 추측 불가한 무작위 문자열이다. 레포·공개 페이지에 적지 않는다.
    - `NTFY_TOPIC_ME`: 본인 주제

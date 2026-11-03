@@ -151,7 +151,10 @@
     "taiwan": {"state": "named|large_unnamed|none", "name": "<선택 — 훈련 코드명>", "start": "YYYY-MM-DD", "end": "YYYY-MM-DD",
                "summary": "<한국어 1문장>", "sources": [{"url": "<opened 에 있는 원문>", "publisher": "<매체명>"}], "ended": true},
     "korea": [{"summary": "<한국어 1문장 — 관측된 사실>", "date": "YYYY-MM-DD",
-               "sources": [{"url": "<opened 에 있는 원문>", "publisher": "<매체명>"}], "same_as": "<선택 — state/linkage.json korea[].id>"}]
+               "sources": [{"url": "<opened 에 있는 원문>", "publisher": "<매체명>"}], "same_as": "<선택 — state/linkage.json korea[].id>"}],
+    "schema_version": 2,
+    "theaters": {"taiwan|ukraine|scs_ecs|mideast|us_posture": {"state": 0, "channels": ["c1_us_gap|c2_nk_ru_cn|c3_simul|c4_sea_energy|c5_diplomacy"],
+                 "sources": [{"name": "<매체명>", "tier": "A|B|C|D", "url": "<opened 에 있는 원문>", "published_at": "<ISO 8601>"}], "summary": "<한국어 1문장 — 관측된 사실>"}}
   },
   "calm": [{"id": "dialogue_offer|channel_restored|provocation_halt|talks_scheduled", "summary": "<한국어 1문장 — 관측된 사실>",
             "sources": [{"url": "<opened 에 있는 원문>", "publisher": "<매체명>"}]}],
@@ -252,6 +255,11 @@
   분석가 의견·전망·익명 소식통은 쓰지 않는다. 같은 사건이 이미 `state/linkage.json` 의 `korea` 에 있으면 `same_as` 에 그 id 를 붙인다(코드가 출처를 합치고 확인 수를 올린다). 한 회차 최대 5건.
   검색어(`coverage` 에 `"linkage:korea"`): `북러 군사협력` · `North Korea troops Russia` · `주한미군 대만`.
 - 근거는 `opened` 에 있는 원문만. 해당이 없으면 `linkage` 를 생략한다 — 억지로 채우지 않는다. 실패해도 회차를 막지 않는다.
+- `theaters`(조기경보 지수 입력, `scripts/ews.py` 가 `state/theaters.json` 에 쌓는다) — **요인 회차(4-4절)에만** 쓴다. 다른 회차는 생략한다(직전 값을 잇고 48시간 지나면 미관측이 된다). 위 대만 해협·한반도 연결 규칙은 그대로이고, 이 블록은 각 전역의 **현재 상태 사실**만 적는다. 「그래서 한반도 위험이 올랐다」고 쓰지 않는다 — 지수 계산은 코드가 한다.
+  - 전역: `taiwan` 대만해협 · `ukraine` 러시아-우크라이나 · `scs_ecs` 남·동중국해 · `mideast` 중동·호르무즈 · `us_posture` 미 전략자산 전개.
+  - `state`: 0 평온 · 1 긴장 · 2 위기 · 3 교전. **0 도 원문이 있어야 쓴다** — 원문 없는 전역은 키를 생략한다(미관측이며 평온이 아니다).
+  - `channels`: 그 전역에서 **원문으로 관측된** 연결만. `c1_us_gap` 미군 전력 공백 · `c2_nk_ru_cn` 북-러·북-중 군사협력 · `c3_simul` 동시 압박 · `c4_sea_energy` 해상교통로·에너지 · `c5_diplomacy` 제재·외교. 없으면 `[]`.
+  - `sources` 는 판정 시각 기준 72시간 안에 나온 원문으로 쓰고 `published_at` 을 적는다. 판정·브리핑에서 이미 연 원문을 먼저 쓰고, 추가로 여는 원문은 전역당 1건 안으로 줄인다. 검색어 `coverage` 에 `"linkage:theaters"`. 실패해도 회차를 막지 않는다.
 
 ## 4-6. 완화 지표 (`calm`, 매 회차 · 등급·알림과 무관 · 확률 아님)
 - 예측 페이지 「시나리오」 칸(완화 / 현상 유지 / 격화)의 완화 쪽 **사실 기록**이다. 현상 유지·격화 지표는 코드가 기존 값(발사 흐름·임박 신호·등급·긴장 국면)에서 판정하고, 완화 지표 4개만 루틴이 기록한다. 우리 확률·전망을 쓰지 않는다.
@@ -305,7 +313,7 @@
 1-2. **임박 신호(4-2절)를 채운다** — 판정·브리핑 검색에서 이미 연 원문 중 항행경보·북한 예고·시설 동향·발사대 이동·공표 일정을 가리키는 기사를 골라 `signals` 에 쓴다. 먼저 `state/signals.json`(없으면 건너뜀)의 `active` 와 대조해 같은 사건을 빼고, 항행경보(일본 해상보안청·중국 해사국)와 38 North 최근 글은 이 단계에서 확인한다. 실패해도 회차는 계속한다.
 1-3. **긴장 국면 지표(4-3절)를 확인한다** — 판정 검색에서 이미 연 원문을 `data/escalation_ladder.json` 의 `indicators[].met` 와 대조해 충족된 것만 `ladder` 에 쓴다. 추가로 여는 원문은 2건 안으로 줄인다. 실패해도 회차는 계속한다.
 1-4. **요인 회차면(4-4절) `factors` 를 채운다.** 요인 회차가 아니면 건너뛴다. 실패해도 회차는 계속한다.
-1-5. **연동 위기(4-5절)를 확인한다** — 대만 해협 훈련과 한반도 연결 사실을 검색해 `linkage` 에 쓴다. 판정·브리핑에서 이미 연 원문을 먼저 쓰고, 추가로 여는 원문은 2건 안으로 줄인다. 해당이 없으면 생략한다. 실패해도 회차는 계속한다.
+1-5. **연동 위기(4-5절)를 확인한다** — 대만 해협 훈련과 한반도 연결 사실을 검색해 `linkage` 에 쓴다. 요인 회차면 전역 5곳의 `theaters` 도 쓴다. 판정·브리핑에서 이미 연 원문을 먼저 쓰고, 추가로 여는 원문은 2건 안으로 줄인다. 해당이 없으면 생략한다. 실패해도 회차는 계속한다.
 1-6. **완화 지표(4-6절)를 확인한다** — 판정·브리핑에서 이미 연 원문을 먼저 쓰고, 추가로 여는 원문은 2건 안으로 줄인다. 해당이 없으면 `"calm": []`. 실패해도 회차는 계속한다.
 1-7. **사건 기록(4-7절)을 확인한다** — 판정·브리핑에서 이미 연 원문을 먼저 쓰고, 추가로 여는 원문은 2건 안으로 줄인다. 해당이 없으면 생략한다. 실패해도 회차는 계속한다.
 2. **먼저 형식을 검사한다** — `python3 scripts/diff_state.py --check run.json`. 아무것도 기록하지 않는다(rc 0 통과 · 1 위반, 위반 사유는 출력의 `error`).
@@ -316,6 +324,7 @@
    - 키·status 값·출처 수 오류 → 3절 규칙대로 고친다.
    2번 안에 못 고치면 고치지 않은 채로 다음 단계로 간다 — 판정 불가로 기록되고 연속 계수(3회 연속이면 「감시 중단」 알림)에 들어간다. 검색 자체가 실패한 회차는 검사 없이 `{"status":"unverified",...}` 를 그대로 낸다.
 2-1. `python3 scripts/diff_state.py run.json` 을 실행하고 출력을 확인한다. 스키마 위반이 남아 있으면 스크립트가 unverified 로 기록한다.
+2-2. `python3 scripts/ews.py run.json` 을 실행한다(조기경보 참고 지수 → `state/theaters.json`·`state/ews.json`, 등급·알림과 무관). 항상 rc 0 이다. 출력에 `::warning::` 이 있으면 최종 출력에 그대로 옮기고 회차는 계속한다.
 3. `rm run.json` 후 `git add state/ data/sources.json $(ls data/source_requests.jsonl 2>/dev/null) && git commit -F .commit_msg` 를 실행한다. 커밋 메시지는 `diff_state.py` 가 `.commit_msg` 에 써 둔 것을 그대로 쓴다(등급 문구를 직접 짓지 않는다).
 4. `git pull --rebase origin main && git push origin HEAD:main`. 거절되면 한 번 더 pull --rebase 후 push 한다. 그래도 실패하면 사유를 출력하고 끝낸다.
    - 알림 발송은 GitHub Actions 가 `state/outbox.json` 변경을 보고 ntfy 로 처리한다. 이 세션에서 ntfy 를 직접 부르지 않는다.

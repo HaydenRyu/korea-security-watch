@@ -1,0 +1,16 @@
+{
+  "_doc": "조기경보 지수(EWS) 가중치. 전역 5 × 채널 5. 값은 채널이 뜻하는 경로가 그 전역에 있는지로 1·0.5·0 만 준 가설이고 과거 자료로 검정하지 않았다. alpha 1 = 세계 연동 E 를 지수에 합치지 않는다(data/linkage.json 검정 6건 모두 평소 수준) — Phase 3 백테스트 통과 뒤에만 낮춘다. public 은 헤이든 승인(AC10) 전까지 false.",
+  "version": 1,
+  "basis": "PM 가설 2026-11-02 — 백테스트 전",
+  "alpha": 1.0,
+  "stale_hours": 48,
+  "min_observed_theaters": 3,
+  "public": false,
+  "weights": {
+    "taiwan":     {"c1_us_gap": 1.0, "c2_nk_ru_cn": 0.5, "c3_simul": 1.0, "c4_sea_energy": 0.5, "c5_diplomacy": 0.5},
+    "ukraine":    {"c1_us_gap": 0.5, "c2_nk_ru_cn": 1.0, "c3_simul": 0.5, "c4_sea_energy": 0.0, "c5_diplomacy": 0.5},
+    "scs_ecs":    {"c1_us_gap": 0.5, "c2_nk_ru_cn": 0.0, "c3_simul": 1.0, "c4_sea_energy": 1.0, "c5_diplomacy": 0.0},
+    "mideast":    {"c1_us_gap": 0.5, "c2_nk_ru_cn": 0.0, "c3_simul": 0.0, "c4_sea_energy": 1.0, "c5_diplomacy": 0.5},
+    "us_posture": {"c1_us_gap": 1.0, "c2_nk_ru_cn": 0.0, "c3_simul": 0.5, "c4_sea_energy": 0.0, "c5_diplomacy": 0.0}
+  }
+}

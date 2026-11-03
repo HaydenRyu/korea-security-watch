@@ -573,6 +573,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
 .wtab button:hover{color:var(--ice)}
 .wtab button[aria-selected="true"]{color:var(--ink);background:var(--ice)}
 .wtab button:focus-visible{outline:1px solid var(--g0);outline-offset:2px}
+#ews-tabs[hidden],#ews-v[hidden]{display:none}  /* 조기경보 탭 — 공개 게이트가 닫히면 안 보인다(ews.js) */
 @media (prefers-reduced-motion:reduce){.wtab button,.phs .px{transition:none}}
 #world[hidden],#conf[hidden],#satr[hidden]{display:none!important}
 #conf{padding:0}
@@ -815,7 +816,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   </section>
 
   <section class="p" id="map-p" aria-label="한반도 지도">
-    <div class="ph" title="지도 표지를 누르면 상세"><span class="k">상황 지도</span><span class="taphint">표지를 누르면 상세</span><span id="imgdate">위성 영상 —</span><span id="nwerr" hidden role="status"></span>
+    <div class="ph" title="지도 표지를 누르면 상세"><span class="k">상황 지도</span><div class="wtab" id="ews-tabs" role="tablist" aria-label="지도 보기" hidden><button type="button" role="tab" data-v="world" aria-selected="false" aria-controls="ews-v" tabindex="-1">세계 보기</button><button type="button" role="tab" data-v="map" aria-selected="true" tabindex="0">한반도 상세</button></div><span class="taphint">표지를 누르면 상세</span><span id="imgdate">위성 영상 —</span><span id="nwerr" hidden role="status"></span>
       <div class="layers" role="group" aria-label="지도 레이어">
         <button type="button" class="base" data-layer="day" aria-pressed="true" title="어제 낮 VIIRS 영상(해상도 약 375m)">어제 위성</button>
         <button type="button" class="base" data-layer="night" aria-pressed="false" title="가장 최근 밤의 야간광(VIIRS NOAA-20, 구름·달빛 보정, 1~2일 전). 평소보다 어두우면 정전·등화관제, 밝으면 야간 활동">야간 조명</button>
@@ -829,7 +830,8 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
         <button type="button" data-layer="fwi" aria-pressed="false" disabled title="어제 화재기상지수(ECMWF FWI, EU GWIS) — 높을수록 자연 산불이 번지기 쉬운 날씨. 열점이 산불인지 판단할 때 참고">화재기상</button>
       </div></div>
     <div class="pb"><div id="map"></div><div class="reticle"></div><span class="corner a"></span><span class="corner b"></span>
-      <div class="hud bl" id="coord">37.80N 127.50E</div><div class="fleg" id="fleg" hidden aria-label="지도 범례"><div class="lr" id="fleg-f" hidden></div><div class="lr" id="fleg-n" hidden></div></div></div>
+      <div class="hud bl" id="coord">37.80N 127.50E</div><div class="fleg" id="fleg" hidden aria-label="지도 범례"><div class="lr" id="fleg-f" hidden></div><div class="lr" id="fleg-n" hidden></div></div>
+      <div class="ews-v" id="ews-v" role="tabpanel" aria-label="세계 보기" hidden><div class="ews-globe" id="ews-globe"></div><aside class="ews-side" id="ews-side"></aside></div></div>
   </section>
 
   <!-- 흐름·예측(10/18): 등급 추이(72시간)만 있던 아래 띠에 「발사 흐름 · 앞으로 일정(90일 중 가까운 2건)」을 붙였다 — 정본 data/risk_calendar.json -->
@@ -1839,5 +1841,6 @@ async function loadReqLog(){try{const r=await fetch("data/source_requests.jsonl?
 loadNewsKr();loadSources().then(loadReqLog).then(()=>{if(location.hash==="#sources")openSources()});
 </script>
 <script src="board2.js?v=2026-10-28a"></script>
+<script src="ews.js?v=2026-11-03a"></script>
 </body>
 </html>

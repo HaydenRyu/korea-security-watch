@@ -47,17 +47,6 @@
       "North Korea attributed FBI"
     ]
   },
-  "opened": [
-    "https://www.segye.com/newsView/20261103517017",
-    "https://www.segye.com/newsView/20261103519482",
-    "https://www.yna.co.kr/view/AKR20261103013851504",
-    "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://www.yna.co.kr/view/AKR20261103165200504",
-    "https://www.yna.co.kr/view/AKR20261104000900108",
-    "https://www.yna.co.kr/view/AKR20261103120351009",
-    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do"
-  ],
-  "overall_summary": "북한이 10/31·11/2 연이어 집속탄두 시험을 했으나 시험·위협 성격의 정례 활동이다. 병력·군수·정부 경고 등 다른 항목에 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -149,7 +138,16 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T19:12:25+00:00",
+  "opened": [
+    "https://www.segye.com/newsView/20261103517017",
+    "https://www.segye.com/newsView/20261103519482",
+    "https://www.yna.co.kr/view/AKR20261103013851504",
+    "https://www.yna.co.kr/view/AKR20261103188300071",
+    "https://www.yna.co.kr/view/AKR20261103165200504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do"
+  ],
+  "overall_summary": "북한이 10/31·11/2 연이어 집속탄두 시험을 했으나 시험·위협 성격의 정례 활동이다. 병력·군수·정부 경고 등 다른 항목에 징후는 없다. 직전 회차 대비 새 징후는 없다.",
+  "checked_at": "2026-11-03T20:11:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

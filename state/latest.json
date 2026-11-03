@@ -1,67 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 11월 3일"
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "북한 핵 전략무기 풍계리",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea munitions logistics"
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "귀순 합참"
+      "지뢰 발견",
+      "DMZ 경고사격"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "North Korea Binance hack FBI"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김성남 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "합참 북한 발표"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
-      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
-    ],
-    "incidents": [
-      "실탄 발견 해안"
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261103510767",
-    "https://www.nknews.org/2026/11/north-korea-claims-first-test-of-smaller-cluster-warheads-on-cruise-missiles/",
-    "https://www.nknews.org/2026/11/kim-yo-jong-denies-north-korean-involvement-in-6b-binance-crypto-theft/",
-    "https://www.nknews.org/2026/11/north-korea-slams-us-rok-drills-accusing-allies-of-rehearsing-nuclear-use/",
+    "https://www.yna.co.kr/view/AKR20261103013851504",
+    "https://www.yna.co.kr/view/AKR20261103165200504",
     "https://www.yna.co.kr/view/AKR20261103120351009",
-    "https://www.nknews.org/feed/",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
-    "https://www.nknews.org/2026/11/romania-appoints-new-charge-daffaires-to-north-korea-after-reopening-embassy/"
+    "https://www.segye.com/newsView/20261103510767",
+    "https://www.nknews.org/2026/11/north-korea-claims-first-test-of-smaller-cluster-warheads-on-cruise-missiles/"
   ],
-  "overall_summary": "북한의 집속탄두 시험 주장, 바이낸스 해킹 귀속 공방, 김성남 국제비서 방중 등 정례·외교성 동향만 있고 병력·핵·접경 충돌 징후는 없다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "북한의 순항미사일 집속탄두 시험 주장 등 정례 성격 활동만 확인됐고 직전 대비 변화는 없다. 김성남 방중은 외교 일정이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -73,14 +58,19 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "region": "북한 일대",
       "lat": 39.0,
       "lon": 125.7,
-      "summary": "북한이 순항미사일 소형 집속탄두 시험을 했다고 주장했고 NK News가 보도했다(직전 회차와 동일 사건); 정부가 안보리에 보낸 지뢰 서한 공개(세계일보)는 지난달 사건의 후속 배경이다.",
+      "summary": "북한이 11/2 순항미사일 집속탄두 '수직타격' 시험을 했다고 KCNA 발표를 연합·NK News가 보도했다(직전 회차와 동일 사건); 군은 북한 주장 기술을 20년 전 구비했다고 밝혔다.",
       "meaning": "대남 타격능력 과시성 무기 시험으로 접경 충돌 징후는 없다.",
       "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261103013851504"
+        },
         {
           "name": "NK News",
           "tier": "C",
@@ -89,39 +79,23 @@
       ],
       "confidence": "중간",
       "facts": [
-        "북한 주장 시험, 연합뉴스 보도",
-        "군은 북한 주장 기술을 20년 전부터 구비했다고 밝힘"
+        "KCNA 주장 시험(11/2)",
+        "군은 20년 전 구비 기술이라 평가"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "nk",
-      "region": "해외(미국·가상자산)",
-      "summary": "FBI의 바이낸스 탈취 북한 소행 지목에 김여정이 KCNA로 부인했다고 NK News가 보도했다(직전 회차와 동일 사건); 직전 회차 corroborated 는 연합·BBC 원문 기준이었으나 이번 회차 열람 원문은 1곳이다.",
-      "meaning": "가상자산 탈취는 정권 자금원 문제이며 군사 징후는 아니다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/kim-yo-jong-denies-north-korean-involvement-in-6b-binance-crypto-theft/"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "FBI가 북한 해킹조직 지목",
-        "북한 부인",
-        "통일부 입장 표명"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "바이낸스 탈취 북한 지목 건은 첫 보도 후 24시간 경과, 이번 회차 신규 원문 확인 못 함."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
       "region": "평양-베이징",
-      "summary": "북한 김성남 당 국제비서가 방중을 위해 평양을 출발했다고 교도통신 인용으로 연합뉴스가 보도했다(외교 일정).",
-      "meaning": "김정은 단둥 방문 열흘 만의 고위급 교류로, 군사협정·무기 협력 발표는 없다.",
+      "lat": 39.9,
+      "lon": 116.4,
+      "summary": "김성남 북한 국제비서가 당대표단을 이끌고 방중했다고 연합뉴스가 보도했다(외교 일정).",
+      "meaning": "김정은 단둥 방문 열흘 만의 고위급 교류로 군사협정·무기협력 발표는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -131,7 +105,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "김성남 국제비서 방중 출발(교도 보도 인용)"
+        "당대표단 방중"
       ],
       "speculation": []
     },
@@ -142,13 +116,14 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none"
+      "status": "none",
+      "summary": "합참의장 부상장병 위문은 경고가 아니다."
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T09:12:17+00:00",
+  "checked_at": "2026-11-03T10:12:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

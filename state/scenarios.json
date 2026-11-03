@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-02T23:11:26+00:00",
+  "updated_at": "2026-11-03T00:11:33+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -59,7 +59,7 @@
           "id": "signal",
           "label": "임박 신호 1건 이상",
           "state": "on",
-          "note": "2건"
+          "note": "1건"
         },
         {
           "id": "grade",

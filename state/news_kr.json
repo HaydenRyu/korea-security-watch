@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-11-03T21:19:14+00:00",
+ "fetched_at": "2026-11-03T22:31:52+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-03T21:19:14+00:00",
+ "last_ok_at": "2026-11-03T22:31:52+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1154,
-  "hits": 58,
-  "clusters": 46,
+  "fetched": 1153,
+  "hits": 55,
+  "clusters": 44,
   "by_group": {
-   "fire": 19,
+   "fire": 18,
    "border": 13,
-   "mine": 9,
+   "mine": 8,
    "gps": 9,
    "summit": 4,
    "drone_balloon": 3,
@@ -26,14 +26,14 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 594,
+   "count": 593,
    "hits": 55
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 3
+   "hits": 1
   },
   "동아일보": {
    "feeds": 2,
@@ -45,7 +45,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 25
+   "hits": 24
   },
   "세계일보": {
    "feeds": 2,
@@ -63,19 +63,19 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "fire": {
-   "clusters": 19,
+   "clusters": 18,
    "max_independent": 3,
-   "latest": "2026-11-03T21:19:14+00:00"
+   "latest": "2026-11-03T22:31:52+00:00"
   },
   "border": {
    "clusters": 13,
    "max_independent": 2,
-   "latest": "2026-11-03T21:19:14+00:00"
+   "latest": "2026-11-03T22:31:52+00:00"
   },
   "mine": {
-   "clusters": 9,
+   "clusters": 8,
    "max_independent": 2,
-   "latest": "2026-11-03T21:19:14+00:00"
+   "latest": "2026-11-03T22:31:52+00:00"
   },
   "gps": {
    "clusters": 9,
@@ -114,7 +114,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 114,
+   "count": 113,
    "hits": 48
   },
   {
@@ -171,7 +171,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 2
+   "hits": 0
   },
   {
    "outlet": "동아일보",
@@ -195,7 +195,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 20
+   "hits": 19
   },
   {
    "outlet": "국민일보",

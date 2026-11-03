@@ -1,83 +1,84 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 전방 병력 증강",
+      "North Korea troop buildup border"
+    ],
+    "nuclear": [
+      "풍계리 영변 핵시설",
+      "North Korea nuclear Yongbyon Punggye-ri"
+    ],
+    "logistics": [
+      "북한 군수 수송 탄약",
+      "North Korea Russia munitions shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견 DMZ 귀순 NLL",
+      "North Korea DMZ mine defector"
+    ],
     "electronic_cyber": [
-      "Binance hack North Korea laundering Chainalysis November 2 FBI attribution",
       "GPS 교란",
       "해킹 개인정보 유출",
       "사이버 공격"
     ],
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "북한 순항미사일 집속탄두 시험"
-    ],
-    "nuclear": [
-      "North Korea cruise missile cluster warhead test Kim Yo Jong Binance",
-      "북한 순항미사일 집속탄두 수직타격 시험"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 군수 탄약 수송 North Korea troops buildup"
-    ],
-    "logistics": [
-      "북한 병력 이동 전방 증강 군수 탄약 수송 North Korea troops buildup"
-    ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비 노농적위군 동원 등화관제 North Korea mobilization parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 열병식 준비 노농적위군 동원 등화관제 North Korea mobilization parade"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 데프콘 합참 경고 간첩 혐의 국가보안법 구속 지뢰 발견 DMZ 귀순"
+      "진돗개 데프콘 발령",
+      "국방부 합참 긴급 경고"
     ],
     "hybrid_ops": [
-      "진돗개 데프콘 합참 경고 간첩 혐의 국가보안법 구속 지뢰 발견 DMZ 귀순"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
+    ],
+    "incidents": [
+      "실탄 발견 해안"
+    ],
+    "linkage:taiwan": [
+      "PLA drills around Taiwan"
+    ],
+    "linkage:korea": [
+      "북러 군사협력"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261103013800504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261103/10/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261102519527",
+    "https://www.segye.com/newsView/20261103502478",
     "https://www.aljazeera.com/news/2026/11/1/fbi-blames-north-korea-for-record-6-3bn-crypto-heist",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.segye.com/newsView/20261103502478"
+    "https://www.yna.co.kr/view/AKR20261103013800504"
   ],
-  "overall_summary": "북한이 11/3 순항미사일 집속탄두 시험을 주장했고 김여정은 바이낸스 귀속에 반발했으나 모두 시험·발언 성격의 정례 활동이며 접경 충돌·병력 이동 징후는 없다.",
+  "overall_summary": "북한이 순항미사일 집속탄두 시험을 주장하고 김여정이 FBI의 바이낸스 탈취 귀속에 반발했으나 모두 직전 회차와 같은 정례 범주다. 접경 충돌·병력 이동·정부 긴급 경고 징후는 새로 확인되지 않았다.",
   "items": {
     "troop_movement": {
-      "status": "none"
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "hybrid_ops": {
       "status": "none"
     },
     "nuclear": {
       "status": "none"
     },
+    "logistics": {
+      "status": "none"
+    },
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "북한 일대(서해 추정)",
-      "summary": "북한이 11/3 전략순항미사일용 집속탄두 위력·수직타격 시험을 했다고 주장했고 연합뉴스가 보도했다(10/31 탄도미사일용 집속탄두 시험에 이은 시험).",
-      "meaning": "대남 타격능력 과시성 무기 시험으로 접경 충돌·병력 이동 징후는 없다.",
+      "region": "북한 일대",
+      "summary": "북한이 11/3 전략순항미사일용 집속탄두 위력·수직타격 시험을 했다고 주장했고 연합뉴스가 보도했다.",
+      "meaning": "대남 타격능력 과시성 무기 시험으로 접경 충돌 징후는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -87,7 +88,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "북한 주장 시험, 연합뉴스 1곳 보도",
+        "북한 주장 시험, 연합뉴스 보도",
         "5~6ha 초토화 주장"
       ],
       "speculation": []
@@ -97,11 +98,11 @@
       "routine": true,
       "attribution": "nk",
       "region": "해외(미국·가상자산)",
-      "summary": "FBI가 바이낸스 약 63억 달러 탈취를 북한 TraderTraitor 소행으로 발표했고, 체이널리시스는 탈취 자금의 2차 세탁 착수를 밝혔으며 김여정이 11/3 이를 '미국의 정치적 도발'로 반응했다.",
-      "meaning": "북한의 가상자산 탈취가 정권 자금원으로 대규모 지속되고 있음을 보이나 군사 징후는 아니다.",
+      "summary": "FBI가 바이낸스 약 63억 달러 탈취를 북한 TraderTraitor 소행으로 발표했고 김여정이 11/2 담화로 '정치적 도발'이라 반발했다.",
+      "meaning": "가상자산 탈취는 정권 자금원 문제이며 군사 징후는 아니다.",
       "sources": [
         {
-          "name": "Al Jazeera(Reuters)",
+          "name": "Al Jazeera",
           "tier": "B",
           "url": "https://www.aljazeera.com/news/2026/11/1/fbi-blames-north-korea-for-record-6-3bn-crypto-heist"
         },
@@ -113,13 +114,28 @@
       ],
       "confidence": "높음",
       "facts": [
-        "FBI가 10/31 경보로 북한 책임을 발표",
-        "김여정이 11/3 연합 속보로 '예의주시' 반응"
+        "FBI가 TraderTraitor를 지목",
+        "김여정 담화로 부인"
       ],
       "speculation": []
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-03T00:11:43+00:00",
+  "checked_at": "2026-11-03T01:10:28+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

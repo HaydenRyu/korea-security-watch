@@ -1,44 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
+      "북한 병력 이동 전방",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters"
+      "북한 핵 전략무기 풍계리",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea ammunition logistics"
+      "North Korea munitions logistics"
     ],
     "border_clash": [
       "지뢰 발견",
-      "DMZ NLL 귀순 합참",
-      "North Korea Reuters cluster warhead cruise missile"
+      "DMZ 귀순",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격"
+      "사이버 공격",
+      "North Korea Binance hack FBI"
     ],
     "foreign_forces": [
-      "김정은 방중 김정은 방러",
-      "서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향"
+      "진돗개 발령 데프콘",
+      "합참 북한 발표"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 FBI"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안",
@@ -49,13 +53,19 @@
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261103510597",
+    "https://kookbang.dema.mil.kr/newsWeb/20261103/10/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261103120351009",
     "https://www.yna.co.kr/view/AKR20261103013851504",
     "https://www.yna.co.kr/view/AKR20261103092800504",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008828336",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008827939",
-    "https://www.segye.com/newsView/20261103502478"
+    "https://www.yna.co.kr/view/AKR20261103010600504",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
+    "https://www.bbc.co.uk/news/articles/cjy56dndlyz0o",
+    "https://www.bbc.co.uk/news/articles/cm3wv085ne6po",
+    "https://www.bbc.co.uk/news/articles/c6rey4v53exgo"
   ],
-  "overall_summary": "북한의 집속탄두 시험 주장과 바이낸스 해킹 귀속 공방은 직전 회차와 같은 정례 범주다. 접경 충돌·병력 이동·정부 긴급 경고 등 새 징후는 확인되지 않았다.",
+  "overall_summary": "북한의 집속탄두 시험(주장)과 바이낸스 해킹 귀속 공방, 김성남 국제비서 방중 등 정례·외교성 동향만 있고 병력·핵·접경 충돌 징후는 없다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,7 +82,7 @@
       "region": "북한 일대",
       "lat": 39.0,
       "lon": 125.7,
-      "summary": "북한이 탄도·순항미사일 집속탄두 시험을 연이어 했다고 주장했고 연합뉴스가 보도했다(직전 회차와 동일 사건; 한국 안보리 서한 공개는 9월 DMZ 지뢰 사건의 후속 배경).",
+      "summary": "북한이 지난 2일 순항미사일 집속탄두·수직타격 시험을 했다고 주장했고 연합뉴스가 보도했다(직전 회차와 동일 사건).",
       "meaning": "대남 타격능력 과시성 무기 시험으로 접경 충돌 징후는 없다.",
       "sources": [
         {
@@ -84,7 +94,7 @@
       "confidence": "중간",
       "facts": [
         "북한 주장 시험, 연합뉴스 보도",
-        "합참 정밀 분석 중"
+        "군은 북한 주장 기술을 20년 전부터 구비했다고 밝힘"
       ],
       "speculation": []
     },
@@ -93,30 +103,46 @@
       "routine": true,
       "attribution": "nk",
       "region": "해외(미국·가상자산)",
-      "summary": "FBI가 바이낸스 가상자산 탈취를 북한 소행으로 지목했고 김여정이 담화로 '정치적 도발'이라 반발, 통일부는 '상황 파악이 우선'이라 밝혔다.",
+      "summary": "FBI가 바이낸스 가상자산 탈취를 북한 소행으로 지목했고 북한은 부인했으며 통일부는 '상황 파악이 우선'이라 밝혔다(직전 회차와 동일 사건).",
       "meaning": "가상자산 탈취는 정권 자금원 문제이며 군사 징후는 아니다.",
       "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261103502478"
-        },
         {
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261103092800504"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo"
         }
       ],
       "confidence": "높음",
       "facts": [
         "FBI가 북한 해킹조직 지목",
-        "김여정 담화로 부인",
+        "북한 부인",
         "통일부 입장 표명"
       ],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "평양-베이징",
+      "summary": "북한 김성남 당 국제비서가 방중을 위해 평양을 출발했다고 교도통신 인용으로 연합뉴스가 보도했다(외교 일정).",
+      "meaning": "김정은 단둥 방문 열흘 만의 고위급 교류로, 군사협정·무기 협력 발표는 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261103120351009"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "김성남 국제비서 방중 출발(교도 보도 인용)"
+      ],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -131,15 +157,26 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T06:11:37+00:00",
+  "checked_at": "2026-11-03T07:11:42+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "우크라이나 남부 구호센터 러시아 폭격, 26명 사망",
-      "summary": "키이우는 러시아 항공폭탄이 남부 마을의 구호센터를 타격해 최소 26명이 숨졌다고 밝혔다.",
-      "link_korea": "러시아 전쟁 수행과 북러 군사협력 동향을 가늠하는 배경이다.",
+      "title": "미국, 선거 앞두고 이란 섬 공습",
+      "summary": "BBC는 미국이 이란의 한 섬을 공습했다고 보도했다.",
+      "link_korea": "중동 정세는 미 전략자산 배치와 대북 억지 여력에 영향을 줄 수 있다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "러시아 폭격으로 우크라이나 인도지원센터서 26명 사망",
+      "summary": "키이우는 러시아 폭격으로 인도지원센터에서 26명이 숨졌다고 밝혔다.",
+      "link_korea": "러-우 전쟁은 북러 군사협력의 배경이다.",
       "region": "우크라이나",
       "source": {
         "name": "BBC",
@@ -148,20 +185,9 @@
       }
     },
     {
-      "title": "유럽 7개국 상점 냉동고 사이버 공격",
-      "summary": "유럽 7개국 상점의 냉동고 온도가 50도까지 오르는 사이버 공격이 보고됐다.",
-      "link_korea": "기반시설 대상 사이버 공격 수법은 북한 연계 해킹 대응에도 참고가 된다.",
-      "region": "유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cq1kd1nee80eo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "유럽 병력, 평화 시 우크라이나 배치 예행연습",
-      "summary": "서방 당국자들은 평화 합의 시 파견될 유럽군이 공세 작전에는 참여하지 않는다고 강조했다.",
-      "link_korea": "러시아 전선 변화는 북러 파병·군사협력 환경에 영향을 준다.",
+      "title": "유럽 병력, 평화 시 우크라이나 파병 대비 훈련",
+      "summary": "수천 명의 유럽 병력이 평화 합의 시 우크라이나 배치를 리허설한다.",
+      "link_korea": "유럽의 안전보장 구상은 북러 협력 구도에 영향을 줄 수 있다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
@@ -170,6 +196,6 @@
       }
     }
   ],
-  "world_context": "우크라이나 전선과 사이버 공격 소식이 북러 협력과 북한발 사이버 위협을 가늠하는 배경이다.",
-  "world_at": "2026-11-03T04:11:20+00:00"
+  "world_context": "중동과 우크라이나의 전선 동향이 미 전력 배분과 북러 협력 구도에 간접 영향을 준다.",
+  "world_at": "2026-11-03T07:11:42+00:00"
 }

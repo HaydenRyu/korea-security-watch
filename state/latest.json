@@ -13,7 +13,7 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 합참",
+      "북한 지뢰 합참 DMZ 안보리 서한 정전협정 위반",
       "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
@@ -22,7 +22,7 @@
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit November 2026",
       "서해 구조물",
       "주한미군 감축"
     ],
@@ -49,11 +49,11 @@
   "opened": [
     "https://www.segye.com/newsView/20261103517017",
     "https://www.segye.com/newsView/20261103519482",
-    "https://www.segye.com/newsView/20261103510767",
-    "https://www.yna.co.kr/view/AKR20261103120351009",
-    "https://www.yna.co.kr/view/AKR20261103165200504"
+    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261103012800504",
+    "https://www.yna.co.kr/view/AKR20261103092800504"
   ],
-  "overall_summary": "북한이 11/2 순항미사일 집속탄두 시험을 KCNA로 발표했으나 시험 발사 성격의 정례 범주다. 김성남 국제비서 방중은 외교 일정이며 직전과 큰 변화 없다.",
+  "overall_summary": "북한의 순항미사일 집속탄두 시험(KCNA 발표)과 김성남 국제비서 방중은 정례·외교 범주이며 직전 회차와 같은 수준이다. 병력·핵·접경 충돌 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,8 +68,8 @@
       "status": "single",
       "routine": true,
       "region": "북한",
-      "summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 KCNA가 3일 발표했고 세계일보가 보도했다(시험 발표).",
-      "meaning": "방어망 압박용 시험이나 표적이 남측 시설이라는 근거는 없다.",
+      "summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 조선중앙통신이 3일 발표했고 세계일보가 보도했다(시험 발표).",
+      "meaning": "방어망 압박용 시험이며 표적이 남측 시설이라는 근거는 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -84,24 +84,25 @@
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "바이낸스 해킹 FBI 귀속은 첫 보도 24시간 경과 — 이후 북한 반응·통일부 입장만 후속 보도."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
       "region": "중국 베이징",
-      "summary": "김성남 북한 국제비서의 방중을 연합뉴스·세계일보가 교도통신 인용 보도했다(외교 일정, 군사협정 언급 없음).",
-      "meaning": "김정은 방중 직후 북중 고위급 교류 지속.",
+      "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징에 도착했다고 세계일보가 교도통신 인용 보도했다(외교 일정, 군사협정 언급 없음).",
+      "meaning": "김정은 단둥 방문 열흘 만의 북중 당 교류 지속.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103120351009"
+          "url": "https://www.segye.com/newsView/20261103519482"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "당 대표단 3일 평양 출발"
+        "당 대표단 3일 베이징 도착(교도 인용)"
       ],
       "speculation": []
     },
@@ -118,7 +119,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T12:09:29+00:00",
+  "checked_at": "2026-11-03T13:16:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

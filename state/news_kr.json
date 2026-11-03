@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-03T09:47:27+00:00",
+ "fetched_at": "2026-11-03T09:52:31+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-03T08:35:23+00:00",
@@ -8,15 +8,15 @@
   "feeds": 15,
   "feeds_failed": 1,
   "fetched": 1094,
-  "hits": 56,
-  "clusters": 47,
+  "hits": 59,
+  "clusters": 49,
   "by_group": {
    "drone_balloon": 6,
-   "fire": 16,
+   "fire": 17,
+   "border": 11,
+   "mine": 10,
    "summit": 4,
    "alert": 3,
-   "border": 10,
-   "mine": 9,
    "gps": 12,
    "usfk": 1,
    "spy": 2
@@ -45,7 +45,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 24
+   "hits": 26
   },
   "세계일보": {
    "feeds": 2,
@@ -68,9 +68,19 @@
    "latest": "2026-11-03T09:54:07+00:00"
   },
   "fire": {
-   "clusters": 16,
+   "clusters": 17,
    "max_independent": 2,
    "latest": "2026-11-03T09:54:07+00:00"
+  },
+  "border": {
+   "clusters": 11,
+   "max_independent": 2,
+   "latest": "2026-11-03T09:52:31+00:00"
+  },
+  "mine": {
+   "clusters": 10,
+   "max_independent": 2,
+   "latest": "2026-11-03T09:52:31+00:00"
   },
   "summit": {
    "clusters": 4,
@@ -80,16 +90,6 @@
   "alert": {
    "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-11-03T08:31:34+00:00"
-  },
-  "border": {
-   "clusters": 10,
-   "max_independent": 2,
-   "latest": "2026-11-03T08:31:34+00:00"
-  },
-  "mine": {
-   "clusters": 9,
-   "max_independent": 2,
    "latest": "2026-11-03T08:31:34+00:00"
   },
   "gps": {
@@ -195,7 +195,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 19
+   "hits": 21
   },
   {
    "outlet": "국민일보",

@@ -7,17 +7,15 @@
       "사이버 공격"
     ],
     "border_clash": [
-      "북한 순항미사일 집속탄두 시험 11월 3일 김여정 바이낸스 담화",
-      "진돗개 데프콘 합참 경고 간첩 혐의 국가보안법 구속 지뢰 발견 DMZ 귀순",
-      "지뢰 발견 목함지뢰 해안",
-      "DMZ NLL 귀순 합참 발표"
+      "지뢰 발견 DMZ 귀순 합참",
+      "북한 순항미사일 집속탄두 시험"
     ],
     "nuclear": [
       "North Korea cruise missile cluster warhead test Kim Yo Jong Binance",
       "북한 순항미사일 집속탄두 수직타격 시험"
     ],
     "calm": [
-      "news_kr.py 수집 결과 대조"
+      "남북 대화 제안 통신선 복원"
     ],
     "troop_movement": [
       "북한 병력 이동 전방 증강 군수 탄약 수송 North Korea troops buildup"
@@ -26,9 +24,8 @@
       "북한 병력 이동 전방 증강 군수 탄약 수송 North Korea troops buildup"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 북러 군사협력 주한미군 감축",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 준비 노농적위군 동원 등화관제 North Korea mobilization parade"
@@ -44,18 +41,12 @@
     ]
   },
   "opened": [
-    "https://www.stripes.com/theaters/asia_pacific/2026-11-02/north-korea-cluster-bomb-warhead-23335418.html",
-    "https://www.khan.co.kr/en/article/202611020918057/",
-    "https://news.sbs.co.kr/english/article.do?news_id=N1008824780",
-    "https://www.helpnetsecurity.com/2026/11/02/fbi-north-korea-binance-hack/",
+    "https://www.yna.co.kr/view/AKR20261103013800504",
     "https://www.aljazeera.com/news/2026/11/1/fbi-blames-north-korea-for-record-6-3bn-crypto-heist",
-    "https://www.chainalysis.com/blog/binance-exploit-latest-findings-and-response/",
-    "https://www.yna.co.kr/view/AKR20261103010600504",
     "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.segye.com/newsView/20261102519527",
-    "https://kookbang.dema.mil.kr/newsWeb/20261103/10/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261103013800504"
+    "https://www.segye.com/newsView/20261103502478"
   ],
+  "overall_summary": "북한이 11/3 순항미사일 집속탄두 시험을 주장했고 김여정은 바이낸스 귀속에 반발했으나 모두 시험·발언 성격의 정례 활동이며 접경 충돌·병력 이동 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -115,19 +106,9 @@
           "url": "https://www.aljazeera.com/news/2026/11/1/fbi-blames-north-korea-for-record-6-3bn-crypto-heist"
         },
         {
-          "name": "Help Net Security",
-          "tier": "C",
-          "url": "https://www.helpnetsecurity.com/2026/11/02/fbi-north-korea-binance-hack/"
-        },
-        {
-          "name": "Chainalysis",
-          "tier": "C",
-          "url": "https://www.chainalysis.com/blog/binance-exploit-latest-findings-and-response/"
-        },
-        {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103010600504"
+          "url": "https://www.segye.com/newsView/20261103502478"
         }
       ],
       "confidence": "높음",
@@ -138,8 +119,7 @@
       "speculation": []
     }
   },
-  "overall_summary": "북한이 11/3 순항미사일 집속탄두 시험을 주장했고 김여정은 바이낸스 귀속에 반발했으나 모두 시험·발언 성격의 정례 활동이며 접경 충돌·병력 이동 징후는 없다.",
-  "checked_at": "2026-11-02T23:11:26+00:00",
+  "checked_at": "2026-11-03T00:11:43+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -51,12 +51,9 @@
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261103013851504",
-    "https://www.yna.co.kr/view/AKR20261103092800504",
-    "https://www.yna.co.kr/view/AKR20261102078400504",
-    "https://www.yna.co.kr/view/AKR20261102150800083",
-    "https://www.yna.co.kr/view/AKR20261101016700504",
+    "https://www.yna.co.kr/view/AKR20261103100000072",
     "https://www.segye.com/newsView/20261103502478",
-    "https://feeds.bbci.co.uk/news/world/rss.xml"
+    "https://www.yna.co.kr/view/AKR20261103092800504"
   ],
   "overall_summary": "북한의 집속탄두 시험 주장과 바이낸스 해킹 귀속 공방은 직전 회차와 같은 정례 범주다. 접경 충돌·병력 이동·정부 긴급 경고 징후는 새로 확인되지 않았다.",
   "items": {
@@ -82,11 +79,6 @@
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261103013851504"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261102078400504"
         }
       ],
       "confidence": "중간",
@@ -139,7 +131,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T04:11:20+00:00",
+  "checked_at": "2026-11-03T05:11:35+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

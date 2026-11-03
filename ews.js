@@ -85,7 +85,7 @@ function lastGood(doc){
 const NOTE_E=`<p class="ews-s">세계 연동은 지수에 넣지 않고 따로 보여 드립니다. 과거 검정에서 다른 곳의 위기 앞뒤로 북한 발사가 늘었다는 근거가 없습니다.</p>`;
 const worldShort=doc=>`<p class="ews-s">판정 보류 — 세계 연동 데이터가 부족하거나 오래되었습니다 (관측 전역 ${esc(doc.coverage?.observed_theaters??0)}/5)</p>`;
 const stale=doc=>`<p class="ews-p">판정 보류 — 한반도 판정이 오래되었습니다 (마지막 ${esc(kst(doc.coverage?.latest_updated_at))})</p>`;
-const notes=doc=>(doc.floored?`<p class="ews-s">공식 단계 ${esc(doc.grade_label)} 구간 아래로 내려가지 않게 맞춘 값입니다.</p>`:"")+(doc.alpha===1?NOTE_E:"")+(doc.e==null?worldShort(doc):"");
+const notes=doc=>(doc.grade>0?`<p class="ews-s">공식 단계 ${esc(doc.grade_label)} 구간 안에서 징후가 쌓인 정도입니다.</p>`:"")+(doc.alpha===1?NOTE_E:"")+(doc.e==null?worldShort(doc):"");
 function gauge(doc){
   const v=`<p class="ews-s">가설 가중치 v${esc(doc.weights_version)} · 백테스트 전</p><p class="ews-s">${C7}</p><p class="ews-s">${esc(kst(doc.computed_at))}</p>`;
   if(doc.status==="error")

@@ -9,11 +9,12 @@
 
   근거 없는 전역은 「평온」이 아니라 미관측이다. 미관측이 많거나 판정이 묵으면 0점 대신 보류한다.
 
-  공식 단계와 어긋나지 않게 두 가지를 지킨다.
+  공식 단계와 어긋나지 않으면서 단계 안의 차이를 보여 준다.
   - α=1: E 는 표시만 하고 지수에 합치지 않는다. 대만 해협·러-우 사건 앞뒤 북한 발사는 과거 검정 6건 모두 「평소 수준」이다
     (data/linkage.json). α 는 Phase 3 백테스트를 통과한 뒤에만 낮춘다.
-  - 공식 단계 하한: D 는 10개 항목 평균이라 최근 380회차가 전부 25 미만이었다(공식 경계 53회차 포함).
-    지수는 공식 단계의 구간 아래로 내려가지 않는다.
+  - 단계 안 위치: 지수 구간은 공식 단계가 정하고, 값은 그 단계에서 D 가 가질 수 있는 최댓값 대비 위치다.
+    D 그대로는 10개 항목 평균이라 공식 경계에서도 25 안팎이었다. 등급이 안 보는 정례 징후가 여기서 차이를 만든다.
+    최댓값은 등급 규칙에서 나온 값이고 과거 사건에 맞춘 값이 아니다. 이 위치가 단계 상승을 앞서는지는 scripts/ews_backtest.py 로 본다.
 """
 from __future__ import annotations
 
@@ -33,7 +34,9 @@ CHANNELS = ("c1_us_gap", "c2_nk_ru_cn", "c3_simul", "c4_sea_energy", "c5_diploma
 CORE_ITEMS = {"nuclear", "troop_movement", "gov_warning"}  # 항목 점수 ×2
 GRADE_POINT = {"none": 0, "single": 1, "corroborated": 2}
 BANDS = ((75, "고위험 징후"), (50, "경계 징후"), (25, "관찰"), (0, "안정"))
-GRADE_FLOOR = {0: 0, 1: 25, 2: 50, 3: 75}  # 평시·주의·경계·위험 ↔ 구간 하한
+D_POINTS_MAX = 26
+# 공식 단계별 (구간 하한, 상한, 그 단계에서 가능한 D 점수 최대). 점수 최대는 항목 상태 5^10 전수 열거 결과(compute_grade 기준).
+GRADE_SCALE = {0: (0, 24, 26), 1: (25, 49, 13), 2: (50, 74, 20), 3: (75, 100, 26)}
 SOURCES_MAX = 5
 SUMMARY_LEN = 200
 ERROR_LEN = 200
@@ -52,6 +55,14 @@ def _round(x: float) -> int:
 
 def band(ews: int) -> str:
     return next(name for low, name in BANDS if ews >= low)
+
+
+def place(raw: float, grade) -> int:
+    """반올림 전 값 → 공식 단계 구간 안의 지수. 단계를 모르면 값 그대로."""
+    if grade not in GRADE_SCALE:
+        return _round(raw)
+    low, high, points = GRADE_SCALE[grade]
+    return _round(low + (high - low) * min(raw / (points / D_POINTS_MAX * 100), 1))
 
 
 def score_d(items: dict) -> float:
@@ -111,13 +122,12 @@ def compute(latest: dict, doc: dict, weights: dict, now: str, last_good: dict | 
 
     out = {"version": 1, "computed_at": now, "weights_version": weights["version"], "status": "withheld" if withheld else "ok",
            "ews": None, "band": None, "d": _round(d_raw), "e": None if world_short else _round(e_raw), "alpha": alpha,
-           "grade": latest.get("grade"), "grade_label": latest.get("grade_label"), "floored": False,
+           "grade": latest.get("grade"), "grade_label": latest.get("grade_label"),
            "coverage": {"observed_theaters": n_observed, "linkage_judged_at": judged_at, "latest_updated_at": latest_at},
            "theaters": theaters, "channels": channels, "last_good": last_good}
     if not withheld:
-        raw = _round(alpha * d_raw + (1 - alpha) * (0.0 if world_short else e_raw))  # 반올림 전 값으로 합친다
-        ews = max(raw, GRADE_FLOOR.get(latest.get("grade"), 0))
-        out.update(ews=ews, band=band(ews), floored=ews > raw)
+        ews = place(alpha * d_raw + (1 - alpha) * (0.0 if world_short else e_raw), latest.get("grade"))  # 반올림 전 값으로 합친다
+        out.update(ews=ews, band=band(ews))
         out["last_good"] = {"ews": ews, "band": out["band"], "computed_at": now}
     return out
 

@@ -1,52 +1,54 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "북한 병력 이동 전방 증강 11월",
+      "North Korea troops deployment border November 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변"
+      "북한 핵실험장 풍계리 영변 동향",
+      "North Korea Reuters cruise missile cluster warhead"
     ],
     "logistics": [
-      "North Korea ammunition shipment"
+      "북한 탄약 군수 수송 열병식 집결",
+      "North Korea munitions logistics parade preparations satellite imagery"
     ],
     "border_clash": [
       "지뢰 발견",
-      "DMZ 경고사격"
+      "DMZ",
+      "North Korea troops deployment border November 2026"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출"
+      "북한 GPS 교란 합참",
+      "North Korea attributed FBI hack Binance"
     ],
     "foreign_forces": [
-      "김성남 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 탄약 군수 수송 열병식 집결",
+      "North Korea munitions logistics parade preparations satellite imagery"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 노농적위군 동원",
+      "North Korea air defense evacuation drills"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 상향 North Korea emergency alert Japan J-Alert",
+      "North Korea emergency alert Japan J-Alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
+      "North Korea attributed FBI hack Binance"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261103013851504",
-    "https://www.yna.co.kr/view/AKR20261103165200504",
-    "https://www.yna.co.kr/view/AKR20261103120351009",
-    "https://www.segye.com/newsView/20261103510767",
-    "https://www.nknews.org/2026/11/north-korea-claims-first-test-of-smaller-cluster-warheads-on-cruise-missiles/"
+    "https://www.segye.com/newsView/20261103517017",
+    "https://www.nknews.org/",
+    "https://www.nknews.org/2026/11/kim-yo-jong-denies-north-korean-involvement-in-6b-binance-crypto-theft/",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008828621"
   ],
-  "overall_summary": "북한의 순항미사일 집속탄두 시험 주장 등 정례 성격 활동만 확인됐고 직전 대비 변화는 없다. 김성남 방중은 외교 일정이다.",
+  "overall_summary": "순항미사일 집속탄두 시험 주장 등 정례 성격 활동만 확인되며 직전 대비 변화는 없다. 김성남 방중은 외교 일정이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,54 +60,50 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
-      "region": "북한 일대",
-      "lat": 39.0,
-      "lon": 125.7,
-      "summary": "북한이 11/2 순항미사일 집속탄두 '수직타격' 시험을 했다고 KCNA 발표를 연합·NK News가 보도했다(직전 회차와 동일 사건); 군은 북한 주장 기술을 20년 전 구비했다고 밝혔다.",
-      "meaning": "대남 타격능력 과시성 무기 시험으로 접경 충돌 징후는 없다.",
+      "region": "북한 내륙",
+      "summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 KCNA가 3일 발표했고 세계일보·NK News가 보도했다(직전 회차와 동일 사건, 시험 발표).",
+      "meaning": "시험 발사 성격의 정례 활동이며 남측 시설 표적 정황은 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103013851504"
+          "url": "https://www.segye.com/newsView/20261103517017"
         },
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/2026/11/north-korea-claims-first-test-of-smaller-cluster-warheads-on-cruise-missiles/"
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 주장 시험(11/2)",
-        "군은 20년 전 구비 기술이라 평가"
+        "조선중앙통신 3일 보도, 11/2 시험",
+        "군은 압도적 대응 태세 유지 입장"
       ],
       "speculation": []
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "바이낸스 탈취 북한 지목 건은 첫 보도 후 24시간 경과, 이번 회차 신규 원문 확인 못 함."
+      "summary": "바이낸스 북한 지목(FBI)은 24시간 경과, 김여정 부인 담화는 귀속 발표가 아니라 배경."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "평양-베이징",
-      "lat": 39.9,
-      "lon": 116.4,
-      "summary": "김성남 북한 국제비서가 당대표단을 이끌고 방중했다고 연합뉴스가 보도했다(외교 일정).",
-      "meaning": "김정은 단둥 방문 열흘 만의 고위급 교류로 군사협정·무기협력 발표는 없다.",
+      "region": "중국",
+      "summary": "김성남 북한 국제비서의 방중을 연합뉴스가 보도했다(외교 일정, 군사협정 언급 없음).",
+      "meaning": "북중 고위급 교류 외교 일정.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "SBS",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103120351009"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008828621"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "당대표단 방중"
+        "방중 보도"
       ],
       "speculation": []
     },
@@ -116,14 +114,13 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none",
-      "summary": "합참의장 부상장병 위문은 경고가 아니다."
+      "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T10:12:06+00:00",
+  "checked_at": "2026-11-03T11:14:10+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

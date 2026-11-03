@@ -1,8 +1,21 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Reuters"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송",
+      "North Korea ammunition logistics"
+    ],
     "border_clash": [
       "지뢰 발견",
-      "DMZ 북한 군사분계선 귀순 NLL"
+      "DMZ NLL 귀순 합참",
+      "North Korea Reuters cluster warhead cruise missile"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -10,52 +23,39 @@
       "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
-    ],
-    "troop_movement": [
-      "북한 병력 이동",
-      "North Korea troop movement"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "김정은 방중 김정은 방러",
+      "서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout mobilization"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea US Japan warning"
+      "진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
       "남북 대화 제안",
-      "North Korea talks offer"
+      "통신선 복원"
+    ],
+    "incidents": [
+      "실탄 발견 해안"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261103013851504",
-    "https://www.yna.co.kr/view/AKR20261103100000072",
-    "https://www.segye.com/newsView/20261103502478",
-    "https://www.yna.co.kr/view/AKR20261103092800504"
+    "https://www.yna.co.kr/view/AKR20261103092800504",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008828336",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008827939",
+    "https://www.segye.com/newsView/20261103502478"
   ],
-  "overall_summary": "북한의 집속탄두 시험 주장과 바이낸스 해킹 귀속 공방은 직전 회차와 같은 정례 범주다. 접경 충돌·병력 이동·정부 긴급 경고 징후는 새로 확인되지 않았다.",
+  "overall_summary": "북한의 집속탄두 시험 주장과 바이낸스 해킹 귀속 공방은 직전 회차와 같은 정례 범주다. 접경 충돌·병력 이동·정부 긴급 경고 등 새 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,7 +72,7 @@
       "region": "북한 일대",
       "lat": 39.0,
       "lon": 125.7,
-      "summary": "북한이 탄도·순항미사일 집속탄두 시험을 연이어 했다고 주장했고 연합뉴스가 보도했다(직전 회차와 동일 사건, 합참은 일부 발사를 즉각 공지하지 않았다고 설명).",
+      "summary": "북한이 탄도·순항미사일 집속탄두 시험을 연이어 했다고 주장했고 연합뉴스가 보도했다(직전 회차와 동일 사건; 한국 안보리 서한 공개는 9월 DMZ 지뢰 사건의 후속 배경).",
       "meaning": "대남 타격능력 과시성 무기 시험으로 접경 충돌 징후는 없다.",
       "sources": [
         {
@@ -84,7 +84,7 @@
       "confidence": "중간",
       "facts": [
         "북한 주장 시험, 연합뉴스 보도",
-        "합참 '모든 발사체를 공지하진 않는다'"
+        "합참 정밀 분석 중"
       ],
       "speculation": []
     },
@@ -93,7 +93,7 @@
       "routine": true,
       "attribution": "nk",
       "region": "해외(미국·가상자산)",
-      "summary": "FBI가 바이낸스 가상자산 탈취를 북한 소행으로 지목했고 김여정이 11/2 담화로 '정치적 도발'이라 반발, 통일부는 '상황 파악이 우선'이라 밝혔다.",
+      "summary": "FBI가 바이낸스 가상자산 탈취를 북한 소행으로 지목했고 김여정이 담화로 '정치적 도발'이라 반발, 통일부는 '상황 파악이 우선'이라 밝혔다.",
       "meaning": "가상자산 탈취는 정권 자금원 문제이며 군사 징후는 아니다.",
       "sources": [
         {
@@ -131,7 +131,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T05:11:35+00:00",
+  "checked_at": "2026-11-03T06:11:37+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,10 +1,18 @@
 {
- "at": "2026-11-03T02:20:08+00:00",
- "south": 80,
- "area": 97,
- "baseline": 78,
- "ratio": 1.03,
- "samples": 7,
- "mil": [],
+ "at": "2026-11-03T02:22:00+00:00",
+ "south": 77,
+ "area": 92,
+ "baseline": 79.0,
+ "ratio": 0.97,
+ "samples": 8,
+ "mil": [
+  {
+   "type": "H60",
+   "name": null,
+   "call": "CARD00",
+   "lat": 37.45,
+   "lon": 127.11
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

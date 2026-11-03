@@ -1,59 +1,46 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "북한 지뢰 합참 DMZ 안보리 서한 정전협정 위반",
-      "DMZ NLL 귀순"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "정부 유엔 안보리 서한 북한 지뢰 매설 정전협정 위반",
+      "북한 지뢰 DMZ 귀순 NLL 3일 합참",
+      "North Korea cruise missile cluster warhead vertical strike test KCNA Korea Herald"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit November 2026",
-      "서해 구조물",
-      "주한미군 감축"
+      "Kim Jong Un China Russia visit November 2026",
+      "서해 구조물 주한미군 감축 11월 3일"
+    ],
+    "electronic_cyber": [
+      "북한 바이낸스 해킹 FBI 귀속 North Korea Binance hack attributed"
+    ],
+    "nuclear": [
+      "북한 핵실험 풍계리 영변 동향 North Korea nuclear Yongbyon"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 North Korea troop movement DMZ"
+    ],
+    "logistics": [
+      "북한 병력 이동 전방 증강 North Korea troop movement DMZ"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 병력 이동 전방 증강 North Korea troop movement DMZ"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 전시 준전시 등화관제 North Korea martial mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 발령 데프콘 한미일 경고 North Korea warning evacuation"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안"
-    ],
-    "incidents": [
-      "실탄 발견 해안"
+      "국가보안법 구속 간첩 혐의 North Korea espionage indicted"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261103517017",
     "https://www.segye.com/newsView/20261103519482",
-    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261103012800504",
-    "https://www.yna.co.kr/view/AKR20261103092800504"
+    "https://www.koreaherald.com/article/10923504",
+    "https://www.nknews.org/2026/11/north-korea-claims-first-test-of-smaller-cluster-warheads-on-cruise-missiles/"
   ],
-  "overall_summary": "북한의 순항미사일 집속탄두 시험(KCNA 발표)과 김성남 국제비서 방중은 정례·외교 범주이며 직전 회차와 같은 수준이다. 병력·핵·접경 충돌 징후는 확인되지 않았다.",
+  "overall_summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 3일 발표했으나 10/31 탄도미사일 집속탄두 시험에 이은 시험 발표로 직전과 같은 수준이다. 김성남 국제비서의 방중은 외교 일정이며 군사협력 언급은 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,34 +52,47 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
-      "region": "북한",
-      "summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 조선중앙통신이 3일 발표했고 세계일보가 보도했다(시험 발표).",
-      "meaning": "방어망 압박용 시험이며 표적이 남측 시설이라는 근거는 없다.",
+      "region": "북한 미사일총국",
+      "summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 조선중앙통신이 3일 발표했고 세계일보·코리아헤럴드·NK News가 보도했다(시험 발표).",
+      "meaning": "남측 방어망 압박용 무기 시험이며 표적이 남측 시설이라는 근거는 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261103517017"
+        },
+        {
+          "name": "코리아헤럴드",
+          "tier": "B",
+          "url": "https://www.koreaherald.com/article/10923504"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/north-korea-claims-first-test-of-smaller-cluster-warheads-on-cruise-missiles/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 3일 발표"
+        "조선중앙통신이 미사일총국의 산포전투부 위력평가·수직타격비행특성시험을 발표",
+        "군은 압도적 대응태세 유지 입장"
       ],
-      "speculation": []
+      "speculation": [
+        "지하시설·갱도 입구 타격 의도라는 전문가 분석"
+      ]
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "바이낸스 해킹 FBI 귀속은 첫 보도 24시간 경과 — 이후 북한 반응·통일부 입장만 후속 보도."
+      "summary": "바이낸스 해킹은 민간 분석업체 귀속뿐이고 정부 공식 귀속·원문 확인이 이번 회차에 없어 징후로 올리지 않는다."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
       "region": "중국 베이징",
       "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징에 도착했다고 세계일보가 교도통신 인용 보도했다(외교 일정, 군사협정 언급 없음).",
-      "meaning": "김정은 단둥 방문 열흘 만의 북중 당 교류 지속.",
+      "meaning": "김정은 단둥 방문 열흘 만의 당 교류로 군사협력 근거는 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -102,9 +102,11 @@
       ],
       "confidence": "중간",
       "facts": [
-        "당 대표단 3일 베이징 도착(교도 인용)"
+        "교도통신이 외교소식통 인용으로 보도"
       ],
-      "speculation": []
+      "speculation": [
+        "5중전회 후 정책 교환·미 중간선거 후 대미 접근 확인 가능성"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -119,7 +121,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T13:16:55+00:00",
+  "checked_at": "2026-11-03T14:15:07+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

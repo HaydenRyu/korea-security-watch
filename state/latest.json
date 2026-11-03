@@ -2,11 +2,11 @@
   "coverage": {
     "border_clash": [
       "지뢰 발견",
-      "DMZ 북한 군사분계선"
+      "DMZ 북한 군사분계선 귀순 NLL"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 공격",
+      "해킹 개인정보 유출",
       "사이버 공격"
     ],
     "foreign_forces": [
@@ -51,14 +51,14 @@
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261103013851504",
+    "https://www.yna.co.kr/view/AKR20261103092800504",
+    "https://www.yna.co.kr/view/AKR20261102078400504",
+    "https://www.yna.co.kr/view/AKR20261102150800083",
+    "https://www.yna.co.kr/view/AKR20261101016700504",
     "https://www.segye.com/newsView/20261103502478",
-    "https://www.segye.com/newsView/20261102519527",
-    "https://www.bbc.co.uk/news/articles/c6rey4v53exgo",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://kookbang.dema.mil.kr/newsWeb/20261103/10/ATCE_CTGR_0010010000/view.do",
-    "https://news.google.com/rss/search?q=North+Korea&hl=en-US&gl=US&ceid=US:en"
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
   ],
-  "overall_summary": "북한이 순항미사일 집속탄두 시험을 주장하고 김여정이 FBI의 바이낸스 귀속에 반발했으나 모두 직전 회차와 같은 정례 범주다. 접경 충돌·병력 이동·정부 긴급 경고 징후는 새로 확인되지 않았다.",
+  "overall_summary": "북한의 집속탄두 시험 주장과 바이낸스 해킹 귀속 공방은 직전 회차와 같은 정례 범주다. 접경 충돌·병력 이동·정부 긴급 경고 징후는 새로 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,18 +75,24 @@
       "region": "북한 일대",
       "lat": 39.0,
       "lon": 125.7,
-      "summary": "북한이 전략순항미사일용 집속탄두 위력·수직타격 시험을 했다고 주장했고 연합뉴스가 보도했다(직전 회차와 동일 사건).",
+      "summary": "북한이 탄도·순항미사일 집속탄두 시험을 연이어 했다고 주장했고 연합뉴스가 보도했다(직전 회차와 동일 사건, 합참은 일부 발사를 즉각 공지하지 않았다고 설명).",
       "meaning": "대남 타격능력 과시성 무기 시험으로 접경 충돌 징후는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261103013851504"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261102078400504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "북한 주장 시험, 연합뉴스 보도"
+        "북한 주장 시험, 연합뉴스 보도",
+        "합참 '모든 발사체를 공지하진 않는다'"
       ],
       "speculation": []
     },
@@ -95,24 +101,25 @@
       "routine": true,
       "attribution": "nk",
       "region": "해외(미국·가상자산)",
-      "summary": "FBI가 바이낸스 약 63억 달러 탈취를 북한 TraderTraitor 소행으로 발표했고 김여정이 11/2 담화로 '정치적 도발'이라 반발했다.",
+      "summary": "FBI가 바이낸스 가상자산 탈취를 북한 소행으로 지목했고 김여정이 11/2 담화로 '정치적 도발'이라 반발, 통일부는 '상황 파악이 우선'이라 밝혔다.",
       "meaning": "가상자산 탈취는 정권 자금원 문제이며 군사 징후는 아니다.",
       "sources": [
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo"
-        },
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261103502478"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261103092800504"
         }
       ],
       "confidence": "높음",
       "facts": [
-        "FBI가 TraderTraitor를 지목",
-        "김여정 담화로 부인"
+        "FBI가 북한 해킹조직 지목",
+        "김여정 담화로 부인",
+        "통일부 입장 표명"
       ],
       "speculation": []
     },
@@ -132,7 +139,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T03:10:23+00:00",
+  "checked_at": "2026-11-03T04:11:20+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
@@ -172,5 +179,5 @@
     }
   ],
   "world_context": "우크라이나 전선과 사이버 공격 소식이 북러 협력과 북한발 사이버 위협을 가늠하는 배경이다.",
-  "world_at": "2026-11-03T03:10:23+00:00"
+  "world_at": "2026-11-03T04:11:20+00:00"
 }

@@ -1,49 +1,77 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강 11월 3일"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup border"
     ],
     "nuclear": [
-      "북한 집속탄두 순항미사일 시험 합참",
-      "North Korea nuclear Yongbyon Punggye-ri satellite imagery November 2026"
+      "북한 핵시설 영변 풍계리",
+      "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "북한 탄약 연료 비축 군수 수송 동향"
+      "북한 탄약 연료 비축 군수 수송",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "DMZ 지뢰 발견 합참 11월",
-      "news_kr 수집(지뢰·DMZ 묶음)"
+      "지뢰 발견 DMZ",
+      "목함지뢰 해안 귀순",
+      "North Korea DMZ NLL mine"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 서북도서",
-      "해킹 개인정보 유출 사이버 공격 11월 3일"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "North Korea GPS jamming hacking"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit November 2026",
-      "news_kr 수집(summit 묶음)"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비 집결 평양 주민 대피 등화관제"
+      "북한 열병식 준비 집결",
+      "North Korea parade preparation"
     ],
     "nk_internal": [
-      "북한 열병식 준비 집결 평양 주민 대피 등화관제"
+      "북한 등화관제 주민 대피 준전시",
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 합참 북한 노동신문 전시 준비"
+      "진돗개 발령 데프콘",
+      "DEFCON Korea raised"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "news_kr 수집(summit 묶음)"
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
+    ],
+    "linkage:taiwan": [
+      "대만 중국 군사훈련",
+      "PLA drills around Taiwan"
+    ],
+    "linkage:korea": [
+      "북러 군사협력",
+      "North Korea troops Russia"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261103517017",
     "https://www.segye.com/newsView/20261103519482",
-    "https://www.bbc.co.uk/news/world"
+    "https://www.yna.co.kr/view/AKR20261103013851504",
+    "https://www.yna.co.kr/view/AKR20261103120351009",
+    "https://www.yna.co.kr/view/AKR20261103165200504",
+    "https://www.yna.co.kr/view/AKR20261104000900108",
+    "https://www.yna.co.kr/view/AKR20261103188300071",
+    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "북한이 10/31·11/2 집속탄두 시험을 3일 발표했고 김성남 국제비서가 베이징을 방문 중이다. 모두 시험·외교 일정이라 정례 범위로, 직전 회차와 큰 변화는 없다.",
+  "overall_summary": "북한이 10/31·11/2 집속탄두 시험을 3일 발표했고 김성남 국제비서가 베이징을 방문했다. 시험·외교 일정이라 정례 범위이며 직전과 변화 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,45 +83,54 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "region": "북한 (미사일총국)",
-      "summary": "조선중앙통신이 11/2 순항미사일 집속탄두·수직타격 시험을 3일 발표했고 세계일보가 보도했다(시험 발표, 연합 보도는 열람하지 않음).",
-      "meaning": "신형 타격수단 시험 과시로 위협 발언·시험 범주다.",
+      "summary": "조선중앙통신이 11/2 순항미사일 집속탄두·수직타격 시험을 3일 발표했고 세계일보·연합뉴스가 보도했다.",
+      "meaning": "신형 타격수단 시험 과시로 시험 발사 범주다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261103517017"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261103013851504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "10/31 탄도미사일용, 11/2 순항미사일용 집속탄두 시험을 KCNA가 11/3 보도",
-        "군은 압도적 대응태세를 유지한다고 밝힘"
+        "KCNA가 11/3 미사일총국의 산포전투부 위력평가시험 보도"
       ],
       "speculation": []
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "이번 회차에 원문을 다시 열지 못해 직전의 미 귀속 반박 보도(연합, 11/3)를 근거 없이 잇지 않았다."
+      "summary": "24시간 경과 안의 새 사건 없음 — 미국의 북한 바이낸스 해킹 부인 반박(연합 11/3)은 기존 귀속 논쟁의 후속으로 배경이다."
     },
     "foreign_forces": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "region": "중국 베이징",
-      "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징에 도착했다고 세계일보가 교도통신 인용 보도했다(외교 일정, 군사협력 언급 없음).",
-      "meaning": "김정은 단둥 방문 열흘 만의 당 차원 교류다.",
+      "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징을 방문했다고 교도통신 인용으로 세계일보·연합뉴스가 보도했다(외교 일정).",
+      "meaning": "김정은 단둥 방문 열흘 만의 당 차원 교류로 군사협력 언급은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261103519482"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261103120351009"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "교도통신이 외교 소식통 인용"
+        "교도통신이 외교 소식통 인용 보도"
       ],
       "speculation": []
     },
@@ -110,14 +147,14 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T22:13:05+00:00",
+  "checked_at": "2026-11-03T23:10:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
       "title": "러 외무부 \"한미 연합훈련이 한반도 불안정 초래\"",
-      "summary": "러시아 외무부 대변인이 한미 연합군사훈련이 한반도에 불안정을 낳고 있다고 3일 밝혔다.",
+      "summary": "러시아 외무부 대변인이 한미 연합군사훈련이 한반도에 불안정을 야기한다고 3일 밝혔다.",
       "link_korea": "북러 밀착 속 러시아의 대한반도 입장을 보여준다.",
       "region": "러시아",
       "source": {
@@ -128,5 +165,5 @@
     }
   ],
   "world_context": "러시아·중국이 북한 시험 발사에 한미훈련을 거론하는 구도가 이어진다.",
-  "world_at": "2026-11-03T19:12:25+00:00"
+  "world_at": "2026-11-03T23:10:33+00:00"
 }

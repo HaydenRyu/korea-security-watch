@@ -130,12 +130,44 @@ def test_index_never_below_official_grade_band():
     for grade, want in [(0, "안정"), (1, "관찰"), (2, "경계 징후"), (3, "고위험 징후")]:
         for w in (WEIGHTS, ALPHA1):
             o = ews.compute({"checked_at": NOW, "items": items, "grade": grade, "grade_label": "x"}, doc(), w, NOW)
-            assert o["band"] == want and o["floored"] is (grade > 0) and o["d"] == 0
+            assert o["band"] == want and o["d"] == 0
 
 
-def test_floor_does_not_lower_a_higher_score():
+def test_index_stays_inside_official_grade_band():
     o = ews.compute({**latest(**{k: "corroborated" for k in d.ITEMS}), "grade": 1}, doc(), ALPHA1, NOW)
-    assert o["ews"] == 100 and o["band"] == "고위험 징후" and o["floored"] is False
+    assert o["ews"] == 49 and o["band"] == "관찰"
+
+
+def test_index_moves_with_d_inside_a_grade():
+    low = {"troop_movement": {"status": "single"}}
+    high = {**low, "border_clash": {"status": "corroborated", "routine": True}, "foreign_forces": {"status": "corroborated", "routine": True}}
+    vals = []
+    for over in (low, high):
+        items = {**{k: {"status": "none"} for k in d.ITEMS}, **over}
+        assert d.compute_grade(items) == 1
+        vals.append(ews.compute({"checked_at": NOW, "items": items, "grade": 1}, doc(), ALPHA1, NOW)["ews"])
+    assert vals == [29, 32]  # D 7.69 → 25+24×7.69/50 · D 15.38 → 25+24×15.38/50 (반올림)
+
+
+def _top_of_grade(grade):
+    routine = {"status": "corroborated", "routine": True}
+    items = {k: routine for k in d.ITEMS}
+    if grade == 1:
+        items["troop_movement"] = {"status": "single"}
+    if grade == 2:
+        items = {k: {"status": "corroborated"} for k in d.ITEMS if k not in d.CRITICAL}
+        items.update({k: {"status": "single"} for k in d.CRITICAL})
+    if grade == 3:
+        items = {k: {"status": "corroborated"} for k in d.ITEMS}
+    return items
+
+
+def test_grade_scale_points_are_reachable_at_that_grade():
+    for grade in (1, 2, 3):
+        items = _top_of_grade(grade)
+        assert d.compute_grade(items) == grade
+        assert round(ews.score_d(items) / 100 * ews.D_POINTS_MAX) == ews.GRADE_SCALE[grade][2]
+        assert ews.place(ews.score_d(items), grade) == ews.GRADE_SCALE[grade][1]
 
 
 def test_alpha1_keeps_world_out_of_index_but_shows_e():
@@ -145,7 +177,7 @@ def test_alpha1_keeps_world_out_of_index_but_shows_e():
 
 def test_alpha1_world_gap_does_not_withhold_index():
     o = ews.compute({**latest(), "grade": 1}, doc(judged_at=None), ALPHA1, NOW)
-    assert o["status"] == "ok" and o["ews"] == 25 and o["e"] is None
+    assert o["status"] == "ok" and o["ews"] == 25 and o["e"] is None  # 항목 전부 none 이어도 구간 하한
     assert all(t["contribution"] is None for t in o["theaters"]) and all(c["value"] is None for c in o["channels"])
 
 
@@ -243,3 +275,10 @@ def test_sample_has_three_states():
     s = json.loads((ROOT / "state" / "sample" / "ews.json").read_text(encoding="utf-8"))
     assert {k: s[k]["status"] for k in ("ok", "stale", "error")} == {"ok": "ok", "stale": "withheld", "error": "error"}
     assert s["withheld"]["e"] is None and s["withheld"]["ews"] is not None  # 세계 연동 공백은 지수를 막지 않는다
+
+
+def test_backtest_counts_only_upgrades_inside_window():
+    import ews_backtest as b
+    r = [{"at": f"2026-10-0{i}T00:00:00+00:00", "grade": g, "d": x} for i, (g, x) in enumerate([(1, 4.0), (1, 12.0), (2, 19.0), (1, 4.0)], 1)]
+    assert b.entries(r) == ["2026-10-03T00:00:00+00:00"]
+    assert b.lead_table(r, 1, 2) == {4.0: [2, 0], 12.0: [1, 1]}

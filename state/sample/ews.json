@@ -5,14 +5,13 @@
     "computed_at": "2026-10-18T05:07:00+00:00",
     "weights_version": 1,
     "status": "ok",
-    "ews": 50,
+    "ews": 55,
     "band": "경계 징후",
     "d": 15,
     "e": 22,
     "alpha": 1.0,
     "grade": 2,
     "grade_label": "경계",
-    "floored": true,
     "coverage": {
       "observed_theaters": 4,
       "linkage_judged_at": "2026-10-18T05:07:00+00:00",
@@ -128,7 +127,7 @@
       }
     ],
     "last_good": {
-      "ews": 50,
+      "ews": 55,
       "band": "경계 징후",
       "computed_at": "2026-10-18T05:07:00+00:00"
     }
@@ -138,14 +137,13 @@
     "computed_at": "2026-10-18T05:07:00+00:00",
     "weights_version": 1,
     "status": "ok",
-    "ews": 50,
+    "ews": 55,
     "band": "경계 징후",
     "d": 15,
     "e": null,
     "alpha": 1.0,
     "grade": 2,
     "grade_label": "경계",
-    "floored": true,
     "coverage": {
       "observed_theaters": 2,
       "linkage_judged_at": "2026-10-18T05:07:00+00:00",
@@ -245,7 +243,7 @@
       }
     ],
     "last_good": {
-      "ews": 50,
+      "ews": 55,
       "band": "경계 징후",
       "computed_at": "2026-10-18T05:07:00+00:00"
     }
@@ -262,7 +260,6 @@
     "alpha": 1.0,
     "grade": 2,
     "grade_label": "경계",
-    "floored": false,
     "coverage": {
       "observed_theaters": 4,
       "linkage_judged_at": "2026-10-18T05:07:00+00:00",

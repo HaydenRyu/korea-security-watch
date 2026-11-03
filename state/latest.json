@@ -6,7 +6,7 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear test site Yongbyon"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
@@ -15,7 +15,7 @@
     "border_clash": [
       "지뢰 발견 목함지뢰 해안",
       "NLL 귀순",
-      "North Korea Reuters cluster warhead cruise missile"
+      "North Korea cruise missile cluster warhead"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
@@ -23,7 +23,7 @@
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit November 2026",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -32,7 +32,7 @@
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
-      "North Korea wartime alert civil defense"
+      "North Korea civil defense alert"
     ],
     "gov_warning": [
       "진돗개 발령 데프콘",
@@ -55,8 +55,8 @@
     "https://www.segye.com/newsView/20261103517017",
     "https://www.segye.com/newsView/20261103519482",
     "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://www.yna.co.kr/view/AKR20261103013851504"
+    "https://www.yna.co.kr/view/AKR20261103013851504",
+    "https://www.yna.co.kr/view/AKR20261103188300071"
   ],
   "overall_summary": "북한이 10/31·11/2 집속탄두 시험을 관영매체로 발표했고 김성남 국제비서가 방중했으나 모두 정례·외교 범주다. 새 군사적 이상 징후는 없고 직전 회차와 같다.",
   "items": {
@@ -73,7 +73,9 @@
       "status": "corroborated",
       "routine": true,
       "region": "북한 서해상",
-      "summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 조선중앙통신이 3일 발표했고 세계일보·연합뉴스가 보도했다(시험 발표).",
+      "lat": 39.0,
+      "lon": 125.7,
+      "summary": "조선중앙통신이 11/2 순항미사일 집속탄두·수직타격 시험을 3일 발표했고 세계일보·연합뉴스가 보도했다(시험 발표).",
       "meaning": "탄두 성능 과시 시험으로 즉각적 군사행동 징후는 아니다.",
       "sources": [
         {
@@ -90,7 +92,7 @@
       "confidence": "중간",
       "facts": [
         "조선중앙통신이 미사일총국의 10/31 탄도미사일, 11/2 순항미사일 집속탄두 시험을 3일 발표",
-        "합참은 도발 시 압도적 대응 능력·태세 유지라고 밝힘"
+        "합참의장은 3일 육군 헬기부대 방문에서 적 도발 억제 즉응태세를 지시(국방일보)"
       ],
       "speculation": []
     },
@@ -118,6 +120,8 @@
       "status": "single",
       "routine": true,
       "region": "중국 베이징",
+      "lat": 39.9,
+      "lon": 116.4,
       "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징에 도착했다고 세계일보가 교도통신 인용 보도했다(외교 일정, 군사협정 언급 없음).",
       "meaning": "10/24 김정은 단둥 방문 이후 당 차원 교류로 군사협력 징후는 없다.",
       "sources": [
@@ -140,14 +144,13 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none",
-      "summary": "합참의장이 9/21 DMZ 지뢰 부상 장병을 위문했을 뿐 신규 경보는 없다."
+      "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T17:10:52+00:00",
+  "checked_at": "2026-11-03T18:11:48+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,54 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강 11월",
-      "North Korea troops deployment border November 2026"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 핵실험장 풍계리 영변 동향",
-      "North Korea Reuters cruise missile cluster warhead"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 열병식 집결",
-      "North Korea munitions logistics parade preparations satellite imagery"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ",
-      "North Korea troops deployment border November 2026"
+      "북한 지뢰 발견 DMZ 합참",
+      "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "North Korea attributed FBI hack Binance"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 탄약 군수 수송 열병식 집결",
-      "North Korea munitions logistics parade preparations satellite imagery"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군 동원",
-      "North Korea air defense evacuation drills"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 North Korea emergency alert Japan J-Alert",
-      "North Korea emergency alert Japan J-Alert"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
-      "North Korea attributed FBI hack Binance"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안"
+    ],
+    "incidents": [
+      "실탄 발견 해안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261103517017",
-    "https://www.nknews.org/",
-    "https://www.nknews.org/2026/11/kim-yo-jong-denies-north-korean-involvement-in-6b-binance-crypto-theft/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008828621"
+    "https://www.segye.com/newsView/20261103519482",
+    "https://www.segye.com/newsView/20261103510767",
+    "https://www.yna.co.kr/view/AKR20261103120351009",
+    "https://www.yna.co.kr/view/AKR20261103165200504"
   ],
-  "overall_summary": "순항미사일 집속탄두 시험 주장 등 정례 성격 활동만 확인되며 직전 대비 변화는 없다. 김성남 방중은 외교 일정이다.",
+  "overall_summary": "북한이 11/2 순항미사일 집속탄두 시험을 KCNA로 발표했으나 시험 발사 성격의 정례 범주다. 김성남 국제비서 방중은 외교 일정이며 직전과 큰 변화 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,48 +67,41 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "북한 내륙",
-      "summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 KCNA가 3일 발표했고 세계일보·NK News가 보도했다(직전 회차와 동일 사건, 시험 발표).",
-      "meaning": "시험 발사 성격의 정례 활동이며 남측 시설 표적 정황은 없다.",
+      "region": "북한",
+      "summary": "북한이 11/2 순항미사일 집속탄두·수직타격 시험을 했다고 KCNA가 3일 발표했고 세계일보가 보도했다(시험 발표).",
+      "meaning": "방어망 압박용 시험이나 표적이 남측 시설이라는 근거는 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261103517017"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신 3일 보도, 11/2 시험",
-        "군은 압도적 대응 태세 유지 입장"
+        "KCNA 3일 발표"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "바이낸스 북한 지목(FBI)은 24시간 경과, 김여정 부인 담화는 귀속 발표가 아니라 배경."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국",
-      "summary": "김성남 북한 국제비서의 방중을 연합뉴스가 보도했다(외교 일정, 군사협정 언급 없음).",
-      "meaning": "북중 고위급 교류 외교 일정.",
+      "region": "중국 베이징",
+      "summary": "김성남 북한 국제비서의 방중을 연합뉴스·세계일보가 교도통신 인용 보도했다(외교 일정, 군사협정 언급 없음).",
+      "meaning": "김정은 방중 직후 북중 고위급 교류 지속.",
       "sources": [
         {
-          "name": "SBS",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008828621"
+          "url": "https://www.yna.co.kr/view/AKR20261103120351009"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "방중 보도"
+        "당 대표단 3일 평양 출발"
       ],
       "speculation": []
     },
@@ -120,7 +118,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T11:14:10+00:00",
+  "checked_at": "2026-11-03T12:09:29+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

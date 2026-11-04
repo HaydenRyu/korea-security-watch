@@ -1,55 +1,50 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집 묶음 확인(2026-11-04 12시 KST)"
+      "news_kr 수집 묶음 확인(2026-11-04 13시 KST)"
     ],
     "nuclear": [
-      "news_kr 수집 묶음 확인(2026-11-04 12시 KST)"
+      "news_kr 수집 묶음 확인(2026-11-04 13시 KST)"
     ],
     "logistics": [
-      "news_kr 수집 묶음 확인(2026-11-04 12시 KST)"
+      "news_kr 수집 묶음 확인(2026-11-04 13시 KST)"
     ],
     "border_clash": [
-      "합참 북한 동해상 미상 발사체 (news_kr 수집)",
-      "합참 북한 발사체 4일 동해상 탄도미사일 순항미사일 확인",
-      "DMZ 지뢰 합참의장 (news_kr 수집)"
+      "합참 북한 발사체 4일 탄도미사일 사거리",
+      "지뢰 발견 DMZ NLL 귀순 11월 4일",
+      "North Korea missile launch November 4 Joint Chiefs Reuters"
     ],
     "electronic_cyber": [
-      "해킹 공격 (news_kr 수집)",
-      "바이낸스 해킹 북한 (news_kr 수집)"
+      "해킹 개인정보 유출 사이버 공격 11월 4일",
+      "GPS 교란 (news_kr 수집)"
     ],
     "foreign_forces": [
       "김정은 방중 방러 서해 구조물 주한미군 감축",
       "North Korea launch November 4 2026 Joint Chiefs of Staff"
     ],
     "parade_massing": [
-      "news_kr 수집 묶음 확인(2026-11-04 12시 KST)"
+      "news_kr 수집 묶음 확인(2026-11-04 13시 KST)"
     ],
     "nk_internal": [
-      "news_kr 수집 묶음 확인(2026-11-04 12시 KST)"
+      "news_kr 수집 묶음 확인(2026-11-04 13시 KST)"
     ],
     "gov_warning": [
-      "news_kr 수집 묶음 확인(2026-11-04 12시 KST)"
+      "news_kr 수집 묶음 확인(2026-11-04 13시 KST)"
     ],
     "hybrid_ops": [
-      "news_kr 수집 묶음 확인(2026-11-04 12시 KST)"
+      "news_kr 수집 묶음 확인(2026-11-04 13시 KST)",
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "news_kr 수집 묶음 확인"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 11월"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261104505205",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008829816",
-    "https://www.yna.co.kr/view/AKR20261104055100504",
-    "https://www.segye.com/newsView/20261103519482",
-    "https://www.yna.co.kr/view/AKR20261103160700504",
-    "https://www.yna.co.kr/view/AKR20261104083200001",
-    "https://www.yna.co.kr/view/AKR20261103165200504",
-    "https://www.yna.co.kr/view/AKR20261104088200017",
-    "https://www.yna.co.kr/view/AKR20261103188300071"
+    "https://www.segye.com/newsView/20261103519482"
   ],
-  "overall_summary": "합참이 4일 오전 동해상 미상 발사체를 발표했고 제원은 분석 중이며 10/29·10/31 시험 발사 흐름 안이다. 국회에서 발표 지연 논란이 있으나 다른 항목에 새 징후는 없다.",
+  "overall_summary": "합참이 4일 오전 동해상 미상 발사체를 발표했으나 제원·사거리는 아직 분석 중이며 10/29·10/31 시험 발사 흐름 안이다. 다른 항목에 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -66,7 +61,7 @@
       "region": "동해상 (북한 동해안)",
       "lat": 39.15,
       "lon": 127.45,
-      "summary": "합참이 4일 오전 북한이 동해상으로 미상 발사체를 발사했다고 발표했고 연합뉴스·SBS·세계일보가 보도했다(제원·사거리 분석 중, 탄도미사일이면 나흘 만).",
+      "summary": "합참이 4일 오전 북한이 동해상으로 미상 발사체를 발사했다고 발표했고 세계일보·SBS가 보도했다(제원·사거리 분석 중, 후속 발표 없음).",
       "meaning": "10/29·10/31 시험 발사 흐름의 연장으로 제원 확인 전이라 시험 발사 범주로 본다.",
       "sources": [
         {
@@ -78,11 +73,6 @@
           "name": "SBS",
           "tier": "B",
           "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008829816"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261104055100504"
         }
       ],
       "confidence": "중간",
@@ -96,7 +86,7 @@
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "FBI의 바이낸스 해킹 북한 귀속 발표는 10/31로 24시간이 지났고, 4일 보도된 베이퍼판다 AI 해킹은 중국 연계 민간 보고라 징후로 올리지 않는다."
+      "summary": "FBI의 바이낸스 해킹 북한 귀속 발표는 10/31로 24시간이 지났고 4일 새 사고 보도는 확인되지 않았다."
     },
     "foreign_forces": {
       "status": "single",
@@ -104,18 +94,13 @@
       "region": "중국 베이징",
       "lat": 39.9,
       "lon": 116.4,
-      "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징을 방문했고(교도 인용 세계일보), 중국공산당 중앙당교 대표단도 2일 평양에 도착했다(KCNA 인용 연합) — 당 교류 성격의 외교 일정으로 군사협력 언급은 없다.",
+      "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징을 방문했다(교도 인용 세계일보) — 당 간 교류 성격이며 군사협력 언급은 없다.",
       "meaning": "김정은 단둥 방문 열흘 만의 당 차원 교류로 군사협력 언급은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261103519482"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103160700504"
         }
       ],
       "confidence": "중간",
@@ -137,7 +122,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-04T03:11:25+00:00",
+  "checked_at": "2026-11-04T04:10:37+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

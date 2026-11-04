@@ -2,52 +2,50 @@
   "coverage": {
     "border_clash": [
       "합참 북한 동해상 미상 발사체 (news_kr 수집)",
-      "North Korea launch East Sea Joint Chiefs November 4 2026",
-      "北朝鮮 弾道ミサイル 発射 防衛省 11月4日"
+      "지뢰 발견 DMZ 북한 11월",
+      "North Korea missile launch East Sea Joint Chiefs of Staff November 4"
     ],
     "foreign_forces": [
-      "김성남 방중 (news_kr 수집)"
+      "김성남 방중 김정은 방러 Kim Jong Un China Russia visit",
+      "北朝鮮 ミサイル 発射 防衛省 11月4日"
     ],
     "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
       "바이낸스 해킹 북한 (news_kr 수집)"
     ],
     "calm": [
       "news_kr 수집 묶음 확인"
     ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강 11월"
+      "news_kr 수집 묶음 확인"
     ],
     "nuclear": [
-      "북한 핵시설 영변 풍계리 동향"
+      "news_kr 수집 묶음 확인"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 러시아 선박"
+      "news_kr 수집 묶음 확인"
     ],
     "parade_massing": [
-      "북한 열병식 준비 집결 위성사진"
+      "news_kr 수집 묶음 확인"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 주민 대피"
+      "news_kr 수집 묶음 확인"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향"
+      "news_kr 수집 묶음 확인"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한"
+      "news_kr 수집 묶음 확인"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261104053300504",
-    "https://www.yna.co.kr/view/AKR20261104055100504",
+    "https://www.segye.com/newsView/20261104505205",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008829816",
-    "https://www.segye.com/newsView/20261103519482",
-    "https://www.segye.com/newsView/20261103517017",
+    "https://www.yna.co.kr/view/AKR20261104055100504",
     "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://www.yna.co.kr/view/AKR20261103120351009",
-    "https://www.yna.co.kr/view/AKR20261104000900108"
+    "https://www.segye.com/newsView/20261103519482"
   ],
-  "overall_summary": "합참이 4일 오전 동해상 미상 발사체 발사를 발표했고 제원은 분석 중이다. 직전 10/29·10/31·11/2 시험 발사 흐름과 같은 범위의 시험 성격이며 다른 항목에 겹침은 없다.",
+  "overall_summary": "합참이 4일 오전 동해상 미상 발사체 발사를 발표했고 제원은 분석 중이다. 10/29·10/31 시험 발사 흐름과 같은 범위이며 다른 항목에 겹침은 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,18 +60,25 @@
       "status": "corroborated",
       "routine": true,
       "region": "동해상 (북한 동해안)",
-      "summary": "합참이 4일 오전 북한이 동해상으로 미상 발사체를 발사했다고 발표했고 연합뉴스·SBS가 보도했다(제원 분석 중, 탄도미사일이면 나흘 만).",
-      "meaning": "연이은 시험 발사 흐름의 연장으로 보이며 제원 확인 전이라 시험 발사 범주로 본다.",
+      "lat": 39.15,
+      "lon": 127.45,
+      "summary": "합참이 4일 오전 북한이 동해상으로 미상 발사체를 발사했다고 발표했고 연합뉴스·SBS·세계일보가 보도했다(제원·사거리 분석 중, 탄도미사일이면 나흘 만).",
+      "meaning": "10/29·10/31 시험 발사 흐름의 연장으로 제원 확인 전이라 시험 발사 범주로 본다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261104053300504"
+          "url": "https://www.segye.com/newsView/20261104505205"
         },
         {
           "name": "SBS",
           "tier": "B",
           "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008829816"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261104055100504"
         }
       ],
       "confidence": "중간",
@@ -89,21 +94,18 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "중국 베이징",
-      "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징을 방문했다고 교도통신 인용으로 세계일보·연합뉴스가 보도했다(외교 일정).",
+      "lat": 39.9,
+      "lon": 116.4,
+      "summary": "김성남 북한 국제비서가 당 대표단을 이끌고 3일 베이징을 방문했다고 교도통신 인용으로 세계일보가 보도했다(외교 일정, 군사협력 언급 없음).",
       "meaning": "김정은 단둥 방문 열흘 만의 당 차원 교류로 군사협력 언급은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261103519482"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103120351009"
         }
       ],
       "confidence": "중간",
@@ -125,7 +127,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-04T01:10:56+00:00",
+  "checked_at": "2026-11-04T02:10:43+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

@@ -1,57 +1,62 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 선덕 동해상 미사일 발사 300km 미만 11월 4일",
-      "North Korea missile launch November 4 Reuters"
+      "합참 북한 미사일 발사 11월 4일",
+      "North Korea missile launch Reuters November 4 2026"
     ],
     "nuclear": [
-      "North Korea missile launch November 4 Reuters",
+      "North Korea missile launch Reuters November 4 2026",
       "합참 북한 미사일 발사"
     ],
     "logistics": [
       "합참 북한 미사일 발사",
-      "North Korea missile launch November 4 Reuters"
+      "North Korea missile launch Reuters November 4 2026"
     ],
     "border_clash": [
-      "합참 북한 선덕 동해상 미사일 발사 300km 미만 11월 4일",
-      "지뢰 발견 DMZ 합참 목함지뢰 해안",
-      "North Korea missile launch November 4 Reuters"
+      "합참 북한 동해상 미사일 발사 11월 4일",
+      "지뢰 발견 DMZ 합참",
+      "North Korea missile launch Reuters November 4 2026"
     ],
     "electronic_cyber": [
-      "North Korea Binance hack attributed United States Kim Yo Jong statement",
-      "해킹 개인정보 유출 (수집기 gps 묶음)",
-      "GPS 교란 (수집기)"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "North Korea Binance hack attributed"
     ],
     "foreign_forces": [
       "김정은 방중 김성남 북중 고위급",
-      "North Korea Binance hack attributed United States Kim Yo Jong statement"
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "North Korea missile launch November 4 Reuters"
+      "North Korea missile launch Reuters November 4 2026"
     ],
     "nk_internal": [
-      "합참 북한 선덕 동해상 미사일 발사 300km 미만 11월 4일"
+      "합참 북한 미사일 발사 11월 4일"
     ],
     "gov_warning": [
-      "합참 북한 선덕 동해상 미사일 발사 300km 미만 11월 4일",
-      "North Korea missile launch November 4 Reuters"
+      "합참 북한 미사일 발사 11월 4일",
+      "North Korea missile launch Reuters November 4 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 (수집기 spy 묶음)",
-      "North Korea Binance hack attributed United States Kim Yo Jong statement"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "확성기 방송 중단 (수집기 summit 묶음)"
+      "확성기 방송 중단",
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261104517905",
+    "https://www.yna.co.kr/view/AKR20261104053300504",
     "https://www.yna.co.kr/view/AKR20261104055151504",
     "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://www.yna.co.kr/view/AKR20261104120900061",
-    "https://www.yna.co.kr/view/AKR20261103120351009"
+    "https://www.yna.co.kr/view/AKR20261103120351009",
+    "https://www.yna.co.kr/view/AKR20261103165200504",
+    "https://www.segye.com/newsView/20261104517905",
+    "https://www.segye.com/newsView/20261104520775",
+    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "북한이 11월 4일 오전 동해상으로 미사일 수 발을 발사해 일주일새 4번째 연쇄 시험 발사가 이어졌으나 정례 시험 범주로 본다. 김성남 방중 등 북중 교류와 바이낸스 해킹 공방이 겹치지만 병력·군수·경고 징후는 확인되지 않았다.",
+  "overall_summary": "북한이 4일 동해상 미사일 수 발을 발사했으나 일주일 새 4번째 시험 발사로 정례 범주이며, 김여정 담화는 대화를 선택지로만 언급했다. 김성남 방중·바이낸스 해킹 공방이 이어지나 병력·군수·정부 경고 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -131,10 +136,10 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "summary": "북한 지령 혐의 민노총 간부 2명이 항소심에서도 무죄를 받았고 신규 공식 귀속 발표는 없다."
+      "summary": "민노총 간부 2명 국보법 항소심 무죄(수원고법) — 북한 연계 공식 귀속 발표가 아니라 배경."
     }
   },
-  "checked_at": "2026-11-04T10:11:37+00:00",
+  "checked_at": "2026-11-04T12:12:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

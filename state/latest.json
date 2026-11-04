@@ -21,6 +21,7 @@
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
+      "사이버 공격",
       "North Korea Binance hack attribution"
     ],
     "foreign_forces": [
@@ -44,6 +45,14 @@
       "국가보안법 구속",
       "북한 해킹 귀속 FBI",
       "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
+    ],
+    "incidents": [
+      "실탄 발견 해안",
+      "news_kr 사건 묶음"
     ]
   },
   "opened": [
@@ -52,11 +61,8 @@
     "https://www.segye.com/newsView/20261104520775",
     "https://www.yna.co.kr/view/AKR20261103188300071",
     "https://www.yna.co.kr/view/AKR20261103120351009",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml",
-    "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
-    "https://www.bbc.co.uk/news/articles/c6n8dnn09jg7o",
-    "https://news.web.nhk/newsweb/na/nd-20261104de70610"
+    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/"
   ],
   "overall_summary": "4일 오전 북한의 동해상 미사일 수 발 발사(일주일새 4번째)가 이어졌으나 정례 시험 발사 범주이며 병력·군수·정부 경고 등 타 항목 겹침은 없다. 직전 회차 대비 새 징후 없음.",
   "items": {
@@ -138,10 +144,10 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "summary": "4일 수원고법이 북한 공작원 접선 혐의 민노총 간부 2명 항소심에서 무죄를 선고해 귀속 확정 사건이 아니다."
+      "summary": "민노총 간부 2명 항소심 무죄 보도는 법원 판결이며 북한 연계 공식 귀속 신규 발표가 아니다."
     }
   },
-  "checked_at": "2026-11-04T13:13:53+00:00",
+  "checked_at": "2026-11-04T14:12:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

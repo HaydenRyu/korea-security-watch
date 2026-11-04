@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-11-04T17:24:41+00:00",
+ "fetched_at": "2026-11-04T17:49:02+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-04T17:24:41+00:00",
+ "last_ok_at": "2026-11-04T17:49:02+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -66,32 +66,32 @@
   "spy": {
    "clusters": 2,
    "max_independent": 2,
-   "latest": "2026-11-04T17:24:41+00:00"
+   "latest": "2026-11-04T17:49:02+00:00"
   },
   "border": {
    "clusters": 9,
    "max_independent": 1,
-   "latest": "2026-11-04T17:24:41+00:00"
+   "latest": "2026-11-04T17:49:02+00:00"
   },
   "drone_balloon": {
    "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-11-04T17:24:41+00:00"
+   "latest": "2026-11-04T17:49:02+00:00"
   },
   "fire": {
    "clusters": 22,
    "max_independent": 5,
-   "latest": "2026-11-04T17:24:41+00:00"
+   "latest": "2026-11-04T17:49:02+00:00"
   },
   "mine": {
    "clusters": 7,
    "max_independent": 1,
-   "latest": "2026-11-04T17:24:41+00:00"
+   "latest": "2026-11-04T17:49:02+00:00"
   },
   "influence": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-04T17:24:41+00:00"
+   "latest": "2026-11-04T17:49:02+00:00"
   },
   "gps": {
    "clusters": 8,

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "at": "2026-11-04T16:17:04+00:00",
+  "opened": 8,
+  "blocks": {
+    "world": {
+      "status": "checked",
+      "last_ok": "2026-11-04T16:17:04+00:00",
+      "raw": 3,
+      "kept": 3
+    },
+    "factors": {
+      "status": "checked",
+      "last_ok": "2026-11-04T16:17:04+00:00",
+      "raw": 4,
+      "kept": 4
+    },
+    "linkage": {
+      "status": "no_findings",
+      "last_ok": "2026-11-04T16:17:04+00:00",
+      "raw": 0,
+      "kept": 0
+    },
+    "theaters": {
+      "status": "checked",
+      "last_ok": "2026-11-04T16:17:04+00:00",
+      "raw": 2,
+      "kept": 2
+    },
+    "incidents": {
+      "status": "checked",
+      "last_ok": "2026-11-04T16:17:04+00:00",
+      "raw": 1,
+      "kept": 1
+    }
+  }
+}

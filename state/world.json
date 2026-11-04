@@ -1,12 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-11-04T13:13:53+00:00",
-  "world_at": "2026-11-04T13:13:53+00:00",
+  "updated_at": "2026-11-04T16:17:04+00:00",
+  "world_at": "2026-11-04T16:17:04+00:00",
   "world": [
     {
-      "title": "이란 협상대표 \"미국인들이 전쟁에 '아니오' 투표\"",
-      "summary": "이란 갈리바프 의장이 미 중간선거 결과를 반전 민심으로 규정했고 트럼프 대통령은 분쟁이 공화당 패배에 영향을 줬음을 인정했다.",
-      "link_korea": "중동 분쟁에 묶인 미군 전력 배치가 한반도 억제태세에 미치는 영향의 변수다.",
+      "title": "러-우 오레시키 휴전 후 멜라니아 여사, 양국 대표단 백악관 초청",
+      "summary": "헤르손주 오레시키에서 주민 수백 명을 대피시킨 휴전이 끝났고, 러·우 대표단이 5일 백악관에서 만난다.",
+      "link_korea": "러-우 전쟁 향방은 북러 군사협력과 북한군 파병의 전제가 된다.",
+      "region": "유럽",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "이란 협상대표 \"미국인들이 전쟁에 'NO'\"",
+      "summary": "미 중간선거 공화당 패배 뒤 이란 측이 대미 강경 메시지를 냈고, 트럼프는 2월 대이란 공격을 후회하지 않는다고 했다.",
+      "link_korea": "중동 전쟁의 미군 자산 소요는 한반도 전력 공백 논의와 맞닿는다.",
       "region": "중동",
       "source": {
         "name": "BBC",
@@ -15,27 +26,16 @@
       }
     },
     {
-      "title": "미 중간선거 민주당 상·하원 장악 확실",
-      "summary": "텍사스 상원 선거에서 38년 만에 민주당 후보가 승리하는 등 민주당이 연방의회 양원 다수당을 차지하게 됐다.",
-      "link_korea": "의회 구성 변화가 대북 정책·주한미군 관련 예산과 한미 관계에 영향을 줄 수 있다.",
-      "region": "미국",
+      "title": "러 외무부 \"한반도 악화는 한미 훈련 탓\"",
+      "summary": "자하로바 대변인이 한미 훈련을 도발이라 비난하며 북한의 조치는 합법적이라고 말했다.",
+      "link_korea": "러시아가 북한 편에서 한미훈련을 공개 비난했다.",
+      "region": "동북아",
       "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6n8dnn09jg7o",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "이란서 대규모 반미 집회",
-      "summary": "혁명수비대 간부가 미 중간선거 결과 속에 대결 자세를 강조했다고 NHK가 보도했다.",
-      "link_korea": "중동 긴장 지속은 미군 전략자산의 한반도 순환 배치 여력과 연결된다.",
-      "region": "중동",
-      "source": {
-        "name": "NHK",
-        "url": "https://news.web.nhk/newsweb/na/nd-20261104de70610",
-        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
+        "name": "국민일보",
+        "url": "https://www.kmib.co.kr/article/20261104500033",
+        "via": "https://www.kmib.co.kr/article/20261104500033"
       }
     }
   ],
-  "world_context": "미 중간선거 결과와 중동 분쟁이 미국의 대외 군사 태세를 가늠할 변수로 부상했다."
+  "world_context": "러-우 휴전 협의, 중동 전쟁 후폭풍, 러시아의 한미훈련 비난이 한반도 정세에 겹쳐 있다."
 }

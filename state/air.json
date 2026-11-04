@@ -1,31 +1,45 @@
 {
- "at": "2026-11-04T02:43:41+00:00",
- "south": 78,
- "area": 99,
- "baseline": 79,
- "ratio": 0.99,
- "samples": 9,
+ "at": "2026-11-04T03:54:42+00:00",
+ "south": 71,
+ "area": 95,
+ "baseline": 71,
+ "ratio": 1.0,
+ "samples": 3,
  "mil": [
   {
-   "type": "GLEX",
-   "name": "정찰용 비즈니스젯 가능",
-   "call": "",
-   "lat": 33.91,
-   "lon": 124.66
+   "type": "BE20",
+   "name": null,
+   "call": "CATS82",
+   "lat": 37.12,
+   "lon": 127.04
   },
   {
    "type": "H60",
    "name": null,
-   "call": "CARD58",
-   "lat": 36.9,
-   "lon": 126.93
+   "call": "HOIST16",
+   "lat": 36.48,
+   "lon": 127.34
   },
   {
    "type": "BE20",
    "name": null,
-   "call": "MAGIC64",
-   "lat": 32.83,
-   "lon": 130.14
+   "call": "CATS16",
+   "lat": 35.79,
+   "lon": 128.6
+  },
+  {
+   "type": "?",
+   "name": null,
+   "call": "",
+   "lat": 33.44,
+   "lon": 132.06
+  },
+  {
+   "type": "BE20",
+   "name": null,
+   "call": "CNV7101",
+   "lat": 33.78,
+   "lon": 132.33
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

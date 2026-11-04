@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-04T16:12:29+00:00",
+  "computed_at": "2026-11-04T17:12:10+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 29,
@@ -11,9 +11,9 @@
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
-    "observed_theaters": 0,
-    "linkage_judged_at": null,
-    "latest_updated_at": "2026-11-04T16:12:28+00:00"
+    "observed_theaters": 2,
+    "linkage_judged_at": "2026-11-04T16:17:04+00:00",
+    "latest_updated_at": "2026-11-04T17:12:10+00:00"
   },
   "theaters": [
     {
@@ -27,12 +27,21 @@
     },
     {
       "key": "ukraine",
-      "observed": false,
-      "state": null,
+      "observed": true,
+      "state": 2,
       "contribution": null,
-      "channels": [],
-      "summary": "",
-      "sources": []
+      "channels": [
+        "c5_diplomacy"
+      ],
+      "summary": "오레시키 휴전이 끝났고 러·우 대표단이 백악관 회동을 앞두고 있다.",
+      "sources": [
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no",
+          "published_at": "2026-11-04T15:01:10Z"
+        }
+      ]
     },
     {
       "key": "scs_ecs",
@@ -45,12 +54,22 @@
     },
     {
       "key": "mideast",
-      "observed": false,
-      "state": null,
+      "observed": true,
+      "state": 2,
       "contribution": null,
-      "channels": [],
-      "summary": "",
-      "sources": []
+      "channels": [
+        "c1_us_gap",
+        "c4_sea_energy"
+      ],
+      "summary": "미·이스라엘의 2월 대이란 공격 이후 전쟁이 이어지고 휘발유 가격 급등이 보도됐다.",
+      "sources": [
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
+          "published_at": "2026-11-04T12:21:21Z"
+        }
+      ]
     },
     {
       "key": "us_posture",
@@ -65,7 +84,7 @@
   "channels": [
     {
       "key": "c1_us_gap",
-      "observed": false,
+      "observed": true,
       "value": null
     },
     {
@@ -80,18 +99,18 @@
     },
     {
       "key": "c4_sea_energy",
-      "observed": false,
+      "observed": true,
       "value": null
     },
     {
       "key": "c5_diplomacy",
-      "observed": false,
+      "observed": true,
       "value": null
     }
   ],
   "last_good": {
     "ews": 29,
     "band": "관찰",
-    "computed_at": "2026-11-04T16:12:29+00:00"
+    "computed_at": "2026-11-04T17:12:10+00:00"
   }
 }

@@ -1,62 +1,60 @@
 {
   "coverage": {
-    "border_clash": [
-      "지뢰 발견 DMZ 유엔 안보리 서한",
-      "북한 DMZ 귀순",
-      "North Korea Reuters missile launch"
-    ],
-    "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit North Korea November 2026"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "북한 해킹 귀속 FBI"
+    "troop_movement": [
+      "병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
       "North Korea nuclear Yongbyon"
     ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition logistics"
+      "북한 군수 물자 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견",
+      "DMZ 월선 경고사격",
+      "North Korea DMZ border"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "North Korea hacking"
+    ],
+    "foreign_forces": [
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비",
+      "북한 열병식 집결",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea quasi-war state"
+      "북한 등화관제 준전시",
+      "North Korea martial"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "DEFCON Korea raised"
+      "진돗개 데프콘 격상",
+      "North Korea warning Japan J-Alert"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261104517905",
     "https://www.segye.com/newsView/20261104520775",
     "https://www.yna.co.kr/view/AKR20261104055100504",
-    "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://www.yna.co.kr/view/AKR20261103120351009"
+    "https://www.yna.co.kr/view/AKR20261103188300071"
   ],
-  "overall_summary": "4일 북한이 선덕 일대에서 동해상으로 미사일 수 발을 발사했으나(사거리 300㎞ 미만, 일주일새 4번째) 시험 발사 성격이라 정례로 본다. 바이낸스 해킹은 FBI가 북한을 지목했고, 김성남 방중은 외교 일정으로 직전 판정과 같다.",
+  "overall_summary": "4일 선덕 일대 미사일 발사(일주일새 4번째)는 시험 발사로 정례로 본다. 직전 회차의 바이낸스 해킹·김성남 방중은 24시간이 지나 배경으로 내렸고 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,11 +68,11 @@
     "border_clash": {
       "status": "corroborated",
       "routine": true,
-      "region": "함경남도 선덕 일대 → 동해",
+      "region": "동해 선덕",
       "lat": 39.75,
       "lon": 127.45,
-      "summary": "합참이 4일 오전 북한이 선덕 일대에서 동해상으로 미사일 수 발을 발사한 것을 포착했다고 밝혔고 비행거리는 300㎞ 미만, 일주일새 4번째 시험 발사다.",
-      "meaning": "남측·미군 시설을 표적으로 한 실전 배치 정황은 없고 시험 발사 성격이라 정례 범위로 본다.",
+      "summary": "합참이 4일 오전 북한이 선덕 일대에서 동해상으로 미사일 수 발을 발사했다고 밝혔고 비행거리는 300㎞ 미만, 일주일새 4번째 시험 발사다.",
+      "meaning": "반복 시험 발사로 정례 범위의 위협 과시이나 빈도가 높다.",
       "sources": [
         {
           "name": "세계일보",
@@ -87,60 +85,21 @@
           "url": "https://www.yna.co.kr/view/AKR20261104055100504"
         }
       ],
-      "confidence": "중간",
+      "confidence": "높음",
       "facts": [
-        "합참이 4일 오전 선덕 일대 동해상 발사 포착 발표",
-        "비행거리 300㎞ 미만",
-        "일주일새 4번째 발사"
+        "합참 발표: 4일 오전 동해상 발사, 300㎞ 미만"
       ],
       "speculation": [
-        "CRBM 또는 방사포일 가능성(군 정밀 분석 중)"
+        "미 중간선거일에 맞춘 메시지 가능성"
       ]
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "nk",
-      "region": "미국·국제",
-      "summary": "FBI가 바이낸스 63억달러(약 8조4천억원) 가상자산 탈취 배후로 북한을 지목했고 미 국무부는 3일 북한 사이버범죄가 전 지구적 문제라고 김여정 부인에 반박했다.",
-      "meaning": "가상자산 탈취 귀속 발표로 배경 성격이며 국내 기반시설 마비나 진행 중인 작전은 확인되지 않았다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103188300071"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "FBI가 북한 해킹조직을 배후로 지목했다는 보도",
-        "미 국무부가 3일 북한 사이버범죄 반박 입장 표명"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — FBI의 바이낸스 해킹 북한 지목 첫 보도와 미 국무부 반박이 3일(29시간 전)이고 새 보도 없음."
     },
     "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "중국 베이징",
-      "lat": 39.91,
-      "lon": 116.4,
-      "summary": "김성남 북한 노동당 국제비서가 3일 당대표단을 이끌고 방중길에 올랐다고 교도통신을 인용해 보도됐다.",
-      "meaning": "당 대 당 외교 일정이며 군사협정·무기 이전 정황은 없어 정례로 본다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103120351009"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "교도통신 인용 보도",
-        "김정은 단둥 방문 열흘 만의 고위급 교류"
-      ],
-      "speculation": [
-        "중국 5중전회 결과·정책 방향 교환 가능성"
-      ]
+      "status": "none",
+      "summary": "24시간 경과 — 김성남 방중 첫 보도 3일, 새 군사협력 발표 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -152,11 +111,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "민노총 간부 북 지령 혐의 항소심 무죄 — 귀속 확정 발표 아님, 배경."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-04T19:10:13+00:00",
+  "checked_at": "2026-11-04T20:11:04+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

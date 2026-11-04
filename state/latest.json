@@ -1,54 +1,51 @@
 {
   "coverage": {
-    "troop_movement": [
-      "news_kr 수집 묶음(병력·전방) 점검",
-      "BBC World·Yonhap English RSS 점검"
-    ],
-    "nuclear": [
-      "news_kr 수집 묶음 점검(핵 관련 신규 보도 없음)"
-    ],
-    "logistics": [
-      "news_kr 수집 묶음 점검"
-    ],
     "border_clash": [
-      "합참 북한 동해 발사체 (news_kr 묶음 alert/fire)",
-      "N. Korea fires multiple missiles East Sea JCS",
-      "DMZ 지뢰 합참의장 부상장병 (news_kr 묶음)"
+      "북한 미사일 발사 합참 선덕 11월 4일",
+      "DMZ 지뢰 매설 북한 안보리 서한 정전협정 위반"
     ],
     "electronic_cyber": [
-      "TRM랩스 북한 바이낸스 자금세탁 (news_kr gps 묶음)",
-      "BBC Binance hack fake job interviews"
-    ],
-    "foreign_forces": [
-      "Kim Song-nam China visit KCNA",
-      "김성남 방중 (news_kr summit 묶음)"
-    ],
-    "parade_massing": [
-      "news_kr 수집 묶음 점검"
-    ],
-    "nk_internal": [
-      "Kim Jong Un Nampho shipyard naval buildup"
-    ],
-    "gov_warning": [
-      "news_kr alert 묶음 점검"
+      "North Korea Binance hack attributed US Treasury FBI November 2026",
+      "해킹 공격(수집기 gps 묶음)"
     ],
     "hybrid_ops": [
-      "北지령 혐의 민노총 항소심 무죄 (news_kr spy 묶음)"
+      "국가보안법 구속 간첩 혐의(국내 언론 수집기 spy 묶음)"
     ],
-    "calm": [
-      "북한 대화 선택지 미국 중간선거 (news_kr)"
+    "foreign_forces": [
+      "김정은 방중 김성남 방중(수집기 summit 묶음)"
+    ],
+    "troop_movement": [
+      "북한 핵 풍계리 영변 동향 병력 이동 군수 비축",
+      "North Korea nuclear troops mobilization parade state of war Nov 4 2026"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변 동향 병력 이동 군수 비축",
+      "North Korea nuclear troops mobilization parade state of war Nov 4 2026"
+    ],
+    "logistics": [
+      "북한 핵 풍계리 영변 동향 병력 이동 군수 비축",
+      "North Korea nuclear troops mobilization parade state of war Nov 4 2026"
+    ],
+    "parade_massing": [
+      "북한 핵 풍계리 영변 동향 병력 이동 군수 비축",
+      "North Korea nuclear troops mobilization parade state of war Nov 4 2026"
+    ],
+    "nk_internal": [
+      "진돗개 데프콘 경고 북한 등화관제 준전시"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 경고 북한 등화관제 준전시"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261104505205",
     "https://www.koreaherald.com/article/10925149",
     "https://en.yna.co.kr/view/AEN20261104005551315",
-    "https://en.yna.co.kr/view/AEN20261104003651315",
-    "https://en.yna.co.kr/view/AEN20261104003000315",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://en.yna.co.kr/RSS/news.xml"
+    "https://www.yna.co.kr/view/AKR20261103120351009",
+    "https://www.yna.co.kr/view/AKR20261103188300071",
+    "https://www.yna.co.kr/view/AKR20261104120900061"
   ],
-  "overall_summary": "4일 오전 북한이 함남 선덕 일대에서 동해상으로 다수 미사일을 발사했으며 비행거리는 300㎞ 미만으로 알려졌다(제원 분석 중). 나흘 전 집속탄두 전술탄도미사일 시험에 이은 시험 발사 흐름이며 병력·군수·정부 경고 등 다른 항목의 새 징후는 확인되지 않았다.",
+  "overall_summary": "4일 오전 북한이 선덕 일대에서 동해상으로 다수 미사일을 발사했고 일주일 새 세 번째 탄도미사일 가능성이 있으나 시험 발사 흐름의 연속이다. 병력·군수·정부 경고 등 다른 항목의 새 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,14 +56,30 @@
     "logistics": {
       "status": "none"
     },
+    "electronic_cyber": {
+      "status": "none",
+      "summary": "바이낸스 해킹 FBI 북한 귀속 발표(10/31)는 24시간 경과 — 11/3 미 국무부 재확인은 후속 보도로 배경."
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
+    },
     "border_clash": {
       "status": "corroborated",
       "routine": true,
       "region": "함남 선덕 일대·동해상",
       "lat": 39.75,
       "lon": 127.45,
-      "summary": "합참이 4일 오전 북한 선덕 일대에서 동해상으로 발사된 다수 미사일을 포착했다고 밝혔고 비행거리는 300㎞ 미만으로 알려졌다(제원 분석 중).",
-      "meaning": "단거리 시험 발사 흐름의 연속이며 한·미가 제원을 공동 분석 중이다.",
+      "summary": "합참이 4일 오전 북한 선덕 일대에서 동해상으로 발사된 다수 미사일을 포착했고 비행거리는 300㎞ 미만으로 제원 분석 중이다(일주일 새 세 번째 탄도미사일 가능성).",
+      "meaning": "시험 발사 흐름의 연속이며 한·미가 제원을 공동 분석 중이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -87,12 +100,11 @@
       "confidence": "높음",
       "facts": [
         "합참: 4일 오전 선덕 일대에서 동해상으로 다수 미사일 발사",
-        "비행거리 300㎞ 미만 추정, 근거리 탄도미사일 가능성 열어 두고 분석 중"
+        "비행거리 300㎞ 미만 추정"
       ],
-      "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "none"
+      "speculation": [
+        "전문가는 화성-11라 가능성 언급"
+      ]
     },
     "foreign_forces": {
       "status": "single",
@@ -100,35 +112,23 @@
       "region": "베이징",
       "lat": 39.9,
       "lon": 116.4,
-      "summary": "김성남 북한 당 정치국원이 당 대표단을 이끌고 3일 중국을 방문했다(조선중앙통신 인용) — 당 간 교류이며 군사협력 언급은 없다.",
-      "meaning": "김정은 단둥 방문 열흘 만의 북중 고위급 교류로 외교 일정에 해당한다.",
+      "summary": "김성남 북한 당 국제비서가 당 대표단을 이끌고 3일 중국을 방문했다 — 당 간 교류이며 군사협력 언급은 없다.",
+      "meaning": "북중 고위급 외교 일정이다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://en.yna.co.kr/view/AEN20261104003000315"
+          "url": "https://www.yna.co.kr/view/AKR20261103120351009"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 확인: 중국 공산당 초청으로 당 대표단 방중"
+        "교도통신 인용 보도: 5중전회 직후 방중"
       ],
       "speculation": []
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-04T07:16:22+00:00",
+  "checked_at": "2026-11-04T08:11:22+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

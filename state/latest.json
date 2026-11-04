@@ -1,62 +1,64 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 미사일 발사 11월 4일",
-      "North Korea missile launch Reuters November 4 2026"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "North Korea missile launch Reuters November 4 2026",
-      "합참 북한 미사일 발사"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "합참 북한 미사일 발사",
-      "North Korea missile launch Reuters November 4 2026"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "합참 북한 동해상 미사일 발사 11월 4일",
-      "지뢰 발견 DMZ 합참",
-      "North Korea missile launch Reuters November 4 2026"
+      "지뢰 발견 DMZ",
+      "DMZ NLL 귀순",
+      "합참 북한 미사일 발사",
+      "North Korea missile launch Joint Chiefs"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "North Korea Binance hack attributed"
+      "North Korea Binance hack attribution"
     ],
     "foreign_forces": [
-      "김정은 방중 김성남 북중 고위급",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "서해 구조물",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "North Korea missile launch Reuters November 4 2026"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "합참 북한 미사일 발사 11월 4일"
+      "북한 준전시 등화관제 동원",
+      "North Korea mobilization wartime"
     ],
     "gov_warning": [
-      "합참 북한 미사일 발사 11월 4일",
-      "North Korea missile launch Reuters November 4 2026"
+      "진돗개 데프콘",
+      "합참 경계태세"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
+      "북한 해킹 귀속 FBI",
       "North Korea attributed FBI"
-    ],
-    "calm": [
-      "확성기 방송 중단",
-      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261104053300504",
-    "https://www.yna.co.kr/view/AKR20261104055151504",
-    "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://www.yna.co.kr/view/AKR20261103120351009",
-    "https://www.yna.co.kr/view/AKR20261103165200504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261104517905",
     "https://www.segye.com/newsView/20261104520775",
-    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do"
+    "https://www.yna.co.kr/view/AKR20261103188300071",
+    "https://www.yna.co.kr/view/AKR20261103120351009",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.nhk.or.jp/rss/news/cat6.xml",
+    "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
+    "https://www.bbc.co.uk/news/articles/c6n8dnn09jg7o",
+    "https://news.web.nhk/newsweb/na/nd-20261104de70610"
   ],
-  "overall_summary": "북한이 4일 동해상 미사일 수 발을 발사했으나 일주일 새 4번째 시험 발사로 정례 범주이며, 김여정 담화는 대화를 선택지로만 언급했다. 김성남 방중·바이낸스 해킹 공방이 이어지나 병력·군수·정부 경고 징후는 없다.",
+  "overall_summary": "4일 오전 북한의 동해상 미사일 수 발 발사(일주일새 4번째)가 이어졌으나 정례 시험 발사 범주이며 병력·군수·정부 경고 등 타 항목 겹침은 없다. 직전 회차 대비 새 징후 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -73,13 +75,13 @@
       "region": "함경남도 선덕 → 동해",
       "lat": 40.0,
       "lon": 127.3,
-      "summary": "합참이 4일 오전 북한이 동해상으로 미사일 수 발을 발사한 것을 포착했다고 발표했고 비행거리 300㎞ 미만, 일주일새 4번째 시험 발사다.",
+      "summary": "합참이 4일 오전 북한이 선덕 일대에서 동해상으로 미사일 수 발을 발사한 것을 포착했다고 발표했고 비행거리 300㎞ 미만, 일주일새 4번째 시험 발사다.",
       "meaning": "단거리 시험 발사의 연쇄로 정례 무력시위 범주이며 남측·미군 시설 표적이나 타 항목 겹침은 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "국방일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261104055151504"
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
         },
         {
           "name": "세계일보",
@@ -89,18 +91,18 @@
       ],
       "confidence": "높음",
       "facts": [
-        "합참 4일 오전 동해상 미사일 수 발 포착 발표",
+        "합참 4일 오전 선덕 일대 동해상 미사일 수 발 포착 발표",
         "김여정 담화 '대화는 선택지일 뿐 국익과 동일시되지 않는다'"
       ],
       "speculation": [
-        "미 중간선거일에 맞춘 사전 계획된 발사라는 전문가 분석"
+        "미 중간선거일에 맞춘 발사라는 해석"
       ]
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 바이낸스 가상자산 대규모 탈취에 대해 미 국무부가 북한 사이버범죄를 비판했으나 수사기관의 공식 귀속 발표는 아직 없다.",
+      "summary": "귀속 미확인 — 바이낸스 가상자산 대규모 탈취에 대해 미국이 북한 사이버범죄를 비판했으나 수사기관의 공식 귀속 발표는 아직 없다.",
       "meaning": "가상자산 탈취는 북한 무기 자금 조달 우려와 연결되나 군사 징후는 아니다.",
       "sources": [
         {
@@ -136,26 +138,48 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "summary": "민노총 간부 2명 국보법 항소심 무죄(수원고법) — 북한 연계 공식 귀속 발표가 아니라 배경."
+      "summary": "4일 수원고법이 북한 공작원 접선 혐의 민노총 간부 2명 항소심에서 무죄를 선고해 귀속 확정 사건이 아니다."
     }
   },
-  "checked_at": "2026-11-04T12:12:14+00:00",
+  "checked_at": "2026-11-04T13:13:53+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],
   "world": [
     {
-      "title": "러 외무부 \"한미 연합훈련이 한반도 불안정 초래\"",
-      "summary": "러시아 외무부 대변인이 한미 연합군사훈련이 한반도에 불안정을 야기한다고 3일 밝혔다.",
-      "link_korea": "북러 밀착 속 러시아의 대한반도 입장을 보여준다.",
-      "region": "러시아",
+      "title": "이란 협상대표 \"미국인들이 전쟁에 '아니오' 투표\"",
+      "summary": "이란 갈리바프 의장이 미 중간선거 결과를 반전 민심으로 규정했고 트럼프 대통령은 분쟁이 공화당 패배에 영향을 줬음을 인정했다.",
+      "link_korea": "중동 분쟁에 묶인 미군 전력 배치가 한반도 억제태세에 미치는 영향의 변수다.",
+      "region": "중동",
       "source": {
-        "name": "연합뉴스",
-        "url": "https://www.yna.co.kr/view/AKR20261104000900108",
-        "via": "https://www.yna.co.kr/view/AKR20261104000900108"
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "미 중간선거 민주당 상·하원 장악 확실",
+      "summary": "텍사스 상원 선거에서 38년 만에 민주당 후보가 승리하는 등 민주당이 연방의회 양원 다수당을 차지하게 됐다.",
+      "link_korea": "의회 구성 변화가 대북 정책·주한미군 관련 예산과 한미 관계에 영향을 줄 수 있다.",
+      "region": "미국",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c6n8dnn09jg7o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "이란서 대규모 반미 집회",
+      "summary": "혁명수비대 간부가 미 중간선거 결과 속에 대결 자세를 강조했다고 NHK가 보도했다.",
+      "link_korea": "중동 긴장 지속은 미군 전략자산의 한반도 순환 배치 여력과 연결된다.",
+      "region": "중동",
+      "source": {
+        "name": "NHK",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261104de70610",
+        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
       }
     }
   ],
-  "world_context": "러시아·중국이 북한 시험 발사에 한미훈련을 거론하는 구도가 이어진다.",
-  "world_at": "2026-11-03T23:10:33+00:00"
+  "world_context": "미 중간선거 결과와 중동 분쟁이 미국의 대외 군사 태세를 가늠할 변수로 부상했다.",
+  "world_at": "2026-11-04T13:13:53+00:00"
 }

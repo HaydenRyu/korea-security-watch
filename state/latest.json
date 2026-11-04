@@ -64,14 +64,14 @@
   "opened": [
     "https://www.segye.com/newsView/20261103517017",
     "https://www.segye.com/newsView/20261103519482",
+    "https://www.yna.co.kr/view/AKR20261103165200504",
+    "https://www.yna.co.kr/view/AKR20261103188300071",
+    "https://www.yna.co.kr/view/AKR20261103092800504",
     "https://www.yna.co.kr/view/AKR20261103013851504",
     "https://www.yna.co.kr/view/AKR20261103120351009",
-    "https://www.yna.co.kr/view/AKR20261103165200504",
-    "https://www.yna.co.kr/view/AKR20261104000900108",
-    "https://www.yna.co.kr/view/AKR20261103188300071",
     "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "북한이 10/31·11/2 집속탄두 시험을 3일 발표했고 김성남 국제비서가 베이징을 방문했다. 시험·외교 일정이라 정례 범위이며 직전과 변화 없다.",
+  "overall_summary": "북한이 순항미사일 집속탄두 시험(11/2)을 3일 발표했고 김성남 국제비서가 방중했다. FBI의 바이낸스 해킹 북한 귀속(10/31)에 김여정이 반발했으나 모두 정례 범위이며 직전과 변화 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -108,7 +108,7 @@
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "24시간 경과 안의 새 사건 없음 — 미국의 북한 바이낸스 해킹 부인 반박(연합 11/3)은 기존 귀속 논쟁의 후속으로 배경이다."
+      "summary": "FBI의 바이낸스 해킹 북한 귀속 발표는 10/31로 24시간 경과, 3일 김여정 부인 담화·미 국무부 반박은 후속 보도라 배경이다."
     },
     "foreign_forces": {
       "status": "corroborated",
@@ -147,7 +147,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-03T23:10:33+00:00",
+  "checked_at": "2026-11-04T00:10:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

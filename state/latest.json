@@ -1,42 +1,52 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 지뢰 DMZ 귀순",
-      "지뢰 발견 DMZ 귀순",
-      "North Korea missile Reuters November 4 2026"
+      "지뢰 발견 DMZ 유엔 안보리 서한",
+      "북한 DMZ 귀순",
+      "North Korea Reuters missile launch"
     ],
     "foreign_forces": [
-      "김정은 방중 김정은 방러",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit North Korea November 2026"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "hybrid_ops": [
-      "news_kr 수집기 spy/hybrid 묶음(간첩·국가보안법)"
-    ],
-    "troop_movement": [
-      "news_kr 수집기 전 묶음(병력·전방 증강 후보 없음)"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "북한 해킹 귀속 FBI"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
       "North Korea nuclear Yongbyon"
     ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
+    ],
     "logistics": [
-      "news_kr 수집기 전 묶음(군수 후보 없음)"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition logistics"
     ],
     "parade_massing": [
-      "news_kr 수집기 전 묶음(열병식 후보 없음)"
+      "북한 열병식 준비",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "news_kr 수집기 전 묶음(내부 동향 후보 없음)"
+      "북한 준전시 등화관제",
+      "North Korea quasi-war state"
     ],
     "gov_warning": [
-      "news_kr 수집기 alert 묶음(진돗개·데프콘 보도 없음)"
+      "진돗개 데프콘 발령",
+      "DEFCON Korea raised"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
@@ -146,7 +156,7 @@
       "summary": "민노총 간부 북 지령 혐의 항소심 무죄 — 귀속 확정 발표 아님, 배경."
     }
   },
-  "checked_at": "2026-11-04T18:09:52+00:00",
+  "checked_at": "2026-11-04T19:10:13+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

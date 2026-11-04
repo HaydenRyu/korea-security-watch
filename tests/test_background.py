@@ -113,7 +113,7 @@ def test_background_main_leaves_hourly_files_byte_identical():
         assert w["world"][0]["title"] == "제목" and w["world_context"] == "맥락"
         assert set(th["theaters"]) == {"taiwan"} and fac["domains"]["nk_domestic"]["level"] == "긴장" and len(inc["items"]) == 1
         msg = (box.tmp / ".bg_commit_msg").read_text()
-        assert msg.startswith("bg: world=checked factors=checked linkage=checked theaters=checked incidents=checked ")
+        assert msg.startswith("bg: world=checked factors=checked linkage=checked theaters=partial incidents=checked ")  # 전역 1/5 < 3
 
 
 def test_prompts_commit_only_owned_files():
@@ -146,6 +146,7 @@ def test_background_blocks_skipped_failed_and_last_ok():
     t1, t2 = NOW, "2026-11-05T06:00:00+00:00"
     r = full_run(blocks={"world": "checked", "factors": "no_findings", "theaters": "failed"},
                  notes={"theaters": "검색 실패"})
+    r["coverage"]["factor:nk_domestic"] = ["북한 당 전원회의"]  # no_findings 는 검색 기록이 있어야 인정
     r["incidents"][0]["sources"] = src("https://never-opened.example/x")  # 검사 뒤 0줄
     r["blocks"]["incidents"] = "checked"
     _, rec = bg.step(r, {}, t1)
@@ -265,3 +266,93 @@ def test_theater_sources_in_future_rejected_beyond_skew():
     assert one("2026-11-05T09:00:00+09:00") == {"taiwan"}   # KST 표기 = UTC 00:00 — 정규화
     assert one("2026-11-05T09:00:00") == set()              # 시간대 없음 → UTC 09:00 = 9시간 미래
     assert ews.FUTURE_SKEW_MIN == 10
+
+
+def test_theater_sources_accept_rss_pubdate():
+    """정본 출처는 RSS 다 — pubDate(RFC 822) 를 그대로 옮겨도 72시간 검사를 지나야 한다(11/05 리뷰)."""
+    r = {"opened": [OPENED[0]], "linkage": {"theaters": {"taiwan": {"state": 1, "channels": [], "summary": "s",
+                                                           "sources": [{"url": OPENED[0], "published_at": "Wed, 04 Nov 2026 22:00:00 +0000"}]}}}}
+    assert set(ews.ingest(r, None, NOW)["theaters"]) == {"taiwan"}
+    assert ews._dt("Thu, 05 Nov 2026 09:00:00 +0900") == ews._dt("2026-11-05T00:00:00+00:00")
+    assert ews._dt("not a date") is None and ews._dt("") is None and ews._dt(None) is None
+
+
+# ── 회차 하한(11/05 첫 실회차: theaters 2/5 인데 checked · linkage 원문 0건인데 no_findings) ──
+def _theater(pub=NOW):
+    return {"state": 0, "channels": [], "summary": "s", "sources": [{"url": OPENED[0], "published_at": pub}]}
+
+
+def test_theaters_partial_below_min_observed_and_checked_at_min():
+    assert bg.min_observed() == json.loads((ROOT / "data" / "ews_weights.json").read_text())["min_observed_theaters"] == 3
+    two = {"opened": OPENED, "coverage": {"linkage:theaters": ["q"]}, "blocks": {"theaters": "checked"},
+           "linkage": {"theaters": {"ukraine": _theater(), "mideast": _theater()}}}
+    out, rec = bg.step(two, {}, NOW)
+    t = rec["blocks"]["theaters"]
+    assert t["status"] == "partial" and t["last_ok"] is None and t["kept"] == 2
+    assert t["note"] == "관측 2/5 — 빠진 전역: taiwan, scs_ecs, us_posture"
+    assert set(out["theaters"]["theaters"]) == {"ukraine", "mideast"}  # 관측분은 그대로 쌓는다
+    assert "theaters=partial" in bg.commit_message(rec) and "partial" in bg.STATUSES
+    three = json.loads(json.dumps(two))
+    three["linkage"]["theaters"]["taiwan"] = _theater()
+    _, rec3 = bg.step(three, {"background": rec}, NOW)
+    assert rec3["blocks"]["theaters"]["status"] == "checked" and rec3["blocks"]["theaters"]["last_ok"] == NOW
+    stale = json.loads(json.dumps(three))  # 72시간 밖 출처는 관측으로 세지 않는다 — 자기 신고 checked 여도 partial
+    stale["linkage"]["theaters"]["taiwan"] = _theater("2026-10-30T00:00:00+00:00")
+    assert bg.step(stale, {}, NOW)[1]["blocks"]["theaters"]["status"] == "partial"
+    none = {"opened": OPENED, "coverage": {"linkage:theaters": ["q"]}, "blocks": {"theaters": "no_findings"}}
+    assert bg.step(none, {}, NOW)[1]["blocks"]["theaters"]["status"] == "failed"  # theaters 엔 해당 없음이 없다
+
+
+def test_no_findings_requires_search_record_per_block():
+    base = {"opened": OPENED, "blocks": {k: "no_findings" for k in d.BACKGROUND_BLOCKS if k != "theaters"}}
+    _, rec = bg.step(base, {}, NOW)
+    for k in ("world", "factors", "linkage", "incidents"):
+        assert rec["blocks"][k]["status"] == "failed" and rec["blocks"][k]["note"].startswith("검색 기록 없음"), k
+        assert rec["blocks"][k]["last_ok"] is None
+    cov = {"world": ["세계 안보"], "factor:inter_korean": ["대북 전단"], "linkage:korea": ["북러 군사협력"], "incidents": ["실탄 발견 해안"]}
+    _, rec2 = bg.step({**base, "coverage": cov}, {}, NOW)
+    assert all(rec2["blocks"][k]["status"] == "no_findings" for k in ("world", "factors", "linkage", "incidents"))
+    bad = {"world": [], "factors": ["x"], "linkage:theaters": ["q"], "incidents": [" "]}  # 빈 목록·접두사 없는 키·다른 블록 키
+    _, rec3 = bg.step({**base, "coverage": bad}, {}, NOW)
+    assert all(rec3["blocks"][k]["status"] == "failed" for k in ("world", "factors", "linkage", "incidents"))
+    assert bg.step({**base, "coverage": {"linkage:taiwan": ["PLA drills around Taiwan"]}}, {}, NOW)[1]["blocks"]["linkage"]["status"] == "no_findings"
+
+
+def test_check_mode_writes_nothing_and_reports_retry():
+    with tempfile.TemporaryDirectory() as td, Box(Path(td)) as box:
+        _seed_hourly(box)
+        (box.state / "theaters.json").write_text('{"seed": 1}\n')
+        before = {p.name: p.read_bytes() for p in box.state.iterdir()}
+        r = {"opened": OPENED, "coverage": {"linkage:theaters": ["q"]}, "blocks": {"theaters": "checked", "linkage": "no_findings"},
+             "linkage": {"theaters": {"ukraine": _theater(LIVE), "mideast": _theater(LIVE)}}}
+        p = box.write("bg_run.json", r)
+        import io, contextlib
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rc = bg.main(["x", "--check", p])
+        assert rc == 3
+        res = json.loads(buf.getvalue().strip().splitlines()[-1])
+        assert res["check"] == "retry" and res["blocks"]["theaters"]["status"] == "partial"
+        assert res["blocks"]["linkage"]["status"] == "failed" and set(res["retry"]) == {"world", "factors", "linkage", "theaters", "incidents"}
+        assert res["missing_theaters"] == ["taiwan", "scs_ecs", "us_posture"]
+        assert {p.name: p.read_bytes() for p in box.state.iterdir()} == before  # 쓰기 없음
+        assert not (box.tmp / ".bg_commit_msg").exists()
+        assert bg.main(["x", "--check", box.write("bad.json", {"opened": []})]) == 1
+        assert {p.name: p.read_bytes() for p in box.state.iterdir()} == before
+    with tempfile.TemporaryDirectory() as td, Box(Path(td)) as box:  # state/ 가 없어도 만들지 않는다
+        shutil.rmtree(box.state, ignore_errors=True)
+        with contextlib.redirect_stdout(io.StringIO()):
+            bg.main(["x", "--check", box.write("bg_run.json", r)])
+        assert not box.state.exists()
+
+
+def test_background_prompt_requires_check_retry_and_fixed_sources():
+    md = (ROOT / "prompts" / "background.md").read_text()
+    assert "python3 -B scripts/background.py --check bg_run.json" in md  # -B: --check 는 .pyc 도 쓰지 않는다
+    for t in ews.THEATERS:
+        assert f"`{t}`" in md
+    for k in ("\"world\"", "factor:", "linkage:taiwan", "linkage:korea", "linkage:theaters", "\"incidents\""):
+        assert k in md, k
+    assert "kmib.co.kr" not in md.split("## 0-1.")[1].split("## 1.")[0]  # 국민일보는 curl 우회 금지 매체 — 정본에 올리지 않는다
+    table = "\n".join(l for l in md.split("## 0-1.")[1].split("## 1.")[0].splitlines() if l.startswith("|"))
+    assert "aljazeera" not in table.lower()  # 약관이 허가 없는 자동 접근을 제한 — 정본 표에 올리지 않는다

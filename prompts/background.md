@@ -7,13 +7,38 @@
 ## 0. 공통 규칙 — `prompts/monitor.md` 를 따른다(여기 다시 적지 않는다)
 - 출처 정본·등급(A~D)·이용 제한(`restrict`·Claude-User 차단 매체·조선일보 원문 금지): `monitor.md` 1절 + `data/sources.json`.
 - `single`·`corroborated` 기준(서로 다른 기관 2곳, 같은 통신 재인용은 1곳): `monitor.md` 3절.
-- WebFetch 가 막히면 curl 로 여는 방법과 그 예외: `monitor.md` 5절 1단계.
+- WebFetch 가 막히면 curl 로 연다: `curl -sL -A 'Mozilla/5.0' --max-time 20 <URL> | sed 's/<[^>]*>/ /g' | tr -s ' \n' | head -c 6000` — 본문이 나오면 연 것으로 치고 `opened` 에 넣는다(`monitor.md` 5절 1단계와 같은 규칙).
+  클라우드 환경에서 WebFetch 는 BBC·연합 등을 거부한다(11/05 실측) — 아래 0-1 정본 출처는 **처음부터 curl 로 열어도 된다.**
+  예외(curl 우회 금지): `data/sources.json` 에 `claude_user_blocked` 인 매체(국민일보·중앙·한겨레)·조선일보·대만 국방부(robots.txt).
 - 아래 4개 절(4-1·4-4·4-5·4-7)은 매시간 지시문에서 **그대로 옮겼다.** 절 번호 참조(「3절」「0-2」 등) 중 이 파일에 없는 절은 `monitor.md` 의 절이다.
   옮긴 문장은 이 회차에 맞춰 이렇게 읽는다:
   - 「판정용으로 이미 연 원문」「판정·브리핑에서 이미 연 원문」 = 이 회차에서 앞 블록이 이미 연 원문.
   - 「추가로 여는 원문은 N건 안으로」 = 그 블록에서 새로 여는 원문의 상한.
   - 「실패하면 생략한다」「회차를 막지 않는다」 = 그 블록을 `blocks` 에 `failed` 로 적고(사유는 `notes`) 다음 블록으로 간다.
   - 「매 회차」 = 이 배경 회차마다.
+
+## 0-1. 정본 출처 — 전역·블록별 (11/05 확인: 이 목록은 `curl -sS -m 20 -A 'Mozilla/5.0'` 로 열리고 72시간 안 항목이 있었다)
+검색 결과에 오래된 기사만 나와도 **포기하지 않는다** — 아래 피드를 직접 열어 72시간 안 항목을 고르고, 그 기사 원문을 연다.
+피드는 목록일 뿐이다: `sources` 의 `url` 은 기사 주소이고, 그 기사를 실제로 열어 `opened` 에 넣는다. `published_at` 은 피드의 `pubDate` 시각을 시간대를 살려 ISO 8601 로 적는다(예 `Thu, 05 Nov 2026 09:30:00 +0000` → `2026-11-05T09:30:00+00:00`; 코드는 RFC 822 원문도 읽는다).
+
+| 대상 | 피드·목록(먼저 연다) | 기사 원문 |
+|---|---|---|
+| `taiwan` | Focus Taiwan(CNA 영문) `https://feeds.feedburner.com/rsscna/engnews` · CNA 중문 `https://feeds.feedburner.com/rsscna/politics` · `https://feeds.feedburner.com/rsscna/mainland` | `focustaiwan.tw` · `cna.com.tw` (curl 열림) |
+| `scs_ecs` | Philstar `https://www.philstar.com/rss/nation` · Rappler `https://www.rappler.com/feed/` · BBC 아시아 `https://feeds.bbci.co.uk/news/world/asia/rss.xml` | `philstar.com` · `rappler.com` · `bbc.co.uk` |
+| `us_posture` | Stars and Stripes 목록 `https://www.stripes.com/theaters/asia_pacific/` · DVIDS `https://www.dvidshub.net/rss/news` | `stripes.com/theaters/…/YYYY-MM-DD/…`(주소의 날짜) · `dvidshub.net/news/…` |
+| `ukraine` | BBC 유럽 `https://feeds.bbci.co.uk/news/world/europe/rss.xml` | `bbc.co.uk` |
+| `mideast` | BBC 중동 `https://feeds.bbci.co.uk/news/world/middle_east/rss.xml` | `bbc.co.uk` |
+| `linkage`(taiwan) | `taiwan` 행과 같다 | 위와 같다 |
+| `linkage`(korea) | `taiwan` 행 + 세계일보 정치 `https://www.segye.com/Articles/RSSList/segye_politic.xml` + BBC 아시아 | `segye.com/newsView/…` |
+| `world` | BBC 세계 `https://feeds.bbci.co.uk/news/world/rss.xml` | `bbc.co.uk` |
+
+- 쓰지 않는 것(11/05 확인): Reuters(401)·Inquirer(403)·일본 방위성(403)·필리핀 해경(403)·Japan Times 기사(403)·USNI 기사(403 — 피드만 열림)·
+  USNI Fleet Tracker 피드(마지막 항목 10/13 — 72시간 규칙에 못 든다)·NHK RSS(마지막 항목 8월)·Taipei Times RSS(`dc:date` 가 다음 날 지면 날짜라 미래 시각 — 지수 검사가 버린다)·
+  NK News(클라우드 차단)·Al Jazeera(약관 6절이 허가 없는 자동 접근·분석을 제한)·연합뉴스(`ai_use` 제한·클라우드에서 기사 본문 빈 페이지)·국민일보(`claude_user_blocked`)·대만 국방부(robots.txt).
+- 세계일보 RSS 는 개인 구독 한정이다 — 피드 목록(제목·링크 묶음)을 레포에 올리지 않는다. 인용하는 기사 한 건의 주소만 `sources` 에 쓴다.
+- **전역마다 의무**(`theaters` 5곳 모두): 검색어 1개 이상(`coverage["linkage:theaters"]` 에 전역 이름이 드러나게) + 72시간 안 원문 1건 이상 열기.
+  원문을 끝내 못 열면 그 전역 키는 쓰지 않고(평온 0 으로 채우지 않는다) `notes.theaters` 에 「<전역>: <이유>」 를 적는다 — 마지막 출력에도 그 이유를 옮긴다.
+  코드가 관측 전역을 센다: `ews_weights.json` `min_observed_theaters`(3) 미만이면 `theaters` 가 `partial`(빠진 전역 키가 note), 0이면 `failed`.
 
 ## 1. 출력 — `bg_run.json`
 ```json
@@ -57,6 +82,10 @@
   - `checked` = 찾아서 그 블록 키에 적었다. `no_findings` = 검색하고 원문을 확인했지만 적을 것이 없다(그 블록 키는 생략하거나 빈 값).
     `failed` = 검색·열람이 실패해 확인하지 못했다(`notes` 에 사유).
   - 코드가 검사 뒤 남은 줄이 0이면 `checked` 를 `failed` 로 바꿔 적는다(「검사 뒤 남은 줄 0」 — `opened` 밖 출처·필수 필드 누락).
+  - 코드가 자기 신고를 결과와 대조한다: `no_findings` 는 그 블록의 `coverage` 검색어 키(`world` · `factor:<키>` · `linkage:taiwan`/`linkage:korea` · `linkage:theaters` · `incidents`)가
+    1개 이상 있을 때만 인정하고, 없으면 `failed`(「검색 기록 없음」)로 적는다 — 검색도 안 하고 「해당 없음」이라 쓰지 않는다.
+  - `theaters` 는 「해당 없음」이 없다. 관측 전역이 3곳 미만이면 코드가 `partial`(코드만 매기는 상태 — 루틴은 쓰지 않는다), 0곳이면 `failed`.
+    `partial`·`failed`·`skipped` 는 `last_ok` 를 올리지 않는다.
   - `factors` 는 네 영역을 매번 판정하므로(근거 없으면 `보통`) 보통 `checked` 다.
   - `linkage` 블록 = `linkage.taiwan`·`linkage.korea`, `theaters` 블록 = `linkage.theaters`(같은 `linkage` 키 안에 쓰고 상태는 따로 적는다).
 - `opened` 가 0건이면 코드가 블록 입력을 하나도 쓰지 않고 다섯 블록을 전부 `failed` 로 적는다. 매시간 판정의 「원문 3건·사이트 2곳」 조건은 이 회차엔 없다.
@@ -125,6 +154,10 @@
 0-1. 사건 기록(4-7절)용 국내 언론 수집 결과를 만든다 — `python3 scripts/news_kr.py`(결과 `news_kr.local.json`, .gitignore — **커밋하지 않는다**). 읽는 법은 `monitor.md` 5절 0-2 와 같다. 실패하면 검색으로 대신한다.
 1. 블록마다 검색 → 원문 열기(`opened` 에 넣기) → `bg_run.json` 의 그 블록 키에 쓰기 → `blocks` 에 상태 적기. 대상은 4-1 `world`(+`world_context`) · 4-4 `factors` · 4-5 `linkage`(`taiwan`·`korea`) · 4-5 `theaters`(`linkage.theaters`) · 4-7 `incidents`.
    쓴 검색어는 `coverage` 에 블록별로 남긴다(실제로 검색창에 넣은 말 — `monitor.md` 5절 1단계와 같은 규칙).
+1-1. **회차 하한** — 쓰기 전에 `python3 -B scripts/background.py --check bg_run.json` 을 실행한다(아무 파일도 쓰지 않는다. 출력 = 블록별 예상 상태·`retry`·`missing_theaters`).
+   rc 3(`partial`·`failed`·`skipped` 있음)이면 `retry` 의 블록과 `missing_theaters` 의 전역을 **한 번 더** 시도한다: 0-1 정본 피드를 열어 72시간 안 원문을 찾고,
+   `failed`(「검색 기록 없음」)면 검색어를 실제로 넣어 보고 `coverage` 에 남긴다. 재시도는 1회 — 그래도 못 채우면 `notes` 에 이유를 적고 2단계로 간다.
+   rc 0 이면 바로 2단계. 재시도에서도 **열지 않은 URL 을 `opened` 에 넣지 않는다.**
 2. `bg_run.json` 을 레포 루트에 쓰고 `python3 scripts/background.py bg_run.json` 을 실행한다. 출력 한 줄(`blocks`·`commit`)을 확인한다.
    - rc 1(입력 무효 — `opened` 0건·깨진 JSON)이어도 3단계로 간다(실패도 커밋해 기록으로 남긴다).
    - 블록 하나가 형식 오류로 예외를 내도 rc 는 0 이다 — 그 블록만 `failed`(note 「오류 — …」)로 적히고 그 파일은 직전 내용 그대로 남는다. 나머지 블록·`background.json`·커밋 메시지는 정상으로 만들어지니 그대로 3단계로 간다.
@@ -135,4 +168,4 @@
    - 커밋 메시지(`bg: <블록별 상태> <UTC>`)는 `background.py` 가 `.bg_commit_msg` 에 써 둔 것을 그대로 쓴다.
    - `git add state/` 처럼 디렉터리째 넣지 않는다 — `latest.json`·`events.jsonl` 등은 매시간 루틴 소유라, 이 세션의 낡은 판을 실으면 매시간 기록을 되돌린다.
 4. `git pull --rebase origin main && git push origin HEAD:main`. 거절되면 한 번 더 pull --rebase 후 push 한다. 그래도 실패하면 사유를 출력하고 끝낸다.
-5. 마지막 출력: `background.py` 출력 한 줄과 push 결과(커밋 sha — `git rev-parse --short HEAD`).
+5. 마지막 출력: `background.py` 출력 한 줄과 push 결과(커밋 sha — `git rev-parse --short HEAD`). `partial`·`failed` 블록이 있으면 `notes` 의 이유(못 연 전역·출처)를 한 줄씩 붙인다.

@@ -34,7 +34,7 @@
 | 배경 | KST 08:37·14:37·20:37 | `prompts/background.md` → `background.py` | `state/world.json`·`factors.json`·`linkage.json`·`theaters.json`·`incidents.json`·`background.json` |
 
 - 서로의 파일은 읽기만 한다(`ews.py` 가 `theaters.json` 을, 화면이 전부를). 배경 파일의 시간 경과 만료도 배경 회차에만 반영된다(8시간 단위).
-- 블록 수행 기록: 루틴이 `blocks: {블록: checked|no_findings|failed}` 를 내고, 키가 없으면 코드가 `skipped` 로 적는다. 매시간 블록(`signals`·`ladder`·`calm`)은 `events.jsonl` 의 `blocks`, 배경 블록은 `state/background.json` 의 `blocks{키: {status, last_ok}}`.
+- 블록 수행 기록: 루틴이 `blocks: {블록: checked|no_findings|failed}` 를 내고, 키가 없으면 코드가 `skipped` 로 적는다. 배경 블록은 코드가 자기 신고를 결과와 대조한다 — `no_findings` 는 coverage 검색어 키가 있어야 인정(없으면 `failed`), `theaters` 는 관측 전역이 `min_observed_theaters`(3) 미만이면 `partial`. 루틴은 쓰기 전에 `background.py --check` 로 예상 상태를 보고 모자란 블록·전역을 한 번 더 시도한다. 매시간 블록(`signals`·`ladder`·`calm`)은 `events.jsonl` 의 `blocks`, 배경 블록은 `state/background.json` 의 `blocks{키: {status, last_ok}}`.
 - 세계 브리핑은 2026-11-05 부터 `state/world.json` 이다(`latest.json` 에서 뺐다). 화면은 `world.json` 이 없거나 비면 `latest.world` 로 폴백한다.
 
 ## 조기경보 지수(EWS, 참고용)

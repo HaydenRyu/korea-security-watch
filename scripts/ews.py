@@ -22,6 +22,7 @@ import json
 import math
 import sys
 from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -47,9 +48,14 @@ ERROR_LEN = 200
 
 
 def _dt(s) -> datetime | None:
+    """ISO 8601, 또는 RSS pubDate(RFC 822/2822, 예 'Thu, 05 Nov 2026 00:00:00 +0000') — 피드 날짜를 그대로 옮겨도 읽는다."""
     try:
         return datetime.fromisoformat(str(s).replace("Z", "+00:00"))
     except (TypeError, ValueError):
+        pass
+    try:
+        return parsedate_to_datetime(str(s)) if s else None
+    except (TypeError, ValueError, IndexError):
         return None
 
 

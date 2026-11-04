@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-04T16:17:04+00:00",
+  "judged_at": "2026-11-04T17:28:41+00:00",
   "theaters": {
     "ukraine": {
       "state": 2,
@@ -12,14 +12,14 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no",
-          "published_at": "2026-11-04T15:01:10Z"
+          "published_at": "2026-11-04T15:01:10+00:00"
         }
       ],
       "summary": "오레시키 휴전이 끝났고 러·우 대표단이 백악관 회동을 앞두고 있다.",
-      "judged_at": "2026-11-04T16:17:04+00:00"
+      "judged_at": "2026-11-04T17:28:41+00:00"
     },
     "mideast": {
-      "state": 2,
+      "state": 3,
       "channels": [
         "c1_us_gap",
         "c4_sea_energy"
@@ -28,12 +28,26 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
-          "published_at": "2026-11-04T12:21:21Z"
+          "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
+          "published_at": "2026-11-03T11:33:33+00:00"
         }
       ],
-      "summary": "미·이스라엘의 2월 대이란 공격 이후 전쟁이 이어지고 휘발유 가격 급등이 보도됐다.",
-      "judged_at": "2026-11-04T16:17:04+00:00"
+      "summary": "미군이 호르무즈 케슘섬을 타격했고 IRGC가 미 무인기 격추를 주장했다.",
+      "judged_at": "2026-11-04T17:28:41+00:00"
+    },
+    "taiwan": {
+      "state": 1,
+      "channels": [],
+      "sources": [
+        {
+          "name": "CNA",
+          "tier": "B",
+          "url": "https://www.cna.com.tw/news/acn/202611040281.aspx",
+          "published_at": "2026-11-04T18:02:21+08:00"
+        }
+      ],
+      "summary": "중국 해경선 4척이 진먼 수역을 침범해 대만 해순서 순방정이 병행 감시했다.",
+      "judged_at": "2026-11-04T17:28:41+00:00"
     }
   }
 }

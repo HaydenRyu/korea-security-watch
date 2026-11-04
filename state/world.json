@@ -1,22 +1,33 @@
 {
   "version": 1,
-  "updated_at": "2026-11-04T16:17:04+00:00",
-  "world_at": "2026-11-04T16:17:04+00:00",
+  "updated_at": "2026-11-04T17:28:41+00:00",
+  "world_at": "2026-11-04T17:28:41+00:00",
   "world": [
     {
+      "title": "미국, 이란 케슘섬 타격 — 호르무즈 긴장",
+      "summary": "미 당국자들이 IRGC의 미 항공기 사격에 대응해 호르무즈 해협의 케슘섬을 제한적·방어적으로 타격했다고 CBS에 밝혔다. IRGC는 미 무인기 3대를 격추했다고 주장했다.",
+      "link_korea": "중동 전쟁의 미군 자산 소요는 한반도 전력 공백 논의와 맞닿는다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+      }
+    },
+    {
       "title": "러-우 오레시키 휴전 후 멜라니아 여사, 양국 대표단 백악관 초청",
-      "summary": "헤르손주 오레시키에서 주민 수백 명을 대피시킨 휴전이 끝났고, 러·우 대표단이 5일 백악관에서 만난다.",
+      "summary": "헤르손주 오레시키에서 주민 수백 명을 대피시킨 휴전이 끝났고, 러·우 대표단이 백악관에서 만날 예정이다.",
       "link_korea": "러-우 전쟁 향방은 북러 군사협력과 북한군 파병의 전제가 된다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     },
     {
       "title": "이란 협상대표 \"미국인들이 전쟁에 'NO'\"",
-      "summary": "미 중간선거 공화당 패배 뒤 이란 측이 대미 강경 메시지를 냈고, 트럼프는 2월 대이란 공격을 후회하지 않는다고 했다.",
+      "summary": "미 중간선거 공화당 패배 뒤 이란 의회의장이 미국 유권자의 메시지를 지지한다고 밝혔고, 트럼프는 패배 일부가 전쟁과 유가 상승 탓이라고 인정했다.",
       "link_korea": "중동 전쟁의 미군 자산 소요는 한반도 전력 공백 논의와 맞닿는다.",
       "region": "중동",
       "source": {
@@ -24,18 +35,7 @@
         "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
-    },
-    {
-      "title": "러 외무부 \"한반도 악화는 한미 훈련 탓\"",
-      "summary": "자하로바 대변인이 한미 훈련을 도발이라 비난하며 북한의 조치는 합법적이라고 말했다.",
-      "link_korea": "러시아가 북한 편에서 한미훈련을 공개 비난했다.",
-      "region": "동북아",
-      "source": {
-        "name": "국민일보",
-        "url": "https://www.kmib.co.kr/article/20261104500033",
-        "via": "https://www.kmib.co.kr/article/20261104500033"
-      }
     }
   ],
-  "world_context": "러-우 휴전 협의, 중동 전쟁 후폭풍, 러시아의 한미훈련 비난이 한반도 정세에 겹쳐 있다."
+  "world_context": "중동 호르무즈 충돌과 미 중간선거 후폭풍, 러-우 휴전 협의가 한반도 정세와 겹쳐 있다."
 }

@@ -268,41 +268,38 @@ W_OK = {"title": "제목", "summary": "요약", "link_korea": "연결", "region"
         "source": {"name": "Reuters", "url": "https://b.example"}}
 
 
-def test_world_passes_to_latest_not_events():
+def test_world_never_written_to_latest():
+    """11/05 — 세계 브리핑은 state/world.json(배경 루틴) 소유. 매시간 latest 에는 싣지 않는다(직전 latest 에 남은 것도 지운다)."""
     r = run()
     r["world"] = [W_OK]
     r["world_context"] = "맥락"
     latest, ev, _ = d.step(r, None, [])
-    assert latest["world"][0]["title"] == "제목" and latest["world_context"] == "맥락"
-    assert latest["world_at"] == r["checked_at"]
+    assert not any(k in latest for k in d.WORLD_KEYS)
     assert not any(k.startswith("world") for k in ev)
+    old = {**latest, "world": [W_OK], "world_context": "맥락", "world_at": "2026-10-18T04:00:00+00:00"}  # 전환 전 latest
+    caught_up = {"world": [W_OK], "world_at": "2026-10-18T04:00:00+00:00"}  # world.json 이 같은 시각까지 따라잡음
+    nxt, _, _ = d.step(run(), old, [], caught_up)
+    assert not any(k in nxt for k in d.WORLD_KEYS)
+    held_from = {**old, "grade": 1, "active": ["border_clash"]}
+    held, ev, _ = d.step(run(), held_from, [{"status": "ok", "raw_grade": 1, "checked_at": "x"}], caught_up)  # 내림 보류 경로
+    assert ev.get("held") and not any(k in held for k in d.WORLD_KEYS)
 
 
-def test_world_drops_bad_items_and_caps():
-    r = run()
-    r["world"] = ([W_OK] * 7 + ["x", {"title": "t"}, {**W_OK, "source": {"url": "https://never.example"}}])
-    latest, _, _ = d.step(r, None, [])
-    assert len(latest["world"]) == d.WORLD_MAX
-    assert all(w["source"]["url"] == "https://b.example" for w in latest["world"])
-
-
-def test_bad_world_never_blocks_run():
-    for bad in ["str", 3, {"a": 1}, [None, 5, {"source": "x"}], [{"title": 1, "summary": [], "source": {"url": 2}}]]:
-        r = run(border_clash={"status": "single", "sources": SRC1})
-        r["world"] = bad
-        r["world_context"] = {"no": 1}
-        latest, ev, _ = d.step(r, None, [])
-        assert ev["status"] == "ok" and latest["grade"] == 1 and "world" not in latest
-
-
-def test_world_kept_when_missing_or_unverified():
+def test_update_world_keeps_previous_and_caps():
     r = run()
     r["world"] = [W_OK]
-    first, _, _ = d.step(r, None, [])
-    nxt, _, _ = d.step(run(), first, [])  # 이번 회차에 world 없음 → 직전 것 유지
-    assert nxt["world"] == first["world"] and nxt["world_at"] == first["world_at"]
-    kept, _, _ = d.step({"status": "unverified", "reason": "x"}, first, [])
-    assert kept is None  # unverified 는 latest 를 덮지 않는다
+    r["world_context"] = "맥락"
+    first = d.update_world(r, None, r["checked_at"])
+    assert first["world"][0]["title"] == "제목" and first["world_context"] == "맥락" and first["world_at"] == r["checked_at"]
+    nxt = d.update_world(run(), first, "2026-10-18T13:00:00+00:00")  # 이번 회차에 world 없음 → 직전 것 유지
+    assert nxt["world"] == first["world"] and nxt["world_at"] == first["world_at"] and nxt["world_context"] == "맥락"
+    r["world"] = ([W_OK] * 7 + ["x", {"title": "t"}, {**W_OK, "source": {"url": "https://never.example"}}])
+    capped = d.update_world(r, None, r["checked_at"])
+    assert len(capped["world"]) == d.WORLD_MAX and all(w["source"]["url"] == "https://b.example" for w in capped["world"])
+    for bad in ["str", 3, {"a": 1}, [None, 5, {"source": "x"}], [{"title": 1, "summary": [], "source": {"url": 2}}]]:
+        r2 = run()
+        r2["world"], r2["world_context"] = bad, {"no": 1}
+        assert d.update_world(r2, "garbage", r2["checked_at"])["world"] == []
 
 
 def test_world_does_not_affect_grade():
@@ -608,16 +605,16 @@ def test_scenarios_default_tilt_is_hold_and_calm_pre_until_judged():
 
 
 def test_calm_needs_opened_source_and_expires_after_72h():
-    run = {"opened": ["https://a.example"], "calm": [
+    run = {"opened": ["https://a.example"], "blocks": {"calm": "checked"}, "calm": [
         {"id": "dialogue_offer", "summary": "s", "sources": [{"url": "https://a.example"}]},
         {"id": "talks_scheduled", "summary": "s", "sources": [{"url": "https://never.example"}]},
         {"id": "made_up", "sources": [{"url": "https://a.example"}]}]}
     sc = _scen(run)
     states = {i["id"]: i["state"] for i in _by(sc, "calm")["indicators"]}
     assert states["dialogue_offer"] == "on" and states["talks_scheduled"] == "off" and set(sc["calm"]) == {"dialogue_offer"}
-    later = _scen({"calm": []}, sc, now="2026-10-25T04:00:00+00:00")  # 73시간 뒤, 루틴은 확인함(빈 배열)
+    later = _scen({"calm": [], "blocks": {"calm": "no_findings"}}, sc, now="2026-10-25T04:00:00+00:00")  # 73시간 뒤, 루틴은 확인함(해당 없음)
     assert "dialogue_offer" not in later["calm"] and {i["state"] for i in _by(later, "calm")["indicators"][:4]} == {"off"}
-    stale = _scen({}, sc, now="2026-10-25T04:00:00+00:00")  # 72시간 넘게 calm 키 없음 → 기록 전
+    stale = _scen({"calm": []}, sc, now="2026-10-25T04:00:00+00:00")  # 72시간 넘게 blocks.calm 없음(안 함) → 기록 전
     assert _by(stale, "calm")["indicators"][0]["state"] == "pre"
 
 

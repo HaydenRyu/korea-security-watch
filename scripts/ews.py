@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """조기경보 지수(EWS) — 한반도 직접(D)과 세계 연동(E)을 합친 참고 지수. 공식 등급·알림과 무관하다.
 
-  python3 scripts/ews.py [run.json]
+  python3 scripts/ews.py          매시간 루틴 2-2단계 — state/ews.json 만 쓴다(state/theaters.json 은 읽기만)
 
-  run.json 을 주면 run.linkage.theaters 를 state/theaters.json 에 먼저 쌓는다(루틴 2-2단계).
+  state/theaters.json 은 배경 루틴(하루 3회)이 scripts/background.py 로 쌓는다 — 그 안에서 이 파일의 ingest 를 부른다(11/05 분리).
   diff_state.update_linkage 는 정해진 키만 다시 쓰므로 theaters 를 state/linkage.json 에 둘 수 없다.
   실패해도 rc 0 — 참고 지수가 회차를 막으면 안 된다. 실패는 stdout 의 ::warning:: 과 state/ews.json 의 error 로 남긴다.
 
@@ -39,6 +39,10 @@ D_POINTS_MAX = 26
 GRADE_SCALE = {0: (0, 24, 26), 1: (25, 49, 13), 2: (50, 74, 20), 3: (75, 100, 26)}
 SOURCES_MAX = 5
 SUMMARY_LEN = 200
+SOURCE_MAX_AGE_H = 72  # 전역 출처는 판정 시각 기준 72시간 안에 나온 원문만(prompts/background.md 4-5 theaters) — published_at 없음·파싱 불가도 버린다
+# 미래 시각 허용폭. 판정 시각(now)은 background.py 가 회차 시작이 아니라 실행 직전 시계로 찍으므로, 회차 도중 열린 기사의 published_at 이
+# now 를 넘을 일은 없다 — 남는 것은 매체 서버·우리 러너 시계의 차이뿐이라 NTP 오차 규모(초~분)로 작게 둔다. 시간대 표기 실수(±9시간 등)는 걸러진다.
+FUTURE_SKEW_MIN = 10
 ERROR_LEN = 200
 
 
@@ -138,10 +142,26 @@ def error_doc(err: str, now: str, weights_version, last_good: dict | None) -> di
             "error": err[:ERROR_LEN]}
 
 
+def _fresh(src: dict, t_now: datetime | None) -> bool:
+    """출처의 published_at 이 판정 시각 기준 [−FUTURE_SKEW_MIN, SOURCE_MAX_AGE_H] 안인가(UTC 정규화). 없거나 파싱이 안 되면 False."""
+    pub = _dt(src.get("published_at")) if isinstance(src.get("published_at"), str) else None
+    if pub is None or t_now is None:
+        return False
+    if pub.tzinfo is None:
+        pub = pub.replace(tzinfo=timezone.utc)
+    if t_now.tzinfo is None:
+        t_now = t_now.replace(tzinfo=timezone.utc)
+    age = t_now.astimezone(timezone.utc) - pub.astimezone(timezone.utc)
+    return -timedelta(minutes=FUTURE_SKEW_MIN) <= age <= timedelta(hours=SOURCE_MAX_AGE_H)
+
+
 def ingest(run: dict, doc: dict | None, now: str) -> dict:
-    """run.linkage.theaters → state/theaters.json. 연 원문 없는 전역·모르는 값은 그것만 버리고, 안 낸 전역은 직전 값을 잇는다."""
+    """run.linkage.theaters → state/theaters.json. 연 원문 없는 전역·모르는 값은 그것만 버리고, 안 낸 전역은 직전 값을 잇는다.
+    72시간이 지났거나 published_at 이 없는 출처는 버린다 — 출처가 0이면 그 전역은 이번 회차 미관측(직전 값을 잇는다)."""
     import diff_state as d
     doc = doc if isinstance(doc, dict) else {}
+    run = run if isinstance(run, dict) else {}
+    t_now = _dt(now)
     rows = dict(doc.get("theaters")) if isinstance(doc.get("theaters"), dict) else {}
     raw = (run.get("linkage") or {}).get("theaters") if isinstance(run.get("linkage"), dict) else None
     opened, got = d._opened(run), False
@@ -150,7 +170,8 @@ def ingest(run: dict, doc: dict | None, now: str) -> dict:
         if not isinstance(row, dict) or type(row.get("state")) is not int or not 0 <= row["state"] <= 3:
             continue
         srcs = [{f: s[f] for f in ("name", "tier", "url", "published_at") if s.get(f)}
-                for s in row.get("sources") or [] if isinstance(s, dict) and s.get("url") in opened][:SOURCES_MAX]
+                for s in row.get("sources") or []
+                if isinstance(s, dict) and s.get("url") in opened and _fresh(s, t_now)][:SOURCES_MAX]
         if not srcs:  # state 0 도 근거가 있어야 관측이다
             continue
         summary = row.get("summary").strip()[:SUMMARY_LEN] if isinstance(row.get("summary"), str) else ""
@@ -180,9 +201,8 @@ def main(argv: list[str]) -> int:
         weights_version = weights["version"]
         theaters_path = STATE / "theaters.json"
         doc = _load(theaters_path) if theaters_path.exists() else {}
-        if len(argv) > 1:
-            doc = ingest(_load(Path(argv[1])), doc, now)
-            _write(theaters_path, doc)
+        if len(argv) > 1:  # 11/05 전 지시문(`ews.py run.json`)이 남아 있어도 theaters.json 을 쓰지 않는다 — 배경 루틴 소유
+            print("::warning::ews run.json 인자는 무시한다 — state/theaters.json 은 scripts/background.py 가 쓴다")
         out = compute(_load(STATE / "latest.json"), doc, weights, now, last_good)
     except Exception as e:  # noqa: BLE001 — 회차를 막지 않는다
         err = f"{type(e).__name__}: {e}"

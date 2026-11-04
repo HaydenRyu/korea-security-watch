@@ -101,27 +101,30 @@ def test_step_does_not_leak_linkage_into_latest_or_grade():
     assert latest["grade"] == 0 and outbox is None and "linkage" not in latest
 
 
-def test_main_writes_linkage_state():
+def test_background_main_writes_linkage_state():
+    """11/05 — state/linkage.json 은 배경 루틴(scripts/background.py)이 쓴다. 깨진 직전 파일·무효 입력에도 막히지 않는다."""
+    import background as bg
     with tempfile.TemporaryDirectory() as tmp:
-        old = d.STATE
-        d.STATE = Path(tmp)
+        old = bg.STATE, bg.COMMIT_MSG
+        bg.STATE, bg.COMMIT_MSG = Path(tmp), Path(tmp) / ".bg_commit_msg"
         try:
-            (d.STATE / "linkage.json").write_text("{not json")
-            r = {"items": {k: {"status": "none"} for k in d.ITEMS}, "overall_summary": "s",
-                 "coverage": {k: ["q"] for k in d.ITEMS}, "opened": OPENED,
+            (bg.STATE / "linkage.json").write_text("{not json")
+            r = {"opened": OPENED, "blocks": {"linkage": "checked"},
                  "linkage": {"korea": [{"summary": "s", "sources": src(OPENED[0], OPENED[1])}]}}
-            p = d.STATE / "run.json"
+            p = bg.STATE / "bg_run.json"
             p.write_text(json.dumps(r))
-            assert d.main(["x", str(p)]) == 0
-            lk = json.loads((d.STATE / "linkage.json").read_text())
+            assert bg.main(["x", str(p)]) == 0
+            lk = json.loads((bg.STATE / "linkage.json").read_text())
             assert lk["korea"][0]["status"] == "corroborated" and lk["taiwan"] is None
-            ev = json.loads((d.STATE / "events.jsonl").read_text().splitlines()[-1])
-            assert ev["linkage"] == {"taiwan": "none", "korea": 1}
-            p.write_text(json.dumps({"status": "unverified", "reason": "검색 실패"}))
-            assert d.main(["x", str(p)]) == 0
-            assert len(json.loads((d.STATE / "linkage.json").read_text())["korea"]) == 1  # 판정 불가 회차도 잇는다
+            st = json.loads((bg.STATE / "background.json").read_text())["blocks"]["linkage"]
+            assert st["status"] == "checked" and st["kept"] == 1 and st["last_ok"]
+            p.write_text(json.dumps({"opened": []}))  # 원문 0건 — 입력 무효(만료만 반영)
+            assert bg.main(["x", str(p)]) == 1
+            assert len(json.loads((bg.STATE / "linkage.json").read_text())["korea"]) == 1  # 무효 회차도 잇는다
+            st2 = json.loads((bg.STATE / "background.json").read_text())["blocks"]["linkage"]
+            assert st2["status"] == "failed" and st2["last_ok"] == st["last_ok"]
         finally:
-            d.STATE = old
+            bg.STATE, bg.COMMIT_MSG = old
 
 
 def test_data_file_is_canonical_and_consistent():

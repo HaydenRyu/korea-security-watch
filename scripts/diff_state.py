@@ -10,6 +10,8 @@ LLM 은 항목별 관측만 낸다(run.json). 등급·발송 여부는 이 파�
   - .commit_msg         이번 회차의 커밋 메시지(루틴이 git commit -F 로 그대로 쓴다 — 등급 문구를 모델이 짓지 않는다)
   - state/outbox.json   이번 회차에 보낼 메시지 — Actions 가 이 파일 변경을 보고 ntfy 로 발송
                         me = 본인 주제(주의 이상·해제·감시 중단), friends = 지인 주제(경계 이상·해제)
+  - state/signals.json · ladder.json · scenarios.json   참고 블록(매시간 소유)
+  쓰지 않는 파일: state/world·factors·linkage·incidents·theaters·background.json — 배경 루틴(scripts/background.py) 소유
 """
 from __future__ import annotations
 
@@ -456,21 +458,60 @@ def clean_world(run: dict) -> tuple[list[dict], str] | None:
         return None
 
 
-def with_world(new_latest: dict, run: dict, latest: dict | None, now: str) -> dict:
-    """새 latest 에 세계 브리핑을 싣는다. 이번 회차에 쓸 만한 게 없으면 직전 것을 그대로 둔다."""
-    for k in ("world", "world_context", "world_at"):
-        new_latest.pop(k, None)
-    w = clean_world(run)
+WORLD_KEYS = ("world", "world_context", "world_at")  # 11/05 latest.json 에서 빠졌다 — state/world.json(배경 루틴 소유)
+
+
+def update_world(run: dict, doc: dict | None, now: str) -> dict:
+    """state/world.json = {version, updated_at, world_at, world[], world_context?}. 배경 루틴(scripts/background.py)만 쓴다.
+    이번 회차에 쓸 만한 게 없으면 직전 브리핑을 그대로 둔다. 어떤 입력에도 예외를 내지 않는다."""
+    doc = doc if isinstance(doc, dict) else {}
+    w = clean_world(run if isinstance(run, dict) else {})
     if w:
-        new_latest["world"], ctx = w
-        if ctx:
-            new_latest["world_context"] = ctx
-        new_latest["world_at"] = now
-    elif isinstance(latest, dict) and isinstance(latest.get("world"), list) and latest["world"]:
-        for k in ("world", "world_context", "world_at"):
-            if k in latest:
-                new_latest[k] = latest[k]
+        out = {"version": 1, "updated_at": now, "world_at": now, "world": w[0]}
+        if w[1]:
+            out["world_context"] = w[1]
+        return out
+    keep = {k: doc[k] for k in WORLD_KEYS if k in doc} if isinstance(doc.get("world"), list) and doc["world"] else {}
+    return {"version": 1, "updated_at": now, "world_at": keep.pop("world_at", None), "world": keep.pop("world", []), **keep}
+
+
+def world_newer(src, world_doc) -> bool:
+    """src(latest)의 브리핑이 world.json 의 것보다 새것인가 — 전환기 판단용. world.json 이 없거나 비어도 True."""
+    if not (isinstance(src, dict) and isinstance(src.get("world"), list) and src["world"]):
+        return False
+    if not (isinstance(world_doc, dict) and isinstance(world_doc.get("world"), list) and world_doc["world"]):
+        return True
+    a, b = _dt(src.get("world_at")), _dt(world_doc.get("world_at"))
+    return bool(a and (b is None or a > b))
+
+
+def carry_world(new_latest: dict, prev_latest, world_doc) -> dict:
+    """latest 에서 세계 브리핑 키를 뺀다 — 단 직전 latest 의 브리핑이 world.json 보다 새것이면 남긴다(11/05 전환기).
+    머지 전 옛 매시간 회차가 시드보다 새 latest.world 를 쓰면, 매시간이 지워 버리면 유실된다. 매시간은 world.json 을 쓰지 않는다
+    (소유 원칙) — 배경 회차가 그 브리핑을 world.json 으로 옮긴 뒤(world_at 같거나 새것) 다음 매시간 회차가 뺀다.
+    이번 run 의 world 는 어느 경우에도 싣지 않는다."""
+    for k in WORLD_KEYS:
+        new_latest.pop(k, None)
+    if world_newer(prev_latest, world_doc):
+        for k in WORLD_KEYS:
+            if k in prev_latest:
+                new_latest[k] = prev_latest[k]
     return new_latest
+
+
+# ── 블록 수행 기록(11/05) ── 「빈 결과」와 「안 함」을 가른다. 루틴이 run.blocks 에 블록마다 상태를 내고,
+# 키가 없으면 코드가 skipped 로 적는다. 매시간 블록은 events.jsonl 의 event.blocks, 배경 블록은 state/background.json.
+BLOCK_STATUSES = ("checked", "no_findings", "failed")
+BLOCK_DONE = ("checked", "no_findings")  # 이 둘만 「확인함」 — judged_at·last_ok 를 올린다
+HOURLY_BLOCKS = ("signals", "ladder", "calm")
+BACKGROUND_BLOCKS = ("world", "factors", "linkage", "theaters", "incidents")
+
+
+def block_status(run, key: str) -> str:
+    """run.blocks[key] — 정해진 값이 아니거나 없으면 skipped."""
+    b = run.get("blocks") if isinstance(run, dict) else None
+    v = b.get(key) if isinstance(b, dict) else None
+    return v if v in BLOCK_STATUSES else "skipped"
 
 
 # ── 임박 신호(signals, 선택 · 판정과 무관) ─────────────────────────────────────────────
@@ -743,7 +784,9 @@ def update_ladder(run: dict, doc: dict | None, now: str, catalog: dict | None = 
         prev_stage = doc.get("stage") if isinstance(doc.get("stage"), int) else 0
         if stage != prev_stage:
             hist.append({"at": now, "from": prev_stage, "to": stage, "why": why or ("만료(마지막 충족 뒤 72시간)" if stage < prev_stage else "")})
-        out = {"version": 1, "updated_at": now, "judged_at": now if run.get("checked_at") else doc.get("judged_at"),
+        # judged_at = 루틴이 이 블록을 실제로 확인한 마지막 회차(11/05 — 생략 회차에도 올라가 「확인됨」으로 보이던 것을 바로잡음)
+        out = {"version": 1, "updated_at": now,
+               "judged_at": now if block_status(run, "ladder") in BLOCK_DONE else doc.get("judged_at"),
                "stage": stage, "stage_name": names.get(stage, ""), "stage_action": (cat.get("actions") or {}).get(stage, ""), "total": len(ids), "met": met, "checking": checking,
                "indicators": inds, "history": hist[-LADDER_HISTORY_MAX:]}
         return out
@@ -793,7 +836,7 @@ def update_scenarios(run: dict, doc: dict | None, now: str, latest: dict | None,
         for k, row in clean_calm(run).items():
             calm[k] = {**row, "first_seen": (calm.get(k) or {}).get("first_seen") or now, "last_seen": now}
         calm = {k: v for k, v in calm.items() if _ladder_alive(v, t_now)}
-        judged = now if "calm" in run else doc.get("calm_judged_at")
+        judged = now if block_status(run, "calm") in BLOCK_DONE else doc.get("calm_judged_at")
         fresh = bool(_dt(judged) and t_now - _dt(judged) <= timedelta(hours=CRISIS_FLOOR_H))
         tp = (cal or {}).get("tempo") or {}
         recent = tp.get("recent") or []
@@ -834,7 +877,7 @@ def update_scenarios(run: dict, doc: dict | None, now: str, latest: dict | None,
 
 
 # ── 배경 요인(factors, 선택 · 등급·알림과 무관) ─────────────────────────────────────────
-# 4개 영역을 완화·보통·긴장으로 본 참고 판정(루틴이 KST 08·14·20시 회차, 또는 state/factors.json 이 10시간보다 오래됐을 때 낸다).
+# 4개 영역을 완화·보통·긴장으로 본 참고 판정(배경 루틴이 KST 08:37·14:37·20:37 에 낸다 — scripts/background.py 가 state/factors.json 을 쓴다).
 # 과거 20년 발사 기록으로 검증한 결과 네 영역 모두 「평소 수준」이라 등급·알림에 쓰지 않는다.
 FACTOR_KEYS = ("nk_domestic", "inter_korean", "great_powers", "public_opinion")
 FACTOR_LEVELS = ("완화", "보통", "긴장")
@@ -1149,11 +1192,11 @@ def drop_confirmed(events: list[dict], cur_grade: int) -> bool:
 
 
 def held_step(run: dict, latest: dict, events: list[dict], grade: int, active: set[str],
-              now: str) -> tuple[dict, dict, None]:
+              now: str, world_doc=None) -> tuple[dict, dict, None]:
     """내림 보류: 표시 등급·항목은 직전 판정 그대로, 이번 산정값은 이력과 latest.held 에 정직하게 남긴다.
     알림(해제 포함)은 내림이 적용되는 회차에 한 번만 나간다."""
     cur = latest.get("grade", 0)
-    new_latest = with_world({k: v for k, v in latest.items() if k != "held"}, run, latest, now)
+    new_latest = carry_world({k: v for k, v in latest.items() if k != "held"}, latest, world_doc)
     ended = {k for k, it in run["items"].items() if _flag(it, "ended")}
     if ended & set(new_latest.get("items") or {}):
         new_latest["items"] = {k: ({**it, "ended_at": now} if k in ended and isinstance(it, dict) else it)
@@ -1171,8 +1214,8 @@ def held_step(run: dict, latest: dict, events: list[dict], grade: int, active: s
     return new_latest, event, None
 
 
-def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | None, dict, dict | None]:
-    """(새 latest 또는 None=유지, 이벤트, outbox 또는 None)"""
+def step(run: dict, latest: dict | None, events: list[dict], world_doc=None) -> tuple[dict | None, dict, dict | None]:
+    """(새 latest 또는 None=유지, 이벤트, outbox 또는 None). world_doc = state/world.json(읽기만 — 브리핑 키를 뺄지 정한다)."""
     validate(run)
     now = run.get("checked_at") or datetime.now(timezone.utc).isoformat()
     run["checked_at"] = now
@@ -1212,7 +1255,7 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
         extra["deescalation"] = True
 
     if latest is not None and grade < prev_grade and not drop_confirmed(events, prev_grade):
-        nl, ev, ob = held_step(run, latest, events, grade, active, now)
+        nl, ev, ob = held_step(run, latest, events, grade, active, now, world_doc)
         ev.update(extra)
         return nl, ev, ob
 
@@ -1230,15 +1273,16 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     notify = notify or released or calmed
 
     new_latest = {**run, "grade": grade, "grade_label": GRADE_LABEL[grade], "active": sorted(active)}
-    for k in ("unresolved", "floor", "signals", "ladder", "factors", "linkage", "calm"):  # 참고 블록은 state/signals·ladder·factors·linkage·scenarios.json 에 따로 쌓는다
+    # 참고 블록은 state/signals·ladder·scenarios.json(매시간)·world·factors·linkage·incidents·theaters.json(배경)에 따로 쌓는다
+    for k in ("unresolved", "floor", "signals", "ladder", "factors", "linkage", "calm", "incidents", "blocks", *WORLD_KEYS):
         new_latest.pop(k, None)
+    carry_world(new_latest, latest, world_doc)
     unres = unresolved_keys(items)
     if unres:
         new_latest["unresolved"] = unres
     if floor_at:
         new_latest["floor"] = {"since": floor_at, "base_grade": base_grade,
                                "until": (_dt(floor_at) + timedelta(hours=CRISIS_FLOOR_H)).isoformat()}
-    new_latest = with_world(new_latest, run, latest, now)
     event = {"checked_at": now, "status": "ok", "grade": grade, "prev_grade": prev_grade, "raw_grade": grade,
              "active": sorted(active), "new": sorted(new_keys), "notified": notify,
              "summary": run.get("overall_summary", ""), "sources": event_sources(items), **extra}
@@ -1313,26 +1357,25 @@ def main(argv: list[str]) -> int:
     latest = _load(STATE / "latest.json", None)
     events_path = STATE / "events.jsonl"
     events = [json.loads(l) for l in events_path.read_text().splitlines() if l.strip()] if events_path.exists() else []
+    world_doc = _load_safe(STATE / "world.json")  # 읽기만 — 배경 루틴 소유
     try:
-        new_latest, event, outbox = step(run, latest, events)
+        new_latest, event, outbox = step(run, latest, events, world_doc)
     except RunError as e:
         # 스키마 위반도 판정 불가로 기록한다(평시로 두지 않는다)
         new_latest, event, outbox = step({"status": "unverified", "reason": f"schema: {e}",
-                                          "checked_at": run.get("checked_at")}, latest, events)
-    # 브리핑 진단: 루틴이 world 를 냈는지(raw) · 열람 검사 뒤 몇 건 남았는지(kept). 판정과 무관
-    raw = run.get("world") if isinstance(run, dict) else None
-    kept = clean_world(run) if isinstance(run, dict) else None
-    event["world"] = {"raw": len(raw) if isinstance(raw, list) else 0, "kept": len(kept[0]) if kept else 0}
+                                          "checked_at": run.get("checked_at")}, latest, events, world_doc)
     if event.get("status") == "ok":  # 국내 해킹 단독 검색 여부 — 판정과 무관한 진단
         event["cyber_domestic"] = cyber_domestic_queries(run.get("coverage"))
     STATE.mkdir(exist_ok=True)
+    ok = run if event.get("status") == "ok" and isinstance(run, dict) else {}
+    # 블록 수행 기록 — 판정 불가 회차는 블록 입력도 쓰지 않으므로 전부 skipped
+    event["blocks"] = {k: block_status(ok, k) for k in HOURLY_BLOCKS}
     try:  # 임박 신호는 판정과 무관 — 실패해도 회차를 막지 않는다
-        sig = update_signals(run if event.get("status") == "ok" else {}, _load(STATE / "signals.json", None), event["checked_at"])
+        sig = update_signals(ok, _load(STATE / "signals.json", None), event["checked_at"])
         (STATE / "signals.json").write_text(json.dumps(sig, ensure_ascii=False, indent=2) + "\n")
         event["signals"] = {"raw": len(run["signals"]) if isinstance(run.get("signals"), list) else 0, "active": len(sig["active"])}
     except Exception as e:  # noqa: BLE001
         event["signals"] = {"error": str(e)[:120]}
-    ok = run if event.get("status") == "ok" and isinstance(run, dict) else {}
     try:  # 긴장 국면 — 등급·알림과 무관. 판정 불가 회차는 시간 경과(만료)만 반영
         lad = update_ladder(ok, _load_safe(STATE / "ladder.json"), event["checked_at"])
         (STATE / "ladder.json").write_text(json.dumps(lad, ensure_ascii=False, indent=2) + "\n")
@@ -1340,27 +1383,8 @@ def main(argv: list[str]) -> int:
                            "stage": lad.get("stage"), "met": len(lad.get("met") or []), "checking": len(lad.get("checking") or [])}
     except Exception as e:  # noqa: BLE001
         event["ladder"] = {"error": str(e)[:120]}
-    try:  # 배경 요인 — 등급·알림과 무관. 요인 회차가 아니면 직전 값을 그대로 쓴다
-        fac = update_factors(ok, _load_safe(STATE / "factors.json"), event["checked_at"])
-        (STATE / "factors.json").write_text(json.dumps(fac, ensure_ascii=False, indent=2) + "\n")
-        event["factors"] = {"raw": len(ok["factors"]) if isinstance(ok.get("factors"), dict) else 0,
-                            "kept": len(clean_factors(ok))}
-    except Exception as e:  # noqa: BLE001
-        event["factors"] = {"error": str(e)[:120]}
-    try:  # 연동 위기 — 등급·알림과 무관. 안 내면 직전 값을 잇고, 판정 불가 회차는 시간 경과(만료)만 반영
-        lk = update_linkage(ok, _load_safe(STATE / "linkage.json"), event["checked_at"])
-        (STATE / "linkage.json").write_text(json.dumps(lk, ensure_ascii=False, indent=2) + "\n")
-        event["linkage"] = {"taiwan": (lk.get("taiwan") or {}).get("state", "none") if not lk.get("error") else None,
-                            "korea": len(lk.get("korea") or [])}
-    except Exception as e:  # noqa: BLE001
-        event["linkage"] = {"error": str(e)[:120]}
-    try:  # 사건 기록 — 등급·알림과 무관. 안 내면 직전 기록을 잇고, 판정 불가 회차는 보관 기한 경과만 반영
-        inc = update_incidents(ok, _load_safe(STATE / "incidents.json"), event["checked_at"])
-        (STATE / "incidents.json").write_text(json.dumps(inc, ensure_ascii=False, indent=2) + "\n")
-        event["incidents"] = {"raw": len(ok["incidents"]) if isinstance(ok.get("incidents"), list) else 0,
-                              "kept": len(clean_incidents(ok)), "total": len(inc.get("items") or [])}
-    except Exception as e:  # noqa: BLE001
-        event["incidents"] = {"error": str(e)[:120]}
+    # world·factors·linkage·incidents·theaters 는 쓰지 않는다(11/05 — 배경 루틴 scripts/background.py 소유. 시간 경과 만료도 그쪽).
+    # 두 루틴이 서로 다른 파일만 써야 git pull --rebase 가 충돌 없이 합쳐진다(tests/test_background.py 가 바이트 불변을 본다)
     try:  # 시나리오 — 등급·알림과 무관. 판정 불가 회차는 시간 경과(만료)와 다른 칸 값만 반영
         sc = update_scenarios(ok, _load_safe(STATE / "scenarios.json"), event["checked_at"],
                               new_latest if new_latest is not None else latest, _load_safe(STATE / "ladder.json"),

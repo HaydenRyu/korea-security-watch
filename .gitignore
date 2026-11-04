@@ -5,3 +5,5 @@ __pycache__/
 relay/.wrangler/
 news_kr.local.json
 .commit_msg
+bg_run.json
+.bg_commit_msg

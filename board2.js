@@ -48,7 +48,8 @@ addEventListener("ksw:bg",e=>{if(incLoaded)e.detail?.waits?.push(loadInc())});  
 async function loadInc(){
   incLoaded=true;let ok=false;
   try{const r=await fetch("state/incidents.json",{cache:"no-store"});if(r.ok){INC=await r.json();ok=true}}catch(_){}
-  renderInc();incLayer();
+  try{renderInc();incLayer()}catch(e){console.error("renderInc",e);ok=false}
+  if(!ok)incLoaded=false;  // 실패면 탭을 다시 열거나 다음 배경 변화 때 다시 받는다
   return ok;
 }
 function renderInc(){

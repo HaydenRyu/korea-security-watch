@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-04T22:40:02+00:00",
+ "fetched_at": "2026-11-04T23:14:19+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-04T17:49:02+00:00",
@@ -8,12 +8,12 @@
   "feeds": 15,
   "feeds_failed": 1,
   "fetched": 1095,
-  "hits": 56,
-  "clusters": 44,
+  "hits": 55,
+  "clusters": 43,
   "by_group": {
    "spy": 2,
    "border": 8,
-   "drone_balloon": 4,
+   "drone_balloon": 3,
    "fire": 21,
    "mine": 7,
    "influence": 2,
@@ -28,7 +28,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 595,
-   "hits": 60
+   "hits": 59
   },
   "SBS": {
    "feeds": 3,
@@ -66,32 +66,32 @@
   "spy": {
    "clusters": 2,
    "max_independent": 2,
-   "latest": "2026-11-04T22:40:02+00:00"
+   "latest": "2026-11-04T23:14:19+00:00"
   },
   "border": {
    "clusters": 8,
    "max_independent": 1,
-   "latest": "2026-11-04T22:40:02+00:00"
+   "latest": "2026-11-04T23:14:19+00:00"
   },
   "drone_balloon": {
-   "clusters": 4,
+   "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-11-04T22:40:02+00:00"
+   "latest": "2026-11-04T23:14:19+00:00"
   },
   "fire": {
    "clusters": 21,
    "max_independent": 3,
-   "latest": "2026-11-04T22:40:02+00:00"
+   "latest": "2026-11-04T23:14:19+00:00"
   },
   "mine": {
    "clusters": 7,
    "max_independent": 1,
-   "latest": "2026-11-04T22:40:02+00:00"
+   "latest": "2026-11-04T23:14:19+00:00"
   },
   "influence": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-04T22:40:02+00:00"
+   "latest": "2026-11-04T23:14:19+00:00"
   },
   "gps": {
    "clusters": 9,
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "SBS",

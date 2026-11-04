@@ -44,11 +44,12 @@ tabs(document.querySelector('#sensors-p .wtab'),k=>{
 const TIER={direct:["직접","공식 귀속"],indirect:["간접","공식 확인 전"],resolved:["해소","무관 판명"]};
 const day=s=>{if(!s)return"—";const d=new Date(s);return isNaN(d)?esc(s):`${d.getMonth()+1}월 ${d.getDate()}일`};
 // 배경 회차(state/background.json at 변화 — index.html refresh)가 새로 쓰면, 이미 연 사건 기록을 다시 받는다
-addEventListener("ksw:bg",()=>{if(incLoaded)loadInc()});
+addEventListener("ksw:bg",e=>{if(incLoaded)e.detail?.waits?.push(loadInc())});  // 성공 여부를 index.html refresh 에 돌려준다
 async function loadInc(){
-  incLoaded=true;
-  try{const r=await fetch("state/incidents.json",{cache:"no-store"});if(r.ok)INC=await r.json()}catch(_){}
+  incLoaded=true;let ok=false;
+  try{const r=await fetch("state/incidents.json",{cache:"no-store"});if(r.ok){INC=await r.json();ok=true}}catch(_){}
   renderInc();incLayer();
+  return ok;
 }
 function renderInc(){
   const items=(INC?.items||[]).slice().sort((a,b)=>String(b.when?.occurred||"").localeCompare(String(a.when?.occurred||"")));

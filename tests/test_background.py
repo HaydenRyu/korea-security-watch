@@ -3,6 +3,7 @@
 두 루틴(매시간 monitor.md · 하루 3회 background.md)이 서로 다른 파일만 써야 git pull --rebase 가 충돌 없이 합쳐진다.
 """
 import json
+from datetime import datetime, timezone
 import re
 import shutil
 import subprocess
@@ -20,6 +21,7 @@ import ews  # noqa: E402
 
 OPENED = ["https://www.yna.co.kr/a", "https://www.reuters.com/b", "https://apnews.com/c"]
 NOW = "2026-11-05T00:00:00+00:00"
+LIVE = datetime.now(timezone.utc).isoformat(timespec="seconds")  # main() 은 실제 시계를 쓴다 — 그 경로 fixture 의 published_at
 HOURLY_OWNED = ("latest.json", "events.jsonl", "signals.json", "ladder.json", "scenarios.json", "ews.json", "outbox.json")
 W = {"title": "제목", "summary": "요약", "link_korea": "연결", "source": {"name": "Reuters", "url": OPENED[1]}}
 
@@ -28,7 +30,7 @@ def src(*urls):
     return [{"url": u, "publisher": "p"} for u in urls]
 
 
-def full_run(**extra):
+def full_run(pub=NOW, **extra):
     """매시간 run 에 배경 블록까지 전부 실은 것 — 옛 지시문·실수로 내도 매시간 코드는 배경 파일을 쓰면 안 된다."""
     return {"items": {k: {"status": "none"} for k in d.ITEMS}, "overall_summary": "s",
             "coverage": {k: ["q"] for k in d.ITEMS}, "opened": OPENED,
@@ -36,7 +38,7 @@ def full_run(**extra):
             "factors": {"nk_domestic": {"level": "긴장", "summary": "s", "sources": src(OPENED[0])}},
             "linkage": {"korea": [{"summary": "s", "sources": src(OPENED[0], OPENED[1])}],
                         "theaters": {"taiwan": {"state": 1, "channels": [], "summary": "s",
-                                                "sources": [{"url": OPENED[0], "published_at": NOW}]}}},
+                                                "sources": [{"url": OPENED[0], "published_at": pub}]}}},
             "incidents": [{"tier": "indirect", "category": "탄약", "when": {"occurred": "2026-11-04"},
                            "where": {"place": "강화"}, "what": "실탄 발견", "sources": src(OPENED[0])}],
             **extra}
@@ -100,7 +102,7 @@ def test_background_main_leaves_hourly_files_byte_identical():
     with tempfile.TemporaryDirectory() as td, Box(Path(td)) as box:
         _seed_hourly(box)
         before = box.snap(HOURLY_OWNED)
-        r = full_run(blocks={k: "checked" for k in d.BACKGROUND_BLOCKS})
+        r = full_run(pub=LIVE, blocks={k: "checked" for k in d.BACKGROUND_BLOCKS})
         assert bg.main(["x", box.write("bg_run.json", r)]) == 0
         assert box.snap(HOURLY_OWNED) == before
         assert {p.name for p in box.state.iterdir()} == set(HOURLY_OWNED) | set(bg.OWNED)
@@ -196,3 +198,70 @@ def test_index_world_prefers_world_json_and_falls_back_to_latest():
     js = fn + "\nconst C=" + json.dumps(cases) + ";console.log(JSON.stringify(C.map(([a,b])=>{const r=pickWorld(a,b);return r?r.world:null})));"
     out = subprocess.run(["node", "-e", js], capture_output=True, text=True, timeout=20, check=True).stdout
     assert json.loads(out) == [c[2] for c in cases]
+
+
+# ── 리뷰 P2(11/05) ──
+def test_block_exception_isolated_others_saved_and_rc0():
+    """theaters.sources 가 숫자 → ews.ingest 예외. 그 블록만 failed, 나머지·background.json·커밋 메시지는 만든다."""
+    with tempfile.TemporaryDirectory() as td, Box(Path(td)) as box:
+        (box.state / "theaters.json").write_text('{"seed": 1}\n')
+        r = full_run(pub=LIVE, blocks={k: "checked" for k in d.BACKGROUND_BLOCKS})
+        r["linkage"]["theaters"]["taiwan"]["sources"] = 5
+        assert bg.main(["x", box.write("bg_run.json", r)]) == 0
+        rec = json.loads((box.state / "background.json").read_text())["blocks"]
+        assert rec["theaters"]["status"] == "failed" and rec["theaters"]["note"].startswith("오류 — TypeError")
+        assert rec["theaters"]["last_ok"] is None
+        assert all(rec[k]["status"] == "checked" for k in ("world", "factors", "linkage", "incidents"))
+        assert (box.state / "theaters.json").read_text() == '{"seed": 1}\n'  # 직전 내용 유지
+        assert json.loads((box.state / "world.json").read_text())["world"]
+        assert "theaters=failed" in (box.tmp / ".bg_commit_msg").read_text()
+    with tempfile.TemporaryDirectory() as td, Box(Path(td)) as box:  # 직전 파일이 없으면 그 파일은 만들지 않는다
+        assert bg.main(["x", box.write("bg_run.json", r)]) == 0
+        assert not (box.state / "theaters.json").exists() and (box.state / "background.json").exists()
+
+
+def test_transition_newer_latest_world_is_kept_until_background_catches_up():
+    """머지 전 옛 매시간 회차가 시드보다 새 latest.world 를 쓴 경우 — 매시간은 지우지 않고, 배경이 옮긴 뒤에 뺀다."""
+    seed = {"version": 1, "world_at": "2026-11-04T13:13:53+00:00", "world": [W]}
+    newer = {"items": {k: {"status": "none"} for k in d.ITEMS}, "grade": 0, "active": [], "checked_at": "x",
+             "world": [{**W, "title": "새 브리핑"}], "world_context": "새 맥락", "world_at": "2026-11-05T01:00:00+00:00"}
+    r = full_run(checked_at="2026-11-05T02:00:00+00:00")
+    nl, _, _ = d.step(json.loads(json.dumps(r)), newer, [], seed)
+    assert nl["world"][0]["title"] == "새 브리핑" and nl["world_at"] == newer["world_at"]  # 유실 없음(이번 run 의 world 는 안 실림)
+    held_from = {**newer, "grade": 1, "active": ["border_clash"]}
+    held, ev, _ = d.step(json.loads(json.dumps(r)), held_from, [{"status": "ok", "raw_grade": 1, "checked_at": "x"}], seed)
+    assert ev.get("held") and held["world_at"] == newer["world_at"]
+    nl2, _, _ = d.step(json.loads(json.dumps(r)), newer, [], None)  # world.json 없음 — 지우지 않는다
+    assert nl2["world_at"] == newer["world_at"]
+    # 배경 회차: 새 브리핑이 없으면 latest 의 새것을 world.json 으로 옮긴다(latest 는 읽기만)
+    out, _ = bg.step({"opened": OPENED, "blocks": {"world": "failed"}}, {"world": seed, "latest": newer}, NOW)
+    assert out["world"]["world"][0]["title"] == "새 브리핑" and out["world"]["world_at"] == newer["world_at"]
+    assert out["world"]["world_context"] == "새 맥락"
+    nl3, _, _ = d.step(json.loads(json.dumps(r)), nl, [], out["world"])  # 따라잡은 뒤 매시간이 뺀다
+    assert not any(k in nl3 for k in d.WORLD_KEYS)
+    out2, _ = bg.step({"opened": OPENED}, {"world": out["world"], "latest": {**newer, "world_at": "2026-11-01T00:00:00+00:00"}}, NOW)
+    assert out2["world"]["world_at"] == newer["world_at"]  # 더 오래된 latest 는 덮지 않는다
+
+
+def test_index_refresh_checks_background_before_hourly_early_return():
+    html = (ROOT / "index.html").read_text()
+    body = html[html.index("const refresh=async()=>{"):]
+    body = body[:body.index("setInterval(refresh")]
+    early = body.index("checked_at===latest?.checked_at)return;")
+    assert body.index('get("background.json")') < early
+    bg_branch = body[body.index("if(bgNew){"):early]
+    assert 'get("world.json")' in bg_branch and "refs()" in bg_branch and "ksw:bg" in bg_branch
+    assert body.count('get("background.json")') == 1  # 폴링당 추가 요청은 1건
+    assert 'addEventListener("ksw:bg"' in (ROOT / "board2.js").read_text()
+
+
+def test_theater_sources_in_future_rejected_beyond_skew():
+    def one(pub):
+        r = {"opened": [OPENED[0]], "linkage": {"theaters": {"taiwan": {"state": 1, "channels": [], "summary": "s",
+                                                               "sources": [{"url": OPENED[0], "published_at": pub}]}}}}
+        return set(ews.ingest(r, None, NOW)["theaters"])
+    assert one("2026-11-05T00:09:00+00:00") == {"taiwan"}   # 9분 앞 — 시계 오차 허용
+    assert one("2026-11-05T00:11:00+00:00") == set()        # 11분 앞
+    assert one("2026-11-05T09:00:00+09:00") == {"taiwan"}   # KST 표기 = UTC 00:00 — 정규화
+    assert one("2026-11-05T09:00:00") == set()              # 시간대 없음 → UTC 09:00 = 9시간 미래
+    assert ews.FUTURE_SKEW_MIN == 10

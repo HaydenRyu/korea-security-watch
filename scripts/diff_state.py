@@ -475,6 +475,30 @@ def update_world(run: dict, doc: dict | None, now: str) -> dict:
     return {"version": 1, "updated_at": now, "world_at": keep.pop("world_at", None), "world": keep.pop("world", []), **keep}
 
 
+def world_newer(src, world_doc) -> bool:
+    """src(latest)의 브리핑이 world.json 의 것보다 새것인가 — 전환기 판단용. world.json 이 없거나 비어도 True."""
+    if not (isinstance(src, dict) and isinstance(src.get("world"), list) and src["world"]):
+        return False
+    if not (isinstance(world_doc, dict) and isinstance(world_doc.get("world"), list) and world_doc["world"]):
+        return True
+    a, b = _dt(src.get("world_at")), _dt(world_doc.get("world_at"))
+    return bool(a and (b is None or a > b))
+
+
+def carry_world(new_latest: dict, prev_latest, world_doc) -> dict:
+    """latest 에서 세계 브리핑 키를 뺀다 — 단 직전 latest 의 브리핑이 world.json 보다 새것이면 남긴다(11/05 전환기).
+    머지 전 옛 매시간 회차가 시드보다 새 latest.world 를 쓰면, 매시간이 지워 버리면 유실된다. 매시간은 world.json 을 쓰지 않는다
+    (소유 원칙) — 배경 회차가 그 브리핑을 world.json 으로 옮긴 뒤(world_at 같거나 새것) 다음 매시간 회차가 뺀다.
+    이번 run 의 world 는 어느 경우에도 싣지 않는다."""
+    for k in WORLD_KEYS:
+        new_latest.pop(k, None)
+    if world_newer(prev_latest, world_doc):
+        for k in WORLD_KEYS:
+            if k in prev_latest:
+                new_latest[k] = prev_latest[k]
+    return new_latest
+
+
 # ── 블록 수행 기록(11/05) ── 「빈 결과」와 「안 함」을 가른다. 루틴이 run.blocks 에 블록마다 상태를 내고,
 # 키가 없으면 코드가 skipped 로 적는다. 매시간 블록은 events.jsonl 의 event.blocks, 배경 블록은 state/background.json.
 BLOCK_STATUSES = ("checked", "no_findings", "failed")
@@ -1168,11 +1192,11 @@ def drop_confirmed(events: list[dict], cur_grade: int) -> bool:
 
 
 def held_step(run: dict, latest: dict, events: list[dict], grade: int, active: set[str],
-              now: str) -> tuple[dict, dict, None]:
+              now: str, world_doc=None) -> tuple[dict, dict, None]:
     """내림 보류: 표시 등급·항목은 직전 판정 그대로, 이번 산정값은 이력과 latest.held 에 정직하게 남긴다.
     알림(해제 포함)은 내림이 적용되는 회차에 한 번만 나간다."""
     cur = latest.get("grade", 0)
-    new_latest = {k: v for k, v in latest.items() if k != "held" and k not in WORLD_KEYS}
+    new_latest = carry_world({k: v for k, v in latest.items() if k != "held"}, latest, world_doc)
     ended = {k for k, it in run["items"].items() if _flag(it, "ended")}
     if ended & set(new_latest.get("items") or {}):
         new_latest["items"] = {k: ({**it, "ended_at": now} if k in ended and isinstance(it, dict) else it)
@@ -1190,8 +1214,8 @@ def held_step(run: dict, latest: dict, events: list[dict], grade: int, active: s
     return new_latest, event, None
 
 
-def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | None, dict, dict | None]:
-    """(새 latest 또는 None=유지, 이벤트, outbox 또는 None)"""
+def step(run: dict, latest: dict | None, events: list[dict], world_doc=None) -> tuple[dict | None, dict, dict | None]:
+    """(새 latest 또는 None=유지, 이벤트, outbox 또는 None). world_doc = state/world.json(읽기만 — 브리핑 키를 뺄지 정한다)."""
     validate(run)
     now = run.get("checked_at") or datetime.now(timezone.utc).isoformat()
     run["checked_at"] = now
@@ -1231,7 +1255,7 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
         extra["deescalation"] = True
 
     if latest is not None and grade < prev_grade and not drop_confirmed(events, prev_grade):
-        nl, ev, ob = held_step(run, latest, events, grade, active, now)
+        nl, ev, ob = held_step(run, latest, events, grade, active, now, world_doc)
         ev.update(extra)
         return nl, ev, ob
 
@@ -1252,6 +1276,7 @@ def step(run: dict, latest: dict | None, events: list[dict]) -> tuple[dict | Non
     # 참고 블록은 state/signals·ladder·scenarios.json(매시간)·world·factors·linkage·incidents·theaters.json(배경)에 따로 쌓는다
     for k in ("unresolved", "floor", "signals", "ladder", "factors", "linkage", "calm", "incidents", "blocks", *WORLD_KEYS):
         new_latest.pop(k, None)
+    carry_world(new_latest, latest, world_doc)
     unres = unresolved_keys(items)
     if unres:
         new_latest["unresolved"] = unres
@@ -1332,12 +1357,13 @@ def main(argv: list[str]) -> int:
     latest = _load(STATE / "latest.json", None)
     events_path = STATE / "events.jsonl"
     events = [json.loads(l) for l in events_path.read_text().splitlines() if l.strip()] if events_path.exists() else []
+    world_doc = _load_safe(STATE / "world.json")  # 읽기만 — 배경 루틴 소유
     try:
-        new_latest, event, outbox = step(run, latest, events)
+        new_latest, event, outbox = step(run, latest, events, world_doc)
     except RunError as e:
         # 스키마 위반도 판정 불가로 기록한다(평시로 두지 않는다)
         new_latest, event, outbox = step({"status": "unverified", "reason": f"schema: {e}",
-                                          "checked_at": run.get("checked_at")}, latest, events)
+                                          "checked_at": run.get("checked_at")}, latest, events, world_doc)
     if event.get("status") == "ok":  # 국내 해킹 단독 검색 여부 — 판정과 무관한 진단
         event["cyber_domestic"] = cyber_domestic_queries(run.get("coverage"))
     STATE.mkdir(exist_ok=True)

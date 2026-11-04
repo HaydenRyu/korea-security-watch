@@ -21,7 +21,13 @@
   키가 없으면 skipped. checked 인데 검사 뒤 남은 줄이 0이면 failed(note 「검사 뒤 남은 줄 0」) — 적었다고 했지만 반영된 것이 없다.
   last_ok = checked·no_findings 의 마지막 시각.
 
-  rc 0 = 정상 · 1 = 입력 무효(그래도 파일은 쓴다 — 실패도 커밋해 기록으로 남긴다).
+  블록 하나의 형식 오류·예외는 그 블록만 failed(note = 오류 요약)로 적고 그 파일은 직전 내용을 둔다 — 나머지 블록·background.json·
+  커밋 메시지는 그대로 만든다(11/05 리뷰: theaters.sources 가 숫자면 ews.ingest 예외로 회차 전체가 멈췄다).
+
+  세계 브리핑 전환(1회성): latest.json 의 world 가 world.json 보다 새것이면(머지 전 옛 매시간 회차가 쓴 것) 이번 회차에 새 브리핑이
+  없을 때 그것을 world.json 으로 옮긴다. latest.json 은 읽기만 한다 — 지우는 것은 매시간 diff_state 가 world.json 이 따라잡은 뒤에 한다.
+
+  rc 0 = 정상(블록별 failed 가 있어도 0 — 상태는 출력의 blocks) · 1 = 입력 무효(opened 0건·깨진 JSON — 그래도 파일은 쓴다, 실패도 커밋해 기록으로 남긴다).
 """
 from __future__ import annotations
 
@@ -79,15 +85,43 @@ def counts(run: dict, key: str, now: str) -> tuple[int, int]:
     return 0, 0
 
 
+ERR_LEN = 120
+
+
+def _seed_world(world_doc, latest):
+    """전환기 1회성 — latest.world 가 world.json 보다 새것이면 그 브리핑을 직전 값으로 쓴다(latest 는 읽기만)."""
+    if not d.world_newer(latest, world_doc):
+        return world_doc
+    return {k: latest[k] for k in d.WORLD_KEYS if k in latest}
+
+
+def _guarded(fn, prev):
+    """(결과, 오류 요약|None). 예외가 나거나 기존 함수가 error 를 돌려주면 직전 내용을 그대로 둔다."""
+    try:
+        res = fn()
+    except Exception as e:  # noqa: BLE001 — 블록 하나가 회차 전체를 멈추면 안 된다
+        return prev, f"{type(e).__name__}: {e}"[:ERR_LEN]
+    if isinstance(res, dict) and res.get("error"):
+        return prev, f"error: {res['error']}"[:ERR_LEN]
+    return res, None
+
+
 def step(run, docs: dict, now: str) -> tuple[dict, dict]:
-    """(새 파일 내용 {블록: doc}, background.json). docs = 직전 파일 내용({블록|"background": doc|None})."""
+    """(새 파일 내용 {블록: doc|None}, background.json). docs = 직전 파일 내용({블록|"background"|"latest": doc|None}).
+    블록 결과가 None(직전 파일이 없고 그 블록이 실패)이면 그 파일은 쓰지 않는다."""
     reason = invalid(run)
     use = run if reason is None else {}  # 무효 입력은 블록 입력 없이 시간 경과(만료)만
-    out = {"world": d.update_world(use, docs.get("world"), now),
-           "factors": d.update_factors(use, docs.get("factors"), now),
-           "linkage": d.update_linkage(use, docs.get("linkage"), now),
-           "theaters": ews.ingest(use, docs.get("theaters"), now),
-           "incidents": d.update_incidents(use, docs.get("incidents"), now)}
+    world_prev = _seed_world(docs.get("world"), docs.get("latest"))
+    calls = {"world": (lambda: d.update_world(use, world_prev, now), world_prev),
+             "factors": (lambda: d.update_factors(use, docs.get("factors"), now), docs.get("factors")),
+             "linkage": (lambda: d.update_linkage(use, docs.get("linkage"), now), docs.get("linkage")),
+             "theaters": (lambda: ews.ingest(use, docs.get("theaters"), now), docs.get("theaters")),
+             "incidents": (lambda: d.update_incidents(use, docs.get("incidents"), now), docs.get("incidents"))}
+    out, errs = {}, {}
+    for k, (fn, prev_doc) in calls.items():
+        out[k], err = _guarded(fn, prev_doc)
+        if err:
+            errs[k], out[k] = err, None  # None = 파일을 쓰지 않는다(직전 내용 바이트 그대로)
     prev_bg = docs.get("background") if isinstance(docs.get("background"), dict) else {}
     prev = prev_bg.get("blocks") if isinstance(prev_bg.get("blocks"), dict) else {}
     notes = run.get("notes") if isinstance(run, dict) and isinstance(run.get("notes"), dict) else {}
@@ -95,7 +129,9 @@ def step(run, docs: dict, now: str) -> tuple[dict, dict]:
     for k in BLOCKS:
         raw, kept = counts(use, k, now)
         st, note = ("failed", reason) if reason else (d.block_status(run, k), "")
-        if st == "checked" and kept == 0:
+        if k in errs:
+            st, note = "failed", "오류 — " + errs[k]
+        elif st == "checked" and kept == 0:
             st, note = "failed", "검사 뒤 남은 줄 0 — opened 밖 출처·필수 필드 누락"
         if not note and isinstance(notes.get(k), str) and notes[k].strip():
             note = notes[k].strip()
@@ -133,9 +169,11 @@ def main(argv: list[str]) -> int:
     STATE.mkdir(exist_ok=True)
     docs = {k: d._load_safe(STATE / f) for k, f in FILES.items()}
     docs["background"] = d._load_safe(STATE / "background.json")
+    docs["latest"] = d._load_safe(STATE / "latest.json")  # 읽기만 — 매시간 소유
     out, bg = step(run, docs, now)
     for k, f in FILES.items():
-        _write(STATE / f, out[k])
+        if out[k] is not None:
+            _write(STATE / f, out[k])
     _write(STATE / "background.json", bg)
     msg = commit_message(bg)
     COMMIT_MSG.write_text(msg + "\n")

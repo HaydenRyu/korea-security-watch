@@ -40,6 +40,9 @@ GRADE_SCALE = {0: (0, 24, 26), 1: (25, 49, 13), 2: (50, 74, 20), 3: (75, 100, 26
 SOURCES_MAX = 5
 SUMMARY_LEN = 200
 SOURCE_MAX_AGE_H = 72  # 전역 출처는 판정 시각 기준 72시간 안에 나온 원문만(prompts/background.md 4-5 theaters) — published_at 없음·파싱 불가도 버린다
+# 미래 시각 허용폭. 판정 시각(now)은 background.py 가 회차 시작이 아니라 실행 직전 시계로 찍으므로, 회차 도중 열린 기사의 published_at 이
+# now 를 넘을 일은 없다 — 남는 것은 매체 서버·우리 러너 시계의 차이뿐이라 NTP 오차 규모(초~분)로 작게 둔다. 시간대 표기 실수(±9시간 등)는 걸러진다.
+FUTURE_SKEW_MIN = 10
 ERROR_LEN = 200
 
 
@@ -140,13 +143,16 @@ def error_doc(err: str, now: str, weights_version, last_good: dict | None) -> di
 
 
 def _fresh(src: dict, t_now: datetime | None) -> bool:
-    """출처의 published_at 이 판정 시각 기준 SOURCE_MAX_AGE_H 안인가. 없거나 파싱이 안 되면 False(11/05 — 검사 없이 받던 버그)."""
+    """출처의 published_at 이 판정 시각 기준 [−FUTURE_SKEW_MIN, SOURCE_MAX_AGE_H] 안인가(UTC 정규화). 없거나 파싱이 안 되면 False."""
     pub = _dt(src.get("published_at")) if isinstance(src.get("published_at"), str) else None
     if pub is None or t_now is None:
         return False
     if pub.tzinfo is None:
         pub = pub.replace(tzinfo=timezone.utc)
-    return t_now - pub <= timedelta(hours=SOURCE_MAX_AGE_H)
+    if t_now.tzinfo is None:
+        t_now = t_now.replace(tzinfo=timezone.utc)
+    age = t_now.astimezone(timezone.utc) - pub.astimezone(timezone.utc)
+    return -timedelta(minutes=FUTURE_SKEW_MIN) <= age <= timedelta(hours=SOURCE_MAX_AGE_H)
 
 
 def ingest(run: dict, doc: dict | None, now: str) -> dict:

@@ -127,6 +127,7 @@
    쓴 검색어는 `coverage` 에 블록별로 남긴다(실제로 검색창에 넣은 말 — `monitor.md` 5절 1단계와 같은 규칙).
 2. `bg_run.json` 을 레포 루트에 쓰고 `python3 scripts/background.py bg_run.json` 을 실행한다. 출력 한 줄(`blocks`·`commit`)을 확인한다.
    - rc 1(입력 무효 — `opened` 0건·깨진 JSON)이어도 3단계로 간다(실패도 커밋해 기록으로 남긴다).
+   - 블록 하나가 형식 오류로 예외를 내도 rc 는 0 이다 — 그 블록만 `failed`(note 「오류 — …」)로 적히고 그 파일은 직전 내용 그대로 남는다. 나머지 블록·`background.json`·커밋 메시지는 정상으로 만들어지니 그대로 3단계로 간다.
    - `checked` 로 낸 블록이 `failed`(「검사 뒤 남은 줄 0」)로 나왔으면 사실대로 고쳐 **한 번만** 다시 실행해도 된다: 그 URL 을 실제로 열어 `opened` 에 넣거나, 열 수 없으면 그 줄을 뺀다.
      **열지 않은 URL 을 `opened` 에만 끼워 넣지 않는다.**
 3. `rm bg_run.json` 후 **배경 소유 파일만** 커밋한다:

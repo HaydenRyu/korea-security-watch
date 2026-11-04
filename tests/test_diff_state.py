@@ -277,10 +277,11 @@ def test_world_never_written_to_latest():
     assert not any(k in latest for k in d.WORLD_KEYS)
     assert not any(k.startswith("world") for k in ev)
     old = {**latest, "world": [W_OK], "world_context": "맥락", "world_at": "2026-10-18T04:00:00+00:00"}  # 전환 전 latest
-    nxt, _, _ = d.step(run(), old, [])
+    caught_up = {"world": [W_OK], "world_at": "2026-10-18T04:00:00+00:00"}  # world.json 이 같은 시각까지 따라잡음
+    nxt, _, _ = d.step(run(), old, [], caught_up)
     assert not any(k in nxt for k in d.WORLD_KEYS)
     held_from = {**old, "grade": 1, "active": ["border_clash"]}
-    held, ev, _ = d.step(run(), held_from, [{"status": "ok", "raw_grade": 1, "checked_at": "x"}])  # 내림 보류 경로
+    held, ev, _ = d.step(run(), held_from, [{"status": "ok", "raw_grade": 1, "checked_at": "x"}], caught_up)  # 내림 보류 경로
     assert ev.get("held") and not any(k in held for k in d.WORLD_KEYS)
 
 

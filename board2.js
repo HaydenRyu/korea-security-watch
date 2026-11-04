@@ -43,6 +43,8 @@ tabs(document.querySelector('#sensors-p .wtab'),k=>{
 });
 const TIER={direct:["직접","공식 귀속"],indirect:["간접","공식 확인 전"],resolved:["해소","무관 판명"]};
 const day=s=>{if(!s)return"—";const d=new Date(s);return isNaN(d)?esc(s):`${d.getMonth()+1}월 ${d.getDate()}일`};
+// 배경 회차(state/background.json at 변화 — index.html refresh)가 새로 쓰면, 이미 연 사건 기록을 다시 받는다
+addEventListener("ksw:bg",()=>{if(incLoaded)loadInc()});
 async function loadInc(){
   incLoaded=true;
   try{const r=await fetch("state/incidents.json",{cache:"no-store"});if(r.ok)INC=await r.json()}catch(_){}
@@ -56,7 +58,7 @@ function renderInc(){
   if(!items.length){
     $("inc").innerHTML=`<p class="ihead">국내 총기·탄약·마약·방화·해킹 등 사건 중 한반도 안보와의 연결이 보도된 것만 모읍니다.
       직접 = 수사기관·법원·정부·우방의 공식 귀속 발표 · 간접 = 공식 확인 전 정황(북한제 추정·표류물·연관성 조사 중). 등급은 감시 항목이 정합니다.</p>
-      <p class="fa-e">${INC?"최근 30일 기록 없음":"아직 기록이 없습니다 — 매시 회차가 분류를 시작하면 여기 쌓입니다."}</p>`;
+      <p class="fa-e">${INC?"최근 30일 기록 없음":"아직 기록이 없습니다 — 배경 회차(하루 3회)가 분류를 시작하면 여기 쌓입니다."}</p>`;
     return;
   }
   const row=x=>{const t=TIER[x.tier]||TIER.indirect;

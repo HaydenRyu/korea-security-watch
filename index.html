@@ -809,7 +809,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   <section class="p" id="sensors-p" aria-label="감시 항목">
     <div class="ph"><div class="wtab" role="tablist" aria-label="감시 칸"><button type="button" role="tab" id="st-sensors" aria-controls="sensors" aria-selected="true" data-t="sensors">감시 항목</button><button type="button" role="tab" id="st-inc" aria-controls="inc" aria-selected="false" tabindex="-1" data-t="inc">사건 기록</button></div><span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 등급은 코드 규칙이 정하고, 사실 확인은 출처 원문으로 하세요.">AI 판독</span><span class="r" id="sensorsum">9개</span><span class="r" id="incsum" hidden>최근 30일</span></div>
     <div class="pb scroll" id="sensors" role="tabpanel" aria-labelledby="st-sensors"></div>
-    <!-- 사건 기록(10/28): state/incidents.json(매시 루틴) — 총기·탄약·마약·방화·해킹 등 국내 사건 중 안보 연결이 있는 것만.
+    <!-- 사건 기록(10/28): state/incidents.json(배경 루틴, 하루 3회 — 11/05 분리) — 총기·탄약·마약·방화·해킹 등 국내 사건 중 안보 연결이 있는 것만.
          직접 = 수사기관·법원·정부·우방 공식 발표가 북한·외국 정보기관 연계를 명시(hybrid_ops 와 같은 게이트, 등급 반영) ·
          간접 = 공식 귀속 전 정황(표시만, 등급 무관) · 해소 = 무관 판명. 개인 실명은 기록하지 않는다 -->
     <div class="pb scroll" id="inc" role="tabpanel" aria-labelledby="st-inc" hidden><p class="fa-e">불러오는 중</p></div>
@@ -1544,6 +1544,8 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
   await loadPrep();  // render·initMap(지하철 레이어) 앞
   try{latest=await get("latest.json")}catch(e){}
   WORLD=await get("world.json").catch(()=>null);
+  // 배경 파일(world·factors·linkage·incidents·theaters, 하루 3회)은 매시간 변경과 따로 감지한다 — background.json 의 at 이 바뀌면 다시 그린다
+  let bgAt=(await get("background.json").catch(()=>null))?.at??null;
   try{events=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(l=>JSON.parse(l))}catch(e){}
   DATA={latest,events};render(latest,events);initMap();drawPins(latest?.items);route();tick();
   // 참고 블록(긴장 국면·배경 요인) — 파일이 없거나 깨져도 빈 상태로 그린다. 등급 화면과 따로 읽는다
@@ -1561,11 +1563,14 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
   // 자동 갱신: 열어 둔 화면이 첫 로드 값에 머물러 「지연」으로 보이던 문제(10/19). 3분마다·화면으로 돌아올 때 새 회차면 다시 그린다
   const refresh=async()=>{
     if(sample||document.hidden)return;
+    let bgNew=false;  // 폴링당 요청 +1(background.json, 수백 바이트). 바뀐 때만 world.json·refs 를 다시 받는다
+    try{const at=(await get("background.json"))?.at??null;if(at!==bgAt){bgAt=at;bgNew=true}}catch(e){}
+    if(bgNew){WORLD=await get("world.json").catch(()=>WORLD);renderWorld(latest);refs();dispatchEvent(new Event("ksw:bg"))}
     try{const l=await get("latest.json"),ev=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(x=>JSON.parse(x));
       if(ev.length&&ev[ev.length-1].checked_at===events[events.length-1]?.checked_at&&l.checked_at===latest?.checked_at)return;
-      WORLD=await get("world.json").catch(()=>WORLD);
+      if(!bgNew)WORLD=await get("world.json").catch(()=>WORLD);
       latest=l;events=ev;DATA={latest,events};render(latest,events);drawPins(latest?.items);drawDial(latest?.grade??null);
-      refs();
+      if(!bgNew)refs();
     }catch(e){}
   };
   setInterval(refresh,180e3);document.addEventListener("visibilitychange",refresh);

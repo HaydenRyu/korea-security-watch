@@ -1,62 +1,57 @@
 {
   "coverage": {
-    "border_clash": [
-      "북한 미사일 발사 합참 11월 4일",
-      "North Korea missile JCS Nov 4",
-      "지뢰 발견 DMZ 합참",
-      "DMZ NLL 귀순"
-    ],
-    "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 공격(수집기 gps 묶음)",
-      "사이버 공격",
-      "North Korea hack attributed FBI"
-    ],
-    "foreign_forces": [
-      "김정은 방중 김성남",
-      "Kim Jong Un China Russia visit",
-      "주한미군 감축 서해 구조물"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 North Korea attributed FBI"
-    ],
     "troop_movement": [
-      "북한 핵 풍계리 영변 병력 이동 군수",
-      "North Korea nuclear troops parade Nov 2026"
+      "합참 북한 선덕 동해상 미사일 발사 300km 미만 11월 4일",
+      "North Korea missile launch November 4 Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 병력 이동 군수",
-      "North Korea nuclear troops parade Nov 2026"
+      "North Korea missile launch November 4 Reuters",
+      "합참 북한 미사일 발사"
     ],
     "logistics": [
-      "북한 핵 풍계리 영변 병력 이동 군수",
-      "North Korea nuclear troops parade Nov 2026"
+      "합참 북한 미사일 발사",
+      "North Korea missile launch November 4 Reuters"
+    ],
+    "border_clash": [
+      "합참 북한 선덕 동해상 미사일 발사 300km 미만 11월 4일",
+      "지뢰 발견 DMZ 합참 목함지뢰 해안",
+      "North Korea missile launch November 4 Reuters"
+    ],
+    "electronic_cyber": [
+      "North Korea Binance hack attributed United States Kim Yo Jong statement",
+      "해킹 개인정보 유출 (수집기 gps 묶음)",
+      "GPS 교란 (수집기)"
+    ],
+    "foreign_forces": [
+      "김정은 방중 김성남 북중 고위급",
+      "North Korea Binance hack attributed United States Kim Yo Jong statement"
     ],
     "parade_massing": [
-      "북한 핵 풍계리 영변 병력 이동 군수",
-      "North Korea nuclear troops parade Nov 2026"
+      "North Korea missile launch November 4 Reuters"
     ],
     "nk_internal": [
-      "진돗개 데프콘 북한 등화관제 준전시",
-      "North Korea state of war DEFCON"
+      "합참 북한 선덕 동해상 미사일 발사 300km 미만 11월 4일"
     ],
     "gov_warning": [
-      "진돗개 데프콘 북한 등화관제 준전시",
-      "North Korea state of war DEFCON"
+      "합참 북한 선덕 동해상 미사일 발사 300km 미만 11월 4일",
+      "North Korea missile launch November 4 Reuters"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 (수집기 spy 묶음)",
+      "North Korea Binance hack attributed United States Kim Yo Jong statement"
+    ],
+    "calm": [
+      "확성기 방송 중단 (수집기 summit 묶음)"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261104505205",
-    "https://www.koreaherald.com/article/10925149",
-    "https://en.yna.co.kr/view/AEN20261104005551315",
+    "https://www.segye.com/newsView/20261104517905",
     "https://www.yna.co.kr/view/AKR20261104055151504",
+    "https://www.yna.co.kr/view/AKR20261103188300071",
     "https://www.yna.co.kr/view/AKR20261104120900061",
-    "https://www.yna.co.kr/view/AKR20261103120351009",
-    "https://www.yna.co.kr/view/AKR20261103165200504",
-    "https://www.nknews.org/"
+    "https://www.yna.co.kr/view/AKR20261103120351009"
   ],
-  "overall_summary": "4일 오전 북한이 선덕 일대에서 동해상으로 다수 미사일을 발사했고 일주일새 4번째 무력시위로 시험 발사 흐름의 연속이다. 병력·군수·정부 경고 등 다른 항목의 새 징후는 확인되지 않았다.",
+  "overall_summary": "북한이 11월 4일 오전 동해상으로 미사일 수 발을 발사해 일주일새 4번째 연쇄 시험 발사가 이어졌으나 정례 시험 범주로 본다. 김성남 방중 등 북중 교류와 바이낸스 해킹 공방이 겹치지만 병력·군수·경고 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,6 +62,64 @@
     "logistics": {
       "status": "none"
     },
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "함경남도 선덕 → 동해",
+      "lat": 40.0,
+      "lon": 127.3,
+      "summary": "합참이 4일 오전 북한이 동해상으로 미사일 수 발을 발사한 것을 포착했다고 발표했고 비행거리 300㎞ 미만, 일주일새 4번째 시험 발사다.",
+      "meaning": "단거리 시험 발사의 연쇄로 정례 무력시위 범주이며 남측·미군 시설 표적이나 타 항목 겹침은 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261104055151504"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261104517905"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "합참 4일 오전 동해상 미사일 수 발 포착 발표",
+        "김여정 담화 '대화는 선택지일 뿐 국익과 동일시되지 않는다'"
+      ],
+      "speculation": [
+        "미 중간선거일에 맞춘 사전 계획된 발사라는 전문가 분석"
+      ]
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "summary": "귀속 미확인 — 바이낸스 가상자산 대규모 탈취에 대해 미 국무부가 북한 사이버범죄를 비판했으나 수사기관의 공식 귀속 발표는 아직 없다.",
+      "meaning": "가상자산 탈취는 북한 무기 자금 조달 우려와 연결되나 군사 징후는 아니다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261103188300071"
+        }
+      ],
+      "confidence": "중간"
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "summary": "김성남 북한 노동당 국제비서가 3일 당대표단을 이끌고 방중길에 올랐다고 교도통신을 인용해 보도됐다.",
+      "meaning": "김정은 단둥 방문 열흘 만의 북중 고위급 교류로 외교 일정이다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261103120351009"
+        }
+      ],
+      "confidence": "중간"
+    },
     "parade_massing": {
       "status": "none"
     },
@@ -76,58 +129,12 @@
     "gov_warning": {
       "status": "none"
     },
-    "electronic_cyber": {
-      "status": "none"
-    },
     "hybrid_ops": {
       "status": "none",
-      "summary": "민노총 간부 北지령 혐의 항소심 무죄(11/4)는 귀속 확정 아님, 배경."
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "김성남 노동당 비서 방중(교도 보도 11/3)은 24시간 경과, 외교 일정으로 배경."
-    },
-    "border_clash": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "함남 선덕 일대·동해상",
-      "lat": 39.75,
-      "lon": 127.45,
-      "summary": "합참이 4일 오전 북한 선덕 일대에서 동해상으로 발사된 다수 미사일을 포착했고 비행거리는 300㎞ 미만으로 제원 분석 중이다(일주일새 4번째 연쇄 무력시위).",
-      "meaning": "시험 발사 흐름의 연속이며 한·미가 제원을 공동 분석 중이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261104505205"
-        },
-        {
-          "name": "코리아헤럴드",
-          "tier": "B",
-          "url": "https://www.koreaherald.com/article/10925149"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://en.yna.co.kr/view/AEN20261104005551315"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261104055151504"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "합참: 4일 오전 선덕 일대에서 동해상으로 다수 미사일 발사",
-        "비행거리 300㎞ 미만 추정"
-      ],
-      "speculation": [
-        "전문가는 화성-11라 가능성 언급"
-      ]
+      "summary": "북한 지령 혐의 민노총 간부 2명이 항소심에서도 무죄를 받았고 신규 공식 귀속 발표는 없다."
     }
   },
-  "checked_at": "2026-11-04T09:11:04+00:00",
+  "checked_at": "2026-11-04T10:11:37+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

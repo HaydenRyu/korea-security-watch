@@ -19,22 +19,22 @@
 
 ## 0-1. 정본 출처 — 전역·블록별 (11/05 확인: 이 목록은 `curl -sS -m 20 -A 'Mozilla/5.0'` 로 열리고 72시간 안 항목이 있었다)
 검색 결과에 오래된 기사만 나와도 **포기하지 않는다** — 아래 피드를 직접 열어 72시간 안 항목을 고르고, 그 기사 원문을 연다.
-피드는 목록일 뿐이다: `sources` 의 `url` 은 기사 주소이고, 그 기사를 실제로 열어 `opened` 에 넣는다. `published_at` 은 피드의 `pubDate`(시간대 포함 그대로).
+피드는 목록일 뿐이다: `sources` 의 `url` 은 기사 주소이고, 그 기사를 실제로 열어 `opened` 에 넣는다. `published_at` 은 피드의 `pubDate` 시각을 시간대를 살려 ISO 8601 로 적는다(예 `Thu, 05 Nov 2026 09:30:00 +0000` → `2026-11-05T09:30:00+00:00`; 코드는 RFC 822 원문도 읽는다).
 
 | 대상 | 피드·목록(먼저 연다) | 기사 원문 |
 |---|---|---|
 | `taiwan` | Focus Taiwan(CNA 영문) `https://feeds.feedburner.com/rsscna/engnews` · CNA 중문 `https://feeds.feedburner.com/rsscna/politics` · `https://feeds.feedburner.com/rsscna/mainland` | `focustaiwan.tw` · `cna.com.tw` (curl 열림) |
 | `scs_ecs` | Philstar `https://www.philstar.com/rss/nation` · Rappler `https://www.rappler.com/feed/` · BBC 아시아 `https://feeds.bbci.co.uk/news/world/asia/rss.xml` | `philstar.com` · `rappler.com` · `bbc.co.uk` |
 | `us_posture` | Stars and Stripes 목록 `https://www.stripes.com/theaters/asia_pacific/` · DVIDS `https://www.dvidshub.net/rss/news` | `stripes.com/theaters/…/YYYY-MM-DD/…`(주소의 날짜) · `dvidshub.net/news/…` |
-| `ukraine` | BBC 유럽 `https://feeds.bbci.co.uk/news/world/europe/rss.xml` · Al Jazeera `https://www.aljazeera.com/xml/rss/all.xml` | `bbc.co.uk` · `aljazeera.com` |
-| `mideast` | BBC 중동 `https://feeds.bbci.co.uk/news/world/middle_east/rss.xml` · Al Jazeera `https://www.aljazeera.com/xml/rss/all.xml` | `bbc.co.uk` · `aljazeera.com` |
+| `ukraine` | BBC 유럽 `https://feeds.bbci.co.uk/news/world/europe/rss.xml` | `bbc.co.uk` |
+| `mideast` | BBC 중동 `https://feeds.bbci.co.uk/news/world/middle_east/rss.xml` | `bbc.co.uk` |
 | `linkage`(taiwan) | `taiwan` 행과 같다 | 위와 같다 |
 | `linkage`(korea) | `taiwan` 행 + 세계일보 정치 `https://www.segye.com/Articles/RSSList/segye_politic.xml` + BBC 아시아 | `segye.com/newsView/…` |
-| `world` | BBC 세계 `https://feeds.bbci.co.uk/news/world/rss.xml` · Al Jazeera | `bbc.co.uk` · `aljazeera.com` |
+| `world` | BBC 세계 `https://feeds.bbci.co.uk/news/world/rss.xml` | `bbc.co.uk` |
 
 - 쓰지 않는 것(11/05 확인): Reuters(401)·Inquirer(403)·일본 방위성(403)·필리핀 해경(403)·Japan Times 기사(403)·USNI 기사(403 — 피드만 열림)·
   USNI Fleet Tracker 피드(마지막 항목 10/13 — 72시간 규칙에 못 든다)·NHK RSS(마지막 항목 8월)·Taipei Times RSS(`dc:date` 가 다음 날 지면 날짜라 미래 시각 — 지수 검사가 버린다)·
-  NK News(클라우드 차단)·연합뉴스(`ai_use` 제한·클라우드에서 기사 본문 빈 페이지)·국민일보(`claude_user_blocked`)·대만 국방부(robots.txt).
+  NK News(클라우드 차단)·Al Jazeera(약관 6절이 허가 없는 자동 접근·분석을 제한)·연합뉴스(`ai_use` 제한·클라우드에서 기사 본문 빈 페이지)·국민일보(`claude_user_blocked`)·대만 국방부(robots.txt).
 - 세계일보 RSS 는 개인 구독 한정이다 — 피드 목록(제목·링크 묶음)을 레포에 올리지 않는다. 인용하는 기사 한 건의 주소만 `sources` 에 쓴다.
 - **전역마다 의무**(`theaters` 5곳 모두): 검색어 1개 이상(`coverage["linkage:theaters"]` 에 전역 이름이 드러나게) + 72시간 안 원문 1건 이상 열기.
   원문을 끝내 못 열면 그 전역 키는 쓰지 않고(평온 0 으로 채우지 않는다) `notes.theaters` 에 「<전역>: <이유>」 를 적는다 — 마지막 출력에도 그 이유를 옮긴다.
@@ -154,7 +154,7 @@
 0-1. 사건 기록(4-7절)용 국내 언론 수집 결과를 만든다 — `python3 scripts/news_kr.py`(결과 `news_kr.local.json`, .gitignore — **커밋하지 않는다**). 읽는 법은 `monitor.md` 5절 0-2 와 같다. 실패하면 검색으로 대신한다.
 1. 블록마다 검색 → 원문 열기(`opened` 에 넣기) → `bg_run.json` 의 그 블록 키에 쓰기 → `blocks` 에 상태 적기. 대상은 4-1 `world`(+`world_context`) · 4-4 `factors` · 4-5 `linkage`(`taiwan`·`korea`) · 4-5 `theaters`(`linkage.theaters`) · 4-7 `incidents`.
    쓴 검색어는 `coverage` 에 블록별로 남긴다(실제로 검색창에 넣은 말 — `monitor.md` 5절 1단계와 같은 규칙).
-1-1. **회차 하한** — 쓰기 전에 `python3 scripts/background.py --check bg_run.json` 을 실행한다(아무 파일도 쓰지 않는다. 출력 = 블록별 예상 상태·`retry`·`missing_theaters`).
+1-1. **회차 하한** — 쓰기 전에 `python3 -B scripts/background.py --check bg_run.json` 을 실행한다(아무 파일도 쓰지 않는다. 출력 = 블록별 예상 상태·`retry`·`missing_theaters`).
    rc 3(`partial`·`failed`·`skipped` 있음)이면 `retry` 의 블록과 `missing_theaters` 의 전역을 **한 번 더** 시도한다: 0-1 정본 피드를 열어 72시간 안 원문을 찾고,
    `failed`(「검색 기록 없음」)면 검색어를 실제로 넣어 보고 `coverage` 에 남긴다. 재시도는 1회 — 그래도 못 채우면 `notes` 에 이유를 적고 2단계로 간다.
    rc 0 이면 바로 2단계. 재시도에서도 **열지 않은 URL 을 `opened` 에 넣지 않는다.**

@@ -268,6 +268,15 @@ def test_theater_sources_in_future_rejected_beyond_skew():
     assert ews.FUTURE_SKEW_MIN == 10
 
 
+def test_theater_sources_accept_rss_pubdate():
+    """정본 출처는 RSS 다 — pubDate(RFC 822) 를 그대로 옮겨도 72시간 검사를 지나야 한다(11/05 리뷰)."""
+    r = {"opened": [OPENED[0]], "linkage": {"theaters": {"taiwan": {"state": 1, "channels": [], "summary": "s",
+                                                           "sources": [{"url": OPENED[0], "published_at": "Wed, 04 Nov 2026 22:00:00 +0000"}]}}}}
+    assert set(ews.ingest(r, None, NOW)["theaters"]) == {"taiwan"}
+    assert ews._dt("Thu, 05 Nov 2026 09:00:00 +0900") == ews._dt("2026-11-05T00:00:00+00:00")
+    assert ews._dt("not a date") is None and ews._dt("") is None and ews._dt(None) is None
+
+
 # ── 회차 하한(11/05 첫 실회차: theaters 2/5 인데 checked · linkage 원문 0건인데 no_findings) ──
 def _theater(pub=NOW):
     return {"state": 0, "channels": [], "summary": "s", "sources": [{"url": OPENED[0], "published_at": pub}]}
@@ -339,9 +348,11 @@ def test_check_mode_writes_nothing_and_reports_retry():
 
 def test_background_prompt_requires_check_retry_and_fixed_sources():
     md = (ROOT / "prompts" / "background.md").read_text()
-    assert "python3 scripts/background.py --check bg_run.json" in md
+    assert "python3 -B scripts/background.py --check bg_run.json" in md  # -B: --check 는 .pyc 도 쓰지 않는다
     for t in ews.THEATERS:
         assert f"`{t}`" in md
     for k in ("\"world\"", "factor:", "linkage:taiwan", "linkage:korea", "linkage:theaters", "\"incidents\""):
         assert k in md, k
     assert "kmib.co.kr" not in md.split("## 0-1.")[1].split("## 1.")[0]  # 국민일보는 curl 우회 금지 매체 — 정본에 올리지 않는다
+    table = "\n".join(l for l in md.split("## 0-1.")[1].split("## 1.")[0].splitlines() if l.startswith("|"))
+    assert "aljazeera" not in table.lower()  # 약관이 허가 없는 자동 접근을 제한 — 정본 표에 올리지 않는다

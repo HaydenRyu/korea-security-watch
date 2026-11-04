@@ -1,45 +1,17 @@
 {
- "at": "2026-11-04T03:54:42+00:00",
- "south": 71,
- "area": 95,
- "baseline": 71,
- "ratio": 1.0,
- "samples": 3,
+ "at": "2026-11-04T05:49:52+00:00",
+ "south": 81,
+ "area": 101,
+ "baseline": 76,
+ "ratio": 1.07,
+ "samples": 5,
  "mil": [
   {
    "type": "BE20",
    "name": null,
    "call": "CATS82",
-   "lat": 37.12,
-   "lon": 127.04
-  },
-  {
-   "type": "H60",
-   "name": null,
-   "call": "HOIST16",
-   "lat": 36.48,
-   "lon": 127.34
-  },
-  {
-   "type": "BE20",
-   "name": null,
-   "call": "CATS16",
-   "lat": 35.79,
-   "lon": 128.6
-  },
-  {
-   "type": "?",
-   "name": null,
-   "call": "",
-   "lat": 33.44,
-   "lon": 132.06
-  },
-  {
-   "type": "BE20",
-   "name": null,
-   "call": "CNV7101",
-   "lat": 33.78,
-   "lon": 132.33
+   "lat": 37.07,
+   "lon": 126.99
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

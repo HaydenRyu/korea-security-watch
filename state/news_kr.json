@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-04T03:54:55+00:00",
+ "fetched_at": "2026-11-04T05:50:42+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-04T02:07:56+00:00",
@@ -7,46 +7,44 @@
  "counts": {
   "feeds": 15,
   "feeds_failed": 1,
-  "fetched": 1096,
-  "hits": 60,
-  "clusters": 41,
+  "fetched": 1095,
+  "hits": 56,
+  "clusters": 37,
   "by_group": {
-   "fire": 19,
-   "border": 11,
+   "fire": 21,
+   "border": 10,
    "mine": 8,
    "alert": 3,
-   "drone_balloon": 2,
-   "gps": 8,
-   "hybrid": 1,
-   "summit": 4,
-   "usfk": 1,
-   "spy": 1
+   "gps": 6,
+   "summit": 3,
+   "drone_balloon": 1,
+   "usfk": 1
   }
  },
  "outlets": {
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 597,
-   "hits": 62
+   "count": 596,
+   "hits": 55
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 6
+   "hits": 8
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 12
+   "hits": 15
   },
   "국민일보": {
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 23
+   "hits": 21
   },
   "세계일보": {
    "feeds": 2,
@@ -64,54 +62,44 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "fire": {
-   "clusters": 19,
+   "clusters": 21,
    "max_independent": 5,
-   "latest": "2026-11-04T03:54:55+00:00"
+   "latest": "2026-11-04T05:50:42+00:00"
   },
   "border": {
-   "clusters": 11,
+   "clusters": 10,
    "max_independent": 2,
-   "latest": "2026-11-04T03:54:55+00:00"
+   "latest": "2026-11-04T05:50:42+00:00"
   },
   "mine": {
    "clusters": 8,
    "max_independent": 2,
-   "latest": "2026-11-04T03:54:55+00:00"
+   "latest": "2026-11-04T05:50:42+00:00"
   },
   "alert": {
    "clusters": 3,
    "max_independent": 5,
    "latest": "2026-11-04T03:40:00+00:00"
   },
-  "drone_balloon": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-04T03:29:40+00:00"
-  },
   "gps": {
-   "clusters": 8,
+   "clusters": 6,
    "max_independent": 3,
-   "latest": "2026-11-04T02:51:15+00:00"
-  },
-  "hybrid": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-04T02:51:15+00:00"
+   "latest": "2026-11-03T19:30:00+00:00"
   },
   "summit": {
-   "clusters": 4,
+   "clusters": 3,
    "max_independent": 2,
-   "latest": "2026-11-04T02:37:34+00:00"
+   "latest": "2026-11-03T11:36:00+00:00"
+  },
+  "drone_balloon": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-03T09:54:07+00:00"
   },
   "usfk": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-03T07:25:21+00:00"
-  },
-  "spy": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-03T06:34:25+00:00"
   }
  },
  "feeds": [
@@ -120,8 +108,8 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 117,
-   "hits": 49
+   "count": 116,
+   "hits": 48
   },
   {
    "outlet": "연합뉴스",
@@ -153,7 +141,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 6
+   "hits": 0
   },
   {
    "outlet": "SBS",
@@ -161,7 +149,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 3
+   "hits": 4
   },
   {
    "outlet": "SBS",
@@ -177,7 +165,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 3
+   "hits": 4
   },
   {
    "outlet": "동아일보",
@@ -185,7 +173,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 9
+   "hits": 10
   },
   {
    "outlet": "동아일보",
@@ -193,7 +181,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 3
+   "hits": 5
   },
   {
    "outlet": "국민일보",
@@ -209,7 +197,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibSocRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 5
+   "hits": 3
   },
   {
    "outlet": "세계일보",

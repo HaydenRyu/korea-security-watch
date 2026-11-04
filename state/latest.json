@@ -1,77 +1,53 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup border"
-    ],
-    "nuclear": [
-      "북한 핵시설 영변 풍계리",
-      "North Korea nuclear Yongbyon Punggye-ri"
-    ],
-    "logistics": [
-      "북한 탄약 연료 비축 군수 수송",
-      "North Korea ammunition shipment Russia"
-    ],
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "목함지뢰 해안 귀순",
-      "North Korea DMZ NLL mine"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "North Korea GPS jamming hacking"
+      "합참 북한 동해상 미상 발사체 (news_kr 수집)",
+      "North Korea launch East Sea Joint Chiefs November 4 2026",
+      "北朝鮮 弾道ミサイル 発射 防衛省 11月4日"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "김성남 방중 (news_kr 수집)"
     ],
-    "parade_massing": [
-      "북한 열병식 준비 집결",
-      "North Korea parade preparation"
-    ],
-    "nk_internal": [
-      "북한 등화관제 주민 대피 준전시",
-      "North Korea civil defense drill"
-    ],
-    "gov_warning": [
-      "진돗개 발령 데프콘",
-      "DEFCON Korea raised"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+    "electronic_cyber": [
+      "바이낸스 해킹 북한 (news_kr 수집)"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "news_kr 수집 묶음 확인"
     ],
-    "linkage:taiwan": [
-      "대만 중국 군사훈련",
-      "PLA drills around Taiwan"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 11월"
     ],
-    "linkage:korea": [
-      "북러 군사협력",
-      "North Korea troops Russia"
+    "nuclear": [
+      "북한 핵시설 영변 풍계리 동향"
+    ],
+    "logistics": [
+      "북한 탄약 군수 수송 러시아 선박"
+    ],
+    "parade_massing": [
+      "북한 열병식 준비 집결 위성사진"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 주민 대피"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 상향"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 북한"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261103517017",
+    "https://www.yna.co.kr/view/AKR20261104053300504",
+    "https://www.yna.co.kr/view/AKR20261104055100504",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008829816",
     "https://www.segye.com/newsView/20261103519482",
-    "https://www.yna.co.kr/view/AKR20261103165200504",
+    "https://www.segye.com/newsView/20261103517017",
+    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://www.yna.co.kr/view/AKR20261103092800504",
-    "https://www.yna.co.kr/view/AKR20261103013851504",
     "https://www.yna.co.kr/view/AKR20261103120351009",
-    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do"
+    "https://www.yna.co.kr/view/AKR20261104000900108"
   ],
-  "overall_summary": "북한이 순항미사일 집속탄두 시험(11/2)을 3일 발표했고 김성남 국제비서가 방중했다. FBI의 바이낸스 해킹 북한 귀속(10/31)에 김여정이 반발했으나 모두 정례 범위이며 직전과 변화 없다.",
+  "overall_summary": "합참이 4일 오전 동해상 미상 발사체 발사를 발표했고 제원은 분석 중이다. 직전 10/29·10/31·11/2 시험 발사 흐름과 같은 범위의 시험 성격이며 다른 항목에 겹침은 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -85,30 +61,32 @@
     "border_clash": {
       "status": "corroborated",
       "routine": true,
-      "region": "북한 (미사일총국)",
-      "summary": "조선중앙통신이 11/2 순항미사일 집속탄두·수직타격 시험을 3일 발표했고 세계일보·연합뉴스가 보도했다.",
-      "meaning": "신형 타격수단 시험 과시로 시험 발사 범주다.",
+      "region": "동해상 (북한 동해안)",
+      "summary": "합참이 4일 오전 북한이 동해상으로 미상 발사체를 발사했다고 발표했고 연합뉴스·SBS가 보도했다(제원 분석 중, 탄도미사일이면 나흘 만).",
+      "meaning": "연이은 시험 발사 흐름의 연장으로 보이며 제원 확인 전이라 시험 발사 범주로 본다.",
       "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261103517017"
-        },
         {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261103013851504"
+          "url": "https://www.yna.co.kr/view/AKR20261104053300504"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008829816"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA가 11/3 미사일총국의 산포전투부 위력평가시험 보도"
+        "합참이 4일 오전 동해상 미상 발사체 발사를 발표",
+        "합참이 제원·사거리를 분석 중"
       ],
-      "speculation": []
+      "speculation": [
+        "탄도미사일로 확인되면 나흘 만의 발사"
+      ]
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "FBI의 바이낸스 해킹 북한 귀속 발표는 10/31로 24시간 경과, 3일 김여정 부인 담화·미 국무부 반박은 후속 보도라 배경이다."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "corroborated",
@@ -147,7 +125,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-04T00:10:31+00:00",
+  "checked_at": "2026-11-04T01:10:56+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

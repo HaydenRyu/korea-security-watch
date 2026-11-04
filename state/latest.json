@@ -1,60 +1,56 @@
 {
   "coverage": {
     "troop_movement": [
-      "병력 이동 전방 증강",
+      "북한 병력 이동 전방 증강",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "풍계리 영변 핵시설 동향",
+      "North Korea nuclear test site 38 North"
     ],
     "logistics": [
-      "북한 군수 물자 수송",
+      "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 월선 경고사격",
-      "North Korea DMZ border"
+      "지뢰 발견 DMZ 귀순 NLL 북한",
+      "북한 미사일 발사 합참 11월 5일"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hacking"
+      "GPS 교란 서해 서구조물 주한미군 감축 김정은 방중",
+      "해킹 개인정보 유출 랜섬웨어 공격 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "North Korea Reuters missile Kim Jong Un China Russia visit",
+      "GPS 교란 서해 서구조물 주한미군 감축 김정은 방중"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 준비",
+      "North Korea parade preparation"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea martial"
+      "북한 준전시 등화관제 노농적위군",
+      "North Korea wartime posture"
     ],
     "gov_warning": [
-      "진돗개 데프콘 격상",
-      "North Korea warning Japan J-Alert"
+      "진돗개 데프콘 상향",
+      "북한 미사일 발사 합참 11월 5일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hackers"
     ],
     "calm": [
-      "남북 대화 제안 통신선",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
     ]
   },
   "opened": [
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261104517905",
     "https://www.segye.com/newsView/20261104520775",
     "https://www.yna.co.kr/view/AKR20261104055100504",
-    "https://www.yna.co.kr/view/AKR20261103188300071"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "4일 선덕 일대 미사일 발사(일주일새 4번째)는 시험 발사로 정례로 본다. 직전 회차의 바이낸스 해킹·김성남 방중은 24시간이 지나 배경으로 내렸고 새 징후는 없다.",
+  "overall_summary": "4일 오전 선덕 일대 미사일 수 발 발사(일주일새 4번째)는 시험 발사로 정례 범위이며 직전 회차와 판정이 같다. 병력·핵·군수·정부 경고 등 다른 항목에 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,9 +67,14 @@
       "region": "동해 선덕",
       "lat": 39.75,
       "lon": 127.45,
-      "summary": "합참이 4일 오전 북한이 선덕 일대에서 동해상으로 미사일 수 발을 발사했다고 밝혔고 비행거리는 300㎞ 미만, 일주일새 4번째 시험 발사다.",
+      "summary": "합참이 4일 오전 북한이 함남 선덕 일대에서 동해상으로 미사일 수 발을 발사했다고 밝혔고 비행거리는 300㎞ 미만, 일주일새 4번째 시험 발사다.",
       "meaning": "반복 시험 발사로 정례 범위의 위협 과시이나 빈도가 높다.",
       "sources": [
+        {
+          "name": "국방일보",
+          "tier": "B",
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
+        },
         {
           "name": "세계일보",
           "tier": "B",
@@ -87,19 +88,17 @@
       ],
       "confidence": "높음",
       "facts": [
-        "합참 발표: 4일 오전 동해상 발사, 300㎞ 미만"
+        "합참 발표: 4일 오전 선덕 일대 동해상 발사, 300㎞ 미만"
       ],
       "speculation": [
-        "미 중간선거일에 맞춘 메시지 가능성"
+        "미 중간선거일에 맞춘 사전 계획 가능성(전문가)"
       ]
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "24시간 경과 — FBI의 바이낸스 해킹 북한 지목 첫 보도와 미 국무부 반박이 3일(29시간 전)이고 새 보도 없음."
+      "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "24시간 경과 — 김성남 방중 첫 보도 3일, 새 군사협력 발표 없음."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -111,10 +110,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "민노총 간부 북 지령 혐의 항소심 무죄는 귀속 발표가 아닌 재판 결과라 배경이다."
     }
   },
-  "checked_at": "2026-11-04T20:11:04+00:00",
+  "checked_at": "2026-11-04T21:11:17+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

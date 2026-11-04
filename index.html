@@ -1564,8 +1564,11 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
   const refresh=async()=>{
     if(sample||document.hidden)return;
     let bgNew=false;  // 폴링당 요청 +1(background.json, 수백 바이트). 바뀐 때만 world.json·refs 를 다시 받는다
-    try{const at=(await get("background.json"))?.at??null;if(at!==bgAt){bgAt=at;bgNew=true}}catch(e){}
-    if(bgNew){WORLD=await get("world.json").catch(()=>WORLD);renderWorld(latest);refs();dispatchEvent(new Event("ksw:bg"))}
+    let bgNext;
+    try{const at=(await get("background.json"))?.at??null;if(at!==bgAt){bgNext=at;bgNew=true}}catch(e){}
+    if(bgNew){  // 배경 파일을 다 받은 뒤에만 bgAt 을 확정한다 — 하나라도 실패하면 다음 폴링에서 다시 받는다
+      try{WORLD=await get("world.json");await Promise.all(["factors.json","linkage.json","incidents.json"].map(p=>get(p)));bgAt=bgNext}catch(e){}
+      renderWorld(latest);refs();dispatchEvent(new Event("ksw:bg"))}
     try{const l=await get("latest.json"),ev=(await get("events.jsonl",true)).split("\n").filter(Boolean).map(x=>JSON.parse(x));
       if(ev.length&&ev[ev.length-1].checked_at===events[events.length-1]?.checked_at&&l.checked_at===latest?.checked_at)return;
       if(!bgNew)WORLD=await get("world.json").catch(()=>WORLD);

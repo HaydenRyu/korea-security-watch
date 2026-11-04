@@ -1,26 +1,26 @@
 {
- "fetched_at": "2026-11-04T17:49:02+00:00",
- "status": "ok",
- "status_detail": "",
+ "fetched_at": "2026-11-04T19:03:52+00:00",
+ "status": "partial",
+ "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-04T17:49:02+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 0,
-  "fetched": 1155,
-  "hits": 60,
-  "clusters": 46,
+  "feeds_failed": 1,
+  "fetched": 1095,
+  "hits": 57,
+  "clusters": 44,
   "by_group": {
    "spy": 2,
-   "border": 9,
+   "border": 8,
    "drone_balloon": 4,
-   "fire": 22,
+   "fire": 21,
    "mine": 7,
    "influence": 2,
    "gps": 8,
-   "alert": 4,
    "hybrid": 1,
-   "summit": 4
+   "summit": 4,
+   "alert": 3
   }
  },
  "outlets": {
@@ -28,7 +28,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 595,
-   "hits": 54
+   "hits": 55
   },
   "SBS": {
    "feeds": 3,
@@ -56,9 +56,9 @@
   },
   "국방일보": {
    "feeds": 1,
-   "failed": 0,
-   "count": 60,
-   "hits": 6
+   "failed": 1,
+   "count": 0,
+   "hits": 0
   }
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
@@ -66,42 +66,37 @@
   "spy": {
    "clusters": 2,
    "max_independent": 2,
-   "latest": "2026-11-04T17:49:02+00:00"
+   "latest": "2026-11-04T19:03:52+00:00"
   },
   "border": {
-   "clusters": 9,
+   "clusters": 8,
    "max_independent": 1,
-   "latest": "2026-11-04T17:49:02+00:00"
+   "latest": "2026-11-04T19:03:52+00:00"
   },
   "drone_balloon": {
    "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-11-04T17:49:02+00:00"
+   "latest": "2026-11-04T19:03:52+00:00"
   },
   "fire": {
-   "clusters": 22,
-   "max_independent": 5,
-   "latest": "2026-11-04T17:49:02+00:00"
+   "clusters": 21,
+   "max_independent": 4,
+   "latest": "2026-11-04T19:03:52+00:00"
   },
   "mine": {
    "clusters": 7,
    "max_independent": 1,
-   "latest": "2026-11-04T17:49:02+00:00"
+   "latest": "2026-11-04T19:03:52+00:00"
   },
   "influence": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-04T17:49:02+00:00"
+   "latest": "2026-11-04T19:03:52+00:00"
   },
   "gps": {
    "clusters": 8,
    "max_independent": 3,
    "latest": "2026-11-04T16:05:33+00:00"
-  },
-  "alert": {
-   "clusters": 4,
-   "max_independent": 5,
-   "latest": "2026-11-04T15:00:00+00:00"
   },
   "hybrid": {
    "clusters": 1,
@@ -112,6 +107,11 @@
    "clusters": 4,
    "max_independent": 1,
    "latest": "2026-11-04T07:53:59+00:00"
+  },
+  "alert": {
+   "clusters": 3,
+   "max_independent": 4,
+   "latest": "2026-11-04T03:40:00+00:00"
   }
  },
  "feeds": [
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "SBS",
@@ -231,9 +231,8 @@
    "outlet": "국방일보",
    "section": "국방",
    "url": "https://kookbang.dema.mil.kr/dema_xml/dema0010010000.xml",
-   "ok": true,
-   "count": 60,
-   "hits": 6
+   "ok": false,
+   "error": "URLError: <urlopen error timed out>"
   }
  ]
 }

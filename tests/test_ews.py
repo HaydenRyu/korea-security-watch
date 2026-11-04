@@ -19,9 +19,10 @@ def latest(**status):
     return {"checked_at": NOW, "items": {k: {"status": status.get(k, "none")} for k in d.ITEMS}}
 
 
-def row(state=0, channels=(), urls=1):
+def row(state=0, channels=(), urls=1, published_at=NOW):
     return {"state": state, "channels": list(channels), "summary": "s",
-            "sources": [{"name": "n", "tier": "B", "url": f"https://e.example/{i}"} for i in range(urls)]}
+            "sources": [{"name": "n", "tier": "B", "url": f"https://e.example/{i}", "published_at": published_at}
+                        for i in range(urls)]}
 
 
 def doc(judged_at=NOW, **over):
@@ -215,15 +216,35 @@ def test_ingest_drops_unknown_values_and_keeps_previous():
     assert out["theaters"]["taiwan"]["channels"] == ["c1_us_gap"] and "mideast" in out["theaters"]
 
 
-def test_main_ingests_run_json():
+def test_main_ignores_run_json_and_never_writes_theaters(capsys):
+    """11/05 — theaters.json 은 배경 루틴 소유. 옛 지시문이 `ews.py run.json` 을 불러도 읽기만 한다."""
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
         rj = tmp / "run.json"
         rj.write_text(json.dumps(_run(**{t: row() for t in ews.THEATERS})))
+        prev = {"schema_version": 2, "judged_at": None, "theaters": {}}
         rc, o = run_main(tmp, latest_doc={**latest(), "checked_at": ews.datetime.now(ews.timezone.utc).isoformat()},
-                         argv=("ews.py", str(rj)))
+                         theaters=prev, argv=("ews.py", str(rj)))
         saved = json.loads((tmp / "state" / "theaters.json").read_text())
-    assert rc == 0 and o["status"] == "ok" and set(saved["theaters"]) == set(ews.THEATERS)
+    assert rc == 0 and saved == prev and "::warning::ews run.json" in capsys.readouterr().out
+
+
+def test_ingest_drops_sources_older_than_72h_or_without_published_at():
+    t71, t73 = "2026-10-31T01:00:00+00:00", "2026-10-30T23:00:00+00:00"  # NOW 기준 71시간 · 73시간 전
+    ok = row(1, published_at=t71)
+    old = row(2, published_at=t73)
+    none_ = row(1)
+    none_["sources"][0].pop("published_at")
+    bad = row(1, published_at="어제")
+    zless = row(1, published_at="2026-11-02T09:00:00")  # 시간대 없음 → UTC 로 본다
+    out = ews.ingest(_run(taiwan=ok, ukraine=old, scs_ecs=none_, mideast=bad, us_posture=zless), None, NOW)
+    assert set(out["theaters"]) == {"taiwan", "us_posture"}
+    mixed = {**row(1), "sources": [*row(1, published_at=t73)["sources"], {**row(1)["sources"][0], "url": "https://e.example/0"}]}
+    out = ews.ingest(_run(taiwan=mixed), None, NOW)
+    assert [s["published_at"] for s in out["theaters"]["taiwan"]["sources"]] == [NOW]  # 묵은 출처만 빠지고 전역은 남는다
+    prev = {"judged_at": H49, "theaters": {"ukraine": {**row(2), "judged_at": H49}}}
+    out = ews.ingest(_run(ukraine=old), prev, NOW)  # 출처가 전부 묵으면 이번 회차 미관측 — 직전 값을 잇는다
+    assert out["judged_at"] == H49 and out["theaters"]["ukraine"]["judged_at"] == H49
 
 
 # ── AC11 구버전 호환 · AC3 공식 등급 불변 ──

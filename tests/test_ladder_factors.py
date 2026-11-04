@@ -143,10 +143,10 @@ def test_main_writes_state_and_tolerates_garbage():
             p.write_text(json.dumps(run))
             assert d.main(["x", str(p)]) == 0
             lad = json.loads((d.STATE / "ladder.json").read_text())
-            fac = json.loads((d.STATE / "factors.json").read_text())
-            assert lad["stage"] == 0 and lad["total"] == 16 and fac["domains"] == {} and fac["at"] is None
+            assert lad["stage"] == 0 and lad["total"] == 16
+            assert (d.STATE / "factors.json").read_text() == "[1,2"  # 11/05 — 배경 루틴 소유, 매시간은 손대지 않는다
             ev = json.loads((d.STATE / "events.jsonl").read_text().splitlines()[-1])
-            assert ev["status"] == "ok" and ev["ladder"]["stage"] == 0 and ev["factors"]["kept"] == 0
+            assert ev["status"] == "ok" and ev["ladder"]["stage"] == 0 and "factors" not in ev
             # 판정 불가 회차도 막지 않는다
             p.write_text(json.dumps({"status": "unverified", "reason": "검색 실패"}))
             assert d.main(["x", str(p)]) == 0

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "updated_at": "2026-11-04T13:13:53+00:00",
+  "world_at": "2026-11-04T13:13:53+00:00",
+  "world": [
+    {
+      "title": "이란 협상대표 \"미국인들이 전쟁에 '아니오' 투표\"",
+      "summary": "이란 갈리바프 의장이 미 중간선거 결과를 반전 민심으로 규정했고 트럼프 대통령은 분쟁이 공화당 패배에 영향을 줬음을 인정했다.",
+      "link_korea": "중동 분쟁에 묶인 미군 전력 배치가 한반도 억제태세에 미치는 영향의 변수다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "미 중간선거 민주당 상·하원 장악 확실",
+      "summary": "텍사스 상원 선거에서 38년 만에 민주당 후보가 승리하는 등 민주당이 연방의회 양원 다수당을 차지하게 됐다.",
+      "link_korea": "의회 구성 변화가 대북 정책·주한미군 관련 예산과 한미 관계에 영향을 줄 수 있다.",
+      "region": "미국",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c6n8dnn09jg7o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "이란서 대규모 반미 집회",
+      "summary": "혁명수비대 간부가 미 중간선거 결과 속에 대결 자세를 강조했다고 NHK가 보도했다.",
+      "link_korea": "중동 긴장 지속은 미군 전략자산의 한반도 순환 배치 여력과 연결된다.",
+      "region": "중동",
+      "source": {
+        "name": "NHK",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261104de70610",
+        "via": "https://www.nhk.or.jp/rss/news/cat6.xml"
+      }
+    }
+  ],
+  "world_context": "미 중간선거 결과와 중동 분쟁이 미국의 대외 군사 태세를 가늠할 변수로 부상했다."
+}

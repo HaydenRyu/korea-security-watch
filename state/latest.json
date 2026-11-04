@@ -1,16 +1,17 @@
 {
   "coverage": {
     "border_clash": [
-      "North Korea missile launch Reuters November 4 2026",
-      "북한 지뢰 DMZ 안보리 서한 정전협정 위반",
-      "news_kr 수집기 border/mine/alert 묶음"
+      "북한 지뢰 DMZ 귀순",
+      "지뢰 발견 DMZ 귀순",
+      "North Korea missile Reuters November 4 2026"
     ],
     "foreign_forces": [
-      "김정은 방중 김정은 방러 김성남 방중",
-      "서해 구조물 주한미군 감축 11월"
+      "김정은 방중 김정은 방러",
+      "Kim Jong Un China Russia visit"
     ],
     "electronic_cyber": [
-      "news_kr 수집기 gps 묶음(바이낸스 해킹·GPS)"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "hybrid_ops": [
       "news_kr 수집기 spy/hybrid 묶음(간첩·국가보안법)"
@@ -19,7 +20,8 @@
       "news_kr 수집기 전 묶음(병력·전방 증강 후보 없음)"
     ],
     "nuclear": [
-      "news_kr 수집기 전 묶음(핵 관련 후보 없음)"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "news_kr 수집기 전 묶음(군수 후보 없음)"
@@ -42,7 +44,6 @@
     "https://www.segye.com/newsView/20261104520775",
     "https://www.yna.co.kr/view/AKR20261104055100504",
     "https://www.yna.co.kr/view/AKR20261103188300071",
-    "https://www.yna.co.kr/view/AKR20261103165200504",
     "https://www.yna.co.kr/view/AKR20261103120351009"
   ],
   "overall_summary": "4일 북한이 선덕 일대에서 동해상으로 미사일 수 발을 발사했으나(사거리 300㎞ 미만, 일주일새 4번째) 시험 발사 성격이라 정례로 본다. 바이낸스 해킹은 FBI가 북한을 지목했고, 김성남 방중은 외교 일정으로 직전 판정과 같다.",
@@ -141,10 +142,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "민노총 간부 북 지령 혐의 항소심 무죄 — 귀속 확정 발표 아님, 배경."
     }
   },
-  "checked_at": "2026-11-04T17:12:10+00:00",
+  "checked_at": "2026-11-04T18:09:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

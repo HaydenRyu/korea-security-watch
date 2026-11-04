@@ -1,35 +1,42 @@
 {
   "version": 1,
-  "computed_at": "2026-11-04T17:12:10+00:00",
+  "computed_at": "2026-11-04T18:09:52+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 29,
   "band": "관찰",
   "d": 8,
-  "e": null,
+  "e": 15,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
-    "observed_theaters": 2,
-    "linkage_judged_at": "2026-11-04T16:17:04+00:00",
-    "latest_updated_at": "2026-11-04T17:12:10+00:00"
+    "observed_theaters": 3,
+    "linkage_judged_at": "2026-11-04T17:28:41+00:00",
+    "latest_updated_at": "2026-11-04T18:09:52+00:00"
   },
   "theaters": [
     {
       "key": "taiwan",
-      "observed": false,
-      "state": null,
-      "contribution": null,
+      "observed": true,
+      "state": 1,
+      "contribution": 0,
       "channels": [],
-      "summary": "",
-      "sources": []
+      "summary": "중국 해경선 4척이 진먼 수역을 침범해 대만 해순서 순방정이 병행 감시했다.",
+      "sources": [
+        {
+          "name": "CNA",
+          "tier": "B",
+          "url": "https://www.cna.com.tw/news/acn/202611040281.aspx",
+          "published_at": "2026-11-04T18:02:21+08:00"
+        }
+      ]
     },
     {
       "key": "ukraine",
       "observed": true,
       "state": 2,
-      "contribution": null,
+      "contribution": 3,
       "channels": [
         "c5_diplomacy"
       ],
@@ -39,7 +46,7 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no",
-          "published_at": "2026-11-04T15:01:10Z"
+          "published_at": "2026-11-04T15:01:10+00:00"
         }
       ]
     },
@@ -47,7 +54,7 @@
       "key": "scs_ecs",
       "observed": false,
       "state": null,
-      "contribution": null,
+      "contribution": 0,
       "channels": [],
       "summary": "",
       "sources": []
@@ -55,19 +62,19 @@
     {
       "key": "mideast",
       "observed": true,
-      "state": 2,
-      "contribution": null,
+      "state": 3,
+      "contribution": 13,
       "channels": [
         "c1_us_gap",
         "c4_sea_energy"
       ],
-      "summary": "미·이스라엘의 2월 대이란 공격 이후 전쟁이 이어지고 휘발유 가격 급등이 보도됐다.",
+      "summary": "미군이 호르무즈 케슘섬을 타격했고 IRGC가 미 무인기 격추를 주장했다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
-          "published_at": "2026-11-04T12:21:21Z"
+          "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
+          "published_at": "2026-11-03T11:33:33+00:00"
         }
       ]
     },
@@ -75,7 +82,7 @@
       "key": "us_posture",
       "observed": false,
       "state": null,
-      "contribution": null,
+      "contribution": 0,
       "channels": [],
       "summary": "",
       "sources": []
@@ -85,32 +92,32 @@
     {
       "key": "c1_us_gap",
       "observed": true,
-      "value": null
+      "value": 4
     },
     {
       "key": "c2_nk_ru_cn",
       "observed": false,
-      "value": null
+      "value": 0
     },
     {
       "key": "c3_simul",
       "observed": false,
-      "value": null
+      "value": 0
     },
     {
       "key": "c4_sea_energy",
       "observed": true,
-      "value": null
+      "value": 8
     },
     {
       "key": "c5_diplomacy",
       "observed": true,
-      "value": null
+      "value": 3
     }
   ],
   "last_good": {
     "ews": 29,
     "band": "관찰",
-    "computed_at": "2026-11-04T17:12:10+00:00"
+    "computed_at": "2026-11-04T18:09:52+00:00"
   }
 }

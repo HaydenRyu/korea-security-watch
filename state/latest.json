@@ -1,48 +1,63 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 5일",
-      "North Korea Reuters"
+      "북한 전방 병력 증강",
+      "North Korea troop buildup Reuters"
     ],
     "nuclear": [
-      "북한 합참 발표 11월 5일"
+      "북한 핵시설 풍계리 영변",
+      "North Korea nuclear 38 North"
     ],
     "logistics": [
-      "북한 합참 발표 11월 5일"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL"
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ NLL 귀순 합참"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 5일"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 합참 발표 11월 5일"
+      "북한 준전시 등화관제",
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 5일"
+      "진돗개 발령 데프콘",
+      "합참 긴급 발표"
     ],
     "hybrid_ops": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "북한 합참 발표 11월 5일"
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
     "https://www.segye.com/newsView/20261105519180",
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261105517949"
+    "https://www.segye.com/newsView/20261105517949",
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치가 중심이다. 병력·핵·전시 관련 신규 징후는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치가 중심이다. 4일 미사일 발사·신형 대공미사일 시험 주장은 시험 성격이며 병력·핵·전시 관련 신규 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -51,6 +66,24 @@
       "status": "none"
     },
     "logistics": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "border_clash": {
@@ -78,28 +111,9 @@
         "승선원 규모·귀순 의사 미공개"
       ],
       "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "none",
-      "summary": "바이낸스 해킹 북한 지목 관련 추가제재는 정부 내 논의 없음(배경)."
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-05T17:13:27+00:00",
+  "checked_at": "2026-11-05T18:10:43+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -18,11 +18,12 @@
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
-      "해킹 개인정보 유출 공격"
+      "해킹 개인정보 유출 공격",
+      "FBI Binance hack North Korea attributed"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
-      "Kim Jong Un China Russia visit North Korea Reuters",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -32,7 +33,8 @@
       "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "합참 진돗개 데프콘 상향"
+      "합참 진돗개 데프콘 상향",
+      "북한 합참 발표 11월 5일"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -44,10 +46,9 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
-    "https://www.segye.com/newsView/20261105517949",
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261105118000083",
-    "https://www.yna.co.kr/view/AKR20261105174600504"
+    "https://www.yna.co.kr/view/AKR20261105174600504",
+    "https://www.yna.co.kr/view/AKR20261105092000504",
+    "https://www.yna.co.kr/view/AKR20261105118000083"
   ],
   "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치가 중심이다. 4일 미사일 발사·신형 대공미사일 시험 주장은 시험 성격이며 5일 북중 고위급 접촉은 외교 일정으로 병력·핵·전시 관련 신규 징후는 없다.",
   "items": {
@@ -61,7 +62,8 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "FBI 바이낸스 해킹 북한 귀속 발표는 10/31로 24시간 경과 — 5일 통일부 제재 논의 없음 보도만 있어 배경."
     },
     "foreign_forces": {
       "status": "single",
@@ -119,7 +121,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-05T20:09:40+00:00",
+  "checked_at": "2026-11-05T21:11:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

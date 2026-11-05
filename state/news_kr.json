@@ -1,26 +1,26 @@
 {
- "fetched_at": "2026-11-05T12:46:40+00:00",
+ "fetched_at": "2026-11-05T13:58:40+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-05T12:46:40+00:00",
+ "last_ok_at": "2026-11-05T13:58:40+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1138,
-  "hits": 58,
-  "clusters": 48,
+  "hits": 57,
+  "clusters": 47,
   "by_group": {
    "border": 11,
    "drone_balloon": 4,
-   "influence": 1,
    "mine": 12,
+   "influence": 1,
+   "alert": 4,
    "defect": 1,
    "fire": 16,
-   "summit": 6,
+   "summit": 5,
    "spy": 1,
-   "gps": 7,
-   "alert": 3
+   "gps": 7
   }
  },
  "outlets": {
@@ -34,7 +34,7 @@
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 1
+   "hits": 0
   },
   "동아일보": {
    "feeds": 2,
@@ -66,27 +66,32 @@
   "border": {
    "clusters": 11,
    "max_independent": 1,
-   "latest": "2026-11-05T12:46:40+00:00"
+   "latest": "2026-11-05T13:58:40+00:00"
   },
   "drone_balloon": {
    "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-11-05T12:46:40+00:00"
-  },
-  "influence": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-05T12:46:40+00:00"
+   "latest": "2026-11-05T13:58:40+00:00"
   },
   "mine": {
    "clusters": 12,
    "max_independent": 1,
-   "latest": "2026-11-05T12:46:40+00:00"
+   "latest": "2026-11-05T13:58:40+00:00"
+  },
+  "influence": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-05T13:54:54+00:00"
+  },
+  "alert": {
+   "clusters": 4,
+   "max_independent": 3,
+   "latest": "2026-11-05T13:32:39+00:00"
   },
   "defect": {
    "clusters": 1,
    "max_independent": 2,
-   "latest": "2026-11-05T11:15:26+00:00"
+   "latest": "2026-11-05T13:32:39+00:00"
   },
   "fire": {
    "clusters": 16,
@@ -94,8 +99,8 @@
    "latest": "2026-11-05T10:05:56+00:00"
   },
   "summit": {
-   "clusters": 6,
-   "max_independent": 2,
+   "clusters": 5,
+   "max_independent": 1,
    "latest": "2026-11-05T09:35:02+00:00"
   },
   "spy": {
@@ -107,11 +112,6 @@
    "clusters": 7,
    "max_independent": 2,
    "latest": "2026-11-05T02:57:03+00:00"
-  },
-  "alert": {
-   "clusters": 3,
-   "max_independent": 3,
-   "latest": "2026-11-04T15:00:00+00:00"
   }
  },
  "feeds": [
@@ -177,7 +177,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "동아일보",

@@ -1,44 +1,48 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강"
+    "border_clash": [
+      "목함지뢰 발견 DMZ 귀순",
+      "북한 미사일 발사 합참 11월 5일"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 North Korea nuclear"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송 열병식 집결"
-    ],
-    "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
+      "북한 핵실험장 풍계리 영변 동향"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit"
-    ],
-    "parade_massing": [
-      "북한 군수 탄약 수송 열병식 집결"
-    ],
-    "nk_internal": [
-      "북한 준전시 대피 진돗개 데프콘 North Korea alert"
+      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "North Korea Reuters missile launch November 2026"
     ],
     "gov_warning": [
-      "북한 준전시 대피 진돗개 데프콘 North Korea alert"
+      "진돗개 발령 데프콘 상향 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 예비군 동원"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송 비축 North Korea ammunition shipment"
+    ],
+    "parade_massing": [
+      "북한 열병식 병력 집결 North Korea parade preparation"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 주민 대피 North Korea wartime state"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261105011100504",
     "https://www.yna.co.kr/view/AKR20261104055151504",
-    "https://www.yna.co.kr/view/AKR20261104139800002",
     "https://www.segye.com/newsView/20261104517905",
-    "https://www.segye.com/newsView/20261104520775"
+    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760",
+    "https://www.nknews.org/?p=187342"
   ],
-  "overall_summary": "4일 북한 단거리 미사일 발사와 5일 시험발사 주장이 있었으나 정례 시험 범위다. 다른 항목에 겹치는 징후는 확인되지 않았다.",
+  "overall_summary": "4일 북한 단거리 미사일 발사(300㎞ 미만)가 유일한 24시간 내 징후이며 정례 시험 범위다. 다른 항목에 겹치는 새 징후는 확인되지 않았다(핵·진돗개·귀속 발표 검색 결과는 모두 과거 기사).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -78,8 +82,7 @@
       ]
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "연합 인터뷰(체이널리시스)는 과거 해킹 분석이라 신규 사건 아님."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none"
@@ -94,11 +97,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "민노총 간부 2명 항소심 무죄 선고는 귀속 발표가 아닌 재판 결과라 징후 아님."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-04T23:10:19+00:00",
+  "checked_at": "2026-11-05T00:12:28+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

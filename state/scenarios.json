@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-04T23:10:19+00:00",
+  "updated_at": "2026-11-05T00:12:28+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -58,8 +58,8 @@
         {
           "id": "signal",
           "label": "임박 신호 1건 이상",
-          "state": "on",
-          "note": "1건"
+          "state": "off",
+          "note": "0건"
         },
         {
           "id": "grade",
@@ -74,7 +74,7 @@
           "note": "평상"
         }
       ],
-      "on": 4,
+      "on": 3,
       "known": 4
     },
     {
@@ -185,7 +185,7 @@
     }
   ],
   "calm": {},
-  "calm_judged_at": "2026-11-04T23:10:19+00:00",
+  "calm_judged_at": "2026-11-05T00:12:28+00:00",
   "history": [
     {
       "date": "2026-10-22",
@@ -318,7 +318,7 @@
       "tilt": "hold",
       "on": {
         "calm": 0,
-        "hold": 4,
+        "hold": 3,
         "esc": 0
       }
     }

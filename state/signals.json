@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-11-04T23:10:19+00:00",
-  "active": [
+  "updated_at": "2026-11-05T00:12:28+00:00",
+  "active": [],
+  "expired": [
+    {
+      "id": "nk_threat-20261019-6a074a59",
+      "kind": "nk_threat",
+      "summary": "김여정이 남부 국경선 부근 전술 타격수단 증강 배치와 대남 확성기 방송 재개를 검토 중이라고 담화로 예고했다(시점 미정).",
+      "window": null,
+      "level": "report",
+      "first_seen": "2026-10-19T10:10:12+00:00",
+      "expires": "2026-11-02",
+      "source": {
+        "url": "https://www.yna.co.kr/view/AKR20261019167400504",
+        "title": "北김여정 \"남부국경 매우 불안정…대남 확성기방송 재개 검토\"",
+        "publisher": "연합뉴스"
+      },
+      "expired_at": "2026-11-03T00:11:33+00:00"
+    },
     {
       "id": "nk_threat-20261021-6b4953d8",
       "kind": "nk_threat",
@@ -24,24 +40,8 @@
           "title": "北 김여정 “10월 중 전 국경선서 대남 심리전 확성기 가동”",
           "publisher": "세계일보"
         }
-      ]
-    }
-  ],
-  "expired": [
-    {
-      "id": "nk_threat-20261019-6a074a59",
-      "kind": "nk_threat",
-      "summary": "김여정이 남부 국경선 부근 전술 타격수단 증강 배치와 대남 확성기 방송 재개를 검토 중이라고 담화로 예고했다(시점 미정).",
-      "window": null,
-      "level": "report",
-      "first_seen": "2026-10-19T10:10:12+00:00",
-      "expires": "2026-11-02",
-      "source": {
-        "url": "https://www.yna.co.kr/view/AKR20261019167400504",
-        "title": "北김여정 \"남부국경 매우 불안정…대남 확성기방송 재개 검토\"",
-        "publisher": "연합뉴스"
-      },
-      "expired_at": "2026-11-03T00:11:33+00:00"
+      ],
+      "expired_at": "2026-11-05T00:12:28+00:00"
     }
   ]
 }

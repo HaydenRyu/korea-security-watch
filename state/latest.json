@@ -1,85 +1,87 @@
 {
   "coverage": {
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순",
-      "북한 미사일 발사 합참 11월 5일"
+      "지뢰 발견 DMZ 귀순 북한",
+      "북한 합참 발표 11월 5일"
     ],
     "nuclear": [
       "북한 핵실험장 풍계리 영변 동향"
     ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "logistics": [
+      "North Korea ammunition shipment logistics"
+    ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "GPS 교란 북한 서북도서",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "North Korea Reuters missile launch November 2026"
-    ],
-    "gov_warning": [
-      "진돗개 발령 데프콘 상향 합참"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 예비군 동원"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송 비축 North Korea ammunition shipment"
+      "North Korea Reuters November 5 2026"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결 North Korea parade preparation"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 주민 대피 North Korea wartime state"
+      "북한 준전시 등화관제 주민 대피"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 상향"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+    ],
+    "calm": [
+      "news_kr·NK News 헤드라인 확인"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261104055151504",
-    "https://www.segye.com/newsView/20261104517905",
-    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760",
-    "https://www.nknews.org/?p=187342"
+    "https://www.segye.com/newsView/20261105502629",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008831375",
+    "https://www.nknews.org/",
+    "https://www.segye.com/newsView/20261104520775"
   ],
-  "overall_summary": "4일 북한 단거리 미사일 발사(300㎞ 미만)가 유일한 24시간 내 징후이며 정례 시험 범위다. 다른 항목에 겹치는 새 징후는 확인되지 않았다(핵·진돗개·귀속 발표 검색 결과는 모두 과거 기사).",
+  "overall_summary": "4일 북한 단거리 미사일 발사와 5일 KCNA의 신형 대공미사일·순항미사일 훈련 주장이 유일한 최근 징후이며 정례 시험 범위다. 병력·핵·정부 경고 등 겹치는 새 징후는 확인되지 않았다.",
   "items": {
-    "troop_movement": {
-      "status": "none"
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "함남 선덕·동해상",
+      "lat": 40.0,
+      "lon": 128.0,
+      "summary": "합참이 4일 선덕 일대 동해상 미사일 수 발(300㎞ 미만) 발사를 발표했고 북한은 5일 신형 반항공미사일 시험·순항미사일 훈련이라고 주장했다.",
+      "meaning": "시험 발사 성격으로 정례 범위이나 일주일 새 반복되는 점은 추적 대상이다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261105502629"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008831375"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "합참: 4일 오전 선덕 일대 동해상 미사일 수 발, 300㎞ 미만",
+        "KCNA: 신형 대공미사일 시험, 순항미사일 가상 비행장 타격 훈련"
+      ],
+      "speculation": [
+        "미 중간선거일 시점 선택은 대미 협상력 과시 해석"
+      ]
     },
     "nuclear": {
       "status": "none"
     },
-    "logistics": {
+    "troop_movement": {
       "status": "none"
     },
-    "border_clash": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "함남 선덕",
-      "lat": 40.0,
-      "lon": 127.3,
-      "summary": "합참이 4일 오전 함남 선덕 일대 동해상 미사일 수 발 발사(300㎞ 미만)를 발표했고 북한은 5일 신형 반항공미사일 시험발사·순항미사일 훈련이었다고 주장했다.",
-      "meaning": "시험 발사 성격으로 남측·미군 시설 표적 정황은 없다.",
-      "confidence": "높음",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261104055151504"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261104517905"
-        }
-      ],
-      "facts": [
-        "합참 4일 동해상 미사일 수 발 발사 발표, 비행거리 300㎞ 미만"
-      ],
-      "speculation": [
-        "미 중간선거 시점 맞춘 사전 계획 가능성(전문가)"
-      ]
+    "logistics": {
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -97,10 +99,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "민노총 간부 2명 항소심 무죄(11/4)는 북한 귀속 확정 발표가 아니라 징후로 보지 않음."
     }
   },
-  "checked_at": "2026-11-05T00:12:28+00:00",
+  "checked_at": "2026-11-05T01:10:49+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

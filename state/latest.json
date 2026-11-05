@@ -1,24 +1,28 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 수송 탄약"
+      "북한 군수 수송 탄약",
+      "North Korea munitions shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 11월",
-      "북한 어선 울릉도 표류 귀순 합참"
+      "지뢰 발견 DMZ 귀순 북한",
+      "합참 발표 북한 어선"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit North Korea Reuters",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -35,16 +39,14 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
     "https://www.segye.com/newsView/20261105517949",
     "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261105011151504",
     "https://www.yna.co.kr/view/AKR20261105118000083",
-    "https://www.yna.co.kr/view/AKR20261105092000504",
     "https://www.yna.co.kr/view/AKR20261105174600504"
   ],
   "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치가 중심이다. 4일 미사일 발사·신형 대공미사일 시험 주장은 시험 성격이며 5일 북중 고위급 접촉은 외교 일정으로 병력·핵·전시 관련 신규 징후는 없다.",
@@ -117,7 +119,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-05T19:11:35+00:00",
+  "checked_at": "2026-11-05T20:09:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

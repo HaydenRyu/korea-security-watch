@@ -13,16 +13,16 @@
       "North Korea munitions shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한",
-      "북한 합참 발표 지뢰 NLL 귀순 11월 5일"
+      "지뢰 발견 DMZ 귀순 합참 11월",
+      "북한 어선 표류 울릉도"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
-      "해킹 개인정보 유출 공격"
+      "해킹 개인정보 유출 공격 11월 5일"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
-      "Kim Jong Un China Russia visit North Korea Reuters",
+      "North Korea Reuters November 5 2026",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -35,7 +35,7 @@
       "합참 진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속 간첩 혐의 11월",
       "North Korea attributed FBI"
     ],
     "calm": [
@@ -44,12 +44,11 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
-    "https://www.yna.co.kr/view/AKR20261105174600504",
-    "https://www.yna.co.kr/view/AKR20261105118000083",
-    "https://www.yna.co.kr/view/AKR20261105092000504",
-    "https://www.yna.co.kr/view/AKR20261105011100504"
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261105517949",
+    "https://www.yna.co.kr/view/AKR20261105118000083"
   ],
-  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치(승선원·귀순 의사 미공개)가 중심이다. 4일 신형 대공미사일 시험 주장과 5일 북중 고위급 접촉은 시험·외교 성격이며 병력·핵·전시 관련 신규 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치(승선원·귀순 의사 미공개)가 중심이다. 4일 미사일 발사·신형 대공미사일 시험은 24시간 경과한 시험 성격이고 5일 북중 고위급 접촉은 외교 일정이며 병력·핵·전시 관련 신규 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,41 +60,36 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "울릉도 북방 공해",
       "lat": 37.8,
-      "lon": 131.0,
-      "summary": "합참이 3일 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 해경과 조치·조사 중이라고 5일 밝혔다.",
-      "meaning": "표류 어선 건으로 군사적 도발 성격은 확인되지 않는다.",
+      "lon": 130.9,
+      "summary": "합참이 3일 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 해경과 조사 중이라고 5일 밝혔다.",
+      "meaning": "표류 어선 조치로 승선원·귀순 의사는 미공개이며 군사적 도발 정황은 없다.",
       "sources": [
         {
-          "name": "세계일보(합참 인용)",
+          "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261105519983"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261105174600504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "승선원 규모·귀순 의사 미공개"
+        "합참 3일 식별, 5일 발표",
+        "해경과 조사 중"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "바이낸스 해킹 북한 지목 후 통일부 '추가제재 논의 없음'(5일) 보도뿐, 신규 공격·공식 귀속 발표 없음 — 배경."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "베이징",
+      "region": "중국",
       "summary": "왕이 중국 외교부장이 방중한 북한 김성남 노동당 비서를 만나 북중관계 심화·발전을 추진하기로 했다고 연합뉴스가 5일 보도했다.",
-      "meaning": "외교 일정이며 군사 협정·무기 협력 발표는 없다.",
+      "meaning": "외교 일정으로 군사협정·무기 협력 언급은 확인되지 않는다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -104,7 +98,9 @@
         }
       ],
       "confidence": "중간",
-      "facts": [],
+      "facts": [
+        "왕이–김성남 회동"
+      ],
       "speculation": []
     },
     "parade_massing": {
@@ -120,7 +116,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-05T22:12:03+00:00",
+  "checked_at": "2026-11-05T23:10:10+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

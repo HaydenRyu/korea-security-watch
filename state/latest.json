@@ -1,48 +1,45 @@
 {
   "coverage": {
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순",
-      "북한 미사일 발사 합참 11월 5일"
+      "목함지뢰 발견 DMZ 귀순 11월"
     ],
-    "nuclear": [
-      "북한 핵실험장 풍계리 영변 동향"
+    "foreign_forces": [
+      "김정은 방중 방러 Kim Jong Un China Russia visit"
     ],
     "electronic_cyber": [
       "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
-    "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "North Korea Reuters missile launch November 2026"
-    ],
-    "gov_warning": [
-      "진돗개 발령 데프콘 상향 합참"
-    ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 North Korea talks offer"
     ],
+    "gov_warning": [
+      "진돗개 데프콘 합참 (news_kr 수집 결과)"
+    ],
+    "nuclear": [
+      "북한 핵시설 풍계리 영변 (news_kr 수집 결과)"
+    ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강 예비군 동원"
+      "북한 병력 이동 전방 증강 (news_kr 수집 결과)"
     ],
     "logistics": [
-      "북한 군수 탄약 수송 비축 North Korea ammunition shipment"
+      "북한 군수 수송 (news_kr 수집 결과)"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결 North Korea parade preparation"
+      "북한 열병식 병력 집결 (news_kr 수집 결과)"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 주민 대피 North Korea wartime state"
+      "북한 준전시 등화관제 (news_kr 수집 결과)"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261104055151504",
+    "https://www.segye.com/newsView/20261105502629",
     "https://www.segye.com/newsView/20261104517905",
-    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760",
-    "https://www.nknews.org/?p=187342"
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "4일 북한 단거리 미사일 발사(300㎞ 미만)가 유일한 24시간 내 징후이며 정례 시험 범위다. 다른 항목에 겹치는 새 징후는 확인되지 않았다(핵·진돗개·귀속 발표 검색 결과는 모두 과거 기사).",
+  "overall_summary": "4일 함남 선덕 일대 단거리 미사일 발사와 5일 북한의 신형 반항공미사일·순항미사일 훈련 주장이 유일한 징후이며 정례 시험 범위다. 다른 항목에 새 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,27 +56,26 @@
       "region": "함남 선덕",
       "lat": 40.0,
       "lon": 127.3,
-      "summary": "합참이 4일 오전 함남 선덕 일대 동해상 미사일 수 발 발사(300㎞ 미만)를 발표했고 북한은 5일 신형 반항공미사일 시험발사·순항미사일 훈련이었다고 주장했다.",
+      "summary": "합참이 4일 선덕 일대 동해상 미사일 수 발 발사를 발표했고 북한은 5일 조선중앙통신으로 신형 반항공미사일 시험발사·장거리순항미사일 비행장 타격 훈련이라고 주장했다.",
       "meaning": "시험 발사 성격으로 남측·미군 시설 표적 정황은 없다.",
-      "confidence": "높음",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "국방일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261104055151504"
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
         },
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261104517905"
+          "url": "https://www.segye.com/newsView/20261105502629"
         }
       ],
+      "confidence": "높음",
       "facts": [
-        "합참 4일 동해상 미사일 수 발 발사 발표, 비행거리 300㎞ 미만"
+        "합참 4일 선덕 일대 동해상 미사일 수 발 포착, 제원 한미 분석 중",
+        "조선중앙통신 5일 신형 반항공미사일종합체 시험발사 보도"
       ],
-      "speculation": [
-        "미 중간선거 시점 맞춘 사전 계획 가능성(전문가)"
-      ]
+      "speculation": []
     },
     "electronic_cyber": {
       "status": "none"
@@ -100,7 +96,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-05T00:12:28+00:00",
+  "checked_at": "2026-11-05T02:10:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

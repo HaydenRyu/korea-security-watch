@@ -1,53 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "North Korea troops border buildup logistics ammunition",
-      "북한 전방 병력 증강"
+      "북한 전방 병력 증강",
+      "North Korea troops buildup"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
+      "북한 핵 풍계리 영변",
       "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "North Korea troops border buildup logistics ammunition",
-      "북한 군수 탄약 수송"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 북한 미사일 합참 발표 11월 5일"
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "북한 합참 발표 미사일 11월 5일"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란 북한 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "진돗개 데프콘 합참 경고 북한 노농적위군 준전시"
+      "북한 노농적위군 준전시"
     ],
     "gov_warning": [
-      "진돗개 데프콘 합참 경고 북한 노농적위군 준전시"
+      "합참 진돗개 데프콘 경고"
     ],
     "hybrid_ops": [
-      "북한 국가보안법 간첩 혐의 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hack"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261105011152504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261105513495",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "북한 4일 반항공미사일 시험·순항미사일 훈련 주장이 이어지는 시험성 활동이고, 김성남 방중·왕이 회담은 외교 일정이다. 새 병력·핵·정부 경고 징후는 확인되지 않았다.",
+  "overall_summary": "북한이 4일 동해로 쏜 미사일(합참 포착)은 시험성 활동으로 직전 회차와 같고, 김성남 방중·왕이 회담은 외교 일정이다. 새 병력·핵·정부 경고 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,26 +58,24 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
-      "region": "동해",
-      "summary": "북한 미사일총국이 4일 신형 반항공미사일 시험발사와 장거리순항미사일 시범화력훈련을 했다고 조선중앙통신이 5일 보도했다(합참의 4일 발사 포착과 일치, 직전 회차와 같은 시험성 활동).",
-      "meaning": "시험·훈련 성격의 정례적 도발이며 남측 표적·실전 배치 근거는 없다.",
+      "region": "동해 선덕 일대",
+      "lat": 39.75,
+      "lon": 127.45,
+      "summary": "합참이 4일 오전 북한이 선덕 일대에서 동해상으로 미사일 수발을 쐈다고 밝혔고 북한은 신형 반항공미사일 시험·순항미사일 훈련이라 주장했다(직전 회차와 같은 시험성 활동).",
+      "meaning": "시험 발사 성격으로 남측 표적이나 실전 배치 근거는 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "국방일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261105011152504"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 5일 보도: 4일 신형 반항공미사일 시험발사, 제원·장소·표적 미공개"
+        "합참, 4일 오전 선덕 일대 동해상 미사일 수발 포착",
+        "한미 분석 중"
       ],
       "speculation": []
     },
@@ -89,8 +86,10 @@
       "status": "single",
       "routine": true,
       "region": "베이징",
-      "summary": "김성남 노동당 비서가 5일 베이징에서 왕이와 회담했다(3일 방중, 외교 일정, 군사 협정 언급 없음).",
-      "meaning": "북중 고위급 교류 확대이나 군사협력 발표는 없다.",
+      "lat": 39.9,
+      "lon": 116.4,
+      "summary": "김성남 노동당 비서가 5일 베이징에서 왕이와 회담했다(외교 일정, 군사 협정 언급 없음).",
+      "meaning": "북중 당 간 외교 교류로 군사 협력 신호는 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -100,7 +99,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "왕이가 북중 관계 발전·당 관리 경험 교류 희망"
+        "중국공산당 대외연락부 위챗 기준 5일 접견"
       ],
       "speculation": []
     },
@@ -117,7 +116,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-05T09:12:10+00:00",
+  "checked_at": "2026-11-05T10:10:37+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

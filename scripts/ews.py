@@ -176,7 +176,8 @@ def compute(latest: dict, doc: dict, weights: dict, now: str, last_good: dict | 
                          "contribution": None if world_short else _round(sum(part(t, c) for c in CHANNELS) / denom * 100),
                          "channels": (row.get("channels") or []) if observed[t] else [],
                          "summary": row.get("summary", "") if observed[t] else "",
-                         "sources": (row.get("sources") or []) if observed[t] else []})
+                         "sources": (row.get("sources") or []) if observed[t] else [],
+                         "judged_at": row.get("judged_at") if observed[t] else None})  # 확인 시각 — 화면이 기여 대신 보여 준다(alpha==1)
     channels = [{"key": c, "observed": any(observed[t] and c in (rows[t].get("channels") or []) for t in THEATERS),
                  "value": None if world_short else _round(sum(part(t, c) for t in THEATERS) / denom * 100)}
                 for c in CHANNELS]

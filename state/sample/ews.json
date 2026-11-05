@@ -35,7 +35,8 @@
             "url": "https://example.com/sample-1",
             "published_at": "2026-10-18T01:00:00+00:00"
           }
-        ]
+        ],
+        "judged_at": "2026-10-18T05:07:00+00:00"
       },
       {
         "key": "ukraine",
@@ -53,7 +54,8 @@
             "url": "https://example.com/sample-2",
             "published_at": "2026-10-18T01:00:00+00:00"
           }
-        ]
+        ],
+        "judged_at": "2026-10-18T05:07:00+00:00"
       },
       {
         "key": "scs_ecs",
@@ -71,7 +73,8 @@
             "url": "https://example.com/sample-3",
             "published_at": "2026-10-18T01:00:00+00:00"
           }
-        ]
+        ],
+        "judged_at": "2026-10-18T05:07:00+00:00"
       },
       {
         "key": "mideast",
@@ -87,7 +90,8 @@
             "url": "https://example.com/sample-4",
             "published_at": "2026-10-18T01:00:00+00:00"
           }
-        ]
+        ],
+        "judged_at": "2026-10-18T05:07:00+00:00"
       },
       {
         "key": "us_posture",
@@ -96,7 +100,8 @@
         "contribution": 0,
         "channels": [],
         "summary": "",
-        "sources": []
+        "sources": [],
+        "judged_at": null
       }
     ],
     "channels": [
@@ -167,7 +172,8 @@
             "url": "https://example.com/sample-1",
             "published_at": "2026-10-18T01:00:00+00:00"
           }
-        ]
+        ],
+        "judged_at": "2026-10-18T05:07:00+00:00"
       },
       {
         "key": "ukraine",
@@ -185,7 +191,8 @@
             "url": "https://example.com/sample-2",
             "published_at": "2026-10-18T01:00:00+00:00"
           }
-        ]
+        ],
+        "judged_at": "2026-10-18T05:07:00+00:00"
       },
       {
         "key": "scs_ecs",
@@ -194,7 +201,8 @@
         "contribution": null,
         "channels": [],
         "summary": "",
-        "sources": []
+        "sources": [],
+        "judged_at": null
       },
       {
         "key": "mideast",
@@ -203,7 +211,8 @@
         "contribution": null,
         "channels": [],
         "summary": "",
-        "sources": []
+        "sources": [],
+        "judged_at": null
       },
       {
         "key": "us_posture",
@@ -212,7 +221,8 @@
         "contribution": null,
         "channels": [],
         "summary": "",
-        "sources": []
+        "sources": [],
+        "judged_at": null
       }
     ],
     "channels": [
@@ -283,7 +293,8 @@
             "url": "https://example.com/sample-1",
             "published_at": "2026-10-18T01:00:00+00:00"
           }
-        ]
+        ],
+        "judged_at": "2026-10-18T05:07:00+00:00"
       },
       {
         "key": "ukraine",
@@ -301,7 +312,8 @@
             "url": "https://example.com/sample-2",
             "published_at": "2026-10-18T01:00:00+00:00"
           }
-        ]
+        ],
+        "judged_at": "2026-10-18T05:07:00+00:00"
       },
       {
         "key": "scs_ecs",
@@ -319,7 +331,8 @@
             "url": "https://example.com/sample-3",
             "published_at": "2026-10-18T01:00:00+00:00"
           }
-        ]
+        ],
+        "judged_at": "2026-10-18T05:07:00+00:00"
       },
       {
         "key": "mideast",
@@ -335,7 +348,8 @@
             "url": "https://example.com/sample-4",
             "published_at": "2026-10-18T01:00:00+00:00"
           }
-        ]
+        ],
+        "judged_at": "2026-10-18T05:07:00+00:00"
       },
       {
         "key": "us_posture",
@@ -344,7 +358,8 @@
         "contribution": 0,
         "channels": [],
         "summary": "",
-        "sources": []
+        "sources": [],
+        "judged_at": null
       }
     ],
     "channels": [

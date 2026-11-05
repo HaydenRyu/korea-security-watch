@@ -6,26 +6,24 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon Punggye-ri"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL 11월",
-      "합참 북한 발표 11월 5일",
-      "North Korea missile launch Seondeok"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순 합참 11월 5일",
+      "North Korea missile launch Kim Jong Un China Russia visit November 5 2026"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격 11월 5일"
     ],
     "foreign_forces": [
       "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -39,22 +37,22 @@
       "US State Department Korea travel advisory"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
+      "간첩 혐의 국가보안법 구속 11월",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105502629",
-    "https://www.segye.com/newsView/20261105504645",
+    "https://www.yna.co.kr/view/AKR20261105011100504",
+    "https://www.segye.com/newsView/20261105513495",
     "https://www.yna.co.kr/view/AKR20261105118000083",
-    "https://www.yna.co.kr/view/AKR20261105011100504"
+    "https://www.yna.co.kr/view/AKR20261105092000504",
+    "https://www.segye.com/newsView/20261105504645"
   ],
-  "overall_summary": "4일 선덕 일대 미사일 수 발 발사를 합참이 발표했고 북한은 5일 신형 대공미사일 시험·순항미사일 훈련이라 주장했다. 직전 회차와 같은 시험성 활동이며 새 병력·핵·정부 경고 징후는 확인되지 않았다.",
+  "overall_summary": "북한이 4일 발사한 미사일을 5일 신형 대공미사일 시험·순항미사일 훈련이라 주장했고 직전 회차와 같은 시험성 활동이다. 김성남 방중 회담 등 외교 일정 외에 새 병력·핵·정부 경고 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,8 +69,8 @@
       "region": "함경남도 선덕",
       "lat": 39.75,
       "lon": 127.45,
-      "summary": "합참이 4일 선덕 일대 동해상 미사일 수 발 발사(300㎞ 미만)를 발표했고 북한은 5일 신형 반항공미사일 시험발사·장거리순항미사일 시범화력훈련이라고 주장했다.",
-      "meaning": "시험·훈련 성격의 발사로 남측 표적 실사격이나 병력 증강 동반은 확인되지 않는다.",
+      "summary": "합참이 4일 발표한 선덕 일대 미사일 발사를 북한이 5일 신형 반항공미사일 시험·장거리순항미사일 훈련이라고 주장했다.",
+      "meaning": "시험·훈련 성격이며 남측 표적 실사격이나 병력 증강 동반은 확인되지 않는다.",
       "sources": [
         {
           "name": "세계일보",
@@ -87,12 +85,9 @@
       ],
       "confidence": "높음",
       "facts": [
-        "합참: 4일 오전 선덕 일대에서 동해상으로 미사일 수 발 발사, 300㎞ 미만 비행",
-        "조선중앙통신 5일: 신형 반항공미사일 시험발사, 장거리 전략순항미사일 시범화력훈련 주장"
+        "조선중앙통신 5일: 전날 신형 반항공미사일 시험발사와 순항미사일 비행장 타격훈련"
       ],
-      "speculation": [
-        "미 중간선거일·김여정 대화 언급과 맞물린 협상력 과시 해석"
-      ]
+      "speculation": []
     },
     "electronic_cyber": {
       "status": "none"
@@ -101,9 +96,14 @@
       "status": "single",
       "routine": true,
       "region": "베이징",
-      "summary": "왕이 중국 외교 수장이 5일 베이징에서 김성남 노동당 국제비서(대표단장)를 만나 북중관계 심화·발전을 강조했다.",
-      "meaning": "외교·당 교류 일정이며 군사협정·무기 협력 발표는 확인되지 않는다.",
+      "summary": "김성남 노동당 비서가 5일 베이징에서 왕이와 회담했다(방중 외교 일정).",
+      "meaning": "군사협정·무기 협력 발표는 없는 고위급 교류다.",
       "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261105513495"
+        },
         {
           "name": "연합뉴스",
           "tier": "B",
@@ -112,7 +112,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "김성남 비서 대표단 4일 평양 출발, 5일 왕이 접견"
+        "왕이가 5일 김성남 대표단 접견"
       ],
       "speculation": []
     },
@@ -129,7 +129,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-05T06:11:11+00:00",
+  "checked_at": "2026-11-05T07:10:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

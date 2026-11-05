@@ -277,6 +277,37 @@ def test_theater_sources_accept_rss_pubdate():
     assert ews._dt("not a date") is None and ews._dt("") is None and ews._dt(None) is None
 
 
+def test_theater_quiet_check_from_canonical_feeds():
+    """기사가 드문 전역은 정본 피드 확인이 state 0 관측이다 — 조건 하나라도 빠지면 미관측(11/05)."""
+    F = ews.QUIET_FEEDS["scs_ecs"]
+    def run(state=0, feeds=F[:2], cov=True, opened=None, pub=NOW, extra=()):
+        srcs = [{"name": "f", "url": u, "published_at": pub} for u in feeds] + list(extra)
+        r = {"opened": list(opened if opened is not None else feeds) + [x["url"] for x in extra],
+             "linkage": {"theaters": {"scs_ecs": {"state": state, "channels": [], "summary": "", "sources": srcs}}}}
+        if cov:
+            r["coverage"] = {"linkage:theaters": ["South China Sea"]}
+        return ews.ingest(r, None, NOW)["theaters"].get("scs_ecs")
+    ok = run()
+    assert ok["state"] == 0 and all(s["kind"] == "feed" for s in ok["sources"]) and "72시간" in ok["summary"]
+    assert run(state=1) is None                                    # 피드만으로 1 이상은 안 된다
+    assert run(feeds=F[:1]) is None                                # 정본 2곳 이상인 전역은 2곳
+    assert run(cov=False) is None                                  # 검색 기록 없음
+    assert run(opened=F[:1]) is None                               # 실제로 연 피드만
+    assert run(pub="2026-10-30T00:00:00+00:00") is None            # 죽은 피드(최신 항목 72시간 밖)
+    off = run(feeds=("https://example.com/rss", "https://example.org/rss"))  # 정본 밖 주소 = 종전 규칙대로 「연 원문」 — 평온 확인 표식은 안 붙는다
+    assert off is not None and not any(s.get("kind") for s in off["sources"]) and off["summary"] == ""
+    art = {"name": "a", "url": OPENED[0], "published_at": NOW}
+    mixed = run(state=1, extra=(art,))                              # 기사가 있으면 기사로 판정, 피드는 근거에서 뺀다
+    assert mixed["state"] == 1 and [s["url"] for s in mixed["sources"]] == [OPENED[0]]
+    one = {"opened": [ews.QUIET_FEEDS["ukraine"][0]], "coverage": {"linkage:theaters": ["q"]},
+           "linkage": {"theaters": {"ukraine": {"state": 0, "sources": [{"url": ews.QUIET_FEEDS["ukraine"][0], "published_at": NOW}]}}}}
+    assert ews.ingest(one, None, NOW)["theaters"]["ukraine"]["state"] == 0   # 정본 1곳뿐인 전역은 1곳
+    md = (ROOT / "prompts" / "background.md").read_text()
+    for t, urls in ews.QUIET_FEEDS.items():                         # 지시문 정본 표와 코드 목록이 같다
+        row = next(l for l in md.splitlines() if l.startswith(f"| `{t}` |"))
+        assert all(u in row for u in urls), t
+
+
 # ── 회차 하한(11/05 첫 실회차: theaters 2/5 인데 checked · linkage 원문 0건인데 no_findings) ──
 def _theater(pub=NOW):
     return {"state": 0, "channels": [], "summary": "s", "sources": [{"url": OPENED[0], "published_at": pub}]}

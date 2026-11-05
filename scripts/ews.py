@@ -45,6 +45,20 @@ SOURCE_MAX_AGE_H = 72  # 전역 출처는 판정 시각 기준 72시간 안에 �
 # now 를 넘을 일은 없다 — 남는 것은 매체 서버·우리 러너 시계의 차이뿐이라 NTP 오차 규모(초~분)로 작게 둔다. 시간대 표기 실수(±9시간 등)는 걸러진다.
 FUTURE_SKEW_MIN = 10
 ERROR_LEN = 200
+# 평온 확인용 정본 피드(prompts/background.md 0-1 표와 같아야 한다 — 테스트가 대조). 기사가 드문 전역(남중국해·미 전략자산)은
+# 「관련 기사 없음」 자체가 관측이다: state 0 에 한해 이 피드를 연 기록을 근거로 받는다(11/05 — 2곳이 매 회차 미관측으로 남았다).
+# 조건 = 이 목록의 피드를 실제로 열었고(opened) · 피드 최신 항목이 72시간 안(피드가 살아 있다) · 정본이 2곳 이상이면 2곳 ·
+# coverage["linkage:theaters"] 에 검색어가 있다. state 1 이상은 종전대로 기사 원문이 있어야 한다.
+QUIET_FEEDS = {
+    "taiwan": ("https://feeds.feedburner.com/rsscna/engnews", "https://feeds.feedburner.com/rsscna/politics",
+               "https://feeds.feedburner.com/rsscna/mainland"),
+    "scs_ecs": ("https://www.philstar.com/rss/nation", "https://www.rappler.com/feed/",
+                "https://feeds.bbci.co.uk/news/world/asia/rss.xml"),
+    "us_posture": ("https://www.stripes.com/theaters/asia_pacific/", "https://www.dvidshub.net/rss/news"),
+    "ukraine": ("https://feeds.bbci.co.uk/news/world/europe/rss.xml",),
+    "mideast": ("https://feeds.bbci.co.uk/news/world/middle_east/rss.xml",),
+}
+QUIET_MIN_FEEDS = 2
 
 
 def _dt(s) -> datetime | None:
@@ -171,16 +185,28 @@ def ingest(run: dict, doc: dict | None, now: str) -> dict:
     rows = dict(doc.get("theaters")) if isinstance(doc.get("theaters"), dict) else {}
     raw = (run.get("linkage") or {}).get("theaters") if isinstance(run.get("linkage"), dict) else None
     opened, got = d._opened(run), False
+    cov = run.get("coverage") if isinstance(run.get("coverage"), dict) else {}
+    qs = cov.get("linkage:theaters")
+    searched = isinstance(qs, list) and any(isinstance(q, str) and q.strip() for q in qs)
     for t in THEATERS if isinstance(raw, dict) else ():
         row = raw.get(t)
         if not isinstance(row, dict) or type(row.get("state")) is not int or not 0 <= row["state"] <= 3:
             continue
-        srcs = [{f: s[f] for f in ("name", "tier", "url", "published_at") if s.get(f)}
-                for s in row.get("sources") or []
-                if isinstance(s, dict) and s.get("url") in opened and _fresh(s, t_now)][:SOURCES_MAX]
-        if not srcs:  # state 0 도 근거가 있어야 관측이다
+        good = [s for s in row.get("sources") or []
+                if isinstance(s, dict) and s.get("url") in opened and _fresh(s, t_now)]
+        arts = [s for s in good if s.get("url") not in QUIET_FEEDS[t]]
+        feeds = list({s["url"]: s for s in good if s.get("url") in QUIET_FEEDS[t]}.values())
+        quiet = (not arts and row["state"] == 0 and searched
+                 and len(feeds) >= min(QUIET_MIN_FEEDS, len(QUIET_FEEDS[t])))
+        if arts:
+            srcs = [{f: s[f] for f in ("name", "tier", "url", "published_at") if s.get(f)} for s in arts][:SOURCES_MAX]
+        elif quiet:
+            srcs = [{**{f: s[f] for f in ("name", "url", "published_at") if s.get(f)}, "kind": "feed"} for s in feeds][:SOURCES_MAX]
+        else:  # state 0 도 근거가 있어야 관측이다(기사 원문, 또는 위 평온 확인 조건)
             continue
         summary = row.get("summary").strip()[:SUMMARY_LEN] if isinstance(row.get("summary"), str) else ""
+        if quiet and not summary:
+            summary = f"정본 피드 {len(feeds)}곳에 72시간 안 관련 기사 없음"
         rows[t] = {"state": row["state"], "channels": [c for c in CHANNELS if c in (row.get("channels") or [])],
                    "sources": srcs, "summary": summary, "judged_at": now}
         got = True

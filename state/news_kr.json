@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-05T10:59:52+00:00",
+ "fetched_at": "2026-11-05T11:32:02+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-05T10:59:52+00:00",
+ "last_ok_at": "2026-11-05T11:32:02+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1137,
-  "hits": 58,
-  "clusters": 49,
+  "hits": 60,
+  "clusters": 50,
   "by_group": {
    "border": 11,
    "drone_balloon": 5,
    "influence": 1,
    "mine": 12,
    "defect": 1,
-   "fire": 16,
+   "fire": 17,
    "summit": 6,
    "spy": 1,
    "hybrid": 1,
@@ -29,7 +29,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 578,
-   "hits": 50
+   "hits": 49
   },
   "SBS": {
    "feeds": 3,
@@ -53,7 +53,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 3
+   "hits": 5
   },
   "국방일보": {
    "feeds": 1,
@@ -67,30 +67,30 @@
   "border": {
    "clusters": 11,
    "max_independent": 1,
-   "latest": "2026-11-05T10:59:52+00:00"
+   "latest": "2026-11-05T11:32:02+00:00"
   },
   "drone_balloon": {
    "clusters": 5,
    "max_independent": 1,
-   "latest": "2026-11-05T10:59:52+00:00"
+   "latest": "2026-11-05T11:32:02+00:00"
   },
   "influence": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-05T10:59:52+00:00"
+   "latest": "2026-11-05T11:32:02+00:00"
   },
   "mine": {
    "clusters": 12,
    "max_independent": 1,
-   "latest": "2026-11-05T10:59:52+00:00"
+   "latest": "2026-11-05T11:32:02+00:00"
   },
   "defect": {
    "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-05T10:39:50+00:00"
+   "max_independent": 2,
+   "latest": "2026-11-05T11:15:26+00:00"
   },
   "fire": {
-   "clusters": 16,
+   "clusters": 17,
    "max_independent": 3,
    "latest": "2026-11-05T10:05:56+00:00"
   },
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 8
+   "hits": 7
   },
   {
    "outlet": "연합뉴스",
@@ -223,7 +223,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 2
+   "hits": 4
   },
   {
    "outlet": "세계일보",

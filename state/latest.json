@@ -14,16 +14,15 @@
     ],
     "border_clash": [
       "지뢰 발견 DMZ 귀순 북한",
-      "합참 발표 북한 어선"
+      "북한 합참 발표 지뢰 NLL 귀순 11월 5일"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
-      "해킹 개인정보 유출 공격",
-      "FBI Binance hack North Korea attributed"
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "Kim Jong Un China Russia visit North Korea Reuters",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -33,8 +32,7 @@
       "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "합참 진돗개 데프콘 상향",
-      "북한 합참 발표 11월 5일"
+      "합참 진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -47,10 +45,11 @@
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
     "https://www.yna.co.kr/view/AKR20261105174600504",
+    "https://www.yna.co.kr/view/AKR20261105118000083",
     "https://www.yna.co.kr/view/AKR20261105092000504",
-    "https://www.yna.co.kr/view/AKR20261105118000083"
+    "https://www.yna.co.kr/view/AKR20261105011100504"
   ],
-  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치가 중심이다. 4일 미사일 발사·신형 대공미사일 시험 주장은 시험 성격이며 5일 북중 고위급 접촉은 외교 일정으로 병력·핵·전시 관련 신규 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치(승선원·귀순 의사 미공개)가 중심이다. 4일 신형 대공미사일 시험 주장과 5일 북중 고위급 접촉은 시험·외교 성격이며 병력·핵·전시 관련 신규 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,9 +60,35 @@
     "logistics": {
       "status": "none"
     },
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "울릉도 북방 공해",
+      "lat": 37.8,
+      "lon": 131.0,
+      "summary": "합참이 3일 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 해경과 조치·조사 중이라고 5일 밝혔다.",
+      "meaning": "표류 어선 건으로 군사적 도발 성격은 확인되지 않는다.",
+      "sources": [
+        {
+          "name": "세계일보(합참 인용)",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261105519983"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261105174600504"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "승선원 규모·귀순 의사 미공개"
+      ],
+      "speculation": []
+    },
     "electronic_cyber": {
       "status": "none",
-      "summary": "FBI 바이낸스 해킹 북한 귀속 발표는 10/31로 24시간 경과 — 5일 통일부 제재 논의 없음 보도만 있어 배경."
+      "summary": "바이낸스 해킹 북한 지목 후 통일부 '추가제재 논의 없음'(5일) 보도뿐, 신규 공격·공식 귀속 발표 없음 — 배경."
     },
     "foreign_forces": {
       "status": "single",
@@ -93,35 +118,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "울릉도 북방 공해",
-      "lat": 37.8,
-      "lon": 131.0,
-      "summary": "합참이 3일 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 해경과 조치·조사 중이라고 5일 밝혔다.",
-      "meaning": "표류 어선 건으로 군사적 도발 성격은 확인되지 않는다.",
-      "sources": [
-        {
-          "name": "세계일보(합참 인용)",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261105519983"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261105174600504"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "승선원 규모·귀순 의사 미공개"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-05T21:11:06+00:00",
+  "checked_at": "2026-11-05T22:12:03+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

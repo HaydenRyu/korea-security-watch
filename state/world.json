@@ -1,23 +1,34 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T05:40:19+00:00",
-  "world_at": "2026-11-05T05:40:19+00:00",
+  "updated_at": "2026-11-05T11:41:19+00:00",
+  "world_at": "2026-11-05T11:41:19+00:00",
   "world": [
     {
-      "title": "밴스 부통령, 중간선거 패배의 원인으로 이란전 지목",
-      "summary": "밴스 미 부통령이 공화당의 중간선거 참패를 이란 전쟁 탓으로 돌리며 대통령과 거리를 두는 날 선 평가를 내놨다.",
-      "link_korea": "미국의 중동 개입 피로가 커지면 한반도 억제 자원 배분과 대북 협상 환경에 영향을 줄 수 있다.",
-      "region": "미국",
+      "title": "홍콩 민주화 운동가 조슈아 웡, 국가보안법 위반 징역 10년",
+      "summary": "홍콩 법원이 외세 결탁 혐의로 조슈아 웡에게 징역 10년을 선고했다.",
+      "link_korea": "중국의 대외 압박과 인권 문제를 둘러싼 국제 대립 구도를 보여준다.",
+      "region": "중국·홍콩",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/crz98zqkz7z0o",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/cwp9g3rlp8jlo",
+        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+      }
+    },
+    {
+      "title": "미국, 호르무즈 케슘섬 제한 타격",
+      "summary": "미 당국자들은 이란 혁명수비대가 미 항공기를 향해 사격한 데 대응한 제한적 방어 타격이라고 밝혔다.",
+      "link_korea": "호르무즈 정세는 한국의 에너지 수송과 청해부대 임무에 직결된다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
       }
     },
     {
       "title": "이란 협상 대표 \"미국인이 전쟁에 반대표를 던졌다\"",
-      "summary": "이란 의회의장이자 협상 대표 갈리바프는 미국 중간선거 결과를 '전쟁 반대' 메시지로 규정하고 지지한다고 밝혔다.",
-      "link_korea": "호르무즈 정세는 청해부대 임무 확대 등 한국의 해상 안보·에너지 수송에 직결된다.",
+      "summary": "이란 의회의장 갈리바프는 미 중간선거 결과를 전쟁 반대 메시지로 지지한다고 밝혔다.",
+      "link_korea": "미국의 중동 개입 피로는 한반도 억제 자원 배분에 영향을 줄 수 있다.",
       "region": "중동",
       "source": {
         "name": "BBC",
@@ -26,27 +37,16 @@
       }
     },
     {
-      "title": "러·우 대표단, 헤르손 오레시키 휴전 뒤 백악관 회동 예정",
-      "summary": "헤르손 오레시키 휴전으로 주민 대피가 이뤄진 뒤 러시아·우크라이나 대표단이 목요일 백악관에서 미 영부인을 만난다.",
-      "link_korea": "러·우 전쟁의 협상 국면은 북러 군사협력과 북한군 파병 문제의 향방과 맞닿아 있다.",
+      "title": "러시아 공습으로 우크라이나 민간인 최소 38명 사망",
+      "summary": "자포리자 활공폭탄 공격 등 24시간 동안 구호센터·호스피스·병원이 공격받았다.",
+      "link_korea": "북러 군사협력과 연결된 러-우 전쟁의 지속은 한반도 안보 환경에 영향을 준다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no",
+        "url": "https://www.bbc.co.uk/news/articles/c65ynez5y599o",
         "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
-      }
-    },
-    {
-      "title": "중국, 파푸아뉴기니 포탄 발견 보도 부인",
-      "summary": "포트모르즈비 공사장에서 32kg 포탄형 물체가 발견돼 중국인 4명이 체포됐으나 중국 대사관은 '포탄 모양 와인병'이라며 부인했다.",
-      "link_korea": "중국의 태평양 도서국 영향력 확대는 인도·태평양 안보 구도와 미 동맹 전력 운용에 영향을 준다.",
-      "region": "남태평양",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cm0qkxzv3j99o",
-        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
       }
     }
   ],
-  "world_context": "미 중간선거 이후 이란전 책임론과 러·우 협상 움직임이 겹치며 미국의 대외 개입 기조가 시험대에 올랐다."
+  "world_context": "중동 전쟁과 러-우 전쟁이 이어지는 가운데 미 정치 변화가 대외 개입 기조의 변수로 부각된다."
 }

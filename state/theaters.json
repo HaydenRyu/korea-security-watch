@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-05T05:40:19+00:00",
+  "judged_at": "2026-11-05T11:41:19+00:00",
   "theaters": {
     "ukraine": {
       "state": 2,
@@ -13,10 +13,16 @@
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no",
           "published_at": "2026-11-04T15:01:10+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/c65ynez5y599o",
+          "published_at": "2026-11-03T16:57:41+00:00"
         }
       ],
-      "summary": "헤르손 오레시키 휴전으로 주민 대피가 이뤄졌고 러·우 대표단이 백악관 회동을 앞두고 있다.",
-      "judged_at": "2026-11-05T05:40:19+00:00"
+      "summary": "오레시키 휴전과 러·우 백악관 회동 예정 속에도 러시아 공습으로 민간인 38명 이상이 숨졌다.",
+      "judged_at": "2026-11-05T11:41:19+00:00"
     },
     "mideast": {
       "state": 3,
@@ -38,8 +44,8 @@
           "published_at": "2026-11-04T16:59:15+00:00"
         }
       ],
-      "summary": "미국이 호르무즈 케슘섬을 제한 타격했고 이란 협상 대표는 미 중간선거 결과를 전쟁 반대 메시지로 지지했다.",
-      "judged_at": "2026-11-05T05:40:19+00:00"
+      "summary": "미국이 호르무즈 케슘섬을 제한 타격했고 이란 협상 대표는 중간선거 결과를 전쟁 반대 메시지로 지지했다.",
+      "judged_at": "2026-11-05T11:41:19+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -62,38 +68,38 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-05T00:00:00+08:00",
+          "published_at": "2026-11-05T18:13:00+08:00",
+          "kind": "feed"
+        },
+        {
+          "name": "Rappler",
+          "url": "https://www.rappler.com/feed/",
+          "published_at": "2026-11-05T19:22:32+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-05T03:56:16+00:00",
+          "published_at": "2026-11-05T08:07:22+00:00",
           "kind": "feed"
         }
       ],
-      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-05T05:40:19+00:00"
+      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "judged_at": "2026-11-05T11:41:19+00:00"
     },
     "us_posture": {
       "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "Stars and Stripes",
-          "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-03T00:00:00+00:00",
-          "kind": "feed"
-        },
-        {
           "name": "DVIDS",
-          "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-04T22:53:23+00:00",
-          "kind": "feed"
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/578663/funakoshi-hosts-forces-australia-india-japan-and-us-start-exercise-malabar-2026",
+          "published_at": "2026-11-05T11:00:11+00:00"
         }
       ],
-      "summary": "Stripes·DVIDS 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
-      "judged_at": "2026-11-05T05:40:19+00:00"
+      "summary": "미·일·인·호 말라바르 2026 연합훈련이 요코스카에서 시작됐으며 전략자산 이례적 전개 보도는 없다.",
+      "judged_at": "2026-11-05T11:41:19+00:00"
     }
   }
 }

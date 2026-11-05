@@ -98,14 +98,15 @@ function gauge(doc){
     +`<div class="ews-meter" role="img" aria-label="조기경보 지수 ${esc(doc.ews)}, ${esc(doc.band)}"><i style="background:var(--g0)"></i><i style="background:var(--g1)"></i><i style="background:var(--g2)"></i><i style="background:var(--g3)"></i><u style="left:${Math.min(99,Math.max(0,doc.ews))}%"></u></div>`
     +`<p class="ews-p">한반도 직접 ${esc(doc.d)} · 세계 연동 ${esc(doc.e??"—")}</p>${notes(doc)}<p class="ews-s">${C5}</p>${v}</section>`;
 }
+const quietOnly=t=>(t.sources||[]).length>0&&t.sources.every(s=>s.kind==="feed"); // 평온 확인 = 정본 피드에 관련 기사 없음(기사 근거 아님)
 function theaterValue(t){
   if(!t.observed)return C9;
-  return`${STATE_NAME[t.state]??"—"}${t.contribution==null?"":` · ${t.contribution}`}`;
+  return`${STATE_NAME[t.state]??"—"}${quietOnly(t)?"(피드 확인)":""}${t.contribution==null?"":` · ${t.contribution}`}`;
 }
 function card(t){
   if(!t)return"";
   if(!t.observed)return`<div class="ews-card"><b>${esc(THEATER[t.key].n)}</b><br>${C9}</div>`;
-  const links=(t.sources||[]).filter(s=>/^https?:/.test(s.url||"")).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name||s.url)}${s.tier?` · ${esc(s.tier)}`:""}${s.published_at?` · ${esc(kst(s.published_at))}`:""}</a>`).join("");
+  const links=(t.sources||[]).filter(s=>/^https?:/.test(s.url||"")).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name||s.url)}${s.kind==="feed"?" · 피드 확인 · 관련 보도 없음":""}${s.tier?` · ${esc(s.tier)}`:""}${s.published_at?` · ${s.kind==="feed"?"최신 항목 ":""}${esc(kst(s.published_at))}`:""}</a>`).join("");
   const ch=(t.channels||[]).map(c=>CHANNEL[c]).filter(Boolean).join(" · ");
   return`<div class="ews-card"><b>${esc(THEATER[t.key].n)}</b> ${esc(STATE_NAME[t.state]??"")}<br>${esc(t.summary)}${ch?`<p class="ews-s">${esc(ch)}</p>`:""}${links}</div>`;
 }
@@ -204,7 +205,7 @@ function initBoard(doc){
 // ── 예측 절 ──
 function initForecast(doc){
   const b=$("ews-fc-b");
-  const tr=(doc.theaters||[]).map(t=>`<tr><td>${esc(THEATER[t.key]?.n||t.key)}</td><td>${t.observed?esc(STATE_NAME[t.state]??"—"):C9}</td><td class="n">${t.observed?esc(t.contribution??"—"):"—"}</td></tr>`).join("");
+  const tr=(doc.theaters||[]).map(t=>`<tr><td>${esc(THEATER[t.key]?.n||t.key)}</td><td>${t.observed?esc((STATE_NAME[t.state]??"—")+(quietOnly(t)?"(피드 확인)":"")):C9}</td><td class="n">${t.observed?esc(t.contribution??"—"):"—"}</td></tr>`).join("");
   const cr=(doc.channels||[]).map(c=>`<tr><td>${esc(CHANNEL[c.key]||c.key)}</td><td class="n">${c.observed?esc(c.value??"—"):C9}</td></tr>`).join("");
   $("ews-fc-v").textContent=`가설 가중치 v${doc.weights_version??"—"} · 백테스트 전`;
   const head=doc.status==="error"?`<p class="ews-p ews-err">조기경보 지수를 계산하지 못했습니다 — ${esc(String(doc.error||"").slice(0,200))}</p>${lastGood(doc)}`

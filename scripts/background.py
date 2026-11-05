@@ -62,7 +62,7 @@ PARTIAL = "partial"  # 코드만 매긴다(루틴 입력 어휘는 d.BLOCK_STATU
 STATUSES = (*d.BLOCK_STATUSES, PARTIAL, "skipped")  # background.json·커밋 메시지에 나오는 전체 어휘
 # no_findings 를 인정하는 coverage 키 — prompts/background.md 가 요구하는 키 이름 그대로. 끝이 ":" 면 접두사.
 COVERAGE_KEYS = {"world": ("world",), "factors": ("factor:",), "linkage": ("linkage:taiwan", "linkage:korea"),
-                 "theaters": ("linkage:theaters",), "incidents": ("incidents",)}
+                 "theaters": ("linkage:theaters", "linkage:theaters:"), "incidents": ("incidents",)}
 MIN_OBSERVED_DEFAULT = 3  # ews_weights.json 을 못 읽을 때만(지수 쪽 기본과 같은 값)
 
 
@@ -87,10 +87,11 @@ def searched(run, block: str) -> bool:
     return False
 
 
-def observed_theaters(run, now: str) -> list[str]:
-    """이번 회차 입력에서 ews.ingest 검사를 지난 전역 키(직전 값 제외)."""
+def observed_theaters(run, now: str, doc=None) -> list[str]:
+    """이번 회차 입력에서 받아들인 전역 키 — 직전 판(doc)과 함께 돌린다
+    (직전 값을 이은 전역·평온 확인이 신선한 긴장을 못 덮어 버려진 전역은 이번 관측이 아니다)."""
     try:
-        return [t for t in ews.THEATERS if t in ews.ingest(run, None, now)["theaters"]]
+        return ews.ingest_accepted(run, doc, now)[1]
     except Exception:  # noqa: BLE001
         return []
 
@@ -104,7 +105,7 @@ def invalid(run) -> str | None:
     return None
 
 
-def counts(run: dict, key: str, now: str) -> tuple[int, int]:
+def counts(run: dict, key: str, now: str, doc=None) -> tuple[int, int]:
     """(루틴이 낸 줄 수, 기존 검사 함수를 지난 줄 수)."""
     try:
         if key == "world":
@@ -121,7 +122,7 @@ def counts(run: dict, key: str, now: str) -> tuple[int, int]:
             return raw, int("taiwan" in c) + len(c["korea"])
         if key == "theaters":
             raw = lk.get("theaters")
-            return (len(raw) if isinstance(raw, dict) else 0), len(ews.ingest(run, None, now)["theaters"])
+            return (len(raw) if isinstance(raw, dict) else 0), len(observed_theaters(run, now, doc))
         if key == "incidents":
             raw = run.get("incidents")
             return (len(raw) if isinstance(raw, list) else 0), len(d.clean_incidents(run))
@@ -172,14 +173,14 @@ def step(run, docs: dict, now: str) -> tuple[dict, dict]:
     notes = run.get("notes") if isinstance(run, dict) and isinstance(run.get("notes"), dict) else {}
     blocks = {}
     for k in BLOCKS:
-        raw, kept = counts(use, k, now)
+        raw, kept = counts(use, k, now, docs.get(k))
         st, note = ("failed", reason) if reason else (d.block_status(run, k), "")
         if k in errs:
             st, note = "failed", "오류 — " + errs[k]
         elif st == "no_findings" and not searched(use, k):
             st, note = "failed", "검색 기록 없음 — coverage 에 " + "·".join(COVERAGE_KEYS[k]) + " 키가 없다"
         elif k == "theaters" and st in d.BLOCK_DONE:
-            seen = observed_theaters(use, now)
+            seen = observed_theaters(use, now, docs.get("theaters"))
             missing = [t for t in ews.THEATERS if t not in seen]
             if not seen:
                 st, note = "failed", "관측 전역 0 — 전역마다 72시간 안 원문으로 state(0 포함)를 적는다"
@@ -229,7 +230,7 @@ def main(argv: list[str]) -> int:
     out, bg = step(run, docs, now)
     if check:  # 쓰기 없음 — 상태 파일·background.json·.bg_commit_msg 모두 그대로
         retry = [k for k, v in bg["blocks"].items() if v["status"] not in d.BLOCK_DONE]
-        seen = observed_theaters(run if bg.get("error") is None else {}, now)
+        seen = observed_theaters(run if bg.get("error") is None else {}, now, docs.get("theaters"))
         print(json.dumps({"check": "invalid" if bg.get("error") else ("ok" if not retry else "retry"),
                           "blocks": {k: {"status": v["status"], **({"note": v["note"]} if v.get("note") else {})}
                                      for k, v in bg["blocks"].items()},

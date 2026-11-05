@@ -1,24 +1,17 @@
 {
   "coverage": {
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순",
-      "DMZ NLL North Korea border"
+      "지뢰 발견 DMZ 귀순 북한",
+      "0-2 국내언론 수집(news_kr)"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격"
     ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘 North Korea Reuters November 5",
-      "진돗개 발령 데프콘"
+    "calm": [
+      "news_kr 수집 결과 대조"
     ],
     "troop_movement": [
       "북한 병력 이동 전방 증강",
@@ -29,27 +22,28 @@
       "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 탄약 수송"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
-      "North Korea wartime mobilization"
+      "North Korea mobilization"
     ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+    "gov_warning": [
+      "진돗개 데프콘 발령"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261105502629",
-    "https://kookbang.dema.mil.kr/newsWeb/20261103/10/ATCE_CTGR_0010010000/view.do"
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261105504822"
   ],
-  "overall_summary": "4일 선덕 일대 단거리 미사일 발사와 5일 북한의 신형 반항공미사일·순항미사일 훈련 주장이 유일한 징후이며 정례 시험 범위다. 다른 항목에 새 징후는 확인되지 않았다.",
+  "overall_summary": "4일 선덕 일대 단거리 미사일 발사와 5일 KCNA의 신형 반항공미사일·순항미사일 훈련 주장이 유일한 징후이며 정례 시험 범위다. 다른 항목에 새 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,6 +52,24 @@
       "status": "none"
     },
     "logistics": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "border_clash": {
@@ -88,27 +100,9 @@
       "speculation": [
         "한미 제원 분석 중"
       ]
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-05T03:10:14+00:00",
+  "checked_at": "2026-11-05T04:09:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

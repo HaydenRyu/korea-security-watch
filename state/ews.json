@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-05T03:10:14+00:00",
+  "computed_at": "2026-11-05T04:09:53+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 27,
@@ -11,9 +11,9 @@
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
-    "observed_theaters": 3,
-    "linkage_judged_at": "2026-11-04T23:41:19+00:00",
-    "latest_updated_at": "2026-11-05T03:10:14+00:00"
+    "observed_theaters": 5,
+    "linkage_judged_at": "2026-11-05T03:30:01+00:00",
+    "latest_updated_at": "2026-11-05T04:09:52+00:00"
   },
   "theaters": [
     {
@@ -22,19 +22,13 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "공군기 12대가 중간선을 넘어 중국 함정의 '합동 전비 경순'에 호응했고 해경선 4척이 진먼 수역을 침범했다.",
+      "summary": "대만 국방부는 중국 군함 8척·군용기 19대가 대만 주변에서 포착됐다고 밝혔고 대만은 미 양당의 지지를 거론했다.",
       "sources": [
         {
-          "name": "CNA",
+          "name": "중앙통신사",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611040264.aspx",
-          "published_at": "2026-11-04T17:32:45+08:00"
-        },
-        {
-          "name": "CNA",
-          "tier": "B",
-          "url": "https://www.cna.com.tw/news/acn/202611040281.aspx",
-          "published_at": "2026-11-04T18:02:21+08:00"
+          "url": "https://www.cna.com.tw/news/acn/202611040368.aspx",
+          "published_at": "2026-11-04T22:37:35+08:00"
         }
       ]
     },
@@ -46,7 +40,7 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "러시아의 마을 이중 폭격으로 최소 40명이 숨졌고, 오레시키 휴전 종료 뒤 러·우 대표단이 백악관 회동을 앞두고 있다.",
+      "summary": "러시아의 마을 이중 폭격으로 최소 40명이 숨졌고 러·우 대표단은 백악관 회동을 앞두고 있다.",
       "sources": [
         {
           "name": "BBC",
@@ -64,12 +58,25 @@
     },
     {
       "key": "scs_ecs",
-      "observed": false,
-      "state": null,
+      "observed": true,
+      "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "",
-      "sources": []
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "sources": [
+        {
+          "name": "Philstar",
+          "url": "https://www.philstar.com/rss/nation",
+          "published_at": "2026-11-05T00:00:00+08:00",
+          "kind": "feed"
+        },
+        {
+          "name": "BBC 아시아",
+          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+          "published_at": "2026-11-05T03:19:55+00:00",
+          "kind": "feed"
+        }
+      ]
     },
     {
       "key": "mideast",
@@ -80,7 +87,7 @@
         "c1_us_gap",
         "c4_sea_energy"
       ],
-      "summary": "미군이 호르무즈 케슘섬을 제한 타격했고 IRGC가 미 무인기 격추를 주장했으며 중재국이 전면전 재발 방지에 나섰다.",
+      "summary": "미군이 호르무즈 케슘섬을 제한 타격했고 중간선거 뒤 이란은 미국 여론의 반전 메시지를 지지했다.",
       "sources": [
         {
           "name": "BBC",
@@ -98,12 +105,25 @@
     },
     {
       "key": "us_posture",
-      "observed": false,
-      "state": null,
+      "observed": true,
+      "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "",
-      "sources": []
+      "summary": "Stripes·DVIDS 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
+      "sources": [
+        {
+          "name": "Stars and Stripes",
+          "url": "https://www.stripes.com/theaters/asia_pacific/",
+          "published_at": "2026-11-03T00:00:00+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "DVIDS",
+          "url": "https://www.dvidshub.net/rss/news",
+          "published_at": "2026-11-04T21:55:08+00:00",
+          "kind": "feed"
+        }
+      ]
     }
   ],
   "channels": [
@@ -136,6 +156,6 @@
   "last_good": {
     "ews": 27,
     "band": "관찰",
-    "computed_at": "2026-11-05T03:10:14+00:00"
+    "computed_at": "2026-11-05T04:09:53+00:00"
   }
 }

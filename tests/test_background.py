@@ -340,6 +340,13 @@ def test_theater_quiet_check_from_canonical_feeds():
         assert ews.is_feed(u) or "stripes.com/theaters" in u, u
     assert ews.is_feed("https://www.stripes.com/theaters/asia_pacific/")
     assert not ews.is_feed("https://www.bbc.co.uk/news/articles/cm87zvpzwq0no")
+    # 4차 리뷰 ─ 표준 파서 정규화(0443·점 경로) · 조각 단위 판별(atomic·feeding 은 기사)
+    assert ews.is_feed("https://www.stripes.com:0443/theaters/asia_pacific/")
+    assert ews.is_feed("https://www.stripes.com/theaters/asia_pacific/./")
+    assert ews.is_feed("HTTP://Feeds.BBCI.co.uk:80/news/world/europe/rss.xml?x=1#y")
+    for a in ("https://example.com/news/atomic-weapons-talks", "https://example.com/2026/11/feeding-program",
+              "https://www.cna.com.tw/news/acn/202611040281.aspx", "https://www.stripes.com/theaters/asia_pacific/2026-11-04/carrier-1234.html"):
+        assert not ews.is_feed(a), a
     # 같은 초의 직전 판은 이번 관측이 아니다
     same = {"theaters": {t: {"state": 1, "sources": [{"url": "u"}], "judged_at": NOW} for t in ("taiwan", "ukraine", "mideast")}}
     assert bg.observed_theaters({"opened": OPENED, "linkage": {"theaters": {}}}, NOW, same) == []

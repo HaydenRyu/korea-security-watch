@@ -23,6 +23,8 @@ import math
 import sys
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+import posixpath
+from urllib.parse import urlsplit
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,28 +64,38 @@ QUIET_MIN_FEEDS = 2
 
 
 def _feed_key(u) -> str:
-    """피드 주소 비교용 — scheme·www·끝 슬래시·대소문자 차이를 지운다(변형 주소로 피드가 기사로 통과하지 않게)."""
-    s = str(u).strip().lower().split("#", 1)[0].split("?", 1)[0]  # fragment·query 는 같은 피드다
-    for pre in ("https://", "http://"):
-        s = s[len(pre):] if s.startswith(pre) else s
-    s = s[4:] if s.startswith("www.") else s
-    host, _, path = s.partition("/")
-    host = host.split("@")[-1]
-    for port in (":443", ":80"):  # 기본 포트는 같은 주소다
-        host = host[: -len(port)] if host.endswith(port) else host
-    return (host + ("/" + path if path else "")).rstrip("/")
+    """주소 비교용 정규화(표준 파서) — scheme·www·대소문자·기본 포트·fragment·query·점 경로·끝 슬래시 차이를 지운다."""
+    try:
+        sp = urlsplit(str(u).strip())
+        host = (sp.hostname or "").lower()
+        port = sp.port
+    except ValueError:
+        return str(u).strip().lower()
+    host = host[4:] if host.startswith("www.") else host
+    if port not in (None, 80, 443):
+        host = f"{host}:{port}"
+    path = posixpath.normpath(sp.path) if sp.path else ""
+    path = "" if path in (".", "/") else path.lower()
+    return (host + path).rstrip("/")
 
 
 # 지시문 0-1 표에 있는 목록 주소 전부(평온 확인용 + 다른 블록용) — 어느 것이든 기사로는 세지 않는다
 OTHER_FEEDS = ("https://feeds.bbci.co.uk/news/world/rss.xml", "https://www.segye.com/Articles/RSSList/segye_politic.xml")
 ALL_FEEDS = {_feed_key(u) for us in (*QUIET_FEEDS.values(), OTHER_FEEDS) for u in us}
-_FEED_MARKS = ("/rss", "rss.xml", "/feed", "feedburner.", "/atom", ".rss", ".atom")
+FEED_SEGMENTS = {"rss", "feed", "feeds", "atom", "rsslist"}  # 경로 조각이 정확히 이것이면 피드
+FEED_EXT = (".xml", ".rss", ".atom")
 
 
 def is_feed(u) -> bool:
-    """목록(피드) 주소인가 — 표의 주소, 또는 주소 모양이 피드(rss·feed·atom). 피드는 기사 근거가 아니다."""
+    """목록(피드) 주소인가 — 표의 주소, 또는 모양이 피드(feeds.·feedburner 호스트, 경로 조각 rss/feed/atom, .xml·.rss·.atom).
+    부분 문자열이 아니라 조각 단위로 본다(기사 경로의 atomic·feeding 은 피드가 아니다). 피드는 기사 근거가 아니다."""
     k = _feed_key(u)
-    return k in ALL_FEEDS or any(m in k for m in _FEED_MARKS)
+    if k in ALL_FEEDS:
+        return True
+    host, _, path = k.partition("/")
+    segs = [x for x in path.split("/") if x]
+    return (host.startswith("feeds.") or "feedburner." in host or any(x in FEED_SEGMENTS for x in segs)
+            or bool(segs) and segs[-1].endswith(FEED_EXT))
 
 
 def _dt(s) -> datetime | None:

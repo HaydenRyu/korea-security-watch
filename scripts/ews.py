@@ -66,10 +66,24 @@ def _feed_key(u) -> str:
     s = str(u).strip().lower().split("#", 1)[0].split("?", 1)[0]  # fragment·query 는 같은 피드다
     for pre in ("https://", "http://"):
         s = s[len(pre):] if s.startswith(pre) else s
-    return (s[4:] if s.startswith("www.") else s).rstrip("/")
+    s = s[4:] if s.startswith("www.") else s
+    host, _, path = s.partition("/")
+    host = host.split("@")[-1]
+    for port in (":443", ":80"):  # 기본 포트는 같은 주소다
+        host = host[: -len(port)] if host.endswith(port) else host
+    return (host + ("/" + path if path else "")).rstrip("/")
 
 
-ALL_FEEDS = {_feed_key(u) for us in QUIET_FEEDS.values() for u in us}  # 어느 전역의 정본 피드든 기사로는 세지 않는다
+# 지시문 0-1 표에 있는 목록 주소 전부(평온 확인용 + 다른 블록용) — 어느 것이든 기사로는 세지 않는다
+OTHER_FEEDS = ("https://feeds.bbci.co.uk/news/world/rss.xml", "https://www.segye.com/Articles/RSSList/segye_politic.xml")
+ALL_FEEDS = {_feed_key(u) for us in (*QUIET_FEEDS.values(), OTHER_FEEDS) for u in us}
+_FEED_MARKS = ("/rss", "rss.xml", "/feed", "feedburner.", "/atom", ".rss", ".atom")
+
+
+def is_feed(u) -> bool:
+    """목록(피드) 주소인가 — 표의 주소, 또는 주소 모양이 피드(rss·feed·atom). 피드는 기사 근거가 아니다."""
+    k = _feed_key(u)
+    return k in ALL_FEEDS or any(m in k for m in _FEED_MARKS)
 
 
 def _dt(s) -> datetime | None:
@@ -225,7 +239,7 @@ def ingest_accepted(run: dict, doc: dict | None, now: str) -> tuple[dict, list[s
             continue
         good = [s for s in row.get("sources") or []
                 if isinstance(s, dict) and s.get("url") in opened and _fresh(s, t_now)]
-        arts = [s for s in good if _feed_key(s.get("url")) not in ALL_FEEDS]
+        arts = [s for s in good if not is_feed(s.get("url"))]
         own = {_feed_key(u) for u in QUIET_FEEDS[t]}
         feeds = list({_feed_key(s["url"]): s for s in good if _feed_key(s.get("url")) in own}.values())
         quiet = (not arts and row["state"] == 0 and searched(t)

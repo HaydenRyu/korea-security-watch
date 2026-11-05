@@ -294,8 +294,7 @@ def test_theater_quiet_check_from_canonical_feeds():
     assert run(cov=False) is None                                  # 검색 기록 없음
     assert run(opened=F[:1]) is None                               # 실제로 연 피드만
     assert run(pub="2026-10-30T00:00:00+00:00") is None            # 죽은 피드(최신 항목 72시간 밖)
-    off = run(feeds=("https://example.com/rss", "https://example.org/rss"))  # 정본 밖 주소 = 종전 규칙대로 「연 원문」 — 평온 확인 표식은 안 붙는다
-    assert off is not None and not any(s.get("kind") for s in off["sources"]) and off["summary"] == ""
+    assert run(feeds=("https://example.com/rss", "https://example.org/rss")) is None  # 정본 밖 피드 — 기사도 평온 확인도 아니다
     art = {"name": "a", "url": OPENED[0], "published_at": NOW}
     mixed = run(state=1, extra=(art,))                              # 기사가 있으면 기사로 판정, 피드는 근거에서 뺀다
     assert mixed["state"] == 1 and [s["url"] for s in mixed["sources"]] == [OPENED[0]]
@@ -330,6 +329,17 @@ def test_theater_quiet_check_from_canonical_feeds():
     frag = ews.QUIET_FEEDS["ukraine"][0] + "#top"
     fr = {"opened": [frag], "linkage": {"theaters": {"taiwan": {"state": 3, "sources": [{"url": frag, "published_at": NOW}]}}}}
     assert ews.ingest(fr, None, NOW)["theaters"] == {}
+    # 3차 리뷰 ─ 기본 포트·다른 블록용 피드·피드 모양 주소도 기사가 아니다
+    for u in ("https://feeds.bbci.co.uk:443/news/world/europe/rss.xml", "https://feeds.bbci.co.uk/news/world/rss.xml",
+              "https://www.segye.com/Articles/RSSList/segye_politic.xml", "https://example.com/feed/", "https://x.org/news.rss"):
+        x = {"opened": [u], "linkage": {"theaters": {"taiwan": {"state": 0, "sources": [{"url": u, "published_at": NOW}]}}}}
+        assert ews.ingest(x, None, NOW)["theaters"] == {}, u
+    md0 = (ROOT / "prompts" / "background.md").read_text().split("## 0-1.")[1].split("## 1.")[0]
+    import re as _re
+    for u in _re.findall(r"`(https?://[^`]+)`", md0):               # 지시문 표의 목록 주소는 전부 피드로 인식된다
+        assert ews.is_feed(u) or "stripes.com/theaters" in u, u
+    assert ews.is_feed("https://www.stripes.com/theaters/asia_pacific/")
+    assert not ews.is_feed("https://www.bbc.co.uk/news/articles/cm87zvpzwq0no")
     # 같은 초의 직전 판은 이번 관측이 아니다
     same = {"theaters": {t: {"state": 1, "sources": [{"url": "u"}], "judged_at": NOW} for t in ("taiwan", "ukraine", "mideast")}}
     assert bg.observed_theaters({"opened": OPENED, "linkage": {"theaters": {}}}, NOW, same) == []

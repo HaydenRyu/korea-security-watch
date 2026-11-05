@@ -285,7 +285,7 @@ def test_theater_quiet_check_from_canonical_feeds():
         r = {"opened": list(opened if opened is not None else feeds) + [x["url"] for x in extra],
              "linkage": {"theaters": {"scs_ecs": {"state": state, "channels": [], "summary": "", "sources": srcs}}}}
         if cov:
-            r["coverage"] = {"linkage:theaters": ["South China Sea"]}
+            r["coverage"] = {"linkage:theaters:scs_ecs": ["South China Sea"]}
         return ews.ingest(r, None, NOW)["theaters"].get("scs_ecs")
     ok = run()
     assert ok["state"] == 0 and all(s["kind"] == "feed" for s in ok["sources"]) and "72시간" in ok["summary"]
@@ -299,9 +299,35 @@ def test_theater_quiet_check_from_canonical_feeds():
     art = {"name": "a", "url": OPENED[0], "published_at": NOW}
     mixed = run(state=1, extra=(art,))                              # 기사가 있으면 기사로 판정, 피드는 근거에서 뺀다
     assert mixed["state"] == 1 and [s["url"] for s in mixed["sources"]] == [OPENED[0]]
-    one = {"opened": [ews.QUIET_FEEDS["ukraine"][0]], "coverage": {"linkage:theaters": ["q"]},
+    one = {"opened": [ews.QUIET_FEEDS["ukraine"][0]], "coverage": {"linkage:theaters:ukraine": ["q"]},
            "linkage": {"theaters": {"ukraine": {"state": 0, "sources": [{"url": ews.QUIET_FEEDS["ukraine"][0], "published_at": NOW}]}}}}
     assert ews.ingest(one, None, NOW)["theaters"]["ukraine"]["state"] == 0   # 정본 1곳뿐인 전역은 1곳
+    # 리뷰(11/05) 보강 ─ ①다른 전역의 정본 피드·주소 변형은 기사로 통과하지 않는다
+    bbc_asia = ews.QUIET_FEEDS["scs_ecs"][2]
+    tw = {"opened": [bbc_asia, bbc_asia.replace("https://", "http://") + "/"],
+          "linkage": {"theaters": {"taiwan": {"state": 2, "sources": [{"url": bbc_asia, "published_at": NOW},
+                                                                       {"url": bbc_asia.replace("https://", "http://") + "/", "published_at": NOW}]}}}}
+    assert "taiwan" not in ews.ingest(tw, None, NOW)["theaters"]
+    # ②검색은 전역마다 — 대만 검색 1건으로 다른 전역을 평온 처리하지 않는다
+    multi = {"opened": [ews.QUIET_FEEDS["ukraine"][0], ews.QUIET_FEEDS["mideast"][0]],
+             "coverage": {"linkage:theaters:taiwan": ["PLA drills around Taiwan"], "linkage:theaters": ["x"]},
+             "linkage": {"theaters": {t: {"state": 0, "sources": [{"url": ews.QUIET_FEEDS[t][0], "published_at": NOW}]}
+                                      for t in ("ukraine", "mideast")}}}
+    assert ews.ingest(multi, None, NOW)["theaters"] == {}
+    # ③신선한 긴장 이상은 피드 확인으로 평온이 되지 않는다(직전 값 유지) · 72시간 지난 직전 값은 덮는다
+    prev = {"theaters": {"scs_ecs": {"state": 3, "channels": ["c1_us_gap"], "sources": [{"url": "u"}], "summary": "p",
+                                     "judged_at": "2026-11-04T00:00:00+00:00"}}}
+    r = {"opened": list(F[:2]), "coverage": {"linkage:theaters:scs_ecs": ["q"]},
+         "linkage": {"theaters": {"scs_ecs": {"state": 0, "sources": [{"url": u, "published_at": NOW} for u in F[:2]]}}}}
+    assert ews.ingest(r, prev, NOW)["theaters"]["scs_ecs"]["state"] == 3
+    assert bg.observed_theaters(r, NOW, prev) == [] and bg.observed_theaters(r, NOW) == ["scs_ecs"]
+    old = json.loads(json.dumps(prev)); old["theaters"]["scs_ecs"]["judged_at"] = "2026-11-01T00:00:00+00:00"
+    assert ews.ingest(r, old, NOW)["theaters"]["scs_ecs"]["state"] == 0
+    # ④피드 확인은 연결 채널을 관측하지 않는다
+    r["linkage"]["theaters"]["scs_ecs"]["channels"] = ["c1_us_gap"]
+    assert ews.ingest(r, None, NOW)["theaters"]["scs_ecs"]["channels"] == []
+    js = (ROOT / "ews.js").read_text()
+    assert "피드 확인" in js and 'kind==="feed"' in js  # ⑤화면이 피드 확인과 기사 근거를 구분한다
     md = (ROOT / "prompts" / "background.md").read_text()
     for t, urls in ews.QUIET_FEEDS.items():                         # 지시문 정본 표와 코드 목록이 같다
         row = next(l for l in md.splitlines() if l.startswith(f"| `{t}` |"))

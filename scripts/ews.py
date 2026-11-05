@@ -61,6 +61,17 @@ QUIET_FEEDS = {
 QUIET_MIN_FEEDS = 2
 
 
+def _feed_key(u) -> str:
+    """피드 주소 비교용 — scheme·www·끝 슬래시·대소문자 차이를 지운다(변형 주소로 피드가 기사로 통과하지 않게)."""
+    s = str(u).strip().lower()
+    for pre in ("https://", "http://"):
+        s = s[len(pre):] if s.startswith(pre) else s
+    return (s[4:] if s.startswith("www.") else s).rstrip("/")
+
+
+ALL_FEEDS = {_feed_key(u) for us in QUIET_FEEDS.values() for u in us}  # 어느 전역의 정본 피드든 기사로는 세지 않는다
+
+
 def _dt(s) -> datetime | None:
     """ISO 8601, 또는 RSS pubDate(RFC 822/2822, 예 'Thu, 05 Nov 2026 00:00:00 +0000') — 피드 날짜를 그대로 옮겨도 읽는다."""
     try:
@@ -175,6 +186,18 @@ def _fresh(src: dict, t_now: datetime | None) -> bool:
     return -timedelta(minutes=FUTURE_SKEW_MIN) <= age <= timedelta(hours=SOURCE_MAX_AGE_H)
 
 
+def _active(row, t_now: datetime | None) -> bool:
+    """직전 값이 기사 근거의 긴장 이상(state ≥ 1)이고 판정 72시간 안인가."""
+    if not isinstance(row, dict) or type(row.get("state")) is not int or row["state"] < 1:
+        return False
+    at = _dt(row.get("judged_at"))
+    if at is None or t_now is None:
+        return False
+    if at.tzinfo is None:
+        at = at.replace(tzinfo=timezone.utc)
+    return t_now - at <= timedelta(hours=SOURCE_MAX_AGE_H)
+
+
 def ingest(run: dict, doc: dict | None, now: str) -> dict:
     """run.linkage.theaters → state/theaters.json. 연 원문 없는 전역·모르는 값은 그것만 버리고, 안 낸 전역은 직전 값을 잇는다.
     72시간이 지났거나 published_at 이 없는 출처는 버린다 — 출처가 0이면 그 전역은 이번 회차 미관측(직전 값을 잇는다)."""
@@ -186,18 +209,24 @@ def ingest(run: dict, doc: dict | None, now: str) -> dict:
     raw = (run.get("linkage") or {}).get("theaters") if isinstance(run.get("linkage"), dict) else None
     opened, got = d._opened(run), False
     cov = run.get("coverage") if isinstance(run.get("coverage"), dict) else {}
-    qs = cov.get("linkage:theaters")
-    searched = isinstance(qs, list) and any(isinstance(q, str) and q.strip() for q in qs)
+
+    def searched(t: str) -> bool:  # 평온 확인은 그 전역을 따로 검색한 기록이 있어야 한다(검색 1건으로 여러 전역을 평온 처리하지 않는다)
+        qs = cov.get(f"linkage:theaters:{t}")
+        return isinstance(qs, list) and any(isinstance(q, str) and q.strip() for q in qs)
+
     for t in THEATERS if isinstance(raw, dict) else ():
         row = raw.get(t)
         if not isinstance(row, dict) or type(row.get("state")) is not int or not 0 <= row["state"] <= 3:
             continue
         good = [s for s in row.get("sources") or []
                 if isinstance(s, dict) and s.get("url") in opened and _fresh(s, t_now)]
-        arts = [s for s in good if s.get("url") not in QUIET_FEEDS[t]]
-        feeds = list({s["url"]: s for s in good if s.get("url") in QUIET_FEEDS[t]}.values())
-        quiet = (not arts and row["state"] == 0 and searched
+        arts = [s for s in good if _feed_key(s.get("url")) not in ALL_FEEDS]
+        own = {_feed_key(u) for u in QUIET_FEEDS[t]}
+        feeds = list({_feed_key(s["url"]): s for s in good if _feed_key(s.get("url")) in own}.values())
+        quiet = (not arts and row["state"] == 0 and searched(t)
                  and len(feeds) >= min(QUIET_MIN_FEEDS, len(QUIET_FEEDS[t])))
+        if quiet and _active(rows.get(t), t_now):
+            continue  # 보도 공백은 해소 근거가 아니다 — 아직 신선한 긴장·위기·교전을 피드 확인으로 평온으로 덮지 않는다(직전 값을 잇는다)
         if arts:
             srcs = [{f: s[f] for f in ("name", "tier", "url", "published_at") if s.get(f)} for s in arts][:SOURCES_MAX]
         elif quiet:
@@ -207,7 +236,8 @@ def ingest(run: dict, doc: dict | None, now: str) -> dict:
         summary = row.get("summary").strip()[:SUMMARY_LEN] if isinstance(row.get("summary"), str) else ""
         if quiet and not summary:
             summary = f"정본 피드 {len(feeds)}곳에 72시간 안 관련 기사 없음"
-        rows[t] = {"state": row["state"], "channels": [c for c in CHANNELS if c in (row.get("channels") or [])],
+        channels = [] if quiet else [c for c in CHANNELS if c in (row.get("channels") or [])]  # 피드 확인은 연결을 관측하지 않는다
+        rows[t] = {"state": row["state"], "channels": channels,
                    "sources": srcs, "summary": summary, "judged_at": now}
         got = True
     return {"schema_version": 2, "judged_at": now if got else doc.get("judged_at"), "theaters": rows}

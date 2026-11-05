@@ -1,44 +1,36 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup border"
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 탄약 수송 (0-2 수집 결과 대조)"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순 합참 11월 5일",
-      "North Korea missile launch Kim Jong Un China Russia visit November 5 2026"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 11월 5일"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방중 방러",
       "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 병력 집결 (0-2 수집 결과 대조)"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense drill"
+      "북한 준전시 등화관제 (0-2 수집 결과 대조)"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "US State Department Korea travel advisory"
+      "진돗개 데프콘 발령 북한"
     ],
     "hybrid_ops": [
-      "간첩 혐의 국가보안법 구속 11월",
-      "North Korea attributed FBI"
+      "국가보안법 간첩 혐의 구속 11월"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 North Korea talks offer"
@@ -46,13 +38,11 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261105502629",
-    "https://www.yna.co.kr/view/AKR20261105011100504",
     "https://www.segye.com/newsView/20261105513495",
-    "https://www.yna.co.kr/view/AKR20261105118000083",
-    "https://www.yna.co.kr/view/AKR20261105092000504",
-    "https://www.segye.com/newsView/20261105504645"
+    "https://www.segye.com/newsView/20261105504645",
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "북한이 4일 발사한 미사일을 5일 신형 대공미사일 시험·순항미사일 훈련이라 주장했고 직전 회차와 같은 시험성 활동이다. 김성남 방중 회담 등 외교 일정 외에 새 병력·핵·정부 경고 징후는 확인되지 않았다.",
+  "overall_summary": "북한이 4일 발사한 미사일을 신형 반항공미사일 시험·순항미사일 훈련이라 주장했으며 직전 회차와 같은 시험성 활동이다. 김성남 방중·왕이 회담 외에 새 병력·핵·정부 경고 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -78,9 +68,9 @@
           "url": "https://www.segye.com/newsView/20261105502629"
         },
         {
-          "name": "연합뉴스",
+          "name": "국방일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261105011100504"
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
         }
       ],
       "confidence": "높음",
@@ -103,11 +93,6 @@
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261105513495"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261105118000083"
         }
       ],
       "confidence": "중간",
@@ -129,7 +114,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-05T07:10:06+00:00",
+  "checked_at": "2026-11-05T08:10:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

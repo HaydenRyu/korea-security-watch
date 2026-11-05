@@ -1,54 +1,43 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 전방 병력 증강 군수 탄약 수송",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri",
-      "북한 핵 영변 풍계리"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
-    "border_clash": [
-      "울릉도 북한 어선 표류",
-      "지뢰 발견 DMZ 귀순"
+    "foreign_forces": [
+      "North Korea missile Kim Jong Un China Russia visit"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 11월"
     ],
-    "foreign_forces": [
-      "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+    "border_clash": [
+      "지뢰 발견 DMZ 합참"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "North Korea nuclear Yongbyon Punggye-ri November 2026"
+    ],
+    "logistics": [
+      "North Korea ammunition fuel logistics shipments Russia"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 병력 집결 평양"
     ],
     "nk_internal": [
-      "북한 준전시 노농적위군"
+      "북한 준전시 노농적위군 동원 등화관제"
     ],
     "gov_warning": [
-      "북한 진돗개 데프콘"
+      "진돗개 발령 데프콘 상향 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
+      "국가보안법 구속 간첩 혐의"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519180",
     "https://www.segye.com/newsView/20261105513495",
-    "https://www.yna.co.kr/view/AKR20261105174600504"
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "합참이 3일 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 조치했다고 5일 밝혔다(표류 선박, 정례). 김성남 방중·왕이 회담은 외교 일정이며 새 군사 징후는 없다.",
+  "overall_summary": "합참이 3일 울릉도 북방 표류 북한 어선을 조치했다고 밝혔고 김성남 방중·왕이 회담은 외교 일정이다. 4일 북한 미사일 발사와 신형 대공미사일 시험 주장은 24시간 경과·시험 성격으로 배경이며 새 군사 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,8 +48,50 @@
     "logistics": {
       "status": "none"
     },
+    "border_clash": {
+      "status": "single",
+      "routine": true,
+      "region": "울릉도 북방 공해상",
+      "lat": 37.7,
+      "lon": 131.0,
+      "summary": "합참이 3일 울릉도 북방 공해상에서 표류 중인 북한 어선 1척을 식별해 해경과 조치했다고 5일 밝혔고 관계기관이 조사 중이다.",
+      "meaning": "표류 선박 사안으로 군사적 도발 징후는 아니다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261105519180"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "합참 5일 발표: 3일 표류 북한 어선 1척 식별·해경과 조치"
+      ],
+      "speculation": []
+    },
     "electronic_cyber": {
       "status": "none"
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "베이징",
+      "lat": 39.9,
+      "lon": 116.4,
+      "summary": "김성남 노동당 비서가 5일 베이징에서 왕이와 회담했다(외교 일정, 군사 협정 언급 없음).",
+      "meaning": "북중 고위급 외교 교류로 군사적 신규 협력 징후는 없다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261105513495"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "중국 대외연락부 위챗 인용: 왕이가 북한 대표단 접견"
+      ],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -73,57 +104,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "울릉도 북방 공해",
-      "lat": 37.7,
-      "lon": 130.9,
-      "summary": "합참이 3일 울릉도 북방 공해상에서 표류 중인 북한 어선 1척을 식별해 해경과 조치했다고 5일 밝혔고 관계기관이 조사 중이다.",
-      "meaning": "기관 고장 등 표류 선박 사례로 군사적 도발 근거는 없으며 승선원 의사에 따라 송환 또는 귀순이 결정된다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261105519180"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261105174600504"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "합참 5일 발표: 3일 울릉도 북방 공해상 표류 북한 어선 1척 식별, 해경과 조치",
-        "승선원 규모·귀순 의향은 미공개"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "베이징",
-      "lat": 39.9,
-      "lon": 116.4,
-      "summary": "김성남 노동당 비서가 5일 베이징에서 왕이와 회담했다(외교 일정, 군사 협정 언급 없음).",
-      "meaning": "북중 당 간 외교 교류로 군사 협력 신호는 없다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261105513495"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "중국공산당 대외연락부 위챗 기준 5일 접견"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-05T12:16:24+00:00",
+  "checked_at": "2026-11-05T13:14:08+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

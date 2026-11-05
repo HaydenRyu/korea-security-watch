@@ -5,58 +5,59 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵시설 풍계리 영변 동향",
-      "North Korea nuclear site 38 North"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 수송 탄약 비축",
+      "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "목함지뢰 발견",
-      "DMZ NLL 귀순 북한 어선",
-      "북한 미사일 발사 합참"
+      "지뢰 발견 목함지뢰 해안",
+      "북한 DMZ NLL 귀순 합참"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격 랜섬웨어"
+      "사이버 공격",
+      "North Korea hacking attributed"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "김정은 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "서해 구조물",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 등화관제 준전시",
+      "North Korea nationwide mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향",
-      "한미일 긴급 경고"
+      "진돗개 발령 데프콘",
+      "South Korea Japan US emergency warning North Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 FBI North Korea attributed"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선",
+      "남북 대화 제안",
+      "통신선 복원",
       "North Korea talks offer",
       "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261105519180",
     "https://www.segye.com/newsView/20261105519983",
+    "https://www.segye.com/newsView/20261105519180",
     "https://www.segye.com/newsView/20261105517949",
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreaherald.com/",
-    "https://www.yna.co.kr/view/AKR20261105118000083"
+    "https://www.nknews.org/2026/11/"
   ],
-  "overall_summary": "직전 회차와 같은 국면으로, 표류 북한 어선 조치와 북한의 미사일·순항미사일 시험 주장 등 정례성 사안이 중심이다. 전시·병력·핵 관련 신규 징후는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치와 북한의 신형 대공미사일·순항미사일 시험 주장 등 정례성 사안이 중심이다. 병력·핵·전시 관련 신규 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -73,29 +74,23 @@
       "region": "울릉도 북방 공해",
       "lat": 37.8,
       "lon": 131.0,
-      "summary": "합참이 3일 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 해경과 조치·조사 중이라고 5일 밝혔다(세계일보 2건 확인); 북한은 4일 신형 대공미사일·순항미사일 훈련을 주장했고 합참은 4일 선덕 일대 동해상 미사일 수발을 포착했다(국방일보).",
-      "meaning": "표류 어선은 정례적 해상 사안이며 미사일은 시험 발사 성격이라 정세 급변 근거는 아니다.",
+      "summary": "합참이 3일 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 해경과 조치·조사 중이라고 5일 밝혔다.",
+      "meaning": "표류 어선 처리로 군사적 도발 근거는 없다.",
       "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261105519180"
-        },
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261105519983"
         },
         {
-          "name": "국방일보",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
+          "url": "https://www.segye.com/newsView/20261105519180"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "합참 5일: 3일 울릉도 북방 공해상 표류 북한 어선 1척 식별, 해경과 조치, 관계기관 조사 중",
-        "합참: 4일 선덕 일대 동해상 미사일 수발 포착, 한미 정밀 분석"
+        "합참 5일 발표: 3일 표류 어선 1척 식별, 해경과 조치, 관계기관 조사 중"
       ],
       "speculation": []
     },
@@ -103,30 +98,14 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "베이징",
-      "summary": "왕이 중국 외교 수장이 5일 베이징에서 김성남 노동당 비서를 만났다(외교 일정, 군사 협정 언급 없음; 연합뉴스 제목 확인).",
-      "meaning": "북중 고위급 외교 접촉으로 군사 협력 신규 발표는 없다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261105118000083"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "왕이-김성남 5일 회동(연합뉴스 제목)"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "원문 미열람(연합 AI 이용 제한 표기)으로 근거 제외 — 왕이·김성남 면담은 제목만 확인된 외교 일정이며 군사 협력 언급 없음."
     },
     "parade_massing": {
       "status": "none"
     },
     "nk_internal": {
-      "status": "none",
-      "summary": "북한 유엔대표부가 EU 인권결의안을 규탄한 공보문(세계일보) 외 전시태세 징후 없음."
+      "status": "none"
     },
     "gov_warning": {
       "status": "none"
@@ -135,7 +114,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-05T15:10:38+00:00",
+  "checked_at": "2026-11-05T16:14:56+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

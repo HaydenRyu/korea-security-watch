@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-05T03:30:01+00:00",
+  "judged_at": "2026-11-05T05:40:19+00:00",
   "theaters": {
     "ukraine": {
       "state": 2,
@@ -11,18 +11,12 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c98rz6penv86o",
-          "published_at": "2026-11-04T22:48:43+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no",
           "published_at": "2026-11-04T15:01:10+00:00"
         }
       ],
-      "summary": "러시아의 마을 이중 폭격으로 최소 40명이 숨졌고 러·우 대표단은 백악관 회동을 앞두고 있다.",
-      "judged_at": "2026-11-05T03:30:01+00:00"
+      "summary": "헤르손 오레시키 휴전으로 주민 대피가 이뤄졌고 러·우 대표단이 백악관 회동을 앞두고 있다.",
+      "judged_at": "2026-11-05T05:40:19+00:00"
     },
     "mideast": {
       "state": 3,
@@ -44,8 +38,8 @@
           "published_at": "2026-11-04T16:59:15+00:00"
         }
       ],
-      "summary": "미군이 호르무즈 케슘섬을 제한 타격했고 중간선거 뒤 이란은 미국 여론의 반전 메시지를 지지했다.",
-      "judged_at": "2026-11-05T03:30:01+00:00"
+      "summary": "미국이 호르무즈 케슘섬을 제한 타격했고 이란 협상 대표는 미 중간선거 결과를 전쟁 반대 메시지로 지지했다.",
+      "judged_at": "2026-11-05T05:40:19+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -54,12 +48,12 @@
         {
           "name": "중앙통신사",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/acn/202611040368.aspx",
-          "published_at": "2026-11-04T22:37:35+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611050032.aspx",
+          "published_at": "2026-11-05T09:32:17+08:00"
         }
       ],
-      "summary": "대만 국방부는 중국 군함 8척·군용기 19대가 대만 주변에서 포착됐다고 밝혔고 대만은 미 양당의 지지를 거론했다.",
-      "judged_at": "2026-11-05T03:30:01+00:00"
+      "summary": "대만 국방부는 어제 오전 6시부터 오늘 오전 6시까지 중국 군함 8척·공무선 8척·군용기 19대를 포착했다고 밝혔다.",
+      "judged_at": "2026-11-05T05:40:19+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -74,12 +68,12 @@
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-05T03:19:55+00:00",
+          "published_at": "2026-11-05T03:56:16+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-05T03:30:01+00:00"
+      "judged_at": "2026-11-05T05:40:19+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -94,12 +88,12 @@
         {
           "name": "DVIDS",
           "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-04T21:55:08+00:00",
+          "published_at": "2026-11-04T22:53:23+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Stripes·DVIDS 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
-      "judged_at": "2026-11-05T03:30:01+00:00"
+      "judged_at": "2026-11-05T05:40:19+00:00"
     }
   }
 }

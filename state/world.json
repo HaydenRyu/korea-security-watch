@@ -1,23 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T03:30:01+00:00",
-  "world_at": "2026-11-05T03:30:01+00:00",
+  "updated_at": "2026-11-05T05:40:19+00:00",
+  "world_at": "2026-11-05T05:40:19+00:00",
   "world": [
     {
-      "title": "러, 우크라이나 마을 이중 폭격 — 최소 40명 사망",
-      "summary": "우크라이나 경찰이 구호센터와 대피소를 연달아 때린 러시아 폭격으로 최소 40명이 숨졌다며 바디캠 영상을 공개했다.",
-      "link_korea": "러-우 전쟁 장기화는 북러 군사협력의 전제가 된다.",
-      "region": "유럽",
+      "title": "밴스 부통령, 중간선거 패배의 원인으로 이란전 지목",
+      "summary": "밴스 미 부통령이 공화당의 중간선거 참패를 이란 전쟁 탓으로 돌리며 대통령과 거리를 두는 날 선 평가를 내놨다.",
+      "link_korea": "미국의 중동 개입 피로가 커지면 한반도 억제 자원 배분과 대북 협상 환경에 영향을 줄 수 있다.",
+      "region": "미국",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c98rz6penv86o",
+        "url": "https://www.bbc.co.uk/news/articles/crz98zqkz7z0o",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "이란 협상대표 \"미국인들이 전쟁에 'NO'\"",
-      "summary": "미 중간선거 공화당 패배 뒤 이란 의회의장이 미국 유권자의 메시지를 지지한다고 밝혔다.",
-      "link_korea": "중동 전쟁의 미군 자산 소요는 한반도 전력 공백 논의와 맞닿는다.",
+      "title": "이란 협상 대표 \"미국인이 전쟁에 반대표를 던졌다\"",
+      "summary": "이란 의회의장이자 협상 대표 갈리바프는 미국 중간선거 결과를 '전쟁 반대' 메시지로 규정하고 지지한다고 밝혔다.",
+      "link_korea": "호르무즈 정세는 청해부대 임무 확대 등 한국의 해상 안보·에너지 수송에 직결된다.",
       "region": "중동",
       "source": {
         "name": "BBC",
@@ -26,27 +26,27 @@
       }
     },
     {
-      "title": "北, 바이낸스 해킹 연루 부인",
-      "summary": "김여정은 미국이 제기한 63억 달러 바이낸스 해킹 배후설을 \"터무니없는 수사\"라며 부인했고, FBI 등은 북한 소행이라 밝혔다.",
-      "link_korea": "북한의 사이버 탈취는 제재 하 외화 조달 수단으로 지목된다.",
-      "region": "한반도",
+      "title": "러·우 대표단, 헤르손 오레시키 휴전 뒤 백악관 회동 예정",
+      "summary": "헤르손 오레시키 휴전으로 주민 대피가 이뤄진 뒤 러시아·우크라이나 대표단이 목요일 백악관에서 미 영부인을 만난다.",
+      "link_korea": "러·우 전쟁의 협상 국면은 북러 군사협력과 북한군 파병 문제의 향방과 맞닿아 있다.",
+      "region": "유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo",
-        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     },
     {
-      "title": "北, 신형 대공미사일 시험발사·순항미사일 비행장 타격훈련",
-      "summary": "조선중앙통신은 4일 신형 반항공미사일 시험발사와 장거리 전략순항미사일 가상 비행장 타격 훈련을 보도했고, 합참은 함남 선덕 일대 발사를 탐지했다.",
-      "link_korea": "한반도 직접 군사 동향이다.",
-      "region": "한반도",
+      "title": "중국, 파푸아뉴기니 포탄 발견 보도 부인",
+      "summary": "포트모르즈비 공사장에서 32kg 포탄형 물체가 발견돼 중국인 4명이 체포됐으나 중국 대사관은 '포탄 모양 와인병'이라며 부인했다.",
+      "link_korea": "중국의 태평양 도서국 영향력 확대는 인도·태평양 안보 구도와 미 동맹 전력 운용에 영향을 준다.",
+      "region": "남태평양",
       "source": {
-        "name": "세계일보",
-        "url": "https://www.segye.com/newsView/20261105502629",
-        "via": "https://www.segye.com/Articles/RSSList/segye_politic.xml"
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cm0qkxzv3j99o",
+        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
       }
     }
   ],
-  "world_context": "유럽·중동 전쟁이 이어지는 가운데 북한은 미 중간선거일에 미사일 시험으로 존재감을 드러냈다."
+  "world_context": "미 중간선거 이후 이란전 책임론과 러·우 협상 움직임이 겹치며 미국의 대외 개입 기조가 시험대에 올랐다."
 }

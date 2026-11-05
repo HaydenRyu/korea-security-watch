@@ -1,38 +1,38 @@
 {
   "version": 1,
-  "at": "2026-11-05T03:30:01+00:00",
-  "opened": 19,
+  "at": "2026-11-05T05:40:19+00:00",
+  "opened": 20,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-05T03:30:01+00:00",
+      "last_ok": "2026-11-05T05:40:19+00:00",
       "raw": 4,
       "kept": 4
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-05T03:30:01+00:00",
+      "last_ok": "2026-11-05T05:40:19+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-05T03:30:01+00:00",
+      "last_ok": "2026-11-05T05:40:19+00:00",
       "raw": 0,
       "kept": 0
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-05T03:30:01+00:00",
+      "last_ok": "2026-11-05T05:40:19+00:00",
       "raw": 5,
-      "kept": 5,
-      "note": "Rappler 미사용(403 이력). 이번 회차 DVIDS·Stripes 에 72시간 안 미 전략자산 전개 기사 없음."
+      "kept": 5
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-05T03:30:01+00:00",
+      "last_ok": "2026-11-05T05:40:19+00:00",
       "raw": 0,
-      "kept": 0
+      "kept": 0,
+      "note": "news_kr 수집 결과에 안보 연결 근거가 적힌 국내 총기·탄약·마약 사건 없음(동아·국방일보 피드 3곳 시간초과)."
     }
   }
 }

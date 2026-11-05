@@ -1,63 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 합참 발표 11월 5일",
+      "North Korea Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 합참 발표 11월 5일"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 합참 발표 11월 5일"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "북한 DMZ NLL 귀순 합참"
+      "지뢰 발견 DMZ 귀순 NLL"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "North Korea hacking attributed"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "서해 구조물",
-      "Kim Jong Un China Russia visit"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 합참 발표 11월 5일"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea nationwide mobilization"
+      "북한 합참 발표 11월 5일"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "South Korea Japan US emergency warning North Korea"
+      "북한 합참 발표 11월 5일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "북한 합참 발표 11월 5일"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
     "https://www.segye.com/newsView/20261105519180",
-    "https://www.segye.com/newsView/20261105517949",
-    "https://www.nknews.org/2026/11/"
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261105517949"
   ],
-  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치와 북한의 신형 대공미사일·순항미사일 시험 주장 등 정례성 사안이 중심이다. 병력·핵·전시 관련 신규 징후는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치가 중심이다. 병력·핵·전시 관련 신규 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,7 +60,7 @@
       "lat": 37.8,
       "lon": 131.0,
       "summary": "합참이 3일 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 해경과 조치·조사 중이라고 5일 밝혔다.",
-      "meaning": "표류 어선 처리로 군사적 도발 근거는 없다.",
+      "meaning": "표류 어선 건으로 군사적 도발 성격은 확인되지 않는다.",
       "sources": [
         {
           "name": "세계일보",
@@ -83,23 +68,23 @@
           "url": "https://www.segye.com/newsView/20261105519983"
         },
         {
-          "name": "세계일보",
+          "name": "세계일보(합참 인용)",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261105519180"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "합참 5일 발표: 3일 표류 어선 1척 식별, 해경과 조치, 관계기관 조사 중"
+        "승선원 규모·귀순 의사 미공개"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "바이낸스 해킹 북한 지목 관련 추가제재는 정부 내 논의 없음(배경)."
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "원문 미열람(연합 AI 이용 제한 표기)으로 근거 제외 — 왕이·김성남 면담은 제목만 확인된 외교 일정이며 군사 협력 언급 없음."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -114,7 +99,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-05T16:14:56+00:00",
+  "checked_at": "2026-11-05T17:13:27+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,17 +1,24 @@
 {
- "at": "2026-11-05T02:50:30+00:00",
- "south": 65,
- "area": 84,
- "baseline": 79.5,
- "ratio": 0.82,
- "samples": 8,
+ "at": "2026-11-05T03:32:00+00:00",
+ "south": 70,
+ "area": 87,
+ "baseline": 71.0,
+ "ratio": 0.99,
+ "samples": 4,
  "mil": [
   {
    "type": "GLEX",
    "name": "정찰용 비즈니스젯 가능",
    "call": "",
-   "lat": 37.72,
-   "lon": 127.82
+   "lat": 37.6,
+   "lon": 127.52
+  },
+  {
+   "type": "BE20",
+   "name": null,
+   "call": "CNV7102",
+   "lat": 33.67,
+   "lon": 130.39
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

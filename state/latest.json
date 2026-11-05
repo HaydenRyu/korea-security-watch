@@ -1,63 +1,53 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 전방 병력 증강",
-      "North Korea troop buildup Reuters"
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "북한 핵시설 풍계리 영변",
-      "North Korea nuclear 38 North"
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 수송 탄약"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "DMZ NLL 귀순 합참"
+      "지뢰 발견 목함지뢰 해안 DMZ 11월",
+      "북한 어선 울릉도 표류 귀순 합참"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격 랜섬웨어 공격"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense drill"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "합참 긴급 발표"
+      "합참 진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
-    "https://www.segye.com/newsView/20261105519180",
     "https://www.segye.com/newsView/20261105517949",
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261105011151504",
+    "https://www.yna.co.kr/view/AKR20261105118000083",
+    "https://www.yna.co.kr/view/AKR20261105092000504",
+    "https://www.yna.co.kr/view/AKR20261105174600504"
   ],
-  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치가 중심이다. 4일 미사일 발사·신형 대공미사일 시험 주장은 시험 성격이며 병력·핵·전시 관련 신규 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치가 중심이다. 4일 미사일 발사·신형 대공미사일 시험 주장은 시험 성격이며 5일 북중 고위급 접촉은 외교 일정으로 병력·핵·전시 관련 신규 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,7 +62,21 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "베이징",
+      "summary": "왕이 중국 외교부장이 방중한 북한 김성남 노동당 비서를 만나 북중관계 심화·발전을 추진하기로 했다고 연합뉴스가 5일 보도했다.",
+      "meaning": "외교 일정이며 군사 협정·무기 협력 발표는 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261105118000083"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -96,14 +100,14 @@
       "meaning": "표류 어선 건으로 군사적 도발 성격은 확인되지 않는다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "세계일보(합참 인용)",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261105519983"
         },
         {
-          "name": "세계일보(합참 인용)",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261105519180"
+          "url": "https://www.yna.co.kr/view/AKR20261105174600504"
         }
       ],
       "confidence": "중간",
@@ -113,7 +117,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-05T18:10:43+00:00",
+  "checked_at": "2026-11-05T19:11:35+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

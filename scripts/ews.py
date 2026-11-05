@@ -63,7 +63,7 @@ QUIET_MIN_FEEDS = 2
 
 def _feed_key(u) -> str:
     """피드 주소 비교용 — scheme·www·끝 슬래시·대소문자 차이를 지운다(변형 주소로 피드가 기사로 통과하지 않게)."""
-    s = str(u).strip().lower()
+    s = str(u).strip().lower().split("#", 1)[0].split("?", 1)[0]  # fragment·query 는 같은 피드다
     for pre in ("https://", "http://"):
         s = s[len(pre):] if s.startswith(pre) else s
     return (s[4:] if s.startswith("www.") else s).rstrip("/")
@@ -199,7 +199,12 @@ def _active(row, t_now: datetime | None) -> bool:
 
 
 def ingest(run: dict, doc: dict | None, now: str) -> dict:
-    """run.linkage.theaters → state/theaters.json. 연 원문 없는 전역·모르는 값은 그것만 버리고, 안 낸 전역은 직전 값을 잇는다.
+    return ingest_accepted(run, doc, now)[0]
+
+
+def ingest_accepted(run: dict, doc: dict | None, now: str) -> tuple[dict, list[str]]:
+    """(새 theaters.json, 이번 입력에서 받아들인 전역 키). ingest 와 같고, 관측 수를 시각 비교 없이 센다(background.py).
+    run.linkage.theaters → state/theaters.json. 연 원문 없는 전역·모르는 값은 그것만 버리고, 안 낸 전역은 직전 값을 잇는다.
     72시간이 지났거나 published_at 이 없는 출처는 버린다 — 출처가 0이면 그 전역은 이번 회차 미관측(직전 값을 잇는다)."""
     import diff_state as d
     doc = doc if isinstance(doc, dict) else {}
@@ -207,7 +212,7 @@ def ingest(run: dict, doc: dict | None, now: str) -> dict:
     t_now = _dt(now)
     rows = dict(doc.get("theaters")) if isinstance(doc.get("theaters"), dict) else {}
     raw = (run.get("linkage") or {}).get("theaters") if isinstance(run.get("linkage"), dict) else None
-    opened, got = d._opened(run), False
+    opened, accepted = d._opened(run), []
     cov = run.get("coverage") if isinstance(run.get("coverage"), dict) else {}
 
     def searched(t: str) -> bool:  # 평온 확인은 그 전역을 따로 검색한 기록이 있어야 한다(검색 1건으로 여러 전역을 평온 처리하지 않는다)
@@ -239,8 +244,9 @@ def ingest(run: dict, doc: dict | None, now: str) -> dict:
         channels = [] if quiet else [c for c in CHANNELS if c in (row.get("channels") or [])]  # 피드 확인은 연결을 관측하지 않는다
         rows[t] = {"state": row["state"], "channels": channels,
                    "sources": srcs, "summary": summary, "judged_at": now}
-        got = True
-    return {"schema_version": 2, "judged_at": now if got else doc.get("judged_at"), "theaters": rows}
+        accepted.append(t)
+    got = bool(accepted)
+    return {"schema_version": 2, "judged_at": now if got else doc.get("judged_at"), "theaters": rows}, accepted
 
 
 def _load(path: Path):

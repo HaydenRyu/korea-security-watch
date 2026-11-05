@@ -88,11 +88,10 @@ def searched(run, block: str) -> bool:
 
 
 def observed_theaters(run, now: str, doc=None) -> list[str]:
-    """이번 회차에 새로 판정된 전역 키 — ews.ingest 를 직전 판(doc)과 함께 돌려 judged_at 이 이번 시각인 것만 센다
+    """이번 회차 입력에서 받아들인 전역 키 — 직전 판(doc)과 함께 돌린다
     (직전 값을 이은 전역·평온 확인이 신선한 긴장을 못 덮어 버려진 전역은 이번 관측이 아니다)."""
     try:
-        rows = ews.ingest(run, doc, now)["theaters"]
-        return [t for t in ews.THEATERS if isinstance(rows.get(t), dict) and rows[t].get("judged_at") == now]
+        return ews.ingest_accepted(run, doc, now)[1]
     except Exception:  # noqa: BLE001
         return []
 
@@ -106,7 +105,7 @@ def invalid(run) -> str | None:
     return None
 
 
-def counts(run: dict, key: str, now: str) -> tuple[int, int]:
+def counts(run: dict, key: str, now: str, doc=None) -> tuple[int, int]:
     """(루틴이 낸 줄 수, 기존 검사 함수를 지난 줄 수)."""
     try:
         if key == "world":
@@ -123,7 +122,7 @@ def counts(run: dict, key: str, now: str) -> tuple[int, int]:
             return raw, int("taiwan" in c) + len(c["korea"])
         if key == "theaters":
             raw = lk.get("theaters")
-            return (len(raw) if isinstance(raw, dict) else 0), len(observed_theaters(run, now))
+            return (len(raw) if isinstance(raw, dict) else 0), len(observed_theaters(run, now, doc))
         if key == "incidents":
             raw = run.get("incidents")
             return (len(raw) if isinstance(raw, list) else 0), len(d.clean_incidents(run))
@@ -174,7 +173,7 @@ def step(run, docs: dict, now: str) -> tuple[dict, dict]:
     notes = run.get("notes") if isinstance(run, dict) and isinstance(run.get("notes"), dict) else {}
     blocks = {}
     for k in BLOCKS:
-        raw, kept = counts(use, k, now)
+        raw, kept = counts(use, k, now, docs.get(k))
         st, note = ("failed", reason) if reason else (d.block_status(run, k), "")
         if k in errs:
             st, note = "failed", "오류 — " + errs[k]

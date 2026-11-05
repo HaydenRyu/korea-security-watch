@@ -326,8 +326,21 @@ def test_theater_quiet_check_from_canonical_feeds():
     # ④피드 확인은 연결 채널을 관측하지 않는다
     r["linkage"]["theaters"]["scs_ecs"]["channels"] = ["c1_us_gap"]
     assert ews.ingest(r, None, NOW)["theaters"]["scs_ecs"]["channels"] == []
+    # 2차 리뷰 ─ fragment·query 붙인 피드도 피드다
+    frag = ews.QUIET_FEEDS["ukraine"][0] + "#top"
+    fr = {"opened": [frag], "linkage": {"theaters": {"taiwan": {"state": 3, "sources": [{"url": frag, "published_at": NOW}]}}}}
+    assert ews.ingest(fr, None, NOW)["theaters"] == {}
+    # 같은 초의 직전 판은 이번 관측이 아니다
+    same = {"theaters": {t: {"state": 1, "sources": [{"url": "u"}], "judged_at": NOW} for t in ("taiwan", "ukraine", "mideast")}}
+    assert bg.observed_theaters({"opened": OPENED, "linkage": {"theaters": {}}}, NOW, same) == []
+    # 거절된 평온 입력은 kept 에 들지 않는다
+    rr = {**r, "blocks": {"theaters": "checked"}}
+    _, rec = bg.step(rr, {"theaters": prev}, NOW)
+    assert rec["blocks"]["theaters"]["kept"] == 0 and rec["blocks"]["theaters"]["status"] == "failed"
     js = (ROOT / "ews.js").read_text()
     assert "피드 확인" in js and 'kind==="feed"' in js  # ⑤화면이 피드 확인과 기사 근거를 구분한다
+    fc = js.split("function initForecast", 1)[1].split("\n}", 1)[0]
+    assert "quietOnly(t)" in fc  # 예측 표도 같은 표시
     md = (ROOT / "prompts" / "background.md").read_text()
     for t, urls in ews.QUIET_FEEDS.items():                         # 지시문 정본 표와 코드 목록이 같다
         row = next(l for l in md.splitlines() if l.startswith(f"| `{t}` |"))

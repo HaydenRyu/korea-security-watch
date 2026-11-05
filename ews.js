@@ -205,7 +205,7 @@ function initBoard(doc){
 // ── 예측 절 ──
 function initForecast(doc){
   const b=$("ews-fc-b");
-  const tr=(doc.theaters||[]).map(t=>`<tr><td>${esc(THEATER[t.key]?.n||t.key)}</td><td>${t.observed?esc(STATE_NAME[t.state]??"—"):C9}</td><td class="n">${t.observed?esc(t.contribution??"—"):"—"}</td></tr>`).join("");
+  const tr=(doc.theaters||[]).map(t=>`<tr><td>${esc(THEATER[t.key]?.n||t.key)}</td><td>${t.observed?esc((STATE_NAME[t.state]??"—")+(quietOnly(t)?"(피드 확인)":"")):C9}</td><td class="n">${t.observed?esc(t.contribution??"—"):"—"}</td></tr>`).join("");
   const cr=(doc.channels||[]).map(c=>`<tr><td>${esc(CHANNEL[c.key]||c.key)}</td><td class="n">${c.observed?esc(c.value??"—"):C9}</td></tr>`).join("");
   $("ews-fc-v").textContent=`가설 가중치 v${doc.weights_version??"—"} · 백테스트 전`;
   const head=doc.status==="error"?`<p class="ews-p ews-err">조기경보 지수를 계산하지 못했습니다 — ${esc(String(doc.error||"").slice(0,200))}</p>${lastGood(doc)}`

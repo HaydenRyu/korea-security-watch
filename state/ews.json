@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-05T04:09:53+00:00",
+  "computed_at": "2026-11-05T05:09:44+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 27,
@@ -13,7 +13,7 @@
   "coverage": {
     "observed_theaters": 5,
     "linkage_judged_at": "2026-11-05T03:30:01+00:00",
-    "latest_updated_at": "2026-11-05T04:09:52+00:00"
+    "latest_updated_at": "2026-11-05T05:09:44+00:00"
   },
   "theaters": [
     {
@@ -30,7 +30,8 @@
           "url": "https://www.cna.com.tw/news/acn/202611040368.aspx",
           "published_at": "2026-11-04T22:37:35+08:00"
         }
-      ]
+      ],
+      "judged_at": "2026-11-05T03:30:01+00:00"
     },
     {
       "key": "ukraine",
@@ -54,7 +55,8 @@
           "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no",
           "published_at": "2026-11-04T15:01:10+00:00"
         }
-      ]
+      ],
+      "judged_at": "2026-11-05T03:30:01+00:00"
     },
     {
       "key": "scs_ecs",
@@ -76,7 +78,8 @@
           "published_at": "2026-11-05T03:19:55+00:00",
           "kind": "feed"
         }
-      ]
+      ],
+      "judged_at": "2026-11-05T03:30:01+00:00"
     },
     {
       "key": "mideast",
@@ -101,7 +104,8 @@
           "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
           "published_at": "2026-11-04T16:59:15+00:00"
         }
-      ]
+      ],
+      "judged_at": "2026-11-05T03:30:01+00:00"
     },
     {
       "key": "us_posture",
@@ -123,7 +127,8 @@
           "published_at": "2026-11-04T21:55:08+00:00",
           "kind": "feed"
         }
-      ]
+      ],
+      "judged_at": "2026-11-05T03:30:01+00:00"
     }
   ],
   "channels": [
@@ -156,6 +161,6 @@
   "last_good": {
     "ews": 27,
     "band": "관찰",
-    "computed_at": "2026-11-05T04:09:53+00:00"
+    "computed_at": "2026-11-05T05:09:44+00:00"
   }
 }

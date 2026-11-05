@@ -1,49 +1,55 @@
 {
   "coverage": {
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한",
-      "0-2 국내언론 수집(news_kr)"
-    ],
-    "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격"
-    ],
-    "calm": [
-      "news_kr 수집 결과 대조"
-    ],
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "North Korea troop buildup border"
     ],
     "nuclear": [
-      "북한 핵시설 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 핵시설 풍계리 영변 동향",
+      "North Korea nuclear Yongbyon 38 North"
     ],
     "logistics": [
-      "북한 군수 탄약 수송"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition logistics"
+    ],
+    "border_clash": [
+      "지뢰 발견 목함지뢰 DMZ 귀순",
+      "북한 미사일 발사 합참 선덕",
+      "North Korea missile Reuters November 5 2026"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
+    ],
+    "foreign_forces": [
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 상향 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261105502629",
     "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261105504822"
+    "https://www.segye.com/newsView/20261105502629",
+    "https://www.segye.com/newsView/20261105504645"
   ],
-  "overall_summary": "4일 선덕 일대 단거리 미사일 발사와 5일 KCNA의 신형 반항공미사일·순항미사일 훈련 주장이 유일한 징후이며 정례 시험 범위다. 다른 항목에 새 징후는 확인되지 않았다.",
+  "overall_summary": "11/4 선덕 일대 미사일 수발 발사를 합참이 발표했고 북한은 신형 대공미사일 시험·순항미사일 훈련이라 주장했다. 시험성 활동으로 직전 회차와 같고 새 병력·핵·정부 경고 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -53,6 +59,35 @@
     },
     "logistics": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "함경남도 선덕",
+      "lat": 39.75,
+      "lon": 127.45,
+      "summary": "합참이 4일 선덕 일대 동해상 미사일 수 발 발사(300㎞ 미만)를 발표했고 북한은 5일 신형 반항공미사일 시험발사·장거리순항미사일 비행장 타격 훈련이라고 주장했다.",
+      "meaning": "시험·훈련 성격의 발사로 남측 표적 실사격이나 병력 증강 동반은 확인되지 않는다.",
+      "sources": [
+        {
+          "name": "국방일보",
+          "tier": "B",
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261105502629"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "합참: 4일 오전 선덕 일대에서 동해상으로 미사일 수 발 발사, 300㎞ 미만 비행",
+        "조선중앙통신 5일: 신형 반항공미사일 시험발사, 순항미사일 비행장 타격 훈련 주장"
+      ],
+      "speculation": [
+        "미 중간선거일·김여정 담화와 맞물린 협상력 과시 해석"
+      ]
     },
     "electronic_cyber": {
       "status": "none"
@@ -71,38 +106,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "함남 선덕·동해상",
-      "lat": 40.0,
-      "lon": 128.0,
-      "summary": "합참이 4일 선덕 일대 동해상 미사일 수 발 발사를 발표했고 북한은 5일 조선중앙통신으로 신형 반항공미사일 시험발사·장거리순항미사일 비행장 타격 훈련이라고 주장했다.",
-      "meaning": "시험발사·훈련 성격으로 정례 범위이며 남측 시설 실표적 정황은 없다.",
-      "sources": [
-        {
-          "name": "국방일보",
-          "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261105502629"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "합참 4일 선덕 일대 동해상 미사일 수 발 포착",
-        "KCNA 5일 신형 반항공미사일 시험·순항미사일 훈련 주장"
-      ],
-      "speculation": [
-        "한미 제원 분석 중"
-      ]
     }
   },
-  "checked_at": "2026-11-05T04:09:52+00:00",
+  "checked_at": "2026-11-05T05:09:44+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,29 +1,29 @@
 {
   "version": 1,
-  "at": "2026-11-05T11:41:19+00:00",
+  "at": "2026-11-05T23:40:06+00:00",
   "domains": {
     "inter_korean": {
       "level": "보통",
       "sources": [
         {
-          "url": "https://www.segye.com/newsView/20261105519180",
+          "url": "https://www.segye.com/newsView/20261105519983",
           "publisher": "세계일보"
         }
       ],
-      "summary": "울릉도 북방 공해상 북한 어선 표류 건은 조사 중이며 전단·확성기 등 새 조치는 없다.",
-      "at": "2026-11-05T11:41:19+00:00",
+      "summary": "합참이 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 조사 중이며 군사적 도발 정황은 없다.",
+      "at": "2026-11-05T23:40:06+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "nk_domestic": {
       "level": "보통",
       "sources": [
         {
-          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html",
-          "publisher": "Stars and Stripes"
+          "url": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo",
+          "publisher": "BBC"
         }
       ],
-      "summary": "북한이 신형 대공미사일 시험과 화력타격 훈련을 보도했으나 노선 변경·숙청 보도는 없다.",
-      "at": "2026-11-05T11:41:19+00:00",
+      "summary": "김여정이 바이낸스 해킹 연루를 공식 부인했으나 노선 변화 보도는 없다.",
+      "at": "2026-11-05T23:40:06+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "great_powers": {
@@ -32,22 +32,26 @@
         {
           "url": "https://www.segye.com/newsView/20261105518588",
           "publisher": "세계일보"
+        },
+        {
+          "url": "https://www.cna.com.tw/news/acn/202611050321.aspx",
+          "publisher": "중앙통신사(CNA)"
         }
       ],
-      "summary": "정부가 유엔 북한인권결의안 공동제안국에 참여했으나 북러·북중 새 군사 합의 보도는 없다.",
-      "at": "2026-11-05T11:41:19+00:00",
+      "summary": "한국 정부가 5년 연속 유엔 북한인권결의안 공동제안국에 참여했고 미·중 정상 공감대 유지 발언이 있었다.",
+      "at": "2026-11-05T23:40:06+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "public_opinion": {
       "level": "보통",
       "sources": [
         {
-          "url": "https://www.segye.com/newsView/20261105517949",
+          "url": "https://www.segye.com/newsView/20261105518588",
           "publisher": "세계일보"
         }
       ],
-      "summary": "북한 유엔대표부가 EU 인권결의안을 규탄했으나 특정 인물·시설 지목은 없다.",
-      "at": "2026-11-05T11:41:19+00:00",
+      "summary": "대남 비난 수위를 바꿀 공식 조치 보도가 없다.",
+      "at": "2026-11-05T23:40:06+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     }
   },

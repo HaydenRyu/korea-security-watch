@@ -1,34 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T11:41:19+00:00",
-  "world_at": "2026-11-05T11:41:19+00:00",
+  "updated_at": "2026-11-05T23:40:06+00:00",
+  "world_at": "2026-11-05T23:40:06+00:00",
   "world": [
     {
-      "title": "홍콩 민주화 운동가 조슈아 웡, 국가보안법 위반 징역 10년",
-      "summary": "홍콩 법원이 외세 결탁 혐의로 조슈아 웡에게 징역 10년을 선고했다.",
-      "link_korea": "중국의 대외 압박과 인권 문제를 둘러싼 국제 대립 구도를 보여준다.",
-      "region": "중국·홍콩",
+      "title": "멜라니아 여사, 러·우 대표단 백악관 초청해 지속 가능한 휴전 촉구",
+      "summary": "멜라니아 트럼프 여사가 지난주 헤르손 지역 휴전 이후 러시아·우크라이나 대표단을 백악관에 맞아 더 오래가는 휴전을 촉구했다.",
+      "link_korea": "러·우 전쟁 국면은 북러 군사협력과 북한군 파병 논의에 직결된다.",
+      "region": "유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cwp9g3rlp8jlo",
-        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "미국, 호르무즈 케슘섬 제한 타격",
-      "summary": "미 당국자들은 이란 혁명수비대가 미 항공기를 향해 사격한 데 대응한 제한적 방어 타격이라고 밝혔다.",
-      "link_korea": "호르무즈 정세는 한국의 에너지 수송과 청해부대 임무에 직결된다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
-      }
-    },
-    {
-      "title": "이란 협상 대표 \"미국인이 전쟁에 반대표를 던졌다\"",
-      "summary": "이란 의회의장 갈리바프는 미 중간선거 결과를 전쟁 반대 메시지로 지지한다고 밝혔다.",
-      "link_korea": "미국의 중동 개입 피로는 한반도 억제 자원 배분에 영향을 줄 수 있다.",
+      "title": "이란 협상 대표 \"미국 유권자가 전쟁에 반대했다\"",
+      "summary": "이란 협상 수석대표 갈리바프 의장이 미 중간선거 공화당 참패를 '전쟁 반대 메시지'라며 지지했다.",
+      "link_korea": "중동 전쟁의 미국 내 부담은 주한미군 등 미군 전력 배분에 영향을 줄 수 있다.",
       "region": "중동",
       "source": {
         "name": "BBC",
@@ -37,16 +26,27 @@
       }
     },
     {
-      "title": "러시아 공습으로 우크라이나 민간인 최소 38명 사망",
-      "summary": "자포리자 활공폭탄 공격 등 24시간 동안 구호센터·호스피스·병원이 공격받았다.",
-      "link_korea": "북러 군사협력과 연결된 러-우 전쟁의 지속은 한반도 안보 환경에 영향을 준다.",
-      "region": "유럽",
+      "title": "미국, 호르무즈 케슘섬 제한 타격",
+      "summary": "미 당국자들은 IRGC가 미 항공기를 향해 사격한 데 대응해 케슘섬을 제한적·방어적으로 타격했다고 CBS에 밝혔다.",
+      "link_korea": "미군의 중동 투입 확대는 한반도 전력 공백 우려와 연결된다.",
+      "region": "중동",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c65ynez5y599o",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+      }
+    },
+    {
+      "title": "북한, 63억 달러 바이낸스 해킹 연루 부인",
+      "summary": "김여정이 미 정부기관과 분석가들의 북한 배후 지목을 '터무니없는 주장'이라며 부인했다.",
+      "link_korea": "북한의 가상자산 탈취는 대북 제재 이행과 자금 조달 문제와 직결된다.",
+      "region": "동아시아",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo",
+        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
       }
     }
   ],
-  "world_context": "중동 전쟁과 러-우 전쟁이 이어지는 가운데 미 정치 변화가 대외 개입 기조의 변수로 부각된다."
+  "world_context": "러·우 휴전 모색과 중동 군사 충돌, 북한의 사이버 탈취 논란이 동시에 진행 중이다."
 }

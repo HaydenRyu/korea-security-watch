@@ -1595,10 +1595,16 @@
   }
  },
  "tempo": {
-  "last30": 7,
+  "last30": 8,
   "avg30": 1.4,
-  "ratio": 5.1,
+  "ratio": 5.8,
   "recent": [
+   {
+    "date": "2026-11-04",
+    "event": "Anti-aircraft Missile Launch",
+    "event_ko": "미사일 발사",
+    "src": "https://www.koreaherald.com/article/10926818"
+   },
    {
     "date": "2026-11-03",
     "event": "Ballistic Missile Launch",
@@ -1765,20 +1771,20 @@
    },
    "2026": {
     "nuclear": 0,
-    "missile": 27,
+    "missile": 28,
     "other": 8,
-    "launch": 27
+    "launch": 28
    }
   },
   "basis": "CSIS 미사일·핵 도발 날짜, 평소 = 2016~2025 평균"
  },
  "data": {
-  "updated_at": "2026-11-05T10:45:34+00:00",
-  "csis_rows": 517,
-  "csis_last": "2026-11-03",
+  "updated_at": "2026-11-05T21:27:43+00:00",
+  "csis_rows": 519,
+  "csis_last": "2026-11-04",
   "cns_days": 153,
   "cns_last": "2024-11-05",
-  "launch_days": 275
+  "launch_days": 276
  },
  "_verify": "훈련 연도별 check = 원문 인용·판정(2016~ 2026-10-18 검증 · 2006~2015 2026-10-18 조사 추가). confirmed 36 · start_only 4(note 참고). USFK.mil 은 403 이라 보도·Wayback 으로 대체. GlobalSecurity 정리 페이지는 1차 원문 아님(note 표기)",
  "cns": {
@@ -2033,7 +2039,7 @@
     "pct": 79
    }
   },
-  "last": "2026-11-03",
+  "last": "2026-11-04",
   "since": 2,
   "basis": "발사한 날 228일(2006~2025) 각각의 다음 발사까지 간격"
  },
@@ -2042,8 +2048,8 @@
   "min_n": 5,
   "kinds": {
    "nk_threat": {
-    "n": 1,
-    "hit": 1
+    "n": 2,
+    "hit": 2
    }
   },
   "baseline": 0.43,

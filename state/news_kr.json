@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-11-05T15:12:32+00:00",
+ "fetched_at": "2026-11-05T18:59:34+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-05T15:12:32+00:00",
+ "last_ok_at": "2026-11-05T18:59:34+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -12,13 +12,13 @@
   "clusters": 47,
   "by_group": {
    "mine": 11,
+   "fire": 15,
    "border": 10,
    "drone_balloon": 3,
    "summit": 6,
    "alert": 5,
    "influence": 1,
    "defect": 1,
-   "fire": 15,
    "spy": 1,
    "gps": 7
   }
@@ -40,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 0
+   "hits": 2
   },
   "국민일보": {
    "feeds": 2,
@@ -66,7 +66,12 @@
   "mine": {
    "clusters": 11,
    "max_independent": 1,
-   "latest": "2026-11-05T15:12:32+00:00"
+   "latest": "2026-11-05T18:59:34+00:00"
+  },
+  "fire": {
+   "clusters": 15,
+   "max_independent": 3,
+   "latest": "2026-11-05T16:19:24+00:00"
   },
   "border": {
    "clusters": 10,
@@ -97,11 +102,6 @@
    "clusters": 1,
    "max_independent": 2,
    "latest": "2026-11-05T13:32:39+00:00"
-  },
-  "fire": {
-   "clusters": 15,
-   "max_independent": 3,
-   "latest": "2026-11-05T10:05:56+00:00"
   },
   "spy": {
    "clusters": 1,
@@ -185,7 +185,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "동아일보",
@@ -193,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "국민일보",

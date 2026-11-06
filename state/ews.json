@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-06T11:12:41+00:00",
+  "computed_at": "2026-11-06T12:09:51+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 27,
+  "ews": 26,
   "band": "관찰",
-  "d": 4,
-  "e": 15,
+  "d": 2,
+  "e": 6,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-06T05:39:29+00:00",
-    "latest_updated_at": "2026-11-06T11:12:41+00:00"
+    "linkage_judged_at": "2026-11-06T11:40:34+00:00",
+    "latest_updated_at": "2026-11-06T12:09:51+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "대만 국방부는 어제 오전 6시부터 오늘 오전 6시까지 중국 군함 8척·공무선 8척·군용기 19대를 포착했다고 밝혔다.",
+      "summary": "중국 해경선 4척이 6일 오전 금문 제한수역에 접근해 대만 해순서가 병행 감시로 저지했다.",
       "sources": [
         {
           "name": "중앙통신사",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611050032.aspx",
-          "published_at": "2026-11-05T09:32:17+08:00"
+          "url": "https://www.cna.com.tw/news/acn/202611060206.aspx",
+          "published_at": "2026-11-06T16:22:43+08:00"
         }
       ],
-      "judged_at": "2026-11-05T05:40:19+00:00"
+      "judged_at": "2026-11-06T11:40:34+00:00"
     },
     {
       "key": "ukraine",
@@ -41,7 +41,7 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "러·우 대표단이 백악관에 모여 지속 가능한 휴전을 논의했다.",
+      "summary": "러·우 관리들이 백악관에서 지속 가능한 휴전을 논의했다.",
       "sources": [
         {
           "name": "BBC",
@@ -50,7 +50,7 @@
           "published_at": "2026-11-05T19:08:08+00:00"
         }
       ],
-      "judged_at": "2026-11-06T05:39:29+00:00"
+      "judged_at": "2026-11-06T11:40:34+00:00"
     },
     {
       "key": "scs_ecs",
@@ -63,7 +63,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-06T00:23:00+00:00",
+          "published_at": "2026-11-05T16:23:00+00:00",
           "kind": "feed"
         },
         {
@@ -73,33 +73,32 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-06T05:39:29+00:00"
+      "judged_at": "2026-11-06T11:40:34+00:00"
     },
     {
       "key": "mideast",
       "observed": true,
-      "state": 3,
-      "contribution": 13,
+      "state": 2,
+      "contribution": 3,
       "channels": [
-        "c1_us_gap",
-        "c4_sea_energy"
+        "c1_us_gap"
       ],
-      "summary": "미국이 호르무즈 인근 케슘섬을 제한 타격했고 이란은 미 중간선거 결과를 전쟁 반대로 해석했다.",
+      "summary": "이란 협상대표가 미 유권자의 전쟁 반대를 언급했고 이란 미사일 기지 인근 공사 정황이 위성영상으로 보도됐다.",
       "sources": [
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo",
-          "published_at": "2026-11-03T11:33:33+00:00"
-        },
         {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
           "published_at": "2026-11-04T16:59:15+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/ckjrwx1r2d5ro",
+          "published_at": "2026-11-06T07:33:41+00:00"
         }
       ],
-      "judged_at": "2026-11-06T05:39:29+00:00"
+      "judged_at": "2026-11-06T11:40:34+00:00"
     },
     {
       "key": "us_posture",
@@ -107,23 +106,23 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "미 공군이 북마리아나 제도를 연 6,000회 훈련 거점으로 쓰려는 분산 운용 계획을 추진 중이다.",
+      "summary": "미 공군이 북마리아나 제도를 연 6,000회 훈련 거점으로 쓰는 분산 운용 계획을 추진한다.",
       "sources": [
         {
           "name": "Stars and Stripes",
           "tier": "B",
           "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/air-force-training-flights-small-pacific-islands-23368814.html",
-          "published_at": "2026-11-05T00:00:00+00:00"
+          "published_at": "2026-11-05T06:10:35+00:00"
         }
       ],
-      "judged_at": "2026-11-05T23:40:06+00:00"
+      "judged_at": "2026-11-06T11:40:34+00:00"
     }
   ],
   "channels": [
     {
       "key": "c1_us_gap",
       "observed": true,
-      "value": 4
+      "value": 3
     },
     {
       "key": "c2_nk_ru_cn",
@@ -137,8 +136,8 @@
     },
     {
       "key": "c4_sea_energy",
-      "observed": true,
-      "value": 8
+      "observed": false,
+      "value": 0
     },
     {
       "key": "c5_diplomacy",
@@ -147,8 +146,8 @@
     }
   ],
   "last_good": {
-    "ews": 27,
+    "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-06T11:12:41+00:00"
+    "computed_at": "2026-11-06T12:09:51+00:00"
   }
 }

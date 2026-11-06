@@ -1,62 +1,60 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 DMZ",
-      "North Korea troops DMZ"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup border"
     ],
     "nuclear": [
-      "북한 핵 풍계리",
-      "North Korea nuclear Reuters"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site 38 North"
     ],
     "logistics": [
-      "북한 군수 수송 나홋카",
-      "North Korea ammunition shipment Russia"
+      "북한 군수 탄약 수송 러시아",
+      "North Korea ammunition shipments Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한 11월",
-      "합참 북한 발표 11월 6일",
-      "North Korea DMZ mine"
+      "지뢰 발견",
+      "울릉도 북한 어선 표류 합참 해경 조사",
+      "DMZ 귀순 NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 공격 랜섬웨어 사이버 공격",
-      "해킹 개인정보 유출",
-      "FBI North Korea hack attributed"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 11월 6일"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시",
-      "North Korea martial"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 발령",
-      "North Korea alert"
+      "진돗개 데프콘 상향",
+      "North Korea Reuters November 6 2026"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
       "남북 대화 제안",
-      "North Korea talks offer"
+      "통신선 복원"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261105519983",
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
+    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261105174600504",
     "https://www.yna.co.kr/view/AKR20261105118000083",
-    "https://www.yna.co.kr/view/AKR20261106079100009",
     "https://www.dailysecu.com/news/articleView.html?idxno=209309"
   ],
-  "overall_summary": "직전 회차와 큰 변화 없이 표류 북한 어선 식별, 왕이–김성남 회동, 귀속 미확인 해킹 등 정례 성격 보도만 확인됐다. NK뉴스발 북한 화물선의 러 나홋카항 왕래 급증(석탄 원산지 세탁·무기 거래 의혹)은 전문가 관측 단계라 배경으로만 둔다.",
+  "overall_summary": "직전 회차와 큰 변화 없이 표류 북한 어선 식별, 왕이–김성남 회동, 귀속 미확인 해킹 등 정례 성격 보도만 확인됐다. 11/4 선덕 일대 동해 미사일 발사와 KCNA 발표 순항미사일 훈련은 24시간이 지나 배경으로 둔다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -66,7 +64,7 @@
     },
     "logistics": {
       "status": "none",
-      "summary": "북한 화물선의 러 나홋카항 왕래 급증(NK뉴스 분석, 11/6 연합 인용)은 석탄 원산지 세탁·무기 거래 의혹 수준의 관측이라 배경으로만 둔다."
+      "summary": "북한 화물선의 러 나홋카항 왕래 급증은 관측 수준이라 배경으로만 둔다."
     },
     "border_clash": {
       "status": "single",
@@ -81,16 +79,11 @@
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261105174600504"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261105519983"
         }
       ],
-      "confidence": "높음",
+      "confidence": "중간",
       "facts": [
-        "합참 5일 발표: 3일 표류 어선 1척 식별, 해경과 조치, 관계기관 조사 중"
+        "합참 5일 발표: 3일 표류 어선 1척 식별, 해경과 조사 중"
       ],
       "speculation": []
     },
@@ -109,7 +102,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "11/4 NH여행 공지, 계정 인증정보 이용 비인가 접근 정황"
+        "11/4 NH여행 공지"
       ],
       "speculation": []
     },
@@ -145,7 +138,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-06T07:14:06+00:00",
+  "checked_at": "2026-11-06T08:11:53+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

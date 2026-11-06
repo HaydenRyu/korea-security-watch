@@ -1,25 +1,32 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
+      "북한 핵시설 영변 풍계리",
       "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "북한 군수 수송 탄약 비축"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순",
+      "목함지뢰 해안 발견",
+      "DMZ NLL 귀순",
       "합참 발표 북한 11월 6일"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 공격"
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -31,21 +38,22 @@
       "진돗개 데프콘 상향 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
+    "https://www.hankyung.com/article/2026110585147",
     "https://www.segye.com/newsView/20261105517949",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209309",
-    "https://www.hankyung.com/article/2026110585147"
+    "https://www.dailysecu.com/news/articleView.html?idxno=209309"
   ],
-  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치와 북중 고위급 접촉이 중심이다. 병력·핵·전시 관련 신규 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치와 북중 고위급(왕이–김성남) 접촉이 중심이다. 병력·핵·전시 관련 신규 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -54,6 +62,18 @@
       "status": "none"
     },
     "logistics": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "border_clash": {
@@ -75,26 +95,6 @@
       "facts": [
         "합참 3일 식별, 5일 발표",
         "해경과 조사 중"
-      ],
-      "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "region": "국내",
-      "summary": "귀속 미확인 — 글로벌 항공예약시스템 아마데우스 해킹으로 NH농협여행이 일부 고객 항공예약 개인정보 유출 가능성을 공지했다.",
-      "meaning": "개인정보 유출 사고로 정부·금융·통신·전력망 마비는 없으며 북한 등 귀속 발표도 없다.",
-      "sources": [
-        {
-          "name": "데일리시큐",
-          "tier": "C",
-          "url": "https://www.dailysecu.com/news/articleView.html?idxno=209309"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "NH농협여행 유출 가능성 공지",
-        "피해 규모 미공개"
       ],
       "speculation": []
     },
@@ -120,20 +120,28 @@
       ],
       "speculation": []
     },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "region": "국내",
+      "summary": "귀속 미확인 — 글로벌 항공예약시스템 아마데우스 해킹으로 NH농협여행이 일부 고객 항공예약 개인정보 유출 가능성을 공지했다.",
+      "meaning": "개인정보 유출 사고로 정부·금융·통신·전력망 마비는 없으며 북한 등 귀속 발표도 없다.",
+      "sources": [
+        {
+          "name": "데일리시큐",
+          "tier": "C",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=209309"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "NH농협여행 유출 가능성 공지",
+        "피해 규모 미공개"
+      ],
+      "speculation": []
     }
   },
-  "checked_at": "2026-11-06T01:11:41+00:00",
+  "checked_at": "2026-11-06T02:10:19+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

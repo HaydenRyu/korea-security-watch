@@ -14,12 +14,12 @@
     ],
     "border_clash": [
       "지뢰 발견",
-      "DMZ 귀순"
+      "DMZ 귀순 합참"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격"
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
@@ -53,9 +53,10 @@
     "https://www.yna.co.kr/view/AKR20261106079100009",
     "https://www.yna.co.kr/view/AKR20261105174600504",
     "https://www.dailysecu.com/news/articleView.html?idxno=209309",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do"
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "직전 회차와 변화 없이 새 군사 도발·핵·병력 징후는 없고 귀속 미확인 해킹 보도만 남았다. 표류 어선 사안은 24시간이 지나 배경으로 내렸다.",
+  "overall_summary": "직전 회차와 변화 없이 새 군사 도발·핵·병력 징후는 없고 귀속 미확인 해킹 보도만 남았다. 러 극동항 북한 선박 왕래 보도는 공식 귀속 없는 분석 보도라 배경으로만 둔다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,11 +69,12 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "24시간 경과 — 울릉도 표류 북한 어선 첫 보도 11/5 10시(UTC), 신규 접경 사건 없음."
+      "summary": "울릉도 표류 북한 어선(11/5 19:39 KST 첫 보도)은 24시간 경과해 배경으로 내림."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
+      "attribution": "unknown",
       "summary": "귀속 미확인 — 글로벌 항공예약시스템 아마데우스 해킹으로 NH농협여행이 일부 고객 항공예약번호 유출 가능성을 공지했다.",
       "meaning": "북한 소행으로 밝혀지지 않았다.",
       "sources": [
@@ -83,13 +85,11 @@
         }
       ],
       "confidence": "낮음",
-      "attribution": "unknown",
       "facts": [],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "신규 군사협력 보도 없음(러 극동항 북한 선박 왕래 보도는 배경)."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -101,11 +101,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "러 나홋카항 북한 선박 왕래 급증 보도는 정부 공식 귀속이 없어 배경이다."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-06T12:09:51+00:00",
+  "checked_at": "2026-11-06T13:12:44+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

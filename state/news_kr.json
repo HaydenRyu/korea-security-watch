@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-11-06T10:48:19+00:00",
+ "fetched_at": "2026-11-06T12:06:13+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-06T10:48:19+00:00",
+ "last_ok_at": "2026-11-06T12:06:13+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -11,18 +11,18 @@
   "hits": 40,
   "clusters": 34,
   "by_group": {
+   "summit": 2,
    "mine": 7,
    "fire": 11,
    "border": 6,
    "alert": 4,
    "hybrid": 1,
-   "spy": 2,
+   "spy": 1,
    "gps": 4,
    "sanction": 1,
    "drone_balloon": 2,
    "influence": 1,
-   "defect": 1,
-   "summit": 1
+   "defect": 1
   }
  },
  "outlets": {
@@ -30,13 +30,13 @@
    "feeds": 5,
    "failed": 0,
    "count": 571,
-   "hits": 39
+   "hits": 40
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 4
+   "hits": 3
   },
   "동아일보": {
    "feeds": 2,
@@ -65,6 +65,11 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "summit": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-06T11:33:50+00:00"
+  },
   "mine": {
    "clusters": 7,
    "max_independent": 2,
@@ -91,7 +96,7 @@
    "latest": "2026-11-06T06:01:29+00:00"
   },
   "spy": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-06T06:01:29+00:00"
   },
@@ -119,11 +124,6 @@
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-05T10:39:50+00:00"
-  },
-  "summit": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-05T05:48:31+00:00"
   }
  },
  "feeds": [
@@ -165,7 +165,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 2
   },
   {
    "outlet": "SBS",
@@ -189,7 +189,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "동아일보",

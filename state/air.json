@@ -1,17 +1,24 @@
 {
- "at": "2026-11-06T06:44:24+00:00",
- "south": 72,
- "area": 92,
- "baseline": 78.5,
- "ratio": 0.92,
- "samples": 6,
+ "at": "2026-11-06T08:21:31+00:00",
+ "south": 81,
+ "area": 106,
+ "baseline": 79,
+ "ratio": 1.03,
+ "samples": 7,
  "mil": [
   {
-   "type": "C30J",
-   "name": "C-130J 수송기",
-   "call": "",
-   "lat": 36.59,
-   "lon": 126.85
+   "type": "H60",
+   "name": null,
+   "call": "EVAC39",
+   "lat": 37.2,
+   "lon": 127.04
+  },
+  {
+   "type": "H60",
+   "name": null,
+   "call": "CARD10",
+   "lat": 37.44,
+   "lon": 127.27
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

@@ -1,37 +1,40 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup border"
+      "북한 병력 이동 전방",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site 38 North"
+      "풍계리 영변 핵시설",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 탄약 수송 러시아",
-      "North Korea ammunition shipments Russia"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
       "지뢰 발견",
-      "울릉도 북한 어선 표류 합참 해경 조사",
-      "DMZ 귀순 NLL"
+      "DMZ 귀순",
+      "합참 북한 발표 11월 6일"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 11월 6일"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방중 방러",
       "Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 준비",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
       "진돗개 데프콘 상향",
@@ -39,7 +42,8 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속",
-      "북한 해킹 귀속 FBI"
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안",
@@ -47,14 +51,13 @@
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261104/6/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261105174600504",
     "https://www.yna.co.kr/view/AKR20261105118000083",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209309"
+    "https://www.dailysecu.com/news/articleView.html?idxno=209309",
+    "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156787708",
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "직전 회차와 큰 변화 없이 표류 북한 어선 식별, 왕이–김성남 회동, 귀속 미확인 해킹 등 정례 성격 보도만 확인됐다. 11/4 선덕 일대 동해 미사일 발사와 KCNA 발표 순항미사일 훈련은 24시간이 지나 배경으로 둔다.",
+  "overall_summary": "직전 회차와 큰 변화 없이 표류 북한 어선 식별, 왕이–김성남 회동, 귀속 미확인 해킹 등 정례 성격 보도만 확인됐다. 11/4 동해 미사일 발사와 KCNA 순항미사일 훈련은 24시간이 지나 배경으로 둔다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,8 +66,7 @@
       "status": "none"
     },
     "logistics": {
-      "status": "none",
-      "summary": "북한 화물선의 러 나홋카항 왕래 급증은 관측 수준이라 배경으로만 둔다."
+      "status": "none"
     },
     "border_clash": {
       "status": "single",
@@ -72,8 +74,8 @@
       "region": "울릉도 북방 공해",
       "lat": 37.8,
       "lon": 131.0,
-      "summary": "합참이 3일 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 해경과 조사 중이라고 5일 밝혔다.",
-      "meaning": "표류 어선 처리 절차로 군사적 도발 근거는 없다.",
+      "summary": "합참이 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 해경과 조사 중이라고 5일 밝혔다.",
+      "meaning": "귀순·표류 가능성 조사로 군사적 위협은 아니다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -83,7 +85,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참 5일 발표: 3일 표류 어선 1척 식별, 해경과 조사 중"
+        "합참 5일 발표, 해경 조사 중"
       ],
       "speculation": []
     },
@@ -92,26 +94,24 @@
       "routine": true,
       "attribution": "unknown",
       "summary": "귀속 미확인 — 글로벌 항공예약시스템 아마데우스 해킹으로 NH농협여행이 일부 고객 항공예약번호 유출 가능성을 공지했다.",
-      "meaning": "민간 시스템 침해로 군사적 의미는 제한적이다.",
+      "meaning": "민간 개인정보 유출이며 북한 연계는 확인되지 않았다.",
       "sources": [
         {
           "name": "데일리시큐",
-          "tier": "C",
+          "tier": "B",
           "url": "https://www.dailysecu.com/news/articleView.html?idxno=209309"
         }
       ],
       "confidence": "중간",
-      "facts": [
-        "11/4 NH여행 공지"
-      ],
+      "facts": [],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "베이징",
+      "region": "중국 베이징",
       "summary": "왕이 중국 외교부장이 방중한 북한 김성남 노동당 비서를 만나 북중관계 심화·발전을 추진하기로 했다고 5일 보도됐다.",
-      "meaning": "외교 일정이며 군사 협정·무기 협력 발표는 없다.",
+      "meaning": "외교 일정이며 군사협정·무기 협력 발표는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -120,9 +120,7 @@
         }
       ],
       "confidence": "중간",
-      "facts": [
-        "왕이–김성남 회동 보도(11/5)"
-      ],
+      "facts": [],
       "speculation": []
     },
     "parade_massing": {
@@ -138,7 +136,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-06T08:11:53+00:00",
+  "checked_at": "2026-11-06T09:10:05+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

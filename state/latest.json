@@ -1,15 +1,12 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집기 병력·접경 묶음",
       "North Korea troops DMZ"
     ],
     "nuclear": [
-      "news_kr 수집기",
       "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "news_kr 수집기 sanction 묶음",
       "North Korea Russia shipments"
     ],
     "border_clash": [
@@ -25,11 +22,9 @@
       "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "news_kr 수집기",
       "North Korea parade"
     ],
     "nk_internal": [
-      "news_kr 수집기",
       "North Korea blackout mobilization"
     ],
     "gov_warning": [
@@ -37,17 +32,19 @@
       "North Korea news November 6 2026"
     ],
     "hybrid_ops": [
-      "news_kr 수집기 spy 묶음",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261106079100009",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209309",
     "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://www.dailysecu.com/news/articleView.html?idxno=209309"
   ],
-  "overall_summary": "직전 회차와 변화 없이 새 군사 도발·핵·병력 징후는 없고 귀속 미확인 해킹 보도만 남았다. 러 극동항 북한 선박 왕래·울릉도 표류 어선은 공식 귀속 없는 배경이다.",
+  "overall_summary": "직전 회차와 변화 없이 새 군사 도발·핵·병력 징후는 없고 귀속 미확인 해킹 보도만 남았다. 러 극동항 북한 선박 왕래는 공식 귀속 없는 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,21 +57,6 @@
       "summary": "러 극동항 북한 선박 왕래 급증은 석탄밀수 의혹 단일 연합 보도이며 공식 귀속이 없어 배경으로만 둔다."
     },
     "border_clash": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
       "status": "none"
     },
     "electronic_cyber": {
@@ -93,9 +75,24 @@
       "confidence": "낮음",
       "facts": [],
       "speculation": []
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-06T17:13:09+00:00",
+  "checked_at": "2026-11-06T18:11:18+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

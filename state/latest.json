@@ -13,20 +13,18 @@
       "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 월선 귀순",
+      "지뢰 발견 DMZ 귀순 북한 11월",
       "합참 북한 발표 11월 6일",
       "North Korea DMZ mine"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "FBI Binance hack North Korea"
+      "해킹 공격 랜섬웨어 사이버 공격",
+      "해킹 개인정보 유출",
+      "FBI North Korea hack attributed"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "서해 구조물",
-      "주한미군 감축",
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
@@ -47,17 +45,18 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
+    "https://www.yna.co.kr/view/AKR20261105174600504",
     "https://www.yna.co.kr/view/AKR20261105118000083",
     "https://www.yna.co.kr/view/AKR20261106079100009",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209309",
-    "https://www.nknews.org/"
+    "https://www.dailysecu.com/news/articleView.html?idxno=209309"
   ],
-  "overall_summary": "직전 회차와 큰 변화 없이 표류 북한 어선 식별, 왕이–김성남 회동 등 정례 성격 보도만 확인됐다. 11/4 미사일 발사·10/31 FBI 바이낸스 귀속은 24시간이 지난 배경이다.",
+  "overall_summary": "직전 회차와 큰 변화 없이 표류 북한 어선 식별, 왕이–김성남 회동, 귀속 미확인 해킹 등 정례 성격 보도만 확인됐다. NK뉴스발 북한 화물선의 러 나홋카항 왕래 급증(석탄 원산지 세탁·무기 거래 의혹)은 전문가 관측 단계라 배경으로만 둔다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,27 +66,31 @@
     },
     "logistics": {
       "status": "none",
-      "summary": "NK뉴스 선박추적 분석으로 북한 화물선의 러 나홋카항 왕래 증가가 보도됐으나 정부·수사기관 적발·귀속 발표가 없는 분석이라 배경으로만 둔다."
+      "summary": "북한 화물선의 러 나홋카항 왕래 급증(NK뉴스 분석, 11/6 연합 인용)은 석탄 원산지 세탁·무기 거래 의혹 수준의 관측이라 배경으로만 둔다."
     },
     "border_clash": {
       "status": "single",
       "routine": true,
       "region": "울릉도 북방 공해",
       "lat": 37.8,
-      "lon": 130.9,
+      "lon": 131.0,
       "summary": "합참이 3일 울릉도 북방 공해상 표류 북한 어선 1척을 식별해 해경과 조사 중이라고 5일 밝혔다.",
-      "meaning": "표류 어선 조치로 승선원·귀순 의사는 미공개이며 군사적 도발 정황은 없다.",
+      "meaning": "표류 어선 처리 절차로 군사적 도발 근거는 없다.",
       "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261105174600504"
+        },
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261105519983"
         }
       ],
-      "confidence": "중간",
+      "confidence": "높음",
       "facts": [
-        "합참 3일 식별, 5일 발표",
-        "해경과 조사 중"
+        "합참 5일 발표: 3일 표류 어선 1척 식별, 해경과 조치, 관계기관 조사 중"
       ],
       "speculation": []
     },
@@ -95,9 +98,8 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "국내",
-      "summary": "귀속 미확인 — 글로벌 항공예약시스템 아마데우스 해킹으로 NH농협여행이 일부 고객 항공예약 개인정보 유출 가능성을 공지했다.",
-      "meaning": "개인정보 유출 사고로 정부·금융·통신·전력망 마비는 없으며 북한 등 귀속 발표도 없다.",
+      "summary": "귀속 미확인 — 글로벌 항공예약시스템 아마데우스 해킹으로 NH농협여행이 일부 고객 항공예약번호 유출 가능성을 공지했다.",
+      "meaning": "민간 시스템 침해로 군사적 의미는 제한적이다.",
       "sources": [
         {
           "name": "데일리시큐",
@@ -105,20 +107,18 @@
           "url": "https://www.dailysecu.com/news/articleView.html?idxno=209309"
         }
       ],
-      "confidence": "낮음",
+      "confidence": "중간",
       "facts": [
-        "NH농협여행 유출 가능성 공지"
+        "11/4 NH여행 공지, 계정 인증정보 이용 비인가 접근 정황"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 베이징",
-      "lat": 39.9,
-      "lon": 116.4,
+      "region": "베이징",
       "summary": "왕이 중국 외교부장이 방중한 북한 김성남 노동당 비서를 만나 북중관계 심화·발전을 추진하기로 했다고 5일 보도됐다.",
-      "meaning": "외교 일정으로 군사협정·무기 협력 언급은 확인되지 않는다.",
+      "meaning": "외교 일정이며 군사 협정·무기 협력 발표는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -128,7 +128,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "왕이–김성남 5일 베이징 회동"
+        "왕이–김성남 회동 보도(11/5)"
       ],
       "speculation": []
     },
@@ -145,7 +145,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-06T06:12:46+00:00",
+  "checked_at": "2026-11-06T07:14:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

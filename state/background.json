@@ -1,39 +1,39 @@
 {
   "version": 1,
-  "at": "2026-11-06T11:40:34+00:00",
-  "opened": 18,
+  "at": "2026-11-06T23:40:32+00:00",
+  "opened": 13,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-06T11:40:34+00:00",
-      "raw": 4,
-      "kept": 4
+      "last_ok": "2026-11-06T23:40:32+00:00",
+      "raw": 3,
+      "kept": 3
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-06T11:40:34+00:00",
+      "last_ok": "2026-11-06T23:40:32+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
-      "status": "no_findings",
+      "status": "failed",
       "last_ok": "2026-11-06T11:40:34+00:00",
       "raw": 0,
       "kept": 0,
-      "note": "동부전구 명명 훈련·북러/주한미군 신규 공식 발표를 연 원문에서 확인하지 못함"
+      "note": "대만 동부전구 명명훈련·북러 신규 공식 발표 전용 검색을 이 회차에 실행하지 못함(검색 기록 없음)"
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-06T11:40:34+00:00",
+      "last_ok": "2026-11-06T23:40:32+00:00",
       "raw": 5,
-      "kept": 5
+      "kept": 4,
+      "note": "Rappler 피드 403으로 못 염(scs_ecs 는 Philstar·BBC 아시아로 평온 확인)"
     },
     "incidents": {
-      "status": "no_findings",
-      "last_ok": "2026-11-06T11:40:34+00:00",
-      "raw": 0,
-      "kept": 0,
-      "note": "안보 연결이 기사에 적힌 신규 사건 없음(연합 본문은 빈 페이지, 국민일보는 차단 매체)"
+      "status": "checked",
+      "last_ok": "2026-11-06T23:40:32+00:00",
+      "raw": 1,
+      "kept": 1
     }
   }
 }

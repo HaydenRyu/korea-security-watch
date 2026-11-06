@@ -1,43 +1,48 @@
 {
   "version": 1,
-  "at": "2026-11-06T11:40:34+00:00",
+  "at": "2026-11-06T23:40:32+00:00",
   "domains": {
     "inter_korean": {
       "level": "보통",
-      "sources": [],
-      "summary": "전단·확성기 등 새 조치 보도는 확인되지 않았다.",
-      "at": "2026-11-06T11:40:34+00:00",
+      "sources": [
+        {
+          "url": "https://www.yna.co.kr/view/AKR20261105174600504",
+          "publisher": "연합뉴스"
+        }
+      ],
+      "summary": "울릉도 북방 공해상에서 표류 북한 어선이 발견됐으나 전단·확성기 등 새 조치는 확인되지 않았다.",
+      "at": "2026-11-06T23:40:32+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "nk_domestic": {
       "level": "보통",
-      "sources": [],
-      "summary": "북한 내부 노선 변화나 숙청을 보도한 원문은 확인되지 않았다.",
-      "at": "2026-11-06T11:40:34+00:00",
+      "sources": [
+        {
+          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html",
+          "publisher": "Stars and Stripes"
+        }
+      ],
+      "summary": "북한이 새 미사일 기술을 주장했다는 보도 외에 내부 노선 변화·숙청을 다룬 원문은 확인되지 않았다.",
+      "at": "2026-11-06T23:40:32+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "great_powers": {
       "level": "보통",
       "sources": [
         {
-          "url": "https://www.bbc.co.uk/news/articles/cqg7xxg4jdv5o",
-          "publisher": "BBC"
+          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html",
+          "publisher": "Stars and Stripes"
         }
       ],
-      "summary": "미 수뇌부 교체설은 부인됐고 대북 군사 옵션 언급이나 고위급 접촉 발표는 확인되지 않았다.",
-      "at": "2026-11-06T11:40:34+00:00",
+      "summary": "트럼프-김정은 외교가 불투명하다는 보도만 있고 고위급 접촉 발표나 군사 옵션 언급은 확인되지 않았다.",
+      "at": "2026-11-06T23:40:32+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "public_opinion": {
       "level": "보통",
-      "sources": [
-        {
-          "url": "https://www.segye.com/newsView/20261106513124",
-          "publisher": "세계일보"
-        }
-      ],
-      "summary": "북한 비난이 일본을 향했을 뿐 대남 비난 수위 변화를 보도한 원문은 없다.",
-      "at": "2026-11-06T11:40:34+00:00",
+      "sources": [],
+      "summary": "대남 비난 수위 변화를 보도한 원문은 확인되지 않았다.",
+      "at": "2026-11-06T23:40:32+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     }
   },

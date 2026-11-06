@@ -1,28 +1,28 @@
 {
- "fetched_at": "2026-11-06T09:36:55+00:00",
+ "fetched_at": "2026-11-06T10:48:19+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-06T09:36:55+00:00",
+ "last_ok_at": "2026-11-06T10:48:19+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1130,
-  "hits": 41,
-  "clusters": 36,
+  "hits": 40,
+  "clusters": 34,
   "by_group": {
    "mine": 7,
    "fire": 11,
    "border": 6,
    "alert": 4,
-   "hybrid": 2,
-   "spy": 3,
+   "hybrid": 1,
+   "spy": 2,
    "gps": 4,
    "sanction": 1,
    "drone_balloon": 2,
    "influence": 1,
    "defect": 1,
-   "summit": 2
+   "summit": 1
   }
  },
  "outlets": {
@@ -30,13 +30,13 @@
    "feeds": 5,
    "failed": 0,
    "count": 571,
-   "hits": 41
+   "hits": 39
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 3
+   "hits": 4
   },
   "동아일보": {
    "feeds": 2,
@@ -48,7 +48,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 17
+   "hits": 16
   },
   "세계일보": {
    "feeds": 2,
@@ -67,8 +67,8 @@
  "groups": {
   "mine": {
    "clusters": 7,
-   "max_independent": 1,
-   "latest": "2026-11-06T09:36:55+00:00"
+   "max_independent": 2,
+   "latest": "2026-11-06T09:57:35+00:00"
   },
   "fire": {
    "clusters": 11,
@@ -86,12 +86,12 @@
    "latest": "2026-11-06T06:39:34+00:00"
   },
   "hybrid": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-06T06:01:29+00:00"
   },
   "spy": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-06T06:01:29+00:00"
   },
@@ -121,7 +121,7 @@
    "latest": "2026-11-05T10:39:50+00:00"
   },
   "summit": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-05T05:48:31+00:00"
   }
@@ -149,7 +149,7 @@
    "url": "https://www.yna.co.kr/rss/society.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "연합뉴스",
@@ -165,7 +165,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "SBS",
@@ -189,7 +189,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "동아일보",
@@ -213,7 +213,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 15
+   "hits": 14
   },
   {
    "outlet": "국민일보",

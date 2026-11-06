@@ -1,56 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "North Korea troops DMZ",
-      "북한 병력 이동 전방"
+      "합참 북한 발표 11월 6일",
+      "North Korea Reuters November 6 2026"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon",
-      "북한 핵 풍계리 영변"
+      "북한 핵 풍계리 영변 병력 이동 군수 준전시 진돗개 데프콘",
+      "North Korea nuclear Yongbyon Punggye-ri 38 North troop movement"
     ],
     "logistics": [
-      "North Korea Russia shipments",
-      "북한 러시아 군수 수송"
+      "북한 핵 풍계리 영변 병력 이동 군수 준전시 진돗개 데프콘"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순",
-      "목함지뢰 해안",
-      "North Korea DMZ NLL"
+      "목함지뢰 지뢰 발견 DMZ 귀순",
+      "DMZ landmine NLL North Korea defector border"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 공격",
-      "North Korea GPS jamming hacking"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중 서해 구조물 주한미군 감축",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit troops"
     ],
     "parade_massing": [
-      "North Korea parade"
+      "North Korea nuclear Yongbyon Punggye-ri 38 North troop movement"
     ],
     "nk_internal": [
-      "North Korea blackout mobilization",
-      "북한 등화관제 준전시"
+      "북한 핵 풍계리 영변 병력 이동 군수 준전시 진돗개 데프콘"
     ],
     "gov_warning": [
-      "합참 북한 진돗개 데프콘",
-      "North Korea news November 6 2026"
+      "합참 북한 발표 11월 6일",
+      "북한 핵 풍계리 영변 병력 이동 군수 준전시 진돗개 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
+    "https://www.nknews.org/",
+    "https://www.wunc.org/2026-11-02/fbi-says-north-korean-hackers-are-behind-the-theft-of-6-3b-from-binance",
     "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261105174600504",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209309"
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "직전 회차와 변화 없이 새 군사 도발·핵·병력 징후는 없고 귀속 미확인 해킹 보도만 남았다. 러 극동항 선박 왕래·울릉도 표류 어선은 배경이다.",
+  "overall_summary": "11/4~5 북한의 미사일·대공미사일 시험은 정례 시험으로 24시간을 넘겨 배경이며, 이번 회차에 새 도발·핵·병력 징후는 확인되지 않았다. 직전 회차와 같은 평시 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,29 +55,10 @@
       "status": "none"
     },
     "logistics": {
-      "status": "none",
-      "summary": "러 극동항 북한 선박 왕래 급증은 석탄밀수 의혹 단일 연합 보도이며 공식 귀속이 없어 배경으로만 둔다."
+      "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "울릉도 공해상 북한 어선 표류 발견(11/5 연합)은 첫 보도 24시간 경과로 배경이며 귀순·월선 확인 없음."
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "summary": "귀속 미확인 — 글로벌 항공예약시스템 아마데우스 해킹으로 NH농협여행이 일부 고객 항공예약번호 유출 가능성을 공지했다.",
-      "meaning": "북한 소행으로 밝혀지지 않았다.",
-      "sources": [
-        {
-          "name": "데일리시큐",
-          "tier": "C",
-          "url": "https://www.dailysecu.com/news/articleView.html?idxno=209309"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [],
-      "speculation": []
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none"
@@ -96,17 +73,16 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "FBI의 바이낸스 해킹 북한 귀속 발표(11/2)는 24시간을 넘겨 배경이다."
+    },
+    "electronic_cyber": {
+      "status": "none",
+      "summary": "24시간 경과 — 아마데우스 해킹 건 첫 보도가 24시간을 넘었고 새 사고 보도 없음"
     }
   },
-  "checked_at": "2026-11-06T20:10:53+00:00",
-  "grade": 1,
-  "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-06T21:11:21+00:00",
-    "summary": "11/5 북한의 신형 대공미사일·순항미사일 시험은 정례 시험으로 24시간을 넘겨 배경이며, 이번 회차에 새 도발·핵·병력 징후는 확인되지 않았다. 직전 회차의 귀속 미확인 해킹 건은 24시간이 지나 내렸다."
-  }
+  "checked_at": "2026-11-06T22:11:03+00:00",
+  "grade": 0,
+  "grade_label": "평시",
+  "active": []
 }

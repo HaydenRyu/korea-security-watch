@@ -9,23 +9,24 @@
       "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 군수 수송",
+      "북한 군수 수송 나홋카",
       "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
       "지뢰 발견",
       "DMZ 월선 귀순",
-      "합참 북한 발표",
+      "합참 북한 발표 11월 6일",
       "North Korea DMZ mine"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "해킹 개인정보 유출 사이버 공격",
       "FBI Binance hack North Korea"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "서해 구조물 주한미군 감축 김정은 방러",
+      "서해 구조물",
+      "주한미군 감축",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
@@ -41,23 +42,22 @@
       "North Korea alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
     "https://www.yna.co.kr/view/AKR20261105118000083",
-    "https://www.yna.co.kr/view/AKR20261105174600504",
     "https://www.yna.co.kr/view/AKR20261106079100009",
-    "https://www.yna.co.kr/view/AKR20261105092000504",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209309"
+    "https://www.dailysecu.com/news/articleView.html?idxno=209309",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "직전 회차와 큰 변화 없이 표류 북한 어선 식별, 왕이–김성남 회동 등 정례 성격 보도만 확인됐다. 11/4 이전의 미사일 발사와 10/31 FBI 바이낸스 귀속은 24시간이 지난 배경이다.",
+  "overall_summary": "직전 회차와 큰 변화 없이 표류 북한 어선 식별, 왕이–김성남 회동 등 정례 성격 보도만 확인됐다. 11/4 미사일 발사·10/31 FBI 바이낸스 귀속은 24시간이 지난 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,7 +67,7 @@
     },
     "logistics": {
       "status": "none",
-      "summary": "러 나홋카항 북한 화물선 왕래 급증(5일 NK뉴스 분석 인용)은 석탄·무기 거래 의혹 수준의 배경 보도다."
+      "summary": "NK뉴스 선박추적 분석으로 북한 화물선의 러 나홋카항 왕래 증가가 보도됐으나 정부·수사기관 적발·귀속 발표가 없는 분석이라 배경으로만 둔다."
     },
     "border_clash": {
       "status": "single",
@@ -82,18 +82,12 @@
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261105519983"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261105174600504"
         }
       ],
       "confidence": "중간",
       "facts": [
         "합참 3일 식별, 5일 발표",
-        "해경과 조사 중",
-        "송환·귀순 미정"
+        "해경과 조사 중"
       ],
       "speculation": []
     },
@@ -113,8 +107,7 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "NH농협여행 유출 가능성 공지",
-        "피해 규모 미공개"
+        "NH농협여행 유출 가능성 공지"
       ],
       "speculation": []
     },
@@ -149,11 +142,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "FBI의 바이낸스 해킹 북한 귀속 발표는 10/31로 24시간이 지나 배경이며 5일 통일부는 대북 제재 논의가 없다고 밝혔다."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-06T05:10:30+00:00",
+  "checked_at": "2026-11-06T06:12:46+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

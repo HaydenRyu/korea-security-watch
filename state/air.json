@@ -1,10 +1,18 @@
 {
- "at": "2026-11-06T12:06:01+00:00",
- "south": 65,
- "area": 86,
- "baseline": 69,
- "ratio": 0.94,
+ "at": "2026-11-06T13:20:18+00:00",
+ "south": 51,
+ "area": 63,
+ "baseline": 32,
+ "ratio": 1.59,
  "samples": 7,
- "mil": [],
+ "mil": [
+  {
+   "type": "H47",
+   "name": null,
+   "call": "KEEP00",
+   "lat": 36.92,
+   "lon": 127.1
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

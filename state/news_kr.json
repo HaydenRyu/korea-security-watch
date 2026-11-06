@@ -1,14 +1,14 @@
 {
- "fetched_at": "2026-11-06T03:28:52+00:00",
+ "fetched_at": "2026-11-06T04:38:59+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-06T03:28:52+00:00",
+ "last_ok_at": "2026-11-06T04:38:59+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1137,
-  "hits": 45,
+  "hits": 44,
   "clusters": 39,
   "by_group": {
    "mine": 10,
@@ -17,7 +17,7 @@
    "sanction": 1,
    "border": 9,
    "drone_balloon": 3,
-   "alert": 5,
+   "alert": 4,
    "influence": 1,
    "defect": 1,
    "summit": 4
@@ -40,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 5
+   "hits": 4
   },
   "국민일보": {
    "feeds": 2,
@@ -52,7 +52,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 1
+   "hits": 0
   },
   "국방일보": {
    "feeds": 1,
@@ -66,7 +66,7 @@
   "mine": {
    "clusters": 10,
    "max_independent": 1,
-   "latest": "2026-11-06T03:28:52+00:00"
+   "latest": "2026-11-06T04:38:59+00:00"
   },
   "fire": {
    "clusters": 13,
@@ -94,7 +94,7 @@
    "latest": "2026-11-05T15:00:00+00:00"
   },
   "alert": {
-   "clusters": 5,
+   "clusters": 4,
    "max_independent": 3,
    "latest": "2026-11-05T14:52:47+00:00"
   },
@@ -105,8 +105,8 @@
   },
   "defect": {
    "clusters": 1,
-   "max_independent": 2,
-   "latest": "2026-11-05T13:32:39+00:00"
+   "max_independent": 1,
+   "latest": "2026-11-05T10:39:50+00:00"
   },
   "summit": {
    "clusters": 4,
@@ -193,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "국민일보",
@@ -217,7 +217,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "세계일보",

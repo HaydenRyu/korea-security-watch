@@ -1,52 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 발표 11월 6일",
+      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
       "North Korea Reuters November 6 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 병력 이동 군수 준전시 진돗개 데프콘",
-      "North Korea nuclear Yongbyon Punggye-ri 38 North troop movement"
+      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
+      "North Korea Reuters November 6 2026"
     ],
     "logistics": [
-      "북한 핵 풍계리 영변 병력 이동 군수 준전시 진돗개 데프콘"
+      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
+      "North Korea Reuters November 6 2026"
+    ],
+    "parade_massing": [
+      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
+      "North Korea Reuters November 6 2026"
+    ],
+    "nk_internal": [
+      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
+      "North Korea Reuters November 6 2026"
+    ],
+    "gov_warning": [
+      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
+      "North Korea Reuters November 6 2026"
     ],
     "border_clash": [
       "목함지뢰 지뢰 발견 DMZ 귀순",
-      "DMZ landmine NLL North Korea defector border"
+      "North Korea Reuters November 6 2026"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출",
+      "North Korea GPS jamming cyber"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit troops"
-    ],
-    "parade_massing": [
-      "North Korea nuclear Yongbyon Punggye-ri 38 North troop movement"
-    ],
-    "nk_internal": [
-      "북한 핵 풍계리 영변 병력 이동 군수 준전시 진돗개 데프콘"
-    ],
-    "gov_warning": [
-      "합참 북한 발표 11월 6일",
-      "북한 핵 풍계리 영변 병력 이동 군수 준전시 진돗개 데프콘"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://www.wunc.org/2026-11-02/fbi-says-north-korean-hackers-are-behind-the-theft-of-6-3b-from-binance",
+    "https://www.yna.co.kr/view/AKR20261106079100009",
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
     "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do"
+    "https://www.nknews.org/category/news/"
   ],
-  "overall_summary": "11/4~5 북한의 미사일·대공미사일 시험은 정례 시험으로 24시간을 넘겨 배경이며, 이번 회차에 새 도발·핵·병력 징후는 확인되지 않았다. 직전 회차와 같은 평시 수준이다.",
+  "overall_summary": "11/4 미사일 발사와 11/5 대공미사일 시험 보도는 24시간을 넘긴 배경이며 새 도발·핵·병력 징후는 없다. 직전 회차와 같은 평시 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,6 +65,10 @@
       "status": "none"
     },
     "border_clash": {
+      "status": "none",
+      "summary": "울릉도 표류 북한 어선(11/5 첫 보도)은 24시간 경과 배경이다."
+    },
+    "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
@@ -74,14 +85,10 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "summary": "FBI의 바이낸스 해킹 북한 귀속 발표(11/2)는 24시간을 넘겨 배경이다."
-    },
-    "electronic_cyber": {
-      "status": "none",
-      "summary": "24시간 경과 — 아마데우스 해킹 건 첫 보도가 24시간을 넘었고 새 사고 보도 없음"
+      "summary": "러 나홋카항 북한선박 증가(11/6 연합, NK뉴스 분석)는 정부 귀속·적발 발표가 없는 배경이다."
     }
   },
-  "checked_at": "2026-11-06T22:11:03+00:00",
+  "checked_at": "2026-11-06T23:09:31+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

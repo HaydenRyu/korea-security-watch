@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updated_at": "2026-11-06T05:39:29+00:00",
-  "world_at": "2026-11-06T05:39:29+00:00",
+  "updated_at": "2026-11-06T11:40:34+00:00",
+  "world_at": "2026-11-06T11:40:34+00:00",
   "world": [
     {
-      "title": "트럼프, 공화당 선거 참패 뒤 헤그세스·루비오 경질설 부인",
-      "summary": "백악관은 중간선거 패배 이후 제기된 피트 헤그세스 국방장관 교체설과 루비오 장관 거취설을 부인했다.",
-      "link_korea": "미 국방·외교 수뇌부 변동 여부는 대북 정책과 주한미군 운용 기조에 영향을 줄 수 있다.",
+      "title": "백악관, 헤그세스·루비오 교체설 부인",
+      "summary": "중간선거 패배 뒤 헤그세스 국방장관 교체와 탄핵 표결 가능성, 루비오 장관의 대선 출마설이 제기됐고 백악관은 두 사람의 퇴임설을 부인했다.",
+      "link_korea": "미 국방·외교 수뇌부 변동은 대북 정책과 주한미군 운용 기조에 영향을 줄 수 있다.",
       "region": "북미",
       "source": {
         "name": "BBC",
@@ -15,38 +15,38 @@
       }
     },
     {
-      "title": "멜라니아 여사, 러·우 대표단 백악관 초청해 지속 가능한 휴전 촉구",
-      "summary": "멜라니아 트럼프 여사가 러시아·우크라이나 대표단을 백악관에 맞아 더 오래가는 휴전을 촉구했다.",
-      "link_korea": "러·우 전쟁 국면은 북러 군사협력과 북한군 파병 논의에 직결된다.",
+      "title": "멜라니아 여사, 러·우 대표단 초청해 지속 가능한 휴전 촉구",
+      "summary": "멜라니아 트럼프 여사가 러시아·우크라이나 관리들을 맞아 더 오래가는 휴전을 촉구했다.",
+      "link_korea": "러·우 전쟁 국면은 북러 군사협력과 북한군 파병 논의와 직결된다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     },
     {
-      "title": "이란 협상 대표 \"미국 유권자가 전쟁에 반대했다\"",
-      "summary": "이란 협상 수석대표가 미 중간선거 결과를 '전쟁 반대 메시지'라고 평가했고 트럼프 대통령은 분쟁이 공화당 패배에 영향을 줬다고 인정했다.",
-      "link_korea": "중동 전쟁의 미국 내 부담은 주한미군 등 미군 전력 배분에 영향을 줄 수 있다.",
+      "title": "이란 미사일 기지 인근서 대규모 공사 진행, 위성영상 시사",
+      "summary": "11월 촬영된 위성영상에 이란 미사일 기지 인근의 굴착과 신규 건물 공사 흔적이 보인다고 BBC가 분석했다.",
+      "link_korea": "중동의 미군 전력 부담은 주한미군 등 전력 배분에 영향을 줄 수 있다.",
       "region": "중동",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
+        "url": "https://www.bbc.co.uk/news/articles/ckjrwx1r2d5ro",
         "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
       }
     },
     {
-      "title": "북한, 63억 달러 바이낸스 해킹 연루 부인",
-      "summary": "미 정부기관과 분석가들이 북한을 사상 최대 규모 암호화폐 탈취의 배후로 지목했으나 북한은 이를 부인했다.",
-      "link_korea": "북한의 가상자산 탈취는 대북 제재 이행과 자금 조달 문제와 직결된다.",
+      "title": "북한 외무성 연구원, 일본 방위비 증액에 \"국민 생활고만 가중\"",
+      "summary": "조선중앙통신은 6일 외무성 일본연구소 연구원 담화로 일본의 방위비 증액 추진이 국민에게 과중한 생활고만 안길 것이라고 주장했다고 세계일보가 전했다.",
+      "link_korea": "북한의 대일 비난 수위는 한·미·일 안보협력에 대한 북한의 반응을 보여준다.",
       "region": "동아시아",
       "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo",
-        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+        "name": "세계일보",
+        "url": "https://www.segye.com/newsView/20261106513124",
+        "via": "https://www.segye.com/Articles/RSSList/segye_politic.xml"
       }
     }
   ],
-  "world_context": "미 중간선거 이후 정치 지형 변화와 중동·우크라이나 정세가 미국의 전력 배분과 대북 정책 환경에 동시에 영향을 주고 있다."
+  "world_context": "미 중간선거 이후 미국 안보 수뇌부 거취와 러·우 휴전, 중동 긴장이 이어지는 가운데 북한은 일본 방위비를 비난했다."
 }

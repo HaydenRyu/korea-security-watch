@@ -1,48 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집기 병력·접경 묶음"
+      "news_kr 수집기 병력·접경 묶음",
+      "North Korea troops DMZ"
     ],
     "nuclear": [
-      "news_kr 수집기"
+      "news_kr 수집기",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "news_kr 수집기 sanction 묶음"
+      "news_kr 수집기 sanction 묶음",
+      "North Korea Russia shipments"
     ],
     "border_clash": [
-      "news_kr 수집기 mine·border·defect 묶음",
-      "울릉도 표류 북한 어선"
+      "합참 북한 발표 지뢰 발견 DMZ 11월 6일",
+      "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "해킹 공격 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란",
+      "North Korea GPS jamming hacking"
     ],
     "foreign_forces": [
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
       "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "news_kr 수집기"
+      "news_kr 수집기",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "news_kr 수집기"
+      "news_kr 수집기",
+      "North Korea blackout mobilization"
     ],
     "gov_warning": [
-      "합참 북한 발표 11월 6일"
+      "합참 북한 발표 지뢰 발견 DMZ 11월 6일",
+      "North Korea news November 6 2026"
     ],
     "hybrid_ops": [
-      "news_kr 수집기 spy·hybrid 묶음"
+      "news_kr 수집기 spy·hybrid 묶음",
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "news_kr 수집기 summit 묶음"
+      "news_kr 수집기 summit 묶음",
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261106079100009",
-    "https://www.yna.co.kr/view/AKR20261105174600504",
     "https://www.dailysecu.com/news/articleView.html?idxno=209309",
     "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "직전 회차와 변화 없이 새 군사 도발·핵·병력 징후는 없고 귀속 미확인 해킹 보도만 남았다. 울릉도 공해상 북한 어선 표류(11/5 첫 보도, 조사 중)와 러 극동항 북한 선박 왕래는 24시간 경과·공식 귀속 없는 배경이다.",
+  "overall_summary": "직전 회차와 변화 없이 새 군사 도발·핵·병력 징후는 없고 귀속 미확인 해킹 보도만 남았다. 러 극동항 북한 선박 왕래·울릉도 표류 어선은 공식 귀속 없는 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -89,7 +100,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-06T15:15:25+00:00",
+  "checked_at": "2026-11-06T16:14:18+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

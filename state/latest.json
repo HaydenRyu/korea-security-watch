@@ -51,13 +51,12 @@
     ]
   },
   "opened": [
-    "https://www.dailysecu.com/news/articleView.html?idxno=209309",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261106079100009",
     "https://www.yna.co.kr/view/AKR20261105174600504",
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/12/ATCE_CTGR_0010010000/view.do"
+    "https://www.dailysecu.com/news/articleView.html?idxno=209309",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "직전 회차와 큰 변화 없이 표류 북한 어선 식별과 귀속 미확인 해킹 등 정례 성격 보도만 확인됐다. 새 군사 도발·핵·병력 징후는 없다.",
+  "overall_summary": "직전 회차와 변화 없이 표류 북한 어선 식별과 귀속 미확인 해킹 등 정례 성격 보도만 확인됐다. 새 군사 도발·핵·병력 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -123,7 +122,7 @@
       "summary": "러 나홋카항 북한 선박 왕래 급증 보도는 정부 공식 귀속이 없어 배경이다."
     }
   },
-  "checked_at": "2026-11-06T10:09:54+00:00",
+  "checked_at": "2026-11-06T11:12:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

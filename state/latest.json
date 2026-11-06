@@ -1,72 +1,57 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 발표 11월 6일 속보",
-      "North Korea troop buildup border"
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri 38 North November 2026",
-      "북한 핵 풍계리 영변 동향"
+      "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment Russia"
+      "북한 군수 수송 탄약 비축"
     ],
     "border_clash": [
-      "합참 북한 발표 11월 6일 속보 DMZ 귀순 지뢰",
-      "목함지뢰 해안 발견",
-      "NLL DMZ 귀순"
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "합참 발표 북한 11월 6일"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 11월",
-      "랜섬웨어 공격"
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 11월",
-      "왕이 김성남 북중관계 심화 발전 만남"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade preparation satellite"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시 노농적위군",
-      "North Korea mobilization civil defense drill"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 격상",
-      "北朝鮮 ミサイル 防衛省 11月"
+      "진돗개 데프콘 상향 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 김여정 담화",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
-    "https://www.segye.com/newsView/20261105508769",
+    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261105517949",
-    "https://www.segye.com/newsView/20261105516185",
-    "https://www.newdaily.co.kr/site/data/html/2026/11/05/2026110500055.html",
-    "https://www.fnnews.com/news/202611051104481078",
-    "https://www.hankyung.com/article/2026110585147",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209309"
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.dailysecu.com/news/articleView.html?idxno=209309",
+    "https://www.hankyung.com/article/2026110585147"
   ],
-  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치와 5일 북중 고위급 접촉이 중심이다. 4일 신형 대공미사일·순항미사일 시험 주장은 시험 성격이며 병력·핵·전시 관련 신규 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치와 북중 고위급 접촉이 중심이다. 병력·핵·전시 관련 신규 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "4일 신형 대공미사일·순항미사일 시험은 KCNA 주장의 시험 성격이며 핵 관련 신규 징후는 없다."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
@@ -148,7 +133,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-06T00:12:23+00:00",
+  "checked_at": "2026-11-06T01:11:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

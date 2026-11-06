@@ -1,60 +1,72 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "합참 북한 발표 11월 6일 속보",
+      "North Korea troop buildup border"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon Punggye-ri 38 North November 2026",
+      "북한 핵 풍계리 영변 동향"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea munitions shipment"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참 11월",
-      "북한 어선 표류 울릉도"
+      "합참 북한 발표 11월 6일 속보 DMZ 귀순 지뢰",
+      "목함지뢰 해안 발견",
+      "NLL DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출 공격 11월 5일"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 11월",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "North Korea Reuters November 5 2026",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 11월",
+      "왕이 김성남 북중관계 심화 발전 만남"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade preparation satellite"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 등화관제 준전시 노농적위군",
+      "North Korea mobilization civil defense drill"
     ],
     "gov_warning": [
-      "합참 진돗개 데프콘 상향"
+      "진돗개 데프콘 격상",
+      "北朝鮮 ミサイル 防衛省 11月"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 11월",
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 김여정 담화",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261105519983",
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261105508769",
     "https://www.segye.com/newsView/20261105517949",
-    "https://www.yna.co.kr/view/AKR20261105118000083"
+    "https://www.segye.com/newsView/20261105516185",
+    "https://www.newdaily.co.kr/site/data/html/2026/11/05/2026110500055.html",
+    "https://www.fnnews.com/news/202611051104481078",
+    "https://www.hankyung.com/article/2026110585147",
+    "https://www.dailysecu.com/news/articleView.html?idxno=209309"
   ],
-  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치(승선원·귀순 의사 미공개)가 중심이다. 4일 미사일 발사·신형 대공미사일 시험은 24시간 경과한 시험 성격이고 5일 북중 고위급 접촉은 외교 일정이며 병력·핵·전시 관련 신규 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 국면으로, 울릉도 북방 표류 북한 어선 조치와 5일 북중 고위급 접촉이 중심이다. 4일 신형 대공미사일·순항미사일 시험 주장은 시험 성격이며 병력·핵·전시 관련 신규 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "none",
+      "summary": "4일 신형 대공미사일·순항미사일 시험은 KCNA 주장의 시험 성격이며 핵 관련 신규 징후는 없다."
     },
     "logistics": {
       "status": "none"
@@ -82,24 +94,44 @@
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "국내",
+      "summary": "귀속 미확인 — 글로벌 항공예약시스템 아마데우스 해킹으로 NH농협여행이 일부 고객 항공예약 개인정보 유출 가능성을 공지했다.",
+      "meaning": "개인정보 유출 사고로 정부·금융·통신·전력망 마비는 없으며 북한 등 귀속 발표도 없다.",
+      "sources": [
+        {
+          "name": "데일리시큐",
+          "tier": "C",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=209309"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "NH농협여행 유출 가능성 공지",
+        "피해 규모 미공개"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국",
-      "summary": "왕이 중국 외교부장이 방중한 북한 김성남 노동당 비서를 만나 북중관계 심화·발전을 추진하기로 했다고 연합뉴스가 5일 보도했다.",
+      "region": "중국 베이징",
+      "lat": 39.9,
+      "lon": 116.4,
+      "summary": "왕이 중국 외교부장이 방중한 북한 김성남 노동당 비서를 만나 북중관계 심화·발전을 추진하기로 했다고 5일 보도됐다.",
       "meaning": "외교 일정으로 군사협정·무기 협력 언급은 확인되지 않는다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "한국경제",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261105118000083"
+          "url": "https://www.hankyung.com/article/2026110585147"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "왕이–김성남 회동"
+        "왕이–김성남 5일 베이징 회동",
+        "한국경제 보도"
       ],
       "speculation": []
     },
@@ -116,7 +148,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-05T23:10:10+00:00",
+  "checked_at": "2026-11-06T00:12:23+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

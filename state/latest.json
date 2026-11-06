@@ -1,34 +1,40 @@
 {
   "coverage": {
     "troop_movement": [
-      "North Korea troops DMZ"
+      "North Korea troops DMZ",
+      "북한 병력 이동 전방"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon",
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "North Korea Russia shipments"
+      "North Korea Russia shipments",
+      "북한 러시아 군수 수송"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순 11월 6일",
+      "합참 북한 지뢰 발견 DMZ 귀순",
+      "목함지뢰 해안",
       "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란",
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 공격",
       "North Korea GPS jamming hacking"
     ],
     "foreign_forces": [
       "김정은 방중 서해 구조물 주한미군 감축",
-      "North Korea Kim Jong Un China Russia visit"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "North Korea parade"
     ],
     "nk_internal": [
-      "North Korea blackout mobilization"
+      "North Korea blackout mobilization",
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "합참 북한 지뢰 발견 DMZ 귀순 11월 6일",
+      "합참 북한 진돗개 데프콘",
       "North Korea news November 6 2026"
     ],
     "hybrid_ops": [
@@ -41,10 +47,10 @@
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/",
+    "https://www.yna.co.kr/view/AKR20261105174600504",
     "https://www.dailysecu.com/news/articleView.html?idxno=209309"
   ],
-  "overall_summary": "직전 회차와 변화 없이 새 군사 도발·핵·병력 징후는 없고 귀속 미확인 해킹 보도만 남았다. 러 극동항 북한 선박 왕래는 공식 귀속 없는 배경이다.",
+  "overall_summary": "직전 회차와 변화 없이 새 군사 도발·핵·병력 징후는 없고 귀속 미확인 해킹 보도만 남았다. 러 극동항 선박 왕래·울릉도 표류 어선은 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,7 +63,8 @@
       "summary": "러 극동항 북한 선박 왕래 급증은 석탄밀수 의혹 단일 연합 보도이며 공식 귀속이 없어 배경으로만 둔다."
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "울릉도 공해상 북한 어선 표류 발견(11/5 연합)은 첫 보도 24시간 경과로 배경이며 귀순·월선 확인 없음."
     },
     "electronic_cyber": {
       "status": "single",
@@ -92,14 +99,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-06T18:11:18+00:00",
+  "checked_at": "2026-11-06T20:10:53+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-06T19:11:26+00:00",
-    "summary": "직전 회차와 변화 없이 새 군사 도발·핵·병력 징후는 없다. 11/4~5 미사일·방공 시험은 24시간이 지나 배경이다."
-  }
+  "active": []
 }

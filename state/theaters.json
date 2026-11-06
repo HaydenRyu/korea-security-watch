@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-05T23:40:06+00:00",
+  "judged_at": "2026-11-06T05:39:29+00:00",
   "theaters": {
     "ukraine": {
       "state": 2,
@@ -13,16 +13,10 @@
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o",
           "published_at": "2026-11-05T19:08:08+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c98rz6penv86o",
-          "published_at": "2026-11-04T22:48:43+00:00"
         }
       ],
-      "summary": "러·우 대표단이 백악관에서 만났으나 러시아 공습으로 40명 이상이 숨진 직후다.",
-      "judged_at": "2026-11-05T23:40:06+00:00"
+      "summary": "러·우 대표단이 백악관에 모여 지속 가능한 휴전을 논의했다.",
+      "judged_at": "2026-11-06T05:39:29+00:00"
     },
     "mideast": {
       "state": 3,
@@ -44,8 +38,8 @@
           "published_at": "2026-11-04T16:59:15+00:00"
         }
       ],
-      "summary": "미국이 호르무즈 케슘섬을 제한 타격했고 이란은 미 중간선거 결과를 전쟁 반대로 해석했다.",
-      "judged_at": "2026-11-05T23:40:06+00:00"
+      "summary": "미국이 호르무즈 인근 케슘섬을 제한 타격했고 이란은 미 중간선거 결과를 전쟁 반대로 해석했다.",
+      "judged_at": "2026-11-06T05:39:29+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -68,18 +62,18 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-05T16:23:00+00:00",
+          "published_at": "2026-11-06T00:23:00+00:00",
           "kind": "feed"
         },
         {
           "name": "Rappler",
           "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-05T23:15:00+00:00",
+          "published_at": "2026-11-06T05:36:06+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·Rappler 피드에 72시간 안 남중국해 관련 기사 없음",
-      "judged_at": "2026-11-05T23:40:06+00:00"
+      "judged_at": "2026-11-06T05:39:29+00:00"
     },
     "us_posture": {
       "state": 1,

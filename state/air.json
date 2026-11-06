@@ -1,25 +1,10 @@
 {
- "at": "2026-11-06T00:02:21+00:00",
- "south": 61,
- "area": 77,
- "baseline": 62,
- "ratio": 0.98,
+ "at": "2026-11-06T03:28:37+00:00",
+ "south": 82,
+ "area": 98,
+ "baseline": 71,
+ "ratio": 1.15,
  "samples": 5,
- "mil": [
-  {
-   "type": "H60",
-   "name": null,
-   "call": "CARD78",
-   "lat": 37.45,
-   "lon": 127.11
-  },
-  {
-   "type": "B350",
-   "name": null,
-   "call": "TORI11",
-   "lat": 35.81,
-   "lon": 128.55
-  }
- ],
+ "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

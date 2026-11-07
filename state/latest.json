@@ -5,10 +5,12 @@
       "North Korea troops deployment border"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri"
+      "North Korea nuclear Yongbyon Punggye-ri",
+      "북한 핵 영변 풍계리"
     ],
     "logistics": [
-      "North Korea ammunition shipment Russia"
+      "North Korea ammunition shipment Russia",
+      "북한 탄약 수송"
     ],
     "border_clash": [
       "합참 북한 지뢰 발견 DMZ 귀순 11월 7일",
@@ -20,37 +22,39 @@
       "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 김성남 류하이싱 회담",
+      "김정은 방중",
       "North Korea Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비"
+      "북한 열병식 준비",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea blackout mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 발령 데프콘",
+      "DEFCON Korea"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI 북한 해킹 귀속"
+      "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안",
       "통신선 복원",
-      "확성기 방송 중단"
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/",
     "https://www.yna.co.kr/view/AKR20261107030200504",
     "https://www.yna.co.kr/view/AKR20261107031300001"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없고, 북 당 국제비서 김성남의 방중 고위급 회동만 외교 일정으로 이어진다. 11/4~5 순항·대공미사일 시험은 배경이다.",
+  "overall_summary": "최근 24시간 새 군사 징후는 없고 김성남 방중 고위급 회동만 외교 일정으로 이어진다. 11/4~5 순항·대공미사일 시험은 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -73,7 +77,7 @@
       "region": "중국 베이징",
       "lat": 39.91,
       "lon": 116.4,
-      "summary": "북 노동당 김성남 국제비서가 방중 중 류하이싱 중련부장과 회담했다(방중 세 번째 고위급 회동, 사회주의·대외관계 상호 지지 재확인).",
+      "summary": "북 노동당 김성남 국제비서가 방중 중 류하이싱 중련부장과 회담했다(방중 세 번째 고위급 회동, 11/7 첫 보도).",
       "meaning": "당 대 당 외교 일정으로 군사 협정·무기 협력 발표는 확인되지 않는다.",
       "sources": [
         {
@@ -103,7 +107,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-07T05:10:42+00:00",
+  "checked_at": "2026-11-07T06:10:44+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

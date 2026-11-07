@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-07T05:10:43+00:00",
+  "computed_at": "2026-11-07T06:10:44+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 26,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-06T23:40:32+00:00",
-    "latest_updated_at": "2026-11-07T05:10:42+00:00"
+    "linkage_judged_at": "2026-11-07T05:40:21+00:00",
+    "latest_updated_at": "2026-11-07T06:10:44+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,22 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "중국 해경선 4척이 6일 오전 금문 수역에 접근해 대만 해순서가 병행 감시로 저지했다.",
+      "summary": "중국 해경선 4척이 6일 금문 제한수역에 접근했고, 대만 국방부는 7일 중국 군용기·함정 24건이 대만 주변에서 활동했다고 밝혔다.",
       "sources": [
         {
           "name": "중앙통신사",
           "tier": "B",
           "url": "https://www.cna.com.tw/news/acn/202611060206.aspx",
           "published_at": "2026-11-06T16:22:43+08:00"
+        },
+        {
+          "name": "중앙통신사",
+          "tier": "B",
+          "url": "https://www.cna.com.tw/news/aipl/202611070034.aspx",
+          "published_at": "2026-11-07T09:56:00+08:00"
         }
       ],
-      "judged_at": "2026-11-06T23:40:32+00:00"
+      "judged_at": "2026-11-07T05:40:21+00:00"
     },
     {
       "key": "ukraine",
@@ -47,10 +53,10 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o",
-          "published_at": "2026-11-06T07:56:00+00:00"
+          "published_at": "2026-11-05T19:08:08+00:00"
         }
       ],
-      "judged_at": "2026-11-06T23:40:32+00:00"
+      "judged_at": "2026-11-07T05:40:21+00:00"
     },
     {
       "key": "scs_ecs",
@@ -63,7 +69,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-07T00:00:00+08:00",
+          "published_at": "2026-11-07T11:44:00+08:00",
           "kind": "feed"
         },
         {
@@ -73,7 +79,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-06T23:40:32+00:00"
+      "judged_at": "2026-11-07T05:40:21+00:00"
     },
     {
       "key": "mideast",
@@ -90,15 +96,15 @@
           "published_at": "2026-11-06T07:33:41+00:00"
         }
       ],
-      "judged_at": "2026-11-06T23:40:32+00:00"
+      "judged_at": "2026-11-07T05:40:21+00:00"
     },
     {
       "key": "us_posture",
       "observed": true,
-      "state": 1,
+      "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 공군이 북마리아나 제도를 연 6,000회 훈련 거점으로 쓰는 분산 운용 계획을 추진한다.",
+      "summary": "미 태평양공군이 괌 인근 소규모 섬에서 훈련 비행을 늘릴 계획이라는 보도 외에 새 전략자산 전개는 확인되지 않았다.",
       "sources": [
         {
           "name": "Stars and Stripes",
@@ -107,7 +113,7 @@
           "published_at": "2026-11-05T06:10:35+00:00"
         }
       ],
-      "judged_at": "2026-11-06T11:40:34+00:00"
+      "judged_at": "2026-11-07T05:40:21+00:00"
     }
   ],
   "channels": [
@@ -140,6 +146,6 @@
   "last_good": {
     "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-07T05:10:43+00:00"
+    "computed_at": "2026-11-07T06:10:44+00:00"
   }
 }

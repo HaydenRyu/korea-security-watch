@@ -1,16 +1,8 @@
 {
   "coverage": {
-    "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
-    ],
-    "electronic_cyber": [
-      "GPS 교란 해킹 공격 사이버 공격 랜섬웨어"
-    ],
-    "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
-    ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "북한 병력 이동 전방 증강",
+      "North Korea troops deployment border"
     ],
     "nuclear": [
       "North Korea nuclear Yongbyon Punggye-ri"
@@ -18,25 +10,47 @@
     "logistics": [
       "North Korea ammunition shipment Russia"
     ],
+    "border_clash": [
+      "합참 북한 지뢰 발견 DMZ 귀순 11월 7일",
+      "목함지뢰 해안"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
+    ],
+    "foreign_forces": [
+      "김정은 방중 김성남 류하이싱 회담",
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
+    ],
     "parade_massing": [
       "북한 열병식 준비"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 열병식"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
       "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI 북한 해킹 귀속"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
     "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261106079100009"
+    "https://www.nknews.org/",
+    "https://www.yna.co.kr/view/AKR20261107030200504",
+    "https://www.yna.co.kr/view/AKR20261107031300001"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 11/4 미사일 발사·11/5 대공미사일 시험은 배경이다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없고, 북 당 국제비서 김성남의 방중 고위급 회동만 외교 일정으로 이어진다. 11/4~5 순항·대공미사일 시험은 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -54,7 +68,27 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "중국 베이징",
+      "lat": 39.91,
+      "lon": 116.4,
+      "summary": "북 노동당 김성남 국제비서가 방중 중 류하이싱 중련부장과 회담했다(방중 세 번째 고위급 회동, 사회주의·대외관계 상호 지지 재확인).",
+      "meaning": "당 대 당 외교 일정으로 군사 협정·무기 협력 발표는 확인되지 않는다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261107030200504"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "김성남 대표단 11/3 베이징 도착(KCNA 보도), 11/7 류하이싱과 회담"
+      ],
+      "speculation": [
+        "북미대화 관련 의중 전달 가능성(국정원 분석 인용)"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -69,8 +103,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-07T04:10:00+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-07T05:10:42+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

@@ -13,17 +13,16 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순",
-      "North Korea DMZ NLL mine defector"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 7일"
     ],
     "electronic_cyber": [
       "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 사이버 공격 11월"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김성남 류하이싱 회담 북중 방중"
+      "김정은 방중 방러",
+      "North Korea Kim Jong Un China Russia visit November 2026",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -32,23 +31,22 @@
       "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 North Korea nuclear"
+      "진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835161",
     "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org",
-    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1434334",
-    "https://www.yna.co.kr/view/AKR20261107030200504"
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1434334"
   ],
-  "overall_summary": "최근 24시간 새 군사 징후는 없고 김성남 방중 고위급 회동만 외교 일정으로 이어진다. 11/4~5 순항·대공미사일 시험과 제재 의혹(러 극동항 선박 증가)은 배경이다.",
+  "overall_summary": "최근 24시간 새 군사 징후는 없고 김성남 방중 고위급 회동만 외교 일정으로 이어진다. 11/4~5 순항·대공미사일 시험과 제재 의혹은 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,8 +58,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "열점 1건(철원 서쪽 북측, 보도 없음)은 근거 없어 징후 아님."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -76,14 +73,15 @@
       "meaning": "당 대 당 외교 일정으로 군사 협정·무기 협력 발표는 확인되지 않는다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "SBS",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261107030200504"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835161"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "김성남 대표단 11/3 베이징 도착(KCNA 11/4 보도), 11/7 류하이싱과 회담(연합 제목)"
+        "11/6 댜오위타이에서 회담, KCNA 11/7 보도",
+        "양당 상호 지지 재확인, 군사 합의 언급 없음"
       ],
       "speculation": [
         "북미대화 관련 의중 전달 가능성"
@@ -102,7 +100,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-07T07:10:39+00:00",
+  "checked_at": "2026-11-07T08:11:22+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

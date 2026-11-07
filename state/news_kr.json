@@ -1,23 +1,23 @@
 {
- "fetched_at": "2026-11-07T00:22:40+00:00",
+ "fetched_at": "2026-11-07T01:32:40+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-07T00:22:40+00:00",
+ "last_ok_at": "2026-11-07T01:32:40+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1126,
-  "hits": 32,
+  "fetched": 1124,
+  "hits": 30,
   "clusters": 27,
   "by_group": {
+   "border": 4,
    "mine": 7,
-   "fire": 9,
+   "fire": 8,
    "hybrid": 1,
    "spy": 1,
    "gps": 3,
    "sanction": 1,
-   "border": 3,
    "drone_balloon": 2,
    "alert": 3,
    "influence": 1,
@@ -29,8 +29,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 566,
-   "hits": 33
+   "count": 564,
+   "hits": 34
   },
   "SBS": {
    "feeds": 3,
@@ -65,14 +65,19 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "border": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-11-07T00:53:21+00:00"
+  },
   "mine": {
    "clusters": 7,
    "max_independent": 1,
    "latest": "2026-11-06T09:57:35+00:00"
   },
   "fire": {
-   "clusters": 9,
-   "max_independent": 3,
+   "clusters": 8,
+   "max_independent": 1,
    "latest": "2026-11-06T08:07:14+00:00"
   },
   "hybrid": {
@@ -95,11 +100,6 @@
    "max_independent": 1,
    "latest": "2026-11-06T02:13:17+00:00"
   },
-  "border": {
-   "clusters": 3,
-   "max_independent": 1,
-   "latest": "2026-11-05T15:00:00+00:00"
-  },
   "drone_balloon": {
    "clusters": 2,
    "max_independent": 1,
@@ -107,7 +107,7 @@
   },
   "alert": {
    "clusters": 3,
-   "max_independent": 3,
+   "max_independent": 1,
    "latest": "2026-11-05T14:52:47+00:00"
   },
   "influence": {
@@ -132,7 +132,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 86,
+   "count": 84,
    "hits": 31
   },
   {
@@ -165,7 +165,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "SBS",

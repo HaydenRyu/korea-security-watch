@@ -1,50 +1,49 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 속보 합참 11월 7일",
+      "북한 합참 속보 11월 7일",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea missile launch nuclear Punggye-ri Yongbyon 38 North",
-      "북한 속보 합참 11월 7일"
+      "북한 합참 속보 11월 7일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "북한 속보 합참 11월 7일",
+      "북한 합참 속보 11월 7일",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "border_clash": [
       "지뢰 발견 목함지뢰 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 GPS 교란"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 11월"
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 속보 합참 11월 7일"
+      "북한 합참 속보 11월 7일"
     ],
     "nk_internal": [
-      "북한 속보 합참 11월 7일"
+      "북한 합참 속보 11월 7일"
     ],
     "gov_warning": [
-      "북한 속보 합참 11월 7일"
+      "북한 합참 속보 11월 7일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hacking"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 북미 대화 11월"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835161",
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "이번 회차 신규 징후는 김성남 방중 당 외교 일정(정례)뿐이며 군사 도발·전시태세 징후는 확인되지 않았다. 11/4 미사일 발사 이후 추가 도발 보도는 없다.",
+  "overall_summary": "신규 징후는 김성남 방중 당 외교 일정(정례)뿐이며 군사 도발·전시태세 징후는 없다. 11/4 미사일 발사 이후 추가 도발 보도는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,12 +54,24 @@
     "logistics": {
       "status": "none"
     },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
+    },
     "border_clash": {
       "status": "none",
       "summary": "해안 지뢰·귀순 신규 보도 없음; 11/4 합참 동해상 미사일 발사 발표는 24시간 경과 배경."
-    },
-    "electronic_cyber": {
-      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
@@ -75,6 +86,11 @@
           "name": "SBS",
           "tier": "B",
           "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835161"
+        },
+        {
+          "name": "Korea Times",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
         }
       ],
       "confidence": "중간",
@@ -83,21 +99,9 @@
         "양당 상호 지지 재확인, 군사 언급 없음"
       ],
       "speculation": []
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-07T09:11:46+00:00",
+  "checked_at": "2026-11-07T10:10:16+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

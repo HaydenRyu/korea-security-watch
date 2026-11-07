@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-06T23:09:31+00:00",
+  "computed_at": "2026-11-07T00:10:54+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 0,
   "band": "안정",
   "d": 0,
-  "e": 6,
+  "e": 1,
   "alpha": 1.0,
   "grade": 0,
   "grade_label": "평시",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-06T11:40:34+00:00",
-    "latest_updated_at": "2026-11-06T23:09:31+00:00"
+    "linkage_judged_at": "2026-11-06T23:40:32+00:00",
+    "latest_updated_at": "2026-11-07T00:10:54+00:00"
   },
   "theaters": [
     {
@@ -22,7 +22,7 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "중국 해경선 4척이 6일 오전 금문 제한수역에 접근해 대만 해순서가 병행 감시로 저지했다.",
+      "summary": "중국 해경선 4척이 6일 오전 금문 수역에 접근해 대만 해순서가 병행 감시로 저지했다.",
       "sources": [
         {
           "name": "중앙통신사",
@@ -31,26 +31,26 @@
           "published_at": "2026-11-06T16:22:43+08:00"
         }
       ],
-      "judged_at": "2026-11-06T11:40:34+00:00"
+      "judged_at": "2026-11-06T23:40:32+00:00"
     },
     {
       "key": "ukraine",
       "observed": true,
-      "state": 2,
-      "contribution": 3,
+      "state": 1,
+      "contribution": 1,
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "러·우 관리들이 백악관에서 지속 가능한 휴전을 논의했다.",
+      "summary": "백악관에서 러·우 대표단이 만나 헤르손 6일 휴전 이후 지속 가능한 휴전을 논의했다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o",
-          "published_at": "2026-11-05T19:08:08+00:00"
+          "published_at": "2026-11-06T07:56:00+00:00"
         }
       ],
-      "judged_at": "2026-11-06T11:40:34+00:00"
+      "judged_at": "2026-11-06T23:40:32+00:00"
     },
     {
       "key": "scs_ecs",
@@ -58,39 +58,31 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "Philstar·Rappler 피드에 72시간 안 남중국해 관련 기사 없음",
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
       "sources": [
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-05T16:23:00+00:00",
+          "published_at": "2026-11-07T00:00:00+08:00",
           "kind": "feed"
         },
         {
-          "name": "Rappler",
-          "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-06T05:36:06+00:00",
+          "name": "BBC 아시아",
+          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+          "published_at": "2026-11-06T22:59:54+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-06T11:40:34+00:00"
+      "judged_at": "2026-11-06T23:40:32+00:00"
     },
     {
       "key": "mideast",
       "observed": true,
       "state": 2,
-      "contribution": 3,
-      "channels": [
-        "c1_us_gap"
-      ],
-      "summary": "이란 협상대표가 미 유권자의 전쟁 반대를 언급했고 이란 미사일 기지 인근 공사 정황이 위성영상으로 보도됐다.",
+      "contribution": 0,
+      "channels": [],
+      "summary": "이란이 미사일 기지 인근에서 신규 공사와 피해 시설 보수를 하는 정황이 위성영상으로 보도됐다.",
       "sources": [
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o",
-          "published_at": "2026-11-04T16:59:15+00:00"
-        },
         {
           "name": "BBC",
           "tier": "B",
@@ -98,7 +90,7 @@
           "published_at": "2026-11-06T07:33:41+00:00"
         }
       ],
-      "judged_at": "2026-11-06T11:40:34+00:00"
+      "judged_at": "2026-11-06T23:40:32+00:00"
     },
     {
       "key": "us_posture",
@@ -121,8 +113,8 @@
   "channels": [
     {
       "key": "c1_us_gap",
-      "observed": true,
-      "value": 3
+      "observed": false,
+      "value": 0
     },
     {
       "key": "c2_nk_ru_cn",
@@ -142,12 +134,12 @@
     {
       "key": "c5_diplomacy",
       "observed": true,
-      "value": 3
+      "value": 1
     }
   ],
   "last_good": {
     "ews": 0,
     "band": "안정",
-    "computed_at": "2026-11-06T23:09:31+00:00"
+    "computed_at": "2026-11-07T00:10:54+00:00"
   }
 }

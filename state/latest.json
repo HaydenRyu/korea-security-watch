@@ -1,59 +1,63 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
-      "North Korea Reuters November 6 2026"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
-      "North Korea Reuters November 6 2026"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Punggye-ri Yongbyon"
     ],
     "logistics": [
-      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
-      "North Korea Reuters November 6 2026"
-    ],
-    "parade_massing": [
-      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
-      "North Korea Reuters November 6 2026"
-    ],
-    "nk_internal": [
-      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
-      "North Korea Reuters November 6 2026"
-    ],
-    "gov_warning": [
-      "합참 북한 발표 지뢰 DMZ 귀순 11월 6일",
-      "North Korea Reuters November 6 2026"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "목함지뢰 지뢰 발견 DMZ 귀순",
-      "North Korea Reuters November 6 2026"
+      "지뢰 발견 DMZ 귀순",
+      "북한 합참 발표 11월 7일",
+      "North Korea DMZ NLL mine"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
+      "GPS 교란",
       "해킹 개인정보 유출",
-      "North Korea GPS jamming cyber"
+      "North Korea GPS jamming cyber attack"
     ],
     "foreign_forces": [
       "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "서해 구조물"
+    ],
+    "parade_massing": [
+      "북한 열병식 병력 집결",
+      "North Korea parade"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 상향",
+      "South Korea Japan government warning North Korea"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안",
-      "North Korea talks offer"
+      "통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261106079100009",
+    "https://www.nknews.org/category/news/",
     "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/category/news/"
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "11/4 미사일 발사와 11/5 대공미사일 시험 보도는 24시간을 넘긴 배경이며 새 도발·핵·병력 징후는 없다. 직전 회차와 같은 평시 수준이다.",
+  "overall_summary": "최근 24시간 새 도발·핵·병력 징후는 없고, 11/4 미사일 발사와 11/5 대공미사일 시험은 배경이다. 북한 선박의 러 나홋카항 왕래 급증 보도는 귀속 발표 없는 배경이라 직전과 같은 평시다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,8 +69,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "울릉도 표류 북한 어선(11/5 첫 보도)은 24시간 경과 배경이다."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -84,11 +87,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "러 나홋카항 북한선박 증가(11/6 연합, NK뉴스 분석)는 정부 귀속·적발 발표가 없는 배경이다."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-06T23:09:31+00:00",
+  "checked_at": "2026-11-07T00:10:54+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

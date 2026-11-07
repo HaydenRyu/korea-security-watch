@@ -1,52 +1,42 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troops deployment border"
-    ],
-    "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri",
-      "북한 핵 영변 풍계리"
-    ],
-    "logistics": [
-      "북한 탄약 수송 군수",
-      "North Korea ammunition shipment Russia"
-    ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순",
-      "목함지뢰 해안"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란 해킹 공격 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "North Korea nuclear Yongbyon Punggye-ri"
+    ],
+    "logistics": [
+      "North Korea ammunition shipment Russia"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 준비"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 열병식"
     ],
     "gov_warning": [
       "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "국가보안법 구속 간첩 혐의"
     ]
   },
   "opened": [
     "https://www.nknews.org/",
-    "https://www.newdaily.co.kr/site/data/html/2026/09/29/2026092900244.html",
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261106079100009"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 11/4 미사일 발사·11/5 신형 대공미사일 시험은 24시간 경과한 배경이다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 11/4 미사일 발사·11/5 대공미사일 시험은 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,8 +48,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "11/4 동해 미사일 발사·11/5 울릉도 표류 북한 어선은 24시간 경과 — 새 접경 사건 없음"
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -80,7 +69,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-07T03:10:33+00:00",
+  "checked_at": "2026-11-07T04:10:00+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

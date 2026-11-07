@@ -1,7 +1,7 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
+      "북한 병력 이동 전방 증강",
       "North Korea troop movement"
     ],
     "nuclear": [
@@ -9,48 +9,54 @@
       "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
+      "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순"
+      "지뢰 발견 DMZ",
+      "목함지뢰 해안",
+      "귀순 NLL",
+      "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김성남 방중 류하이싱 회담",
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout drill"
+      "북한 등화관제 준전시",
+      "North Korea wartime"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "South Korea alert"
+      "진돗개 데프콘 발령",
+      "DEFCON Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 FBI"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835161",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835335",
-    "https://www.nknews.org/"
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/6/ATCE_CTGR_0010010000/view.do",
+    "https://newsis.com/view/NISX20260928_0003806097",
+    "https://biz.sbs.co.kr/amp/article/20000343947"
   ],
-  "overall_summary": "신규 징후 없음; 김성남 방중 당 외교 일정이 이어지고 접경 이상 보도는 없다. 직전과 동일한 평상 수준이다.",
+  "overall_summary": "신규 징후 없음; 김성남 방중 당 외교 일정만 이어지고 접경 이상 보도는 없다. 직전과 동일한 평상 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,7 +69,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "연평도 위문열차 공연 보도만 있고 북한 도발 언급 없음; 9월 DMZ 지뢰 건은 배경."
+      "summary": "연평도 위문열차·드론 공방전 등 국내 행사만 확인, 접경 이상 보도 없음."
     },
     "electronic_cyber": {
       "status": "none"
@@ -71,23 +77,23 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "베이징",
-      "lat": 39.9,
-      "lon": 116.4,
-      "summary": "북 노동당 김성남 국제비서가 방중 중 류하이싱 대외연락부장·차이치와 회담했으나 군사 협력 언급은 없는 당 외교 일정이다.",
-      "meaning": "북중 당 차원 외교 일정으로 군사적 의미는 제한적이다.",
+      "region": "중국 베이징",
+      "summary": "북 노동당 김성남 국제비서 방중 당 외교 일정이 이어지며 군사 협력 언급은 없다.",
+      "meaning": "북중 당 외교 일정이라 군사적 의미는 제한적이다.",
       "sources": [
         {
-          "name": "SBS",
+          "name": "SBS Biz(교도 인용)",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835161"
+          "url": "https://biz.sbs.co.kr/amp/article/20000343947"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신 보도를 SBS가 전함: 11/6 베이징 회담, 군사 협력 언급 없음"
+        "김성남 국제비서가 당 대표단을 이끌고 방중"
       ],
-      "speculation": []
+      "speculation": [
+        "북중 관계 강화 목적(교도 추정)"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -102,7 +108,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-07T16:10:49+00:00",
+  "checked_at": "2026-11-07T17:10:48+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

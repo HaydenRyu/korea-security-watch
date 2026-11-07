@@ -1,28 +1,28 @@
 {
- "fetched_at": "2026-11-07T12:35:38+00:00",
+ "fetched_at": "2026-11-07T13:24:38+00:00",
  "status": "partial",
- "status_detail": "동아일보/정치: RemoteDisconnected: Remote end closed connection without response; 동아일보/사회: TimeoutError: The read operation timed out; 국방일보/국방: URLError: <urlopen error timed out>",
+ "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-07T10:06:44+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 3,
-  "fetched": 961,
-  "hits": 23,
-  "clusters": 18,
+  "feeds_failed": 1,
+  "fetched": 1061,
+  "hits": 26,
+  "clusters": 20,
   "by_group": {
    "drone_balloon": 2,
    "border": 2,
    "summit": 2,
+   "fire": 5,
    "mine": 4,
-   "fire": 4,
    "hybrid": 1,
    "spy": 1,
+   "gps": 3,
    "sanction": 1,
    "alert": 1,
    "influence": 1,
-   "defect": 1,
-   "gps": 2
+   "defect": 1
   }
  },
  "outlets": {
@@ -36,13 +36,13 @@
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 4
+   "hits": 5
   },
   "동아일보": {
    "feeds": 2,
-   "failed": 2,
-   "count": 0,
-   "hits": 0
+   "failed": 0,
+   "count": 100,
+   "hits": 3
   },
   "국민일보": {
    "feeds": 2,
@@ -67,8 +67,8 @@
  "groups": {
   "drone_balloon": {
    "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-07T12:01:04+00:00"
+   "max_independent": 2,
+   "latest": "2026-11-07T12:50:07+00:00"
   },
   "border": {
    "clusters": 2,
@@ -80,15 +80,15 @@
    "max_independent": 2,
    "latest": "2026-11-07T07:02:00+00:00"
   },
+  "fire": {
+   "clusters": 5,
+   "max_independent": 1,
+   "latest": "2026-11-07T04:00:00+00:00"
+  },
   "mine": {
    "clusters": 4,
    "max_independent": 1,
    "latest": "2026-11-06T09:54:41+00:00"
-  },
-  "fire": {
-   "clusters": 4,
-   "max_independent": 1,
-   "latest": "2026-11-06T08:07:14+00:00"
   },
   "hybrid": {
    "clusters": 1,
@@ -99,6 +99,11 @@
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-06T06:01:29+00:00"
+  },
+  "gps": {
+   "clusters": 3,
+   "max_independent": 1,
+   "latest": "2026-11-06T02:28:55+00:00"
   },
   "sanction": {
    "clusters": 1,
@@ -119,11 +124,6 @@
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-05T10:39:50+00:00"
-  },
-  "gps": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-05T02:57:03+00:00"
   }
  },
  "feeds": [
@@ -189,21 +189,23 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "동아일보",
    "section": "정치",
    "url": "https://rss.donga.com/politics.xml",
-   "ok": false,
-   "error": "RemoteDisconnected: Remote end closed connection without response"
+   "ok": true,
+   "count": 50,
+   "hits": 2
   },
   {
    "outlet": "동아일보",
    "section": "사회",
    "url": "https://rss.donga.com/national.xml",
-   "ok": false,
-   "error": "TimeoutError: The read operation timed out"
+   "ok": true,
+   "count": 50,
+   "hits": 1
   },
   {
    "outlet": "국민일보",

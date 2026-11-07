@@ -1,57 +1,46 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 합참 발표 11월 7일",
-      "North Korea troops Reuters"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear 38 North"
-    ],
-    "logistics": [
-      "북한 탄약 수송",
-      "North Korea ammunition shipment"
+    "foreign_forces": [
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한",
-      "North Korea DMZ NLL"
+      "북한 지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
-    ],
-    "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 열병식 준비",
-      "North Korea parade"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘 발령",
-      "US travel advisory Korea"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안(news_kr 수집 결과 대체)"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "북한 핵실험 영변 풍계리 동향"
+    ],
+    "logistics": [
+      "북한 탄약 수송 군수 러시아"
+    ],
+    "parade_massing": [
+      "북한 열병식 준비 병력 집결"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 노농적위군 동원"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 상향 합참"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의"
     ]
   },
   "opened": [
     "https://www.koreaherald.com/article/10929317",
-    "https://www.yna.co.kr/view/AKR20261107030200504",
-    "https://www.yna.co.kr/view/AKR20261105174600504",
-    "https://www.yna.co.kr/view/AKR20261106079100009",
+    "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "새 군사 징후는 없고 북 김성남 방중 외교 접촉만 이어진다. 직전 회차와 동일한 평온 상태.",
+  "overall_summary": "북 김성남 방중 외교 접촉만 이어지고 새 접경·군사 징후는 확인되지 않았다. 직전 회차와 같은 평상 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,7 +53,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "울릉도 표류 북한 어선(11/5 첫 보도)은 24시간 경과, 신규 DMZ·NLL 사건 없음."
+      "summary": "강화 해안 표류 지뢰는 10/19 보도가 마지막이라 24시간 경과, 새 접경 사건 보도 없음."
     },
     "electronic_cyber": {
       "status": "none"
@@ -72,27 +61,19 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 베이징",
-      "lat": 39.9,
-      "lon": 116.4,
-      "summary": "북 노동당 김성남 국제부장이 방중 중 왕이·류하이싱·차이치와 연쇄 회담했으나 군사협력 언급은 없다(외교 일정).",
-      "meaning": "북중 당 차원 외교 접촉으로 군사 징후는 없다.",
+      "region": "베이징",
+      "summary": "북 노동당 김성남 국제부장이 방중 중 왕이·차이치 등과 회담했으나 군사협력 언급은 없는 외교 일정이다.",
+      "meaning": "북중 당 차원 관계 심화 신호이나 군사적 이전·협정은 확인되지 않았다.",
       "sources": [
         {
           "name": "Korea Herald",
           "tier": "B",
           "url": "https://www.koreaherald.com/article/10929317"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261107030200504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "김성남 4일 일정 방중, 왕이·류하이싱·차이치 회담",
-        "상호 지지·최고지도자 합의 이행 확인"
+        "김성남이 4일 일정으로 방중해 차이치·왕이 등과 회담"
       ],
       "speculation": []
     },
@@ -106,11 +87,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "러 극동항 북한선박 증가 보도는 정부 귀속 발표 없는 배경."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-07T19:11:01+00:00",
+  "checked_at": "2026-11-07T20:10:39+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

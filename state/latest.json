@@ -1,47 +1,62 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 속보 11월 7일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 전방 병력 증강 보도",
+      "North Korea troops DMZ Reuters"
     ],
     "nuclear": [
-      "북한 합참 속보 11월 7일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 핵시설 영변 풍계리",
+      "North Korea nuclear 38 North"
     ],
     "logistics": [
-      "북한 합참 속보 11월 7일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ NLL 귀순 북한 어선"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 속보 11월 7일"
+      "북한 열병식 집결",
+      "North Korea parade preparations"
     ],
     "nk_internal": [
-      "북한 합참 속보 11월 7일"
+      "북한 준전시 등화관제",
+      "North Korea mobilization civil defense"
     ],
     "gov_warning": [
-      "북한 합참 속보 11월 7일"
+      "진돗개 발령 데프콘",
+      "South Korea Japan US emergency warning North Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835161",
     "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
+    "https://koreajoongangdaily.joins.com/section/northKorea",
+    "https://en.yna.co.kr/nk/index",
+    "https://www.yna.co.kr/view/AKR20261105092000504",
+    "https://www.yna.co.kr/view/AKR20261105174600504"
   ],
   "overall_summary": "신규 징후는 김성남 방중 당 외교 일정(정례)뿐이며 군사 도발·전시태세 징후는 없다. 11/4 미사일 발사 이후 추가 도발 보도는 없다.",
   "items": {
@@ -55,7 +70,8 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "바이낸스 해킹 FBI 귀속 발표는 10월 말(24시간 경과 배경); 11/5 통일부 '제재 논의 없음'만 확인, 신규 사건 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -71,7 +87,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "해안 지뢰·귀순 신규 보도 없음; 11/4 합참 동해상 미사일 발사 발표는 24시간 경과 배경."
+      "summary": "울릉도 북방 북한 어선 표류(11/3 식별, 11/5 합참 발표)는 24시간 경과 배경; 신규 지뢰·월선·귀순 보도 없음."
     },
     "foreign_forces": {
       "status": "single",
@@ -83,14 +99,14 @@
       "meaning": "당 대 당 외교 일정이며 군사 협정·무기 협력 언급은 확인되지 않는다.",
       "sources": [
         {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835161"
-        },
-        {
           "name": "Korea Times",
           "tier": "B",
           "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+        },
+        {
+          "name": "Korea JoongAng Daily",
+          "tier": "B",
+          "url": "https://koreajoongangdaily.joins.com/section/northKorea"
         }
       ],
       "confidence": "중간",
@@ -101,7 +117,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-07T10:10:16+00:00",
+  "checked_at": "2026-11-07T11:11:01+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,60 +1,44 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 합참 발표 11월 7일"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 수송"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "목함지뢰 해안",
-      "귀순 NLL",
-      "North Korea DMZ NLL"
+      "지뢰 발견 DMZ 귀순 NLL"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea GPS jamming"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김성남 방중 류하이싱 회담",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea wartime"
+      "북한 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "DEFCON Korea"
+      "진돗개 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/6/ATCE_CTGR_0010010000/view.do",
-    "https://newsis.com/view/NISX20260928_0003806097",
-    "https://biz.sbs.co.kr/amp/article/20000343947"
+    "https://www.koreaherald.com/",
+    "https://www.koreaherald.com/article/10929317",
+    "https://www.koreatimes.co.kr/southkorea/defense"
   ],
   "overall_summary": "신규 징후 없음; 김성남 방중 당 외교 일정만 이어지고 접경 이상 보도는 없다. 직전과 동일한 평상 수준이다.",
   "items": {
@@ -69,7 +53,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "연평도 위문열차·드론 공방전 등 국내 행사만 확인, 접경 이상 보도 없음."
+      "summary": "신규 접경 이상 없음; 울릉도 북 어선 표류는 11/5 보도로 24시간 경과, DMZ 지뢰는 10월 조사 결과 배경."
     },
     "electronic_cyber": {
       "status": "none"
@@ -77,23 +61,23 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 베이징",
-      "summary": "북 노동당 김성남 국제비서 방중 당 외교 일정이 이어지며 군사 협력 언급은 없다.",
-      "meaning": "북중 당 외교 일정이라 군사적 의미는 제한적이다.",
+      "region": "베이징",
+      "lat": 39.9,
+      "lon": 116.4,
+      "summary": "북 노동당 김성남 국제부장이 방중 중 류하이싱·차이치·왕이와 연쇄 회담했으나 군사협력 언급은 없다.",
+      "meaning": "북중 당 외교 일정이며 군사적 징후는 아니다.",
       "sources": [
         {
-          "name": "SBS Biz(교도 인용)",
+          "name": "Korea Herald",
           "tier": "B",
-          "url": "https://biz.sbs.co.kr/amp/article/20000343947"
+          "url": "https://www.koreaherald.com/article/10929317"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "김성남 국제비서가 당 대표단을 이끌고 방중"
+        "김성남 방중 4일 일정, 류하이싱·차이치·왕이 회담"
       ],
-      "speculation": [
-        "북중 관계 강화 목적(교도 추정)"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -108,7 +92,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-07T17:10:48+00:00",
+  "checked_at": "2026-11-07T18:11:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

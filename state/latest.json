@@ -5,54 +5,48 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵시설 영변 풍계리 동향",
+      "북한 핵시설 영변 풍계리",
       "North Korea nuclear test site"
     ],
     "logistics": [
       "북한 탄약 수송 러시아",
-      "North Korea ammunition Russia shipment"
+      "North Korea ammunition Russia"
     ],
     "border_clash": [
       "지뢰 발견",
-      "목함지뢰 해안",
-      "북한 DMZ 귀순 합참"
+      "DMZ 귀순"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출",
-      "North Korea hacking"
+      "사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비 병력 집결"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 합참",
-      "합참 북한 발표 11월 7일"
+      "합참 북한 발표 11월 7일",
+      "진돗개 데프콘"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI",
-      "랜섬웨어 공격 사이버 공격"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
     "https://www.koreaherald.com/article/10929317",
-    "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "북 김성남이 방중 중 류하이싱·차이치와 회담했으나 군사협력 언급은 없고, 새 접경·군사 징후는 확인되지 않았다. 직전 회차와 같은 평상 수준이다.",
+  "overall_summary": "북 김성남이 방중해 류하이싱·차이치와 회담했으나 군사협력 언급은 없고, 새 접경·군사 징후는 확인되지 않았다. 직전 회차와 같은 평상 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,8 +58,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "강화 해안 표류 지뢰는 10/19 보도가 마지막이라 24시간 경과, 새 접경 사건 보도 없음."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -87,7 +80,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "김성남이 류하이싱·차이치와 회담, 5개년 계획·상호 지지 논의"
+        "김성남이 류하이싱·차이치와 회담, 상호 지지 확인"
       ],
       "speculation": []
     },
@@ -104,7 +97,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-07T21:10:33+00:00",
+  "checked_at": "2026-11-07T22:10:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

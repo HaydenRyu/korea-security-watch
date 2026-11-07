@@ -1,20 +1,20 @@
 {
- "fetched_at": "2026-11-07T08:50:50+00:00",
+ "fetched_at": "2026-11-07T10:06:44+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-07T08:50:50+00:00",
+ "last_ok_at": "2026-11-07T10:06:44+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1122,
-  "hits": 32,
-  "clusters": 27,
+  "hits": 28,
+  "clusters": 23,
   "by_group": {
-   "border": 4,
-   "summit": 3,
-   "fire": 8,
-   "mine": 5,
+   "border": 3,
+   "summit": 2,
+   "fire": 6,
+   "mine": 4,
    "hybrid": 1,
    "spy": 1,
    "gps": 3,
@@ -30,7 +30,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 562,
-   "hits": 37
+   "hits": 36
   },
   "SBS": {
    "feeds": 3,
@@ -66,22 +66,22 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "border": {
-   "clusters": 4,
+   "clusters": 3,
    "max_independent": 3,
    "latest": "2026-11-07T08:39:00+00:00"
   },
   "summit": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 2,
    "latest": "2026-11-07T07:02:00+00:00"
   },
   "fire": {
-   "clusters": 8,
+   "clusters": 6,
    "max_independent": 1,
    "latest": "2026-11-07T04:00:00+00:00"
   },
   "mine": {
-   "clusters": 5,
+   "clusters": 4,
    "max_independent": 1,
    "latest": "2026-11-06T09:54:41+00:00"
   },
@@ -165,7 +165,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "SBS",

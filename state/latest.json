@@ -2,54 +2,51 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troops nuclear test site Yongbyon November 2026"
+      "North Korea troops deployment border"
     ],
     "nuclear": [
-      "북한 병력 이동 전방 증강 핵 풍계리 영변 동향",
-      "North Korea troops nuclear test site Yongbyon November 2026"
+      "North Korea nuclear Yongbyon Punggye-ri",
+      "북한 핵 영변 풍계리"
     ],
     "logistics": [
-      "북한 열병식 준전시 진돗개 발령 탄약 수송",
-      "북한 합참 발표 11월 7일"
+      "북한 탄약 수송 군수",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준전시 진돗개 발령 탄약 수송"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 열병식 준전시 진돗개 발령 탄약 수송",
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 7일",
-      "북한 열병식 준전시 진돗개 발령 탄약 수송"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261105/13/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261106079100009",
-    "https://www.yna.co.kr/view/AKR20261105118000083"
+    "https://www.nknews.org/",
+    "https://www.newdaily.co.kr/site/data/html/2026/09/29/2026092900244.html",
+    "https://www.yna.co.kr/view/AKR20261106079100009"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 11/4 미사일 발사와 11/5 왕이-김성남 면담은 24시간 경과한 배경이다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 11/4 미사일 발사·11/5 신형 대공미사일 시험은 24시간 경과한 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,7 +59,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "11/4 동해 미사일 발사(합참)는 24시간 경과, 11/5 울릉도 표류 북한 어선도 24시간 경과 — 새 접경 사건 없음"
+      "summary": "11/4 동해 미사일 발사·11/5 울릉도 표류 북한 어선은 24시간 경과 — 새 접경 사건 없음"
     },
     "electronic_cyber": {
       "status": "none"
@@ -83,7 +80,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-07T02:10:06+00:00",
+  "checked_at": "2026-11-07T03:10:33+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

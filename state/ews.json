@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-07T02:10:06+00:00",
+  "computed_at": "2026-11-07T03:10:33+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 0,
@@ -13,7 +13,7 @@
   "coverage": {
     "observed_theaters": 5,
     "linkage_judged_at": "2026-11-06T23:40:32+00:00",
-    "latest_updated_at": "2026-11-07T02:10:06+00:00"
+    "latest_updated_at": "2026-11-07T03:10:33+00:00"
   },
   "theaters": [
     {
@@ -140,6 +140,6 @@
   "last_good": {
     "ews": 0,
     "band": "안정",
-    "computed_at": "2026-11-07T02:10:06+00:00"
+    "computed_at": "2026-11-07T03:10:33+00:00"
   }
 }

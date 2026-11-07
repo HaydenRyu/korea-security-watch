@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-07T13:24:38+00:00",
+ "fetched_at": "2026-11-07T14:36:04+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-07T10:06:44+00:00",
@@ -68,7 +68,7 @@
   "drone_balloon": {
    "clusters": 2,
    "max_independent": 2,
-   "latest": "2026-11-07T12:50:07+00:00"
+   "latest": "2026-11-07T13:24:34+00:00"
   },
   "border": {
    "clusters": 2,

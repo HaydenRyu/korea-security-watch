@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-07T11:11:01+00:00",
+  "computed_at": "2026-11-07T12:11:28+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 26,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-07T05:40:21+00:00",
-    "latest_updated_at": "2026-11-07T11:11:01+00:00"
+    "linkage_judged_at": "2026-11-07T11:39:51+00:00",
+    "latest_updated_at": "2026-11-07T12:11:28+00:00"
   },
   "theaters": [
     {
@@ -22,22 +22,22 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "중국 해경선 4척이 6일 금문 제한수역에 접근했고, 대만 국방부는 7일 중국 군용기·함정 24건이 대만 주변에서 활동했다고 밝혔다.",
+      "summary": "대만 국방부는 7일 중국 군용기 11대·군함 10척·공무선 3척 등 24건이 대만 주변에서 활동했다고 밝혔고, 6일 중국 해경선 4척이 금문 수역을 침범했다.",
       "sources": [
-        {
-          "name": "중앙통신사",
-          "tier": "B",
-          "url": "https://www.cna.com.tw/news/acn/202611060206.aspx",
-          "published_at": "2026-11-06T16:22:43+08:00"
-        },
         {
           "name": "중앙통신사",
           "tier": "B",
           "url": "https://www.cna.com.tw/news/aipl/202611070034.aspx",
           "published_at": "2026-11-07T09:56:00+08:00"
+        },
+        {
+          "name": "중앙통신사",
+          "tier": "B",
+          "url": "https://www.cna.com.tw/news/acn/202611060206.aspx",
+          "published_at": "2026-11-06T16:22:00+08:00"
         }
       ],
-      "judged_at": "2026-11-07T05:40:21+00:00"
+      "judged_at": "2026-11-07T11:39:51+00:00"
     },
     {
       "key": "ukraine",
@@ -47,7 +47,7 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "백악관에서 러·우 대표단이 만나 헤르손 6일 휴전 이후 지속 가능한 휴전을 논의했다.",
+      "summary": "백악관에서 러·우 대표단이 만나 헤르손 휴전 이후 지속 가능한 휴전을 논의했다.",
       "sources": [
         {
           "name": "BBC",
@@ -56,7 +56,7 @@
           "published_at": "2026-11-05T19:08:08+00:00"
         }
       ],
-      "judged_at": "2026-11-07T05:40:21+00:00"
+      "judged_at": "2026-11-07T11:39:51+00:00"
     },
     {
       "key": "scs_ecs",
@@ -69,7 +69,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-07T11:44:00+08:00",
+          "published_at": "2026-11-07T17:20:00+08:00",
           "kind": "feed"
         },
         {
@@ -79,7 +79,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-07T05:40:21+00:00"
+      "judged_at": "2026-11-07T11:39:51+00:00"
     },
     {
       "key": "mideast",
@@ -87,7 +87,7 @@
       "state": 2,
       "contribution": 0,
       "channels": [],
-      "summary": "이란이 미사일 기지 인근에서 신규 공사와 피해 시설 보수를 하는 정황이 위성영상으로 보도됐다.",
+      "summary": "이란 미사일 기지 인근에서 신규 공사 정황이 위성영상으로 보도됐다.",
       "sources": [
         {
           "name": "BBC",
@@ -96,7 +96,7 @@
           "published_at": "2026-11-06T07:33:41+00:00"
         }
       ],
-      "judged_at": "2026-11-07T05:40:21+00:00"
+      "judged_at": "2026-11-07T11:39:51+00:00"
     },
     {
       "key": "us_posture",
@@ -104,7 +104,7 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 태평양공군이 괌 인근 소규모 섬에서 훈련 비행을 늘릴 계획이라는 보도 외에 새 전략자산 전개는 확인되지 않았다.",
+      "summary": "미 공군이 북마리아나 제도에서 연 6,000회 훈련 비행을 계획한다는 보도 외에 새 전략자산 전개는 확인되지 않았다.",
       "sources": [
         {
           "name": "Stars and Stripes",
@@ -113,7 +113,7 @@
           "published_at": "2026-11-05T06:10:35+00:00"
         }
       ],
-      "judged_at": "2026-11-07T05:40:21+00:00"
+      "judged_at": "2026-11-07T11:39:51+00:00"
     }
   ],
   "channels": [
@@ -146,6 +146,6 @@
   "last_good": {
     "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-07T11:11:01+00:00"
+    "computed_at": "2026-11-07T12:11:28+00:00"
   }
 }

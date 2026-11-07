@@ -1,59 +1,77 @@
 {
   "coverage": {
-    "foreign_forces": [
-      "김성남 류하이싱 회담 방중",
-      "Kim Jong Un China Russia visit North Korea"
-    ],
-    "border_clash": [
-      "북한 지뢰 발견 DMZ 합참",
-      "북한 어선 울릉도 표류 발견 해경 귀순"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 소형 집속탄 순항미사일 시험 합참 11월",
-      "North Korea missile launch Reuters November 2026"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 합참"
+      "북한 핵 영변 풍계리",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 러시아 파병 11월"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ 귀순",
+      "North Korea DMZ mine"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "North Korea GPS jamming"
+    ],
+    "foreign_forces": [
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비 동향"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군 동원"
+      "북한 등화관제 준전시",
+      "North Korea civil defense wartime"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 경고"
+      "진돗개 발령 데프콘",
+      "South Korea DEFCON alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1434334",
-    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1433965",
-    "https://www.nknews.org/",
-    "https://newstomato.com/ReadNews.aspx?no=1319016",
-    "https://www.rfa.org/korean/in-focus/2026/11/03/north-korea-cruise-missile/"
+    "https://nknews.org",
+    "https://en.yna.co.kr/nk/index",
+    "https://www.dailynk.com/english/",
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1434334"
   ],
-  "overall_summary": "북 노동당 김성남 국제비서가 방중 중이며 북중 고위급 교류가 이어지고 있으나 군사협정·무기 이전 보도는 없다. 10/31·11/2 집속탄두 시험은 24시간이 지난 북한 주장으로 배경이며 접경 신규 사건은 확인되지 않았다.",
+  "overall_summary": "신형 대공·순항미사일 시험 등 정례 활동 외에 새 군사 징후는 없고, 북 김성남의 방중 당 외교가 이어진다. 직전 회차와 큰 변화 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "none",
+      "summary": "핵 관련 새 징후 없음. 11/2~11/5 순항미사일 집속탄두·신형 대공미사일 시험은 정례 시험 배경."
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "새 지뢰·월선·귀순 보도 없음(검색 결과는 7·9월 과거 사건뿐)."
     },
     "electronic_cyber": {
       "status": "none"
@@ -64,7 +82,7 @@
       "region": "중국 베이징",
       "lat": 39.9,
       "lon": 116.4,
-      "summary": "북 노동당 김성남 국제비서가 중국공산당 초청으로 방중해 대외연락부 인사들과 접촉 중이다(11/3 출발, 11/7 류하이싱 회담 보도는 연합 제목으로만 확인).",
+      "summary": "북 노동당 김성남 국제비서가 중국공산당 초청으로 방중해 고위급과 회담 중이다(11/3 출발, 11/7 류하이싱 회담 보도).",
       "meaning": "당 대 당 외교 일정으로 군사협정·무기 이전 발표는 없다.",
       "sources": [
         {
@@ -75,12 +93,9 @@
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신 보도: 김성남 단장 당 대표단 3일 평양 출발, 베이징 도착",
-        "기사에 회담 구체 내용 없음"
+        "조선중앙통신 보도: 김성남 당 대표단 11/3 평양 출발"
       ],
-      "speculation": [
-        "교도통신: 중국공산당과 관계 강화 모색으로 추정"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -95,7 +110,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-07T13:12:07+00:00",
+  "checked_at": "2026-11-07T14:13:26+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

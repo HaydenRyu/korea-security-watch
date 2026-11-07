@@ -1,38 +1,50 @@
 {
   "coverage": {
-    "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
+    ],
+    "nuclear": [
+      "북한 핵시설 영변 풍계리 동향",
+      "North Korea nuclear test site"
+    ],
+    "logistics": [
+      "북한 탄약 수송 러시아",
+      "North Korea ammunition Russia shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
+      "지뢰 발견",
+      "목함지뢰 해안",
+      "북한 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출",
+      "North Korea hacking"
     ],
-    "calm": [
-      "남북 대화 제안(news_kr 수집 결과 대체)"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강"
-    ],
-    "nuclear": [
-      "북한 핵실험 영변 풍계리 동향"
-    ],
-    "logistics": [
-      "북한 탄약 수송 군수 러시아"
+    "foreign_forces": [
+      "김정은 방중",
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 준비 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군 동원"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 합참"
+      "진돗개 발령 데프콘 상향 합참",
+      "합참 북한 발표 11월 7일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI",
+      "랜섬웨어 공격 사이버 공격"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
@@ -40,7 +52,7 @@
     "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "북 김성남 방중 외교 접촉만 이어지고 새 접경·군사 징후는 확인되지 않았다. 직전 회차와 같은 평상 수준이다.",
+  "overall_summary": "북 김성남이 방중 중 류하이싱·차이치와 회담했으나 군사협력 언급은 없고, 새 접경·군사 징후는 확인되지 않았다. 직전 회차와 같은 평상 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,7 +74,9 @@
       "status": "single",
       "routine": true,
       "region": "베이징",
-      "summary": "북 노동당 김성남 국제부장이 방중 중 왕이·차이치 등과 회담했으나 군사협력 언급은 없는 외교 일정이다.",
+      "lat": 39.9,
+      "lon": 116.4,
+      "summary": "북 노동당 김성남 국제부장이 방중 중 류하이싱·차이치와 회담했으나 군사협력 언급 없는 외교 일정이다.",
       "meaning": "북중 당 차원 관계 심화 신호이나 군사적 이전·협정은 확인되지 않았다.",
       "sources": [
         {
@@ -73,7 +87,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "김성남이 4일 일정으로 방중해 차이치·왕이 등과 회담"
+        "김성남이 류하이싱·차이치와 회담, 5개년 계획·상호 지지 논의"
       ],
       "speculation": []
     },
@@ -90,7 +104,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-07T20:10:39+00:00",
+  "checked_at": "2026-11-07T21:10:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

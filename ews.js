@@ -1,6 +1,7 @@
 // 조기경보 지수(EWS) 화면 — index.html 「세계 보기」 탭과 forecast.html 「조기경보 지표」 절. 공식 등급·알림과 무관한 참고 지수다.
 // 공개 게이트 2개(data/ews_weights.json): public_globe = 「세계 보기」 탭·지구본·전역 목록·카드·예측 절 전역 표 · public_index = 지수 숫자·게이지·지수 문장.
-// 옛 키 public 만 있으면 둘 다 그 값으로 읽는다. 둘 다 닫히면 ?sample=1 에서만 그린다(?sample=1&gate=globe = 지구본만 공개한 화면 미리보기).
+// public_globe_view = 「세계 보기」 탭·3D 지구본만(전역 위치 + 「판정 준비 중」, state/ews.json 을 읽지 않아 단계·요약·출처가 화면에 없다 — 11/08 hayden: 판정 공개 전 지구본 먼저).
+// 옛 키 public 만 있으면 둘 다 그 값으로 읽는다. 둘 다 닫히면 ?sample=1 에서만 그린다(?sample=1&gate=globe = 지구본만 공개한 화면 · gate=view = 지구본 화면만 연 미리보기).
 // 게이트가 둘 다 닫히면 state/ews.json·MapLibre·스타일을 건드리지 않는다.
 // alpha==1(세계 연동이 지수에 안 들어감)이면 기여 점수·연결 채널 값·한반도 연결선을 그리지 않는다 — 「이 지역이 한국 위험을 올렸다」로 읽히기 때문이다.
 // MapLibre 는 「세계 보기」를 처음 누를 때 읽는다. 미관측·보류·실패를 0점이나 「안정」으로 그리지 않는다.
@@ -25,11 +26,16 @@ const C7="공식 경보 단계와 별개인 참고 지수입니다. 공식 경�
 const C9="확인된 근거 없음";
 const C16="이 브라우저에서는 지구본을 표시할 수 없어 목록으로 보여 드립니다.";
 const NOTE_W="각 지역의 상태·요약·출처입니다. 한반도 위험 계산에는 넣지 않습니다.";
+const PENDING="판정 준비 중";
+const NOTE_P="지역별 상태는 판정이 안정되고 검수를 통과하면 공개합니다. 지금은 위치만 보여 드립니다.";
 // 게이트 판정 — 새 키(boolean)가 있으면 그 값, 없으면 옛 public. 미리보기는 둘 다 연다(gate=globe 면 지수만 닫는다).
-function gates(w,sample,q){if(sample)return{globe:true,index:(q&&q.get("gate"))!=="globe"};const k=n=>typeof w?.[n]==="boolean"?w[n]:w?.public===true;return{globe:k("public_globe")===true,index:k("public_index")===true}}
+function gates(w,sample,q){const gq=q&&q.get("gate");
+  if(sample)return gq==="view"?{view:true,globe:false,index:false}:{view:true,globe:true,index:gq!=="globe"};
+  const k=n=>typeof w?.[n]==="boolean"?w[n]:w?.public===true,globe=k("public_globe")===true;
+  return{view:globe||w?.public_globe_view===true,globe,index:k("public_index")===true}}
 // 세계 연동이 지수에 들어가는가(alpha<1). 모르면 안 들어간다고 본다 — 기여 표시는 연동이 확인될 때만.
 function linkedOf(doc,w){const a=typeof doc?.alpha==="number"?doc.alpha:w?.alpha;return typeof a==="number"&&a<1}
-let VIEW={globe:true,index:true,linked:true};
+let VIEW={globe:true,index:true,linked:true,pending:false};
 
 const jf=u=>fetch(u,{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null);
 const kst=iso=>{const t=new Date(iso);if(isNaN(t))return"—";const p=Object.fromEntries(new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(t).map(x=>[x.type,x.value]));
@@ -110,6 +116,7 @@ function gauge(doc){
 }
 const quietOnly=t=>(t.sources||[]).length>0&&t.sources.every(s=>s.kind==="feed"); // 평온 확인 = 정본 피드에 관련 기사 없음(기사 근거 아님)
 function theaterValue(t){
+  if(VIEW.pending)return PENDING;
   if(!t.observed)return C9;
   return`${STATE_NAME[t.state]??"—"}${quietOnly(t)?"(피드 확인)":""}${!VIEW.linked||t.contribution==null?"":` · ${t.contribution}`}`;
 }
@@ -117,6 +124,7 @@ const seen=t=>t.judged_at?`<p class="ews-s">확인 ${esc(kst(t.judged_at))}</p>`
 const srcLinks=t=>(t.sources||[]).filter(s=>/^https?:/.test(s.url||"")).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name||s.url)}${s.kind==="feed"?" · 피드 확인 · 관련 보도 없음":""}${s.tier?` · ${esc(s.tier)}`:""}${s.published_at?` · ${s.kind==="feed"?"최신 항목 ":""}${esc(kst(s.published_at))}`:""}</a>`).join("");
 function card(t){
   if(!t)return"";
+  if(VIEW.pending)return`<div class="ews-card"><b>${esc(THEATER[t.key].n)}</b><br>${PENDING}</div>`;
   if(!t.observed)return`<div class="ews-card"><b>${esc(THEATER[t.key].n)}</b><br>${C9}</div>`;
   const ch=VIEW.linked?(t.channels||[]).map(c=>CHANNEL[c]).filter(Boolean).join(" · "):"";  // 연결 채널은 연동이 지수에 들어갈 때만
   return`<div class="ews-card"><b>${esc(THEATER[t.key].n)}</b> ${esc(STATE_NAME[t.state]??"")}<br>${esc(t.summary)}${ch?`<p class="ews-s">${esc(ch)}</p>`:""}${seen(t)}${srcLinks(t)}</div>`;
@@ -126,7 +134,7 @@ function renderSide(doc,sel){
   const tl=ts.map(t=>`<li><button type="button" class="ews-row" data-t="${esc(t.key)}" aria-pressed="${t.key===sel}"><i class="ews-dot" style="--c:var(${stateVar(t)})"></i><span class="ews-name">${esc(THEATER[t.key]?.n||t.key)}</span><span class="ews-val">${esc(theaterValue(t))}</span></button></li>`).join("");
   const cl=cs.map(c=>`<li><div class="ews-row static"><span class="ews-name">${esc(CHANNEL[c.key]||c.key)}</span><span class="ews-val">${c.observed?esc(c.value??"—"):C9}</span></div></li>`).join("");
   const head=VIEW.index?gauge(doc):doc.status==="error"||!ts.length?`<section><p class="ews-p ews-err">세계 전역 자료를 불러오지 못했습니다</p></section>`:"";
-  const tlh=VIEW.linked?"<h3>연동 전역</h3>":`<h3>세계 전역</h3><p class="ews-s">${NOTE_W}</p>`;
+  const tlh=VIEW.linked?"<h3>연동 전역</h3>":`<h3>세계 전역</h3><p class="ews-s">${VIEW.pending?NOTE_P:NOTE_W}</p>`;
   $("ews-side").innerHTML=head+(tl?`<section>${tlh}<ul class="ews-list">${tl}</ul></section>`:"")
     +card(ts.find(t=>t.key===sel))+(cl&&VIEW.linked?`<section><h3>연결 채널</h3><ul class="ews-list">${cl}</ul></section>`:"");
 }
@@ -246,14 +254,15 @@ if(globalThis.__EWS_TEST__)Object.assign(globalThis.__EWS_TEST__,{gates,linkedOf
   if(!$("ews-tabs")&&!$("ews-fc"))return;
   const w=await jf("data/ews_weights.json");
   const g=gates(w,SAMPLE,Q);
-  if(!g.globe&&!g.index)return;  // 게이트 — 운영은 승인 전까지 아무것도 그리지 않는다
+  if(!g.view&&!g.index)return;  // 게이트 — 운영은 승인 전까지 아무것도 그리지 않는다
   let doc;
-  if(SAMPLE){const all=await jf("state/sample/ews.json");doc=all&&(all[Q.get("ews")]||all.ok)}
+  if(!g.globe&&!g.index)doc={status:"pending",theaters:Object.keys(THEATER).map(key=>({key,observed:false})),channels:[]};  // 지구본 화면만 — 판정 자료를 읽지도 싣지도 않는다
+  else if(SAMPLE){const all=await jf("state/sample/ews.json");doc=all&&(all[Q.get("ews")]||all.ok)}
   else doc=await jf("state/ews.json");
   if(!doc)doc={status:"error",error:"state/ews.json 을 불러오지 못했습니다",weights_version:w?.version,theaters:[],channels:[],computed_at:null};
-  VIEW={globe:g.globe,index:g.index,linked:linkedOf(doc,w)};
+  VIEW={globe:g.globe,index:g.index,linked:linkedOf(doc,w),pending:doc.status==="pending"};
   const st=document.createElement("style");st.textContent=CSS;document.head.append(st);
-  if($("ews-tabs")&&g.globe)initBoard(doc);  // 「세계 보기」는 지구본 공개가 있어야 연다
-  if($("ews-fc"))initForecast(doc);
+  if($("ews-tabs")&&g.view)initBoard(doc);  // 「세계 보기」는 지구본 화면 공개(view)가 있어야 연다
+  if($("ews-fc")&&(g.globe||g.index))initForecast(doc);  // 예측 절 전역 표는 판정 공개 뒤에만
 })();
 })();

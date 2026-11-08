@@ -87,12 +87,29 @@ def test_new_keys_override_legacy_and_gates_table():
         [{"public": True, "public_index": False}, False, ""],     # 새 키 하나만 있으면 나머지는 옛 키
         [None, False, ""],
         [{"public_globe": False, "public_index": False}, True, "sample=1"],
-        [{"public_globe": False, "public_index": False}, True, "sample=1&gate=globe"]],
+        [{"public_globe": False, "public_index": False}, True, "sample=1&gate=globe"],
+        [{"public_globe_view": True}, False, ""],                  # 지구본 화면만
+        [{"public_globe_view": True, "public_globe": True}, False, ""],
+        [{"public_globe": False, "public_index": False}, True, "sample=1&gate=view"]],
         "arcs": []}
     o = run({**W, "public_globe": False, "public_index": False}, hook=q)
-    assert o["gates"] == [{"globe": True, "index": True}, {"globe": False, "index": False}, {"globe": True, "index": False},
-                          {"globe": True, "index": False}, {"globe": True, "index": False}, {"globe": False, "index": False},
-                          {"globe": True, "index": True}, {"globe": True, "index": False}]
+    G = lambda v, g, i: {"view": v, "globe": g, "index": i}
+    assert o["gates"] == [G(True, True, True), G(False, False, False), G(True, True, False),
+                          G(True, True, False), G(True, True, False), G(False, False, False),
+                          G(True, True, True), G(True, True, False),
+                          G(True, False, False), G(True, True, False), G(True, False, False)]
+
+
+def test_globe_view_only_shows_positions_without_judgments():
+    """11/08 — 판정 공개(public_globe) 전 3D 지구본 화면만 연다. 단계·요약·출처·미관측 문구가 화면에 없어야 한다."""
+    for o in (run({**W, "public_globe_view": True, "public_globe": False, "public_index": False}),
+              run({**W, "public_globe": False, "public_index": False}, search="?sample=1&gate=view")):
+        side = o["side"]
+        assert not o["tabs_hidden"] and o["fc_hidden"] and o["fc"] == ""
+        assert "판정 준비 중" in side and "위치만 보여 드립니다" in side
+        assert all(n in side for n in ("대만해협", "러시아-우크라이나", "남·동중국해", "중동·호르무즈", "미 전략자산"))
+        for bad in ("평온", "긴장", "위기", "교전", "대만 주변 합동훈련", "https://", "확인된 근거 없음", "조기경보 지수", "--g"):
+            assert bad not in side, bad
 
 
 def test_globe_public_index_hidden_shows_world_without_index():

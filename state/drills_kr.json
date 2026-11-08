@@ -1,14 +1,14 @@
 {
  "source": "접경 지자체 공지(철원 RSS · 고성 공지 · 파주 새소식+HWP · 화천 공지+PDF) — 군 사격훈련 주민 안내",
  "note": "참고 자료 · 등급 판정과 무관. 일정은 부대 사정·기상으로 바뀔 수 있다.",
- "fetched_at": "2026-11-08T14:25:45.352257+00:00",
+ "fetched_at": "2026-11-08T21:25:00.954636+00:00",
  "sources": {
   "cheorwon": {
    "name": "철원군",
    "page": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-08T14:25:45.352257+00:00",
+   "last_ok_at": "2026-11-08T21:25:00.954636+00:00",
    "count": 10
   },
   "goseong": {
@@ -16,7 +16,7 @@
    "page": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/list.do",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-08T14:25:45.352257+00:00",
+   "last_ok_at": "2026-11-08T21:25:00.954636+00:00",
    "count": 10
   },
   "paju": {
@@ -24,40 +24,19 @@
    "page": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=2001",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-08T14:25:45.352257+00:00",
+   "last_ok_at": "2026-11-08T21:25:00.954636+00:00",
    "count": 8
   },
   "hwacheon": {
    "name": "화천군",
    "page": "https://www.ihc.go.kr/www/selectBbsNttList.do?bbsNo=11&key=2338",
-   "status": "ok",
-   "status_detail": "",
+   "status": "error",
+   "status_detail": "RemoteDisconnected: Remote end closed connection without response",
    "last_ok_at": "2026-11-08T14:25:45.352257+00:00",
    "count": 6
   }
  },
  "posts": [
-  {
-   "source": "goseong",
-   "title": "'26년 육군 제22사단 후반기 현궁 사격 훈련 일정 안내",
-   "url": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/view.do?nttId=B000000081275Xm1bD5w",
-   "posted": "2026-11-06",
-   "body": "2026년 후반기 육군 제22사단 현궁 사격 훈련 일정 안내드립니다.\n○ 훈련기간\n가) '26. 12. 2.(수) 08:00 ~ 13:00 / 학야리 전차포 사격장\n- 예비일: 12. 3.(목)\n○ 사격시간은 발효된 기상특보 및 당일 기상에 따라 변동 가능\n* 사격당일과 해당시간에 마을 주민께서는 사격장 및 피탄지 주변 출입 전면금지하오니, 이 점 유의하시고 양해 부탁드립니다.\n* 마을 주민 및 가축 등이 놀라지 않도록 사전 조치사항(참문개방, 가축장 음악 및 트랙터 시동 등)을 사격 30분 전부터 부탁드립니다.",
-   "unit": "제22사단",
-   "first": "2026-12-02",
-   "last": "2026-12-03",
-   "days": [
-    "2026-12-02",
-    "2026-12-03"
-   ],
-   "places": [
-    "전차포 사격장",
-    "주민께서는 사격장",
-    "및 피탄지"
-   ],
-   "arms": [],
-   "active_now": false
-  },
   {
    "source": "goseong",
    "title": "26년 11월 마치진 대공사격훈련장 사격 훈련 일정 안내",
@@ -94,7 +73,7 @@
     "대공사격훈련장"
    ],
    "arms": [],
-   "active_now": false
+   "active_now": true
   },
   {
    "source": "paju",
@@ -127,6 +106,27 @@
     "2026-11-27"
    ],
    "places": [],
+   "arms": [],
+   "active_now": true
+  },
+  {
+   "source": "goseong",
+   "title": "'26년 육군 제22사단 후반기 현궁 사격 훈련 일정 안내",
+   "url": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/view.do?nttId=B000000081275Xm1bD5w",
+   "posted": "2026-11-06",
+   "body": "2026년 후반기 육군 제22사단 현궁 사격 훈련 일정 안내드립니다.\n○ 훈련기간\n가) '26. 12. 2.(수) 08:00 ~ 13:00 / 학야리 전차포 사격장\n- 예비일: 12. 3.(목)\n○ 사격시간은 발효된 기상특보 및 당일 기상에 따라 변동 가능\n* 사격당일과 해당시간에 마을 주민께서는 사격장 및 피탄지 주변 출입 전면금지하오니, 이 점 유의하시고 양해 부탁드립니다.\n* 마을 주민 및 가축 등이 놀라지 않도록 사전 조치사항(참문개방, 가축장 음악 및 트랙터 시동 등)을 사격 30분 전부터 부탁드립니다.",
+   "unit": "제22사단",
+   "first": "2026-12-02",
+   "last": "2026-12-03",
+   "days": [
+    "2026-12-02",
+    "2026-12-03"
+   ],
+   "places": [
+    "전차포 사격장",
+    "주민께서는 사격장",
+    "및 피탄지"
+   ],
    "arms": [],
    "active_now": false
   },

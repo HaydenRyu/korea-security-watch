@@ -1,54 +1,55 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 병력 이동 전방",
+      "North Korea troop buildup border"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
     "border_clash": [
-      "북한 합참 지뢰 DMZ 귀순 11월 8일",
-      "목함지뢰 해안 발견",
-      "DMZ NLL 귀순 뉴스"
+      "지뢰 발견 DMZ 귀순 북한 11월",
+      "DMZ NLL North Korea clash"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "한양증권 대신증권 해킹 유출 그룹웨어",
-      "해킹 개인정보 유출"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강"
-    ],
-    "nuclear": [
-      "북한 핵실험장 풍계리 영변 동향"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송 러시아"
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결 준비"
+      "북한 열병식 준비"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군 동원"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 합참"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 확성기 중단 11월"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261108505997",
     "https://www.segye.com/newsView/20261108509478",
-    "https://www.yna.co.kr/view/AKR20261108052700054",
-    "https://biz.sbs.co.kr/amp/article/20000343888"
+    "https://biz.sbs.co.kr/amp/article/20000343888",
+    "https://www.ytn.co.kr/_ln/0101_202610291545228200"
   ],
-  "overall_summary": "신규 군사 징후는 없고 김성남 방중 종료와 금융권 해킹(귀속 미확인)만 정례 수준으로 직전 회차와 같다.",
+  "overall_summary": "신규 군사 징후는 없고 김성남 방중 종료와 금융권 해킹(귀속 미확인)만 정례 수준으로 직전 회차와 같다. 마지막 미사일 발사는 10/29로 24시간 밖이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,7 +68,7 @@
       "routine": true,
       "attribution": "unknown",
       "summary": "귀속 미확인 — 한양증권(31건) 등 증권·금융권 그룹웨어 해킹 유출이 조사 중이며 북한 등 귀속 발표는 없다.",
-      "meaning": "국내 금융권 대상 사이버 사고이나 귀속이 없어 등급에 반영하지 않는다.",
+      "meaning": "국내 금융권 사이버 사고이나 귀속이 없어 등급에 반영하지 않는다.",
       "sources": [
         {
           "name": "SBS Biz",
@@ -114,7 +115,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-08T13:13:48+00:00",
+  "checked_at": "2026-11-08T14:10:54+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

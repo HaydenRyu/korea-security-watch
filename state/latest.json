@@ -1,55 +1,49 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troop buildup border"
+      "북한 합참 발표 11월 8일",
+      "North Korea Reuters November 8 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 합참 발표 11월 8일",
+      "North Korea Reuters November 8 2026"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 합참 발표 11월 8일",
+      "North Korea Reuters November 8 2026"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한 11월",
-      "DMZ NLL North Korea clash"
+      "지뢰 발견 DMZ 귀순 NLL",
+      "North Korea Reuters November 8 2026"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "주한미군 감축"
+      "North Korea Reuters November 8 2026"
     ],
     "parade_massing": [
-      "북한 열병식 준비"
+      "북한 합참 발표 11월 8일"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 합참 발표 11월 8일"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "북한 합참 발표 11월 8일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "지뢰 발견 DMZ 귀순 NLL"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 중단 11월"
+      "North Korea Reuters November 8 2026"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261108505997",
     "https://www.segye.com/newsView/20261108509478",
-    "https://biz.sbs.co.kr/amp/article/20000343888",
-    "https://www.ytn.co.kr/_ln/0101_202610291545228200"
+    "https://www.koreatimes.co.kr/southkorea/defense/20261005/seoul-concludes-north-korea-responsible-for-dmz-land-mine-explosions"
   ],
-  "overall_summary": "신규 군사 징후는 없고 김성남 방중 종료와 금융권 해킹(귀속 미확인)만 정례 수준으로 직전 회차와 같다. 마지막 미사일 발사는 10/29로 24시간 밖이다.",
+  "overall_summary": "최근 24시간 새 군사 징후는 없고 북 김성남 방중 외교 일정만 이어졌다. 직전 회차와 큰 차이 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,28 +58,14 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "summary": "귀속 미확인 — 한양증권(31건) 등 증권·금융권 그룹웨어 해킹 유출이 조사 중이며 북한 등 귀속 발표는 없다.",
-      "meaning": "국내 금융권 사이버 사고이나 귀속이 없어 등급에 반영하지 않는다.",
-      "sources": [
-        {
-          "name": "SBS Biz",
-          "tier": "B",
-          "url": "https://biz.sbs.co.kr/amp/article/20000343888"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "한양증권 10/29 외부 해킹, 유출 31건, 귀속 언급 없음"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 한양증권 해킹 첫 보도 10/29, 새 사고·귀속 발표 없음."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "북 김성남 당 국제비서의 5일 방중이 마무리돼 11/7 귀국했고 군사협력 언급은 없다.",
+      "region": "중국",
+      "summary": "북 김성남 당 국제비서가 11/3~7 방중해 왕이·차이치 등과 회담하고 귀국했으며 군사협력 언급은 없다.",
       "meaning": "외교 일정이며 군사 협정·기술 협력 발표는 없다.",
       "sources": [
         {
@@ -96,7 +76,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "왕이·차이치 등과 회담 후 귀국"
+        "왕이·차이치·류하이싱 면담 후 7일 귀국"
       ],
       "speculation": [
         "APEC 앞두고 북·미 관계 논의 관측"
@@ -115,7 +95,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-08T14:10:54+00:00",
+  "checked_at": "2026-11-08T15:12:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

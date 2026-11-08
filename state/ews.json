@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-08T14:10:54+00:00",
+  "computed_at": "2026-11-08T15:12:25+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 27,
+  "ews": 26,
   "band": "관찰",
-  "d": 4,
+  "d": 2,
   "e": 13,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-08T11:40:17+00:00",
-    "latest_updated_at": "2026-11-08T14:10:54+00:00"
+    "linkage_judged_at": "2026-11-08T14:40:17+00:00",
+    "latest_updated_at": "2026-11-08T15:12:25+00:00"
   },
   "theaters": [
     {
@@ -41,7 +41,7 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "러시아의 새 공습으로 우크라이나 전력망이 추가 피해를 입었고 다음 주 3자 회담이 예정돼 있다.",
+      "summary": "러시아의 탄도미사일 30여 발·드론 170여 기 공습으로 우크라이나 에너지 시설이 피해를 입었고 다음 주 3자 회담이 예정돼 있다.",
       "sources": [
         {
           "name": "BBC",
@@ -50,7 +50,7 @@
           "published_at": "2026-11-07T12:49:36+00:00"
         }
       ],
-      "judged_at": "2026-11-08T11:40:17+00:00"
+      "judged_at": "2026-11-08T14:40:17+00:00"
     },
     {
       "key": "scs_ecs",
@@ -73,7 +73,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-08T11:40:17+00:00"
+      "judged_at": "2026-11-08T14:40:17+00:00"
     },
     {
       "key": "mideast",
@@ -83,7 +83,7 @@
       "channels": [
         "c4_sea_energy"
       ],
-      "summary": "미 중부사령부가 7일 봉쇄 위반 화물선을 무력화했고 후티 측은 사우디 공습으로 최소 33명이 숨졌다고 주장했다.",
+      "summary": "미 중부사령부가 7일 대이란 해상봉쇄를 위반한 화물선을 정밀타격으로 무력화했고 후티 측은 사우디 공습으로 최소 33명이 숨졌다고 주장했다.",
       "sources": [
         {
           "name": "DVIDS(미 중부사령부)",
@@ -98,7 +98,7 @@
           "published_at": "2026-11-08T04:03:12+00:00"
         }
       ],
-      "judged_at": "2026-11-08T11:40:17+00:00"
+      "judged_at": "2026-11-08T14:40:17+00:00"
     },
     {
       "key": "us_posture",
@@ -106,7 +106,7 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "Stars and Stripes 아시아태평양 목록·DVIDS 피드에 72시간 안 새 전략자산 전개 기사 없음",
+      "summary": "Stars and Stripes 목록·DVIDS 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
       "sources": [
         {
           "name": "Stars and Stripes",
@@ -117,11 +117,11 @@
         {
           "name": "DVIDS",
           "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-07T23:37:54-05:00",
+          "published_at": "2026-11-08T08:47:47+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-08T08:44:47+00:00"
+      "judged_at": "2026-11-08T14:40:17+00:00"
     }
   ],
   "channels": [
@@ -152,8 +152,8 @@
     }
   ],
   "last_good": {
-    "ews": 27,
+    "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-08T14:10:54+00:00"
+    "computed_at": "2026-11-08T15:12:25+00:00"
   }
 }

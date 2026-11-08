@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-07T23:10:43+00:00",
+  "computed_at": "2026-11-08T00:10:31+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 26,
   "band": "관찰",
   "d": 2,
-  "e": 1,
+  "e": 10,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-07T11:39:51+00:00",
-    "latest_updated_at": "2026-11-07T23:10:43+00:00"
+    "linkage_judged_at": "2026-11-07T23:40:38+00:00",
+    "latest_updated_at": "2026-11-08T00:10:30+00:00"
   },
   "theaters": [
     {
@@ -22,22 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "대만 국방부는 7일 중국 군용기 11대·군함 10척·공무선 3척 등 24건이 대만 주변에서 활동했다고 밝혔고, 6일 중국 해경선 4척이 금문 수역을 침범했다.",
+      "summary": "ISW·AEI는 중국이 비공표 대규모 군연으로 대만 포위를 모의 중일 수 있다고 지적했고, 대만 국안회의는 서태평양에 100여 척이 전개됐다고 밝혔다.",
       "sources": [
         {
           "name": "중앙통신사",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611070034.aspx",
-          "published_at": "2026-11-07T09:56:00+08:00"
-        },
-        {
-          "name": "중앙통신사",
-          "tier": "B",
-          "url": "https://www.cna.com.tw/news/acn/202611060206.aspx",
-          "published_at": "2026-11-06T16:22:00+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611070199.aspx",
+          "published_at": "2026-11-07T21:17:02+08:00"
         }
       ],
-      "judged_at": "2026-11-07T11:39:51+00:00"
+      "judged_at": "2026-11-07T23:40:38+00:00"
     },
     {
       "key": "ukraine",
@@ -53,10 +47,10 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o",
-          "published_at": "2026-11-05T19:08:08+00:00"
+          "published_at": "2026-11-06T07:56:19+00:00"
         }
       ],
-      "judged_at": "2026-11-07T11:39:51+00:00"
+      "judged_at": "2026-11-07T23:40:38+00:00"
     },
     {
       "key": "scs_ecs",
@@ -69,34 +63,42 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-07T17:20:00+08:00",
+          "published_at": "2026-11-08T00:00:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-06T22:59:54+00:00",
+          "published_at": "2026-11-07T23:02:35+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-07T11:39:51+00:00"
+      "judged_at": "2026-11-07T23:40:38+00:00"
     },
     {
       "key": "mideast",
       "observed": true,
-      "state": 2,
-      "contribution": 0,
-      "channels": [],
-      "summary": "이란 미사일 기지 인근에서 신규 공사 정황이 위성영상으로 보도됐다.",
+      "state": 3,
+      "contribution": 8,
+      "channels": [
+        "c4_sea_energy"
+      ],
+      "summary": "미 중부사령부가 7일 오만만에서 이란 봉쇄를 위반하려던 화물선을 정밀탄으로 무력화했고, 사우디 공습으로 예멘 후티 측 25명 이상이 숨졌다는 주장이 나왔다.",
       "sources": [
+        {
+          "name": "DVIDS(미 중부사령부)",
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/578872/us-forces-disable-cargo-vessel-attempting-violate-nav",
+          "published_at": "2026-11-07T15:31:51-05:00"
+        },
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/ckjrwx1r2d5ro",
-          "published_at": "2026-11-06T07:33:41+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo",
+          "published_at": "2026-11-07T17:09:24+00:00"
         }
       ],
-      "judged_at": "2026-11-07T11:39:51+00:00"
+      "judged_at": "2026-11-07T23:40:38+00:00"
     },
     {
       "key": "us_posture",
@@ -104,16 +106,22 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 공군이 북마리아나 제도에서 연 6,000회 훈련 비행을 계획한다는 보도 외에 새 전략자산 전개는 확인되지 않았다.",
+      "summary": "Stars and Stripes 아시아태평양 목록·DVIDS 피드에 72시간 안 새 전략자산 전개 기사 없음",
       "sources": [
         {
           "name": "Stars and Stripes",
-          "tier": "B",
-          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/air-force-training-flights-small-pacific-islands-23368814.html",
-          "published_at": "2026-11-05T06:10:35+00:00"
+          "url": "https://www.stripes.com/theaters/asia_pacific/",
+          "published_at": "2026-11-06T00:00:00+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "DVIDS",
+          "url": "https://www.dvidshub.net/rss/news",
+          "published_at": "2026-11-07T22:01:55+00:00",
+          "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-07T11:39:51+00:00"
+      "judged_at": "2026-11-07T23:40:38+00:00"
     }
   ],
   "channels": [
@@ -134,8 +142,8 @@
     },
     {
       "key": "c4_sea_energy",
-      "observed": false,
-      "value": 0
+      "observed": true,
+      "value": 8
     },
     {
       "key": "c5_diplomacy",
@@ -146,6 +154,6 @@
   "last_good": {
     "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-07T23:10:43+00:00"
+    "computed_at": "2026-11-08T00:10:31+00:00"
   }
 }

@@ -1,20 +1,21 @@
 {
   "coverage": {
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한 11월"
+      "지뢰 발견 DMZ 귀순 북한 11월 8일",
+      "뉴스 수집기 border 묶음(연평도 위문열차 등)"
     ],
     "foreign_forces": [
       "Kim Jong Un China Russia visit",
       "김성남 방중 회담"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 11월 북한 GPS 교란 국가보안법 구속"
+      "해킹 개인정보 유출 사이버 공격 11월"
     ],
     "gov_warning": [
       "북한 합참 발표 11월 7일"
     ],
     "nuclear": [
-      "North Korea Reuters November 7 2026"
+      "North Korea Reuters missile nuclear"
     ],
     "troop_movement": [
       "북한 병력 이동 전방 증강"
@@ -29,16 +30,20 @@
       "North Korea wartime nationwide drill blackout"
     ],
     "hybrid_ops": [
-      "간첩 혐의 국가보안법 구속 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 북미 회담"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261107030200504",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008835472",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/6/ATCE_CTGR_0010010000/view.do"
+    "https://www.yna.co.kr/view/AKR20261106079100009",
+    "https://www.yna.co.kr/view/AKR20261107031300001",
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "최근 24시간 새 군사 징후는 없고 김성남 방중 외교 일정만 이어진다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "최근 24시간 새 군사 징후는 없고 김성남 방중 당 외교 일정만 이어진다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,7 +70,8 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "북한 선박 나홋카항 왕래 급증은 NK뉴스 분석 인용 보도이며 정부 귀속 발표가 없어 배경으로만 둔다."
     },
     "foreign_forces": {
       "status": "single",
@@ -74,7 +80,7 @@
       "lat": 39.9,
       "lon": 116.4,
       "summary": "북 노동당 김성남 국제비서가 방중 중 류하이싱 대외연락부장·차이치와 회담했으나 군사협력 언급 없는 당 대외 외교 일정이다.",
-      "meaning": "북중 당 차원의 관계 심화 재확인으로 군사 협정·무기 이전 정황은 없다.",
+      "meaning": "북중 당 차원의 관계 재확인으로 군사 협정·무기 이전 정황은 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -90,7 +96,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-07T23:10:43+00:00",
+  "checked_at": "2026-11-08T00:10:30+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

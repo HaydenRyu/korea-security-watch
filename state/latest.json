@@ -1,59 +1,54 @@
 {
   "coverage": {
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순 합참",
-      "North Korea DMZ NLL mine"
+      "북한 합참 지뢰 DMZ 귀순 11월 8일",
+      "목함지뢰 해안 발견",
+      "DMZ NLL 귀순 뉴스"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참 11월",
-      "해킹 개인정보 유출 공격 11월 8일",
-      "한양증권 해킹 개인정보 유출 증권사",
-      "North Korea hacking GPS jamming"
+      "북한 GPS 교란",
+      "한양증권 대신증권 해킹 유출 그룹웨어",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 김정은 방러"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강 11월",
-      "North Korea troop movement border"
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "북한 핵실험장 풍계리 영변 동향",
-      "North Korea nuclear Yongbyon Punggye-ri"
+      "북한 핵실험장 풍계리 영변 동향"
     ],
     "logistics": [
-      "북한 군수 탄약 수송 러시아",
-      "North Korea munitions shipment Russia"
+      "북한 군수 탄약 수송 러시아"
     ],
     "parade_massing": [
-      "북한 열병식 집결 준비 위성사진",
-      "North Korea parade Mirim satellite"
+      "북한 열병식 집결 준비"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군 동원",
-      "North Korea blackout drill mobilization"
+      "북한 준전시 등화관제 노농적위군 동원"
     ],
     "gov_warning": [
-      "진돗개 발령 국가보안법 구속 간첩 혐의",
-      "Korea DEFCON alert"
+      "진돗개 데프콘 상향 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "북한 해킹 귀속 FBI"
+    ],
+    "calm": [
+      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261108505997",
     "https://www.segye.com/newsView/20261108509478",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261108052700054",
     "https://biz.sbs.co.kr/amp/article/20000343888"
   ],
-  "overall_summary": "신규 군사 징후 없음; 김성남 방중 종료와 금융권 해킹(귀속 미확인)만 정례 수준으로 직전 회차와 동일하다.",
+  "overall_summary": "신규 군사 징후는 없고 김성남 방중 종료와 금융권 해킹(귀속 미확인)만 정례 수준으로 직전 회차와 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,15 +60,14 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "새 지뢰·월선·교전 보도 없음(연평도 위문열차 공연 등 정례 소식뿐)."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 한양증권(31건)·대신증권 등 증권·금융권 그룹웨어 해킹 유출이 조사 중이며 북한 등 귀속 발표는 없다.",
-      "meaning": "귀속이 없어 등급에 반영하지 않는다.",
+      "summary": "귀속 미확인 — 한양증권(31건) 등 증권·금융권 그룹웨어 해킹 유출이 조사 중이며 북한 등 귀속 발표는 없다.",
+      "meaning": "국내 금융권 대상 사이버 사고이나 귀속이 없어 등급에 반영하지 않는다.",
       "sources": [
         {
           "name": "SBS Biz",
@@ -83,15 +77,15 @@
       ],
       "confidence": "중간",
       "facts": [
-        "한양증권 고객·임직원 정보 31건 유출, 다우오피스 경유 추정"
+        "한양증권 10/29 외부 해킹, 유출 31건, 귀속 언급 없음"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "북 김성남 당 국제비서의 닷새 방중이 11/7 끝나 귀국했고 군사협력 언급은 없다(11/8 보도).",
-      "meaning": "당 차원 외교 일정이며 군사 징후가 아니다.",
+      "summary": "북 김성남 당 국제비서의 5일 방중이 마무리돼 11/7 귀국했고 군사협력 언급은 없다.",
+      "meaning": "외교 일정이며 군사 협정·기술 협력 발표는 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -101,10 +95,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "11/3~7 방중, 왕이·차이치·류하이싱 면담"
+        "왕이·차이치 등과 회담 후 귀국"
       ],
       "speculation": [
-        "APEC 앞둔 북·미 정세 논의 관측"
+        "APEC 앞두고 북·미 관계 논의 관측"
       ]
     },
     "parade_massing": {
@@ -114,14 +108,13 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none",
-      "summary": "미 국방·국무 거취 변수로 한·미 안보협의 일정이 늦어진다는 분석 기사뿐 긴급 경고는 없다."
+      "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-11-08T12:10:59+00:00",
+  "checked_at": "2026-11-08T13:13:48+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

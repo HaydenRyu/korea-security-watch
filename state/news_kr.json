@@ -1,14 +1,14 @@
 {
- "fetched_at": "2026-11-08T07:12:04+00:00",
+ "fetched_at": "2026-11-08T07:20:22+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-08T07:12:04+00:00",
+ "last_ok_at": "2026-11-08T07:20:22+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1120,
-  "hits": 25,
+  "hits": 26,
   "clusters": 22,
   "by_group": {
    "drone_balloon": 4,
@@ -29,7 +29,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 560,
-   "hits": 34
+   "hits": 36
   },
   "SBS": {
    "feeds": 3,
@@ -67,12 +67,12 @@
   "drone_balloon": {
    "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-11-08T07:04:19+00:00"
+   "latest": "2026-11-08T07:13:27+00:00"
   },
   "fire": {
    "clusters": 5,
    "max_independent": 1,
-   "latest": "2026-11-08T07:04:19+00:00"
+   "latest": "2026-11-08T07:13:27+00:00"
   },
   "hybrid": {
    "clusters": 3,
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 4
   },
   {
    "outlet": "연합뉴스",
@@ -159,7 +159,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "SBS",

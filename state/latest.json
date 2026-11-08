@@ -1,37 +1,50 @@
 {
   "coverage": {
-    "troop_movement": [
-      "news_kr 수집 결과"
-    ],
-    "nuclear": [
-      "news_kr 수집 결과"
-    ],
-    "logistics": [
-      "news_kr 수집 결과"
-    ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순"
+      "목함지뢰 해안 발견 DMZ 귀순 합참",
+      "North Korea DMZ NLL mine"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란 합참 11월",
+      "해킹 개인정보 유출 공격 11월 8일",
+      "한양증권 해킹 개인정보 유출 증권사",
+      "North Korea hacking GPS jamming"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
-    ],
-    "parade_massing": [
-      "news_kr 수집 결과"
-    ],
-    "nk_internal": [
-      "news_kr 수집 결과"
-    ],
-    "gov_warning": [
-      "news_kr 수집 결과"
-    ],
-    "hybrid_ops": [
-      "news_kr 수집 결과(hybrid·spy 묶음)"
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 김정은 방러"
     ],
     "calm": [
-      "news_kr 수집 결과"
+      "남북 대화 제안",
+      "North Korea talks offer"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 11월",
+      "North Korea troop movement border"
+    ],
+    "nuclear": [
+      "북한 핵실험장 풍계리 영변 동향",
+      "North Korea nuclear Yongbyon Punggye-ri"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송 러시아",
+      "North Korea munitions shipment Russia"
+    ],
+    "parade_massing": [
+      "북한 열병식 집결 준비 위성사진",
+      "North Korea parade Mirim satellite"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 노농적위군 동원",
+      "North Korea blackout drill mobilization"
+    ],
+    "gov_warning": [
+      "진돗개 발령 국가보안법 구속 간첩 혐의",
+      "Korea DEFCON alert"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
@@ -52,14 +65,15 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "새 지뢰·월선·교전 보도 없음(연평도 위문열차 공연 등 정례 소식뿐)."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 한양증권(31건) 등 증권·금융권 그룹웨어 해킹 개인정보 유출이 조사 중이며 북한 등 귀속 발표는 없다.",
-      "meaning": "국내 금융권 사이버 사고이나 귀속이 없어 등급 근거가 아니다.",
+      "summary": "귀속 미확인 — 한양증권(31건)·대신증권 등 증권·금융권 그룹웨어 해킹 유출이 조사 중이며 북한 등 귀속 발표는 없다.",
+      "meaning": "귀속이 없어 등급에 반영하지 않는다.",
       "sources": [
         {
           "name": "SBS Biz",
@@ -69,16 +83,15 @@
       ],
       "confidence": "중간",
       "facts": [
-        "외부 그룹웨어 경유 침입, 31건 유출"
+        "한양증권 고객·임직원 정보 31건 유출, 다우오피스 경유 추정"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "평양·베이징",
-      "summary": "북 김성남 당 국제비서의 닷새 방중이 11/7 끝나 귀국했고 군사협력 언급은 없다.",
-      "meaning": "외교 일정이며 군사 협정·무기 협력 징후는 없다.",
+      "summary": "북 김성남 당 국제비서의 닷새 방중이 11/7 끝나 귀국했고 군사협력 언급은 없다(11/8 보도).",
+      "meaning": "당 차원 외교 일정이며 군사 징후가 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -88,9 +101,11 @@
       ],
       "confidence": "중간",
       "facts": [
-        "왕이·차이치 면담, 7일 귀국"
+        "11/3~7 방중, 왕이·차이치·류하이싱 면담"
       ],
-      "speculation": []
+      "speculation": [
+        "APEC 앞둔 북·미 정세 논의 관측"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -99,13 +114,14 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none"
+      "status": "none",
+      "summary": "미 국방·국무 거취 변수로 한·미 안보협의 일정이 늦어진다는 분석 기사뿐 긴급 경고는 없다."
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-11-08T11:10:04+00:00",
+  "checked_at": "2026-11-08T12:10:59+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

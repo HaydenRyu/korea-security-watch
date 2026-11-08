@@ -1,39 +1,45 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 도발 11월 8일",
-      "North Korea Reuters November 8 2026"
+      "북한 병력 이동 합참 발표",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea missile launch OR nuclear OR border news this week"
+      "북한 핵시설 풍계리 영변",
+      "North Korea nuclear site 38 North"
     ],
     "logistics": [
-      "North Korea Reuters November 8 2026"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "North Korea missile launch OR nuclear OR border news this week"
+      "지뢰 발견 DMZ",
+      "북한 귀순 NLL 합참"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "North Korea missile launch OR nuclear OR border news this week"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군 진돗개 데프콘"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "북한 준전시 등화관제 노농적위군 진돗개 데프콘"
+      "진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안(미실시 — 수집 결과에 해당 없음)"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
@@ -42,7 +48,7 @@
     "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
     "https://biz.sbs.co.kr/amp/article/20000343888"
   ],
-  "overall_summary": "신규 군사 징후 없음; 김성남 방중 마무리와 금융권 해킹(귀속 미확인)만 정례 수준이다. 직전 회차와 동일하다.",
+  "overall_summary": "신규 군사 징후 없음; 김성남 방중 종료와 금융권 해킹(귀속 미확인)만 정례 수준이며 직전 회차와 동일하다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,19 +61,6 @@
     },
     "border_clash": {
       "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none",
-      "summary": "FBI 바이낸스 귀속(11/2)은 24시간 경과 — 배경"
     },
     "electronic_cyber": {
       "status": "single",
@@ -107,9 +100,21 @@
       "speculation": [
         "APEC 앞두고 북미 관계 논의 관측"
       ]
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-08T08:10:24+00:00",
+  "checked_at": "2026-11-08T09:10:34+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

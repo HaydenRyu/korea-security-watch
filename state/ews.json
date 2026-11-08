@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-08T08:10:25+00:00",
+  "computed_at": "2026-11-08T09:10:34+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 27,
   "band": "관찰",
   "d": 4,
-  "e": 10,
+  "e": 13,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-08T05:40:17+00:00",
-    "latest_updated_at": "2026-11-08T08:10:24+00:00"
+    "linkage_judged_at": "2026-11-08T08:44:47+00:00",
+    "latest_updated_at": "2026-11-08T09:10:34+00:00"
   },
   "theaters": [
     {
@@ -31,26 +31,26 @@
           "published_at": "2026-11-07T21:17:02+08:00"
         }
       ],
-      "judged_at": "2026-11-08T05:40:17+00:00"
+      "judged_at": "2026-11-08T08:44:47+00:00"
     },
     {
       "key": "ukraine",
       "observed": true,
-      "state": 1,
-      "contribution": 1,
+      "state": 3,
+      "contribution": 4,
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "백악관에서 러·우 관리들이 만나 지속 가능한 휴전을 논의했다.",
+      "summary": "러시아가 7~8일 밤 탄도미사일 30발 이상·드론 170기 이상으로 우크라이나 12개 지역을 공격해 9명이 다쳤고 양측 협상을 앞두고 있다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o",
-          "published_at": "2026-11-06T07:56:19+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cm4g1nq8158po",
+          "published_at": "2026-11-07T12:49:36+00:00"
         }
       ],
-      "judged_at": "2026-11-08T05:40:17+00:00"
+      "judged_at": "2026-11-08T08:44:47+00:00"
     },
     {
       "key": "scs_ecs",
@@ -63,7 +63,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-08T11:50:00+08:00",
+          "published_at": "2026-11-08T15:34:00+08:00",
           "kind": "feed"
         },
         {
@@ -73,7 +73,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-08T05:40:17+00:00"
+      "judged_at": "2026-11-08T08:44:47+00:00"
     },
     {
       "key": "mideast",
@@ -83,7 +83,7 @@
       "channels": [
         "c4_sea_energy"
       ],
-      "summary": "미 중부사령부가 7일 오만만에서 봉쇄 위반 화물선을 정밀탄으로 무력화했고 사우디 공습으로 후티 측 최소 33명이 숨졌다는 주장이 나왔다.",
+      "summary": "미 중부사령부가 7일 오만만에서 봉쇄 위반 화물선을 정밀탄으로 무력화했고 후티 측 매체는 사우디 공습으로 최소 33명이 숨졌다고 주장했다.",
       "sources": [
         {
           "name": "DVIDS(미 중부사령부)",
@@ -98,7 +98,7 @@
           "published_at": "2026-11-08T04:03:12+00:00"
         }
       ],
-      "judged_at": "2026-11-08T05:40:17+00:00"
+      "judged_at": "2026-11-08T08:44:47+00:00"
     },
     {
       "key": "us_posture",
@@ -117,11 +117,11 @@
         {
           "name": "DVIDS",
           "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-08T04:37:54+00:00",
+          "published_at": "2026-11-07T23:37:54-05:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-08T05:40:17+00:00"
+      "judged_at": "2026-11-08T08:44:47+00:00"
     }
   ],
   "channels": [
@@ -148,12 +148,12 @@
     {
       "key": "c5_diplomacy",
       "observed": true,
-      "value": 1
+      "value": 4
     }
   ],
   "last_good": {
     "ews": 27,
     "band": "관찰",
-    "computed_at": "2026-11-08T08:10:25+00:00"
+    "computed_at": "2026-11-08T09:10:34+00:00"
   }
 }

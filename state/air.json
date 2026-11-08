@@ -1,24 +1,17 @@
 {
- "at": "2026-11-08T04:45:17+00:00",
- "south": 64,
- "area": 90,
- "baseline": 70,
- "ratio": 0.91,
- "samples": 3,
+ "at": "2026-11-08T05:57:10+00:00",
+ "south": 66,
+ "area": 89,
+ "baseline": 76.5,
+ "ratio": 0.86,
+ "samples": 4,
  "mil": [
   {
    "type": "GLEX",
    "name": "정찰용 비즈니스젯 가능",
    "call": "",
-   "lat": 36.96,
-   "lon": 124.51
-  },
-  {
-   "type": "B762",
-   "name": null,
-   "call": "TATRA53",
-   "lat": 32.95,
-   "lon": 131.14
+   "lat": 37.17,
+   "lon": 124.79
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

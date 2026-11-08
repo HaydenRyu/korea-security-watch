@@ -1,16 +1,17 @@
 {
- "fetched_at": "2026-11-08T10:53:43+00:00",
+ "fetched_at": "2026-11-08T12:04:59+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-08T10:53:43+00:00",
+ "last_ok_at": "2026-11-08T12:04:59+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1119,
-  "hits": 21,
-  "clusters": 17,
+  "fetched": 1118,
+  "hits": 22,
+  "clusters": 18,
   "by_group": {
+   "sanction": 2,
    "alert": 1,
    "drone_balloon": 2,
    "fire": 3,
@@ -20,7 +21,6 @@
    "defect": 1,
    "mine": 2,
    "spy": 1,
-   "sanction": 1,
    "influence": 1
   }
  },
@@ -28,8 +28,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 560,
-   "hits": 33
+   "count": 559,
+   "hits": 34
   },
   "SBS": {
    "feeds": 3,
@@ -64,6 +64,11 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "sanction": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-08T11:17:54+00:00"
+  },
   "alert": {
    "clusters": 1,
    "max_independent": 1,
@@ -109,11 +114,6 @@
    "max_independent": 1,
    "latest": "2026-11-06T06:01:29+00:00"
   },
-  "sanction": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-06T02:13:17+00:00"
-  },
   "influence": {
    "clusters": 1,
    "max_independent": 1,
@@ -126,8 +126,8 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 80,
-   "hits": 27
+   "count": 79,
+   "hits": 26
   },
   {
    "outlet": "연합뉴스",
@@ -151,7 +151,7 @@
    "url": "https://www.yna.co.kr/rss/local.xml",
    "ok": true,
    "count": 120,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "연합뉴스",
@@ -159,7 +159,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "SBS",

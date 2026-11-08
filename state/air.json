@@ -1,17 +1,24 @@
 {
- "at": "2026-11-08T21:23:49+00:00",
- "south": 45,
- "area": 48,
- "baseline": 42.5,
- "ratio": 1.06,
- "samples": 6,
+ "at": "2026-11-08T22:36:29+00:00",
+ "south": 52,
+ "area": 57,
+ "baseline": 53,
+ "ratio": 0.98,
+ "samples": 3,
  "mil": [
   {
    "type": "GLEX",
    "name": "정찰용 비즈니스젯 가능",
    "call": "",
-   "lat": 37.22,
-   "lon": 125.22
+   "lat": 38.13,
+   "lon": 129.01
+  },
+  {
+   "type": "B350",
+   "name": null,
+   "call": "TORII11",
+   "lat": 33.12,
+   "lon": 131.81
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

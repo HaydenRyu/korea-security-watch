@@ -1,59 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 8일",
-      "North Korea Reuters November 2026"
+      "북한 합참 발표 도발 11월 8일",
+      "North Korea Reuters November 8 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters November 2026"
+      "North Korea missile launch OR nuclear OR border news this week"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea Reuters November 2026"
+      "North Korea Reuters November 8 2026"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "North Korea DMZ NLL"
+      "지뢰 발견 DMZ 귀순 NLL",
+      "North Korea missile launch OR nuclear OR border news this week"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "North Korea GPS jamming"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러 Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "North Korea missile launch OR nuclear OR border news this week"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout drill"
+      "북한 준전시 등화관제 노농적위군 진돗개 데프콘"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea evacuation warning"
+      "북한 준전시 등화관제 노농적위군 진돗개 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안(미실시 — 수집 결과에 해당 없음)"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261108505997",
-    "https://www.nknews.org/2026/11/north-korean-loudspeakers-visible-at-border-but-no-broadcasts-heard/",
+    "https://www.nknews.org/",
     "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
     "https://biz.sbs.co.kr/amp/article/20000343888"
   ],
-  "overall_summary": "신규 군사 징후 없음; 김성남 방중 마무리와 금융권 해킹(귀속 미확인)만 정례 수준으로 이어진다. 직전 회차와 동일하다.",
+  "overall_summary": "신규 군사 징후 없음; 김성남 방중 마무리와 금융권 해킹(귀속 미확인)만 정례 수준이다. 직전 회차와 동일하다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -77,7 +66,8 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "FBI 바이낸스 귀속(11/2)은 24시간 경과 — 배경"
     },
     "electronic_cyber": {
       "status": "single",
@@ -119,7 +109,7 @@
       ]
     }
   },
-  "checked_at": "2026-11-08T07:12:41+00:00",
+  "checked_at": "2026-11-08T08:10:24+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

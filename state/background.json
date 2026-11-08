@@ -1,37 +1,36 @@
 {
   "version": 1,
-  "at": "2026-11-08T05:40:17+00:00",
-  "opened": 20,
+  "at": "2026-11-08T08:44:47+00:00",
+  "opened": 18,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-08T05:40:17+00:00",
+      "last_ok": "2026-11-08T08:44:47+00:00",
       "raw": 5,
       "kept": 5
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-08T05:40:17+00:00",
+      "last_ok": "2026-11-08T08:44:47+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-08T05:40:17+00:00",
+      "last_ok": "2026-11-08T08:44:47+00:00",
       "raw": 0,
       "kept": 0,
-      "note": "대만 명명 훈련 공식 발표 없음(CNA: 비공표 '무성' 군연 가능성 지적뿐); 북러·북중 신규 군사 합의 없음(김성남 방중은 당 교류)"
+      "note": "대만 명명 훈련 공식 발표 없음; 북러·북중 신규 군사 합의 없음"
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-08T05:40:17+00:00",
+      "last_ok": "2026-11-08T08:44:47+00:00",
       "raw": 5,
-      "kept": 5,
-      "note": "Rappler 미사용; Philstar·BBC 아시아로 scs_ecs 평온 확인"
+      "kept": 5
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-08T05:40:17+00:00",
+      "last_ok": "2026-11-08T08:44:47+00:00",
       "raw": 0,
       "kept": 0,
       "note": "국내 수집 묶음에 공식 안보 연결 신규 사건 없음"

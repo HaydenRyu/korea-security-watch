@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-08T05:40:17+00:00",
+  "judged_at": "2026-11-08T08:44:47+00:00",
   "theaters": {
     "ukraine": {
-      "state": 1,
+      "state": 3,
       "channels": [
         "c5_diplomacy"
       ],
@@ -11,12 +11,12 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o",
-          "published_at": "2026-11-06T07:56:19+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cm4g1nq8158po",
+          "published_at": "2026-11-07T12:49:36+00:00"
         }
       ],
-      "summary": "백악관에서 러·우 관리들이 만나 지속 가능한 휴전을 논의했다.",
-      "judged_at": "2026-11-08T05:40:17+00:00"
+      "summary": "러시아가 7~8일 밤 탄도미사일 30발 이상·드론 170기 이상으로 우크라이나 12개 지역을 공격해 9명이 다쳤고 양측 협상을 앞두고 있다.",
+      "judged_at": "2026-11-08T08:44:47+00:00"
     },
     "mideast": {
       "state": 3,
@@ -37,8 +37,8 @@
           "published_at": "2026-11-08T04:03:12+00:00"
         }
       ],
-      "summary": "미 중부사령부가 7일 오만만에서 봉쇄 위반 화물선을 정밀탄으로 무력화했고 사우디 공습으로 후티 측 최소 33명이 숨졌다는 주장이 나왔다.",
-      "judged_at": "2026-11-08T05:40:17+00:00"
+      "summary": "미 중부사령부가 7일 오만만에서 봉쇄 위반 화물선을 정밀탄으로 무력화했고 후티 측 매체는 사우디 공습으로 최소 33명이 숨졌다고 주장했다.",
+      "judged_at": "2026-11-08T08:44:47+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -52,7 +52,7 @@
         }
       ],
       "summary": "미 싱크탱크가 중국의 비공표 대규모 군연으로 대만 포위 모의 가능성을 지적했고 대만 정부의 공식 확인은 없다.",
-      "judged_at": "2026-11-08T05:40:17+00:00"
+      "judged_at": "2026-11-08T08:44:47+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -61,7 +61,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-08T11:50:00+08:00",
+          "published_at": "2026-11-08T15:34:00+08:00",
           "kind": "feed"
         },
         {
@@ -72,7 +72,7 @@
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-08T05:40:17+00:00"
+      "judged_at": "2026-11-08T08:44:47+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -87,12 +87,12 @@
         {
           "name": "DVIDS",
           "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-08T04:37:54+00:00",
+          "published_at": "2026-11-07T23:37:54-05:00",
           "kind": "feed"
         }
       ],
       "summary": "Stars and Stripes 아시아태평양 목록·DVIDS 피드에 72시간 안 새 전략자산 전개 기사 없음",
-      "judged_at": "2026-11-08T05:40:17+00:00"
+      "judged_at": "2026-11-08T08:44:47+00:00"
     }
   }
 }

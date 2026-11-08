@@ -1,59 +1,49 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea Reuters November 8 2026"
-    ],
-    "nuclear": [
-      "북한 풍계리 영변 핵 동향",
-      "North Korea Reuters November 8 2026"
-    ],
-    "logistics": [
-      "북러 군수 수송 탄약",
-      "North Korea Russia ammunition shipment"
-    ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참 11월 8일",
-      "북한 합참 NLL 월선"
+      "북한 합참 지뢰 발견 DMZ 11월 8일"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 11월"
+      "해킹 개인정보 유출 공격",
+      "한국국제교류재단 해킹 개인정보 유출",
+      "미래에셋증권 해킹 개인정보 유출 그룹웨어"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 11월",
-      "North Korea Reuters November 8 2026",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러",
+      "서해 구조물 주한미군 감축 Kim Jong Un China Russia visit"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변 동향",
+      "North Korea Reuters November 8 2026"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 속보"
+    ],
+    "logistics": [
+      "북한 병력 이동 전방 증강 속보"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 준전시 등화관제 열병식 진돗개 데프콘"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea KCNA drill"
+      "북한 준전시 등화관제 열병식 진돗개 데프콘"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "미 국무부 한국 여행경보"
+      "북한 준전시 등화관제 열병식 진돗개 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 11월",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 북한"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261108505997",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209381",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209380",
-    "https://www.yna.co.kr/view/AKR20261106079100009",
     "https://www.nknews.org/",
-    "https://kcnawatch.org/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do"
+    "https://biz.sbs.co.kr/amp/article/20000343888"
   ],
-  "overall_summary": "새로 확인된 군사 도발 징후는 없고 김성남 방중 귀국(외교)과 귀속 미확인 국내 해킹 보도만 있다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "김성남 방중 종료 외 새 군사 징후는 확인되지 않았고 증권가 해킹이 이어지나 귀속은 없다. 지난 회차와 같은 수준이며, 국내 언론 수집은 일부 피드 실패(partial)였다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,45 +55,32 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "24시간 안 새 지뢰·월선·교전·귀순 보도 없음(9~10월 DMZ 지뢰는 배경)."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "서울",
-      "lat": 37.57,
-      "lon": 126.98,
-      "summary": "귀속 미확인 — 한국국제교류재단(11/7 공개)과 미래에셋증권(11/5 그룹웨어, 약 3만5천 명)에서 해킹 개인정보 유출이 확인돼 조사 중이다.",
-      "meaning": "북한 등 소행으로 밝혀지지 않은 민간·공공 해킹으로 군사 징후는 아니다.",
+      "summary": "귀속 미확인 — 한양증권(31건, 11/3 보도) 등 증권·금융권 그룹웨어 해킹 개인정보 유출이 이어지며 조사 중이다.",
+      "meaning": "북한·중국 소행 발표는 없어 등급에 쓰지 않는다.",
       "sources": [
         {
-          "name": "데일리시큐",
-          "tier": "C",
-          "url": "https://www.dailysecu.com/news/articleView.html?idxno=209381"
-        },
-        {
-          "name": "데일리시큐",
-          "tier": "C",
-          "url": "https://www.dailysecu.com/news/articleView.html?idxno=209380"
+          "name": "SBS Biz",
+          "tier": "B",
+          "url": "https://biz.sbs.co.kr/amp/article/20000343888"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KF가 11/7 일반메일시스템 추가 유출 정황 공개",
-        "미래에셋증권 11/5 그룹웨어 공격으로 임직원 35,255명 정보 유출"
+        "외부 그룹웨어 경유 유출 31건, 귀속 언급 없음"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 베이징",
-      "lat": 39.9,
-      "lon": 116.4,
-      "summary": "북 김성남 당 국제비서의 닷새 방중이 11/7 끝나 귀국했다고 조선중앙통신이 11/8 보도했고 군사협력 언급은 없다.",
-      "meaning": "APEC 앞둔 북중 당 차원 외교 일정으로 군사 징후는 아니다.",
+      "summary": "북 김성남 당 국제비서의 닷새 방중이 11/7 끝나 귀국했고 군사협력 언급은 없다.",
+      "meaning": "외교·당 교류 일정이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -113,16 +90,17 @@
       ],
       "confidence": "중간",
       "facts": [
-        "김성남 대표단 11/7 귀국, 평양국제비행장 영접"
+        "왕이·차이치 접견, 조선중앙통신 인용"
       ],
-      "speculation": []
+      "speculation": [
+        "APEC 앞두고 북미 관계 논의 관측"
+      ]
     },
     "parade_massing": {
       "status": "none"
     },
     "nk_internal": {
-      "status": "none",
-      "summary": "11/4 대공미사일·순항미사일 시험은 24시간 경과, 정례 시험으로 배경 처리."
+      "status": "none"
     },
     "gov_warning": {
       "status": "none"
@@ -131,7 +109,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-08T05:10:36+00:00",
+  "checked_at": "2026-11-08T06:11:03+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

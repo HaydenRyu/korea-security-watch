@@ -1,51 +1,50 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 증강 군수 물자 수송",
+      "North Korea troop movement ammunition shipment Russia DEFCON"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site Yongbyon"
+      "북한 핵실험 영변 풍계리 동향 목함지뢰 해안",
+      "North Korea missile launch Reuters November 2026"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 병력 이동 전방 증강 군수 물자 수송",
+      "North Korea troop movement ammunition shipment Russia DEFCON"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "목함지뢰 해안",
-      "North Korea DMZ border"
+      "북한 합참 발표 지뢰 발견 DMZ NLL 귀순",
+      "북한 핵실험 영변 풍계리 동향 목함지뢰 해안"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 11월 8일"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "주한미군 감축",
-      "서해 구조물"
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 김정은 방중"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 준비 병력 집결 노농적위군 등화관제"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 열병식 준비 병력 집결 노농적위군 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning Japan J-Alert"
+      "진돗개 발령 데프콘 상향 한미일 긴급 경고",
+      "North Korea troop movement ammunition shipment Russia DEFCON"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261108505997",
     "https://www.segye.com/newsView/20261108509478",
-    "https://www.yonhapnewstv.co.kr/"
+    "https://www.nknews.org/"
   ],
   "overall_summary": "최근 24시간 새 군사 징후는 없고 김성남 방중 마무리(외교 일정)만 확인된다. 과거 대비 평시 범위다.",
   "items": {
@@ -59,10 +58,21 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "직전 회차에서 징후 없음 유지: 24시간 내 새 지뢰·월선·교전 보도 없음(9월 DMZ 폭발 조사는 배경)."
+      "status": "none"
     },
     "electronic_cyber": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "foreign_forces": {
@@ -86,21 +96,9 @@
       "speculation": [
         "APEC 앞두고 북미 관계 논의 추측"
       ]
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-08T17:10:19+00:00",
+  "checked_at": "2026-11-08T18:11:02+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

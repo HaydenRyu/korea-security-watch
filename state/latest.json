@@ -1,49 +1,47 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 합참 발표 11월 8일",
-      "North Korea Reuters November 8 2026"
-    ],
-    "nuclear": [
-      "북한 합참 발표 11월 8일",
-      "North Korea Reuters November 8 2026"
-    ],
-    "logistics": [
-      "북한 합참 발표 11월 8일",
-      "North Korea Reuters November 8 2026"
-    ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "North Korea Reuters November 8 2026"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "북한 합참 지뢰 발견 DMZ 11월 8일"
     ],
     "foreign_forces": [
-      "North Korea Reuters November 8 2026"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
-    "parade_massing": [
-      "북한 합참 발표 11월 8일"
+    "electronic_cyber": [
+      "북한 GPS 교란",
+      "해킹 개인정보 유출"
     ],
-    "nk_internal": [
-      "북한 합참 발표 11월 8일"
-    ],
-    "gov_warning": [
-      "북한 합참 발표 11월 8일"
+    "nuclear": [
+      "북한 핵 풍계리 영변 동향 11월",
+      "North Korea nuclear missile launch news this week"
     ],
     "hybrid_ops": [
-      "지뢰 발견 DMZ 귀순 NLL"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "North Korea Reuters November 8 2026"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송 열병식 집결"
+    ],
+    "parade_massing": [
+      "북한 군수 탄약 수송 열병식 집결"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 노농적위군 대피"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 상향 합참 긴급 경고"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261108505997",
     "https://www.segye.com/newsView/20261108509478",
-    "https://www.koreatimes.co.kr/southkorea/defense/20261005/seoul-concludes-north-korea-responsible-for-dmz-land-mine-explosions"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "최근 24시간 새 군사 징후는 없고 북 김성남 방중 외교 일정만 이어졌다. 직전 회차와 큰 차이 없다.",
+  "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 북 김성남 방중(11/3~7)이 마무리됐으나 군사협력 언급은 없어 직전과 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,15 +56,14 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "24시간 경과 — 한양증권 해킹 첫 보도 10/29, 새 사고·귀속 발표 없음."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
       "region": "중국",
       "summary": "북 김성남 당 국제비서가 11/3~7 방중해 왕이·차이치 등과 회담하고 귀국했으며 군사협력 언급은 없다.",
-      "meaning": "외교 일정이며 군사 협정·기술 협력 발표는 없다.",
+      "meaning": "당 대 당 교류 후속으로 군사협력 징후는 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -76,10 +73,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "왕이·차이치·류하이싱 면담 후 7일 귀국"
+        "11/7 귀국, 조선중앙통신 11/8 보도"
       ],
       "speculation": [
-        "APEC 앞두고 북·미 관계 논의 관측"
+        "APEC 앞두고 북미 관계 논의 추측"
       ]
     },
     "parade_massing": {
@@ -95,7 +92,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-08T15:12:25+00:00",
+  "checked_at": "2026-11-08T16:10:15+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

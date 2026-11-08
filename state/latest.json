@@ -1,49 +1,50 @@
 {
   "coverage": {
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한 11월 8일",
-      "뉴스 수집기 border 묶음(연평도 위문열차 등)"
+      "뉴스 수집기 border·mine 묶음(연평도 위문열차 등)",
+      "Google News 북한 when:1d"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit",
-      "김성남 방중 회담"
+      "Google News North Korea when:1d (KN-23 젤렌스키·Kim Song Nam China)",
+      "연합뉴스 북한 RSS"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 11월"
+      "Google News 북한 when:1d (바이낸스 해킹)",
+      "뉴스 수집기 gps 묶음"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 7일"
+      "뉴스 수집기 alert 묶음",
+      "연합뉴스 북한 RSS"
     ],
     "nuclear": [
-      "North Korea Reuters missile nuclear"
+      "Google News North Korea when:1d"
     ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "Google News 북한 when:1d"
     ],
     "logistics": [
-      "North Korea military mobilization logistics ammunition"
+      "뉴스 수집기 sanction 묶음"
     ],
     "parade_massing": [
-      "북한 열병식 준비 평양 동향"
+      "연합뉴스 북한 RSS"
     ],
     "nk_internal": [
-      "North Korea wartime nationwide drill blackout"
+      "연합뉴스 북한 RSS(농근맹 대회)"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한"
+      "뉴스 수집기 hybrid·spy 묶음"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 북미 회담"
+      "Google News 북한 when:1d (대화·통신선 키워드 미검출)"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261107030200504",
-    "https://www.yna.co.kr/view/AKR20261106079100009",
-    "https://www.yna.co.kr/view/AKR20261107031300001",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/"
+    "https://www.yna.co.kr/view/AKR20261107054400099",
+    "https://www.yna.co.kr/view/AKR20261108007100504",
+    "https://www.yna.co.kr/view/AKR20261108010300504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/6/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "최근 24시간 새 군사 징후는 없고 김성남 방중 당 외교 일정만 이어진다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "최근 24시간 새 군사 징후는 없고 김성남 당 대표단의 방중 일정이 11/7 귀국으로 마무리됐다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,8 +71,7 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "북한 선박 나홋카항 왕래 급증은 NK뉴스 분석 인용 보도이며 정부 귀속 발표가 없어 배경으로만 둔다."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
@@ -79,24 +79,24 @@
       "region": "베이징",
       "lat": 39.9,
       "lon": 116.4,
-      "summary": "북 노동당 김성남 국제비서가 방중 중 류하이싱 대외연락부장·차이치와 회담했으나 군사협력 언급 없는 당 대외 외교 일정이다.",
-      "meaning": "북중 당 차원의 관계 재확인으로 군사 협정·무기 이전 정황은 없다.",
+      "summary": "북 노동당 김성남 국제비서 대표단이 중국 고위급 연쇄 회동과 중앙당교 참관 뒤 11/7 귀국했으며 군사협력 언급 없는 당 외교 일정이다(젤렌스키의 KN-23 사용 주장은 기지의 북러 협력 배경).",
+      "meaning": "북중 당 차원의 교류로 군사 협정·무기 이전 정황은 없다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261107030200504"
+          "url": "https://www.yna.co.kr/view/AKR20261108007100504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "김성남이 11/6 류하이싱과 회담, 조선중앙통신 11/7 보도",
-        "군사협력 언급 없음"
+        "김성남 대표단 11/7 귀국, 조선중앙통신 11/8 보도",
+        "젤렌스키가 11/7 KN-23 사용을 주장(기존 북러 협력의 반복 보도)"
       ],
       "speculation": []
     }
   },
-  "checked_at": "2026-11-08T00:10:30+00:00",
+  "checked_at": "2026-11-08T01:10:59+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

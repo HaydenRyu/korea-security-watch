@@ -4,9 +4,9 @@
   "https://www.data.go.kr/data/15057792/openapi.do",
   "https://www.data.go.kr/data/15058193/openapi.do"
  ],
- "fetched_at": "2026-11-08T14:25:16.293141+00:00",
- "status": "ok",
- "status_detail": "",
+ "fetched_at": "2026-11-08T15:38:03.796366+00:00",
+ "status": "error",
+ "status_detail": "시간 상한 180초 — 상세 0건까지 받음, 나머지는 다음 회차",
  "last_ok_at": "2026-11-08T14:25:16.293141+00:00",
  "warnings": [
   {

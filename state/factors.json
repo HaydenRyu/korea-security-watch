@@ -1,43 +1,47 @@
 {
   "version": 1,
-  "at": "2026-11-07T23:40:38+00:00",
+  "at": "2026-11-08T05:40:17+00:00",
   "domains": {
     "inter_korean": {
       "level": "보통",
       "sources": [],
       "summary": "전단·확성기 등 새 조치를 다룬 원문은 이번 회차에 확인되지 않았다.",
-      "at": "2026-11-07T23:40:38+00:00",
+      "at": "2026-11-08T05:40:17+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "nk_domestic": {
       "level": "보통",
       "sources": [
         {
-          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html",
-          "publisher": "Stars and Stripes"
+          "url": "https://www.segye.com/newsView/20261108505997",
+          "publisher": "세계일보"
         }
       ],
-      "summary": "북한이 신형 대공미사일 시험 등 무기 개발을 주장했으나 내부 노선 변화·숙청을 다룬 원문은 없다.",
-      "at": "2026-11-07T23:40:38+00:00",
+      "summary": "김성남 당 국제비서의 방중 마무리 보도만 있고 노선 변화·숙청은 확인되지 않았다.",
+      "at": "2026-11-08T05:40:17+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "great_powers": {
       "level": "보통",
       "sources": [
         {
-          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html",
-          "publisher": "Stars and Stripes"
+          "url": "https://www.segye.com/newsView/20261108505997",
+          "publisher": "세계일보"
+        },
+        {
+          "url": "https://www.cna.com.tw/news/acn/202611080057.aspx",
+          "publisher": "중앙통신사(CNA)"
         }
       ],
-      "summary": "북·미 외교가 불투명하다는 보도만 있고 고위급 접촉 발표나 군사 옵션 언급은 확인되지 않았다.",
-      "at": "2026-11-07T23:40:38+00:00",
+      "summary": "북중 당 대표단 교류와 미 국방 수뇌부 방중 가능성 보도만 있고 새 군사 합의나 정상 접촉 발표는 없다.",
+      "at": "2026-11-08T05:40:17+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "public_opinion": {
       "level": "보통",
       "sources": [],
       "summary": "북 대남 비난 수위 변화나 공식 조치로 이어진 갈등을 다룬 원문은 확인되지 않았다.",
-      "at": "2026-11-07T23:40:38+00:00",
+      "at": "2026-11-08T05:40:17+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     }
   },

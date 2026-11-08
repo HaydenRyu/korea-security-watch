@@ -1,34 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-11-07T23:40:38+00:00",
-  "world_at": "2026-11-07T23:40:38+00:00",
+  "updated_at": "2026-11-08T05:40:17+00:00",
+  "world_at": "2026-11-08T05:40:17+00:00",
   "world": [
     {
-      "title": "미군, 이란 봉쇄 위반 화물선 무력화",
-      "summary": "미 중부사령부는 11월 7일 오만만에서 봉쇄를 거듭 위반하려던 화물선을 항공기 정밀탄으로 무력화했다. 7월 이후 선박 147척을 돌려보내고 5척을 무력화했다고 밝혔다.",
-      "link_korea": "호르무즈 해역 긴장은 청해부대 임무구역 확대와 한국의 기여 압박으로 이어진다.",
+      "title": "미 중부사령부, 이란 봉쇄 위반 화물선 정밀탄으로 무력화",
+      "summary": "미 중부사령부는 7일 오만만에서 이란 봉쇄를 반복 위반하려던 화물선 M/V Huda를 정밀탄으로 무력화했다고 밝혔다.",
+      "link_korea": "호르무즈 해역 긴장은 청해부대 임무와 한국의 에너지 수송로에 직접 영향을 준다.",
       "region": "중동",
       "source": {
-        "name": "DVIDS(미 국방부)",
-        "url": "https://www.dvidshub.net/news/578872/us-forces-disable-cargo-vessel-attempting-violate-nav",
+        "name": "DVIDS(미 중부사령부)",
+        "url": "https://www.dvidshub.net/news/578872/us-forces-disable-cargo-vessel-attempting-violate-naval-blockade",
         "via": "https://www.dvidshub.net/rss/news"
       }
     },
     {
-      "title": "미국, 이란 핵 정보에 최대 2천만 달러 현상금",
-      "summary": "미 국무부가 이란 핵 프로그램 정보 제공에 최대 2천만 달러 보상을 내걸었고, 중부사령부는 이란의 무기 이동을 제한할 태스크포스를 신설한다고 밝혔다.",
-      "link_korea": "핵 비확산 압박 강화는 대북 비확산·제재 논의의 선례가 된다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "사우디 공습으로 예멘 후티 측 25명 이상 사망 주장",
-      "summary": "후티 계열 매체는 사나 동쪽 알샤리야에서 사우디 공습으로 최소 25명이 숨졌다고 주장했으며, 사우디 주도 연합은 논평하지 않았다.",
-      "link_korea": "중동 분쟁 확산은 미군 전력 배분과 에너지 수송로 안정에 영향을 준다.",
+      "title": "후티 측 \"사우디 공습으로 최소 33명 사망\"",
+      "summary": "예멘 후티 계열 매체는 사우디 공습으로 여성·어린이 포함 최소 33명이 숨졌다고 주장했고 사우디는 입장을 내지 않았다.",
+      "link_korea": "홍해·중동 해상로 불안은 한국 수출입 물류와 유가에 영향을 준다.",
       "region": "중동",
       "source": {
         "name": "BBC",
@@ -37,26 +26,38 @@
       }
     },
     {
-      "title": "중국, 비공표 대규모 군연 가능성…대만 포위 모의 지적",
-      "summary": "미 ISW·AEI 보고서는 중국이 대만 포위·고립을 모의하는 비공표 군연을 하고 있을 수 있다고 지적했고, 대만 국안회의는 서태평양에 100여 척이 전개됐다고 밝혔다.",
-      "link_korea": "중국 해군·해경의 서태평양 대규모 전개는 주한미군 등 역내 미군 전력 운용과 연동될 수 있다.",
-      "region": "동아시아",
+      "title": "미국, 이란 핵 프로그램 정보에 최대 2천만 달러 현상금",
+      "summary": "미 국무부 정의보상 프로그램이 이란 핵 프로그램 정보에 최대 2천만 달러를 내걸었고, 트럼프는 핵시설 재타격 가능성을 거듭 언급했다.",
+      "link_korea": "핵 비확산 압박 방식은 북핵 대응과 대북 제재 논의의 선례가 된다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "멜라니아 여사, 러·우크라이나 관리 초청해 지속 휴전 촉구",
+      "summary": "멜라니아 트럼프 여사가 러시아·우크라이나 관리들을 백악관에 초청해 지속 가능한 휴전을 촉구했고 양측은 헤르손 휴전에서 그의 역할을 평가했다.",
+      "link_korea": "러·우 휴전 향방은 북러 군사협력과 북한군 파병 문제에 연결된다.",
+      "region": "유럽",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+      }
+    },
+    {
+      "title": "중국, 대만 포위 모의하는 '무성' 군연 중일 가능성",
+      "summary": "미 싱크탱크는 중국이 예고 없는 대규모 군연으로 대만 포위·고립을 모의 중일 수 있다고 지적했다.",
+      "link_korea": "대만해협 긴장은 주한미군 전력 운용과 한반도 억제 태세에 부담이 된다.",
+      "region": "대만해협",
       "source": {
         "name": "중앙통신사(CNA)",
         "url": "https://www.cna.com.tw/news/aipl/202611070199.aspx",
         "via": "https://feeds.feedburner.com/rsscna/politics"
       }
-    },
-    {
-      "title": "한국형 핵추진잠수함 '장보고-N' 사업 본격 추진",
-      "summary": "방위사업청은 6일 방추위에서 장보고-N 사업추진기본전략을 의결해 사업타당성 조사를 면제했다. 2030년대 후반 전력화를 목표로 한다.",
-      "link_korea": "북한 핵·미사일 위협에 대한 수중 킬체인과 억제력 강화 사업이다.",
-      "region": "한반도",
-      "source": {
-        "name": "세계일보",
-        "url": "https://www.segye.com/newsView/20261106513257"
-      }
     }
   ],
-  "world_context": "이란 봉쇄·중동 교전과 중국의 서태평양 대규모 전개가 이어지는 가운데 한국은 핵추진잠수함 추진으로 억제력 강화에 나섰다."
+  "world_context": "중동 해상 봉쇄 충돌이 이어지는 가운데 러·우 휴전 논의와 대만해협의 비공표 군사 움직임 지적이 겹친 하루다."
 }

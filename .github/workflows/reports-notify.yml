@@ -1,0 +1,31 @@
+name: reports-notify
+# 판정·검수 보고서(reports/*.md)가 올라오면 본인 ntfy 주제로 제목 한 줄을 보낸다.
+# 일회성 루틴(지구본 공개 판정·검수)은 클라우드에서 돌고 ntfy 주제를 모른다 — 주제는 이 레포 시크릿에만 있다.
+on:
+  push:
+    branches: [main]
+    paths: ["reports/*.md"]
+  workflow_dispatch:
+    inputs:
+      file: { description: "보낼 보고서 경로(시험용)", required: true, default: reports/globe_readiness_2026-11-08.md }
+
+concurrency: { group: reports-notify, cancel-in-progress: false }
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      NTFY_TOPIC_ME: ${{ secrets.NTFY_TOPIC_ME }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - name: send
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = workflow_dispatch ]; then files="${{ inputs.file }}"
+          else files=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'reports/*.md'); fi
+          for f in $files; do
+            title=$(head -1 "$f" | sed 's/^# *//')
+            python3 scripts/ntfy_send.py me "JIS 보고서" "${title} — https://github.com/${GITHUB_REPOSITORY}/blob/main/${f}" 3
+          done

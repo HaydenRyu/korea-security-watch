@@ -269,8 +269,16 @@ def ingest_accepted(run: dict, doc: dict | None, now: str) -> tuple[dict, list[s
         if quiet and not summary:
             summary = f"정본 피드 {len(feeds)}곳에 72시간 안 관련 기사 없음"
         channels = [] if quiet else [c for c in CHANNELS if c in (row.get("channels") or [])]  # 피드 확인은 연결을 관측하지 않는다
-        rows[t] = {"state": row["state"], "channels": channels,
-                   "sources": srcs, "summary": summary, "judged_at": now}
+        state, extra = row["state"], {}
+        prev = rows.get(t)
+        resolution = row.get("resolution").strip()[:SUMMARY_LEN] if isinstance(row.get("resolution"), str) else ""
+        if _active(prev, t_now) and state < prev["state"]:
+            if resolution:  # 하향은 해소 사실(전면 휴전 발효·철수·훈련 종료)을 적었을 때만
+                extra = {"resolution": resolution}
+            else:  # 국지 휴전·외교 행사 기사로 진행 중인 위기·교전을 낮추지 않는다(11/08 우크라이나 2→1 검수 결함)
+                state, extra = prev["state"], {"downgrade_held": state}
+        rows[t] = {"state": state, "channels": channels,
+                   "sources": srcs, "summary": summary, "judged_at": now, **extra}
         accepted.append(t)
     got = bool(accepted)
     return {"schema_version": 2, "judged_at": now if got else doc.get("judged_at"), "theaters": rows}, accepted

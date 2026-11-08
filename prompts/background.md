@@ -72,7 +72,8 @@
                "sources": [{"url": "<opened 에 있는 원문>", "publisher": "<매체명>"}], "same_as": "<선택 — state/linkage.json korea[].id>"}],
     "schema_version": 2,
     "theaters": {"taiwan|ukraine|scs_ecs|mideast|us_posture": {"state": 0, "channels": ["c1_us_gap|c2_nk_ru_cn|c3_simul|c4_sea_energy|c5_diplomacy"],
-                 "sources": [{"name": "<매체명>", "tier": "A|B|C|D", "url": "<opened 에 있는 원문>", "published_at": "<ISO 8601>"}], "summary": "<한국어 1문장 — 관측된 사실>"}}
+                 "sources": [{"name": "<매체명>", "tier": "A|B|C|D", "url": "<opened 에 있는 원문>", "published_at": "<ISO 8601>"}], "summary": "<한국어 1문장 — 관측된 사실>",
+                 "resolution": "<선택 — 직전보다 낮출 때만: 해소 사실 1문장>"}}
   },
   "incidents": [{"tier": "direct|indirect|resolved", "category": "총기|탄약|폭발물|마약|화재·폭발|드론|해킹|간첩|밀수|기타",
                  "when": {"occurred": "YYYY-MM-DD[THH:MM]", "announced": "YYYY-MM-DD"},
@@ -139,6 +140,15 @@
 - `theaters`(조기경보 지수 입력, `scripts/background.py` 가 `ews.ingest` 로 `state/theaters.json` 에 쌓는다) — **배경 회차마다** 쓴다. 생략하면 직전 값을 잇고 48시간 지나면 미관측이 된다. 위 대만 해협·한반도 연결 규칙은 그대로이고, 이 블록은 각 전역의 **현재 상태 사실**만 적는다. 「그래서 한반도 위험이 올랐다」고 쓰지 않는다 — 지수 계산은 코드가 한다.
   - 전역: `taiwan` 대만해협 · `ukraine` 러시아-우크라이나 · `scs_ecs` 남·동중국해 · `mideast` 중동·호르무즈 · `us_posture` 미 전략자산 전개.
   - `state`: 0 평온 · 1 긴장 · 2 위기 · 3 교전. **0 도 원문이 있어야 쓴다** — 원문 없는 전역은 키를 생략한다(미관측이며 평온이 아니다). 예외는 0-1절 「평온 확인」(정본 피드 확인, state 0 만)뿐이다.
+    단계는 그 전역의 **현재 상태**로 매기고, 이번에 연 기사 한 건의 주제로 매기지 않는다(11/08 검수: 백악관 외교 행사 기사 1건으로 전쟁 중인 우크라이나를 1 로 적었다).
+    | 단계 | 기준(원문에 적힌 사실) |
+    |---|---|
+    | 0 평온 | 무력 사용·군사 시위 보도 없음 |
+    | 1 긴장 | 무력 사용 없이 대규모 훈련·함정 집결·위협 발언·제재·외교 갈등 |
+    | 2 위기 | 국지적·일회성 무력 사용(사상자 난 충돌·나포·격침·요격) 또는 무력 충돌 직전 동원·최후통첩 |
+    | 3 교전 | 국가(또는 국가급 무장세력) 간 무력 충돌이 **지금 계속 중**(전쟁 진행·연일 공습·포격·봉쇄 집행 중 무력 사용) |
+    - **내릴 때는 해소 사실을 적는다**: 직전보다 낮게 쓰려면 `resolution` 에 해소 사실 1문장(예 「전선 전체 휴전 발효」·「봉쇄 해제 발표」·「훈련 종료 발표」)을 쓰고 그 원문을 `sources` 에 넣는다. 국지·한시 휴전, 협상·회담·외교 행사, 하루 보도 공백은 해소가 아니다. 코드(`ews.ingest`)가 `resolution` 없는 하향을 직전 단계로 되돌린다(`downgrade_held`).
+  - `summary` 의 숫자(사상자·척수·날짜)는 원문 숫자를 그대로 옮긴다. 「~명 이상」처럼 다른 숫자로 바꾸지 않고, 주장 주체(예 「후티 측 매체」)를 붙인다.
   - `channels`: 그 전역에서 **원문으로 관측된** 연결만. `c1_us_gap` 미군 전력 공백 · `c2_nk_ru_cn` 북-러·북-중 군사협력 · `c3_simul` 동시 압박 · `c4_sea_energy` 해상교통로·에너지 · `c5_diplomacy` 제재·외교. 없으면 `[]`.
   - `sources` 는 판정 시각 기준 72시간 안에 나온 원문으로 쓰고(평온 확인은 0-1절 피드 주소) `published_at` 을 적는다. 코드(`ews.ingest`)가 검사한다 — 72시간 밖·`published_at` 없음·형식 오류인 출처는 버리고, 남은 출처가 0이면 그 전역은 미관측이다. 판정·브리핑에서 이미 연 원문을 먼저 쓰고, 추가로 여는 원문은 전역당 1건 안으로 줄인다. 검색어 `coverage` 에 전역마다 `"linkage:theaters:<전역>"`. 실패해도 회차를 막지 않는다.
 

@@ -303,3 +303,18 @@ def test_backtest_counts_only_upgrades_inside_window():
     r = [{"at": f"2026-10-0{i}T00:00:00+00:00", "grade": g, "d": x} for i, (g, x) in enumerate([(1, 4.0), (1, 12.0), (2, 19.0), (1, 4.0)], 1)]
     assert b.entries(r) == ["2026-10-03T00:00:00+00:00"]
     assert b.lead_table(r, 1, 2) == {4.0: [2, 0], 12.0: [1, 1]}
+
+
+def test_ingest_holds_downgrade_without_resolution():
+    """11/08 검수 — 우크라이나 2→1 이 국지 휴전·외교 기사 1건으로 내려갔다. 하향은 해소 근거(resolution)가 있어야 한다."""
+    prev = {"judged_at": H49, "theaters": {"ukraine": {**row(2), "judged_at": "2026-11-02T12:00:00+00:00"}}}
+    out = ews.ingest(_run(ukraine=row(1)), prev, NOW)
+    u = out["theaters"]["ukraine"]
+    assert u["state"] == 2 and u["downgrade_held"] == 1 and u["judged_at"] == NOW and "resolution" not in u
+    out = ews.ingest(_run(ukraine={**row(0), "resolution": "전선 전체 휴전 발효"}), prev, NOW)
+    u = out["theaters"]["ukraine"]
+    assert u["state"] == 0 and u["resolution"] == "전선 전체 휴전 발효" and "downgrade_held" not in u
+    out = ews.ingest(_run(ukraine=row(3)), prev, NOW)  # 상향은 그대로
+    assert out["theaters"]["ukraine"]["state"] == 3
+    stale = {"judged_at": H49, "theaters": {"ukraine": {**row(2), "judged_at": "2026-10-30T00:00:00+00:00"}}}
+    assert ews.ingest(_run(ukraine=row(1)), stale, NOW)["theaters"]["ukraine"]["state"] == 1  # 72시간 지난 직전 값은 묶지 않는다

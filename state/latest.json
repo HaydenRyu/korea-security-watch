@@ -2,27 +2,27 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea Reuters missile troops November 2026"
+      "North Korea Reuters November 8 2026"
     ],
     "nuclear": [
-      "김정은 방중 방러 핵 동향",
-      "NK News North Korea latest"
+      "북한 풍계리 영변 핵 동향",
+      "North Korea Reuters November 8 2026"
     ],
     "logistics": [
       "북러 군수 수송 탄약",
       "North Korea Russia ammunition shipment"
     ],
     "border_clash": [
-      "북한 군사분계선 지뢰 발견 합참 11월 8일",
-      "DMZ 귀순 NLL"
+      "북한 지뢰 발견 DMZ 귀순 합참 11월 8일",
+      "북한 합참 NLL 월선"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격 11월"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 핵 동향",
-      "Kim Jong Un China Russia visit",
+      "김정은 방중 방러 11월",
+      "North Korea Reuters November 8 2026",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -30,14 +30,14 @@
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
-      "North Korea anti-aircraft missiles attack drill airport KCNA"
+      "North Korea KCNA drill"
     ],
     "gov_warning": [
       "진돗개 데프콘 상향",
       "미 국무부 한국 여행경보"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속 간첩 혐의 11월",
       "North Korea attributed FBI"
     ],
     "calm": [
@@ -45,12 +45,15 @@
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261108505997",
+    "https://www.dailysecu.com/news/articleView.html?idxno=209381",
+    "https://www.dailysecu.com/news/articleView.html?idxno=209380",
+    "https://www.yna.co.kr/view/AKR20261106079100009",
     "https://www.nknews.org/",
     "https://kcnawatch.org/",
-    "https://news.sbs.co.kr/english/article.do?news_id=N1008831384",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/04/north-korea-test-fires-new-air-defence-missile-system-kcna-reports"
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "새로 확인된 도발 징후는 없고, 11/4 대공·순항미사일 시험과 김성남 방중은 정례·외교 일정이다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "새로 확인된 군사 도발 징후는 없고 김성남 방중 귀국(외교)과 귀속 미확인 국내 해킹 보도만 있다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,27 +66,54 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "24시간 안 새 지뢰·월선·교전 보도 없음(9~10월 DMZ 지뢰는 배경)."
+      "summary": "24시간 안 새 지뢰·월선·교전·귀순 보도 없음(9~10월 DMZ 지뢰는 배경)."
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "서울",
+      "lat": 37.57,
+      "lon": 126.98,
+      "summary": "귀속 미확인 — 한국국제교류재단(11/7 공개)과 미래에셋증권(11/5 그룹웨어, 약 3만5천 명)에서 해킹 개인정보 유출이 확인돼 조사 중이다.",
+      "meaning": "북한 등 소행으로 밝혀지지 않은 민간·공공 해킹으로 군사 징후는 아니다.",
+      "sources": [
+        {
+          "name": "데일리시큐",
+          "tier": "C",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=209381"
+        },
+        {
+          "name": "데일리시큐",
+          "tier": "C",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=209380"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "KF가 11/7 일반메일시스템 추가 유출 정황 공개",
+        "미래에셋증권 11/5 그룹웨어 공격으로 임직원 35,255명 정보 유출"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
       "region": "중국 베이징",
-      "summary": "북 노동당 김성남 국제비서가 중국 고위급과 연쇄 회동한 당 외교 일정이며 군사협력 언급은 없다(11/7 보도).",
-      "meaning": "북중 당 차원 외교로 군사 징후는 아니다.",
+      "lat": 39.9,
+      "lon": 116.4,
+      "summary": "북 김성남 당 국제비서의 닷새 방중이 11/7 끝나 귀국했다고 조선중앙통신이 11/8 보도했고 군사협력 언급은 없다.",
+      "meaning": "APEC 앞둔 북중 당 차원 외교 일정으로 군사 징후는 아니다.",
       "sources": [
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261108505997"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "NK News가 11/4 북 고위 당 간부의 방중을 보도"
+        "김성남 대표단 11/7 귀국, 평양국제비행장 영접"
       ],
       "speculation": []
     },
@@ -101,7 +131,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-08T04:10:05+00:00",
+  "checked_at": "2026-11-08T05:10:36+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

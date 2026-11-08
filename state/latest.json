@@ -6,24 +6,24 @@
     ],
     "nuclear": [
       "풍계리 영변 핵 동향",
-      "North Korea nuclear test site"
+      "North Korea missile nuclear Reuters November 8"
     ],
     "logistics": [
       "북한 군수 수송 탄약",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순",
-      "목함지뢰 해안",
-      "NLL DMZ North Korea"
+      "북한 지뢰 발견 DMZ 귀순 NLL",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격",
+      "해킹 공격",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
+      "North Korea Kim Jong Un China Russia visit",
       "김정은 방중 방러",
-      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -33,8 +33,7 @@
       "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 격상",
-      "한미일 긴급 경고"
+      "진돗개 데프콘 격상"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -47,10 +46,13 @@
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261108007100504",
-    "https://www.yna.co.kr/view/AKR20261108010300504",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/6/ATCE_CTGR_0010010000/view.do"
+    "https://www.nknews.org/",
+    "https://www.nknews.org/2026/11/",
+    "https://www.koreaherald.com/article/10929518",
+    "https://www.koreaherald.com/article/10929317",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "최근 24시간 새 군사 징후는 없고 김성남 당 대표단의 방중이 11/7 귀국으로 마무리됐다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "최근 24시간 새 군사 징후는 없고 김성남 당 대표단의 방중이 11/7 귀국으로 마무리됐다. 바이낸스 해킹 북한 귀속(10/31)에 대한 미 국무부 후속 언급이 있었으나 배경이며 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -101,7 +103,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-08T02:09:56+00:00",
+  "checked_at": "2026-11-08T03:11:50+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

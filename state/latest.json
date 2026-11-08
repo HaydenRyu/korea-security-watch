@@ -1,59 +1,43 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troop movement Reuters"
+      "news_kr 수집 결과"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear 38 North"
+      "news_kr 수집 결과"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
+      "news_kr 수집 결과"
     ],
     "border_clash": [
-      "지뢰 발견 합참 DMZ",
-      "목함지뢰 해안",
-      "DMZ NLL 귀순"
+      "북한 합참 지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격 증권"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "news_kr 수집 결과"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea internal mobilization"
+      "news_kr 수집 결과"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "한미일 긴급 경고"
+      "news_kr 수집 결과"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "news_kr 수집 결과(hybrid·spy 묶음)"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
+      "news_kr 수집 결과"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261108505997",
-    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261108509478",
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
     "https://biz.sbs.co.kr/amp/article/20000343888"
   ],
   "overall_summary": "신규 군사 징후 없음; 김성남 방중 종료와 금융권 해킹(귀속 미확인)만 정례 수준으로 직전 회차와 동일하다.",
@@ -74,7 +58,7 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 한양증권(31건, 11/3 보도) 등 증권·금융권 그룹웨어 해킹 개인정보 유출이 조사 중이며 북한 등 귀속 발표는 없다.",
+      "summary": "귀속 미확인 — 한양증권(31건) 등 증권·금융권 그룹웨어 해킹 개인정보 유출이 조사 중이며 북한 등 귀속 발표는 없다.",
       "meaning": "국내 금융권 사이버 사고이나 귀속이 없어 등급 근거가 아니다.",
       "sources": [
         {
@@ -104,7 +88,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "11/3~7 방중, 왕이·차이치 면담"
+        "왕이·차이치 면담, 7일 귀국"
       ],
       "speculation": []
     },
@@ -121,7 +105,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-08T10:10:03+00:00",
+  "checked_at": "2026-11-08T11:10:04+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

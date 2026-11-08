@@ -1,49 +1,59 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 합참 발표 11월 8일",
+      "North Korea Reuters November 2026"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Reuters November 2026"
+    ],
+    "logistics": [
+      "북한 군수 수송 탄약",
+      "North Korea Reuters November 2026"
+    ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 11월 8일"
+      "지뢰 발견 DMZ 귀순",
+      "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 공격",
-      "한국국제교류재단 해킹 개인정보 유출",
-      "미래에셋증권 해킹 개인정보 유출 그룹웨어"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
-      "서해 구조물 주한미군 감축 Kim Jong Un China Russia visit"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea Reuters November 8 2026"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 속보"
-    ],
-    "logistics": [
-      "북한 병력 이동 전방 증강 속보"
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 준전시 등화관제 열병식 진돗개 데프콘"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 열병식 진돗개 데프콘"
+      "북한 준전시 등화관제",
+      "North Korea blackout drill"
     ],
     "gov_warning": [
-      "북한 준전시 등화관제 열병식 진돗개 데프콘"
+      "진돗개 발령 데프콘",
+      "North Korea evacuation warning"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261108505997",
-    "https://www.nknews.org/",
+    "https://www.nknews.org/2026/11/north-korean-loudspeakers-visible-at-border-but-no-broadcasts-heard/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261106/3/ATCE_CTGR_0010010000/view.do",
     "https://biz.sbs.co.kr/amp/article/20000343888"
   ],
-  "overall_summary": "김성남 방중 종료 외 새 군사 징후는 확인되지 않았고 증권가 해킹이 이어지나 귀속은 없다. 지난 회차와 같은 수준이며, 국내 언론 수집은 일부 피드 실패(partial)였다.",
+  "overall_summary": "신규 군사 징후 없음; 김성남 방중 마무리와 금융권 해킹(귀속 미확인)만 정례 수준으로 이어진다. 직전 회차와 동일하다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,11 +67,23 @@
     "border_clash": {
       "status": "none"
     },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
+    },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 한양증권(31건, 11/3 보도) 등 증권·금융권 그룹웨어 해킹 개인정보 유출이 이어지며 조사 중이다.",
+      "summary": "귀속 미확인 — 한양증권(31건, 11/3 보도) 등 증권·금융권 그룹웨어 해킹 개인정보 유출이 조사 중이며 북한 등 귀속 발표는 없다.",
       "meaning": "북한·중국 소행 발표는 없어 등급에 쓰지 않는다.",
       "sources": [
         {
@@ -72,7 +94,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "외부 그룹웨어 경유 유출 31건, 귀속 언급 없음"
+        "외부 그룹웨어 경유 유출 31건, 귀속 언급 없음, 경위 조사 중"
       ],
       "speculation": []
     },
@@ -90,26 +112,14 @@
       ],
       "confidence": "중간",
       "facts": [
-        "왕이·차이치 접견, 조선중앙통신 인용"
+        "왕이·차이치 접견, 군사협력 언급 없음"
       ],
       "speculation": [
         "APEC 앞두고 북미 관계 논의 관측"
       ]
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-08T06:11:03+00:00",
+  "checked_at": "2026-11-08T07:12:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

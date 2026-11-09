@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-11-09T16:44:57+00:00",
+ "fetched_at": "2026-11-09T17:58:43+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-09T16:44:57+00:00",
+ "last_ok_at": "2026-11-09T17:58:43+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -26,7 +26,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 556,
-   "hits": 30
+   "hits": 29
   },
   "SBS": {
    "feeds": 3,
@@ -64,7 +64,7 @@
   "mine": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-09T16:44:57+00:00"
+   "latest": "2026-11-09T17:58:43+00:00"
   },
   "fire": {
    "clusters": 3,
@@ -109,7 +109,7 @@
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
    "count": 76,
-   "hits": 24
+   "hits": 23
   },
   {
    "outlet": "연합뉴스",

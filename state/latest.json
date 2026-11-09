@@ -1,54 +1,47 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 합참 발표 11월 9일",
+      "North Korea Reuters November 9 2026"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설",
-      "North Korea nuclear Yongbyon"
+      "North Korea missile nuclear Yongbyon 38 North"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 합참 발표 11월 9일"
     ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순",
-      "North Korea DMZ NLL"
+      "목함지뢰 해안 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
-      "주한미군 감축"
+      "김정은 방중 Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 국가보안법 구속 간첩 혐의"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "North Korea Reuters November 9 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "North Korea Reuters November 9 2026"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "북한 합참 발표 11월 9일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "서해 구조물 주한미군 감축 국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.koreatimes.co.kr/southkorea/defense/20261109/deploying-mine-hunting-assets-to-anti-piracy-unit-meant-to-prepare-for-unseen-threats-defense-minister",
-    "https://www.koreatimes.co.kr/southkorea/defense/20261109/defense-chief-signals-potential-shift-in-plans-to-integrate-military-academies",
-    "https://www.yna.co.kr/view/AKR20261109078600504"
+    "https://www.yna.co.kr/view/AKR20261109078600504",
+    "https://www.yna.co.kr/view/AKR20261107030200504",
+    "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156787708"
   ],
-  "overall_summary": "이번 회차에서 새 군사 징후는 확인되지 않았다. 북 김성남 방중(통일부 11/9 평가)은 외교 일정으로 직전과 같다.",
+  "overall_summary": "신규 징후 없이 김성남 방중 관련 외교 일정만 이어지는 가운데, 일부 사이트(38North·동아)는 접근이 막혀 열람 범위가 제한됐다. 직전 회차와 동일한 경계 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -80,9 +73,9 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 베이징",
-      "summary": "통일부가 북 김성남 방중으로 중 5중전회 결과 공유·고위급 소통이 이뤄졌다고 밝혔다(외교 일정, 군사협정 언급 없음).",
-      "meaning": "정상회담 조율 가능성이 거론되는 외교 일정이다.",
+      "region": "평양·베이징",
+      "summary": "통일부가 북 김성남 국제비서 방중으로 중 5중전회 결과 공유·고위급 소통이 이뤄졌다고 밝혔다(외교 일정, 군사협정 언급 없음).",
+      "meaning": "북중 당 대 당 교류로 정상회담 조율 가능성이 거론되나 군사 협력 징후는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -92,14 +85,14 @@
       ],
       "confidence": "중간",
       "facts": [
-        "통일부 11/9 발표"
+        "연합뉴스 11/9 11:55 송고: 통일부 \"당 대 당 교류로 북중 전략적 관계 발전\""
       ],
       "speculation": [
-        "김정은 방중 조율 가능성"
+        "동아일보 제목: 김정은 정상회담 조율 가능성(원문 미열람)"
       ]
     }
   },
-  "checked_at": "2026-11-09T15:14:48+00:00",
+  "checked_at": "2026-11-09T16:13:29+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,48 +1,57 @@
 {
   "coverage": {
     "troop_movement": [
-      "지뢰 발견 DMZ 귀순 북한 합참",
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 병력 이동 전방",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "지뢰 발견 DMZ 귀순 북한 합참"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한 합참"
+      "북한 지뢰 발견 목함지뢰 해안",
+      "DMZ NLL 귀순",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
+      "북한 GPS 교란",
       "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 서해 구조물 주한미군 감축",
-      "North Korea Kim Jong Un China Russia visit"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축",
+      "Zelensky North Korean KN-23"
     ],
     "parade_massing": [
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "지뢰 발견 DMZ 귀순 북한 합참"
+      "진돗개 데프콘 발령",
+      "North Korea warning Japan J-Alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261109078600504",
-    "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156787708",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://www.segye.com/newsView/20260807512333",
+    "https://www.imaeil.com/page/view/2026101916020694455",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008837398"
   ],
-  "overall_summary": "신규 징후 없이 김성남 방중 관련 외교 일정만 이어진다. NK News 는 러시아의 KN-23 사용(젤렌스키 주장)을 보도했으나 이미 알려진 북러 협력의 반복으로 배경이다.",
+  "overall_summary": "직전 회차와 같이 북 김성남 방중 관련 외교 일정만 확인됐고 군사 징후는 없다. 강화 해안 유실 지뢰는 10/19 이후 새 발견이 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -54,7 +63,8 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "10/19 이후 새 발견 없음 — 강화 해안 유실 지뢰 누적 보도는 배경."
     },
     "electronic_cyber": {
       "status": "none"
@@ -62,19 +72,19 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "평양·베이징",
+      "region": "북·중",
       "summary": "통일부가 북 김성남 국제비서 방중으로 중 5중전회 결과 공유·고위급 소통이 이뤄졌다고 밝혔다(외교 일정, 군사협정 언급 없음).",
-      "meaning": "북중 당 대 당 교류로 정상회담 조율 가능성이 거론되나 군사 협력 징후는 없다.",
+      "meaning": "북중 고위급 외교 소통으로 군사 협력 발표는 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "SBS",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261109078600504"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008837398"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "연합뉴스 11/9 송고: 통일부 \"당 대 당 교류로 북중 전략적 관계 발전\""
+        "통일부 11/9 발표"
       ],
       "speculation": []
     },
@@ -91,7 +101,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-09T18:10:52+00:00",
+  "checked_at": "2026-11-09T19:11:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

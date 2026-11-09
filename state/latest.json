@@ -35,20 +35,34 @@
     ]
   },
   "opened": [
-    "https://en.yna.co.kr/view/AEN20261108000200315",
-    "https://www.nknews.org/",
-    "https://www.nknews.org/2026/11/us-blacklists-seychelles-based-crypto-exchange-over-north-korean-laundering/",
+    "https://www.yna.co.kr/view/AKR20261110010600504",
     "https://www.nknews.org/2026/11/north-korea-tests-anti-aircraft-missiles-conducts-attack-drill-on-airport-kcna/",
     "https://www.nknews.org/2026/11/russia-used-north-korean-kn-23-missiles-in-ukraine-energy-site-strike-zelensky/",
-    "https://home.treasury.gov/news/press-releases/sb0685"
+    "https://home.treasury.gov/news/press-releases/sb0685",
+    "https://www.nknews.org/2026/11/us-blacklists-seychelles-based-crypto-exchange-over-north-korean-laundering/"
   ],
-  "overall_summary": "지난 24시간 새 군사 도발·전쟁 징후는 확인되지 않았다. 11/4 북 방공미사일·공항 타격 훈련(KCNA 주장)은 시험·훈련 보도로 배경이며, 미 FinCEN의 MEXC 제재 명령(북 제재 회피 연루)과 북 김성남 방중 등 배경성 동향만 이어진다.",
+  "overall_summary": "지난 24시간 새 도발·전쟁 징후는 없다. 북이 신형 어뢰 발사시험을 주장했으나(KCNA 주장, 정례 시험) 접경·병력 징후는 없고 북중 고위급 소통 등 배경성 동향만 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "summary": "北 조선중앙통신이 동해에서 신형 어뢰 발사시험을 했고 내년 초 해군 실전배치 예정이라고 주장했다고 연합뉴스가 보도했다(북한 주장, 원문 제목만 확인).",
+      "meaning": "무기 시험 주장으로 정례 위협 수준이며 남측 표적·실사격 정황은 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261110010600504"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "연합뉴스 11/10 보도 제목: 北 동해서 신형어뢰 발사시험, 내년 초 해군 실전배치"
+      ],
+      "speculation": []
     },
     "logistics": {
       "status": "none"
@@ -119,7 +133,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-09T21:12:12+00:00",
+  "checked_at": "2026-11-09T22:11:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

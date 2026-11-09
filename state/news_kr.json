@@ -1,44 +1,45 @@
 {
- "fetched_at": "2026-11-09T19:14:16+00:00",
- "status": "partial",
- "status_detail": "연합뉴스/정치: ValueError: 항목 0건(형식 변경·빈 응답)",
- "last_ok_at": "2026-11-09T17:58:43+00:00",
+ "fetched_at": "2026-11-09T20:26:27+00:00",
+ "status": "ok",
+ "status_detail": "",
+ "last_ok_at": "2026-11-09T20:26:27+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 1,
-  "fetched": 996,
-  "hits": 15,
-  "clusters": 12,
+  "feeds_failed": 0,
+  "fetched": 1115,
+  "hits": 21,
+  "clusters": 15,
   "by_group": {
    "mine": 1,
-   "fire": 2,
-   "drone_balloon": 1,
+   "fire": 3,
+   "border": 2,
+   "gps": 1,
+   "hybrid": 2,
+   "drone_balloon": 2,
    "alert": 1,
-   "hybrid": 1,
    "spy": 2,
-   "summit": 3,
-   "border": 2
+   "summit": 3
   }
  },
  "outlets": {
   "연합뉴스": {
    "feeds": 5,
-   "failed": 1,
-   "count": 436,
-   "hits": 25
+   "failed": 0,
+   "count": 555,
+   "hits": 29
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 8
+   "hits": 9
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 2
+   "hits": 3
   },
   "국민일보": {
    "feeds": 2,
@@ -64,15 +65,30 @@
   "mine": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-09T19:14:16+00:00"
+   "latest": "2026-11-09T20:26:27+00:00"
   },
   "fire": {
+   "clusters": 3,
+   "max_independent": 2,
+   "latest": "2026-11-09T19:44:35+00:00"
+  },
+  "border": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-09T18:49:13+00:00"
+   "latest": "2026-11-09T19:30:00+00:00"
+  },
+  "gps": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-09T19:28:54+00:00"
+  },
+  "hybrid": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-09T19:28:54+00:00"
   },
   "drone_balloon": {
-   "clusters": 1,
+   "clusters": 2,
    "max_independent": 2,
    "latest": "2026-11-09T15:41:41+00:00"
   },
@@ -80,11 +96,6 @@
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-09T15:18:32+00:00"
-  },
-  "hybrid": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-09T08:17:55+00:00"
   },
   "spy": {
    "clusters": 2,
@@ -95,11 +106,6 @@
    "clusters": 3,
    "max_independent": 2,
    "latest": "2026-11-09T05:57:00+00:00"
-  },
-  "border": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-08T02:59:00+00:00"
   }
  },
  "feeds": [
@@ -108,15 +114,16 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 76,
+   "count": 75,
    "hits": 23
   },
   {
    "outlet": "연합뉴스",
    "section": "정치",
    "url": "https://www.yna.co.kr/rss/politics.xml",
-   "ok": false,
-   "error": "ValueError: 항목 0건(형식 변경·빈 응답)"
+   "ok": true,
+   "count": 120,
+   "hits": 4
   },
   {
    "outlet": "연합뉴스",
@@ -164,7 +171,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 6
+   "hits": 7
   },
   {
    "outlet": "동아일보",
@@ -180,7 +187,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "국민일보",

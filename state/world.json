@@ -1,41 +1,52 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08T23:40:10+00:00",
-  "world_at": "2026-11-08T23:40:10+00:00",
+  "updated_at": "2026-11-09T02:40:36+00:00",
+  "world_at": "2026-11-09T02:40:36+00:00",
   "world": [
     {
-      "title": "사우디 공습으로 최소 33명 사망 주장, 후티 측",
-      "summary": "후티 계열 매체는 사우디 공습으로 사나 동쪽에서 어린이 포함 최소 33명이 숨졌다고 주장했다.",
-      "link_korea": "중동 해상교통로 불안은 한국의 에너지 수입과 청해부대 호르무즈 임무에 영향을 준다.",
+      "title": "후티, 리야드 아람코 타워 타격 주장",
+      "summary": "후티가 사우디 수도 리야드 업무지구와 공항·아람코 시설을 겨냥했다고 밝혔고, 사우디는 경미한 피해와 미사일 요격을 발표했다.",
+      "link_korea": "호르무즈·홍해 에너지 수송 불안은 한국의 원유 수입과 청해부대 임무에 직결된다.",
       "region": "중동",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/c6ly3mjx958eo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "미, 이란 핵 정보에 최대 2000만 달러 현상금",
-      "summary": "미국이 이란 핵프로그램 정보에 최대 2000만 달러 현상금을 내걸었다.",
-      "link_korea": "핵 비확산 체제와 대이란 제재 집행 방식은 대북 제재에도 선례가 된다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
-      }
-    },
-    {
-      "title": "러 공습으로 우크라 전력망 피해, 회담 앞두고",
-      "summary": "러시아의 공습으로 9명이 다치고 우크라이나 전력망이 손상됐으며 회담이 예정돼 있다.",
-      "link_korea": "러-우 전쟁과 협상 동향은 북러 군사협력과 북한군 파병 문제와 직결된다.",
+      "title": "러시아 공습으로 우크라이나 전력망 손상, 아부다비 회담 앞둔 시점",
+      "summary": "미사일 30여 기와 드론 170여 대 공습으로 9명이 다치고 전력망이 손상됐으며, 다음 주 아부다비에서 3자 회담이 예정돼 있다.",
+      "link_korea": "북러 군사협력과 북한군 파병이 이어지는 전쟁의 협상 국면이라 한반도 안보에 영향을 준다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/cm4g1nq8158po",
         "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
+    },
+    {
+      "title": "중국, 3개 전구 수상함 협동 대규모 미공표 전개 — 미 싱크탱크 분석",
+      "summary": "ISW·AEI는 중국이 3개 연안 전구 수상함을 단일 원해 임무에 묶어 대만 고립 모의를 시도한 것으로 보며, 대만 NSC는 100척 넘는 함정 활동을 공개했다.",
+      "link_korea": "서해·동중국해 중국 해군 활동 확대는 주한미군 전력 운용과 연결될 수 있다.",
+      "region": "동아시아",
+      "source": {
+        "name": "중앙통신사(CNA)",
+        "url": "https://www.cna.com.tw/news/aipl/202611090007.aspx",
+        "via": "https://feeds.feedburner.com/rsscna/politics"
+      }
+    },
+    {
+      "title": "미국, 이란 핵 프로그램 정보에 2000만 달러 현상금",
+      "summary": "미국이 이란 핵 프로그램 관련 정보에 2000만 달러의 보상금을 내걸었다.",
+      "link_korea": "핵 비확산 체제 압박은 북한 핵 문제 대응과 같은 선상에서 논의된다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+      }
     }
   ],
-  "world_context": "러-우 협상 국면과 중동 대이란 압박이 동시에 이어지며 제재·전력 배분 문제가 부각된다."
+  "world_context": "중동 충돌 확산, 우크라이나 협상 국면, 대만 주변 중국 해군 전개가 동시에 이어지는 한 주다."
 }

@@ -38,6 +38,8 @@ jobs:
     permissions: { contents: write }
     steps:
       - uses: actions/checkout@v4
+        # 이벤트 시점 커밋이 아니라 main 끝을 받는다 — 맥 킥 dispatch 와 늦은 schedule 이 겹치면 같은 커밋에서 출발한다(firms.yml 과 같은 이유)
+        with: { ref: main }
       - name: count
         run: python3 scripts/risk_calendar.py
       - name: conflicts
@@ -59,5 +61,14 @@ jobs:
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add data/risk_calendar.json data/forecast_prob.json data/forecast_ledger.jsonl $(ls data/conflicts.json data/imagery_reports.json 2>/dev/null)
           git commit -m "calendar: $(date -u +%FT%H:%MZ)"
-          for i in 1 2 3 4 5 6; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((RANDOM % 15 + 5)); done
+          # firms.yml commit 과 같은 루프 — 커밋 밖 변경은 버리고, 실패 회차는 abort + reset 으로 깨끗이 되돌린 뒤 다시 한다
+          left=$(git status --porcelain --untracked-files=no)
+          [ -n "$left" ] && { echo "커밋 밖 변경 버림:"; echo "$left"; git reset -q --hard HEAD; }
+          own=$(git rev-parse HEAD)
+          for i in 1 2 3 4 5 6; do
+            git pull --rebase -X theirs -q origin main && git push -q origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true
+            git reset -q --hard "$own"
+            sleep $((RANDOM % 15 + 5))
+          done
           exit 1

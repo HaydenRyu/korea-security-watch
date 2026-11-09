@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-09T10:10:40+00:00",
+  "computed_at": "2026-11-09T11:16:19+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 26,
-  "band": "관찰",
-  "d": 2,
+  "ews": 0,
+  "band": "안정",
+  "d": 0,
   "e": 13,
   "alpha": 1.0,
-  "grade": 1,
-  "grade_label": "주의",
+  "grade": 0,
+  "grade_label": "평시",
   "coverage": {
     "observed_theaters": 5,
     "linkage_judged_at": "2026-11-09T08:41:10+00:00",
-    "latest_updated_at": "2026-11-09T09:11:08+00:00"
+    "latest_updated_at": "2026-11-09T11:16:19+00:00"
   },
   "theaters": [
     {
@@ -146,8 +146,8 @@
     }
   ],
   "last_good": {
-    "ews": 26,
-    "band": "관찰",
-    "computed_at": "2026-11-09T10:10:40+00:00"
+    "ews": 0,
+    "band": "안정",
+    "computed_at": "2026-11-09T11:16:19+00:00"
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-09T11:16:19+00:00",
+  "computed_at": "2026-11-09T12:14:55+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 0,
@@ -12,8 +12,8 @@
   "grade_label": "평시",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-09T08:41:10+00:00",
-    "latest_updated_at": "2026-11-09T11:16:19+00:00"
+    "linkage_judged_at": "2026-11-09T11:39:56+00:00",
+    "latest_updated_at": "2026-11-09T12:14:55+00:00"
   },
   "theaters": [
     {
@@ -22,22 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "CNA는 중국이 3개 전구 수상함을 협동 운용하는 드문 사례를 분석했고, 대만 국방부는 공함 7척·공기 1대를 감시 중이라고 발표했다.",
+      "summary": "중국 해경선 4척이 금문 제한수역에 진입했다가 대만 해순서의 2시간 경고 방송 끝에 물러났다.",
       "sources": [
         {
           "name": "중앙통신사",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611090007.aspx",
-          "published_at": "2026-11-09T06:53:41+08:00"
-        },
-        {
-          "name": "중앙통신사",
-          "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611090019.aspx",
-          "published_at": "2026-11-09T09:10:09+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611090216.aspx",
+          "published_at": "2026-11-09T17:54:21+08:00"
         }
       ],
-      "judged_at": "2026-11-09T08:41:10+00:00"
+      "judged_at": "2026-11-09T11:39:56+00:00"
     },
     {
       "key": "ukraine",
@@ -56,7 +50,7 @@
           "published_at": "2026-11-07T12:49:36+00:00"
         }
       ],
-      "judged_at": "2026-11-09T08:41:10+00:00"
+      "judged_at": "2026-11-09T11:39:56+00:00"
     },
     {
       "key": "scs_ecs",
@@ -69,17 +63,17 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-09T10:00:00+08:00",
+          "published_at": "2026-11-09T17:10:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-09T05:10:33+00:00",
+          "published_at": "2026-11-09T06:01:52+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-09T08:41:10+00:00"
+      "judged_at": "2026-11-09T11:39:56+00:00"
     },
     {
       "key": "mideast",
@@ -98,7 +92,7 @@
           "published_at": "2026-11-08T21:37:36+00:00"
         }
       ],
-      "judged_at": "2026-11-09T08:41:10+00:00"
+      "judged_at": "2026-11-09T11:39:56+00:00"
     },
     {
       "key": "us_posture",
@@ -106,16 +100,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "한미연합군사령부 창설 48주년 기념 보도만 있고 전략자산 전개·군사 시위 보도는 없다.",
+      "summary": "브런슨 사령관의 일본 방위상 면담 보도만 있고 전략자산 전개·군사 시위 보도는 없다.",
       "sources": [
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/578914/rok-us-combined-forces-command-marks-48-years-combined-defense",
-          "published_at": "2026-11-08T18:21:12-05:00"
+          "url": "https://www.dvidshub.net/news/578931/gen-brunson-thanks-japans-defense-minister-support-un",
+          "published_at": "2026-11-09T01:38:25-05:00"
         }
       ],
-      "judged_at": "2026-11-09T08:41:10+00:00"
+      "judged_at": "2026-11-09T11:39:56+00:00"
     }
   ],
   "channels": [
@@ -148,6 +142,6 @@
   "last_good": {
     "ews": 0,
     "band": "안정",
-    "computed_at": "2026-11-09T11:16:19+00:00"
+    "computed_at": "2026-11-09T12:14:55+00:00"
   }
 }

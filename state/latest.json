@@ -1,42 +1,43 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 9일",
-      "North Korea Reuters November 9 2026"
+      "북한 전방 병력 증강",
+      "North Korea troops border November 2026"
     ],
     "nuclear": [
-      "북한 합참 발표 11월 9일",
-      "North Korea Reuters November 9 2026"
+      "북한 핵시설 풍계리 영변",
+      "North Korea nuclear test site 38 North"
     ],
     "logistics": [
-      "북한 합참 발표 11월 9일",
-      "North Korea Reuters November 9 2026"
+      "북한 탄약 수송 비축",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 해안 북한",
-      "North Korean howitzer sighting Gimpo Aegibong park",
-      "북한 합참 발표 11월 9일"
+      "목함지뢰 발견 해안 11월",
+      "DMZ NLL 귀순 합참",
+      "North Korea DMZ November 9 2026"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격",
+      "GPS 교란",
+      "해킹 개인정보 유출 11월 9일",
       "North Korea attributed FBI hackers crypto"
     ],
     "foreign_forces": [
       "김정은 방중 김정은 방러",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 11월"
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 9일"
+      "북한 열병식 준비 집결"
     ],
     "nk_internal": [
-      "North Korea Reuters November 9 2026"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 9일"
+      "진돗개 데프콘 상향 합참 발표"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 11월",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI hackers crypto"
     ],
     "calm": [
@@ -44,11 +45,11 @@
     ]
   },
   "opened": [
-    "https://www.koreajoongangdaily.com/korea/north-korea",
     "https://www.nknews.org/category/news/",
+    "https://www.koreajoongangdaily.com/korea/north-korea",
     "https://www.koreatimes.co.kr/southkorea/defense"
   ],
-  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 울릉도 북한 어선은 첫 보도(11/5) 24시간 경과, 김포 자주포·확성기·KN-23 러 사용은 기존 흐름의 반복이라 직전과 같은 평시 판단이다.",
+  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 김성남 방중(11/3~)·KN-23 러 사용·MEXC 제재는 기존 흐름의 보도라 직전과 같은 평시 판단이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,14 +62,14 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "24시간 경과 — 울릉도 북한 어선 첫 보도 11/5, 새 접경 사건 보도 없음(김포 애기봉 자주포 노출은 10/25~27 보도의 배경)."
+      "summary": "새 접경 사건 보도 없음 — 김포 애기봉 북한 곡사포 노출(11/8 JoongAng)은 기존 보도의 배경, 지뢰 신규 발견도 확인되지 않음."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "젤렌스키의 KN-23 러 사용 주장(11/9)은 이미 알려진 북러 협력의 반복 보도라 배경."
+      "summary": "김성남 방중(11/3 출발, 통일부 11/9 설명)과 KN-23 러 사용 주장은 이미 알려진 북중·북러 교류의 반복 보도라 배경."
     },
     "parade_massing": {
       "status": "none"
@@ -84,8 +85,8 @@
       "routine": true,
       "attribution": "nk",
       "category": "제재 위반",
-      "summary": "귀속 미확정 — 미 재무부가 북한 제재 대상 은행 대표의 약 35만 달러 이전을 도운 세이셸 소재 가상자산 거래소 MEXC를 제재 지정했다고 NK News가 보도했다.",
-      "meaning": "북한의 제재 회피 자금세탁에 대한 사후 제재 발표로 현재 진행 작전 정황은 없다.",
+      "summary": "귀속 미확정 — 미 재무부가 북한 제재 대상 은행 대표의 약 35만 달러 이전을 도운 MEXC를 제재했다고 NK News가 보도했다(A 등급 원문 미확인).",
+      "meaning": "사후 제재 발표로 진행 중 작전 정황은 없다.",
       "sources": [
         {
           "name": "NK News",
@@ -95,13 +96,12 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "미 재무부가 MEXC를 북한 자금세탁 연루로 제재 지정(NK News 보도)"
+        "미 재무부 MEXC 제재 지정(NK News 보도)"
       ],
-      "speculation": [],
-      "attribution_dropped": "A 등급 기관의 귀속 발표 없음"
+      "speculation": []
     }
   },
-  "checked_at": "2026-11-09T11:16:19+00:00",
+  "checked_at": "2026-11-09T12:14:55+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

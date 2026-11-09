@@ -1,16 +1,20 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 지뢰 발견 DMZ 귀순 NLL"
+      "북한 지뢰 발견 DMZ 귀순 합참",
+      "North Korea troops Reuters November 2026"
     ],
     "nuclear": [
-      "North Korea Kim Jong Un China Russia visit"
+      "North Korea nuclear Yongbyon Punggye-ri November 2026",
+      "북한 핵 영변 풍계리"
     ],
     "logistics": [
-      "North Korea missile launch Reuters November 9"
+      "North Korea missile Reuters November 2026",
+      "북한 군수 탄약 러시아 수송"
     ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순 NLL"
+      "북한 지뢰 발견 DMZ 귀순 합참",
+      "목함지뢰 해안 발견"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
@@ -18,16 +22,20 @@
     ],
     "foreign_forces": [
       "North Korea Kim Jong Un China Russia visit",
-      "김정은 방중 방러 서해 구조물 주한미군 감축"
+      "Zelensky North Korean KN-23 missiles energy strike",
+      "김정은 방중 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "North Korea missile launch Reuters November 9"
+      "North Korea parade massing November 2026",
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "North Korea missile launch Reuters November 9"
+      "북한 준전시 등화관제 노농적위군",
+      "North Korea mobilization Reuters November 2026"
     ],
     "gov_warning": [
-      "북한 합참 지뢰 발견 DMZ 귀순 NLL"
+      "진돗개 발령 데프콘 상향",
+      "북한 합참 발표 경고"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -38,12 +46,12 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261109078600504",
     "https://www.nknews.org/category/news/",
     "https://www.segye.com/newsView/20261108509478",
-    "https://www.koreaherald.com/"
+    "https://www.koreaherald.com/",
+    "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133"
   ],
-  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 김성남 방중(11/7)·DMZ 지뢰(9~10월) 등은 24시간 경과한 배경이다.",
+  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 김성남 방중·강화 해안 지뢰(10월)·KN-23 러시아 사용 보도는 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,10 +68,6 @@
     "electronic_cyber": {
       "status": "none"
     },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "24시간 경과 — 김성남 방중 첫 보도 11/7, 통일부 11/9 설명은 후속이며 새 군사협력 발표 없음"
-    },
     "parade_massing": {
       "status": "none"
     },
@@ -75,9 +79,13 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none",
+      "summary": "24시간 경과 — 김성남 방중 첫 보도 11/7, 젤렌스키 KN-23 사용 주장은 기존 협력의 반복 보도라 배경"
     }
   },
-  "checked_at": "2026-11-09T04:09:24+00:00",
+  "checked_at": "2026-11-09T05:09:34+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

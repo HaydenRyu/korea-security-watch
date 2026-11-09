@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-09T02:40:36+00:00",
+  "judged_at": "2026-11-09T05:39:44+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -15,8 +15,8 @@
           "published_at": "2026-11-07T12:49:36+00:00"
         }
       ],
-      "summary": "러시아의 미사일 30여 기·드론 170여 대 공습으로 9명이 다치고 전력망이 손상됐으며 다음 주 아부다비 회담이 예정돼 있다.",
-      "judged_at": "2026-11-09T02:40:36+00:00"
+      "summary": "러시아의 탄도미사일 30여 기·드론 170여 대 공습으로 9명이 다치고 전력망이 손상됐으며 다음 주 아부다비 회담이 예정돼 있다.",
+      "judged_at": "2026-11-09T05:39:44+00:00"
     },
     "mideast": {
       "state": 3,
@@ -29,16 +29,10 @@
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c6ly3mjx958eo",
           "published_at": "2026-11-08T21:37:36+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo",
-          "published_at": "2026-11-08T04:03:12+00:00"
         }
       ],
-      "summary": "후티가 리야드 아람코 타워 등을 타격했다고 밝혔고 사우디는 경미한 피해를 발표했으며, 후티 측 매체는 사우디 공습으로 최소 33명이 숨졌다고 주장했다.",
-      "judged_at": "2026-11-09T02:40:36+00:00"
+      "summary": "후티가 리야드 업무지구·아람코 시설 등을 타격했다고 밝혔고 사우디는 경미한 피해와 미사일 요격을 발표했다.",
+      "judged_at": "2026-11-09T05:39:44+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -49,10 +43,16 @@
           "tier": "B",
           "url": "https://www.cna.com.tw/news/aipl/202611090007.aspx",
           "published_at": "2026-11-09T06:53:41+08:00"
+        },
+        {
+          "name": "중앙통신사",
+          "tier": "B",
+          "url": "https://www.cna.com.tw/news/aipl/202611090019.aspx",
+          "published_at": "2026-11-09T09:10:09+08:00"
         }
       ],
-      "summary": "ISW·AEI가 중국의 3개 전구 수상함 협동 미공표 전개를 보고했고 대만 NSC는 100척 넘는 중국 함정 활동을 공개했으며, 대만 국방부 일일 집계는 공함 7척·공기 1대다.",
-      "judged_at": "2026-11-09T02:40:36+00:00"
+      "summary": "CNA는 중국의 3개 전구 수상함 협동 행동을 드문 사례로 분석했고, 대만 국방 당국은 공함 7척·공기 1대를 감시 중이라고 전했다.",
+      "judged_at": "2026-11-09T05:39:44+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -67,12 +67,12 @@
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-09T02:07:38+00:00",
+          "published_at": "2026-11-09T04:14:56+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-09T02:40:36+00:00"
+      "judged_at": "2026-11-09T05:39:44+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -82,11 +82,11 @@
           "name": "DVIDS",
           "tier": "A",
           "url": "https://www.dvidshub.net/news/578914/rok-us-combined-forces-command-marks-48-years-combine",
-          "published_at": "2026-11-08T18:28:12+00:00"
+          "published_at": "2026-11-08T18:21:12-05:00"
         }
       ],
-      "summary": "연합사 창설 48주년 기념행사가 캠프 험프리스에서 열렸고 새 전력 전개 보도는 없다.",
-      "judged_at": "2026-11-09T02:40:36+00:00"
+      "summary": "한미연합군사령부 창설 48주년 기념 보도만 있고 전략자산 전개·군사 시위 보도는 없다.",
+      "judged_at": "2026-11-09T05:39:44+00:00"
     }
   }
 }

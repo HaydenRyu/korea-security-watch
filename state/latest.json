@@ -41,17 +41,16 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://www.koreatimes.co.kr/southkorea/defense",
-    "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133",
+    "https://www.yna.co.kr/view/AKR20261109078600504",
     "https://www.koreaherald.com/",
-    "https://www.yna.co.kr/view/AKR20261109078600504"
+    "https://www.koreatimes.co.kr/southkorea/defense",
+    "https://www.imaeil.com/page/view/2026101916020694455"
   ],
-  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 김성남 방중과 11/5 울릉도 북 어선 발견은 배경이며 직전 회차와 같은 평시 판단이다.",
+  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 김성남 방중은 배경이며 직전 회차와 같은 평시 판단이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,15 +62,14 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "새 지뢰·월선 보도 없음 — 11/5 울릉도 북 어선 발견은 24시간 경과 배경."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김성남 방중·북중 고위급 소통은 이미 알려진 협력의 반복 보도라 배경(통일부 11/9 브리핑)."
+      "summary": "북 김성남 방중(11/5~)은 이미 알려진 배경이며 24시간 내 새 군사협력·정상 방문 확인 없음"
     },
     "parade_massing": {
       "status": "none"
@@ -86,7 +84,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-09T07:14:07+00:00",
+  "checked_at": "2026-11-09T08:12:59+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

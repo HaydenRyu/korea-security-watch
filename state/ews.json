@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-09T08:12:59+00:00",
+  "computed_at": "2026-11-09T09:11:08+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 0,
-  "band": "안정",
-  "d": 0,
+  "ews": 26,
+  "band": "관찰",
+  "d": 2,
   "e": 13,
   "alpha": 1.0,
-  "grade": 0,
-  "grade_label": "평시",
+  "grade": 1,
+  "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-09T05:39:44+00:00",
-    "latest_updated_at": "2026-11-09T08:12:59+00:00"
+    "linkage_judged_at": "2026-11-09T08:41:10+00:00",
+    "latest_updated_at": "2026-11-09T09:11:08+00:00"
   },
   "theaters": [
     {
@@ -22,7 +22,7 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "CNA는 중국의 3개 전구 수상함 협동 행동을 드문 사례로 분석했고, 대만 국방 당국은 공함 7척·공기 1대를 감시 중이라고 전했다.",
+      "summary": "CNA는 중국이 3개 전구 수상함을 협동 운용하는 드문 사례를 분석했고, 대만 국방부는 공함 7척·공기 1대를 감시 중이라고 발표했다.",
       "sources": [
         {
           "name": "중앙통신사",
@@ -37,7 +37,7 @@
           "published_at": "2026-11-09T09:10:09+08:00"
         }
       ],
-      "judged_at": "2026-11-09T05:39:44+00:00"
+      "judged_at": "2026-11-09T08:41:10+00:00"
     },
     {
       "key": "ukraine",
@@ -47,7 +47,7 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "러시아의 탄도미사일 30여 기·드론 170여 대 공습으로 9명이 다치고 전력망이 손상됐으며 다음 주 아부다비 회담이 예정돼 있다.",
+      "summary": "러시아가 탄도미사일 30여 기·드론 170여 대로 공습해 9명이 다치고 전력망이 손상됐으며 다음 주 아부다비 3자 회담이 예정돼 있다.",
       "sources": [
         {
           "name": "BBC",
@@ -56,7 +56,7 @@
           "published_at": "2026-11-07T12:49:36+00:00"
         }
       ],
-      "judged_at": "2026-11-09T05:39:44+00:00"
+      "judged_at": "2026-11-09T08:41:10+00:00"
     },
     {
       "key": "scs_ecs",
@@ -75,11 +75,11 @@
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-09T04:14:56+00:00",
+          "published_at": "2026-11-09T05:10:33+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-09T05:39:44+00:00"
+      "judged_at": "2026-11-09T08:41:10+00:00"
     },
     {
       "key": "mideast",
@@ -89,7 +89,7 @@
       "channels": [
         "c4_sea_energy"
       ],
-      "summary": "후티가 리야드 업무지구·아람코 시설 등을 타격했다고 밝혔고 사우디는 경미한 피해와 미사일 요격을 발표했다.",
+      "summary": "후티 측이 리야드 업무지구·아람코 시설을 타격했다고 밝혔고 사우디는 경미한 피해와 미사일 요격을 발표했다.",
       "sources": [
         {
           "name": "BBC",
@@ -98,7 +98,7 @@
           "published_at": "2026-11-08T21:37:36+00:00"
         }
       ],
-      "judged_at": "2026-11-09T05:39:44+00:00"
+      "judged_at": "2026-11-09T08:41:10+00:00"
     },
     {
       "key": "us_posture",
@@ -111,11 +111,11 @@
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/578914/rok-us-combined-forces-command-marks-48-years-combine",
+          "url": "https://www.dvidshub.net/news/578914/rok-us-combined-forces-command-marks-48-years-combined-defense",
           "published_at": "2026-11-08T18:21:12-05:00"
         }
       ],
-      "judged_at": "2026-11-09T05:39:44+00:00"
+      "judged_at": "2026-11-09T08:41:10+00:00"
     }
   ],
   "channels": [
@@ -146,8 +146,8 @@
     }
   ],
   "last_good": {
-    "ews": 0,
-    "band": "안정",
-    "computed_at": "2026-11-09T08:12:59+00:00"
+    "ews": 26,
+    "band": "관찰",
+    "computed_at": "2026-11-09T09:11:08+00:00"
   }
 }

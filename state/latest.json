@@ -14,7 +14,7 @@
     ],
     "border_clash": [
       "지뢰 발견 목함지뢰 해안",
-      "DMZ 귀순 합참",
+      "북한 합참 발표 DMZ 지뢰 귀순",
       "North Korea DMZ mine"
     ],
     "electronic_cyber": [
@@ -45,12 +45,11 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261109078600504",
+    "https://www.nknews.org/",
     "https://www.koreaherald.com/",
-    "https://www.koreatimes.co.kr/southkorea/defense",
-    "https://www.imaeil.com/page/view/2026101916020694455"
+    "https://www.koreatimes.co.kr/southkorea/defense"
   ],
-  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 김성남 방중은 배경이며 직전 회차와 같은 평시 판단이다.",
+  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 울릉도 해상 북한 어선 발견은 조사 중이며 직전 회차와 같은 평시 판단이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,14 +61,33 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "울릉도 인근 공해",
+      "lat": 37.48,
+      "lon": 130.9,
+      "summary": "울릉도 인근 공해상에서 북한 어선이 발견돼 군이 조사 중이며 승선원·귀순 의사는 미공개다.",
+      "meaning": "표류·월선 어선은 통상 사례로 군사적 위협 근거는 없다.",
+      "sources": [
+        {
+          "name": "코리아타임스",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/southkorea/defense"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "북한 어선이 울릉도 인근 공해에서 발견되어 조사 중"
+      ],
+      "speculation": [
+        "귀순 여부는 미확인"
+      ]
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "북 김성남 방중(11/5~)은 이미 알려진 배경이며 24시간 내 새 군사협력·정상 방문 확인 없음"
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -84,8 +102,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-09T08:12:59+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-09T09:11:08+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

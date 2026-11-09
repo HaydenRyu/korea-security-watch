@@ -2,46 +2,46 @@
   "coverage": {
     "troop_movement": [
       "북한 합참 지뢰 발견 DMZ 귀순 NLL",
-      "North Korea Reuters Kim Jong Un November 9 2026"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea Reuters Kim Jong Un November 9 2026"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "North Korea Reuters Kim Jong Un November 9 2026"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "border_clash": [
       "북한 합참 지뢰 발견 DMZ 귀순 NLL"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Reuters Kim Jong Un November 9 2026"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "North Korea Reuters Kim Jong Un November 9 2026"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "nk_internal": [
-      "North Korea Reuters Kim Jong Un November 9 2026"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "gov_warning": [
-      "North Korea Reuters Kim Jong Un November 9 2026"
+      "북한 합참 지뢰 발견 DMZ 귀순 NLL"
     ],
     "hybrid_ops": [
       "북한 합참 지뢰 발견 DMZ 귀순 NLL"
     ],
     "calm": [
-      "North Korea Reuters Kim Jong Un November 9 2026"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.nknews.org/category/news/",
     "https://www.segye.com/newsView/20261108509478",
+    "https://www.yna.co.kr/view/AKR20261109078600504",
     "https://www.yna.co.kr/view/AKR20261107030200504"
   ],
-  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 11/4~5 미사일·대공 시험과 11/3~7 김성남 방중은 24시간 경과한 배경이다.",
+  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 11/4~5 미사일·대공 시험과 김성남 방중은 24시간 경과한 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,7 +60,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "24시간 경과 — 김성남 방중 회담 첫 보도 11/7, 새 군사협력 발표 없음"
+      "summary": "24시간 경과 — 김성남 방중 첫 보도 11/7, 통일부 11/9 설명은 후속이며 새 군사협력 발표 없음"
     },
     "parade_massing": {
       "status": "none"
@@ -75,7 +75,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-09T02:10:50+00:00",
+  "checked_at": "2026-11-09T03:09:43+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

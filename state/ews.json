@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-09T02:10:50+00:00",
+  "computed_at": "2026-11-09T03:09:43+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 0,
@@ -12,8 +12,8 @@
   "grade_label": "평시",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-08T23:40:10+00:00",
-    "latest_updated_at": "2026-11-09T02:10:50+00:00"
+    "linkage_judged_at": "2026-11-09T02:40:36+00:00",
+    "latest_updated_at": "2026-11-09T03:09:43+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "미 싱크탱크가 중국의 비공표 대규모 군연으로 대만 포위 모의 가능성을 지적했고 대만 정부의 공식 확인은 없다.",
+      "summary": "ISW·AEI가 중국의 3개 전구 수상함 협동 미공표 전개를 보고했고 대만 NSC는 100척 넘는 중국 함정 활동을 공개했으며, 대만 국방부 일일 집계는 공함 7척·공기 1대다.",
       "sources": [
         {
           "name": "중앙통신사",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611070199.aspx",
-          "published_at": "2026-11-07T21:17:02+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611090007.aspx",
+          "published_at": "2026-11-09T06:53:41+08:00"
         }
       ],
-      "judged_at": "2026-11-08T11:40:17+00:00"
+      "judged_at": "2026-11-09T02:40:36+00:00"
     },
     {
       "key": "ukraine",
@@ -41,7 +41,7 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "러시아의 공습으로 9명이 다치고 전력망이 손상됐으며 회담이 예정돼 있다.",
+      "summary": "러시아의 미사일 30여 기·드론 170여 대 공습으로 9명이 다치고 전력망이 손상됐으며 다음 주 아부다비 회담이 예정돼 있다.",
       "sources": [
         {
           "name": "BBC",
@@ -50,7 +50,7 @@
           "published_at": "2026-11-07T12:49:36+00:00"
         }
       ],
-      "judged_at": "2026-11-08T23:40:10+00:00"
+      "judged_at": "2026-11-09T02:40:36+00:00"
     },
     {
       "key": "scs_ecs",
@@ -63,17 +63,17 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-09T00:00:00+08:00",
+          "published_at": "2026-11-09T10:00:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-08T14:42:09+00:00",
+          "published_at": "2026-11-09T02:07:38+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-08T23:40:10+00:00"
+      "judged_at": "2026-11-09T02:40:36+00:00"
     },
     {
       "key": "mideast",
@@ -83,13 +83,13 @@
       "channels": [
         "c4_sea_energy"
       ],
-      "summary": "미 중부사령부가 7일 대이란 봉쇄를 위반한 화물선을 무력화했고 후티 측 매체는 사우디 공습으로 최소 33명이 숨졌다고 주장했다.",
+      "summary": "후티가 리야드 아람코 타워 등을 타격했다고 밝혔고 사우디는 경미한 피해를 발표했으며, 후티 측 매체는 사우디 공습으로 최소 33명이 숨졌다고 주장했다.",
       "sources": [
         {
-          "name": "DVIDS(미 중부사령부)",
-          "tier": "A",
-          "url": "https://www.dvidshub.net/news/578872/us-forces-disable-cargo-vessel-attempting-violate-naval-blockade",
-          "published_at": "2026-11-07T15:31:51-05:00"
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/c6ly3mjx958eo",
+          "published_at": "2026-11-08T21:37:36+00:00"
         },
         {
           "name": "BBC",
@@ -98,7 +98,7 @@
           "published_at": "2026-11-08T04:03:12+00:00"
         }
       ],
-      "judged_at": "2026-11-08T23:40:10+00:00"
+      "judged_at": "2026-11-09T02:40:36+00:00"
     },
     {
       "key": "us_posture",
@@ -106,22 +106,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "Stars and Stripes 목록·DVIDS 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
+      "summary": "연합사 창설 48주년 기념행사가 캠프 험프리스에서 열렸고 새 전력 전개 보도는 없다.",
       "sources": [
         {
-          "name": "Stars and Stripes",
-          "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-06T00:00:00+00:00",
-          "kind": "feed"
-        },
-        {
           "name": "DVIDS",
-          "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-08T18:28:12-05:00",
-          "kind": "feed"
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/578914/rok-us-combined-forces-command-marks-48-years-combine",
+          "published_at": "2026-11-08T18:28:12+00:00"
         }
       ],
-      "judged_at": "2026-11-08T23:40:10+00:00"
+      "judged_at": "2026-11-09T02:40:36+00:00"
     }
   ],
   "channels": [
@@ -154,6 +148,6 @@
   "last_good": {
     "ews": 0,
     "band": "안정",
-    "computed_at": "2026-11-09T02:10:50+00:00"
+    "computed_at": "2026-11-09T03:09:43+00:00"
   }
 }

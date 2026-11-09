@@ -15,7 +15,9 @@ concurrency: { group: firms, cancel-in-progress: false }
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 8   # 유형 추정 Overpass 상한 120s(firms.OSM_BUDGET_S) + 토지피복 상한 60s(firms.LC_BUDGET_S, 10/28 실측 칸당 ≈0.6s) 포함
+    # 유형 추정 Overpass 상한 120s(firms.OSM_BUDGET_S) + 토지피복 상한 60s(firms.LC_BUDGET_S, 10/28 실측 칸당 ≈0.6s) 포함.
+    # 8분이던 때 navwarn 3.5분 + drills 4분에 걸려 잡이 취소되고 그 회차 수집분이 커밋 전에 버려졌다(11-09 run 42561204273). 단계별 실측 최대 합 ≈670s
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         # 이벤트 시점 커밋(github.sha)이 아니라 main 끝을 받는다 — 맥 킥 dispatch 와 늦은 schedule 이 같은 커밋에서 출발해
@@ -32,6 +34,7 @@ jobs:
       - name: navwarn_kr
         # 실패(rc 3: 키 미활성·한도·통신)는 이 스텝을 실패로 표시하되 열점 커밋은 계속한다. 상태는 산출물 status 에도 남는다
         continue-on-error: true
+        timeout-minutes: 5
         env: { DATA_GO_KR_KEY: "${{ secrets.DATA_GO_KR_KEY }}" }
         run: python3 scripts/navwarn_kr.py
       - name: news_kr

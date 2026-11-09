@@ -1,17 +1,17 @@
 {
- "at": "2026-11-08T23:55:22+00:00",
- "south": 60,
- "area": 74,
- "baseline": 60.0,
- "ratio": 1.0,
- "samples": 4,
+ "at": "2026-11-09T01:06:20+00:00",
+ "south": 74,
+ "area": 97,
+ "baseline": 78,
+ "ratio": 0.95,
+ "samples": 5,
  "mil": [
   {
-   "type": "BE20",
+   "type": "SURN",
    "name": null,
-   "call": "MAGIC56",
-   "lat": 32.69,
-   "lon": 131.31
+   "call": "KCGB521",
+   "lat": 34.83,
+   "lon": 128.99
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

@@ -1,42 +1,38 @@
 {
   "coverage": {
     "troop_movement": [
-      "North Korea Reuters missile nuclear Kim Jong Un",
-      "북한 합참 발표"
+      "North Korea Reuters Kim Jong Un missile November 2026",
+      "북한 합참 발표 지뢰 발견 DMZ 귀순"
     ],
     "nuclear": [
-      "North Korea Reuters missile nuclear Kim Jong Un",
-      "북한 핵 합참 발표"
+      "북한 준전시 등화관제 열병식 핵 풍계리 영변",
+      "North Korea Reuters Kim Jong Un missile November 2026"
     ],
     "logistics": [
-      "North Korea Reuters missile nuclear Kim Jong Un",
-      "북한 군수 수송"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순",
+      "North Korea Reuters Kim Jong Un missile November 2026"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 NLL"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격 랜섬웨어",
-      "GPS 교란"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "North Korea Reuters Kim Jong Un missile November 2026"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 준전시 등화관제 열병식 핵 풍계리 영변"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea nationwide drill"
+      "북한 준전시 등화관제 열병식 핵 풍계리 영변"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning Japan J-Alert"
+      "진돗개 발령 데프콘 North Korea warning Japan J-Alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 North Korea talks offer"
@@ -47,7 +43,7 @@
     "https://www.segye.com/newsView/20261108509478",
     "https://www.segye.com/newsView/20261108505997"
   ],
-  "overall_summary": "신규 징후 없이 김성남 방중 종료 보도만 있고 11/4~5 미사일·대공 시험은 24시간 경과 배경이다. 직전과 동일한 평시 수준이다.",
+  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 11/4~5 미사일·대공 시험과 11/3~7 김성남 방중은 24시간 경과한 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,25 +61,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "베이징",
-      "summary": "북 김성남 당 국제비서가 11/3~7 방중해 왕이·차이치·류하이싱과 회동 후 귀국했으며 군사협력 언급은 없다.",
-      "meaning": "당 차원 북중 교류로 군사적 의미는 제한적이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261108505997"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "11/8 세계일보: 7일 귀국"
-      ],
-      "speculation": [
-        "APEC 앞두고 북미 관계 의견 교환 추정"
-      ]
+      "status": "none",
+      "summary": "24시간 경과 — 김성남 방중 종료 보도 첫 보도 11/7, 새 군사협력 발표 없음"
     },
     "parade_massing": {
       "status": "none"
@@ -98,14 +77,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-08T23:10:34+00:00",
-  "grade": 1,
-  "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-09T00:10:29+00:00",
-    "summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 11/2~5 무기시험 주장과 11/3~7 김성남 방중은 이미 알려진 배경이다."
-  }
+  "checked_at": "2026-11-09T01:13:19+00:00",
+  "grade": 0,
+  "grade_label": "평시",
+  "active": []
 }

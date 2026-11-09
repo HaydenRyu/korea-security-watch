@@ -18,7 +18,13 @@ jobs:
     timeout-minutes: 8   # 유형 추정 Overpass 상한 120s(firms.OSM_BUDGET_S) + 토지피복 상한 60s(firms.LC_BUDGET_S, 10/28 실측 칸당 ≈0.6s) 포함
     steps:
       - uses: actions/checkout@v4
+        # 이벤트 시점 커밋(github.sha)이 아니라 main 끝을 받는다 — 맥 킥 dispatch 와 늦은 schedule 이 같은 커밋에서 출발해
+        # 같은 state 를 따로 써 충돌했다(10-30·10-31). concurrency 로 줄 선 뒤 회차가 앞 회차 push 위에서 시작한다
+        with: { ref: main }
       - name: fetch
+        id: fetch
+        # FIRMS 통신 실패(rc 3, 3회 재시도 뒤)는 이 스텝만 실패로 표시하고 다른 갱신·커밋은 계속한다. rc 3 은 state/firms.json 을 쓰기 전에 끝난다
+        continue-on-error: true
         env: { FIRMS_KEY: "${{ secrets.FIRMS_KEY }}" }
         run: python3 scripts/firms.py
       - name: air
@@ -43,6 +49,9 @@ jobs:
         run: |
           python3 -m pip install -q --user --break-system-packages olefile==0.47 pypdf==6.14.2 || echo "첨부 해석기 설치 실패 — 본문만"
           python3 scripts/drills_kr.py
+      - name: firms_note
+        if: steps.fetch.outcome == 'failure'
+        run: echo "FIRMS 수집 실패 — state/firms.json 미갱신(직전 값 유지)" >> "$GITHUB_STEP_SUMMARY"
       - name: commit
         run: |
           [ -z "$(git status --porcelain -- state/firms.json state/firms_cells.json state/air.json state/air.jsonl state/navwarn_kr.json state/news_kr.json state/drills_kr.json)" ] && { echo unchanged; exit 0; }  # 신규 파일도 변경으로 본다
@@ -50,6 +59,17 @@ jobs:
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add state/firms.json $(ls state/firms_cells.json state/air.json state/air.jsonl state/navwarn_kr.json state/news_kr.json state/drills_kr.json 2>/dev/null)
           git commit -m "firms: $(date -u +%FT%H:%MZ)"
-          # 루틴·calendar 커밋과 경합한다(10/24 실측 60회 중 4회 실패) — 6회·무작위 대기로 재시도
-          for i in 1 2 3 4 5 6; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((RANDOM % 15 + 5)); done
+          # 커밋 밖 추적 파일 변경이 남으면 pull --rebase 가 거절한다(11-03 drills_kr 시간 초과 회차) — 이름을 남기고 버린다
+          left=$(git status --porcelain --untracked-files=no)
+          [ -n "$left" ] && { echo "커밋 밖 변경 버림:"; echo "$left"; git reset -q --hard HEAD; }
+          # 루틴·calendar 커밋과 경합한다(10/24 실측 60회 중 4회 실패) — 6회·무작위 대기로 재시도.
+          # 회차가 실패하면 rebase 를 거두고 이번 커밋으로 되돌린다 — 중간 상태가 남으면 남은 회차가 모두 실패한다(10-31).
+          # -X theirs = 충돌 칸은 이번 회차 값. 이 파일들은 firms 회차만 쓰고 줄을 섰으니 늦게 push 하는 쪽이 늦게 수집한 쪽이다
+          own=$(git rev-parse HEAD)
+          for i in 1 2 3 4 5 6; do
+            git pull --rebase -X theirs -q origin main && git push -q origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true
+            git reset -q --hard "$own"
+            sleep $((RANDOM % 15 + 5))
+          done
           exit 1

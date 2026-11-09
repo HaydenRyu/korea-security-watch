@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-11-09T17:58:43+00:00",
- "status": "ok",
- "status_detail": "",
+ "fetched_at": "2026-11-09T19:14:16+00:00",
+ "status": "partial",
+ "status_detail": "연합뉴스/정치: ValueError: 항목 0건(형식 변경·빈 응답)",
  "last_ok_at": "2026-11-09T17:58:43+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 0,
-  "fetched": 1116,
-  "hits": 19,
-  "clusters": 14,
+  "feeds_failed": 1,
+  "fetched": 996,
+  "hits": 15,
+  "clusters": 12,
   "by_group": {
    "mine": 1,
-   "fire": 3,
-   "drone_balloon": 3,
+   "fire": 2,
+   "drone_balloon": 1,
    "alert": 1,
    "hybrid": 1,
    "spy": 2,
@@ -24,9 +24,9 @@
  "outlets": {
   "연합뉴스": {
    "feeds": 5,
-   "failed": 0,
-   "count": 556,
-   "hits": 29
+   "failed": 1,
+   "count": 436,
+   "hits": 25
   },
   "SBS": {
    "feeds": 3,
@@ -64,15 +64,15 @@
   "mine": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-09T17:58:43+00:00"
+   "latest": "2026-11-09T19:14:16+00:00"
   },
   "fire": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-09T16:27:00+00:00"
+   "latest": "2026-11-09T18:49:13+00:00"
   },
   "drone_balloon": {
-   "clusters": 3,
+   "clusters": 1,
    "max_independent": 2,
    "latest": "2026-11-09T15:41:41+00:00"
   },
@@ -115,9 +115,8 @@
    "outlet": "연합뉴스",
    "section": "정치",
    "url": "https://www.yna.co.kr/rss/politics.xml",
-   "ok": true,
-   "count": 120,
-   "hits": 5
+   "ok": false,
+   "error": "ValueError: 항목 0건(형식 변경·빈 응답)"
   },
   {
    "outlet": "연합뉴스",
@@ -141,7 +140,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 2
   },
   {
    "outlet": "SBS",

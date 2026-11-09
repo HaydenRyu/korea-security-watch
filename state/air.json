@@ -1,17 +1,24 @@
 {
- "at": "2026-11-09T17:58:31+00:00",
- "south": 8,
- "area": 13,
- "baseline": 8.0,
- "ratio": 1.0,
- "samples": 6,
+ "at": "2026-11-09T19:13:31+00:00",
+ "south": 30,
+ "area": 38,
+ "baseline": 24,
+ "ratio": 1.25,
+ "samples": 5,
  "mil": [
   {
    "type": "GLEX",
    "name": "정찰용 비즈니스젯 가능",
    "call": "",
-   "lat": 37.39,
-   "lon": 126.96
+   "lat": 37.37,
+   "lon": 126.74
+  },
+  {
+   "type": "C17",
+   "name": "C-17 수송기",
+   "call": "",
+   "lat": 32.52,
+   "lon": 128.13
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

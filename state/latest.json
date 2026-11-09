@@ -1,48 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "지뢰 발견 DMZ 귀순 북한 합참",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+      "지뢰 발견 DMZ 귀순 북한 합참"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+      "지뢰 발견 DMZ 귀순 북한 합참"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 서해 구조물 주한미군 감축 국가보안법 구속",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중 서해 구조물 주한미군 감축",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "nk_internal": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "gov_warning": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+      "지뢰 발견 DMZ 귀순 북한 합참"
     ],
     "hybrid_ops": [
-      "김정은 방중 서해 구조물 주한미군 감축 국가보안법 구속"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ],
     "calm": [
-      "김정은 방중 서해 구조물 주한미군 감축 국가보안법 구속"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261109078600504",
-    "https://www.yna.co.kr/view/AKR20261107030200504",
     "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156787708",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "신규 징후 없이 김성남 방중 관련 외교 일정만 이어진다. 38North 는 접근이 막혀 열람 범위가 제한됐고 직전 회차와 같은 수준이다.",
+  "overall_summary": "신규 징후 없이 김성남 방중 관련 외교 일정만 이어진다. NK News 는 러시아의 KN-23 사용(젤렌스키 주장)을 보도했으나 이미 알려진 북러 협력의 반복으로 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -74,11 +74,9 @@
       ],
       "confidence": "중간",
       "facts": [
-        "연합뉴스 11/9 11:55 송고: 통일부 \"당 대 당 교류로 북중 전략적 관계 발전\""
+        "연합뉴스 11/9 송고: 통일부 \"당 대 당 교류로 북중 전략적 관계 발전\""
       ],
-      "speculation": [
-        "동아일보 제목: 김정은 정상회담 조율 가능성(원문 미열람)"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -93,7 +91,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-09T17:11:20+00:00",
+  "checked_at": "2026-11-09T18:10:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

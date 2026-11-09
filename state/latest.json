@@ -1,56 +1,47 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 전방 병력 증강",
-      "North Korea troops border"
+      "북한 합참 발표 오늘",
+      "North Korea Reuters November 9 2026"
     ],
     "nuclear": [
-      "북한 핵시설 풍계리 영변",
-      "North Korea nuclear test site 38 North"
+      "North Korea Reuters November 9 2026"
     ],
     "logistics": [
-      "북한 탄약 수송",
-      "North Korea ammunition shipment Russia"
+      "North Korea Reuters November 9 2026"
     ],
     "border_clash": [
-      "목함지뢰 발견 해안",
-      "DMZ NLL 귀순 합참",
-      "North Korea DMZ"
+      "목함지뢰 발견 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출",
-      "North Korea attributed FBI hackers"
+      "해킹 개인정보 유출 사이버 공격 북한 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "North Korea Reuters November 9 2026"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 합참 발표 오늘"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 합참 발표 오늘"
     ],
     "gov_warning": [
-      "진돗개 데프콘 합참"
+      "북한 합참 발표 오늘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "해킹 개인정보 유출 사이버 공격 북한 GPS 교란"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "북한 합참 발표 오늘"
     ]
   },
   "opened": [
     "https://www.nknews.org/category/news/",
-    "https://www.koreajoongangdaily.com/korea/north-korea",
     "https://www.koreatimes.co.kr/southkorea/defense",
-    "https://www.yna.co.kr/view/AKR20261109078600504"
+    "https://www.koreajoongangdaily.com/korea/north-korea",
+    "https://www.donga.com/news/Politics/article/all/20261109/134988158/2"
   ],
-  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 김성남 방중·KN-23 러 사용·MEXC 제재는 기존 흐름의 보도라 평시 판단을 유지한다.",
+  "overall_summary": "최근 24시간 새로 확인된 북한발 군사 징후는 없다. 김성남 방중·KN-23 러 사용·MEXC 제재는 기존 흐름이라 평시 판단을 유지한다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,15 +53,10 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "새 접경 사건 보도 없음 — 훈련 공포탄 보도는 국내 사건."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "김성남 방중과 KN-23 러 사용 주장은 알려진 교류의 반복 보도라 배경."
     },
     "parade_massing": {
       "status": "none"
@@ -82,12 +68,32 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "A 등급 원문(재무부 발표)을 열지 못해 징후로 올리지 않음 — MEXC 제재는 NK News 보도만 확인, 사후 제재 발표라 배경."
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "중국 베이징",
+      "summary": "북한 김성남이 방중해 시진핑 비서실장 등과 고위급 회동, 김정은 정상회담 조율 가능성이 거론된다(외교 일정, 군사협정 언급 없음).",
+      "meaning": "북중 고위급 소통 강화이나 군사 협력 신규 발표는 없는 외교 일정이다.",
+      "sources": [
+        {
+          "name": "동아일보",
+          "tier": "B",
+          "url": "https://www.donga.com/news/Politics/article/all/20261109/134988158/2"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "김성남 방중, 중국 지도부 회동 보도"
+      ],
+      "speculation": [
+        "김정은 방중 정상회담 조율 가능성"
+      ]
     }
   },
-  "checked_at": "2026-11-09T13:16:34+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-09T14:15:22+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

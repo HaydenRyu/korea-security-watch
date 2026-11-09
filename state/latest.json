@@ -1,57 +1,46 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "북한 지뢰 발견 목함지뢰 해안",
-      "DMZ NLL 귀순",
-      "North Korea DMZ border"
+      "지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 공격"
+      "Binance hack North Korea State Department"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축",
-      "Zelensky North Korean KN-23"
-    ],
-    "parade_massing": [
-      "북한 열병식 병력 집결"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "North Korea warning Japan J-Alert"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "북한 합참 발표 11월 9일"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "North Korea talks offer"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "North Korea nuclear Yongbyon Punggye-ri satellite imagery November 2026"
+    ],
+    "logistics": [
+      "북한 군수 물자 탄약 수송"
+    ],
+    "parade_massing": [
+      "북한 열병식 준비 병력 집결"
+    ],
+    "nk_internal": [
+      "북한 준전시 상태 등화관제 대피 훈련"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://www.segye.com/newsView/20260807512333",
-    "https://www.imaeil.com/page/view/2026101916020694455",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008837398"
+    "https://en.yna.co.kr/view/AEN20261108000200315",
+    "https://www.nknews.org/2026/11/us-blacklists-seychelles-based-crypto-exchange-over-north-korean-laundering/",
+    "https://www.nknews.org/2026/11/north-korea-tests-anti-aircraft-missiles-conducts-attack-drill-on-airport-kcna/",
+    "https://www.nknews.org/2026/11/russia-used-north-korean-kn-23-missiles-in-ukraine-energy-site-strike-zelensky/"
   ],
-  "overall_summary": "직전 회차와 같이 북 김성남 방중 관련 외교 일정만 확인됐고 군사 징후는 없다. 강화 해안 유실 지뢰는 10/19 이후 새 발견이 확인되지 않았다.",
+  "overall_summary": "지난 24시간 새 군사 도발·전쟁 징후는 확인되지 않았다. 북 김성남 방중(외교 일정)과 미 제재·귀속 발표 등 배경성 동향만 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,29 +52,41 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "10/19 이후 새 발견 없음 — 강화 해안 유실 지뢰 누적 보도는 배경."
+      "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "nk",
+      "summary": "미 국무부가 최근 바이낸스 해킹을 계기로 북한 사이버 위협 대응 국제 공조를 촉구했다(11/7 보도).",
+      "meaning": "가상자산 탈취 수사·외교 발표 수준으로 정부·금융망 마비는 아니다.",
+      "confidence": "중간",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://en.yna.co.kr/view/AEN20261108000200315"
+        }
+      ],
+      "facts": [
+        "국무부 대변인이 연합뉴스에 서면으로 밝힘"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "북·중",
-      "summary": "통일부가 북 김성남 국제비서 방중으로 중 5중전회 결과 공유·고위급 소통이 이뤄졌다고 밝혔다(외교 일정, 군사협정 언급 없음).",
-      "meaning": "북중 고위급 외교 소통으로 군사 협력 발표는 없다.",
+      "summary": "통일부가 북 김성남 방중으로 중 5중전회 결과 공유·고위급 소통이 이뤄졌다고 밝혔다(외교 일정); 젤렌스키의 북 KN-23 러 사용 주장은 기존 협력 반복 보도라 배경이다.",
+      "meaning": "군사협정 언급 없는 외교 일정이다.",
+      "confidence": "중간",
       "sources": [
         {
-          "name": "SBS",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008837398"
+          "url": "https://en.yna.co.kr/view/AEN20261108000200315"
         }
       ],
-      "confidence": "중간",
-      "facts": [
-        "통일부 11/9 발표"
-      ],
+      "facts": [],
       "speculation": []
     },
     "parade_massing": {
@@ -98,10 +99,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "미 재무부 OFAC의 MEXC 제재(11/6)는 북 자금세탁 연루 거래소 지정이나 이번 24시간 신규 귀속 발표가 아니라 배경으로 둔다."
     }
   },
-  "checked_at": "2026-11-09T19:11:33+00:00",
+  "checked_at": "2026-11-09T20:11:38+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

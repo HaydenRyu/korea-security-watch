@@ -1,40 +1,40 @@
 {
   "version": 1,
-  "at": "2026-11-09T08:41:10+00:00",
-  "opened": 18,
+  "at": "2026-11-09T11:39:56+00:00",
+  "opened": 19,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-09T08:41:10+00:00",
+      "last_ok": "2026-11-09T11:39:56+00:00",
       "raw": 3,
       "kept": 3
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-09T08:41:10+00:00",
+      "last_ok": "2026-11-09T11:39:56+00:00",
       "raw": 4,
       "kept": 4,
-      "note": "연합·동아·SBS 등 ai_use 제한 매체는 열지 않아 nk_domestic·inter_korean·public_opinion 은 근거 없는 보통"
+      "note": "연합·SBS·동아 등 ai_use 제한 매체와 국민일보(claude_user_blocked)는 열지 않아 inter_korean·public_opinion 은 근거 없는 보통"
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-09T08:41:10+00:00",
+      "last_ok": "2026-11-09T11:39:56+00:00",
       "raw": 0,
       "kept": 0,
-      "note": "대만 3개 전구 협동은 동부전구 명명 발표 아님·북러/북중 새 합의 공식 발표 없음"
+      "note": "대만 명명 훈련 발표 없음(금문 해경 4척 진입은 명명 훈련 아님)·북러/북중 새 합의 공식 발표 열람 없음"
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-09T08:41:10+00:00",
+      "last_ok": "2026-11-09T11:39:56+00:00",
       "raw": 5,
       "kept": 5
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-09T08:41:10+00:00",
+      "last_ok": "2026-11-09T11:39:56+00:00",
       "raw": 0,
       "kept": 0,
-      "note": "news_kr 적중 묶음은 ai_use 제한 매체이거나 북한 연결 근거가 기사에 없는 사건"
+      "note": "news_kr 적중 묶음 전부 ai_use 제한 또는 claude_user_blocked 매체이고 북한 연결 근거도 확인 못 함"
     }
   }
 }

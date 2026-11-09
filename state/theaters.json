@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-09T08:41:10+00:00",
+  "judged_at": "2026-11-09T11:39:56+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -16,7 +16,7 @@
         }
       ],
       "summary": "러시아가 탄도미사일 30여 기·드론 170여 대로 공습해 9명이 다치고 전력망이 손상됐으며 다음 주 아부다비 3자 회담이 예정돼 있다.",
-      "judged_at": "2026-11-09T08:41:10+00:00"
+      "judged_at": "2026-11-09T11:39:56+00:00"
     },
     "mideast": {
       "state": 3,
@@ -32,7 +32,7 @@
         }
       ],
       "summary": "후티 측이 리야드 업무지구·아람코 시설을 타격했다고 밝혔고 사우디는 경미한 피해와 미사일 요격을 발표했다.",
-      "judged_at": "2026-11-09T08:41:10+00:00"
+      "judged_at": "2026-11-09T11:39:56+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -41,18 +41,12 @@
         {
           "name": "중앙통신사",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611090007.aspx",
-          "published_at": "2026-11-09T06:53:41+08:00"
-        },
-        {
-          "name": "중앙통신사",
-          "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611090019.aspx",
-          "published_at": "2026-11-09T09:10:09+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611090216.aspx",
+          "published_at": "2026-11-09T17:54:21+08:00"
         }
       ],
-      "summary": "CNA는 중국이 3개 전구 수상함을 협동 운용하는 드문 사례를 분석했고, 대만 국방부는 공함 7척·공기 1대를 감시 중이라고 발표했다.",
-      "judged_at": "2026-11-09T08:41:10+00:00"
+      "summary": "중국 해경선 4척이 금문 제한수역에 진입했다가 대만 해순서의 2시간 경고 방송 끝에 물러났다.",
+      "judged_at": "2026-11-09T11:39:56+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -61,18 +55,18 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-09T10:00:00+08:00",
+          "published_at": "2026-11-09T17:10:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-09T05:10:33+00:00",
+          "published_at": "2026-11-09T06:01:52+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-09T08:41:10+00:00"
+      "judged_at": "2026-11-09T11:39:56+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -81,12 +75,12 @@
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/578914/rok-us-combined-forces-command-marks-48-years-combined-defense",
-          "published_at": "2026-11-08T18:21:12-05:00"
+          "url": "https://www.dvidshub.net/news/578931/gen-brunson-thanks-japans-defense-minister-support-un",
+          "published_at": "2026-11-09T01:38:25-05:00"
         }
       ],
-      "summary": "한미연합군사령부 창설 48주년 기념 보도만 있고 전략자산 전개·군사 시위 보도는 없다.",
-      "judged_at": "2026-11-09T08:41:10+00:00"
+      "summary": "브런슨 사령관의 일본 방위상 면담 보도만 있고 전략자산 전개·군사 시위 보도는 없다.",
+      "judged_at": "2026-11-09T11:39:56+00:00"
     }
   }
 }

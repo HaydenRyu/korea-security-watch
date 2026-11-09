@@ -1,46 +1,48 @@
 {
   "coverage": {
     "border_clash": [
-      "지뢰 발견 DMZ 귀순"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "Binance hack North Korea State Department"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit"
+      "김정은 방중 방러 Kim Jong Un China Russia visit 서해 구조물 주한미군 감축"
     ],
     "gov_warning": [
       "북한 합참 발표 11월 9일"
     ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+    ],
     "calm": [
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
     ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "North Korea Reuters November 9 2026"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri satellite imagery November 2026"
+      "North Korea Reuters November 9 2026"
     ],
     "logistics": [
-      "북한 군수 물자 탄약 수송"
+      "North Korea Reuters November 9 2026"
     ],
     "parade_massing": [
-      "북한 열병식 준비 병력 집결"
+      "North Korea Reuters November 9 2026"
     ],
     "nk_internal": [
-      "북한 준전시 상태 등화관제 대피 훈련"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "North Korea Reuters November 9 2026"
     ]
   },
   "opened": [
     "https://en.yna.co.kr/view/AEN20261108000200315",
+    "https://www.nknews.org/",
     "https://www.nknews.org/2026/11/us-blacklists-seychelles-based-crypto-exchange-over-north-korean-laundering/",
     "https://www.nknews.org/2026/11/north-korea-tests-anti-aircraft-missiles-conducts-attack-drill-on-airport-kcna/",
-    "https://www.nknews.org/2026/11/russia-used-north-korean-kn-23-missiles-in-ukraine-energy-site-strike-zelensky/"
+    "https://www.nknews.org/2026/11/russia-used-north-korean-kn-23-missiles-in-ukraine-energy-site-strike-zelensky/",
+    "https://home.treasury.gov/news/press-releases/sb0685"
   ],
-  "overall_summary": "지난 24시간 새 군사 도발·전쟁 징후는 확인되지 않았다. 북 김성남 방중(외교 일정)과 미 제재·귀속 발표 등 배경성 동향만 이어진다.",
+  "overall_summary": "지난 24시간 새 군사 도발·전쟁 징후는 확인되지 않았다. 11/4 북 방공미사일·공항 타격 훈련(KCNA 주장)은 시험·훈련 보도로 배경이며, 미 FinCEN의 MEXC 제재 명령(북 제재 회피 연루)과 북 김성남 방중 등 배경성 동향만 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,38 +57,25 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "nk",
-      "summary": "미 국무부가 최근 바이낸스 해킹을 계기로 북한 사이버 위협 대응 국제 공조를 촉구했다(11/7 보도).",
-      "meaning": "가상자산 탈취 수사·외교 발표 수준으로 정부·금융망 마비는 아니다.",
-      "confidence": "중간",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://en.yna.co.kr/view/AEN20261108000200315"
-        }
-      ],
-      "facts": [
-        "국무부 대변인이 연합뉴스에 서면으로 밝힘"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 바이낸스 해킹 관련 미 국무부 공조 촉구는 11/7 첫 보도"
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
       "summary": "통일부가 북 김성남 방중으로 중 5중전회 결과 공유·고위급 소통이 이뤄졌다고 밝혔다(외교 일정); 젤렌스키의 북 KN-23 러 사용 주장은 기존 협력 반복 보도라 배경이다.",
-      "meaning": "군사협정 언급 없는 외교 일정이다.",
-      "confidence": "중간",
+      "meaning": "북중 고위급 소통과 북러 무기 협력 반복 보도로 외교 일정 수준이며 새 군사협정은 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://en.yna.co.kr/view/AEN20261108000200315"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/russia-used-north-korean-kn-23-missiles-in-ukraine-energy-site-strike-zelensky/"
         }
       ],
-      "facts": [],
+      "confidence": "중간",
+      "facts": [
+        "젤렌스키가 11/7 러 공습에 북한제 KN-23이 쓰였다고 잠정 결론이라고 주장"
+      ],
       "speculation": []
     },
     "parade_massing": {
@@ -99,11 +88,38 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "미 재무부 OFAC의 MEXC 제재(11/6)는 북 자금세탁 연루 거래소 지정이나 이번 24시간 신규 귀속 발표가 아니라 배경으로 둔다."
+      "status": "single",
+      "routine": true,
+      "attribution": "nk",
+      "attributed_by": {
+        "name": "미 재무부 FinCEN",
+        "tier": "A",
+        "what": "11/6 보도자료 — MEXC Global 9714조 명령, 북한 제재 회피 거점 지목"
+      },
+      "category": "제재 위반",
+      "summary": "미 재무부가 11/6 MEXC Global을 북한 제재 회피 거점으로 지목하며 미 금융시스템 접근을 차단하는 FinCEN 명령을 발표했다.",
+      "meaning": "북한의 가상자산·제재 회피 자금 경로에 대한 수사 결과 발표로 배경 성격이다.",
+      "sources": [
+        {
+          "name": "미 재무부",
+          "tier": "A",
+          "url": "https://home.treasury.gov/news/press-releases/sb0685"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/us-blacklists-seychelles-based-crypto-exchange-over-north-korean-laundering/"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "명령은 공표 30일 뒤 발효",
+        "북 관련 거래액은 재무부 발표에 수치 없음"
+      ],
+      "speculation": []
     }
   },
-  "checked_at": "2026-11-09T20:11:38+00:00",
+  "checked_at": "2026-11-09T21:12:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

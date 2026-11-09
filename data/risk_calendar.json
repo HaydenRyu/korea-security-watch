@@ -1772,16 +1772,16 @@
    "2026": {
     "nuclear": 0,
     "missile": 28,
-    "other": 8,
+    "other": 9,
     "launch": 28
    }
   },
   "basis": "CSIS 미사일·핵 도발 날짜, 평소 = 2016~2025 평균"
  },
  "data": {
-  "updated_at": "2026-11-09T11:22:42+00:00",
-  "csis_rows": 519,
-  "csis_last": "2026-11-04",
+  "updated_at": "2026-11-09T23:45:55+00:00",
+  "csis_rows": 520,
+  "csis_last": "2026-11-06",
   "cns_days": 153,
   "cns_last": "2024-11-05",
   "launch_days": 276
@@ -2040,7 +2040,7 @@
    }
   },
   "last": "2026-11-04",
-  "since": 5,
+  "since": 6,
   "basis": "발사한 날 228일(2006~2025) 각각의 다음 발사까지 간격"
  },
  "signal_check": {

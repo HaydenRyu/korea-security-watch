@@ -1,25 +1,30 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 신형어뢰 핵 전략무기"
+      "북한 신형어뢰 핵 전략무기",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 탄약 수송"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
       "합참 북한 지뢰 발견 DMZ 귀순",
+      "북한 합참 지뢰 귀순 NLL",
       "김포 무인기 추락 군 조사"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격",
+      "Binance hack North Korea meme coin laundering Lazarus"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
       "김정은 방중",
+      "North Korea Kim Jong Un China Russia visit November 2026",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -33,7 +38,7 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "North Korea attributed FBI Binance"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
@@ -41,11 +46,13 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261110507929",
-    "https://www.nocutnews.co.kr/news/6604470",
     "https://www.segye.com/newsView/20261110503049",
+    "https://www.yna.co.kr/view/AKR20261110088200091",
+    "https://www.nocutnews.co.kr/news/6604470",
+    "https://www.techzine.eu/news/security/145442/north-koreans-behind-binance-hack-fbi-reports/",
     "https://www.yna.co.kr/view/AKR20261109078600504"
   ],
-  "overall_summary": "김포 추락 물체는 육군이 자체 훈련 무인기로 밝혀 북한 연관 정황이 없어 징후에서 내렸다. 북 신형어뢰 시험 주장과 북중 고위급 소통은 정례·외교 일정이며 새 징후는 없다.",
+  "overall_summary": "김포 추락 무인기는 육군 훈련 장비로 북한 연관 정황이 없고, 신형어뢰 시험 주장과 북중 고위급 소통은 정례·외교 일정이다. 엘립틱의 북 해커 밈코인 세탁 분석은 10/31 바이낸스 귀속의 후속 배경이며 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -54,7 +61,8 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "엘립틱의 바이낸스 탈취 자금 밈코인 세탁 분석 보고서는 민간 분석이고 신규 정부 귀속이 없어 10/31 귀속 건의 배경이다."
     },
     "parade_massing": {
       "status": "none"
@@ -70,7 +78,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "원문 재확인 결과 육군이 자체 대대급 소형 무인기의 훈련 중 통신 두절 추락으로 밝혀 북한 연관 정황이 없다(원인 조사 중)."
+      "summary": "김포 군 무인기 추락은 육군 대대급 훈련 무인기의 통신 두절 사고로 북한 연관 정황이 없다(원인 조사 중)."
     },
     "nuclear": {
       "status": "single",
@@ -103,7 +111,7 @@
       "confidence": "중간"
     }
   },
-  "checked_at": "2026-11-10T03:10:29+00:00",
+  "checked_at": "2026-11-10T04:10:29+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

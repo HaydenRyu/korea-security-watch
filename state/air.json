@@ -1,10 +1,18 @@
 {
- "at": "2026-11-10T00:13:20+00:00",
- "south": 57,
- "area": 73,
- "baseline": 60.5,
- "ratio": 0.94,
- "samples": 6,
- "mil": [],
+ "at": "2026-11-10T01:25:58+00:00",
+ "south": 62,
+ "area": 75,
+ "baseline": 75,
+ "ratio": 0.83,
+ "samples": 5,
+ "mil": [
+  {
+   "type": "B762",
+   "name": null,
+   "call": "TATRA51",
+   "lat": 32.76,
+   "lon": 131.61
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

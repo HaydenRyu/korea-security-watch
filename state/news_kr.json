@@ -1,39 +1,38 @@
 {
- "fetched_at": "2026-11-10T02:51:21+00:00",
+ "fetched_at": "2026-11-10T04:08:04+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-10T02:51:21+00:00",
+ "last_ok_at": "2026-11-10T04:08:04+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1112,
-  "hits": 23,
-  "clusters": 17,
+  "fetched": 1113,
+  "hits": 26,
+  "clusters": 20,
   "by_group": {
    "mine": 1,
-   "spy": 1,
+   "gps": 3,
+   "spy": 2,
+   "summit": 3,
    "drone_balloon": 4,
    "border": 2,
    "fire": 5,
-   "alert": 1,
-   "gps": 1,
-   "hybrid": 1,
-   "summit": 2
+   "hybrid": 1
   }
  },
  "outlets": {
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 553,
-   "hits": 28
+   "count": 554,
+   "hits": 32
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 5
+   "hits": 3
   },
   "동아일보": {
    "feeds": 2,
@@ -65,12 +64,22 @@
   "mine": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-10T02:51:21+00:00"
+   "latest": "2026-11-10T04:08:04+00:00"
+  },
+  "gps": {
+   "clusters": 3,
+   "max_independent": 2,
+   "latest": "2026-11-10T03:02:56+00:00"
   },
   "spy": {
-   "clusters": 1,
+   "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-10T02:33:15+00:00"
+   "latest": "2026-11-10T02:57:46+00:00"
+  },
+  "summit": {
+   "clusters": 3,
+   "max_independent": 1,
+   "latest": "2026-11-10T02:48:44+00:00"
   },
   "drone_balloon": {
    "clusters": 4,
@@ -87,25 +96,10 @@
    "max_independent": 3,
    "latest": "2026-11-10T01:10:00+00:00"
   },
-  "alert": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-09T21:58:11+00:00"
-  },
-  "gps": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-09T19:28:54+00:00"
-  },
   "hybrid": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-09T19:28:54+00:00"
-  },
-  "summit": {
-   "clusters": 2,
-   "max_independent": 2,
-   "latest": "2026-11-09T05:57:00+00:00"
   }
  },
  "feeds": [
@@ -114,8 +108,8 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 73,
-   "hits": 19
+   "count": 74,
+   "hits": 20
   },
   {
    "outlet": "연합뉴스",
@@ -147,7 +141,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 5
   },
   {
    "outlet": "SBS",
@@ -155,7 +149,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "SBS",
@@ -171,7 +165,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "동아일보",

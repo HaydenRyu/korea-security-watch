@@ -1,56 +1,49 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 10일 속보",
-      "North Korea troops border"
+      "북한 합참 발표 11월 10일",
+      "North Korea Reuters"
     ],
     "nuclear": [
-      "북한 신형 고속어뢰 KCNA",
-      "North Korea nuclear torpedo"
+      "북한 합참 발표 11월 10일",
+      "North Korea Reuters"
     ],
     "logistics": [
-      "북한 탄약 러시아 수송",
-      "North Korea munitions Russia"
+      "North Korea Reuters"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 11월",
-      "목함지뢰 해안"
+      "지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hackers meme coin"
+      "news_kr 수집 GPS·해킹 묶음"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "서해 구조물",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중 방러",
+      "North Korea Reuters"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "North Korea Reuters"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "North Korea Reuters"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "북한 합참 발표 11월 10일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "news_kr 수집 spy 묶음"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "North Korea Reuters"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
+    "https://www.segye.com/newsView/20261110515998",
     "https://www.segye.com/newsView/20261110507929",
-    "https://www.nknews.org/2026/11/north-korea-says-navy-to-deploy-new-high-speed-torpedo-in-early-2027/"
+    "https://www.nknews.org/?p=186552",
+    "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156787708"
   ],
-  "overall_summary": "직전 회차와 같은 정례 수준이다. 신형 어뢰 시험 주장과 김포 군 무인기 추락(사고) 외 새 군사 징후는 없다.",
+  "overall_summary": "북한이 신형 어뢰 시험·내년 초 해군 배치를 주장했으나 독립 확인이 없는 정례 시험 주장이다. 그 밖의 신규 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,16 +56,16 @@
       "meaning": "해군 전력 시험 주장이며 핵 사용 준비 징후는 아니다.",
       "sources": [
         {
-          "name": "NK News",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.nknews.org/2026/11/north-korea-says-navy-to-deploy-new-high-speed-torpedo-in-early-2027/"
+          "url": "https://www.segye.com/newsView/20261110515998"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 9일 시험·2027년 초 배치 주장",
-        "사진 미공개",
-        "독립 확인 없음"
+        "KCNA 10일 보도: 9일 신형 어뢰 시험, 내년 초 해군 배치 주장",
+        "제원·사진 미공개",
+        "합참 '예의 주시'"
       ],
       "speculation": []
     },
@@ -101,7 +94,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-10T12:13:18+00:00",
+  "checked_at": "2026-11-10T13:15:13+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

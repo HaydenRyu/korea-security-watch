@@ -5,8 +5,8 @@
       "North Korea troop movement border"
     ],
     "nuclear": [
-      "북한 핵 전략무기 동향",
-      "North Korea nuclear missile test KCNA torpedo"
+      "북한 신형어뢰 핵 전략무기",
+      "North Korea nuclear torpedo KCNA"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
@@ -22,7 +22,7 @@
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -39,19 +39,15 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261110503049",
     "https://www.nknews.org/",
-    "https://www.nknews.org/2026/11/north-korea-tests-anti-aircraft-missiles-conducts-attack-drill-on-airport-kcna/",
-    "https://www.nknews.org/2026/11/russia-used-north-korean-kn-23-missiles-in-ukraine-energy-site-strike-zelensky/",
-    "https://www.nknews.org/2026/11/us-blacklists-seychelles-based-crypto-exchange-over-north-korean-laundering/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008837872",
-    "https://www.yna.co.kr/view/AKR20261110010600504",
     "https://www.yna.co.kr/view/AKR20261109078600504"
   ],
-  "overall_summary": "지난 24시간 새 도발·전쟁 징후는 없다. 북이 신형 어뢰 시험을 주장했으나 정례 시험이고, 접경·병력 징후 없이 북중 고위급 소통과 제재 보도 등 배경성 동향만 이어진다.",
+  "overall_summary": "지난 24시간 새 도발·전쟁 징후는 없다. 북이 신형 어뢰 시험을 주장했으나 정례 시험이고, 접경·병력 징후 없이 북중 고위급 소통 등 배경성 동향만 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,15 +55,15 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "summary": "조선중앙통신이 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했다고 연합뉴스가 보도했다(북한 주장, 제목만 확인).",
+      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했다고 세계일보가 보도했다(북한 주장).",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261110010600504"
+          "url": "https://www.segye.com/newsView/20261110503049"
         }
       ],
-      "confidence": "낮음"
+      "confidence": "중간"
     },
     "logistics": {
       "status": "none"
@@ -81,7 +77,7 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "통일부가 북 김성남 방중으로 중 5중전회 결과 공유·고위급 소통이 이뤄졌다고 밝혔다(외교 일정); 젤렌스키의 KN-23 러 사용 주장은 기존 협력 반복이라 배경이다.",
+      "summary": "통일부가 북 김성남 방중으로 중 5중전회 결과 공유·고위급 소통이 이뤄졌다고 밝혔다(외교 일정).",
       "sources": [
         {
           "name": "연합뉴스",
@@ -101,23 +97,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "routine": true,
-      "attribution": "nk",
-      "category": "제재 위반",
-      "summary": "귀속 미확정 — 미 재무부가 11/6 MEXC Global을 북한 제재 회피 거점으로 지목했다고 NK News가 보도했다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/us-blacklists-seychelles-based-crypto-exchange-over-north-korean-laundering/"
-        }
-      ],
-      "confidence": "중간",
-      "attribution_dropped": "A 등급 기관의 귀속 발표 없음"
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-09T23:11:37+00:00",
+  "checked_at": "2026-11-10T00:10:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

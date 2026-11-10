@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-09T23:11:37+00:00",
+  "computed_at": "2026-11-10T00:10:55+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 28,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-09T11:39:56+00:00",
-    "latest_updated_at": "2026-11-09T23:11:37+00:00"
+    "linkage_judged_at": "2026-11-09T23:43:57+00:00",
+    "latest_updated_at": "2026-11-10T00:10:55+00:00"
   },
   "theaters": [
     {
@@ -22,7 +22,7 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "중국 해경선 4척이 금문 제한수역에 진입했다가 대만 해순서의 2시간 경고 방송 끝에 물러났다.",
+      "summary": "중국 해경선 4척이 금문 제한수역에 진입했다가 대만 해순서의 2시간 경고 방송 끝에 물러났고, 해순서는 근 2주간 6차례 진입했다고 밝혔다.",
       "sources": [
         {
           "name": "중앙통신사",
@@ -31,7 +31,7 @@
           "published_at": "2026-11-09T17:54:21+08:00"
         }
       ],
-      "judged_at": "2026-11-09T11:39:56+00:00"
+      "judged_at": "2026-11-09T23:43:57+00:00"
     },
     {
       "key": "ukraine",
@@ -50,30 +50,24 @@
           "published_at": "2026-11-07T12:49:36+00:00"
         }
       ],
-      "judged_at": "2026-11-09T11:39:56+00:00"
+      "judged_at": "2026-11-09T23:43:57+00:00"
     },
     {
       "key": "scs_ecs",
       "observed": true,
-      "state": 0,
+      "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "summary": "중국 해경선 4척이 센카쿠(댜오위타이) 영해에 진입했다가 일본 해상보안본부 발표상 약 2시간 뒤 접속수역으로 물러났다(올해 18일째).",
       "sources": [
         {
-          "name": "Philstar",
-          "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-09T17:10:00+08:00",
-          "kind": "feed"
-        },
-        {
-          "name": "BBC 아시아",
-          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-09T06:01:52+00:00",
-          "kind": "feed"
+          "name": "중앙통신사",
+          "tier": "B",
+          "url": "https://www.cna.com.tw/news/acn/202611090280.aspx",
+          "published_at": "2026-11-09T21:28:43+08:00"
         }
       ],
-      "judged_at": "2026-11-09T11:39:56+00:00"
+      "judged_at": "2026-11-09T23:43:57+00:00"
     },
     {
       "key": "mideast",
@@ -92,7 +86,7 @@
           "published_at": "2026-11-08T21:37:36+00:00"
         }
       ],
-      "judged_at": "2026-11-09T11:39:56+00:00"
+      "judged_at": "2026-11-09T23:43:57+00:00"
     },
     {
       "key": "us_posture",
@@ -100,16 +94,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "브런슨 사령관의 일본 방위상 면담 보도만 있고 전략자산 전개·군사 시위 보도는 없다.",
+      "summary": "키 소드 27 종료 후 보급 지원 기사와 오키나와 지사의 후텐마 이전 요구 보도뿐이고 전략자산 전개·군사 시위 보도는 없다.",
       "sources": [
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/578931/gen-brunson-thanks-japans-defense-minister-support-un",
-          "published_at": "2026-11-09T01:38:25-05:00"
+          "url": "https://www.dvidshub.net/news/579022/fueling-air-dominance-593rd-csc-supports-f-22-operations-during-keen-sword-27",
+          "published_at": "2026-11-09T17:48:48-05:00"
         }
       ],
-      "judged_at": "2026-11-09T11:39:56+00:00"
+      "judged_at": "2026-11-09T23:43:57+00:00"
     }
   ],
   "channels": [
@@ -142,6 +136,6 @@
   "last_good": {
     "ews": 28,
     "band": "관찰",
-    "computed_at": "2026-11-09T23:11:37+00:00"
+    "computed_at": "2026-11-10T00:10:55+00:00"
   }
 }

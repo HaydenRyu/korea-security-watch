@@ -16,13 +16,13 @@
 {"date": "2026-10-29", "days": 30, "p": 0.943, "hit": null}
 {"date": "2026-10-30", "days": 7, "p": 0.443, "hit": true}
 {"date": "2026-10-30", "days": 30, "p": 0.943, "hit": null}
-{"date": "2026-10-31", "days": 7, "p": 0.443, "hit": null}
+{"date": "2026-10-31", "days": 7, "p": 0.443, "hit": true}
 {"date": "2026-10-31", "days": 30, "p": 0.943, "hit": null}
-{"date": "2026-11-01", "days": 7, "p": 0.443, "hit": null}
+{"date": "2026-11-01", "days": 7, "p": 0.443, "hit": true}
 {"date": "2026-11-01", "days": 30, "p": 0.943, "hit": null}
-{"date": "2026-11-02", "days": 7, "p": 0.443, "hit": null}
+{"date": "2026-11-02", "days": 7, "p": 0.443, "hit": true}
 {"date": "2026-11-02", "days": 30, "p": 0.943, "hit": null}
-{"date": "2026-11-03", "days": 7, "p": 0.443, "hit": null}
+{"date": "2026-11-03", "days": 7, "p": 0.443, "hit": true}
 {"date": "2026-11-03", "days": 30, "p": 0.943, "hit": null}
 {"date": "2026-11-04", "days": 7, "p": 0.443, "hit": null}
 {"date": "2026-11-04", "days": 30, "p": 0.943, "hit": null}
@@ -38,3 +38,5 @@
 {"date": "2026-11-09", "days": 30, "p": 0.943, "hit": null}
 {"date": "2026-11-10", "days": 7, "p": 0.443, "hit": null}
 {"date": "2026-11-10", "days": 30, "p": 0.943, "hit": null}
+{"date": "2026-11-11", "days": 7, "p": 0.451, "hit": null}
+{"date": "2026-11-11", "days": 30, "p": 0.949, "hit": null}

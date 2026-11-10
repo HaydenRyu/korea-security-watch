@@ -1,10 +1,18 @@
 {
- "at": "2026-11-10T04:07:18+00:00",
- "south": 69,
- "area": 89,
- "baseline": 70,
- "ratio": 0.99,
- "samples": 5,
- "mil": [],
+ "at": "2026-11-10T06:47:39+00:00",
+ "south": 72,
+ "area": 90,
+ "baseline": 74.5,
+ "ratio": 0.97,
+ "samples": 4,
+ "mil": [
+  {
+   "type": "C30J",
+   "name": "C-130J 수송기",
+   "call": "",
+   "lat": 36.69,
+   "lon": 127.06
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

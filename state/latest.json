@@ -2,59 +2,49 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement Reuters"
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 동향 신형어뢰 합참",
-      "North Korea nuclear 38 North"
+      "북한 신형어뢰 발사시험 해군 실전배치",
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment Russia"
+      "북한 군수 탄약 수송",
+      "North Korea munitions shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한",
-      "목함지뢰 해안",
-      "DMZ NLL border North Korea"
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "김여정 유엔 사무총장 DMZ 지뢰 폭발"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "북한 GPS 교란 해킹 개인정보 유출",
+      "OFAC Seychelles crypto exchange North Korea laundering"
     ],
     "foreign_forces": [
-      "김정은 방중 김정은 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "북한 김정은 방중 방러 김성남",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade preparation"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense drill"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "South Korea Japan US warning North Korea"
+      "진돗개 발령 데프콘 상향"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261110503049",
-    "https://www.segye.com/newsView/20261110507929",
-    "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261109078600504"
+    "https://www.nknews.org/2026/11/north-korea-says-navy-to-deploy-new-high-speed-torpedo-in-early-2027/",
+    "https://www.nknews.org/2026/11/russia-used-north-korean-kn-23-missiles-in-ukraine-energy-site-strike-zelensky/",
+    "https://www.nknews.org/2026/11/us-blacklists-seychelles-based-crypto-exchange-over-north-korean-laundering/",
+    "https://www.nhk.or.jp/rss/news/cat6.xml"
   ],
-  "overall_summary": "신규 징후는 없다. 북한 주장 신형어뢰 시험(9일)과 김성남 방중(정례 외교)이 이어지며 직전 회차와 변동 없다. 김포 군 무인기 추락은 북한 연관이 없는 국내 사고다.",
+  "overall_summary": "직전 회차와 같은 정례 수준이다. 북한 신형어뢰 시험 주장(9일)과 노동당 간부 방중이 보도됐으나 모두 정례·북한 주장 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,24 +53,24 @@
       "status": "single",
       "routine": true,
       "region": "동해",
-      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했고 세계일보·NK News가 보도했다(북한 주장).",
-      "meaning": "시험 성격의 북한 주장으로 독립 확인은 없다.",
+      "summary": "조선중앙통신이 9일 신형 고속어뢰 시험과 2027년 초 해군 실전배치를 주장했고 NK News·NHK가 북한 주장으로 보도했다.",
+      "meaning": "해군 전력 시험 주장으로 핵 사용 준비 징후는 아니다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "NK News",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261110503049"
+          "url": "https://www.nknews.org/2026/11/north-korea-says-navy-to-deploy-new-high-speed-torpedo-in-early-2027/"
         },
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
+          "name": "NHK",
+          "tier": "B",
+          "url": "https://www.nhk.or.jp/rss/news/cat6.xml"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 보도, 제원·사진 미공개",
-        "합참은 면밀히 감시 중"
+        "KCNA가 9일 시험, 2027년 초 배치를 주장",
+        "사진 미공개"
       ],
       "speculation": []
     },
@@ -88,27 +78,29 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "김여정의 유엔 사무총장 비난 담화는 발언만 있어 신규 충돌이 아니다(배경)."
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "미 재무부 FinCEN의 MEXC 거래 금지 명령(북한 은행 대표자 연루 언급)은 배경이다."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
       "region": "중국",
-      "summary": "통일부가 북한 김성남의 방중으로 중국 5중전회 결과 공유·고위급 소통이 이뤄졌다고 9일 밝혔다.",
-      "meaning": "외교 일정 성격으로 군사협정·무기 협력 언급은 없다.",
+      "summary": "북한 노동당 간부가 중국을 방문해 왕이 외교부장과 회담했다고 NHK가 전했다(통일부는 9일 김성남 방중을 확인); 젤렌스키의 KN-23 사용 주장은 독립 확인이 없어 배경이다.",
+      "meaning": "외교 일정 수준의 북중 고위급 교류다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "NHK",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261109078600504"
+          "url": "https://www.nhk.or.jp/rss/news/cat6.xml"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "통일부 9일 발표"
+        "노동당 간부 방중, 왕이 회담"
       ],
       "speculation": []
     },
@@ -125,7 +117,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-10T09:11:36+00:00",
+  "checked_at": "2026-11-10T10:11:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -13,16 +13,16 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 DMZ 귀순",
-      "지뢰 발견 목함지뢰 해안"
+      "지뢰 발견 DMZ 귀순 합참",
+      "김포 무인기 추정 물체 추락 군 당국 조사"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "North Korea Kim Jong Un China Russia visit Reuters",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -39,25 +39,43 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
+    "https://www.nocutnews.co.kr/news/6604470",
+    "https://www.dt.co.kr/article/12094195",
     "https://www.segye.com/newsView/20261110503049",
-    "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261109078600504",
-    "https://www.yna.co.kr/view/AKR20261110010600504"
+    "https://www.yna.co.kr/view/AKR20261109078600504"
   ],
-  "overall_summary": "지난 24시간 새 도발·전쟁 징후는 없다. 북이 신형 어뢰 시험을 주장했으나 정례 시험이고, 접경·병력 징후 없이 북중 고위급 소통 등 배경성 동향만 이어진다.",
+  "overall_summary": "김포시 공원·주택가에 무인기 추정 물체가 추락해 군이 북 연관성을 조사 중이나 원인은 미확인이다. 북 신형어뢰 시험 주장과 북중 고위급 소통은 정례·외교 일정으로 그 밖의 새 징후는 없다.",
   "items": {
     "troop_movement": {
+      "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "nuclear": {
       "status": "single",
       "routine": true,
       "region": "동해",
-      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했다고 세계일보·연합뉴스가 보도했다(북한 주장, 같은 KCNA 발표 받아쓰기).",
+      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했다고 세계일보가 보도했다(북한 주장).",
       "meaning": "무기 시험 주장으로 정례 성격이다.",
       "sources": [
         {
@@ -67,15 +85,6 @@
         }
       ],
       "confidence": "중간"
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "border_clash": {
-      "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
@@ -92,21 +101,40 @@
       ],
       "confidence": "중간"
     },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
+    "border_clash": {
+      "status": "single",
+      "routine": false,
+      "region": "경기 김포시 운양동",
+      "lat": 37.65,
+      "lon": 126.68,
+      "summary": "10일 오전 김포 운양동에 무인기 추정 물체가 추락해 군이 수거 후 대공 용의점과 북 연관성을 조사 중이다(원인 미확인).",
+      "meaning": "북 무인기 여부가 확인되지 않아 단독 보도 수준의 확인 대기 사안이다.",
+      "sources": [
+        {
+          "name": "노컷뉴스",
+          "tier": "B",
+          "url": "https://www.nocutnews.co.kr/news/6604470"
+        },
+        {
+          "name": "디지털타임스",
+          "tier": "B",
+          "url": "https://www.dt.co.kr/article/12094195"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "10일 오전 운양동에 물체 추락, 인명 피해 없음",
+        "군이 물체 수거·조사 중, 육군 관계자 '확인된 것 없다'"
+      ],
+      "speculation": [
+        "북한 무인기일 가능성은 조사 대상일 뿐 확인되지 않음"
+      ]
     }
   },
-  "checked_at": "2026-11-10T01:12:01+00:00",
+  "checked_at": "2026-11-10T02:10:20+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": []
+  "active": [
+    "border_clash"
+  ]
 }

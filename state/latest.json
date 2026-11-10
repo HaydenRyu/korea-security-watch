@@ -13,15 +13,16 @@
       "North Korea ammunition"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "귀순 North Korea border"
+      "북한 지뢰 발견 DMZ 귀순",
+      "North Korea border mine"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 Kim Jong Un China Russia visit",
+      "김정은 방중 방러 11월",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -35,10 +36,7 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안"
+      "OFAC Seychelles crypto exchange North Korea laundering sanctions"
     ]
   },
   "opened": [
@@ -46,7 +44,7 @@
     "https://www.segye.com/newsView/20261110507929",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "KCNA 신형 어뢰 시험 주장(routine) 외 새 징후는 없다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "KCNA의 신형 어뢰 시험·내년 초 배치 주장(routine) 외 새 징후는 없다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -99,7 +97,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-10T18:10:49+00:00",
+  "checked_at": "2026-11-10T19:14:08+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

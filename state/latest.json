@@ -5,27 +5,27 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 신형어뢰 핵 전략무기",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon",
+      "북한 신형어뢰 핵 전략무기"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "North Korea ammunition shipment",
+      "북한 군수 탄약 수송"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순",
+      "북한 합참 발표 지뢰 발견 DMZ 귀순",
       "김포 무인기 추락 군 조사"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격",
+      "해킹 개인정보 유출",
       "Binance hack North Korea FBI"
     ],
     "foreign_forces": [
       "김정은 방중",
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "Zelensky North Korean KN-23 missiles",
-      "서해 구조물 주한미군 감축"
+      "서해 구조물 주한미군 감축",
+      "북한 김성남 방중 통일부"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -45,14 +45,35 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261110507929",
     "https://www.segye.com/newsView/20261110503049",
-    "https://www.nknews.org",
-    "https://www.techzine.eu/news/security/145442/north-koreans-behind-binance-hack-fbi-reports/"
+    "https://www.segye.com/newsView/20261110507929",
+    "https://www.nknews.org"
   ],
-  "overall_summary": "북한 신형어뢰 시험 주장(조선중앙통신)과 김포 군 무인기 추락(북한 연관 정황 없음) 외에 새 징후는 없다. 젤렌스키의 KN-23 사용 주장은 기존 북러 협력의 반복 보도로 배경이다.",
+  "overall_summary": "북한 신형어뢰 시험 주장(조선중앙통신)과 김포 군 무인기 추락(북한 연관 정황 없음) 외에 새 징후는 없다. 김성남 방중·밈코인 세탁·KN-23 사용 주장은 기존 북중·북러 협력과 사이버 귀속의 반복 보도로 배경이다.",
   "items": {
     "troop_movement": {
+      "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none",
+      "summary": "김성남 국제비서 방중(11/5 왕이 회동)은 이미 알려진 북중 당 교류로 배경이며 새 군사협력 확인은 없다."
+    },
+    "hybrid_ops": {
+      "status": "none"
+    },
+    "electronic_cyber": {
       "status": "none"
     },
     "nuclear": {
@@ -74,12 +95,9 @@
       ],
       "speculation": []
     },
-    "logistics": {
-      "status": "none"
-    },
     "border_clash": {
       "status": "none",
-      "summary": "김포 군 무인기 추락은 육군 교육훈련 중 원인미상 사고로 북한 연관 정황이 없다.",
+      "summary": "김포 군 무인기 추락은 육군 훈련 중 원인미상 사고로 북한 연관 정황이 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -87,29 +105,9 @@
           "url": "https://www.segye.com/newsView/20261110507929"
         }
       ]
-    },
-    "electronic_cyber": {
-      "status": "none",
-      "summary": "바이낸스 해킹 FBI 귀속은 10/31 건의 후속 배경이며 새 사건이 아니다."
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "24시간 경과 — 김성남 방중 첫 보도 11/9 02시; 젤렌스키 KN-23 주장은 기존 북러 협력의 반복 보도로 배경."
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-10T05:10:12+00:00",
+  "checked_at": "2026-11-10T06:14:03+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

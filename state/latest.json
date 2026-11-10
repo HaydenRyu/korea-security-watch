@@ -14,17 +14,17 @@
     ],
     "border_clash": [
       "합참 북한 지뢰 발견 DMZ 귀순",
-      "북한 합참 지뢰 귀순 NLL",
       "김포 무인기 추락 군 조사"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "Binance hack North Korea meme coin laundering Lazarus"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격",
+      "Binance hack North Korea FBI"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit November 2026",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "Zelensky North Korean KN-23 missiles",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -38,7 +38,7 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI Binance"
+      "US blacklists Seychelles crypto exchange North Korean laundering OFAC"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
@@ -47,22 +47,54 @@
   "opened": [
     "https://www.segye.com/newsView/20261110507929",
     "https://www.segye.com/newsView/20261110503049",
-    "https://www.yna.co.kr/view/AKR20261110088200091",
-    "https://www.nocutnews.co.kr/news/6604470",
-    "https://www.techzine.eu/news/security/145442/north-koreans-behind-binance-hack-fbi-reports/",
-    "https://www.yna.co.kr/view/AKR20261109078600504"
+    "https://www.nknews.org",
+    "https://www.techzine.eu/news/security/145442/north-koreans-behind-binance-hack-fbi-reports/"
   ],
-  "overall_summary": "김포 추락 무인기는 육군 훈련 장비로 북한 연관 정황이 없고, 신형어뢰 시험 주장과 북중 고위급 소통은 정례·외교 일정이다. 엘립틱의 북 해커 밈코인 세탁 분석은 10/31 바이낸스 귀속의 후속 배경이며 새 징후는 없다.",
+  "overall_summary": "북한 신형어뢰 시험 주장(조선중앙통신)과 김포 군 무인기 추락(북한 연관 정황 없음) 외에 새 징후는 없다. 젤렌스키의 KN-23 사용 주장은 기존 북러 협력의 반복 보도로 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "region": "동해",
+      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했고 세계일보가 보도했다(북한 주장).",
+      "meaning": "수중 타격 능력 고도화 주장이나 시험·발언 성격이다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261110503049"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "제원·사진 비공개, 합참 예의주시"
+      ],
+      "speculation": []
+    },
     "logistics": {
       "status": "none"
     },
+    "border_clash": {
+      "status": "none",
+      "summary": "김포 군 무인기 추락은 육군 교육훈련 중 원인미상 사고로 북한 연관 정황이 없다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261110507929"
+        }
+      ]
+    },
     "electronic_cyber": {
       "status": "none",
-      "summary": "엘립틱의 바이낸스 탈취 자금 밈코인 세탁 분석 보고서는 민간 분석이고 신규 정부 귀속이 없어 10/31 귀속 건의 배경이다."
+      "summary": "바이낸스 해킹 FBI 귀속은 10/31 건의 후속 배경이며 새 사건이 아니다."
+    },
+    "foreign_forces": {
+      "status": "none",
+      "summary": "24시간 경과 — 김성남 방중 첫 보도 11/9 02시; 젤렌스키 KN-23 주장은 기존 북러 협력의 반복 보도로 배경."
     },
     "parade_massing": {
       "status": "none"
@@ -75,43 +107,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "none",
-      "summary": "김포 군 무인기 추락은 육군 대대급 훈련 무인기의 통신 두절 사고로 북한 연관 정황이 없다(원인 조사 중)."
-    },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "동해",
-      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했다고 세계일보(연합 전재)가 보도했다(북한 주장).",
-      "meaning": "무기 시험 주장으로 정례 성격이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261110503049"
-        }
-      ],
-      "confidence": "중간"
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "북중",
-      "summary": "통일부가 북 김성남 방중으로 중 5중전회 결과 공유·고위급 소통이 이뤄졌다고 밝혔다(외교 일정).",
-      "meaning": "군사 협정·무기 협력 발표 없는 외교 일정이다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261109078600504"
-        }
-      ],
-      "confidence": "중간"
     }
   },
-  "checked_at": "2026-11-10T04:10:29+00:00",
+  "checked_at": "2026-11-10T05:10:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

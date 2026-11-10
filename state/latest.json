@@ -13,15 +13,15 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "North Korea DMZ border mine"
+      "북한 합참 지뢰 DMZ 귀순 11월 10일",
+      "지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격 11월 10일"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "주한미군 감축 서해 구조물 김정은 방중",
+      "김정은 방중 서해 구조물 주한미군 감축",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
@@ -43,12 +43,6 @@
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
-  "opened": [
-    "https://www.segye.com/newsView/20261110515998",
-    "https://www.segye.com/newsView/20261110507929",
-    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do"
-  ],
-  "overall_summary": "북한 신형 어뢰 시험 주장(KCNA 단독, 정례 성격) 외에 새 징후는 없다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -103,7 +97,13 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-10T22:16:58+00:00",
+  "opened": [
+    "https://www.segye.com/newsView/20261110515998",
+    "https://www.segye.com/newsView/20261110507929",
+    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do"
+  ],
+  "overall_summary": "북한 신형 어뢰 시험 주장(KCNA 단독, 정례 성격) 외에 새 징후는 없다. 직전 회차와 같은 수준이다.",
+  "checked_at": "2026-11-10T23:09:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

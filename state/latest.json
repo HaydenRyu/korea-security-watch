@@ -1,49 +1,56 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 10일 속보"
+      "북한 합참 발표 11월 10일 속보",
+      "North Korea troops border"
     ],
     "nuclear": [
-      "북한 신형 고속어뢰 시험 KCNA"
+      "북한 신형 고속어뢰 KCNA",
+      "North Korea nuclear torpedo"
     ],
     "logistics": [
-      "North Korea munitions Russia (NK News 목록)"
+      "북한 탄약 러시아 수송",
+      "North Korea munitions Russia"
     ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순 11월",
-      "김여정 유엔 사무총장 DMZ 지뢰 폭발"
+      "지뢰 발견 DMZ 귀순 11월",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 11월 2026",
-      "북한 해킹 밈코인 돈세탁"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "North Korea hackers meme coin"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "김정은 방중 방러"
+      "김정은 방중",
+      "서해 구조물",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결(합참 속보 검색)"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제(NK News 목록)"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘(news_kr 수집)"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의(news_kr 수집)"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안(news_kr 수집)"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.nknews.org/",
     "https://www.segye.com/newsView/20261110507929",
-    "https://www.nknews.org/2026/11/north-korean-leaders-sister-slams-un-chief-over-dmz-mine-blast-remarks/",
     "https://www.nknews.org/2026/11/north-korea-says-navy-to-deploy-new-high-speed-torpedo-in-early-2027/"
   ],
-  "overall_summary": "직전 회차와 같은 정례 수준이다. 북한 신형 어뢰 시험 주장과 김여정의 유엔 사무총장 비난 담화가 있었으나 새 군사 징후는 없다.",
+  "overall_summary": "직전 회차와 같은 정례 수준이다. 신형 어뢰 시험 주장과 김포 군 무인기 추락(사고) 외 새 군사 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -52,7 +59,7 @@
       "status": "single",
       "routine": true,
       "region": "동해",
-      "summary": "조선중앙통신이 9일 신형 고속어뢰 시험과 2027년 초 해군 배치를 주장했고 NK News가 북한 주장으로 보도했다.",
+      "summary": "조선중앙통신이 신형 고속어뢰 시험과 2027년 초 해군 배치를 주장했고 NK News가 북한 주장으로 보도했다.",
       "meaning": "해군 전력 시험 주장이며 핵 사용 준비 징후는 아니다.",
       "sources": [
         {
@@ -73,15 +80,13 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "김여정의 유엔 사무총장 비난 담화(위협 발언)만 있고 새 충돌·지뢰 발견 없음; 김포 군 무인기 추락은 원인미상 훈련 사고로 북한 연관 보도 없음."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "직전 회차의 북 노동당 간부 방중 보도는 이번 회차에 원문을 다시 열지 못해 배경으로 내림; 24시간 내 새 협력 확인 없음."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -96,7 +101,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-10T11:11:45+00:00",
+  "checked_at": "2026-11-10T12:13:18+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

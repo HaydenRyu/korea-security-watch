@@ -1,10 +1,10 @@
 {
- "at": "2026-11-10T12:10:28+00:00",
- "south": 61,
- "area": 77,
- "baseline": 59,
- "ratio": 1.03,
- "samples": 7,
+ "at": "2026-11-10T13:25:11+00:00",
+ "south": 40,
+ "area": 46,
+ "baseline": 44.0,
+ "ratio": 0.91,
+ "samples": 6,
  "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

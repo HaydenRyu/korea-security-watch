@@ -1,41 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-11-09T23:43:57+00:00",
-  "world_at": "2026-11-09T23:43:57+00:00",
+  "updated_at": "2026-11-10T05:40:14+00:00",
+  "world_at": "2026-11-10T05:40:14+00:00",
   "world": [
     {
-      "title": "프랑스, 이란 IRGC가 슈퍼마켓 냉장고 해킹 배후라고 지목",
-      "summary": "프랑스 외무장관은 지난달 수백 개 슈퍼마켓 냉장·냉동고 온도를 올린 사이버 공격의 배후가 이란 혁명수비대(IRGC)라며 제재하겠다고 밝혔다. 이란 측 일부 매체는 근거 없다고 반박했다.",
-      "link_korea": "국가 배후 사이버 공격과 제재 대응은 북한 해킹 위협과 대북 제재 논의에도 공통되는 사례다.",
+      "title": "트럼프 \"이란 추가 공격 가능성 매우 낮다\"",
+      "summary": "트럼프 대통령은 이란과의 전쟁에서 현 상태를 유지하겠다며 추가 공격은 \"매우 낮다\"고 밝혔다. 다만 상황이 바뀌면 대응할 준비가 돼 있다고 했다.",
+      "link_korea": "중동 전선의 미군 전력 부담이 줄면 인도·태평양 전력 배분 논의에 영향을 줄 수 있다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cq5yny4nl2d3o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "러·우·미 3자 평화회담 아부다비에서 재개",
+      "summary": "2월 이후 처음으로 러시아·우크라이나·미국 대표단이 아랍에미리트에서 만난다. 미 당국자는 동부 영토 문제에서 양측이 \"약간의 유연성\"을 보인다고 밝혔다.",
+      "link_korea": "러시아의 전쟁 종결 여부는 북러 군사협력과 북한군 파병의 향방에 직접 영향을 준다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cmg474vk6dyqo",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/cqpvgvrpjvv8o",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     },
     {
-      "title": "중국, 대미 수출통제·불신기업 명단 조치 2개월 추가 유예",
-      "summary": "중국 상무부는 미중 제8차 경제무역 협의 합의에 따라 미국 16개 기업의 수출통제 명단과 11개 기업의 불신기업 명단 조치를 10일부터 2개월 더 유예한다고 발표했다.",
-      "link_korea": "미중 무역 휴전 유지는 한반도 문제를 둘러싼 양국 협력 환경과 대북 제재 공조에 영향을 준다.",
-      "region": "동아시아",
+      "title": "트럼프 \"엔비디아 CEO 불륜 상대 중국 스파이 의혹, FBI 조사 중\"",
+      "summary": "트럼프 대통령은 엔비디아 CEO와 중국 스파이로 의심되는 인물의 관계를 FBI가 조사하고 있다고 밝혔다. 중국 외교부는 근거 없는 비방이라고 반박했다.",
+      "link_korea": "미중 기술·첩보 갈등과 대중 반도체 통제 강화 논의는 한국 반도체 업계와 대중 공급망 정책에도 파급된다.",
+      "region": "미·중",
       "source": {
-        "name": "중앙통신사(CNA)",
-        "url": "https://www.cna.com.tw/news/acn/202611090261.aspx",
-        "via": "https://feeds.feedburner.com/rsscna/mainland"
-      }
-    },
-    {
-      "title": "일본, 중국 총영사 추방 검토했다가 보복 우려로 접어",
-      "summary": "요미우리 보도를 인용한 CNA에 따르면 일본 정부는 다카이치 총리의 대만 유사시 발언 직후 '참수' 발언을 한 주오사카 중국 총영사의 추방을 검토했으나 중국이 '2배 보복'을 경고하자 보류했다. 현재 양국의 사실상 유일한 소통 채널은 월례 차관-대사 면담이다.",
-      "link_korea": "중일 갈등과 대만 문제는 한미일 안보 협력과 주일미군·주한미군 운용 환경에 영향을 준다.",
-      "region": "동아시아",
-      "source": {
-        "name": "중앙통신사(CNA)",
-        "url": "https://www.cna.com.tw/news/acn/202611090165.aspx",
-        "via": "https://feeds.feedburner.com/rsscna/mainland"
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cqg7x7dpvym8o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "이란 배후 사이버 공격 제재 논의와 중일 외교 갈등이 이어지는 가운데 미중은 무역 휴전 조치를 2개월 더 유예했다."
+  "world_context": "중동에서는 미국이 확전을 자제하는 가운데 후티·사우디 충돌이 이어지고, 러·우 협상이 재개되며 미중 기술·첩보 갈등이 부각됐다."
 }

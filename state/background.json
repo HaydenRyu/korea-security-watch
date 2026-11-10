@@ -1,40 +1,37 @@
 {
   "version": 1,
-  "at": "2026-11-09T23:43:57+00:00",
-  "opened": 20,
+  "at": "2026-11-10T05:40:14+00:00",
+  "opened": 21,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-09T23:43:57+00:00",
+      "last_ok": "2026-11-10T05:40:14+00:00",
       "raw": 3,
       "kept": 3
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-09T23:43:57+00:00",
+      "last_ok": "2026-11-10T05:40:14+00:00",
       "raw": 4,
-      "kept": 4,
-      "note": "연합·SBS·동아 등 ai_use 제한 매체와 국민일보(claude_user_blocked)는 열지 않아 inter_korean·public_opinion 은 근거 없는 보통"
+      "kept": 4
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-09T23:43:57+00:00",
+      "last_ok": "2026-11-10T05:40:14+00:00",
       "raw": 0,
-      "kept": 0,
-      "note": "대만 명명 훈련 발표 없음(금문 해경 4척 진입은 명명 훈련 아님)·북러/북중 새 합의 공식 원문은 제한 매체뿐이라 열람 못 함"
+      "kept": 0
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-09T23:43:57+00:00",
+      "last_ok": "2026-11-10T05:40:14+00:00",
       "raw": 5,
       "kept": 5
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-09T23:43:57+00:00",
+      "last_ok": "2026-11-10T05:40:14+00:00",
       "raw": 0,
-      "kept": 0,
-      "note": "news_kr 적중 묶음은 제한 매체 또는 북한 연결 근거 없는 국내 사건(공포탄 오발 등)"
+      "kept": 0
     }
   }
 }

@@ -1,23 +1,23 @@
 {
- "fetched_at": "2026-11-10T23:21:06+00:00",
+ "fetched_at": "2026-11-10T23:40:21+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-10T23:21:06+00:00",
+ "last_ok_at": "2026-11-10T23:40:21+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1113,
-  "hits": 28,
-  "clusters": 22,
+  "hits": 26,
+  "clusters": 20,
   "by_group": {
+   "drone_balloon": 4,
    "defect": 1,
-   "hybrid": 2,
-   "spy": 3,
+   "hybrid": 1,
+   "spy": 1,
    "fire": 4,
-   "summit": 5,
-   "drone_balloon": 3,
    "gps": 3,
+   "summit": 4,
    "mine": 5,
    "border": 1
   }
@@ -27,7 +27,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 553,
-   "hits": 21
+   "hits": 19
   },
   "SBS": {
    "feeds": 3,
@@ -62,18 +62,23 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "drone_balloon": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-11-10T23:25:26+00:00"
+  },
   "defect": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-10T22:50:00+00:00"
   },
   "hybrid": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-10T22:47:40+00:00"
   },
   "spy": {
-   "clusters": 3,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-10T22:47:40+00:00"
   },
@@ -82,18 +87,13 @@
    "max_independent": 3,
    "latest": "2026-11-10T20:26:07+00:00"
   },
-  "summit": {
-   "clusters": 5,
-   "max_independent": 1,
-   "latest": "2026-11-10T20:11:58+00:00"
-  },
-  "drone_balloon": {
+  "gps": {
    "clusters": 3,
    "max_independent": 1,
    "latest": "2026-11-10T19:30:00+00:00"
   },
-  "gps": {
-   "clusters": 3,
+  "summit": {
+   "clusters": 4,
    "max_independent": 1,
    "latest": "2026-11-10T19:30:00+00:00"
   },
@@ -147,7 +147,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 2
   },
   {
    "outlet": "SBS",

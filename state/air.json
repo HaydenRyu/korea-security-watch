@@ -1,18 +1,10 @@
 {
- "at": "2026-11-10T09:21:12+00:00",
- "south": 63,
- "area": 80,
- "baseline": 63.0,
- "ratio": 1.0,
- "samples": 8,
- "mil": [
-  {
-   "type": "BE20",
-   "name": null,
-   "call": "HABU11",
-   "lat": 32.98,
-   "lon": 131.6
-  }
- ],
+ "at": "2026-11-10T10:33:51+00:00",
+ "south": 90,
+ "area": 106,
+ "baseline": 72.5,
+ "ratio": 1.24,
+ "samples": 4,
+ "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

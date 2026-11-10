@@ -1,28 +1,25 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement border"
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "북한 신형어뢰 핵 전략무기",
-      "North Korea nuclear torpedo KCNA"
+      "북한 신형어뢰 핵 전략무기"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 탄약 수송"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "김포 무인기 추정 물체 추락 군 당국 조사"
+      "합참 북한 지뢰 발견 DMZ 귀순",
+      "김포 무인기 추락 군 조사"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit Reuters",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -39,16 +36,16 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261110507929",
     "https://www.nocutnews.co.kr/news/6604470",
-    "https://www.dt.co.kr/article/12094195",
     "https://www.segye.com/newsView/20261110503049",
     "https://www.yna.co.kr/view/AKR20261109078600504"
   ],
-  "overall_summary": "김포시 공원·주택가에 무인기 추정 물체가 추락해 군이 북 연관성을 조사 중이나 원인은 미확인이다. 북 신형어뢰 시험 주장과 북중 고위급 소통은 정례·외교 일정으로 그 밖의 새 징후는 없다.",
+  "overall_summary": "김포 추락 물체는 육군이 자체 훈련 무인기로 밝혀 북한 연관 정황이 없어 징후에서 내렸다. 북 신형어뢰 시험 주장과 북중 고위급 소통은 정례·외교 일정이며 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,11 +68,15 @@
     "hybrid_ops": {
       "status": "none"
     },
+    "border_clash": {
+      "status": "none",
+      "summary": "원문 재확인 결과 육군이 자체 대대급 소형 무인기의 훈련 중 통신 두절 추락으로 밝혀 북한 연관 정황이 없다(원인 조사 중)."
+    },
     "nuclear": {
       "status": "single",
       "routine": true,
       "region": "동해",
-      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했다고 세계일보가 보도했다(북한 주장).",
+      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했다고 세계일보(연합 전재)가 보도했다(북한 주장).",
       "meaning": "무기 시험 주장으로 정례 성격이다.",
       "sources": [
         {
@@ -100,41 +101,10 @@
         }
       ],
       "confidence": "중간"
-    },
-    "border_clash": {
-      "status": "single",
-      "routine": false,
-      "region": "경기 김포시 운양동",
-      "lat": 37.65,
-      "lon": 126.68,
-      "summary": "10일 오전 김포 운양동에 무인기 추정 물체가 추락해 군이 수거 후 대공 용의점과 북 연관성을 조사 중이다(원인 미확인).",
-      "meaning": "북 무인기 여부가 확인되지 않아 단독 보도 수준의 확인 대기 사안이다.",
-      "sources": [
-        {
-          "name": "노컷뉴스",
-          "tier": "B",
-          "url": "https://www.nocutnews.co.kr/news/6604470"
-        },
-        {
-          "name": "디지털타임스",
-          "tier": "B",
-          "url": "https://www.dt.co.kr/article/12094195"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "10일 오전 운양동에 물체 추락, 인명 피해 없음",
-        "군이 물체 수거·조사 중, 육군 관계자 '확인된 것 없다'"
-      ],
-      "speculation": [
-        "북한 무인기일 가능성은 조사 대상일 뿐 확인되지 않음"
-      ]
     }
   },
-  "checked_at": "2026-11-10T02:10:20+00:00",
+  "checked_at": "2026-11-10T03:10:29+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [
-    "border_clash"
-  ]
+  "active": []
 }

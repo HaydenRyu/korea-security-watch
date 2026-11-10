@@ -45,7 +45,8 @@
   "opened": [
     "https://www.segye.com/newsView/20261110503049",
     "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261109078600504"
+    "https://www.yna.co.kr/view/AKR20261109078600504",
+    "https://www.yna.co.kr/view/AKR20261110010600504"
   ],
   "overall_summary": "지난 24시간 새 도발·전쟁 징후는 없다. 북이 신형 어뢰 시험을 주장했으나 정례 시험이고, 접경·병력 징후 없이 북중 고위급 소통 등 배경성 동향만 이어진다.",
   "items": {
@@ -55,7 +56,9 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했다고 세계일보가 보도했다(북한 주장).",
+      "region": "동해",
+      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했다고 세계일보·연합뉴스가 보도했다(북한 주장, 같은 KCNA 발표 받아쓰기).",
+      "meaning": "무기 시험 주장으로 정례 성격이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -77,7 +80,9 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
+      "region": "북중",
       "summary": "통일부가 북 김성남 방중으로 중 5중전회 결과 공유·고위급 소통이 이뤄졌다고 밝혔다(외교 일정).",
+      "meaning": "군사 협정·무기 협력 발표 없는 외교 일정이다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -100,7 +105,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-10T00:10:55+00:00",
+  "checked_at": "2026-11-10T01:12:01+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

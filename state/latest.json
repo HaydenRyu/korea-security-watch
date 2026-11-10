@@ -2,37 +2,42 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "North Korea troop movement Reuters"
     ],
     "nuclear": [
-      "북한 신형어뢰 풍계리 영변",
-      "North Korea torpedo nuclear Yongbyon"
+      "북한 핵 동향 신형어뢰 합참",
+      "North Korea nuclear 38 North"
     ],
     "logistics": [
       "북한 탄약 군수 수송",
-      "North Korea ammunition logistics"
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참",
-      "North Korea DMZ NLL"
+      "지뢰 발견 DMZ 귀순 북한",
+      "목함지뢰 해안",
+      "DMZ NLL border North Korea"
     ],
     "electronic_cyber": [
-      "GPS 교란 서북도서 11월",
+      "GPS 교란 북한",
       "해킹 개인정보 유출",
-      "North Korea hacking attributed"
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 서해 구조물 주한미군 감축",
-      "North Korea Kim Jong Un China Russia visit"
+      "김정은 방중 김정은 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 집결",
+      "North Korea parade preparation"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 상향",
+      "South Korea Japan US warning North Korea"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -40,15 +45,16 @@
     ],
     "calm": [
       "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
+      "North Korea talks offer 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261110503049",
     "https://www.segye.com/newsView/20261110507929",
+    "https://www.nknews.org/",
     "https://www.yna.co.kr/view/AKR20261109078600504"
   ],
-  "overall_summary": "신규 징후는 확인되지 않았다. 북한 주장 신형어뢰 시험(9일)과 김성남 방중(정례 외교)이 이어지며 직전 회차와 변동 없다.",
+  "overall_summary": "신규 징후는 없다. 북한 주장 신형어뢰 시험(9일)과 김성남 방중(정례 외교)이 이어지며 직전 회차와 변동 없다. 김포 군 무인기 추락은 북한 연관이 없는 국내 사고다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,19 +63,24 @@
       "status": "single",
       "routine": true,
       "region": "동해",
-      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했고 연합뉴스·세계일보가 보도했다(북한 주장, 통신 전재).",
-      "meaning": "시험 발사 성격의 북한 주장으로 독립 확인은 없다.",
+      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했고 세계일보·NK News가 보도했다(북한 주장).",
+      "meaning": "시험 성격의 북한 주장으로 독립 확인은 없다.",
       "sources": [
         {
-          "name": "세계일보(연합 전재)",
+          "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261110503049"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 10일 보도, 제원·사진 미공개",
-        "합참은 면밀히 감시 중이라고만 언급"
+        "KCNA 보도, 제원·사진 미공개",
+        "합참은 면밀히 감시 중"
       ],
       "speculation": []
     },
@@ -87,7 +98,7 @@
       "routine": true,
       "region": "중국",
       "summary": "통일부가 북한 김성남의 방중으로 중국 5중전회 결과 공유·고위급 소통이 이뤄졌다고 9일 밝혔다.",
-      "meaning": "외교 일정 성격으로 군사협정·무기 협력 언급은 확인되지 않았다.",
+      "meaning": "외교 일정 성격으로 군사협정·무기 협력 언급은 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -95,9 +106,9 @@
           "url": "https://www.yna.co.kr/view/AKR20261109078600504"
         }
       ],
-      "confidence": "낮음",
+      "confidence": "중간",
       "facts": [
-        "제목 기준 확인, 본문 세부 미확인"
+        "통일부 9일 발표"
       ],
       "speculation": []
     },
@@ -114,7 +125,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-10T08:11:08+00:00",
+  "checked_at": "2026-11-10T09:11:36+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

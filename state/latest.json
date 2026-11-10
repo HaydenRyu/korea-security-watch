@@ -36,7 +36,11 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "OFAC Seychelles crypto exchange North Korea laundering sanctions"
+      "North Korea attributed FBI OFAC"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
@@ -44,7 +48,7 @@
     "https://www.segye.com/newsView/20261110507929",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "KCNA의 신형 어뢰 시험·내년 초 배치 주장(routine) 외 새 징후는 없다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "KCNA의 신형 어뢰 시험·내년 초 배치 주장(routine) 외 새 징후는 없다. 김포 군 무인기 추락은 원인 조사 중인 훈련 사고로 징후 아님.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,8 +79,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "김포 군 무인기 추락은 훈련 중 사고(원인 조사 중, 북한 연관 없음)로 징후 아님."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -94,10 +97,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "미 OFAC 세이셸 거래소 제재는 11/9 이전 발표 배경으로 기록."
     }
   },
-  "checked_at": "2026-11-10T19:14:08+00:00",
+  "checked_at": "2026-11-10T20:10:32+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

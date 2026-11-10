@@ -5,56 +5,83 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon",
-      "북한 신형어뢰 핵 전략무기"
+      "북한 신형어뢰 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "North Korea ammunition shipment",
-      "북한 군수 탄약 수송"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순",
-      "김포 무인기 추락 군 조사"
+      "지뢰 발견 DMZ 귀순 11월 10일",
+      "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "Binance hack North Korea FBI"
+      "North Korea hacking attributed"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축",
-      "북한 김성남 방중 통일부"
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 합참 발표"
+      "진돗개 데프콘 발령",
+      "한미일 경고 대피"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "US blacklists Seychelles crypto exchange North Korean laundering OFAC"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261110503049",
     "https://www.segye.com/newsView/20261110507929",
-    "https://www.nknews.org"
+    "https://www.yna.co.kr/view/AKR20261110010600504",
+    "https://www.yna.co.kr/view/AKR20261110088200091",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008839347"
   ],
-  "overall_summary": "북한 신형어뢰 시험 주장(조선중앙통신)과 김포 군 무인기 추락(북한 연관 정황 없음) 외에 새 징후는 없다. 김성남 방중·밈코인 세탁·KN-23 사용 주장은 기존 북중·북러 협력과 사이버 귀속의 반복 보도로 배경이다.",
+  "overall_summary": "신규 징후는 확인되지 않았다. 북한 주장 신형어뢰 시험 보도(9일)가 배경으로 이어지고 있으며 직전 회차와 변동 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "region": "동해",
+      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했고 연합뉴스·세계일보가 보도했다(북한 주장, 통신 전재).",
+      "meaning": "전술 수중무기 시험 주장으로 위협 발언·시험 성격이다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261110010600504"
+        }
+      ],
+      "confidence": "중간"
+    },
     "logistics": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none",
+      "summary": "김포 군 무인기 추락은 원인미상 아군 훈련 사고로 북한 연관 언급이 없어 징후로 보지 않는다."
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
       "status": "none"
     },
     "parade_massing": {
@@ -66,48 +93,11 @@
     "gov_warning": {
       "status": "none"
     },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "김성남 국제비서 방중(11/5 왕이 회동)은 이미 알려진 북중 당 교류로 배경이며 새 군사협력 확인은 없다."
-    },
     "hybrid_ops": {
       "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "동해",
-      "summary": "조선중앙통신이 9일 동해 신형어뢰 발사시험과 내년 초 해군 실전배치를 주장했고 세계일보가 보도했다(북한 주장).",
-      "meaning": "수중 타격 능력 고도화 주장이나 시험·발언 성격이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261110503049"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "제원·사진 비공개, 합참 예의주시"
-      ],
-      "speculation": []
-    },
-    "border_clash": {
-      "status": "none",
-      "summary": "김포 군 무인기 추락은 육군 훈련 중 원인미상 사고로 북한 연관 정황이 없다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261110507929"
-        }
-      ]
     }
   },
-  "checked_at": "2026-11-10T06:14:03+00:00",
+  "checked_at": "2026-11-10T07:17:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

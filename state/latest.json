@@ -1,48 +1,58 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 합참 발표 11월 11일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "북한 신형 어뢰 핵 풍계리 영변",
-      "North Korea nuclear missile troops November 10 2026"
+      "북한 신형 어뢰 발사시험",
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
+      "북한 군수 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 지뢰 DMZ 귀순 11월 10일",
-      "지뢰 발견 DMZ 귀순 합참"
+      "지뢰 발견 DMZ 귀순",
+      "NLL DMZ North Korea"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "North Korea hack"
     ],
     "foreign_forces": [
-      "김정은 방중 서해 구조물 주한미군 감축",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
+      "북한 열병식",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea civil defense drill"
+      "북한 준전시 등화관제",
+      "North Korea blackout"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "DEFCON Korea"
+      "진돗개 발령",
+      "North Korea warning alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
+  "opened": [
+    "https://www.segye.com/newsView/20261110515998",
+    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261111501265"
+  ],
+  "overall_summary": "신형 어뢰 시험 주장(11/9) 외에 새 징후는 없고 평소 범위다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -51,10 +61,8 @@
       "status": "single",
       "routine": true,
       "region": "동해",
-      "lat": 39.8,
-      "lon": 128.5,
       "summary": "조선중앙통신이 11/9 신형 어뢰 동해 발사시험과 내년 초 해군 실전배치를 주장했고 세계일보가 북한 주장으로 보도했으며 합참은 예의주시한다고만 밝혔다.",
-      "meaning": "성능·탑재체 미공개의 북한 주장 무기 시험으로 위협 과시 성격이다.",
+      "meaning": "수중전력 시험 주장으로 독립 확인은 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -64,19 +72,15 @@
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 단독 보도, 사양·사진 미공개",
-        "합참 예의주시"
+        "KCNA 단독 보도, 제원·사진 없음"
       ],
-      "speculation": [
-        "실전배치 시점은 북한 주장"
-      ]
+      "speculation": []
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "새 지뢰·월선·귀순 보도 없음(김포 군 무인기 추락은 원인 미상 군 사고로 북한 연관 언급 없음)."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -97,13 +101,7 @@
       "status": "none"
     }
   },
-  "opened": [
-    "https://www.segye.com/newsView/20261110515998",
-    "https://www.segye.com/newsView/20261110507929",
-    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do"
-  ],
-  "overall_summary": "북한 신형 어뢰 시험 주장(KCNA 단독, 정례 성격) 외에 새 징후는 없다. 직전 회차와 같은 수준이다.",
-  "checked_at": "2026-11-10T23:09:55+00:00",
+  "checked_at": "2026-11-11T00:10:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

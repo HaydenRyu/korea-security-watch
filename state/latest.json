@@ -1,66 +1,43 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
+      "북한 병력 이동 전방 증강 군수 탄약",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "북한 핵 풍계리 영변 North Korea nuclear"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 병력 이동 전방 증강 군수 탄약"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순 합참",
-      "DMZ NLL North Korea"
+      "지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "North Korea GPS jamming"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 준전시 등화관제 North Korea civil defense parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense"
+      "북한 열병식 준전시 등화관제 North Korea civil defense parade"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning evacuation"
+      "북한 합참 발표 11월 11일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ]
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261110010651504",
-    "https://www.yna.co.kr/view/AKR20261110088200091",
-    "https://www.yna.co.kr/view/AKR20261109078600504",
-    "https://www.yna.co.kr/view/AKR20261111165400504"
+    "https://www.nknews.org/",
+    "https://www.segye.com/newsList/0101030700000"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 북한 신형 어뢰 시험 주장(11/10)은 첫 보도 후 24시간이 지났고 정례 시험 성격이라 배경으로 둔다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 어뢰 시험 주장(11/10)·김여정 UN 비난 등은 정례 발언·시험이거나 24시간 경과 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,8 +52,7 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "바이낸스 해킹 北해커 밈코인 세탁(11/10)은 수사·분석 보도라 배경으로 둔다."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none"
@@ -94,7 +70,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-11T10:10:55+00:00",
+  "checked_at": "2026-11-11T11:18:32+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

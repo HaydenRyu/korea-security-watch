@@ -2,54 +2,53 @@
   "coverage": {
     "troop_movement": [
       "북한 합참 발표 오늘",
-      "North Korea troop movement ammunition Russia shipment"
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri NK News",
-      "북한 핵 풍계리 영변"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon NK News"
     ],
     "logistics": [
-      "북한 합참 발표 오늘",
-      "North Korea troop movement ammunition Russia shipment"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition Russia shipment"
     ],
     "border_clash": [
       "지뢰 발견 DMZ NLL 귀순",
-      "북한 11월 11일 미사일 도발 노동신문 열병식 준전시"
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
       "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit troops"
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 11월 11일 미사일 도발 노동신문 열병식 준전시"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 11월 11일 미사일 도발 노동신문 열병식 준전시"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "북한 합참 발표 오늘",
+      "진돗개 발령 데프콘",
       "North Korea Reuters November 11 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
-      "북한 해킹 FBI 귀속 North Korea attributed hack"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hack"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
+    "https://www.nknews.org/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
     "https://www.fnnews.com/news/202611110635447943",
-    "https://www.yna.co.kr/view/AKR20261110010600504",
-    "https://www.yna.co.kr/view/AKR20261109078600504",
-    "https://www.yna.co.kr/view/AKR20261111165400504",
-    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do"
+    "https://www.yna.co.kr/view/AKR20261111165400504"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 금융보안원 해킹(11/9~11, 귀속 미확인)만 일반 항목에 단일 출처로 올렸고, 어뢰 시험 주장(11/10)·합참의장 KF-21 지휘비행은 정례·배경이다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 금융보안원 해킹(귀속 미확인)만 단일 출처 일반 징후로 유지하며, 북한 개헌 헌법 공개·어뢰 시험 주장은 정례·배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -91,7 +90,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김성남 방중(11/3~7)은 당 대 당 교류 배경 보도(통일부 11/9)로 24시간 경과, 새 파병·이전·협정 확인 없음."
+      "summary": "새 파병·이전·협정·정상 방문 보도 없음(김정은 방중 10/24는 24시간 경과 배경)."
     },
     "parade_massing": {
       "status": "none"
@@ -106,7 +105,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-11T14:13:43+00:00",
+  "checked_at": "2026-11-11T15:12:44+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

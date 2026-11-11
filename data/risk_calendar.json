@@ -1595,9 +1595,9 @@
   }
  },
  "tempo": {
-  "last30": 8,
+  "last30": 7,
   "avg30": 1.4,
-  "ratio": 5.8,
+  "ratio": 5.1,
   "recent": [
    {
     "date": "2026-11-04",
@@ -1640,12 +1640,6 @@
     "event": "Submarine Launched Cruise Missile Launch",
     "event_ko": "잠수함 발사 순항미사일",
     "src": "https://en.yna.co.kr/view/AEN20261015000751315"
-   },
-   {
-    "date": "2026-10-12",
-    "event": "Ballistic Missile Launch",
-    "event_ko": "탄도미사일 발사",
-    "src": "https://en.yna.co.kr/view/AEN20261012002700315?section=national/defense"
    }
   ],
   "per_year": {
@@ -1779,7 +1773,7 @@
   "basis": "CSIS 미사일·핵 도발 날짜, 평소 = 2016~2025 평균"
  },
  "data": {
-  "updated_at": "2026-11-11T10:47:34+00:00",
+  "updated_at": "2026-11-11T21:53:23+00:00",
   "csis_rows": 521,
   "csis_last": "2026-11-10",
   "cns_days": 153,
@@ -2040,7 +2034,7 @@
    }
   },
   "last": "2026-11-04",
-  "since": 7,
+  "since": 8,
   "basis": "발사한 날 228일(2006~2025) 각각의 다음 발사까지 간격"
  },
  "signal_check": {

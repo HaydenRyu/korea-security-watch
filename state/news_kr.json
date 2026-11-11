@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-11T17:08:22+00:00",
+ "fetched_at": "2026-11-11T18:21:44+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-11T17:08:22+00:00",
+ "last_ok_at": "2026-11-11T18:21:44+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1107,
-  "hits": 19,
-  "clusters": 18,
+  "hits": 20,
+  "clusters": 19,
   "by_group": {
    "border": 3,
    "mine": 5,
+   "gps": 4,
    "drone_balloon": 3,
    "summit": 3,
    "alert": 2,
-   "gps": 3,
    "fire": 2
   }
  },
@@ -43,7 +43,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 6
+   "hits": 7
   },
   "세계일보": {
    "feeds": 2,
@@ -63,12 +63,17 @@
   "border": {
    "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-11-11T17:08:22+00:00"
+   "latest": "2026-11-11T18:21:44+00:00"
   },
   "mine": {
    "clusters": 5,
    "max_independent": 1,
-   "latest": "2026-11-11T17:08:22+00:00"
+   "latest": "2026-11-11T18:21:44+00:00"
+  },
+  "gps": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-11-11T18:21:44+00:00"
   },
   "drone_balloon": {
    "clusters": 3,
@@ -84,11 +89,6 @@
    "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-11T08:53:06+00:00"
-  },
-  "gps": {
-   "clusters": 3,
-   "max_independent": 1,
-   "latest": "2026-11-10T19:30:00+00:00"
   },
   "fire": {
    "clusters": 2,
@@ -191,7 +191,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibSocRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "세계일보",

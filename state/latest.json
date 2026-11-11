@@ -1,41 +1,35 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "지뢰 발견 DMZ 귀순 합참",
+      "North Korea Reuters November 11 2026"
     ],
     "nuclear": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "North Korea Reuters November 11 2026"
     ],
     "logistics": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "North Korea Reuters November 11 2026"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit Reuters",
+      "김정은 방중 방러 11월",
+      "North Korea Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "North Korea Reuters November 11 2026"
     ],
     "nk_internal": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "North Korea Reuters November 11 2026"
     ],
     "gov_warning": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "지뢰 발견 DMZ 귀순 합참"
     ],
     "hybrid_ops": [
       "간첩 혐의 국가보안법 구속",
@@ -50,20 +44,20 @@
     "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
     "https://nknews.org/"
   ],
-  "overall_summary": "신규 군사 징후나 상태 변화는 확인되지 않았다. 김여정의 유엔 사무총장 비난 등 발언만 있었고 직전 회차와 같은 평시 상태다.",
+  "overall_summary": "신규 군사 징후는 없다. 북 신형 어뢰 시험·김여정 발언은 정례 범위로 직전 회차와 같은 평시다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "24시간 경과 — 신형 어뢰 시험 주장 첫 보도 11/9 21시(UTC), 이후 신규 확인 없음"
+      "status": "none"
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "북 신형 어뢰 시험(11/9, KCNA 주장·합참 예의주시)은 첫 보도 24시간 경과 후 배경 — 신규 접경 사건 없음"
     },
     "electronic_cyber": {
       "status": "none"
@@ -84,7 +78,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-11T04:09:48+00:00",
+  "checked_at": "2026-11-11T05:10:15+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

@@ -1,52 +1,60 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 합참 발표 11월 11일",
+      "North Korea troops Reuters"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear 38 North"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
+      "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순 NLL 11월 11일",
-      "North Korea Reuters military Kim Jong Un November 11 2026"
+      "지뢰 발견 DMZ 귀순 북한",
+      "North Korea DMZ landmine"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 준전시 등화관제",
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "진돗개 데프콘 경고"
+      "합참 진돗개 데프콘",
+      "한미일 긴급 경고"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261110515998",
     "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreaherald.com/article/10926441"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "신규 군사 징후는 없다. 북 신형 어뢰 시험(11/9, 북 주장)과 11/4 단거리 발사는 정례 범위로 직전 회차와 같은 평시다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 북한 신형 어뢰 시험 주장(11/10)은 첫 보도 후 24시간이 지났고 정례 시험 성격이라 배경으로 둔다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,7 +66,8 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "신형 어뢰 시험 주장(조선중앙통신 11/10, 시험 11/9)은 24시간 경과한 북한 주장으로 배경이며 접경 충돌 신규 사건은 없다."
     },
     "electronic_cyber": {
       "status": "none"
@@ -79,7 +88,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-11T08:10:46+00:00",
+  "checked_at": "2026-11-11T09:11:05+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

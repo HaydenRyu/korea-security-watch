@@ -189,7 +189,7 @@ def test_alpha1_stale_official_judgment_still_withholds():
 
 def test_real_weights_shape():
     w = json.loads((ROOT / "data" / "ews_weights.json").read_text())
-    assert w["public_globe"] is False and w["public_index"] is False and "public" not in w and w["version"] == 1 and "백테스트 전" in w["basis"]
+    assert w["public_globe"] is True and w["public_index"] is False and "public" not in w and w["version"] == 1 and "백테스트 전" in w["basis"]
     assert w["alpha"] == 1.0  # 낮추려면 Phase 3 백테스트 통과가 먼저다
     assert set(w["weights"]) == set(ews.THEATERS)
     assert all(set(v) == set(ews.CHANNELS) for v in w["weights"].values())

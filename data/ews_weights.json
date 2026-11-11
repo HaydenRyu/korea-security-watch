@@ -6,7 +6,7 @@
   "stale_hours": 48,
   "min_observed_theaters": 3,
   "public_globe_view": true,
-  "public_globe": false,
+  "public_globe": true,
   "public_index": false,
   "weights": {
     "taiwan":     {"c1_us_gap": 1.0, "c2_nk_ru_cn": 0.5, "c3_simul": 1.0, "c4_sea_energy": 0.5, "c5_diplomacy": 0.5},

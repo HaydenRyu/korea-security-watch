@@ -13,17 +13,16 @@
       "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한",
+      "북한 DMZ 지뢰 발견 귀순 합참",
       "North Korea DMZ border"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "North Korea hacking"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "North Korea Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -48,11 +47,11 @@
     ]
   },
   "opened": [
-    "https://www.fnnews.com/news/202611110635447943",
     "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
+    "https://www.fnnews.com/news/202611110635447943",
     "https://www.jcs.mil.kr"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 금융보안원 해킹(귀속 미확인)만 단일 출처 일반 징후로 유지한다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 금융보안원 해킹(귀속 미확인)만 단일 출처 일반 징후로 유지하며, 11/10 북한 신형어뢰 시험 주장은 정례 무기시험 배경으로만 본다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,21 +63,6 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
       "status": "none"
     },
     "electronic_cyber": {
@@ -105,9 +89,24 @@
       "speculation": [
         "수사 결과 귀속 발표 여부는 미정"
       ]
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-11T18:11:25+00:00",
+  "checked_at": "2026-11-11T19:11:48+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

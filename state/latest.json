@@ -1,40 +1,45 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 11일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
+      "North Korea Kim Jong Un China Russia visit Reuters"
     ],
     "nuclear": [
-      "북한 합참 발표 11월 11일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
+      "North Korea Kim Jong Un China Russia visit Reuters"
     ],
     "logistics": [
-      "북한 합참 발표 11월 11일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
+      "North Korea Kim Jong Un China Russia visit Reuters"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
+      "North Korea Kim Jong Un China Russia visit Reuters"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 서해 구조물 주한미군 감축",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "North Korea Kim Jong Un China Russia visit Reuters",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 11일"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
+      "North Korea Kim Jong Un China Russia visit Reuters"
     ],
     "nk_internal": [
-      "북한 합참 발표 11월 11일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
+      "North Korea Kim Jong Un China Russia visit Reuters"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 11일"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 11일",
+      "North Korea Kim Jong Un China Russia visit Reuters"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "간첩 혐의 국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
@@ -43,10 +48,9 @@
   "opened": [
     "https://www.segye.com/newsView/20261110515998",
     "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreajoongangdaily.com/korea/pyongyang-fires-missiles-as-trump-offers-talks-seoul-seeks-beijings-help-to-revive-north-korea-diplomacy/12834681",
     "https://nknews.org/"
   ],
-  "overall_summary": "신규 군사 징후나 상태 변화는 확인되지 않았다. 직전 회차의 신형 어뢰 시험 주장(11/9)은 첫 보도 24시간이 지나 배경으로 내렸다.",
+  "overall_summary": "신규 군사 징후나 상태 변화는 확인되지 않았다. 김여정의 유엔 사무총장 비난 등 발언만 있었고 직전 회차와 같은 평시 상태다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -80,7 +84,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-11T03:09:51+00:00",
+  "checked_at": "2026-11-11T04:09:48+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

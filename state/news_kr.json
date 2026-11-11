@@ -1,21 +1,21 @@
 {
- "fetched_at": "2026-11-11T15:59:47+00:00",
+ "fetched_at": "2026-11-11T17:08:22+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-11T15:59:47+00:00",
+ "last_ok_at": "2026-11-11T17:08:22+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1107,
-  "hits": 18,
-  "clusters": 17,
+  "hits": 19,
+  "clusters": 18,
   "by_group": {
+   "border": 3,
+   "mine": 5,
    "drone_balloon": 3,
    "summit": 3,
-   "border": 2,
    "alert": 2,
-   "mine": 4,
    "gps": 3,
    "fire": 2
   }
@@ -25,7 +25,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 547,
-   "hits": 16
+   "hits": 15
   },
   "SBS": {
    "feeds": 3,
@@ -43,7 +43,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 5
+   "hits": 6
   },
   "세계일보": {
    "feeds": 2,
@@ -60,6 +60,16 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "border": {
+   "clusters": 3,
+   "max_independent": 1,
+   "latest": "2026-11-11T17:08:22+00:00"
+  },
+  "mine": {
+   "clusters": 5,
+   "max_independent": 1,
+   "latest": "2026-11-11T17:08:22+00:00"
+  },
   "drone_balloon": {
    "clusters": 3,
    "max_independent": 1,
@@ -70,20 +80,10 @@
    "max_independent": 1,
    "latest": "2026-11-11T09:35:44+00:00"
   },
-  "border": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-11T09:20:00+00:00"
-  },
   "alert": {
    "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-11T08:53:06+00:00"
-  },
-  "mine": {
-   "clusters": 4,
-   "max_independent": 1,
-   "latest": "2026-11-11T07:58:20+00:00"
   },
   "gps": {
    "clusters": 3,
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "SBS",
@@ -183,7 +183,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 5
+   "hits": 6
   },
   {
    "outlet": "국민일보",

@@ -1,52 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-11-11T11:40:50+00:00",
-  "world_at": "2026-11-11T11:40:50+00:00",
+  "updated_at": "2026-11-11T23:39:53+00:00",
+  "world_at": "2026-11-11T23:39:53+00:00",
   "world": [
     {
-      "title": "이란 연계 요원 3명, 영국 RAF 페어퍼드 사건 등 테러 모의 혐의 기소",
-      "summary": "미 법무부가 이란 배후 요원 3명을 미국·유럽 테러 모의 혐의로 기소했고, 9월 영국 RAF 페어퍼드 기지 인근 사건 관여를 주장했다. 이란은 관여를 부인했다.",
-      "link_korea": "미군 해외 기지 보안과 이란 관련 긴장은 주한미군 자산 운용 여력에도 영향을 줄 수 있다.",
-      "region": "중동·유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c3rryrryk59zo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "우크라 종전 3자 회담 첫날 종료, 젤렌스키 \"건설적\"",
-      "summary": "아부다비에서 우크라·러시아·미국이 4시간 회담했다. 젤렌스키는 \"건설적이고 실질적\"이라 했으나 돌파구 기대는 낮다.",
+      "title": "러-우-미 아부다비 3자 회담 종료…돌파구 없이 포로 교환 합의 임박",
+      "summary": "둘째 날 회담이 종전 후 안보 문제를 다뤘으나 돌파구는 없었다. 양측은 대규모 포로 교환이 곧 가능하다고 밝혔다.",
       "link_korea": "러-우 전쟁 향방은 북러 군사협력과 북한군 파병 문제에 직결된다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cqpvgvrpjvv8o",
+        "url": "https://www.bbc.co.uk/news/articles/ck792we7zrz4o",
         "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     },
     {
-      "title": "나토 사령부 근무 미 육군 부사관, 러시아 간첩 혐의로 영국서 체포",
-      "summary": "영국 대테러경찰이 41세 미 육군 선임 부사관을 국가안보법 위반 혐의로 체포했다. 나토 연합신속대응군단 사령부가 있는 기지 소속으로 알려졌다.",
-      "link_korea": "동맹군 내부 정보 유출 우려는 한미 군사정보 보호에도 시사점이 있다.",
-      "region": "유럽",
+      "title": "미 법무부, 이란 연계 3명 기소…영국 RAF 페어퍼드 사건 등 연루 주장",
+      "summary": "미국은 이란 배후 요원 3명이 RAF 페어퍼드 사건을 포함한 공격을 모의했다고 밝혔다.",
+      "link_korea": "해외 미군 기지 보안 위협은 주한미군 자산 운용 여력과도 이어진다.",
+      "region": "중동·유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6d7q77xgw0vo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/c3rryrryk59zo",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
       }
     },
     {
-      "title": "미국, 마다가스카르에 러시아 군사 밀착 경고",
-      "summary": "미 아프리카사령부 부사령관이 러시아와 군사협력을 넓히는 마다가스카르에 \"사헬 모델\" 확산을 우려한다고 밝혔다.",
-      "link_korea": "러시아의 해외 군사 영향력 확대 양상은 북러 밀착을 읽는 비교 사례다.",
-      "region": "아프리카",
+      "title": "미 재무장관, 이란 연계 위협 보도 후 군 기지로 이동",
+      "summary": "미 언론에 따르면 베선트 재무장관이 이란 연계 위협으로 워싱턴 자택에서 군 기지로 옮겼다. 위협의 성격은 불분명하다.",
+      "link_korea": "이란 제재·봉쇄 압박이 미국 안보 자원 배분에 영향을 줘 한반도 억제 여력과 연결된다.",
+      "region": "북미·중동",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/crkgv58pknyeo",
+        "url": "https://www.bbc.co.uk/news/articles/cqr7gr0010r2o",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     }
   ],
-  "world_context": "중동·유럽의 대이란·대러 안보 충돌이 이어지는 가운데 종전 협상과 간첩·테러 수사가 동시에 진행됐다."
+  "world_context": "러-우 협상은 진전 없이 이어지고 이란 관련 위협이 미국 안보 부담을 키우는 가운데, 한반도와는 북러 협력·미군 자산 운용으로 연결된다."
 }

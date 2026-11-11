@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-11T11:40:50+00:00",
+  "judged_at": "2026-11-11T23:39:53+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -11,25 +11,20 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqpvgvrpjvv8o",
-          "published_at": "2026-11-10T21:21:55+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/ck792we7zrz4o",
+          "published_at": "2026-11-11T18:04:58+00:00"
         }
       ],
-      "summary": "러·우·미 3자 회담 첫날이 끝났으나 휴전 발효 보도는 없어 전쟁은 계속 중이다.",
-      "judged_at": "2026-11-11T11:40:50+00:00"
+      "summary": "아부다비 3자 회담이 돌파구 없이 끝났고 휴전 발효 보도는 없어 전쟁은 계속 중이다.",
+      "judged_at": "2026-11-11T23:39:53+00:00"
     },
     "mideast": {
       "state": 3,
       "channels": [
-        "c4_sea_energy"
+        "c4_sea_energy",
+        "c5_diplomacy"
       ],
       "sources": [
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c6ly3mjx958eo",
-          "published_at": "2026-11-08T21:37:36+00:00"
-        },
         {
           "name": "BBC",
           "tier": "B",
@@ -37,8 +32,8 @@
           "published_at": "2026-11-10T09:40:31+00:00"
         }
       ],
-      "summary": "후티 측이 리야드 업무지구를 타격해 아람코 타워가 피해를 입었고, 트럼프는 대이란 추가 공격이 \"매우 낮다\"고 말했다.",
-      "judged_at": "2026-11-11T11:40:50+00:00"
+      "summary": "후티 측이 리야드 아람코 타워를 타격했고, 트럼프는 대이란 추가 공격이 \"매우 낮다\"며 현상 유지와 협상 모멘텀을 언급했다.",
+      "judged_at": "2026-11-11T23:39:53+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -75,12 +70,12 @@
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/579136/projecting-precision-25th-infantry-division-executes-himars-rapid-infiltration-jpmrc-27-01",
-          "published_at": "2026-11-10T23:25:33-05:00"
+          "url": "https://www.dvidshub.net/news/579144/airman-gains-joint-operations-experience-during-keen-sword",
+          "published_at": "2026-11-11T15:12:16-05:00"
         }
       ],
-      "summary": "미 25사단이 하와이에서 JPMRC 27-01 HIMARS 신속 침투 훈련을 한 정례 훈련 보도뿐이며 새 전략자산 전개 보도는 없다.",
-      "judged_at": "2026-11-11T11:40:50+00:00"
+      "summary": "미 공군 장병이 10월 15~28일 일본 요코스카의 킨 소드 훈련에 참가한 사례만 보도됐고 새 전략자산 전개 보도는 없다.",
+      "judged_at": "2026-11-11T23:39:53+00:00"
     }
   }
 }

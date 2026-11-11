@@ -13,8 +13,8 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순 NLL",
-      "North Korea Reuters missile military November 2026"
+      "북한 합참 지뢰 발견 DMZ 귀순 NLL 11월 11일",
+      "North Korea Reuters military Kim Jong Un November 11 2026"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -34,7 +34,7 @@
       "진돗개 데프콘 경고"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
@@ -79,7 +79,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-11T07:11:19+00:00",
+  "checked_at": "2026-11-11T08:10:46+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

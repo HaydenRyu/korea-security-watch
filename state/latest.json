@@ -1,67 +1,80 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+    "border_clash": [
+      "합참 발표 지뢰 발견 DMZ 11월 11일"
     ],
     "nuclear": [
-      "북한 핵실험장 영변 핵시설 동향",
-      "North Korea nuclear Yongbyon Punggye-ri"
+      "North Korea Reuters November 11 2026"
     ],
-    "logistics": [
-      "북한 열병식 군수 탄약 수송",
-      "North Korea parade munitions logistics"
-    ],
-    "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순 11월 11일"
+    "foreign_forces": [
+      "김정은 방중 방러 Kim Jong Un China Russia visit 주한미군 감축 서해 구조물"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격",
-      "금융보안원 해킹 비정상 접근 상시평가 시스템 유출"
-    ],
-    "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중 방러 서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 열병식 군수 탄약 수송",
-      "North Korea parade munitions logistics"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제 진돗개 데프콘 경고",
-      "North Korea war footing"
-    ],
-    "gov_warning": [
-      "북한 준전시 등화관제 진돗개 데프콘 경고",
-      "North Korea war footing"
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hack"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 열병식 군수 비축 동향",
+      "North Korea troops buildup parade logistics wartime mobilization November 2026"
+    ],
+    "logistics": [
+      "북한 병력 이동 전방 증강 열병식 군수 비축 동향",
+      "North Korea troops buildup parade logistics wartime mobilization November 2026"
+    ],
+    "parade_massing": [
+      "북한 병력 이동 전방 증강 열병식 군수 비축 동향",
+      "North Korea troops buildup parade logistics wartime mobilization November 2026"
+    ],
+    "nk_internal": [
+      "진돗개 발령 데프콘 상향 한미일 긴급 경고 북한 등화관제 준전시"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 상향 한미일 긴급 경고 북한 등화관제 준전시"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261110010600504",
-    "https://www.fnnews.com/news/202611110635447943",
-    "https://www.koreajoongangdaily.com/korea/north-korea-conducts-underwater-test-of-new-precisionguided-torpedo-kcna/12925042",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261017/n-korea-tests-new-precision-guided-torpedo-using-ai-kcna",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008841674"
+    "https://www.yahoo.com/news/north-korea-says-status-nuclear-211336694.html",
+    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
+    "https://www.fnnews.com/news/202611110635447943"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 금융보안원 해킹(귀속 미확인)만 단일 출처 일반 징후로 유지하며, 신형어뢰 시험 주장은 정례 무기시험 배경으로만 본다.",
+  "overall_summary": "11/11 기준 새 군사 징후 없음; 북한 신형 어뢰 시험 주장(11/10)·헌법 재게시·김여정 대화 거부 등 발언·정례 수준. 금융보안원 해킹은 귀속 미확인 일반 사고.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "none",
+      "summary": "북한 11/10 신형 어뢰 시험 주장(KCNA, 내년 초 실전배치)은 재래식 무기 시험이라 핵 항목 아님·배경."
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
+      "status": "none",
+      "summary": "새 충돌 없음 — 9/21 DMZ 지뢰 폭발은 과거 사건, 김여정 11/10 구테흐스 제안 거부는 발언뿐(코리아타임스 요약)."
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "electronic_cyber": {
@@ -88,25 +101,9 @@
       "speculation": [
         "수사 결과 귀속 발표 여부는 미정"
       ]
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "김정은 10/24 단둥 방문 등 방중 보도는 24시간 경과 배경이며 신규 파병·협정·훈련 보도 없음."
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-11T20:11:54+00:00",
+  "checked_at": "2026-11-11T21:11:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

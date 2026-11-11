@@ -6,11 +6,11 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon NK News"
+      "NK News nuclear"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea ammunition Russia shipment"
+      "North Korea ammunition Russia"
     ],
     "border_clash": [
       "지뢰 발견 DMZ NLL 귀순",
@@ -18,17 +18,17 @@
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
       "진돗개 발령 데프콘",
@@ -36,7 +36,7 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hack"
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
@@ -45,10 +45,9 @@
   "opened": [
     "https://www.nknews.org/",
     "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
-    "https://www.fnnews.com/news/202611110635447943",
-    "https://www.yna.co.kr/view/AKR20261111165400504"
+    "https://www.fnnews.com/news/202611110635447943"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 금융보안원 해킹(귀속 미확인)만 단일 출처 일반 징후로 유지하며, 북한 개헌 헌법 공개·어뢰 시험 주장은 정례·배경이다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 금융보안원 해킹(귀속 미확인)만 단일 출처 일반 징후로 유지하며, 김여정의 DMZ 지뢰 관련 유엔 사무총장 비판·개헌 헌법 공개·어뢰 시험 주장은 정례·배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -80,9 +79,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "11/9 오후 3시께 외부 비정상 접근 확인",
-        "금융위·KISA 신고, 접속 차단",
-        "주민번호·개인신용정보 유출 없음(금융보안원 설명)"
+        "11/9 외부 비정상 접근 확인",
+        "고객민감정보 유출 없음(금융보안원 설명)"
       ],
       "speculation": [
         "수사 결과 귀속 발표 여부는 미정"
@@ -105,7 +103,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-11T15:12:44+00:00",
+  "checked_at": "2026-11-11T16:12:04+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -123,6 +123,16 @@ def test_globe_public_index_hidden_shows_world_without_index():
     assert "대만 주변 합동훈련" in o["fc"] and "https://a.example/1" in o["fc"]
 
 
+def test_globe_public_discloses_ai_and_stage_criteria_without_tier():
+    """11/11 — 판정 공개 화면은 AI 판정임과 단계 기준을 밝히고, 설명 없는 출처 등급 글자는 싣지 않는다."""
+    d = doc()
+    d["theaters"][0]["sources"][0]["tier"] = "B"
+    o = run({**W, "public_globe": True, "public_index": False}, ews_doc=d)
+    for s in (o["side"], o["fc"]):
+        assert "AI가 공개 기사를 읽고 쓴 판정" in s and "무력 충돌 계속 중" in s
+    assert "매체A · B" not in o["fc"] and "매체A · " in o["fc"]  # 출처는 선택 전에도 나오는 예측 절로 본다
+
+
 def test_alpha1_hides_contribution_channels_and_arcs():
     o = run({**W, "public_globe": True, "public_index": False},
             hook={"gates": [], "arcs": [[False, doc(1.0)], [True, doc(0.8)]]})

@@ -25,7 +25,8 @@ const C5="0–24 안정 · 25–49 관찰 · 50–74 경계 징후 · 75–100 �
 const C7="공식 경보 단계와 별개인 참고 지수입니다. 공식 경보는 재난안전포털·긴급재난문자를 따르세요.";
 const C9="확인된 근거 없음";
 const C16="이 브라우저에서는 지구본을 표시할 수 없어 목록으로 보여 드립니다.";
-const NOTE_W="각 지역의 상태·요약·출처입니다. 한반도 위험 계산에는 넣지 않습니다.";
+const NOTE_W="각 지역의 상태·요약·출처입니다. AI가 공개 기사를 읽고 쓴 판정이며, 한반도 위험 계산에는 넣지 않습니다.";
+const NOTE_S="평온 무력 사용·군사 시위 보도 없음 · 긴장 무력 사용 없는 대규모 훈련·함정 집결·위협·외교 갈등 · 위기 국지적 무력 사용 또는 충돌 직전 동원 · 교전 국가(급) 간 무력 충돌 계속 중";  // prompts/background.md 4-5 단계 기준
 const PENDING="판정 준비 중";
 const NOTE_P="지역별 상태는 판정이 안정되고 검수를 통과하면 공개합니다. 지금은 위치만 보여 드립니다.";
 // 게이트 판정 — 새 키(boolean)가 있으면 그 값, 없으면 옛 public. 미리보기는 둘 다 연다(gate=globe 면 지수만 닫는다).
@@ -121,7 +122,7 @@ function theaterValue(t){
   return`${STATE_NAME[t.state]??"—"}${quietOnly(t)?"(피드 확인)":""}${!VIEW.linked||t.contribution==null?"":` · ${t.contribution}`}`;
 }
 const seen=t=>t.judged_at?`<p class="ews-s">확인 ${esc(kst(t.judged_at))}</p>`:"";
-const srcLinks=t=>(t.sources||[]).filter(s=>/^https?:/.test(s.url||"")).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name||s.url)}${s.kind==="feed"?" · 피드 확인 · 관련 보도 없음":""}${s.tier?` · ${esc(s.tier)}`:""}${s.published_at?` · ${s.kind==="feed"?"최신 항목 ":""}${esc(kst(s.published_at))}`:""}</a>`).join("");
+const srcLinks=t=>(t.sources||[]).filter(s=>/^https?:/.test(s.url||"")).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name||s.url)}${s.kind==="feed"?" · 피드 확인 · 관련 보도 없음":""}${s.published_at?` · ${s.kind==="feed"?"최신 항목 ":""}${esc(kst(s.published_at))}`:""}</a>`).join("");
 function card(t){
   if(!t)return"";
   if(VIEW.pending)return`<div class="ews-card"><b>${esc(THEATER[t.key].n)}</b><br>${PENDING}</div>`;
@@ -136,7 +137,8 @@ function renderSide(doc,sel){
   const head=VIEW.index?gauge(doc):doc.status==="error"||!ts.length?`<section><p class="ews-p ews-err">세계 전역 자료를 불러오지 못했습니다</p></section>`:"";
   const tlh=VIEW.linked?"<h3>연동 전역</h3>":`<h3>세계 전역</h3><p class="ews-s">${VIEW.pending?NOTE_P:NOTE_W}</p>`;
   $("ews-side").innerHTML=head+(tl?`<section>${tlh}<ul class="ews-list">${tl}</ul></section>`:"")
-    +card(ts.find(t=>t.key===sel))+(cl&&VIEW.linked?`<section><h3>연결 채널</h3><ul class="ews-list">${cl}</ul></section>`:"");
+    +card(ts.find(t=>t.key===sel))+(cl&&VIEW.linked?`<section><h3>연결 채널</h3><ul class="ews-list">${cl}</ul></section>`:"")
+    +(tl&&!VIEW.pending?`<p class="ews-s">${NOTE_S}</p>`:"");
 }
 
 // ── 지구본 ──
@@ -206,7 +208,9 @@ function initBoard(doc){
   const tabs=$("ews-tabs"),view=$("ews-v"),panel=$("map-p");
   const btns=[...tabs.querySelectorAll("button[role=tab]")];
   let sel=null;
-  const pick=k=>{sel=k;renderSide(doc,sel)};
+  const pick=k=>{sel=k;renderSide(doc,sel);  // 좁은 화면은 카드가 패널 아래로 밀린다 — 패널만 굴려 카드를 보인다(페이지는 굴리지 않는다)
+    const s=$("ews-side"),c=s.querySelector(".ews-card");if(!c)return;
+    const a=s.getBoundingClientRect(),b=c.getBoundingClientRect(),d=b.bottom-a.bottom;if(d>0)s.scrollTop+=Math.min(d,b.top-a.top)};
   $("ews-side").addEventListener("click",e=>{const b=e.target.closest("[data-t]");if(b)pick(b.dataset.t)});
   function show(k,focus){
     for(const b of btns){const on=b.dataset.v===k;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1;if(on&&focus)b.focus()}
@@ -241,7 +245,7 @@ function initForecast(doc){
   }else{  // 지수 비공개 — 절 제목·우측 표기에서도 지수를 뺀다
     const k=$("ews-fc").querySelector(".k");if(k)k.textContent="세계 전역 상황";
     const at=doc.coverage?.linkage_judged_at;$("ews-fc-v").textContent=at?`확인 ${kst(at)}`:"—";
-    head=doc.status==="error"||!ts.length?`<p class="ews-p ews-err">세계 전역 자료를 불러오지 못했습니다</p>`:`<p class="ews-s">${NOTE_W}</p>`;
+    head=doc.status==="error"||!ts.length?`<p class="ews-p ews-err">세계 전역 자료를 불러오지 못했습니다</p>`:`<p class="ews-s">${NOTE_W}</p><p class="ews-s">${NOTE_S}</p>`;
   }
   b.innerHTML=`<div>${head}</div>`
     +(tr?`<table class="ews-t"><thead><tr><th>전역</th><th>상태</th><th>${VIEW.linked?"기여":"확인"}</th></tr></thead><tbody>${tr}</tbody></table>`:"")

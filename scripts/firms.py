@@ -468,16 +468,28 @@ def sat_label(src: str) -> str:
     return "MODIS" if src.startswith("MODIS") else src.split("_")[1]
 
 
-def fetch(key: str, src: str) -> list[dict]:
-    for attempt in range(3):  # 러너 네트워크 일시 불통(Errno 101) 실측 — 짧게 재시도
+FETCH_TRIES = 3
+
+
+def fetch(key: str, src: str, _open=None, _sleep=time.sleep, _clock=time.monotonic) -> list[dict]:
+    """시도마다 번호·예외·경과 초를 남긴다 — 10-25·10-26 장애는 마지막 1줄만 남아 실패 지점을 가르지 못했다.
+    통신 오류(OSError)만 재시도한다. 예외 문자열에 키가 들어가지 않게 URL 은 찍지 않는다."""
+    _open = _open or urllib.request.urlopen
+    t0 = _clock()
+    for attempt in range(1, FETCH_TRIES + 1):
         try:
-            with urllib.request.urlopen(API.format(key=key, src=src), timeout=40) as r:
+            with _open(API.format(key=key, src=src), timeout=40) as r:
                 text = r.read().decode()
+            if attempt > 1:
+                print(f"FIRMS {src} 시도 {attempt}/{FETCH_TRIES} 성공 · 경과 {_clock() - t0:.1f}s")
             break
-        except OSError:
-            if attempt == 2:
+        except Exception as e:
+            retry = isinstance(e, OSError) and attempt < FETCH_TRIES
+            print(f"FIRMS {src} 시도 {attempt}/{FETCH_TRIES} 실패 · 경과 {_clock() - t0:.1f}s · "
+                  f"{type(e).__name__}: {e}" + (" — 10s 뒤 재시도" if retry else ""))
+            if not retry:
                 raise
-            time.sleep(10)
+            _sleep(10)
     if not text.startswith("latitude"):
         raise RuntimeError(f"{src}: unexpected response {text[:120]!r}")
     return list(csv.DictReader(io.StringIO(text)))

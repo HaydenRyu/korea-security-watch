@@ -76,3 +76,7 @@ jobs:
             sleep $((RANDOM % 15 + 5))
           done
           exit 1
+      - name: firms_fresh
+        # fetch 가 continue-on-error 라 단발 통신 실패는 잡을 실패시키지 않는다. 장기 단절(fetched_at 3h 초과·누락·파싱 실패·미래 10분 초과)은
+        # 이 스텝만 잡을 실패시킨다 — 실패 메일은 「FIRMS 가 3시간 넘게 안 들어왔다」는 뜻이다
+        run: python3 scripts/firms_fresh.py

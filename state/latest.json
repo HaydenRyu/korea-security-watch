@@ -1,48 +1,58 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강 열병식 집결"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 핵실험장 영변 동향 nuclear North Korea"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear 38 North"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 logistics ammunition Russia"
+      "북한 군수 물자 수송",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 합참"
+      "지뢰 발견 DMZ 귀순 북한",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출",
-      "금융보안원 상시평가 시스템 해킹 유출"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격",
+      "North Korea hacking"
     ],
     "foreign_forces": [
+      "김정은 방중",
       "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 병력 이동 전방 증강 열병식 집결"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시 노농적위군 North Korea mobilization"
+      "북한 전시태세 등화관제",
+      "North Korea internal mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 경고 North Korea warning US Japan"
+      "진돗개 데프콘 발령",
+      "US travel advisory Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
+    "https://www.fnnews.com/news/202611110635447943",
     "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/",
-    "https://www.nknews.org/2026/11/north-korean-leaders-sister-slams-un-chief-over-dmz-mine-blast-remarks/",
-    "https://www.fnnews.com/news/202611110635447943"
+    "https://www.jcs.mil.kr"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 금융보안원 해킹(귀속 미확인)만 단일 출처 일반 징후로 유지하며, 김여정의 유엔 사무총장 비판·개헌 헌법 공개·신형 어뢰 시험 주장은 정례·배경이다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 금융보안원 해킹(귀속 미확인)만 단일 출처 일반 징후로 유지한다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,31 +65,6 @@
     },
     "border_clash": {
       "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "서울 여의도",
-      "lat": 37.52,
-      "lon": 126.92,
-      "summary": "귀속 미확인 — 금융보안원 상시평가 시스템이 11/9 외부 비정상 접근으로 행정서식·개인정보 300여건·이용자정보 350여건이 유출됐으나 고객민감정보는 없다고 11/11 밝혔다.",
-      "meaning": "금융 유관기관 대상 해킹이나 북한 등 소행 발표가 없고 금융거래 시스템 마비도 없어 일반 사고로 본다.",
-      "sources": [
-        {
-          "name": "뉴시스(파이낸셜뉴스 전재)",
-          "tier": "B",
-          "url": "https://www.fnnews.com/news/202611110635447943"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "11/9 외부 비정상 접근 확인",
-        "고객민감정보 유출 없음(금융보안원 설명)"
-      ],
-      "speculation": [
-        "수사 결과 귀속 발표 여부는 미정"
-      ]
     },
     "foreign_forces": {
       "status": "none"
@@ -95,9 +80,34 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "서울 여의도",
+      "lat": 37.52,
+      "lon": 126.92,
+      "summary": "귀속 미확인 — 금융보안원 상시평가 시스템이 11/9 외부 비정상 접근으로 행정서식·개인정보 300여건·이용자정보 350여건이 유출됐으나 고객민감정보는 없다고 11/11 밝혔다.",
+      "meaning": "금융 유관기관 대상 해킹이나 북한 등 소행 발표가 없고 금융거래 시스템 마비도 없어 일반 사고로 본다.",
+      "sources": [
+        {
+          "name": "파이낸셜뉴스(뉴시스 전재)",
+          "tier": "B",
+          "url": "https://www.fnnews.com/news/202611110635447943"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "11/9 외부 비정상 접근 확인",
+        "고객민감정보 유출 없음(금융보안원 설명)"
+      ],
+      "speculation": [
+        "수사 결과 귀속 발표 여부는 미정"
+      ]
     }
   },
-  "checked_at": "2026-11-11T17:12:02+00:00",
+  "checked_at": "2026-11-11T18:11:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

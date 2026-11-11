@@ -1,20 +1,20 @@
 {
- "fetched_at": "2026-11-11T18:30:10+00:00",
+ "fetched_at": "2026-11-11T21:01:17+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-11T18:30:10+00:00",
+ "last_ok_at": "2026-11-11T21:01:17+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1107,
-  "hits": 20,
-  "clusters": 19,
+  "fetched": 1106,
+  "hits": 18,
+  "clusters": 17,
   "by_group": {
    "border": 3,
-   "mine": 5,
-   "gps": 4,
-   "drone_balloon": 3,
+   "mine": 4,
+   "gps": 3,
+   "drone_balloon": 2,
    "summit": 3,
    "alert": 2,
    "fire": 2
@@ -24,8 +24,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 547,
-   "hits": 15
+   "count": 546,
+   "hits": 14
   },
   "SBS": {
    "feeds": 3,
@@ -37,13 +37,13 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 5
+   "hits": 4
   },
   "국민일보": {
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 7
+   "hits": 6
   },
   "세계일보": {
    "feeds": 2,
@@ -63,20 +63,20 @@
   "border": {
    "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-11-11T18:30:10+00:00"
+   "latest": "2026-11-11T21:01:17+00:00"
   },
   "mine": {
-   "clusters": 5,
-   "max_independent": 1,
-   "latest": "2026-11-11T18:30:10+00:00"
-  },
-  "gps": {
    "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-11-11T18:30:10+00:00"
+   "latest": "2026-11-11T21:01:17+00:00"
+  },
+  "gps": {
+   "clusters": 3,
+   "max_independent": 1,
+   "latest": "2026-11-11T21:01:17+00:00"
   },
   "drone_balloon": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-11T13:13:14+00:00"
   },
@@ -102,8 +102,8 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 67,
-   "hits": 12
+   "count": 66,
+   "hits": 11
   },
   {
    "outlet": "연합뉴스",
@@ -167,7 +167,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 4
+   "hits": 3
   },
   {
    "outlet": "동아일보",
@@ -183,7 +183,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 6
+   "hits": 5
   },
   {
    "outlet": "국민일보",

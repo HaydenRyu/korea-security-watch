@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-11T22:10:50+00:00",
+  "computed_at": "2026-11-11T23:10:27+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 26,
@@ -142,6 +142,6 @@
   "last_good": {
     "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-11T22:10:50+00:00"
+    "computed_at": "2026-11-11T23:10:27+00:00"
   }
 }

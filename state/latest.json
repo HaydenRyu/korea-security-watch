@@ -1,66 +1,55 @@
 {
   "coverage": {
-    "border_clash": [
-      "합참 발표 지뢰 발견 DMZ 11월 11일"
-    ],
     "nuclear": [
-      "North Korea Reuters November 11 2026"
+      "North Korea Reuters November 12 2026"
+    ],
+    "border_clash": [
+      "북한 합참 지뢰 발견 DMZ 귀순 NLL"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit 주한미군 감축 서해 구조물"
+      "김정은 방중 방러 Kim Jong Un China Russia visit 서해 구조물"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출",
-      "사이버 공격 랜섬웨어 공격"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hack"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격 북한"
     ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강 열병식 군수 비축 동향",
-      "North Korea troops buildup parade logistics wartime mobilization November 2026"
+      "북한 병력 이동 전방 증강 열병식 군수 비축 동향"
     ],
     "logistics": [
-      "북한 병력 이동 전방 증강 열병식 군수 비축 동향",
-      "North Korea troops buildup parade logistics wartime mobilization November 2026"
+      "북한 병력 이동 전방 증강 열병식 군수 비축 동향"
     ],
     "parade_massing": [
-      "북한 병력 이동 전방 증강 열병식 군수 비축 동향",
-      "North Korea troops buildup parade logistics wartime mobilization November 2026"
+      "북한 병력 이동 전방 증강 열병식 군수 비축 동향"
     ],
     "nk_internal": [
-      "진돗개 발령 데프콘 상향 한미일 긴급 경고 북한 등화관제 준전시"
+      "진돗개 발령 데프콘 상향 북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 한미일 긴급 경고 북한 등화관제 준전시"
+      "진돗개 발령 데프콘 상향 북한 등화관제 준전시"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ]
   },
   "opened": [
-    "https://www.yahoo.com/news/north-korea-says-status-nuclear-211336694.html",
-    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
+    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
     "https://www.fnnews.com/news/202611110635447943"
   ],
-  "overall_summary": "11/11 기준 새 군사 징후 없음; 북한 신형 어뢰 시험 주장(11/10)·헌법 재게시·김여정 대화 거부 등 발언·정례 수준. 금융보안원 해킹은 귀속 미확인 일반 사고.",
+  "overall_summary": "11/11~12 기준 새 군사 징후 없음; 헌법 재게시·신형 어뢰 시험 주장 등 발언·정례 수준. 금융보안원 해킹은 귀속 미확인 일반 사고(직전 회차 유지).",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "북한 11/10 신형 어뢰 시험 주장(KCNA, 내년 초 실전배치)은 재래식 무기 시험이라 핵 항목 아님·배경."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 충돌 없음 — 9/21 DMZ 지뢰 폭발은 과거 사건, 김여정 11/10 구테흐스 제안 거부는 발언뿐(코리아타임스 요약)."
+      "summary": "새 충돌 없음 — 울릉도 북 표류 어민 6명 구조(11/3)는 구조 사안, 9/21 DMZ 지뢰는 과거 사건."
     },
     "foreign_forces": {
       "status": "none"
@@ -103,7 +92,7 @@
       ]
     }
   },
-  "checked_at": "2026-11-11T21:11:14+00:00",
+  "checked_at": "2026-11-11T22:10:49+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

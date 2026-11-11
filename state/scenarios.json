@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-11T21:11:14+00:00",
+  "updated_at": "2026-11-11T22:10:49+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -53,7 +53,7 @@
           "id": "tempo_up",
           "label": "최근 30일 발사가 평소 이상",
           "state": "on",
-          "note": "평소의 5.8배"
+          "note": "평소의 5.1배"
         },
         {
           "id": "signal",

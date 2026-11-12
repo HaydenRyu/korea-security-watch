@@ -1,17 +1,17 @@
 {
- "at": "2026-11-11T23:22:05+00:00",
- "south": 58,
- "area": 68,
+ "at": "2026-11-12T00:35:55+00:00",
+ "south": 62,
+ "area": 80,
  "baseline": 60,
- "ratio": 0.97,
- "samples": 5,
+ "ratio": 1.03,
+ "samples": 7,
  "mil": [
   {
-   "type": "H60",
+   "type": "B762",
    "name": null,
-   "call": "CARD60",
-   "lat": 37.45,
-   "lon": 127.11
+   "call": "TATRA52",
+   "lat": 34.2,
+   "lon": 132.22
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

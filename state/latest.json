@@ -1,55 +1,61 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 탄약 수송",
+      "North Korea troops deployment front line ammunition shipment Russia November 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 풍계리 영변 핵 활동",
+      "North Korea Yongbyon Punggye-ri nuclear test site activity November 2026"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 병력 이동 전방 탄약 수송",
+      "North Korea troops deployment front line ammunition shipment Russia November 2026"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순",
-      "DMZ NLL North Korea"
+      "지뢰 발견 해안 DMZ 귀순 11월",
+      "북한 합참 11월 12일",
+      "North Korea news November 12 2026"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "북한 GPS 교란 서북도서",
+      "해킹 개인정보 유출 11월 12일"
     ],
     "foreign_forces": [
-      "김정은 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "Kim Jong Un China Russia visit November 2026",
+      "서해 구조물 중국 잠정조치수역"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 준비 등화관제 전시태세",
+      "North Korea news November 12 2026"
     ],
     "nk_internal": [
-      "북한 전시태세 등화관제",
-      "North Korea mobilization"
+      "북한 열병식 준비 등화관제 전시태세",
+      "North Korea news November 12 2026"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "US Japan warning North Korea"
+      "진돗개 발령 데프콘 북한 경고 대피",
+      "North Korea missile launch Japan Ministry of Defense November",
+      "北朝鮮 ミサイル 発射 11月"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 11월",
-      "North Korea attributed FBI"
+      "간첩 혐의 국가보안법 구속 11월",
+      "North Korea attributed FBI hack 2026"
     ],
     "calm": [
-      "North Korea talks offer 남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261112511583",
-    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/category/news/"
+    "https://www.nknews.org/category/news/",
+    "https://www.segye.com/newsView/20261112516344",
+    "https://www.38north.org/",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261111/nk-fishermen-rescued-off-ulleung-island-seek-to-defect-testing-lee-administration",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261112/trio-sentenced-to-prison-terms-over-gambling-sites-linked-to-nk-hackers",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261112/n-korea-warns-of-action-against-us-led-naval-buildup"
   ],
-  "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 북한 동해안 해군기지 시찰·개정 헌법 공개 등은 평시 수준 배경이다.",
+  "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다(수동 대리 회차). 김종식 당 부부장의 미 주도 해군력 증강 대응 「행동」 담화·김정은 동해 해군기지 시찰·울릉도 구조 어민 일부 귀순 의사(11/10 첫 보도)·북한 해커 연계 도박사이트 일당 국가보안법 판결은 평시 수준 배경이고, 접경 열점 후보·일본 항행경보 신규 확인은 없다(해상보안청 항행경보 페이지는 열지 못함).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,13 +67,15 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "울릉도 북방 구조 북한 어민 6명 중 일부 귀순 의사 보도는 첫 보도 11/10(중앙일보)로 24시간 경과 — 통일부 확인 거부, 배경."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "조현 외교장관 11/13 베이징 왕이 회담 예정(서해 구조물 제기 방침) — 외교 일정, 신규 군사 동향 아님."
     },
     "parade_massing": {
       "status": "none"
@@ -79,10 +87,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "서울중앙지법이 북한 해커와 불법 도박사이트를 만든 일당 공범 3명에 국가보안법 위반 등 징역 3~4년 선고(11/12 연합 보도) — 법원 A 등급 원문을 열지 못해 배경으로 둔다."
     }
   },
-  "checked_at": "2026-11-12T06:10:34+00:00",
+  "checked_at": "2026-11-12T15:05:39+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

@@ -1,46 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "North Korea Reuters November 12 2026",
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+      "북한 속보 합참 11월 12일",
+      "North Korea news November 11 2026"
     ],
     "nuclear": [
-      "North Korea Reuters November 12 2026"
+      "북한 속보 합참 11월 12일",
+      "North Korea news November 11 2026"
     ],
     "logistics": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+      "북한 속보 합참 11월 12일",
+      "North Korea news November 11 2026"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+      "지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "해킹 공격 개인정보 유출 11월"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "North Korea Reuters November 12 2026"
+      "북한 속보 합참 11월 12일",
+      "North Korea news November 11 2026"
     ],
     "nk_internal": [
-      "North Korea Reuters November 12 2026"
+      "북한 속보 합참 11월 12일",
+      "North Korea news November 11 2026"
     ],
     "gov_warning": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+      "북한 속보 합참 11월 12일",
+      "North Korea news November 11 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://www.rfa.org/korean/"
+    "https://www.koreajoongangdaily.com/korea/pyongyang-fires-missiles-as-trump-offers-talks-seoul-seeks-beijing-help-to-revive-north-korea-diplomacy/12834681",
+    "https://nknews.org/?p=943883",
+    "https://weekly.khan.co.kr/article/202610241520001"
   ],
-  "overall_summary": "11/12 새로 확인된 군사 도발·전쟁 징후는 없다. 김정은 동해안 해군기지 시찰·헌법 개정문 공개 등 배경 동향뿐이라 직전과 같은 평시 수준이다.",
+  "overall_summary": "11/12 24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 국내 수집기·검색 모두 신규 보도가 없어 직전과 같은 평시 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,8 +61,7 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "연합 11/12 라자루스 유럽 드론업계 해킹은 해외 업계 대상 보고라 징후에서 제외(배경); 국내 신규 귀속 사고 없음."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none"
@@ -74,7 +79,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-12T02:10:34+00:00",
+  "checked_at": "2026-11-12T03:09:56+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

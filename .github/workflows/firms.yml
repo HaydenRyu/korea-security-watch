@@ -52,15 +52,20 @@ jobs:
         run: |
           python3 -m pip install -q --user --break-system-packages olefile==0.47 pypdf==6.14.2 || echo "첨부 해석기 설치 실패 — 본문만"
           python3 scripts/drills_kr.py
+      - name: obs_link
+        # 접경 열점을 사건 후보로 묶고 사격 공지와 날짜를 대조한다(state/obs_candidates.json — 판정 루틴의 보도 대조 입력, 등급과 무관).
+        # 입력(firms·drills_kr)이 그대로면 산출도 바이트 동일이라 커밋을 만들지 않는다. 실패해도 다른 갱신은 계속한다
+        continue-on-error: true
+        run: python3 scripts/obs_link.py
       - name: firms_note
         if: steps.fetch.outcome == 'failure'
         run: echo "FIRMS 수집 실패 — state/firms.json 미갱신(직전 값 유지)" >> "$GITHUB_STEP_SUMMARY"
       - name: commit
         run: |
-          [ -z "$(git status --porcelain -- state/firms.json state/firms_cells.json state/air.json state/air.jsonl state/navwarn_kr.json state/news_kr.json state/drills_kr.json)" ] && { echo unchanged; exit 0; }  # 신규 파일도 변경으로 본다
+          [ -z "$(git status --porcelain -- state/firms.json state/firms_cells.json state/air.json state/air.jsonl state/navwarn_kr.json state/news_kr.json state/drills_kr.json state/obs_candidates.json)" ] && { echo unchanged; exit 0; }  # 신규 파일도 변경으로 본다
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add state/firms.json $(ls state/firms_cells.json state/air.json state/air.jsonl state/navwarn_kr.json state/news_kr.json state/drills_kr.json 2>/dev/null)
+          git add state/firms.json $(ls state/firms_cells.json state/air.json state/air.jsonl state/navwarn_kr.json state/news_kr.json state/drills_kr.json state/obs_candidates.json 2>/dev/null)
           git commit -m "firms: $(date -u +%FT%H:%MZ)"
           # 커밋 밖 추적 파일 변경이 남으면 pull --rebase 가 거절한다(11-03 drills_kr 시간 초과 회차) — 이름을 남기고 버린다
           left=$(git status --porcelain --untracked-files=no)

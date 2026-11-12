@@ -468,6 +468,14 @@ def sat_label(src: str) -> str:
     return "MODIS" if src.startswith("MODIS") else src.split("_")[1]
 
 
+def source_status(per: dict[str, list[str]], prev: dict | None) -> dict:
+    """소스별 관측 상태. rows = 이번 창(WINDOW_H) 감지 건수, last_t = 마지막 감지 시각(0건이면 직전 값 승계).
+    0건이 위성 운영 종료인지 무감지인지는 여기서 가르지 않는다 — 읽는 쪽이 last_t 로 본다(SNPP 는 11/03 부터 0건 실측)."""
+    return {src: {"sat": sat_label(src), "rows": len(ts),
+                  "last_t": max(ts) if ts else ((prev or {}).get(src) or {}).get("last_t")}
+            for src, ts in per.items()}
+
+
 def fetch(key: str, src: str) -> list[dict]:
     for attempt in range(3):  # 러너 네트워크 일시 불통(Errno 101) 실측 — 짧게 재시도
         try:
@@ -492,12 +500,14 @@ def main(argv: list[str]) -> int:
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(hours=WINDOW_H)
     points = []
+    per: dict[str, list[str]] = {src: [] for src in SOURCES}
     try:
         for src in SOURCES:
             for r in fetch(key, src):
                 t = datetime.strptime(f"{r['acq_date']} {int(r['acq_time']):04d}", "%Y-%m-%d %H%M").replace(tzinfo=timezone.utc)
                 if t < cutoff:
                     continue
+                per[src].append(t.isoformat())
                 lat, lon = float(r["latitude"]), float(r["longitude"])
                 points.append({"lat": round(lat, 3), "lon": round(lon, 3), "t": t.isoformat(),
                                "frp": float(r.get("frp") or 0), "conf": r.get("confidence", ""),
@@ -509,7 +519,12 @@ def main(argv: list[str]) -> int:
     points.sort(key=lambda p: p["t"], reverse=True)
     cells_path = Path(argv[argv.index("--cells") + 1]) if "--cells" in argv else CELLS
     cells = typed(points, cells_path, now, osm="--no-osm" not in argv, lc="--no-lc" not in argv)
+    try:
+        prev_status = json.loads(out.read_text()).get("sources_status")
+    except (OSError, ValueError):
+        prev_status = None
     doc = {"fetched_at": now.isoformat(), "window_h": WINDOW_H, "sources": SOURCES,
+           "sources_status": source_status(per, prev_status),
            "border_km": BORDER_KM, "count": len(points), "border_count": sum(p["border"] for p in points),
            "kind_note": "kind 는 추정(감지 일수·OSM 시설·토지피복 근거)이다. 단독 판정 근거로 쓰지 않는다. "
                         "mil 은 군사 시설 인근 표지(보도 대조용)이며 유형·등급을 바꾸지 않는다",

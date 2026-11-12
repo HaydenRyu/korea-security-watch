@@ -1,56 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 도발 합참 11월 12일",
+      "북한 합참 발표 오늘",
       "North Korea Reuters November 12 2026"
     ],
     "nuclear": [
-      "Kim Jong Un nuclear Russia troops deployment November 2026",
-      "North Korea Reuters November 12 2026"
+      "북한 핵 풍계리 영변 동향 38 North"
     ],
     "logistics": [
-      "북한 도발 합참 11월 12일",
+      "북한 합참 발표 오늘",
       "North Korea Reuters November 12 2026"
     ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순",
-      "North Korea Reuters November 12 2026"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격",
-      "랜섬웨어 공격 해킹 피해 11월"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "Kim Jong Un nuclear Russia troops deployment November 2026",
-      "서해 구조물 주한미군 감축 국가보안법 구속 간첩 혐의"
+      "김정은 방중 방러 Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 도발 합참 11월 12일",
       "North Korea Reuters November 12 2026"
     ],
     "nk_internal": [
-      "북한 도발 합참 11월 12일",
-      "North Korea Reuters November 12 2026"
+      "Kim Jong Un inspects new naval base construction east coast"
     ],
     "gov_warning": [
-      "북한 도발 합참 11월 12일",
-      "North Korea Reuters November 12 2026"
+      "북한 합참 발표 오늘"
     ],
     "hybrid_ops": [
-      "서해 구조물 주한미군 감축 국가보안법 구속 간첩 혐의",
-      "GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/05/north-korea-test-fires-new-air-defence-missile-system-kcna-reports",
-    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261012509353"
+    "https://www.nknews.org/category/news/",
+    "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border",
+    "https://www.yna.co.kr/view/AKR20261110010600504",
+    "https://www.yna.co.kr/view/AKR20261112021200504"
   ],
-  "overall_summary": "11/12 24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 11/4 미사일·순항미사일 시험(한 달 새 4번째)은 8일 전 배경이며 직전과 같은 평시 수준이다.",
+  "overall_summary": "11/12 24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 11/9 신형어뢰 시험(북 주장)·김여정 담화 등은 평시 수준 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,7 +54,8 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "11/11 김여정의 유엔 사무총장 DMZ 지뢰 폭발 발언 비난은 9월 사건 관련 위협 발언·배경이며 24시간 내 신규 충돌·지뢰 발견 보도 없음."
     },
     "electronic_cyber": {
       "status": "none"
@@ -74,7 +67,8 @@
       "status": "none"
     },
     "nk_internal": {
-      "status": "none"
+      "status": "none",
+      "summary": "11/12 북한 개정 헌법 전문 공개·김정은 동해안 해군기지 건설 시찰(NK News)은 정치·정례 동향으로 전시태세 징후 아님."
     },
     "gov_warning": {
       "status": "none"
@@ -83,7 +77,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-12T04:09:54+00:00",
+  "checked_at": "2026-11-12T05:10:47+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

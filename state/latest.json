@@ -1,52 +1,56 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 속보 합참 11월 12일",
-      "North Korea news November 11 2026"
+      "북한 도발 합참 11월 12일",
+      "North Korea Reuters November 12 2026"
     ],
     "nuclear": [
-      "북한 속보 합참 11월 12일",
-      "North Korea news November 11 2026"
+      "Kim Jong Un nuclear Russia troops deployment November 2026",
+      "North Korea Reuters November 12 2026"
     ],
     "logistics": [
-      "북한 속보 합참 11월 12일",
-      "North Korea news November 11 2026"
+      "북한 도발 합참 11월 12일",
+      "North Korea Reuters November 12 2026"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순"
+      "목함지뢰 발견 DMZ 귀순",
+      "North Korea Reuters November 12 2026"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격",
+      "랜섬웨어 공격 해킹 피해 11월"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "Kim Jong Un nuclear Russia troops deployment November 2026",
+      "서해 구조물 주한미군 감축 국가보안법 구속 간첩 혐의"
     ],
     "parade_massing": [
-      "북한 속보 합참 11월 12일",
-      "North Korea news November 11 2026"
+      "북한 도발 합참 11월 12일",
+      "North Korea Reuters November 12 2026"
     ],
     "nk_internal": [
-      "북한 속보 합참 11월 12일",
-      "North Korea news November 11 2026"
+      "북한 도발 합참 11월 12일",
+      "North Korea Reuters November 12 2026"
     ],
     "gov_warning": [
-      "북한 속보 합참 11월 12일",
-      "North Korea news November 11 2026"
+      "북한 도발 합참 11월 12일",
+      "North Korea Reuters November 12 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 North Korea attributed FBI"
+      "서해 구조물 주한미군 감축 국가보안법 구속 간첩 혐의",
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "calm": [
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.koreajoongangdaily.com/korea/pyongyang-fires-missiles-as-trump-offers-talks-seoul-seeks-beijing-help-to-revive-north-korea-diplomacy/12834681",
-    "https://nknews.org/?p=943883",
-    "https://weekly.khan.co.kr/article/202610241520001"
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/05/north-korea-test-fires-new-air-defence-missile-system-kcna-reports",
+    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261012509353"
   ],
-  "overall_summary": "11/12 24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 국내 수집기·검색 모두 신규 보도가 없어 직전과 같은 평시 수준이다.",
+  "overall_summary": "11/12 24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 11/4 미사일·순항미사일 시험(한 달 새 4번째)은 8일 전 배경이며 직전과 같은 평시 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -79,7 +83,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-12T03:09:56+00:00",
+  "checked_at": "2026-11-12T04:09:54+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

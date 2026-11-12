@@ -1,48 +1,55 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters November 12 2026"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향 38 North"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters November 12 2026"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "DMZ NLL North Korea"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit"
+      "김정은 방러 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "North Korea Reuters November 12 2026"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "Kim Jong Un inspects new naval base construction east coast"
+      "북한 전시태세 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "북한 합참 발표 오늘"
+      "진돗개 발령 데프콘",
+      "US Japan warning North Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의 11월",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "North Korea talks offer 남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.nknews.org/category/news/",
-    "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border",
-    "https://www.yna.co.kr/view/AKR20261110010600504",
-    "https://www.yna.co.kr/view/AKR20261112021200504"
+    "https://www.segye.com/newsView/20261112511583",
+    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/category/news/"
   ],
-  "overall_summary": "11/12 24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 11/9 신형어뢰 시험(북 주장)·김여정 담화 등은 평시 수준 배경이다.",
+  "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다. 북한 동해안 해군기지 시찰·개정 헌법 공개 등은 평시 수준 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -54,8 +61,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "11/11 김여정의 유엔 사무총장 DMZ 지뢰 폭발 발언 비난은 9월 사건 관련 위협 발언·배경이며 24시간 내 신규 충돌·지뢰 발견 보도 없음."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -67,8 +73,7 @@
       "status": "none"
     },
     "nk_internal": {
-      "status": "none",
-      "summary": "11/12 북한 개정 헌법 전문 공개·김정은 동해안 해군기지 건설 시찰(NK News)은 정치·정례 동향으로 전시태세 징후 아님."
+      "status": "none"
     },
     "gov_warning": {
       "status": "none"
@@ -77,7 +82,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-12T05:10:47+00:00",
+  "checked_at": "2026-11-12T06:10:34+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

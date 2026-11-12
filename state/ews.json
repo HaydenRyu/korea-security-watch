@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-12T05:10:47+00:00",
+  "computed_at": "2026-11-12T06:10:34+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 0,
@@ -12,8 +12,8 @@
   "grade_label": "평시",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-11T23:39:53+00:00",
-    "latest_updated_at": "2026-11-12T05:10:47+00:00"
+    "linkage_judged_at": "2026-11-12T05:39:06+00:00",
+    "latest_updated_at": "2026-11-12T06:10:34+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "G7 외교장관이 대만해협 평화에 우려를 표하고 무력 위협에 의한 현상 변경 반대를 재확인했다.",
+      "summary": "G7 외교장관이 대만해협 평화에 우려를 표했고 대만 행정원은 뜻을 같이하는 국가와 협력을 이어가겠다고 밝혔다.",
       "sources": [
         {
           "name": "중앙통신사",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611100355.aspx",
-          "published_at": "2026-11-10T22:00:30+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611120120.aspx",
+          "published_at": "2026-11-12T12:41:46+08:00"
         }
       ],
-      "judged_at": "2026-11-11T11:40:50+00:00"
+      "judged_at": "2026-11-12T05:39:06+00:00"
     },
     {
       "key": "ukraine",
@@ -41,7 +41,7 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "아부다비 3자 회담이 돌파구 없이 끝났고 휴전 발효 보도는 없어 전쟁은 계속 중이다.",
+      "summary": "아부다비 회담이 돌파구 없이 끝났고 휴전 발효 보도는 없어 전쟁은 계속 중이다.",
       "sources": [
         {
           "name": "BBC",
@@ -50,7 +50,7 @@
           "published_at": "2026-11-11T18:04:58+00:00"
         }
       ],
-      "judged_at": "2026-11-11T23:39:53+00:00"
+      "judged_at": "2026-11-12T05:39:06+00:00"
     },
     {
       "key": "scs_ecs",
@@ -78,8 +78,14 @@
         "c4_sea_energy",
         "c5_diplomacy"
       ],
-      "summary": "후티 측이 리야드 아람코 타워를 타격했고, 트럼프는 대이란 추가 공격이 \"매우 낮다\"며 현상 유지와 협상 모멘텀을 언급했다.",
+      "summary": "이스라엘이 가자 나세르 병원 건물을 공습해 최소 5명이 숨졌다고 하마스 운영 민방위 당국이 밝혔고, 트럼프는 대이란 추가 공격이 매우 낮다고 말했다.",
       "sources": [
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo",
+          "published_at": "2026-11-12T05:06:27+00:00"
+        },
         {
           "name": "BBC",
           "tier": "B",
@@ -87,7 +93,7 @@
           "published_at": "2026-11-10T09:40:31+00:00"
         }
       ],
-      "judged_at": "2026-11-11T23:39:53+00:00"
+      "judged_at": "2026-11-12T05:39:06+00:00"
     },
     {
       "key": "us_posture",
@@ -95,7 +101,7 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 공군 장병이 10월 15~28일 일본 요코스카의 킨 소드 훈련에 참가한 사례만 보도됐고 새 전략자산 전개 보도는 없다.",
+      "summary": "미 공군 주방위군 장교가 10월 15~28일 일본 요코스카에서 열린 키 소드 27 연합훈련에 참가한 정례 훈련 기사만 있고 새 전략자산 전개 보도는 없다.",
       "sources": [
         {
           "name": "DVIDS",
@@ -104,7 +110,7 @@
           "published_at": "2026-11-11T15:12:16-05:00"
         }
       ],
-      "judged_at": "2026-11-11T23:39:53+00:00"
+      "judged_at": "2026-11-12T05:39:06+00:00"
     }
   ],
   "channels": [
@@ -137,6 +143,6 @@
   "last_good": {
     "ews": 0,
     "band": "안정",
-    "computed_at": "2026-11-12T05:10:47+00:00"
+    "computed_at": "2026-11-12T06:10:34+00:00"
   }
 }

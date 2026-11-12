@@ -1,36 +1,36 @@
 {
   "version": 1,
-  "at": "2026-11-11T23:39:53+00:00",
-  "opened": 15,
+  "at": "2026-11-12T05:39:06+00:00",
+  "opened": 23,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-11T23:39:53+00:00",
-      "raw": 3,
-      "kept": 3
+      "last_ok": "2026-11-12T05:39:06+00:00",
+      "raw": 4,
+      "kept": 4
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-11T23:39:53+00:00",
+      "last_ok": "2026-11-12T05:39:06+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-11T23:39:53+00:00",
+      "last_ok": "2026-11-12T05:39:06+00:00",
       "raw": 0,
       "kept": 0
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-11T23:39:53+00:00",
-      "raw": 3,
-      "kept": 3,
-      "note": "taiwan·scs_ecs: 72시간 안 관련 신규 기사 없어 키 생략(직전 값 승계); Stars and Stripes 목록은 JS 렌더로 항목 추출 실패"
+      "last_ok": "2026-11-12T05:39:06+00:00",
+      "raw": 4,
+      "kept": 4,
+      "note": "scs_ecs: Philstar 피드에 72시간 안 남중국해 기사 없고 Rappler 피드 빈 응답(2곳 요건 미충족)으로 키 생략, 직전 값 승계"
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-11T23:39:53+00:00",
+      "last_ok": "2026-11-12T05:39:06+00:00",
       "raw": 0,
       "kept": 0
     }

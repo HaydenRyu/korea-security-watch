@@ -222,8 +222,9 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 .fleg i{display:inline-block;width:8px;height:8px;border-radius:50%;flex:none}
 .fleg .fx{box-shadow:inset 0 0 0 2px #ff8a3d,0 0 0 1.5px #05080e} .fleg .ub{outline:1.5px dashed #ff8a3d;outline-offset:-1.5px} .fleg .bu{background:var(--g2)} .fleg .wf{background:var(--g3)} .fleg .un{background:var(--g1);outline:1px dashed var(--g1);outline-offset:1px}
 .fleg .nk{width:12px;height:12px;box-shadow:inset 0 0 0 1.5px var(--ice)}
-.fleg .ls{display:none}
-@media (max-width:759px){.fleg{bottom:8px} .fleg .lf{display:none} .fleg .ls{display:inline}}  /* 휴대폰은 좌표 표시가 없다 · 범례 줄 이름은 짧게(한 줄에 들어가야 2줄 이내) */
+.fleg .cd{width:12px;height:12px;outline:1.5px dashed #ffb020;outline-offset:-1.5px}
+.fleg .ls{display:none} .fleg .warn{color:var(--amber)}  /* 수집 실패·지연(11/12) */
+@media (max-width:759px){.fleg{bottom:8px} .fleg .lf,.fleg .lt,.fleg .cd{display:none} .fleg .ls{display:inline}}  /* 휴대폰은 좌표 표시가 없다 · 범례 줄 이름은 짧게(한 줄에 들어가야 2줄 이내) */
 /* 범례 줄: 열점 한 줄 · 항행경보 한 줄 — 레이어마다 따로 숨긴다 */
 .fleg .lr{display:flex;flex-wrap:wrap;gap:var(--s4) var(--s12);flex-basis:100%} .fleg .lr[hidden]{display:none}
 .fleg .ns{border-radius:0;background:rgba(192,132,252,.35);box-shadow:inset 0 0 0 1.5px #c084fc}
@@ -290,7 +291,7 @@ a{color:inherit;text-underline-offset:3px;text-decoration-color:var(--dim)}
 #air .aq b{font:600 18px/1 var(--data);color:var(--ice)}
 #air .aq b small{font-size:11px;font-weight:400;color:var(--fog);margin-left:2px}
 #air .ar{font:400 11px/1.4 var(--text);color:var(--fog);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-#air .ar.low{color:var(--amber)} #airAt.stale{color:var(--amber)}
+#airAt.stale{color:var(--amber)}  /* 항공기 수 감소는 색으로 강조하지 않는다 — 수신 공백과 구분되지 않는다(11/12). 문구로만 적는다 */
 #air ul{display:flex;gap:8px;margin:0;padding:0;list-style:none;font-size:12px;line-height:1.4;color:var(--ice);overflow:hidden;white-space:nowrap}
 #air ul .d{color:var(--dim)}
 /* adsb.lol 지도 iframe 은 봇 차단 쿠키(SameSite=Lax)가 다른 사이트 안에서 안 실려 「challenge cookies not found」(10/18)
@@ -854,7 +855,7 @@ a[target=_blank]:not([class]):hover,a.wt:hover{text-decoration-color:var(--ice)}
   <section class="p" id="air-p" aria-label="항공기">
     <div class="ph"><div class="wtab" role="tablist" aria-label="신호 칸"><button type="button" role="tab" id="at-air" aria-controls="air" aria-selected="true" data-t="air">공역</button><button type="button" role="tab" id="at-sea" aria-controls="sea" aria-selected="false" tabindex="-1" data-t="sea">해상</button></div><span id="airAt">매시간</span><span id="seaAt" hidden>—</span><svg id="airRing" class="aring" viewBox="0 0 14 14" hidden aria-hidden="true"><circle cx="7" cy="7" r="5"/><circle cx="7" cy="7" r="5"/></svg><span class="r">참고 · 등급 판정과 무관</span></div>
     <div class="pb" id="air">
-      <div class="aq"><span class="al" title="위험이 커지면 항공사가 정부 발표보다 먼저 운항을 줄이거나 우회합니다. 지난 7일 같은 시각보다 30% 넘게 줄면 주황색으로 표시합니다. 공개 수신망이라 수신 공백으로도 줄 수 있습니다.">남한 상공 민항기</span><b id="airN">—</b><span id="airR" class="ar">기록을 불러오는 중</span></div>
+      <div class="aq"><span class="al" title="위험이 커지면 항공사가 정부 발표보다 먼저 운항을 줄이거나 우회합니다. 지난 7일 같은 시각보다 30% 넘게 줄면 「감소」로 적습니다. 공개 수신망이라 수신 공백으로도 줄 수 있어 원인은 이 숫자만으로 알 수 없습니다.">남한 상공 민항기</span><b id="airN">—</b><span id="airR" class="ar">기록을 불러오는 중</span></div>
       <div class="am"><span class="al">신호 켠 군용기</span><ul id="airMil"><li>—</li></ul></div>
       <div class="awrap"><div id="airMap" role="img" aria-label="한반도 상공 항공기 위치(신호를 켠 기체만, 1분마다 갱신) · 자곡동 기준 25·50·100km 거리환 · 최근 30분 궤적"></div>
         <div class="acard" id="airCard" hidden><button type="button" id="airCardX" aria-label="닫기">×</button><img id="airImg" alt=""><div class="t" id="airCardT"></div></div>
@@ -1417,18 +1418,61 @@ const KIND={fixed:{c:"#ff8a3d",lbl:"상시 열원 추정",lg:"상시 열원",i:"
   burn:{c:"#ff8a3d",lbl:"산불·소각 추정",lg:"산불·소각",i:"bu"},unknown:{c:"#f2c14e",lbl:"미상",lg:"미상",i:"un"}};
 const RING=k=>k==="fixed"||k==="urban";  // 테두리형(상시·시가지 열원)
 const kindOf=p=>KIND[p.kind]?p.kind:"unknown";
+// ── 열점 관측 품질(11/12): 관측 없음 · 수집 실패 · 오래된 값을 구분하고, 접경 열점은 점이 아니라 사건 후보(state/obs_candidates.json) 단위로 보인다 ──
+const FIRMS_LATE_MS=2*3600e3;  // 열점은 15분마다 수집 — 2시간 넘게 그대로면 지금 값이 아니다(항공 기록과 같은 기준)
+let FIRMS_AT=null,CAND_CELL={};
+const cellKey=(lat,lon,a=0,b=0)=>`${Math.round(lat/0.005)+a}:${Math.round(lon/0.005)+b}`;  // scripts/firms.py cell_key(CELL_DEG 0.005)와 같은 격자
+// 반올림 경계(파이썬 round 는 짝수 반올림)에서 한 칸 어긋날 수 있어 접경 점은 이웃 칸까지 본다
+const candOf=p=>{if(!p.border)return null;let c=CAND_CELL[cellKey(p.lat,p.lon)];
+  for(let a=-1;!c&&a<=1;a++)for(let b=-1;!c&&b<=1;b++)c=CAND_CELL[cellKey(p.lat,p.lon,a,b)];return c||null};
+const SIDE={north:"북측",south:"남측",mixed:"남·북 걸침",unknown:"남북 미상"};
+const candHead=c=>`${c.n}점 · 위성 ${c.passes}회 통과`;
+const httpUrl=u=>/^https?:\/\//.test(u||"")?u:"";
+function candSched(c){
+  const s=c.schedule||{},sd=s.same_day||[];
+  if(!s.checked)return c.side==="north"?"공개 사격 공지 대조 안 함(북측 — 남측 지자체 공지만 봅니다)":`공개 사격 공지 대조 못 함(${esc(s.why||"사유 미기재")})`;
+  if(!sd.length)return`같은 날 공개 사격 공지 없음(공지 수집 정상 ${(s.sources_ok||[]).length}곳 기준)`;
+  return`같은 날 공개 사격 공지 있음(위치 미대조): `+sd.slice(0,2).map(d=>httpUrl(d.url)?`<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title||d.source||"공지")}</a>`:esc(d.title||d.source||"공지")).join(" · ")+(sd.length>2?` 외 ${sd.length-2}건`:"");
+}
+const lagTxt=(t,at)=>{const h=(Date.parse(at)-Date.parse(t))/3600e3;return h>=1?`감지 약 ${Math.round(h)}시간 뒤`:"감지 1시간 안"};
+function candPop(c){
+  return `<div class="pop"><div class="ph2"><b>접경 열점 묶음</b><span class="btag">사건 후보</span>${c.side==="north"?'<span class="ntag">북측</span>':""}</div>
+    <dl class="k"><dt>규모</dt><dd>${candHead(c)} · ${esc((c.sats||[]).join("·"))}</dd><dt>감지</dt><dd>${short(c.first_t)}${c.last_t!==c.first_t?` ~ ${short(c.last_t)}`:""} KST</dd><dt>수집</dt><dd>${short(c.first_seen)} KST 처음 수집(${lagTxt(c.first_t,c.first_seen)})</dd><dt>분계선</dt><dd>가장 가까운 점 ${c.mdl_km_min<1?"1km 안":`약 ${Math.round(c.mdl_km_min)}km`} · ${SIDE[c.side]||SIDE.unknown}</dd><dt>공지</dt><dd>${candSched(c)}</dd></dl>
+    <p>이웃한 접경 열점을 한 건으로 묶은 것이고 원인은 정하지 않습니다. 공지와 날짜가 겹쳐도 사격이라는 뜻이 아니며, 열점이 없다고 사격·화재가 없었다는 근거도 아닙니다(위성 통과 시각·구름).</p></div>`;
+}
+// 열점 파일을 못 받았을 때 — 빈 지도가 「열점 없음」으로 읽히지 않게 버튼·범례에 적는다
+function firmsFail(){
+  const b=document.querySelector("[data-layer=firms]"),lg=$("fleg-f");if(!b||!lg)return;
+  b.textContent="열점 —";b.title="위성 열점 자료를 불러오지 못했습니다 — 열점이 없다는 뜻이 아닙니다";
+  lg.innerHTML=`<span class="warn">열점 수집 실패 — 열점 없음이 아닙니다</span>`;lg.hidden=false;flegSync();
+}
 function firmsPop(p,where){
-  const k=kindOf(p),why=p.kind_why||[];
+  const k=kindOf(p),why=p.kind_why||[],cd=candOf(p);
   return `<div class="pop"><div class="ph2"><b>${esc(p.kind_label||KIND[k].lbl)}</b>${p.kind_conf?`<span class="kc">신뢰도 ${esc(p.kind_conf)}</span>`:""}${p.north?'<span class="ntag">북측</span>':""}${p.border?'<span class="btag">접경 구역</span>':""}${p.mil?'<span class="mtag">군사 시설 인근</span>':""}</div>
-    <dl class="k">${why.length?`<dt>근거</dt><dd><ul>${why.map(w=>`<li>${esc(w)}</li>`).join("")}</ul></dd>`:""}<dt>위치</dt><dd>${where?esc(where):'<span class="dim">위치 확인 중</span>'}</dd><dt>감지</dt><dd>${short(p.t)} KST · ${esc(p.sat||"—")}</dd>${p.mdl_km!=null?`<dt>분계선</dt><dd>군사분계선에서 약 ${Math.round(p.mdl_km)}km</dd>`:""}</dl>
+    <dl class="k">${why.length?`<dt>근거</dt><dd><ul>${why.map(w=>`<li>${esc(w)}</li>`).join("")}</ul></dd>`:""}<dt>위치</dt><dd>${where?esc(where):'<span class="dim">위치 확인 중</span>'}</dd><dt>감지</dt><dd>${short(p.t)} KST · ${esc(p.sat||"—")}</dd>${FIRMS_AT?`<dt>수집</dt><dd>${short(FIRMS_AT)} KST 회차</dd>`:""}${cd?`<dt>묶음</dt><dd>접경 사건 후보 · ${candHead(cd)}<br>${candSched(cd)}</dd>`:""}${p.mdl_km!=null?`<dt>분계선</dt><dd>군사분계선에서 약 ${Math.round(p.mdl_km)}km</dd>`:""}</dl>
     <p>유형은 같은 자리 감지 이력, 주변 시설 지도(© OpenStreetMap contributors), 토지피복(ESA WorldCover 2021, CC BY 4.0)으로 추정한 것입니다. 「군사 시설 인근」은 위치 표지일 뿐 판정이 아닙니다. 포격·화재 여부는 같은 곳의 보도가 있을 때만 판단합니다.</p></div>`;
 }
 const HOVER=matchMedia("(hover:hover) and (pointer:fine)").matches;  // 휴대폰은 누르면 팝업만(툴팁과 겹치지 않게)
-function drawFirms(doc){
-  if(!map||!doc?.points)return;
+function drawFirms(doc,cdoc){
+  if(!map||!doc?.points)return firmsFail();
   const b=document.querySelector("[data-layer=firms]");
-  b.textContent=`열점 ${doc.count}`+(doc.border_count?` · 접경 ${doc.border_count}`:"");
+  // 후보 파일은 같은 수집 회차 것일 때만 쓴다(묶음 스텝 실패·회차 경합이면 점 수로 되돌린다)
+  const cands=cdoc&&cdoc.firms_fetched_at===doc.fetched_at&&Array.isArray(cdoc.candidates)?cdoc.candidates:null;
+  FIRMS_AT=doc.fetched_at||null;CAND_CELL={};(cands||[]).forEach(c=>(c.cells||[]).forEach(k=>CAND_CELL[k]=c));
+  const late=FIRMS_AT&&Date.now()-Date.parse(FIRMS_AT)>FIRMS_LATE_MS&&!sample;
+  const sameDay=t=>kst(t,{dateStyle:"short"})===kst(FIRMS_AT,{dateStyle:"short"}),hm=t=>sameDay(t)?kst(t,{hour:"2-digit",minute:"2-digit"}):short(t);
+  const sats=Object.values(doc.sources_status||{}).filter(x=>x?.sat).map(x=>`${esc(x.sat)} ${x.last_t?hm(x.last_t):"기록 없음"}`).join(" · ");
+  b.textContent=`열점 ${doc.count}`+(cands?(cands.length?` · 접경 ${cands.length}건`:""):(doc.border_count?` · 접경 ${doc.border_count}`:""));
+  b.title=`위성 열점 — NASA 위성이 감지한 열원(최근 ${doc.window_h||48}시간, 산불·소각 포함) · ${FIRMS_AT?short(FIRMS_AT)+" 수집"+(late?"(갱신 지연)":""):"수집 시각 없음"}`
+    +(sats?` · 위성별 마지막 감지 ${sats}`:"")+(cands&&!cands.length?" · 현재 수집 범위에서 접경 열점 없음(사격·화재가 없었다는 근거는 아님)":"")+" · 점을 누르면 위치·설명";
   layers.firms=L.layerGroup();
+  // 접경 사건 후보 테두리 — 점보다 먼저 그려 점 팝업을 가리지 않게
+  (cands||[]).forEach(c=>{
+    L.circleMarker([c.lat,c.lon],{renderer:hitR(),radius:17,weight:4,fill:false,interactive:false,color:"#05080e",opacity:.75}).addTo(layers.firms);
+    const m=L.circleMarker([c.lat,c.lon],{renderer:hitR(),radius:17,weight:1.5,color:"#ffb020",dashArray:"5 4",fillColor:"#ffb020",fillOpacity:.06}).addTo(layers.firms);
+    m.bindPopup(()=>candPop(c),POP());
+    if(HOVER)m.bindTooltip(`접경 사건 후보 · ${candHead(c)}<br><span style="color:var(--fog)">${short(c.first_t)} · 누르면 상세</span>`,{className:"tip"});
+  });
   const ord={fixed:0,urban:1,unknown:2,farm:3,burn:3,wildfire:4};  // 상시·시가지 열원을 먼저 그려 산불·소각·미상이 위에 오게
   [...doc.points].sort((x,y)=>ord[kindOf(x)]-ord[kindOf(y)]).forEach(p=>{
     const k=kindOf(p),c=KIND[k].c,big=p.border||p.north;
@@ -1448,7 +1492,10 @@ function drawFirms(doc){
   const n=k=>doc.points.filter(p=>kindOf(p)===k).length,nn=doc.points.filter(p=>p.north).length;
   // 범례는 0건 유형을 뺀다(유형 6종 — 휴대폰 2줄 이내 유지). 상시 열원·미상은 0이어도 둔다
   const lgk=Object.keys(KIND).filter(k=>n(k)||k==="fixed"||k==="unknown"),nm=doc.points.filter(p=>p.mil).length;
-  const lg=$("fleg-f");lg.innerHTML=`<span><span class="lf">열점 유형(추정)</span><span class="ls">열점</span></span>`+lgk.map(k=>`<span><i class="${KIND[k].i}"></i>${KIND[k].lg} <b>${n(k)}</b></span>`).join("")+`<span><i class="nk"></i>북측 <b>${nn}</b></span>`+(nm?`<span title="군사 시설 인근 표지 — 판정 아님, 보도 대조용">군사 인근 <b>${nm}</b></span>`:"");
+  const lg=$("fleg-f");lg.innerHTML=`<span><span class="lf">열점 유형(추정)</span><span class="ls">열점</span></span>`+lgk.map(k=>`<span><i class="${KIND[k].i}"></i>${KIND[k].lg} <b>${n(k)}</b></span>`).join("")+`<span><i class="nk"></i>북측 <b>${nn}</b></span>`+(nm?`<span title="군사 시설 인근 표지 — 판정 아님, 보도 대조용">군사 인근 <b>${nm}</b></span>`:"")
+    +(cands?`<span><i class="cd"></i><span class="lf">접경 후보</span><span class="ls">접경</span> <b>${cands.length}</b>${cands.length?`건(${cands.reduce((a,c)=>a+c.n,0)}점)`:""}</span>`:"")
+    +(late?`<span class="warn">수집 지연 · ${short(FIRMS_AT)} 값</span>`:FIRMS_AT?`<span class="lt">수집 ${hm(FIRMS_AT)}</span>`:"")
+    +(sats?`<span class="lt">마지막 감지 ${sats}</span>`:"");
   toggle(b,layers.firms);
   b.addEventListener("click",()=>{lg.hidden=b.getAttribute("aria-pressed")!=="true";flegSync()});
   b.setAttribute("aria-pressed","true");layers.firms.addTo(map);lg.hidden=false;flegSync();  // 기본 켬(10/19 hayden)
@@ -1559,7 +1606,9 @@ function tick(){$("now").textContent=kst(Date.now(),{hour:"2-digit",minute:"2-di
       try{renderDrills(dr)}catch(e){console.error("renderDrills",e)}
       return ok}).catch(e=>{console.error("refs",e);return false});
   refs().then(ok=>{if(!ok)bgAt=undefined});  // 첫 로드 실패면 다음 폴링이 배경 변화로 보고 다시 받는다
-  try{drawFirms(await get("firms.json"))}catch(e){}
+  {let fd=null,cd=null;try{fd=await get("firms.json")}catch(e){}
+   if(fd)try{cd=await get("obs_candidates.json")}catch(e){}  // 없으면(sample·묶음 실패) 점 수 표기로
+   try{drawFirms(fd,cd)}catch(e){console.error("firms",e);firmsFail()}}
   try{const r=await fetch("data/cctv.json");if(r.ok)drawCctv(await r.json())}catch(e){}
   try{const r=await fetch("data/shelters.json");if(r.ok)drawShelters(await r.json())}catch(e){}
   try{const r=await fetch(base+"navwarn_kr.json",{cache:"no-store"});if(r.ok)drawNavwarn(await r.json())}catch(e){console.error("navwarn",e)}
@@ -1674,7 +1723,8 @@ async function loadNewsKr(){const el=$("srcNews");try{const r=await fetch("state
   if(age>2)t+=` · <b>${Math.floor(age)}시간째 새 수집 없음</b>`;
   el.innerHTML=t;el.hidden=false}catch(e){}}
 // 항공 지표 — scripts/air_count.py 가 매시간 state/air.json 을 쓴다
-const AIR_LOW=0.7;  // 평소의 70% 미만이면 강조
+const AIR_LOW=0.7;  // 평소의 70% 미만이면 「감소」로 적는다 — 색 강조는 하지 않는다(수신 공백과 구분 안 됨, 11/12)
+const airLow=q=>q<AIR_LOW?" · 감소(원인 미확인)":"";
 let AIR_BASE=null;  // 지난 7일 같은 시각 중앙값(state/air.json baseline) — 실시간 대수와 비교
 function dir8(lat,lon){const a=Math.atan2(lon-127.5,lat-37.5)*180/Math.PI;return["북","북동","동","남동","남","남서","서","북서"][Math.round(((a+360)%360)/45)%8]}
 async function loadAir(){
@@ -1686,7 +1736,7 @@ async function loadAir(){
   const r=$("airR");
   AIR_BASE=d.baseline??null;
   if(d.ratio==null){r.textContent=`평소 기준을 쌓는 중 · 같은 시각 기록 ${d.samples}/3일`}
-  else{r.textContent=`평소(${Math.round(d.baseline)}대)의 ${Math.round(d.ratio*100)}%`;r.classList.toggle("low",d.ratio<AIR_LOW)}
+  else{r.textContent=`평소(${Math.round(d.baseline)}대)의 ${Math.round(d.ratio*100)}%`+airLow(d.ratio)}
   $("airMil").innerHTML=d.mil?.length?d.mil.map(m=>`<li>${esc(m.name||m.type)}${(c=>c?` <span class="d">${esc(c)}</span>`:` <span class="d">호출부호 미송출</span>`)((m.call||"").replace(/@/g,"").trim())} <span class="d">· 한반도 중심에서 ${dir8(m.lat,m.lon)}쪽</span></li>`).join(""):'<li class="d">지금은 없음</li>';
 }
 loadAir();
@@ -1765,7 +1815,7 @@ async function loadAirLive(){
   const late=Date.now()-Date.parse(d.at)>15*60e3;
   $("airAt").textContent=`${new Date(d.at).toLocaleTimeString("ko-KR",{hour:"2-digit",minute:"2-digit",hour12:false,timeZone:"Asia/Seoul"})} 위치 · ${ago(d.at)}${late?"(갱신 지연)":""}`;
   $("airAt").classList.toggle("stale",late);airRing(d.at);
-  const r=$("airR");if(AIR_BASE!=null){const q=n/AIR_BASE;r.textContent=`평소 이 시각(${Math.round(AIR_BASE)}대)의 ${Math.round(q*100)}%`;r.classList.toggle("low",q<AIR_LOW)}
+  const r=$("airR");if(AIR_BASE!=null){const q=n/AIR_BASE;r.textContent=`평소 이 시각(${Math.round(AIR_BASE)}대)의 ${Math.round(q*100)}%`+airLow(q)}
 }
 // 다음 위치까지 남은 시간(맥이 5분마다 올린다) — 등급 다이얼의 「다음 확인까지」와 같은 말. 6분을 넘기면 가득 찬 채 호박(갱신 지연)
 function airRing(at){const el=$("airRing");if(!el)return;if(at)el.dataset.at=at;const t=el.dataset.at;if(!t){el.setAttribute("hidden","");return}
@@ -1823,10 +1873,14 @@ Promise.all([jsonOr("data/risk_calendar.json"),jsonOr(base+"signals.json"),jsonO
   if(!doc?.tempo){$("fc4").innerHTML=`<p class="empty">예측 자료를 불러오지 못했습니다 · <a href="forecast.html">예측 전체 ›</a></p>`;return}
   const tp=doc.tempo,hot=tp.ratio!=null&&tp.ratio>=2,up=fcUpcoming(doc),sig=fcSignals(sg,new Date(),!sample);
   const hasFc=typeof fcProb==="function",p7=hasFc?fcProb(pb,7):null,p30=hasFc?fcProb(pb,30):null,tl=hasFc?fcTilt(sc):null;
+  // 임박 신호 출처(11/12): 넷째 칸은 링크, 한 줄 요약(#fcr 는 그 자체가 링크)은 매체 이름만
+  const sigPub=s=>s.source?.publisher||(s.source?.url?"출처":""),sigAlso=s=>(s.also||[]).length?` 외 ${s.also.length}곳`:"";
+  const sigSrc=s=>{const u=/^https?:\/\//.test(s.source?.url||"")?s.source.url:"",n=sigPub(s);
+    return n?(u?`<a href="${esc(u)}" target="_blank" rel="noopener" title="${esc(s.source.title||"")}">${esc(n)}</a>`:esc(n))+sigAlso(s)+" · ":""};
   const AIB=`<span class="ai" title="AI가 공개 기사를 읽고 쓴 문장입니다. 사실 확인은 출처 원문으로 하세요.">AI</span>`;
   const upLi=u=>`<li><span class="d">${fcMD(u.start)}${u.end?"~":""}</span><span class="t"><span class="${u.stat?.verdict==="more"?"hi":""}">${esc(u.name)}</span> <small>· ${u.stat?`${u.stat.years}년 중 ${u.stat.hit}년 발사(평소 ${u.stat.expected})`:"과거 집계 없음"}</small></span></li>`;
   const tiltLi=tl?`<li><span class="d">기울기</span><span class="t"><span style="color:var(${SCN_C[tl.tone]})">${esc(tl.name)} ${tl.on}/${tl.known}</span> <small>· ${tl.rows.filter(c=>c.id!==tl.id).map(c=>`${esc(c.name)} ${c.on}`).join(" · ")}</small></span></li>`:"";
-  const sigLi=sig.length?`<li><span class="d">${sig[0].window?.start?fcMD(sig[0].window.start)+(sig[0].window.end&&sig[0].window.end!==sig[0].window.start?"~":""):"임박"}</span><span class="t">${AIB}${esc(FC_SIG_KIND[sig[0].kind]||"신호")} · ${esc(sig[0].summary)}${sig.length>1?` <small>외 ${sig.length-1}건</small>`:""}</span></li>`:"";
+  const sigLi=sig.length?`<li><span class="d">${sig[0].window?.start?fcMD(sig[0].window.start)+(sig[0].window.end&&sig[0].window.end!==sig[0].window.start?"~":""):"임박"}</span><span class="t">${AIB}${esc(FC_SIG_KIND[sig[0].kind]||"신호")}${sigPub(sig[0])?`(${esc(sigPub(sig[0]))}${sigAlso(sig[0])})`:""} · ${esc(sig[0].summary)}${sig.length>1?` <small>외 ${sig.length-1}건</small>`:""}</span></li>`:"";
   const head=p7?`<span class="fct">7일 안 발사 <b class="q">${p7.pct}%</b>${p30?` · 30일 ${p30.pct}%`:""}<small>지난 1년 빈도${p7.actual!=null?` · 과거 이 수준일 때 실제 <span style="color:var(--amber)">${p7.actual}%</span>`:""}</small></span>`
     :`<span class="fct">최근 30일 발사 <b class="${hot?"":"q"}">${tp.last30}일</b> · 평소 ${tp.avg30}일<small>${hot?`평소의 ${tp.ratio}배 — 발사가 몰릴 땐 다음 발사도 가깝다`:"평소 범위"}</small></span>`;
   const rest=[tiltLi,sigLi||(up.length?upLi(up[0]):"")].filter(Boolean);
@@ -1841,7 +1895,7 @@ Promise.all([jsonOr("data/risk_calendar.json"),jsonOr(base+"signals.json"),jsonO
     +(tl?`<div class="f4s"><div class="f4h">시나리오<small>확률 아님 · 지표 충족 수</small></div><dl class="f4k">`
       +tl.rows.map(c=>`<dt style="color:var(${SCN_C[c.tone]})">${esc(c.name)}${c.id===tl.id?" ◀":""}</dt><dd><b>${c.on}</b><small>/${c.known} · ${esc(c.desc)}</small></dd>`).join("")+`</dl></div>`:"")
     +`<div class="f4s"><div class="f4h">임박 신호<small>${sig.length}건 · 기사로 본 앞으로의 단서</small></div>`
-    +(sig.length?`<ul class="f4g">${sig.map(s=>`<li><span class="d">${esc(fcSigWhen(s))}</span><span class="t" title="${esc(s.summary)}">${AIB}${esc(FC_SIG_KIND[s.kind]||"신호")} · ${esc(s.summary)}</span></li>`).join("")}</ul>`
+    +(sig.length?`<ul class="f4g">${sig.map(s=>`<li><span class="d">${esc(fcSigWhen(s))}</span><span class="t" title="${esc(s.summary)}">${AIB}${esc(FC_SIG_KIND[s.kind]||"신호")} · ${sigSrc(s)}${esc(s.summary)}</span></li>`).join("")}</ul>`
       :`<p class="f4e">지금 유효한 신호 없음</p>`)+`</div>`
     +`<div class="f4s"><div class="f4h">앞으로 ${hz}일 일정<small>오른쪽 = 과거 같은 시기 발사한 해</small></div><ul class="f4u">`
     +(up.length?up.map(u=>{const hi=u.stat?.verdict==="more"?" hi":"";

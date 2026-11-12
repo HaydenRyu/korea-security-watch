@@ -290,3 +290,13 @@ def test_lc_priority_skips_facility_cells_first():
     f.enrich_lc(cells, datetime(2026, 10, 28, tzinfo=timezone.utc), lookup=lambda la, lo: seen.append(la) or (40, 90),
                     priority={"a", "b"}, limit=1)
     assert seen == [37.1]
+
+
+def test_source_status_carries_last_seen():
+    # 11/03~ 실측: SNPP 는 응답은 오지만 0건 — 마지막 감지 시각을 잃지 않는다
+    prev = {"VIIRS_SNPP_NRT": {"sat": "SNPP", "rows": 8, "last_t": "2026-11-02T04:10:00+00:00"}}
+    s = f.source_status({"VIIRS_SNPP_NRT": [], "VIIRS_NOAA20_NRT": ["2026-11-10T03:46:00+00:00", "2026-11-10T16:50:00+00:00"],
+                         "MODIS_NRT": []}, prev)
+    assert s["VIIRS_SNPP_NRT"] == {"sat": "SNPP", "rows": 0, "last_t": "2026-11-02T04:10:00+00:00"}
+    assert s["VIIRS_NOAA20_NRT"] == {"sat": "NOAA20", "rows": 2, "last_t": "2026-11-10T16:50:00+00:00"}
+    assert s["MODIS_NRT"] == {"sat": "MODIS", "rows": 0, "last_t": None}   # 직전 기록 없음 — 지어내지 않는다

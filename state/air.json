@@ -1,10 +1,25 @@
 {
- "at": "2026-11-12T13:22:39+00:00",
- "south": 47,
- "area": 55,
- "baseline": 43.5,
- "ratio": 1.08,
- "samples": 6,
- "mil": [],
+ "at": "2026-11-12T14:33:13+00:00",
+ "south": 22,
+ "area": 34,
+ "baseline": 18,
+ "ratio": 1.22,
+ "samples": 7,
+ "mil": [
+  {
+   "type": "H64",
+   "name": null,
+   "call": "MERCS70",
+   "lat": 36.93,
+   "lon": 127.03
+  },
+  {
+   "type": "GLEX",
+   "name": "정찰용 비즈니스젯 가능",
+   "call": "",
+   "lat": 37.4,
+   "lon": 127.04
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

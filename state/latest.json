@@ -1,47 +1,46 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 12일",
-      "North Korea Reuters November 12 2026"
+      "North Korea Reuters November 12 2026",
+      "북한 합참 발표 지뢰 발견 DMZ 귀순"
     ],
     "nuclear": [
       "North Korea Reuters November 12 2026"
     ],
     "logistics": [
-      "북한 합참 발표 11월 12일"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 북한 GPS 교란"
+      "해킹 공격 개인정보 유출 11월"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중 방러 Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 12일"
+      "North Korea Reuters November 12 2026"
     ],
     "nk_internal": [
       "North Korea Reuters November 12 2026"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 12일"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/",
-    "https://www.rfa.org/korean/in-focus/2026/11/09/apec-china-north-korea-trump/"
+    "https://www.yna.co.kr/rss/northkorea.xml",
+    "https://www.rfa.org/korean/"
   ],
-  "overall_summary": "11/12 기준 새로 확인된 군사 도발·전쟁 징후는 없다. 동해안 신형 해군기지 시찰 등 배경 동향만 있어 직전과 같은 평시 수준이다.",
+  "overall_summary": "11/12 새로 확인된 군사 도발·전쟁 징후는 없다. 김정은 동해안 해군기지 시찰·헌법 개정문 공개 등 배경 동향뿐이라 직전과 같은 평시 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,11 +56,10 @@
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "연합 11/12 「라자루스 유럽 드론업계 해킹」은 해외 업계 대상 보고(원문 미열람, ai_use)라 징후에서 제외; 금융보안원 건은 원문 미확인 유지."
+      "summary": "연합 11/12 라자루스 유럽 드론업계 해킹은 해외 업계 대상 보고라 징후에서 제외(배경); 국내 신규 귀속 사고 없음."
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "김성남 11/3 방중은 외교 일정, 군사협력 새 발표 없음(배경)."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -76,7 +74,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-12T01:16:45+00:00",
+  "checked_at": "2026-11-12T02:10:34+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

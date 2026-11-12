@@ -1,17 +1,31 @@
 {
- "at": "2026-11-12T00:56:49+00:00",
- "south": 73,
- "area": 92,
- "baseline": 61,
- "ratio": 1.2,
+ "at": "2026-11-12T02:09:12+00:00",
+ "south": 89,
+ "area": 103,
+ "baseline": 77,
+ "ratio": 1.16,
  "samples": 7,
  "mil": [
   {
-   "type": "KC2",
+   "type": "BE20",
    "name": null,
-   "call": "DENEB07",
-   "lat": 33.92,
-   "lon": 132.49
+   "call": "BLCAT62",
+   "lat": 37.07,
+   "lon": 126.8
+  },
+  {
+   "type": "BE20",
+   "name": null,
+   "call": "BLCAT54",
+   "lat": 37.0,
+   "lon": 127.48
+  },
+  {
+   "type": "V22",
+   "name": null,
+   "call": "JGVN716",
+   "lat": 32.99,
+   "lon": 130.59
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

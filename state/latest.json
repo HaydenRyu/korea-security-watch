@@ -1,42 +1,51 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 합참 발표 11월 12일",
+      "North Korea Reuters November 12 2026"
+    ],
     "nuclear": [
       "North Korea Reuters November 12 2026"
     ],
-    "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순 NLL"
+    "logistics": [
+      "북한 합참 발표 11월 12일"
     ],
-    "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit 서해 구조물"
+    "border_clash": [
+      "지뢰 발견 DMZ 귀순",
+      "북한 합참 발표 11월 12일"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격 북한"
+      "해킹 개인정보 유출",
+      "금융보안원 해킹 개인정보 유출 상시평가",
+      "금융보안원 상시평가 시스템 외부 비정상 접근 유출 350건"
     ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 열병식 군수 비축 동향"
-    ],
-    "logistics": [
-      "북한 병력 이동 전방 증강 열병식 군수 비축 동향"
+    "foreign_forces": [
+      "김정은 방중 방러 11월",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 병력 이동 전방 증강 열병식 군수 비축 동향"
+      "북한 합참 발표 11월 12일"
     ],
     "nk_internal": [
-      "진돗개 발령 데프콘 상향 북한 등화관제 준전시"
+      "North Korea Reuters November 12 2026"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 북한 등화관제 준전시"
+      "북한 합참 발표 11월 12일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea Reuters November 12 2026"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
     "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
-    "https://www.fnnews.com/news/202611110635447943"
+    "https://www.rfa.org/korean/in-focus/2026/11/09/apec-china-north-korea-trump/",
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1432777"
   ],
-  "overall_summary": "11/11~12 기준 새 군사 징후 없음; 헌법 재게시·신형 어뢰 시험 주장 등 발언·정례 수준. 금융보안원 해킹은 귀속 미확인 일반 사고(직전 회차 유지).",
+  "overall_summary": "11/12 기준 새로 확인된 군사 도발·전쟁 징후는 없다. 직전과 같은 평시 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -48,11 +57,15 @@
       "status": "none"
     },
     "border_clash": {
+      "status": "none"
+    },
+    "electronic_cyber": {
       "status": "none",
-      "summary": "새 충돌 없음 — 울릉도 북 표류 어민 6명 구조(11/3)는 구조 사안, 9/21 DMZ 지뢰는 과거 사건."
+      "summary": "이번 회차 검색에서 금융보안원 유출 건의 원문을 확인하지 못해 징후에서 제외(귀속 미확인 건, 등급 영향 없음)."
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김성남 국제비서 11/3 방중은 외교 일정이며 군사 협력 새 발표 없음(배경)."
     },
     "parade_massing": {
       "status": "none"
@@ -65,41 +78,10 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "서울 여의도",
-      "lat": 37.52,
-      "lon": 126.92,
-      "summary": "귀속 미확인 — 금융보안원 상시평가 시스템이 11/9 외부 비정상 접근으로 행정서식·개인정보 300여건·이용자정보 350여건이 유출됐으나 고객민감정보는 없다고 11/11 밝혔다.",
-      "meaning": "금융 유관기관 대상 해킹이나 북한 등 소행 발표가 없고 금융거래 시스템 마비도 없어 일반 사고로 본다.",
-      "sources": [
-        {
-          "name": "파이낸셜뉴스(뉴시스 전재)",
-          "tier": "B",
-          "url": "https://www.fnnews.com/news/202611110635447943"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "11/9 외부 비정상 접근 확인",
-        "고객민감정보 유출 없음(금융보안원 설명)"
-      ],
-      "speculation": [
-        "수사 결과 귀속 발표 여부는 미정"
-      ]
     }
   },
-  "checked_at": "2026-11-11T22:10:49+00:00",
-  "grade": 1,
-  "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-11T23:10:27+00:00",
-    "summary": "11/11 기준 새로 확인된 군사 도발·전쟁 징후는 없다. 북한은 김정은의 해군기지 건설 현지지도(KCNA 11/12) 등 정례 동향 수준이며 직전과 같다."
-  }
+  "checked_at": "2026-11-12T00:11:35+00:00",
+  "grade": 0,
+  "grade_label": "평시",
+  "active": []
 }

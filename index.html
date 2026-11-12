@@ -1309,10 +1309,10 @@ function initMap(){
   const d=new Date(Date.now()-30*3600e3).toISOString().slice(0,10); // 전일 영상(당일은 미완성)
   const G=(l,t,lv,x)=>`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/${l}/default/${t}/GoogleMapsCompatible_Level${lv}/{z}/{y}/{x}.${x}`;
   const attr='<a href="https://earthdata.nasa.gov/gibs">NASA GIBS</a>';
-  // 위성 한 대는 궤도 사이 빈 띠가 생긴다 → NOAA-20 위에 SNPP 를 lighten 으로 겹쳐 메운다
+  // 위성 한 대는 궤도 사이 빈 띠가 생긴다 → NOAA-20 위에 NOAA-21 을 lighten 으로 겹쳐 메운다(SNPP 는 11/02 종료 — 11/05 부터 타일 404 실측)
   layers.day=L.layerGroup([
     L.tileLayer(G("VIIRS_NOAA20_CorrectedReflectance_TrueColor",d,9,"jpg"),{maxNativeZoom:9,className:"sat",attribution:attr}),
-    L.tileLayer(G("VIIRS_SNPP_CorrectedReflectance_TrueColor",d,9,"jpg"),{maxNativeZoom:9,className:"sat"})
+    L.tileLayer(G("VIIRS_NOAA21_CorrectedReflectance_TrueColor",d,9,"jpg"),{maxNativeZoom:9,className:"sat"})
       .on("add",e=>{e.target.getContainer().style.mixBlendMode="lighten"})]).addTo(map);
   // 야간광: 2016 정적 Black Marble → 일별(VIIRS NOAA-20 GapFilled, 1~2일 지연). 없는 날짜는 404 라 최근 1~4일 중 첫 200 을 쓴다(CORS 허용·404 실측 10/23)
   const NIGHT="VIIRS_NOAA20_GapFilled_BRDF_Corrected_DayNightBand_Radiance";let nightDate=null;

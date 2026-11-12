@@ -37,7 +37,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 API = "https://firms.modaps.eosdis.nasa.gov/api/area/csv/{key}/{src}/124,33,131,43/2"
-SOURCES = ["VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT", "VIIRS_NOAA21_NRT", "MODIS_NRT"]  # MODIS = Terra·Aqua 1km, 통과 시각이 VIIRS 와 달라 하루 2회 추가(10/23)
+# MODIS = Terra·Aqua 1km, 통과 시각이 VIIRS 와 달라 하루 2회 추가(10/23).
+# Suomi NPP 는 2026-11-02 13:00 UTC 에 자료 전달이 끝나 뺐다(NASA FIRMS 공지 · 11/03 부터 0건 실측, 11/12)
+SOURCES = ["VIIRS_NOAA20_NRT", "VIIRS_NOAA21_NRT", "MODIS_NRT"]
 WINDOW_H = 48
 # 접경지역 지원 특별법 시행령 지정 기준 「민통선과의 거리 20km 이내」(2024 개정안 · 뉴시스 2024-12-12)를 MDL 기준으로 근사.
 # 민통선은 MDL 남쪽에 있어 법정 범위보다 좁다(보수적) — 북측에도 같은 거리를 쓴다
@@ -470,7 +472,7 @@ def sat_label(src: str) -> str:
 
 def source_status(per: dict[str, list[str]], prev: dict | None) -> dict:
     """소스별 관측 상태. rows = 이번 창(WINDOW_H) 감지 건수, last_t = 마지막 감지 시각(0건이면 직전 값 승계).
-    0건이 위성 운영 종료인지 무감지인지는 여기서 가르지 않는다 — 읽는 쪽이 last_t 로 본다(SNPP 는 11/03 부터 0건 실측)."""
+    0건이 위성 운영 종료인지 무감지인지는 여기서 가르지 않는다 — 읽는 쪽이 last_t 로 본다(SNPP 가 11/03 부터 응답은 오는데 0건이었다 — 종료를 열흘 뒤에야 알았다)."""
     return {src: {"sat": sat_label(src), "rows": len(ts),
                   "last_t": max(ts) if ts else ((prev or {}).get(src) or {}).get("last_t")}
             for src, ts in per.items()}

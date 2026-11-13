@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-13T14:18:31+00:00",
+ "fetched_at": "2026-11-13T15:36:46+00:00",
  "status": "partial",
- "status_detail": "SBS/정치: HTTPError: HTTP Error 404: 404; 국방일보/국방: URLError: <urlopen error timed out>",
+ "status_detail": "SBS/사회: HTTPError: HTTP Error 404: 404; 국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-13T13:02:09+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 2,
-  "fetched": 1015,
-  "hits": 24,
+  "fetched": 1016,
+  "hits": 26,
   "clusters": 23,
   "by_group": {
+   "summit": 8,
    "spy": 3,
-   "summit": 7,
    "yellowsea": 1,
    "gps": 4,
    "border": 6,
-   "mine": 4,
+   "mine": 3,
    "alert": 1,
    "hybrid": 2,
    "defect": 1,
@@ -28,12 +28,12 @@
    "feeds": 5,
    "failed": 0,
    "count": 545,
-   "hits": 20
+   "hits": 22
   },
   "SBS": {
    "feeds": 3,
    "failed": 1,
-   "count": 130,
+   "count": 131,
    "hits": 1
   },
   "동아일보": {
@@ -46,13 +46,13 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 11
+   "hits": 12
   },
   "세계일보": {
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 0
+   "hits": 1
   },
   "국방일보": {
    "feeds": 1,
@@ -63,15 +63,15 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "summit": {
+   "clusters": 8,
+   "max_independent": 2,
+   "latest": "2026-11-13T15:36:46+00:00"
+  },
   "spy": {
    "clusters": 3,
    "max_independent": 1,
    "latest": "2026-11-13T14:05:32+00:00"
-  },
-  "summit": {
-   "clusters": 7,
-   "max_independent": 1,
-   "latest": "2026-11-13T12:23:10+00:00"
   },
   "yellowsea": {
    "clusters": 1,
@@ -89,7 +89,7 @@
    "latest": "2026-11-13T10:18:12+00:00"
   },
   "mine": {
-   "clusters": 4,
+   "clusters": 3,
    "max_independent": 1,
    "latest": "2026-11-13T10:18:12+00:00"
   },
@@ -129,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 4
   },
   {
    "outlet": "연합뉴스",
@@ -153,29 +153,29 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 6
+   "hits": 7
   },
   {
    "outlet": "SBS",
    "section": "정치",
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
-   "ok": false,
-   "error": "HTTPError: HTTP Error 404: 404"
-  },
-  {
-   "outlet": "SBS",
-   "section": "사회",
-   "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03&plink=RSSREADER",
    "ok": true,
    "count": 29,
    "hits": 0
   },
   {
    "outlet": "SBS",
+   "section": "사회",
+   "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03&plink=RSSREADER",
+   "ok": false,
+   "error": "HTTPError: HTTP Error 404: 404"
+  },
+  {
+   "outlet": "SBS",
    "section": "속보",
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
-   "count": 101,
+   "count": 102,
    "hits": 1
   },
   {
@@ -200,7 +200,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 10
+   "hits": 11
   },
   {
    "outlet": "국민일보",
@@ -216,7 +216,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "세계일보",

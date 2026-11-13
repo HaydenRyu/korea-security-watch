@@ -1,26 +1,25 @@
 {
- "fetched_at": "2026-11-13T22:58:56+00:00",
+ "fetched_at": "2026-11-13T23:33:37+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-13T22:58:56+00:00",
+ "last_ok_at": "2026-11-13T23:33:37+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1104,
-  "hits": 28,
-  "clusters": 24,
+  "hits": 27,
+  "clusters": 23,
   "by_group": {
    "summit": 9,
+   "drone_balloon": 2,
+   "spy": 1,
    "border": 7,
    "usfk": 1,
-   "spy": 2,
    "yellowsea": 1,
    "mine": 3,
    "gps": 3,
-   "alert": 1,
    "defect": 1,
-   "drone_balloon": 1,
    "hybrid": 1
   }
  },
@@ -41,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 6
+   "hits": 5
   },
   "국민일보": {
    "feeds": 2,
@@ -67,7 +66,17 @@
   "summit": {
    "clusters": 9,
    "max_independent": 2,
-   "latest": "2026-11-13T22:58:56+00:00"
+   "latest": "2026-11-13T23:33:37+00:00"
+  },
+  "drone_balloon": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-13T23:07:43+00:00"
+  },
+  "spy": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-13T23:01:29+00:00"
   },
   "border": {
    "clusters": 7,
@@ -78,11 +87,6 @@
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-13T17:21:04+00:00"
-  },
-  "spy": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-13T14:05:32+00:00"
   },
   "yellowsea": {
    "clusters": 1,
@@ -99,20 +103,10 @@
    "max_independent": 1,
    "latest": "2026-11-13T09:49:54+00:00"
   },
-  "alert": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-13T09:00:00+00:00"
-  },
   "defect": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-12T04:18:31+00:00"
-  },
-  "drone_balloon": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-11T23:17:48+00:00"
   },
   "hybrid": {
    "clusters": 1,
@@ -199,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "국민일보",

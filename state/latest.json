@@ -1,37 +1,35 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters November 13 2026"
+      "북한 합참 발표 지뢰 발견 NLL 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters November 13 2026"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "NK News 최근 헤드라인"
     ],
     "logistics": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters November 13 2026"
+      "북한 합참 발표 지뢰 발견 NLL 귀순",
+      "NK News 최근 헤드라인"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 NLL 귀순"
+      "북한 합참 발표 지뢰 발견 NLL 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란 11월 13일"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit 서해 구조물 주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "한중 외교장관 회담 왕이 조현"
     ],
     "parade_massing": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters November 13 2026"
+      "NK News 최근 헤드라인"
     ],
     "nk_internal": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters November 13 2026"
+      "NK News 최근 헤드라인"
     ],
     "gov_warning": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters November 13 2026"
+      "북한 합참 발표 지뢰 발견 NLL 귀순"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
@@ -43,11 +41,9 @@
   "opened": [
     "https://www.segye.com/newsView/20261113514600",
     "https://www.nknews.org/",
-    "https://www.segye.com/newsList/0101030900000",
-    "https://www.segye.com/newsList/0101010800000",
-    "https://www.segye.com/newsList/0101010700000"
+    "https://www.korea.kr/news/reporterView.do?newsId=148973708"
   ],
-  "overall_summary": "24시간 내 신규 군사 징후는 확인되지 않았다. NK News 기준 미국의 북한 가상자산 탈취 자금 압류(정례 사이버 범주)와 한중 외교장관 회담(외교 일정)만 있었고, 접경 열점 후보는 0건이다.",
+  "overall_summary": "24시간 내 신규 군사 징후는 확인되지 않았다. 한중 외교장관 회담(외교 일정)과 NK News 헤드라인(G7 비핵화 비난, 단둥 동향)만 있었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -76,7 +72,7 @@
       ],
       "confidence": "낮음",
       "facts": [
-        "NK News 메인 헤드라인 기준"
+        "NK News 메인 헤드라인 기준(직전 회차 확인, 이번 회차 요약 목록에는 미표시)"
       ],
       "speculation": []
     },
@@ -96,7 +92,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-13T16:14:34+00:00",
+  "checked_at": "2026-11-13T17:11:57+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

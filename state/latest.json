@@ -19,11 +19,14 @@
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "해킹 개인정보 유출",
+      "랜섬웨어 공격",
       "North Korea hackers FBI"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "김정은 방중",
+      "서해 구조물",
+      "주한미군 감축",
       "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
@@ -39,20 +42,23 @@
       "North Korea warning Japan US"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261113514600",
     "https://www.yna.co.kr/view/AKR20261113139051504",
     "https://www.yna.co.kr/view/AKR20261113039300009",
+    "https://www.yna.co.kr/view/AKR20261114002200071",
     "https://www.rfa.org/korean/in-focus/2026/11/09/apec-china-north-korea-trump/"
   ],
-  "overall_summary": "군사적 신규 징후는 없고 FBI의 북한 해커 '페이스스틸러' 수법 공개(정례 배경)만 유지된다. 한중 외교장관 회담은 일반적 평화·안정 언급에 그쳤고 접경 열점 후보는 0건이다.",
+  "overall_summary": "군사적 신규 징후는 없고 FBI의 북한 해커 '페이스스틸러' 수법 공개(정례 배경)만 유지된다. 한중 외교장관 회담과 외교부-유엔 면담은 일반적 평화·안정 언급에 그쳤고 접경 열점 후보는 0건이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -101,7 +107,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-13T22:11:20+00:00",
+  "checked_at": "2026-11-13T23:10:17+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

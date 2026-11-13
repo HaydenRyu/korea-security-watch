@@ -4,10 +4,10 @@
   "https://www.data.go.kr/data/15057792/openapi.do",
   "https://www.data.go.kr/data/15058193/openapi.do"
  ],
- "fetched_at": "2026-11-13T18:05:35.612995+00:00",
+ "fetched_at": "2026-11-13T19:19:46.710922+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-13T18:05:35.612995+00:00",
+ "last_ok_at": "2026-11-13T19:19:46.710922+00:00",
  "warnings": [
   {
    "doc_num": "26-369",

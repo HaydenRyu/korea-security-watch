@@ -1,46 +1,63 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 합참 발표 오늘",
-      "North Korea Reuters"
-    ],
-    "nuclear": [
-      "38 North 최신 글"
-    ],
-    "logistics": [
-      "North Korea Reuters"
-    ],
     "border_clash": [
-      "목함지뢰 발견 귀순 DMZ"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "북한 지뢰 발견 DMZ 합참",
+      "목함지뢰 해안 DMZ",
+      "North Korea DMZ NLL defector"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중 방러",
+      "서해 구조물 주한미군 감축"
     ],
-    "parade_massing": [
-      "북한 합참 발표 오늘"
-    ],
-    "nk_internal": [
-      "North Korea Reuters"
-    ],
-    "gov_warning": [
-      "북한 합참 발표 오늘"
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "랜섬웨어 공격"
     ],
     "hybrid_ops": [
-      "North Korea Reuters"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
+    ],
+    "logistics": [
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
+    ],
+    "parade_massing": [
+      "북한 열병식 병력 집결",
+      "North Korea parade"
+    ],
+    "nk_internal": [
+      "북한 등화관제 준전시",
+      "North Korea martial wartime state"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 상향",
+      "North Korea warning travel advisory"
     ]
   },
   "opened": [
-    "https://www.nknews.org",
-    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261113039300009"
+    "https://www.nknews.org/",
+    "https://www.dailynk.com/english/",
+    "https://www.koreaherald.com/"
   ],
-  "overall_summary": "새로 보도된 군사 징후는 없고 신규 동해 군항·북중 외교·북한발 해킹 수법 보고 등 배경 보도뿐이다. 직전 회차(주의)와 같다; 접경 열점 후보 대조는 하지 않았다.",
+  "overall_summary": "최근 24시간 안에 새 군사 도발·경보 징후는 확인되지 않았다. NK News는 11/4 클러스터 탄두 시험 조작 의혹과 북러 교량 버스 노선을 전했고 접경 열점 후보는 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -52,30 +69,31 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "외교부의 유엔 설명 등 9월 DMZ 지뢰 사건 후속 보도만 있고 24시간 내 새 발견은 없다."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 연합뉴스가 북한 정부 배후 해커의 가짜 화상회의 수법 보고서를 보도했으나 정부 공식 귀속 발표는 확인되지 않았다.",
-      "meaning": "가상자산 탈취 수법 보고로 정례 배경 성격이다.",
+      "region": "전국",
+      "summary": "귀속 미확인 — 코리아헤럴드가 바이낸스의 북한 연계 지목 대규모 사이버 공격 피해 보상(63억 달러 규모) 발표를 보도했으나 정부 공식 귀속 발표는 확인되지 않았다.",
+      "meaning": "가상자산 탈취 성격으로 군사 위협과 직결되지 않는다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "코리아헤럴드",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261113039300009"
+          "url": "https://www.koreaherald.com/"
         }
       ],
       "confidence": "낮음",
       "facts": [
-        "연합뉴스 11/13 보도"
+        "바이낸스가 북한 연계로 지목된 공격 피해 자산을 보전했다고 밝힘"
       ],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "조현-왕이 회담·단둥 버스공장 등 외교·경제 보도뿐이며 군사 협정·이전은 없다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -90,14 +108,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-13T10:12:43+00:00",
+  "checked_at": "2026-11-13T12:13:41+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-13T11:12:04+00:00",
-    "summary": "최근 24시간 안에 새 군사 도발·경보 징후는 확인되지 않았고, 김정은 동해 군항 시찰과 노동당의 미 해군력 확장 비난은 위협 발언·배경 수준이다. 접경 열점 후보는 없었다."
-  }
+  "active": []
 }

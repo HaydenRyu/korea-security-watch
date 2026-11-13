@@ -1,73 +1,53 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강 탄약 군수 수송",
-      "North Korea troops ammunition shipment Russia deployment November 2026",
-      "북한 통천 문천 군항 동해함대 전진 배치"
+      "북한 합참 발표 오늘",
+      "North Korea Reuters November 13 2026"
     ],
     "nuclear": [
-      "북한 풍계리 영변 핵 활동 11월",
-      "North Korea Yongbyon Punggye-ri nuclear activity November 2026"
+      "북한 합참 발표 오늘",
+      "North Korea Reuters November 13 2026"
     ],
     "logistics": [
-      "북한 병력 이동 전방 증강 탄약 군수 수송",
-      "North Korea troops ammunition shipment Russia deployment November 2026"
+      "북한 합참 발표 오늘",
+      "North Korea Reuters November 13 2026"
     ],
     "border_clash": [
-      "지뢰 발견 해안 DMZ 귀순 11월",
-      "북한 합참 11월 13일",
-      "합참 북한 통지문 전통문 군사분계선 경고사격 11월 12일",
-      "North Korea news November 13 2026"
+      "지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "Binance hack North Korea FBI attribution November 2026"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit",
-      "김정은 방중 서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 준비 등화관제 준전시 전시태세",
-      "North Korea parade preparation blackout drill civil defense mobilization"
+      "북한 합참 발표 오늘"
     ],
     "nk_internal": [
-      "북한 열병식 준비 등화관제 준전시 전시태세",
-      "North Korea parade preparation blackout drill civil defense mobilization"
+      "North Korea Reuters November 13 2026"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 북한 경고 대피",
-      "北朝鮮 ミサイル 発射 防衛省 11月",
-      "北朝鮮 速報 NHK",
-      "North Korea news November 13 2026"
+      "북한 합참 발표 오늘"
     ],
     "hybrid_ops": [
-      "간첩 혐의 국가보안법 구속",
-      "North Korea attributed FBI hack"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.nknews.org/category/news/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.38north.org/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261113/binance-says-all-asset-losses-from-n-korea-linked-cyberattack-covered",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261112/n-korean-fm-slams-g7-nations-call-for-denuclearization-says-its-nuclear-pursuit-remains-steadfast",
-    "https://www.nknews.org/2026/11/north-korean-shows-of-force-are-a-signal-to-south-unification-minister/",
-    "https://www.nknews.org/2026/11/kim-jong-un-inspects-new-naval-base-construction-on-east-coast/",
-    "https://www1.kaiho.mlit.go.jp/TUHO/keiho/navarea11_en.html",
-    "https://www.segye.com/newsView/20261112516344"
+    "https://www.nknews.org/",
+    "https://www.yna.co.kr/view/AKR20261113039300009",
+    "https://www.yna.co.kr/view/AKR20261112119700504",
+    "https://www.koreajoongangdaily.com/korea/north-korea"
   ],
-  "overall_summary": "24시간 안에 새로 확인된 군사 도발·전쟁 징후는 없다(수동 대리 회차). 최선희 외무상의 G7 비핵화 성명 반박 논평(구체적 군사행동 예고 없음)·김정은 문천 해군기지 건설 시찰(11/11)·바이낸스 탈취 피해 보전 완료 후속 보도(FBI 귀속 10/31)는 평시 수준 배경이고, 접경 열점 후보 0건·일본 해상보안청 NAVAREA XI 북한 관련 경보 없음(일본 방위성·미 국무부 여행경보·합참 발표 페이지는 열지 못함).",
+  "overall_summary": "새로 보도된 군사 징후는 확인되지 않았다(동해안 신규 해군기지 공사 점검, 조현-왕이 회담 등 배경 보도뿐). 접경 열점 후보 대조는 하지 않았다. 직전 회차(평시 0)와 같다.",
   "items": {
     "troop_movement": {
-      "status": "none",
-      "summary": "김정은의 문천 해군기지 건설 시찰(11/11, KCNA 11/12 보도)은 장기 건설 사업 시찰로, 함대 전진 배치·병력 이동을 확인한 A~C 원문은 열지 못해 배경으로 둔다."
+      "status": "none"
     },
     "nuclear": {
       "status": "none"
@@ -79,12 +59,10 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "바이낸스 탈취(10/29)의 FBI 북한 귀속 발표는 10/31로 24시간 경과 — 11/13 보도는 피해 보전 완료 후속 기사라 배경."
+      "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "조현 외교장관 11/13~14 방중·왕이 회담은 외교 일정이고 신규 군사 동향·서해 구조물 신규 설치 보도는 없다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -96,11 +74,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "24시간 안에 새 공식 귀속 발표는 확인되지 않았다 — FBI의 바이낸스 탈취 귀속(10/31)·도박사이트 일당 국가보안법 판결(11/12 보도, 24시간 경과)은 배경."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-13T03:39:22+00:00",
+  "checked_at": "2026-11-13T07:28:42+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

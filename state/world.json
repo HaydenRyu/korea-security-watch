@@ -1,51 +1,52 @@
 {
   "version": 1,
-  "updated_at": "2026-11-13T11:40:28+00:00",
-  "world_at": "2026-11-13T11:40:28+00:00",
+  "updated_at": "2026-11-13T23:40:00+00:00",
+  "world_at": "2026-11-13T23:40:00+00:00",
   "world": [
     {
-      "title": "FBI, 북한 해커의 '페이스스틸러' 가짜 화상통화 수법으로 4억 달러 이상 탈취 발표",
-      "summary": "미 FBI는 북한 국가 후원 해커가 가짜 화상통화로 신원을 도용해 18개월간 900명 넘는 피해자에게서 4억 달러 넘는 암호화폐를 가로챘다고 밝혔다.",
-      "link_korea": "북한이 암호화폐 탈취 수익을 무기 개발 자금으로 쓴다는 미 당국 설명이 이어진다.",
+      "title": "푸틴, 러-우 평화 협상 요구 높여…유럽 안보 의제화를 승리로 평가",
+      "summary": "BBC 러시아 에디터는 유럽 안보 문제가 협상 의제에 오른 것을 모스크바가 승리로 보며 푸틴이 요구를 높였다고 전했다.",
+      "link_korea": "러-우 협상의 향방은 북러 군사협력과 북한군 파병 지속 여부에 영향을 준다.",
+      "region": "유럽",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cq39glwprknjo",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+      }
+    },
+    {
+      "title": "IAEA, 이란 이스파한 농축시설 미사찰에 우려 확대",
+      "summary": "유엔 핵감시기구는 이란이 1년여 전 공표한 이스파한 우라늄 농축시설을 한 번도 방문하지 못했다며 우려를 표했다.",
+      "link_korea": "중동 핵 비확산 체제의 약화는 북한 핵 문제 대응에도 선례로 작용한다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cm75261e3pdko",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+      }
+    },
+    {
+      "title": "FBI, 북한 해커의 가짜 화상통화 암호화폐 탈취 발표",
+      "summary": "FBI는 18개월간 900여 명이 '페이스스틸러' 수법에 당했고 피해액이 4억 달러 규모라고 밝혔다.",
+      "link_korea": "북한의 암호화폐 탈취 수익이 무기 개발 자금원이라는 미 당국 설명이 이어진다.",
       "region": "북한·미국",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/cqdj1ellpd70o",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
       }
     },
     {
-      "title": "미 특사, 유럽을 러-우 평화회담에 포함하겠다고 약속",
-      "summary": "쿠슈너·위트코프가 푸틴과 만난 뒤 젤렌스키에게 다음 회담에 EU 대표를 넣겠다고 했고, 러시아는 영토 요구가 변하지 않았다고 밝혔다.",
-      "link_korea": "러-우 전쟁의 협상 향방은 북러 군사협력과 북한군 파병의 지속 여부에 영향을 준다.",
-      "region": "유럽",
+      "title": "중국 국방부, 중미 군사 소통 유지 강조",
+      "summary": "중국 국방부 대변인은 11월 2~3일 워싱턴에서 4차 위기 소통 실무회의가 열렸다며 분쟁 관리 소통을 이어가겠다고 밝혔다.",
+      "link_korea": "미중 군사 소통 동향은 한반도 주변 군사 긴장 관리와 주한미군 운용 환경에 연결된다.",
+      "region": "동아시아",
       "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
-      }
-    },
-    {
-      "title": "핀란드만에서 러시아 군함, 우크라이나 드론 공격받아",
-      "summary": "핀란드 당국은 러시아 군함 나로포민스크가 핀란드만에서 공격받았음을 확인했고, 우크라이나 보안국은 우스트루가 석유 터미널 공격의 일부라고 밝혔다.",
-      "link_korea": "전쟁 확전 양상은 러시아의 병력·물자 수요와 북러 협력에 연결된다.",
-      "region": "유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cmn0d33zz34zo",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
-      }
-    },
-    {
-      "title": "이란, 청해부대 작전구역 확대에 '가랑이 찢어진다' 경고",
-      "summary": "이란 외무부 대변인은 12일 한국 속담을 인용해 이란 침략에 직간접 관여하는 해군 전력 파견을 적대 행위로 간주하겠다고 밝혔다.",
-      "link_korea": "한국 청해부대의 오만 남방 해역 확대가 중동 긴장에 직접 연결된다.",
-      "region": "중동",
-      "source": {
-        "name": "세계일보",
-        "url": "https://www.segye.com/newsView/20261113512091"
+        "name": "중앙통신사",
+        "url": "https://www.cna.com.tw/news/acn/202611130213.aspx",
+        "via": "https://feeds.feedburner.com/rsscna/mainland"
       }
     }
   ],
-  "world_context": "북한의 사이버 수익원, 러-우 협상과 확전, 중동 긴장에 한국 청해부대가 얽히는 흐름이 이어진다."
+  "world_context": "러-우 협상 교착, 이란 핵 사찰 공백, 북한 사이버 수익, 미중 군 소통이 한반도 안보 환경에 동시에 걸려 있다."
 }

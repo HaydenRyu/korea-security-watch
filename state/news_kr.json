@@ -1,26 +1,26 @@
 {
- "fetched_at": "2026-11-13T11:47:40+00:00",
+ "fetched_at": "2026-11-13T13:02:09+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-13T11:47:40+00:00",
+ "last_ok_at": "2026-11-13T13:02:09+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1105,
-  "hits": 24,
-  "clusters": 23,
+  "hits": 25,
+  "clusters": 24,
   "by_group": {
-   "summit": 6,
-   "spy": 2,
+   "spy": 3,
+   "summit": 7,
    "yellowsea": 1,
    "gps": 4,
    "border": 6,
    "mine": 4,
    "alert": 1,
    "hybrid": 2,
-   "drone_balloon": 3,
-   "defect": 1
+   "defect": 1,
+   "drone_balloon": 2
   }
  },
  "outlets": {
@@ -46,7 +46,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 10
+   "hits": 11
   },
   "세계일보": {
    "feeds": 2,
@@ -63,15 +63,15 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
-  "summit": {
-   "clusters": 6,
-   "max_independent": 1,
-   "latest": "2026-11-13T11:20:00+00:00"
-  },
   "spy": {
-   "clusters": 2,
+   "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-11-13T11:12:25+00:00"
+   "latest": "2026-11-13T12:35:55+00:00"
+  },
+  "summit": {
+   "clusters": 7,
+   "max_independent": 1,
+   "latest": "2026-11-13T12:23:10+00:00"
   },
   "yellowsea": {
    "clusters": 1,
@@ -103,15 +103,15 @@
    "max_independent": 1,
    "latest": "2026-11-13T08:46:47+00:00"
   },
-  "drone_balloon": {
-   "clusters": 3,
-   "max_independent": 1,
-   "latest": "2026-11-13T08:04:11+00:00"
-  },
   "defect": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-12T04:18:31+00:00"
+  },
+  "drone_balloon": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-11T23:17:48+00:00"
   }
  },
  "feeds": [
@@ -201,7 +201,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 9
+   "hits": 10
   },
   {
    "outlet": "국민일보",

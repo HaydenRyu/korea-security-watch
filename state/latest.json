@@ -1,52 +1,46 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 13일",
-      "North Korea military Reuters"
+      "북한 합참 발표 오늘",
+      "North Korea Reuters"
     ],
     "nuclear": [
-      "North Korea nuclear NK News",
-      "북한 핵시설 동향"
+      "38 North 최신 글"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
+      "North Korea Reuters"
     ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순",
-      "DMZ NLL North Korea border"
+      "목함지뢰 발견 귀순 DMZ"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격 서해 구조물 주한미군 감축"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중"
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 합참 발표 오늘"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "North Korea Reuters"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "북한 합참 발표 오늘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "North Korea Reuters"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.nknews.org",
-    "https://www.yna.co.kr/view/AKR20261112119751504",
-    "https://www.yna.co.kr/view/AKR20261113039300009",
-    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do"
+    "https://kookbang.dema.mil.kr/newsWeb/20261111/8/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261113039300009"
   ],
-  "overall_summary": "새로 보도된 군사 징후는 없고 동해 신규 군항 공사·조현-왕이 회담·북한발 해킹 수법 보고 등 배경 보도뿐이다. 직전 회차(평시)와 같다; 접경 열점 후보 대조는 하지 않았다.",
+  "overall_summary": "새로 보도된 군사 징후는 없고 신규 동해 군항·북중 외교·북한발 해킹 수법 보고 등 배경 보도뿐이다. 직전 회차(주의)와 같다; 접경 열점 후보 대조는 하지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,7 +58,7 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 연합뉴스가 북한 정부 배후 해커의 가짜 화상회의 수법(최근 18개월 4억달러 규모 탈취) 보고서를 보도했으나 정부 공식 귀속 발표는 확인되지 않았다.",
+      "summary": "귀속 미확인 — 연합뉴스가 북한 정부 배후 해커의 가짜 화상회의 수법 보고서를 보도했으나 정부 공식 귀속 발표는 확인되지 않았다.",
       "meaning": "가상자산 탈취 수법 보고로 정례 배경 성격이다.",
       "sources": [
         {
@@ -81,7 +75,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "조현-왕이 베이징 회담(11/13) 등 외교 일정 보도뿐이며 군사 협정·이전은 없다."
+      "summary": "조현-왕이 회담·단둥 버스공장 등 외교·경제 보도뿐이며 군사 협정·이전은 없다."
     },
     "parade_massing": {
       "status": "none"
@@ -96,7 +90,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-13T09:10:48+00:00",
+  "checked_at": "2026-11-13T10:12:43+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

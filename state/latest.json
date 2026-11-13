@@ -1,52 +1,47 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 지뢰 발견 DMZ 합참 11월 13일",
-      "NK News headlines"
+      "북한 합참 발표 11월 13일"
     ],
     "nuclear": [
-      "NK News headlines",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon Punggye-ri 38 North November 2026"
     ],
     "logistics": [
-      "NK News headlines",
-      "북한 군수 수송"
+      "North Korea Reuters missile troops"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 합참 11월 13일",
-      "지뢰 발견 귀순 NLL"
+      "지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격",
+      "서해 구조물 주한미군 감축 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러",
+      "North Korea Reuters missile troops"
     ],
     "parade_massing": [
-      "NK News headlines"
+      "북한 합참 발표 11월 13일"
     ],
     "nk_internal": [
-      "NK News headlines"
+      "North Korea Reuters missile troops"
     ],
     "gov_warning": [
-      "합참 발표 진돗개 데프콘"
+      "북한 합참 발표 11월 13일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261113514600",
-    "https://www.nknews.org/",
-    "https://nocutnews.co.kr/news/6586109"
+    "https://www.yna.co.kr/view/AKR20261113139051504",
+    "https://www.yna.co.kr/view/AKR20261113039300009"
   ],
-  "overall_summary": "24시간 내 신규 군사 징후는 확인되지 않았다. 한중 외교장관 회담(외교 일정)과 NK News 헤드라인(G7 비핵화 비난, 동해안 군항 분석, 단둥 동향)만 있었다.",
+  "overall_summary": "최근 24시간 새 군사 징후는 확인되지 않았고 FBI의 북한 가상자산 탈취 수법 공개(정례 사이버 귀속)만 있었다. 접경 열점 후보 0건, 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,24 +53,27 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "DMZ 지뢰 폭발(9월)은 배경으로, 외교부 11/13 유엔 설명 외에 24시간 내 새 발견·충돌 보도 없음."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "nk",
-      "summary": "NK News는 미국이 북한 가상자산 탈취 관련 자금(바이낸스 약 12억 달러)을 압류하려 한다고 11월 13일 전했다.",
-      "meaning": "가상자산 탈취 대응 조치로 정례적 사이버 위협 범주다.",
+      "region": "미국",
+      "summary": "FBI가 11월 12일(현지) 북한 정부 배후 해커의 '페이스스틸러' 가짜 화상회의 수법으로 18개월간 4억달러 넘는 암호화폐가 탈취됐다고 밝혔다.",
+      "meaning": "가상자산 탈취 수사·귀속 발표로 기존 사이버 위협의 연장이며 국내 기반시설 마비는 확인되지 않았다.",
       "sources": [
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261113039300009"
         }
       ],
-      "confidence": "낮음",
+      "confidence": "중간",
       "facts": [
-        "NK News 메인 헤드라인 기준"
+        "FBI 12일(현지) 발표",
+        "웹캠 영상 900건 이상 압수"
       ],
       "speculation": []
     },
@@ -95,7 +93,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-13T19:11:06+00:00",
+  "checked_at": "2026-11-13T20:11:51+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

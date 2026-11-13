@@ -1,17 +1,17 @@
 {
- "fetched_at": "2026-11-13T15:36:46+00:00",
+ "fetched_at": "2026-11-13T16:50:22+00:00",
  "status": "partial",
- "status_detail": "SBS/사회: HTTPError: HTTP Error 404: 404; 국방일보/국방: URLError: <urlopen error timed out>",
+ "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-13T13:02:09+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 2,
-  "fetched": 1016,
-  "hits": 26,
-  "clusters": 23,
+  "feeds_failed": 1,
+  "fetched": 1045,
+  "hits": 27,
+  "clusters": 24,
   "by_group": {
-   "summit": 8,
+   "summit": 9,
    "spy": 3,
    "yellowsea": 1,
    "gps": 4,
@@ -32,15 +32,15 @@
   },
   "SBS": {
    "feeds": 3,
-   "failed": 1,
-   "count": 131,
+   "failed": 0,
+   "count": 160,
    "hits": 1
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 4
+   "hits": 6
   },
   "국민일보": {
    "feeds": 2,
@@ -64,9 +64,9 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "summit": {
-   "clusters": 8,
+   "clusters": 9,
    "max_independent": 2,
-   "latest": "2026-11-13T15:36:46+00:00"
+   "latest": "2026-11-13T16:50:22+00:00"
   },
   "spy": {
    "clusters": 3,
@@ -167,8 +167,9 @@
    "outlet": "SBS",
    "section": "사회",
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03&plink=RSSREADER",
-   "ok": false,
-   "error": "HTTPError: HTTP Error 404: 404"
+   "ok": true,
+   "count": 29,
+   "hits": 0
   },
   {
    "outlet": "SBS",
@@ -184,7 +185,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "동아일보",
@@ -192,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "국민일보",

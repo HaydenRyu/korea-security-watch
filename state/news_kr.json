@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-13T16:50:22+00:00",
+ "fetched_at": "2026-11-13T17:59:43+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-13T13:02:09+00:00",
@@ -8,10 +8,11 @@
   "feeds": 15,
   "feeds_failed": 1,
   "fetched": 1045,
-  "hits": 27,
-  "clusters": 24,
+  "hits": 28,
+  "clusters": 25,
   "by_group": {
    "summit": 9,
+   "usfk": 1,
    "spy": 3,
    "yellowsea": 1,
    "gps": 4,
@@ -28,7 +29,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 545,
-   "hits": 22
+   "hits": 24
   },
   "SBS": {
    "feeds": 3,
@@ -66,7 +67,12 @@
   "summit": {
    "clusters": 9,
    "max_independent": 2,
-   "latest": "2026-11-13T16:50:22+00:00"
+   "latest": "2026-11-13T17:59:43+00:00"
+  },
+  "usfk": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-13T17:21:04+00:00"
   },
   "spy": {
    "clusters": 3,
@@ -129,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "연합뉴스",
@@ -153,7 +159,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 7
+   "hits": 8
   },
   {
    "outlet": "SBS",

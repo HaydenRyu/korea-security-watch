@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-12T05:39:06+00:00",
+  "judged_at": "2026-11-13T11:40:28+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -11,12 +11,18 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/ck792we7zrz4o",
-          "published_at": "2026-11-11T18:04:58+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cmn0d33zz34zo",
+          "published_at": "2026-11-12T20:09:16+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo",
+          "published_at": "2026-11-13T02:01:35+00:00"
         }
       ],
-      "summary": "아부다비 회담이 돌파구 없이 끝났고 휴전 발효 보도는 없어 전쟁은 계속 중이다.",
-      "judged_at": "2026-11-12T05:39:06+00:00"
+      "summary": "핀란드만에서 러시아 군함이 우크라이나 드론 공격을 받았고 푸틴은 러시아 입장이 변하지 않았다고 밝혀 전쟁이 계속 중이다.",
+      "judged_at": "2026-11-13T11:40:28+00:00"
     },
     "mideast": {
       "state": 3,
@@ -26,20 +32,14 @@
       ],
       "sources": [
         {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo",
-          "published_at": "2026-11-12T05:06:27+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cq5yny4nl2d3o",
-          "published_at": "2026-11-10T09:40:31+00:00"
+          "name": "세계일보",
+          "tier": "C",
+          "url": "https://www.segye.com/newsView/20261113512091",
+          "published_at": "2026-11-13T16:42:00+09:00"
         }
       ],
-      "summary": "이스라엘이 가자 나세르 병원 건물을 공습해 최소 5명이 숨졌다고 하마스 운영 민방위 당국이 밝혔고, 트럼프는 대이란 추가 공격이 매우 낮다고 말했다.",
-      "judged_at": "2026-11-12T05:39:06+00:00"
+      "summary": "이란 외무부가 청해부대의 오만 남방 해역 확대를 겨냥해 이란 침략 관여를 적대 행위로 간주하겠다고 경고했다.",
+      "judged_at": "2026-11-13T11:40:28+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -48,12 +48,13 @@
         {
           "name": "중앙통신사",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611120120.aspx",
-          "published_at": "2026-11-12T12:41:46+08:00"
+          "url": "https://www.cna.com.tw/news/acn/202611130213.aspx",
+          "published_at": "2026-11-13T17:00:30+08:00"
         }
       ],
-      "summary": "G7 외교장관이 대만해협 평화에 우려를 표했고 대만 행정원은 뜻을 같이하는 국가와 협력을 이어가겠다고 밝혔다.",
-      "judged_at": "2026-11-12T05:39:06+00:00"
+      "summary": "중국 국방부는 중미 군사 소통 유지를 밝혔고 대만해협 새 훈련 발표는 이번 원문에 없다.",
+      "judged_at": "2026-11-13T11:40:28+00:00",
+      "downgrade_held": 0
     },
     "scs_ecs": {
       "state": 1,
@@ -74,14 +75,14 @@
       "channels": [],
       "sources": [
         {
-          "name": "DVIDS",
-          "tier": "A",
-          "url": "https://www.dvidshub.net/news/579144/airman-gains-joint-operations-experience-during-keen-sword",
-          "published_at": "2026-11-11T15:12:16-05:00"
+          "name": "Stars and Stripes",
+          "tier": "B",
+          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-13/japan-nuclear-powered-submarines-23450638.html",
+          "published_at": "2026-11-13T00:00:00+00:00"
         }
       ],
-      "summary": "미 공군 주방위군 장교가 10월 15~28일 일본 요코스카에서 열린 키 소드 27 연합훈련에 참가한 정례 훈련 기사만 있고 새 전략자산 전개 보도는 없다.",
-      "judged_at": "2026-11-12T05:39:06+00:00"
+      "summary": "일본이 핵추진 잠수함 도입을 검토 중이라는 보도만 있고 미 전략자산의 새 전개 보도는 없다.",
+      "judged_at": "2026-11-13T11:40:28+00:00"
     }
   }
 }

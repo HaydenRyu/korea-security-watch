@@ -13,16 +13,15 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참 북한 11월",
-      "DMZ NLL 귀순"
+      "지뢰 발견 합참 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 11월 14일 2026"
+      "GPS 교란 북한",
+      "해킹 공격 개인정보 유출"
     ],
     "foreign_forces": [
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China visit",
       "서해 구조물",
       "주한미군 감축"
     ],
@@ -33,13 +32,11 @@
       "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "북한 미사일 발사 합참 11월 14일"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "간첩 혐의 국가보안법 구속",
+      "US seize $1.2B Binance funds North Korean crypto theft"
     ],
     "calm": [
       "남북 대화 제안"
@@ -48,9 +45,10 @@
   "opened": [
     "https://www.segye.com/newsView/20261114504516",
     "https://www.segye.com/newsView/20261114500800",
-    "https://arynews.tv/north-koreas-kim-jong-un-visits-china-via-dandong-bridge-south-korea-source-says"
+    "https://arynews.tv/north-koreas-kim-jong-un-visits-china-via-dandong-bridge-south-korea-source-says",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사적 징후는 없다. 한중 외교장관 회담의 북중 교류 설명과 주한미군 전문가 전망이 중심이며 접경 열점 후보도 없다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사적 징후는 없다. 한중 외교장관 회담의 북중 교류 설명과 주한미군 전문가 전망은 배경이며, 접경 열점 후보는 0건, NK News의 미국 바이낸스 자금 동결 보도는 공식 귀속 원문을 열지 못해 징후로 올리지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -81,10 +79,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "미국의 북한 연계 가상자산 동결 보도는 공식 귀속 원문을 열지 못해 배경으로만 둔다."
     }
   },
-  "checked_at": "2026-11-14T07:09:56+00:00",
+  "checked_at": "2026-11-14T08:09:58+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

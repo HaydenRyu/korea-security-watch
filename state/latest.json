@@ -13,17 +13,18 @@
       "North Korea Russia munitions transfer"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 북한",
-      "북한 귀순 NLL DMZ"
+      "지뢰 발견 DMZ 귀순 NLL",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 11월",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 11월 14일"
+      "김정은 방중",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -40,7 +41,8 @@
       "North Korea attributed FBI hacking"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
@@ -48,7 +50,7 @@
     "https://www.segye.com/newsView/20261114500800",
     "https://www.nknews.org"
   ],
-  "overall_summary": "11월 14일 17시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관 회담 후속 설명(왕이의 김정은 단둥 방문·김성남 방중 설명)과 미 전문가 전작권 논평뿐이다. 직전 회차 대비 변화 없음; 접경 열점 후보 0건.",
+  "overall_summary": "11월 14일 18시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관 회담 후속 설명과 미 전문가 전작권 논평뿐이다. 직전 회차 대비 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -83,7 +85,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T17:10:30+00:00",
+  "checked_at": "2026-11-14T18:09:46+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

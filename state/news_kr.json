@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-11-14T03:10:24+00:00",
+ "fetched_at": "2026-11-14T03:35:25+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-14T03:10:24+00:00",
+ "last_ok_at": "2026-11-14T03:35:25+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -39,7 +39,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 5
+   "hits": 4
   },
   "국민일보": {
    "feeds": 2,
@@ -65,7 +65,7 @@
   "summit": {
    "clusters": 10,
    "max_independent": 2,
-   "latest": "2026-11-14T03:10:24+00:00"
+   "latest": "2026-11-14T03:35:25+00:00"
   },
   "drone_balloon": {
    "clusters": 2,
@@ -187,7 +187,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "국민일보",

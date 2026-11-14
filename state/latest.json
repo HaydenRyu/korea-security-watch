@@ -1,56 +1,47 @@
 {
   "coverage": {
-    "troop_movement": [
-      "North Korea nuclear Yongbyon Punggye-ri troops mobilization",
-      "북한 미사일 발사 합참"
-    ],
-    "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri troops mobilization",
-      "북한 핵 풍계리 영변"
-    ],
-    "logistics": [
-      "북한 미사일 발사 합참",
-      "North Korea Russia munitions transfer"
-    ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "목함지뢰 해안"
+      "지뢰 발견 DMZ 귀순 북한"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격 랜섬웨어 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중",
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 열병식 병력 집결"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘 발령",
-      "한미일 긴급 경고"
+      "서해 구조물 주한미군 감축 김정은 방중 방러"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hacking"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+    ],
+    "nuclear": [
+      "북한 미사일 발사 합참 11월 14일",
+      "North Korea nuclear test Punggye-ri Yongbyon"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 탄약 군수 수송"
+    ],
+    "logistics": [
+      "북한 병력 이동 전방 증강 탄약 군수 수송"
+    ],
+    "parade_massing": [
+      "북한 준전시 등화관제 노농적위군 열병식 집결"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 노농적위군 열병식 집결"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 상향 한미일 긴급 경고 North Korea nuclear test Punggye-ri Yongbyon"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261114504516",
     "https://www.segye.com/newsView/20261114500800",
-    "https://www.nknews.org"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "11월 14일 18시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관 회담 후속 설명과 미 전문가 전작권 논평뿐이다. 직전 회차 대비 변화 없음.",
+  "overall_summary": "11월 14일 19시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관 회담 후속 설명, 미 전문가 전작권 논평, NK News 분석(11/13 클러스터탄 시험 조작 의혹)뿐이다. 직전 회차 대비 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,15 +53,14 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "배경 — 9월 DMZ 지뢰 대응 설명 등 새 발견·충돌 없음"
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "배경 — 한중 외교장관 회담에서 왕이가 10/24 김정은 단둥 방문·김성남 방중을 설명, 새 군사협력·미군 공식 발표 없음"
+      "summary": "배경 — 왕이가 10/24 김정은 단둥 방문을 한국 측에 설명, 새 군사협력·미군 공식 발표 없음"
     },
     "parade_massing": {
       "status": "none"
@@ -85,7 +75,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T18:09:46+00:00",
+  "checked_at": "2026-11-14T19:10:31+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

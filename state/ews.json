@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-14T05:09:34+00:00",
+  "computed_at": "2026-11-14T06:09:45+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 0,
   "band": "안정",
   "d": 0,
-  "e": 17,
+  "e": 8,
   "alpha": 1.0,
   "grade": 0,
   "grade_label": "평시",
   "coverage": {
     "observed_theaters": 4,
-    "linkage_judged_at": "2026-11-13T23:40:00+00:00",
-    "latest_updated_at": "2026-11-14T05:09:34+00:00"
+    "linkage_judged_at": "2026-11-14T05:40:00+00:00",
+    "latest_updated_at": "2026-11-14T06:09:45+00:00"
   },
   "theaters": [
     {
@@ -22,7 +22,7 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "중국 국방부는 미중 군사 소통 유지를 밝혔고 대만해협 새 훈련 발표는 이번 원문에 없다.",
+      "summary": "중국 국방부는 미중 국방 소통 유지를 밝혔고 대만해협 새 훈련 발표는 연 원문에 없다.",
       "sources": [
         {
           "name": "중앙통신사",
@@ -31,7 +31,7 @@
           "published_at": "2026-11-13T17:00:30+08:00"
         }
       ],
-      "judged_at": "2026-11-13T23:40:00+00:00"
+      "judged_at": "2026-11-14T05:40:00+00:00"
     },
     {
       "key": "ukraine",
@@ -41,7 +41,7 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "발트해 핀란드만에서 러시아 군함이 우크라이나 드론 공격을 받았고 푸틴은 평화 협상 요구를 높여 전쟁이 계속 중이다.",
+      "summary": "핀란드만에서 러시아 군함이 우크라이나 드론에 피격됐고 평화 협상 논의 속에서도 전쟁이 계속 중이다.",
       "sources": [
         {
           "name": "BBC",
@@ -52,11 +52,11 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cq39glwprknjo",
-          "published_at": "2026-11-13T16:40:31+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo",
+          "published_at": "2026-11-13T02:01:35+00:00"
         }
       ],
-      "judged_at": "2026-11-13T23:40:00+00:00"
+      "judged_at": "2026-11-14T05:40:00+00:00"
     },
     {
       "key": "scs_ecs",
@@ -72,12 +72,11 @@
       "key": "mideast",
       "observed": true,
       "state": 3,
-      "contribution": 13,
+      "contribution": 4,
       "channels": [
-        "c4_sea_energy",
         "c5_diplomacy"
       ],
-      "summary": "가자 나세르 병원에 미사일이 떨어지는 공습이 이어지고 이란 외무부는 청해부대 작전구역 확대를 적대 행위로 간주하겠다고 경고했다.",
+      "summary": "이스라엘 공습으로 가자 병원에서 6명이 숨졌다고 보건부가 밝혔고 IAEA는 이란 미사찰 시설에 우려를 표했다.",
       "sources": [
         {
           "name": "BBC",
@@ -86,13 +85,13 @@
           "published_at": "2026-11-12T16:54:12+00:00"
         },
         {
-          "name": "세계일보",
-          "tier": "C",
-          "url": "https://www.segye.com/newsView/20261113512091",
-          "published_at": "2026-11-13T16:42:00+09:00"
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/cm75261e3pdko",
+          "published_at": "2026-11-13T12:28:28+00:00"
         }
       ],
-      "judged_at": "2026-11-13T23:40:00+00:00"
+      "judged_at": "2026-11-14T05:40:00+00:00"
     },
     {
       "key": "us_posture",
@@ -100,16 +99,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 구축함 마이클 머피가 중동 작전을 포함한 11개월 배치를 마치고 하와이로 귀환했다는 보도만 있고 새 전략자산 전개 보도는 없다.",
+      "summary": "일본의 원자력 잠수함 검토 보도만 있고 한반도 주변 미 전략자산의 새 전개 보도는 없다.",
       "sources": [
         {
           "name": "Stars and Stripes",
           "tier": "B",
-          "url": "https://www.stripes.com/branches/navy/2026-11-13/navy-destroyer-11-month-deployment-23450500.html",
+          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-13/japan-nuclear-powered-submarines-23450638.html",
           "published_at": "2026-11-13T00:00:00+00:00"
         }
       ],
-      "judged_at": "2026-11-13T23:40:00+00:00"
+      "judged_at": "2026-11-14T05:40:00+00:00"
     }
   ],
   "channels": [
@@ -130,8 +129,8 @@
     },
     {
       "key": "c4_sea_energy",
-      "observed": true,
-      "value": 8
+      "observed": false,
+      "value": 0
     },
     {
       "key": "c5_diplomacy",
@@ -142,6 +141,6 @@
   "last_good": {
     "ews": 0,
     "band": "안정",
-    "computed_at": "2026-11-14T05:09:34+00:00"
+    "computed_at": "2026-11-14T06:09:45+00:00"
   }
 }

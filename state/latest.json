@@ -1,59 +1,57 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 탄약 군수 수송 전방 병력 증강",
-      "North Korea artillery logistics border buildup"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement border"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향 11월",
-      "North Korea nuclear Yongbyon Punggye-ri troops mobilization November 2026"
+      "북한 핵시설 영변 풍계리",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 전방 병력 증강",
-      "North Korea artillery logistics border buildup"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "북한 합참 발표 11월 14일"
+      "지뢰 발견 DMZ 합참",
+      "North Korea DMZ NLL border"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출",
-      "랜섬웨어 공격"
+      "North Korea cyber attack"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
+      "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 11월"
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "North Korea Reuters November 14 2026"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 노농적위군 등화관제 진돗개 데프콘"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "북한 준전시 노농적위군 등화관제 진돗개 데프콘",
-      "북한 합참 발표 11월 14일"
+      "진돗개 데프콘 발령",
+      "North Korea warning DEFCON"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 FBI"
+      "북한 도박사이트 구축 징역 선고 국가보안법",
+      "North Korea crypto theft Binance seize DOJ"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261113514600",
-    "https://www.nknews.org/",
-    "https://www.koreajoongangdaily.com/",
-    "https://www.koreatimes.co.kr/southkorea/defense"
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1433965",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "최근 24시간 새 군사 징후는 확인되지 않았다. 한중 외교장관 회담, 북한 동해 군항 분석 등 외교·분석 보도뿐이며 접경 열점 후보에 대한 새 보도 대조 사항도 없다.",
+  "overall_summary": "최근 24시간 새 군사 징후는 확인되지 않았다. 한중 외교장관 회담, 북한 동해 군항 분석 등 외교·분석 보도뿐이며 접경 열점 후보도 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,15 +63,13 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "DMZ 지뢰는 9월 사건의 후속 보도(외교부 유엔 설명)뿐이며 새 발견은 없다."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "한중 외교장관 회담·트럼프 전작권 분석은 외교·배경 보도로 새 군사 협력 확인은 없다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -88,7 +84,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T03:09:57+00:00",
+  "checked_at": "2026-11-14T04:09:57+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

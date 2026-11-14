@@ -1,57 +1,62 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement border"
+      "북한 병력 이동 군수 비축",
+      "North Korea troops nuclear artillery Reuters November 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear Reuters November 2026"
+      "북한 핵 풍계리 영변 핵시설 동향 전술핵",
+      "North Korea troops nuclear artillery Reuters November 2026"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment Russia"
+      "북한 준전시 등화관제 노농적위군 병력 이동 군수 비축",
+      "North Korea troops nuclear artillery Reuters November 2026"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "목함지뢰 해안 발견"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순",
+      "북한 미사일 발사 합참 11월 14일"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 공격 11월 14일",
-      "사이버 공격 랜섬웨어 공격"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격",
+      "North Korea attributed FBI hackers"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit",
-      "김정은 방중 서해 구조물 주한미군 감축"
+      "김정은 방중 김성남",
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade preparation"
+      "북한 준전시 등화관제 노농적위군 병력 이동 군수 비축",
+      "North Korea troops nuclear artillery Reuters November 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 대피",
-      "North Korea wartime mobilization"
+      "북한 준전시 등화관제 노농적위군 병력 이동 군수 비축",
+      "North Korea talks offer"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "North Korea warning Japan J-Alert"
+      "북한 미사일 발사 합참 11월 14일",
+      "North Korea talks offer"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hackers"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261114504516",
     "https://www.segye.com/newsView/20261114500800",
-    "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html",
-    "https://www.armscontrol.org/node/15539"
+    "https://www.segye.com/newsView/20261113514600",
+    "https://www.hankookilbo.com/news/article/A2026111414010001875",
+    "https://www.koreaherald.com/article/10935019",
+    "https://www.nknews.org/2026/11/north-korean-cluster-warheads-could-threaten-targets-as-far-as-busan-experts/",
+    "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사적 징후는 없다. 한중 외교장관 회담에서 왕이가 김정은 단둥 방문(10/24)·김성남 방중(11/5)을 설명한 것과 주한미군 철수 관련 미 전문가 관측은 배경이며, 접경 열점 후보는 0건이다.",
+  "overall_summary": "11/14 10시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관회담에서 북중 교류 설명 등 외교 동향만 확인됐다. 최근 며칠 대비 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,13 +68,16 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "배경 — DMZ 지뢰 관련 외교부 유엔 설명(11/13)·동해 군항 보도는 새 접경 사건 아님, 신규 발견·충돌 보도 없음"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "배경 — FBI의 북한 '페이스스틸러' 암호화폐 탈취 귀속(11월 초)은 24시간 경과, 신규 국내 사고 보도 없음"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "배경 — 김정은 단둥 방문(10/24)·김성남 당 대표단 방중(11/3경)은 24시간 경과, 14일 한중 외교장관회담 설명 보도는 후속 재인용이며 새 파병·협정 없음"
     },
     "parade_massing": {
       "status": "none"
@@ -84,7 +92,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T09:09:44+00:00",
+  "checked_at": "2026-11-14T10:10:10+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

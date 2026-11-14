@@ -1,12 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-11-13T23:40:00+00:00",
-  "world_at": "2026-11-13T23:40:00+00:00",
+  "updated_at": "2026-11-14T05:40:00+00:00",
+  "world_at": "2026-11-14T05:40:00+00:00",
   "world": [
     {
-      "title": "푸틴, 러-우 평화 협상 요구 높여…유럽 안보 의제화를 승리로 평가",
-      "summary": "BBC 러시아 에디터는 유럽 안보 문제가 협상 의제에 오른 것을 모스크바가 승리로 보며 푸틴이 요구를 높였다고 전했다.",
+      "title": "젤렌스키, 러-우 평화 협상에 유럽 참여 환영",
+      "summary": "우크라이나 대통령은 미국이 유럽을 러-우 평화 협상에 끌어들이는 것이 타당하다며 환영했다.",
       "link_korea": "러-우 협상의 향방은 북러 군사협력과 북한군 파병 지속 여부에 영향을 준다.",
+      "region": "유럽",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+      }
+    },
+    {
+      "title": "푸틴, 평화 협상 요구 수위 높여",
+      "summary": "BBC 러시아 에디터는 푸틴이 우크라이나 평화 협상에서 요구를 높였다고 분석했다.",
+      "link_korea": "협상 교착은 러시아의 북한 군사 지원 의존을 길게 할 수 있다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
@@ -15,38 +26,27 @@
       }
     },
     {
-      "title": "IAEA, 이란 이스파한 농축시설 미사찰에 우려 확대",
-      "summary": "유엔 핵감시기구는 이란이 1년여 전 공표한 이스파한 우라늄 농축시설을 한 번도 방문하지 못했다며 우려를 표했다.",
-      "link_korea": "중동 핵 비확산 체제의 약화는 북한 핵 문제 대응에도 선례로 작용한다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cm75261e3pdko",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
-      }
-    },
-    {
-      "title": "FBI, 북한 해커의 가짜 화상통화 암호화폐 탈취 발표",
-      "summary": "FBI는 18개월간 900여 명이 '페이스스틸러' 수법에 당했고 피해액이 4억 달러 규모라고 밝혔다.",
-      "link_korea": "북한의 암호화폐 탈취 수익이 무기 개발 자금원이라는 미 당국 설명이 이어진다.",
-      "region": "북한·미국",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cqdj1ellpd70o",
-        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
-      }
-    },
-    {
-      "title": "중국 국방부, 중미 군사 소통 유지 강조",
-      "summary": "중국 국방부 대변인은 11월 2~3일 워싱턴에서 4차 위기 소통 실무회의가 열렸다며 분쟁 관리 소통을 이어가겠다고 밝혔다.",
-      "link_korea": "미중 군사 소통 동향은 한반도 주변 군사 긴장 관리와 주한미군 운용 환경에 연결된다.",
+      "title": "한중 외교장관 베이징 회담, 한반도 문제·APEC 정상회담 논의",
+      "summary": "왕이 중국 외교부장과 조현 외교부 장관이 13일 베이징에서 만나 한반도 문제와 APEC 기간 양국 정상회담을 논의했다.",
+      "link_korea": "중국의 대북 입장과 북중 교류 설명이 한국 대북 정책 환경에 직접 연결된다.",
       "region": "동아시아",
       "source": {
         "name": "중앙통신사",
-        "url": "https://www.cna.com.tw/news/acn/202611130213.aspx",
+        "url": "https://www.cna.com.tw/news/acn/202611140044.aspx",
+        "via": "https://feeds.feedburner.com/rsscna/mainland"
+      }
+    },
+    {
+      "title": "왕이, 미중 정상회담 앞두고 미 정당 대표 면담",
+      "summary": "왕이는 13일 미중 정당 대화 미국 대표를 만나 두 정상의 합의 이행과 AI 등 협력 확대를 말했다.",
+      "link_korea": "APEC 미중 정상회담 결과는 대북 압박·북미 대화 구도에 영향을 준다.",
+      "region": "동아시아",
+      "source": {
+        "name": "중앙통신사",
+        "url": "https://www.cna.com.tw/news/acn/202611140073.aspx",
         "via": "https://feeds.feedburner.com/rsscna/mainland"
       }
     }
   ],
-  "world_context": "러-우 협상 교착, 이란 핵 사찰 공백, 북한 사이버 수익, 미중 군 소통이 한반도 안보 환경에 동시에 걸려 있다."
+  "world_context": "러-우 협상 교착과 APEC 앞 한중·미중 외교 접촉이 한반도 안보 환경에 동시에 걸려 있다."
 }

@@ -2,53 +2,56 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
+      "North Korea troop movement border"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear Reuters November 2026"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 합참 DMZ 귀순"
+      "지뢰 발견 DMZ 귀순 NLL",
+      "목함지뢰 해안 발견"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 공격 개인정보 유출"
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 공격 11월 14일",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중",
-      "서해 구조물",
-      "주한미군 감축"
+      "Kim Jong Un China Russia visit",
+      "김정은 방중 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 집결",
+      "North Korea parade preparation"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 대피",
+      "North Korea wartime mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 상향",
+      "North Korea warning Japan J-Alert"
     ],
     "hybrid_ops": [
-      "간첩 혐의 국가보안법 구속",
-      "US seize $1.2B Binance funds North Korean crypto theft"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261114504516",
     "https://www.segye.com/newsView/20261114500800",
-    "https://arynews.tv/north-koreas-kim-jong-un-visits-china-via-dandong-bridge-south-korea-source-says",
-    "https://www.nknews.org/"
+    "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html",
+    "https://www.armscontrol.org/node/15539"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사적 징후는 없다. 한중 외교장관 회담의 북중 교류 설명과 주한미군 전문가 전망은 배경이며, 접경 열점 후보는 0건, NK News의 미국 바이낸스 자금 동결 보도는 공식 귀속 원문을 열지 못해 징후로 올리지 않았다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사적 징후는 없다. 한중 외교장관 회담에서 왕이가 김정은 단둥 방문(10/24)·김성남 방중(11/5)을 설명한 것과 주한미군 철수 관련 미 전문가 관측은 배경이며, 접경 열점 후보는 0건이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -66,8 +69,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "한중 외교장관 회담의 김정은 단둥 방문(10/24) 설명과 주한미군 철수 전망은 경제 협력·전문가 관측일 뿐 신규 군사 협력·공식 감축 발표 없음(배경)."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -79,11 +81,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "미국의 북한 연계 가상자산 동결 보도는 공식 귀속 원문을 열지 못해 배경으로만 둔다."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-14T08:09:58+00:00",
+  "checked_at": "2026-11-14T09:09:44+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

@@ -1,48 +1,55 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 미사일 발사 지뢰 발견 DMZ 귀순",
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 합참 발표 11월 14일",
+      "North Korea Reuters missile troops November 2026"
     ],
     "nuclear": [
-      "North Korea Kim Jong Un China Russia visit"
+      "North Korea Reuters missile troops November 2026"
     ],
     "logistics": [
-      "합참 북한 미사일 발사 지뢰 발견 DMZ 귀순"
+      "North Korea Reuters missile troops November 2026"
     ],
     "border_clash": [
-      "합참 북한 미사일 발사 지뢰 발견 DMZ 귀순"
+      "지뢰 발견 DMZ 귀순 NLL",
+      "북한 합참 발표 11월 14일"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 서해 구조물 주한미군 감축",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격",
+      "North Korea attributed FBI hackers indictment"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "북한 GPS 교란 서해 구조물 주한미군 감축"
+      "김정은 방중 김정은 방러 조용원",
+      "Kim Jong Un China Russia visit",
+      "국가보안법 구속 간첩 혐의 서해 구조물 주한미군 감축",
+      "조용원 방러 조선중앙통신 러시아 방문 전투적 우의"
     ],
     "parade_massing": [
-      "합참 북한 미사일 발사 지뢰 발견 DMZ 귀순"
+      "북한 합참 발표 11월 14일"
     ],
     "nk_internal": [
-      "합참 북한 미사일 발사 지뢰 발견 DMZ 귀순"
+      "North Korea Reuters missile troops November 2026"
     ],
     "gov_warning": [
-      "북한 GPS 교란 서해 구조물 주한미군 감축"
+      "북한 합참 발표 11월 14일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 서해 구조물 주한미군 감축",
+      "North Korea attributed FBI hackers indictment",
+      "US seize $1.2B Binance North Korean crypto theft Justice Department"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261114504516",
     "https://www.segye.com/newsView/20261114500800",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://www.yna.co.kr/view/AKR20261115005600504",
+    "https://www.yna.co.kr/view/AKR20261114033800017"
   ],
-  "overall_summary": "11월 14일 22시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관 회담 후속 설명, 미 전문가 전작권·주한미군 논평, NK News 분석(11/4 클러스터탄두 시험 사진 조작 의혹, 동해 해군기지)뿐이다. 직전 회차 대비 변화 없음. 접경 열점 신규 후보 0건.",
+  "overall_summary": "24시간 안 새 징후는 조용원 당 비서의 방러(외교 일정, 조선중앙통신 15일 보도)와 보안기업 보고서의 라자루스 국내 서버 표적 정황뿐이며 둘 다 정례·보고 성격이다. 직전 회차 대비 변화 없음; 접경 열점 신규 후보 0건, 합참 사이트는 503으로 확인 못 했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,11 +64,44 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "서울",
+      "summary": "글로벌 보안기업 보고서에서 북한 연계 라자루스가 PHP 취약점으로 국내 서버·도메인 30곳을 표적으로 삼은 정황이 공개됐다(정부 귀속 발표 없음).",
+      "meaning": "실제 장애 없는 해킹 조직 동향 보고라 정례 범위다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261114033800017"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "보안기업 보고서 기반 연합뉴스 보도"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "배경 — 왕이가 김정은 단둥 방문·김성남 방중을 한국 측에 설명(11/13 회담), 주한미군·전작권은 미 전문가 논평뿐 공식 발표 없음"
+      "status": "single",
+      "routine": true,
+      "region": "러시아",
+      "summary": "조용원 노동당 비서가 이끄는 당·정부 대표단이 러시아를 방문했다고 조선중앙통신이 15일 보도했다(교도는 메드베데프 회담 예상).",
+      "meaning": "군사 협정·무기 이전 발표 없는 고위급 외교 일정이다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261115005600504"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "조선중앙통신 보도를 연합이 전함"
+      ],
+      "speculation": [
+        "북러 관계 강화 확인용 방문으로 예상"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -76,8 +116,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T22:09:51+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-14T23:10:39+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

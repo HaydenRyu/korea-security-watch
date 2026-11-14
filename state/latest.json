@@ -2,59 +2,55 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troops Reuters November 2026"
+      "North Korea troop buildup"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters November 2026"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment Russia"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "합참 발표 지뢰 발견 DMZ 11월 14일",
-      "귀순 NLL"
+      "지뢰 발견 DMZ 합참 북한 11월",
+      "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격 해킹"
+      "해킹 개인정보 유출 사이버 공격 11월 14일 2026"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "North Korea Reuters Kim Jong Un China visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning State Department"
+      "진돗개 데프콘 발령",
+      "북한 미사일 발사 합참 11월 14일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단",
-      "North Korea talks offer"
+      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261114504516",
     "https://www.segye.com/newsView/20261114500800",
-    "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html",
-    "https://www.koreajoongangdaily.com/korea/north-korea-is-racing-to-rebuild-its-conventional-forces-with-help-from-russia/12963205"
+    "https://arynews.tv/north-koreas-kim-jong-un-visits-china-via-dandong-bridge-south-korea-source-says"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사적 징후는 없다. 한중 외교장관 회담의 북중 교류 설명과 주한미군·전작권 전문가 전망이 중심이며 11/4 미사일 발사 이후 새 발사 보도도 없다. 접경 열점 후보 대조는 새 후보 없음으로 별도 징후 없음.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사적 징후는 없다. 한중 외교장관 회담의 북중 교류 설명과 주한미군 전문가 전망이 중심이며 접경 열점 후보도 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -73,7 +69,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "한중 외교장관 회담(11/13)에서 왕이가 김정은 10/24 단둥 방문·김성남 11/5 방중을 설명 — 24시간 안 새 군사 협력 없음, 배경."
+      "summary": "한중 외교장관 회담의 김정은 단둥 방문(10/24) 설명과 주한미군 철수 전망은 경제 협력·전문가 관측일 뿐 신규 군사 협력·공식 감축 발표 없음(배경)."
     },
     "parade_massing": {
       "status": "none"
@@ -88,7 +84,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T06:09:45+00:00",
+  "checked_at": "2026-11-14T07:09:56+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

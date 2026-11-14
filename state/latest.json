@@ -2,56 +2,55 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement border"
+      "North Korea troop buildup Reuters"
     ],
     "nuclear": [
-      "북한 핵시설 영변 풍계리",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Reuters November 2026"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea ammunition logistics"
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참",
-      "North Korea DMZ NLL border"
+      "북한 합참 발표 지뢰 발견 DMZ",
+      "DMZ NLL 귀순 경고사격"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea cyber attack"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방중 김성남 왕이 설명",
       "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "North Korea warning DEFCON"
+      "진돗개 데프콘 상향 합참"
     ],
     "hybrid_ops": [
-      "북한 도박사이트 구축 징역 선고 국가보안법",
-      "North Korea crypto theft Binance seize DOJ"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hacking"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261113514600",
-    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1433965",
-    "https://www.nknews.org/"
+    "https://biz.sbs.co.kr/amp/article/20000344530",
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1435239",
+    "https://www.thestar.com.my/news/world/2026/11/04/north-korea-fires-multiple-missiles-in-fourth-weapons-launch-in-a-month-seoul-says"
   ],
-  "overall_summary": "최근 24시간 새 군사 징후는 확인되지 않았다. 한중 외교장관 회담, 북한 동해 군항 분석 등 외교·분석 보도뿐이며 접경 열점 후보도 없었다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사적 징후는 없다. 한중 외교장관 회담과 김성남 방중 설명 등 외교 일정이 중심이며 11/4 미사일 발사 이후 새 발사 보도도 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -84,7 +83,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T04:09:57+00:00",
+  "checked_at": "2026-11-14T05:09:34+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

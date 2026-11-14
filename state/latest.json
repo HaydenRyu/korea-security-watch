@@ -2,45 +2,39 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "North Korea troop movement Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon troop ammunition Russia November 2026"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "North Korea nuclear Yongbyon troop ammunition Russia November 2026"
     ],
     "border_clash": [
       "북한 합참 지뢰 발견 DMZ 귀순",
-      "North Korea DMZ NLL Reuters"
+      "North Korea Reuters November 14 2026"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "북한 준전시 등화관제 진돗개 데프콘 서해 구조물 주한미군 감축"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "North Korea Reuters November 14 2026"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 열병식 준전시 등화관제 진돗개 국가보안법 구속 간첩 혐의 남북 대화 제안"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 진돗개 데프콘 서해 구조물 주한미군 감축"
+      "북한 열병식 준전시 등화관제 진돗개 국가보안법 구속 간첩 혐의 남북 대화 제안"
     ],
     "gov_warning": [
-      "북한 준전시 등화관제 진돗개 데프콘 서해 구조물 주한미군 감축"
+      "북한 열병식 준전시 등화관제 진돗개 국가보안법 구속 간첩 혐의 남북 대화 제안"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "북한 열병식 준전시 등화관제 진돗개 국가보안법 구속 간첩 혐의 남북 대화 제안"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "북한 열병식 준전시 등화관제 진돗개 국가보안법 구속 간첩 혐의 남북 대화 제안"
     ]
   },
   "opened": [
@@ -48,7 +42,7 @@
     "https://www.segye.com/newsView/20261114500800",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "11/14 14시(UTC) 기준 24시간 내 새 군사 징후 없음 — 왕이의 김정은 단둥 방문(10/24) 설명, 미 전문가의 전작권·주한미군 관측(공식 발표 아님), NK News의 북한 무기시험 사진 의혹뿐이다. 직전 회차 대비 변화 없음.",
+  "overall_summary": "11/14 15시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관 회담 후속 설명(왕이의 김정은 방중 설명)과 미 전문가의 전작권·주한미군 관측(공식 발표 아님)뿐이다. 직전 회차 대비 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,16 +54,14 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "배경 — 신규 지뢰 발견·충돌 보도 없음"
+      "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "배경 — 신규 국내 사고·귀속 발표 보도 없음"
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "배경 — 10/24 김정은 단둥 방문의 외교 당국자 설명(왕이)과 전문가 관측뿐, 새 군사협력·미군 공식 발표 없음"
+      "summary": "배경 — 한중 외교장관 회담에서 10/24 김정은 단둥 방문 설명, 새 군사협력·미군 공식 발표 없음"
     },
     "parade_massing": {
       "status": "none"
@@ -84,7 +76,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T14:10:18+00:00",
+  "checked_at": "2026-11-14T15:10:43+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

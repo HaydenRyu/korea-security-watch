@@ -1,19 +1,18 @@
 {
- "fetched_at": "2026-11-14T01:56:51+00:00",
+ "fetched_at": "2026-11-14T03:10:24+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-14T01:56:51+00:00",
+ "last_ok_at": "2026-11-14T03:10:24+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1104,
-  "hits": 27,
-  "clusters": 24,
+  "fetched": 1105,
+  "hits": 26,
+  "clusters": 23,
   "by_group": {
    "summit": 10,
    "drone_balloon": 2,
-   "spy": 1,
    "border": 7,
    "usfk": 1,
    "yellowsea": 1,
@@ -27,14 +26,14 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 544,
+   "count": 545,
    "hits": 18
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 2
+   "hits": 1
   },
   "동아일보": {
    "feeds": 2,
@@ -66,17 +65,12 @@
   "summit": {
    "clusters": 10,
    "max_independent": 2,
-   "latest": "2026-11-14T01:56:51+00:00"
+   "latest": "2026-11-14T03:10:24+00:00"
   },
   "drone_balloon": {
    "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-13T23:07:43+00:00"
-  },
-  "spy": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-13T23:01:29+00:00"
   },
   "border": {
    "clusters": 7,
@@ -120,7 +114,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 64,
+   "count": 65,
    "hits": 11
   },
   {
@@ -177,7 +171,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "동아일보",

@@ -1,23 +1,23 @@
 {
- "fetched_at": "2026-11-14T07:13:31+00:00",
+ "fetched_at": "2026-11-14T08:27:32+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-14T07:13:31+00:00",
+ "last_ok_at": "2026-11-14T08:27:32+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1105,
-  "hits": 29,
-  "clusters": 24,
+  "hits": 28,
+  "clusters": 23,
   "by_group": {
    "summit": 12,
    "hybrid": 2,
    "spy": 1,
    "usfk": 1,
-   "border": 7,
+   "border": 6,
    "yellowsea": 1,
-   "mine": 3,
+   "mine": 2,
    "gps": 3,
    "defect": 1,
    "drone_balloon": 1
@@ -66,7 +66,7 @@
   "summit": {
    "clusters": 12,
    "max_independent": 2,
-   "latest": "2026-11-14T07:13:31+00:00"
+   "latest": "2026-11-14T08:27:32+00:00"
   },
   "hybrid": {
    "clusters": 2,
@@ -84,7 +84,7 @@
    "latest": "2026-11-14T05:31:15+00:00"
   },
   "border": {
-   "clusters": 7,
+   "clusters": 6,
    "max_independent": 1,
    "latest": "2026-11-13T19:26:38+00:00"
   },
@@ -94,7 +94,7 @@
    "latest": "2026-11-13T10:45:32+00:00"
   },
   "mine": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-13T10:18:12+00:00"
   },

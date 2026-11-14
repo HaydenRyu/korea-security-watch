@@ -2,47 +2,49 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement Reuters"
+      "North Korea Reuters missile troops"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon troop ammunition Russia November 2026"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "North Korea nuclear Yongbyon troop ammunition Russia November 2026"
+      "North Korea ammunition Russia"
     ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순",
-      "North Korea Reuters November 14 2026"
+      "북한 지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Reuters November 14 2026"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식 준전시 등화관제 진돗개 국가보안법 구속 간첩 혐의 남북 대화 제안"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "북한 열병식 준전시 등화관제 진돗개 국가보안법 구속 간첩 혐의 남북 대화 제안"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "북한 열병식 준전시 등화관제 진돗개 국가보안법 구속 간첩 혐의 남북 대화 제안"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "북한 열병식 준전시 등화관제 진돗개 국가보안법 구속 간첩 혐의 남북 대화 제안"
+      "국가보안법 구속",
+      "US seize Binance North Korea crypto theft Justice Department"
     ],
     "calm": [
-      "북한 열병식 준전시 등화관제 진돗개 국가보안법 구속 간첩 혐의 남북 대화 제안"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261114504516",
-    "https://www.segye.com/newsView/20261114500800",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://www.yna.co.kr/view/AKR20261113139051504"
   ],
-  "overall_summary": "11/14 15시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관 회담 후속 설명(왕이의 김정은 방중 설명)과 미 전문가의 전작권·주한미군 관측(공식 발표 아님)뿐이다. 직전 회차 대비 변화 없음.",
+  "overall_summary": "11/14 16시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관 회담 후속 설명과 외교 일정뿐이다. 직전 회차 대비 변화 없음. 접경 열점 후보는 확인하지 않음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -54,14 +56,15 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "배경 — 외교부가 유엔 고위급에 9월 DMZ 지뢰 대응을 설명한 것으로 새 발견·충돌 없음"
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "배경 — 한중 외교장관 회담에서 10/24 김정은 단둥 방문 설명, 새 군사협력·미군 공식 발표 없음"
+      "summary": "배경 — 한중 외교장관 회담에서 왕이가 10/24 김정은 단둥 방문·김성남 방중을 설명, 새 군사협력·미군 공식 발표 없음"
     },
     "parade_massing": {
       "status": "none"
@@ -76,7 +79,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T15:10:43+00:00",
+  "checked_at": "2026-11-14T16:10:56+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

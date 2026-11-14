@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-11-14T08:27:32+00:00",
+ "fetched_at": "2026-11-14T09:43:15+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-14T08:27:32+00:00",
+ "last_ok_at": "2026-11-14T09:43:15+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -11,11 +11,11 @@
   "hits": 28,
   "clusters": 23,
   "by_group": {
-   "summit": 12,
+   "summit": 11,
+   "border": 7,
    "hybrid": 2,
    "spy": 1,
    "usfk": 1,
-   "border": 6,
    "yellowsea": 1,
    "mine": 2,
    "gps": 3,
@@ -28,7 +28,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 545,
-   "hits": 19
+   "hits": 18
   },
   "SBS": {
    "feeds": 3,
@@ -40,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 4
+   "hits": 5
   },
   "국민일보": {
    "feeds": 2,
@@ -64,9 +64,14 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "summit": {
-   "clusters": 12,
+   "clusters": 11,
    "max_independent": 2,
-   "latest": "2026-11-14T08:27:32+00:00"
+   "latest": "2026-11-14T09:43:15+00:00"
+  },
+  "border": {
+   "clusters": 7,
+   "max_independent": 1,
+   "latest": "2026-11-14T08:38:00+00:00"
   },
   "hybrid": {
    "clusters": 2,
@@ -82,11 +87,6 @@
    "clusters": 1,
    "max_independent": 2,
    "latest": "2026-11-14T05:31:15+00:00"
-  },
-  "border": {
-   "clusters": 6,
-   "max_independent": 1,
-   "latest": "2026-11-13T19:26:38+00:00"
   },
   "yellowsea": {
    "clusters": 1,
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "SBS",
@@ -193,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 1
+   "hits": 2
   },
   {
    "outlet": "국민일보",

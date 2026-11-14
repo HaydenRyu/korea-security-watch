@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-14T11:40:21+00:00",
+  "judged_at": "2026-11-14T23:39:41+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -13,16 +13,10 @@
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
           "published_at": "2026-11-14T10:30:38+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cq39glwprknjo",
-          "published_at": "2026-11-13T16:40:31+00:00"
         }
       ],
-      "summary": "푸틴이 전면 휴전을 계속 거부하는 가운데 미국이 돈바스 철수와 나토 가입 교환을 거론해 전쟁이 이어지는 중 협상이 진행된다.",
-      "judged_at": "2026-11-14T11:40:21+00:00"
+      "summary": "전쟁이 이어지는 가운데 젤렌스키는 미국이 돈바스 철수와 나토 가입의 교환을 거론했다고 밝혔고 미 당국자는 확인하지 않았다.",
+      "judged_at": "2026-11-14T23:39:41+00:00"
     },
     "mideast": {
       "state": 3,
@@ -44,7 +38,7 @@
         }
       ],
       "summary": "이스라엘 공습으로 가자 병원에서 6명이 숨졌다고 보건부가 밝혔고 IAEA는 이란 미사찰 시설에 우려를 표했다.",
-      "judged_at": "2026-11-14T11:40:21+00:00"
+      "judged_at": "2026-11-14T23:39:41+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -54,25 +48,37 @@
           "name": "Focus Taiwan",
           "tier": "B",
           "url": "https://focustaiwan.tw/politics/202611140008",
-          "published_at": "2026-11-14T16:14:30+08:00"
+          "published_at": "2026-11-14T16:14:34+08:00"
         }
       ],
       "summary": "대만 해순서는 동부 해안에서 중국 해경선과 무선 방송으로 영유권 주장을 다툰 뒤 계속 감시 중이라고 밝혔다.",
-      "judged_at": "2026-11-14T11:40:21+00:00"
+      "judged_at": "2026-11-14T23:39:41+00:00"
     },
     "scs_ecs": {
-      "state": 1,
+      "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "중앙통신사",
-          "tier": "B",
-          "url": "https://www.cna.com.tw/news/acn/202611090280.aspx",
-          "published_at": "2026-11-09T21:28:43+08:00"
+          "name": "Philstar",
+          "url": "https://www.philstar.com/rss/nation",
+          "published_at": "2026-11-14T16:00:00+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "Rappler",
+          "url": "https://www.rappler.com/feed/",
+          "published_at": "2026-11-14T23:31:36+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "BBC 아시아",
+          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+          "published_at": "2026-11-14T18:17:58+00:00",
+          "kind": "feed"
         }
       ],
-      "summary": "중국 해경 함정 편대가 센카쿠(댜오위타이) 영해에 진입했다(일본 공동통신 집계 올해 18일째).",
-      "judged_at": "2026-11-11T11:40:50+00:00"
+      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "judged_at": "2026-11-14T23:39:41+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -80,13 +86,19 @@
       "sources": [
         {
           "name": "DVIDS",
-          "tier": "A",
-          "url": "https://www.dvidshub.net/news/579361/japan-us-participate-annual-joint-senior-leader-seminar",
-          "published_at": "2026-11-14T02:09:21+00:00"
+          "url": "https://www.dvidshub.net/rss/news",
+          "published_at": "2026-11-14T20:51:50+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "Stars and Stripes",
+          "url": "https://www.stripes.com/theaters/asia_pacific/",
+          "published_at": "2026-11-13T00:00:00+00:00",
+          "kind": "feed"
         }
       ],
-      "summary": "미 태평양사령부가 일본 통합막료장 등과 정례 고위 세미나를 열었고 새 전략자산 전개 보도는 없다.",
-      "judged_at": "2026-11-14T11:40:21+00:00"
+      "summary": "DVIDS·Stars and Stripes 목록에 72시간 안 새 미 전략자산 전개 기사 없음",
+      "judged_at": "2026-11-14T23:39:41+00:00"
     }
   }
 }

@@ -1,17 +1,17 @@
 {
- "at": "2026-11-14T04:47:46+00:00",
- "south": 66,
- "area": 93,
- "baseline": 71.5,
- "ratio": 0.92,
- "samples": 6,
+ "at": "2026-11-14T05:59:31+00:00",
+ "south": 83,
+ "area": 102,
+ "baseline": 72,
+ "ratio": 1.15,
+ "samples": 5,
  "mil": [
   {
    "type": "GLEX",
    "name": "정찰용 비즈니스젯 가능",
    "call": "",
-   "lat": 37.23,
-   "lon": 125.3
+   "lat": 36.61,
+   "lon": 124.42
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

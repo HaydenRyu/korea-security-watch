@@ -1,20 +1,20 @@
 {
- "fetched_at": "2026-11-14T04:47:57+00:00",
- "status": "partial",
- "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
- "last_ok_at": "2026-11-14T03:35:25+00:00",
+ "fetched_at": "2026-11-14T05:59:41+00:00",
+ "status": "ok",
+ "status_detail": "",
+ "last_ok_at": "2026-11-14T05:59:41+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 1,
-  "fetched": 1045,
-  "hits": 27,
+  "feeds_failed": 0,
+  "fetched": 1105,
+  "hits": 29,
   "clusters": 24,
   "by_group": {
    "summit": 11,
+   "usfk": 1,
    "drone_balloon": 2,
    "border": 7,
-   "usfk": 1,
    "yellowsea": 1,
    "mine": 3,
    "gps": 3,
@@ -51,13 +51,13 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 1
+   "hits": 3
   },
   "국방일보": {
    "feeds": 1,
-   "failed": 1,
-   "count": 0,
-   "hits": 0
+   "failed": 0,
+   "count": 60,
+   "hits": 5
   }
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
@@ -65,7 +65,12 @@
   "summit": {
    "clusters": 11,
    "max_independent": 2,
-   "latest": "2026-11-14T04:47:57+00:00"
+   "latest": "2026-11-14T05:59:41+00:00"
+  },
+  "usfk": {
+   "clusters": 1,
+   "max_independent": 2,
+   "latest": "2026-11-14T05:31:15+00:00"
   },
   "drone_balloon": {
    "clusters": 2,
@@ -76,11 +81,6 @@
    "clusters": 7,
    "max_independent": 1,
    "latest": "2026-11-13T19:26:38+00:00"
-  },
-  "usfk": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-13T17:21:04+00:00"
   },
   "yellowsea": {
    "clusters": 1,
@@ -211,7 +211,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 1
+   "hits": 3
   },
   {
    "outlet": "세계일보",
@@ -225,8 +225,9 @@
    "outlet": "국방일보",
    "section": "국방",
    "url": "https://kookbang.dema.mil.kr/dema_xml/dema0010010000.xml",
-   "ok": false,
-   "error": "URLError: <urlopen error timed out>"
+   "ok": true,
+   "count": 60,
+   "hits": 5
   }
  ]
 }

@@ -14,45 +14,41 @@
     ],
     "border_clash": [
       "북한 합참 지뢰 발견 DMZ 귀순",
-      "North Korea DMZ NLL"
+      "North Korea DMZ NLL Reuters"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격 11월",
-      "North Korea attributed FBI"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "북한 준전시 등화관제 진돗개 데프콘 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense"
+      "북한 준전시 등화관제 진돗개 데프콘 서해 구조물 주한미군 감축"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "North Korea warning"
+      "북한 준전시 등화관제 진돗개 데프콘 서해 구조물 주한미군 감축"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261114500800",
     "https://www.segye.com/newsView/20261114504516",
+    "https://www.segye.com/newsView/20261114500800",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "11/14 13시(UTC) 기준 24시간 내 새 군사 징후 없음 — 왕이의 김정은 방중(10/24) 설명, 미 전문가의 전작권·주한미군 관측(공식 발표 아님), NK News의 동해 군항 분석뿐이다. 직전 회차 대비 변화 없음.",
+  "overall_summary": "11/14 14시(UTC) 기준 24시간 내 새 군사 징후 없음 — 왕이의 김정은 단둥 방문(10/24) 설명, 미 전문가의 전작권·주한미군 관측(공식 발표 아님), NK News의 북한 무기시험 사진 의혹뿐이다. 직전 회차 대비 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,6 +58,18 @@
     },
     "logistics": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "none",
+      "summary": "배경 — 신규 지뢰 발견·충돌 보도 없음"
+    },
+    "electronic_cyber": {
+      "status": "none",
+      "summary": "배경 — 신규 국내 사고·귀속 발표 보도 없음"
+    },
+    "foreign_forces": {
+      "status": "none",
+      "summary": "배경 — 10/24 김정은 단둥 방문의 외교 당국자 설명(왕이)과 전문가 관측뿐, 새 군사협력·미군 공식 발표 없음"
     },
     "parade_massing": {
       "status": "none"
@@ -74,21 +82,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "none",
-      "summary": "배경 — 9월 DMZ 지뢰 사건 후속 외 신규 발견·충돌 보도 없음"
-    },
-    "electronic_cyber": {
-      "status": "none",
-      "summary": "배경 — 신규 국내 사고·귀속 발표 보도 없음"
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "배경 — 10/24 김정은 단둥 방문의 외교부 설명(왕이)뿐, 새 군사협력 확인 없음"
     }
   },
-  "checked_at": "2026-11-14T13:11:14+00:00",
+  "checked_at": "2026-11-14T14:10:18+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

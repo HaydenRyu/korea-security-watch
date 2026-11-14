@@ -5,7 +5,7 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
+      "북한 핵 풍계리 영변 동향",
       "North Korea nuclear Yongbyon"
     ],
     "logistics": [
@@ -13,18 +13,17 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참 11월",
+      "북한 합참 지뢰 발견 DMZ 귀순",
       "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 합참",
-      "해킹 개인정보 유출",
-      "사이버 공격 랜섬웨어 공격",
+      "해킹 개인정보 유출 사이버 공격 11월",
       "North Korea attributed FBI"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "North Korea Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -41,19 +40,19 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI Binance seize"
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "북한 남북 대화 제안 통신선 확성기 중단",
+      "남북 대화 제안 통신선 복원 확성기",
       "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261114500800",
-    "https://www.segye.com/newsView/20261113514600",
+    "https://www.segye.com/newsView/20261114504516",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "11/14 12시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관회담 후속, 미 전문가의 전작권·주한미군 관측(공식 발표 아님), NK News의 동해 군항 분석뿐이다. 직전 회차 대비 변화 없음.",
+  "overall_summary": "11/14 13시(UTC) 기준 24시간 내 새 군사 징후 없음 — 왕이의 김정은 방중(10/24) 설명, 미 전문가의 전작권·주한미군 관측(공식 발표 아님), NK News의 동해 군항 분석뿐이다. 직전 회차 대비 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -86,10 +85,10 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "배경 — 주한미군은 전문가 관측만 있고 공식 발표 없음, 김정은 방중 설명은 후속 재인용"
+      "summary": "배경 — 10/24 김정은 단둥 방문의 외교부 설명(왕이)뿐, 새 군사협력 확인 없음"
     }
   },
-  "checked_at": "2026-11-14T12:09:59+00:00",
+  "checked_at": "2026-11-14T13:11:14+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

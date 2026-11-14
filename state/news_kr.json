@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-14T18:08:10+00:00",
+ "fetched_at": "2026-11-14T19:20:42+00:00",
  "status": "partial",
- "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
+ "status_detail": "동아일보/정치: TimeoutError: The read operation timed out; 동아일보/사회: TimeoutError: The read operation timed out",
  "last_ok_at": "2026-11-14T15:50:37+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 1,
-  "fetched": 1045,
-  "hits": 26,
-  "clusters": 21,
+  "feeds_failed": 2,
+  "fetched": 1005,
+  "hits": 23,
+  "clusters": 18,
   "by_group": {
-   "summit": 10,
-   "border": 6,
+   "summit": 8,
    "hybrid": 2,
    "spy": 1,
    "usfk": 1,
    "yellowsea": 1,
+   "border": 5,
    "mine": 2,
    "gps": 3,
    "defect": 1,
@@ -38,9 +38,9 @@
   },
   "동아일보": {
    "feeds": 2,
-   "failed": 0,
-   "count": 100,
-   "hits": 4
+   "failed": 2,
+   "count": 0,
+   "hits": 0
   },
   "국민일보": {
    "feeds": 2,
@@ -56,22 +56,17 @@
   },
   "국방일보": {
    "feeds": 1,
-   "failed": 1,
-   "count": 0,
-   "hits": 0
+   "failed": 0,
+   "count": 60,
+   "hits": 5
   }
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "summit": {
-   "clusters": 10,
+   "clusters": 8,
    "max_independent": 2,
    "latest": "2026-11-14T14:03:10+00:00"
-  },
-  "border": {
-   "clusters": 6,
-   "max_independent": 1,
-   "latest": "2026-11-14T08:38:00+00:00"
   },
   "hybrid": {
    "clusters": 2,
@@ -92,6 +87,11 @@
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-13T10:45:32+00:00"
+  },
+  "border": {
+   "clusters": 5,
+   "max_independent": 1,
+   "latest": "2026-11-13T10:18:12+00:00"
   },
   "mine": {
    "clusters": 2,
@@ -183,17 +183,15 @@
    "outlet": "동아일보",
    "section": "정치",
    "url": "https://rss.donga.com/politics.xml",
-   "ok": true,
-   "count": 50,
-   "hits": 2
+   "ok": false,
+   "error": "TimeoutError: The read operation timed out"
   },
   {
    "outlet": "동아일보",
    "section": "사회",
    "url": "https://rss.donga.com/national.xml",
-   "ok": true,
-   "count": 50,
-   "hits": 2
+   "ok": false,
+   "error": "TimeoutError: The read operation timed out"
   },
   {
    "outlet": "국민일보",
@@ -231,8 +229,9 @@
    "outlet": "국방일보",
    "section": "국방",
    "url": "https://kookbang.dema.mil.kr/dema_xml/dema0010010000.xml",
-   "ok": false,
-   "error": "URLError: <urlopen error timed out>"
+   "ok": true,
+   "count": 60,
+   "hits": 5
   }
  ]
 }

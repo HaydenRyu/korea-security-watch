@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-14T11:10:28+00:00",
+  "computed_at": "2026-11-14T12:09:59+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 0,
@@ -12,8 +12,8 @@
   "grade_label": "평시",
   "coverage": {
     "observed_theaters": 4,
-    "linkage_judged_at": "2026-11-14T05:40:00+00:00",
-    "latest_updated_at": "2026-11-14T11:10:28+00:00"
+    "linkage_judged_at": "2026-11-14T11:40:21+00:00",
+    "latest_updated_at": "2026-11-14T12:09:59+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "중국 국방부는 미중 국방 소통 유지를 밝혔고 대만해협 새 훈련 발표는 연 원문에 없다.",
+      "summary": "대만 해순서는 동부 해안에서 중국 해경선과 무선 방송으로 영유권 주장을 다툰 뒤 계속 감시 중이라고 밝혔다.",
       "sources": [
         {
-          "name": "중앙통신사",
+          "name": "Focus Taiwan",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/acn/202611130213.aspx",
-          "published_at": "2026-11-13T17:00:30+08:00"
+          "url": "https://focustaiwan.tw/politics/202611140008",
+          "published_at": "2026-11-14T16:14:30+08:00"
         }
       ],
-      "judged_at": "2026-11-14T05:40:00+00:00"
+      "judged_at": "2026-11-14T11:40:21+00:00"
     },
     {
       "key": "ukraine",
@@ -41,22 +41,22 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "핀란드만에서 러시아 군함이 우크라이나 드론에 피격됐고 평화 협상 논의 속에서도 전쟁이 계속 중이다.",
+      "summary": "푸틴이 전면 휴전을 계속 거부하는 가운데 미국이 돈바스 철수와 나토 가입 교환을 거론해 전쟁이 이어지는 중 협상이 진행된다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cmn0d33zz34zo",
-          "published_at": "2026-11-12T20:09:16+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
+          "published_at": "2026-11-14T10:30:38+00:00"
         },
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo",
-          "published_at": "2026-11-13T02:01:35+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cq39glwprknjo",
+          "published_at": "2026-11-13T16:40:31+00:00"
         }
       ],
-      "judged_at": "2026-11-14T05:40:00+00:00"
+      "judged_at": "2026-11-14T11:40:21+00:00"
     },
     {
       "key": "scs_ecs",
@@ -91,7 +91,7 @@
           "published_at": "2026-11-13T12:28:28+00:00"
         }
       ],
-      "judged_at": "2026-11-14T05:40:00+00:00"
+      "judged_at": "2026-11-14T11:40:21+00:00"
     },
     {
       "key": "us_posture",
@@ -99,16 +99,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "일본의 원자력 잠수함 검토 보도만 있고 한반도 주변 미 전략자산의 새 전개 보도는 없다.",
+      "summary": "미 태평양사령부가 일본 통합막료장 등과 정례 고위 세미나를 열었고 새 전략자산 전개 보도는 없다.",
       "sources": [
         {
-          "name": "Stars and Stripes",
-          "tier": "B",
-          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-13/japan-nuclear-powered-submarines-23450638.html",
-          "published_at": "2026-11-13T00:00:00+00:00"
+          "name": "DVIDS",
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/579361/japan-us-participate-annual-joint-senior-leader-seminar",
+          "published_at": "2026-11-14T02:09:21+00:00"
         }
       ],
-      "judged_at": "2026-11-14T05:40:00+00:00"
+      "judged_at": "2026-11-14T11:40:21+00:00"
     }
   ],
   "channels": [
@@ -141,6 +141,6 @@
   "last_good": {
     "ews": 0,
     "band": "안정",
-    "computed_at": "2026-11-14T11:10:28+00:00"
+    "computed_at": "2026-11-14T12:09:59+00:00"
   }
 }

@@ -2,7 +2,7 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement Reuters"
+      "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
@@ -13,17 +13,18 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 합참 DMZ 귀순",
+      "지뢰 발견 DMZ 귀순 합참 11월",
       "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어 공격",
       "North Korea attributed FBI"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -43,17 +44,16 @@
       "North Korea attributed FBI Binance seize"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원",
+      "북한 남북 대화 제안 통신선 확성기 중단",
       "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261114504516",
     "https://www.segye.com/newsView/20261114500800",
-    "https://www.nknews.org/",
-    "https://www.koreaherald.com/"
+    "https://www.segye.com/newsView/20261113514600",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "11/14 11시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관회담 후속 설명, 전작권·주한미군 전문가 관측, 북한 국기 비율 변경 보도뿐이다. 직전 회차 대비 변화 없음.",
+  "overall_summary": "11/14 12시(UTC) 기준 24시간 내 새 군사 징후 없음 — 한중 외교장관회담 후속, 미 전문가의 전작권·주한미군 관측(공식 발표 아님), NK News의 동해 군항 분석뿐이다. 직전 회차 대비 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -73,23 +73,23 @@
     "gov_warning": {
       "status": "none"
     },
+    "hybrid_ops": {
+      "status": "none"
+    },
     "border_clash": {
       "status": "none",
       "summary": "배경 — 9월 DMZ 지뢰 사건 후속 외 신규 발견·충돌 보도 없음"
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "배경 — FBI 북한 암호화폐 탈취 귀속(11월 초)은 24시간 경과, 신규 국내 사고 보도 없음"
+      "summary": "배경 — 신규 국내 사고·귀속 발표 보도 없음"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "배경 — 김정은 단둥 방문(10/24)·김성남 방중 설명은 후속 재인용이며 새 파병·협정 없음, 주한미군은 전문가 관측만 있고 공식 발표 없음"
-    },
-    "hybrid_ops": {
-      "status": "none"
+      "summary": "배경 — 주한미군은 전문가 관측만 있고 공식 발표 없음, 김정은 방중 설명은 후속 재인용"
     }
   },
-  "checked_at": "2026-11-14T11:10:28+00:00",
+  "checked_at": "2026-11-14T12:09:59+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

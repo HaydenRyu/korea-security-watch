@@ -1,53 +1,53 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 병력 이동 합참",
+      "North Korea troop movement"
+    ],
+    "nuclear": [
+      "북한 미사일 핵 풍계리 영변 합참",
+      "North Korea nuclear Yongbyon Punggye-ri"
+    ],
+    "logistics": [
+      "북한 탄약 수송 러시아",
+      "North Korea ammunition shipment Russia"
+    ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 합참"
+      "북한 지뢰 발견 목함지뢰 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 공격 랜섬웨어 공격",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "Kim Jong Un China Russia visit North Korea",
       "서해 구조물 주한미군 감축"
+    ],
+    "parade_massing": [
+      "North Korea parade preparation"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 상향"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri"
-    ],
-    "troop_movement": [
-      "북한 합참 발표 11월 13일"
-    ],
-    "gov_warning": [
-      "진돗개 발령 데프콘 상향",
-      "North Korea news November 13 2026"
+      "North Korea attributed FBI hackers"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
-    ],
-    "logistics": [
-      "북한 탄약 수송 러시아 군수물자"
-    ],
-    "parade_massing": [
-      "North Korea parade preparation Kim Jong Un military"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261113514600",
-    "https://nocutnews.co.kr/news/6586109",
     "https://www.yna.co.kr/view/AKR20261113139051504",
-    "https://www.yna.co.kr/view/AKR20261113039300009"
+    "https://www.yna.co.kr/view/AKR20261113039300009",
+    "https://nocutnews.co.kr/news/6586109"
   ],
-  "overall_summary": "최근 24시간 새 군사 징후는 확인되지 않았고, FBI의 북한 해커 '페이스스틸러' 발표(암호화폐 4억달러 탈취)만 정례 사이버 징후로 유지한다. DMZ 지뢰는 외교부의 유엔 설명 등 후속 보도뿐이며 접경 열점 신규 대조 대상은 없었다.",
+  "overall_summary": "최근 24시간 새 군사 징후는 확인되지 않았다. FBI 북한 해커 발표(11/12~13)는 24시간이 지나 배경으로 내렸고, DMZ 지뢰는 9월 사건의 후속 보도뿐이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,26 +60,11 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "DMZ 지뢰 관련은 9월 사건의 후속 보도(외교부 유엔 설명)로 새 발견 없음."
+      "summary": "DMZ 지뢰는 9월 사건의 후속 보도(외교부 유엔 설명, 노컷 해설)로 새 발견 없음."
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "nk",
-      "summary": "FBI가 11월 12일(현지) 북한 정부 배후 해커의 '페이스스틸러' 수법으로 18개월간 4억달러 넘는 암호화폐가 탈취됐다고 밝혔다.",
-      "meaning": "북한의 가상자산 탈취를 통한 외화벌이 지속을 보여주는 수사 결과 발표로 즉각적 군사 위협은 아니다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261113039300009"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "FBI 발표를 연합뉴스가 보도"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — FBI 페이스스틸러 발표 첫 보도 11/13 09시(KST), 새 사건 없음."
     },
     "foreign_forces": {
       "status": "none"
@@ -97,14 +82,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T00:11:29+00:00",
-  "grade": 1,
-  "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-14T01:10:09+00:00",
-    "summary": "최근 24시간 새로 확인된 군사 징후는 없다. 직전 회차의 FBI 페이스스틸러 발표는 첫 보도 24시간이 지나 배경으로 내렸고, DMZ 지뢰·한중 외교장관 회담·주한미군 관련 보도는 후속·외교 기사뿐이다."
-  }
+  "checked_at": "2026-11-14T02:09:44+00:00",
+  "grade": 0,
+  "grade_label": "평시",
+  "active": []
 }

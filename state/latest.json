@@ -1,46 +1,62 @@
 {
   "coverage": {
-    "border_clash": [
-      "북한 DMZ 지뢰 귀순 합참 11월 15일"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 공격"
-    ],
-    "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "북한 미사일 발사 합참 NLL 월선 서해 구조물 주한미군 감축"
-    ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강 탄약 군수 수송",
-      "North Korea troops buildup ammunition logistics"
-    ],
-    "logistics": [
-      "북한 병력 이동 전방 증강 탄약 군수 수송",
-      "North Korea troops buildup ammunition logistics"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 핵시설 동향",
-      "North Korea nuclear Yongbyon Punggye-ri activity"
+      "북한 핵시설 풍계리 영변",
+      "North Korea nuclear test site"
+    ],
+    "logistics": [
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견",
+      "DMZ 경고사격 귀순",
+      "North Korea DMZ border"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "North Korea hackers attributed"
+    ],
+    "foreign_forces": [
+      "김정은 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비 전시태세 등화관제 준전시"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 열병식 준비 전시태세 등화관제 준전시"
+      "북한 준전시 등화관제",
+      "North Korea civil defense"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 정부 경고 북한 간첩 국가보안법 구속"
+      "진돗개 발령 데프콘",
+      "한미일 긴급 경고"
     ],
     "hybrid_ops": [
-      "진돗개 발령 데프콘 상향 정부 경고 북한 간첩 국가보안법 구속"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261115501757",
     "https://www.segye.com/newsView/20261115509019",
+    "https://www.segye.com/newsView/20261115501757",
+    "https://kcnawatch.org/",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "신규 징후는 직전 회차와 같은 조용원 비서 방러(외교 일정)와 보안기업 보고의 국내 서버 30곳 표적 정황(귀속 미확인)뿐이다. DMZ·핵·병력·정부 경고 쪽 새 징후는 확인하지 못했고 제한된 검색 기준이다.",
+  "overall_summary": "신규 징후 없이 직전 회차와 같은 두 건(라자루스 국내 서버 노림 보고, 조용원 방러)만 이어진다. 접경 열점 후보는 없고 군사 도발·경고 보도도 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -90,11 +106,16 @@
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/"
+        },
+        {
+          "name": "KCNA Watch",
+          "tier": "D",
+          "url": "https://kcnawatch.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "14일 평양 출발, 목적 미공개"
+        "14일 평양 출발 모스크바 도착, 메드베데프 통합러시아 위원장 초청, 목적 미공개, 군사협력 의제 언급 없음"
       ],
       "speculation": [
         "김정은 메시지 전달 관측"
@@ -113,7 +134,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-15T19:10:40+00:00",
+  "checked_at": "2026-11-15T20:10:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

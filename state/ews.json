@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-15T05:09:24+00:00",
+  "computed_at": "2026-11-15T06:09:52+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 27,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-14T23:39:41+00:00",
-    "latest_updated_at": "2026-11-15T05:09:24+00:00"
+    "linkage_judged_at": "2026-11-15T05:39:54+00:00",
+    "latest_updated_at": "2026-11-15T06:09:52+00:00"
   },
   "theaters": [
     {
@@ -31,7 +31,7 @@
           "published_at": "2026-11-14T16:14:34+08:00"
         }
       ],
-      "judged_at": "2026-11-14T23:39:41+00:00"
+      "judged_at": "2026-11-15T05:39:54+00:00"
     },
     {
       "key": "ukraine",
@@ -47,10 +47,10 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
-          "published_at": "2026-11-14T10:30:38+00:00"
+          "published_at": "2026-11-14T22:37:25+00:00"
         }
       ],
-      "judged_at": "2026-11-14T23:39:41+00:00"
+      "judged_at": "2026-11-15T05:39:54+00:00"
     },
     {
       "key": "scs_ecs",
@@ -69,7 +69,7 @@
         {
           "name": "Rappler",
           "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-14T23:31:36+00:00",
+          "published_at": "2026-11-15T05:25:19+00:00",
           "kind": "feed"
         },
         {
@@ -79,7 +79,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-14T23:39:41+00:00"
+      "judged_at": "2026-11-15T05:39:54+00:00"
     },
     {
       "key": "mideast",
@@ -104,7 +104,7 @@
           "published_at": "2026-11-13T12:28:28+00:00"
         }
       ],
-      "judged_at": "2026-11-14T23:39:41+00:00"
+      "judged_at": "2026-11-15T05:39:54+00:00"
     },
     {
       "key": "us_posture",
@@ -112,22 +112,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "DVIDS·Stars and Stripes 목록에 72시간 안 새 미 전략자산 전개 기사 없음",
+      "summary": "DVIDS는 카데나 기지에 F-15EX 첫 상주 배치 기종이 도착했다고 전했을 뿐 새 전략자산 긴급 전개 기사는 없다.",
       "sources": [
         {
           "name": "DVIDS",
-          "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-14T20:51:50+00:00",
-          "kind": "feed"
-        },
-        {
-          "name": "Stars and Stripes",
-          "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-13T00:00:00+00:00",
-          "kind": "feed"
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/579371/kadena-welcomes-first-permanently-assigned-f-15ex-eagle-ii-aircraft",
+          "published_at": "2026-11-15T03:03:44+00:00"
         }
       ],
-      "judged_at": "2026-11-14T23:39:41+00:00"
+      "judged_at": "2026-11-15T05:39:54+00:00"
     }
   ],
   "channels": [
@@ -160,6 +154,6 @@
   "last_good": {
     "ews": 27,
     "band": "관찰",
-    "computed_at": "2026-11-15T05:09:24+00:00"
+    "computed_at": "2026-11-15T06:09:52+00:00"
   }
 }

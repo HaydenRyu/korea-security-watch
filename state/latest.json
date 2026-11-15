@@ -13,7 +13,7 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
+      "북한 지뢰 발견 DMZ 귀순",
       "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
@@ -23,10 +23,10 @@
       "North Korea hacking"
     ],
     "foreign_forces": [
-      "김정은 방러 방중",
+      "김정은 방중 방러",
       "Kim Jong Un China Russia visit",
-      "주한미군 감축",
-      "서해 구조물"
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결",
@@ -55,7 +55,7 @@
     "https://www.nknews.org",
     "https://www.segye.com/newsView/20261114500800"
   ],
-  "overall_summary": "북한 연계 라자루스의 국내 서버 노림 보고(귀속 미확인)와 조용원 방러(외교 일정)가 있으나 정례 범위이며 새 군사 징후는 없다. 접경 열점·신규 미사일 발사 보도 없음.",
+  "overall_summary": "라자루스의 국내 서버 노림 보고(귀속 미확인)와 조용원 방러(외교 일정)가 있으나 정례 범위다. 새 군사 징후·접경 충돌·미사일 발사 보도는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -73,7 +73,7 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 보안기업 Cypherma 보고서에서 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 공개됐다(정부 귀속 발표 없음).",
+      "summary": "귀속 미확인 — 보안기업 사이퍼마 보고서에서 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 공개됐다(정부 귀속 발표 없음).",
       "meaning": "정부 귀속 전 사이버 정찰 정황.",
       "sources": [
         {
@@ -84,7 +84,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "국내 서버 30곳 표적 목록"
+        "국내 서버·도메인 30곳 표적 목록"
       ],
       "speculation": []
     },
@@ -119,7 +119,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-15T05:09:24+00:00",
+  "checked_at": "2026-11-15T06:09:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

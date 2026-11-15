@@ -1,46 +1,47 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troops deployment border"
+      "북한 병력 이동 전방 증강 열병식 준전시",
+      "North Korea nuclear Yongbyon Punggye-ri troops border November 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters"
+      "North Korea nuclear Yongbyon Punggye-ri troops border November 2026",
+      "북한 핵 병력 군수 열병식 준전시 진돗개 발령 국가보안법 구속 남북 대화 제안"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 핵 병력 군수 열병식 준전시 진돗개 발령 국가보안법 구속 남북 대화 제안",
+      "North Korea nuclear Yongbyon Punggye-ri troops border November 2026"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "North Korea Reuters missile border"
+      "북한 합참 지뢰 발견 DMZ 귀순",
+      "North Korea nuclear Yongbyon Punggye-ri troops border November 2026"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
+      "북한 GPS 교란 해킹 개인정보 유출 공격 서해 구조물 주한미군 감축",
       "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
-      "김정은 방러 방중 조용원 모스크바",
-      "Kim Jong Un China Russia visit Cho Yong Won Moscow"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "북한 GPS 교란 해킹 개인정보 유출 공격 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
+      "북한 핵 병력 군수 열병식 준전시 진돗개 발령 국가보안법 구속 남북 대화 제안",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
+      "북한 핵 병력 군수 열병식 준전시 진돗개 발령 국가보안법 구속 남북 대화 제안",
       "North Korea civil defense"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
+      "북한 핵 병력 군수 열병식 준전시 진돗개 발령 국가보안법 구속 남북 대화 제안",
       "Korea DEFCON Jindo dog"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "북한 핵 병력 군수 열병식 준전시 진돗개 발령 국가보안법 구속 남북 대화 제안",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "북한 핵 병력 군수 열병식 준전시 진돗개 발령 국가보안법 구속 남북 대화 제안"
     ]
   },
   "opened": [
@@ -48,7 +49,7 @@
     "https://www.segye.com/newsView/20261115509019",
     "https://www.koreaherald.com/article/10927095"
   ],
-  "overall_summary": "신규 징후는 조용원 비서의 방러(외교 일정)와 Cyfirma 보고의 국내 서버 30곳 표적 정황뿐이며 모두 정례·귀속 미확인 수준이다. 직전 회차와 대체로 같고 DMZ·핵·병력 쪽 새 징후는 없다(접경 열점 후보 대조는 새 후보 확인 못 함).",
+  "overall_summary": "신규 징후는 직전 회차와 같은 조용원 비서 방러(외교 일정)와 Cyfirma 보고의 국내 서버 30곳 표적 정황(귀속 미확인)뿐이다. DMZ·핵·병력·정부 경고 쪽 새 징후는 확인하지 못했고 제한된 검색 결과 기준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -120,7 +121,7 @@
       ]
     }
   },
-  "checked_at": "2026-11-15T17:09:49+00:00",
+  "checked_at": "2026-11-15T18:10:00+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

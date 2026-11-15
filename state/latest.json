@@ -1,63 +1,57 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement DMZ"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
-    ],
-    "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "목함지뢰 해안 발견",
-      "DMZ NLL 귀순 합참",
-      "North Korea DMZ NLL"
+      "지뢰 발견 DMZ 합참 북한",
+      "NLL 귀순 월선"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "North Korea hacking"
+      "북한 GPS 교란 합참 11월",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축",
-      "조용원 방러"
-    ],
-    "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘",
-      "North Korea warning Japan J-Alert"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안"
+    ],
+    "troop_movement": [
+      "북한 전방 병력 이동 증강 합참",
+      "North Korea military mobilization wartime readiness"
+    ],
+    "nuclear": [
+      "북한 풍계리 영변 핵시설 동향",
+      "North Korea Yongbyon Punggye-ri nuclear activity"
+    ],
+    "logistics": [
+      "북한 탄약 연료 군수 수송",
+      "North Korea ammunition shipment Russia"
+    ],
+    "parade_massing": [
+      "진돗개 발령 데프콘 상향 북한 열병식",
+      "North Korea parade massing"
+    ],
+    "nk_internal": [
+      "북한 등화관제 준전시 노농적위군",
+      "North Korea wartime readiness mobilization"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 상향 북한 열병식",
+      "US travel advisory South Korea"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 FBI"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261115501757",
-    "https://www.nknews.org",
-    "https://www.segye.com/newsView/20261114500800"
+    "https://www.segye.com/newsView/20261114504516",
+    "https://www.segye.com/newsView/20261114500800",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "라자루스의 국내 서버 노림 보고(귀속 미확인)와 조용원 방러(외교 일정)가 있으나 정례 범위다. 새 군사 징후·접경 충돌·미사일 발사 보도는 없고, 동해 고무보트 표류는 북한 연관 확인이 없다.",
+  "overall_summary": "새 군사 징후는 없고 라자루스 국내 서버 표적 보고서와 조용원 방러만 정례 수준으로 확인됐다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,8 +69,9 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
+      "region": "서울",
       "summary": "귀속 미확인 — 보안기업 사이퍼마 보고서에서 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 공개됐다(정부 귀속 발표 없음).",
-      "meaning": "정부 귀속 전 사이버 정찰 정황.",
+      "meaning": "민간 보고서 수준의 위협 정보로 실제 마비는 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -86,25 +81,26 @@
       ],
       "confidence": "중간",
       "facts": [
-        "국내 서버·도메인 30곳 표적 목록"
+        "사이퍼마 보고서: 10개국 216개 서버 중 한국 30곳 표적 목록"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
+      "region": "모스크바",
       "summary": "조용원 노동당 비서 방러(외교 일정)를 NK News가 보도했다.",
-      "meaning": "북러 고위급 외교 교류.",
+      "meaning": "북러 고위급 외교 교류로 군사 협정 발표는 아직 없다.",
       "sources": [
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org"
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조용원 모스크바행"
+        "Nov 15 NK News: 조용원 모스크바행, 메드베데프 면담 예정"
       ],
       "speculation": []
     },
@@ -121,7 +117,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-15T07:10:26+00:00",
+  "checked_at": "2026-11-15T08:10:22+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

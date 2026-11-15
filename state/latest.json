@@ -5,15 +5,15 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 미사일 핵 풍계리 영변 군사 동향",
-      "North Korea nuclear Yongbyon Punggye-ri"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순",
+      "북한 합참 지뢰 DMZ 귀순 NLL",
       "DMZ NLL North Korea clash"
     ],
     "electronic_cyber": [
@@ -23,7 +23,7 @@
     ],
     "foreign_forces": [
       "김정은 방중 방러",
-      "Kim Jong Un China Russia visit Reuters",
+      "North Korea Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -41,19 +41,14 @@
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261115509019",
     "https://www.segye.com/newsView/20261115501757",
-    "https://www.yna.co.kr/view/AKR20261115005651504",
     "https://www.yna.co.kr/view/AKR20261115036400062"
   ],
-  "overall_summary": "직전 회차와 같은 두 건(라자루스 국내 서버 노림 보고, 조용원 방러)만 이어지며 신규 군사 도발·경고 보도는 확인되지 않았다. 접경 열점 후보는 없다.",
+  "overall_summary": "직전 회차와 같은 두 건(라자루스 국내 서버 노림 보고, 조용원 방러)만 이어지며 신규 군사 도발·경고 보도는 확인되지 않았다. 동해 대진항 고무보트 표류는 추진기 고장 구조 사건으로 북한 연관이 없고, 접경 열점 후보는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,6 +60,18 @@
       "status": "none"
     },
     "border_clash": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "electronic_cyber": {
@@ -98,11 +105,6 @@
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261115509019"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261115005651504"
         }
       ],
       "confidence": "중간",
@@ -112,21 +114,9 @@
       "speculation": [
         "김정은 메시지 전달·정상외교 일정 논의 가능성"
       ]
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-15T21:09:54+00:00",
+  "checked_at": "2026-11-15T22:09:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

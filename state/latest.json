@@ -1,43 +1,45 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동",
+      "북한 병력 이동 전방 증강",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리",
-      "North Korea nuclear Reuters November 2026"
+      "풍계리 영변 핵 활동",
+      "North Korea nuclear site activity"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea ammunition"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참 북한",
-      "DMZ NLL 귀순",
-      "북한 합참 발표 지뢰 DMZ 귀순 11월 15일"
+      "북한 합참 DMZ 지뢰 NLL 귀순 11월 15일",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출",
+      "North Korea Lazarus hack"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 조용원",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물",
+      "김정은 방중",
+      "North Korea Kim Jong Un China Russia visit Reuters",
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea civil defense"
     ],
     "gov_warning": [
-      "진돗개 데프콘"
+      "진돗개 발령 데프콘",
+      "Korea government warning"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
       "North Korea attributed FBI"
     ],
     "calm": [
@@ -45,12 +47,11 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261115005600504",
-    "https://www.yna.co.kr/view/AKR20261114033800017",
+    "https://www.segye.com/newsView/20261115501757",
     "https://www.segye.com/newsView/20261114504516",
-    "https://www.segye.com/newsView/20261114500800"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "24시간 안 새 징후는 조용원 방러 보도와 라자루스 국내 서버 표적 정황뿐이며 둘 다 정례·보고 성격이다. 직전 회차와 변화 없음.",
+  "overall_summary": "신규 징후는 라자루스의 국내 서버 노림 보안기업 보고(귀속 미확인)와 조용원 방러 외교 일정뿐이며 직전 회차와 같다. 접경 열점·지뢰·군사 이상 동향은 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,43 +69,36 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "서울",
       "summary": "귀속 미확인 — 보안기업 보고서에서 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 공개됐다(정부 귀속 발표 없음).",
-      "meaning": "정부·금융·통신 서버가 표적이 됐으나 실제 마비 보도는 없다.",
+      "meaning": "실제 피해·정부 귀속이 없어 배경 성격이다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261114033800017"
+          "url": "https://www.segye.com/newsView/20261115501757"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "연합뉴스 14일 보도"
+        "보안기업 보고서: 노출 서버 216대 중 30대가 국내"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "러시아",
       "summary": "조용원 노동당 비서가 이끄는 당·정부 대표단 방러를 조선중앙통신이 15일 보도했다(외교 일정).",
-      "meaning": "북러 고위급 교류의 연장이며 새 군사 협정·파병 발표는 없다.",
+      "meaning": "북러 고위급 외교 일정으로 군사 협정 언급은 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261115005600504"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261114504516"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "왕이가 한국 측에 10월 김정은 단둥 방문을 설명했다(세계일보 14일)"
+        "조용원 메드베데프 면담 예정 보도"
       ],
       "speculation": []
     },
@@ -121,7 +115,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-15T02:09:46+00:00",
+  "checked_at": "2026-11-15T03:09:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

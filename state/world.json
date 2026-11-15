@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-11-15T11:39:27+00:00",
-  "world_at": "2026-11-15T11:39:27+00:00",
+  "updated_at": "2026-11-15T23:39:55+00:00",
+  "world_at": "2026-11-15T23:39:55+00:00",
   "world": [
     {
-      "title": "트럼프·푸틴·시진핑, 다음 주 중국서 사상 첫 3자 회동",
-      "summary": "백악관은 트럼프 대통령이 선전 APEC 기간 푸틴·시진핑과 만나 핵무기 감축을 논의하겠다고 밝혔다.",
-      "link_korea": "3대 핵강국 회동에서 북·미 대화와 비확산 의제가 다뤄질 수 있다.",
-      "region": "미·중·러",
+      "title": "미·러·중 정상, 선전 APEC 계기 3자 회동 예정",
+      "summary": "백악관은 트럼프·푸틴·시진핑이 APEC 정상회의 기간 선전에서 만나며 핵군축을 논의하겠다고 밝혔다. 러시아는 확인했고 중국은 아직 입장을 내지 않았다.",
+      "link_korea": "세 핵강국 회동은 북핵·북러·북중 군사협력 구도에 직접 영향을 줄 수 있다.",
+      "region": "동아시아",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do",
@@ -15,38 +15,27 @@
       }
     },
     {
-      "title": "젤렌스키 \"미국, 돈바스 철수와 나토 가입 교환 거론\"",
-      "summary": "젤렌스키 대통령은 미국이 돈바스 양도와 나토 가입의 교환을 거론했다고 밝혔고 미 당국자는 \"여러 아이디어가 논의 중\"이라고만 답했다.",
-      "link_korea": "종전 협상의 향방은 북한군 파병과 북러 군사협력 지속 여부에 영향을 준다.",
+      "title": "젤렌스키, 미국에 스타실드 속도 제한 해제 촉구",
+      "summary": "젤렌스키는 미 정부가 제공한 군용 스타링크 속도 제한이 러시아 미사일·드론 요격을 방해한다며 제한 해제를 요구했다.",
+      "link_korea": "러시아의 대우크라이나 전쟁 장기화는 북러 군사협력의 배경이다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
+        "url": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o",
         "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     },
     {
-      "title": "이스라엘 공습으로 하마스 라파 여단장 사망",
-      "summary": "하마스와 이스라엘군 모두 가자 난민촌 공습으로 라파 여단장 사미르 아부 유니스가 숨졌음을 확인했다.",
-      "link_korea": "중동 전선의 장기화는 미군 전력 배분과 한반도 억제 여력에 관련된다.",
-      "region": "중동",
+      "title": "미 공군 F-15EX, 가데나 기지에 첫 상시 배치",
+      "summary": "미 공군은 15일 첫 상시 배치 F-15EX가 일본 가데나 기지에 도착했다고 밝혔다.",
+      "link_korea": "서태평양 미 공군 전력 증강은 한반도 억제태세와 연결된다.",
+      "region": "서태평양",
       "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cqrkg4r6mg7xo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "IAEA \"이란 미사찰 농축 시설 우려 커져\"",
-      "summary": "IAEA는 이란이 발표한 이스파한 우라늄 농축 시설을 한 번도 방문하지 못했다고 밝혔다.",
-      "link_korea": "핵 비확산 체제의 사찰 공백 사례로 북핵 검증 논의에도 시사점이 있다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cm75261e3pdko",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+        "name": "DVIDS",
+        "url": "https://www.dvidshub.net/news/579371/kadena-welcomes-first-permanently-assigned-f-15ex-eagle-ii-aircraft",
+        "via": "https://www.dvidshub.net/rss/news"
       }
     }
   ],
-  "world_context": "미·중·러 정상 회동 계획, 우크라이나 종전 협상, 가자 공습과 이란 핵 사찰 공백이 한반도 안보 환경의 외곽 변수로 겹쳐 있다."
+  "world_context": "미·중·러 정상 회동 예고와 우크라이나 전쟁, 서태평양 미 전력 증강이 겹친 하루다."
 }

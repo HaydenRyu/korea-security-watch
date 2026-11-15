@@ -1,38 +1,39 @@
 {
   "version": 1,
-  "at": "2026-11-15T11:39:27+00:00",
-  "opened": 19,
+  "at": "2026-11-15T23:39:55+00:00",
+  "opened": 11,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-15T11:39:27+00:00",
-      "raw": 4,
-      "kept": 4
+      "last_ok": "2026-11-15T23:39:55+00:00",
+      "raw": 3,
+      "kept": 3
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-15T11:39:27+00:00",
+      "last_ok": "2026-11-15T23:39:55+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
-      "status": "no_findings",
-      "last_ok": "2026-11-15T11:39:27+00:00",
-      "raw": 0,
-      "kept": 0
+      "status": "checked",
+      "last_ok": "2026-11-15T23:39:55+00:00",
+      "raw": 1,
+      "kept": 1
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-15T11:39:27+00:00",
-      "raw": 4,
-      "kept": 4,
-      "note": "taiwan: 직전 값(1) 유지 — 이번 피드에 대만해협 군사 기사 없음, 해소 기사도 없어 키 생략. Rappler 피드 403으로 못 열음."
+      "last_ok": "2026-11-15T23:39:55+00:00",
+      "raw": 3,
+      "kept": 3,
+      "note": "taiwan: 이번 피드에 대만해협 군사 기사 없고 해소 기사도 없어 키 생략(직전 값 유지). mideast: 72시간 안 교전 원문을 이번에 열지 못해 키 생략."
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-15T11:39:27+00:00",
+      "last_ok": "2026-11-15T23:39:55+00:00",
       "raw": 0,
-      "kept": 0
+      "kept": 0,
+      "note": "news_kr 묶음에 안보 연결 근거가 기사에 적힌 사건 없음(원문 미개봉)."
     }
   }
 }

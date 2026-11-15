@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updated_at": "2026-11-15T11:39:27+00:00",
-  "judged_at": "2026-11-15T11:39:27+00:00",
+  "updated_at": "2026-11-15T23:39:55+00:00",
+  "judged_at": "2026-11-15T23:39:55+00:00",
   "taiwan": null,
-  "korea": []
+  "korea": [
+    {
+      "id": "korea-20261115-09b31b42",
+      "status": "single",
+      "summary": "북한 조선중앙통신이 조용원 당 비서의 러시아 방문을 보도했다.",
+      "date": "2026-11-15",
+      "sources": [
+        {
+          "url": "https://www.segye.com/newsView/20261115509019",
+          "publisher": "세계일보"
+        }
+      ],
+      "first_seen": "2026-11-15T23:39:55+00:00",
+      "last_seen": "2026-11-15T23:39:55+00:00"
+    }
+  ]
 }

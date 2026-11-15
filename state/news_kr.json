@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-11-15T15:21:56+00:00",
+ "fetched_at": "2026-11-15T15:30:48+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-15T15:21:56+00:00",
+ "last_ok_at": "2026-11-15T15:30:48+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
@@ -66,12 +66,12 @@
   "gps": {
    "clusters": 4,
    "max_independent": 5,
-   "latest": "2026-11-15T15:21:56+00:00"
+   "latest": "2026-11-15T15:30:48+00:00"
   },
   "hybrid": {
    "clusters": 4,
    "max_independent": 5,
-   "latest": "2026-11-15T15:21:56+00:00"
+   "latest": "2026-11-15T15:30:48+00:00"
   },
   "spy": {
    "clusters": 1,

@@ -1,59 +1,49 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 열병식 집결",
-      "North Korea troops border buildup parade satellite imagery November"
-    ],
-    "nuclear": [
-      "북한 핵실험장 영변 우라늄 농축 핵 동향",
-      "North Korea nuclear Yongbyon Punggye-ri activity 38 North"
-    ],
-    "logistics": [
-      "북한 탄약 수송 러시아 무기 이전 파병"
+    "electronic_cyber": [
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 11월 15일"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 합참 11월 15일",
-      "North Korea state media DMZ NLL defector border incident"
-    ],
-    "electronic_cyber": [
-      "북한 GPS 교란 서북도서 합참",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격 11월 15일",
-      "North Korea cyber attack South Korea hack Lazarus attributed FBI"
+      "지뢰 발견 DMZ 합참 11월",
+      "북한 미사일 발사 합참 NLL 귀순 11월 15일"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit North Korea",
-      "서해 구조물 주한미군 감축 11월"
-    ],
-    "parade_massing": [
-      "북한 병력 이동 전방 증강 열병식 집결"
-    ],
-    "nk_internal": [
-      "북한 노농적위군 준전시 등화관제 진돗개 데프콘"
-    ],
-    "gov_warning": [
-      "North Korea emergency warning alert evacuation US Japan South Korea",
-      "North Korea missile launch Joint Chiefs of Staff November 2026"
+      "North Korea Reuters Kim Jong Un China Russia visit November 2026",
+      "김정은 방중 방러 서해 구조물 주한미군 감축"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
-      "North Korea cyber attack South Korea hack Lazarus attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 North Korea attributed FBI"
+    ],
+    "nuclear": [
+      "북한 풍계리 영변 핵시설 핵실험 동향",
+      "North Korea nuclear troops mobilization ammunition parade satellite imagery"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 군수 탄약 수송"
+    ],
+    "logistics": [
+      "북한 병력 이동 전방 증강 군수 탄약 수송"
+    ],
+    "parade_massing": [
+      "North Korea nuclear troops mobilization ammunition parade satellite imagery"
+    ],
+    "nk_internal": [
+      "진돗개 데프콘 한미일 경고 북한 준전시 노농적위군 등화관제"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 한미일 경고 북한 준전시 노농적위군 등화관제"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261115501757",
     "https://www.segye.com/newsView/20261115509019",
-    "https://www.yna.co.kr/view/AKR20261115036400062",
-    "https://www.koreaherald.com/article/10937539",
-    "https://en.fnnews.com/news/202611151138024147",
-    "https://segye.com/newsView/20261115509089",
-    "https://seoul.co.kr/news/economy/2026/11/15/20261115500055",
-    "https://khan.co.kr/article/202611111616001",
-    "https://www.newspim.com/news/view/20260930000634"
+    "https://www.segye.com/newsView/20261115501757",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "직전 회차와 같은 국면이다: 조용원 방러(외교 일정)와 보안기업 보고서 기반 라자루스 국내 서버 표적 정황(귀속 미확인)만 있고 군사 징후는 새로 없다. 접경 열점 후보는 0건이며 동해 대진항 고무보트 표류는 해경 구조 사안으로 북한 연관 보도가 없다.",
+  "overall_summary": "조용원 방러(북·러 당 고위급)와 라자루스의 국내 서버 노림 정황이 이어지나 둘 다 정례·귀속 미확인 수준이며 군사 징후는 새로 확인되지 않았다. 직전 회차와 판정은 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,36 +61,29 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "대한민국 전역",
-      "summary": "귀속 미확인 — 보안기업 보고서에서 북한 연계 라자루스가 PHP 취약점으로 국내 서버·도메인 30곳을 노린 정황이 공개됐고, 같은 주말 금융·가상자산·공공기관 개인정보 유출이 잇따랐으나 정부의 북한 귀속 발표는 없다.",
-      "meaning": "표적 목록 단계의 정황이며 정부·금융 시스템이 실제로 멈춘 사고는 확인되지 않아 정례 사이버 활동 범위로 본다.",
+      "region": "국내",
+      "summary": "귀속 미확인 — 보안기업 Cyfirma 보고로 북한 연계 라자루스가 PHP 취약점으로 국내 서버·도메인 30곳을 노린 정황이 공개됐으나 정부의 북한 귀속 발표는 없다.",
+      "meaning": "국내 정부·금융·통신 서버가 표적 후보로 거론됐지만 실제 마비 사례는 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261115501757"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://segye.com/newsView/20261115509089"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "보안기업 보고서에 국내 서버 30곳이 잠재 표적으로 적시됐다",
-        "금융·대학·가상자산 거래소 개인정보 유출 보도가 이어졌다(귀속 없음)"
+        "Cyfirma 보고: 노출 서버 216대 중 국내 30곳 표적 확인",
+        "정부 귀속 발표 없음"
       ],
-      "speculation": [
-        "라자루스 표적 목록과 국내 유출 사고의 연관은 확인되지 않았다"
-      ]
+      "speculation": []
     },
     "foreign_forces": {
       "status": "corroborated",
       "routine": true,
-      "region": "러시아 모스크바",
+      "region": "러시아",
       "summary": "조용원 노동당 비서가 당·정부 대표단을 이끌고 통합러시아 초청으로 방러했다고 조선중앙통신이 15일 전했고, 방문 목적·일정은 공개되지 않았다.",
-      "meaning": "한미중러 정상회담을 앞둔 외교 일정이며 군사협정·무기 협력 발표는 확인되지 않았다.",
+      "meaning": "북러 당 고위급 외교 일정으로 군사협력 합의 언급은 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -108,18 +91,18 @@
           "url": "https://www.segye.com/newsView/20261115509019"
         },
         {
-          "name": "The Korea Herald",
-          "tier": "B",
-          "url": "https://www.koreaherald.com/article/10937539"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
-      "confidence": "높음",
+      "confidence": "중간",
       "facts": [
-        "조선중앙통신이 대표단의 모스크바 도착을 보도했다",
-        "구체적 방문 목적은 공개되지 않았다"
+        "14일 평양 출발, 모스크바 도착",
+        "군사협력 의제 명시 없음"
       ],
       "speculation": [
-        "정상회담 관련 메시지 전달 가능성은 언론 추정이다"
+        "푸틴·시진핑·트럼프 회담 전 메시지 전달 가능성"
       ]
     },
     "parade_massing": {
@@ -135,7 +118,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-15T13:11:59+00:00",
+  "checked_at": "2026-11-15T14:10:24+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

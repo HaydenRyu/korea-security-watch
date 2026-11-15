@@ -1,25 +1,24 @@
 {
- "fetched_at": "2026-11-15T03:32:45+00:00",
+ "fetched_at": "2026-11-15T04:46:53+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-15T03:32:45+00:00",
+ "last_ok_at": "2026-11-15T04:46:53+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1106,
-  "hits": 34,
-  "clusters": 25,
+  "hits": 32,
+  "clusters": 23,
   "by_group": {
    "summit": 10,
    "mine": 3,
    "gps": 4,
    "hybrid": 3,
    "drone_balloon": 1,
-   "border": 6,
+   "border": 5,
    "usfk": 1,
-   "yellowsea": 1,
-   "defect": 1
+   "yellowsea": 1
   }
  },
  "outlets": {
@@ -88,7 +87,7 @@
    "latest": "2026-11-15T00:20:00+00:00"
   },
   "border": {
-   "clusters": 6,
+   "clusters": 5,
    "max_independent": 1,
    "latest": "2026-11-14T08:38:00+00:00"
   },
@@ -101,11 +100,6 @@
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-13T10:45:32+00:00"
-  },
-  "defect": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-12T04:18:31+00:00"
   }
  },
  "feeds": [

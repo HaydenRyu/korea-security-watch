@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-15T11:10:18+00:00",
+  "computed_at": "2026-11-15T12:10:43+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 28,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-15T05:39:54+00:00",
-    "latest_updated_at": "2026-11-15T11:10:18+00:00"
+    "linkage_judged_at": "2026-11-15T11:39:27+00:00",
+    "latest_updated_at": "2026-11-15T12:10:43+00:00"
   },
   "theaters": [
     {
@@ -50,7 +50,7 @@
           "published_at": "2026-11-14T22:37:25+00:00"
         }
       ],
-      "judged_at": "2026-11-15T05:39:54+00:00"
+      "judged_at": "2026-11-15T11:39:27+00:00"
     },
     {
       "key": "scs_ecs",
@@ -58,18 +58,12 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
       "sources": [
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-14T16:00:00+00:00",
-          "kind": "feed"
-        },
-        {
-          "name": "Rappler",
-          "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-15T05:25:19+00:00",
+          "published_at": "2026-11-15T10:32:00+00:00",
           "kind": "feed"
         },
         {
@@ -79,7 +73,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-15T05:39:54+00:00"
+      "judged_at": "2026-11-15T11:39:27+00:00"
     },
     {
       "key": "mideast",
@@ -89,13 +83,13 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "이스라엘 공습으로 가자 병원에서 6명이 숨졌다고 보건부가 밝혔고 IAEA는 이란 미사찰 시설에 우려를 표했다.",
+      "summary": "이스라엘이 가자 난민촌을 공습해 하마스 라파 여단장이 숨졌다고 양측이 확인했고 IAEA는 이란 미사찰 시설에 우려를 표했다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo",
-          "published_at": "2026-11-12T16:54:12+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cqrkg4r6mg7xo",
+          "published_at": "2026-11-15T08:17:41+00:00"
         },
         {
           "name": "BBC",
@@ -104,7 +98,7 @@
           "published_at": "2026-11-13T12:28:28+00:00"
         }
       ],
-      "judged_at": "2026-11-15T05:39:54+00:00"
+      "judged_at": "2026-11-15T11:39:27+00:00"
     },
     {
       "key": "us_posture",
@@ -112,7 +106,7 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "DVIDS는 카데나 기지에 F-15EX 첫 상주 배치 기종이 도착했다고 전했을 뿐 새 전략자산 긴급 전개 기사는 없다.",
+      "summary": "가데나 기지에 F-15EX 첫 상주 배치 항공기가 도착했다고 미 공군이 밝혔다.",
       "sources": [
         {
           "name": "DVIDS",
@@ -121,7 +115,7 @@
           "published_at": "2026-11-15T03:03:44+00:00"
         }
       ],
-      "judged_at": "2026-11-15T05:39:54+00:00"
+      "judged_at": "2026-11-15T11:39:27+00:00"
     }
   ],
   "channels": [
@@ -154,6 +148,6 @@
   "last_good": {
     "ews": 28,
     "band": "관찰",
-    "computed_at": "2026-11-15T11:10:18+00:00"
+    "computed_at": "2026-11-15T12:10:43+00:00"
   }
 }

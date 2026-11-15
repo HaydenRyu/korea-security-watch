@@ -1,10 +1,32 @@
 {
- "at": "2026-11-15T04:46:43+00:00",
- "south": 75,
- "area": 93,
- "baseline": 69,
- "ratio": 1.09,
- "samples": 7,
- "mil": [],
+ "at": "2026-11-15T06:31:11+00:00",
+ "south": 76,
+ "area": 97,
+ "baseline": 76.0,
+ "ratio": 1.0,
+ "samples": 4,
+ "mil": [
+  {
+   "type": "CL60",
+   "name": null,
+   "call": "",
+   "lat": 34.4,
+   "lon": 126.34
+  },
+  {
+   "type": "B350",
+   "name": null,
+   "call": "TORII11",
+   "lat": 37.1,
+   "lon": 127.09
+  },
+  {
+   "type": "C30J",
+   "name": "C-130J 수송기",
+   "call": "",
+   "lat": 35.63,
+   "lon": 128.7
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

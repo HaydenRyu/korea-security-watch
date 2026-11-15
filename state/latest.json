@@ -47,9 +47,8 @@
   "opened": [
     "https://www.yna.co.kr/view/AKR20261115005600504",
     "https://www.yna.co.kr/view/AKR20261114033800017",
-    "https://www.segye.com/newsView/20261114500800",
     "https://www.segye.com/newsView/20261114504516",
-    "https://www.nknews.org"
+    "https://www.segye.com/newsView/20261114500800"
   ],
   "overall_summary": "24시간 안 새 징후는 조용원 방러 보도와 라자루스 국내 서버 표적 정황뿐이며 둘 다 정례·보고 성격이다. 직전 회차와 변화 없음.",
   "items": {
@@ -122,7 +121,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-15T01:10:07+00:00",
+  "checked_at": "2026-11-15T02:09:46+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

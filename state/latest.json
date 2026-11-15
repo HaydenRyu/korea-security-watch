@@ -1,40 +1,43 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
+      "북한 병력 이동 전방",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵시설 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear site"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea munitions shipment"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ NLL 귀순",
-      "고무보트 표류 대진항 구조 북한 이탈"
+      "지뢰 발견 DMZ 합참 북한 11월",
+      "DMZ NLL 귀순",
+      "NK News DMZ"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참 11월",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격",
+      "North Korea hacking"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit Cho Yong Won Moscow",
-      "서해 구조물 주한미군 감축"
+      "김정은 방러 방중 조용원",
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 합참 북한 발사"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 준비"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 대피"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 경고"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
@@ -42,12 +45,10 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261115501757",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261115/n-korean-leaders-close-aide-visits-russia-amid-deepening-bilateral-ties",
-    "https://www.segye.com/newsView/20261114500800",
-    "https://www.yna.co.kr/rss/northkorea.xml",
-    "https://www.nhk.or.jp/rss/news/cat6.xml"
+    "https://www.nknews.org/",
+    "https://www.segye.com/newsView/20261114500800"
   ],
-  "overall_summary": "새 군사 징후는 없고 라자루스 국내 서버 표적 보고서와 조용원 방러만 정례 수준으로 확인됐다. 접경 열점 후보는 없고 대진항 고무보트 표류는 낚시 중 기관 고장 사고로 북한과 무관하다.",
+  "overall_summary": "직전 회차와 같은 수준으로 새 군사 징후는 없고, 보안기업 보고서의 라자루스 국내 서버 표적 정황과 조용원 방러만 정례 단일 출처로 이어진다. 접경 열점·신규 지뢰·정부 경고 보도는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,8 +66,8 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 보안기업 보고서에서 북한 연계 라자루스가 국내 서버·도메인 30곳을 노린 정황이 공개됐다(정부 귀속 발표 없음).",
-      "meaning": "국내 서버를 겨냥한 사이버 정찰·공격 시도지만 실제 피해나 정부 귀속은 없다.",
+      "summary": "귀속 미확인 — 보안기업 사이퍼마 보고서에서 북한 연계 라자루스가 국내 서버·도메인 30곳을 노린 정황이 공개됐다(정부 귀속 발표 없음).",
+      "meaning": "민간 보고서 수준으로 실제 피해·정부 귀속이 없어 등급 근거가 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -76,30 +77,27 @@
       ],
       "confidence": "중간",
       "facts": [
-        "글로벌 보안기업 보고서가 PHP 취약점을 악용한 국내 서버 30곳 표적을 공개"
+        "사이퍼마 보고서: 10개국 216개 서버 표적 목록 중 한국 30곳"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "러시아 모스크바",
       "summary": "조용원 노동당 비서가 당·정부 대표단을 이끌고 방러했다고 북한 매체가 전했다(외교 일정).",
-      "meaning": "북러 고위급 교류 지속이며 군사 협정·무기 이전 발표는 없다.",
+      "meaning": "정상급 외교 일정이며 군사협정·무기 협력 발표는 없다.",
       "sources": [
         {
-          "name": "코리아타임스",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261115/n-korean-leaders-close-aide-visits-russia-amid-deepening-bilateral-ties"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "11/14 모스크바 도착, 메드베데프 초청, KCNA 보도"
+        "NK News 11/15: 김정은 최측근이 푸틴·시진핑·트럼프 회담 앞서 모스크바행"
       ],
-      "speculation": [
-        "푸틴에 보내는 김정은 메시지 전달 가능성(분석가)"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -114,7 +112,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-15T09:10:01+00:00",
+  "checked_at": "2026-11-15T10:10:28+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

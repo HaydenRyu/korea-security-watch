@@ -2,56 +2,51 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "North Korea troop deployment"
     ],
     "nuclear": [
-      "풍계리 영변 핵 활동",
-      "North Korea nuclear site activity"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
+      "북한 군수 물자 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 DMZ 지뢰 NLL 귀순 11월 15일",
-      "North Korea DMZ border"
+      "북한 DMZ 지뢰 NLL 귀순 합참 11월 15일",
+      "지뢰 발견"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "North Korea Lazarus hack"
+      "사이버 공격",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit Reuters",
-      "주한미군 감축"
+      "김정은 방러",
+      "North Korea Kim Jong Un China Russia visit Cho Yong Won Moscow",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "Korea government warning"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
       "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261115501757",
-    "https://www.segye.com/newsView/20261114504516",
-    "https://www.nknews.org/"
+    "https://www.nknews.org",
+    "https://www.koreajoongangdaily.com/"
   ],
-  "overall_summary": "신규 징후는 라자루스의 국내 서버 노림 보안기업 보고(귀속 미확인)와 조용원 방러 외교 일정뿐이며 직전 회차와 같다. 접경 열점·지뢰·군사 이상 동향은 확인되지 않았다.",
+  "overall_summary": "북한 연계 라자루스의 국내 서버 노림 보고(귀속 미확인)와 조용원 방러(외교 일정)가 있었으나 정례 범위이며 새 군사 징후는 없다. 접경 열점 대조·미사일 신규 발사 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,46 +56,6 @@
     },
     "logistics": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "summary": "귀속 미확인 — 보안기업 보고서에서 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 공개됐다(정부 귀속 발표 없음).",
-      "meaning": "실제 피해·정부 귀속이 없어 배경 성격이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261115501757"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "보안기업 보고서: 노출 서버 216대 중 30대가 국내"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "summary": "조용원 노동당 비서가 이끄는 당·정부 대표단 방러를 조선중앙통신이 15일 보도했다(외교 일정).",
-      "meaning": "북러 고위급 외교 일정으로 군사 협정 언급은 없다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "조용원 메드베데프 면담 예정 보도"
-      ],
-      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -113,9 +68,58 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "summary": "귀속 미확인 — 보안기업 Cypherma 보고서에서 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 공개됐다(정부 귀속 발표 없음).",
+      "meaning": "민간 보고 기반이라 등급 근거가 아닌 배경 성격이다.",
+      "sources": [
+        {
+          "name": "세계일보(연합 전재)",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261115501757"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "보고서상 한국 내 확인 서버 30곳",
+        "정부 귀속 발표 없음"
+      ],
+      "speculation": [
+        "금융 탈취·첩보 목적은 보고서 해석"
+      ]
+    },
+    "foreign_forces": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "모스크바",
+      "summary": "조용원 노동당 비서가 이끄는 당·정부 대표단 방러를 조선중앙통신이 보도했고 NK News도 메드베데프 면담 예정을 전했다(외교 일정).",
+      "meaning": "북러 고위급 교류로 군사 협정·무기 이전 발표는 확인되지 않았다.",
+      "sources": [
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org"
+        },
+        {
+          "name": "JoongAng Daily",
+          "tier": "B",
+          "url": "https://www.koreajoongangdaily.com/"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "대표단 방러 보도 11/15"
+      ],
+      "speculation": []
     }
   },
-  "checked_at": "2026-11-15T03:09:33+00:00",
+  "checked_at": "2026-11-15T04:09:47+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

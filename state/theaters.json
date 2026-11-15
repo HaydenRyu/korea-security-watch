@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-14T23:39:41+00:00",
+  "judged_at": "2026-11-15T05:39:54+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -12,11 +12,11 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
-          "published_at": "2026-11-14T10:30:38+00:00"
+          "published_at": "2026-11-14T22:37:25+00:00"
         }
       ],
       "summary": "전쟁이 이어지는 가운데 젤렌스키는 미국이 돈바스 철수와 나토 가입의 교환을 거론했다고 밝혔고 미 당국자는 확인하지 않았다.",
-      "judged_at": "2026-11-14T23:39:41+00:00"
+      "judged_at": "2026-11-15T05:39:54+00:00"
     },
     "mideast": {
       "state": 3,
@@ -38,7 +38,7 @@
         }
       ],
       "summary": "이스라엘 공습으로 가자 병원에서 6명이 숨졌다고 보건부가 밝혔고 IAEA는 이란 미사찰 시설에 우려를 표했다.",
-      "judged_at": "2026-11-14T23:39:41+00:00"
+      "judged_at": "2026-11-15T05:39:54+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -52,7 +52,7 @@
         }
       ],
       "summary": "대만 해순서는 동부 해안에서 중국 해경선과 무선 방송으로 영유권 주장을 다툰 뒤 계속 감시 중이라고 밝혔다.",
-      "judged_at": "2026-11-14T23:39:41+00:00"
+      "judged_at": "2026-11-15T05:39:54+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -67,7 +67,7 @@
         {
           "name": "Rappler",
           "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-14T23:31:36+00:00",
+          "published_at": "2026-11-15T05:25:19+00:00",
           "kind": "feed"
         },
         {
@@ -78,7 +78,7 @@
         }
       ],
       "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-14T23:39:41+00:00"
+      "judged_at": "2026-11-15T05:39:54+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -86,19 +86,13 @@
       "sources": [
         {
           "name": "DVIDS",
-          "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-14T20:51:50+00:00",
-          "kind": "feed"
-        },
-        {
-          "name": "Stars and Stripes",
-          "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-13T00:00:00+00:00",
-          "kind": "feed"
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/579371/kadena-welcomes-first-permanently-assigned-f-15ex-eagle-ii-aircraft",
+          "published_at": "2026-11-15T03:03:44+00:00"
         }
       ],
-      "summary": "DVIDS·Stars and Stripes 목록에 72시간 안 새 미 전략자산 전개 기사 없음",
-      "judged_at": "2026-11-14T23:39:41+00:00"
+      "summary": "DVIDS는 카데나 기지에 F-15EX 첫 상주 배치 기종이 도착했다고 전했을 뿐 새 전략자산 긴급 전개 기사는 없다.",
+      "judged_at": "2026-11-15T05:39:54+00:00"
     }
   }
 }

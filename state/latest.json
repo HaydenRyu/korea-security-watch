@@ -1,39 +1,55 @@
 {
   "coverage": {
-    "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
-    ],
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순"
-    ],
-    "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "김정은 방중 방러"
-    ],
     "troop_movement": [
-      "북한 합참 발표 11월 15일"
+      "북한 병력 이동",
+      "North Korea troops deployment"
     ],
     "nuclear": [
-      "북한 합참 발표 11월 15일"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 합참 발표 11월 15일"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견",
+      "DMZ 귀순",
+      "North Korea DMZ mine"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "랜섬웨어 공격"
+    ],
+    "foreign_forces": [
+      "김정은 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 15일"
+      "북한 열병식",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 합참 발표 11월 15일"
+      "북한 등화관제 준전시",
+      "North Korea martial law"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 15일"
+      "진돗개 발령 데프콘",
+      "North Korea warning evacuation"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "북한 해킹 귀속 FBI attributed North Korea"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer"
     ]
   },
   "opened": [
@@ -41,7 +57,7 @@
     "https://www.segye.com/newsView/20261115501757",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "조용원 방러와 라자루스의 국내 서버 노림 정황이 이어지나 각각 정례·귀속 미확인 수준이며 새 군사 징후는 없다. 직전 회차와 판정이 같다.",
+  "overall_summary": "새 군사 도발·병력 이동 징후는 없다. 조용원 방러(15일 보도)와 Cyfirma 보고 기반 라자루스 국내 서버 노림 보도가 직전 회차와 같은 수준으로 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,25 +71,13 @@
     "border_clash": {
       "status": "none"
     },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
-    },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "국내",
+      "region": "한국",
       "summary": "귀속 미확인 — 보안기업 Cyfirma 보고로 북한 연계 라자루스가 PHP 취약점으로 국내 서버·도메인 30곳을 노린 정황이 공개됐으나 정부의 북한 귀속 발표는 없다.",
-      "meaning": "국내 정부·금융·통신 서버가 표적 후보로 거론됐지만 실제 마비 사례는 확인되지 않았다.",
+      "meaning": "민간 보고 수준의 위협 정황으로 즉각적 군사 의미는 제한적이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -83,7 +87,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "Cyfirma 보고: 노출 서버 216대 중 국내 30곳 표적 확인",
+        "Cyfirma 표적 목록 분석 결과 국내 30곳",
         "정부 귀속 발표 없음"
       ],
       "speculation": []
@@ -91,9 +95,11 @@
     "foreign_forces": {
       "status": "corroborated",
       "routine": true,
-      "region": "러시아",
+      "region": "러시아 모스크바",
+      "lat": 55.75,
+      "lon": 37.62,
       "summary": "조용원 노동당 비서가 당·정부 대표단을 이끌고 통합러시아 초청으로 방러했다고 조선중앙통신이 15일 전했고, 방문 목적·일정은 공개되지 않았다.",
-      "meaning": "북러 당 고위급 외교 일정으로 군사협력 합의 언급은 없다.",
+      "meaning": "북러 당 고위급 교류로 군사 협정·무기 이전 발표는 아직 없어 외교 일정에 가깝다.",
       "sources": [
         {
           "name": "세계일보",
@@ -108,15 +114,27 @@
       ],
       "confidence": "중간",
       "facts": [
-        "14일 평양 출발, 모스크바 도착",
-        "군사협력 의제 명시 없음"
+        "14일 평양 출발, 15일 KCNA 보도",
+        "목적·일정 비공개"
       ],
       "speculation": [
-        "푸틴·시진핑·트럼프 회담 전 메시지 전달 가능성"
+        "김정은 메시지 전달 가능성(기사 추측)"
       ]
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-15T15:09:51+00:00",
+  "checked_at": "2026-11-15T16:10:51+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -5,17 +5,15 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear site"
+      "북한 핵 풍계리 영변 North Korea nuclear site 38 North"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참 북한 11월",
-      "DMZ NLL 귀순",
-      "NK News DMZ"
+      "북한 합참 발표 지뢰 DMZ 귀순 11월 15일",
+      "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
@@ -23,9 +21,9 @@
       "North Korea hacking"
     ],
     "foreign_forces": [
-      "김정은 방러 방중 조용원",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 합참 북한 발사"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 준비"
@@ -37,18 +35,16 @@
       "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hacking"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261115501757",
+    "https://www.segye.com/newsView/20261115509019",
     "https://www.nknews.org/",
-    "https://www.segye.com/newsView/20261114500800"
+    "https://www.segye.com/newsView/20261115501757"
   ],
-  "overall_summary": "직전 회차와 같은 수준으로 새 군사 징후는 없고, 보안기업 보고서의 라자루스 국내 서버 표적 정황과 조용원 방러만 정례 단일 출처로 이어진다. 접경 열점·신규 지뢰·정부 경고 보도는 확인되지 않았다.",
+  "overall_summary": "직전 회차와 같은 수준으로 새 군사 징후는 없다. 라자루스의 국내 서버 표적 정황(민간 보고서)과 조용원 방러(외교 일정)만 정례로 이어진다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -82,11 +78,16 @@
       "speculation": []
     },
     "foreign_forces": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "summary": "조용원 노동당 비서가 당·정부 대표단을 이끌고 방러했다고 북한 매체가 전했다(외교 일정).",
       "meaning": "정상급 외교 일정이며 군사협정·무기 협력 발표는 없다.",
       "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261115509019"
+        },
         {
           "name": "NK News",
           "tier": "C",
@@ -95,7 +96,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "NK News 11/15: 김정은 최측근이 푸틴·시진핑·트럼프 회담 앞서 모스크바행"
+        "조선중앙통신 인용: 조용원 비서가 14일 평양 출발, 메드베데프 초청 방러(군사협력 언급 없음)"
       ],
       "speculation": []
     },
@@ -112,7 +113,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-15T10:10:28+00:00",
+  "checked_at": "2026-11-15T11:10:18+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

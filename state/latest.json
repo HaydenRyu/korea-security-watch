@@ -1,41 +1,39 @@
 {
   "coverage": {
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 11월 15일"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참 11월",
-      "북한 미사일 발사 합참 NLL 귀순 11월 15일"
+      "지뢰 발견 DMZ 귀순"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit November 2026",
-      "김정은 방중 방러 서해 구조물 주한미군 감축"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 North Korea attributed FBI"
-    ],
-    "nuclear": [
-      "북한 풍계리 영변 핵시설 핵실험 동향",
-      "North Korea nuclear troops mobilization ammunition parade satellite imagery"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
+      "North Korea Kim Jong Un China Russia visit",
+      "김정은 방중 방러"
     ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강 군수 탄약 수송"
+      "북한 합참 발표 11월 15일"
+    ],
+    "nuclear": [
+      "북한 합참 발표 11월 15일"
     ],
     "logistics": [
-      "북한 병력 이동 전방 증강 군수 탄약 수송"
+      "북한 합참 발표 11월 15일"
     ],
     "parade_massing": [
-      "North Korea nuclear troops mobilization ammunition parade satellite imagery"
+      "북한 합참 발표 11월 15일"
     ],
     "nk_internal": [
-      "진돗개 데프콘 한미일 경고 북한 준전시 노농적위군 등화관제"
+      "북한 합참 발표 11월 15일"
     ],
     "gov_warning": [
-      "진돗개 데프콘 한미일 경고 북한 준전시 노농적위군 등화관제"
+      "북한 합참 발표 11월 15일"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의"
+    ],
+    "calm": [
+      "남북 대화 제안"
     ]
   },
   "opened": [
@@ -43,7 +41,7 @@
     "https://www.segye.com/newsView/20261115501757",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "조용원 방러(북·러 당 고위급)와 라자루스의 국내 서버 노림 정황이 이어지나 둘 다 정례·귀속 미확인 수준이며 군사 징후는 새로 확인되지 않았다. 직전 회차와 판정은 같다.",
+  "overall_summary": "조용원 방러와 라자루스의 국내 서버 노림 정황이 이어지나 각각 정례·귀속 미확인 수준이며 새 군사 징후는 없다. 직전 회차와 판정이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,6 +53,18 @@
       "status": "none"
     },
     "border_clash": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "electronic_cyber": {
@@ -104,21 +114,9 @@
       "speculation": [
         "푸틴·시진핑·트럼프 회담 전 메시지 전달 가능성"
       ]
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-15T14:10:24+00:00",
+  "checked_at": "2026-11-15T15:09:51+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

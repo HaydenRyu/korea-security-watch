@@ -1,55 +1,55 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 14일",
-      "North Korea Reuters missile troops November 2026"
+      "북한 병력 이동",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Reuters missile troops November 2026"
+      "북한 핵 풍계리",
+      "North Korea nuclear Reuters November 2026"
     ],
     "logistics": [
-      "North Korea Reuters missile troops November 2026"
+      "북한 군수 수송",
+      "North Korea ammunition"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "북한 합참 발표 11월 14일"
+      "지뢰 발견 DMZ 합참 북한",
+      "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격",
-      "North Korea attributed FBI hackers indictment"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 김정은 방러 조용원",
-      "Kim Jong Un China Russia visit",
-      "국가보안법 구속 간첩 혐의 서해 구조물 주한미군 감축",
-      "조용원 방러 조선중앙통신 러시아 방문 전투적 우의"
+      "김정은 방중 방러 조용원",
+      "Kim Jong Un China Russia visit North Korea",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 14일"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "North Korea Reuters missile troops November 2026"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 14일"
+      "진돗개 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 서해 구조물 주한미군 감축",
-      "North Korea attributed FBI hackers indictment",
-      "US seize $1.2B Binance North Korean crypto theft Justice Department"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "North Korea talks offer"
+      "남북 대화 제안"
     ]
   },
   "opened": [
+    "https://www.yna.co.kr/view/AKR20261115005600504",
+    "https://www.yna.co.kr/view/AKR20261114033800017",
     "https://www.segye.com/newsView/20261114504516",
     "https://www.segye.com/newsView/20261114500800",
-    "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261115005600504",
-    "https://www.yna.co.kr/view/AKR20261114033800017"
+    "https://www.nknews.org"
   ],
-  "overall_summary": "24시간 안 새 징후는 조용원 당 비서의 방러(외교 일정, 조선중앙통신 15일 보도)와 보안기업 보고서의 라자루스 국내 서버 표적 정황뿐이며 둘 다 정례·보고 성격이다. 직전 회차 대비 변화 없음; 접경 열점 신규 후보 0건, 합참 사이트는 503으로 확인 못 했다.",
+  "overall_summary": "24시간 안 새 징후는 조용원 당 비서 방러 보도와 라자루스 국내 서버 표적 정황뿐이며 둘 다 정례·보고 성격이다. 직전 회차와 변화 없음; 접경 열점 신규 후보 0건.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -66,9 +66,10 @@
     "electronic_cyber": {
       "status": "single",
       "routine": true,
+      "attribution": "unknown",
       "region": "서울",
-      "summary": "글로벌 보안기업 보고서에서 북한 연계 라자루스가 PHP 취약점으로 국내 서버·도메인 30곳을 표적으로 삼은 정황이 공개됐다(정부 귀속 발표 없음).",
-      "meaning": "실제 장애 없는 해킹 조직 동향 보고라 정례 범위다.",
+      "summary": "귀속 미확인 — 보안기업 보고서에서 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 공개됐다(정부 귀속 발표 없음).",
+      "meaning": "정부·금융·통신 서버가 표적이 됐으나 실제 마비 보도는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -78,7 +79,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "보안기업 보고서 기반 연합뉴스 보도"
+        "연합뉴스 14일 보도"
       ],
       "speculation": []
     },
@@ -86,22 +87,25 @@
       "status": "single",
       "routine": true,
       "region": "러시아",
-      "summary": "조용원 노동당 비서가 이끄는 당·정부 대표단이 러시아를 방문했다고 조선중앙통신이 15일 보도했다(교도는 메드베데프 회담 예상).",
-      "meaning": "군사 협정·무기 이전 발표 없는 고위급 외교 일정이다.",
+      "summary": "조용원 노동당 비서가 이끄는 당·정부 대표단 방러를 조선중앙통신이 15일 보도했다(외교 일정).",
+      "meaning": "북러 고위급 교류의 연장이며 새 군사 협정·파병 발표는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261115005600504"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261114504516"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신 보도를 연합이 전함"
+        "왕이가 한국 측에 10월 김정은 단둥 방문을 설명했다(세계일보 14일)"
       ],
-      "speculation": [
-        "북러 관계 강화 확인용 방문으로 예상"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -116,7 +120,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-14T23:10:39+00:00",
+  "checked_at": "2026-11-15T00:10:23+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

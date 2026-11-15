@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-14T23:10:39+00:00",
+  "computed_at": "2026-11-15T00:10:23+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 27,
@@ -11,9 +11,9 @@
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
-    "observed_theaters": 4,
-    "linkage_judged_at": "2026-11-14T11:40:21+00:00",
-    "latest_updated_at": "2026-11-14T23:10:39+00:00"
+    "observed_theaters": 5,
+    "linkage_judged_at": "2026-11-14T23:39:41+00:00",
+    "latest_updated_at": "2026-11-15T00:10:23+00:00"
   },
   "theaters": [
     {
@@ -28,10 +28,10 @@
           "name": "Focus Taiwan",
           "tier": "B",
           "url": "https://focustaiwan.tw/politics/202611140008",
-          "published_at": "2026-11-14T16:14:30+08:00"
+          "published_at": "2026-11-14T16:14:34+08:00"
         }
       ],
-      "judged_at": "2026-11-14T11:40:21+00:00"
+      "judged_at": "2026-11-14T23:39:41+00:00"
     },
     {
       "key": "ukraine",
@@ -41,32 +41,45 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "푸틴이 전면 휴전을 계속 거부하는 가운데 미국이 돈바스 철수와 나토 가입 교환을 거론해 전쟁이 이어지는 중 협상이 진행된다.",
+      "summary": "전쟁이 이어지는 가운데 젤렌스키는 미국이 돈바스 철수와 나토 가입의 교환을 거론했다고 밝혔고 미 당국자는 확인하지 않았다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
           "published_at": "2026-11-14T10:30:38+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cq39glwprknjo",
-          "published_at": "2026-11-13T16:40:31+00:00"
         }
       ],
-      "judged_at": "2026-11-14T11:40:21+00:00"
+      "judged_at": "2026-11-14T23:39:41+00:00"
     },
     {
       "key": "scs_ecs",
-      "observed": false,
-      "state": null,
+      "observed": true,
+      "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "",
-      "sources": [],
-      "judged_at": null
+      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "sources": [
+        {
+          "name": "Philstar",
+          "url": "https://www.philstar.com/rss/nation",
+          "published_at": "2026-11-14T16:00:00+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "Rappler",
+          "url": "https://www.rappler.com/feed/",
+          "published_at": "2026-11-14T23:31:36+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "BBC 아시아",
+          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+          "published_at": "2026-11-14T18:17:58+00:00",
+          "kind": "feed"
+        }
+      ],
+      "judged_at": "2026-11-14T23:39:41+00:00"
     },
     {
       "key": "mideast",
@@ -91,7 +104,7 @@
           "published_at": "2026-11-13T12:28:28+00:00"
         }
       ],
-      "judged_at": "2026-11-14T11:40:21+00:00"
+      "judged_at": "2026-11-14T23:39:41+00:00"
     },
     {
       "key": "us_posture",
@@ -99,16 +112,22 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 태평양사령부가 일본 통합막료장 등과 정례 고위 세미나를 열었고 새 전략자산 전개 보도는 없다.",
+      "summary": "DVIDS·Stars and Stripes 목록에 72시간 안 새 미 전략자산 전개 기사 없음",
       "sources": [
         {
           "name": "DVIDS",
-          "tier": "A",
-          "url": "https://www.dvidshub.net/news/579361/japan-us-participate-annual-joint-senior-leader-seminar",
-          "published_at": "2026-11-14T02:09:21+00:00"
+          "url": "https://www.dvidshub.net/rss/news",
+          "published_at": "2026-11-14T20:51:50+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "Stars and Stripes",
+          "url": "https://www.stripes.com/theaters/asia_pacific/",
+          "published_at": "2026-11-13T00:00:00+00:00",
+          "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-14T11:40:21+00:00"
+      "judged_at": "2026-11-14T23:39:41+00:00"
     }
   ],
   "channels": [
@@ -141,6 +160,6 @@
   "last_good": {
     "ews": 27,
     "band": "관찰",
-    "computed_at": "2026-11-14T23:10:39+00:00"
+    "computed_at": "2026-11-15T00:10:23+00:00"
   }
 }

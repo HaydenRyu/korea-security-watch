@@ -46,9 +46,10 @@
   "opened": [
     "https://www.segye.com/newsView/20261115509019",
     "https://www.segye.com/newsView/20261115501757",
+    "https://www.yna.co.kr/view/AKR20261115005651504",
     "https://www.yna.co.kr/view/AKR20261115036400062"
   ],
-  "overall_summary": "직전 회차와 같은 두 건(라자루스 국내 서버 노림 보고, 조용원 방러)만 이어지며 신규 군사 도발·경고 보도는 확인되지 않았다. 동해 대진항 고무보트 표류는 추진기 고장 구조 사건으로 북한 연관이 없고, 접경 열점 후보는 없다.",
+  "overall_summary": "직전 회차와 같은 두 건(라자루스 국내 서버 노림 보고, 조용원 방러)만 이어지며 신규 군사 도발·경고 보도는 확인되지 않았다. 접경 열점 후보는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -116,7 +117,7 @@
       ]
     }
   },
-  "checked_at": "2026-11-15T22:09:41+00:00",
+  "checked_at": "2026-11-15T22:10:22+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,17 +1,17 @@
 {
- "at": "2026-11-15T07:44:54+00:00",
- "south": 74,
- "area": 93,
- "baseline": 72.0,
- "ratio": 1.03,
+ "at": "2026-11-15T07:51:21+00:00",
+ "south": 82,
+ "area": 102,
+ "baseline": 71.0,
+ "ratio": 1.15,
  "samples": 4,
  "mil": [
   {
    "type": "CL60",
    "name": null,
    "call": "",
-   "lat": 37.02,
-   "lon": 127.1
+   "lat": 37.38,
+   "lon": 127.02
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

@@ -1,44 +1,45 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement border"
+      "합참 북한",
+      "North Korea missile"
     ],
     "nuclear": [
-      "북한 미사일 발사 핵 풍계리 영변 동향",
-      "North Korea nuclear Punggye-ri Yongbyon"
+      "North Korea missile",
+      "풍계리 영변 핵시설"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition logistics"
+      "합참 북한",
+      "North Korea Reuters"
     ],
     "border_clash": [
-      "북한 합참 지뢰 발견 NLL 귀순",
-      "North Korea DMZ border clash"
+      "지뢰 발견",
+      "목함지뢰 해안",
+      "귀순 NLL",
+      "North Korea DMZ"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
       "사이버 공격",
-      "North Korea Lazarus hacking Korea"
+      "North Korea hack attributed"
     ],
     "foreign_forces": [
-      "김정은 방러",
+      "김정은 방중",
       "Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 열병식 준비"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 대피",
-      "North Korea wartime mobilization"
+      "북한 준전시 동원",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "Korea DEFCON alert"
+      "합참 북한",
+      "진돗개 발령"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -48,16 +49,16 @@
     "calm": [
       "남북 대화 제안",
       "통신선 복원",
+      "North Korea talks offer",
       "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261115509019",
     "https://www.segye.com/newsView/20261115501757",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261025/cover-story-kim-jong-uns-china-trip-reaffirms-blood-ties-as-beijing-watches-moscow",
-    "https://www.byteseu.com/2523214/"
+    "https://www.segye.com/newsView/20261115509019",
+    "https://www.yna.co.kr/view/AKR20261112143000065"
   ],
-  "overall_summary": "조용원 노동당 비서의 방러(조선중앙통신 보도)와 라자루스의 국내 서버 노림 정황 보도가 이어졌으나 둘 다 직전 회차와 같은 정례·귀속 미확인 수준이다. 접경 군사 충돌·핵 동향·정부 경고는 새로 확인된 것이 없다.",
+  "overall_summary": "직전 회차와 변화 없음: 조용원 방러(외교 일정)와 라자루스·김수키 관련 귀속 미확인 사이버 보도만 있고 군사 징후는 없다. 접경 열점·신규 지뢰·충돌 보도는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,8 +76,8 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 보안기업 보고로 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 공개됐으나 정부의 북한 귀속 발표는 없다.",
-      "meaning": "국내 서버 대상 정찰·침투 시도 정황이나 실제 피해·정부 귀속이 없어 배경 수준이다.",
+      "summary": "귀속 미확인 — 보안기업 보고로 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 공개됐고 김수키의 국회의원실 사칭 공격도 보도됐으나 정부의 북한 귀속 발표는 없다.",
+      "meaning": "국내 서버·공공 대상 정찰·침투 시도 정황이나 실제 마비·정부 귀속이 없어 배경 수준이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -95,19 +96,14 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
+      "region": "러시아 모스크바",
       "summary": "조용원 노동당 비서가 당·정부 대표단을 이끌고 통합러시아 초청으로 방러했다고 조선중앙통신이 15일 전했고 방문 목적·일정은 공개되지 않았다.",
       "meaning": "북러 고위급 교류의 외교 일정이며 군사 협정·무기 이전 발표는 없다.",
-      "region": "러시아 모스크바",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261115509019"
-        },
-        {
-          "name": "Bytes Europe(연합뉴스 전재)",
-          "tier": "B",
-          "url": "https://www.byteseu.com/2523214/"
         }
       ],
       "confidence": "중간",
@@ -131,7 +127,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-15T23:10:32+00:00",
+  "checked_at": "2026-11-16T00:10:26+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-15T23:10:32+00:00",
+  "computed_at": "2026-11-16T00:10:26+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 27,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-15T11:39:27+00:00",
-    "latest_updated_at": "2026-11-15T23:10:32+00:00"
+    "linkage_judged_at": "2026-11-15T23:39:55+00:00",
+    "latest_updated_at": "2026-11-16T00:10:26+00:00"
   },
   "theaters": [
     {
@@ -41,16 +41,16 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "전쟁이 이어지는 가운데 젤렌스키는 미국이 돈바스 철수와 나토 가입의 교환을 거론했다고 밝혔고 미 당국자는 확인하지 않았다.",
+      "summary": "러시아의 공습과 우크라이나 방공이 이어지는 가운데 젤렌스키가 군용 스타링크 속도 제한 해제를 촉구했다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
-          "published_at": "2026-11-14T22:37:25+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o",
+          "published_at": "2026-11-15T19:32:39+00:00"
         }
       ],
-      "judged_at": "2026-11-15T11:39:27+00:00"
+      "judged_at": "2026-11-15T23:39:55+00:00"
     },
     {
       "key": "scs_ecs",
@@ -63,17 +63,17 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-15T10:32:00+00:00",
+          "published_at": "2026-11-15T18:32:00+00:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-14T18:17:58+00:00",
+          "published_at": "2026-11-15T22:24:20+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-15T11:39:27+00:00"
+      "judged_at": "2026-11-15T23:39:55+00:00"
     },
     {
       "key": "mideast",
@@ -106,16 +106,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "가데나 기지에 F-15EX 첫 상주 배치 항공기가 도착했다고 미 공군이 밝혔다.",
+      "summary": "가데나 기지에 첫 상시 배치 F-15EX가 도착했다는 보도 외에 긴장 보도는 없다.",
       "sources": [
         {
           "name": "DVIDS",
           "tier": "A",
           "url": "https://www.dvidshub.net/news/579371/kadena-welcomes-first-permanently-assigned-f-15ex-eagle-ii-aircraft",
-          "published_at": "2026-11-15T03:03:44+00:00"
+          "published_at": "2026-11-14T22:03:44+00:00"
         }
       ],
-      "judged_at": "2026-11-15T11:39:27+00:00"
+      "judged_at": "2026-11-15T23:39:55+00:00"
     }
   ],
   "channels": [
@@ -148,6 +148,6 @@
   "last_good": {
     "ews": 27,
     "band": "관찰",
-    "computed_at": "2026-11-15T23:10:32+00:00"
+    "computed_at": "2026-11-16T00:10:26+00:00"
   }
 }

@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-16T04:04:41+00:00",
+ "fetched_at": "2026-11-16T05:28:15+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-16T04:04:41+00:00",
+ "last_ok_at": "2026-11-16T05:28:15+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1109,
-  "hits": 29,
+  "fetched": 1108,
+  "hits": 27,
   "clusters": 24,
   "by_group": {
    "gps": 5,
    "hybrid": 5,
+   "sanction": 1,
    "border": 4,
    "defect": 1,
    "summit": 10,
-   "sanction": 1,
    "alert": 1,
    "usfk": 1,
    "yellowsea": 1,
@@ -27,8 +27,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 550,
-   "hits": 24
+   "count": 549,
+   "hits": 21
   },
   "SBS": {
    "feeds": 3,
@@ -66,12 +66,17 @@
   "gps": {
    "clusters": 5,
    "max_independent": 2,
-   "latest": "2026-11-16T04:04:41+00:00"
+   "latest": "2026-11-16T05:28:15+00:00"
   },
   "hybrid": {
    "clusters": 5,
    "max_independent": 2,
-   "latest": "2026-11-16T04:04:41+00:00"
+   "latest": "2026-11-16T05:28:15+00:00"
+  },
+  "sanction": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-16T04:27:55+00:00"
   },
   "border": {
    "clusters": 4,
@@ -85,17 +90,12 @@
   },
   "summit": {
    "clusters": 10,
-   "max_independent": 2,
-   "latest": "2026-11-16T02:18:27+00:00"
-  },
-  "sanction": {
-   "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-16T01:23:02+00:00"
+   "latest": "2026-11-16T02:18:27+00:00"
   },
   "alert": {
    "clusters": 1,
-   "max_independent": 2,
+   "max_independent": 1,
    "latest": "2026-11-15T23:27:47+00:00"
   },
   "usfk": {
@@ -120,7 +120,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 70,
+   "count": 69,
    "hits": 14
   },
   {
@@ -129,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 6
+   "hits": 4
   },
   {
    "outlet": "연합뉴스",
@@ -145,7 +145,7 @@
    "url": "https://www.yna.co.kr/rss/local.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "연합뉴스",

@@ -1,38 +1,39 @@
 {
   "version": 1,
-  "at": "2026-11-16T11:40:02+00:00",
-  "opened": 15,
+  "at": "2026-11-16T11:40:06+00:00",
+  "opened": 17,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-16T11:40:02+00:00",
-      "raw": 5,
-      "kept": 5
+      "last_ok": "2026-11-16T11:40:06+00:00",
+      "raw": 4,
+      "kept": 4
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-16T11:40:02+00:00",
+      "last_ok": "2026-11-16T11:40:06+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
-      "status": "checked",
-      "last_ok": "2026-11-16T11:40:02+00:00",
-      "raw": 1,
-      "kept": 1
+      "status": "no_findings",
+      "last_ok": "2026-11-16T11:40:06+00:00",
+      "raw": 0,
+      "kept": 0,
+      "note": "대만 명명 훈련·북러 새 합의 공식 보도 없음."
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-16T11:40:02+00:00",
+      "last_ok": "2026-11-16T11:40:06+00:00",
       "raw": 5,
       "kept": 5
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-16T11:40:02+00:00",
+      "last_ok": "2026-11-16T11:40:06+00:00",
       "raw": 0,
       "kept": 0,
-      "note": "news_kr 묶음 중 국민일보 단독 건은 claude_user_blocked라 원문 미개봉 — 사건으로 쓰지 않음."
+      "note": "news_kr 묶음에 국내 직접 연결 사건 없음(간첩 1건은 원문 미개봉)."
     }
   }
 }

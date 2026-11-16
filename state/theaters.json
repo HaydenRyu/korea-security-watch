@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-16T11:40:06+00:00",
+  "judged_at": "2026-11-16T23:40:00+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -11,12 +11,12 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
-          "published_at": "2026-11-14T22:37:25+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/ckx27v6dpjz0o",
+          "published_at": "2026-11-16T14:58:12+00:00"
         }
       ],
-      "summary": "전쟁이 계속되는 가운데 미국 협상단이 돈바스 철수와 나토 가입 맞교환을 거론했다고 젤렌스키가 밝혔다.",
-      "judged_at": "2026-11-16T11:40:06+00:00"
+      "summary": "러시아는 우크라이나가 하루 2천 대 넘는 드론을 발사했다고 밝혔고 크림대교가 타격받았다.",
+      "judged_at": "2026-11-16T23:40:00+00:00"
     },
     "mideast": {
       "state": 3,
@@ -27,12 +27,12 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo",
-          "published_at": "2026-11-15T13:42:58+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo",
+          "published_at": "2026-11-16T11:09:38+00:00"
         }
       ],
-      "summary": "이란 혁명수비대가 사흘 새 두 번째로 바레인 미군 기지를 드론 6대로 겨냥했다고 밝혔고 미·이란은 호르무즈 해협 대치 중이다.",
-      "judged_at": "2026-11-16T11:40:06+00:00"
+      "summary": "사우디 지원 예멘 정부군이 바브엘만데브 해협의 병력을 아덴 방어로 옮기며 후티 진격에 맞서고 있다.",
+      "judged_at": "2026-11-16T23:40:00+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -46,7 +46,7 @@
         }
       ],
       "summary": "대만 국방부는 중국군 항공기 4대가 중간선을 넘는 등 항공기·함정 총 14기·척이 대만 주변에서 활동했다고 밝혔다.",
-      "judged_at": "2026-11-16T11:40:06+00:00"
+      "judged_at": "2026-11-16T23:40:00+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -55,7 +55,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-16T17:11:00+08:00",
+          "published_at": "2026-11-17T00:00:00+08:00",
           "kind": "feed"
         },
         {
@@ -66,7 +66,7 @@
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
-      "judged_at": "2026-11-16T11:40:06+00:00"
+      "judged_at": "2026-11-16T23:40:00+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -74,13 +74,19 @@
       "sources": [
         {
           "name": "DVIDS",
-          "tier": "A",
-          "url": "https://www.dvidshub.net/news/579391/projecting-lethality-25th-infantry-division-validates-deep-strike-capabilities-across-pacific",
-          "published_at": "2026-11-16T03:15:34+00:00"
+          "url": "https://www.dvidshub.net/rss/news",
+          "published_at": "2026-11-16T23:29:26+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "Stars and Stripes",
+          "url": "https://www.stripes.com/theaters/asia_pacific/",
+          "published_at": "2026-11-16T12:00:00+00:00",
+          "kind": "feed"
         }
       ],
-      "summary": "미 25사단이 태평양에서 종심타격 능력 검증 훈련을 했다고 DVIDS가 전했다.",
-      "judged_at": "2026-11-16T11:40:06+00:00"
+      "summary": "Stripes·DVIDS 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
+      "judged_at": "2026-11-16T23:40:00+00:00"
     }
   }
 }

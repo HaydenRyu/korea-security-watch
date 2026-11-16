@@ -1,47 +1,43 @@
 {
   "version": 1,
-  "at": "2026-11-16T11:40:06+00:00",
+  "at": "2026-11-16T23:40:00+00:00",
   "domains": {
     "inter_korean": {
       "level": "보통",
       "sources": [],
       "summary": "전단·확성기 재개 등 새 조치 보도는 없다.",
-      "at": "2026-11-16T11:40:06+00:00",
+      "at": "2026-11-16T23:40:00+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "nk_domestic": {
       "level": "보통",
       "sources": [
         {
-          "url": "https://www.bbc.co.uk/news/articles/cqdj1ellpd70o",
-          "publisher": "BBC"
+          "url": "https://www.segye.com/newsView/20261116518821",
+          "publisher": "세계일보"
         }
       ],
-      "summary": "FBI가 북한 해커의 암호화폐 탈취를 밝혔으나 노선 변화 결정 보도는 없다.",
-      "at": "2026-11-16T11:40:06+00:00",
+      "summary": "북한 해킹조직의 AI 활용 확대 분석이 나왔으나 노선 변화 결정 보도는 없다.",
+      "at": "2026-11-16T23:40:00+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "great_powers": {
       "level": "보통",
       "sources": [
         {
-          "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do",
-          "publisher": "BBC"
-        },
-        {
-          "url": "https://www.segye.com/newsView/20261116515292",
-          "publisher": "세계일보"
+          "url": "https://www.cna.com.tw/news/acn/202611160163.aspx",
+          "publisher": "CNA"
         }
       ],
-      "summary": "미·중·러 정상 3자 회동이 19일로 예고됐으나 새 군사 합의 발표는 없다.",
-      "at": "2026-11-16T11:40:06+00:00",
+      "summary": "미·중·러 정상 회동이 19일로 예고됐으나 새 군사 합의 발표는 없다.",
+      "at": "2026-11-16T23:40:00+00:00",
       "since": "2026-11-05T03:30:01+00:00"
     },
     "public_opinion": {
       "level": "보통",
       "sources": [],
       "summary": "북한의 특정 인물·시설 지목 대남 비난 보도는 없다.",
-      "at": "2026-11-16T11:40:06+00:00",
+      "at": "2026-11-16T23:40:00+00:00",
       "since": "2026-10-23T04:11:01+00:00"
     }
   },

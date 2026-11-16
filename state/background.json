@@ -1,39 +1,39 @@
 {
   "version": 1,
-  "at": "2026-11-16T11:40:06+00:00",
-  "opened": 17,
+  "at": "2026-11-16T23:40:00+00:00",
+  "opened": 20,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-16T11:40:06+00:00",
+      "last_ok": "2026-11-16T23:40:00+00:00",
       "raw": 4,
       "kept": 4
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-16T11:40:06+00:00",
+      "last_ok": "2026-11-16T23:40:00+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-16T11:40:06+00:00",
+      "last_ok": "2026-11-16T23:40:00+00:00",
       "raw": 0,
       "kept": 0,
       "note": "대만 명명 훈련·북러 새 합의 공식 보도 없음."
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-16T11:40:06+00:00",
+      "last_ok": "2026-11-16T23:40:00+00:00",
       "raw": 5,
       "kept": 5
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-16T11:40:06+00:00",
+      "last_ok": "2026-11-16T23:40:00+00:00",
       "raw": 0,
       "kept": 0,
-      "note": "news_kr 묶음에 국내 직접 연결 사건 없음(간첩 1건은 원문 미개봉)."
+      "note": "news_kr 묶음에 국내 직접 연결 사건 없음(원문 미개봉)."
     }
   }
 }

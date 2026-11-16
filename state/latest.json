@@ -1,54 +1,42 @@
 {
   "coverage": {
-    "foreign_forces": [
-      "김정은 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
-    ],
-    "border_clash": [
-      "지뢰 발견 DMZ 합참",
-      "귀순"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 공격"
-    ],
-    "calm": [
-      "남북 대화 제안"
-    ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear"
+      "북한 미사일 발사 합참 11월 16일"
     ],
     "logistics": [
-      "북한 군수 탄약",
-      "North Korea ammunition"
+      "북한 탄약 군수 수송 러시아"
+    ],
+    "border_clash": [
+      "북한 지뢰 발견 DMZ 합참"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 공격"
+    ],
+    "foreign_forces": [
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식 집결 위성사진"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 주민 대피"
     ],
     "gov_warning": [
-      "진돗개 데프콘"
+      "진돗개 발령 데프콘 상향 경고"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261115509019",
-    "https://www.nknews.org/",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.mnd.go.kr/"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "신규 징후 없이 조용원 방러(정례 외교)와 귀속 미확인 해킹 표적 정황이 유지된다. 접경 남측 열점 후보 신규 대조 대상 없음.",
+  "overall_summary": "직전 회차와 변화 없음: 조용원 방러(정례 외교)와 사이퍼마 표적 목록 보고(귀속 미확인)만 이어진다. 24시간 안 신규 발사·접경 충돌·지뢰 발견 보도는 확인되지 않았고 접경 열점 후보는 0건이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,8 +48,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "신규 접경 사건 보도 없음(11/13 지뢰 관련 외교부 설명은 배경)."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
@@ -97,11 +84,6 @@
           "url": "https://www.segye.com/newsView/20261115509019"
         },
         {
-          "name": "코리아타임스",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
-        },
-        {
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/"
@@ -109,7 +91,8 @@
       ],
       "confidence": "높음",
       "facts": [
-        "대표단 모스크바 도착"
+        "대표단 모스크바 도착",
+        "군사협정·무기 이전 언급 없음"
       ],
       "speculation": [
         "정상외교 일정 논의 가능성"
@@ -128,7 +111,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T07:13:36+00:00",
+  "checked_at": "2026-11-16T08:14:24+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

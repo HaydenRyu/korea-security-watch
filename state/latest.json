@@ -1,45 +1,54 @@
 {
   "coverage": {
-    "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "조용원 방러"
-    ],
-    "electronic_cyber": [
-      "북한 라자루스 국내 서버 30곳 해킹 정찰총국"
-    ],
-    "border_clash": [
-      "합참 북한 발사 도발 오늘"
-    ],
-    "calm": [],
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "북한 전방 병력 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리 동향"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "North Korea ammunition stockpile logistics shipment"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견 DMZ 귀순",
+      "North Korea DMZ NLL"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
+    ],
+    "foreign_forces": [
+      "김정은 방러",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 대피 훈련"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 경계태세"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261115509019",
-    "https://www.yna.co.kr/view/AKR20261116064600504",
-    "https://www.yna.co.kr/view/AKR20261114033800017",
-    "https://www.yna.co.kr/view/AKR20261116084700062"
+    "https://www.nknews.org/",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "조용원 노동당 비서의 방러(11/14 도착)를 통일부가 주시 중이며 미중러 정상회담 직전 북러 고위급 교류로 정례 외교 일정 성격이다. 라자루스의 국내 서버 30곳 표적 보도는 민간 보안기업 보고 기반이라 귀속 미확인으로 배경 처리했고, 합참 발표 도발은 확인되지 않았다.",
+  "overall_summary": "조용원 노동당 비서의 방러 외 새로운 군사 징후는 없고 접경 열점 후보도 0건이다. 직전 회차와 같은 정례 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,48 +66,50 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 민간 보안기업 사이퍼마 보고서에 라자루스(북한 정찰총국 연계 추정)가 PHP 취약점으로 국내 서버·도메인 30곳을 표적 목록에 올린 정황이 연합뉴스에 보도됐다.",
-      "meaning": "정부·금융·통신 대상 정찰성 공격 시도이나 실제 마비·피해 발표는 없다.",
+      "summary": "귀속 미확인 — 사이퍼마가 라자루스 연계 해커의 표적 목록에 국내 서버 30곳이 올랐다고 보고했으나 침해 확인은 아니다.",
+      "meaning": "실제 침해 확인 전의 표적 정황이다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "코리아타임스",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261114033800017"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "표적 목록 10개국 216개 서버 중 한국 30곳",
-        "정부 기관 공식 귀속 발표 없음"
-      ],
-      "speculation": [
-        "금융 탈취·첩보 수집 목적"
-      ]
-    },
-    "foreign_forces": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "러시아 모스크바",
-      "summary": "조용원 노동당 비서가 통합러시아 초청으로 방러(11/14 도착)했고 통일부가 미중러 정상회담 직전 북러 고위급 교류로 동향을 주시한다고 밝혔다.",
-      "meaning": "당 차원 외교 교류로 군사 협정·무기 이전 발표는 없다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261116064600504"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261115509019"
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신 보도, 방문 목적·일정 미공개"
+        "표적 목록 216곳 중 국내 서버 30곳"
+      ],
+      "speculation": []
+    },
+    "foreign_forces": {
+      "status": "corroborated",
+      "routine": true,
+      "region": "러시아",
+      "summary": "조용원 노동당 비서가 통합러시아 초청으로 방러(11/14 출발·15 도착)했다.",
+      "meaning": "미중러 정상회담 직전 북러 고위급 외교 일정이며 군사 협정 발표는 없다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261115509019"
+        },
+        {
+          "name": "코리아타임스",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "대표단 모스크바 도착"
       ],
       "speculation": [
-        "김정은 메시지 전달·북미대화 입장 타진"
+        "정상외교 일정 논의 가능성"
       ]
     },
     "parade_massing": {
@@ -114,7 +125,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T04:10:33+00:00",
+  "checked_at": "2026-11-16T05:10:26+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

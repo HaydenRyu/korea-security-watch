@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-16T05:10:26+00:00",
+  "computed_at": "2026-11-16T06:11:32+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 28,
   "band": "관찰",
   "d": 6,
-  "e": 8,
+  "e": 13,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-15T23:39:55+00:00",
-    "latest_updated_at": "2026-11-16T05:10:26+00:00"
+    "linkage_judged_at": "2026-11-16T05:40:58+00:00",
+    "latest_updated_at": "2026-11-16T06:11:32+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "대만 해순서는 동부 해안에서 중국 해경선과 무선 방송으로 영유권 주장을 다툰 뒤 계속 감시 중이라고 밝혔다.",
+      "summary": "대만 국방부는 중국군 항공기 4대가 중간선을 넘는 등 항공기·함정 총 14기·척이 대만 주변에서 활동했다고 밝혔다.",
       "sources": [
         {
-          "name": "Focus Taiwan",
+          "name": "CNA",
           "tier": "B",
-          "url": "https://focustaiwan.tw/politics/202611140008",
-          "published_at": "2026-11-14T16:14:34+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611160028.aspx",
+          "published_at": "2026-11-16T09:55:08+08:00"
         }
       ],
-      "judged_at": "2026-11-15T05:39:54+00:00"
+      "judged_at": "2026-11-16T05:40:58+00:00"
     },
     {
       "key": "ukraine",
@@ -41,16 +41,16 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "러시아의 공습과 우크라이나 방공이 이어지는 가운데 젤렌스키가 군용 스타링크 속도 제한 해제를 촉구했다.",
+      "summary": "러시아가 돈바스 대부분을 장악한 채 전쟁이 계속되는 가운데 미국 협상단이 돈바스 철수와 나토 가입 맞교환을 거론했다고 젤렌스키가 밝혔다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o",
-          "published_at": "2026-11-15T19:32:39+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo",
+          "published_at": "2026-11-14T22:37:25+00:00"
         }
       ],
-      "judged_at": "2026-11-15T23:39:55+00:00"
+      "judged_at": "2026-11-16T05:40:58+00:00"
     },
     {
       "key": "scs_ecs",
@@ -58,47 +58,41 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
       "sources": [
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-15T18:32:00+00:00",
+          "published_at": "2026-11-16T00:00:00+00:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-15T22:24:20+00:00",
+          "published_at": "2026-11-16T03:09:49+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-15T23:39:55+00:00"
+      "judged_at": "2026-11-16T05:40:58+00:00"
     },
     {
       "key": "mideast",
       "observed": true,
       "state": 3,
-      "contribution": 4,
+      "contribution": 8,
       "channels": [
-        "c5_diplomacy"
+        "c4_sea_energy"
       ],
-      "summary": "이스라엘이 가자 난민촌을 공습해 하마스 라파 여단장이 숨졌다고 양측이 확인했고 IAEA는 이란 미사찰 시설에 우려를 표했다.",
+      "summary": "예멘 정부군이 바브엘만데브 인근에서 철수해 후티가 해협 인근을 장악했다고 후티 측 매체가 보도했다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqrkg4r6mg7xo",
-          "published_at": "2026-11-15T08:17:41+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cm75261e3pdko",
-          "published_at": "2026-11-13T12:28:28+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo",
+          "published_at": "2026-11-16T03:08:31+00:00"
         }
       ],
-      "judged_at": "2026-11-15T11:39:27+00:00"
+      "judged_at": "2026-11-16T05:40:58+00:00"
     },
     {
       "key": "us_posture",
@@ -106,7 +100,7 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "가데나 기지에 첫 상시 배치 F-15EX가 도착했다는 보도 외에 긴장 보도는 없다.",
+      "summary": "미 공군 첫 상시 배치 F-15EX가 15일 가데나 기지에 도착했다.",
       "sources": [
         {
           "name": "DVIDS",
@@ -115,7 +109,7 @@
           "published_at": "2026-11-14T22:03:44+00:00"
         }
       ],
-      "judged_at": "2026-11-15T23:39:55+00:00"
+      "judged_at": "2026-11-16T05:40:58+00:00"
     }
   ],
   "channels": [
@@ -136,18 +130,18 @@
     },
     {
       "key": "c4_sea_energy",
-      "observed": false,
-      "value": 0
+      "observed": true,
+      "value": 8
     },
     {
       "key": "c5_diplomacy",
       "observed": true,
-      "value": 8
+      "value": 4
     }
   ],
   "last_good": {
     "ews": 28,
     "band": "관찰",
-    "computed_at": "2026-11-16T05:10:26+00:00"
+    "computed_at": "2026-11-16T06:11:32+00:00"
   }
 }

@@ -13,7 +13,7 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
+      "지뢰 발견 DMZ 귀순 합참",
       "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
@@ -22,8 +22,8 @@
     ],
     "foreign_forces": [
       "김정은 방러",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "주한미군 감축"
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결"
@@ -39,7 +39,7 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
+      "남북 대화 제안 통신선 복원 확성기 방송 중단",
       "North Korea talks offer"
     ]
   },
@@ -125,7 +125,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T05:10:26+00:00",
+  "checked_at": "2026-11-16T06:11:32+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

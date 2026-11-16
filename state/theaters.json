@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-16T05:40:58+00:00",
+  "judged_at": "2026-11-16T11:40:02+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -15,8 +15,8 @@
           "published_at": "2026-11-14T22:37:25+00:00"
         }
       ],
-      "summary": "러시아가 돈바스 대부분을 장악한 채 전쟁이 계속되는 가운데 미국 협상단이 돈바스 철수와 나토 가입 맞교환을 거론했다고 젤렌스키가 밝혔다.",
-      "judged_at": "2026-11-16T05:40:58+00:00"
+      "summary": "러시아가 돈바스 대부분을 장악한 채 전쟁이 계속되는 가운데 젤렌스키가 미국의 돈바스 철수-나토 가입 맞교환안을 언급했다.",
+      "judged_at": "2026-11-16T11:40:02+00:00"
     },
     "mideast": {
       "state": 3,
@@ -27,12 +27,18 @@
         {
           "name": "BBC",
           "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo",
+          "published_at": "2026-11-15T13:42:58+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo",
           "published_at": "2026-11-16T03:08:31+00:00"
         }
       ],
-      "summary": "예멘 정부군이 바브엘만데브 인근에서 철수해 후티가 해협 인근을 장악했다고 후티 측 매체가 보도했다.",
-      "judged_at": "2026-11-16T05:40:58+00:00"
+      "summary": "이란이 바레인 미군기지를 드론으로 공격했고(사흘 새 두 번째) 예멘 정부군은 바브엘만데브 인근에서 철수한다고 밝혔다.",
+      "judged_at": "2026-11-16T11:40:02+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -46,7 +52,7 @@
         }
       ],
       "summary": "대만 국방부는 중국군 항공기 4대가 중간선을 넘는 등 항공기·함정 총 14기·척이 대만 주변에서 활동했다고 밝혔다.",
-      "judged_at": "2026-11-16T05:40:58+00:00"
+      "judged_at": "2026-11-16T11:40:02+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -55,18 +61,18 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-16T00:00:00+00:00",
+          "published_at": "2026-11-16T17:11:00+08:00",
           "kind": "feed"
         },
         {
-          "name": "BBC 아시아",
+          "name": "BBC",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-16T03:09:49+00:00",
+          "published_at": "2026-11-16T07:19:11+00:00",
           "kind": "feed"
         }
       ],
-      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
-      "judged_at": "2026-11-16T05:40:58+00:00"
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "judged_at": "2026-11-16T11:40:02+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -74,13 +80,13 @@
       "sources": [
         {
           "name": "DVIDS",
-          "tier": "A",
+          "tier": "B",
           "url": "https://www.dvidshub.net/news/579371/kadena-welcomes-first-permanently-assigned-f-15ex-eagle-ii-aircraft",
-          "published_at": "2026-11-14T22:03:44+00:00"
+          "published_at": "2026-11-15T12:00:00+00:00"
         }
       ],
       "summary": "미 공군 첫 상시 배치 F-15EX가 15일 가데나 기지에 도착했다.",
-      "judged_at": "2026-11-16T05:40:58+00:00"
+      "judged_at": "2026-11-16T11:40:02+00:00"
     }
   }
 }

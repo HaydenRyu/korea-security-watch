@@ -5,15 +5,15 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear Yongbyon November 2026"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 북한",
+      "북한 지뢰 발견 DMZ",
       "목함지뢰 해안",
       "NLL 귀순"
     ],
@@ -24,7 +24,7 @@
       "North Korea hacking GPS jamming"
     ],
     "foreign_forces": [
-      "김정은 방중 시진핑 트럼프",
+      "김정은 방러",
       "Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
@@ -39,7 +39,7 @@
     ],
     "gov_warning": [
       "진돗개 발령 데프콘",
-      "North Korea warning Japan Korea US"
+      "북한 미사일 발사 합참 11월 16일"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -48,15 +48,19 @@
     ],
     "calm": [
       "남북 대화 제안",
-      "North Korea talks offer"
+      "통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261116518821",
     "https://www.segye.com/newsView/20261116519067",
     "https://www.yna.co.kr/view/AKR20261116064600504",
-    "https://www.yna.co.kr/view/AKR20261116181400071"
+    "https://www.yna.co.kr/view/AKR20261116181400071",
+    "https://www.donga.com/news/Politics/article/all/20261116/135028820/2"
   ],
+  "overall_summary": "조용원 방러·트럼프의 김정은 방중 언급 등 외교 교류가 이어지나 군사적 징후는 없다. 접경 열점 후보 신규 없음, 라자루스 국내 서버 표적 보도(IT업계)는 공식 귀속 전이라 배경 처리, 직전과 비슷한 평온 수준.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -130,8 +134,7 @@
       "status": "none"
     }
   },
-  "overall_summary": "조용원 방러·미중러 정상회담(11/19) 직전 북러·북중 고위급 교류와 트럼프의 김정은 방중 언급이 이어지나 군사적 징후는 없다. 접경 열점 후보 신규 없음, 신규 국내 해킹(김수키 사칭 메일, 국민일보 단독·원문 미열람)은 귀속 전 단독이라 배경 처리, 직전과 비슷한 평온 수준.",
-  "checked_at": "2026-11-16T18:10:51+00:00",
+  "checked_at": "2026-11-16T19:10:20+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

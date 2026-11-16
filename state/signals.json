@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updated_at": "2026-11-16T09:11:07+00:00",
-  "active": [],
+  "updated_at": "2026-11-16T10:11:31+00:00",
+  "active": [
+    {
+      "id": "scheduled_event-20261116-2edd67bc",
+      "kind": "scheduled_event",
+      "summary": "트럼프·시진핑·푸틴 첫 3자 정상회담이 11/19 선전 APEC 계기에 열릴 예정이라고 백악관·크렘린이 밝혔다.",
+      "window": {
+        "start": "2026-11-19",
+        "end": "2026-11-19"
+      },
+      "level": "official",
+      "first_seen": "2026-11-16T10:11:31+00:00",
+      "expires": "2026-11-26",
+      "source": {
+        "url": "https://en.yna.co.kr/view/AEN20261116006000315",
+        "title": "S. Korea voices hope upcoming U.S.-China-Russia summit will advance peace on Korean Peninsula",
+        "publisher": "연합뉴스"
+      }
+    }
+  ],
   "expired": [
     {
       "id": "nk_threat-20261019-6a074a59",

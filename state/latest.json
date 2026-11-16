@@ -2,58 +2,59 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
+      "North Korea troops border buildup"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear test site activity"
+      "북한 핵 영변 풍계리 동향",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 탄약 수송 군수",
-      "North Korea ammunition shipment"
+      "북한 군수 탄약 수송",
+      "North Korea munitions transfer"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참",
-      "목함지뢰 해안",
-      "NLL 귀순"
+      "목함지뢰 발견 해안 DMZ 귀순",
+      "북한 11월 16일 합참 DMZ NLL 대남방송 재개"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란",
+      "김수키 국회의원실 사칭 해킹 공격 사례비"
     ],
     "foreign_forces": [
-      "김정은 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "북한 조용원 방러 통합러시아 미중러회담",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "Cho Yong Won Russia visit United Russia"
     ],
     "parade_massing": [
-      "북한 열병식 준비",
+      "북한 열병식 병력 집결",
       "North Korea parade preparation"
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
-      "North Korea mobilization civil defense"
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "Korea DEFCON alert"
+      "진돗개 데프콘 상향",
+      "North Korea warning travel advisory"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261115509019",
-    "https://www.nknews.org/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+    "https://en.yna.co.kr/view/AEN20261116008451315",
+    "https://en.yna.co.kr/view/AEN20261116006000315",
+    "https://en.yna.co.kr/view/AEN20261116007700315",
+    "https://www.yna.co.kr/view/AKR20261112143000065",
+    "https://news.tf.co.kr/read/ptoday/2378677.htm",
+    "https://www.segye.com/newsView/20261115509019"
   ],
-  "overall_summary": "조용원 방러와 사이퍼마 보고 외에 24시간 안 새 군사 징후는 없고 접경 열점·지뢰 신규 보도도 없다. 직전 회차와 판단이 같다.",
+  "overall_summary": "직전 회차 대비 새 징후 없음: 조용원 방러(11/15 보도)와 11/19 트럼프·시진핑·푸틴 선전 정상회담 예고가 배경이며, 접경 남측 열점·표류지뢰·최후통첩 신규 보도는 확인되지 않았다. 북한 대남방송 재개는 10월 예고 이후 실제 재개 보도가 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,51 +69,30 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "summary": "귀속 미확인 — 사이퍼마가 라자루스 연계 해커의 표적 목록에 국내 서버 30곳이 올랐다고 보고했으나 침해 확인은 아니다.",
-      "meaning": "실제 침해 확인 전의 표적 정황이다.",
-      "sources": [
-        {
-          "name": "코리아타임스",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "표적 목록 216곳 중 국내 서버 30곳"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 사이퍼마 보고는 직전 회차 이전 첫 보도이고 이번 회차에 원문 재확인·신규 사고 보도가 없다."
     },
     "foreign_forces": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "러시아",
       "lat": 55.75,
       "lon": 37.62,
-      "summary": "조용원 노동당 비서가 통합러시아 초청으로 방러(11/14 출발·15 도착)했다.",
-      "meaning": "미중러 정상회담 직전 북러 고위급 외교 일정이며 군사 협정 발표는 없다.",
+      "summary": "조용원 노동당 비서가 통합러시아 초청으로 방러(11/14 출발·15 도착)했고 통일부가 미중러 회담을 앞둔 동향을 주시한다고 밝혔다.",
+      "meaning": "정상회담 직전 북러 고위급 외교 일정이며 군사 협정 발표는 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261115509019"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
         }
       ],
-      "confidence": "높음",
+      "confidence": "중간",
       "facts": [
-        "대표단 모스크바 도착",
         "군사협정·무기 이전 언급 없음"
       ],
       "speculation": [
-        "정상외교 일정 논의 가능성"
+        "김정은 메시지 전달 가능성"
       ]
     },
     "parade_massing": {
@@ -128,7 +108,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T09:11:07+00:00",
+  "checked_at": "2026-11-16T10:11:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

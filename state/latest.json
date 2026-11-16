@@ -1,66 +1,46 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 전방 병력 증강",
-      "North Korea troop movement"
+      "북한 전방 병력 증강"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear Yongbyon November 2026"
+      "북한 핵 영변 동향"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 탄약 수송"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ",
-      "목함지뢰 해안",
-      "NLL 귀순"
+      "북한 지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "North Korea hacking GPS jamming"
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
-      "김정은 방러",
       "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중"
     ],
     "parade_massing": [
-      "북한 열병식 준비",
-      "North Korea parade"
+      "북한 열병식 준비"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "북한 미사일 발사 합참 11월 16일"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "간첩 혐의"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261116518821",
     "https://www.segye.com/newsView/20261116519067",
     "https://www.yna.co.kr/view/AKR20261116064600504",
-    "https://www.yna.co.kr/view/AKR20261116181400071",
-    "https://www.donga.com/news/Politics/article/all/20261116/135028820/2"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848717"
   ],
-  "overall_summary": "조용원 방러·트럼프의 김정은 방중 언급 등 외교 교류가 이어지나 군사적 징후는 없다. 접경 열점 후보 신규 없음, 라자루스 국내 서버 표적 보도(IT업계)는 공식 귀속 전이라 배경 처리, 직전과 비슷한 평온 수준.",
+  "overall_summary": "조용원 방러·트럼프의 김정은 방중 언급 등 외교 교류가 이어지나 군사적 징후는 없다. 접경 군사 사건 보도 없이 직전과 비슷한 평온 수준.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -78,7 +58,7 @@
       "status": "single",
       "routine": true,
       "region": "서울",
-      "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
+      "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니며, 김수키 추정 국회의원실 사칭 공격 보도는 정부 귀속 전이다.",
       "meaning": "사이버 공격 역량 확대 분석 보고로 즉각적 군사 위협은 아니다.",
       "sources": [
         {
@@ -98,7 +78,7 @@
       "status": "single",
       "routine": true,
       "region": "러시아·중국",
-      "summary": "북한 조용원 당·정부 대표단이 11/14 러시아를 방문했다고 통일부가 밝혔고, 트럼프는 중국에서 김정은을 만날 수 있다고 언급했다.",
+      "summary": "통일부가 조용원 대표단의 방러를 밝혔고 트럼프가 중국에서 김정은을 만날 수 있다고 언급했으나 군사협정·무기 이전 발표는 없다.",
       "meaning": "미중러 정상회담 직전 북러·북중 고위급 외교 교류로 군사협정·무기 이전 발표는 없다.",
       "sources": [
         {
@@ -107,9 +87,9 @@
           "url": "https://www.yna.co.kr/view/AKR20261116064600504"
         },
         {
-          "name": "연합뉴스",
+          "name": "SBS",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261116181400071"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848717"
         }
       ],
       "confidence": "중간",
@@ -134,7 +114,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T19:10:20+00:00",
+  "checked_at": "2026-11-16T20:10:05+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -2,38 +2,41 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troops border buildup"
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리 동향",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea munitions transfer"
+      "North Korea ammunition"
     ],
     "border_clash": [
-      "북한 합참 DMZ 지뢰 발견 귀순 11월 16일"
+      "지뢰 발견 DMZ 귀순",
+      "North Korea DMZ mine"
     ],
     "electronic_cyber": [
-      "해킹 공격 개인정보 유출",
-      "GPS 교란 서해 구조물 주한미군 감축"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격",
+      "North Korea cyber attack"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중 방러 조용원"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade preparation"
+      "북한 열병식",
+      "North Korea parade"
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
       "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "North Korea warning travel advisory"
+      "진돗개 데프콘 경고",
+      "North Korea warning alert"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -45,11 +48,12 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261115509019",
-    "https://www.nknews.org",
-    "https://news.tf.co.kr/read/ptoday/2378677.htm"
+    "https://www.nknews.org/2026/11/seouls-demand-for-mine-apology-derailed-push-for-north-korea-talks-sources/",
+    "https://www.nknews.org/2026/11/seoul-asks-beijing-to-help-bring-north-korea-back-to-talks-ahead-of-apec-summit/",
+    "https://www.yna.co.kr/view/AKR20261115005651504",
+    "https://www.yna.co.kr/view/AKR20261116110100063"
   ],
-  "overall_summary": "직전 회차 대비 새 징후 없음: 조용원 방러와 미중러 정상회담 예고가 배경이며 접경 지뢰·최후통첩·열점 후보는 없었다. 접경 열점 후보 0건.",
+  "overall_summary": "직전 회차 대비 새 징후 없음: 조용원 방러와 APEC 앞둔 대화 모색이 배경이며 접경 충돌·최후통첩은 없었다. 접경 열점 후보 0건.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,31 +68,7 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "신규 사고 보도 없음 — 김수키 사칭 해킹은 11/16 국민일보 보도이나 귀속 미확인 국내 사고 신규 확인 못 함."
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "러시아",
-      "lat": 55.75,
-      "lon": 37.62,
-      "summary": "조용원 노동당 비서가 통합러시아 초청으로 방러(11/14 출발·15 도착)했고 통일부가 미중러 회담을 앞둔 동향을 주시한다고 밝혔다.",
-      "meaning": "정상회담 직전 북러 고위급 외교 일정이며 군사 협정 발표는 없다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261115509019"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "군사협정·무기 이전 언급 없음"
-      ],
-      "speculation": [
-        "김정은 메시지 전달 가능성"
-      ]
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -101,9 +81,32 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "러시아",
+      "lat": 55.75,
+      "lon": 37.62,
+      "summary": "조용원 노동당 비서가 통합러시아 초청으로 방러(11/14 출발)했다고 조선중앙통신이 보도했다(연합 전재).",
+      "meaning": "정상회담 직전 북러 고위급 외교 일정이며 군사 협정 발표는 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261115005651504"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "군사협정·무기 이전 언급 없음"
+      ],
+      "speculation": [
+        "김정은 메시지 전달 가능성"
+      ]
     }
   },
-  "checked_at": "2026-11-16T11:11:52+00:00",
+  "checked_at": "2026-11-16T12:13:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

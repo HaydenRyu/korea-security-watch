@@ -1,31 +1,17 @@
 {
- "at": "2026-11-16T01:31:23+00:00",
- "south": 70,
- "area": 88,
- "baseline": 70,
- "ratio": 1.0,
- "samples": 5,
+ "at": "2026-11-16T02:46:17+00:00",
+ "south": 82,
+ "area": 105,
+ "baseline": 81,
+ "ratio": 1.01,
+ "samples": 7,
  "mil": [
   {
-   "type": "C130",
-   "name": "C-130 수송기",
-   "call": "PS101",
-   "lat": 35.83,
-   "lon": 128.58
-  },
-  {
-   "type": "BE20",
+   "type": "C560",
    "name": null,
-   "call": "CNV7502",
-   "lat": 35.29,
-   "lon": 129.09
-  },
-  {
-   "type": "C17",
-   "name": "C-17 수송기",
-   "call": "RCH4163",
-   "lat": 34.17,
-   "lon": 132.42
+   "call": "NINJA13",
+   "lat": 36.96,
+   "lon": 127.74
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

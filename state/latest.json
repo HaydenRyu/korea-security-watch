@@ -13,17 +13,15 @@
       "North Korea munitions transfer"
     ],
     "border_clash": [
-      "목함지뢰 발견 해안 DMZ 귀순",
-      "북한 11월 16일 합참 DMZ NLL 대남방송 재개"
+      "북한 합참 DMZ 지뢰 발견 귀순 11월 16일"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란",
-      "김수키 국회의원실 사칭 해킹 공격 사례비"
+      "해킹 공격 개인정보 유출",
+      "GPS 교란 서해 구조물 주한미군 감축"
     ],
     "foreign_forces": [
-      "북한 조용원 방러 통합러시아 미중러회담",
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "Cho Yong Won Russia visit United Russia"
+      "김정은 방중 방러 조용원"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -47,14 +45,11 @@
     ]
   },
   "opened": [
-    "https://en.yna.co.kr/view/AEN20261116008451315",
-    "https://en.yna.co.kr/view/AEN20261116006000315",
-    "https://en.yna.co.kr/view/AEN20261116007700315",
-    "https://www.yna.co.kr/view/AKR20261112143000065",
-    "https://news.tf.co.kr/read/ptoday/2378677.htm",
-    "https://www.segye.com/newsView/20261115509019"
+    "https://www.segye.com/newsView/20261115509019",
+    "https://www.nknews.org",
+    "https://news.tf.co.kr/read/ptoday/2378677.htm"
   ],
-  "overall_summary": "직전 회차 대비 새 징후 없음: 조용원 방러(11/15 보도)와 11/19 트럼프·시진핑·푸틴 선전 정상회담 예고가 배경이며, 접경 남측 열점·표류지뢰·최후통첩 신규 보도는 확인되지 않았다. 북한 대남방송 재개는 10월 예고 이후 실제 재개 보도가 없다.",
+  "overall_summary": "직전 회차 대비 새 징후 없음: 조용원 방러와 미중러 정상회담 예고가 배경이며 접경 지뢰·최후통첩·열점 후보는 없었다. 접경 열점 후보 0건.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,7 +65,7 @@
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "24시간 경과 — 사이퍼마 보고는 직전 회차 이전 첫 보도이고 이번 회차에 원문 재확인·신규 사고 보도가 없다."
+      "summary": "신규 사고 보도 없음 — 김수키 사칭 해킹은 11/16 국민일보 보도이나 귀속 미확인 국내 사고 신규 확인 못 함."
     },
     "foreign_forces": {
       "status": "single",
@@ -108,7 +103,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T10:11:31+00:00",
+  "checked_at": "2026-11-16T11:11:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

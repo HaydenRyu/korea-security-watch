@@ -5,7 +5,7 @@
       "Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순",
+      "지뢰 발견 DMZ 귀순 합참",
       "DMZ NLL border clash North Korea"
     ],
     "nuclear": [
@@ -14,7 +14,7 @@
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 공격 사이버 공격"
+      "해킹 개인정보 유출 11월 16일"
     ],
     "troop_movement": [
       "북한 병력 이동 전방 증강",
@@ -34,6 +34,9 @@
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의 북한"
+    ],
+    "calm": [
+      "남북 대화 제안"
     ]
   },
   "opened": [
@@ -41,7 +44,7 @@
     "https://www.nknews.org/",
     "https://www.segye.com/newsView/20261116519067"
   ],
-  "overall_summary": "24시간 안 새 군사 도발·핵·접경 징후는 확인되지 않았다. INSS 북 해킹 AI 활용 보고서(분석)와 APEC 앞 외교 동향만 있으며, 검색 결과는 대부분 과거 기사였고 calm 전용 검색은 하지 못했다.",
+  "overall_summary": "24시간 안 새 군사 도발·핵·접경 징후는 확인되지 않았다. INSS 북 해킹 AI 활용 보고서(분석)와 APEC 앞 외교 동향(남측 중국에 대화 복귀 중재 요청)만 있다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -91,7 +94,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T15:13:19+00:00",
+  "checked_at": "2026-11-16T16:12:32+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

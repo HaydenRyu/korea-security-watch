@@ -1,61 +1,47 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Rubio"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition"
+    "foreign_forces": [
+      "김정은 방중 트럼프 시진핑",
+      "Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "DMZ 귀순",
-      "North Korea DMZ mine"
+      "합참 북한 지뢰 발견 DMZ 귀순",
+      "DMZ NLL border clash North Korea"
+    ],
+    "nuclear": [
+      "North Korea missile launch Reuters November 16 2026",
+      "북한 핵 풍계리 영변"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "North Korea cyber attack"
+      "북한 GPS 교란",
+      "해킹 공격 사이버 공격"
     ],
-    "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troops deployment border"
+    ],
+    "logistics": [
+      "북한 탄약 수송 군수 러시아 이전"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "북한 열병식 준비 병력 집결 위성사진"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 노농적위군 동원 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 경고",
-      "North Korea warning alert"
+      "진돗개 발령 데프콘 상향 경고 11월"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "국가보안법 구속 간첩 혐의 북한"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261116518821",
     "https://www.nknews.org/",
-    "https://www.nknews.org/2026/11/seouls-demand-for-mine-apology-derailed-push-for-north-korea-talks-sources/"
+    "https://www.segye.com/newsView/20261116519067"
   ],
-  "overall_summary": "직전 회차 대비 새 징후 없음: 조용원 방러 등 외교 일정이 배경이고 접경 충돌·최후통첩·합참 신규 발표는 확인되지 않았다. 접경 열점 후보 0건.",
+  "overall_summary": "24시간 안 새 군사 도발·핵·접경 징후는 확인되지 않았다. INSS 북 해킹 AI 활용 보고서(분석)와 APEC 앞 외교 동향만 있으며, 검색 결과는 대부분 과거 기사였고 calm 전용 검색은 하지 못했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,8 +56,27 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "국가안보전략연구원의 북한 해킹조직 AI 활용 분석 보고서뿐 실제 피해 보도 없음(배경)."
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "summary": "INSS가 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
+      "meaning": "사이버 역량 평가 보고서로 실제 공격 발생은 아니다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261116518821"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "INSS 16일 보고서 발간",
+        "MS 보고서 인용"
+      ],
+      "speculation": []
+    },
+    "foreign_forces": {
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -84,14 +89,10 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "24시간 경과 — 조용원 방러 첫 보도 11/15, 군사 협정·이전 발표 없이 외교 일정 배경으로만 둔다."
     }
   },
-  "checked_at": "2026-11-16T14:14:50+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-16T15:13:19+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

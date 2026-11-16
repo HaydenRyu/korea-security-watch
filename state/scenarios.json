@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-16T14:14:50+00:00",
+  "updated_at": "2026-11-16T15:13:19+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -64,8 +64,8 @@
         {
           "id": "grade",
           "label": "상황판 주의 이상",
-          "state": "off",
-          "note": "평시"
+          "state": "on",
+          "note": "주의"
         },
         {
           "id": "ladder_low",
@@ -74,7 +74,7 @@
           "note": "평상"
         }
       ],
-      "on": 3,
+      "on": 4,
       "known": 4
     },
     {
@@ -418,6 +418,15 @@
       "on": {
         "calm": 0,
         "hold": 3,
+        "esc": 0
+      }
+    },
+    {
+      "date": "2026-11-17",
+      "tilt": "hold",
+      "on": {
+        "calm": 0,
+        "hold": 4,
         "esc": 0
       }
     }

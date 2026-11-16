@@ -1,64 +1,56 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한",
-      "North Korea missile"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea missile",
-      "풍계리 영변 핵시설"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "합참 북한",
-      "North Korea Reuters"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "목함지뢰 해안",
-      "귀순 NLL",
-      "North Korea DMZ"
+      "지뢰 발견 DMZ 귀순 NLL 합참",
+      "North Korea DMZ mine"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "사이버 공격",
-      "North Korea hack attributed"
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방중 방러",
       "Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 동원",
-      "North Korea mobilization"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "합참 북한",
-      "진돗개 발령"
+      "진돗개 데프콘 경고"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261115501757",
     "https://www.segye.com/newsView/20261115509019",
-    "https://www.yna.co.kr/view/AKR20261112143000065"
+    "https://www.nknews.org",
+    "https://www.nknews.org/2026/11/kim-jong-uns-top-aide-heads-to-moscow-days-before-putin-xi-trump-summit/",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008846775"
   ],
-  "overall_summary": "직전 회차와 변화 없음: 조용원 방러(외교 일정)와 라자루스·김수키 관련 귀속 미확인 사이버 보도만 있고 군사 징후는 없다. 접경 열점·신규 지뢰·충돌 보도는 확인되지 않았다.",
+  "overall_summary": "조용원 방러(북러 당 고위급 외교 일정)와 라자루스 국내 서버 노림 보도(귀속 미확인)가 이어졌으나 군사적 이상 징후는 없다. 접경 열점 대조 후보와 신규 공표 훈련은 확인하지 못했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -76,42 +68,52 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 보안기업 보고로 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 공개됐고 김수키의 국회의원실 사칭 공격도 보도됐으나 정부의 북한 귀속 발표는 없다.",
-      "meaning": "국내 서버·공공 대상 정찰·침투 시도 정황이나 실제 마비·정부 귀속이 없어 배경 수준이다.",
+      "region": "서울",
+      "summary": "귀속 미확인 — 사이퍼마 보안 보고서로 라자루스 연관 가능성이 있는 해커가 국내 서버·도메인 30곳을 노린 정황이 보도됐으나 정부의 북한 귀속 발표는 없다.",
+      "meaning": "금융 탈취·첩보 수집 목적의 사이버 위협이나 현재 서비스 중단 등 실제 피해는 확인되지 않았다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "SBS",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261115501757"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008846775"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "글로벌 보안기업 보고서가 라자루스의 한국 서버 30곳 공격 시도 정황을 공개"
+        "보안업체 보고서 인용 보도",
+        "정부 귀속 발표 없음"
       ],
       "speculation": [
-        "정찰총국 연계 가능성"
+        "라자루스 연관 가능성"
       ]
     },
     "foreign_forces": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
-      "region": "러시아 모스크바",
-      "summary": "조용원 노동당 비서가 당·정부 대표단을 이끌고 통합러시아 초청으로 방러했다고 조선중앙통신이 15일 전했고 방문 목적·일정은 공개되지 않았다.",
-      "meaning": "북러 고위급 교류의 외교 일정이며 군사 협정·무기 이전 발표는 없다.",
+      "region": "모스크바",
+      "lat": 55.75,
+      "lon": 37.62,
+      "summary": "조용원 노동당 비서가 메드베데프 통합러시아당 의장 초청으로 당·정부 대표단을 이끌고 14일 방러했다고 조선중앙통신이 15일 전했고 방문 목적·일정은 공개되지 않았다.",
+      "meaning": "북러 고위급 당 차원 협력의 외교 일정이며 군사 협정·무기 이전 발표는 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261115509019"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/kim-jong-uns-top-aide-heads-to-moscow-days-before-putin-xi-trump-summit/"
         }
       ],
-      "confidence": "중간",
+      "confidence": "높음",
       "facts": [
-        "조선중앙통신 15일 보도, 메드베데프 초청, 전날 평양 출발"
+        "14일 평양 출발, 15일 KCNA 보도",
+        "메드베데프 초청"
       ],
       "speculation": [
-        "김정은 메시지 전달 또는 방러 사전 조율 가능성"
+        "김정은 메시지 전달 가능성"
       ]
     },
     "parade_massing": {
@@ -127,7 +129,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T00:10:26+00:00",
+  "checked_at": "2026-11-16T01:10:30+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

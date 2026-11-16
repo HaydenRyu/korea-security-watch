@@ -1,57 +1,59 @@
 {
   "coverage": {
-    "border_clash": [
-      "지뢰 발견 DMZ 합참",
-      "귀순 DMZ NLL"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
-    ],
-    "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
-    ],
-    "calm": [
-      "남북 대화 제안"
-    ],
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop"
+      "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear"
+      "North Korea nuclear test site"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea logistics"
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견 DMZ 귀속 합참 11월",
+      "DMZ NLL North Korea border"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "North Korea hacking Kim Jong Un"
+    ],
+    "foreign_forces": [
+      "김정은 방중",
+      "서해 구조물 주한미군 감축 김정은 방러",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea nk"
+      "북한 준전시 등화관제",
+      "North Korea blackout wartime"
     ],
     "gov_warning": [
-      "북한 진돗개 데프콘",
-      "North Korea gov"
+      "진돗개 발령 데프콘",
+      "US warning Korea travel"
     ],
     "hybrid_ops": [
-      "북한 국가보안법 구속 간첩 혐의",
-      "North Korea hybrid"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261116518821",
     "https://www.segye.com/newsView/20261116519067",
-    "https://www.yna.co.kr/view/AKR20261117011400009",
-    "https://www.yna.co.kr/view/AKR20261116181600071"
+    "https://www.segye.com/newsView/20261116518821",
+    "https://www.nknews.org/",
+    "https://www.koreatimes.co.kr/southkorea/defense"
   ],
-  "overall_summary": "신규 군사 징후는 없고 김정은 방중·APEC 회담설 등 외교 동향만 이어진다. 직전 회차와 동일 수준이다.",
+  "overall_summary": "국가안보전략연구원의 북 해킹조직 AI 활용 보고서와 조용원 방러·APEC 계기 북미 회동 관측 등 외교·분석 보도만 있고 신규 접경 사건·군사협정은 확인되지 않았다. 접경 열점 대조 대상 없이 직전 회차와 비슷한 평온 수준.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,15 +65,13 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "접경 신규 지뢰·충돌 보도 없음(수집기 border 묶음은 대남방송 우려 기사뿐)."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
-      "attribution": "unknown",
-      "summary": "INSS가 북 해킹조직의 AI 활용 정착 보고서를 발표했으나 신규 공격·피해 보도는 아니다.",
-      "meaning": "역량 분석 보고로 즉각 위협 변화는 없다.",
+      "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
+      "meaning": "사이버 역량 확대 전망일 뿐 실제 마비·피해는 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -81,31 +81,27 @@
       ],
       "confidence": "중간",
       "facts": [
-        "INSS 16일 보고서"
+        "국가안보전략연구원 보고서 발간"
       ],
-      "speculation": []
+      "speculation": [
+        "공격 역량 확대 가능성"
+      ]
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "트럼프가 중국에서 김정은을 만날 수 있다고 했고 크렘린궁은 APEC 참석 시 푸틴 회담 가능성을 언급했으나 신규 군사협정·무기 이전 발표는 없다.",
-      "meaning": "정상 외교 일정 관련 발언으로 군사 징후는 아니다.",
+      "summary": "푸틴이 모스크바에서 조용원을 만나 양국 군사적 형제애를 언급했으나 신규 군사협정·무기 이전 발표는 없다.",
+      "meaning": "북러 외교 일정이며 새 군사 협력 확인은 아니다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261117011400009"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261116181600071"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "트럼프 발언",
-        "크렘린궁 발언"
+        "조용원 방러, APEC 계기 3자 정상회담 관련 보도"
       ],
       "speculation": []
     },
@@ -122,7 +118,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T23:10:37+00:00",
+  "checked_at": "2026-11-16T23:10:58+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

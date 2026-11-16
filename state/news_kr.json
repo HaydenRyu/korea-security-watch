@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-11-16T11:54:21+00:00",
+ "fetched_at": "2026-11-16T13:05:22+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-16T11:54:21+00:00",
+ "last_ok_at": "2026-11-16T13:05:22+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1110,
   "hits": 15,
-  "clusters": 15,
+  "clusters": 14,
   "by_group": {
    "gps": 4,
    "hybrid": 3,
-   "summit": 7,
+   "summit": 6,
    "spy": 1,
    "influence": 1,
    "alert": 1,
@@ -49,7 +49,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 0
+   "hits": 1
   },
   "국방일보": {
    "feeds": 1,
@@ -62,16 +62,16 @@
  "groups": {
   "gps": {
    "clusters": 4,
-   "max_independent": 1,
-   "latest": "2026-11-16T11:54:21+00:00"
+   "max_independent": 2,
+   "latest": "2026-11-16T13:05:22+00:00"
   },
   "hybrid": {
    "clusters": 3,
-   "max_independent": 1,
-   "latest": "2026-11-16T11:37:18+00:00"
+   "max_independent": 2,
+   "latest": "2026-11-16T12:47:29+00:00"
   },
   "summit": {
-   "clusters": 7,
+   "clusters": 6,
    "max_independent": 1,
    "latest": "2026-11-16T11:05:26+00:00"
   },
@@ -199,7 +199,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "세계일보",

@@ -1,23 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-11-15T23:39:55+00:00",
-  "world_at": "2026-11-15T23:39:55+00:00",
+  "updated_at": "2026-11-16T05:40:28+00:00",
+  "world_at": "2026-11-16T05:40:28+00:00",
   "world": [
     {
-      "title": "미·러·중 정상, 선전 APEC 계기 3자 회동 예정",
-      "summary": "백악관은 트럼프·푸틴·시진핑이 APEC 정상회의 기간 선전에서 만나며 핵군축을 논의하겠다고 밝혔다. 러시아는 확인했고 중국은 아직 입장을 내지 않았다.",
-      "link_korea": "세 핵강국 회동은 북핵·북러·북중 군사협력 구도에 직접 영향을 줄 수 있다.",
-      "region": "동아시아",
+      "title": "예멘 정부군 철수, 후티가 바브엘만데브 해협 장악",
+      "summary": "사우디 지원 예멘 정부군이 홍해 남단 해협에서 병력을 아덴 방어로 돌린다고 밝혔고, 후티 매체는 해당 지역을 장악했다고 보도했다.",
+      "link_korea": "홍해 해상로·유가 불안은 한국의 에너지 수입과 미 전력 배치에 영향을 준다.",
+      "region": "중동",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
       "title": "젤렌스키, 미국에 스타실드 속도 제한 해제 촉구",
-      "summary": "젤렌스키는 미 정부가 제공한 군용 스타링크 속도 제한이 러시아 미사일·드론 요격을 방해한다며 제한 해제를 요구했다.",
-      "link_korea": "러시아의 대우크라이나 전쟁 장기화는 북러 군사협력의 배경이다.",
+      "summary": "젤렌스키는 군용 스타링크 속도 제한이 러시아 미사일·드론 요격을 방해한다며 제한 해제를 요구했다.",
+      "link_korea": "러시아의 전쟁 장기화는 북러 군사협력의 배경이다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
@@ -26,16 +26,16 @@
       }
     },
     {
-      "title": "미 공군 F-15EX, 가데나 기지에 첫 상시 배치",
-      "summary": "미 공군은 15일 첫 상시 배치 F-15EX가 일본 가데나 기지에 도착했다고 밝혔다.",
-      "link_korea": "서태평양 미 공군 전력 증강은 한반도 억제태세와 연결된다.",
-      "region": "서태평양",
+      "title": "미·러·중 정상, 선전 APEC 계기 3자 회동 예정",
+      "summary": "백악관은 트럼프·푸틴·시진핑이 APEC 기간 선전에서 만나 핵군축을 논의한다고 밝혔다.",
+      "link_korea": "세 핵강국 회동은 북핵·북러·북중 구도에 영향을 줄 수 있다.",
+      "region": "동아시아",
       "source": {
-        "name": "DVIDS",
-        "url": "https://www.dvidshub.net/news/579371/kadena-welcomes-first-permanently-assigned-f-15ex-eagle-ii-aircraft",
-        "via": "https://www.dvidshub.net/rss/news"
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     }
   ],
-  "world_context": "미·중·러 정상 회동 예고와 우크라이나 전쟁, 서태평양 미 전력 증강이 겹친 하루다."
+  "world_context": "홍해·우크라이나 전선과 미·러·중 정상 회동이 겹친 한 주다."
 }

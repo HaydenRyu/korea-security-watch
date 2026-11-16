@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-15T23:39:55+00:00",
+  "judged_at": "2026-11-16T05:40:28+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -15,30 +15,24 @@
           "published_at": "2026-11-15T19:32:39+00:00"
         }
       ],
-      "summary": "러시아의 공습과 우크라이나 방공이 이어지는 가운데 젤렌스키가 군용 스타링크 속도 제한 해제를 촉구했다.",
-      "judged_at": "2026-11-15T23:39:55+00:00"
+      "summary": "러시아 미사일·드론 공습이 이어지는 가운데 젤렌스키가 군용 스타링크 속도 제한 해제를 촉구했다.",
+      "judged_at": "2026-11-16T05:40:28+00:00"
     },
     "mideast": {
       "state": 3,
       "channels": [
-        "c5_diplomacy"
+        "c4_sea_energy"
       ],
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqrkg4r6mg7xo",
-          "published_at": "2026-11-15T08:17:41+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cm75261e3pdko",
-          "published_at": "2026-11-13T12:28:28+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo",
+          "published_at": "2026-11-16T03:08:31+00:00"
         }
       ],
-      "summary": "이스라엘이 가자 난민촌을 공습해 하마스 라파 여단장이 숨졌다고 양측이 확인했고 IAEA는 이란 미사찰 시설에 우려를 표했다.",
-      "judged_at": "2026-11-15T11:39:27+00:00"
+      "summary": "예멘 정부군이 바브엘만데브 해협 일대에서 철수한다고 밝혔고 후티 매체는 해당 지역을 장악했다고 보도했다.",
+      "judged_at": "2026-11-16T05:40:28+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -61,18 +55,18 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-15T18:32:00+00:00",
+          "published_at": "2026-11-16T00:00:00+00:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-15T22:24:20+00:00",
+          "published_at": "2026-11-16T03:09:49+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-15T23:39:55+00:00"
+      "judged_at": "2026-11-16T05:40:28+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -86,7 +80,7 @@
         }
       ],
       "summary": "가데나 기지에 첫 상시 배치 F-15EX가 도착했다는 보도 외에 긴장 보도는 없다.",
-      "judged_at": "2026-11-15T23:39:55+00:00"
+      "judged_at": "2026-11-16T05:40:28+00:00"
     }
   }
 }

@@ -1,42 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 미사일 발사 합참 11월 16일"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea nuclear test site activity"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 러시아"
+      "북한 탄약 수송 군수",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 합참"
+      "지뢰 발견 DMZ 합참",
+      "목함지뢰 해안",
+      "NLL 귀순"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit"
+      "김정은 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결 위성사진"
+      "북한 열병식 준비",
+      "North Korea parade preparation"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 주민 대피"
+      "북한 준전시 등화관제",
+      "North Korea mobilization civil defense"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 경고"
+      "진돗개 발령 데프콘",
+      "Korea DEFCON alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261115509019",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "직전 회차와 변화 없음: 조용원 방러(정례 외교)와 사이퍼마 표적 목록 보고(귀속 미확인)만 이어진다. 24시간 안 신규 발사·접경 충돌·지뢰 발견 보도는 확인되지 않았고 접경 열점 후보는 0건이다.",
+  "overall_summary": "조용원 방러와 사이퍼마 보고 외에 24시간 안 새 군사 징후는 없고 접경 열점·지뢰 신규 보도도 없다. 직전 회차와 판단이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -111,7 +128,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T08:14:24+00:00",
+  "checked_at": "2026-11-16T09:11:07+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

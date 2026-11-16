@@ -13,8 +13,8 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 목함지뢰 해안",
-      "북한 DMZ NLL 귀순 합참"
+      "북한 지뢰 발견 DMZ 합참 귀순",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -22,9 +22,9 @@
       "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "김정은 방중 방러",
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "시진핑 트럼프 푸틴 선전 정상회담 북한"
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -41,6 +41,9 @@
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
@@ -48,7 +51,7 @@
     "https://www.nknews.org/",
     "https://www.koreaherald.com/"
   ],
-  "overall_summary": "최근 24시간 새 군사 도발·전시 징후는 없고 조용원 방러(북러 고위급 교류)와 라자루스 국내 서버 노림 보도가 직전 회차에서 이어진다. 접경 열점 후보는 없고 지뢰·귀순 신규 보도도 확인되지 않았다.",
+  "overall_summary": "최근 24시간 새 군사 도발·전시 징후는 없고 조용원 방러(북러 고위급 외교)만 이어진다. 접경 열점 후보 0건, 지뢰·귀순 신규 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,30 +78,15 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "summary": "귀속 미확인 — 보안기업 보고로 북한 연계 라자루스가 국내 서버 30곳을 노린 정황이 보도됐으나 정부의 북한 귀속 발표는 없다.",
-      "meaning": "정부 귀속 전까지 배경 수준의 사이버 위협이다.",
-      "sources": [
-        {
-          "name": "Korea Herald",
-          "tier": "B",
-          "url": "https://www.koreaherald.com/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "Korea Herald 메인에 북한 연계 해커 국내 서버 30곳 표적 보도"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 라자루스 국내 서버 표적 보도 첫 보도 11/15 01시(UTC), 정부 귀속 발표 없음."
     },
     "foreign_forces": {
       "status": "corroborated",
       "routine": true,
       "region": "러시아",
-      "summary": "조용원 노동당 비서가 당·정부 대표단을 이끌고 통합러시아 초청으로 방러했다고 조선중앙통신이 15일 전했고 방문 목적·일정은 공개되지 않았다.",
-      "meaning": "북러 고위급 교류이며 군사 협정·무기 협력 발표는 없다.",
+      "summary": "조용원 노동당 비서가 통합러시아 초청으로 방러했다고 조선중앙통신이 전했고, 미·중·러 정상회담을 앞두고 통일부가 동향을 주시 중이다.",
+      "meaning": "북러 고위급 외교 교류이며 군사협정·무기 이전 발표는 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -113,14 +101,15 @@
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 15일 보도, 목적·일정 비공개"
+        "조용원 14일 평양 출발 모스크바 도착(KCNA)",
+        "목적·일정 비공개"
       ],
       "speculation": [
-        "김정은 메시지 전달 가능성"
+        "김정은 메시지 전달·북미 대화 타진 해석"
       ]
     }
   },
-  "checked_at": "2026-11-16T02:09:12+00:00",
+  "checked_at": "2026-11-16T03:10:10+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

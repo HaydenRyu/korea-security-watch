@@ -1,50 +1,63 @@
 {
   "coverage": {
-    "foreign_forces": [
-      "김정은 방중 트럼프 시진핑",
-      "Kim Jong Un China Russia visit"
-    ],
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "DMZ NLL border clash North Korea"
+    "troop_movement": [
+      "북한 전방 병력 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea missile launch Reuters November 16 2026",
-      "북한 핵 풍계리 영변"
-    ],
-    "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 11월 16일"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troops deployment border"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 탄약 수송 군수 러시아 이전"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견 DMZ 북한",
+      "목함지뢰 해안",
+      "NLL 귀순"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "North Korea hacking GPS jamming"
+    ],
+    "foreign_forces": [
+      "김정은 방중 시진핑 트럼프",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비 병력 집결 위성사진"
+      "북한 열병식 준비",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 노농적위군 동원 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 경고 11월"
+      "진돗개 발령 데프콘",
+      "North Korea warning Japan Korea US"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261116518821",
-    "https://www.nknews.org/",
-    "https://www.segye.com/newsView/20261116519067"
+    "https://www.segye.com/newsView/20261116519067",
+    "https://www.yna.co.kr/view/AKR20261116064600504",
+    "https://www.yna.co.kr/view/AKR20261116181400071"
   ],
-  "overall_summary": "24시간 안 새 군사 도발·핵·접경 징후는 확인되지 않았다. INSS 북 해킹 AI 활용 보고서(분석)와 APEC 앞 외교 동향(남측 중국에 대화 복귀 중재 요청)만 있다.",
+  "overall_summary": "북한 조용원 방러(11/14 도착)·김성남 방중(11/3~7) 등 미중러 정상회담(11/19) 직전 고위급 외교 교류가 이어지고 트럼프가 김정은 중국 방문 가능성을 언급했으나 군사적 징후는 없다. 접경 열점 후보 0건, 직전과 비슷한 평온 수준.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,9 +74,9 @@
     "electronic_cyber": {
       "status": "single",
       "routine": true,
-      "attribution": "unknown",
-      "summary": "INSS가 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
-      "meaning": "사이버 역량 평가 보고서로 실제 공격 발생은 아니다.",
+      "region": "서울",
+      "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
+      "meaning": "사이버 공격 역량 확대 분석 보고로 즉각적 군사 위협은 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -73,13 +86,37 @@
       ],
       "confidence": "중간",
       "facts": [
-        "INSS 16일 보고서 발간",
-        "MS 보고서 인용"
+        "MS가 북 해킹조직 제이드 슬릿을 AI 정착 단계로 평가",
+        "북 사이버 인력 약 8,400명 추산"
       ],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "러시아·중국",
+      "summary": "북한 조용원 당·정부 대표단이 11/14 러시아를 방문했다고 통일부가 밝혔고, 트럼프는 중국에서 김정은을 만날 수 있다고 언급했다.",
+      "meaning": "미중러 정상회담 직전 북러·북중 고위급 외교 교류로 군사협정·무기 이전 발표는 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261116064600504"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261116181400071"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "조용원 방러 14일 도착, 통일부 동향 주시",
+        "김성남 3~7일 방중"
+      ],
+      "speculation": [
+        "북한이 미중러 회담 의제화를 염두에 둔 소통으로 해석"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -94,7 +131,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T16:12:32+00:00",
+  "checked_at": "2026-11-16T17:11:38+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

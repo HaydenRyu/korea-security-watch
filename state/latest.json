@@ -6,7 +6,7 @@
     ],
     "nuclear": [
       "북한 핵시설 영변 풍계리",
-      "North Korea missile launch nuclear Yongbyon 38 North"
+      "North Korea Yongbyon 38 North"
     ],
     "logistics": [
       "북한 군수 수송 탄약",
@@ -23,7 +23,8 @@
     ],
     "foreign_forces": [
       "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit North Korea Reuters"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "시진핑 트럼프 푸틴 선전 정상회담 북한"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -38,21 +39,16 @@
       "DEFCON Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261115509019",
     "https://www.nknews.org/",
-    "https://www.koreaherald.com/",
-    "https://www.koreajoongangdaily.com/korea/pyongyang-fires-missiles-as-trump-offers-talks-seoul-seeks-beijings-help-to-revive-north-korea-diplomacy/12834681"
+    "https://www.koreaherald.com/"
   ],
-  "overall_summary": "최근 24시간 새 군사 도발·전시 징후는 없고, 조용원 방러와 라자루스 국내 서버 노림 보도가 직전 회차에서 이어진다. 접경 열점 후보·지뢰 신규 발견 보도는 확인되지 않았다.",
+  "overall_summary": "최근 24시간 새 군사 도발·전시 징후는 없고 조용원 방러(북러 고위급 교류)와 라자루스 국내 서버 노림 보도가 직전 회차에서 이어진다. 접경 열점 후보는 없고 지뢰·귀순 신규 보도도 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,6 +60,18 @@
       "status": "none"
     },
     "border_clash": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "electronic_cyber": {
@@ -86,7 +94,7 @@
       "speculation": []
     },
     "foreign_forces": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "region": "러시아",
       "summary": "조용원 노동당 비서가 당·정부 대표단을 이끌고 통합러시아 초청으로 방러했다고 조선중앙통신이 15일 전했고 방문 목적·일정은 공개되지 않았다.",
@@ -96,6 +104,11 @@
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261115509019"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
@@ -105,21 +118,9 @@
       "speculation": [
         "김정은 메시지 전달 가능성"
       ]
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-16T01:10:45+00:00",
+  "checked_at": "2026-11-16T02:09:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,50 +1,57 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 전방 병력 증강"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL",
+      "North Korea Kim Jong Un China Russia visit APEC"
     ],
     "nuclear": [
-      "북한 핵 영변 동향"
+      "North Korea Rubio nuclear NK News",
+      "서해 구조물 주한미군 감축 김정은 방러 일본 방위성 北朝鮮 ミサイル"
     ],
     "logistics": [
-      "북한 군수 탄약 수송"
+      "North Korea Kim Jong Un China Russia visit APEC",
+      "서해 구조물 주한미군 감축 김정은 방러 일본 방위성 北朝鮮 ミサイル"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL",
+      "North Korea mine DMZ NK News"
     ],
     "electronic_cyber": [
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격 랜섬웨어",
       "GPS 교란",
-      "해킹 개인정보 유출 공격"
+      "해킹 개인정보 유출",
+      "North Korea hacking cyber attack"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit Reuters",
-      "서해 구조물 주한미군 감축"
+      "North Korea Kim Jong Un China Russia visit APEC",
+      "김정은 방중 김정은 방러",
+      "서해 구조물 주한미군 감축 김정은 방러 일본 방위성 北朝鮮 ミサイル"
     ],
     "parade_massing": [
-      "북한 열병식 준비"
+      "North Korea Kim Jong Un China Russia visit APEC",
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL",
+      "North Korea NK News latest"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "서해 구조물 주한미군 감축 김정은 방러 일본 방위성 北朝鮮 ミサイル",
+      "North Korea Kim Jong Un China Russia visit APEC"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261116519067",
+    "https://www.nknews.org",
     "https://www.segye.com/newsView/20261116518821",
-    "https://www.yna.co.kr/view/AKR20261117005800109",
-    "https://www.yna.co.kr/view/AKR20261117005500109"
+    "https://www.segye.com/newsView/20261116519067"
   ],
-  "overall_summary": "푸틴이 조용원을 만나 군사적 형제애를 언급하고 트럼프가 김정은 방중 가능성을 언급했으나 신규 군사협정·접경 사건은 없다. 직전과 비슷한 평온 수준.",
+  "overall_summary": "조용원 방러·트럼프의 김정은 방중 언급 등 정상급 외교 일정이 이어지나 신규 군사협정·접경 사건은 확인되지 않았다. 직전 회차와 비슷한 평온 수준.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,6 +65,43 @@
     "border_clash": {
       "status": "none"
     },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "nk",
+      "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
+      "meaning": "사이버 역량 확대 평가로 즉각 위협 변화는 없다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261116518821"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "INSS가 16일 보고서 발간"
+      ],
+      "speculation": []
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "summary": "푸틴이 모스크바에서 조용원을 만나 양국 군사적 형제애를 언급했으나 신규 군사협정·무기 이전 발표는 없다.",
+      "meaning": "북러 정치 접촉으로 외교 일정 성격이다.",
+      "sources": [
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "조용원 방러, 미중러 정상회담 앞두고"
+      ],
+      "speculation": []
+    },
     "parade_massing": {
       "status": "none"
     },
@@ -69,47 +113,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "region": "서울",
-      "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
-      "meaning": "사이버 역량 확대 분석 보고로 즉각적 군사 위협은 아니다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261116518821"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "MS가 제이드 슬릿을 AI 정착 단계로 평가"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "러시아·중국",
-      "summary": "푸틴이 모스크바에서 조용원을 만나 양국 군사적 형제애를 언급했으나 신규 군사협정·무기 이전 발표는 없다.",
-      "meaning": "북러 고위급 외교 교류로 신규 협정은 없다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261117005800109"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "푸틴·조용원 16일 모스크바 회동(타스 보도 인용)"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-16T21:09:45+00:00",
+  "checked_at": "2026-11-16T22:10:24+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-17T20:21:33+00:00",
+ "fetched_at": "2026-11-17T21:34:39+00:00",
  "status": "partial",
- "status_detail": "SBS/정치: HTTPError: HTTP Error 403: Forbidden; SBS/사회: HTTPError: HTTP Error 403: Forbidden; SBS/속보: HTTPError: HTTP Error 403: Forbidden",
+ "status_detail": "동아일보/정치: TimeoutError: The read operation timed out; 동아일보/사회: RemoteDisconnected: Remote end closed connection without response",
  "last_ok_at": "2026-11-17T19:08:12+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 3,
-  "fetched": 962,
-  "hits": 27,
-  "clusters": 25,
+  "feeds_failed": 2,
+  "fetched": 1022,
+  "hits": 25,
+  "clusters": 21,
   "by_group": {
    "hybrid": 3,
-   "summit": 12,
-   "fire": 2,
-   "alert": 2,
-   "border": 7,
-   "mine": 2,
+   "summit": 10,
+   "fire": 1,
+   "alert": 1,
+   "border": 6,
+   "mine": 1,
    "gps": 2
   }
  },
@@ -29,15 +29,15 @@
   },
   "SBS": {
    "feeds": 3,
-   "failed": 3,
-   "count": 0,
-   "hits": 0
+   "failed": 0,
+   "count": 160,
+   "hits": 2
   },
   "동아일보": {
    "feeds": 2,
-   "failed": 0,
-   "count": 100,
-   "hits": 6
+   "failed": 2,
+   "count": 0,
+   "hits": 0
   },
   "국민일보": {
    "feeds": 2,
@@ -63,30 +63,30 @@
   "hybrid": {
    "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-11-17T20:21:33+00:00"
+   "latest": "2026-11-17T21:34:39+00:00"
   },
   "summit": {
-   "clusters": 12,
-   "max_independent": 1,
-   "latest": "2026-11-17T20:21:33+00:00"
+   "clusters": 10,
+   "max_independent": 2,
+   "latest": "2026-11-17T21:34:39+00:00"
   },
   "fire": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-17T19:47:11+00:00"
   },
   "alert": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-17T09:00:00+00:00"
   },
   "border": {
-   "clusters": 7,
+   "clusters": 6,
    "max_independent": 2,
    "latest": "2026-11-17T08:57:28+00:00"
   },
   "mine": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 2,
    "latest": "2026-11-17T08:57:28+00:00"
   },
@@ -141,38 +141,39 @@
    "outlet": "SBS",
    "section": "정치",
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
-   "ok": false,
-   "error": "HTTPError: HTTP Error 403: Forbidden"
+   "ok": true,
+   "count": 29,
+   "hits": 0
   },
   {
    "outlet": "SBS",
    "section": "사회",
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03&plink=RSSREADER",
-   "ok": false,
-   "error": "HTTPError: HTTP Error 403: Forbidden"
+   "ok": true,
+   "count": 29,
+   "hits": 0
   },
   {
    "outlet": "SBS",
    "section": "속보",
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
-   "ok": false,
-   "error": "HTTPError: HTTP Error 403: Forbidden"
+   "ok": true,
+   "count": 102,
+   "hits": 2
   },
   {
    "outlet": "동아일보",
    "section": "정치",
    "url": "https://rss.donga.com/politics.xml",
-   "ok": true,
-   "count": 50,
-   "hits": 4
+   "ok": false,
+   "error": "TimeoutError: The read operation timed out"
   },
   {
    "outlet": "동아일보",
    "section": "사회",
    "url": "https://rss.donga.com/national.xml",
-   "ok": true,
-   "count": 50,
-   "hits": 2
+   "ok": false,
+   "error": "RemoteDisconnected: Remote end closed connection without response"
   },
   {
    "outlet": "국민일보",

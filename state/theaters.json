@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-17T05:39:51+00:00",
+  "judged_at": "2026-11-17T11:39:35+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -12,11 +12,17 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo",
-          "published_at": "2026-11-17T04:18:32+00:00"
+          "published_at": "2026-11-17T10:45:55+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo",
+          "published_at": "2026-11-17T05:59:01+00:00"
         }
       ],
-      "summary": "키이우 시장은 러시아 탄도미사일이 드니프로강 교량 2곳을 맞혔다고 밝혔고, 우크라이나는 크림대교를 이틀 연속 타격했다고 러시아 임명 주지사가 말했다.",
-      "judged_at": "2026-11-17T05:39:51+00:00"
+      "summary": "우크라이나가 크림대교 일부를 붕괴시켰다고 젤렌스키 대통령이 밝혔고, 러시아는 키이우 교량을 타격하는 등 양측 공격이 계속되고 있다.",
+      "judged_at": "2026-11-17T11:39:35+00:00"
     },
     "mideast": {
       "state": 3,
@@ -33,26 +39,26 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo",
-          "published_at": "2026-11-16T11:09:38+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cmy97qperq9eo",
+          "published_at": "2026-11-16T21:40:07+00:00"
         }
       ],
-      "summary": "이란 혁명수비대가 바레인 미군 기지에 드론 6대를 날렸다고 밝혔고 바레인군은 요격했다고 발표했으며, 예멘 정부군은 후티에 맞서 아덴 방어로 병력을 옮겼다.",
-      "judged_at": "2026-11-17T05:39:51+00:00"
+      "summary": "이란 혁명수비대가 바레인 미군 기지에 드론 6대를 날렸다고 밝혔고, 후티는 예멘 정부군을 아덴 방어로 몰아붙이고 있다.",
+      "judged_at": "2026-11-17T11:39:35+00:00"
     },
     "taiwan": {
       "state": 1,
       "channels": [],
       "sources": [
         {
-          "name": "CNA",
+          "name": "Focus Taiwan",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611170112.aspx",
-          "published_at": "2026-11-17T13:02:37+08:00"
+          "url": "https://focustaiwan.tw/politics/202611170014",
+          "published_at": "2026-11-17T15:00:00+08:00"
         }
       ],
-      "summary": "대만 국방부는 러시아 군용기 2대가 대만 동북쪽에서 방공식별구역에 진입해 동부 공역을 지나 남동쪽으로 이탈했다고 밝혔다.",
-      "judged_at": "2026-11-17T05:39:51+00:00"
+      "summary": "대만 국방부는 러시아 군용기가 대만 방공식별구역에 진입했다고 밝혔다.",
+      "judged_at": "2026-11-17T11:39:35+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -61,18 +67,18 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-17T08:00:00+08:00",
+          "published_at": "2026-11-17T18:53:00+08:00",
           "kind": "feed"
         },
         {
-          "name": "Rappler",
-          "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-17T13:13:41+08:00",
+          "name": "BBC 아시아",
+          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+          "published_at": "2026-11-17T10:22:09+00:00",
           "kind": "feed"
         }
       ],
-      "summary": "Philstar·Rappler 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
-      "judged_at": "2026-11-17T05:39:51+00:00"
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
+      "judged_at": "2026-11-17T11:39:35+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -85,8 +91,8 @@
           "published_at": "2026-11-16T00:00:00+00:00"
         }
       ],
-      "summary": "미 공군이 오키나와 가데나에 첫 해외 배치 F-15EX를 들여 상주 전투기 전력 재편을 시작했다.",
-      "judged_at": "2026-11-17T05:39:51+00:00"
+      "summary": "미 공군이 오키나와 가데나에 F-15EX 배치를 시작해 상주 전투기 전력 재편에 들어갔다.",
+      "judged_at": "2026-11-17T11:39:35+00:00"
     }
   }
 }

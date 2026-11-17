@@ -1,39 +1,38 @@
 {
   "version": 1,
-  "at": "2026-11-17T05:39:51+00:00",
-  "opened": 21,
+  "at": "2026-11-17T11:39:35+00:00",
+  "opened": 16,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-17T05:39:51+00:00",
+      "last_ok": "2026-11-17T11:39:35+00:00",
       "raw": 4,
       "kept": 4
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-17T05:39:51+00:00",
+      "last_ok": "2026-11-17T11:39:35+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-17T05:39:51+00:00",
+      "last_ok": "2026-11-17T11:39:35+00:00",
       "raw": 0,
-      "kept": 0,
-      "note": "대만 명명 훈련·북러 새 합의의 비제한 매체 원문 없음(조용원 방러는 연합 원문이라 미개봉)."
+      "kept": 0
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-17T05:39:51+00:00",
+      "last_ok": "2026-11-17T11:39:35+00:00",
       "raw": 5,
-      "kept": 5
+      "kept": 5,
+      "note": "Rappler 피드 403 — scs_ecs 평온 확인은 Philstar·BBC 아시아 2곳으로 함."
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-17T05:39:51+00:00",
+      "last_ok": "2026-11-17T11:39:35+00:00",
       "raw": 0,
-      "kept": 0,
-      "note": "news_kr 묶음에 국내 직접 연결 사건 없음."
+      "kept": 0
     }
   }
 }

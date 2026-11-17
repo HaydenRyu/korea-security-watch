@@ -1,49 +1,53 @@
 {
   "coverage": {
-    "border_clash": [
-      "북한 지뢰 발견 DMZ 합참 11월 17일"
-    ],
-    "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit APEC",
-      "러시아 군용기 카디즈 진입 합참 일본 영공 침범 11월 17일"
-    ],
-    "electronic_cyber": [
-      "사이버 공격 해킹 개인정보 유출 11월"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troops border mobilization"
     ],
     "nuclear": [
-      "North Korea missile launch nuclear Yongbyon Punggye-ri 38 North"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 군수 탄약 수송 열병식 집결",
-      "North Korea troops border mobilization wartime footing gov warning DEFCON Jindo dog"
+      "North Korea Yongbyon Punggye-ri nuclear 38 North",
+      "북한 핵시설 동향"
     ],
     "logistics": [
-      "북한 병력 이동 전방 증강 군수 탄약 수송 열병식 집결"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "북한 지뢰 발견 합참 DMZ 귀순"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출",
+      "GPS 교란"
+    ],
+    "foreign_forces": [
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 병력 이동 전방 증강 군수 탄약 수송 열병식 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "North Korea troops border mobilization wartime footing gov warning DEFCON Jindo dog"
+      "North Korea wartime footing blackout"
     ],
     "gov_warning": [
-      "North Korea troops border mobilization wartime footing gov warning DEFCON Jindo dog"
+      "진돗개 데프콘 상향 North Korea DEFCON"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261117515619",
     "https://www.segye.com/newsView/20261117515618",
+    "https://www.segye.com/newsView/20261117515619",
     "https://www.segye.com/newsView/20261117515680",
-    "https://www.koreajoongangdaily.com/korea/kim-jonguns-close-aide-visits-russia/12973237",
     "https://www.koreajoongangdaily.com/korea/norths-kim-may-skip-apec-but-his-shadow-looms-large-over-summit/12973481"
   ],
-  "overall_summary": "신규 군사 징후 없음: 러 군용기 KADIZ 진입(영공 침해 없음)만 정례 수준이며, 조용원 방러·APEC 3자 회담 앞둔 외교 동향이 중심이다. 접경 열점·보도 대조 대상 없음, 직전 회차와 동일.",
+  "overall_summary": "신규 군사 징후 없음: 러 군용기 KADIZ 진입(영공 침해 없음)만 정례 수준이며, 김정은 삼지연 현지지도·APEC 앞둔 북미중러 외교 동향이 중심이다. 유엔사-북한군 대화 중단 보도는 9월 DMZ 지뢰 사건의 배경이며 직전 회차와 동일하다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -66,7 +70,7 @@
       "region": "동해",
       "lat": 38.0,
       "lon": 132.0,
-      "summary": "합참에 따르면 17일 새벽 러시아 군용기 10대 미만이 동해 카디즈에 진입 후 이탈했고(올해 3번째, 영공 침해 없음), 같은 날 일본은 러 추정 군용기 2대의 영공 침범을 발표했다.",
+      "summary": "합참에 따르면 17일 새벽 러시아 군용기 10대 미만이 동해 카디즈에 진입 후 이탈했고(올해 3번째, 영공 침해 없음), 같은 날 일본은 러 항공기 2대의 영공 침범을 발표했다.",
       "meaning": "영공 침해 없는 정례 수준의 러 군용기 활동이다.",
       "sources": [
         {
@@ -94,7 +98,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T11:11:14+00:00",
+  "checked_at": "2026-11-17T12:11:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

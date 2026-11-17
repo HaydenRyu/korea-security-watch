@@ -41,15 +41,12 @@
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
-  "opened": [
-    "https://www.segye.com/newsView/20261117515619",
-    "https://www.segye.com/newsView/20261117515618",
-    "https://www.segye.com/newsView/20261117515680",
-    "https://www.nknews.org/"
-  ],
-  "overall_summary": "러시아 군용기의 KADIZ 진입·일본 영공 침범이 새로 보도됐으나 정례 범위의 단발 사건이다. 김정은은 삼지연 방문, 트럼프·시진핑·푸틴 APEC 일정 속 직접적인 군사 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -104,7 +101,14 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T18:11:01+00:00",
+  "opened": [
+    "https://www.segye.com/newsView/20261117515619",
+    "https://www.segye.com/newsView/20261117515618",
+    "https://www.segye.com/newsView/20261117515680",
+    "https://www.nknews.org/"
+  ],
+  "overall_summary": "직전 회차와 같은 정례 범위로, 러 군용기 KADIZ 진입 외에 새 군사 징후는 없다. 김정은 중국 접경 스키장 방문, APEC 계기 북미·북러 회담 관측이 이어지나 외교 동향이다.",
+  "checked_at": "2026-11-17T19:10:23+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

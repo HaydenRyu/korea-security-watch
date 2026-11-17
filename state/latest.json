@@ -1,52 +1,52 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 열병식 준전시",
-      "North Korea troops border mobilization"
-    ],
-    "nuclear": [
-      "북한 핵 영변 풍계리 동향",
-      "North Korea nuclear Yongbyon 38 North"
-    ],
-    "logistics": [
-      "북한 병력 이동 전방 증강 열병식 준전시",
-      "North Korea troops border mobilization"
-    ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참",
-      "North Korea missile launch Reuters November 2026"
+      "지뢰 발견 DMZ 유엔사 북한군 대화",
+      "유엔사 북한군 대화 무산 지뢰 사과 요구"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 서해 구조물 주한미군 감축",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit APEC summit",
-      "북한 GPS 교란 서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 병력 이동 전방 증강 열병식 준전시"
-    ],
-    "nk_internal": [
-      "북한 병력 이동 전방 증강 열병식 준전시"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘 합참 경고 여행경보 North Korea warning evacuation"
+      "North Korea Reuters Kim Jong Un China Russia visit APEC",
+      "김정은 방중 방러 서해 구조물 주한미군 감축"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hackers"
+    ],
+    "gov_warning": [
+      "북한 속보 합참 11월 17일"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
+    ],
+    "troop_movement": [
+      "북한 속보 합참 11월 17일",
+      "North Korea Reuters Kim Jong Un China Russia visit APEC"
+    ],
+    "nuclear": [
+      "북한 속보 합참 11월 17일",
+      "North Korea Reuters Kim Jong Un China Russia visit APEC"
+    ],
+    "logistics": [
+      "북한 속보 합참 11월 17일",
+      "North Korea Reuters Kim Jong Un China Russia visit APEC"
+    ],
+    "parade_massing": [
+      "북한 속보 합참 11월 17일",
+      "North Korea Reuters Kim Jong Un China Russia visit APEC"
+    ],
+    "nk_internal": [
+      "북한 속보 합참 11월 17일",
+      "North Korea Reuters Kim Jong Un China Russia visit APEC"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261117027100009",
-    "https://www.yna.co.kr/view/AKR20261117005800109",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848955",
-    "https://www.segye.com/newsView/20261116519067"
+    "https://www.segye.com/newsView/20261116518821",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848824",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848717"
   ],
-  "overall_summary": "신규 군사 징후는 없다: 푸틴-조용원 회동(북러 협력 반복 보도)과 북한 AI 해킹 보고서가 배경으로 이어지고 있다. 김정은은 삼지연·백두산 건설 현장을 점검했고, 유엔사-북한군 대화 무산(9월 지뢰 사고 후속)은 새 사건이 아니다. 접경 열점 보도 대조 결과 특이사항 없음.",
+  "overall_summary": "북러·북중 고위급 외교 동향(조용원 방러, 트럼프의 김정은 회동 언급)과 사이버 보고서 외에 새 군사 징후는 없다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,54 +59,56 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "신규 충돌·지뢰 발견 보도 없음; NK뉴스발 유엔사-북한군 대화 무산 보도는 9월 DMZ 지뢰 사고의 후속 배경이다."
+      "summary": "유엔사-북한군 대화 무산 보도(11/17)는 9월 지뢰 사건의 후속이며 새 발견·충돌은 없음."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
-      "region": "서울",
       "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
-      "meaning": "사이버 위협 동향 보고로 즉각적 군사 징후는 아니다.",
+      "meaning": "사이버 역량 평가 보고로 즉각적 군사 의미는 제한적이다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261116519067"
+          "url": "https://www.segye.com/newsView/20261116518821"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "보고서 발간 보도"
+        "INSS 11/16 보고서, MS 10/29 보고서 인용"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "모스크바",
-      "lat": 55.75,
-      "lon": 37.62,
       "summary": "푸틴이 모스크바에서 조용원을 만나 양국 군사적 형제애를 언급했으나 신규 군사협정·무기 이전 발표는 없다.",
-      "meaning": "북러 협력의 반복 확인으로 미·중·러 정상회의 전 외교 행보다.",
+      "meaning": "북러 고위급 외교 일정으로 APEC·미중러 회담 직전 조율 성격이다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "SBS",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261117005800109"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848824"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848717"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "푸틴, 16일 조용원 회동(타스 보도 인용)"
+        "타스 보도 인용, 트럼프는 중국서 김정은 만날 수 있다고 언급"
       ],
-      "speculation": []
+      "speculation": [
+        "핵보유국 인정 요구 전달 가능성"
+      ]
     },
     "parade_massing": {
       "status": "none"
     },
     "nk_internal": {
-      "status": "none",
-      "summary": "김정은의 삼지연·백두산 건설 현장 점검은 전시태세 징후가 아니다."
+      "status": "none"
     },
     "gov_warning": {
       "status": "none"
@@ -115,7 +117,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T00:10:58+00:00",
+  "checked_at": "2026-11-17T01:10:18+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

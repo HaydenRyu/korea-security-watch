@@ -1,50 +1,50 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순 합참",
-      "DMZ NLL North Korea border"
+      "북한 미사일 발사 합참 NLL 경고사격 귀순 지뢰 발견"
     ],
     "electronic_cyber": [
       "GPS 교란 북한 서해",
       "해킹 개인정보 유출 11월 17일"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "North Korea Kim Jong Un China Russia visit APEC",
+      "김정은 방중 APEC 접경 단둥 신의주 17일",
+      "Kim Jong Un China Russia visit APEC Trump",
       "서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 열병식 병력 집결"
-    ],
-    "nk_internal": [
-      "북한 등화관제 준전시"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원"
+    ],
+    "nuclear": [
+      "북한 핵실험 풍계리 영변 동향"
+    ],
+    "troop_movement": [
+      "North Korea troops buildup nuclear Reuters November 2026"
+    ],
+    "logistics": [
+      "북한 열병식 병력 집결 탄약 군수 비축 수송"
+    ],
+    "parade_massing": [
+      "북한 열병식 병력 집결 탄약 군수 비축 수송"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 북한 준전시 등화관제"
+    ],
+    "nk_internal": [
+      "진돗개 발령 데프콘 북한 준전시 등화관제"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261117515619",
     "https://www.segye.com/newsView/20261117515680",
+    "https://www.segye.com/newsView/20261117515619",
     "https://www.segye.com/newsView/20261117515618",
-    "https://en.yna.co.kr/view/AEN20261116006000315"
+    "https://www.koreaherald.com/",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "신규 군사 징후 없음: 러 군용기 KADIZ 진입(영공 침해 없음)만 정례 수준이며, 김정은 삼지연 현지지도와 APEC 앞둔 북미중러 외교 동향이 중심이다. 유엔사-북한군 대화 중단 보도는 9월 DMZ 지뢰 사건의 배경이며 새 사건이 아니다.",
+  "overall_summary": "러시아 군용기의 KADIZ 진입·일본 영공 침범(정례 성격)과 APEC을 앞둔 김정은 삼지연 방문·북미 회동 관측이 주요 동향이며, 군사적 도발·전쟁 징후는 새로 확인되지 않았다. 접경 열점 후보 0건, 직전 회차와 큰 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -56,8 +56,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "유엔사-북한군 대화 무산 보도는 9월 지뢰 사건 후속 배경이며 새 충돌 없음."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -65,11 +64,11 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "동해",
+      "region": "동해·KADIZ",
       "lat": 37.5,
       "lon": 131.0,
       "summary": "합참에 따르면 17일 새벽 러시아 군용기 10대 미만이 동해 KADIZ에 진입 후 이탈했고(올해 3번째, 영공 침해 없음), 일본은 러 항공기 2대의 영공 침범을 발표했다.",
-      "meaning": "러시아의 간헐적 방공식별구역 진입으로 평소 범위의 압박이다.",
+      "meaning": "러시아의 KADIZ 반복 진입으로 정례적 시위 성격이며 즉각적 위협 징후는 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -79,10 +78,12 @@
       ],
       "confidence": "중간",
       "facts": [
-        "KADIZ 진입 후 이탈, 영공 침해 없음",
-        "올해 3번째"
+        "합참: 10대 미만 진입·이탈, 영공 침해 없음",
+        "일본 정부: 오키노시마 북서쪽 영공 침범 각 약 3분"
       ],
-      "speculation": []
+      "speculation": [
+        "양 사건의 동일 항공기 여부는 미확인"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -97,7 +98,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T13:14:08+00:00",
+  "checked_at": "2026-11-17T14:13:13+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,25 +1,5 @@
 {
   "coverage": {
-    "border_clash": [
-      "지뢰 발견 DMZ 유엔사 북한군 대화",
-      "유엔사 북한군 대화 무산 지뢰 사과 요구"
-    ],
-    "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격"
-    ],
-    "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit APEC",
-      "김정은 방중 방러 서해 구조물 주한미군 감축"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hackers"
-    ],
-    "gov_warning": [
-      "북한 속보 합참 11월 17일"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
-    ],
     "troop_movement": [
       "북한 속보 합참 11월 17일",
       "North Korea Reuters Kim Jong Un China Russia visit APEC"
@@ -39,14 +19,36 @@
     "nk_internal": [
       "북한 속보 합참 11월 17일",
       "North Korea Reuters Kim Jong Un China Russia visit APEC"
+    ],
+    "gov_warning": [
+      "북한 속보 합참 11월 17일",
+      "North Korea Reuters Kim Jong Un China Russia visit APEC"
+    ],
+    "border_clash": [
+      "지뢰 발견 DMZ 귀순 NLL",
+      "North Korea DMZ border"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격",
+      "North Korea hackers"
+    ],
+    "foreign_forces": [
+      "김정은 방중 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit APEC"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261116518821",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848824",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848717"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848955",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849474",
+    "https://en.yna.co.kr/view/AEN20261116006000315"
   ],
-  "overall_summary": "북러·북중 고위급 외교 동향(조용원 방러, 트럼프의 김정은 회동 언급)과 사이버 보고서 외에 새 군사 징후는 없다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "김정은의 삼지연·백두산 민간 인프라 시찰, 11/19 선전 APEC 3자 정상회담 예고 등 외교 동향 외에 새 군사 징후는 없다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,7 +61,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "유엔사-북한군 대화 무산 보도(11/17)는 9월 지뢰 사건의 후속이며 새 발견·충돌은 없음."
+      "summary": "유엔사-북한군 대화 무산 보도(11/17)는 9월 지뢰 사건 후속이며 새 발견·충돌은 없음."
     },
     "electronic_cyber": {
       "status": "single",
@@ -75,34 +77,25 @@
       ],
       "confidence": "중간",
       "facts": [
-        "INSS 11/16 보고서, MS 10/29 보고서 인용"
+        "INSS 11/16 보고서"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "푸틴이 모스크바에서 조용원을 만나 양국 군사적 형제애를 언급했으나 신규 군사협정·무기 이전 발표는 없다.",
-      "meaning": "북러 고위급 외교 일정으로 APEC·미중러 회담 직전 조율 성격이다.",
+      "summary": "11/19 선전 APEC 계기 미·중·러 정상회담 예정이 보도됐으나 군사협정·무기 이전 발표는 없다.",
+      "meaning": "외교 일정 성격으로 군사적 의미는 제한적이다.",
       "sources": [
         {
-          "name": "SBS",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848824"
-        },
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848717"
+          "url": "https://en.yna.co.kr/view/AEN20261116006000315"
         }
       ],
       "confidence": "중간",
-      "facts": [
-        "타스 보도 인용, 트럼프는 중국서 김정은 만날 수 있다고 언급"
-      ],
-      "speculation": [
-        "핵보유국 인정 요구 전달 가능성"
-      ]
+      "facts": [],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -117,7 +110,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T01:10:18+00:00",
+  "checked_at": "2026-11-17T02:09:51+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

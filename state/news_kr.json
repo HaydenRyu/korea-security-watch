@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-11-17T08:14:34+00:00",
+ "fetched_at": "2026-11-17T08:35:02+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-17T08:14:34+00:00",
+ "last_ok_at": "2026-11-17T08:35:02+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1118,
-  "hits": 26,
-  "clusters": 22,
+  "hits": 27,
+  "clusters": 23,
   "by_group": {
-   "summit": 11,
+   "alert": 3,
+   "summit": 12,
    "border": 5,
-   "alert": 2,
    "mine": 2,
    "gps": 3,
    "hybrid": 2,
@@ -31,7 +31,7 @@
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 2
+   "hits": 3
   },
   "동아일보": {
    "feeds": 2,
@@ -60,20 +60,20 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "alert": {
+   "clusters": 3,
+   "max_independent": 1,
+   "latest": "2026-11-17T08:26:22+00:00"
+  },
   "summit": {
-   "clusters": 11,
+   "clusters": 12,
    "max_independent": 2,
-   "latest": "2026-11-17T08:03:53+00:00"
+   "latest": "2026-11-17T08:26:22+00:00"
   },
   "border": {
    "clusters": 5,
    "max_independent": 2,
    "latest": "2026-11-17T07:37:06+00:00"
-  },
-  "alert": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-17T02:37:00+00:00"
   },
   "mine": {
    "clusters": 2,
@@ -159,7 +159,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "동아일보",

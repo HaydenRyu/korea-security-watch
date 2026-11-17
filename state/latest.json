@@ -1,56 +1,47 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "김정은 방중 트럼프 APEC 11월 17일"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "Kim Jong Un China Russia visit Trump"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "Kim Jong Un China Russia visit Trump"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "DMZ NLL 귀순 합참",
-      "North Korea DMZ border"
+      "지뢰 발견 DMZ 유엔사 북한군 대화"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 / 해킹 개인정보 유출 / 사이버 공격"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중 방러"
+      "김정은 방중 트럼프 APEC 11월 17일",
+      "Kim Jong Un China Russia visit Trump"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "김정은 방중 트럼프 APEC 11월 17일"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea internal mobilization"
+      "김정은 방중 트럼프 APEC 11월 17일"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "North Korea warning government"
+      "김정은 방중 트럼프 APEC 11월 17일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "북한 해킹 귀속 세계일보 INSS"
     ],
     "calm": [
-      "남북 대화 제안"
+      "김정은 방중 트럼프 APEC 11월 17일"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
     "https://www.segye.com/newsView/20261116518821",
-    "https://www.yna.co.kr/view/AKR20261117027100009",
-    "https://www.yna.co.kr/view/AKR20261117011400009"
+    "https://www.rfa.org/korean/in-focus/2026/11/09/apec-china-north-korea-trump/",
+    "https://biz.sbs.co.kr/amp/article/20000336732"
   ],
-  "overall_summary": "11/19 선전 APEC 계기 북·미·중·러 외교 일정 외에 새 군사 징후는 없고 직전 회차와 같은 수준이다. 접경 남측 열점 후보 0건. 「지뢰 사과 요구로 유엔사-북 대화 무산」은 NK News·연합 제목 수준으로 신규 충돌이 아니다.",
+  "overall_summary": "북중·북러 외교 동향과 북미 회동설이 중심이며 군사적 징후는 직전과 같은 정례 수준이다. 접경 남측 열점 후보 0건.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,13 +53,14 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "연합 11/17 '유엔사-북한군 대화 추진 무산' 보도(ai_use 제한으로 원문 미열람)·9월 MDL 이남 지뢰 건은 배경이며 24시간 내 새 충돌 확인 없음."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
-      "meaning": "역량 평가 보고서로 즉각적 위협 변화는 없다.",
+      "meaning": "사이버 역량 확대 전망 보고로 즉각 위협 아님.",
       "sources": [
         {
           "name": "세계일보",
@@ -76,21 +68,36 @@
           "url": "https://www.segye.com/newsView/20261116518821"
         }
       ],
-      "confidence": "중간"
+      "confidence": "중간",
+      "facts": [
+        "INSS 11/16 보고서, MS 10/29 보고서 인용"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "크렘린이 김정은 APEC 참석 시 푸틴 회담 가능성을 밝혔으나 군사협정·무기 이전 발표는 없다.",
-      "meaning": "외교 일정 수준의 동향이다.",
+      "summary": "11/9 RFA 보도 기준 김성남 방중 등 북중 고위급 교류가 이어지고, 11/17 연합 등은 크렘린의 APEC 푸틴 회담 가능성 발언을 전했으나 군사협정·무기 이전 발표는 없다.",
+      "meaning": "외교 일정 성격으로 군사적 즉시 위협은 아니다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "RFA",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261117011400009"
+          "url": "https://www.rfa.org/korean/in-focus/2026/11/09/apec-china-north-korea-trump/"
+        },
+        {
+          "name": "SBS Biz",
+          "tier": "B",
+          "url": "https://biz.sbs.co.kr/amp/article/20000336732"
         }
       ],
-      "confidence": "중간"
+      "confidence": "중간",
+      "facts": [
+        "트럼프 11/18~19 APEC 선전 참석 예정"
+      ],
+      "speculation": [
+        "김정은 방중 가능성"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -105,7 +112,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T07:11:05+00:00",
+  "checked_at": "2026-11-17T08:10:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

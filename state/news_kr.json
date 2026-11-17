@@ -1,23 +1,23 @@
 {
- "fetched_at": "2026-11-16T23:06:09+00:00",
+ "fetched_at": "2026-11-17T00:16:42+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-16T23:06:09+00:00",
+ "last_ok_at": "2026-11-17T00:16:42+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1115,
-  "hits": 30,
+  "hits": 29,
   "clusters": 22,
   "by_group": {
-   "summit": 11,
-   "alert": 1,
-   "border": 2,
+   "border": 4,
    "mine": 2,
-   "fire": 2,
-   "gps": 2,
+   "gps": 3,
+   "summit": 10,
+   "alert": 1,
    "hybrid": 2,
+   "fire": 1,
    "defect": 1,
    "spy": 1,
    "influence": 1
@@ -28,13 +28,13 @@
    "feeds": 5,
    "failed": 0,
    "count": 555,
-   "hits": 30
+   "hits": 24
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 4
+   "hits": 6
   },
   "동아일보": {
    "feeds": 2,
@@ -46,7 +46,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 11
+   "hits": 12
   },
   "세계일보": {
    "feeds": 2,
@@ -63,8 +63,23 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "border": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-11-16T23:45:05+00:00"
+  },
+  "mine": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-16T23:45:05+00:00"
+  },
+  "gps": {
+   "clusters": 3,
+   "max_independent": 2,
+   "latest": "2026-11-16T23:08:39+00:00"
+  },
   "summit": {
-   "clusters": 11,
+   "clusters": 10,
    "max_independent": 2,
    "latest": "2026-11-16T23:04:38+00:00"
   },
@@ -73,30 +88,15 @@
    "max_independent": 1,
    "latest": "2026-11-16T22:49:00+00:00"
   },
-  "border": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-16T21:41:49+00:00"
-  },
-  "mine": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-16T21:41:49+00:00"
-  },
-  "fire": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-16T20:10:38+00:00"
-  },
-  "gps": {
-   "clusters": 2,
-   "max_independent": 2,
-   "latest": "2026-11-16T19:30:00+00:00"
-  },
   "hybrid": {
    "clusters": 2,
    "max_independent": 2,
    "latest": "2026-11-16T19:30:00+00:00"
+  },
+  "fire": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-16T13:58:00+00:00"
   },
   "defect": {
    "clusters": 1,
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 9
+   "hits": 3
   },
   {
    "outlet": "SBS",
@@ -161,7 +161,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "SBS",
@@ -177,7 +177,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "동아일보",
@@ -209,7 +209,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibSocRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 1
+   "hits": 2
   },
   {
    "outlet": "세계일보",

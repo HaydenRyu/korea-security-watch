@@ -1,10 +1,25 @@
 {
- "at": "2026-11-16T23:05:20+00:00",
- "south": 51,
- "area": 60,
- "baseline": 62.0,
- "ratio": 0.82,
- "samples": 6,
- "mil": [],
+ "at": "2026-11-17T00:16:27+00:00",
+ "south": 60,
+ "area": 71,
+ "baseline": 63.5,
+ "ratio": 0.94,
+ "samples": 8,
+ "mil": [
+  {
+   "type": "H60",
+   "name": null,
+   "call": "HOIST06",
+   "lat": 37.07,
+   "lon": 127.19
+  },
+  {
+   "type": "BE20",
+   "name": null,
+   "call": "MAGIC64",
+   "lat": 33.95,
+   "lon": 129.66
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

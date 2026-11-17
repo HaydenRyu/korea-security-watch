@@ -1,54 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 속보 합참 11월 17일",
-      "North Korea Reuters Kim Jong Un China Russia visit APEC"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 속보 합참 11월 17일",
-      "North Korea Reuters Kim Jong Un China Russia visit APEC"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 속보 합참 11월 17일",
-      "North Korea Reuters Kim Jong Un China Russia visit APEC"
-    ],
-    "parade_massing": [
-      "북한 속보 합참 11월 17일",
-      "North Korea Reuters Kim Jong Un China Russia visit APEC"
-    ],
-    "nk_internal": [
-      "북한 속보 합참 11월 17일",
-      "North Korea Reuters Kim Jong Un China Russia visit APEC"
-    ],
-    "gov_warning": [
-      "북한 속보 합참 11월 17일",
-      "North Korea Reuters Kim Jong Un China Russia visit APEC"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "North Korea DMZ border"
+      "지뢰 발견 DMZ 합참 북한 11월",
+      "북한 귀순 DMZ NLL 합참"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "North Korea hackers"
+      "GPS 교란 북한 서북도서",
+      "해킹 개인정보 유출 11월 17일"
     ],
     "foreign_forces": [
-      "김정은 방중 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit APEC"
+      "김정은 방중 Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축",
+      "일본 러시아 군용기 영공 침범 항의"
+    ],
+    "parade_massing": [
+      "북한 열병식 집결"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261116518821",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848955",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849474",
-    "https://en.yna.co.kr/view/AEN20261116006000315"
+    "https://www.nknews.org/",
+    "https://www.segye.com/newsList/0101030700000"
   ],
-  "overall_summary": "김정은의 삼지연·백두산 민간 인프라 시찰, 11/19 선전 APEC 3자 정상회담 예고 등 외교 동향 외에 새 군사 징후는 없다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "11/19 선전 APEC 3자 회담을 앞둔 외교 동향과 북 해킹조직 AI 활용 보고서 외에 새 군사 징후는 확인되지 않았다. 직전 회차와 같은 수준이다. 접경 남측 열점 후보 0건.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,14 +58,13 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "유엔사-북한군 대화 무산 보도(11/17)는 9월 지뢰 사건 후속이며 새 발견·충돌은 없음."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
-      "meaning": "사이버 역량 평가 보고로 즉각적 군사 의미는 제한적이다.",
+      "meaning": "북 사이버 역량 확대 전망이나 실제 공격 징후는 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -77,24 +74,26 @@
       ],
       "confidence": "중간",
       "facts": [
-        "INSS 11/16 보고서"
+        "INSS 11/16 보고서, 신규 공격 없음"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "11/19 선전 APEC 계기 미·중·러 정상회담 예정이 보도됐으나 군사협정·무기 이전 발표는 없다.",
-      "meaning": "외교 일정 성격으로 군사적 의미는 제한적이다.",
+      "summary": "트럼프가 김정은 회담을 언급하는 등 11/19 선전 APEC 계기 미·중·러 외교 일정이 이어지나 군사협정·무기 이전 발표는 없다.",
+      "meaning": "외교 일정이며 군사협력 신규 확인은 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://en.yna.co.kr/view/AEN20261116006000315"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
-      "facts": [],
+      "facts": [
+        "트럼프 김정은 회담 언급(11/17)"
+      ],
       "speculation": []
     },
     "parade_massing": {
@@ -110,7 +109,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T02:09:51+00:00",
+  "checked_at": "2026-11-17T03:10:03+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

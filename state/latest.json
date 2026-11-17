@@ -1,59 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 증강 열병식 준전시",
+      "North Korea troops border mobilization"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "북한 핵 영변 풍계리 동향",
+      "North Korea nuclear Yongbyon 38 North"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 병력 이동 전방 증강 열병식 준전시",
+      "North Korea troops border mobilization"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀속 합참 11월",
-      "DMZ NLL North Korea border"
+      "북한 지뢰 발견 DMZ 귀순 합참",
+      "North Korea missile launch Reuters November 2026"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hacking Kim Jong Un"
+      "북한 GPS 교란 서해 구조물 주한미군 감축",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "서해 구조물 주한미군 감축 김정은 방러",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "Kim Jong Un China Russia visit APEC summit",
+      "북한 GPS 교란 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 병력 이동 전방 증강 열병식 준전시"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout wartime"
+      "북한 병력 이동 전방 증강 열병식 준전시"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "US warning Korea travel"
+      "진돗개 데프콘 합참 경고 여행경보 North Korea warning evacuation"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261116519067",
-    "https://www.segye.com/newsView/20261116518821",
-    "https://www.nknews.org/",
-    "https://www.koreatimes.co.kr/southkorea/defense"
+    "https://www.yna.co.kr/view/AKR20261117027100009",
+    "https://www.yna.co.kr/view/AKR20261117005800109",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848955",
+    "https://www.segye.com/newsView/20261116519067"
   ],
-  "overall_summary": "국가안보전략연구원의 북 해킹조직 AI 활용 보고서와 조용원 방러·APEC 계기 북미 회동 관측 등 외교·분석 보도만 있고 신규 접경 사건·군사협정은 확인되지 않았다. 접경 열점 대조 대상 없이 직전 회차와 비슷한 평온 수준.",
+  "overall_summary": "신규 군사 징후는 없다: 푸틴-조용원 회동(북러 협력 반복 보도)과 북한 AI 해킹 보고서가 배경으로 이어지고 있다. 김정은은 삼지연·백두산 건설 현장을 점검했고, 유엔사-북한군 대화 무산(9월 지뢰 사고 후속)은 새 사건이 아니다. 접경 열점 보도 대조 결과 특이사항 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,43 +58,46 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "신규 충돌·지뢰 발견 보도 없음; NK뉴스발 유엔사-북한군 대화 무산 보도는 9월 DMZ 지뢰 사고의 후속 배경이다."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
+      "region": "서울",
       "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
-      "meaning": "사이버 역량 확대 전망일 뿐 실제 마비·피해는 없다.",
+      "meaning": "사이버 위협 동향 보고로 즉각적 군사 징후는 아니다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261116518821"
+          "url": "https://www.segye.com/newsView/20261116519067"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "국가안보전략연구원 보고서 발간"
+        "보고서 발간 보도"
       ],
-      "speculation": [
-        "공격 역량 확대 가능성"
-      ]
+      "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
+      "region": "모스크바",
+      "lat": 55.75,
+      "lon": 37.62,
       "summary": "푸틴이 모스크바에서 조용원을 만나 양국 군사적 형제애를 언급했으나 신규 군사협정·무기 이전 발표는 없다.",
-      "meaning": "북러 외교 일정이며 새 군사 협력 확인은 아니다.",
+      "meaning": "북러 협력의 반복 확인으로 미·중·러 정상회의 전 외교 행보다.",
       "sources": [
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261117005800109"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조용원 방러, APEC 계기 3자 정상회담 관련 보도"
+        "푸틴, 16일 조용원 회동(타스 보도 인용)"
       ],
       "speculation": []
     },
@@ -109,7 +105,8 @@
       "status": "none"
     },
     "nk_internal": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은의 삼지연·백두산 건설 현장 점검은 전시태세 징후가 아니다."
     },
     "gov_warning": {
       "status": "none"
@@ -118,7 +115,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-16T23:10:58+00:00",
+  "checked_at": "2026-11-17T00:10:58+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

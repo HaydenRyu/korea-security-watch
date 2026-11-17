@@ -13,17 +13,17 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참 북한",
-      "유엔사 북한군 대화 지뢰 사과 요구 무산",
+      "합참 북한 목함지뢰 해안 발견 DMZ 귀순",
       "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
+      "북한 GPS 교란 해킹 사이버 공격 국내 개인정보 유출 11월",
       "해킹 개인정보 유출 사이버 공격",
       "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "북한 조용원 푸틴 방러 김정은 APEC",
-      "North Korea Kim Jong Un China Russia visit Reuters",
+      "김정은 방중 방러 에이펙 접경",
+      "North Korea Kim Jong Un China Russia visit APEC Reuters",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -47,12 +47,12 @@
     ]
   },
   "opened": [
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/12/south-korea-sees-little-prospect-of-us-north-korea-contact-around-apec",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850221",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850202",
-    "https://www.rfa.org/korean/in-focus/2026/11/11/china-apec-north-korea-trump/"
+    "https://www.segye.com/newsView/20261117515619",
+    "https://www.segye.com/newsView/20261117515680",
+    "https://www.segye.com/newsView/20261117515618",
+    "https://www.fnnews.com/news/202611171145033682"
   ],
-  "overall_summary": "APEC 선전 정상회의(11/18~19)를 앞둔 외교 국면이며 군사 징후는 새로 확인되지 않았다. 직전과 같이 낮은 수준이다.",
+  "overall_summary": "APEC 선전 정상회의(11/18~19) 직전 외교 국면으로, 김정은의 삼지연 현지지도와 크렘린의 회담 시사가 있으나 군사 징후는 새로 확인되지 않았다. 러 군용기 카디즈 진입(10대 미만, 영공 침해 없음)이 정례 범위의 새 보도다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,37 +64,33 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "NK뉴스발 유엔사-북한군 대화 무산 보도는 9월 지뢰 폭발의 후속 외교 배경이고 새 충돌·발견이 아니다."
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "직전 징후였던 국가안보전략연구원 AI 활용 보고서는 신규 공격·피해 보도가 아니라 배경으로 내림."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 선전",
-      "summary": "APEC(11/18~19, 선전) 계기 미·중·러 3자 정상회담 가능성과 푸틴 방한 대통령 면담 의사를 크렘린이 밝혔으나 군사협정·무기 이전 발표는 없다.",
-      "meaning": "외교 일정 성격으로 군사 징후는 아니다.",
+      "region": "동해",
+      "lat": 37.5,
+      "lon": 131.0,
+      "summary": "합참에 따르면 17일 새벽 러시아 군용기 10대 미만이 동해 카디즈에 진입 후 이탈했고(올해 3번째, 영공 침해 없음), 같은 날 일본은 러 추정 군용기 2대의 영공 침범을 발표했다.",
+      "meaning": "러시아의 반복되는 카디즈 진입으로 영공 침해가 없어 정례 범위의 압박 활동이다.",
       "sources": [
         {
-          "name": "SBS",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850221"
-        },
-        {
-          "name": "Reuters",
-          "tier": "B",
-          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/12/south-korea-sees-little-prospect-of-us-north-korea-contact-around-apec"
+          "url": "https://www.segye.com/newsView/20261117515618"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "Reuters 11/12: 청와대는 APEC 계기 북미 접촉 전망이 낮고 DMZ에서 확성기 방송 준비 외 추가 북한 활동은 없다고 밝힘"
+        "러 군용기 10대 미만 카디즈 진입·이탈, 영공 침해 없음(합참)",
+        "올해 6/27, 8/25에 이어 3번째"
       ],
-      "speculation": [
-        "김정은 방중·북미 회동설은 추측 단계"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -109,7 +105,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T08:11:29+00:00",
+  "checked_at": "2026-11-17T09:09:38+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

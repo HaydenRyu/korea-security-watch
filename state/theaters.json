@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-17T11:39:35+00:00",
+  "judged_at": "2026-11-17T23:39:54+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -12,17 +12,11 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo",
-          "published_at": "2026-11-17T10:45:55+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo",
-          "published_at": "2026-11-17T05:59:01+00:00"
+          "published_at": "2026-11-17T21:24:35+00:00"
         }
       ],
       "summary": "우크라이나가 크림대교 일부를 붕괴시켰다고 젤렌스키 대통령이 밝혔고, 러시아는 키이우 교량을 타격하는 등 양측 공격이 계속되고 있다.",
-      "judged_at": "2026-11-17T11:39:35+00:00"
+      "judged_at": "2026-11-17T23:39:54+00:00"
     },
     "mideast": {
       "state": 3,
@@ -44,7 +38,7 @@
         }
       ],
       "summary": "이란 혁명수비대가 바레인 미군 기지에 드론 6대를 날렸다고 밝혔고, 후티는 예멘 정부군을 아덴 방어로 몰아붙이고 있다.",
-      "judged_at": "2026-11-17T11:39:35+00:00"
+      "judged_at": "2026-11-17T23:39:54+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -58,7 +52,7 @@
         }
       ],
       "summary": "대만 국방부는 러시아 군용기가 대만 방공식별구역에 진입했다고 밝혔다.",
-      "judged_at": "2026-11-17T11:39:35+00:00"
+      "judged_at": "2026-11-17T23:39:54+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -67,18 +61,18 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-17T18:53:00+08:00",
+          "published_at": "2026-11-18T00:00:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-17T10:22:09+00:00",
+          "published_at": "2026-11-17T14:25:45+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
-      "judged_at": "2026-11-17T11:39:35+00:00"
+      "judged_at": "2026-11-17T23:39:54+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -88,11 +82,11 @@
           "name": "Stars and Stripes",
           "tier": "B",
           "url": "https://www.stripes.com/branches/air_force/2026-11-16/f15ex-fighter-jets-kadena-okinawa-23480569.html",
-          "published_at": "2026-11-16T00:00:00+00:00"
+          "published_at": "2026-11-16T00:00:00+09:00"
         }
       ],
       "summary": "미 공군이 오키나와 가데나에 F-15EX 배치를 시작해 상주 전투기 전력 재편에 들어갔다.",
-      "judged_at": "2026-11-17T11:39:35+00:00"
+      "judged_at": "2026-11-17T23:39:54+00:00"
     }
   }
 }

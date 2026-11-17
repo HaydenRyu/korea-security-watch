@@ -1,38 +1,40 @@
 {
   "version": 1,
-  "at": "2026-11-17T11:39:35+00:00",
-  "opened": 16,
+  "at": "2026-11-17T23:39:54+00:00",
+  "opened": 15,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-17T11:39:35+00:00",
-      "raw": 4,
-      "kept": 4
+      "last_ok": "2026-11-17T23:39:54+00:00",
+      "raw": 3,
+      "kept": 3
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-17T11:39:35+00:00",
+      "last_ok": "2026-11-17T23:39:54+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-17T11:39:35+00:00",
+      "last_ok": "2026-11-17T23:39:54+00:00",
       "raw": 0,
-      "kept": 0
+      "kept": 0,
+      "note": "명명 훈련 보도 없음. 북러 관련 기사는 연합뉴스(제한)라 열지 못함."
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-17T11:39:35+00:00",
+      "last_ok": "2026-11-17T23:39:54+00:00",
       "raw": 5,
       "kept": 5,
-      "note": "Rappler 피드 403 — scs_ecs 평온 확인은 Philstar·BBC 아시아 2곳으로 함."
+      "note": "Rappler 기사 403 — scs_ecs 는 피드 2곳(Philstar·BBC 아시아)로 평온 확인."
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-17T11:39:35+00:00",
+      "last_ok": "2026-11-17T23:39:54+00:00",
       "raw": 0,
-      "kept": 0
+      "kept": 0,
+      "note": "news_kr 묶음에서 안보 연결 사건(국내 총기·탄약·밀수) 없음."
     }
   }
 }

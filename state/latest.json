@@ -1,47 +1,58 @@
 {
   "coverage": {
     "troop_movement": [
-      "김정은 방중 트럼프 APEC 11월 17일"
+      "북한 병력 이동 전방",
+      "North Korea troops DMZ"
     ],
     "nuclear": [
-      "Kim Jong Un China Russia visit Trump"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "Kim Jong Un China Russia visit Trump"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 유엔사 북한군 대화"
+      "지뢰 발견 DMZ 합참 북한",
+      "유엔사 북한군 대화 지뢰 사과 요구 무산",
+      "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "김정은 방중 트럼프 APEC 11월 17일",
-      "Kim Jong Un China Russia visit Trump"
+      "북한 조용원 푸틴 방러 김정은 APEC",
+      "North Korea Kim Jong Un China Russia visit Reuters",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "김정은 방중 트럼프 APEC 11월 17일"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "김정은 방중 트럼프 APEC 11월 17일"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "김정은 방중 트럼프 APEC 11월 17일"
+      "진돗개 데프콘 상향",
+      "North Korea warning travel advisory"
     ],
     "hybrid_ops": [
-      "북한 해킹 귀속 세계일보 INSS"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "김정은 방중 트럼프 APEC 11월 17일"
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261116518821",
-    "https://www.rfa.org/korean/in-focus/2026/11/09/apec-china-north-korea-trump/",
-    "https://biz.sbs.co.kr/amp/article/20000336732"
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/12/south-korea-sees-little-prospect-of-us-north-korea-contact-around-apec",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850221",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850202",
+    "https://www.rfa.org/korean/in-focus/2026/11/11/china-apec-north-korea-trump/"
   ],
-  "overall_summary": "북중·북러 외교 동향과 북미 회동설이 중심이며 군사적 징후는 직전과 같은 정례 수준이다. 접경 남측 열점 후보 0건.",
+  "overall_summary": "APEC 선전 정상회의(11/18~19)를 앞둔 외교 국면이며 군사 징후는 새로 확인되지 않았다. 직전과 같이 낮은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -53,50 +64,36 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "연합 11/17 '유엔사-북한군 대화 추진 무산' 보도(ai_use 제한으로 원문 미열람)·9월 MDL 이남 지뢰 건은 배경이며 24시간 내 새 충돌 확인 없음."
+      "status": "none"
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "summary": "국가안보전략연구원이 북 해킹조직의 AI 활용 정착 보고서를 발간했으나 신규 공격·피해 보도는 아니다.",
-      "meaning": "사이버 역량 확대 전망 보고로 즉각 위협 아님.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261116518821"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "INSS 11/16 보고서, MS 10/29 보고서 인용"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "직전 징후였던 국가안보전략연구원 AI 활용 보고서는 신규 공격·피해 보도가 아니라 배경으로 내림."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "11/9 RFA 보도 기준 김성남 방중 등 북중 고위급 교류가 이어지고, 11/17 연합 등은 크렘린의 APEC 푸틴 회담 가능성 발언을 전했으나 군사협정·무기 이전 발표는 없다.",
-      "meaning": "외교 일정 성격으로 군사적 즉시 위협은 아니다.",
+      "region": "중국 선전",
+      "summary": "APEC(11/18~19, 선전) 계기 미·중·러 3자 정상회담 가능성과 푸틴 방한 대통령 면담 의사를 크렘린이 밝혔으나 군사협정·무기 이전 발표는 없다.",
+      "meaning": "외교 일정 성격으로 군사 징후는 아니다.",
       "sources": [
         {
-          "name": "RFA",
+          "name": "SBS",
           "tier": "B",
-          "url": "https://www.rfa.org/korean/in-focus/2026/11/09/apec-china-north-korea-trump/"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850221"
         },
         {
-          "name": "SBS Biz",
+          "name": "Reuters",
           "tier": "B",
-          "url": "https://biz.sbs.co.kr/amp/article/20000336732"
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/12/south-korea-sees-little-prospect-of-us-north-korea-contact-around-apec"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "트럼프 11/18~19 APEC 선전 참석 예정"
+        "Reuters 11/12: 청와대는 APEC 계기 북미 접촉 전망이 낮고 DMZ에서 확성기 방송 준비 외 추가 북한 활동은 없다고 밝힘"
       ],
       "speculation": [
-        "김정은 방중 가능성"
+        "김정은 방중·북미 회동설은 추측 단계"
       ]
     },
     "parade_massing": {
@@ -112,7 +109,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T08:10:40+00:00",
+  "checked_at": "2026-11-17T08:11:29+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

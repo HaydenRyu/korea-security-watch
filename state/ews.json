@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-17T05:10:04+00:00",
+  "computed_at": "2026-11-17T06:10:26+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 27,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-16T23:40:00+00:00",
-    "latest_updated_at": "2026-11-17T05:10:04+00:00"
+    "linkage_judged_at": "2026-11-17T05:39:51+00:00",
+    "latest_updated_at": "2026-11-17T06:10:26+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "대만 국방부는 중국군 항공기 4대가 중간선을 넘는 등 항공기·함정 총 14기·척이 대만 주변에서 활동했다고 밝혔다.",
+      "summary": "대만 국방부는 러시아 군용기 2대가 대만 동북쪽에서 방공식별구역에 진입해 동부 공역을 지나 남동쪽으로 이탈했다고 밝혔다.",
       "sources": [
         {
           "name": "CNA",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611160028.aspx",
-          "published_at": "2026-11-16T09:55:08+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611170112.aspx",
+          "published_at": "2026-11-17T13:02:37+08:00"
         }
       ],
-      "judged_at": "2026-11-16T23:40:00+00:00"
+      "judged_at": "2026-11-17T05:39:51+00:00"
     },
     {
       "key": "ukraine",
@@ -41,16 +41,16 @@
       "channels": [
         "c5_diplomacy"
       ],
-      "summary": "러시아는 우크라이나가 하루 2천 대 넘는 드론을 발사했다고 밝혔고 크림대교가 타격받았다.",
+      "summary": "키이우 시장은 러시아 탄도미사일이 드니프로강 교량 2곳을 맞혔다고 밝혔고, 우크라이나는 크림대교를 이틀 연속 타격했다고 러시아 임명 주지사가 말했다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/ckx27v6dpjz0o",
-          "published_at": "2026-11-16T14:58:12+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo",
+          "published_at": "2026-11-17T04:18:32+00:00"
         }
       ],
-      "judged_at": "2026-11-16T23:40:00+00:00"
+      "judged_at": "2026-11-17T05:39:51+00:00"
     },
     {
       "key": "scs_ecs",
@@ -58,22 +58,22 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
+      "summary": "Philstar·Rappler 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
       "sources": [
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-17T00:00:00+08:00",
+          "published_at": "2026-11-17T08:00:00+08:00",
           "kind": "feed"
         },
         {
-          "name": "BBC 아시아",
-          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-16T07:19:11+00:00",
+          "name": "Rappler",
+          "url": "https://www.rappler.com/feed/",
+          "published_at": "2026-11-17T13:13:41+08:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-16T23:40:00+00:00"
+      "judged_at": "2026-11-17T05:39:51+00:00"
     },
     {
       "key": "mideast",
@@ -83,8 +83,14 @@
       "channels": [
         "c4_sea_energy"
       ],
-      "summary": "사우디 지원 예멘 정부군이 바브엘만데브 해협의 병력을 아덴 방어로 옮기며 후티 진격에 맞서고 있다.",
+      "summary": "이란 혁명수비대가 바레인 미군 기지에 드론 6대를 날렸다고 밝혔고 바레인군은 요격했다고 발표했으며, 예멘 정부군은 후티에 맞서 아덴 방어로 병력을 옮겼다.",
       "sources": [
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo",
+          "published_at": "2026-11-15T13:42:58+00:00"
+        },
         {
           "name": "BBC",
           "tier": "B",
@@ -92,7 +98,7 @@
           "published_at": "2026-11-16T11:09:38+00:00"
         }
       ],
-      "judged_at": "2026-11-16T23:40:00+00:00"
+      "judged_at": "2026-11-17T05:39:51+00:00"
     },
     {
       "key": "us_posture",
@@ -100,22 +106,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "Stripes·DVIDS 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
+      "summary": "미 공군이 오키나와 가데나에 첫 해외 배치 F-15EX를 들여 상주 전투기 전력 재편을 시작했다.",
       "sources": [
         {
-          "name": "DVIDS",
-          "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-16T23:29:26+00:00",
-          "kind": "feed"
-        },
-        {
           "name": "Stars and Stripes",
-          "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-16T12:00:00+00:00",
-          "kind": "feed"
+          "tier": "B",
+          "url": "https://www.stripes.com/branches/air_force/2026-11-16/f15ex-fighter-jets-kadena-okinawa-23480569.html",
+          "published_at": "2026-11-16T00:00:00+00:00"
         }
       ],
-      "judged_at": "2026-11-16T23:40:00+00:00"
+      "judged_at": "2026-11-17T05:39:51+00:00"
     }
   ],
   "channels": [
@@ -148,6 +148,6 @@
   "last_good": {
     "ews": 27,
     "band": "관찰",
-    "computed_at": "2026-11-17T05:10:04+00:00"
+    "computed_at": "2026-11-17T06:10:26+00:00"
   }
 }

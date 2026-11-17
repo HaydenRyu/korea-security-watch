@@ -13,16 +13,16 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 지뢰 DMZ 귀순 NLL 11월 17일"
+      "유엔사 북한군 대화 지뢰 사과 무산",
+      "DMZ 지뢰 발견 귀순 NLL 합참 11월 17일"
     ],
     "electronic_cyber": [
       "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "북한 해킹 개인정보 유출 사이버 공격 11월 17일"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 APEC 트럼프 조용원 푸틴 11월",
-      "Kim Jong Un China Russia visit",
+      "Kim Jong Un China Russia visit APEC Trump",
+      "김정은 방중 방러",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -47,7 +47,7 @@
     "https://www.segye.com/newsView/20261116518821",
     "https://www.segye.com/newsList/0101030700000"
   ],
-  "overall_summary": "11/19 선전 APEC 계기 북·미·중·러 외교 일정 외에 새 군사 징후는 없고 직전 회차와 같은 수준이다. 접경 남측 열점 후보 0건.",
+  "overall_summary": "11/19 선전 APEC 계기 북·미·중·러 외교 일정 외에 새 군사 징후는 없고 직전 회차와 같은 수준이다. 접경 남측 열점 후보 0건. 「지뢰 사과 요구로 유엔사-북 대화 무산」은 NK News 제목만 확인(원문 미열람, 신규 충돌 아님).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -82,7 +82,7 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "트럼프가 김정은 회담을 언급하는 등 11/19 선전 APEC 계기 미·중·러 외교 일정이 이어지나 군사협정·무기 이전 발표는 없다.",
+      "summary": "크렘린이 김정은 APEC 참석 시 푸틴 회담 가능성을 밝히고 트럼프가 중국서 회동 가능성을 언급했으나 군사협정·무기 이전 발표는 없다.",
       "meaning": "외교 일정이며 군사협력 신규 확인은 없다.",
       "sources": [
         {
@@ -93,7 +93,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "트럼프 김정은 회담 언급(11/17)"
+        "트럼프·푸틴 관련 김정은 회동 언급(11/16~17)",
+        "군사협력 신규 확인 없음"
       ],
       "speculation": []
     },
@@ -110,7 +111,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T05:10:04+00:00",
+  "checked_at": "2026-11-17T06:10:26+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,58 +1,62 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troops DMZ"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
+      "북한 군수 수송 탄약",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "합참 북한 목함지뢰 해안 발견 DMZ 귀순",
-      "North Korea DMZ NLL"
+      "목함지뢰 발견 DMZ 귀순 합참",
+      "DMZ landmine North Korea"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 사이버 공격 국내 개인정보 유출 11월",
-      "해킹 개인정보 유출 사이버 공격",
-      "North Korea GPS jamming"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 에이펙 접경",
-      "North Korea Kim Jong Un China Russia visit APEC Reuters",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러 APEC",
+      "Kim Jong Un China Russia visit",
+      "조용원 푸틴 면담 군사적 형제애",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "North Korea warning travel advisory"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안",
       "통신선 복원",
+      "North Korea talks offer",
       "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261117515619",
     "https://www.segye.com/newsView/20261117515680",
     "https://www.segye.com/newsView/20261117515618",
-    "https://www.fnnews.com/news/202611171145033682"
+    "https://www.segye.com/newsView/20261117515619",
+    "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border"
   ],
-  "overall_summary": "APEC 선전 정상회의(11/18~19) 직전 외교 국면으로, 김정은의 삼지연 현지지도와 크렘린의 회담 시사가 있으나 군사 징후는 새로 확인되지 않았다. 러 군용기 카디즈 진입(10대 미만, 영공 침해 없음)이 정례 범위의 새 보도다.",
+  "overall_summary": "러시아 군용기의 카디즈 진입(영공 침해 없음)이 정례 범위의 단일 보도로 유지되고, 김정은은 삼지연 건설현장 현지지도 중이며 APEC(11/18~19) 계기 북미·북중러 접촉 관측이 이어진다. 접경 열점 신규 후보와 군사 충돌 보도는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,7 +69,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "NK뉴스발 유엔사-북한군 대화 무산 보도는 9월 지뢰 폭발의 후속 외교 배경이고 새 충돌·발견이 아니다."
+      "summary": "유엔사-북한군 대화 추진 무산 보도는 9/21 지뢰 폭발의 후속 배경(NK News 익명 소식통 인용)으로 새 충돌이 아니다."
     },
     "electronic_cyber": {
       "status": "none"
@@ -90,7 +94,9 @@
         "러 군용기 10대 미만 카디즈 진입·이탈, 영공 침해 없음(합참)",
         "올해 6/27, 8/25에 이어 3번째"
       ],
-      "speculation": []
+      "speculation": [
+        "일본 영공 침범 기체와 동일 여부는 미확인"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -105,7 +111,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T09:09:38+00:00",
+  "checked_at": "2026-11-17T10:10:58+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

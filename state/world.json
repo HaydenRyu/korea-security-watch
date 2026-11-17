@@ -1,52 +1,52 @@
 {
   "version": 1,
-  "updated_at": "2026-11-16T23:40:00+00:00",
-  "world_at": "2026-11-16T23:40:00+00:00",
+  "updated_at": "2026-11-17T05:39:51+00:00",
+  "world_at": "2026-11-17T05:39:51+00:00",
   "world": [
     {
-      "title": "러시아 \"우크라, 전쟁 최대 규모 드론 공격\"…크림대교 피격",
-      "summary": "러시아는 우크라이나가 하루 동안 2천 대 넘는 드론을 발사했다고 밝혔고 크림대교가 타격받았다. 키이우에는 하루 17차례 공습경보가 울렸다.",
-      "link_korea": "러-우 전면전 격화는 북러 군사협력과 북한군 파병 논의의 배경이 된다.",
+      "title": "러시아, 키이우 주요 교량 2곳 탄도미사일 타격",
+      "summary": "클리치코 키이우 시장은 러시아 탄도미사일이 드니프로강의 북·남 교량을 맞혔고 수도·전력 공급이 끊겼다고 밝혔다. 우크라이나는 이틀 연속 크림대교를 타격했다고 모스크바 임명 주지사가 말했다.",
+      "link_korea": "러-우 전쟁 장기화는 북러 군사협력과 북한군 파병 논의의 배경이다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/ckx27v6dpjz0o",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
-      }
-    },
-    {
-      "title": "예멘 후티 진격…글로벌 경제 불안 우려",
-      "summary": "BBC는 이란이 후원하는 후티의 진격이 세계 경제를 더 불안하게 할 수 있다고 분석했다. 사우디 지원 정부군은 임시 수도 아덴 방어를 위해 병력을 이동한다.",
-      "link_korea": "홍해·바브엘만데브 해협 불안은 한국의 해상 물류와 에너지 수송에 영향을 준다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cmy97qperq9eo",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
-      }
-    },
-    {
-      "title": "에스토니아, 드론 공장 방화 미수 뒤 러시아 국경 검문소 폐쇄",
-      "summary": "에스토니아 정부는 러시아가 배후인 방화 미수 사건이라며 러시아와의 국경 검문소를 닫겠다고 밝혔고 크렘린은 부인했다.",
-      "link_korea": "러시아의 하이브리드 공작 수법은 한국의 사이버·사보타주 대비에도 참고가 된다.",
-      "region": "유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cqp83nk673reo",
+        "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "중국, 미·중·러 정상 19일 선전 회동 \"개창적 의미\"",
-      "summary": "중국 외교부 대변인은 19일 선전에서 열리는 미·중·러 정상 첫 회담이 대국 관계의 전략적 안정을 논의할 것이라며 개창적 의미가 있다고 말했다.",
-      "link_korea": "세 핵강국 회동에서 북핵 문제가 어떻게 다뤄질지 한국 정부가 주시한다.",
+      "title": "이란, 바레인 미군 기지에 드론 공격",
+      "summary": "이란 혁명수비대는 바레인 알리파 공군기지의 미군 방공 레이더를 드론 6대로 겨냥했다고 밝혔고 바레인군은 요격했다고 발표했다. 미국과 이란은 호르무즈 해협을 두고 대치 중이다.",
+      "link_korea": "호르무즈 해협 통항 제한은 한국의 원유·가스 수입에 직접 영향을 준다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+      }
+    },
+    {
+      "title": "FBI, 북한 해커 '페이스스틸러' 화상통화 사기로 4억 달러 탈취 발표",
+      "summary": "FBI는 북한 국가 후원 해커가 가짜 화상통화로 신원을 도용해 18개월간 900여 명을 속이고 4억 달러 넘는 암호화폐를 가로챘다고 밝혔다.",
+      "link_korea": "북한의 암호화폐 탈취는 무기 개발 자금원으로 대북 제재 이행과 직결된다.",
+      "region": "아시아",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cqdj1ellpd70o",
+        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+      }
+    },
+    {
+      "title": "트럼프·푸틴·시진핑, 중국서 역사적 3자 회동 추진",
+      "summary": "백악관은 트럼프 대통령이 중국에서 열리는 3자 회담에서 핵무기 감축을 논의할 것이라고 밝혔다. CNA는 회동이 19일 선전에서 열린다고 전했다.",
+      "link_korea": "미·중·러 정상 접촉은 북미 대화 가능성과 북한의 외교 선택지에 영향을 준다.",
       "region": "동아시아",
       "source": {
-        "name": "CNA",
-        "url": "https://www.cna.com.tw/news/acn/202611160163.aspx",
-        "via": "https://feeds.feedburner.com/rsscna/mainland"
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     }
   ],
-  "world_context": "러-우 전쟁과 중동 불안이 이어지는 가운데 19일 미·중·러 정상 회동이 예정돼 있다."
+  "world_context": "우크라이나·중동 무력 충돌이 이어지는 가운데 미·중·러 정상 회동이 임박했다."
 }

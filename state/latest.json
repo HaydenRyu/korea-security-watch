@@ -1,51 +1,43 @@
 {
   "coverage": {
-    "troop_movement": [
-      "North Korea troops buildup Reuters November 2026"
-    ],
-    "nuclear": [
-      "북한 핵실험 풍계리 영변 동향"
-    ],
-    "logistics": [
-      "북한 군수 비축 수송 동향"
-    ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순 NLL"
-    ],
-    "electronic_cyber": [
-      "GPS 교란 북한 서해",
-      "해킹 공격 개인정보 유출"
+      "합참 북한 발표 11월 17일 지뢰 DMZ 귀순 NLL"
     ],
     "foreign_forces": [
-      "김정은 방중 APEC",
-      "North Korea Kim Jong Un China Russia visit APEC Trump",
-      "서해 구조물 주한미군 감축"
+      "North Korea Kim Jong Un China Russia visit APEC Shenzhen"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 11월 17일"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 군수 비축 동향"
+    ],
+    "logistics": [
+      "북한 병력 이동 전방 증강 군수 비축 동향"
+    ],
+    "nuclear": [
+      "North Korea nuclear Yongbyon Punggye-ri satellite imagery November 2026"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
-    ],
-    "gov_warning": [
-      "진돗개 발령 데프콘 북한"
+      "북한 열병식 준전시 등화관제 노농적위군 진돗개 데프콘"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 열병식 준전시 등화관제 노농적위군 진돗개 데프콘"
+    ],
+    "gov_warning": [
+      "북한 열병식 준전시 등화관제 노농적위군 진돗개 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
-      "North Korea attributed FBI hacking"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hacking"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261117515680",
     "https://www.segye.com/newsView/20261117515619",
     "https://www.segye.com/newsView/20261117515618",
-    "https://en.yna.co.kr/view/AEN20261116006000315",
-    "https://www.nknews.org/"
+    "https://www.koreajoongangdaily.com/korea/norths-kim-may-skip-apec-but-his-shadow-looms-large-over-summit/12973481"
   ],
-  "overall_summary": "러 군용기 KADIZ 진입(정례)과 APEC 앞둔 김정은 삼지연 현지지도·북미 회동 관측이 주요 동향이며 새 군사 도발 징후는 없다. 직전 회차와 변화 없음.",
+  "overall_summary": "러 군용기 KADIZ 진입(정례)과 APEC 앞둔 김정은 삼지연 방문·북미 회동 관측이 주요 동향이며 새 군사 도발 징후는 없다. 직전 회차와 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,7 +50,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "9월 DMZ 지뢰 폭발 관련 유엔사-북한군 대면회담 추진 무산 보도(NK뉴스 인용, 세계일보)는 신규 충돌이 아닌 배경이다."
+      "summary": "9월 DMZ 지뢰 폭발 관련 유엔사-북한군 대화 무산 보도(NK뉴스 인용, 세계일보)는 신규 충돌이 아닌 배경이다."
     },
     "electronic_cyber": {
       "status": "none"
@@ -99,7 +91,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T16:10:27+00:00",
+  "checked_at": "2026-11-17T17:10:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

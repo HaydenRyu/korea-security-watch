@@ -1,18 +1,18 @@
 {
- "fetched_at": "2026-11-17T17:53:58+00:00",
+ "fetched_at": "2026-11-17T19:08:12+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-17T17:53:58+00:00",
+ "last_ok_at": "2026-11-17T19:08:12+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1121,
-  "hits": 27,
-  "clusters": 22,
+  "fetched": 1122,
+  "hits": 28,
+  "clusters": 23,
   "by_group": {
    "hybrid": 3,
-   "summit": 10,
+   "summit": 11,
    "alert": 3,
    "border": 7,
    "mine": 2,
@@ -23,8 +23,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 561,
-   "hits": 22
+   "count": 562,
+   "hits": 23
   },
   "SBS": {
    "feeds": 3,
@@ -62,12 +62,12 @@
   "hybrid": {
    "clusters": 3,
    "max_independent": 2,
-   "latest": "2026-11-17T17:53:58+00:00"
+   "latest": "2026-11-17T19:08:12+00:00"
   },
   "summit": {
-   "clusters": 10,
+   "clusters": 11,
    "max_independent": 2,
-   "latest": "2026-11-17T17:53:58+00:00"
+   "latest": "2026-11-17T19:08:12+00:00"
   },
   "alert": {
    "clusters": 3,
@@ -96,7 +96,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 81,
+   "count": 82,
    "hits": 20
   },
   {
@@ -129,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 2
   },
   {
    "outlet": "SBS",

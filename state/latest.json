@@ -1,61 +1,62 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 17일 지뢰 귀순 DMZ",
+      "북한 병력 이동 전방 증강",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea nuclear 38 North",
-      "북한 핵시설"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site 38 North"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea logistics"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 발표 11월 17일 지뢰 귀순 DMZ",
-      "목함지뢰 해안"
+      "지뢰 발견",
+      "목함지뢰 해안",
+      "DMZ 귀순 NLL",
+      "북한 합참 발표 11월 17일"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea GPS jamming"
+      "GPS 교란 북한 서해",
+      "해킹 개인정보 유출 사이버 공격 11월 17일"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit APEC Shenzhen",
+      "Kim Jong Un China Russia visit",
+      "North Korea Kim Jong Un China Russia visit APEC Shenzhen",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시",
-      "North Korea blackout"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘",
-      "DEFCON Korea"
+      "진돗개 데프콘 상향",
+      "North Korea missile launch Japan Ministry of Defense November 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
+      "국가보안법 구속 간첩 혐의 북한",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261117515680",
     "https://www.segye.com/newsView/20261117515619",
-    "https://www.segye.com/newsView/20261117515618",
-    "https://www.koreajoongangdaily.com/korea/norths-kim-may-skip-apec-but-his-shadow-looms-large-over-summit/12973481"
+    "https://biz.heraldcorp.com/article/10939748",
+    "https://news.sbs.co.kr/english/article.do?news_id=N1008850828",
+    "https://www.koreajoongangdaily.com/korea/kim-jongun-stays-silent-on-trumps-summit-overture-focuses-on-courting-china-russia/12976798",
+    "https://www.nbcnews.com/world/north-korea/kim-jong-un-daughter-ju-ae-tour-samjiyon-rumors-meeting-trump-china-rcna609779",
+    "https://www.nocutnews.co.kr/news/6607973",
+    "https://biz.sbs.co.kr/article/20000346181"
   ],
-  "overall_summary": "북한 직접 도발·전시 징후는 없고 김정은 삼지연 현지지도(11/15~16)와 APEC 계기 북중러·미 정상 동향이 주된 내용이다. 접경 남측 열점은 보도 대조 대상 없음, 직전 회차와 같은 수준.",
+  "overall_summary": "러시아 군용기 KADIZ 진입(정례 범주)과 김정은 방중·북미 정상회동 관측 외에 새로운 군사적 징후는 없다. 접경 열점 후보에 대한 별도 보도는 확인되지 않았고 직전 회차와 판정이 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,47 +69,63 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 접경 충돌·지뢰 발견 보도 없음. 유엔사-북한군 대화 무산(NK뉴스 인용)은 9월 지뢰 사건 후속이라 배경."
+      "summary": "유엔사-북한군 대화 무산 보도(세계일보)는 9월 지뢰 폭발 관련 배경이며 새 충돌·발견은 없다."
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "대구·경북",
+      "summary": "귀속 미확인 — 영남대 등 대구·경북 대학 3곳과 금융 위탁업체 연쇄 해킹으로 개인정보가 유출됐으나 북한 등 소행은 밝혀지지 않았다.",
+      "meaning": "귀속이 확인되지 않아 등급에는 반영하지 않는 국내 사이버 사고 기록이다.",
+      "sources": [
+        {
+          "name": "노컷뉴스",
+          "tier": "B",
+          "url": "https://www.nocutnews.co.kr/news/6607973"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "대구한의대·경일대·금오공대에서 해킹 정황 확인"
+      ],
+      "speculation": []
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "동해 KADIZ",
+      "lat": 37.5,
+      "lon": 130.0,
+      "summary": "러시아 군용기가 17일 새벽 KADIZ에 진입했다 이탈했고 합참은 의도를 예단하지 않겠다고 밝혔다.",
+      "meaning": "러시아 군용기의 KADIZ 진입은 반복되는 정례 범주 활동이다.",
+      "sources": [
+        {
+          "name": "헤럴드경제",
+          "tier": "B",
+          "url": "https://biz.heraldcorp.com/article/10939748"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "합참 공보 발표 인용"
+      ],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
     },
     "nk_internal": {
-      "status": "none",
-      "summary": "김정은 삼지연 관광지구 현지지도는 전시태세 징후 아님."
+      "status": "none"
     },
     "gov_warning": {
       "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "KADIZ",
-      "lat": 36.0,
-      "lon": 131.0,
-      "summary": "러시아 군용기가 17일 KADIZ에 진입했다 이탈했고 일본은 러 항공기 영공 침범을 발표했다(세계일보, 합참 발표 인용).",
-      "meaning": "올해 세 번째 KADIZ 진입으로 정례 범위의 정찰 비행이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261117515618"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "올해 세 번째 KADIZ 무단 진입"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-17T22:09:55+00:00",
+  "checked_at": "2026-11-17T23:10:32+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

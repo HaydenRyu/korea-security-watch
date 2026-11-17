@@ -13,17 +13,16 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참 북한 11월",
-      "북한 귀순 DMZ NLL 합참"
+      "지뢰 발견 DMZ 합참 11월 귀순 NLL"
     ],
     "electronic_cyber": [
       "GPS 교란 북한 서북도서",
-      "해킹 개인정보 유출 11월 17일"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축",
-      "일본 러시아 군용기 영공 침범 항의"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결"
@@ -38,7 +37,7 @@
       "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
@@ -46,7 +45,7 @@
     "https://www.nknews.org/",
     "https://www.segye.com/newsList/0101030700000"
   ],
-  "overall_summary": "11/19 선전 APEC 3자 회담을 앞둔 외교 동향과 북 해킹조직 AI 활용 보고서 외에 새 군사 징후는 확인되지 않았다. 직전 회차와 같은 수준이다. 접경 남측 열점 후보 0건.",
+  "overall_summary": "11/19 APEC 계기 미·중·러 외교 일정(조용원 방러, 트럼프 김정은 회담 언급) 외에 새 군사 징후는 없고 직전 회차와 같은 수준이다. 접경 남측 열점 후보 0건.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -109,7 +108,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T03:10:03+00:00",
+  "checked_at": "2026-11-17T04:09:35+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

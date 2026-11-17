@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-17T17:01:16+00:00",
+ "fetched_at": "2026-11-17T17:53:58+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-17T17:01:16+00:00",
+ "last_ok_at": "2026-11-17T17:53:58+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1121,
-  "hits": 29,
-  "clusters": 24,
+  "hits": 27,
+  "clusters": 22,
   "by_group": {
    "hybrid": 3,
-   "summit": 11,
+   "summit": 10,
    "alert": 3,
    "border": 7,
    "mine": 2,
-   "gps": 3
+   "gps": 2
   }
  },
  "outlets": {
@@ -24,7 +24,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 561,
-   "hits": 23
+   "hits": 22
   },
   "SBS": {
    "feeds": 3,
@@ -42,7 +42,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 10
+   "hits": 9
   },
   "세계일보": {
    "feeds": 2,
@@ -62,12 +62,12 @@
   "hybrid": {
    "clusters": 3,
    "max_independent": 2,
-   "latest": "2026-11-17T17:01:16+00:00"
+   "latest": "2026-11-17T17:53:58+00:00"
   },
   "summit": {
-   "clusters": 11,
+   "clusters": 10,
    "max_independent": 2,
-   "latest": "2026-11-17T17:01:16+00:00"
+   "latest": "2026-11-17T17:53:58+00:00"
   },
   "alert": {
    "clusters": 3,
@@ -85,9 +85,9 @@
    "latest": "2026-11-17T08:57:28+00:00"
   },
   "gps": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 2,
-   "latest": "2026-11-16T23:08:39+00:00"
+   "latest": "2026-11-16T19:30:00+00:00"
   }
  },
  "feeds": [
@@ -129,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "SBS",
@@ -185,7 +185,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibSocRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "세계일보",

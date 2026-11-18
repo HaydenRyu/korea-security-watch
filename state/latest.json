@@ -1,62 +1,50 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 전쟁 준비 병력 이동 탄약 비축 노농적위군",
+      "North Korea troops mobilization"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 풍계리 영변 핵시설 38 North November 2026"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 전쟁 준비 병력 이동 탄약 비축 노농적위군"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ NLL 귀순",
-      "North Korea DMZ"
+      "북한 지뢰 발견 DMZ 합참",
+      "북한 GPS 교란 NLL 귀순 월선"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "Korea cyber attack"
+      "북한 GPS 교란 NLL 귀순 월선",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 11월"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "진돗개 데프콘 북한 열병식 미사일 발사 합참 11월 18일"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea blackout"
+      "북한 전쟁 준비 병력 이동 탄약 비축 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning evacuation"
+      "진돗개 데프콘 북한 열병식 미사일 발사 합참 11월 18일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hackers"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261119500803",
     "https://www.segye.com/newsView/20261118520041",
     "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
-    "https://en.yna.co.kr/view/AEN20261116006000315",
-    "https://www.yna.co.kr/view/AKR20261117027100009"
+    "https://biz.heraldcorp.com/article/10921557"
   ],
-  "overall_summary": "신규 징후 없이 11/19 미·중·러 3자 회담을 앞둔 외교 국면이 이어진다. 접경 열점 후보는 보도 대조에서 확인되지 않았다.",
+  "overall_summary": "접경·핵·병력 등 핵심 항목에 새 징후가 없고, 조용원 방러(기존 협력 반복)와 11/19 선전 미·중·러 정상회담 앞둔 외교 일정만 이어진다. 접경 남측 열점 보도 대조 대상은 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,8 +56,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "신규 접경 사건 없음; 11/17 보도(지뢰 사과 요구 이후 유엔사-북한군 대화 무산)는 배경."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -77,22 +64,28 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "모스크바",
-      "summary": "조용원 북한 당 비서의 11/14~ 방러와 푸틴 면담(기존 협력 반복, 외교 일정)이 로이터에 보도됐다.",
-      "meaning": "북러 고위급 접촉이나 새 군사 협정·이전 발표는 확인되지 않았다.",
+      "region": "러시아 모스크바·중국 선전",
+      "summary": "조용원 북한 당 비서의 방러·푸틴 면담과 11/19 선전 미·중·러 정상회담 계기 김정은 방중설이 이어지나, 새 파병·무기 이전·협정 확인은 없다.",
+      "meaning": "기존 북러 협력 반복 보도와 외교 일정이라 군사적 위협 변화는 확인되지 않는다.",
       "sources": [
         {
-          "name": "Reuters",
+          "name": "Reuters(internazionale 전재)",
           "tier": "B",
           "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261119500803"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "김정은 삼지연 관광지구 시찰, 조용원 모스크바 푸틴 면담"
+        "조용원이 모스크바에서 푸틴과 면담했다(Interfax·TASS 인용)",
+        "통일부는 북측 대표단이 11/14부터 러시아에 머물다 떠났다고 밝혔다"
       ],
       "speculation": [
-        "김정은 APEC 계기 방중 가능성은 트럼프·크렘린 발언일 뿐"
+        "김정은 APEC 계기 방중·푸틴 회동 가능성(트럼프·크렘린 언급)"
       ]
     },
     "parade_massing": {
@@ -105,10 +98,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "FBI의 TraderTraitor 바이낸스 탈취 귀속 보도는 11/1자 배경이다."
     }
   },
-  "checked_at": "2026-11-18T23:09:56+00:00",
+  "checked_at": "2026-11-18T23:10:23+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

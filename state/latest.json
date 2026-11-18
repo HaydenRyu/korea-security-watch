@@ -1,47 +1,60 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 지뢰 발견 DMZ NLL 귀순"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ NLL 귀순"
+      "지뢰 발견 DMZ 귀순",
+      "North Korea DMZ landmine"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격",
-      "북한 GPS 교란"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "North Korea cyber attack"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "북한 GPS 교란 김정은 방중 서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 열병식",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 합참 지뢰 발견 DMZ NLL 귀순"
+      "북한 준전시 노농적위군",
+      "North Korea civil defense"
     ],
     "gov_warning": [
-      "북한 합참 지뢰 발견 DMZ NLL 귀순"
+      "진돗개 발령 데프콘",
+      "US Japan warning North Korea"
     ],
     "hybrid_ops": [
-      "북한 합참 지뢰 발견 DMZ NLL 귀순"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "news_kr 수집 결과 대화·회담 보도 대조"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261118508857",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
-    "https://www.segye.com/newsView/20261118504516"
+    "https://www.segye.com/newsView/20261118510649",
+    "https://www.segye.com/newsView/20261118504500",
+    "https://www.nknews.org/",
+    "https://www.koreaherald.com/"
   ],
-  "overall_summary": "11/18 한중정상회담과 11/19 선전 미·중·러 정상회의를 앞둔 외교 일정이 중심이고 신규 군사 징후는 없다. 조용원 방러 후속(쿠르스크 기념비)은 기존 협력의 반복으로 routine 유지, 국내 수집 결과에서 접경 신규 군사 사건은 확인되지 않았다.",
+  "overall_summary": "새로 확인된 군사 도발·전쟁 징후는 없고 미중러 APEC 정상외교와 북러 외교 일정만 이어진다. 접경 열점 후보는 대조할 보도가 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,33 +72,23 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
-      "region": "러시아 모스크바",
-      "lat": 55.75,
-      "lon": 37.62,
-      "summary": "조용원 북한 당 비서가 11/16 푸틴을 만나 쿠르스크 북한군 위훈 기념비 건립 계획이 나왔다(기존 협력의 반복, 외교 일정).",
-      "meaning": "미·중·러 정상회의 전 북러 외교 접촉이며 새 무기 이전·파병·협정은 확인되지 않는다.",
+      "region": "러시아 쿠르스크",
+      "summary": "조용원 북한 당 비서가 11/16 푸틴을 만나 쿠르스크 북한군 기념비 건립 계획이 나왔다(기존 협력 반복, 외교 일정).",
+      "meaning": "북러 군사협력 지속을 보여주나 새 파병·이전 발표는 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261118508857"
-        },
-        {
-          "name": "Reuters",
-          "tier": "B",
-          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "푸틴-조용원 11/16 면담(KCNA·타스 인용)",
-        "새 군사협력 발표 없음"
+        "푸틴이 올해 안 쿠르스크 북한군 기념비 건립을 언급"
       ],
-      "speculation": [
-        "김정은 방중 가능성 관측"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -100,7 +103,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T18:09:51+00:00",
+  "checked_at": "2026-11-18T19:10:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

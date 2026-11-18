@@ -1,48 +1,47 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 지뢰 NLL 귀순 DMZ 합참",
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "북한 합참 지뢰 발견 DMZ NLL 귀순"
     ],
     "nuclear": [
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "북한 지뢰 NLL 귀순 DMZ 합참"
+      "북한 합참 지뢰 발견 DMZ NLL 귀순"
     ],
     "electronic_cyber": [
       "해킹 개인정보 유출 사이버 공격",
       "북한 GPS 교란"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit Reuters",
-      "김정은 방중 서해 구조물 주한미군 감축"
+      "North Korea Kim Jong Un China Russia visit",
+      "북한 GPS 교란 김정은 방중 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "North Korea Kim Jong Un China Russia visit Reuters"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "nk_internal": [
-      "북한 지뢰 NLL 귀순 DMZ 합참"
+      "북한 합참 지뢰 발견 DMZ NLL 귀순"
     ],
     "gov_warning": [
-      "북한 지뢰 NLL 귀순 DMZ 합참"
+      "북한 합참 지뢰 발견 DMZ NLL 귀순"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "북한 합참 지뢰 발견 DMZ NLL 귀순"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "news_kr 수집 결과 대화·회담 보도 대조"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261118508857",
-    "https://www.segye.com/newsView/20261118504516",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
+    "https://www.segye.com/newsView/20261118504516"
   ],
-  "overall_summary": "조용원 방러·푸틴 면담과 11/18 한중정상회담, 11/19 선전 미·중·러 정상회의를 앞둔 외교 일정이 중심이며 신규 군사 징후는 없다. 접경 열점 후보 1건(11/17 첫 관측)은 관련 보도가 없어 징후로 올리지 않았다.",
+  "overall_summary": "11/18 한중정상회담과 11/19 선전 미·중·러 정상회의를 앞둔 외교 일정이 중심이고 신규 군사 징후는 없다. 조용원 방러 후속(쿠르스크 기념비)은 기존 협력의 반복으로 routine 유지, 국내 수집 결과에서 접경 신규 군사 사건은 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -101,7 +100,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T17:10:37+00:00",
+  "checked_at": "2026-11-18T18:09:51+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

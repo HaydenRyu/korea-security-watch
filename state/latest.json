@@ -13,51 +13,39 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 합참",
-      "DMZ 귀순",
-      "North Korea DMZ mine"
+      "지뢰 발견 합참 DMZ 귀순",
+      "North Korea news November 18 2026 missile OR border OR drill"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea civil defense drill"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "North Korea emergency warning"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
       "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261118508857",
-    "https://www.koreaherald.com/article/10941483",
-    "https://www.koreaherald.com/article/10941762"
+    "https://www.segye.com/newsView/20261118520041",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008852540",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008852738"
   ],
-  "overall_summary": "새로 확인된 군사 도발·전쟁 징후는 없고 APEC 정상외교(한중 정상회담, 북미 대화 관측)와 북러 외교 일정만 이어진다. 접경 열점 후보 대조 대상은 없었다.",
+  "overall_summary": "새로 확인된 군사 도발·전쟁 징후는 없고 APEC 계기 한중 정상회담과 북미 회동 관측 등 외교 동향만 이어진다. 접경 열점 후보 대조 대상은 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -77,22 +65,24 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "러시아 모스크바",
-      "summary": "조용원 북한 당 비서가 11/16 푸틴을 만나 쿠르스크 북한군 위훈 기념비 건립 계획이 나왔다(기존 협력 반복, 외교 일정).",
-      "meaning": "북러 군사협력 기조의 재확인이며 새 파병·이전 확인은 없다.",
+      "region": "중국 선전",
+      "summary": "트럼프 대통령이 APEC을 계기로 김정은 위원장도 중국에 오고 싶어 한다고 언급했으나 성사는 불투명하다(외교 관측).",
+      "meaning": "북미·북중 외교 관측이며 새 군사협력 확인은 없다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "SBS",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261118508857"
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008852540"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신이 타스를 인용해 18일 보도",
-        "푸틴이 올해 안 쿠르스크 기념비 건립 언급"
+        "트럼프 발언 18일 보도",
+        "시진핑 북미대화 지지 발언은 청와대 전언"
       ],
-      "speculation": []
+      "speculation": [
+        "김정은 방중 가능성"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -107,7 +97,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T21:10:31+00:00",
+  "checked_at": "2026-11-18T22:09:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

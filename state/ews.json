@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-17T23:10:32+00:00",
+  "computed_at": "2026-11-18T00:10:41+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 27,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-17T11:39:35+00:00",
-    "latest_updated_at": "2026-11-17T23:10:32+00:00"
+    "linkage_judged_at": "2026-11-17T23:39:54+00:00",
+    "latest_updated_at": "2026-11-18T00:10:41+00:00"
   },
   "theaters": [
     {
@@ -31,7 +31,7 @@
           "published_at": "2026-11-17T15:00:00+08:00"
         }
       ],
-      "judged_at": "2026-11-17T11:39:35+00:00"
+      "judged_at": "2026-11-17T23:39:54+00:00"
     },
     {
       "key": "ukraine",
@@ -47,16 +47,10 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo",
-          "published_at": "2026-11-17T10:45:55+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo",
-          "published_at": "2026-11-17T05:59:01+00:00"
+          "published_at": "2026-11-17T21:24:35+00:00"
         }
       ],
-      "judged_at": "2026-11-17T11:39:35+00:00"
+      "judged_at": "2026-11-17T23:39:54+00:00"
     },
     {
       "key": "scs_ecs",
@@ -69,17 +63,17 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-17T18:53:00+08:00",
+          "published_at": "2026-11-18T00:00:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-17T10:22:09+00:00",
+          "published_at": "2026-11-17T14:25:45+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-17T11:39:35+00:00"
+      "judged_at": "2026-11-17T23:39:54+00:00"
     },
     {
       "key": "mideast",
@@ -104,7 +98,7 @@
           "published_at": "2026-11-16T21:40:07+00:00"
         }
       ],
-      "judged_at": "2026-11-17T11:39:35+00:00"
+      "judged_at": "2026-11-17T23:39:54+00:00"
     },
     {
       "key": "us_posture",
@@ -118,10 +112,10 @@
           "name": "Stars and Stripes",
           "tier": "B",
           "url": "https://www.stripes.com/branches/air_force/2026-11-16/f15ex-fighter-jets-kadena-okinawa-23480569.html",
-          "published_at": "2026-11-16T00:00:00+00:00"
+          "published_at": "2026-11-16T00:00:00+09:00"
         }
       ],
-      "judged_at": "2026-11-17T11:39:35+00:00"
+      "judged_at": "2026-11-17T23:39:54+00:00"
     }
   ],
   "channels": [
@@ -154,6 +148,6 @@
   "last_good": {
     "ews": 27,
     "band": "관찰",
-    "computed_at": "2026-11-17T23:10:32+00:00"
+    "computed_at": "2026-11-18T00:10:41+00:00"
   }
 }

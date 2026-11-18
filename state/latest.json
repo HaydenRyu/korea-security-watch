@@ -6,57 +6,48 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear test site 38 North"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "목함지뢰 해안",
-      "DMZ 귀순 NLL",
-      "북한 합참 발표 11월 17일"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순",
+      "합참 북한 11월 17일 2026"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 서해",
-      "해킹 개인정보 유출 사이버 공격 11월 17일"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "North Korea Kim Jong Un China Russia visit APEC Shenzhen",
-      "서해 구조물 주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "North Korea missile launch Japan Ministry of Defense November 2026"
+      "진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단",
-      "North Korea talks offer"
+      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261117515619",
+    "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133",
+    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760",
+    "https://www.wikitree.co.kr/articles/1150957",
     "https://biz.heraldcorp.com/article/10939748",
-    "https://news.sbs.co.kr/english/article.do?news_id=N1008850828",
-    "https://www.koreajoongangdaily.com/korea/kim-jongun-stays-silent-on-trumps-summit-overture-focuses-on-courting-china-russia/12976798",
-    "https://www.nbcnews.com/world/north-korea/kim-jong-un-daughter-ju-ae-tour-samjiyon-rumors-meeting-trump-china-rcna609779",
-    "https://www.nocutnews.co.kr/news/6607973",
-    "https://biz.sbs.co.kr/article/20000346181"
+    "https://www.nocutnews.co.kr/news/6607973"
   ],
-  "overall_summary": "러시아 군용기 KADIZ 진입(정례 범주)과 김정은 방중·북미 정상회동 관측 외에 새로운 군사적 징후는 없다. 접경 열점 후보에 대한 별도 보도는 확인되지 않았고 직전 회차와 판정이 같다.",
+  "overall_summary": "러시아 군용기 KADIZ 진입(정례 범주)과 국내 대학 해킹(귀속 미확인) 외에 새 군사적 징후는 없고 직전 회차와 판정이 같다. 접경 남측 열점 후보 1건은 관련 보도가 확인되지 않아 징후로 올리지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -69,14 +60,14 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "유엔사-북한군 대화 무산 보도(세계일보)는 9월 지뢰 폭발 관련 배경이며 새 충돌·발견은 없다."
+      "summary": "11/16 NK뉴스발 보도: 9월 DMZ 지뢰 폭발 후 유엔사-북한군 대화 추진이 한국의 사과 요구 뒤 중단됐다는 배경 기사로 새 충돌·발견은 아니다."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "대구·경북",
-      "summary": "귀속 미확인 — 영남대 등 대구·경북 대학 3곳과 금융 위탁업체 연쇄 해킹으로 개인정보가 유출됐으나 북한 등 소행은 밝혀지지 않았다.",
+      "summary": "귀속 미확인 — 대구한의대·경일대·금오공대 등 대학 3곳이 해킹돼 개인정보가 유출됐으나 소행은 밝혀지지 않았다.",
       "meaning": "귀속이 확인되지 않아 등급에는 반영하지 않는 국내 사이버 사고 기록이다.",
       "sources": [
         {
@@ -87,7 +78,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "대구한의대·경일대·금오공대에서 해킹 정황 확인"
+        "대구한의대 1,281건, 경일대 3,056건 유출(17일 보도)"
       ],
       "speculation": []
     },
@@ -97,8 +88,8 @@
       "region": "동해 KADIZ",
       "lat": 37.5,
       "lon": 130.0,
-      "summary": "러시아 군용기가 17일 새벽 KADIZ에 진입했다 이탈했고 합참은 의도를 예단하지 않겠다고 밝혔다.",
-      "meaning": "러시아 군용기의 KADIZ 진입은 반복되는 정례 범주 활동이다.",
+      "summary": "러시아 군용기 10대 미만이 17일 새벽 KADIZ에 진입했다 이탈했고 합참은 의도를 예단하지 않겠다고 밝혔다.",
+      "meaning": "영공 침범 없는 KADIZ 진입으로 반복되는 정례 범주 활동이다.",
       "sources": [
         {
           "name": "헤럴드경제",
@@ -108,7 +99,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참 공보 발표 인용"
+        "합참 공보실장 정례브리핑 인용"
       ],
       "speculation": []
     },
@@ -125,7 +116,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-17T23:10:32+00:00",
+  "checked_at": "2026-11-18T00:10:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

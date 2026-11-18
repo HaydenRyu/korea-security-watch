@@ -1,51 +1,55 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "지뢰 발견 합참 DMZ 귀순",
-      "North Korea news November 18 2026 missile OR border OR drill"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순 11월",
+      "DMZ border North Korea mine"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 GPS 교란 11월 18일"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중"
-    ],
-    "parade_massing": [
-      "북한 열병식 집결"
-    ],
-    "nk_internal": [
-      "북한 등화관제 준전시"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘 발령"
+      "김정은 방중 북한 11월 18일",
+      "Kim Jong Un China Russia visit APEC Shenzhen",
+      "서해 구조물 주한미군 감축"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
+    ],
+    "troop_movement": [
+      "북한 핵 풍계리 영변 병력 이동 군수 열병식 동향",
+      "North Korea troops nuclear test site parade preparation wartime blackout"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변 병력 이동 군수 열병식 동향",
+      "North Korea troops nuclear test site parade preparation wartime blackout"
+    ],
+    "logistics": [
+      "북한 핵 풍계리 영변 병력 이동 군수 열병식 동향",
+      "North Korea troops nuclear test site parade preparation wartime blackout"
+    ],
+    "parade_massing": [
+      "북한 핵 풍계리 영변 병력 이동 군수 열병식 동향",
+      "North Korea troops nuclear test site parade preparation wartime blackout"
+    ],
+    "nk_internal": [
+      "North Korea troops nuclear test site parade preparation wartime blackout"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 합참 긴급 경고 북한 전시 대피"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261118520041",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008852540",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008852738"
+    "https://www.nknews.org",
+    "https://www.koreajoongangdaily.com/korea/norths-kim-may-skip-apec-but-his-shadow-looms-large-over-summit/12973481",
+    "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border"
   ],
-  "overall_summary": "새로 확인된 군사 도발·전쟁 징후는 없고 APEC 계기 한중 정상회담과 북미 회동 관측 등 외교 동향만 이어진다. 접경 열점 후보 대조 대상은 없었다.",
+  "overall_summary": "APEC 선전 계기 미·중·러 회동과 김정은 방중설 등 외교 국면이며 군사적 새 징후는 확인되지 않았다. 접경 남측 열점 후보 대조 결과 관련 보도 없음, 직전과 같은 등급 유지.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,23 +69,23 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 선전",
-      "summary": "트럼프 대통령이 APEC을 계기로 김정은 위원장도 중국에 오고 싶어 한다고 언급했으나 성사는 불투명하다(외교 관측).",
-      "meaning": "북미·북중 외교 관측이며 새 군사협력 확인은 없다.",
+      "region": "러시아 모스크바",
+      "summary": "조용원 북한 당 비서의 11/14~16 방러와 푸틴 면담(기존 협력 반복, 외교 일정)이 이어서 보도됐다.",
+      "meaning": "북러 고위급 교류 지속이며 새 파병·무기 이전 확인은 없다.",
       "sources": [
         {
-          "name": "SBS",
+          "name": "코리아중앙데일리",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008852540"
+          "url": "https://www.koreajoongangdaily.com/korea/norths-kim-may-skip-apec-but-his-shadow-looms-large-over-summit/12973481"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "트럼프 발언 18일 보도",
-        "시진핑 북미대화 지지 발언은 청와대 전언"
+        "11/14 조용원이 특별기로 모스크바 방문",
+        "11/15 노동신문이 전투적 우호 보도"
       ],
       "speculation": [
-        "김정은 방중 가능성"
+        "김정은 메시지 전달설"
       ]
     },
     "parade_massing": {
@@ -97,7 +101,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T22:09:55+00:00",
+  "checked_at": "2026-11-18T22:10:39+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

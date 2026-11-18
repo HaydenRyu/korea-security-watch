@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-11-18T20:42:20+00:00",
+ "fetched_at": "2026-11-18T21:54:33+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-18T20:42:20+00:00",
+ "last_ok_at": "2026-11-18T21:54:33+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1124,
-  "hits": 56,
-  "clusters": 47,
+  "fetched": 1125,
+  "hits": 53,
+  "clusters": 45,
   "by_group": {
    "yellowsea": 1,
-   "spy": 3,
-   "summit": 32,
+   "spy": 2,
+   "summit": 31,
    "gps": 3,
    "fire": 1,
    "hybrid": 4,
@@ -26,14 +26,14 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 564,
-   "hits": 33
+   "count": 565,
+   "hits": 31
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 13
+   "hits": 14
   },
   "동아일보": {
    "feeds": 2,
@@ -51,7 +51,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 3
+   "hits": 2
   },
   "국방일보": {
    "feeds": 1,
@@ -65,17 +65,17 @@
   "yellowsea": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-18T20:42:20+00:00"
+   "latest": "2026-11-18T21:54:33+00:00"
   },
   "spy": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-18T20:42:20+00:00"
+   "latest": "2026-11-18T21:54:33+00:00"
   },
   "summit": {
-   "clusters": 32,
+   "clusters": 31,
    "max_independent": 3,
-   "latest": "2026-11-18T20:16:53+00:00"
+   "latest": "2026-11-18T21:25:00+00:00"
   },
   "gps": {
    "clusters": 3,
@@ -114,7 +114,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 84,
+   "count": 85,
    "hits": 22
   },
   {
@@ -123,7 +123,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 6
+   "hits": 5
   },
   {
    "outlet": "연합뉴스",
@@ -147,7 +147,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 5
+   "hits": 4
   },
   {
    "outlet": "SBS",
@@ -155,7 +155,7 @@
    "url": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
    "ok": true,
    "count": 29,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "SBS",
@@ -211,7 +211,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 3
+   "hits": 2
   },
   {
    "outlet": "세계일보",

@@ -13,7 +13,7 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 합참",
+      "지뢰 발견 합참 DMZ 북한 11월",
       "DMZ NLL North Korea border"
     ],
     "electronic_cyber": [
@@ -22,9 +22,8 @@
       "North Korea hackers"
     ],
     "foreign_forces": [
-      "김정은 방중 APEC 트럼프 시진핑 푸틴",
-      "Kim Jong Un China Russia visit Shenzhen APEC",
-      "Putin Jo Yong Won Kursk memorial North Korean soldiers",
+      "김정은 방중 APEC 선전 11월 18일",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -35,7 +34,7 @@
     ],
     "gov_warning": [
       "진돗개 발령 데프콘",
-      "North Korea missile launch Reuters November 18"
+      "North Korea missile launch Japan Joint Staff Chiefs November 2026"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -46,12 +45,11 @@
     ]
   },
   "opened": [
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
     "https://www.rfa.org/korean/in-focus/2026/11/16/trump-kim-summit-north-korea-china/",
-    "https://www.koreajoongangdaily.com/korea/norths-kim-may-skip-apec-but-his-shadow-looms-large-over-summit/12973481",
-    "https://news.mtn.co.kr/article/2026111409340058810",
-    "https://biz.heraldcorp.com/article/10939146"
+    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760"
   ],
-  "overall_summary": "APEC 선전 정상회의(11/18~19)와 미중러 3자 회담을 앞둔 외교 국면이며 북한 군사 도발·전쟁 징후 보도는 확인되지 않았다. 접경 열점 후보와 국내 언론 묶음에서 새 군사 사건은 없었다.",
+  "overall_summary": "APEC 선전 정상회의(11/18~19)와 19일 미중러 3자 회담을 앞둔 외교 국면이며 북한 군사 도발·전쟁 징후 보도는 새로 확인되지 않았다. 국내 언론 묶음에서도 24시간 안 새 군사 사건은 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,20 +70,24 @@
       "status": "single",
       "routine": true,
       "region": "러시아 모스크바",
-      "summary": "푸틴이 11/16 조용원 당 비서를 만나 쿠르스크 참전 북한군을 잊지 않겠다고 밝혔다(기존 북러 협력의 반복, 외교 일정; 직전 회차와 동일 판정).",
-      "meaning": "북러 군사협력 기조 재확인이나 새 파병·이전 확인은 없다.",
+      "lat": 55.75,
+      "lon": 37.62,
+      "summary": "조용원 북한 정치국 상무위원이 11/14부터 모스크바에 체류하며 푸틴을 만났다(기존 북러 협력의 반복, 외교 일정; 직전 회차와 동일 판정).",
+      "meaning": "북러 고위급 교류 지속이나 새 파병·무기 이전 확인은 없다.",
       "sources": [
         {
-          "name": "헤럴드경제",
+          "name": "Reuters(internazionale 전재)",
           "tier": "B",
-          "url": "https://biz.heraldcorp.com/article/10939146"
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "푸틴-조용원 11/16 모스크바 회동, 군사적 형제애 언급"
+        "조용원 모스크바 푸틴 면담, 김정은 삼지연 관광지구 시찰"
       ],
-      "speculation": []
+      "speculation": [
+        "젤렌스키의 북 미사일 공급 주장은 독립 확인 없음"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -100,7 +102,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T13:10:58+00:00",
+  "checked_at": "2026-11-18T13:13:50+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

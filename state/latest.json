@@ -2,7 +2,7 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방",
-      "North Korea troops border Reuters"
+      "North Korea troops border"
     ],
     "nuclear": [
       "북한 핵 영변 풍계리",
@@ -14,14 +14,13 @@
     ],
     "border_clash": [
       "지뢰 발견",
-      "DMZ 북한군 월선",
+      "DMZ 귀순 북한군",
       "North Korea DMZ"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "해킹 공격 사이버 공격",
-      "North Korea hacking attributed"
+      "해킹 개인정보 유출 사이버 공격",
+      "North Korea hackers attributed"
     ],
     "foreign_forces": [
       "김정은 방중",
@@ -37,7 +36,7 @@
       "North Korea mobilization"
     ],
     "gov_warning": [
-      "합참 북한 발표 오늘",
+      "합참 북한 발표 오늘 미사일 도발",
       "진돗개 발령"
     ],
     "hybrid_ops": [
@@ -49,12 +48,11 @@
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261117027100009",
-    "https://www.yna.co.kr/view/AKR20261118018000504",
-    "https://www.yna.co.kr/view/AKR20261117005800109",
-    "https://www.segye.com/newsView/20261118504516"
+    "https://www.segye.com/newsView/20261118504955",
+    "https://www.koreaherald.com/",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "북러 고위급 접촉·한중정상회담 등 외교 일정 중심이며 새 군사 도발 징후는 없다. 접경 열점·신규 지뢰 보도 없음.",
+  "overall_summary": "한중정상회담과 북러 고위급 접촉 등 외교 일정 중심이며 새 군사 도발 징후는 확인되지 않았다. 합참 신규 발표·접경 신규 지뢰 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,7 +68,7 @@
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "직전 대학 3곳 해킹 건은 첫 보도 24시간 경과로 배경 처리; 이번 회차 새 귀속 발표 없음(INSS 보고서는 분석)."
+      "summary": "북한 해커 AI 코딩도구 악성코드 보도(NK News 인용 구글)는 분석 보고라 배경."
     },
     "foreign_forces": {
       "status": "single",
@@ -78,22 +76,22 @@
       "region": "모스크바",
       "lat": 55.75,
       "lon": 37.62,
-      "summary": "푸틴이 16일 모스크바에서 김정은 최측근 조용원 당 비서를 만나 '군사적 형제애'와 북한군 쿠르스크 참전을 언급했다(타스 인용).",
-      "meaning": "미·중·러 정상회의를 앞둔 북러 고위급 접촉으로 새 파병·무기 이전 발표는 없다.",
+      "summary": "조용원 당 비서가 푸틴을 만나 대미 비난에 동조했다(11/17 NK News 보도), 새 파병·협정 발표 없는 고위급 접촉.",
+      "meaning": "미중러 회담 전 북러 외교 접촉으로 군사 이전 발표는 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261117005800109"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "푸틴-조용원 회동은 타스 보도를 연합이 전함",
+        "푸틴-조용원 회동 보도",
         "새 파병·협정 발표 없음"
       ],
       "speculation": [
-        "미중러 회담 사전 조율 가능성"
+        "미중러 회담 사전 조율"
       ]
     },
     "parade_massing": {
@@ -109,7 +107,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T03:09:34+00:00",
+  "checked_at": "2026-11-18T04:09:52+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

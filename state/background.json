@@ -1,39 +1,38 @@
 {
   "version": 1,
-  "at": "2026-11-18T05:39:58+00:00",
-  "opened": 20,
+  "at": "2026-11-18T11:39:36+00:00",
+  "opened": 17,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-18T05:39:58+00:00",
+      "last_ok": "2026-11-18T11:39:36+00:00",
       "raw": 4,
       "kept": 4
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-18T05:39:58+00:00",
+      "last_ok": "2026-11-18T11:39:36+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
-      "status": "checked",
-      "last_ok": "2026-11-18T05:39:58+00:00",
-      "raw": 1,
-      "kept": 1,
-      "note": "대만 명명 훈련 보도 없음. Rappler RSS 는 빈 응답이라 쓰지 못함."
+      "status": "no_findings",
+      "last_ok": "2026-11-18T11:39:36+00:00",
+      "raw": 0,
+      "kept": 0,
+      "note": "대만 명명 훈련 보도 없음, 북러 신규 공식 사실 없음(직전 기록 유지)."
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-18T05:39:58+00:00",
+      "last_ok": "2026-11-18T11:39:36+00:00",
       "raw": 5,
       "kept": 5
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-18T05:39:58+00:00",
+      "last_ok": "2026-11-18T11:39:36+00:00",
       "raw": 0,
-      "kept": 0,
-      "note": "news_kr 묶음에 국내 안보 연결 사건(총기·탄약·밀수) 없음."
+      "kept": 0
     }
   }
 }

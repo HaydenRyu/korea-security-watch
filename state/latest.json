@@ -2,38 +2,44 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "North Korea troop movement border"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변 미사일 발사 합참",
+      "North Korea nuclear missile launch Japan defense ministry"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition logistics shipment Russia"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
+      "북한 지뢰 발견 DMZ 귀순 11월 18일",
+      "목함지뢰 해안",
+      "NLL DMZ North Korea clash"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격 11월"
+      "북한 GPS 교란 서해 구조물 주한미군 감축",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit North Korea Reuters",
-      "서해 구조물 주한미군 감축 김정은 방중"
+      "North Korea Kim Jong Un China Russia visit",
+      "김정은 방중 방러",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 준전시 등화관제 대피 훈련",
+      "North Korea civil defense mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향"
+      "진돗개 데프콘 상향 합참",
+      "US State Department Korea travel advisory"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
@@ -41,13 +47,11 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261118508857",
-    "https://www.ajunews.com/view/20261117135254061",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209575",
-    "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit",
-    "https://www.segye.com/newsView/20261117515619",
-    "https://www.seoul.co.kr/news/international/2026/11/17/20261117500377"
+    "https://www.japantimes.co.jp/news/2026/11/17/asia-pacific/politics/kim-trump-apec-russia/",
+    "https://www.koreaherald.com/article/10937539",
+    "https://www.segye.com/newsView/20261117515619"
   ],
-  "overall_summary": "북러 협력 보도(푸틴-조용원, 쿠르스크 기념비)는 기존 협력의 반복이며 19일 선전 미·중·러 정상회담과 김정은 방중 관측이 이어지는 외교 국면이다. 접경 남측 열점 후보 1건(11/17 20시 최초)은 관련 보도를 찾지 못해 징후로 올리지 않았고, 군사 징후는 확인되지 않았다. 국내 수집기 동아 피드 2건 실패.",
+  "overall_summary": "새로 확인된 군사 징후는 없고 조용원 방러·트럼프의 김정은 회동 시사 등 외교 동향 위주다. 접경 남측 열점 대조 대상 및 신규 도발 보도는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,7 +63,8 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "신규 접경 사건 없음. 9월 DMZ 지뢰 폭발 후속(유엔사-북한군 회담 중단, NK뉴스 11/16 보도)은 배경."
     },
     "electronic_cyber": {
       "status": "none"
@@ -67,22 +72,29 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "러시아 쿠르스크·모스크바",
-      "summary": "푸틴이 16일 조용원 당 비서에게 쿠르스크 북한군 참전 기념비를 올해 안에 제막하겠다고 밝혔다(기존 북러 협력의 반복, 외교 일정).",
-      "meaning": "북러 군사 협력의 상징적 공고화이나 새 파병·무기 이전은 확인되지 않는다.",
+      "region": "모스크바·쿠르스크",
+      "summary": "푸틴이 조용원 당 비서에게 쿠르스크 북한군 참전 기념비를 올해 안에 세우겠다고 밝혔다(기존 북러 협력의 반복, 외교 일정; 보도 11/17~18, 직전 회차와 동일 판정).",
+      "meaning": "북러 군사협력 상징 행보이나 신규 파병·무기 이전 확인은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261118508857"
+        },
+        {
+          "name": "The Japan Times",
+          "tier": "B",
+          "url": "https://www.japantimes.co.jp/news/2026/11/17/asia-pacific/politics/kim-trump-apec-russia/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신·타스 인용 보도",
-        "새 파병·이전 언급 없음"
+        "조용원이 11/14부터 러시아 체류, 푸틴과 면담",
+        "트럼프는 중국서 김정은을 만날 수 있다고 발언"
       ],
-      "speculation": []
+      "speculation": [
+        "김정은 방중 가능성은 관측 수준이며 확정 발표 없음"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -97,14 +109,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T10:10:16+00:00",
+  "checked_at": "2026-11-18T12:10:34+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-18T11:10:11+00:00",
-    "summary": "새로 확인된 군사 징후는 없고 김정은 방중설·북미 대화 보도 등 외교 동향 위주다. 직전 회차의 북러 협력 건은 24시간 경과로 배경 처리했다."
-  }
+  "active": []
 }

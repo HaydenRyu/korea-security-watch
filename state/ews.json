@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-18T11:10:11+00:00",
+  "computed_at": "2026-11-18T12:10:34+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 26,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-18T05:39:58+00:00",
-    "latest_updated_at": "2026-11-18T10:10:16+00:00"
+    "linkage_judged_at": "2026-11-18T11:39:36+00:00",
+    "latest_updated_at": "2026-11-18T12:10:34+00:00"
   },
   "theaters": [
     {
@@ -22,22 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "대만 국방부가 러시아 군용기의 대만 동부 공역 진입을 규탄했고, 공군기 9대·함정 8척 등 중국 17기·척이 대만 주변에서 활동했다고 밝혔다.",
+      "summary": "대만 국방부가 러시아 군용기의 대만 동부 공역 통과를 규탄했다.",
       "sources": [
         {
           "name": "중앙사(CNA)",
           "tier": "B",
           "url": "https://www.cna.com.tw/news/aipl/202611180046.aspx",
           "published_at": "2026-11-18T10:03:01+08:00"
-        },
-        {
-          "name": "중앙사(CNA)",
-          "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611180062.aspx",
-          "published_at": "2026-11-18T10:54:36+08:00"
         }
       ],
-      "judged_at": "2026-11-18T05:39:58+00:00"
+      "judged_at": "2026-11-18T11:39:36+00:00"
     },
     {
       "key": "ukraine",
@@ -47,7 +41,7 @@
       "channels": [
         "c2_nk_ru_cn"
       ],
-      "summary": "우크라이나가 크림대교 일부를 붕괴시켰다고 젤렌스키 대통령이 밝혔고, 러시아는 키이우 교량을 타격하는 등 양측 공격이 계속되고 있다.",
+      "summary": "우크라이나가 크림대교 공격에 수 주간 준비했다고 밝혔고 러시아의 공습도 이어지고 있다.",
       "sources": [
         {
           "name": "BBC",
@@ -56,7 +50,7 @@
           "published_at": "2026-11-17T21:24:35+00:00"
         }
       ],
-      "judged_at": "2026-11-18T05:39:58+00:00"
+      "judged_at": "2026-11-18T11:39:36+00:00"
     },
     {
       "key": "scs_ecs",
@@ -69,7 +63,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-18T00:00:00+08:00",
+          "published_at": "2026-11-18T18:20:00+08:00",
           "kind": "feed"
         },
         {
@@ -79,7 +73,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-18T05:39:58+00:00"
+      "judged_at": "2026-11-18T11:39:36+00:00"
     },
     {
       "key": "mideast",
@@ -89,14 +83,8 @@
       "channels": [
         "c4_sea_energy"
       ],
-      "summary": "이란 혁명수비대가 바레인 미군 기지에 드론 6대를 날렸다고 밝혔고, 후티는 예멘 정부군을 아덴 방어로 몰아붙이고 있다.",
+      "summary": "이란이 바레인 미군 기지에 드론 공격을 했고 후티가 예멘에서 진격하며 미·이란은 호르무즈를 두고 대치 중이다.",
       "sources": [
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo",
-          "published_at": "2026-11-15T13:42:58+00:00"
-        },
         {
           "name": "BBC",
           "tier": "B",
@@ -104,7 +92,7 @@
           "published_at": "2026-11-16T21:40:07+00:00"
         }
       ],
-      "judged_at": "2026-11-18T05:39:58+00:00"
+      "judged_at": "2026-11-18T11:39:36+00:00"
     },
     {
       "key": "us_posture",
@@ -121,7 +109,7 @@
           "published_at": "2026-11-16T00:00:00+00:00"
         }
       ],
-      "judged_at": "2026-11-18T05:39:58+00:00"
+      "judged_at": "2026-11-18T11:39:36+00:00"
     }
   ],
   "channels": [
@@ -154,6 +142,6 @@
   "last_good": {
     "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-18T11:10:11+00:00"
+    "computed_at": "2026-11-18T12:10:34+00:00"
   }
 }

@@ -20,6 +20,7 @@
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
+      "해킹 공격 사이버 공격",
       "North Korea hacking attributed"
     ],
     "foreign_forces": [
@@ -48,13 +49,12 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261118504516",
-    "https://www.segye.com/newsView/20261118504955",
-    "https://www.yna.co.kr/view/AKR20261117005800109",
     "https://www.yna.co.kr/view/AKR20261117027100009",
-    "https://www.yna.co.kr/view/AKR20261116175400504"
+    "https://www.yna.co.kr/view/AKR20261118018000504",
+    "https://www.yna.co.kr/view/AKR20261117005800109",
+    "https://www.segye.com/newsView/20261118504516"
   ],
-  "overall_summary": "북러 고위급 접촉과 한중정상회담 등 외교 일정 중심이며 군사적 도발 징후는 확인되지 않았다. 접경 열점·신규 지뢰 보도 없음.",
+  "overall_summary": "북러 고위급 접촉·한중정상회담 등 외교 일정 중심이며 새 군사 도발 징후는 없다. 접경 열점·신규 지뢰 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -109,7 +109,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T02:10:38+00:00",
+  "checked_at": "2026-11-18T03:09:34+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

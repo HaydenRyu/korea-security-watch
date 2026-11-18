@@ -1,41 +1,52 @@
 {
   "version": 1,
-  "updated_at": "2026-11-17T23:39:54+00:00",
-  "world_at": "2026-11-17T23:39:54+00:00",
+  "updated_at": "2026-11-18T05:39:58+00:00",
+  "world_at": "2026-11-18T05:39:58+00:00",
   "world": [
     {
-      "title": "우크라이나, 크림대교 일부 붕괴시켜…젤렌스키 '전례 없는 작전'",
-      "summary": "우크라이나가 러시아와 크림을 잇는 크림대교를 크게 파손해 일부 구간이 물에 무너졌다고 젤렌스키 대통령이 밝혔다. 크렘린은 다리를 재건하겠다고 했고, 키이우에서는 러시아 공습으로 닫혔던 드니프로 교량 통행이 일부 재개됐다.",
-      "link_korea": "푸틴이 시진핑·트럼프와 만나기 직전에 터진 사건으로, 북러 군사협력의 배경인 러-우 전쟁이 격화되고 있다.",
+      "title": "우크라이나, 크림대교 일부 붕괴시킨 공격 발표",
+      "summary": "젤렌스키 대통령이 수 주간 준비한 「전례 없는 작전」으로 크림대교가 일부 무너졌다고 밝혔고, 크렘린은 다시 짓겠다고 했다.",
+      "link_korea": "러시아 전쟁 수행 능력과 북한군 파병·북러 협력의 배경이 되는 전선 상황이다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+      }
+    },
+    {
+      "title": "트럼프, 필리핀 도착 — 중국서 시진핑·푸틴과 회담 예정",
+      "summary": "트럼프 대통령이 아세안 정상회의 참석차 마닐라에 도착했고 이어 중국에서 시진핑·푸틴과 만난다.",
+      "link_korea": "미·중·러 정상 접촉은 북미 대화와 대북 제재 구도에 영향을 준다.",
+      "region": "동아시아",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/crq5vlxxx32no",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "트럼프, 마닐라 도착…푸틴·시진핑과 중국서 회담 예정",
-      "summary": "트럼프 대통령이 아세안 정상회의 참석차 마닐라에 도착했고, 이어 중국에서 시진핑·푸틴 대통령과 만날 예정이다. 마닐라에서는 쿼드 정상들과 먼저 회동했다.",
-      "link_korea": "미·중·러 정상 회동이 한반도 비핵화·북미 대화 논의의 배경이 된다.",
-      "region": "동남아·동북아",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/crq5vlxxx32no",
-        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
-      }
-    },
-    {
-      "title": "러시아 항공기 일본 영공 침범 의혹…한국·대만도 식별구역 대응",
-      "summary": "일본은 러시아 추정 항공기 2대가 오키노시마 인근 영공을 침범했다며 전투기를 띄우고 항의했다. 한국도 전투기를 출격시켰고 대만은 자국 식별구역에 들어온 러시아 군용기에 대응했다고 밝혔다.",
-      "link_korea": "러시아 군용기가 한국방공식별구역에도 진입해 공군이 대응했다.",
+      "title": "러시아 군용기 일본 영공 침범 의혹…한국·대만도 대응",
+      "summary": "일본은 러시아 항공기 2대가 영공을 침범했다며 전투기를 띄워 항의했고, 한국도 전투기를 출동시켰으며 대만도 대응했다고 밝혔다.",
+      "link_korea": "한국방공식별구역에서도 러시아 군용기에 대한 대응이 있었다.",
       "region": "동북아",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c60evw20qe47o",
         "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
       }
+    },
+    {
+      "title": "이란, 바레인 미군 기지에 드론 공격",
+      "summary": "이란 혁명수비대가 바레인 알리파 기지 레이더 시설에 드론 6대를 썼다고 밝혔고 바레인은 모두 격추했다고 했다.",
+      "link_korea": "호르무즈 해협 불안은 한국의 에너지 수입과 미군 전력 배치에 영향을 준다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+      }
     }
   ],
-  "world_context": "러-우 전쟁 격화와 미·중·러 정상 회동을 앞둔 러시아의 동북아 군사 시위가 겹쳤다."
+  "world_context": "우크라이나·중동에서 무력 충돌이 이어지는 가운데 미·중·러 정상이 중국에서 만날 예정이다."
 }

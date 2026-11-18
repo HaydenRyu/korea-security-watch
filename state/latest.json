@@ -1,49 +1,52 @@
 {
   "coverage": {
-    "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
-    ],
-    "foreign_forces": [
-      "Kim Jong Un China Russia visit APEC",
-      "김정은 방중",
-      "서해 구조물 주한미군 감축"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
     "troop_movement": [
-      "North Korea troops mobilization news"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변"
+      "북한 핵시설 풍계리 영변",
+      "North Korea nuclear site 38 North"
     ],
     "logistics": [
-      "North Korea ammunition shipments"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "목함지뢰 발견 DMZ 귀순 합참",
+      "북한 미사일 발사 합참 11월"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 GPS 교란",
+      "국내 해킹 공격"
+    ],
+    "foreign_forces": [
+      "김정은 방중 APEC 트럼프 회담",
+      "Kim Jong Un China Russia visit Reuters",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 데프콘 상향"
+    ],
+    "hybrid_ops": [
+      "국가보안법 간첩 혐의 구속 North Korea attributed FBI hackers"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261118508857",
     "https://www.segye.com/newsView/20261118504955",
-    "https://nknews.org/"
+    "https://www.koreadaily.com/article/20261104140907534"
   ],
-  "overall_summary": "한중정상회담·APEC 미중러 정상회담을 앞둔 외교 국면으로 신규 군사 징후는 없다(직전과 동일). 접경 열점 대조는 생략, 동아 2피드 수집 실패.",
+  "overall_summary": "푸틴-조용원 회동(16일)과 쿠르스크 북한군 기념비 계획 등 북러 외교 일정 외에 새 군사 징후는 확인되지 못했다. 한중 정상회담·APEC 계기 북미/북중러 접촉 관측이 이어지며 접경 열점 후보 대조는 해당 보도가 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,8 +58,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "새 충돌·지뢰 발견 보도 없음(유엔사-북 대화 무산·9월 DMZ 지뢰는 배경)."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -64,9 +66,9 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "모스크바",
+      "region": "러시아 쿠르스크",
       "summary": "푸틴이 16일 조용원 당 비서에게 쿠르스크 북한군 참전 기념비를 올해 안에 제막하겠다고 밝혔다(기존 북러 협력의 반복, 외교 일정).",
-      "meaning": "북러 군사협력 기념사업으로 신규 파병·이전 발표는 없다.",
+      "meaning": "북러 군사 협력 상징 사업으로 새로운 파병·무기 이전은 확인되지 않았다.",
       "sources": [
         {
           "name": "세계일보",
@@ -76,9 +78,11 @@
       ],
       "confidence": "중간",
       "facts": [
-        "푸틴-조용원 면담, 기념비 제막 언급"
+        "조선중앙통신이 18일 타스통신 인용 보도"
       ],
-      "speculation": []
+      "speculation": [
+        "APEC 계기 북러 회담 가능성"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -93,7 +97,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T06:10:11+00:00",
+  "checked_at": "2026-11-18T07:10:28+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

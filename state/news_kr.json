@@ -1,18 +1,18 @@
 {
- "fetched_at": "2026-11-18T01:45:30+00:00",
+ "fetched_at": "2026-11-18T02:59:32+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-18T01:45:30+00:00",
+ "last_ok_at": "2026-11-18T02:59:32+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1122,
-  "hits": 29,
-  "clusters": 25,
+  "fetched": 1124,
+  "hits": 28,
+  "clusters": 24,
   "by_group": {
    "hybrid": 3,
-   "summit": 16,
+   "summit": 15,
    "yellowsea": 1,
    "spy": 1,
    "fire": 1,
@@ -25,8 +25,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 563,
-   "hits": 26
+   "count": 565,
+   "hits": 24
   },
   "SBS": {
    "feeds": 3,
@@ -38,7 +38,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 8
+   "hits": 10
   },
   "국민일보": {
    "feeds": 2,
@@ -64,12 +64,12 @@
   "hybrid": {
    "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-11-18T01:45:30+00:00"
+   "latest": "2026-11-18T02:59:32+00:00"
   },
   "summit": {
-   "clusters": 16,
+   "clusters": 15,
    "max_independent": 3,
-   "latest": "2026-11-18T01:45:30+00:00"
+   "latest": "2026-11-18T02:59:32+00:00"
   },
   "yellowsea": {
    "clusters": 1,
@@ -108,7 +108,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 83,
+   "count": 85,
    "hits": 21
   },
   {
@@ -141,7 +141,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 1
   },
   {
    "outlet": "SBS",
@@ -173,7 +173,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "동아일보",
@@ -181,7 +181,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "국민일보",

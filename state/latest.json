@@ -1,58 +1,44 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troops border"
-    ],
-    "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea nuclear 38 North"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순 북한군",
-      "North Korea DMZ"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "North Korea hackers attributed"
+      "북한 합참 지뢰 발견 DMZ 11월 18일"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "북한 GPS 교란 서해 구조물 주한미군 감축"
     ],
-    "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
-    ],
-    "gov_warning": [
-      "합참 북한 발표 오늘 미사일 도발",
-      "진돗개 발령"
+    "electronic_cyber": [
+      "북한 GPS 교란 서해 구조물 주한미군 감축",
+      "해킹 개인정보 유출 국가보안법 간첩 혐의 구속"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "해킹 개인정보 유출 국가보안법 간첩 혐의 구속"
     ],
-    "calm": [
-      "남북 대화 제안"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 11월"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변 동향 11월 2026"
+    ],
+    "logistics": [
+      "North Korea ammunition fuel logistics shipments November 2026"
+    ],
+    "parade_massing": [
+      "북한 열병식 준비 병력 집결 11월"
+    ],
+    "nk_internal": [
+      "북한 전시태세 등화관제 준전시 노농적위군"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 상향 합참 공식"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261118504955",
-    "https://www.koreaherald.com/",
-    "https://www.nknews.org/"
+    "https://www.segye.com/newsView/20261118504516",
+    "https://nknews.org/"
   ],
-  "overall_summary": "한중정상회담과 북러 고위급 접촉 등 외교 일정 중심이며 새 군사 도발 징후는 확인되지 않았다. 합참 신규 발표·접경 신규 지뢰 보도 없음.",
+  "overall_summary": "한중정상회담·11/19 미중러 정상회담을 앞둔 외교 국면이며 군사적 신규 징후는 확인되지 않았다. 국내 수집기 partial(동아 2피드 실패), 접경 열점 대조는 생략.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,35 +50,30 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "새 충돌·지뢰 발견 보도 없음(11/16 지뢰 사과 요구와 유엔사-북 대화 무산은 배경)."
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "북한 해커 AI 코딩도구 악성코드 보도(NK News 인용 구글)는 분석 보고라 배경."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
       "region": "모스크바",
-      "lat": 55.75,
-      "lon": 37.62,
-      "summary": "조용원 당 비서가 푸틴을 만나 대미 비난에 동조했다(11/17 NK News 보도), 새 파병·협정 발표 없는 고위급 접촉.",
-      "meaning": "미중러 회담 전 북러 외교 접촉으로 군사 이전 발표는 없다.",
+      "summary": "푸틴이 16일 김정은 최측근 조용원 당 비서를 만나 북러 '군사적 형제애'를 언급했다는 북 관영 보도가 17일 나왔고, NK News도 보도했다(이미 알려진 북러 협력의 반복, 외교 일정).",
+      "meaning": "북러 군사협력 지속·3자 정상회담 전 외교 행보로, 신규 파병·이전 발표는 없다.",
       "sources": [
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/"
+          "url": "https://nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "푸틴-조용원 회동 보도",
-        "새 파병·협정 발표 없음"
+        "NK News 11/17: 김정은 측근이 푸틴과 면담"
       ],
-      "speculation": [
-        "미중러 회담 사전 조율"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -107,7 +88,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T04:09:52+00:00",
+  "checked_at": "2026-11-18T04:10:08+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

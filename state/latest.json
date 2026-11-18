@@ -1,45 +1,51 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강 탄약 군수 수송"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri activity"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 병력 이동 전방 증강 탄약 군수 수송"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ"
+      "합참 북한 지뢰 발견 귀순 DMZ NLL"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 김정은 방중 김정은 방러 2026년 11월"
     ],
     "parade_massing": [
-      "북한 열병식 준비 노농적위군 준전시 등화관제"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 열병식 준비 노농적위군 준전시 등화관제"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 경보 한미일 긴급 경고 North Korea missile launch warning"
+      "진돗개 발령 데프콘 상향"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 11월 2026"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261118508857",
-    "https://www.segye.com/newsView/20261118504516",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+    "https://www.segye.com/newsView/20261118504955",
+    "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit"
   ],
-  "overall_summary": "새 군사 징후는 없고 북러 고위급 접촉과 미·중·러 정상회담(19일) 전후 외교 동향이 중심이다. 접경 열점 후보에 대한 별도 보도는 확인되지 않았다.",
+  "overall_summary": "북러 협력 보도(푸틴-조용원, 쿠르스크 기념비)는 기존 협력의 반복이고 19일 선전 미·중·러 정상회담을 앞둔 외교 국면이다. 접경 열점 후보 1건(남측 1점)은 관련 보도를 찾지 못해 징후로 올리지 않았으며 군사 징후는 확인되지 않았다. 국내 수집기 일부 피드 실패(동아).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,8 +66,6 @@
       "status": "single",
       "routine": true,
       "region": "러시아 쿠르스크·모스크바",
-      "lat": 55.75,
-      "lon": 37.62,
       "summary": "푸틴이 16일 조용원 당 비서에게 쿠르스크 북한군 참전 기념비를 올해 안에 제막하겠다고 밝혔다(기존 북러 협력의 반복, 외교 일정).",
       "meaning": "북러 군사 협력의 상징적 공고화이나 새 파병·무기 이전은 확인되지 않는다.",
       "sources": [
@@ -73,11 +77,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "푸틴이 16일 조용원과 면담, 기념비 올해 제막 계획 언급(KCNA·타스 인용)"
+        "조선중앙통신·타스 인용 보도",
+        "새 파병·이전 언급 없음"
       ],
-      "speculation": [
-        "19일 미·중·러 회담 앞 북한의 외교적 입지 확보 시도"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -92,7 +95,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T09:10:11+00:00",
+  "checked_at": "2026-11-18T09:10:26+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

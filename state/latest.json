@@ -1,36 +1,44 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 11월 18일"
+      "지뢰 발견 DMZ 11월 18일",
+      "목함지뢰 해안 귀순"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "북한 GPS 교란 서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 서해 구조물 주한미군 감축",
-      "해킹 개인정보 유출 국가보안법 간첩 혐의 구속"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "hybrid_ops": [
-      "해킹 개인정보 유출 국가보안법 간첩 혐의 구속"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강 11월"
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향 11월 2026"
+      "북한 핵 풍계리 영변 동향"
     ],
     "logistics": [
-      "North Korea ammunition fuel logistics shipments November 2026"
+      "North Korea ammunition fuel logistics shipments"
     ],
     "parade_massing": [
-      "북한 열병식 준비 병력 집결 11월"
+      "북한 열병식 준비 병력 집결"
     ],
     "nk_internal": [
-      "북한 전시태세 등화관제 준전시 노농적위군"
+      "북한 전시태세 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향 합참 공식"
+      "진돗개 발령 데프콘 상향 합참"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
@@ -38,7 +46,7 @@
     "https://www.segye.com/newsView/20261118504516",
     "https://nknews.org/"
   ],
-  "overall_summary": "한중정상회담·11/19 미중러 정상회담을 앞둔 외교 국면이며 군사적 신규 징후는 확인되지 않았다. 국내 수집기 partial(동아 2피드 실패), 접경 열점 대조는 생략.",
+  "overall_summary": "한중정상회담·APEC 기간 미중러 정상회담을 앞둔 외교 국면이며 군사적 신규 징후는 확인되지 않았다. 국내 수집기 partial(동아 2피드 실패), 접경 열점 1건은 보도 대조 대상 없음으로 징후 제외.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,8 +68,8 @@
       "status": "single",
       "routine": true,
       "region": "모스크바",
-      "summary": "푸틴이 16일 김정은 최측근 조용원 당 비서를 만나 북러 '군사적 형제애'를 언급했다는 북 관영 보도가 17일 나왔고, NK News도 보도했다(이미 알려진 북러 협력의 반복, 외교 일정).",
-      "meaning": "북러 군사협력 지속·3자 정상회담 전 외교 행보로, 신규 파병·이전 발표는 없다.",
+      "summary": "푸틴이 조용원 당 비서를 만나 쿠르스크 북한군 기념비 건립을 언급했다는 보도가 나왔다(이미 알려진 북러 협력의 반복, 외교 일정).",
+      "meaning": "북러 군사협력 지속이나 신규 파병·이전 발표는 없다.",
       "sources": [
         {
           "name": "NK News",
@@ -71,7 +79,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "NK News 11/17: 김정은 측근이 푸틴과 면담"
+        "푸틴-조용원 면담 보도"
       ],
       "speculation": []
     },
@@ -88,7 +96,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T04:10:08+00:00",
+  "checked_at": "2026-11-18T05:09:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

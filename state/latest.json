@@ -5,32 +5,37 @@
     ],
     "foreign_forces": [
       "Kim Jong Un China Russia visit APEC",
-      "북한 GPS 교란 해킹 개인정보 유출 서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "서해 구조물 주한미군 감축"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 서해 구조물 주한미군 감축"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "hybrid_ops": [
-      "북한 GPS 교란 해킹 개인정보 유출 서해 구조물 주한미군 감축"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "troop_movement": [
-      "북한 핵 풍계리 영변 병력 전방 열병식 등화관제 진돗개 11월 18일",
-      "North Korea nuclear troops ammunition shipments mobilization news"
+      "North Korea troops mobilization news"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 병력 전방 열병식 등화관제 진돗개 11월 18일"
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "North Korea nuclear troops ammunition shipments mobilization news"
+      "North Korea ammunition shipments"
     ],
     "parade_massing": [
-      "북한 핵 풍계리 영변 병력 전방 열병식 등화관제 진돗개 11월 18일"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "북한 핵 풍계리 영변 병력 전방 열병식 등화관제 진돗개 11월 18일"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "북한 핵 풍계리 영변 병력 전방 열병식 등화관제 진돗개 11월 18일"
+      "진돗개 발령 데프콘"
+    ],
+    "calm": [
+      "남북 대화 제안"
     ]
   },
   "opened": [
@@ -38,7 +43,7 @@
     "https://www.segye.com/newsView/20261118504955",
     "https://nknews.org/"
   ],
-  "overall_summary": "한중정상회담·APEC 미중러 정상회담을 앞둔 외교 국면이며 신규 군사 징후는 확인되지 않았다. 접경 열점 대조는 생략, 동아 2피드 수집 실패.",
+  "overall_summary": "한중정상회담·APEC 미중러 정상회담을 앞둔 외교 국면으로 신규 군사 징후는 없다(직전과 동일). 접경 열점 대조는 생략, 동아 2피드 수집 실패.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -51,7 +56,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "새 충돌·지뢰 발견 보도 없음(유엔사-북 대화 무산은 배경)."
+      "summary": "새 충돌·지뢰 발견 보도 없음(유엔사-북 대화 무산·9월 DMZ 지뢰는 배경)."
     },
     "electronic_cyber": {
       "status": "none"
@@ -88,7 +93,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T05:10:12+00:00",
+  "checked_at": "2026-11-18T06:10:11+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

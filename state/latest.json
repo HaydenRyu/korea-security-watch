@@ -13,14 +13,16 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순",
-      "합참 북한 11월 17일 2026"
+      "지뢰 발견 목함지뢰 해안 귀순",
+      "북한 합참 발표 11월 18일"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "GPS 교란",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -40,14 +42,12 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261117515619",
+    "https://www.segye.com/newsView/20261118504955",
     "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133",
-    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760",
-    "https://www.wikitree.co.kr/articles/1150957",
-    "https://biz.heraldcorp.com/article/10939748",
-    "https://www.nocutnews.co.kr/news/6607973"
+    "https://www.nocutnews.co.kr/news/6607973",
+    "https://biz.heraldcorp.com/article/10939748"
   ],
-  "overall_summary": "러시아 군용기 KADIZ 진입(정례 범주)과 국내 대학 해킹(귀속 미확인) 외에 새 군사적 징후는 없고 직전 회차와 판정이 같다. 접경 남측 열점 후보 1건은 관련 보도가 확인되지 않아 징후로 올리지 않았다.",
+  "overall_summary": "신규 군사 징후는 없고 직전 회차와 판정이 같다. 한중정상회담·트럼프-김정은 회동 거론 등 외교 일정이 이어지고, 접경 남측 열점 후보는 새로 생기지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,7 +60,19 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "11/16 NK뉴스발 보도: 9월 DMZ 지뢰 폭발 후 유엔사-북한군 대화 추진이 한국의 사과 요구 뒤 중단됐다는 배경 기사로 새 충돌·발견은 아니다."
+      "summary": "새 충돌·발견 보도 없음 — 10/19 강화 지뢰 등은 24시간 경과 배경이다."
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
@@ -102,21 +114,9 @@
         "합참 공보실장 정례브리핑 인용"
       ],
       "speculation": []
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-18T00:10:41+00:00",
+  "checked_at": "2026-11-18T01:10:03+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

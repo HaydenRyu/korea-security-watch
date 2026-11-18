@@ -1,55 +1,42 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵시설 풍계리 영변",
-      "North Korea nuclear Yongbyon"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "지뢰 발견 합참 DMZ 북한 11월",
-      "DMZ NLL North Korea border"
+      "지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "North Korea hackers"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 APEC 선전 11월 18일",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 열병식 집결"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "North Korea Reuters Kim Jong Un China Russia visit APEC"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea missile launch Japan Joint Staff Chiefs November 2026"
+      "북한 미사일 발사 합참 11월 18일"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "북한 핵 영변 풍계리 동향"
+    ],
+    "logistics": [
+      "북한 탄약 군수 수송 러시아"
+    ],
+    "parade_massing": [
+      "북한 열병식 집결 노농적위군 준전시"
+    ],
+    "nk_internal": [
+      "북한 열병식 집결 노농적위군 준전시"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "국가보안법 구속 간첩 혐의"
     ]
   },
   "opened": [
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
-    "https://www.rfa.org/korean/in-focus/2026/11/16/trump-kim-summit-north-korea-china/",
-    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008852540",
+    "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
   ],
-  "overall_summary": "APEC 선전 정상회의(11/18~19)와 19일 미중러 3자 회담을 앞둔 외교 국면이며 북한 군사 도발·전쟁 징후 보도는 새로 확인되지 않았다. 국내 언론 묶음에서도 24시간 안 새 군사 사건은 없었다.",
+  "overall_summary": "APEC 선전 정상회의와 19일 미중러 3자 회담을 앞둔 외교 국면이며, 북한 군사 도발·전쟁 징후는 새로 확인되지 않았다. 조용원의 모스크바 체류(북러 협력 반복)와 김정은 삼지연 민간 시설 시찰만 있고 직전 회차와 같은 판단이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,23 +57,21 @@
       "status": "single",
       "routine": true,
       "region": "러시아 모스크바",
-      "lat": 55.75,
-      "lon": 37.62,
-      "summary": "조용원 북한 정치국 상무위원이 11/14부터 모스크바에 체류하며 푸틴을 만났다(기존 북러 협력의 반복, 외교 일정; 직전 회차와 동일 판정).",
-      "meaning": "북러 고위급 교류 지속이나 새 파병·무기 이전 확인은 없다.",
+      "summary": "조용원 북한 당 비서가 11/14부터 모스크바에 체류하며 푸틴을 만났다(기존 북러 협력의 반복, 외교 일정; 직전 회차와 동일 판정).",
+      "meaning": "APEC 미중러 회담 직전 북한이 대미 협상 지렛대를 확보하려는 외교 행보다.",
       "sources": [
         {
-          "name": "Reuters(internazionale 전재)",
+          "name": "Korea Times",
           "tier": "B",
-          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+          "url": "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조용원 모스크바 푸틴 면담, 김정은 삼지연 관광지구 시찰"
+        "통일부가 조용원 방러를 주시 중이라고 밝혔다"
       ],
       "speculation": [
-        "젤렌스키의 북 미사일 공급 주장은 독립 확인 없음"
+        "북미 대화 대비 외교적 지렛대 확보"
       ]
     },
     "parade_massing": {
@@ -102,14 +87,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T13:13:50+00:00",
+  "checked_at": "2026-11-18T14:13:19+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-18T14:10:28+00:00",
-    "summary": "APEC 선전 정상회의와 19일 미중러 3자 회담, 북미 회동설 등 외교 국면이며 북한 군사 도발·전쟁 징후 보도는 새로 확인되지 않았다. 국내 언론 수집 묶음에서도 24시간 안 새 군사 사건은 없었다."
-  }
+  "active": []
 }

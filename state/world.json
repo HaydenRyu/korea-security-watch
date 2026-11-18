@@ -1,52 +1,52 @@
 {
   "version": 1,
-  "updated_at": "2026-11-18T11:39:36+00:00",
-  "world_at": "2026-11-18T11:39:36+00:00",
+  "updated_at": "2026-11-18T23:39:17+00:00",
+  "world_at": "2026-11-18T23:39:17+00:00",
   "world": [
     {
-      "title": "크림대교 공격 경위 — 우크라이나 「수 주간 준비」",
-      "summary": "우크라이나는 크림반도 전략 교량에 대한 미사일·드론 공격을 계획하는 데 몇 주가 걸렸다고 밝혔다.",
-      "link_korea": "러시아 전쟁 수행과 북러 협력의 배경이 되는 전선 상황이다.",
-      "region": "유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
-      }
-    },
-    {
-      "title": "미·중·러 정상 3자 회동 예정, 푸틴에 큰 무대",
-      "summary": "목요일 열릴 미·중·러 정상 회동은 푸틴에게 큰 무대가 되지만 우크라이나 전쟁 승리에 가까워지는 것은 아니라고 BBC는 전했다.",
+      "title": "미·러·중 정상, 선전서 3자 회동 앞두고 악수",
+      "summary": "트럼프 대통령이 선전 APEC 참석차 도착해 시진핑 주석의 영접을 받았고 푸틴 대통령과도 인사했으며, 세 정상은 목요일 처음 함께 회담한다.",
       "link_korea": "미·중·러 접촉은 북미 대화와 대북 제재 구도에 영향을 준다.",
-      "region": "유럽·동아시아",
+      "region": "동아시아",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c9n70gd320mpo",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "러시아 군용기 일본 영공 침범 의혹 — 한국·대만도 대응",
-      "summary": "러시아 군용기가 일본 영공을 침범했다는 의혹이 나왔고 한국과 대만도 자국 공역 인근에서 탐지된 러시아 군용기에 대응했다.",
-      "link_korea": "한국방공식별구역 인근 러시아 군용기 대응이 포함된다.",
-      "region": "동북아",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c60evw20qe47o",
-        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
-      }
-    },
-    {
-      "title": "이란, 미국 상대 「더티밤」 음모설 부인",
-      "summary": "트럼프 대통령이 이란의 미국 수도 공격 음모를 매우 심각하게 본다고 했고, 이란은 근거 없다며 부인했다.",
-      "link_korea": "미·이란 호르무즈 대치는 한국의 에너지 수입과 미군 전력 배치에 영향을 준다.",
+      "title": "이란, 쿠웨이트·바레인 공습 — 미국의 케슘섬 타격 이후",
+      "summary": "쿠웨이트는 두 달여 만의 이란 드론 공격을 격퇴했다고 밝혔고, 바레인도 공격받았다고 했다. 미국은 호르무즈의 이란 케슘섬 미사일 발사장을 타격했다.",
+      "link_korea": "호르무즈 불안은 한국의 에너지 수입과 미군 전력 배치에 영향을 준다.",
       "region": "중동",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cq808vzd3nnpo",
+        "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+      }
+    },
+    {
+      "title": "우크라이나, 하르키우 옛 가스관 지하전",
+      "summary": "우크라이나군이 7개월째 하르키우 지역의 옛 소련 가스관 안에서 러시아군과 싸우고 있다고 BBC가 전했다.",
+      "link_korea": "러시아의 전쟁 수행과 북러 군사협력의 배경이 되는 전선 상황이다.",
+      "region": "유럽",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c32l507ev4v4o",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+      }
+    },
+    {
+      "title": "이스라엘, 가자 옐로라인 너머 지상 작전",
+      "summary": "이스라엘군이 대피령 뒤 가자 중부에서 드문 지상 작전을 시작했고, 하마스는 휴전 협정의 노골적 위반이라고 비난했다.",
+      "link_korea": "중동 정세 악화는 미군 자산의 중동 분산과 에너지 시장에 영향을 준다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno",
         "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
       }
     }
   ],
-  "world_context": "우크라이나·중동에서 무력 충돌이 이어지는 가운데 미·중·러 정상 회동이 임박했다."
+  "world_context": "APEC 선전 회의를 앞두고 미·중·러 정상이 모이는 가운데 중동 충돌과 우크라이나 전선이 이어진다."
 }

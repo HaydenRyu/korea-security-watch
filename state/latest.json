@@ -1,52 +1,47 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵시설 풍계리 영변",
-      "North Korea nuclear site 38 North"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순 합참",
-      "북한 미사일 발사 합참 11월"
+      "북한 합참 지뢰 DMZ 귀순 11월 18일"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란",
-      "국내 해킹 공격"
+      "북한 GPS 교란 OR 해킹 공격 OR 랜섬웨어 공격 11월"
     ],
     "foreign_forces": [
-      "김정은 방중 APEC 트럼프 회담",
-      "Kim Jong Un China Russia visit Reuters",
+      "North Korea Reuters Kim Jong Un China Russia visit APEC",
       "서해 구조물 주한미군 감축"
     ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 합참"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변 농축 November 2026"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송 열병식 준전시 등화관제"
+    ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 군수 탄약 수송 열병식 준전시 등화관제"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 군수 탄약 수송 열병식 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향"
+      "국가보안법 구속 간첩 혐의 진돗개 남북 대화 제안"
     ],
     "hybrid_ops": [
-      "국가보안법 간첩 혐의 구속 North Korea attributed FBI hackers"
+      "국가보안법 구속 간첩 혐의 진돗개 남북 대화 제안"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261118508857",
     "https://www.segye.com/newsView/20261118504955",
-    "https://www.koreadaily.com/article/20261104140907534"
+    "https://www.segye.com/newsView/20261118508857",
+    "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
   ],
-  "overall_summary": "푸틴-조용원 회동(16일)과 쿠르스크 북한군 기념비 계획 등 북러 외교 일정 외에 새 군사 징후는 확인되지 못했다. 한중 정상회담·APEC 계기 북미/북중러 접촉 관측이 이어지며 접경 열점 후보 대조는 해당 보도가 없었다.",
+  "overall_summary": "한중정상회담과 11/19 미중러 선전 회동을 앞둔 외교 일정 위주이며 군사적 징후는 새로 확인되지 않았다. 조용원 방러·푸틴 기념비 발언은 기존 북러 협력의 반복이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,25 +59,28 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "region": "러시아 쿠르스크",
-      "summary": "푸틴이 16일 조용원 당 비서에게 쿠르스크 북한군 참전 기념비를 올해 안에 제막하겠다고 밝혔다(기존 북러 협력의 반복, 외교 일정).",
-      "meaning": "북러 군사 협력 상징 사업으로 새로운 파병·무기 이전은 확인되지 않았다.",
+      "summary": "푸틴이 조용원 당 비서에게 쿠르스크 북한군 참전 기념비를 올해 안에 제막하겠다고 밝혔다(기존 북러 협력의 반복, 외교 일정).",
+      "meaning": "북러 군사협력의 상징적 확인이며 새 파병·이전은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261118508857"
+        },
+        {
+          "name": "Korea Times",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조선중앙통신이 18일 타스통신 인용 보도"
+        "조용원 11/14 모스크바 도착, 11/16 푸틴 면담"
       ],
-      "speculation": [
-        "APEC 계기 북러 회담 가능성"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -97,7 +95,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T07:10:28+00:00",
+  "checked_at": "2026-11-18T08:10:12+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -6,55 +6,58 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition logistics"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "North Korea DMZ landmine"
+      "지뢰 발견 합참",
+      "DMZ 귀순",
+      "North Korea DMZ mine"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "North Korea cyber attack"
+      "사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식",
+      "북한 열병식 집결",
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 노농적위군",
-      "North Korea civil defense"
+      "북한 등화관제 준전시",
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "US Japan warning North Korea"
+      "진돗개 데프콘 발령",
+      "North Korea emergency warning"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안",
-      "North Korea talks offer"
+      "통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261118508857",
-    "https://www.segye.com/newsView/20261118510649",
-    "https://www.segye.com/newsView/20261118504500",
-    "https://www.nknews.org/",
-    "https://www.koreaherald.com/"
+    "https://www.koreaherald.com/article/10941483",
+    "https://www.koreaherald.com/article/10941762"
   ],
-  "overall_summary": "새로 확인된 군사 도발·전쟁 징후는 없고 미중러 APEC 정상외교와 북러 외교 일정만 이어진다. 접경 열점 후보는 대조할 보도가 없었다.",
+  "overall_summary": "새로 확인된 군사 도발·전쟁 징후는 없고 APEC 정상외교(한중 정상회담, 북미 대화 관측)와 북러 외교 일정만 이어진다. 접경 열점 후보 대조 대상은 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -74,9 +77,9 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "러시아 쿠르스크",
-      "summary": "조용원 북한 당 비서가 11/16 푸틴을 만나 쿠르스크 북한군 기념비 건립 계획이 나왔다(기존 협력 반복, 외교 일정).",
-      "meaning": "북러 군사협력 지속을 보여주나 새 파병·이전 발표는 없다.",
+      "region": "러시아 모스크바",
+      "summary": "조용원 북한 당 비서가 11/16 푸틴을 만나 쿠르스크 북한군 위훈 기념비 건립 계획이 나왔다(기존 협력 반복, 외교 일정).",
+      "meaning": "북러 군사협력 기조의 재확인이며 새 파병·이전 확인은 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -86,7 +89,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "푸틴이 올해 안 쿠르스크 북한군 기념비 건립을 언급"
+        "조선중앙통신이 타스를 인용해 18일 보도",
+        "푸틴이 올해 안 쿠르스크 기념비 건립 언급"
       ],
       "speculation": []
     },
@@ -103,14 +107,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T19:10:31+00:00",
+  "checked_at": "2026-11-18T21:10:31+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-18T20:10:08+00:00",
-    "summary": "새로 확인된 군사 도발·전쟁 징후는 없고 APEC 정상외교와 북미 대화 관측만 이어진다. 접경 열점 후보 1건은 대조할 보도가 없었다."
-  }
+  "active": []
 }

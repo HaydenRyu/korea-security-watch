@@ -2,56 +2,56 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement border"
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 미사일 발사 합참",
-      "North Korea nuclear missile launch Japan defense ministry"
+      "북한 핵시설 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition logistics shipment Russia"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 11월 18일",
-      "목함지뢰 해안",
-      "NLL DMZ North Korea clash"
+      "지뢰 발견 목함지뢰 해안 DMZ 합참",
+      "DMZ NLL North Korea border"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 서해 구조물 주한미군 감축",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격",
+      "North Korea hackers"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "김정은 방중 방러",
+      "김정은 방중 APEC 트럼프 시진핑 푸틴",
+      "Kim Jong Un China Russia visit Shenzhen APEC",
+      "Putin Jo Yong Won Kursk memorial North Korean soldiers",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 대피 훈련",
-      "North Korea civil defense mobilization"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 합참",
-      "US State Department Korea travel advisory"
+      "진돗개 발령 데프콘",
+      "North Korea missile launch Reuters November 18"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261118508857",
-    "https://www.japantimes.co.jp/news/2026/11/17/asia-pacific/politics/kim-trump-apec-russia/",
-    "https://www.koreaherald.com/article/10937539",
-    "https://www.segye.com/newsView/20261117515619"
+    "https://www.rfa.org/korean/in-focus/2026/11/16/trump-kim-summit-north-korea-china/",
+    "https://www.koreajoongangdaily.com/korea/norths-kim-may-skip-apec-but-his-shadow-looms-large-over-summit/12973481",
+    "https://news.mtn.co.kr/article/2026111409340058810",
+    "https://biz.heraldcorp.com/article/10939146"
   ],
-  "overall_summary": "새로 확인된 군사 징후는 없고 조용원 방러·트럼프의 김정은 회동 시사 등 외교 동향 위주다. 접경 남측 열점 대조 대상 및 신규 도발 보도는 확인되지 않았다.",
+  "overall_summary": "APEC 선전 정상회의(11/18~19)와 미중러 3자 회담을 앞둔 외교 국면이며 북한 군사 도발·전쟁 징후 보도는 확인되지 않았다. 접경 열점 후보와 국내 언론 묶음에서 새 군사 사건은 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,8 +63,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "신규 접경 사건 없음. 9월 DMZ 지뢰 폭발 후속(유엔사-북한군 회담 중단, NK뉴스 11/16 보도)은 배경."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -72,29 +71,21 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "모스크바·쿠르스크",
-      "summary": "푸틴이 조용원 당 비서에게 쿠르스크 북한군 참전 기념비를 올해 안에 세우겠다고 밝혔다(기존 북러 협력의 반복, 외교 일정; 보도 11/17~18, 직전 회차와 동일 판정).",
-      "meaning": "북러 군사협력 상징 행보이나 신규 파병·무기 이전 확인은 없다.",
+      "region": "러시아 모스크바",
+      "summary": "푸틴이 11/16 조용원 당 비서를 만나 쿠르스크 참전 북한군을 잊지 않겠다고 밝혔다(기존 북러 협력의 반복, 외교 일정; 직전 회차와 동일 판정).",
+      "meaning": "북러 군사협력 기조 재확인이나 새 파병·이전 확인은 없다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "헤럴드경제",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261118508857"
-        },
-        {
-          "name": "The Japan Times",
-          "tier": "B",
-          "url": "https://www.japantimes.co.jp/news/2026/11/17/asia-pacific/politics/kim-trump-apec-russia/"
+          "url": "https://biz.heraldcorp.com/article/10939146"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조용원이 11/14부터 러시아 체류, 푸틴과 면담",
-        "트럼프는 중국서 김정은을 만날 수 있다고 발언"
+        "푸틴-조용원 11/16 모스크바 회동, 군사적 형제애 언급"
       ],
-      "speculation": [
-        "김정은 방중 가능성은 관측 수준이며 확정 발표 없음"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -109,7 +100,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-18T12:10:34+00:00",
+  "checked_at": "2026-11-18T13:10:58+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

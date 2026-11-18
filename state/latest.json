@@ -1,40 +1,46 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방",
+      "North Korea troops border Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 영변 풍계리",
+      "North Korea nuclear 38 North"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 귀순",
-      "북한 합참 발표 11월 18일"
+      "지뢰 발견",
+      "DMZ 북한군 월선",
+      "North Korea DMZ"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출",
+      "North Korea hacking attributed"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit"
+      "Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향"
+      "합참 북한 발표 오늘",
+      "진돗개 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
       "North Korea attributed FBI"
     ],
     "calm": [
@@ -42,12 +48,13 @@
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261118504516",
     "https://www.segye.com/newsView/20261118504955",
-    "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133",
-    "https://www.nocutnews.co.kr/news/6607973",
-    "https://biz.heraldcorp.com/article/10939748"
+    "https://www.yna.co.kr/view/AKR20261117005800109",
+    "https://www.yna.co.kr/view/AKR20261117027100009",
+    "https://www.yna.co.kr/view/AKR20261116175400504"
   ],
-  "overall_summary": "신규 군사 징후는 없고 직전 회차와 판정이 같다. 한중정상회담·트럼프-김정은 회동 거론 등 외교 일정이 이어지고, 접경 남측 열점 후보는 새로 생기지 않았다.",
+  "overall_summary": "북러 고위급 접촉과 한중정상회담 등 외교 일정 중심이며 군사적 도발 징후는 확인되지 않았다. 접경 열점·신규 지뢰 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,8 +66,35 @@
       "status": "none"
     },
     "border_clash": {
+      "status": "none"
+    },
+    "electronic_cyber": {
       "status": "none",
-      "summary": "새 충돌·발견 보도 없음 — 10/19 강화 지뢰 등은 24시간 경과 배경이다."
+      "summary": "직전 대학 3곳 해킹 건은 첫 보도 24시간 경과로 배경 처리; 이번 회차 새 귀속 발표 없음(INSS 보고서는 분석)."
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "모스크바",
+      "lat": 55.75,
+      "lon": 37.62,
+      "summary": "푸틴이 16일 모스크바에서 김정은 최측근 조용원 당 비서를 만나 '군사적 형제애'와 북한군 쿠르스크 참전을 언급했다(타스 인용).",
+      "meaning": "미·중·러 정상회의를 앞둔 북러 고위급 접촉으로 새 파병·무기 이전 발표는 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261117005800109"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "푸틴-조용원 회동은 타스 보도를 연합이 전함",
+        "새 파병·협정 발표 없음"
+      ],
+      "speculation": [
+        "미중러 회담 사전 조율 가능성"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -73,57 +107,10 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "대구·경북",
-      "summary": "귀속 미확인 — 대구한의대·경일대·금오공대 등 대학 3곳이 해킹돼 개인정보가 유출됐으나 소행은 밝혀지지 않았다.",
-      "meaning": "귀속이 확인되지 않아 등급에는 반영하지 않는 국내 사이버 사고 기록이다.",
-      "sources": [
-        {
-          "name": "노컷뉴스",
-          "tier": "B",
-          "url": "https://www.nocutnews.co.kr/news/6607973"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "대구한의대 1,281건, 경일대 3,056건 유출(17일 보도)"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "동해 KADIZ",
-      "lat": 37.5,
-      "lon": 130.0,
-      "summary": "러시아 군용기 10대 미만이 17일 새벽 KADIZ에 진입했다 이탈했고 합참은 의도를 예단하지 않겠다고 밝혔다.",
-      "meaning": "영공 침범 없는 KADIZ 진입으로 반복되는 정례 범주 활동이다.",
-      "sources": [
-        {
-          "name": "헤럴드경제",
-          "tier": "B",
-          "url": "https://biz.heraldcorp.com/article/10939748"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "합참 공보실장 정례브리핑 인용"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-18T01:10:03+00:00",
+  "checked_at": "2026-11-18T02:10:38+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-18T02:09:18+00:00",
-    "summary": "신규 군사 징후는 확인되지 않았다. 18일 한중정상회담·APEC(선전)과 김정은 방중 관측이 외교 국면의 중심이며, 접경 남측 열점 후보 1건은 직전 회차 이전 포착분이고 관련 보도가 없어 징후로 올리지 않았다. 일부 출처(연합 등) 열람이 제한돼 검증 범위가 좁다."
-  }
+  "active": []
 }

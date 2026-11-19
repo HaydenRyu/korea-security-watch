@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-19T05:39:57+00:00",
+  "judged_at": "2026-11-19T11:39:45+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -12,11 +12,11 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo",
-          "published_at": "2026-11-19T04:37:00+00:00"
+          "published_at": "2026-11-19T07:32:06+00:00"
         }
       ],
-      "summary": "크림대교가 이번 주 세 번째 공격을 받았고 하르키우에서는 지하 가스관 교전이 이어지는 등 전쟁이 계속되고 있다.",
-      "judged_at": "2026-11-19T05:39:57+00:00"
+      "summary": "크림대교가 이번 주 세 번째 공격을 받는 등 전쟁이 계속되고 있다.",
+      "judged_at": "2026-11-19T11:39:45+00:00"
     },
     "mideast": {
       "state": 3,
@@ -32,21 +32,21 @@
         }
       ],
       "summary": "미군이 호르무즈 케슘섬을 타격한 뒤 이란이 쿠웨이트·바레인을 공격했고 UAE 유조선 승무원 1명이 실종됐다.",
-      "judged_at": "2026-11-19T05:39:57+00:00"
+      "judged_at": "2026-11-19T11:39:45+00:00"
     },
     "taiwan": {
       "state": 1,
       "channels": [],
       "sources": [
         {
-          "name": "중앙사(CNA)",
+          "name": "Focus Taiwan(CNA)",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611190009.aspx",
-          "published_at": "2026-11-19T03:07:10+08:00"
+          "url": "https://focustaiwan.tw/politics/202611190012",
+          "published_at": "2026-11-19T16:14:33+08:00"
         }
       ],
-      "summary": "미 의회 보고서가 중국의 대만 압박 심화와 봉쇄 위험 증가를 경고했다.",
-      "judged_at": "2026-11-19T05:39:57+00:00"
+      "summary": "대만 국방부가 러시아 군용기 2소티가 대만 ADIZ에 진입했다고 밝혔다(이번 주 두 번째).",
+      "judged_at": "2026-11-19T11:39:45+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -55,18 +55,18 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-19T00:00:00+08:00",
+          "published_at": "2026-11-19T16:37:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-19T04:42:00+00:00",
+          "published_at": "2026-11-19T04:42:52+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
-      "judged_at": "2026-11-19T05:39:57+00:00"
+      "judged_at": "2026-11-19T11:39:45+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -74,13 +74,13 @@
       "sources": [
         {
           "name": "DVIDS",
-          "tier": "B",
+          "tier": "A",
           "url": "https://www.dvidshub.net/news/579681/delta-battery-makes-army-history-with-first-ibcs-patriot-enabled-certification-peninsula",
-          "published_at": "2026-11-18T19:00:00+00:00"
+          "published_at": "2026-11-18T23:39:02+00:00"
         }
       ],
       "summary": "주한미군 델타포대가 패트리엇 포대 최초로 IBCS 인증을 완료했다.",
-      "judged_at": "2026-11-19T05:39:57+00:00"
+      "judged_at": "2026-11-19T11:39:45+00:00"
     }
   }
 }

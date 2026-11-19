@@ -1,29 +1,28 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
+      "북한 속보 합참 11월 19일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea nuclear Reuters"
+      "North Korea missile launch nuclear Yongbyon 38 North",
+      "북한 핵 영변 속보"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition Russia"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipments Russia"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참",
+      "목함지뢰 해안 발견 DMZ 귀순",
       "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
+      "GPS 교란",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "Kim Jong Un Trump Xi Putin summit Shenzhen",
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -31,29 +30,28 @@
       "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시",
-      "North Korea wartime alert"
+      "북한 준전시 등화관제",
+      "North Korea civil defense"
     ],
     "gov_warning": [
       "진돗개 데프콘 상향",
-      "합참 북한 전통문"
+      "North Korea warning US Japan"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 간첩 혐의 구속",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원",
+      "남북 대화 제안",
       "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261119512404",
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
+    "https://www.koreatimes.co.kr/southkorea/defense",
+    "https://www.koreatimes.co.kr/southkorea/20260929/s-korean-military-finds-1-n-korean-mine-near-site-of-dmz-blast"
   ],
-  "overall_summary": "선전 미중러 3자 정상회담이 열렸으나 김정은 방중·방러는 통일부 기준 포착되지 않았고, 조용원 방러도 귀국해 외교 일정(routine) 수준이다. 접경 열점·국내 해킹·지뢰 신규 보도는 확인되지 않았다.",
+  "overall_summary": "선전 미중러 정상회담 후에도 김정은 외유·새 군사협력은 확인되지 않았다. 접경 지뢰·국내 해킹·열점 신규 보도 없음(국내 언론 수집 결과 48묶음 중 징후 후보 없음).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,6 +68,27 @@
     "electronic_cyber": {
       "status": "none"
     },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "러시아·중국",
+      "summary": "조용원 노동당 비서 대표단의 방러와 선전 미중러 정상회담이 이어졌으나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
+      "meaning": "외교 일정 수준이며 군사협력 신규 확인은 없다.",
+      "sources": [
+        {
+          "name": "Reuters(internazionale 전재)",
+          "tier": "B",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "김정은 삼지연 시찰, 조용원 방러 11/14~"
+      ],
+      "speculation": [
+        "김정은 외유설은 미확인"
+      ]
+    },
     "parade_massing": {
       "status": "none"
     },
@@ -81,36 +100,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "중국 선전·러시아",
-      "summary": "조용원 노동당 비서 대표단의 방러와 선전 미중러 정상회담이 이어졌으나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
-      "meaning": "북러 고위급 외교 접촉으로 군사협력 확대 근거는 아직 없다.",
-      "sources": [
-        {
-          "name": "코리아타임스",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit"
-        },
-        {
-          "name": "로이터(Internazionale 전재)",
-          "tier": "B",
-          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "통일부가 조용원 방러를 주시 중",
-        "김정은 삼지연 시찰"
-      ],
-      "speculation": [
-        "김정은 방중 가능성 추측"
-      ]
     }
   },
-  "checked_at": "2026-11-19T11:10:05+00:00",
+  "checked_at": "2026-11-19T12:11:05+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [],

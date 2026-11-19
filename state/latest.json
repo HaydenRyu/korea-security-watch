@@ -1,50 +1,51 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+      "북한 지뢰 발견 DMZ 귀순 합참 11월 20일"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격 11월"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중 통일부 포착 서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "nuclear": [
-      "IAEA Grossi North Korea Yongbyon Kangson enrichment concern November 2026",
-      "UN watchdog IAEA Yongbyon (NK News 원문)"
+      "IAEA 영변 농축 11월"
     ],
     "nk_internal": [
-      "Kim Jong Un navy hostile China trip November 19 KCNA",
       "NK News 11/19 헤드라인"
     ],
-    "calm": [
-      "Kim Jong Un China Russia visit (NK News 원문)"
-    ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강 예비군 동원 11월"
+      "북한 병력 이동 전방 증강 11월"
     ],
     "logistics": [
-      "North Korea troops deployment ammunition shipments Russia November 2026"
+      "North Korea ammunition shipments Russia November 2026"
     ],
     "parade_massing": [
-      "북한 열병식 집결 평양 미림 위성"
+      "북한 열병식 집결 평양"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 대피 경고 북한 국방부 11월"
+      "진돗개 데프콘 상향 11월"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261119512404",
+    "https://www.yna.co.kr/view/AKR20261119080500504",
+    "https://www.donga.com/news/Politics/article/all/20261120/135057907/2",
     "https://www.nknews.org",
     "https://www.nknews.org/2026/11/kim-jong-un-slams-enemy-naval-activities-amid-trumps-calls-to-meet-in-china/",
-    "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do"
+    "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/"
   ],
-  "overall_summary": "11/19 미·중·러 정상회담 직후 접경·병력·정부 경고 항목의 새 징후는 확인되지 않았고, 통일부는 김정은 방중 동향을 포착하지 못했다고 밝혔다. IAEA가 11/18 영변 농축시설 별관 증축을 재확인했으나 기존 확장의 연장선이라 정례로 본다. 접경 남측 열점 후보 4건은 관련 보도를 따로 검색하지 못해 징후로 올리지 않았다.",
+  "overall_summary": "11/19 미·중·러 정상회담 직후 접경·병력·정부 경고 항목의 새 징후는 없고 통일부는 김정은 방중 동향이 포착되지 않았다고 밝혔다. 영변 IAEA 우려는 기존 확장의 연장선이라 정례로 본다. 접경 남측 열점 후보는 관련 보도가 없어 징후로 올리지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,8 +56,8 @@
       "region": "영변",
       "lat": 39.8,
       "lon": 125.75,
-      "summary": "IAEA 그로시 사무총장이 11/18 이사회에서 영변 농축시설의 별관 증축(10월 말 외부 공사 완료 추정)을 재확인했다.",
-      "meaning": "우라늄 농축 능력 확대 지속이나 9월 이후 알려진 확장의 연장선이다.",
+      "summary": "IAEA 그로시 사무총장이 11/18 이사회에서 영변 농축시설 별관 증축을 재확인했다(직전 회차와 동일 사건).",
+      "meaning": "우라늄 농축 능력 확대 지속이나 기존 확장의 연장선이다.",
       "sources": [
         {
           "name": "NK News",
@@ -66,45 +67,37 @@
       ],
       "confidence": "중간",
       "facts": [
-        "IAEA 11/18 이사회 모두발언",
-        "5MW 원자로 7번째 조사 주기 가동 추정"
+        "IAEA 11/18 이사회 모두발언"
       ],
-      "speculation": [
-        "별관에 원심분리기 추가 설치 가능성"
-      ]
+      "speculation": []
     },
     "logistics": {
-      "status": "none",
-      "summary": "검색 결과가 과거 파병·탄약 이전 배경뿐이고 24시간 내 원문 확인된 새 이전 보도 없음."
+      "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "24시간 안에 새 지뢰·월선·교전 보도 없음(검색 결과는 9~10월 DMZ 지뢰 사건 배경뿐)."
+      "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "2026-11 GPS 교란 보도 없음, 국내 해킹은 11/11 금융보안원 사고(귀속 미확인, 24시간 밖)."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "통일부 「김정은 방중 동향 포착 안 돼」(11/19), 미·중·러 정상회담은 개최됐으나 새 파병·이전·협정 확인 없음."
+      "summary": "통일부 「김정은 방중 동향 포착 안돼」, 이 대통령–푸틴 첫 회동에서 북핵 논의 — 새 파병·이전·훈련 없음(배경)."
     },
     "parade_massing": {
       "status": "none"
     },
     "nk_internal": {
-      "status": "none",
-      "summary": "김정은 11/17~18 함남 해군대학 시찰·「적」 해상활동 비난은 위협 발언 수준으로 징후 아님."
+      "status": "none"
     },
     "gov_warning": {
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "국내 귀속 발표 신규 확인 없음(검색 결과는 과거 미 DOJ 사례)."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-19T22:10:54+00:00",
+  "checked_at": "2026-11-19T23:09:16+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

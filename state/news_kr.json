@@ -1,23 +1,23 @@
 {
- "fetched_at": "2026-11-19T05:39:10+00:00",
+ "fetched_at": "2026-11-19T06:56:33+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-19T05:39:10+00:00",
+ "last_ok_at": "2026-11-19T06:56:33+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1129,
-  "hits": 46,
-  "clusters": 40,
+  "fetched": 1131,
+  "hits": 48,
+  "clusters": 41,
   "by_group": {
-   "spy": 1,
+   "spy": 2,
    "yellowsea": 1,
-   "summit": 28,
-   "defect": 1,
+   "summit": 27,
+   "hybrid": 4,
+   "gps": 3,
+   "usfk": 1,
    "fire": 1,
-   "gps": 2,
-   "hybrid": 3,
    "alert": 1,
    "border": 3,
    "mine": 1
@@ -27,7 +27,7 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 570,
+   "count": 572,
    "hits": 30
   },
   "SBS": {
@@ -52,7 +52,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 4
+   "hits": 5
   },
   "국방일보": {
    "feeds": 1,
@@ -64,39 +64,39 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "spy": {
-   "clusters": 1,
+   "clusters": 2,
    "max_independent": 2,
-   "latest": "2026-11-19T05:39:10+00:00"
+   "latest": "2026-11-19T06:56:33+00:00"
   },
   "yellowsea": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-19T05:39:10+00:00"
+   "latest": "2026-11-19T06:56:33+00:00"
   },
   "summit": {
-   "clusters": 28,
+   "clusters": 27,
    "max_independent": 3,
-   "latest": "2026-11-19T05:14:57+00:00"
+   "latest": "2026-11-19T06:50:42+00:00"
   },
-  "defect": {
+  "hybrid": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-11-19T06:17:52+00:00"
+  },
+  "gps": {
+   "clusters": 3,
+   "max_independent": 1,
+   "latest": "2026-11-19T06:12:32+00:00"
+  },
+  "usfk": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-19T02:27:49+00:00"
+   "latest": "2026-11-19T06:05:10+00:00"
   },
   "fire": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-19T00:20:00+00:00"
-  },
-  "gps": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-18T19:30:00+00:00"
-  },
-  "hybrid": {
-   "clusters": 3,
-   "max_independent": 1,
-   "latest": "2026-11-18T09:43:52+00:00"
   },
   "alert": {
    "clusters": 1,
@@ -120,7 +120,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 90,
+   "count": 92,
    "hits": 21
   },
   {
@@ -129,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 6
+   "hits": 4
   },
   {
    "outlet": "연합뉴스",
@@ -137,7 +137,7 @@
    "url": "https://www.yna.co.kr/rss/society.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "연합뉴스",
@@ -145,7 +145,7 @@
    "url": "https://www.yna.co.kr/rss/local.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "연합뉴스",
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 1
+   "hits": 5
   },
   {
    "outlet": "SBS",
@@ -217,7 +217,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "세계일보",

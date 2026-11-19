@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-18T23:10:23+00:00",
+  "computed_at": "2026-11-19T00:10:38+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 26,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-18T11:39:36+00:00",
-    "latest_updated_at": "2026-11-18T23:10:23+00:00"
+    "linkage_judged_at": "2026-11-18T23:39:17+00:00",
+    "latest_updated_at": "2026-11-19T00:10:35+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "대만 국방부가 러시아 군용기의 대만 동부 공역 통과를 규탄했다.",
+      "summary": "미 의회 보고서가 중국이 대만에 대한 압박을 키우고 있다고 밝혔다.",
       "sources": [
         {
           "name": "중앙사(CNA)",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611180046.aspx",
-          "published_at": "2026-11-18T10:03:01+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611190009.aspx",
+          "published_at": "2026-11-19T03:07:10+08:00"
         }
       ],
-      "judged_at": "2026-11-18T11:39:36+00:00"
+      "judged_at": "2026-11-18T23:39:17+00:00"
     },
     {
       "key": "ukraine",
@@ -41,16 +41,16 @@
       "channels": [
         "c2_nk_ru_cn"
       ],
-      "summary": "우크라이나가 크림대교 공격에 수 주간 준비했다고 밝혔고 러시아의 공습도 이어지고 있다.",
+      "summary": "우크라이나군이 하르키우 지역에서 러시아군과 지하 가스관 안에서 싸우는 등 전쟁이 계속되고 있다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo",
-          "published_at": "2026-11-17T21:24:35+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/c32l507ev4v4o",
+          "published_at": "2026-11-18T17:00:04+00:00"
         }
       ],
-      "judged_at": "2026-11-18T11:39:36+00:00"
+      "judged_at": "2026-11-18T23:39:17+00:00"
     },
     {
       "key": "scs_ecs",
@@ -63,17 +63,17 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-18T18:20:00+08:00",
+          "published_at": "2026-11-19T00:00:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-17T23:34:56+00:00",
+          "published_at": "2026-11-18T23:04:06+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-18T11:39:36+00:00"
+      "judged_at": "2026-11-18T23:39:17+00:00"
     },
     {
       "key": "mideast",
@@ -83,16 +83,16 @@
       "channels": [
         "c4_sea_energy"
       ],
-      "summary": "이란이 바레인 미군 기지에 드론 공격을 했고 후티가 예멘에서 진격하며 미·이란은 호르무즈를 두고 대치 중이다.",
+      "summary": "미군이 호르무즈 케슘섬을 타격한 뒤 이란이 쿠웨이트·바레인을 공격했고, UAE 유조선도 공격받아 승무원 1명이 실종됐다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cmy97qperq9eo",
-          "published_at": "2026-11-16T21:40:07+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
+          "published_at": "2026-11-18T13:04:48+00:00"
         }
       ],
-      "judged_at": "2026-11-18T11:39:36+00:00"
+      "judged_at": "2026-11-18T23:39:17+00:00"
     },
     {
       "key": "us_posture",
@@ -100,16 +100,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 공군이 오키나와 가데나에 F-15EX 배치를 시작해 상주 전투기 전력 재편에 들어갔다.",
+      "summary": "하와이 기반 미군이 콰절린에서 HIMARS 합동훈련을 했고 한미연합사가 C5ISRT 회의를 열었다.",
       "sources": [
         {
           "name": "Stars and Stripes",
           "tier": "B",
-          "url": "https://www.stripes.com/branches/air_force/2026-11-16/f15ex-fighter-jets-kadena-okinawa-23480569.html",
-          "published_at": "2026-11-16T00:00:00+00:00"
+          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-18/himars-kwajalein-joint-force-training-23501254.html",
+          "published_at": "2026-11-18T00:00:00+00:00"
         }
       ],
-      "judged_at": "2026-11-18T11:39:36+00:00"
+      "judged_at": "2026-11-18T23:39:17+00:00"
     }
   ],
   "channels": [
@@ -142,6 +142,6 @@
   "last_good": {
     "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-18T23:10:23+00:00"
+    "computed_at": "2026-11-19T00:10:38+00:00"
   }
 }

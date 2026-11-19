@@ -1,7 +1,7 @@
 {
   "version": 1,
   "at": "2026-11-19T05:39:57+00:00",
-  "opened": 22,
+  "opened": 17,
   "blocks": {
     "world": {
       "status": "checked",
@@ -16,16 +16,17 @@
       "kept": 4
     },
     "linkage": {
-      "status": "no_findings",
+      "status": "checked",
       "last_ok": "2026-11-19T05:39:57+00:00",
-      "raw": 0,
-      "kept": 0
+      "raw": 1,
+      "kept": 1
     },
     "theaters": {
       "status": "checked",
       "last_ok": "2026-11-19T05:39:57+00:00",
       "raw": 5,
-      "kept": 5
+      "kept": 5,
+      "note": "us_posture: Stars and Stripes 목록은 리다이렉트 페이지만 열려 DVIDS 원문으로 판정"
     },
     "incidents": {
       "status": "no_findings",

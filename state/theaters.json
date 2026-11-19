@@ -4,22 +4,18 @@
   "theaters": {
     "ukraine": {
       "state": 3,
-      "channels": [],
+      "channels": [
+        "c2_nk_ru_cn"
+      ],
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo",
-          "published_at": "2026-11-19T04:37:17+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c32l507ev4v4o",
-          "published_at": "2026-11-18T17:00:04+00:00"
+          "published_at": "2026-11-19T04:37:00+00:00"
         }
       ],
-      "summary": "우크라이나가 크림대교를 이번 주 세 번째 공격했고 하르키우 지하 가스관에서도 지상전이 이어진다.",
+      "summary": "크림대교가 이번 주 세 번째 공격을 받았고 하르키우에서는 지하 가스관 교전이 이어지는 등 전쟁이 계속되고 있다.",
       "judged_at": "2026-11-19T05:39:57+00:00"
     },
     "mideast": {
@@ -35,7 +31,7 @@
           "published_at": "2026-11-18T13:04:48+00:00"
         }
       ],
-      "summary": "미군이 호르무즈 케슘섬 발사장을 타격한 뒤 이란이 쿠웨이트·바레인을 공격했고 UAE 유조선 승무원 1명이 실종됐다.",
+      "summary": "미군이 호르무즈 케슘섬을 타격한 뒤 이란이 쿠웨이트·바레인을 공격했고 UAE 유조선 승무원 1명이 실종됐다.",
       "judged_at": "2026-11-19T05:39:57+00:00"
     },
     "taiwan": {
@@ -49,21 +45,27 @@
           "published_at": "2026-11-19T03:07:10+08:00"
         }
       ],
-      "summary": "미 의회 보고서가 중국이 여러 수단으로 대만 압박을 키우고 있다고 밝혔다.",
+      "summary": "미 의회 보고서가 중국의 대만 압박 심화와 봉쇄 위험 증가를 경고했다.",
       "judged_at": "2026-11-19T05:39:57+00:00"
     },
     "scs_ecs": {
-      "state": 1,
+      "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c60evw20qe47o",
-          "published_at": "2026-11-17T07:44:17+00:00"
+          "name": "Philstar",
+          "url": "https://www.philstar.com/rss/nation",
+          "published_at": "2026-11-19T00:00:00+08:00",
+          "kind": "feed"
+        },
+        {
+          "name": "BBC 아시아",
+          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+          "published_at": "2026-11-19T04:42:00+00:00",
+          "kind": "feed"
         }
       ],
-      "summary": "일본이 러시아 항공기의 영공 침범에 전투기를 출동시키고 항의했으며 한국·대만도 ADIZ 대응을 밝혔다.",
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
       "judged_at": "2026-11-19T05:39:57+00:00"
     },
     "us_posture": {
@@ -71,13 +73,13 @@
       "channels": [],
       "sources": [
         {
-          "name": "Stars and Stripes",
+          "name": "DVIDS",
           "tier": "B",
-          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-18/himars-kwajalein-joint-force-training-23501254.html",
-          "published_at": "2026-11-18T05:49:27+00:00"
+          "url": "https://www.dvidshub.net/news/579681/delta-battery-makes-army-history-with-first-ibcs-patriot-enabled-certification-peninsula",
+          "published_at": "2026-11-18T19:00:00+00:00"
         }
       ],
-      "summary": "하와이 기반 미군이 콰절린에서 정례 합동훈련으로 HIMARS를 발사했다.",
+      "summary": "주한미군 델타포대가 패트리엇 포대 최초로 IBCS 인증을 완료했다.",
       "judged_at": "2026-11-19T05:39:57+00:00"
     }
   }

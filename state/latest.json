@@ -2,25 +2,26 @@
   "coverage": {
     "troop_movement": [
       "북한 합참 발표 오늘",
-      "North Korea Reuters November 19 2026"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea Reuters November 19 2026",
-      "북한 핵 동향"
+      "북한 핵 동향",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "logistics": [
       "북한 합참 발표 오늘",
-      "North Korea Reuters November 19 2026"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 DMZ 귀순"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "김정은 방중 방러",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
@@ -44,9 +45,9 @@
   "opened": [
     "https://www.segye.com/newsView/20261119512404",
     "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreaherald.com/article/10941483"
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
   ],
-  "overall_summary": "신규 군사 징후 없음: 미중러 정상회담 등 외교 일정이 중심이고 북한 관련 군사 동향 보도는 확인되지 않았다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "신규 군사 징후 없음: 국내외 보도는 미중러 정상회담·김정은 방중 관측 등 외교 동향 중심이고 접경 열점 후보 대조 대상도 없다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -65,7 +66,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "24시간 경과 — 조용원 대표단 러시아 체류는 11/14 첫 보도이며 이번 회차에 새 파병·이전·협정 보도가 없다."
+      "summary": "24시간 경과 — 조용원 대표단 러시아 체류는 11/14 첫 보도이며, 김정은 방중 가능성은 트럼프 발언 등 관측일 뿐 확정 보도가 없다."
     },
     "parade_massing": {
       "status": "none"
@@ -80,7 +81,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T18:10:12+00:00",
+  "checked_at": "2026-11-19T19:09:14+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

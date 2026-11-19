@@ -1,63 +1,58 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 합참 발표 11월 19일",
+      "North Korea missile launch Kim Jong Un news today"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설 동향",
-      "North Korea nuclear site UN watchdog"
+      "North Korea missile launch Kim Jong Un news today",
+      "북한 핵"
     ],
     "logistics": [
-      "북한 탄약 수송 군수",
-      "North Korea ammunition shipment"
+      "북한 합참 발표 11월 19일",
+      "North Korea Russia munitions"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참",
-      "DMZ NLL mine North Korea"
+      "지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참 11월",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "GPS 교란 서북도서",
+      "해킹 개인정보 유출",
+      "랜섬웨어 공격 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 미중러 정상회담 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit North Korea"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비",
-      "North Korea parade"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense drill"
+      "북한 합참 발표 11월 19일"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향",
-      "South Korea DEFCON alert"
+      "북한 합참 발표 11월 19일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
+      "국가보안법 구속",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "North Korea talks offer 남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
     "https://www.segye.com/newsView/20261119512404",
-    "https://www.segye.com/newsView/20261119509392",
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do"
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
+    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760"
   ],
-  "overall_summary": "미중러·한중러 정상외교가 이어졌으나 군사 도발·전시 징후는 확인되지 않았다. 직전 회차와 같은 평온 수준이다.",
+  "overall_summary": "신규 군사 징후 없음: 미중러 정상회담·북러 고위급 교류 등 외교 일정만 확인됐고, 접경 열점 보도 대조 대상도 없었다. 직전 회차와 동일한 경계 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "UN 감시기구가 북한 핵시설 개선에 우려를 표명했으나 새 배치·사용 준비 징후는 없다(배경)."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
@@ -71,20 +66,23 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "한중·한러 정상회담과 미중러 회담 등 외교 일정 보도가 이어졌으나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
-      "meaning": "외교 일정이며 군사적 이전 징후는 없다.",
+      "region": "평양·모스크바",
+      "summary": "조용원 노동당 비서 등 북 대표단이 11/14부터 러시아에 체류하며 푸틴과 면담했으나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
+      "meaning": "북러 고위급 교류는 지속되나 새 군사협력 합의는 없다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "Reuters(Internazionale 전재)",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261119509392"
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "이재명 대통령 18일 선전 한중 정상회담"
+        "조용원 푸틴 면담(인터팍스·타스 인용)"
       ],
-      "speculation": []
+      "speculation": [
+        "김정은 APEC 계기 방중설"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -99,7 +97,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T15:10:37+00:00",
+  "checked_at": "2026-11-19T16:10:23+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

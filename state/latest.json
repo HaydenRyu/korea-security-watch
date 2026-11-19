@@ -1,34 +1,42 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 19일"
+      "북한 전방 병력 이동 11월",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 합참 발표 11월 19일"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear site"
     ],
     "logistics": [
-      "북한 합참 발표 11월 19일"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL"
+      "합참 북한 지뢰 발견 DMZ 귀순 11월 19일"
     ],
     "electronic_cyber": [
       "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중 APEC 선전",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 19일"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 합참 발표 11월 19일"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 19일"
+      "진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
-      "북한 합참 발표 11월 19일"
+      "국가보안법 구속 간첩 혐의"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
@@ -36,7 +44,7 @@
     "https://www.segye.com/newsView/20261119500981",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "선전 APEC 계기 정상외교 외에 접경 충돌·핵·병력 징후는 확인되지 않았고 김정은 해군대학 시찰 보도(NK News)만 있다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "선전 APEC 계기 정상외교가 이어지고 김정은의 해군대학 시찰(KCNA 인용) 외에 접경 충돌·핵·병력 징후는 확인되지 않았다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,7 +65,7 @@
       "status": "single",
       "routine": true,
       "region": "중국 선전",
-      "summary": "선전 APEC 계기 이 대통령이 푸틴·시진핑과 한반도 긴장 완화에 공감했으나 새 파병·무기 이전·협정은 확인되지 않았다(외교 일정).",
+      "summary": "선전 APEC 계기 이 대통령이 푸틴·시진핑과 한반도 긴장 완화에 공감했으나 새 파병·무기 이전·협정은 없다(외교 일정).",
       "meaning": "정상 외교 일정이며 군사 협력의 새 징후는 아니다.",
       "sources": [
         {
@@ -85,7 +93,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T03:09:29+00:00",
+  "checked_at": "2026-11-19T04:09:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

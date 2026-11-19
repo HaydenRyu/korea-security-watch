@@ -10,42 +10,51 @@
     ],
     "logistics": [
       "북한 탄약 군수 수송",
-      "North Korea munitions shipment"
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참",
-      "North Korea DMZ NLL border"
+      "지뢰 발견",
+      "DMZ 귀순",
+      "North Korea DMZ mine"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "North Korea Reuters Trump Xi Putin trilateral summit Kim",
-      "North Korea Kim Jong Un China Russia visit summit Shenzhen"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit APEC Shenzhen",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 전시 대피 훈련"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 발령 데프콘",
+      "North Korea warning State Department"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261118520041",
+    "https://en.fnnews.com/news/202611190257199823",
+    "https://www.segye.com/newsView/20261119500803",
     "https://www.segye.com/newsView/20261119512404",
-    "https://www.clickondetroit.com/news/world/2026/10/24/north-korean-leader-kim-jong-un-visits-china-south-korean-news-agency-reports/",
-    "https://www.foxnews.com/politics/trump-leaves-door-open-kim-jong-un-joining-high-stakes-talks-xi-putin"
+    "https://www.dailysecu.com/news/articleView.html?idxno=209608",
+    "https://www.asiatime.co.kr/article/20261115500058"
   ],
-  "overall_summary": "선전 APEC 미·중·러 3자 정상회담(11/19)이 열리나 김정은 참석·새 파병·군사협정은 확인되지 않았고 접경 새 충돌 징후도 없다. 직전 회차와 동일한 외교 일정 수준이며, 열점 대조 대상 신규 후보는 확인하지 않았다.",
+  "overall_summary": "선전 APEC 3자 정상회담 기간 김정은 방중 동향은 없고 접경·군사 징후는 직전과 같이 외교 일정(routine) 수준이다. 접경 열점 후보 보도 대조: 신규 건 없음, 국내 해킹은 귀속 미확인으로 배경.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,7 +69,32 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "전북 전주",
+      "lat": 35.82,
+      "lon": 127.15,
+      "summary": "귀속 미확인 — 전주대 해킹으로 개인정보 약 18만 건이 유출되는 등 국내 대학·금융 해킹이 잇따르고, 민간 보안업체는 라자루스의 국내 서버 공격 정황을 보고했다.",
+      "meaning": "공급망·교육기관 대상 해킹이 이어지나 정부의 북한 귀속 발표는 없다.",
+      "sources": [
+        {
+          "name": "데일리시큐",
+          "tier": "C",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=209608"
+        },
+        {
+          "name": "아시아타임즈",
+          "tier": "B",
+          "url": "https://www.asiatime.co.kr/article/20261115500058"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "전주대 개인정보 약 18만 건 유출(주민번호 2.5만 건)",
+        "사이퍼마 보고서: 라자루스 국내 공격 정황(민간 보고, 정부 귀속 아님)"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "single",
@@ -68,22 +102,27 @@
       "region": "중국 선전",
       "lat": 22.54,
       "lon": 114.06,
-      "summary": "선전 APEC에서 트럼프·시진핑·푸틴 첫 3자 정상회담이 11/19 열리며 김정은 참석 가능성이 거론되나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
-      "meaning": "외교 일정 수준으로 군사적 위협 변화는 없다.",
+      "summary": "선전 APEC에서 트럼프·시진핑·푸틴 3자 정상회담이 11/19 열렸고 청와대는 김정은 방중 특이 동향이 없다고 밝혔으며, 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
+      "meaning": "북·중·러 정상급 외교 일정으로 군사협력 신규 징후는 아직 없다.",
       "sources": [
         {
-          "name": "Fox News",
+          "name": "파이낸셜뉴스",
           "tier": "B",
-          "url": "https://www.foxnews.com/politics/trump-leaves-door-open-kim-jong-un-joining-high-stakes-talks-xi-putin"
+          "url": "https://en.fnnews.com/news/202611190257199823"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261119500803"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "3자 회담은 11/19 오후 선전 Kylin Villa 예정",
-        "미 관리는 북한과의 협상 계획 없다고 전함"
+        "청와대 '김정은 방중 특이 동향 없음'",
+        "이 대통령-푸틴 회동에서 북핵 문제 거론"
       ],
       "speculation": [
-        "트럼프가 김정은 참석 가능성을 언급"
+        "김정은 APEC 참석 가능성 거론(미확인)"
       ]
     },
     "parade_massing": {
@@ -99,7 +138,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T08:10:11+00:00",
+  "checked_at": "2026-11-19T09:10:05+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

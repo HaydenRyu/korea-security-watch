@@ -1,17 +1,24 @@
 {
- "at": "2026-11-19T08:39:27+00:00",
- "south": 72,
- "area": 98,
- "baseline": 72,
- "ratio": 1.0,
- "samples": 5,
+ "at": "2026-11-19T10:31:46+00:00",
+ "south": 75,
+ "area": 92,
+ "baseline": 76.5,
+ "ratio": 0.98,
+ "samples": 6,
  "mil": [
+  {
+   "type": "B748",
+   "name": null,
+   "call": "KAF001",
+   "lat": 35.32,
+   "lon": 126.89
+  },
   {
    "type": "H60",
    "name": null,
-   "call": "CARD89",
-   "lat": 37.37,
-   "lon": 127.36
+   "call": "CARD70",
+   "lat": 37.79,
+   "lon": 127.13
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

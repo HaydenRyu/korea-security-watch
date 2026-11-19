@@ -1,57 +1,51 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 전방 병력 증강",
-      "North Korea troops buildup"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
+      "북한 탄약 군수 수송",
+      "North Korea munitions shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ NLL 귀순",
-      "합참 북한 발표 11월 19일"
+      "지뢰 발견 DMZ 합참",
+      "North Korea DMZ NLL border"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit North Korea Reuters",
-      "서해 구조물",
-      "North Korea Kim Trump Xi Putin Shenzhen APEC"
+      "North Korea Reuters Trump Xi Putin trilateral summit Kim",
+      "North Korea Kim Jong Un China Russia visit summit Shenzhen"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 전시 대피 훈련"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261118520041",
     "https://www.segye.com/newsView/20261119512404",
-    "https://www.koreatimes.co.kr/world/20261118/lee-arrives-in-shenzhen-for-apec-summit",
-    "https://biz.heraldcorp.com/article/10940532"
+    "https://www.clickondetroit.com/news/world/2026/10/24/north-korean-leader-kim-jong-un-visits-china-south-korean-news-agency-reports/",
+    "https://www.foxnews.com/politics/trump-leaves-door-open-kim-jong-un-joining-high-stakes-talks-xi-putin"
   ],
-  "overall_summary": "선전 APEC 계기 3자 정상외교 외에 접경 충돌·병력·핵 징후는 확인되지 않았다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "선전 APEC 미·중·러 3자 정상회담(11/19)이 열리나 김정은 참석·새 파병·군사협정은 확인되지 않았고 접경 새 충돌 징후도 없다. 직전 회차와 동일한 외교 일정 수준이며, 열점 대조 대상 신규 후보는 확인하지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,6 +62,30 @@
     "electronic_cyber": {
       "status": "none"
     },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "중국 선전",
+      "lat": 22.54,
+      "lon": 114.06,
+      "summary": "선전 APEC에서 트럼프·시진핑·푸틴 첫 3자 정상회담이 11/19 열리며 김정은 참석 가능성이 거론되나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
+      "meaning": "외교 일정 수준으로 군사적 위협 변화는 없다.",
+      "sources": [
+        {
+          "name": "Fox News",
+          "tier": "B",
+          "url": "https://www.foxnews.com/politics/trump-leaves-door-open-kim-jong-un-joining-high-stakes-talks-xi-putin"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "3자 회담은 11/19 오후 선전 Kylin Villa 예정",
+        "미 관리는 북한과의 협상 계획 없다고 전함"
+      ],
+      "speculation": [
+        "트럼프가 김정은 참석 가능성을 언급"
+      ]
+    },
     "parade_massing": {
       "status": "none"
     },
@@ -79,36 +97,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "중국 선전",
-      "summary": "선전 APEC에서 트럼프·시진핑·푸틴 첫 3자 정상회담이 11/19 열리며 북한 핵 동결이 의제로 거론되나 김정은 참석·새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
-      "meaning": "북미·북중러 외교 변수이며 군사 징후는 아니다.",
-      "sources": [
-        {
-          "name": "헤럴드경제",
-          "tier": "B",
-          "url": "https://biz.heraldcorp.com/article/10940532"
-        },
-        {
-          "name": "코리아타임스",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/world/20261118/lee-arrives-in-shenzhen-for-apec-summit"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "백악관이 3자 회담 발표, 크렘린·중국 외교부 확인",
-        "북한은 김정은 방중 미발표, 백악관 북미회담 계획 없음"
-      ],
-      "speculation": [
-        "핵 동결 논의 가능성"
-      ]
     }
   },
-  "checked_at": "2026-11-19T07:10:12+00:00",
+  "checked_at": "2026-11-19T08:10:11+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

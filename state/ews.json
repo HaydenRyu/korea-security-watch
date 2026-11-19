@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-19T11:10:05+00:00",
+  "computed_at": "2026-11-19T12:10:07+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 26,
@@ -12,7 +12,7 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-19T05:39:57+00:00",
+    "linkage_judged_at": "2026-11-19T11:39:45+00:00",
     "latest_updated_at": "2026-11-19T11:10:05+00:00"
   },
   "theaters": [
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "미 의회 보고서가 중국의 대만 압박 심화와 봉쇄 위험 증가를 경고했다.",
+      "summary": "대만 국방부가 러시아 군용기 2소티가 대만 ADIZ에 진입했다고 밝혔다(이번 주 두 번째).",
       "sources": [
         {
-          "name": "중앙사(CNA)",
+          "name": "Focus Taiwan(CNA)",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611190009.aspx",
-          "published_at": "2026-11-19T03:07:10+08:00"
+          "url": "https://focustaiwan.tw/politics/202611190012",
+          "published_at": "2026-11-19T16:14:33+08:00"
         }
       ],
-      "judged_at": "2026-11-19T05:39:57+00:00"
+      "judged_at": "2026-11-19T11:39:45+00:00"
     },
     {
       "key": "ukraine",
@@ -41,16 +41,16 @@
       "channels": [
         "c2_nk_ru_cn"
       ],
-      "summary": "크림대교가 이번 주 세 번째 공격을 받았고 하르키우에서는 지하 가스관 교전이 이어지는 등 전쟁이 계속되고 있다.",
+      "summary": "크림대교가 이번 주 세 번째 공격을 받는 등 전쟁이 계속되고 있다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo",
-          "published_at": "2026-11-19T04:37:00+00:00"
+          "published_at": "2026-11-19T07:32:06+00:00"
         }
       ],
-      "judged_at": "2026-11-19T05:39:57+00:00"
+      "judged_at": "2026-11-19T11:39:45+00:00"
     },
     {
       "key": "scs_ecs",
@@ -63,17 +63,17 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-19T00:00:00+08:00",
+          "published_at": "2026-11-19T16:37:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-19T04:42:00+00:00",
+          "published_at": "2026-11-19T04:42:52+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-19T05:39:57+00:00"
+      "judged_at": "2026-11-19T11:39:45+00:00"
     },
     {
       "key": "mideast",
@@ -92,7 +92,7 @@
           "published_at": "2026-11-18T13:04:48+00:00"
         }
       ],
-      "judged_at": "2026-11-19T05:39:57+00:00"
+      "judged_at": "2026-11-19T11:39:45+00:00"
     },
     {
       "key": "us_posture",
@@ -104,12 +104,12 @@
       "sources": [
         {
           "name": "DVIDS",
-          "tier": "B",
+          "tier": "A",
           "url": "https://www.dvidshub.net/news/579681/delta-battery-makes-army-history-with-first-ibcs-patriot-enabled-certification-peninsula",
-          "published_at": "2026-11-18T19:00:00+00:00"
+          "published_at": "2026-11-18T23:39:02+00:00"
         }
       ],
-      "judged_at": "2026-11-19T05:39:57+00:00"
+      "judged_at": "2026-11-19T11:39:45+00:00"
     }
   ],
   "channels": [
@@ -142,6 +142,6 @@
   "last_good": {
     "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-19T11:10:05+00:00"
+    "computed_at": "2026-11-19T12:10:07+00:00"
   }
 }

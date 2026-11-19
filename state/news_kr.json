@@ -1,21 +1,22 @@
 {
- "fetched_at": "2026-11-18T23:24:47+00:00",
- "status": "partial",
- "status_detail": "세계일보/사회: IncompleteRead: IncompleteRead(21312 bytes read, 60 more expected)",
- "last_ok_at": "2026-11-18T21:54:33+00:00",
+ "fetched_at": "2026-11-19T00:35:44+00:00",
+ "status": "ok",
+ "status_detail": "",
+ "last_ok_at": "2026-11-19T00:35:44+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 1,
-  "fetched": 1109,
-  "hits": 46,
-  "clusters": 37,
+  "feeds_failed": 0,
+  "fetched": 1131,
+  "hits": 48,
+  "clusters": 39,
   "by_group": {
-   "spy": 1,
+   "spy": 2,
    "yellowsea": 1,
-   "summit": 26,
-   "gps": 3,
+   "fire": 1,
+   "summit": 27,
    "hybrid": 4,
+   "gps": 2,
    "alert": 1,
    "border": 3,
    "mine": 1
@@ -25,8 +26,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 569,
-   "hits": 31
+   "count": 571,
+   "hits": 33
   },
   "SBS": {
    "feeds": 3,
@@ -38,7 +39,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 9
+   "hits": 12
   },
   "국민일보": {
    "feeds": 2,
@@ -48,8 +49,8 @@
   },
   "세계일보": {
    "feeds": 2,
-   "failed": 1,
-   "count": 20,
+   "failed": 0,
+   "count": 40,
    "hits": 3
   },
   "국방일보": {
@@ -62,29 +63,34 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "spy": {
-   "clusters": 1,
+   "clusters": 2,
    "max_independent": 2,
-   "latest": "2026-11-18T23:24:47+00:00"
+   "latest": "2026-11-19T00:35:44+00:00"
   },
   "yellowsea": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-18T23:24:47+00:00"
+   "latest": "2026-11-19T00:35:44+00:00"
+  },
+  "fire": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-19T00:20:03+00:00"
   },
   "summit": {
-   "clusters": 26,
+   "clusters": 27,
    "max_independent": 3,
-   "latest": "2026-11-18T23:20:00+00:00"
-  },
-  "gps": {
-   "clusters": 3,
-   "max_independent": 1,
-   "latest": "2026-11-18T19:30:00+00:00"
+   "latest": "2026-11-18T23:48:52+00:00"
   },
   "hybrid": {
    "clusters": 4,
    "max_independent": 1,
-   "latest": "2026-11-18T09:43:52+00:00"
+   "latest": "2026-11-18T23:48:01+00:00"
+  },
+  "gps": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-18T19:30:00+00:00"
   },
   "alert": {
    "clusters": 1,
@@ -108,7 +114,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 89,
+   "count": 91,
    "hits": 23
   },
   {
@@ -117,7 +123,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 6
+   "hits": 7
   },
   {
    "outlet": "연합뉴스",
@@ -141,7 +147,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "SBS",
@@ -173,7 +179,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 6
+   "hits": 7
   },
   {
    "outlet": "동아일보",
@@ -181,7 +187,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 3
+   "hits": 5
   },
   {
    "outlet": "국민일보",
@@ -211,8 +217,9 @@
    "outlet": "세계일보",
    "section": "사회",
    "url": "https://www.segye.com/Articles/RSSList/segye_society.xml",
-   "ok": false,
-   "error": "IncompleteRead: IncompleteRead(21312 bytes read, 60 more expected)"
+   "ok": true,
+   "count": 20,
+   "hits": 0
   },
   {
    "outlet": "국방일보",

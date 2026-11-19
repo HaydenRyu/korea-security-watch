@@ -1,22 +1,22 @@
 {
  "source": "접경 지자체 공지(철원 RSS · 고성 공지 · 파주 새소식+HWP · 화천 공지+PDF) — 군 사격훈련 주민 안내",
  "note": "참고 자료 · 등급 판정과 무관. 일정은 부대 사정·기상으로 바뀔 수 있다.",
- "fetched_at": "2026-11-19T06:56:52.809450+00:00",
+ "fetched_at": "2026-11-19T08:40:30.695586+00:00",
  "sources": {
   "cheorwon": {
    "name": "철원군",
    "page": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-19T06:56:52.809450+00:00",
-   "count": 11
+   "last_ok_at": "2026-11-19T08:40:30.695586+00:00",
+   "count": 12
   },
   "goseong": {
    "name": "고성군",
    "page": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/list.do",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-19T06:56:52.809450+00:00",
+   "last_ok_at": "2026-11-19T08:40:30.695586+00:00",
    "count": 10
   },
   "paju": {
@@ -24,15 +24,15 @@
    "page": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=2001",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-19T06:56:52.809450+00:00",
+   "last_ok_at": "2026-11-19T08:40:30.695586+00:00",
    "count": 8
   },
   "hwacheon": {
    "name": "화천군",
    "page": "https://www.ihc.go.kr/www/selectBbsNttList.do?bbsNo=11&key=2338",
-   "status": "error",
-   "status_detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-   "last_ok_at": "2026-11-18T21:54:51.476820+00:00",
+   "status": "ok",
+   "status_detail": "",
+   "last_ok_at": "2026-11-19T08:40:30.695586+00:00",
    "count": 6
   }
  },
@@ -273,6 +273,20 @@
     "동막리, 문혜리 D진지 → 용화동 피탄지(강원특별자치도 철원군 갈말읍 신철원리 산 26-46)",
     "문혜리 D진 → 용화동 피탄지(강원특별자치도 철원군 갈말읍 신철원리 산 26-46)"
    ],
+   "arms": [],
+   "active_now": false
+  },
+  {
+   "source": "cheorwon",
+   "title": "2026년 12월 철원 권역 포병사격에 따른 주민홍보",
+   "url": "https://www.cwg.go.kr/www/selectBbsNttView.do?key=206&bbsNo=24&nttNo=320846",
+   "posted": "2026-11-19",
+   "body": "2026년 12월 포병사격 훈련일정을 붙임과 같이 안내드립니다.",
+   "unit": "",
+   "first": null,
+   "last": null,
+   "days": [],
+   "places": [],
    "arms": [],
    "active_now": false
   },

@@ -1,22 +1,20 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-19T11:39:45+00:00",
+  "judged_at": "2026-11-19T23:39:26+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
-      "channels": [
-        "c2_nk_ru_cn"
-      ],
+      "channels": [],
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo",
-          "published_at": "2026-11-19T07:32:06+00:00"
+          "published_at": "2026-11-19T13:07:35+00:00"
         }
       ],
-      "summary": "크림대교가 이번 주 세 번째 공격을 받는 등 전쟁이 계속되고 있다.",
-      "judged_at": "2026-11-19T11:39:45+00:00"
+      "summary": "크림대교가 이번 주 세 번째 공격을 받았고 푸틴이 더 고통스러운 보복을 공언했다.",
+      "judged_at": "2026-11-19T23:39:26+00:00"
     },
     "mideast": {
       "state": 3,
@@ -32,7 +30,7 @@
         }
       ],
       "summary": "미군이 호르무즈 케슘섬을 타격한 뒤 이란이 쿠웨이트·바레인을 공격했고 UAE 유조선 승무원 1명이 실종됐다.",
-      "judged_at": "2026-11-19T11:39:45+00:00"
+      "judged_at": "2026-11-19T23:39:26+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -45,28 +43,22 @@
           "published_at": "2026-11-19T16:14:33+08:00"
         }
       ],
-      "summary": "대만 국방부가 러시아 군용기 2소티가 대만 ADIZ에 진입했다고 밝혔다(이번 주 두 번째).",
-      "judged_at": "2026-11-19T11:39:45+00:00"
+      "summary": "대만 국방부가 러시아 군용기가 대만 ADIZ에 진입한 영상을 공개했다.",
+      "judged_at": "2026-11-19T23:39:26+00:00"
     },
     "scs_ecs": {
       "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "Philstar",
-          "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-19T16:37:00+08:00",
-          "kind": "feed"
-        },
-        {
-          "name": "BBC 아시아",
-          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-19T04:42:52+00:00",
-          "kind": "feed"
+          "name": "Rappler",
+          "tier": "B",
+          "url": "https://www.rappler.com/newsbreak/inside-track/asean-south-china-sea-code-conduct-legally-binding/",
+          "published_at": "2026-11-20T07:00:00+08:00"
         }
       ],
-      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 무력 관련 기사 없음",
-      "judged_at": "2026-11-19T11:39:45+00:00"
+      "summary": "Rappler 가 ASEAN 남중국해 행동준칙 협상이 85~90% 진행됐다고 보도했다(무력 사용 보도 없음).",
+      "judged_at": "2026-11-19T23:39:26+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -79,8 +71,8 @@
           "published_at": "2026-11-18T23:39:02+00:00"
         }
       ],
-      "summary": "주한미군 델타포대가 패트리엇 포대 최초로 IBCS 인증을 완료했다.",
-      "judged_at": "2026-11-19T11:39:45+00:00"
+      "summary": "주한미군 패트리엇 포대가 미 육군 최초로 IBCS 인증을 마쳤다(군사 시위 보도 없음).",
+      "judged_at": "2026-11-19T23:39:26+00:00"
     }
   }
 }

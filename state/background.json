@@ -1,36 +1,35 @@
 {
   "version": 1,
-  "at": "2026-11-19T11:39:45+00:00",
-  "opened": 16,
+  "at": "2026-11-19T23:39:26+00:00",
+  "opened": 15,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-19T11:39:45+00:00",
+      "last_ok": "2026-11-19T23:39:26+00:00",
       "raw": 4,
       "kept": 4
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-19T11:39:45+00:00",
+      "last_ok": "2026-11-19T23:39:26+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
-      "status": "no_findings",
-      "last_ok": "2026-11-19T11:39:45+00:00",
-      "raw": 0,
-      "kept": 0,
-      "note": "대만 명명 훈련·신규 북러 사실 원문 미확인(검색 결과에 11월 원문 없음)"
+      "status": "checked",
+      "last_ok": "2026-11-19T23:39:26+00:00",
+      "raw": 1,
+      "kept": 1
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-19T11:39:45+00:00",
+      "last_ok": "2026-11-19T23:39:26+00:00",
       "raw": 5,
       "kept": 5
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-19T11:39:45+00:00",
+      "last_ok": "2026-11-19T23:39:26+00:00",
       "raw": 0,
       "kept": 0
     }

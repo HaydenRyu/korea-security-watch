@@ -1,57 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 속보 합참 11월 19일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 병력 이동 전방 증강 군수 탄약 열병식 준비",
+      "North Korea troops border mobilization martial law alert"
     ],
     "nuclear": [
-      "North Korea missile launch nuclear Yongbyon 38 North",
-      "북한 핵 영변 속보"
+      "북한 핵 풍계리 영변 동향 전략무기 이동",
+      "North Korea nuclear Yongbyon Punggye-ri 38 North latest"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipments Russia"
+      "북한 병력 이동 전방 증강 군수 탄약 열병식 준비"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순",
-      "North Korea DMZ NLL"
+      "북한 합참 DMZ 귀순 지뢰 발견 11월 19일"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "남북 대화 제안 통신선 복원 North Korea talks offer 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 병력 이동 전방 증강 군수 탄약 열병식 준비"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense"
+      "North Korea troops border mobilization martial law alert"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "North Korea warning US Japan"
+      "North Korea troops border mobilization martial law alert"
     ],
     "hybrid_ops": [
-      "국가보안법 간첩 혐의 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
-    "https://www.koreatimes.co.kr/southkorea/defense",
-    "https://www.koreatimes.co.kr/southkorea/20260929/s-korean-military-finds-1-n-korean-mine-near-site-of-dmz-blast"
+    "https://www.thestandard.com.hk/world/article/348710/North-Koreas-Kim-inspects-Samjiyon-tourism-zone-amid-speculation-over-China-trip",
+    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760"
   ],
-  "overall_summary": "선전 미중러 정상회담 후에도 김정은 외유·새 군사협력은 확인되지 않았다. 접경 지뢰·국내 해킹·열점 신규 보도 없음(국내 언론 수집 결과 48묶음 중 징후 후보 없음).",
+  "overall_summary": "새 군사 징후는 없고, 조용원 방러·미중러 정상회담 등 외교 일정만 이어진다. 국내 수집 묶음에도 새 접경 충돌·핵·경보 보도가 없다(접경 열점 후보 대조 생략).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,22 +62,23 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "러시아·중국",
-      "summary": "조용원 노동당 비서 대표단의 방러와 선전 미중러 정상회담이 이어졌으나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
-      "meaning": "외교 일정 수준이며 군사협력 신규 확인은 없다.",
+      "region": "중국·러시아",
+      "summary": "조용원 노동당 비서 방러·푸틴 면담과 김정은 방중 관측이 로이터 보도로 이어졌으나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
+      "meaning": "북중러 외교 일정이며 군사 협력의 새 확인은 없다.",
       "sources": [
         {
-          "name": "Reuters(internazionale 전재)",
+          "name": "Reuters(Internazionale 전재)",
           "tier": "B",
           "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "김정은 삼지연 시찰, 조용원 방러 11/14~"
+        "조용원이 푸틴 면담",
+        "통일부: 북 대표단 11/14부터 러시아 체류"
       ],
       "speculation": [
-        "김정은 외유설은 미확인"
+        "김정은 중국행 가능성"
       ]
     },
     "parade_massing": {
@@ -102,14 +94,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T12:11:05+00:00",
+  "checked_at": "2026-11-19T13:13:11+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-19T13:10:31+00:00",
-    "summary": "신규 징후는 확인되지 않았다. 김정은 방중은 통일부가 19일 오전까지 동향 미포착으로 밝혔고, 미중러 정상회담도 외교 일정이다."
-  }
+  "active": []
 }

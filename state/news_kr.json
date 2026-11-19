@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-11-19T04:23:33+00:00",
+ "fetched_at": "2026-11-19T05:39:10+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-19T04:23:33+00:00",
+ "last_ok_at": "2026-11-19T05:39:10+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1130,
+  "fetched": 1129,
   "hits": 46,
-  "clusters": 38,
+  "clusters": 40,
   "by_group": {
    "spy": 1,
    "yellowsea": 1,
-   "summit": 26,
+   "summit": 28,
    "defect": 1,
    "fire": 1,
    "gps": 2,
@@ -27,8 +27,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 571,
-   "hits": 35
+   "count": 570,
+   "hits": 30
   },
   "SBS": {
    "feeds": 3,
@@ -40,7 +40,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 9
+   "hits": 6
   },
   "국민일보": {
    "feeds": 2,
@@ -52,7 +52,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 3
+   "hits": 4
   },
   "국방일보": {
    "feeds": 1,
@@ -66,17 +66,17 @@
   "spy": {
    "clusters": 1,
    "max_independent": 2,
-   "latest": "2026-11-19T04:23:33+00:00"
+   "latest": "2026-11-19T05:39:10+00:00"
   },
   "yellowsea": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-19T04:23:33+00:00"
+   "latest": "2026-11-19T05:39:10+00:00"
   },
   "summit": {
-   "clusters": 26,
+   "clusters": 28,
    "max_independent": 3,
-   "latest": "2026-11-19T04:02:40+00:00"
+   "latest": "2026-11-19T05:14:57+00:00"
   },
   "defect": {
    "clusters": 1,
@@ -120,8 +120,8 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 91,
-   "hits": 22
+   "count": 90,
+   "hits": 21
   },
   {
    "outlet": "연합뉴스",
@@ -129,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 7
+   "hits": 6
   },
   {
    "outlet": "연합뉴스",
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 1
   },
   {
    "outlet": "SBS",
@@ -193,7 +193,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 3
+   "hits": 0
   },
   {
    "outlet": "국민일보",
@@ -217,7 +217,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 3
+   "hits": 4
   },
   {
    "outlet": "세계일보",

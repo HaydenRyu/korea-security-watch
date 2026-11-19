@@ -1,48 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 지뢰 발견 DMZ 귀순 11월 19일",
+      "합참 북한 지뢰 발견 DMZ 귀순",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea missile nuclear 38 North NK News",
-      "북한 핵 전략무기 합참"
+      "합참 북한 지뢰 발견 DMZ 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "합참 북한 지뢰 발견 DMZ 귀순 11월 19일",
+      "합참 북한 지뢰 발견 DMZ 귀순",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순 11월 19일",
+      "합참 북한 지뢰 발견 DMZ 귀순",
       "목함지뢰 해안 NLL"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 서해 구조물 주한미군 감축",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "서해 구조물 주한미군 감축",
       "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중"
     ],
     "parade_massing": [
-      "North Korea missile nuclear 38 North NK News"
+      "합참 북한 지뢰 발견 DMZ 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nk_internal": [
-      "North Korea missile nuclear 38 North NK News"
+      "합참 북한 지뢰 발견 DMZ 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "gov_warning": [
-      "합참 북한 지뢰 발견 DMZ 귀순 11월 19일"
+      "합참 북한 지뢰 발견 DMZ 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 북한"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
@@ -50,7 +50,7 @@
     "https://www.koreatimes.co.kr/foreignaffairs/20261117/trump-floats-kim-summit-in-china-but-experts-see-no-signs-of-preparation",
     "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
   ],
-  "overall_summary": "신규 군사 징후 없음: 국내 수집 묶음은 APEC 북미 회동 관측·전작권 공방 등 정치·외교 중심이고 합참 발표 사실이 없다. 직전 회차와 같은 평시 수준이다.",
+  "overall_summary": "신규 군사 징후 없음: 국내 수집 묶음은 미중러 정상회담·전작권 공방 등 정치·외교 중심이며 합참 발표 사실이 없다. 직전 회차와 같은 평시 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -83,7 +83,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T21:09:01+00:00",
+  "checked_at": "2026-11-19T22:08:54+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

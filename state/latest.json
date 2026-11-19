@@ -1,48 +1,45 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강 군수 탄약 열병식 준비",
-      "North Korea troops border mobilization martial law alert"
+      "북한 병력 이동 전방 증강 동원",
+      "North Korea troops deployment border buildup"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향 전략무기 이동",
-      "North Korea nuclear Yongbyon Punggye-ri 38 North latest"
+      "North Korea Reuters missile launch November 2026"
     ],
     "logistics": [
-      "북한 병력 이동 전방 증강 군수 탄약 열병식 준비"
+      "북한 탄약 군수 수송 열병식 노농적위군 등화관제"
     ],
     "border_clash": [
-      "북한 합참 DMZ 귀순 지뢰 발견 11월 19일"
+      "지뢰 발견 DMZ 합참"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "남북 대화 제안 통신선 복원 North Korea talks offer 서해 구조물 주한미군 감축"
+      "북한 김정은 방중 방러 11월 19일",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 병력 이동 전방 증강 군수 탄약 열병식 준비"
+      "북한 탄약 군수 수송 열병식 노농적위군 등화관제"
     ],
     "nk_internal": [
-      "North Korea troops border mobilization martial law alert"
+      "북한 탄약 군수 수송 열병식 노농적위군 등화관제"
     ],
     "gov_warning": [
-      "North Korea troops border mobilization martial law alert"
+      "진돗개 발령 데프콘 한미일 긴급 경고"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "국가보안법 구속 간첩 혐의"
     ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
-    ]
+    "calm": []
   },
   "opened": [
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
-    "https://www.thestandard.com.hk/world/article/348710/North-Koreas-Kim-inspects-Samjiyon-tourism-zone-amid-speculation-over-China-trip",
-    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760"
+    "https://www.segye.com/newsView/20261119512404",
+    "https://www.rfa.org/korean/in-focus/2026/11/16/apec-asean-russia-chaina-trump/",
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1439607"
   ],
-  "overall_summary": "새 군사 징후는 없고, 조용원 방러·미중러 정상회담 등 외교 일정만 이어진다. 국내 수집 묶음에도 새 접경 충돌·핵·경보 보도가 없다(접경 열점 후보 대조 생략).",
+  "overall_summary": "국내 수집(15피드) 결과 미중러 정상회담·조용원 방러 후속 외교 보도가 중심이며 새 군사 도발·병력·핵 징후는 확인되지 않았다. 직전 회차와 같이 foreign_forces 만 외교 일정으로 routine single 이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,23 +59,27 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국·러시아",
-      "summary": "조용원 노동당 비서 방러·푸틴 면담과 김정은 방중 관측이 로이터 보도로 이어졌으나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
-      "meaning": "북중러 외교 일정이며 군사 협력의 새 확인은 없다.",
+      "region": "러시아·중국",
+      "summary": "조용원 노동당 비서 방러와 김정은 방중 관측이 RFA·한국 언론에 이어졌으나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
+      "meaning": "북러·북중 고위급 교류 흐름이나 군사협력 신규 확인은 없다.",
       "sources": [
         {
-          "name": "Reuters(Internazionale 전재)",
+          "name": "RFA",
           "tier": "B",
-          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+          "url": "https://www.rfa.org/korean/in-focus/2026/11/16/apec-asean-russia-chaina-trump/"
+        },
+        {
+          "name": "코리아센터",
+          "tier": "C",
+          "url": "https://www.koreancenter.or.kr/news/articleView.html?idxno=1439607"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조용원이 푸틴 면담",
-        "통일부: 북 대표단 11/14부터 러시아 체류"
+        "조용원 11/14 방러 출국, 군사협력 논의는 기사에서 확인되지 않음"
       ],
       "speculation": [
-        "김정은 중국행 가능성"
+        "북러 정상회담 준비 가능성(전문가 분석)"
       ]
     },
     "parade_massing": {
@@ -94,7 +95,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T13:13:11+00:00",
+  "checked_at": "2026-11-19T14:10:02+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

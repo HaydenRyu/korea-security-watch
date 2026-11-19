@@ -1,52 +1,50 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 목함지뢰 발견 합참 DMZ NLL 귀순",
-      "North Korea Kim Jong Un China Russia visit Shenzhen"
+      "합참 북한 병력 이동 전방 동향 진돗개 데프콘 11월",
+      "North Korea Reuters AP troops mobilization wartime border China"
     ],
     "nuclear": [
-      "North Korea Kim Jong Un China Russia visit Shenzhen"
+      "North Korea missile launch nuclear Yongbyon 38 North November 2026"
     ],
     "logistics": [
-      "서해 구조물 주한미군 감축 합참 지뢰 발견 북한 11월"
+      "North Korea Reuters AP troops mobilization wartime border China"
     ],
     "border_clash": [
-      "북한 목함지뢰 발견 합참 DMZ NLL 귀순",
-      "서해 구조물 주한미군 감축 합참 지뢰 발견 북한 11월"
+      "북한 합참 발표 오늘 지뢰 발견 DMZ"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 11월 19일",
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
+      "해킹 개인정보 유출 11월 19일",
+      "북한 GPS 교란 사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit Shenzhen",
-      "서해 구조물 주한미군 감축 합참 지뢰 발견 북한 11월"
+      "North Korea Kim Jong Un China Russia visit APEC Shenzhen",
+      "서해 구조물 주한미군 감축 11월"
     ],
     "parade_massing": [
-      "North Korea Kim Jong Un China Russia visit Shenzhen"
+      "합참 북한 병력 이동 전방 동향 진돗개 데프콘 11월"
     ],
     "nk_internal": [
-      "North Korea Kim Jong Un China Russia visit Shenzhen"
+      "North Korea Reuters AP troops mobilization wartime border China"
     ],
     "gov_warning": [
-      "서해 구조물 주한미군 감축 합참 지뢰 발견 북한 11월"
+      "합참 북한 병력 이동 전방 동향 진돗개 데프콘 11월"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
+      "국가보안법 구속 간첩 혐의 북한"
     ],
     "calm": [
-      "North Korea talks offer 남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.koreaherald.com/article/10942242",
-    "https://www.yna.co.kr/view/AKR20261119022100504",
-    "https://www.yna.co.kr/view/AKR20261117027100009",
-    "https://www.yna.co.kr/view/AKR20261118158600504",
-    "https://seoul.co.kr/news/society/2026/11/18/20261118500335",
-    "https://www.segye.com/newsView/20261118520041"
+    "https://www.koreatimes.co.kr/foreignaffairs/others/20261119/trump-xi-putin-set-to-hold-historic-trilateral-summit-us-n-korea-meeting-uncertain",
+    "https://www.segye.com/newsView/20261119500803",
+    "https://www.segye.com/newsView/20261118520041",
+    "https://m.news.nate.com/view/20261119n01671"
   ],
-  "overall_summary": "접경·핵·병력 등 핵심 항목에 새 징후가 없고, 조용원 방러 귀국과 11/19 선전 미·중·러 정상회담 앞둔 외교 일정만 이어진다. 접경 남측 열점 후보는 보도 대조 대상이 없었고, 국내 대학가 해킹은 귀속 미확인이다.",
+  "overall_summary": "선전 APEC 미·중·러 정상회담 일정과 김정은 방중 관측 외에 접경 충돌·핵·병력 징후는 확인되지 않았다. 접경 열점·훈련 이상 보도 없음, 직전 회차와 같은 판정이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,55 +56,7 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "신규 지뢰·월선·교전 보도 없음; 11/17 NK뉴스발 유엔사-북한군 대화 무산 보도는 9월 DMZ 지뢰 사건의 후속 배경이다."
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "대구·경북",
-      "summary": "귀속 미확인 — 영남대(11/16)·전주대 등 국내 대학가 해킹 개인정보 유출이 잇따랐으나 북한·중국 소행 발표는 없다.",
-      "meaning": "국내 사이버 피해가 이어지나 귀속이 없어 군사 징후로 보지 않는다.",
-      "sources": [
-        {
-          "name": "서울신문",
-          "tier": "B",
-          "url": "https://seoul.co.kr/news/society/2026/11/18/20261118500335"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "영남대는 16일 도서관 전자책·취업 홈페이지 해킹으로 학번·성명·연락처 유출을 확인했고 주민번호 유출 정황은 없다"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "모스크바·선전",
-      "summary": "조용원 노동당 비서가 푸틴 등과 회동한 뒤 18일 귀국했고, 11/19 선전 미·중·러 정상회담 계기 김정은 참석 여부는 미확인이며 새 파병·무기 이전·협정 발표는 없다.",
-      "meaning": "북러 고위급 외교 일정이며 군사 협정·이전 발표가 없는 외교 동향이다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261119022100504"
-        },
-        {
-          "name": "Korea Herald",
-          "tier": "B",
-          "url": "https://www.koreaherald.com/article/10942242"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "마트비옌코 러 상원의장은 북한군 참전을 동맹 견고성의 증거라 언급(기존 파병 재언급)",
-        "트럼프-김정은 회동 여부 불확실"
-      ],
-      "speculation": [
-        "김정은 선전 방문 가능성"
-      ]
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -115,14 +65,62 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none",
-      "summary": "11/18 한미 C5ISRT 고위급회의는 정례 상호운용성 회의로 경고·동원 사항이 아니다."
+      "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "대한민국",
+      "summary": "귀속 미확인 — 중기중앙회 노란우산 침해 사고 유출 규모가 36만2천명으로 확대되고 미래에셋생명·고팍스 운영사·대학 등 해킹 피해 보도가 이어졌으나 북한 소행 발표는 없다.",
+      "meaning": "국내 금융·교육 부문 해킹 피해이나 귀속이 없어 군사 징후로 보지 않는다.",
+      "sources": [
+        {
+          "name": "연합뉴스(네이트)",
+          "tier": "B",
+          "url": "https://m.news.nate.com/view/20261119n01671"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "노란우산 개인정보 유출 36만2천명(당초 20만명)"
+      ],
+      "speculation": []
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "중국 선전",
+      "lat": 22.54,
+      "lon": 114.06,
+      "summary": "11/19 선전 APEC 계기 미·중·러 첫 3자 정상회담이 열리는 가운데 김정은 참석·트럼프 회동 여부는 미확인이며 새 파병·무기 이전·협정 확인은 없다.",
+      "meaning": "외교 일정이며 북중·북러 군사협력의 새 확인 사항은 없다.",
+      "sources": [
+        {
+          "name": "코리아헤럴드",
+          "tier": "B",
+          "url": "https://www.koreaherald.com/article/10942242"
+        },
+        {
+          "name": "코리아타임스",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/others/20261119/trump-xi-putin-set-to-hold-historic-trilateral-summit-us-n-korea-meeting-uncertain"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "미·중·러 3자 정상회담 11/19 선전 예정",
+        "김정은 참석 미확인"
+      ],
+      "speculation": [
+        "김정은 방중 가능성 거론"
+      ]
     }
   },
-  "checked_at": "2026-11-19T01:10:02+00:00",
+  "checked_at": "2026-11-19T01:10:46+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

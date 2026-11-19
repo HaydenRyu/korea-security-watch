@@ -6,14 +6,15 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon IAEA"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순 11월 19일"
+      "북한 합참 지뢰 DMZ 귀순 11월 19일",
+      "North Korea DMZ landmine defector"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -22,22 +23,25 @@
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea blackout mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 발령",
+      "DEFCON Korea alert"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
-      "북한 해킹 귀속 FBI"
+      "North Korea attributed FBI hacking"
     ],
     "calm": [
       "남북 대화 제안"
@@ -45,16 +49,17 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261119500803",
-    "https://www.segye.com/newsView/20261118520041",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "선전 APEC 계기 정상외교가 이어지고 김정은의 해군대학 시찰(NK News 인용) 외에 접경 충돌·병력 징후는 확인되지 않았다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "선전 APEC 계기 정상외교와 김정은 해군대학 방문 발언 외에 접경 충돌·병력 징후는 확인되지 않았다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "none",
+      "summary": "IAEA의 영변 시설 증설 우려 표명(NK News 11/19)은 기지의 활동 반복 보도라 배경으로만 둔다."
     },
     "logistics": {
       "status": "none"
@@ -69,22 +74,27 @@
       "status": "single",
       "routine": true,
       "region": "선전·모스크바",
-      "summary": "조용원 노동당 비서가 11/14 방러해 미·중·러 3자 정상회담(11/19 선전 APEC) 직전 외교 행보를 했으나 새 파병·무기 이전·협정은 확인되지 않았다(외교 일정).",
-      "meaning": "북러 고위급 접촉이나 군사협력 신규 확인은 없어 정례 외교 동향이다.",
+      "summary": "이재명 대통령이 11/18 선전 APEC에서 푸틴과 만나 긴장 완화에 공감했고 조용원 비서의 방러가 이어졌으나 새 파병·무기 이전·협정은 없다(외교 일정).",
+      "meaning": "정상·고위급 외교 일정으로 군사협력 신규 확인은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261119500803"
+        },
+        {
+          "name": "Reuters(internazionale 전재)",
+          "tier": "B",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "조용원 11/14 모스크바 도착",
-        "기사에 파병·무기 이전·협정 언급 없음"
+        "조용원 11/14부터 러시아 체류",
+        "김정은 11/15~16 삼지연 관광지구 시찰"
       ],
       "speculation": [
-        "김정은 친서 전달 특사 관측"
+        "김정은 방중 가능성 관측"
       ]
     },
     "parade_massing": {
@@ -100,7 +110,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T05:10:08+00:00",
+  "checked_at": "2026-11-19T06:10:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

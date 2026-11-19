@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-19T05:10:08+00:00",
+  "computed_at": "2026-11-19T06:10:25+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 26,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-18T23:39:17+00:00",
-    "latest_updated_at": "2026-11-19T05:10:08+00:00"
+    "linkage_judged_at": "2026-11-19T05:39:57+00:00",
+    "latest_updated_at": "2026-11-19T06:10:25+00:00"
   },
   "theaters": [
     {
@@ -22,7 +22,7 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "미 의회 보고서가 중국이 대만에 대한 압박을 키우고 있다고 밝혔다.",
+      "summary": "미 의회 보고서가 중국의 대만 압박 심화와 봉쇄 위험 증가를 경고했다.",
       "sources": [
         {
           "name": "중앙사(CNA)",
@@ -31,7 +31,7 @@
           "published_at": "2026-11-19T03:07:10+08:00"
         }
       ],
-      "judged_at": "2026-11-18T23:39:17+00:00"
+      "judged_at": "2026-11-19T05:39:57+00:00"
     },
     {
       "key": "ukraine",
@@ -41,16 +41,16 @@
       "channels": [
         "c2_nk_ru_cn"
       ],
-      "summary": "우크라이나군이 하르키우 지역에서 러시아군과 지하 가스관 안에서 싸우는 등 전쟁이 계속되고 있다.",
+      "summary": "크림대교가 이번 주 세 번째 공격을 받았고 하르키우에서는 지하 가스관 교전이 이어지는 등 전쟁이 계속되고 있다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c32l507ev4v4o",
-          "published_at": "2026-11-18T17:00:04+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo",
+          "published_at": "2026-11-19T04:37:00+00:00"
         }
       ],
-      "judged_at": "2026-11-18T23:39:17+00:00"
+      "judged_at": "2026-11-19T05:39:57+00:00"
     },
     {
       "key": "scs_ecs",
@@ -69,11 +69,11 @@
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-18T23:04:06+00:00",
+          "published_at": "2026-11-19T04:42:00+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-18T23:39:17+00:00"
+      "judged_at": "2026-11-19T05:39:57+00:00"
     },
     {
       "key": "mideast",
@@ -83,7 +83,7 @@
       "channels": [
         "c4_sea_energy"
       ],
-      "summary": "미군이 호르무즈 케슘섬을 타격한 뒤 이란이 쿠웨이트·바레인을 공격했고, UAE 유조선도 공격받아 승무원 1명이 실종됐다.",
+      "summary": "미군이 호르무즈 케슘섬을 타격한 뒤 이란이 쿠웨이트·바레인을 공격했고 UAE 유조선 승무원 1명이 실종됐다.",
       "sources": [
         {
           "name": "BBC",
@@ -92,7 +92,7 @@
           "published_at": "2026-11-18T13:04:48+00:00"
         }
       ],
-      "judged_at": "2026-11-18T23:39:17+00:00"
+      "judged_at": "2026-11-19T05:39:57+00:00"
     },
     {
       "key": "us_posture",
@@ -100,16 +100,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "하와이 기반 미군이 콰절린에서 HIMARS 합동훈련을 했고 한미연합사가 C5ISRT 회의를 열었다.",
+      "summary": "주한미군 델타포대가 패트리엇 포대 최초로 IBCS 인증을 완료했다.",
       "sources": [
         {
-          "name": "Stars and Stripes",
+          "name": "DVIDS",
           "tier": "B",
-          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-18/himars-kwajalein-joint-force-training-23501254.html",
-          "published_at": "2026-11-18T00:00:00+00:00"
+          "url": "https://www.dvidshub.net/news/579681/delta-battery-makes-army-history-with-first-ibcs-patriot-enabled-certification-peninsula",
+          "published_at": "2026-11-18T19:00:00+00:00"
         }
       ],
-      "judged_at": "2026-11-18T23:39:17+00:00"
+      "judged_at": "2026-11-19T05:39:57+00:00"
     }
   ],
   "channels": [
@@ -142,6 +142,6 @@
   "last_good": {
     "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-19T05:10:08+00:00"
+    "computed_at": "2026-11-19T06:10:25+00:00"
   }
 }

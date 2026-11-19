@@ -2,59 +2,58 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 영변 풍계리",
+      "North Korea missile nuclear Reuters"
     ],
     "logistics": [
       "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순",
-      "North Korea DMZ mine"
+      "지뢰 발견 DMZ 귀순 합참",
+      "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
-      "North Korea GPS jamming"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격",
+      "전주대 해킹 개인정보 유출 라자루스"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit APEC Shenzhen",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 방러 11월 19일",
+      "Kim Jong Un China Russia visit APEC North Korea",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 등화관제 준전시 노농적위군",
+      "North Korea wartime alert"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning State Department"
+      "진돗개 데프콘 상향",
+      "합참 북한 전통문"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://en.fnnews.com/news/202611190257199823",
-    "https://www.segye.com/newsView/20261119500803",
     "https://www.segye.com/newsView/20261119512404",
-    "https://www.dailysecu.com/news/articleView.html?idxno=209608",
-    "https://www.asiatime.co.kr/article/20261115500058"
+    "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
   ],
-  "overall_summary": "선전 APEC 3자 정상회담 기간 김정은 방중 동향은 없고 접경·군사 징후는 직전과 같이 외교 일정(routine) 수준이다. 접경 열점 후보 보도 대조: 신규 건 없음, 국내 해킹은 귀속 미확인으로 배경.",
+  "overall_summary": "선전 APEC 미중러 정상회담 기간 김정은 방중·방러는 확인되지 않았고 접경·군사 징후는 직전과 같이 외교 일정(routine) 수준이다. 접경 열점 후보 2건 중 신규 건의 관련 보도는 없고, 국내 해킹은 이번 회차에 원문 재확인이 되지 않아 배경으로 내렸다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -69,60 +68,34 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "전북 전주",
-      "lat": 35.82,
-      "lon": 127.15,
-      "summary": "귀속 미확인 — 전주대 해킹으로 개인정보 약 18만 건이 유출되는 등 국내 대학·금융 해킹이 잇따르고, 민간 보안업체는 라자루스의 국내 서버 공격 정황을 보고했다.",
-      "meaning": "공급망·교육기관 대상 해킹이 이어지나 정부의 북한 귀속 발표는 없다.",
-      "sources": [
-        {
-          "name": "데일리시큐",
-          "tier": "C",
-          "url": "https://www.dailysecu.com/news/articleView.html?idxno=209608"
-        },
-        {
-          "name": "아시아타임즈",
-          "tier": "B",
-          "url": "https://www.asiatime.co.kr/article/20261115500058"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "전주대 개인정보 약 18만 건 유출(주민번호 2.5만 건)",
-        "사이퍼마 보고서: 라자루스 국내 공격 정황(민간 보고, 정부 귀속 아님)"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "이번 회차에 국내 해킹 보도 원문을 재확인하지 못했고 귀속도 없어 배경으로 내림."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 선전",
-      "lat": 22.54,
-      "lon": 114.06,
-      "summary": "선전 APEC에서 트럼프·시진핑·푸틴 3자 정상회담이 11/19 열렸고 청와대는 김정은 방중 특이 동향이 없다고 밝혔으며, 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
-      "meaning": "북·중·러 정상급 외교 일정으로 군사협력 신규 징후는 아직 없다.",
+      "region": "중국 선전·러시아",
+      "summary": "조용원 노동당 비서 대표단이 11/14부터 러시아를 방문해 푸틴과 만났고 선전 APEC 3자 정상회담이 열렸으나, 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
+      "meaning": "북러 고위급 외교 접촉으로 군사협력 확대 근거는 아직 없다.",
       "sources": [
         {
-          "name": "파이낸셜뉴스",
+          "name": "코리아타임스",
           "tier": "B",
-          "url": "https://en.fnnews.com/news/202611190257199823"
+          "url": "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit"
         },
         {
-          "name": "세계일보",
+          "name": "로이터(Internazionale 전재)",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261119500803"
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "청와대 '김정은 방중 특이 동향 없음'",
-        "이 대통령-푸틴 회동에서 북핵 문제 거론"
+        "조용원 대표단 11/14부터 러시아 체류, 푸틴 면담",
+        "김정은은 삼지연 관광지구 시찰"
       ],
       "speculation": [
-        "김정은 APEC 참석 가능성 거론(미확인)"
+        "젤렌스키의 월 수십 발 북한 탄도미사일 공급 주장은 미확인"
       ]
     },
     "parade_massing": {
@@ -138,7 +111,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T09:10:05+00:00",
+  "checked_at": "2026-11-19T10:09:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

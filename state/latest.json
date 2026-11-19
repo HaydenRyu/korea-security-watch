@@ -1,65 +1,56 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
+      "북한 병력 이동 전방",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea missile nuclear Reuters"
+      "IAEA Grossi serious concern North Korea nuclear site upgrades Yongbyon",
+      "북한 핵 영변"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment Russia"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "North Korea DMZ NLL"
+      "북한 목함지뢰 DMZ 귀순",
+      "북한 미사일 발사 합참"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "전주대 해킹 개인정보 유출 라자루스"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 11월 19일",
-      "Kim Jong Un China Russia visit APEC North Korea",
-      "서해 구조물 주한미군 감축"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시 노농적위군",
-      "North Korea wartime alert"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "합참 북한 전통문"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261119512404",
-    "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+    "https://www.nknews.org",
+    "https://www.segye.com",
+    "https://www.koreajoongangdaily.com/korea/iaea-chief-expresses-concerns-over-norths-nuclear-activities/10156793"
   ],
-  "overall_summary": "선전 APEC 미중러 정상회담 기간 김정은 방중·방러는 확인되지 않았고 접경·군사 징후는 직전과 같이 외교 일정(routine) 수준이다. 접경 열점 후보 2건 중 신규 건의 관련 보도는 없고, 국내 해킹은 이번 회차에 원문 재확인이 되지 않아 배경으로 내렸다.",
+  "overall_summary": "선전 APEC 미중러 정상회담 기간 접경·군사 징후는 외교 일정(routine) 수준이고 김정은 방중·방러는 확인되지 않았다. 접경 열점 후보는 신규 건이 없고 관련 보도도 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "none",
+      "summary": "IAEA의 영변·강선 농축시설 우려는 9월 보고 이후 알려진 배경이며 24시간 안의 새 사건이 아니다."
     },
     "logistics": {
       "status": "none"
@@ -68,35 +59,26 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "이번 회차에 국내 해킹 보도 원문을 재확인하지 못했고 귀속도 없어 배경으로 내림."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 선전·러시아",
-      "summary": "조용원 노동당 비서 대표단이 11/14부터 러시아를 방문해 푸틴과 만났고 선전 APEC 3자 정상회담이 열렸으나, 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
-      "meaning": "북러 고위급 외교 접촉으로 군사협력 확대 근거는 아직 없다.",
+      "region": "러시아 쿠르스크",
+      "summary": "조용원 노동당 비서 대표단 방러 중 푸틴이 쿠르스크 북한군 위훈 기념비 건립을 언급했고 선전 APEC 3자 정상회담이 열리지만, 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
+      "meaning": "북러 군사협력의 상징적 확인이며 새 이전·협정은 없다.",
       "sources": [
         {
-          "name": "코리아타임스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.koreatimes.co.kr/world/20261116/seoul-to-closely-monitor-n-korean-officials-russia-trip-before-trump-xi-putin-summit"
-        },
-        {
-          "name": "로이터(Internazionale 전재)",
-          "tier": "B",
-          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+          "url": "https://www.segye.com"
         }
       ],
-      "confidence": "중간",
+      "confidence": "낮음",
       "facts": [
-        "조용원 대표단 11/14부터 러시아 체류, 푸틴 면담",
-        "김정은은 삼지연 관광지구 시찰"
+        "세계일보 메인에 조용원-푸틴 면담, 쿠르스크 위훈 기념비 건립 언급 제목 게재"
       ],
-      "speculation": [
-        "젤렌스키의 월 수십 발 북한 탄도미사일 공급 주장은 미확인"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -111,7 +93,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T10:09:41+00:00",
+  "checked_at": "2026-11-19T11:09:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

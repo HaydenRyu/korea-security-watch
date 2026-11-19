@@ -1,57 +1,42 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troop movement"
+      "북한 합참 발표 11월 19일"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 합참 발표 11월 19일"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 합참 발표 11월 19일"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참",
-      "North Korea DMZ mine"
+      "지뢰 발견 DMZ 귀순 NLL"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit APEC",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 합참 발표 11월 19일"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 합참 발표 11월 19일"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "북한 합참 발표 11월 19일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
+      "북한 합참 발표 11월 19일"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261119500803",
-    "https://www.segye.com/newsView/20261118520041",
+    "https://www.segye.com/newsView/20261119500981",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "선전 APEC 계기 한·중·러 회동에서 한반도 긴장 완화 공감대가 나왔고 김정은 해군대학 시찰 보도 외에 접경 충돌·핵·병력 징후는 확인되지 않았다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "선전 APEC 계기 정상외교 외에 접경 충돌·핵·병력 징후는 확인되지 않았고 김정은 해군대학 시찰 보도(NK News)만 있다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -66,15 +51,14 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "이번 회차 원문 재확인에서 신규 보도를 확인하지 못했다(직전 귀속 미확인 해킹 건은 첫 보도 24시간 경과)."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "선전",
-      "summary": "11/19 선전 APEC 계기 미·중·러 3자 회담이 예정된 가운데 이 대통령이 푸틴·시진핑과 한반도 긴장 완화에 공감했으나 새 파병·무기 이전·협정은 확인되지 않았다.",
-      "meaning": "외교 일정 중심이며 군사협력 신규 확인은 없다.",
+      "region": "중국 선전",
+      "summary": "선전 APEC 계기 이 대통령이 푸틴·시진핑과 한반도 긴장 완화에 공감했으나 새 파병·무기 이전·협정은 확인되지 않았다(외교 일정).",
+      "meaning": "정상 외교 일정이며 군사 협력의 새 징후는 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -84,11 +68,9 @@
       ],
       "confidence": "중간",
       "facts": [
-        "이 대통령-푸틴 회동, 긴장 완화 공감"
+        "11/18 한러 정상 회동에서 한반도 긴장 완화 공감"
       ],
-      "speculation": [
-        "김정은 참석 여부 미확인"
-      ]
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -103,7 +85,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-19T02:09:20+00:00",
+  "checked_at": "2026-11-19T03:09:29+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

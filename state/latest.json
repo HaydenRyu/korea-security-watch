@@ -1,45 +1,62 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강 동원",
-      "North Korea troops deployment border buildup"
+      "북한 병력 이동 전방",
+      "North Korea troop movement DMZ"
     ],
     "nuclear": [
-      "North Korea Reuters missile launch November 2026"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 열병식 노농적위군 등화관제"
+      "북한 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참"
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ 귀순",
+      "NLL"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "북한 김정은 방중 방러 11월 19일",
-      "Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "김정은 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 탄약 군수 수송 열병식 노농적위군 등화관제"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 탄약 군수 수송 열병식 노농적위군 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea blackout mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 한미일 긴급 경고"
+      "진돗개 발령 데프콘",
+      "DEFCON Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
-    "calm": []
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
+    ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261119509392",
     "https://www.segye.com/newsView/20261119512404",
-    "https://www.rfa.org/korean/in-focus/2026/11/16/apec-asean-russia-chaina-trump/",
-    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1439607"
+    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "국내 수집(15피드) 결과 미중러 정상회담·조용원 방러 후속 외교 보도가 중심이며 새 군사 도발·병력·핵 징후는 확인되지 않았다. 직전 회차와 같이 foreign_forces 만 외교 일정으로 routine single 이다.",
+  "overall_summary": "국내 수집(15피드)과 추가 검색에서 새 군사 도발·병력·핵 징후는 확인되지 않았고 한중 정상회담 후속 외교 보도가 중심이다. 직전 회차와 같이 foreign_forces 만 외교 일정으로 routine single 이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -56,32 +73,6 @@
     "electronic_cyber": {
       "status": "none"
     },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "러시아·중국",
-      "summary": "조용원 노동당 비서 방러와 김정은 방중 관측이 RFA·한국 언론에 이어졌으나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
-      "meaning": "북러·북중 고위급 교류 흐름이나 군사협력 신규 확인은 없다.",
-      "sources": [
-        {
-          "name": "RFA",
-          "tier": "B",
-          "url": "https://www.rfa.org/korean/in-focus/2026/11/16/apec-asean-russia-chaina-trump/"
-        },
-        {
-          "name": "코리아센터",
-          "tier": "C",
-          "url": "https://www.koreancenter.or.kr/news/articleView.html?idxno=1439607"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "조용원 11/14 방러 출국, 군사협력 논의는 기사에서 확인되지 않음"
-      ],
-      "speculation": [
-        "북러 정상회담 준비 가능성(전문가 분석)"
-      ]
-    },
     "parade_massing": {
       "status": "none"
     },
@@ -93,9 +84,23 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "summary": "한중 정상회담과 북·미 대화 관련 외교 일정 보도가 이어졌으나 새 파병·무기 이전·군사협정은 확인되지 않았다(외교 일정).",
+      "meaning": "외교 일정으로 군사적 위협 변화는 없다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261119509392"
+        }
+      ],
+      "confidence": "중간"
     }
   },
-  "checked_at": "2026-11-19T14:10:02+00:00",
+  "checked_at": "2026-11-19T14:12:00+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

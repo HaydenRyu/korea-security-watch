@@ -1,54 +1,50 @@
 {
   "coverage": {
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "North Korea DMZ border"
-    ],
-    "foreign_forces": [
-      "Kim Jong Un China Russia visit",
-      "김정은 방중 동향"
-    ],
-    "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출"
-    ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troops deployment border"
+      "북한 속보 합참 11월 20일",
+      "North Korea Reuters November 20 2026"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리 동향",
-      "IAEA Yongbyon enrichment"
+      "North Korea Reuters November 20 2026",
+      "IAEA 영변"
     ],
     "logistics": [
-      "북한 탄약 수송 군수 물자",
-      "North Korea ammunition shipment"
+      "북한 속보 합참 11월 20일"
+    ],
+    "border_clash": [
+      "남북 대화 제안 통신선 복원 North Korea talks offer 지뢰 발견 DMZ 귀순"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 GPS 교란 국가보안법 구속 북한 해킹 귀속 FBI"
+    ],
+    "foreign_forces": [
+      "김정은 방중 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
+      "북한 속보 합참 11월 20일"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군",
-      "North Korea wartime drill"
+      "North Korea Reuters November 20 2026"
     ],
     "gov_warning": [
-      "진돗개 데프콘 합참 발표 북한 경고",
-      "DEFCON North Korea warning"
+      "북한 속보 합참 11월 20일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "해킹 개인정보 유출 GPS 교란 국가보안법 구속 북한 해킹 귀속 FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261119080500504",
-    "https://www.yna.co.kr/view/AKR20261119022100504",
-    "https://www.donga.com/news/Inter/article/all/20261120/135058821/1",
     "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/category/news/"
+    "https://www.nknews.org/",
+    "https://www.nknews.org/2026/11/trump-wraps-up-asia-trip-without-meeting-north-korean-leader-kim-jong-un/",
+    "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/",
+    "https://www.nknews.org/2026/11/kim-jong-un-slams-enemy-naval-activities-amid-trumps-calls-to-meet-in-china/"
   ],
-  "overall_summary": "접경·병력·정부경고 신규 징후는 없고 영변 IAEA 우려 보도만 이어진다. 접경 열점 후보 3건은 보도 대조 대상 없음, 직전 회차 대비 변화 없음.",
+  "overall_summary": "트럼프 방중 중 북미 회동은 불발됐고 접경·병력·정부경고 신규 징후는 없으며, 영변 농축 증설 IAEA 우려만 배경 징후로 유지된다. 직전 회차와 큰 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,20 +55,23 @@
       "region": "영변",
       "lat": 39.8,
       "lon": 125.75,
-      "summary": "IAEA가 영변 농축시설 증설에 '심각한 우려'를 표명했다는 NK News 11/19 보도(직전 회차와 동일 사건).",
-      "meaning": "영변 농축능력 확대 정황이나 이미 알려진 활동의 연장이다.",
+      "summary": "IAEA 사무총장이 11/18 이사회에서 영변 농축시설 증설에 '심각한 우려'를 표명했다는 NK News 11/19 보도(직전 회차와 동일 사건).",
+      "meaning": "농축능력 확대 정황이나 이미 알려진 증설의 재확인이다.",
       "sources": [
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/category/news/"
+          "url": "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "IAEA가 영변 개량(농축시설 확장 포함)에 심각한 우려 표명"
+        "영변 농축시설 증설 부분 10월 말 외관 완공",
+        "5MW 원자로 가동 가능성"
       ],
-      "speculation": []
+      "speculation": [
+        "원심분리기 증설 가능성"
+      ]
     },
     "logistics": {
       "status": "none"
@@ -85,7 +84,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "조용원 당비서 방러 후 귀국, 통일부는 김정은 방중 동향 포착 안 됨(11/19) — 새 파병·협정 없음."
+      "summary": "트럼프 방중 중 북미 회동 불발, 김정은 방중 동향 미포착(통일부) — 신규 군사협력 확인 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -100,7 +99,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T08:10:01+00:00",
+  "checked_at": "2026-11-20T08:10:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

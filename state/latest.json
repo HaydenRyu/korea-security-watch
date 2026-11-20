@@ -1,44 +1,57 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 전방 증강 열병식 집결"
-    ],
-    "nuclear": [
-      "North Korea troops munitions Russia shipment nuclear parade November 2026"
-    ],
-    "logistics": [
-      "North Korea troops munitions Russia shipment nuclear parade November 2026"
-    ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순 11월 20일"
-    ],
-    "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "북한 지뢰 발견 DMZ 귀순 합참",
+      "North Korea DMZ border mine"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit North Korea"
+      "김정은 방중 방러",
+      "North Korea Reuters missile troops"
+    ],
+    "electronic_cyber": [
+      "GPS 교란 해킹 개인정보 유출 사이버 공격",
+      "North Korea GPS jamming"
+    ],
+    "calm": [
+      "남북 대화 제안(뉴스 수집·NK News 원문으로 대체)"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
+    ],
+    "nuclear": [
+      "북한 핵시설 영변 IAEA",
+      "North Korea nuclear IAEA"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "parade_massing": [
-      "북한 병력 전방 증강 열병식 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 전시 진돗개 데프콘 국가보안법 구속 간첩 혐의",
-      "North Korea civil defense warning attributed FBI hackers"
+      "북한 준전시 등화관제",
+      "North Korea wartime alert"
     ],
     "gov_warning": [
-      "북한 등화관제 전시 진돗개 데프콘 국가보안법 구속 간첩 혐의"
+      "진돗개 발령 데프콘",
+      "US Japan warning North Korea"
     ],
     "hybrid_ops": [
-      "북한 등화관제 전시 진돗개 데프콘 국가보안법 구속 간첩 혐의",
-      "North Korea civil defense warning attributed FBI hackers"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261120503763",
-    "https://www.koreatimes.co.kr/southkorea/defense",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://www.nknews.org/2026/11/kim-jong-un-slams-enemy-naval-activities-amid-trumps-calls-to-meet-in-china/",
+    "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/",
+    "https://www.nknews.org/2026/11/seouls-demand-for-mine-apology-derailed-push-for-north-korea-talks-sources/",
+    "https://www.koreajoongangdaily.com/korea/trump-xi-putin-agree-to-hold-dialogue-on-nuclear-risks-korean-peninsula-reportedly-discussed/12982300"
   ],
-  "overall_summary": "새 군사 징후 없이 직전 회차와 같은 수준(핵시설 IAEA 우려 보도만 정례 single)이다. 국내 수집 결과는 미중러 회담·방산 예산 기사 위주이며 접경 사건·최후통첩은 확인되지 않았다(이번 회차는 항목별 검색이 일부만 수행됨).",
+  "overall_summary": "새 군사 징후 없이 직전 회차와 같은 수준이다(IAEA 핵시설 우려 보도만 정례 single). 접경 열점 4건은 관련 보도를 찾지 못했고 미중러 핵위험 대화 합의 등 외교 동향이 중심이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -47,19 +60,14 @@
       "status": "single",
       "routine": true,
       "summary": "IAEA가 북한 핵시설 증설에 '심각한 우려'를 표명했다는 NK News 11/19 보도(직전 회차와 동일 사건).",
-      "meaning": "핵시설 개선 동향이며 새 실험·배치 징후는 아니다.",
       "sources": [
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/"
+          "url": "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/"
         }
       ],
-      "confidence": "중간",
-      "facts": [
-        "NK News 11/19 헤드라인: UN watchdog voices 'serious concern' over upgrades at North Korean nuclear site"
-      ],
-      "speculation": []
+      "confidence": "중간"
     },
     "logistics": {
       "status": "none"
@@ -86,7 +94,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T04:09:30+00:00",
+  "checked_at": "2026-11-20T05:09:48+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

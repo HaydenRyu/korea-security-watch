@@ -1,18 +1,10 @@
 {
- "at": "2026-11-20T08:07:11+00:00",
- "south": 80,
- "area": 100,
- "baseline": 72.0,
- "ratio": 1.11,
+ "at": "2026-11-20T09:22:30+00:00",
+ "south": 55,
+ "area": 70,
+ "baseline": 65.5,
+ "ratio": 0.84,
  "samples": 6,
- "mil": [
-  {
-   "type": "BE20",
-   "name": null,
-   "call": "MAGIC64",
-   "lat": 32.72,
-   "lon": 130.59
-  }
- ],
+ "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

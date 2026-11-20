@@ -1,24 +1,24 @@
 {
- "at": "2026-11-20T14:48:37+00:00",
- "south": 21,
- "area": 27,
- "baseline": 21.0,
- "ratio": 1.0,
- "samples": 6,
+ "at": "2026-11-20T17:20:12+00:00",
+ "south": 3,
+ "area": 7,
+ "baseline": 8,
+ "ratio": 0.38,
+ "samples": 7,
  "mil": [
   {
    "type": "GLEX",
    "name": "정찰용 비즈니스젯 가능",
    "call": "",
-   "lat": 37.15,
-   "lon": 124.64
+   "lat": 37.12,
+   "lon": 124.32
   },
   {
-   "type": "A332",
-   "name": null,
-   "call": "ASY388",
-   "lat": 33.96,
-   "lon": 129.66
+   "type": "C17",
+   "name": "C-17 수송기",
+   "call": "RCH3269",
+   "lat": 33.7,
+   "lon": 132.22
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

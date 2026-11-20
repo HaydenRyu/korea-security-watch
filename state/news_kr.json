@@ -1,30 +1,30 @@
 {
- "fetched_at": "2026-11-20T20:12:49+00:00",
- "status": "ok",
- "status_detail": "",
+ "fetched_at": "2026-11-20T21:24:31+00:00",
+ "status": "partial",
+ "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-20T20:12:49+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 0,
-  "fetched": 1132,
-  "hits": 37,
-  "clusters": 32,
+  "feeds_failed": 1,
+  "fetched": 1073,
+  "hits": 36,
+  "clusters": 31,
   "by_group": {
+   "spy": 3,
    "fire": 3,
    "border": 8,
-   "summit": 13,
-   "spy": 2,
+   "summit": 12,
    "hybrid": 3,
-   "drone_balloon": 2,
-   "yellowsea": 1
+   "yellowsea": 1,
+   "drone_balloon": 1
   }
  },
  "outlets": {
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 572,
+   "count": 573,
    "hits": 28
   },
   "SBS": {
@@ -53,13 +53,18 @@
   },
   "국방일보": {
    "feeds": 1,
-   "failed": 0,
-   "count": 60,
-   "hits": 1
+   "failed": 1,
+   "count": 0,
+   "hits": 0
   }
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "spy": {
+   "clusters": 3,
+   "max_independent": 1,
+   "latest": "2026-11-20T21:08:20+00:00"
+  },
   "fire": {
    "clusters": 3,
    "max_independent": 1,
@@ -71,29 +76,24 @@
    "latest": "2026-11-20T16:40:00+00:00"
   },
   "summit": {
-   "clusters": 13,
+   "clusters": 12,
    "max_independent": 2,
    "latest": "2026-11-20T14:57:20+00:00"
-  },
-  "spy": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-20T08:01:24+00:00"
   },
   "hybrid": {
    "clusters": 3,
    "max_independent": 1,
    "latest": "2026-11-20T07:12:00+00:00"
   },
-  "drone_balloon": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-19T15:00:00+00:00"
-  },
   "yellowsea": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-19T09:49:07+00:00"
+  },
+  "drone_balloon": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-19T09:02:04+00:00"
   }
  },
  "feeds": [
@@ -102,7 +102,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 92,
+   "count": 93,
    "hits": 19
   },
   {
@@ -213,9 +213,8 @@
    "outlet": "국방일보",
    "section": "국방",
    "url": "https://kookbang.dema.mil.kr/dema_xml/dema0010010000.xml",
-   "ok": true,
-   "count": 60,
-   "hits": 1
+   "ok": false,
+   "error": "URLError: <urlopen error timed out>"
   }
  ]
 }

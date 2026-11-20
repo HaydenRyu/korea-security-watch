@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-20T13:34:57+00:00",
+ "fetched_at": "2026-11-20T14:48:47+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-20T10:58:06+00:00",
@@ -8,7 +8,7 @@
   "feeds": 15,
   "feeds_failed": 1,
   "fetched": 1071,
-  "hits": 35,
+  "hits": 34,
   "clusters": 31,
   "by_group": {
    "summit": 15,
@@ -25,7 +25,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 572,
-   "hits": 30
+   "hits": 29
   },
   "SBS": {
    "feeds": 3,
@@ -63,7 +63,7 @@
   "summit": {
    "clusters": 15,
    "max_independent": 2,
-   "latest": "2026-11-20T12:59:26+00:00"
+   "latest": "2026-11-20T14:48:41+00:00"
   },
   "fire": {
    "clusters": 2,
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 7
+   "hits": 6
   },
   {
    "outlet": "SBS",

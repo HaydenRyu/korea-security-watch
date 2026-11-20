@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-20T11:39:38+00:00",
-  "judged_at": "2026-11-20T11:39:38+00:00",
+  "updated_at": "2026-11-20T11:40:29+00:00",
+  "judged_at": "2026-11-20T11:40:29+00:00",
   "taiwan": null,
   "korea": [
     {
@@ -21,10 +21,14 @@
         {
           "url": "https://www.yna.co.kr/view/AKR20261119022100504",
           "publisher": "연합뉴스"
+        },
+        {
+          "url": "https://www.yna.co.kr/view/AKR20261118018000504",
+          "publisher": "연합뉴스"
         }
       ],
       "first_seen": "2026-11-15T23:39:55+00:00",
-      "last_seen": "2026-11-20T05:39:57+00:00"
+      "last_seen": "2026-11-20T11:40:29+00:00"
     }
   ]
 }

@@ -1,36 +1,35 @@
 {
   "version": 1,
-  "at": "2026-11-20T11:39:38+00:00",
-  "opened": 15,
+  "at": "2026-11-20T11:40:29+00:00",
+  "opened": 20,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-20T11:39:38+00:00",
+      "last_ok": "2026-11-20T11:40:29+00:00",
       "raw": 4,
       "kept": 4
     },
     "factors": {
-      "status": "failed",
-      "last_ok": "2026-11-20T05:39:57+00:00",
-      "raw": 0,
-      "kept": 0,
-      "note": "이번 회차는 시간 제약으로 배경 요인 4영역 검색을 하지 않아 직전 판정을 유지한다."
+      "status": "checked",
+      "last_ok": "2026-11-20T11:40:29+00:00",
+      "raw": 4,
+      "kept": 4
     },
     "linkage": {
-      "status": "no_findings",
-      "last_ok": "2026-11-20T11:39:38+00:00",
-      "raw": 0,
-      "kept": 0
+      "status": "checked",
+      "last_ok": "2026-11-20T11:40:29+00:00",
+      "raw": 1,
+      "kept": 1
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-20T11:39:38+00:00",
-      "raw": 3,
-      "kept": 3
+      "last_ok": "2026-11-20T11:40:29+00:00",
+      "raw": 5,
+      "kept": 5
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-20T11:39:38+00:00",
+      "last_ok": "2026-11-20T11:40:29+00:00",
       "raw": 0,
       "kept": 0
     }

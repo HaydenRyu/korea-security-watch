@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-20T11:39:38+00:00",
+  "judged_at": "2026-11-20T11:40:29+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -11,10 +11,16 @@
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o",
           "published_at": "2026-11-20T11:12:57+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go",
+          "published_at": "2026-11-20T00:50:24+00:00"
         }
       ],
-      "summary": "러시아가 크림대교 공격 뒤 키이우에 대규모 미사일 공습을 가해 5명이 숨졌고 다리 3곳이 맞았다(BBC).",
-      "judged_at": "2026-11-20T11:39:38+00:00"
+      "summary": "러시아가 크림대교 피격 뒤 키이우 교량 3곳 등을 탄도미사일로 타격했고 유럽은 종전 협상 용의를 밝혔다.",
+      "judged_at": "2026-11-20T11:40:29+00:00"
     },
     "mideast": {
       "state": 3,
@@ -25,26 +31,40 @@
         {
           "name": "BBC",
           "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno",
+          "published_at": "2026-11-19T17:03:23+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
           "published_at": "2026-11-18T13:04:48+00:00"
         }
       ],
-      "summary": "미국의 이란 케슘섬 타격 뒤 이란이 쿠웨이트와 바레인을 공격했다고 BBC가 전했다.",
-      "judged_at": "2026-11-20T11:39:38+00:00"
+      "summary": "미군의 케슘섬 타격 뒤 이란이 쿠웨이트·바레인을 공격했고 이스라엘군은 가자 옐로라인 너머 지상작전을 마쳤다.",
+      "judged_at": "2026-11-20T11:40:29+00:00"
     },
     "taiwan": {
       "state": 1,
-      "channels": [],
+      "channels": [
+        "c3_simul"
+      ],
       "sources": [
         {
-          "name": "CNA",
+          "name": "중앙통신사(CNA)",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611200047.aspx",
-          "published_at": "2026-11-20T10:05:19+08:00"
+          "url": "https://www.cna.com.tw/news/acn/202611200138.aspx",
+          "published_at": "2026-11-20T14:30:38+08:00"
+        },
+        {
+          "name": "Focus Taiwan",
+          "tier": "B",
+          "url": "https://focustaiwan.tw/politics/202611200010",
+          "published_at": "2026-11-20T15:46:48+08:00"
         }
       ],
-      "summary": "대만 국방부가 20일 기준 24시간 동안 공군기 8대(6대 중선 넘음)·함정 7척·공무선 2척과 공중 기구 4개를 포착했다고 밝혔다.",
-      "judged_at": "2026-11-20T05:39:57+00:00"
+      "summary": "러시아 군용기가 APEC 기간 전후 일본 영공과 대만 방공식별구역에 진입했다고 중앙사가 전했다.",
+      "judged_at": "2026-11-20T11:40:29+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -61,16 +81,10 @@
           "url": "https://www.rappler.com/feed/",
           "published_at": "2026-11-20T18:28:42+08:00",
           "kind": "feed"
-        },
-        {
-          "name": "BBC 아시아",
-          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-20T04:13:22+00:00",
-          "kind": "feed"
         }
       ],
-      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-20T11:39:38+00:00"
+      "summary": "Philstar·Rappler 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "judged_at": "2026-11-20T11:40:29+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -79,12 +93,12 @@
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/579804/cnrh-hosts-multi-region-exercise-synchronizes-shore-support-with-pacflt-ops",
-          "published_at": "2026-11-19T20:31:35-05:00"
+          "url": "https://www.dvidshub.net/news/579822/us-ambassador-visits-uss-george-washington",
+          "published_at": "2026-11-20T06:19:49-05:00"
         }
       ],
-      "summary": "미 하와이 해군지역사령부가 태평양 해군기지 지원 도상훈련을 마쳤다(군사 시위 보도 없음).",
-      "judged_at": "2026-11-20T05:39:57+00:00"
+      "summary": "미 항모 조지워싱턴호가 7함대 해역에서 인도 주재 대사 등을 맞았다(군사 시위 보도 없음).",
+      "judged_at": "2026-11-20T11:40:29+00:00"
     }
   }
 }

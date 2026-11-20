@@ -1,51 +1,55 @@
 {
   "coverage": {
-    "border_clash": [
-      "합참 지뢰 발견 DMZ 귀순"
-    ],
-    "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "북한 GPS 교란 김정은 방중 서해 구조물 주한미군 감축"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 랜섬웨어 공격 국가보안법 구속 간첩 혐의"
+    "troop_movement": [
+      "북한 합참 발표 11월 20일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea missile nuclear troops 38 North NK News"
-    ],
-    "calm": [
-      "남북 대화 제안"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 예비군 동원",
-      "North Korea troop movement frontline buildup November 2026"
+      "North Korea missile launch nuclear Yongbyon 38 North",
+      "북한 영변 핵시설 동향"
     ],
     "logistics": [
-      "북한 탄약 군수 수송 열병식 준비 노농적위군 등화관제"
+      "북한 합참 발표 11월 20일",
+      "North Korea Russia ammunition shipments"
+    ],
+    "border_clash": [
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "북한 합참 발표 11월 20일"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
+    ],
+    "foreign_forces": [
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 탄약 군수 수송 열병식 준비 노농적위군 등화관제"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 탄약 군수 수송 열병식 준비 노농적위군 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea Kim Jong Un inspects Samjiyon"
     ],
     "gov_warning": [
-      "진돗개 데프콘 한미일 경고 North Korea parade logistics nk internal wartime"
+      "진돗개 데프콘 상향",
+      "북한 합참 발표 11월 20일"
     ],
     "hybrid_ops": [
-      "해킹 개인정보 유출 랜섬웨어 공격 국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.nknews.org/2026/11/trump-xi-and-putin-discuss-north-korea-nuclear-risks-at-first-trilateral-talks/",
-    "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/",
-    "https://www.nknews.org/2026/11/seoul-dispatches-team-to-myanmar-to-search-for-plane-bombed-by-north-korea/",
-    "https://www.nknews.org/2026/11/trump-wraps-up-asia-trip-without-meeting-north-korean-leader-kim-jong-un/",
-    "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261119080500504",
-    "https://www.yna.co.kr/view/AKR20261119022100504"
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreajoongangdaily.com/korea/fourth-suspected-north-korean-mine-washes-up-on-ganghwa-coast/12928133"
   ],
-  "overall_summary": "새로운 군사 도발·전쟁 징후는 없고 트럼프·시진핑·푸틴 3자회담 직후 외교 동향과 영변 농축시설 증축 보도가 이어졌다. 접경 열점 신규 후보 대조는 이번 회차에서 하지 않았다.",
+  "overall_summary": "새로운 군사 도발·전쟁 징후는 없고 김정은 삼지연 시찰·방중설과 조용원 방러 후 귀국, IAEA의 영변 농축시설 증축 우려가 이어졌다. 접경 열점 신규 후보는 보도 대조 결과 관련 보도가 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -53,26 +57,20 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "영변",
-      "lat": 39.8,
-      "lon": 125.75,
-      "summary": "IAEA 사무총장이 11/18 이사회에서 영변 농축시설 증축(10월 말 외부 완공)을 '중대한 우려'로 언급했고 5MW 원자로 뒤편 정지 작업도 보도됐다.",
-      "meaning": "기존 농축 확장 흐름의 연장으로 새로운 사용 준비 징후는 아니다.",
+      "summary": "IAEA가 영변 농축시설 증축에 우려를 표명했다는 보도가 이어졌다(기존 보도의 반복).",
+      "meaning": "핵시설 확장 지속 정황이나 새 사건은 아니다.",
       "sources": [
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/"
+          "name": "로이터·AFP(The Star 전재)",
+          "tier": "B",
+          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "Grossi: 증축 10월 말 외부 완공",
-        "NK Pro 위성 분석: 11/9~15 원자로 뒤 도로·정지 작업"
+        "IAEA가 영변 농축시설 확장을 언급했다는 헤드라인"
       ],
-      "speculation": [
-        "용도 불명"
-      ]
+      "speculation": []
     },
     "logistics": {
       "status": "none"
@@ -86,30 +84,23 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "summary": "조용원 노동당 비서가 방러를 마치고 11/19 귀국했고 통일부는 김정은 방중 동향이 포착되지 않았다고 밝혔으며 트럼프는 김정은을 만나지 않고 아시아 순방을 마쳤다.",
-      "meaning": "고위급 외교 일정이며 군사협정·무기 이전 발표는 없다.",
+      "summary": "조용원 노동당 비서가 방러 후 귀국했고 김정은 방중설은 확인되지 않았으며, 젤렌스키는 북한산 탄도미사일 월 수십 발이 러시아로 간다고 주장했다(미확인).",
+      "meaning": "외교 일정 위주이며 새 군사협정·파병 확인은 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "로이터·AFP(The Star 전재)",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261119080500504"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261119022100504"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/trump-wraps-up-asia-trip-without-meeting-north-korean-leader-kim-jong-un/"
+          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "통일부 11/19: 김정은 방중 동향 파악 안 됨"
+        "김정은 11/15~16 삼지연 시찰",
+        "트럼프가 중국에서 김정은 면담 가능성 언급"
       ],
-      "speculation": []
+      "speculation": [
+        "김정은 APEC 계기 방중 가능성"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -124,7 +115,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T15:10:29+00:00",
+  "checked_at": "2026-11-20T16:11:36+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

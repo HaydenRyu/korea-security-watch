@@ -13,17 +13,16 @@
       "Zelensky North Korea missiles Russia"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순",
-      "목함지뢰 해안 발견"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 20일"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격",
+      "GPS 교란",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
+      "North Korea Kim Jong Un China Russia visit missile Reuters",
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물"
     ],
     "parade_massing": [
@@ -42,7 +41,7 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 북한"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
@@ -50,7 +49,7 @@
     "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
     "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "새 군사 징후 없음: 김정은 방중은 보도·발언 차원의 추측 단계이고 통일부도 동향 미포착이다. 국내 수집 묶음 중 접경 군사 사건은 없었다.",
+  "overall_summary": "새 군사 징후 없음: 김정은 방중설은 미확인이고 접경 군사 사건·신규 열점 보도도 없다. 직전 회차와 동일.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -94,7 +93,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T11:09:39+00:00",
+  "checked_at": "2026-11-20T11:11:17+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

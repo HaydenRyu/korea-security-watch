@@ -1,13 +1,24 @@
 {
   "version": 1,
-  "updated_at": "2026-11-20T05:39:57+00:00",
-  "world_at": "2026-11-20T05:39:57+00:00",
+  "updated_at": "2026-11-20T11:39:38+00:00",
+  "world_at": "2026-11-20T11:39:38+00:00",
   "world": [
     {
-      "title": "미·중·러 정상, 첫 3자 회담 뒤 「평화 공동선언」 발표",
-      "summary": "트럼프·푸틴·시진핑이 첫 3자 회담을 마치고 평화 공동선언을 냈다.",
-      "link_korea": "북핵·한반도 문제를 다루는 강대국 논의 구도에 영향을 줄 수 있다.",
-      "region": "동아시아",
+      "title": "러시아, 키이우 대규모 미사일 공습…다리 3곳 피격",
+      "summary": "BBC에 따르면 크림대교 공격에 이은 보복성 공습으로 5명이 숨졌고 키이우 다리 3곳이 맞았다.",
+      "link_korea": "러-우 전쟁 장기화는 북러 군사협력과 북한군 파병 논의의 배경이다.",
+      "region": "유럽",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+      }
+    },
+    {
+      "title": "트럼프·푸틴·시진핑, 첫 3자 회담 뒤 '평화 선언' 발표",
+      "summary": "BBC는 세 정상이 처음으로 3자 회담을 열고 평화 선언을 발표했다고 전했다.",
+      "link_korea": "미·중·러 정상 간 합의 흐름은 대북 제재와 북핵 협상 환경에 영향을 줄 수 있다.",
+      "region": "세계",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c623j4ln97x7o",
@@ -15,38 +26,27 @@
       }
     },
     {
-      "title": "푸틴, 크림대교 공격에 「훨씬 고통스러운」 보복 공언",
-      "summary": "우크라이나의 결합 공격으로 크림대교가 큰 피해를 입었고 푸틴이 더 고통스러운 대응을 공언했다.",
-      "link_korea": "러시아 전선 상황은 북러 군사협력과 한반도 안보 환경에 영향을 준다.",
-      "region": "유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
-      }
-    },
-    {
-      "title": "유럽 정상들, 러시아와 종전 협상 용의 밝혀",
-      "summary": "우크라이나 유럽 우방들이 베를린 정상회의에서 「단일한」 협상 입장을 갖췄다며 러시아와의 대화 준비를 밝혔다.",
-      "link_korea": "우크라이나 종전 논의는 북러 군사협력과 북한군 파병 문제의 향방에 영향을 준다.",
-      "region": "유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "미군 이란 케슘섬 타격 뒤 쿠웨이트·바레인 피격",
-      "summary": "쿠웨이트는 두 달 만의 이란 공격을 격퇴했다고 밝혔고 바레인도 공격받았다고 밝혔다.",
-      "link_korea": "호르무즈 해상 에너지 수송 불안은 한국의 에너지 안보와 미군 전력 배분에 영향을 준다.",
+      "title": "미군 이란 케슘섬 타격 뒤 이란, 쿠웨이트 공격…쿠웨이트 요격 주장",
+      "summary": "쿠웨이트는 두 달 만의 이란 공격을 막았다고 밝혔고 바레인도 이란의 공격을 받았다고 했다.",
+      "link_korea": "중동 해상·에너지 불안은 한국의 원유 수송로와 미군 전력 배치에 영향을 준다.",
       "region": "중동",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
         "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
       }
+    },
+    {
+      "title": "예멘 후티 포위 도시 타이즈 주민 고립",
+      "summary": "BBC는 후티 반군에 몇 주째 포위된 예멘 타이즈의 민간인 상황을 전했다.",
+      "link_korea": "홍해 항로 불안은 한국 수출입 해상 물류에 부담이다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cx7v2d8q879eo",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+      }
     }
   ],
-  "world_context": "미·중·러 3자 회담과 유럽의 협상 의사 표명에도 크림대교·걸프에서 무력 충돌이 이어지고 있다."
+  "world_context": "러-우 전쟁과 중동 충돌이 계속되는 가운데 미·중·러 정상 간 3자 회담이 처음 열렸다."
 }

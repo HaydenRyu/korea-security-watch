@@ -1,36 +1,36 @@
 {
   "version": 1,
-  "at": "2026-11-20T05:39:57+00:00",
-  "opened": 13,
+  "at": "2026-11-20T11:39:38+00:00",
+  "opened": 15,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-20T05:39:57+00:00",
+      "last_ok": "2026-11-20T11:39:38+00:00",
       "raw": 4,
       "kept": 4
     },
     "factors": {
-      "status": "checked",
+      "status": "failed",
       "last_ok": "2026-11-20T05:39:57+00:00",
-      "raw": 4,
-      "kept": 4
+      "raw": 0,
+      "kept": 0,
+      "note": "이번 회차는 시간 제약으로 배경 요인 4영역 검색을 하지 않아 직전 판정을 유지한다."
     },
     "linkage": {
-      "status": "checked",
-      "last_ok": "2026-11-20T05:39:57+00:00",
-      "raw": 1,
-      "kept": 1
+      "status": "no_findings",
+      "last_ok": "2026-11-20T11:39:38+00:00",
+      "raw": 0,
+      "kept": 0
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-20T05:39:57+00:00",
-      "raw": 4,
-      "kept": 4,
-      "note": "scs_ecs: Rappler 남중국해 행동준칙 기사(11/20)가 403 으로 안 열려 평온 확인도 못 써 키 생략(직전 값 유지)."
+      "last_ok": "2026-11-20T11:39:38+00:00",
+      "raw": 3,
+      "kept": 3
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-20T05:39:57+00:00",
+      "last_ok": "2026-11-20T11:39:38+00:00",
       "raw": 0,
       "kept": 0
     }

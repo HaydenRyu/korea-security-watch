@@ -1,23 +1,24 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 20일",
-      "North Korea troop buildup"
+      "북한 병력 이동 전방 증강",
+      "North Korea troops deployment"
     ],
     "nuclear": [
-      "북한 영변 농축 IAEA",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
+      "북한 탄약 군수 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ NLL 귀순"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
@@ -25,13 +26,14 @@
       "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
       "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 발령 데프콘",
+      "North Korea warning"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -39,28 +41,28 @@
     ],
     "calm": [
       "남북 대화 제안",
-      "North Korea talks offer"
+      "통신선 복원"
     ]
   },
   "opened": [
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
-    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760"
+    "https://www.yna.co.kr/view/AKR20261119080500504",
+    "https://www.donga.com/news/Politics/article/all/20261120/135062569/2",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856048"
   ],
-  "overall_summary": "24시간 내 새로운 군사 징후는 확인되지 않았고 김정은 방중설·북러 고위급 교류 보도만 있다. 접경 열점 후보는 보도 대조에서 관련 보도가 없었다.",
+  "overall_summary": "24시간 내 새로운 군사 징후는 없고 김정은 방중설·미중러 정상회담 후속 보도만 있다. 접경 열점 후보 신규 대조 대상 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "직전 영변 IAEA 보도는 이번 회차 원문 재확인에서 근거를 찾지 못해 배경으로 내림 — 원문에 해당 내용 없음."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "새 지뢰·월선·귀순 보도 없음(9~10월 DMZ 지뢰는 배경)."
     },
     "electronic_cyber": {
       "status": "none"
@@ -68,30 +70,22 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "삼지연",
-      "lat": 41.98,
-      "lon": 128.4,
-      "summary": "김정은이 중국 접경 삼지연 관광지구를 시찰했고 방중설이 이어지며 북한 대표단이 러시아를 방문했다.",
-      "meaning": "외교 일정 성격이며 군사 협정·무기 이전 발표는 없다.",
+      "region": "중국·러시아 접경",
+      "summary": "트럼프 방중 마지막 날인 19일까지 통일부는 김정은 방중 동향이 포착되지 않았다고 밝혔고 북러·미중러 정상 외교 보도만 이어졌다.",
+      "meaning": "정상급 외교 일정으로 군사 협정·무기 이전 발표는 없어 정례 외교 동향이다.",
       "sources": [
         {
-          "name": "The Star(Reuters)",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
-        },
-        {
-          "name": "Reuters(Internazionale)",
-          "tier": "B",
-          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+          "url": "https://www.yna.co.kr/view/AKR20261119080500504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA가 삼지연 시찰 보도",
-        "방중설은 미·러 인사 발언에서 비롯"
+        "통일부 \"김정은 방중 동향 포착 안돼\"(11/19)"
       ],
       "speculation": [
-        "김정은 방중 가능성"
+        "방중설은 계속"
       ]
     },
     "parade_massing": {
@@ -107,7 +101,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T12:09:44+00:00",
+  "checked_at": "2026-11-20T12:12:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

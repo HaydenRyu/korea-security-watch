@@ -1,60 +1,49 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 증강 핵 풍계리 영변 군수 열병식 등화관제 진돗개",
+      "North Korea troops nuclear test site parade blackout alert November 2026"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea nuclear Reuters"
+      "북한 병력 이동 전방 증강 핵 풍계리 영변 군수 열병식 등화관제 진돗개",
+      "North Korea troops nuclear test site parade blackout alert November 2026"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition logistics"
-    ],
-    "border_clash": [
-      "지뢰 발견",
-      "합참 NLL DMZ 귀순",
-      "North Korea DMZ border"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
-    ],
-    "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "북한 병력 이동 전방 증강 핵 풍계리 영변 군수 열병식 등화관제 진돗개",
+      "North Korea troops nuclear test site parade blackout alert November 2026"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 병력 이동 전방 증강 핵 풍계리 영변 군수 열병식 등화관제 진돗개",
+      "North Korea troops nuclear test site parade blackout alert November 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 병력 이동 전방 증강 핵 풍계리 영변 군수 열병식 등화관제 진돗개",
+      "North Korea troops nuclear test site parade blackout alert November 2026"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea government warning"
+      "북한 병력 이동 전방 증강 핵 풍계리 영변 군수 열병식 등화관제 진돗개",
+      "North Korea troops nuclear test site parade blackout alert November 2026"
+    ],
+    "border_clash": [
+      "북한 합참 지뢰 발견 DMZ 귀순",
+      "North Korea troops nuclear test site parade blackout alert November 2026"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+    ],
+    "foreign_forces": [
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261119080500504",
-    "https://www.donga.com/news/Politics/article/all/20261120/135062569/2",
-    "https://www.nknews.org/"
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.thestandard.com.hk/world/article/348710/North-Koreas-Kim-inspects-Samjiyon-tourism-zone-amid-speculation-over-China-trip"
   ],
-  "overall_summary": "최근 24시간 신규 징후 없음: 국내 수집 묶음은 정동영 판문점 면담·미중러 정상회담 등 외교 일정이고 접경 군사 사건은 없다. 접경 열점 후보는 북측 농경지 소각 등으로 관련 보도가 없어 징후로 올리지 않았다.",
+  "overall_summary": "신규 징후 없음: 국내 수집 묶음에 접경·군사 사건이 없고 조용원 방러(11/14~16)·김정은 삼지연 시찰은 배경이다. 직전과 같이 평온하다. 열점 후보 대조와 일부 항목 검색은 생략했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,8 +61,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "24시간 경과 — 조용원 방러 첫 보도 11/17 22시(UTC), 김정은 방중·방러 동향은 통일부가 포착 안 됐다고 밝혔다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -88,7 +76,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T19:10:10+00:00",
+  "checked_at": "2026-11-20T19:10:28+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

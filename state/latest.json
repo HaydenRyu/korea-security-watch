@@ -1,52 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troops buildup November 2026"
+      "북한 병력 이동 열병식 등화관제 진돗개 데프콘"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea missile nuclear test site November 2026"
+      "북한 핵 풍계리 영변 우라늄 농축"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition logistics Russia"
+      "북한 병력 이동 열병식 등화관제 진돗개 데프콘"
     ],
     "border_clash": [
       "북한 합참 지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축",
+      "North Korea Reuters November 20 2026"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 병력 이동 열병식 등화관제 진돗개 데프콘"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 병력 이동 열병식 등화관제 진돗개 데프콘"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "북한 병력 이동 열병식 등화관제 진돗개 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html",
-    "https://www.koreaherald.com/article/10927095",
-    "https://www.koreaherald.com/article/10926441"
+    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/",
+    "https://www.koreaherald.com/"
   ],
-  "overall_summary": "신규 징후 없음: 국내 수집 묶음에 24시간 내 접경·군사 사건이 없고 최근 북한 관련 보도(11/1~5 시험발사)는 24시간 밖 배경이다. 직전과 같이 평온하며, 접경 열점 후보 대조와 일부 항목 검색은 제한적으로 수행했다.",
+  "overall_summary": "신규 징후 없음: 국내 수집 묶음과 NK News·코리아헤럴드 첫 화면에 24시간 내 군사·접경 사건이 없고, 11/20 트럼프·시진핑·푸틴 회담과 정동영 판문점 방문은 외교·정치 일정이다. 직전과 같이 평시이며 영문·일부 항목 검색은 제한적으로 수행했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -79,7 +75,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T20:09:29+00:00",
+  "checked_at": "2026-11-20T21:10:31+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

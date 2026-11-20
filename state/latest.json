@@ -1,49 +1,54 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 합참 발표 11월 20일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
-    ],
-    "nuclear": [
-      "IAEA 영변 우려",
-      "North Korea nuclear Yongbyon IAEA"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약"
-    ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순",
-      "지뢰 발견"
-    ],
-    "electronic_cyber": [
-      "GPS 교란 북한 해킹 공격 랜섬웨어 개인정보 유출"
+      "지뢰 발견 DMZ 귀순",
+      "North Korea DMZ border"
     ],
     "foreign_forces": [
-      "서해 구조물 주한미군 감축 김정은 방러",
-      "Kim Jong Un China Russia visit"
+      "Kim Jong Un China Russia visit",
+      "김정은 방중 동향"
+    ],
+    "electronic_cyber": [
+      "북한 GPS 교란",
+      "해킹 개인정보 유출"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troops deployment border"
+    ],
+    "nuclear": [
+      "북한 핵 영변 풍계리 동향",
+      "IAEA Yongbyon enrichment"
+    ],
+    "logistics": [
+      "북한 탄약 수송 군수 물자",
+      "North Korea ammunition shipment"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 준전시 등화관제 노농적위군",
+      "North Korea wartime drill"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 합참 발표 북한 경고",
+      "DEFCON North Korea warning"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261120503763",
+    "https://www.yna.co.kr/view/AKR20261119080500504",
+    "https://www.yna.co.kr/view/AKR20261119022100504",
+    "https://www.donga.com/news/Inter/article/all/20261120/135058821/1",
     "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/category/news/"
   ],
-  "overall_summary": "새로 확인된 군사적 징후는 없고 영변 IAEA 우려(11/19)만 정례 수준으로 유지된다. 한중·한러 정상 접촉과 APEC 외교 일정이 중심이며 국내 수집 묶음에 접경 사건은 없었다.",
+  "overall_summary": "접경·병력·정부경고 신규 징후는 없고 영변 IAEA 우려 보도만 이어진다. 접경 열점 후보 3건은 보도 대조 대상 없음, 직전 회차 대비 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -54,7 +59,7 @@
       "region": "영변",
       "lat": 39.8,
       "lon": 125.75,
-      "summary": "IAEA가 영변 농축시설 증설에 '심각한 우려'를 표명했다는 NK News 11/19 보도(직전 회차와 동일 사건, 24시간 내).",
+      "summary": "IAEA가 영변 농축시설 증설에 '심각한 우려'를 표명했다는 NK News 11/19 보도(직전 회차와 동일 사건).",
       "meaning": "영변 농축능력 확대 정황이나 이미 알려진 활동의 연장이다.",
       "sources": [
         {
@@ -80,7 +85,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김정은 방중·방러 동향 없음 — 통일부 11/19 '김정은 방중 동향 포착 안 됨', 트럼프는 김정은 면담 없이 순방 종료."
+      "summary": "조용원 당비서 방러 후 귀국, 통일부는 김정은 방중 동향 포착 안 됨(11/19) — 새 파병·협정 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -95,14 +100,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T06:09:40+00:00",
+  "checked_at": "2026-11-20T08:10:01+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-20T07:10:18+00:00",
-    "summary": "트럼프 방중 중 북미 회동은 불발됐고 김정은 방중 동향은 포착되지 않았으며, 접경·핵·정부경고 신규 징후는 확인되지 않았다. 직전 회차 대비 큰 변화 없음(국내 사이버·귀속 신규 발표 없음)."
-  }
+  "active": []
 }

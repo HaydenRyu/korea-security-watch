@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-20T12:13:59+00:00",
+ "fetched_at": "2026-11-20T13:34:57+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-20T10:58:06+00:00",
@@ -8,14 +8,14 @@
   "feeds": 15,
   "feeds_failed": 1,
   "fetched": 1071,
-  "hits": 34,
-  "clusters": 30,
+  "hits": 35,
+  "clusters": 31,
   "by_group": {
    "summit": 15,
+   "fire": 2,
    "border": 6,
    "drone_balloon": 3,
    "spy": 2,
-   "fire": 1,
    "hybrid": 3,
    "yellowsea": 1
   }
@@ -25,13 +25,13 @@
    "feeds": 5,
    "failed": 0,
    "count": 572,
-   "hits": 28
+   "hits": 30
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 4
+   "hits": 3
   },
   "동아일보": {
    "feeds": 2,
@@ -63,7 +63,12 @@
   "summit": {
    "clusters": 15,
    "max_independent": 2,
-   "latest": "2026-11-20T12:07:11+00:00"
+   "latest": "2026-11-20T12:59:26+00:00"
+  },
+  "fire": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-20T12:23:09+00:00"
   },
   "border": {
    "clusters": 6,
@@ -79,11 +84,6 @@
    "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-20T08:01:24+00:00"
-  },
-  "fire": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-20T07:12:22+00:00"
   },
   "hybrid": {
    "clusters": 3,
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 5
+   "hits": 7
   },
   {
    "outlet": "SBS",
@@ -159,7 +159,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 4
+   "hits": 3
   },
   {
    "outlet": "동아일보",

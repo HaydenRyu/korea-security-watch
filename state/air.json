@@ -1,18 +1,10 @@
 {
- "at": "2026-11-20T10:35:18+00:00",
- "south": 74,
- "area": 86,
- "baseline": 75.5,
- "ratio": 0.98,
- "samples": 6,
- "mil": [
-  {
-   "type": "B190",
-   "name": null,
-   "call": "MOJO66",
-   "lat": 33.45,
-   "lon": 130.16
-  }
- ],
+ "at": "2026-11-20T10:57:56+00:00",
+ "south": 76,
+ "area": 87,
+ "baseline": 75,
+ "ratio": 1.01,
+ "samples": 7,
+ "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

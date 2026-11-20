@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-20T05:39:26+00:00",
+  "judged_at": "2026-11-20T05:39:57+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -9,12 +9,18 @@
         {
           "name": "BBC",
           "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go",
+          "published_at": "2026-11-20T00:50:24+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo",
           "published_at": "2026-11-19T13:07:35+00:00"
         }
       ],
-      "summary": "크림대교가 이번 주 세 번째 공격을 받았고 푸틴이 더 고통스러운 보복을 공언했다.",
-      "judged_at": "2026-11-20T05:39:26+00:00"
+      "summary": "크림대교 공격 뒤 푸틴이 더 고통스러운 보복을 공언했고 유럽은 종전 협상 용의를 밝혔다.",
+      "judged_at": "2026-11-20T05:39:57+00:00"
     },
     "mideast": {
       "state": 3,
@@ -25,12 +31,18 @@
         {
           "name": "BBC",
           "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno",
+          "published_at": "2026-11-19T17:03:23+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
           "published_at": "2026-11-18T13:04:48+00:00"
         }
       ],
-      "summary": "미군이 호르무즈 케슘섬을 타격한 뒤 이란이 쿠웨이트·바레인을 공격했고 UAE 유조선 승무원 1명이 실종됐다.",
-      "judged_at": "2026-11-20T05:39:26+00:00"
+      "summary": "미군의 이란 케슘섬 타격 뒤 이란이 쿠웨이트·바레인을 공격했고 이스라엘군은 가자 옐로라인 너머 지상작전을 마쳤다.",
+      "judged_at": "2026-11-20T05:39:57+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -43,8 +55,8 @@
           "published_at": "2026-11-20T10:05:19+08:00"
         }
       ],
-      "summary": "대만 국방부가 하루 새 중국 군용기 8대·군함 7척·공무선 2척과 공중 풍선 4개를 포착했다고 밝혔다.",
-      "judged_at": "2026-11-20T05:39:26+00:00"
+      "summary": "대만 국방부가 20일 기준 24시간 동안 공군기 8대(6대 중선 넘음)·함정 7척·공무선 2척과 공중 기구 4개를 포착했다고 밝혔다.",
+      "judged_at": "2026-11-20T05:39:57+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -66,19 +78,13 @@
       "sources": [
         {
           "name": "DVIDS",
-          "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-20T00:19:09+00:00",
-          "kind": "feed"
-        },
-        {
-          "name": "Stars and Stripes",
-          "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-18T12:00:00+00:00",
-          "kind": "feed"
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/579804/cnrh-hosts-multi-region-exercise-synchronizes-shore-support-with-pacflt-ops",
+          "published_at": "2026-11-19T20:31:35-05:00"
         }
       ],
-      "summary": "DVIDS·Stars and Stripes 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
-      "judged_at": "2026-11-20T05:39:26+00:00"
+      "summary": "미 하와이 해군지역사령부가 태평양 해군기지 지원 도상훈련을 마쳤다(군사 시위 보도 없음).",
+      "judged_at": "2026-11-20T05:39:57+00:00"
     }
   }
 }

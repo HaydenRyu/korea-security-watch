@@ -1,62 +1,62 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 핵 풍계리 영변 병력 이동 열병식 준전시 진돗개",
-      "North Korea missile launch nuclear Yongbyon NK News November 2026"
+      "북한 병력 이동 전방 증강 군수 탄약 수송",
+      "North Korea troops mobilization ammunition logistics parade November 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 병력 이동 열병식 준전시 진돗개",
-      "North Korea missile launch nuclear Yongbyon NK News November 2026"
+      "북한 미사일 발사 합참 11월 20일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "North Korea Reuters November 20 2026",
-      "북한 핵 풍계리 영변 병력 이동 열병식 준전시 진돗개"
+      "북한 병력 이동 전방 증강 군수 탄약 수송",
+      "North Korea troops mobilization ammunition logistics parade November 2026"
     ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순",
-      "목함지뢰 해안 발견 NLL 귀순 11월"
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "Korea DMZ NLL North Korea cyber GPS jamming Reuters"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란",
+      "Korea DMZ NLL North Korea cyber GPS jamming Reuters"
     ],
     "foreign_forces": [
-      "North Korea news Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축",
-      "김정은 방중"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "북한 병력 이동 전방 증강 군수 탄약 수송"
     ],
     "parade_massing": [
-      "북한 핵 풍계리 영변 병력 이동 열병식 준전시 진돗개",
-      "North Korea Reuters November 20 2026"
+      "북한 준전시 등화관제 노농적위군 열병식 집결",
+      "North Korea troops mobilization ammunition logistics parade November 2026"
     ],
     "nk_internal": [
-      "북한 핵 풍계리 영변 병력 이동 열병식 준전시 진돗개",
-      "North Korea Reuters November 20 2026"
+      "북한 준전시 등화관제 노농적위군 열병식 집결",
+      "North Korea troops mobilization ammunition logistics parade November 2026"
     ],
     "gov_warning": [
-      "북한 핵 풍계리 영변 병력 이동 열병식 준전시 진돗개",
-      "North Korea Reuters November 20 2026"
+      "북한 미사일 발사 합참 11월 20일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.kmib.co.kr/article/20261119502186",
-    "https://www.yna.co.kr/view/AKR20261119080500504",
-    "https://www.donga.com/news/Politics/article/all/20261120/135062569/2",
-    "https://www.yna.co.kr/view/AKR20261119022100504"
+    "https://www.nknews.org/",
+    "https://www.nknews.org/category/news/",
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.koreatimes.co.kr/southkorea/defense/20261008/s-korean-military-detonates-suspected-n-korean-land-mine-washed-ashore-on-west-coast"
   ],
-  "overall_summary": "신규 징후 없음: 국내 수집 묶음에 24시간 내 접경·군사 사건이 없고 통일부는 김정은 방중 동향이 포착되지 않았다고 밝혔다. 접경 열점 후보 대조와 일부 항목 검색은 제한적으로 수행했다.",
+  "overall_summary": "최근 24시간 새 군사 도발·전쟁 징후는 확인되지 않았다. 김정은 방중설은 통일부가 동향 미포착이라 밝혔고, IAEA의 영변 농축시설 확장 우려(11/19)는 반복 보도라 배경으로만 둔다. 접경 열점 후보 대조는 수행하지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "none",
+      "summary": "IAEA 영변 우려(11/19)는 NK News 단독·기지의 확장 배경이라 징후로 올리지 않음"
     },
     "logistics": {
       "status": "none"
@@ -68,8 +68,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "조용원 방러 귀국·통일부 「김정은 방중 동향 포착 안돼」 — 새 파병·협정 없음"
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -84,7 +83,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T21:10:15+00:00",
+  "checked_at": "2026-11-20T22:09:51+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

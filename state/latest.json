@@ -1,57 +1,66 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 전선 병력 증강 군수 수송 열병식 동향"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설 38 North 11월",
-      "North Korea nuclear test site Yongbyon satellite imagery November 2026"
+      "북한 핵 영변 풍계리",
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 전선 병력 증강 군수 수송 열병식 동향"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "목함지뢰 발견 해안",
-      "DMZ 북한군 MDL 경고사격 귀순"
+      "지뢰 발견",
+      "합참 NLL DMZ 귀순",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "북한 김정은 방중 방러 11월 20일",
-      "North Korea Kim Jong Un China Russia visit",
-      "북한 합참 발표 오늘 미사일 전통문 서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 전선 병력 증강 군수 수송 열병식 동향"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 합참 발표 오늘 미사일 전통문 서해 구조물 주한미군 감축"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "북한 합참 발표 오늘 미사일 전통문 서해 구조물 주한미군 감축"
+      "진돗개 발령 데프콘",
+      "North Korea government warning"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 중단"
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.rfa.org/korean/in-focus/2026/11/16/apec-asean-russia-chaina-trump/",
-    "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
-    "https://www.koreatimes.co.kr/southkorea/defense/20261008/s-korean-military-detonates-suspected-n-korean-land-mine-washed-ashore-on-west-coast",
-    "https://www.thestar.com.my/news/world/2026/11/18/iaea-says-north-korea-is-expanding-uranium-enrichment-plant-at-yongbyon"
+    "https://www.yna.co.kr/view/AKR20261119080500504",
+    "https://www.donga.com/news/Politics/article/all/20261120/135062569/2",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "신규 징후 없음: 조용원 방러(11/16)는 이미 알려진 외교 일정이고 IAEA 영변 농축시설 증설 보고(11/18)는 24시간이 지난 배경이다. 접경·사이버 신규 보도도 확인되지 않아 직전과 같이 평온하다. 열점 후보 대조와 일부 항목 영문 검색은 시간 관계로 생략했다.",
+  "overall_summary": "최근 24시간 신규 징후 없음: 국내 수집 묶음은 정동영 판문점 면담·미중러 정상회담 등 외교 일정이고 접경 군사 사건은 없다. 접경 열점 후보는 북측 농경지 소각 등으로 관련 보도가 없어 징후로 올리지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "IAEA 사무총장이 11/18 영변 농축시설 증설을 이사회에 보고했으나 24시간이 지나 배경으로만 둔다."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
@@ -63,30 +72,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "러시아·중국",
-      "summary": "조용원 당 비서가 11/16 모스크바에서 푸틴을 만났고 김정은 방중·방러는 확인되지 않았다.",
-      "meaning": "북러 고위급 외교 교류이며 새 군사협정·무기 이전 발표는 없다.",
-      "sources": [
-        {
-          "name": "RFA",
-          "tier": "B",
-          "url": "https://www.rfa.org/korean/in-focus/2026/11/16/apec-asean-russia-chaina-trump/"
-        },
-        {
-          "name": "Korea JoongAng Daily",
-          "tier": "B",
-          "url": "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "조용원 11/16 푸틴·메드베데프 면담"
-      ],
-      "speculation": [
-        "김정은 방러 가능성 전문가 거론"
-      ]
+      "status": "none",
+      "summary": "24시간 경과 — 조용원 방러 첫 보도 11/17 22시(UTC), 김정은 방중·방러 동향은 통일부가 포착 안 됐다고 밝혔다."
     },
     "parade_massing": {
       "status": "none"
@@ -101,14 +88,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T17:09:52+00:00",
-  "grade": 1,
-  "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-20T18:09:21+00:00",
-    "summary": "최근 24시간 신규 징후 없음: 국내 수집 묶음에 접경·군사 사건이 없고 조용원 방러·IAEA 영변 보고는 배경이다. 직전과 같이 평온하다. 열점 후보 대조는 생략했다."
-  }
+  "checked_at": "2026-11-20T19:10:10+00:00",
+  "grade": 0,
+  "grade_label": "평시",
+  "active": []
 }

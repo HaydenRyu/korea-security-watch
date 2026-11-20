@@ -1,12 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-11-20T11:40:29+00:00",
-  "world_at": "2026-11-20T11:40:29+00:00",
+  "updated_at": "2026-11-20T23:39:56+00:00",
+  "world_at": "2026-11-20T23:39:56+00:00",
   "world": [
     {
-      "title": "러시아, 크림대교 피격 뒤 키이우 교량 3곳 등 전국 대규모 공습",
-      "summary": "러시아가 탄도미사일로 키이우 교량 3곳을 타격하는 전국 공습을 했고 젤렌스키 대통령은 전쟁 중 가장 큰 규모급이라고 밝혔다.",
-      "link_korea": "러시아의 전쟁 장기화는 북러 군사협력과 북한군 파병 논의의 배경이다.",
+      "title": "러시아 순항미사일, 폴란드 영토에 추락",
+      "summary": "폴란드 정부는 러시아 Kh-101 순항미사일이 남동부 농촌 지역에 떨어졌다며 의도적 도발이라고 밝혔고 인명·시설 피해는 보고되지 않았다.",
+      "link_korea": "러시아의 전선 확대는 북러 군사협력과 북한군 파병 논의의 배경이 된다.",
+      "region": "유럽",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+      }
+    },
+    {
+      "title": "러시아, 키이우 교량 등 대규모 공습",
+      "summary": "러시아가 크림대교 피격 며칠 뒤 키이우 교량과 철도역 등을 대규모로 공습했다.",
+      "link_korea": "전쟁 장기화는 북러 군사협력 심화의 동력이다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
@@ -15,38 +26,38 @@
       }
     },
     {
-      "title": "유럽 지도자들, 러시아와 종전 협상 용의 표명",
-      "summary": "베를린 회의에서 유럽 지도자들이 단일한 협상 입장을 내세우며 러시아와 종전 협상에 나설 용의를 밝혔다.",
-      "link_korea": "우크라이나 종전 구도는 북러 군사협력의 향방에 영향을 준다.",
-      "region": "유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
-      }
-    },
-    {
-      "title": "이란, 미 공습 뒤 쿠웨이트·바레인 공격",
-      "summary": "미군이 호르무즈 해협의 이란 케슘섬 미사일 기지를 타격한 뒤 이란이 쿠웨이트·바레인을 드론으로 공격했다고 두 나라가 밝혔다.",
-      "link_korea": "호르무즈 해협 긴장은 한국의 에너지 수송로와 미군 전력 배치에 영향을 줄 수 있다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
-      }
-    },
-    {
-      "title": "중미 해군, 상하이서 해상군사안보협의 개최",
-      "summary": "중국 CCTV 보도에 따르면 중미 양국 군이 11월 18~20일 상하이에서 해상군사안보협의기제 회의를 열었다.",
-      "link_korea": "미·중 군사 소통 채널은 한반도 주변 해·공역 우발 충돌 관리와 연결된다.",
+      "title": "미·중·러 정상, 선전 회담 뒤 평화선언 발표",
+      "summary": "BBC는 트럼프·푸틴·시진핑 3자 회담이 상징성은 컸으나 실질 성과는 적었다고 분석했다.",
+      "link_korea": "미·중·러 대화 구도는 한반도 비핵화·북러 관계 논의의 환경을 바꾼다.",
       "region": "동아시아",
       "source": {
-        "name": "중앙통신사(CNA)",
-        "url": "https://www.cna.com.tw/news/acn/202611200295.aspx",
-        "via": "https://feeds.feedburner.com/rsscna/mainland"
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cwn70vrjlg8ro",
+        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+      }
+    },
+    {
+      "title": "IAEA, 영변 우라늄 농축시설 확장 지적",
+      "summary": "그로시 IAEA 사무총장은 영변 농축시설에 추가 건물이 9월 중순 착공돼 10월 말 외관이 완공됐다고 이사회에 보고했다.",
+      "link_korea": "북한의 핵물질 생산능력 확대에 직접 관련된다.",
+      "region": "한반도",
+      "source": {
+        "name": "Stars and Stripes",
+        "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-20/north-korea-uranium-enrichment-yongbyon-23523599.html",
+        "via": "https://www.stripes.com/theaters/asia_pacific/"
+      }
+    },
+    {
+      "title": "미·중·러 정상, 연료 공급 확대 합의",
+      "summary": "블룸버그는 3국 정상이 선전 회담에서 세계 연료 공급 확대에 합의했다고 전했다.",
+      "link_korea": "에너지 공급 구도 변화는 대북 제재·북러 교역 환경에 영향을 줄 수 있다.",
+      "region": "동아시아",
+      "source": {
+        "name": "Stars and Stripes",
+        "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-19/trump-xi-putin-fuel-supply-23517122.html",
+        "via": "https://www.stripes.com/theaters/asia_pacific/"
       }
     }
   ],
-  "world_context": "러시아의 대규모 공습과 이란-미국 충돌이 이어지는 가운데 미·중은 군사 소통 채널을 유지하고 있다."
+  "world_context": "우크라이나 전선의 확대와 미·중·러 3자 구도, 북한 핵시설 확장이 한반도 안보 환경의 핵심 변수다."
 }

@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-20T01:33:19+00:00",
+ "fetched_at": "2026-11-20T02:47:33+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-20T01:33:19+00:00",
+ "last_ok_at": "2026-11-20T02:47:33+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1133,
-  "hits": 36,
-  "clusters": 33,
+  "fetched": 1132,
+  "hits": 28,
+  "clusters": 25,
   "by_group": {
-   "summit": 19,
-   "border": 5,
+   "summit": 13,
+   "border": 4,
    "drone_balloon": 3,
    "hybrid": 3,
    "spy": 1,
-   "fire": 2,
+   "fire": 1,
    "usfk": 1,
    "yellowsea": 1
   }
@@ -25,20 +25,20 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 574,
-   "hits": 27
+   "count": 573,
+   "hits": 22
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 2
+   "hits": 1
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 12
+   "hits": 8
   },
   "국민일보": {
    "feeds": 2,
@@ -62,12 +62,12 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "summit": {
-   "clusters": 19,
+   "clusters": 13,
    "max_independent": 2,
-   "latest": "2026-11-20T01:33:19+00:00"
+   "latest": "2026-11-20T02:47:33+00:00"
   },
   "border": {
-   "clusters": 5,
+   "clusters": 4,
    "max_independent": 1,
    "latest": "2026-11-20T01:03:00+00:00"
   },
@@ -87,7 +87,7 @@
    "latest": "2026-11-19T10:29:30+00:00"
   },
   "fire": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-19T10:18:23+00:00"
   },
@@ -108,7 +108,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 94,
+   "count": 93,
    "hits": 20
   },
   {
@@ -117,7 +117,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 2
   },
   {
    "outlet": "연합뉴스",
@@ -141,7 +141,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 0
   },
   {
    "outlet": "SBS",
@@ -165,7 +165,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "동아일보",
@@ -173,7 +173,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 8
+   "hits": 7
   },
   {
    "outlet": "동아일보",
@@ -181,7 +181,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 4
+   "hits": 1
   },
   {
    "outlet": "국민일보",

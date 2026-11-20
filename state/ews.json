@@ -1,37 +1,45 @@
 {
   "version": 1,
-  "computed_at": "2026-11-20T11:11:17+00:00",
+  "computed_at": "2026-11-20T12:09:44+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 27,
+  "ews": 26,
   "band": "관찰",
-  "d": 4,
-  "e": 8,
+  "d": 2,
+  "e": 11,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-20T05:39:57+00:00",
-    "latest_updated_at": "2026-11-20T11:11:17+00:00"
+    "linkage_judged_at": "2026-11-20T11:40:29+00:00",
+    "latest_updated_at": "2026-11-20T12:09:44+00:00"
   },
   "theaters": [
     {
       "key": "taiwan",
       "observed": true,
       "state": 1,
-      "contribution": 0,
-      "channels": [],
-      "summary": "대만 국방부가 20일 기준 24시간 동안 공군기 8대(6대 중선 넘음)·함정 7척·공무선 2척과 공중 기구 4개를 포착했다고 밝혔다.",
+      "contribution": 3,
+      "channels": [
+        "c3_simul"
+      ],
+      "summary": "러시아 군용기가 APEC 기간 전후 일본 영공과 대만 방공식별구역에 진입했다고 중앙사가 전했다.",
       "sources": [
         {
-          "name": "CNA",
+          "name": "중앙통신사(CNA)",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611200047.aspx",
-          "published_at": "2026-11-20T10:05:19+08:00"
+          "url": "https://www.cna.com.tw/news/acn/202611200138.aspx",
+          "published_at": "2026-11-20T14:30:38+08:00"
+        },
+        {
+          "name": "Focus Taiwan",
+          "tier": "B",
+          "url": "https://focustaiwan.tw/politics/202611200010",
+          "published_at": "2026-11-20T15:46:48+08:00"
         }
       ],
-      "judged_at": "2026-11-20T05:39:57+00:00"
+      "judged_at": "2026-11-20T11:40:29+00:00"
     },
     {
       "key": "ukraine",
@@ -39,22 +47,22 @@
       "state": 3,
       "contribution": 0,
       "channels": [],
-      "summary": "크림대교 공격 뒤 푸틴이 더 고통스러운 보복을 공언했고 유럽은 종전 협상 용의를 밝혔다.",
+      "summary": "러시아가 크림대교 피격 뒤 키이우 교량 3곳 등을 탄도미사일로 타격했고 유럽은 종전 협상 용의를 밝혔다.",
       "sources": [
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o",
+          "published_at": "2026-11-20T11:12:57+00:00"
+        },
         {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go",
           "published_at": "2026-11-20T00:50:24+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo",
-          "published_at": "2026-11-19T13:07:35+00:00"
         }
       ],
-      "judged_at": "2026-11-20T05:39:57+00:00"
+      "judged_at": "2026-11-20T11:40:29+00:00"
     },
     {
       "key": "scs_ecs",
@@ -62,16 +70,22 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "Rappler 가 ASEAN 남중국해 행동준칙 협상이 85~90% 진행됐다고 보도했다(무력 사용 보도 없음).",
+      "summary": "Philstar·Rappler 피드에 72시간 안 남·동중국해 관련 기사 없음",
       "sources": [
         {
+          "name": "Philstar",
+          "url": "https://www.philstar.com/rss/nation",
+          "published_at": "2026-11-20T14:19:00+08:00",
+          "kind": "feed"
+        },
+        {
           "name": "Rappler",
-          "tier": "B",
-          "url": "https://www.rappler.com/newsbreak/inside-track/asean-south-china-sea-code-conduct-legally-binding/",
-          "published_at": "2026-11-20T07:00:00+08:00"
+          "url": "https://www.rappler.com/feed/",
+          "published_at": "2026-11-20T18:28:42+08:00",
+          "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-19T23:39:26+00:00"
+      "judged_at": "2026-11-20T11:40:29+00:00"
     },
     {
       "key": "mideast",
@@ -81,7 +95,7 @@
       "channels": [
         "c4_sea_energy"
       ],
-      "summary": "미군의 이란 케슘섬 타격 뒤 이란이 쿠웨이트·바레인을 공격했고 이스라엘군은 가자 옐로라인 너머 지상작전을 마쳤다.",
+      "summary": "미군의 케슘섬 타격 뒤 이란이 쿠웨이트·바레인을 공격했고 이스라엘군은 가자 옐로라인 너머 지상작전을 마쳤다.",
       "sources": [
         {
           "name": "BBC",
@@ -96,7 +110,7 @@
           "published_at": "2026-11-18T13:04:48+00:00"
         }
       ],
-      "judged_at": "2026-11-20T05:39:57+00:00"
+      "judged_at": "2026-11-20T11:40:29+00:00"
     },
     {
       "key": "us_posture",
@@ -104,16 +118,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 하와이 해군지역사령부가 태평양 해군기지 지원 도상훈련을 마쳤다(군사 시위 보도 없음).",
+      "summary": "미 항모 조지워싱턴호가 7함대 해역에서 인도 주재 대사 등을 맞았다(군사 시위 보도 없음).",
       "sources": [
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/579804/cnrh-hosts-multi-region-exercise-synchronizes-shore-support-with-pacflt-ops",
-          "published_at": "2026-11-19T20:31:35-05:00"
+          "url": "https://www.dvidshub.net/news/579822/us-ambassador-visits-uss-george-washington",
+          "published_at": "2026-11-20T06:19:49-05:00"
         }
       ],
-      "judged_at": "2026-11-20T05:39:57+00:00"
+      "judged_at": "2026-11-20T11:40:29+00:00"
     }
   ],
   "channels": [
@@ -129,8 +143,8 @@
     },
     {
       "key": "c3_simul",
-      "observed": false,
-      "value": 0
+      "observed": true,
+      "value": 3
     },
     {
       "key": "c4_sea_energy",
@@ -144,8 +158,8 @@
     }
   ],
   "last_good": {
-    "ews": 27,
+    "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-20T11:11:17+00:00"
+    "computed_at": "2026-11-20T12:09:44+00:00"
   }
 }

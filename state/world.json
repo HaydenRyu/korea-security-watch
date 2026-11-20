@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-19T23:39:26+00:00",
-  "world_at": "2026-11-19T23:39:26+00:00",
+  "updated_at": "2026-11-20T05:39:26+00:00",
+  "world_at": "2026-11-20T05:39:26+00:00",
   "world": [
     {
       "title": "미·중·러 정상, 선전서 첫 3자 회담 뒤 「평화 공동선언」 발표",
@@ -34,17 +34,6 @@
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
         "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
-      }
-    },
-    {
-      "title": "러시아인, 우크라이나 지원 방산기업 감시 혐의로 미국서 체포",
-      "summary": "캘리포니아에서 외국 정부 요원으로 활동하며 방산·기술기업 직원을 감시한 혐의로 러시아인이 체포됐다고 미 법무부가 밝혔다.",
-      "link_korea": "외국 정보기관의 공작 수법은 국내 간첩·하이브리드 위협 대응의 참고가 된다.",
-      "region": "북미",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cq20xg80ly47o",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     }
   ],

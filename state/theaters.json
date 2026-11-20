@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-19T23:39:26+00:00",
+  "judged_at": "2026-11-20T05:39:26+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -14,7 +14,7 @@
         }
       ],
       "summary": "크림대교가 이번 주 세 번째 공격을 받았고 푸틴이 더 고통스러운 보복을 공언했다.",
-      "judged_at": "2026-11-19T23:39:26+00:00"
+      "judged_at": "2026-11-20T05:39:26+00:00"
     },
     "mideast": {
       "state": 3,
@@ -30,21 +30,21 @@
         }
       ],
       "summary": "미군이 호르무즈 케슘섬을 타격한 뒤 이란이 쿠웨이트·바레인을 공격했고 UAE 유조선 승무원 1명이 실종됐다.",
-      "judged_at": "2026-11-19T23:39:26+00:00"
+      "judged_at": "2026-11-20T05:39:26+00:00"
     },
     "taiwan": {
       "state": 1,
       "channels": [],
       "sources": [
         {
-          "name": "Focus Taiwan(CNA)",
+          "name": "CNA",
           "tier": "B",
-          "url": "https://focustaiwan.tw/politics/202611190012",
-          "published_at": "2026-11-19T16:14:33+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611200047.aspx",
+          "published_at": "2026-11-20T10:05:19+08:00"
         }
       ],
-      "summary": "대만 국방부가 러시아 군용기가 대만 ADIZ에 진입한 영상을 공개했다.",
-      "judged_at": "2026-11-19T23:39:26+00:00"
+      "summary": "대만 국방부가 하루 새 중국 군용기 8대·군함 7척·공무선 2척과 공중 풍선 4개를 포착했다고 밝혔다.",
+      "judged_at": "2026-11-20T05:39:26+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -66,13 +66,19 @@
       "sources": [
         {
           "name": "DVIDS",
-          "tier": "A",
-          "url": "https://www.dvidshub.net/news/579681/delta-battery-makes-army-history-with-first-ibcs-patriot-enabled-certification-peninsula",
-          "published_at": "2026-11-18T23:39:02+00:00"
+          "url": "https://www.dvidshub.net/rss/news",
+          "published_at": "2026-11-20T00:19:09+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "Stars and Stripes",
+          "url": "https://www.stripes.com/theaters/asia_pacific/",
+          "published_at": "2026-11-18T12:00:00+00:00",
+          "kind": "feed"
         }
       ],
-      "summary": "주한미군 패트리엇 포대가 미 육군 최초로 IBCS 인증을 마쳤다(군사 시위 보도 없음).",
-      "judged_at": "2026-11-19T23:39:26+00:00"
+      "summary": "DVIDS·Stars and Stripes 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
+      "judged_at": "2026-11-20T05:39:26+00:00"
     }
   }
 }

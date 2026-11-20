@@ -1,55 +1,81 @@
 {
   "coverage": {
-    "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
-    ],
-    "nuclear": [
-      "북한 미사일 발사 핵 영변 풍계리 11월 20일"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란 북한"
-    ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit"
+      "North Korea Kim Jong Un China Russia visit",
+      "김정은 방중 트럼프 회담 해군 활동 비판 11월 19일"
     ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 군수 탄약 수송",
-      "North Korea troops ammunition logistics buildup November 2026"
-    ],
-    "logistics": [
-      "북한 병력 이동 전방 증강 군수 탄약 수송",
-      "North Korea troops ammunition logistics buildup November 2026"
-    ],
-    "parade_massing": [
-      "북한 열병식 준전시 등화관제 노농적위군",
-      "North Korea parade wartime mobilization embassy Pyongyang"
-    ],
-    "nk_internal": [
-      "북한 열병식 준전시 등화관제 노농적위군",
-      "North Korea parade wartime mobilization embassy Pyongyang"
+    "border_clash": [
+      "지뢰 발견 DMZ 귀순"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 정부 경고 대피 북한",
-      "North Korea alert warning US Japan government evacuation DEFCON"
+      "북한 미사일 합참 발표 11월 20일"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 GPS 교란 서해 구조물 주한미군 감축"
+    ],
+    "calm": [
+      "남북 대화 제안"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "북한 영변 풍계리 핵 IAEA"
+    ],
+    "logistics": [
+      "북한 탄약 군수 수송 러시아"
+    ],
+    "parade_massing": [
+      "북한 열병식 집결 준비"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 대피 훈련"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
-      "North Korea attributed FBI hackers espionage arrest"
+      "국가보안법 구속 간첩 혐의"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261120503763",
     "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261119080500504",
-    "https://www.donga.com/news/Inter/article/all/20261120/135058821/1"
+    "https://www.nknews.org/2026/11/kim-jong-un-slams-enemy-naval-activities-amid-trumps-calls-to-meet-in-china/"
   ],
-  "overall_summary": "새 징후 없이 평시 수준이 이어진다. 통일부는 김정은 방중 동향이 없다고 밝혔고 영변 시설 우려 보도는 직전 회차와 같은 사건이다.",
+  "overall_summary": "새 군사 징후 없이 직전 회차와 같은 수준(핵시설 IAEA 우려 보도만 정례 single)이다. 미중러 정상회담 등 외교 일정 속에 접경 열점·보도 대조 대상도 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "summary": "IAEA가 북한 핵시설(영변 농축시설) 증설에 우려를 표명했다는 NK News 보도(직전 회차와 동일 사건).",
+      "meaning": "핵시설 개선 동향이나 새 실험·배치 징후는 아니다.",
+      "sources": [
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "NK News 11/19 헤드라인에 IAEA 우려 표명 보도"
+      ],
+      "speculation": []
+    },
     "logistics": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "none",
+      "summary": "새 접경 사건 없음(검색 결과는 9월 DMZ 지뢰 폭발 관련 과거 보도뿐)."
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none",
+      "summary": "11/19 미중러 3자 정상회담·이재명-푸틴 회동 보도는 외교 일정 배경이며 새 군사협력 확인 없음; 통일부 '김정은 방중 동향 포착 안 돼'."
     },
     "parade_massing": {
       "status": "none"
@@ -60,42 +86,11 @@
     "gov_warning": {
       "status": "none"
     },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "summary": "유엔 감시기구(IAEA)가 북한 핵시설 개선(영변 농축시설 증축)에 심각한 우려를 표명했다는 NK News 보도(직전 회차와 동일 사건).",
-      "meaning": "핵물질 생산능력 확대에 대한 감시 보도로, 새 핵실험·배치 징후는 아니다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "NK News 11/19 게재분 제목: UN watchdog serious concern on nuclear facility upgrades"
-      ],
-      "speculation": []
-    },
-    "border_clash": {
-      "status": "none",
-      "summary": "새 접경 충돌·지뢰 발견 보도 없음. 국방일보·연합·동아 확인 결과 11/19~20 접경 사건 없음."
-    },
-    "electronic_cyber": {
-      "status": "none",
-      "summary": "새 GPS 교란·국내 대형 해킹 보도 없음."
-    },
-    "foreign_forces": {
-      "status": "none",
-      "summary": "통일부는 김정은 방중 동향이 포착되지 않았다고 밝혔다(연합 11/19). 새 파병·이전·협정 확인 없음."
-    },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "새 귀속 발표 없음."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-20T01:09:48+00:00",
+  "checked_at": "2026-11-20T02:09:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

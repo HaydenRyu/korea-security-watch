@@ -1,17 +1,17 @@
 {
- "at": "2026-11-20T02:47:20+00:00",
- "south": 80,
- "area": 94,
- "baseline": 79.0,
- "ratio": 1.01,
+ "at": "2026-11-20T02:50:47+00:00",
+ "south": 76,
+ "area": 95,
+ "baseline": 79.5,
+ "ratio": 0.96,
  "samples": 6,
  "mil": [
   {
-   "type": "C17",
-   "name": "C-17 수송기",
-   "call": "RCH4133",
-   "lat": 34.23,
-   "lon": 127.7
+   "type": "C560",
+   "name": null,
+   "call": "NINJA18",
+   "lat": 34.47,
+   "lon": 132.25
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

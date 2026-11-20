@@ -1,62 +1,44 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 전방 증강",
-      "North Korea troop buildup"
+      "북한 병력 전방 증강 열병식 집결"
     ],
     "nuclear": [
-      "북한 영변 핵시설",
-      "North Korea nuclear IAEA"
+      "North Korea troops munitions Russia shipment nuclear parade November 2026"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea munitions Russia shipment"
+      "North Korea troops munitions Russia shipment nuclear parade November 2026"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "목함지뢰 해안 DMZ 귀순",
-      "North Korea DMZ border"
+      "북한 합참 지뢰 발견 DMZ 귀순 11월 20일"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hacking cyber attack"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "Kim Jong Un China Russia visit North Korea"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 병력 전방 증강 열병식 집결"
     ],
     "nk_internal": [
-      "북한 등화관제 전시 훈련",
-      "North Korea civil defense"
+      "북한 등화관제 전시 진돗개 데프콘 국가보안법 구속 간첩 혐의",
+      "North Korea civil defense warning attributed FBI hackers"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "US Japan Korea warning North Korea"
+      "북한 등화관제 전시 진돗개 데프콘 국가보안법 구속 간첩 혐의"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "북한 등화관제 전시 진돗개 데프콘 국가보안법 구속 간첩 혐의",
+      "North Korea civil defense warning attributed FBI hackers"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261120503763",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
     "https://www.koreatimes.co.kr/southkorea/defense",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "새 군사 징후 없이 직전 회차와 같은 수준(핵시설 IAEA 우려 보도만 정례 single)이다. 미중러 회담·김정은 방중 추측 등 외교 동향이 중심이며 접경 열점 4점(후보 3건)은 관련 보도를 찾지 못해 징후로 올리지 않았다.",
+  "overall_summary": "새 군사 징후 없이 직전 회차와 같은 수준(핵시설 IAEA 우려 보도만 정례 single)이다. 국내 수집 결과는 미중러 회담·방산 예산 기사 위주이며 접경 사건·최후통첩은 확인되지 않았다(이번 회차는 항목별 검색이 일부만 수행됨).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -104,7 +86,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T03:09:28+00:00",
+  "checked_at": "2026-11-20T04:09:30+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

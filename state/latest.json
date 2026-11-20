@@ -1,52 +1,56 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 미사일 발사 합참 11월 20일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 군사 동향 연합뉴스",
+      "North Korea missile nuclear 38 North NK News"
     ],
     "nuclear": [
-      "IAEA 북한 영변 우려",
-      "38 North 최근 글"
+      "North Korea missile nuclear 38 North NK News",
+      "IAEA 북한 영변 농축"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment Russia"
+      "북한 합참 군사 동향 연합뉴스",
+      "Zelensky North Korea missiles Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL 북한",
-      "DMZ NLL North Korea border"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순",
+      "목함지뢰 해안 발견"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "서해 구조물 주한미군 감축 남북 대화 제안 통신선 복원",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 준비 위성"
     ],
     "nk_internal": [
-      "Kim Jong Un slams enemy naval activities NK News"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "North Korea warning US Japan government"
+      "진돗개 발령 데프콘",
+      "북한 합참 군사 동향 연합뉴스"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI 11월"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "서해 구조물 주한미군 감축 남북 대화 제안 통신선 복원"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 북한"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261112/n-korea-warns-of-action-against-us-led-naval-buildup",
     "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
     "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "새 군사 징후 없음: 김정은 방중 보도는 추측 단계이고 북한 부당 해군 증강 비난(11/12)은 정례 발언 수준이다. 접경 열점 후보 점검 결과 별도 보도 없음.",
+  "overall_summary": "새 군사 징후 없음: 김정은 방중은 보도·발언 차원의 추측 단계이고 통일부도 동향 미포착이다. 국내 수집 묶음 중 접경 군사 사건은 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -54,23 +58,15 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "영변",
-      "lat": 39.8,
-      "lon": 125.75,
-      "summary": "IAEA가 북한 핵시설 증설에 '심각한 우려'를 표명했다는 NK News 11/19 헤드라인(직전 회차와 동일 사건).",
-      "meaning": "기존 핵시설 증설 정황의 재확인으로 새 사건은 아니다.",
+      "summary": "IAEA가 북한 영변 우라늄 농축시설 확장에 우려를 표명했다는 보도가 이어진다(직전 회차와 동일 사건).",
       "sources": [
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
+          "name": "The Star(Reuters 계열 보도)",
+          "tier": "B",
+          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
         }
       ],
-      "confidence": "중간",
-      "facts": [
-        "IAEA '심각한 우려' 표명(NK News 헤드라인)"
-      ],
-      "speculation": []
+      "confidence": "낮음"
     },
     "logistics": {
       "status": "none"
@@ -82,7 +78,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 방중·APEC 참석설은 트럼프·크렘린 발언에 따른 추측이고 확인된 방문은 없다; 젤렌스키의 북한 미사일 공급 주장은 우크라이나 측 주장으로 배경."
     },
     "parade_massing": {
       "status": "none"
@@ -97,7 +94,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T10:09:50+00:00",
+  "checked_at": "2026-11-20T11:09:39+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

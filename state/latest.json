@@ -1,59 +1,47 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea nuclear Yongbyon"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "North Korea DMZ border mine"
+      "북한 합참 발표 미사일 11월 21일",
+      "지뢰 발견 DMZ 귀순 북한"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
-      "North Korea GPS jamming"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
-    ],
-    "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
-    ],
-    "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea alert Japan J-Alert"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "주한미군 감축 서해 구조물 김정은 방중"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 동향"
+    ],
+    "nuclear": [
+      "North Korea nuclear test Punggye-ri Yongbyon enrichment satellite imagery"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송 러시아 컨테이너"
+    ],
+    "parade_massing": [
+      "북한 열병식 준비 평양 미림 집결"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 주민 대피 노농적위군"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 상향 긴급 경고 대피 권고"
     ]
   },
   "opened": [
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
     "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreajoongangdaily.com/",
-    "https://www.dailynk.com/english/"
+    "https://www.ytn.co.kr/_ln/0101_202610291545228200"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 미중러 정상외교·김정은 딸 후계 부각 보도만 이어지고 접경 열점 후보는 관련 보도가 없다.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 김정은 삼지연 시찰·방중설과 한미중러 정상외교 보도만 이어졌고, 접경 열점 후보 3건은 관련 보도를 찾지 못했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -86,7 +74,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T09:09:17+00:00",
+  "checked_at": "2026-11-21T10:09:07+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

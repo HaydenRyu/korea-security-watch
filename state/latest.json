@@ -1,42 +1,48 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 미사일 발사 합참 11월 21일"
-    ],
-    "nuclear": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
-    ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한"
+      "지뢰 발견 DMZ 귀순 북한",
+      "북한 합참 발표 11월 21일"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 GPS 교란 서해 구조물 주한미군 감축"
+      "해킹 개인정보 유출 사이버 공격",
+      "북한 GPS 교란"
     ],
     "foreign_forces": [
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
+    "nuclear": [
+      "북한 핵 풍계리 영변 동향",
+      "IAEA North Korea nuclear site concern"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강 탄약 수송 열병식"
+    ],
     "logistics": [
-      "북한 열병식 준비 동향 군수 탄약 수송 전시태세 진돗개 발령"
+      "북한 병력 이동 전방 증강 탄약 수송 열병식"
     ],
     "parade_massing": [
-      "북한 열병식 준비 동향 군수 탄약 수송 전시태세 진돗개 발령"
+      "북한 병력 이동 전방 증강 탄약 수송 열병식"
     ],
     "nk_internal": [
-      "북한 열병식 준비 동향 군수 탄약 수송 전시태세 진돗개 발령"
+      "북한 등화관제 준전시 진돗개 발령 국가보안법 간첩 혐의 구속"
     ],
     "gov_warning": [
-      "북한 열병식 준비 동향 군수 탄약 수송 전시태세 진돗개 발령"
+      "북한 등화관제 준전시 진돗개 발령 국가보안법 간첩 혐의 구속"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "북한 등화관제 준전시 진돗개 발령 국가보안법 간첩 혐의 구속"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.koreadaily.com/article/20261104140907534",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음; 국내 묶음은 정상외교·정치 위주였고 접경 열점 후보 4건은 모두 북측이며 신규 후보 1건(11/21, 농경지 추정)은 관련 보도 없음. 11/4 반항공미사일 시험 이후 새 발사 보도 없음.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음; NK News·코리아타임스 첫 화면은 트럼프·시진핑·푸틴 3자 회담의 한반도 논의와 IAEA 핵시설 우려(11/19 보도)가 중심이다. 접경 열점 후보 신규 1건(11/21)은 관련 보도 없음, 수집기 묶음은 정치·정상외교 위주.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -55,7 +61,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김정은 방중·방러설은 11/18 보도 이후 새 확인 없음(통일부 「동향 포착 안 돼」); 젤렌스키의 북 탄도미사일 월 수십 발 러 공급 주장은 11/16 이전 발언이라 배경."
+      "summary": "김정은 방중·방러 새 확인 없음(11/19 통일부 동향 포착 안 돼); 3자 정상회담의 한반도 논의는 외교 배경."
     },
     "parade_massing": {
       "status": "none"
@@ -70,7 +76,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T14:09:43+00:00",
+  "checked_at": "2026-11-21T15:09:59+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

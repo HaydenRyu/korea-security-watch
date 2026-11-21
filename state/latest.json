@@ -1,46 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
+      "북한 병력 이동",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 핵 영변 풍계리",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
+      "지뢰 발견 DMZ",
+      "North Korea DMZ border mine"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit"
+      "김정은 방중 방러",
+      "서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
+      "북한 열병식",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "북한 지뢰 발견 DMZ 귀순 합참"
+      "진돗개 발령 데프콘",
+      "North Korea alert Japan J-Alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.nknews.org",
-    "https://www.nknews.org/2026/11/trump-xi-and-putin-discuss-north-korea-nuclear-risks-at-first-trilateral-talks/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do"
+    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreajoongangdaily.com/",
+    "https://www.dailynk.com/english/"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 미중러 정상외교 보도만 이어진다. 접경 열점 후보 3건은 새 보도 대조 결과 관련 보도 없음.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 미중러 정상외교·김정은 딸 후계 부각 보도만 이어지고 접경 열점 후보는 관련 보도가 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -58,8 +71,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "트럼프·시진핑·푸틴 3자 회담(11/20 보도)은 외교 배경이며 김정은 방중·신규 파병·협정 확인 없음."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -74,7 +86,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T08:09:06+00:00",
+  "checked_at": "2026-11-21T09:09:17+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

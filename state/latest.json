@@ -2,55 +2,52 @@
   "coverage": {
     "troop_movement": [
       "북한 합참 발표 11월 21일",
-      "North Korea missile launch nuclear Yongbyon 38 North November 2026"
+      "North Korea Reuters November 21 2026"
     ],
     "nuclear": [
-      "North Korea missile launch nuclear Yongbyon 38 North November 2026",
-      "북한 핵 영변 풍계리"
+      "North Korea missile nuclear Punggye-ri Yongbyon 38 North NK News",
+      "북한 핵시설 IAEA 우라늄 농축"
     ],
     "logistics": [
       "북한 합참 발표 11월 21일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "North Korea Reuters November 21 2026"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순",
-      "South Korea invites North military talks border"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란 서해 구조물 주한미군 감축",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중 방러",
-      "GPS 교란 서해 구조물 주한미군 감축"
+      "김정은 방중 방러 Kim Jong Un China Russia visit 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 합참 발표 11월 21일",
-      "North Korea parade massing"
+      "North Korea Reuters November 21 2026"
     ],
     "nk_internal": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "북한 내부 전시 동향"
+      "North Korea Reuters November 21 2026",
+      "북한 합참 발표 11월 21일"
     ],
     "gov_warning": [
       "북한 합참 발표 11월 21일",
-      "North Korea travel warning State Department"
+      "North Korea Reuters November 21 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI",
-      "북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hacking"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.koreatimes.co.kr/southkorea/defense/20261008/s-korean-military-detonates-suspected-n-korean-land-mine-washed-ashore-on-west-coast",
-    "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border"
+    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreaherald.com/article/10942242",
+    "https://www.nknews.org/",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 접경 열점 후보 1건(북측, 대조 대상 아님)이며 국내 언론 묶음은 정상외교·정치 보도 위주였다.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 미·중·러 정상회담(11/19~20)과 조용원 방러 귀국 등 외교 보도 위주이며, 접경 남측 열점 후보에 대조할 보도는 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -83,7 +80,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T13:10:09+00:00",
+  "checked_at": "2026-11-21T14:09:21+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

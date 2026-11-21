@@ -1,50 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 발표 11월 21일"
     ],
     "nuclear": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "North Korea Reuters November 21 2026"
     ],
     "logistics": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 발표 11월 21일"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL"
+      "지뢰 발견 DMZ 귀순 북한"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 발표 11월 21일"
     ],
     "nk_internal": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "North Korea Reuters November 21 2026"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 발표 11월 21일"
     ],
     "hybrid_ops": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreatimes.co.kr/southkorea/20260929/s-korean-military-finds-1-n-korean-mine-near-site-of-dmz-blast",
-    "https://en.yna.co.kr/nk/index"
+    "https://en.yna.co.kr/view/AEN20261120000300315",
+    "https://en.yna.co.kr/view/AEN20261120000800315",
+    "https://www.nknews.org/2026/11/north-korean-chinese-customs-see-traffic-uptick-after-new-bridge-opening/",
+    "https://www.nknews.org/2026/11/lee-putin-discuss-north-korea-and-peninsula-tensions-in-first-meeting-seoul/",
+    "https://www.nknews.org/2026/11/seoul-dispatches-team-to-myanmar-to-search-for-plane-bombed-by-north-korea/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후는 확인되지 않았다. 국내 묶음은 정상외교·정치·발트해 드론 등 배경이며 김정은 삼지연 시찰 외 방중 동향은 포착되지 않았다.",
+  "overall_summary": "최근 24시간 신규 군사 징후는 확인되지 않았다. 접경 열점 4건(북측)은 보도 대조 대상이 아니며, 국내 묶음은 외교·정치·해외 뉴스 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,7 +65,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "배경 — 김정은 삼지연 시찰·방중설(통일부 동향 포착 안 됨), 조용원 방러는 11/18 귀국; 새 확인 사건 없음"
+      "summary": "한·러 정상 첫 회동, 트럼프·시진핑·푸틴 3자 논의, 북라오스 위원회 등은 외교 일정·배경이며 새 군사협력 확인은 없다."
     },
     "parade_massing": {
       "status": "none"
@@ -78,7 +80,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T19:09:14+00:00",
+  "checked_at": "2026-11-21T19:10:32+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

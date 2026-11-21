@@ -1,51 +1,54 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "North Korea Reuters missile troops",
+      "북한 합참 발표 지뢰 발견 DMZ"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea nuclear Yongbyon 38 North"
+      "North Korea Reuters missile troops",
+      "북한 합참 발표 지뢰 발견 DMZ"
     ],
     "logistics": [
-      "북한 탄약 군수 수송"
+      "North Korea Reuters missile troops",
+      "북한 합참 발표 지뢰 발견 DMZ"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "북한 합참 발표 11월 21일"
+      "북한 합참 발표 지뢰 발견 DMZ",
+      "North Korea Reuters missile troops"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 공격"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "North Korea Reuters missile troops"
     ],
     "parade_massing": [
-      "북한 열병식 준비"
+      "North Korea Reuters missile troops",
+      "북한 합참 발표 지뢰 발견 DMZ"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 합참 발표 지뢰 발견 DMZ",
+      "North Korea Reuters missile troops"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 21일"
+      "북한 합참 발표 지뢰 발견 DMZ",
+      "North Korea Reuters missile troops"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261120131200017",
-    "https://www.donga.com/news/Politics/article/all/20261120/135062569/2",
     "https://www.yna.co.kr/view/AKR20261119080500504",
-    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760"
+    "https://www.yna.co.kr/view/AKR20261119022100504",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "24시간 내 새 군사 징후 없음. 국내 대학 20여 곳 해킹은 귀속 미확인이며 김정은 방중 동향은 통일부가 미포착이라 밝혔다.",
+  "overall_summary": "24시간 내 새 군사 징후는 확인되지 않았다. 국내 대학 해킹은 귀속 미확인이고, 김정은 방중·조용원 방러 관련 새 군사 협력 발표도 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,9 +66,9 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "서울",
-      "summary": "귀속 미확인 — 국내 대학 20여 곳 행정·회계시스템 해킹에서 중국 해킹 커뮤니티 연관 AI 도구 흔적이 확인됐으나 배후는 밝혀지지 않았다.",
-      "meaning": "북한·중국 소행 여부 미정이라 등급에 반영하지 않는다.",
+      "region": "국내 대학",
+      "summary": "귀속 미확인 — 국내 대학 20여 곳 해킹에서 중국 해킹 커뮤니티 연관 AI 도구 흔적이 확인됐으나 배후는 밝혀지지 않았다.",
+      "meaning": "귀속 전이라 등급에 반영하지 않는다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -73,15 +76,15 @@
           "url": "https://www.yna.co.kr/view/AKR20261120131200017"
         }
       ],
-      "confidence": "낮음",
+      "confidence": "중간",
       "facts": [
-        "대학 연구행정·회계시스템 취약점 악용",
-        "실제 배후 미확인"
+        "대학 20여 곳 대상 해킹, 중국 해킹 커뮤니티 연관 AI 모의해킹 도구 흔적"
       ],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "통일부가 김정은 방중 동향을 포착하지 못했다고 밝혔고 조용원 방러는 종료됐다 — 새 군사 협력 발표 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -96,7 +99,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T22:09:20+00:00",
+  "checked_at": "2026-11-21T23:08:57+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

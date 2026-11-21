@@ -1,60 +1,47 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 합참 발표 11월 21일",
+      "North Korea missile launch November 2026"
     ],
     "nuclear": [
-      "북한 핵시설 영변 풍계리",
-      "North Korea nuclear site IAEA"
+      "North Korea missile launch November 2026"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition logistics"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "목함지뢰 DMZ 귀순 북한",
-      "North Korea DMZ border clash"
+      "지뢰 발견 DMZ 귀순 NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출",
-      "North Korea GPS jamming hacking"
+      "해킹 개인정보 유출 사이버 공격 북한 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 합참 발표 11월 21일"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "North Korea Yonhap Korea Times Nov 20 2026"
     ],
     "gov_warning": [
-      "합참 북한 미사일 발사 11월 21일",
-      "진돗개 데프콘",
-      "North Korea missile launch warning"
+      "북한 합참 발표 11월 21일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "해킹 개인정보 유출 사이버 공격 북한 GPS 교란"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ]
   },
   "opened": [
-    "https://www.nknews.org",
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreatimes.co.kr/",
-    "https://www.koreaherald.com/"
+    "https://www.koreatimes.co.kr/southkorea/defense",
+    "https://www.koreatimes.co.kr/southkorea/defense/20261117/several-russian-military-aircraft-enter-s-koreas-air-defense-zone-without-notice-jcs",
+    "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 트럼프·시진핑·푸틴 3자 회담(11/19-20) 등 외교 동향만 확인됐고 김정은 방중 동향은 포착되지 않았다.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 조용원 방러·김정은 방중설 등 기존 외교 동향과 11/17 러시아 군용기 KADIZ 진입(24시간 경과)만 확인됐다. 접경 북측 열점 3건은 산불·농경지 소각 추정이며 관련 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,7 +59,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "조용원 방러·김정은 방중설과 러 군용기 KADIZ 진입(11/17)은 24시간 경과한 기존 건이라 배경으로만 둔다."
     },
     "parade_massing": {
       "status": "none"
@@ -87,7 +75,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T01:09:35+00:00",
+  "checked_at": "2026-11-21T01:10:23+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

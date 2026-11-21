@@ -1,41 +1,46 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL",
-      "North Korea Kim Jong Un China Russia visit missile"
+      "북한 지뢰 발견 DMZ 귀순 NLL 합참",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "IAEA 영변 (NK News 피드)",
-      "North Korea Kim Jong Un China Russia visit missile"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL"
+      "북한 지뢰 발견 DMZ 귀순 NLL 합참"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL"
+      "북한 지뢰 발견 DMZ 귀순 NLL 합참",
+      "지뢰 발견",
+      "DMZ",
+      "NLL",
+      "귀순"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 서해 구조물 주한미군 감축",
-      "North Korea Kim Jong Un China Russia visit missile"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL"
+      "북한 지뢰 발견 DMZ 귀순 NLL 합참"
     ],
     "nk_internal": [
-      "North Korea Kim Jong Un China Russia visit missile"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "gov_warning": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL"
+      "북한 지뢰 발견 DMZ 귀순 NLL 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "North Korea talks offer 남북 대화 제안 통신선 복원"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
@@ -43,7 +48,7 @@
     "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
     "https://www.koreaherald.com/rss/kh_NorthKorea"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 트럼프 방중·한미중러 정상 외교와 IAEA의 영변 농축시설 증설 경고(11/19, 배경)만 확인됐고 접경·발사·핵 관련 신규 보도는 없다.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 트럼프 아시아 순방이 김정은 회동 없이 종료되고 한·미·중·러 정상 외교가 이어졌으나 접경·발사·핵 관련 신규 보도는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -76,7 +81,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T03:08:53+00:00",
+  "checked_at": "2026-11-21T04:08:57+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

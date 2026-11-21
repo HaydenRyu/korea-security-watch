@@ -1,43 +1,43 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
+      "북한 병력 이동 전방 증강",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설 동향",
-      "North Korea nuclear test site 38 North"
+      "북한 핵시설 영변 풍계리",
+      "North Korea nuclear site IAEA"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment Russia"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참 오늘",
-      "DMZ 귀순 NLL",
-      "North Korea DMZ border incident"
+      "목함지뢰 DMZ 귀순 북한",
+      "North Korea DMZ border clash"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "North Korea hackers attributed"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출",
+      "North Korea GPS jamming hacking"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 11월 21일",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade preparation"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
       "북한 준전시 등화관제",
       "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향",
-      "South Korea alert North Korea"
+      "합참 북한 미사일 발사 11월 21일",
+      "진돗개 데프콘",
+      "North Korea missile launch warning"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -45,16 +45,16 @@
     ],
     "calm": [
       "남북 대화 제안",
-      "통신선 복원",
       "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856698"
+    "https://www.nknews.org",
+    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreatimes.co.kr/",
+    "https://www.koreaherald.com/"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 김정은 방중설·조용원 방러 등 기존 외교 동향과 한미·남북 접촉 보도만 확인됐다.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 트럼프·시진핑·푸틴 3자 회담(11/19-20) 등 외교 동향만 확인됐고 김정은 방중 동향은 포착되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,8 +72,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "조용원 방러·김정은 방중설은 11/17~18 보도된 기존 건이며 24시간 안 신규 파병·협정 없음(배경)."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -88,7 +87,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T00:08:58+00:00",
+  "checked_at": "2026-11-21T01:09:35+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

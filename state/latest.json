@@ -5,7 +5,7 @@
       "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 핵시설 영변 풍계리",
+      "북한 핵시설 영변",
       "North Korea nuclear IAEA"
     ],
     "logistics": [
@@ -14,8 +14,8 @@
     ],
     "border_clash": [
       "지뢰 발견 DMZ 귀순",
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters missile border November 2026"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순",
+      "North Korea Reuters November 21 2026"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -23,9 +23,10 @@
       "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 동향",
+      "김정은 방중 방러",
       "Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결"
@@ -34,7 +35,8 @@
       "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 발령 데프콘",
+      "phones across Korea emergency alerts Thursday"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -46,11 +48,12 @@
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://www.yna.co.kr/view/AKR20261119080500504",
+    "https://www.koreajoongangdaily.com/korea/north-korea",
+    "https://www.koreaherald.com/list/NorthKorea"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후는 확인되지 않았다. 국내 묶음은 한중러 정상외교·정치 일정 등 배경이며, 접경 열점 후보 대조도 새 보도가 없다.",
+  "overall_summary": "최근 24시간 신규 군사 징후는 확인되지 않았다. 국내 묶음은 정상외교·정치 일정 등 배경이며(통일부 「김정은 방중 동향 포착 안 돼」), 11/19 전국 재난문자는 수능 부정행위 단속용이었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -83,7 +86,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T17:09:11+00:00",
+  "checked_at": "2026-11-21T18:10:26+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

@@ -1,17 +1,17 @@
 {
- "at": "2026-11-21T00:44:03+00:00",
- "south": 66,
- "area": 82,
- "baseline": 65.0,
- "ratio": 1.02,
- "samples": 8,
+ "at": "2026-11-21T01:55:45+00:00",
+ "south": 79,
+ "area": 91,
+ "baseline": 75,
+ "ratio": 1.05,
+ "samples": 7,
  "mil": [
   {
-   "type": "SURN",
-   "name": null,
-   "call": "KNP971",
-   "lat": 35.08,
-   "lon": 129.04
+   "type": "GLEX",
+   "name": "정찰용 비즈니스젯 가능",
+   "call": "",
+   "lat": 36.98,
+   "lon": 127.06
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

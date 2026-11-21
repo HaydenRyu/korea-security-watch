@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-20T23:39:56+00:00",
+  "judged_at": "2026-11-21T05:39:13+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -10,7 +10,7 @@
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
-          "published_at": "2026-11-20T16:54:29+00:00"
+          "published_at": "2026-11-21T02:09:46+00:00"
         },
         {
           "name": "BBC",
@@ -19,8 +19,8 @@
           "published_at": "2026-11-20T13:01:16+00:00"
         }
       ],
-      "summary": "러시아가 키이우 교량 등을 대규모 공습했고 러시아 순항미사일이 폴란드 영토에 떨어졌다고 폴란드 정부가 밝혔다.",
-      "judged_at": "2026-11-20T23:39:56+00:00"
+      "summary": "러시아가 키이우 교량 등을 대규모 공습했고 순항미사일이 폴란드 영토에 떨어졌다고 폴란드 정부가 밝혔다.",
+      "judged_at": "2026-11-21T05:39:13+00:00"
     },
     "mideast": {
       "state": 3,
@@ -31,24 +31,18 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cx7v2d8q879eo",
-          "published_at": "2026-11-20T22:14:17+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
           "published_at": "2026-11-18T13:04:48+00:00"
         },
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno",
-          "published_at": "2026-11-19T17:03:23+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cx7v2d8q879eo",
+          "published_at": "2026-11-20T22:14:17+00:00"
         }
       ],
       "summary": "미군의 케슘섬 타격 뒤 이란이 쿠웨이트·바레인을 공격했고 후티는 예멘 타이즈를 포위해 공격 중이다.",
-      "judged_at": "2026-11-20T23:39:56+00:00"
+      "judged_at": "2026-11-21T05:39:13+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -59,24 +53,18 @@
         {
           "name": "중앙통신사(CNA)",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/acn/202611200138.aspx",
-          "published_at": "2026-11-20T14:30:38+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611210044.aspx",
+          "published_at": "2026-11-21T10:06:27+08:00"
         },
         {
           "name": "중앙통신사(CNA)",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/acn/202611200295.aspx",
-          "published_at": "2026-11-20T19:18:18+08:00"
-        },
-        {
-          "name": "Focus Taiwan",
-          "tier": "B",
-          "url": "https://focustaiwan.tw/politics/202611200020",
-          "published_at": "2026-11-20T20:12:14+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611210057.aspx",
+          "published_at": "2026-11-21T11:19:56+08:00"
         }
       ],
-      "summary": "러시아 군용기가 일본 영공과 대만 방공식별구역을 통과했다고 중앙사가 전했고 중미 해상군사안보 협의가 상하이에서 열렸다.",
-      "judged_at": "2026-11-20T23:39:56+00:00"
+      "summary": "대만 국방부는 중국 군용기 2대·군함 6척·공무선 1척 활동과 정찰 풍선 4개를 보고했고 국안 관리는 중국이 제1도련에 100척 넘게 배치 중이라고 밝혔다.",
+      "judged_at": "2026-11-21T05:39:13+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -85,38 +73,32 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-21T00:00:00+08:00",
+          "published_at": "2026-11-21T00:00:00+00:00",
           "kind": "feed"
         },
         {
-          "name": "Rappler",
-          "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-21T00:50:00+08:00",
+          "name": "BBC",
+          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
+          "published_at": "2026-11-20T23:29:00+00:00",
           "kind": "feed"
         }
       ],
-      "summary": "Philstar·Rappler 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-20T23:39:56+00:00"
+      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "judged_at": "2026-11-21T05:39:13+00:00"
     },
     "us_posture": {
       "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "Stars and Stripes",
-          "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-20T00:00:00+00:00",
-          "kind": "feed"
-        },
-        {
           "name": "DVIDS",
-          "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-20T18:37:37-05:00",
-          "kind": "feed"
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/580011/uss-frank-cable-makes-port-visit-saipan",
+          "published_at": "2026-11-20T21:58:38+00:00"
         }
       ],
-      "summary": "Stars and Stripes·DVIDS 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
-      "judged_at": "2026-11-20T23:39:56+00:00"
+      "summary": "DVIDS에 72시간 안 미 전략자산 위기 전개 보도 없이 잠수함 모함 프랭크 케이블의 사이판 정례 입항만 확인됐다.",
+      "judged_at": "2026-11-21T05:39:13+00:00"
     }
   }
 }

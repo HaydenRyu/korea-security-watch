@@ -1,51 +1,49 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters AP missile Kim Jong Un"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL",
+      "North Korea Kim Jong Un China Russia visit missile"
     ],
     "nuclear": [
-      "북한 영변 핵 IAEA",
-      "North Korea Reuters AP missile Kim Jong Un"
+      "IAEA 영변 (NK News 피드)",
+      "North Korea Kim Jong Un China Russia visit missile"
     ],
     "logistics": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters AP missile Kim Jong Un"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL 북한"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 해킹 개인정보 유출 랜섬웨어 공격"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Reuters AP missile Kim Jong Un"
+      "김정은 방중 서해 구조물 주한미군 감축",
+      "North Korea Kim Jong Un China Russia visit missile"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 21일"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL"
     ],
     "nk_internal": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters AP missile Kim Jong Un"
+      "North Korea Kim Jong Un China Russia visit missile"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 21일",
-      "North Korea Reuters AP missile Kim Jong Un"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 NLL"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "North Korea talks offer 남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/feed/",
-    "https://www.japantimes.co.jp/tag/north-korea/"
+    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreaherald.com/rss/kh_NorthKorea"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 11/19~20 한·미·중·러 정상 외교(3자 회담, 이 대통령-푸틴 회동)와 김정은 방중 동향 미포착 보도만 확인됐고, 접경·발사·핵 관련 신규 보도는 없다.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 트럼프 방중·한미중러 정상 외교와 IAEA의 영변 농축시설 증설 경고(11/19, 배경)만 확인됐고 접경·발사·핵 관련 신규 보도는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -78,7 +76,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T02:09:30+00:00",
+  "checked_at": "2026-11-21T03:08:53+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

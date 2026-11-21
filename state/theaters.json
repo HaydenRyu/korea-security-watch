@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-21T05:39:13+00:00",
+  "judged_at": "2026-11-21T11:39:04+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -19,8 +19,8 @@
           "published_at": "2026-11-20T13:01:16+00:00"
         }
       ],
-      "summary": "러시아가 키이우 교량 등을 대규모 공습했고 순항미사일이 폴란드 영토에 떨어졌다고 폴란드 정부가 밝혔다.",
-      "judged_at": "2026-11-21T05:39:13+00:00"
+      "summary": "러시아가 올해 최대급 공습을 이어가고 미사일이 폴란드 영토에 떨어졌다고 폴란드가 밝혔다.",
+      "judged_at": "2026-11-21T11:39:04+00:00"
     },
     "mideast": {
       "state": 3,
@@ -42,7 +42,7 @@
         }
       ],
       "summary": "미군의 케슘섬 타격 뒤 이란이 쿠웨이트·바레인을 공격했고 후티는 예멘 타이즈를 포위해 공격 중이다.",
-      "judged_at": "2026-11-21T05:39:13+00:00"
+      "judged_at": "2026-11-21T11:39:04+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -53,18 +53,18 @@
         {
           "name": "중앙통신사(CNA)",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611210044.aspx",
-          "published_at": "2026-11-21T10:06:27+08:00"
+          "url": "https://www.cna.com.tw/news/acn/202611210079.aspx",
+          "published_at": "2026-11-21T12:43:43+08:00"
         },
         {
-          "name": "중앙통신사(CNA)",
+          "name": "Focus Taiwan",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611210057.aspx",
-          "published_at": "2026-11-21T11:19:56+08:00"
+          "url": "https://focustaiwan.tw/politics/202611210012",
+          "published_at": "2026-11-21T17:34:10+08:00"
         }
       ],
-      "summary": "대만 국방부는 중국 군용기 2대·군함 6척·공무선 1척 활동과 정찰 풍선 4개를 보고했고 국안 관리는 중국이 제1도련에 100척 넘게 배치 중이라고 밝혔다.",
-      "judged_at": "2026-11-21T05:39:13+00:00"
+      "summary": "대만 대륙위원회 주임은 중국이 연성·경성 복합 압박을 가하고 있다며 통일전선 의도를 경계하라고 밝혔다.",
+      "judged_at": "2026-11-21T11:39:04+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -73,18 +73,18 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-21T00:00:00+00:00",
+          "published_at": "2026-11-21T09:50:00+00:00",
           "kind": "feed"
         },
         {
           "name": "BBC",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-20T23:29:00+00:00",
+          "published_at": "2026-11-20T23:28:17+00:00",
           "kind": "feed"
         }
       ],
-      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-21T05:39:13+00:00"
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "judged_at": "2026-11-21T11:39:04+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -97,8 +97,8 @@
           "published_at": "2026-11-20T21:58:38+00:00"
         }
       ],
-      "summary": "DVIDS에 72시간 안 미 전략자산 위기 전개 보도 없이 잠수함 모함 프랭크 케이블의 사이판 정례 입항만 확인됐다.",
-      "judged_at": "2026-11-21T05:39:13+00:00"
+      "summary": "DVIDS에 미 전략자산 위기 전개 보도 없이 잠수함 모함 프랭크 케이블의 사이판 정례 입항만 확인됐다.",
+      "judged_at": "2026-11-21T11:39:04+00:00"
     }
   }
 }

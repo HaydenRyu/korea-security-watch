@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-11-20T23:49:53+00:00",
+ "fetched_at": "2026-11-21T00:44:15+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-20T23:49:53+00:00",
+ "last_ok_at": "2026-11-21T00:44:15+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1136,
-  "hits": 32,
-  "clusters": 29,
+  "hits": 31,
+  "clusters": 28,
   "by_group": {
    "summit": 11,
    "spy": 2,
-   "fire": 3,
+   "fire": 2,
    "border": 7,
    "hybrid": 3,
    "drone_balloon": 2,
@@ -25,7 +25,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 576,
-   "hits": 25
+   "hits": 24
   },
   "SBS": {
    "feeds": 3,
@@ -71,7 +71,7 @@
    "latest": "2026-11-20T21:08:20+00:00"
   },
   "fire": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-20T19:20:46+00:00"
   },
@@ -135,7 +135,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 1
   },
   {
    "outlet": "SBS",

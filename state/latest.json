@@ -1,66 +1,69 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 21일",
-      "North Korea troops DMZ"
+      "North Korea news Kim Jong Un"
     ],
     "nuclear": [
-      "북한 영변 핵시설",
-      "North Korea nuclear Reuters"
+      "북한 영변 핵시설"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea ammunition shipment"
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 북한 11월",
-      "DMZ NLL 귀순"
+      "북한 지뢰 DMZ 합참"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "해킹 개인정보 유출 11월"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 방러"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제 North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning US Japan"
+      "진돗개 발령 데프콘 North Korea warning US Japan"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
-    ]
+    "calm": []
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261119080500504",
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.nknews.org/",
+    "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/",
+    "https://www.nknews.org/2026/11/seoul-dispatches-team-to-myanmar-to-search-for-plane-bombed-by-north-korea/",
     "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "최근 24시간 새 군사 도발·전쟁 징후는 확인되지 않았다. 김정은은 삼지연 시찰 중이며 방중설은 통일부가 동향 미포착이라 밝혔다. 접경 열점 후보 대조는 수행하지 않았다.",
+  "overall_summary": "최근 24시간 새 군사 도발·전쟁 징후는 확인되지 않았다. IAEA의 영변 농축시설 확장 우려는 기존 사안의 재확인이며, 이번 회차는 항목별 검색을 검색 1건씩으로 제한적으로 수행했고 접경 열점 후보 대조·임박 신호 확인은 하지 못했다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "영변",
+      "lat": 39.8,
+      "lon": 125.75,
+      "summary": "IAEA 사무총장이 영변 노후 농축시설 확장에 「심각한 우려」를 표명했다(11/19, NK News 인용).",
+      "meaning": "기존에 알려진 영변 시설 확장의 재확인으로 신규 핵 사용 준비 징후는 아니다.",
+      "sources": [
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "그로시 총장이 이사회에서 영변 농축시설 확장 우려 표명"
+      ],
+      "speculation": []
     },
     "logistics": {
       "status": "none"
@@ -72,7 +75,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 방중은 통일부가 동향 미포착, NK News에도 방중 보도 없음(소문 언급만)."
     },
     "parade_massing": {
       "status": "none"
@@ -87,8 +91,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-20T23:08:40+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-21T00:09:58+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

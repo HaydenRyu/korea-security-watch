@@ -1,51 +1,56 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 오늘 도발",
-      "North Korea troops Reuters"
+      "북한 합참 발표 11월 21일",
+      "North Korea missile launch nuclear Yongbyon 38 North November 2026"
     ],
     "nuclear": [
-      "North Korea nuclear 38 North"
+      "North Korea missile launch nuclear Yongbyon 38 North November 2026",
+      "북한 핵 영변 풍계리"
     ],
     "logistics": [
-      "북한 군수 수송"
+      "북한 합참 발표 11월 21일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순"
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "South Korea invites North military talks border"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "GPS 교란 서해 구조물 주한미군 감축",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중",
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "김정은 방중 방러",
+      "GPS 교란 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 합참 발표 11월 21일",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 준전시 동원"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "북한 내부 전시 동향"
     ],
     "gov_warning": [
-      "진돗개 발령"
+      "북한 합참 발표 11월 21일",
+      "North Korea travel warning State Department"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI",
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261119080500504",
     "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.yna.co.kr/view/AKR20261120089600704"
+    "https://www.koreatimes.co.kr/southkorea/defense/20261008/s-korean-military-detonates-suspected-n-korean-land-mine-washed-ashore-on-west-coast",
+    "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border"
   ],
-  "overall_summary": "신규 징후 없음. 김정은 방중설은 통일부가 동향 미포착으로 확인했고 접경 사건·미사일 발사 보도도 없다.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 접경 열점 후보 1건(북측, 대조 대상 아님)이며 국내 언론 묶음은 정상외교·정치 보도 위주였다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,15 +62,13 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "신규 지뢰·월선·교전 보도 없음(9월 DMZ 지뢰는 배경)."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "통일부 「김정은 방중 동향 포착 안 돼」(11/19), 삼지연 시찰 로이터 보도 — 신규 방중·방러·군사협력 확인 없음, 배경."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -80,7 +83,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T13:09:17+00:00",
+  "checked_at": "2026-11-21T13:10:09+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

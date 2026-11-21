@@ -1,55 +1,55 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 합참 발표 11월 21일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
+    ],
+    "nuclear": [
+      "North Korea Reuters Kim Jong Un China Russia visit"
+    ],
+    "logistics": [
+      "북한 합참 발표 11월 21일"
+    ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순"
+      "목함지뢰 DMZ 귀순 북한"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 11월"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중 서해 구조물 주한미군 감축"
     ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+    "parade_massing": [
+      "북한 합참 발표 11월 21일"
+    ],
+    "nk_internal": [
+      "북한 합참 발표 11월 21일"
     ],
     "gov_warning": [
       "북한 합참 발표 11월 21일"
     ],
-    "nuclear": [
-      "North Korea Reuters November 21 2026"
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 North Korea talks offer"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 동향",
-      "North Korea troops mobilization parade ammunition shipments blackout drill"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송 열병식 집결"
-    ],
-    "parade_massing": [
-      "북한 군수 탄약 수송 열병식 집결"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제 노농적위군 동원"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/",
-    "https://www.nknews.org/category/news/",
-    "https://www.korea.kr/news/policyNewsList.do"
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.nknews.org",
+    "https://en.yna.co.kr/nk/index"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 트럼프 순방 종료 후 한·미·중·러 정상외교가 이어지고 접경·발사·핵 관련 신규 보도는 없다(영변 농축시설 IAEA 우려는 11/19 보도로 배경). 접경 열점 3건은 모두 북측·직전 회차 이전 포착이며 관련 보도 없음.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 트럼프 순방 종료 후 정상외교가 이어지고 접경·발사·핵 신규 보도는 없다. 접경 열점 3건은 11/20 08시경 포착된 직전 회차 이전 후보로 관련 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
       "status": "none",
-      "summary": "24시간 경과 — IAEA 영변 농축시설 증축 우려 보도(NK News, 11/19)는 배경"
+      "summary": "IAEA의 영변 농축시설 확장 우려는 11/19 보도로 24시간 경과 배경."
     },
     "logistics": {
       "status": "none"
@@ -61,7 +61,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "트럼프 순방 종료·김정은 방중 확인 안 됨, 정상외교 일정은 배경."
     },
     "parade_massing": {
       "status": "none"
@@ -76,7 +77,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T05:09:46+00:00",
+  "checked_at": "2026-11-21T06:08:54+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

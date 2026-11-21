@@ -1,54 +1,51 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 지뢰 발견 DMZ 귀순 NLL 합참",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 전방 병력 이동",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 핵 영변 풍계리",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 지뢰 발견 DMZ 귀순 NLL 합참"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 NLL 합참",
-      "지뢰 발견",
-      "DMZ",
-      "NLL",
-      "귀순"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순",
+      "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격 국가보안법 구속 간첩 혐의"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중",
-      "서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 지뢰 발견 DMZ 귀순 NLL 합참"
-    ],
-    "nk_internal": [
+      "김정은 방중 서해 구조물 주한미군 감축",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
+    "parade_massing": [
+      "북한 열병식 집결"
+    ],
+    "nk_internal": [
+      "북한 내부 전시 동원"
+    ],
     "gov_warning": [
-      "북한 지뢰 발견 DMZ 귀순 NLL 합참"
+      "한미일 긴급 경고 진돗개 데프콘"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 FBI"
+      "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.nknews.org/feed/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreaherald.com/rss/kh_NorthKorea"
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
+    "https://www.koreajoongangdaily.com/korea/pyongyang-fires-missiles-as-trump-offers-talks-seoul-seeks-beijings-help-to-revive-north-korea-diplomacy/12834681"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 트럼프 아시아 순방이 김정은 회동 없이 종료되고 한·미·중·러 정상 외교가 이어졌으나 접경·발사·핵 관련 신규 보도는 없다.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 국내 언론 수집 24묶음 중 접경·발사·핵 관련 신규 보도 없고 트럼프 순방 종료 후 정상외교 보도만 이어졌다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -66,7 +63,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "조용원 방러·김정은 삼지연 시찰·방중설은 외교·배경 보도뿐, 새로 확인된 파병·이전·협정 없음(젤렌스키 주장은 미검증)."
     },
     "parade_massing": {
       "status": "none"
@@ -81,7 +79,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T04:08:57+00:00",
+  "checked_at": "2026-11-21T05:09:10+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

@@ -2,46 +2,50 @@
   "coverage": {
     "troop_movement": [
       "북한 합참 발표 11월 21일",
-      "North Korea missile launch November 2026"
+      "North Korea Reuters AP missile Kim Jong Un"
     ],
     "nuclear": [
-      "North Korea missile launch November 2026"
+      "북한 영변 핵 IAEA",
+      "North Korea Reuters AP missile Kim Jong Un"
     ],
     "logistics": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 발표 11월 21일",
+      "North Korea Reuters AP missile Kim Jong Un"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL"
+      "지뢰 발견 DMZ 귀순 NLL 북한"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 북한 GPS 교란"
+      "GPS 교란 북한 해킹 개인정보 유출 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "North Korea Reuters AP missile Kim Jong Un"
     ],
     "parade_massing": [
       "북한 합참 발표 11월 21일"
     ],
     "nk_internal": [
-      "North Korea Yonhap Korea Times Nov 20 2026"
+      "북한 합참 발표 11월 21일",
+      "North Korea Reuters AP missile Kim Jong Un"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 21일"
+      "북한 합참 발표 11월 21일",
+      "North Korea Reuters AP missile Kim Jong Un"
     ],
     "hybrid_ops": [
-      "해킹 개인정보 유출 사이버 공격 북한 GPS 교란"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.koreatimes.co.kr/southkorea/defense",
-    "https://www.koreatimes.co.kr/southkorea/defense/20261117/several-russian-military-aircraft-enter-s-koreas-air-defense-zone-without-notice-jcs",
-    "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
+    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/feed/",
+    "https://www.japantimes.co.jp/tag/north-korea/"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 조용원 방러·김정은 방중설 등 기존 외교 동향과 11/17 러시아 군용기 KADIZ 진입(24시간 경과)만 확인됐다. 접경 북측 열점 3건은 산불·농경지 소각 추정이며 관련 보도 없음.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 11/19~20 한·미·중·러 정상 외교(3자 회담, 이 대통령-푸틴 회동)와 김정은 방중 동향 미포착 보도만 확인됐고, 접경·발사·핵 관련 신규 보도는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,8 +63,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "조용원 방러·김정은 방중설과 러 군용기 KADIZ 진입(11/17)은 24시간 경과한 기존 건이라 배경으로만 둔다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -75,7 +78,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T01:10:23+00:00",
+  "checked_at": "2026-11-21T02:09:30+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

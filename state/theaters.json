@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-21T11:39:04+00:00",
+  "judged_at": "2026-11-21T23:39:23+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -9,31 +9,23 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
-          "published_at": "2026-11-21T02:09:46+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
+          "published_at": "2026-11-21T19:20:22+00:00"
         },
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o",
-          "published_at": "2026-11-20T13:01:16+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
+          "published_at": "2026-11-21T02:09:46+00:00"
         }
       ],
-      "summary": "러시아가 올해 최대급 공습을 이어가고 미사일이 폴란드 영토에 떨어졌다고 폴란드가 밝혔다.",
-      "judged_at": "2026-11-21T11:39:04+00:00"
+      "summary": "러시아가 대규모 공습을 이어가고 폴란드 영공 침범과 핀란드만 화물선 드론 피격이 잇따랐다.",
+      "judged_at": "2026-11-21T23:39:23+00:00"
     },
     "mideast": {
       "state": 3,
-      "channels": [
-        "c4_sea_energy"
-      ],
+      "channels": [],
       "sources": [
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
-          "published_at": "2026-11-18T13:04:48+00:00"
-        },
         {
           "name": "BBC",
           "tier": "B",
@@ -41,8 +33,8 @@
           "published_at": "2026-11-20T22:14:17+00:00"
         }
       ],
-      "summary": "미군의 케슘섬 타격 뒤 이란이 쿠웨이트·바레인을 공격했고 후티는 예멘 타이즈를 포위해 공격 중이다.",
-      "judged_at": "2026-11-21T11:39:04+00:00"
+      "summary": "후티 반군이 예멘 타이즈를 포위해 공격 중이며 8월 이후 민간인 140명 넘게 숨졌다고 현지 당국이 밝혔다.",
+      "judged_at": "2026-11-21T23:39:23+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -71,20 +63,20 @@
       "channels": [],
       "sources": [
         {
-          "name": "Philstar",
-          "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-21T09:50:00+00:00",
+          "name": "Rappler",
+          "url": "https://www.rappler.com/feed/",
+          "published_at": "2026-11-21T23:45:00+00:00",
           "kind": "feed"
         },
         {
-          "name": "BBC",
+          "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
           "published_at": "2026-11-20T23:28:17+00:00",
           "kind": "feed"
         }
       ],
-      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-21T11:39:04+00:00"
+      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "judged_at": "2026-11-21T23:39:23+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -97,8 +89,8 @@
           "published_at": "2026-11-20T21:58:38+00:00"
         }
       ],
-      "summary": "DVIDS에 미 전략자산 위기 전개 보도 없이 잠수함 모함 프랭크 케이블의 사이판 정례 입항만 확인됐다.",
-      "judged_at": "2026-11-21T11:39:04+00:00"
+      "summary": "미 해군 잠수함 정비함 프랭크 케이블이 사이판에 정례 입항했다.",
+      "judged_at": "2026-11-21T23:39:23+00:00"
     }
   }
 }

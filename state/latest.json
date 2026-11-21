@@ -1,48 +1,41 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troops deployment"
+      "북한 합참 발표 오늘",
+      "North Korea news November 21 2026"
     ],
     "nuclear": [
-      "북한 핵시설 영변",
-      "North Korea nuclear Reuters"
+      "North Korea news November 21 2026",
+      "38north.org 열람(403)"
     ],
     "logistics": [
-      "북한 탄약 수송",
-      "North Korea munitions shipment"
+      "North Korea news November 21 2026"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "North Korea DMZ border incident"
+      "지뢰 발견 DMZ 귀순 NLL",
+      "북한 합참 발표 오늘"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격",
-      "North Korea GPS jamming hacking"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "국가보안법 구속 간첩 혐의 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "North Korea news November 21 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "North Korea news November 21 2026"
     ],
     "gov_warning": [
-      "북한 미사일 발사 합참",
-      "North Korea missile launch alert"
+      "북한 합참 발표 오늘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 서해 구조물 주한미군 감축"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
@@ -50,14 +43,14 @@
     "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음; 국내 묶음은 정상외교·정치·훈련(미 ICBM 시험) 위주였고 NK News·코리아타임스에도 신규 도발 보도 없음. 접경 열점 후보는 대부분 북측이며 보도 대조 결과 관련 보도 없음.",
+  "overall_summary": "최근 24시간 신규 군사 징후는 확인되지 않았다. 국내 묶음은 한중러 정상외교(트럼프 「한반도 위험」 언급)·정치 일정·미 ICBM 시험 등 배경이고, 접경 열점 후보 대조도 새 보도가 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
       "status": "none",
-      "summary": "IAEA의 영변 등 핵시설 개선 '심각한 우려'(11/19, NK News 헤드라인)는 반복 배경이며 신규 준비 징후 확인 안 됨."
+      "summary": "IAEA 사무총장의 영변 농축시설 증축 우려(11/18~19)는 24시간 이전 배경이다."
     },
     "logistics": {
       "status": "none"
@@ -70,7 +63,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "트럼프·시진핑·푸틴 3자 논의(11/20)는 외교 배경, 신규 파병·이전·협정 확인 안 됨."
+      "summary": "김정은 방중·방러 동향은 통일부가 포착 안 됨(11/19)으로 확인, 신규 파병·협정 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -85,7 +78,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T15:10:18+00:00",
+  "checked_at": "2026-11-21T16:08:58+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

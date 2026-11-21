@@ -1,47 +1,56 @@
 {
   "coverage": {
-    "border_clash": [
-      "북한 합참 발표 미사일 11월 21일",
-      "지뢰 발견 DMZ 귀순 북한"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
-    ],
-    "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "주한미군 감축 서해 구조물 김정은 방중"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원"
-    ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강 동향"
+      "북한 합참 발표 11월 21일",
+      "North Korea Reuters November 21 2026"
     ],
     "nuclear": [
-      "North Korea nuclear test Punggye-ri Yongbyon enrichment satellite imagery"
+      "북한 미사일 핵 풍계리 영변 동향",
+      "North Korea missile nuclear Yongbyon Punggye-ri November 2026"
     ],
     "logistics": [
-      "북한 군수 탄약 수송 러시아 컨테이너"
+      "북한 합참 발표 11월 21일",
+      "North Korea Reuters November 21 2026"
+    ],
+    "border_clash": [
+      "지뢰 발견 DMZ 귀순",
+      "North Korea Reuters November 21 2026"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격",
+      "North Korea Reuters November 21 2026"
+    ],
+    "foreign_forces": [
+      "Kim Jong Un China Russia visit",
+      "국가보안법 구속 간첩 혐의 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비 평양 미림 집결"
+      "북한 합참 발표 11월 21일",
+      "North Korea Reuters November 21 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 주민 대피 노농적위군"
+      "북한 합참 발표 11월 21일",
+      "North Korea Reuters November 21 2026"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 긴급 경고 대피 권고"
+      "북한 합참 발표 11월 21일",
+      "North Korea Reuters November 21 2026"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 서해 구조물 주한미군 감축",
+      "North Korea Reuters November 21 2026"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.ytn.co.kr/_ln/0101_202610291545228200"
+    "https://www.yna.co.kr/view/AKR20261119080500504",
+    "https://www.donga.com/news/Politics/article/all/20261120/135062569/2",
+    "https://www.koreaherald.com/article/10942242",
+    "https://en.yna.co.kr/view/AEN20261116006000315"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후 없음. 김정은 삼지연 시찰·방중설과 한미중러 정상외교 보도만 이어졌고, 접경 열점 후보 3건은 관련 보도를 찾지 못했다.",
+  "overall_summary": "최근 24시간 신규 군사 징후 없음. 트럼프·시진핑·푸틴 정상외교와 정동영 장관의 판문점 브런슨 면담 등 외교 보도만 이어졌고, 접경 열점 후보는 직전 회차 이전 것뿐이라 새 대조 대상이 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,7 +68,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 방중은 통일부가 동향 포착 안 됨으로 확인(11/19), 북중·북러 신규 군사협력 확인 없음 — 배경."
     },
     "parade_massing": {
       "status": "none"
@@ -74,7 +84,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T10:09:07+00:00",
+  "checked_at": "2026-11-21T11:09:48+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

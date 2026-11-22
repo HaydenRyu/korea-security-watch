@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-21T23:08:57+00:00",
+  "updated_at": "2026-11-22T00:09:44+00:00",
   "active": [
     {
       "id": "scheduled_event-20261116-2edd67bc",
@@ -25,6 +25,23 @@
           "publisher": "코리아헤럴드"
         }
       ]
+    },
+    {
+      "id": "scheduled_event-20261122-96568d6a",
+      "kind": "scheduled_event",
+      "summary": "조선중앙통신이 11월 하순 평양에서 노동당 세포비서대회를 연다고 11/19 보도했다.",
+      "window": {
+        "start": "2026-11-22",
+        "end": "2026-11-30"
+      },
+      "level": "report",
+      "first_seen": "2026-11-22T00:09:44+00:00",
+      "expires": "2026-11-30",
+      "source": {
+        "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261119/n-korea-to-hold-meeting-of-grassroots-leaders-of-ruling-party-this-month",
+        "title": "N. Korea to hold meeting of grassroots leaders of ruling party this month",
+        "publisher": "The Korea Times"
+      }
     }
   ],
   "expired": [

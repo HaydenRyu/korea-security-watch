@@ -1,10 +1,18 @@
 {
- "at": "2026-11-22T08:32:10+00:00",
- "south": 69,
- "area": 89,
- "baseline": 71.5,
- "ratio": 0.97,
- "samples": 6,
- "mil": [],
+ "at": "2026-11-22T09:48:37+00:00",
+ "south": 63,
+ "area": 87,
+ "baseline": 64.0,
+ "ratio": 0.98,
+ "samples": 4,
+ "mil": [
+  {
+   "type": "H60",
+   "name": null,
+   "call": "HOIST39",
+   "lat": 37.33,
+   "lon": 127.09
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

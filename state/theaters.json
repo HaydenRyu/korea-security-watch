@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-22T11:39:38+00:00",
+  "judged_at": "2026-11-22T23:38:54+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -9,18 +9,18 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
-          "published_at": "2026-11-21T19:20:22+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
+          "published_at": "2026-11-21T02:09:46+00:00"
         },
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
-          "published_at": "2026-11-21T02:09:46+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
+          "published_at": "2026-11-22T17:18:26+00:00"
         }
       ],
-      "summary": "러시아의 공습과 우크라이나의 크림대교 타격이 이어지는 가운데 폴란드 영공 침범과 핀란드만 화물선 드론 피격이 잇따랐다.",
-      "judged_at": "2026-11-22T11:39:38+00:00"
+      "summary": "러시아의 대규모 공습과 폴란드 영공 침범, 핀란드만 러시아행 화물선 드론 피격이 이어지고 있다.",
+      "judged_at": "2026-11-22T23:38:54+00:00"
     },
     "mideast": {
       "state": 3,
@@ -33,8 +33,8 @@
           "published_at": "2026-11-20T22:14:17+00:00"
         }
       ],
-      "summary": "후티 반군이 예멘 타이즈를 포위해 공격 중이다.",
-      "judged_at": "2026-11-22T11:39:38+00:00"
+      "summary": "이란과 미국의 교전이 이어져 쿠웨이트·바레인이 이란 공격을 격퇴했다고 밝혔고, 후티 반군은 예멘 타이즈를 포위 중이다.",
+      "judged_at": "2026-11-22T23:38:54+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -48,7 +48,7 @@
         }
       ],
       "summary": "대만 국방부는 중국 군함 11척과 군용기 17대가 대만 주변에서 활동했다고 밝혔다.",
-      "judged_at": "2026-11-22T11:39:38+00:00"
+      "judged_at": "2026-11-22T23:38:54+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -57,7 +57,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-22T11:32:00+08:00",
+          "published_at": "2026-11-23T00:00:00+08:00",
           "kind": "feed"
         },
         {
@@ -69,12 +69,12 @@
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-22T06:05:00+00:00",
+          "published_at": "2026-11-22T14:05:20+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-22T11:39:38+00:00"
+      "judged_at": "2026-11-22T23:38:54+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -84,11 +84,11 @@
           "name": "DVIDS",
           "tier": "A",
           "url": "https://www.dvidshub.net/news/580011/uss-frank-cable-makes-port-visit-saipan",
-          "published_at": "2026-11-21T02:58:38+00:00"
+          "published_at": "2026-11-20T21:58:38-05:00"
         }
       ],
-      "summary": "미 해군 군수지원함 프랭크 케이블이 사이판에 예정된 입항을 했다.",
-      "judged_at": "2026-11-22T11:39:38+00:00"
+      "summary": "미 해군 잠수함 지원함 프랭크 케이블이 사이판에 예정된 입항을 했다.",
+      "judged_at": "2026-11-22T23:38:54+00:00"
     }
   }
 }

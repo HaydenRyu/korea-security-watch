@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updated_at": "2026-11-22T11:39:38+00:00",
-  "world_at": "2026-11-22T11:39:38+00:00",
+  "updated_at": "2026-11-22T23:38:54+00:00",
+  "world_at": "2026-11-22T23:38:54+00:00",
   "world": [
     {
-      "title": "핀란드만서 러시아행 화물선 드론 피격",
-      "summary": "러시아행 화물선이 핀란드만에서 드론 공격을 받아 불이 났고, 핀란드군은 우크라이나 소행 가능성이 높다고 밝혔다.",
-      "link_korea": "전쟁의 발트해 확산은 북러 군사협력 심화의 배경이 된다.",
+      "title": "핀란드만에서 러시아행 화물선 드론 피격",
+      "summary": "칼리닌그라드로 향하던 러시아 화물선 스파르타 II가 핀란드만에서 드론 공격을 받아 화재가 났고 예인 중이다. 핀란드 국방군은 우크라이나 소행 가능성이 높다고 밝혔다.",
+      "link_korea": "북한군이 러시아를 지원하는 러-우 전쟁의 확전 양상으로, 북러 군사협력 동향 판단의 배경이 된다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
@@ -15,37 +15,38 @@
       }
     },
     {
-      "title": "러시아 미사일, 폴란드 영공 침범",
-      "summary": "폴란드는 러시아 미사일이 자국 영공을 침범해 투스크 총리가 모스크바의 도발이라고 비판했다. 인명·재산 피해는 보고되지 않았다.",
-      "link_korea": "러시아의 확전 압박은 북한군 파병·북러 협력의 동력이다.",
+      "title": "리비아 벵가지항 러시아 선박 폭발, 드론 공격 추정",
+      "summary": "리비아 동부 정부는 벵가지 해군기지에 정박한 러시아 선박의 폭발이 드론 공격으로 추정된다고 밝혔다. 사상자는 없다고 했다.",
+      "link_korea": "러시아의 해외 거점·물류가 타격받는 사례로, 러시아 군수 조달과 북러 협력 환경에 영향을 줄 수 있다.",
+      "region": "아프리카",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "쿠웨이트·바레인, 이란 공격 격퇴 주장",
+      "summary": "쿠웨이트와 바레인이 이란의 공습을 막았다고 밝혔고, 미군은 호르무즈 해협 케슘섬의 이란 미사일 발사장을 타격했다.",
+      "link_korea": "중동 전선에 미군 자산이 묶여 한반도 억제 전력 배분과 에너지 수송로에 영향을 줄 수 있다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+      }
+    },
+    {
+      "title": "러시아 순항미사일 폴란드 영공 침범",
+      "summary": "폴란드는 러시아 Kh-101 순항미사일 등 3개 물체가 영공을 침범했다며 도발로 규정했다. 인명·재산 피해는 없다.",
+      "link_korea": "러-우 전쟁의 NATO 접경 확산으로, 러시아와 군사협력 중인 북한 관련 대러 제재·외교 구도에 연결된다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
         "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
-    },
-    {
-      "title": "젤렌스키 \"크림대교 공격은 정당한 대응\"",
-      "summary": "젤렌스키 대통령은 러시아의 교량 공격 109건에 대한 정당한 대응이라며 크림대교 타격을 옹호했다.",
-      "link_korea": "전쟁 장기화는 북러 군사협력과 북한군 파병의 동력이다.",
-      "region": "유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6wy0qj7w5zqo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "북한, 우라늄 농축시설 확장 — IAEA 우려",
-      "summary": "스타스앤스트라입스는 북한이 우라늄 농축시설을 확장했고 유엔 핵 감시기구가 우려를 제기했다고 전했다.",
-      "link_korea": "북한 핵능력 확대는 한반도 핵 비확산 체제와 대북 제재 논의에 직결된다.",
-      "region": "한반도",
-      "source": {
-        "name": "Stars and Stripes",
-        "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-20/north-korea-uranium-enrichment-yongbyon-23523599.html"
-      }
     }
   ],
-  "world_context": "러시아-우크라이나 전쟁이 발트해·폴란드로 번지는 가운데 북한은 핵시설을 확장하고 있다."
+  "world_context": "러-우 전쟁이 발트해·리비아·NATO 접경으로 번지고 중동에서 미·이란 교전이 이어져 미군 전력 분산이 쟁점이다."
 }

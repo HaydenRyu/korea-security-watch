@@ -1,14 +1,14 @@
 {
- "fetched_at": "2026-11-22T21:29:33+00:00",
+ "fetched_at": "2026-11-22T22:05:35+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-22T21:29:33+00:00",
+ "last_ok_at": "2026-11-22T22:05:35+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1135,
-  "hits": 24,
+  "fetched": 1136,
+  "hits": 23,
   "clusters": 15,
   "by_group": {
    "sanction": 2,
@@ -26,14 +26,14 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 575,
+   "count": 576,
    "hits": 28
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 10
+   "hits": 9
   },
   "동아일보": {
    "feeds": 2,
@@ -114,7 +114,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 95,
+   "count": 96,
    "hits": 17
   },
   {
@@ -171,7 +171,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 9
+   "hits": 8
   },
   {
    "outlet": "동아일보",

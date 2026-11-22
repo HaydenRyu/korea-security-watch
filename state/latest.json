@@ -1,43 +1,62 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 미사일 발사 합참 11월 22일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한"
+      "목함지뢰 발견",
+      "DMZ 귀순 NLL",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 미사일 발사 합참 11월 22일"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 미사일 발사 합참 11월 22일"
+      "북한 준전시 등화관제",
+      "North Korea wartime mobilization"
     ],
     "gov_warning": [
-      "북한 미사일 발사 합참 11월 22일"
+      "진돗개 데프콘 발령",
+      "North Korea emergency warning"
     ],
     "hybrid_ops": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "북한 해킹 귀속 FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border",
     "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+    "https://www.donga.com/news/Politics/article/all/20261120/135062569/2"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 김정은 방중설과 북러 고위급 교류는 이미 알려진 배경이며 직전 회차와 같다. 접경 열점 후보 1건은 관련 보도를 따로 대조하지 못했다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없고 직전 회차와 같다. 접경 북측 열점 1건(11/21, 농경지형)은 북측이며 관련 보도가 없어 징후로 올리지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,7 +89,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T07:09:16+00:00",
+  "checked_at": "2026-11-22T08:09:03+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

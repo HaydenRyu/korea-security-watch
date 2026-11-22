@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-22T11:09:19+00:00",
+  "computed_at": "2026-11-22T12:09:06+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 0,
@@ -12,8 +12,8 @@
   "grade_label": "평시",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-22T05:38:59+00:00",
-    "latest_updated_at": "2026-11-22T11:09:19+00:00"
+    "linkage_judged_at": "2026-11-22T11:39:38+00:00",
+    "latest_updated_at": "2026-11-22T12:09:06+00:00"
   },
   "theaters": [
     {
@@ -22,7 +22,7 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "대만 국방부는 11월 21일 오전 6시부터 22일 오전 6시까지 중국 군함 11척·공무선 1척과 군용기 17대가 중간선을 넘어 대만 중부·서남 공역을 교란했다고 밝혔다.",
+      "summary": "대만 국방부는 중국 군함 11척과 군용기 17대가 대만 주변에서 활동했다고 밝혔다.",
       "sources": [
         {
           "name": "중앙통신사(CNA)",
@@ -31,7 +31,7 @@
           "published_at": "2026-11-22T09:23:17+08:00"
         }
       ],
-      "judged_at": "2026-11-22T05:38:59+00:00"
+      "judged_at": "2026-11-22T11:39:38+00:00"
     },
     {
       "key": "ukraine",
@@ -39,7 +39,7 @@
       "state": 3,
       "contribution": 0,
       "channels": [],
-      "summary": "러시아가 대규모 공습을 이어가는 가운데 폴란드 영공 침범과 핀란드만 화물선 드론 피격이 잇따랐다.",
+      "summary": "러시아의 공습과 우크라이나의 크림대교 타격이 이어지는 가운데 폴란드 영공 침범과 핀란드만 화물선 드론 피격이 잇따랐다.",
       "sources": [
         {
           "name": "BBC",
@@ -54,7 +54,7 @@
           "published_at": "2026-11-21T02:09:46+00:00"
         }
       ],
-      "judged_at": "2026-11-22T05:38:59+00:00"
+      "judged_at": "2026-11-22T11:39:38+00:00"
     },
     {
       "key": "scs_ecs",
@@ -73,17 +73,17 @@
         {
           "name": "Rappler",
           "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-22T13:00:00+08:00",
+          "published_at": "2026-11-22T19:00:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-20T23:28:17+00:00",
+          "published_at": "2026-11-22T06:05:00+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-22T05:38:59+00:00"
+      "judged_at": "2026-11-22T11:39:38+00:00"
     },
     {
       "key": "mideast",
@@ -91,7 +91,7 @@
       "state": 3,
       "contribution": 0,
       "channels": [],
-      "summary": "후티 반군이 예멘 타이즈를 포위해 공격 중이며 8월 이후 민간인 140명 넘게 숨졌다고 현지 당국이 밝혔다.",
+      "summary": "후티 반군이 예멘 타이즈를 포위해 공격 중이다.",
       "sources": [
         {
           "name": "BBC",
@@ -100,7 +100,7 @@
           "published_at": "2026-11-20T22:14:17+00:00"
         }
       ],
-      "judged_at": "2026-11-22T05:38:59+00:00"
+      "judged_at": "2026-11-22T11:39:38+00:00"
     },
     {
       "key": "us_posture",
@@ -108,7 +108,7 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 해군 군수지원함 프랭크 케이블이 11월 21일 사이판에 예정된 입항을 했다.",
+      "summary": "미 해군 군수지원함 프랭크 케이블이 사이판에 예정된 입항을 했다.",
       "sources": [
         {
           "name": "DVIDS",
@@ -117,7 +117,7 @@
           "published_at": "2026-11-21T02:58:38+00:00"
         }
       ],
-      "judged_at": "2026-11-22T05:38:59+00:00"
+      "judged_at": "2026-11-22T11:39:38+00:00"
     }
   ],
   "channels": [
@@ -150,6 +150,6 @@
   "last_good": {
     "ews": 0,
     "band": "안정",
-    "computed_at": "2026-11-22T11:09:19+00:00"
+    "computed_at": "2026-11-22T12:09:06+00:00"
   }
 }

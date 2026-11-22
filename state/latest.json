@@ -2,62 +2,68 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement DMZ"
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea missile launch nuclear November 22 2026",
-      "영변 농축 핵"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
+      "북한 탄약 군수 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "목함지뢰 해안"
+      "지뢰 발견 DMZ 귀순 북한",
+      "목함지뢰 해안",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "GPS 교란 북한 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "North Korea emergency warning"
+      "합참 발표 진돗개 데프콘",
+      "북한 합참 발표 11월 22일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
+    "https://www.nknews.org/",
     "https://www.yna.co.kr/view/AKR20261120131200017",
-    "https://www.koreaherald.com/article/10942242",
-    "https://www.koreajoongangdaily.com/korea/north-korea-tests-cluster-warhead-as-arsenal-grows/12949313",
-    "https://kookbang.dema.mil.kr/newsWeb/20261120/3/ATCE_CTGR_0010010000/view.do"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857175",
+    "https://www.koreaherald.com/list/north-korea"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 북한발 군사 징후는 없다. 국내 대학 해킹은 귀속 미확인이며 접경 열점·국내 언론 수집에서도 신규 사건이 없다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 접경 열점 관련 보도도 없고, 국내 대학 연쇄 해킹은 귀속 미확인으로 직전 회차와 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "IAEA 영변 농축 확장 언급(11/19)은 24시간 경과한 배경이다."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
@@ -69,9 +75,8 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "국내 대학",
       "summary": "귀속 미확인 — 국내 대학 20여 곳 연쇄 해킹에서 중국 해킹 커뮤니티 연관 AI 도구 흔적이 확인됐으나 배후는 밝혀지지 않았다.",
-      "meaning": "귀속 전이라 등급에 반영하지 않는다.",
+      "meaning": "북한·중국 소행으로 밝혀지지 않아 등급에 쓰지 않는다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -81,7 +86,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "대학 연쇄 해킹, 중국 해킹 커뮤니티 연관 AI 도구 흔적"
+        "대학 연쇄 해킹에서 중국 해킹 커뮤니티 연관 AI 도구 흔적"
       ],
       "speculation": []
     },
@@ -101,14 +106,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T02:09:08+00:00",
+  "checked_at": "2026-11-22T04:09:07+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-22T03:09:16+00:00",
-    "summary": "최근 24시간 안에 새로 확인된 군사 징후는 없고 접경 열점 1건도 관련 보도가 없어 징후로 올리지 않았다. 11/20 이후 북러·북중 외교, 트럼프 북미 대화 언급과 김주애 부각 보도가 중심으로, 과거 대비 변화가 없다."
-  }
+  "active": []
 }

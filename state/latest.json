@@ -1,63 +1,49 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
+      "북한 병력 이동 (news_kr 수집)",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Yongbyon (NK News 목록)"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 탄약 수송 (news_kr 수집)"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한",
-      "목함지뢰 해안",
-      "North Korea DMZ border"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "GPS 교란 북한 해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 (news_kr 수집)"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 (news_kr 수집)"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 (news_kr 수집)"
     ],
     "gov_warning": [
-      "합참 발표 진돗개 데프콘",
       "북한 합참 발표 11월 22일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 (news_kr 수집)",
+      "간첩 혐의 (news_kr 수집)"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "남북 대화 제안 (news_kr 수집)"
     ]
   },
   "opened": [
     "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261120131200017",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857175",
-    "https://www.koreaherald.com/list/north-korea"
+    "https://www.koreaherald.com/",
+    "https://www.koreajoongangdaily.com/"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 접경 열점 관련 보도도 없고, 국내 대학 연쇄 해킹은 귀속 미확인으로 직전 회차와 같다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 직전 회차의 대학 해킹 건은 24시간이 지나 배경으로 내렸다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -72,23 +58,8 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "summary": "귀속 미확인 — 국내 대학 20여 곳 연쇄 해킹에서 중국 해킹 커뮤니티 연관 AI 도구 흔적이 확인됐으나 배후는 밝혀지지 않았다.",
-      "meaning": "북한·중국 소행으로 밝혀지지 않아 등급에 쓰지 않는다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261120131200017"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "대학 연쇄 해킹에서 중국 해킹 커뮤니티 연관 AI 도구 흔적"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 대학 연쇄 해킹 첫 보도 11/20, 귀속 미확인이라 배경으로 내림."
     },
     "foreign_forces": {
       "status": "none"
@@ -106,14 +77,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T04:09:07+00:00",
-  "grade": 1,
-  "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-22T05:09:18+00:00",
-    "summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 접경 남측 열점 1건은 관련 보도가 없어 징후로 올리지 않았고, 직전의 대학 해킹 건은 24시간이 지나 배경으로 내렸다."
-  }
+  "checked_at": "2026-11-22T06:08:57+00:00",
+  "grade": 0,
+  "grade_label": "평시",
+  "active": []
 }

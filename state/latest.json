@@ -1,48 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 지뢰 발견 DMZ 귀순",
-      "North Korea missile nuclear Reuters"
+      "합참 북한 병력 이동",
+      "North Korea troops Reuters"
     ],
     "nuclear": [
-      "North Korea missile nuclear Reuters"
+      "영변 풍계리 핵 활동",
+      "North Korea nuclear site IAEA"
     ],
     "logistics": [
-      "합참 북한 지뢰 발견 DMZ 귀순"
+      "북한 군수 수송 탄약"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순"
+      "지뢰 발견 DMZ",
+      "목함지뢰 해안",
+      "귀순 NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "합참 북한 지뢰 발견 DMZ 귀순"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "합참 북한 지뢰 발견 DMZ 귀순"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "합참 북한 지뢰 발견 DMZ 귀순"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "North Korea missile nuclear Reuters"
+      "국가보안법 구속",
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://en.yna.co.kr/view/AEN20261122002900315",
-    "https://en.yna.co.kr/view/AEN20261122002700315",
+    "https://www.yna.co.kr/view/AKR20261122050000504",
+    "https://www.donga.com/news/Politics/article/all/20261123/135070407/2",
     "https://www.nknews.org/",
-    "https://www.koreaherald.com/list/North-Korea"
+    "https://www.koreaherald.com/list/North-Korea",
+    "https://en.yna.co.kr/view/AEN20261122002900315",
+    "https://en.yna.co.kr/view/AEN20261122002700315"
   ],
-  "overall_summary": "24시간 내 신규 군사 징후는 없고 김정은의 러 대사 신임장 접수(외교 의전)와 한전 정보 유출(귀속 미확인)만 직전과 같은 수준으로 이어진다. 접경 남측 열점 후보 1건은 북측(MDL 7km)·농경지형이며 관련 보도 없음.",
+  "overall_summary": "24시간 내 신규 군사 징후는 없고 김정은의 러 대사 신임장 접수(외교 의전)와 한전 정보 유출(귀속 미확인)만 직전과 같은 수준이다. 접경·핵시설 신규 움직임 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -54,6 +65,19 @@
       "status": "none"
     },
     "border_clash": {
+      "status": "none",
+      "summary": "울릉도 표류 북한 주민 6명 송환 추진 보도(동아)는 인도적 송환이며 충돌·월선 징후 아님."
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "electronic_cyber": {
@@ -74,7 +98,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "한전이 11/22 KEPCO ON 65만여 명, SRM 87만여 명 유출을 확인했다고 밝힘"
+        "한전이 11/22 유출 확인을 밝힘"
       ],
       "speculation": []
     },
@@ -84,7 +108,7 @@
       "region": "평양",
       "lat": 39.02,
       "lon": 125.75,
-      "summary": "김정은이 11/22 러시아 신임대사 신임장을 30여 년 만에 직접 접수했다(외교 의전).",
+      "summary": "김정은이 11/22 러시아 신임대사 신임장을 직접 접수했다(외교 의전).",
       "meaning": "북러 관계 격상을 보이는 외교 일정이며 군사 협정·무기 이전 발표는 없다.",
       "sources": [
         {
@@ -95,24 +119,12 @@
       ],
       "confidence": "중간",
       "facts": [
-        "러시아 대사관이 텔레그램으로 신임장 제정 공개"
+        "연합뉴스가 신임장 접수를 보도"
       ],
       "speculation": []
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-22T21:09:33+00:00",
+  "checked_at": "2026-11-22T22:08:58+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

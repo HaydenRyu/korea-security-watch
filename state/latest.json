@@ -5,55 +5,46 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "North Korea talks offer ammunition shipment Yongbyon",
+      "북한 핵 영변"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 준전시 등화관제 열병식 탄약 수송"
     ],
     "border_clash": [
-      "지뢰 발견 해안 DMZ 귀순 북한",
-      "North Korea DMZ border"
+      "지뢰 발견 DMZ 귀순 북한 합참"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 공격 랜섬웨어"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 11월",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 국가보안법 구속 간첩 혐의"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 준전시 등화관제 열병식 탄약 수송"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 열병식 탄약 수송"
     ],
     "gov_warning": [
-      "북한 합참 발표 오늘",
-      "진돗개 데프콘"
+      "북한 오늘 합참 발표 미사일 도발 11월 22일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "서해 구조물 주한미군 감축 국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단",
+      "North Korea talks offer"
     ]
   },
   "opened": [
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
     "https://www.nknews.org/",
-    "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 북러·북중 고위급 교류(조용원 방러 등)는 이미 알려진 배경이며 직전 회차와 같다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없다. 김정은 방중 관측·조용원 방러·영변 IAEA 우려는 모두 11/17~21 보도된 배경이며 직전 회차와 같다. 접경 열점 1건(관련 보도 없음).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,8 +59,7 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "24시간 경과 — 대학 연쇄 해킹 첫 보도 11/20 13시, 귀속 미확인 배경으로만 유지"
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none"
@@ -87,7 +77,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T06:08:58+00:00",
+  "checked_at": "2026-11-22T07:10:05+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

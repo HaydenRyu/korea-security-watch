@@ -1,60 +1,55 @@
 {
   "coverage": {
     "troop_movement": [
-      "North Korea Reuters missile troops",
-      "북한 합참 발표 지뢰 발견 DMZ"
+      "북한 합참 지뢰 발견 DMZ 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea Reuters missile troops",
-      "북한 합참 발표 지뢰 발견 DMZ"
+      "NK News North Korea missile nuclear Yongbyon November 2026"
     ],
     "logistics": [
-      "North Korea Reuters missile troops",
-      "북한 합참 발표 지뢰 발견 DMZ"
+      "북한 11월 22일 합참 발표"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ",
-      "North Korea Reuters missile troops"
+      "북한 합참 지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Reuters missile troops"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "North Korea Reuters missile troops",
-      "북한 합참 발표 지뢰 발견 DMZ"
+      "북한 11월 22일 합참 발표"
     ],
     "nk_internal": [
-      "북한 합참 발표 지뢰 발견 DMZ",
-      "North Korea Reuters missile troops"
+      "북한 11월 22일 합참 발표"
     ],
     "gov_warning": [
-      "북한 합참 발표 지뢰 발견 DMZ",
-      "North Korea Reuters missile troops"
+      "북한 11월 22일 합참 발표"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "북한 합참 지뢰 발견 DMZ 귀순"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ]
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261120131200017",
-    "https://www.yna.co.kr/view/AKR20261119080500504",
-    "https://www.yna.co.kr/view/AKR20261119022100504",
+    "https://www.aljazeera.com/news/2026/11/19/north-korea-expanding-uranium-enrichment-facility-un-nuclear-watchdog-says",
+    "https://www.koreajoongangdaily.com/korea/north-korea-tests-cluster-warhead-as-arsenal-grows/12949313",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "24시간 내 새 군사 징후는 확인되지 않았다. 국내 대학 해킹은 귀속 미확인이고, 김정은 방중·조용원 방러 관련 새 군사 협력 발표도 없다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 북한발 군사 징후는 없다. 국내 대학 해킹은 귀속 미확인이며 영변 농축 확장(IAEA)·집속탄두 시험은 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "none",
+      "summary": "IAEA 사무총장의 영변 농축시설 확장 언급(11/19)은 24시간 경과한 배경이다."
     },
     "logistics": {
       "status": "none"
@@ -67,7 +62,7 @@
       "routine": true,
       "attribution": "unknown",
       "region": "국내 대학",
-      "summary": "귀속 미확인 — 국내 대학 20여 곳 해킹에서 중국 해킹 커뮤니티 연관 AI 도구 흔적이 확인됐으나 배후는 밝혀지지 않았다.",
+      "summary": "귀속 미확인 — 국내 대학 20여 곳 연쇄 해킹에서 중국 해킹 커뮤니티 연관 AI 도구 흔적이 확인됐으나 배후는 밝혀지지 않았다.",
       "meaning": "귀속 전이라 등급에 반영하지 않는다.",
       "sources": [
         {
@@ -78,13 +73,12 @@
       ],
       "confidence": "중간",
       "facts": [
-        "대학 20여 곳 대상 해킹, 중국 해킹 커뮤니티 연관 AI 모의해킹 도구 흔적"
+        "대학 연쇄 해킹, 중국 해킹 커뮤니티 연관 AI 도구 흔적"
       ],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "통일부가 김정은 방중 동향을 포착하지 못했다고 밝혔고 조용원 방러는 종료됐다 — 새 군사 협력 발표 없음."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -99,14 +93,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-21T23:08:57+00:00",
+  "checked_at": "2026-11-22T01:09:29+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-22T00:09:44+00:00",
-    "summary": "최근 24시간 안에 새로 확인된 북한발 군사 징후는 없다. 접경 북측 열점 4건은 관련 보도가 없어 징후로 올리지 않았고, 11월 하순 평양 세포비서대회 예고와 한·미·중·러 정상 논의 보도만 배경이다."
-  }
+  "active": []
 }

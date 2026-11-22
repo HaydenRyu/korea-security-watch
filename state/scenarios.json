@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-22T00:09:44+00:00",
+  "updated_at": "2026-11-22T01:09:29+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -12,8 +12,8 @@
         {
           "id": "dialogue_offer",
           "label": "남북·북미 대화 제안·수용",
-          "state": "on",
-          "note": "루비오 미 국무장관이 트럼프가 김정은과 만날 의향이 있다고 밝혔고 한국 정부도 북미 대화 지원 의사를 밝혔다."
+          "state": "off",
+          "note": ""
         },
         {
           "id": "channel_restored",
@@ -40,7 +40,7 @@
           "note": "마지막 발사 11/04"
         }
       ],
-      "on": 1,
+      "on": 0,
       "known": 5
     },
     {
@@ -184,20 +184,8 @@
       "known": 16
     }
   ],
-  "calm": {
-    "dialogue_offer": {
-      "summary": "루비오 미 국무장관이 트럼프가 김정은과 만날 의향이 있다고 밝혔고 한국 정부도 북미 대화 지원 의사를 밝혔다.",
-      "sources": [
-        {
-          "url": "https://www.koreaherald.com/article/10941522",
-          "publisher": "Korea Herald"
-        }
-      ],
-      "first_seen": "2026-11-19T00:10:35+00:00",
-      "last_seen": "2026-11-19T00:10:35+00:00"
-    }
-  },
-  "calm_judged_at": "2026-11-22T00:09:44+00:00",
+  "calm": {},
+  "calm_judged_at": "2026-11-22T01:09:29+00:00",
   "history": [
     {
       "date": "2026-10-22",
@@ -482,7 +470,7 @@
       "date": "2026-11-22",
       "tilt": "hold",
       "on": {
-        "calm": 1,
+        "calm": 0,
         "hold": 4,
         "esc": 0
       }

@@ -1,63 +1,54 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troops border Reuters"
-    ],
-    "nuclear": [
-      "영변 농축시설 IAEA",
-      "North Korea Yongbyon enrichment IAEA"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment Russia"
-    ],
     "border_clash": [
-      "지뢰 발견",
-      "북한 지뢰 발견 DMZ 귀순",
-      "North Korea Reuters missile border troops"
+      "북한 합참 발표 지뢰 발견 DMZ"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
+      "GPS 교란 북한 해킹 개인정보 유출 사이버 공격",
       "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
+      "김정은 방러 방중 서해 구조물 주한미군 감축",
       "Kim Jong Un China Russia visit"
     ],
+    "troop_movement": [
+      "North Korea Reuters November 22 2026"
+    ],
+    "nuclear": [
+      "North Korea Reuters November 22 2026"
+    ],
+    "logistics": [
+      "North Korea Reuters November 22 2026"
+    ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "North Korea Reuters November 22 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "North Korea Reuters November 22 2026"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "North Korea Reuters November 22 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261120/unification-minister-top-us-envoy-reaffirm-alliance-as-key-to-peace-in-1st-talks",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261118/n-korea-external-works-on-enrichment-facility-extension-complete-iaea",
-    "https://www.donga.com/news/Politics",
-    "https://www.segye.com/newsList/0101030700000"
+    "https://en.yna.co.kr/view/AEN20261122002900315",
+    "https://en.yna.co.kr/view/AEN20261122002700315",
+    "https://en.yna.co.kr/view/AEN20261121000700315",
+    "https://koreajoongangdaily.joins.com/"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없고 직전 회차와 같은 평시다. 김정은의 러시아 대사 신임장 접수(11/22)는 외교 의전이며, 영변 농축시설 증축 IAEA 보고(11/18)는 24시간이 지난 배경이다.",
+  "overall_summary": "새로 확인된 군사 징후는 없고 김정은의 러 대사 신임장 접수(외교 의전)와 한전 정보유출(귀속 미확인)만 일반 징후로 기록한다. 직전 회차와 같은 평온 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "IAEA 영변 농축시설 증축 외부 완료 발표는 11/18 보도라 24시간 경과 — 배경."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
@@ -66,10 +57,45 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "전국",
+      "summary": "귀속 미확인 — 한전이 KEPCO ON·SRM 이용자 약 152만 명 개인정보 추가 유출을 11/22 확인했다고 밝혔다.",
+      "meaning": "국가 기반시설 운영사 정보 유출이나 북한 연계 발표는 없어 등급에 반영하지 않는다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://en.yna.co.kr/view/AEN20261122002700315"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "한전, 약 152만 명 정보 유출 확인"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "평양",
+      "lat": 39.03,
+      "lon": 125.75,
+      "summary": "김정은이 11/22 러시아 신임대사 신임장을 30여 년 만에 직접 접수했다.",
+      "meaning": "외교 의전 변화이며 군사 협정·파병 발표는 없어 정례 외교 일정이다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://en.yna.co.kr/view/AEN20261122002900315"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "러 대사관 텔레그램 인용 보도"
+      ],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -84,8 +110,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T14:09:50+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-22T15:09:30+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

@@ -1,53 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 22일",
-      "North Korea missile Kim Jong Un news"
+      "북한 미사일 합참 발표 11월 22일",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "북한 합참 발표 11월 22일",
-      "North Korea missile Kim Jong Un news"
+      "북한 미사일 합참 발표 11월 22일",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "북한 합참 발표 11월 22일",
-      "North Korea missile Kim Jong Un news"
+      "북한 미사일 합참 발표 11월 22일",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL"
+      "지뢰 발견 DMZ 귀순 NLL 북한"
     ],
     "electronic_cyber": [
-      "북한 합참 발표 11월 22일",
-      "North Korea missile Kim Jong Un news"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 22일",
-      "North Korea missile Kim Jong Un news"
+      "북한 미사일 합참 발표 11월 22일"
     ],
     "nk_internal": [
-      "북한 합참 발표 11월 22일",
-      "North Korea missile Kim Jong Un news"
+      "북한 미사일 합참 발표 11월 22일"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 22일",
-      "North Korea missile Kim Jong Un news"
+      "북한 미사일 합참 발표 11월 22일"
     ],
     "hybrid_ops": [
-      "북한 합참 발표 11월 22일",
-      "North Korea missile Kim Jong Un news"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "calm": [
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.koreatimes.co.kr/southkorea/20260929/s-korean-military-finds-1-n-korean-mine-near-site-of-dmz-blast",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://en.yna.co.kr/nk/index"
   ],
-  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없고 직전 회차와 같다. 국내 언론 수집(15피드)에서도 접경·군사 신규 사건은 없었다.",
+  "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없고 직전 회차와 같은 평시다. 국내 언론 수집(15피드)에서도 접경·군사 신규 사건은 없었다(김정은의 러시아 대사 신임장 접수는 외교 의전).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -80,7 +75,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T12:09:06+00:00",
+  "checked_at": "2026-11-22T13:09:12+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

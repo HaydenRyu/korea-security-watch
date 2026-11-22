@@ -1,47 +1,58 @@
 {
   "coverage": {
     "troop_movement": [
-      "North Korea Reuters November 22 2026"
+      "북한 전방 병력 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Reuters November 22 2026"
+      "영변 농축시설",
+      "Yongbyon IAEA"
     ],
     "logistics": [
-      "North Korea Reuters November 22 2026"
+      "북한 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순"
+      "지뢰 발견",
+      "DMZ 귀순 북한"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 공격 사이버 공격 랜섬웨어"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "North Korea Reuters November 22 2026"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "North Korea Reuters November 22 2026"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "North Korea Reuters November 22 2026"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://en.yna.co.kr/view/AEN20261122002900315",
     "https://en.yna.co.kr/view/AEN20261122002700315",
+    "https://en.yna.co.kr/view/AEN20261122002900315",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.koreaherald.com/"
+    "https://www.nknews.org/category/news/"
   ],
-  "overall_summary": "새로 확인된 군사 징후는 없고 김정은의 러 대사 신임장 직접 접수(외교 의전)와 한전 정보유출(귀속 미확인)만 일반 징후로 기록한다. 직전 회차와 같은 평온 수준이다.",
+  "overall_summary": "신규 비정례 징후 없음: 한전 개인정보 유출(귀속 미확인)과 김정은의 러시아 대사 신임장 접수(외교 의전)만 확인됐다. 접경 열점 후보는 북측 농경지 1건으로 보도 대조 대상 아님.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -61,7 +72,7 @@
       "attribution": "unknown",
       "region": "전국",
       "summary": "귀속 미확인 — 한전이 KEPCO ON·SRM 이용자 약 152만 명 개인정보 추가 유출을 11/22 확인했다고 밝혔다.",
-      "meaning": "국가 기반시설 운영사 정보 유출이나 북한 연계 발표는 없어 등급에 반영하지 않는다.",
+      "meaning": "기반시설 운영기관 정보 유출이나 북한 귀속 발표는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -71,7 +82,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "한전, 약 152만 명 정보 유출 확인"
+        "한전이 11/22 추가 유출 152만 명 확인 발표"
       ],
       "speculation": []
     },
@@ -79,10 +90,10 @@
       "status": "corroborated",
       "routine": true,
       "region": "평양",
-      "lat": 39.03,
+      "lat": 39.02,
       "lon": 125.75,
-      "summary": "김정은이 11/22 러시아 신임대사 신임장을 30여 년 만에 직접 접수했다.",
-      "meaning": "외교 의전 변화이며 군사 협정·파병 발표는 없어 정례 외교 일정이다.",
+      "summary": "김정은이 11/22 러시아 신임대사 신임장을 30여 년 만에 직접 접수했다(외교 의전).",
+      "meaning": "북러 외교 격상이나 군사 협정·파병 발표는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -90,14 +101,14 @@
           "url": "https://en.yna.co.kr/view/AEN20261122002900315"
         },
         {
-          "name": "The Korea Times",
+          "name": "코리아타임스",
           "tier": "B",
           "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "러 대사관 텔레그램 인용 보도"
+        "신임장 직접 접수, 3월 개헌으로 권한 부여"
       ],
       "speculation": []
     },
@@ -114,7 +125,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T16:09:35+00:00",
+  "checked_at": "2026-11-22T17:09:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

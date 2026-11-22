@@ -1,16 +1,5 @@
 {
   "coverage": {
-    "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ"
-    ],
-    "electronic_cyber": [
-      "GPS 교란 북한 해킹 개인정보 유출 사이버 공격",
-      "해킹 개인정보 유출"
-    ],
-    "foreign_forces": [
-      "김정은 방러 방중 서해 구조물 주한미군 감축",
-      "Kim Jong Un China Russia visit"
-    ],
     "troop_movement": [
       "North Korea Reuters November 22 2026"
     ],
@@ -19,6 +8,16 @@
     ],
     "logistics": [
       "North Korea Reuters November 22 2026"
+    ],
+    "border_clash": [
+      "북한 지뢰 발견 DMZ 귀순"
+    ],
+    "electronic_cyber": [
+      "GPS 교란 북한",
+      "해킹 공격 사이버 공격 랜섬웨어"
+    ],
+    "foreign_forces": [
+      "김정은 방중 방러 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "North Korea Reuters November 22 2026"
@@ -33,16 +32,16 @@
       "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://en.yna.co.kr/view/AEN20261122002900315",
     "https://en.yna.co.kr/view/AEN20261122002700315",
-    "https://en.yna.co.kr/view/AEN20261121000700315",
-    "https://koreajoongangdaily.joins.com/"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
+    "https://www.koreaherald.com/"
   ],
-  "overall_summary": "새로 확인된 군사 징후는 없고 김정은의 러 대사 신임장 접수(외교 의전)와 한전 정보유출(귀속 미확인)만 일반 징후로 기록한다. 직전 회차와 같은 평온 수준이다.",
+  "overall_summary": "새로 확인된 군사 징후는 없고 김정은의 러 대사 신임장 직접 접수(외교 의전)와 한전 정보유출(귀속 미확인)만 일반 징후로 기록한다. 직전 회차와 같은 평온 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -77,7 +76,7 @@
       "speculation": []
     },
     "foreign_forces": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "region": "평양",
       "lat": 39.03,
@@ -89,6 +88,11 @@
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://en.yna.co.kr/view/AEN20261122002900315"
+        },
+        {
+          "name": "The Korea Times",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
         }
       ],
       "confidence": "중간",
@@ -110,7 +114,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T15:09:30+00:00",
+  "checked_at": "2026-11-22T16:09:35+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

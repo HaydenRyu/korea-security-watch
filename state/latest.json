@@ -1,40 +1,36 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 지뢰 발견 DMZ NLL 귀순 11월",
-      "North Korea Kim Jong Un China Russia visit"
+      "합참 북한 지뢰 발견 DMZ 귀순",
+      "North Korea missile nuclear Reuters"
     ],
     "nuclear": [
-      "North Korea Kim Jong Un China Russia visit"
+      "North Korea missile nuclear Reuters"
     ],
     "logistics": [
-      "합참 북한 지뢰 발견 DMZ NLL 귀순 11월"
+      "합참 북한 지뢰 발견 DMZ 귀순"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ NLL 귀순 11월",
-      "울릉도 표류 북한 주민 송환"
+      "합참 북한 지뢰 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 공격",
-      "GPS 교란"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 11월 22일"
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "합참 북한 지뢰 발견 DMZ NLL 귀순 11월"
+      "합참 북한 지뢰 발견 DMZ 귀순"
     ],
     "nk_internal": [
-      "합참 북한 지뢰 발견 DMZ NLL 귀순 11월"
+      "합참 북한 지뢰 발견 DMZ 귀순"
     ],
     "gov_warning": [
-      "합참 북한 지뢰 발견 DMZ NLL 귀순 11월"
+      "합참 북한 지뢰 발견 DMZ 귀순"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "North Korea missile nuclear Reuters"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
@@ -43,10 +39,10 @@
   "opened": [
     "https://en.yna.co.kr/view/AEN20261122002900315",
     "https://en.yna.co.kr/view/AEN20261122002700315",
-    "https://en.yna.co.kr/view/AEN20261123000100315",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://www.koreaherald.com/list/North-Korea"
   ],
-  "overall_summary": "24시간 내 신규 군사 징후는 없고 김정은의 러 대사 신임장 접수(외교 의전)와 한전 정보 유출(귀속 미확인)만 직전과 같은 수준으로 이어진다. 울릉도 표류 북한 주민 송환 보도(동아, 원문 미열람)는 인도적 송환으로 징후로 올리지 않았다.",
+  "overall_summary": "24시간 내 신규 군사 징후는 없고 김정은의 러 대사 신임장 접수(외교 의전)와 한전 정보 유출(귀속 미확인)만 직전과 같은 수준으로 이어진다. 접경 남측 열점 후보 1건은 북측(MDL 7km)·농경지형이며 관련 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -116,7 +112,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T20:09:57+00:00",
+  "checked_at": "2026-11-22T21:09:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,58 +1,44 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 전방 병력 증강",
-      "North Korea troop movement"
+      "북한 합참 발표 11월 22일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "영변 농축시설",
-      "Yongbyon IAEA"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 합참 발표 11월 22일"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순 북한"
+      "목함지뢰 해안 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 합참 발표 11월 22일"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 합참 발표 11월 22일"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "북한 합참 발표 11월 22일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ]
   },
   "opened": [
-    "https://en.yna.co.kr/view/AEN20261122002700315",
     "https://en.yna.co.kr/view/AEN20261122002900315",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.nknews.org/category/news/"
+    "https://en.yna.co.kr/view/AEN20261122002700315",
+    "https://www.nknews.org/2026/11/kim-jong-un-slams-enemy-naval-activities-amid-trumps-calls-to-meet-in-china/",
+    "https://www.nknews.org/2026/11/seoul-dispatches-team-to-myanmar-to-search-for-plane-bombed-by-north-korea/"
   ],
-  "overall_summary": "신규 비정례 징후 없음: 한전 개인정보 유출(귀속 미확인)과 김정은의 러시아 대사 신임장 접수(외교 의전)만 확인됐다. 접경 열점 후보는 북측 농경지 1건으로 보도 대조 대상 아님.",
+  "overall_summary": "신규 군사 징후 없이 김정은 러 대사 신임장 접수(외교 의전)와 한전 정보 유출(귀속 미확인)이 직전과 같은 수준으로 이어진다. 일부 검색 결과가 제한적이어서 확인 범위가 좁다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,9 +56,11 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "전국",
+      "region": "전남 나주",
+      "lat": 35.02,
+      "lon": 126.72,
       "summary": "귀속 미확인 — 한전이 KEPCO ON·SRM 이용자 약 152만 명 개인정보 추가 유출을 11/22 확인했다고 밝혔다.",
-      "meaning": "기반시설 운영기관 정보 유출이나 북한 귀속 발표는 없다.",
+      "meaning": "국가 기반시설 운영사 정보 유출이나 북한 귀속 발표는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -82,33 +70,28 @@
       ],
       "confidence": "중간",
       "facts": [
-        "한전이 11/22 추가 유출 152만 명 확인 발표"
+        "한전이 11/22 KEPCO ON 65만여 명, SRM 87만여 명 유출을 확인했다고 밝힘"
       ],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "평양",
       "lat": 39.02,
       "lon": 125.75,
       "summary": "김정은이 11/22 러시아 신임대사 신임장을 30여 년 만에 직접 접수했다(외교 의전).",
-      "meaning": "북러 외교 격상이나 군사 협정·파병 발표는 없다.",
+      "meaning": "북러 관계 격상을 보이는 외교 일정이며 군사 협정·무기 이전 발표는 없다.",
       "sources": [
         {
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://en.yna.co.kr/view/AEN20261122002900315"
-        },
-        {
-          "name": "코리아타임스",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "신임장 직접 접수, 3월 개헌으로 권한 부여"
+        "러시아 대사관이 텔레그램으로 신임장 제정 공개"
       ],
       "speculation": []
     },
@@ -125,7 +108,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T17:09:31+00:00",
+  "checked_at": "2026-11-22T18:09:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

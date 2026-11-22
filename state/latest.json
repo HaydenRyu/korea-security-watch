@@ -5,8 +5,8 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea missile troops nuclear Yongbyon 38 North",
-      "북한 핵 풍계리 영변"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
@@ -14,19 +14,16 @@
     ],
     "border_clash": [
       "목함지뢰 발견 DMZ 귀순",
-      "합참 지뢰 DMZ 귀순 11월 22일",
       "North Korea DMZ border"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격 11월"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "김정은 방중",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -51,8 +48,8 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261118502836",
-    "https://www.wikitree.co.kr/articles/1162973",
-    "https://www.yna.co.kr/view/AKR20261122029400001"
+    "https://www.yna.co.kr/view/AKR20261122029400001",
+    "https://www.wikitree.co.kr/articles/1162937"
   ],
   "overall_summary": "최근 24시간 안에 새로 확인된 군사 징후는 없고 직전 회차와 같다. 국내 해킹 유출은 귀속 미확인 상태이며 북한 소행 발표는 없다.",
   "items": {
@@ -87,7 +84,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-22T10:09:26+00:00",
+  "checked_at": "2026-11-22T11:09:19+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

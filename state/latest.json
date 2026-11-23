@@ -2,53 +2,49 @@
   "coverage": {
     "troop_movement": [
       "북한 합참 발표 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 핵 풍계리 동향",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "DMZ 지뢰 발견 귀순 NLL 북한",
-      "북한 합참 발표 11월 23일"
+      "지뢰 발견 DMZ 귀순",
+      "NLL 북한 선박 코스트가드 합참 감시"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 11월 2026",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 열병식 준비"
     ],
     "nk_internal": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "해킹 개인정보 유출 사이버 공격 11월 2026",
-      "DMZ 지뢰 발견 귀순 NLL 북한"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.nknews.org",
     "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.thestandard.com.hk/world/article/348710/North-Koreas-Kim-inspects-Samjiyon-tourism-zone-amid-speculation-over-China-trip"
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후는 없다. 연평도 포격 16주기 기념·정치권 논평, 김정은 삼지연 시찰·방중설(11/15~18, 미확정)만 확인된다. 직전 회차와 동일하게 전 항목 이상 없음이다.",
+  "overall_summary": "NLL 인근 '코스트가드' 표기 북한 선박 포착(월선 없음, 정례) 외에 새 도발·병력·핵 징후는 확인되지 않았다. 접경 열점 대조·국내 해킹·간첩 검색은 제한적으로만 수행했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,14 +56,33 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "서해 NLL 인근",
+      "lat": 37.9,
+      "lon": 124.7,
+      "summary": "'코스트가드' 표기에 76mm 포로 보이는 무장을 한 북한 선박이 NLL 인근에서 포착돼 합참이 면밀히 감시 중이다(월선 언급 없음).",
+      "meaning": "중국 어선 단속 성격으로 보이며 월선·교전이 확인되지 않아 정례 범위다.",
+      "sources": [
+        {
+          "name": "코리아타임스",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "합참 대변인이 북한군 활동을 면밀히 추적 중이라고 밝힘"
+      ],
+      "speculation": [
+        "인근 중국 어선 감시용으로 추정"
+      ]
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "김정은 방중설·젤렌스키의 북 미사일 러 이전 주장은 기존 보도의 반복·미확정이라 배경으로만 둔다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -82,8 +97,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T10:10:32+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-23T10:11:50+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

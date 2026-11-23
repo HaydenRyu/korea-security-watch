@@ -1,44 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters missile Kim Jong Un"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Reuters missile Kim Jong Un"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "북한 합참 발표 11월 23일"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
-      "북한 합참 발표 11월 23일"
+      "지뢰 발견 DMZ 귀순 북한",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "김정은 방중 방러"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 23일"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 합참 발표 11월 23일"
+      "북한 준전시 등화관제",
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 23일"
+      "북한 미사일 발사 합참 11월 23일",
+      "진돗개 발령"
     ],
     "hybrid_ops": [
-      "North Korea Reuters missile Kim Jong Un"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.nknews.org/2026/11/trump-xi-and-putin-discuss-north-korea-nuclear-risks-at-first-trilateral-talks/",
-    "https://www.nknews.org/2026/11/north-korean-chinese-customs-see-traffic-uptick-after-new-bridge-opening/",
-    "https://www.segye.com/newsView/20261123504616"
+    "https://www.segye.com/newsView/20261123507894",
+    "https://www.segye.com/newsView/20261123504616",
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.yna.co.kr/view/AKR20261122050000504",
+    "https://www.donga.com/news/Politics/article/all/20261123/135070407/2"
   ],
-  "overall_summary": "11/23 03Z 기준 24시간 내 새 군사 징후 없음. 접경 열점 후보 0건, 국내 언론 14묶음은 연평도 16주기 추모 등 배경·정치 기사였다.",
+  "overall_summary": "11/23 04Z 기준 24시간 내 새 군사 징후 없음. 연평도 16주기 추모, 울릉도 표류 북한 주민 송환 예정 등 배경 기사뿐이며 접경 열점 후보 0건.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -53,12 +68,11 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "새 보도 없음 — 한전 정보유출(귀속 미확인)은 11/22 첫 보도 후 24시간 경과, 이번 회차 신규 사고·귀속 발표 확인 못함"
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "24시간 경과 — 김정은 러 대사 신임장 접수는 11/22 의전, 새 파병·이전·협정 보도 없음"
+      "summary": "김정은 러시아대사 신임장 접수·삼지연 시찰 등 외교·내치 일정뿐, 새 군사협력 확인 없음(배경)."
     },
     "parade_massing": {
       "status": "none"
@@ -73,7 +87,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T03:09:19+00:00",
+  "checked_at": "2026-11-23T04:09:05+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

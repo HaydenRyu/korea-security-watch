@@ -1,56 +1,42 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement border"
+      "지뢰 발견 DMZ 귀순 북한군"
     ],
     "nuclear": [
-      "북한 핵실험장 영변 동향",
-      "North Korea nuclear Yongbyon Punggye-ri"
+      "지뢰 발견 DMZ 귀순 북한군"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "지뢰 발견 DMZ 귀순 북한군"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참 NLL 귀순"
+      "지뢰 발견 DMZ 귀순 북한군"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 준비 집결"
+      "지뢰 발견 DMZ 귀순 북한군"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 동원"
+      "지뢰 발견 DMZ 귀순 북한군"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "북한 미사일 발사 합참 11월 23일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "확성기 방송 중단"
+      "지뢰 발견 DMZ 귀순 북한군"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261123504616",
     "https://www.segye.com/newsView/20261123507894",
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
+    "https://www.nknews.org"
   ],
-  "overall_summary": "11/23 06Z 기준 24시간 내 새 군사 징후 없음. 연평도 16주기 추모·정치 기사 중심이며 접경 열점 후보 0건, 김정은 방중설은 확정 보도 없이 추측 단계.",
+  "overall_summary": "최근 24시간 신규 군사 징후는 확인되지 않았고 연평도 포격 16주기 추모 보도만 있다. 열린 원문이 제한적이라 전 항목 이상 없음으로 둔다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,15 +48,13 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "새 지뢰·월선 보도 없음(9월 DMZ 지뢰는 배경)."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "김정은 방중설은 추측 단계, 공식 확정 없음(배경)."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -85,7 +69,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T06:09:42+00:00",
+  "checked_at": "2026-11-23T07:10:19+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

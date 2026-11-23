@@ -1,47 +1,60 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 미사일 발사 합참 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement border"
     ],
     "nuclear": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 핵실험장 영변 동향",
+      "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "북한 미사일 발사 합참 11월 23일"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 지뢰 DMZ 귀순"
+      "지뢰 발견 DMZ 합참 북한 11월",
+      "북한 주민 울릉도 표류 송환"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격 GPS 교란"
+      "GPS 교란",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
+      "김정은 방중",
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 김정은 방중"
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 미사일 발사 합참 11월 23일"
+      "북한 열병식 준비 집결",
+      "North Korea parade preparation"
     ],
     "nk_internal": [
-      "북한 미사일 발사 합참 11월 23일"
+      "북한 준전시 등화관제 동원",
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "북한 미사일 발사 합참 11월 23일"
+      "진돗개 발령 데프콘",
+      "US Japan Korea warning North Korea"
     ],
     "hybrid_ops": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261123504616",
-    "https://www.nknews.org/2026/11/trump-xi-and-putin-discuss-north-korea-nuclear-risks-at-first-trilateral-talks/",
-    "https://www.nknews.org/2026/11/north-korean-chinese-customs-see-traffic-uptick-after-new-bridge-opening/"
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.segye.com/newsView/20261123507894"
   ],
-  "overall_summary": "11/23 04Z 기준 24시간 내 새 군사 징후 없음. 국내 언론 14묶음은 연평도 16주기 추모·정치 기사였고 접경 열점 후보는 없었다.",
+  "overall_summary": "11/23 05Z 기준 24시간 내 새 군사 징후는 확인되지 않았다. 연평도 16주기 추모·정치 기사가 중심이고 접경 열점 후보는 0건이며, 김정은 방중설은 11/16 전후 보도로 새 확정 사실이 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -53,13 +66,15 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "울릉도 표류 북한 주민 송환 예정(동아 단독, 원문 미열람)은 군사 충돌이 아니며 새 지뢰·월선 보도 없음."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 방중설은 11/16 전후 보도로 24시간 경과, 새 확정 사실 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -74,7 +89,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T04:09:09+00:00",
+  "checked_at": "2026-11-23T05:08:56+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

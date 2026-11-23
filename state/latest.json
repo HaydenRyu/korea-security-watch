@@ -13,12 +13,11 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참 북한 11월",
-      "북한 주민 울릉도 표류 송환"
+      "지뢰 발견 DMZ 합참 NLL 귀순"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
@@ -27,16 +26,13 @@
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비 집결",
-      "North Korea parade preparation"
+      "북한 열병식 준비 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 동원",
-      "North Korea civil defense drill"
+      "북한 준전시 등화관제 동원"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "US Japan Korea warning North Korea"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -51,10 +47,10 @@
   },
   "opened": [
     "https://www.segye.com/newsView/20261123504616",
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.segye.com/newsView/20261123507894"
+    "https://www.segye.com/newsView/20261123507894",
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
   ],
-  "overall_summary": "11/23 05Z 기준 24시간 내 새 군사 징후는 확인되지 않았다. 연평도 16주기 추모·정치 기사가 중심이고 접경 열점 후보는 0건이며, 김정은 방중설은 11/16 전후 보도로 새 확정 사실이 없다.",
+  "overall_summary": "11/23 06Z 기준 24시간 내 새 군사 징후 없음. 연평도 16주기 추모·정치 기사 중심이며 접경 열점 후보 0건, 김정은 방중설은 확정 보도 없이 추측 단계.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,14 +63,14 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "울릉도 표류 북한 주민 송환 예정(동아 단독, 원문 미열람)은 군사 충돌이 아니며 새 지뢰·월선 보도 없음."
+      "summary": "새 지뢰·월선 보도 없음(9월 DMZ 지뢰는 배경)."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김정은 방중설은 11/16 전후 보도로 24시간 경과, 새 확정 사실 없음."
+      "summary": "김정은 방중설은 추측 단계, 공식 확정 없음(배경)."
     },
     "parade_massing": {
       "status": "none"
@@ -89,7 +85,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T05:08:56+00:00",
+  "checked_at": "2026-11-23T06:09:42+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

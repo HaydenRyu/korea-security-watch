@@ -1,47 +1,54 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 미사일 도발 11월 23일",
+      "북한 합참 발표 11월 23일",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
+      "북한 합참 발표 11월 23일",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "북한 합참 발표 미사일 도발 11월 23일"
+      "북한 합참 발표 11월 23일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
+      "DMZ 지뢰 발견 귀순 NLL 북한",
+      "북한 합참 발표 11월 23일"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "해킹 개인정보 유출 사이버 공격 11월 2026",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 합참 발표 미사일 도발 11월 23일"
+      "북한 합참 발표 11월 23일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nk_internal": [
-      "북한 합참 발표 미사일 도발 11월 23일"
+      "북한 합참 발표 11월 23일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "gov_warning": [
-      "북한 합참 발표 미사일 도발 11월 23일"
+      "북한 합참 발표 11월 23일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hacking"
+      "해킹 개인정보 유출 사이버 공격 11월 2026",
+      "DMZ 지뢰 발견 귀순 NLL 북한"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261123504616",
     "https://www.nknews.org",
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.thestandard.com.hk/world/article/348710/North-Koreas-Kim-inspects-Samjiyon-tourism-zone-amid-speculation-over-China-trip"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후는 없고 연평도 포격 16주기 추모·정치권 논평과 김정은 삼지연 시찰·방중설 보도(11/15~18)만 있다. 직전 회차와 동일하게 전 항목 이상 없음이다.",
+  "overall_summary": "최근 24시간 신규 군사 징후는 없다. 연평도 포격 16주기 기념·정치권 논평, 김정은 삼지연 시찰·방중설(11/15~18, 미확정)만 확인된다. 직전 회차와 동일하게 전 항목 이상 없음이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,7 +66,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 방중설·젤렌스키의 북 미사일 러 이전 주장은 기존 보도의 반복·미확정이라 배경으로만 둔다."
     },
     "parade_massing": {
       "status": "none"
@@ -74,7 +82,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T09:10:14+00:00",
+  "checked_at": "2026-11-23T10:10:32+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

@@ -1,50 +1,54 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동",
-      "North Korea Reuters November 23 2026"
+      "북한 병력 이동 합참",
+      "North Korea troop movement"
     ],
     "nuclear": [
+      "북한 핵 풍계리 영변",
       "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 수송"
+      "북한 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "북한 합참 NLL 코스트가드 선박 11월 23일"
+      "북한 합참 NLL 지뢰 발견 귀순 DMZ",
+      "North Korea vessel Coast Guard NLL South Korea monitoring"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 11월 2026"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "North Korea Kim Jong Un China Russia visit military",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 11월"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 발령 데프콘",
+      "South Korea Japan US emergency warning"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll",
-    "https://www.nknews.org/category/news/",
-    "https://www.koreaherald.com/article/10946534"
+    "https://www.nknews.org",
+    "https://www.nknews.org/2026/11/russia-proposes-joint-survey-of-tumen-river-with-north-korea-and-china/"
   ],
-  "overall_summary": "NLL 인근 '코스트가드' 표기 북한 선박 포착(월선 없음, 정례) 외에 새 도발·병력·핵 징후는 확인되지 않았다. 접경 열점 0건, 국내 언론 수집에서도 군사 징후 후보는 없었다.",
+  "overall_summary": "새 징후 없음: NLL 인근 '코스트가드' 표기 북한 선박은 월선 없는 정례 감시 사안이다. 직전 회차와 동일 수준이다. 접경 열점 신규 후보 대조는 별도 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,10 +63,10 @@
       "status": "single",
       "routine": true,
       "region": "서해 NLL 인근",
-      "lat": 37.9,
+      "lat": 37.8,
       "lon": 124.7,
       "summary": "'코스트가드' 표기에 76mm 포로 보이는 무장을 한 북한 선박이 NLL 인근에서 포착돼 합참이 면밀히 감시 중이다(월선 언급 없음).",
-      "meaning": "중국 어선 단속 성격으로 보이며 월선·교전이 확인되지 않아 정례 범위다.",
+      "meaning": "북한 해안경비 성격 선박의 NLL 인근 활동이나 월선·충돌은 확인되지 않았다.",
       "sources": [
         {
           "name": "코리아타임스",
@@ -70,19 +74,21 @@
           "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll"
         }
       ],
-      "confidence": "낮음",
+      "confidence": "중간",
       "facts": [
-        "합참 대변인이 11/23 브리핑에서 북한군 활동을 면밀히 추적 중이라고 밝힘"
+        "합참 대변인이 북한군 활동을 면밀히 주시한다고 밝힘",
+        "기사에 NLL 월선 내용 없음"
       ],
       "speculation": [
-        "인근 중국 어선 감시용으로 추정"
+        "중국 어선 단속용일 가능성"
       ]
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "러시아가 중·북과 두만강 공동 조사를 제안(NK News) — 반복·배경성 외교 사안으로 징후 아님."
     },
     "parade_massing": {
       "status": "none"
@@ -97,7 +103,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T11:11:07+00:00",
+  "checked_at": "2026-11-23T11:11:34+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

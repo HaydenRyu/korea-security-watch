@@ -1,58 +1,53 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 NLL 김정은 방중 11월 23일",
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 병력 이동 전방 증강",
+      "North Korea troops buildup"
     ],
     "nuclear": [
-      "북한 합참 NLL 김정은 방중 11월 23일",
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 합참 NLL 김정은 방중 11월 23일",
-      "North Korea Kim Jong Un China Russia visit"
-    ],
-    "parade_massing": [
-      "북한 합참 NLL 김정은 방중 11월 23일",
-      "North Korea Kim Jong Un China Russia visit"
-    ],
-    "nk_internal": [
-      "북한 합참 NLL 김정은 방중 11월 23일",
-      "North Korea Kim Jong Un China Russia visit"
-    ],
-    "gov_warning": [
-      "북한 합참 NLL 김정은 방중 11월 23일",
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한",
-      "북한 합참 NLL 김정은 방중 11월 23일"
+      "지뢰 발견 DMZ",
+      "북한 NLL 귀순 합참"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
-      "North Korea Kim Jong Un China Russia visit"
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
+    ],
+    "parade_massing": [
+      "북한 열병식 집결"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.newspim.com/news/view/20261123000230",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll",
-    "https://biz.heraldcorp.com/article/10946092",
-    "https://en.sedaily.com/politics/2026/11/23/kim-jong-un-says-north-korea-seeks-neither-hegemony-nor-2"
+    "https://biz.heraldcorp.com/article/10946092"
   ],
-  "overall_summary": "신규 징후 없음. 서해 NLL 북쪽 '해양경찰' 표기 북한 함정(월선 없음, 합참 추적·관리)만 직전과 같이 유지되며, 김정은은 11/22 신임 대사 신임장을 접수했고 방중·방러 신규 보도는 없다. 접경 남측 열점 신규 후보 없음.",
+  "overall_summary": "신규 징후 없음. 서해 NLL 북쪽 '해양경찰' 표기 북한 함정은 월선 없이 합참이 실시간 추적 중이며 직전과 같다. 국내 언론 수집 묶음에서도 새 접경·핵·정부경고 사건은 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -116,7 +111,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T17:10:58+00:00",
+  "checked_at": "2026-11-23T18:11:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

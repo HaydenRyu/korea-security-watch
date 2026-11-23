@@ -1,13 +1,13 @@
 {
- "fetched_at": "2026-11-23T22:49:52+00:00",
+ "fetched_at": "2026-11-23T22:52:31+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-23T22:49:52+00:00",
+ "last_ok_at": "2026-11-23T22:52:31+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1130,
+  "fetched": 1129,
   "hits": 24,
   "clusters": 18,
   "by_group": {
@@ -15,10 +15,10 @@
    "mine": 3,
    "hybrid": 2,
    "gps": 2,
-   "spy": 1,
-   "fire": 4,
    "sanction": 2,
    "drone_balloon": 1,
+   "spy": 1,
+   "fire": 4,
    "summit": 3
   }
  },
@@ -26,7 +26,7 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 570,
+   "count": 569,
    "hits": 18
   },
   "SBS": {
@@ -65,22 +65,32 @@
   "border": {
    "clusters": 4,
    "max_independent": 3,
-   "latest": "2026-11-23T22:49:52+00:00"
+   "latest": "2026-11-23T22:52:31+00:00"
   },
   "mine": {
    "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-11-23T22:49:52+00:00"
+   "latest": "2026-11-23T22:52:31+00:00"
   },
   "hybrid": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-23T22:49:52+00:00"
+   "latest": "2026-11-23T22:52:31+00:00"
   },
   "gps": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-23T22:49:52+00:00"
+   "latest": "2026-11-23T22:52:31+00:00"
+  },
+  "sanction": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-23T22:50:04+00:00"
+  },
+  "drone_balloon": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-23T22:50:01+00:00"
   },
   "spy": {
    "clusters": 1,
@@ -91,16 +101,6 @@
    "clusters": 4,
    "max_independent": 3,
    "latest": "2026-11-23T19:30:00+00:00"
-  },
-  "sanction": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-23T13:26:57+00:00"
-  },
-  "drone_balloon": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-23T13:07:56+00:00"
   },
   "summit": {
    "clusters": 3,
@@ -114,7 +114,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 90,
+   "count": 89,
    "hits": 10
   },
   {

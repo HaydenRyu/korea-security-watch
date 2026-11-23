@@ -1,52 +1,41 @@
 {
   "version": 1,
-  "updated_at": "2026-11-23T11:40:08+00:00",
-  "world_at": "2026-11-23T11:40:08+00:00",
+  "updated_at": "2026-11-23T23:40:26+00:00",
+  "world_at": "2026-11-23T23:40:26+00:00",
   "world": [
     {
-      "title": "러시아 공습으로 키이우주 드이메르 주택 붕괴, 11명 사망",
-      "summary": "러시아의 공습으로 우크라이나 드이메르의 주거용 건물이 무너져 11명이 숨졌고, 구조대는 7세 소년을 구조했으며 실종자를 계속 찾고 있다.",
-      "link_korea": "북한군이 러시아를 지원하는 러-우 전쟁의 격화 양상으로, 북러 군사협력 동향 판단의 배경이 된다.",
-      "region": "유럽",
+      "title": "우크라이나, 리비아 항구서 러시아 군함 타격",
+      "summary": "젤렌스키 대통령은 일요일 리비아 항구에서 러시아 군함이 우크라이나 드론에 격침됐다고 밝혔다. 크렘린은 지역 긴장 고조를 경고하면서도 리비아 공격에 대한 직접 언급은 피했다.",
+      "link_korea": "러-우 전쟁의 확전과 북러 군사협력 지속 여부에 영향을 줄 수 있다.",
+      "region": "유럽·북아프리카",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cqdr15l32d3go",
+        "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo",
         "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
       }
     },
     {
-      "title": "핀란드만에서 러시아행 선박 드론 피격",
-      "summary": "핀란드 국방군은 러시아로 향하던 선박이 핀란드만에서 드론 공격을 받았으며 우크라이나 소행 가능성이 높다고 밝혔다. 키이우는 아직 입장을 내지 않았다.",
-      "link_korea": "러-우 전쟁의 해상 확전으로 북러 군사협력과 에너지·해상 수송로 동향 판단의 배경이 된다.",
-      "region": "유럽",
+      "title": "美 법무부, 북한 바이낸스 해킹 자금 11억 달러 몰수 소송",
+      "summary": "미 법무부는 23일(현지시간) 북한 해킹 세력이 지난달 바이낸스에서 탈취한 자금 중 11억 달러 이상의 USDC를 몰수하는 민사 소송을 냈다고 밝혔다.",
+      "link_korea": "북한의 가상화폐 탈취를 통한 제재 회피·자금 조달에 대한 미국의 대응이다.",
+      "region": "한반도·미국",
       "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+        "name": "연합뉴스",
+        "url": "https://www.yna.co.kr/view/AKR20261124020900504",
+        "via": "https://www.yna.co.kr/view/AKR20261124020900504"
       }
     },
     {
-      "title": "리비아 항구의 러시아 선박 폭발, 드론 공격 의심",
-      "summary": "리비아 동부 정부는 러시아로 귀환하던 중 연료·물자 보급차 정박한 러시아 선박에서 드론 공격으로 의심되는 폭발이 일어났다고 밝혔다.",
-      "link_korea": "러시아 해상 수송망에 대한 공격이 러시아의 군수 조달과 북러 협력 여건에 미치는 영향을 가늠하는 배경이 된다.",
-      "region": "아프리카·유럽",
+      "title": "中, 트럼프 대만 입장 발언 공개… 대만 학자 \"미 정책 변화 아냐\"",
+      "summary": "중국 측이 트럼프 대통령의 대만 관련 입장을 직접 인용해 발표했으나, 대만 학자들은 미국 정책의 변화를 뜻하지 않는다고 평가했다.",
+      "link_korea": "미·중 대만 구도의 변화는 주한미군 운용과 동북아 안보 환경에 연결된다.",
+      "region": "동아시아",
       "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
-      }
-    },
-    {
-      "title": "IAEA 사무총장, 영변 우라늄 농축시설 증설 공사 확인",
-      "summary": "IAEA 사무총장은 북한 영변 핵단지의 우라늄 농축시설에 9월 중순부터 또 다른 증설 공사가 시작됐다고 밝혔다.",
-      "link_korea": "북한 핵 능력 확대와 핵 비확산 체제에 직결되는 사안이다.",
-      "region": "동북아",
-      "source": {
-        "name": "Stars and Stripes",
-        "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-20/north-korea-uranium-enrichment-yongbyon-23523599.html",
-        "via": "https://www.stripes.com/theaters/asia_pacific/"
+        "name": "Focus Taiwan(CNA)",
+        "url": "https://focustaiwan.tw/politics/202611230018",
+        "via": "https://feeds.feedburner.com/rsscna/engnews"
       }
     }
   ],
-  "world_context": "러-우 전쟁이 유럽 전역과 해상 수송로로 번지는 가운데 북한은 영변 농축시설을 증설하고 있다."
+  "world_context": "우크라이나 전쟁의 확전, 대북 제재 집행, 미·중 대만 구도가 한반도 안보 환경과 맞닿아 있다."
 }

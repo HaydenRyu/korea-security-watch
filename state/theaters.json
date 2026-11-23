@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-23T11:40:08+00:00",
+  "judged_at": "2026-11-23T23:40:26+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -9,24 +9,18 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqdr15l32d3go",
-          "published_at": "2026-11-22T22:25:00+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo",
+          "published_at": "2026-11-23T15:41:23+00:00"
         },
         {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
           "published_at": "2026-11-22T17:18:26+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
-          "published_at": "2026-11-21T02:09:46+00:00"
         }
       ],
-      "summary": "러시아의 공습으로 드이메르에서 11명이 숨졌고, 폴란드는 러시아 미사일이 자국에 떨어졌다고 밝혔으며, 핀란드만에서 러시아행 선박이 드론 공격을 받았다.",
-      "judged_at": "2026-11-23T11:40:08+00:00"
+      "summary": "젤렌스키 대통령은 리비아 항구에서 러시아 군함이 우크라이나 드론에 격침됐다고 밝혔고, 핀란드만에서 러시아행 화물선이 드론 공격을 받아 예인됐다.",
+      "judged_at": "2026-11-23T23:40:26+00:00"
     },
     "mideast": {
       "state": 3,
@@ -47,14 +41,14 @@
       "channels": [],
       "sources": [
         {
-          "name": "중앙통신사(CNA)",
+          "name": "Focus Taiwan(CNA)",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611230031.aspx",
-          "published_at": "2026-11-23T09:25:00+08:00"
+          "url": "https://focustaiwan.tw/politics/202611230018",
+          "published_at": "2026-11-23T20:49:31+08:00"
         }
       ],
-      "summary": "대만 국방부는 23일 오전 6시까지 24시간 동안 중국 군함 12척과 군용기 6대를 포착했고 이 중 5대가 중간선을 넘었다고 밝혔다.",
-      "judged_at": "2026-11-23T11:40:08+00:00"
+      "summary": "중국이 트럼프 대통령의 대만 관련 입장을 직접 인용해 발표했고 대만 학자들은 미국 정책 변화가 아니라고 평가했다.",
+      "judged_at": "2026-11-23T23:40:26+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -63,13 +57,13 @@
         {
           "name": "Philstar 국내면 피드",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-23T17:49:00+08:00",
+          "published_at": "2026-11-24T00:00:00+08:00",
           "kind": "feed"
         },
         {
           "name": "Rappler 피드",
           "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-23T18:56:53+08:00",
+          "published_at": "2026-11-23T22:11:41+08:00",
           "kind": "feed"
         },
         {
@@ -80,21 +74,27 @@
         }
       ],
       "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-23T11:40:08+00:00"
+      "judged_at": "2026-11-23T23:40:26+00:00"
     },
     "us_posture": {
       "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "DVIDS",
-          "tier": "A",
-          "url": "https://www.dvidshub.net/news/580027/proving-their-mettle-more-than-1100-us-rok-troops-take-e2b",
-          "published_at": "2026-11-23T03:29:18+00:00"
+          "name": "DVIDS 피드",
+          "url": "https://www.dvidshub.net/rss/news",
+          "published_at": "2026-11-23T22:59:23+00:00",
+          "kind": "feed"
+        },
+        {
+          "name": "Stars and Stripes 아시아태평양 목록",
+          "url": "https://www.stripes.com/theaters/asia_pacific/",
+          "published_at": "2026-11-23T00:00:00+00:00",
+          "kind": "feed"
         }
       ],
-      "summary": "미군·한국군 1,100여 명이 참가한 합동 평가 훈련이 보도됐고 그 밖의 특이 전략자산 전개는 보도되지 않았다.",
-      "judged_at": "2026-11-23T11:40:08+00:00"
+      "summary": "DVIDS·Stars and Stripes 목록에 72시간 안 미 전략자산 전개 관련 기사 없음",
+      "judged_at": "2026-11-23T23:40:26+00:00"
     }
   }
 }

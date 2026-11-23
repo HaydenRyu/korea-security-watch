@@ -1,59 +1,58 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 해양경찰 함정 NLL 합참",
       "지뢰 발견",
-      "North Korea DMZ NLL"
+      "울릉군 경계경보 북한 비행체",
+      "North Korea DMZ NLL",
+      "합참 울릉도 비행체 영공 침범"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격",
-      "North Korea GPS jamming"
+      "해킹 개인정보 유출",
+      "해킹 공격"
     ],
     "foreign_forces": [
-      "김정은 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
-    ],
-    "nuclear": [
-      "영변 우라늄 농축",
-      "North Korea Yongbyon nuclear"
+      "김정은 방중 방러 11월",
+      "Kim Jong Un China Russia visit November 2026",
+      "서해 구조물 주한미군 감축"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 FBI"
+    ],
+    "nuclear": [
+      "영변 우라늄 농축"
     ],
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 증강"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
+      "북한 군수 수송 탄약"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea wartime posture"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "US Japan Korea emergency warning North Korea"
+      "울릉군 경계경보 행정안전부",
+      "진돗개 데프콘 발령"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.koreajoongangdaily.com/korea/north-koreas-yongbyon-expansion-raises-uranium-output-concerns/12985165",
+    "https://www.imaeil.com/page/view/2026112407583439675",
+    "https://www.gokorea.kr/news/articleView.html?idxno=887012",
     "https://view.asiae.co.kr/article/2026112317202549460",
+    "https://www.koreajoongangdaily.com/korea/north-koreas-yongbyon-expansion-raises-uranium-output-concerns/12985165",
+    "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
+    "https://biz.heraldcorp.com/article/10921557",
     "https://www.nknews.org/2026/11/russia-proposes-joint-survey-of-tumen-river-with-north-korea-and-china/"
   ],
-  "overall_summary": "직전 회차와 같은 영변 증축(핵)·NLL 북측 무장 해양경찰 표기 함정 2건만 유지되며 신규 징후는 없다. 접경 열점 신규 후보는 확인하지 않았다.",
+  "overall_summary": "11/24 07:52 울릉군에 실제 경계경보(3~6분)가 발령됐으나 행안부 문자는 러시아 항공기, 연합 등은 북한 항공기 추정으로 엇갈려 기종·국적 미확정이며 합참 공식 입장은 미확인이다. 영변 증축·NLL 북 해양경찰 함정은 직전과 같이 유지된다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,8 +63,8 @@
       "region": "영변",
       "lat": 39.8,
       "lon": 125.75,
-      "summary": "WSJ 위성 분석과 IAEA 사무총장 발언으로 영변 우라늄 농축 건물 증축동이 9월 중순 착공·10월 말 외관 완공된 것으로 11/23 보도됐다.",
-      "meaning": "농축 능력 확대 가능성이나 용도는 불명이며 핵 사용 준비 징후는 아니다.",
+      "summary": "WSJ 위성 분석과 IAEA 발언으로 영변 농축 건물 증축동 외관 완공이 11/23 보도됐다(직전과 동일).",
+      "meaning": "농축 능력 확대 가능성이나 핵 사용 준비 징후는 아니다.",
       "sources": [
         {
           "name": "코리아중앙데일리",
@@ -75,10 +74,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "11/6 위성영상, 증축동 외관 완공(IAEA 그로시 이사회 발언 인용)"
+        "11/6 위성영상 증축동 외관 완공"
       ],
       "speculation": [
-        "원심분리기 설치 시 연 약 37kg HEU 추가(연구자 추정)"
+        "원심분리기 설치 시 HEU 증산 가능"
       ]
     },
     "logistics": {
@@ -86,33 +85,42 @@
     },
     "border_clash": {
       "status": "single",
-      "routine": true,
-      "region": "연평도 북방 NLL 이북",
-      "lat": 37.65,
-      "lon": 125.7,
-      "summary": "'해양경찰' 표기에 76mm 포로 보이는 무장을 한 북한 함정이 NLL 북쪽에서 포착돼 합참이 실시간 추적 중이다(월선 언급 없음, 11/23 보도).",
-      "meaning": "북한의 경찰제도 도입과 맞물린 해상 활동 변화이나 NLL 침범은 확인되지 않았다.",
+      "routine": false,
+      "conflict": true,
+      "conflict_what": "행안부 해제 문자는 「러시아 항공기 위험범위 이탈」이라 했으나 연합뉴스·공감신문은 북한 항공기 추정 비행체로 보도했다.",
+      "region": "경북 울릉군",
+      "lat": 37.48,
+      "lon": 130.9,
+      "summary": "11/24 07:52 울릉군에 실제 경계경보·대피 위급문자가 발령돼 연합뉴스가 북한 항공기 추정 비행체의 영공 침범으로 속보했고, 경보는 약 3~6분 뒤 해제됐다.",
+      "meaning": "북한기라면 이례적 영공 침범이나 국적·기종이 확정되지 않았고 합참 공식 확인이 없다.",
       "sources": [
         {
-          "name": "아시아경제",
+          "name": "매일신문",
           "tier": "B",
-          "url": "https://view.asiae.co.kr/article/2026112317202549460"
+          "url": "https://www.imaeil.com/page/view/2026112407583439675"
+        },
+        {
+          "name": "공감신문",
+          "tier": "B",
+          "url": "https://www.gokorea.kr/news/articleView.html?idxno=887012"
         }
       ],
-      "confidence": "중간",
+      "confidence": "낮음",
       "facts": [
-        "함정은 11/16~17 연평도 망향전망대에서 촬영됨",
-        "합참 공보실장이 11/23 정례브리핑에서 실시간 추적·관리 중이라 밝힘"
+        "07:52 울릉군 경계경보 발령, 07:55~07:58 해제",
+        "행안부 해제 문자 문구는 러시아 항공기 위험범위 이탈(매일신문 인용)"
       ],
       "speculation": [
-        "기존 고속정을 재도색·개조했을 가능성"
+        "북한기 여부는 연합뉴스 1보 표현 「추정」에 근거하며 미확정"
       ]
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "한전 개인정보 100만 명 유출 보도가 있으나 귀속·원문 미확인으로 이번 회차 징후에서 제외"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "조용원 방러·푸틴 면담(11/16)은 24시간 경과 배경이며 김정은 방중·방러 신규 확정은 없다."
     },
     "parade_massing": {
       "status": "none"
@@ -121,14 +129,40 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "none"
+      "status": "single",
+      "routine": false,
+      "region": "경북 울릉군",
+      "lat": 37.48,
+      "lon": 130.9,
+      "summary": "행안부가 11/24 07:52 울릉군에 지하·건물 내 대피를 안내하는 위급 재난문자를 발송했고 약 3~6분 뒤 해제했다.",
+      "meaning": "실제 경보 발령이나 곧 해제됐고 원인 항공기 국적이 엇갈린다.",
+      "sources": [
+        {
+          "name": "매일신문",
+          "tier": "B",
+          "url": "https://www.imaeil.com/page/view/2026112407583439675"
+        },
+        {
+          "name": "공감신문",
+          "tier": "B",
+          "url": "https://www.gokorea.kr/news/articleView.html?idxno=887012"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "경보 해제 문자 07:57~08:00 발송"
+      ],
+      "speculation": []
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T22:10:34+00:00",
-  "grade": 1,
-  "grade_label": "주의",
-  "active": []
+  "checked_at": "2026-11-23T23:11:46+00:00",
+  "grade": 2,
+  "grade_label": "경계",
+  "active": [
+    "border_clash",
+    "gov_warning"
+  ]
 }

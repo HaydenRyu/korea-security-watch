@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-23T14:14:43+00:00",
+  "updated_at": "2026-11-23T15:11:51+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -477,6 +477,15 @@
     },
     {
       "date": "2026-11-23",
+      "tilt": "hold",
+      "on": {
+        "calm": 0,
+        "hold": 4,
+        "esc": 0
+      }
+    },
+    {
+      "date": "2026-11-24",
       "tilt": "hold",
       "on": {
         "calm": 0,

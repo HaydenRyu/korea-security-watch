@@ -1,54 +1,46 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Reuters"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참 11월",
-      "북한 해양경찰 표기 함정 NLL 합참"
+      "북한 함정 NLL 합참 11월 23일",
+      "북한 지뢰 발견 DMZ 귀순",
+      "북한 '해양경찰' 함정 76mm NLL 북쪽 합참 감시"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 북한 동향 11월 23일",
-      "North Korea Reuters AP November 23 2026",
-      "서해 구조물 주한미군 감축"
+      "김정은 방러 방중 Kim Jong Un China Russia visit",
+      "North Korea Reuters November 23 2026"
+    ],
+    "troop_movement": [
+      "North Korea news Yonhap Kim Jong Un this week"
+    ],
+    "nuclear": [
+      "North Korea news Yonhap Kim Jong Un this week"
+    ],
+    "logistics": [
+      "North Korea Reuters November 23 2026"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "North Korea news Yonhap Kim Jong Un this week"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "North Korea news Yonhap Kim Jong Un this week"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향"
+      "북한 함정 NLL 합참 11월 23일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
+      "해킹 개인정보 유출 사이버 공격"
     ]
   },
   "opened": [
-    "https://www.newspim.com/news/view/20261123000230",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll",
-    "https://www.rfa.org/korean/in-focus/2026/11/16/apec-asean-russia-chaina-trump/",
-    "https://news.tf.co.kr/read/ptoday/2390911.htm"
+    "https://view.asiae.co.kr/article/2026112317202549460",
+    "https://www.euronews.com/2026/11/23/north-koreas-leader-highlights-sovereignty-after-rebuffing-trump-offer-for-talks",
+    "https://www.manilatimes.net/2026/11/23/world/asia-oceania/north-koreas-kim-says-country-seeks-security-not-supremacy/2475792"
   ],
-  "overall_summary": "북한 '해양경찰' 표기 무장 함정이 NLL 북쪽에서 포착됐으나 월선은 없고 합참이 감시 중이라 정례 범위로 본다. 그 밖의 항목은 새 징후가 없고 접경 열점 후보도 0건이다.",
+  "overall_summary": "북한 '해양경찰' 표기 무장 함정이 NLL 북쪽에서 포착됐으나 월선은 없고 합참이 실시간 추적 중이라 정례 범위로 본다. 김정은은 트럼프 면담 제안을 거절한 뒤 주권·안보 발언만 했고, 접경 열점 후보는 0건이며 그 밖의 항목에 새 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,37 +54,32 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "서해 NLL 북쪽",
-      "lat": 37.7,
-      "lon": 124.7,
-      "summary": "'해양경찰' 표기에 76mm 포로 보이는 무장을 한 북한 함정이 NLL 북쪽에서 포착돼 합참이 실시간 감시 중이다(월선 언급 없음, 11/23 첫 보도).",
-      "meaning": "북한 경찰체계 도입 흐름의 선박 표기 변화로 보이며 월선·교전은 확인되지 않았다.",
+      "region": "연평도 북방 NLL 이북",
+      "lat": 37.65,
+      "lon": 125.7,
+      "summary": "'해양경찰' 표기에 76mm 포로 보이는 무장을 한 북한 함정이 NLL 북쪽에서 포착돼 합참이 실시간 추적 중이다(월선 언급 없음, 11/23 보도).",
+      "meaning": "북한의 경찰제도 도입과 맞물린 해상 활동 변화이나 NLL 침범은 확인되지 않았다.",
       "sources": [
         {
-          "name": "뉴스핌",
+          "name": "아시아경제",
           "tier": "B",
-          "url": "https://www.newspim.com/news/view/20261123000230"
-        },
-        {
-          "name": "코리아타임스",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll"
+          "url": "https://view.asiae.co.kr/article/2026112317202549460"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "합참 대변인 '북한군 활동 면밀 주시, 최전방 해상 선박 실시간 추적'"
+        "함정은 11/16~17 연평도 망향전망대에서 촬영됨",
+        "합참 공보실장이 11/23 정례브리핑에서 실시간 추적·관리 중이라 밝힘"
       ],
       "speculation": [
-        "전환 개조된 해군 함정 가능성"
+        "기존 고속정을 재도색·개조했을 가능성"
       ]
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "조용원 방러(11/14)와 미중러 회담 관련 이미 알려진 흐름뿐, 24시간 내 새 확인 사건 없음."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -107,7 +94,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T20:10:41+00:00",
+  "checked_at": "2026-11-23T21:10:56+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,49 +1,47 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 지뢰 발견 귀순 NLL",
+      "북한 합참 발표 미사일 도발 11월 23일",
       "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea nuclear Punggye-ri Yongbyon activity"
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "북한 군수 수송 탄약"
+      "북한 합참 발표 미사일 도발 11월 23일"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 귀순 NLL",
-      "지뢰 발견"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란",
-      "GPS 교란"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방러 서해 구조물 주한미군 감축"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 합참 발표 미사일 도발 11월 23일"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 합참 발표 미사일 도발 11월 23일"
     ],
     "gov_warning": [
-      "North Korea missile launch Japan Ministry of Defense"
+      "북한 합참 발표 미사일 도발 11월 23일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hacking"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261123504616",
-    "https://www.segye.com/newsView/20261123507894",
-    "https://www.nknews.org"
+    "https://www.nknews.org",
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후는 없고 연평도 포격 16주기 추모·정치권 논평, 국내 밀수 밀항 사건만 있다. 직전 회차와 동일하게 전 항목 이상 없음이다.",
+  "overall_summary": "최근 24시간 신규 군사 징후는 없고 연평도 포격 16주기 추모·정치권 논평과 김정은 삼지연 시찰·방중설 보도(11/15~18)만 있다. 직전 회차와 동일하게 전 항목 이상 없음이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -76,7 +74,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T08:10:39+00:00",
+  "checked_at": "2026-11-23T09:10:14+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

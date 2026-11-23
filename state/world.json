@@ -1,12 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-11-22T23:38:54+00:00",
-  "world_at": "2026-11-22T23:38:54+00:00",
+  "updated_at": "2026-11-23T05:39:35+00:00",
+  "world_at": "2026-11-23T05:39:35+00:00",
   "world": [
     {
-      "title": "핀란드만에서 러시아행 화물선 드론 피격",
-      "summary": "칼리닌그라드로 향하던 러시아 화물선 스파르타 II가 핀란드만에서 드론 공격을 받아 화재가 났고 예인 중이다. 핀란드 국방군은 우크라이나 소행 가능성이 높다고 밝혔다.",
-      "link_korea": "북한군이 러시아를 지원하는 러-우 전쟁의 확전 양상으로, 북러 군사협력 동향 판단의 배경이 된다.",
+      "title": "러시아 공습으로 키이우주 드이메르 주택 붕괴, 11명 사망",
+      "summary": "러시아의 공습으로 우크라이나 드이메르의 주거용 건물이 무너져 11명이 숨졌고, 구조대는 7세 소년을 구조했으며 실종자를 계속 찾고 있다.",
+      "link_korea": "북한군이 러시아를 지원하는 러-우 전쟁의 격화 양상으로, 북러 군사협력 동향 판단의 배경이 된다.",
+      "region": "유럽",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cqdr15l32d3go",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "핀란드만에서 러시아행 선박 드론 피격",
+      "summary": "핀란드 국방군은 러시아로 향하던 선박이 핀란드만에서 드론 공격을 받았으며 우크라이나 소행 가능성이 높다고 밝혔다. 키이우는 아직 입장을 내지 않았다.",
+      "link_korea": "러-우 전쟁의 해상 확전으로 북러 군사협력과 에너지·해상 수송로 동향 판단의 배경이 된다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
@@ -15,38 +26,27 @@
       }
     },
     {
-      "title": "리비아 벵가지항 러시아 선박 폭발, 드론 공격 추정",
-      "summary": "리비아 동부 정부는 벵가지 해군기지에 정박한 러시아 선박의 폭발이 드론 공격으로 추정된다고 밝혔다. 사상자는 없다고 했다.",
-      "link_korea": "러시아의 해외 거점·물류가 타격받는 사례로, 러시아 군수 조달과 북러 협력 환경에 영향을 줄 수 있다.",
-      "region": "아프리카",
+      "title": "리비아 항구의 러시아 선박 폭발, 드론 공격 의심",
+      "summary": "리비아 동부 정부는 러시아로 귀환하던 중 연료·물자 보급차 정박한 러시아 선박에서 드론 공격으로 의심되는 폭발이 일어났다고 밝혔다.",
+      "link_korea": "러시아 해상 수송망에 대한 공격이 러시아의 군수 조달과 북러 협력 여건에 미치는 영향을 가늠하는 배경이 된다.",
+      "region": "아프리카·유럽",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "쿠웨이트·바레인, 이란 공격 격퇴 주장",
-      "summary": "쿠웨이트와 바레인이 이란의 공습을 막았다고 밝혔고, 미군은 호르무즈 해협 케슘섬의 이란 미사일 발사장을 타격했다.",
-      "link_korea": "중동 전선에 미군 자산이 묶여 한반도 억제 전력 배분과 에너지 수송로에 영향을 줄 수 있다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
-      }
-    },
-    {
-      "title": "러시아 순항미사일 폴란드 영공 침범",
-      "summary": "폴란드는 러시아 Kh-101 순항미사일 등 3개 물체가 영공을 침범했다며 도발로 규정했다. 인명·재산 피해는 없다.",
-      "link_korea": "러-우 전쟁의 NATO 접경 확산으로, 러시아와 군사협력 중인 북한 관련 대러 제재·외교 구도에 연결된다.",
-      "region": "유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
         "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+      }
+    },
+    {
+      "title": "IAEA 사무총장, 영변 우라늄 농축시설 증설 공사 확인",
+      "summary": "IAEA 사무총장은 북한 영변 핵단지의 우라늄 농축시설에 9월 중순부터 또 다른 증설 공사가 시작됐다고 밝혔다.",
+      "link_korea": "북한 핵 능력 확대와 핵 비확산 체제에 직결되는 사안이다.",
+      "region": "동북아",
+      "source": {
+        "name": "Stars and Stripes",
+        "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-20/north-korea-uranium-enrichment-yongbyon-23523599.html",
+        "via": "https://www.stripes.com/theaters/asia_pacific/"
       }
     }
   ],
-  "world_context": "러-우 전쟁이 발트해·리비아·NATO 접경으로 번지고 중동에서 미·이란 교전이 이어져 미군 전력 분산이 쟁점이다."
+  "world_context": "러-우 전쟁이 유럽 전역과 해상 수송로로 번지는 가운데 북한은 영변 농축시설을 증설하고 있다."
 }

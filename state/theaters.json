@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-22T23:38:54+00:00",
+  "judged_at": "2026-11-23T05:39:35+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -9,8 +9,8 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro",
-          "published_at": "2026-11-21T02:09:46+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cqdr15l32d3go",
+          "published_at": "2026-11-22T22:25:00+00:00"
         },
         {
           "name": "BBC",
@@ -19,8 +19,8 @@
           "published_at": "2026-11-22T17:18:26+00:00"
         }
       ],
-      "summary": "러시아의 대규모 공습과 폴란드 영공 침범, 핀란드만 러시아행 화물선 드론 피격이 이어지고 있다.",
-      "judged_at": "2026-11-22T23:38:54+00:00"
+      "summary": "러시아의 공습으로 드이메르에서 11명이 숨졌고, 핀란드만에서는 러시아행 선박이 드론 공격을 받았다.",
+      "judged_at": "2026-11-23T05:39:35+00:00"
     },
     "mideast": {
       "state": 3,
@@ -33,8 +33,8 @@
           "published_at": "2026-11-20T22:14:17+00:00"
         }
       ],
-      "summary": "이란과 미국의 교전이 이어져 쿠웨이트·바레인이 이란 공격을 격퇴했다고 밝혔고, 후티 반군은 예멘 타이즈를 포위 중이다.",
-      "judged_at": "2026-11-22T23:38:54+00:00"
+      "summary": "후티 반군에 포위된 예멘 타이즈 주민들이 몇 주째 외부와 단절된 채 지내고 있다고 BBC가 보도했다.",
+      "judged_at": "2026-11-23T05:39:35+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -43,38 +43,38 @@
         {
           "name": "중앙통신사(CNA)",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611220020.aspx",
-          "published_at": "2026-11-22T09:23:17+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611230031.aspx",
+          "published_at": "2026-11-23T09:25:00+08:00"
         }
       ],
-      "summary": "대만 국방부는 중국 군함 11척과 군용기 17대가 대만 주변에서 활동했다고 밝혔다.",
-      "judged_at": "2026-11-22T23:38:54+00:00"
+      "summary": "대만 국방부는 23일 오전 6시까지 24시간 동안 중국 군함 12척과 군용기 6대를 포착했고 이 중 5대가 중간선을 넘었다고 밝혔다.",
+      "judged_at": "2026-11-23T05:39:35+00:00"
     },
     "scs_ecs": {
       "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "Philstar",
+          "name": "Philstar 국내면 피드",
           "url": "https://www.philstar.com/rss/nation",
           "published_at": "2026-11-23T00:00:00+08:00",
           "kind": "feed"
         },
         {
-          "name": "Rappler",
+          "name": "Rappler 피드",
           "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-22T19:00:00+08:00",
+          "published_at": "2026-11-23T13:27:31+08:00",
           "kind": "feed"
         },
         {
-          "name": "BBC 아시아",
+          "name": "BBC 아시아 피드",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
           "published_at": "2026-11-22T14:05:20+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-22T23:38:54+00:00"
+      "judged_at": "2026-11-23T05:39:35+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -87,8 +87,8 @@
           "published_at": "2026-11-20T21:58:38-05:00"
         }
       ],
-      "summary": "미 해군 잠수함 지원함 프랭크 케이블이 사이판에 예정된 입항을 했다.",
-      "judged_at": "2026-11-22T23:38:54+00:00"
+      "summary": "미 해군 잠수함 모함 프랭크 케이블이 11월 21일 사이판에 예정된 기항을 했으며 그 밖의 특이 전개는 보도되지 않았다.",
+      "judged_at": "2026-11-23T05:39:35+00:00"
     }
   }
 }

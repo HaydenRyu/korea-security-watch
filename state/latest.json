@@ -1,59 +1,44 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement Reuters"
+      "북한 합참 발표 11월 23일",
+      "North Korea Reuters missile Kim Jong Un"
     ],
     "nuclear": [
-      "풍계리 영변 핵시설 동향",
-      "North Korea nuclear 38 North"
+      "North Korea Reuters missile Kim Jong Un"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 합참 발표 11월 23일"
     ],
     "border_clash": [
-      "북한 합참 지뢰 발견 DMZ 귀순",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "지뢰 발견 목함지뢰 해안",
+      "북한 합참 발표 11월 23일"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출",
-      "랜섬웨어 공격"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방러 방중 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade preparation"
+      "북한 합참 발표 11월 23일"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 합참 발표 11월 23일"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "State Department Korea travel advisory"
+      "북한 합참 발표 11월 23일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
+      "North Korea Reuters missile Kim Jong Un"
     ]
   },
   "opened": [
-    "https://en.yna.co.kr/view/AEN20261122002700315",
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.seoul.co.kr/news/newsView.php?id=20261023500184",
-    "https://en.yna.co.kr/view/AEN20261122002900315"
+    "https://www.nknews.org/2026/11/trump-xi-and-putin-discuss-north-korea-nuclear-risks-at-first-trilateral-talks/",
+    "https://www.nknews.org/2026/11/north-korean-chinese-customs-see-traffic-uptick-after-new-bridge-opening/",
+    "https://www.segye.com/newsView/20261123504616"
   ],
-  "overall_summary": "24시간 내 신규 군사 징후는 없고 한전 정보 유출(귀속 미확인)과 김정은 러 대사 신임장 접수(외교 의전)만 직전과 같다. 접경 열점 후보 0건, 김정은 방중설은 11/18 보도 이후 새 확정 보도 없음.",
+  "overall_summary": "11/23 03Z 기준 24시간 내 새 군사 징후 없음. 접경 열점 후보 0건, 국내 언론 14묶음은 연평도 16주기 추모 등 배경·정치 기사였다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,46 +53,12 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "summary": "귀속 미확인 — 한전이 KEPCO ON·SRM 이용자 약 152만 명 개인정보 추가 유출을 11/22 확인했다고 밝혔다.",
-      "meaning": "국가 기반시설 운영사 정보 유출이나 북한 소행 근거는 없다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://en.yna.co.kr/view/AEN20261122002700315"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "한전 약 152만 명 개인정보 유출 확인"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "새 보도 없음 — 한전 정보유출(귀속 미확인)은 11/22 첫 보도 후 24시간 경과, 이번 회차 신규 사고·귀속 발표 확인 못함"
     },
     "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "summary": "김정은이 11/22 러시아 신임대사 신임장을 직접 접수했다(외교 의전).",
-      "meaning": "북러 외교 격상이나 군사 협정·이전 발표는 없다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://en.yna.co.kr/view/AEN20261122002900315"
-        },
-        {
-          "name": "코리아타임스",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "신임장 접수 의전 변화(30여 년 만)"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 김정은 러 대사 신임장 접수는 11/22 의전, 새 파병·이전·협정 보도 없음"
     },
     "parade_massing": {
       "status": "none"
@@ -122,14 +73,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T01:09:01+00:00",
-  "grade": 1,
-  "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-23T02:09:30+00:00",
-    "summary": "11/23 02Z 기준 새 징후 없음. 접경 열점 0건, 국내 언론 수집 13묶음(연평도 16주기 추모·북 주민 표류 송환 등) 모두 배경·정치 기사이며 김정은 방중은 추측 단계."
-  }
+  "checked_at": "2026-11-23T03:09:19+00:00",
+  "grade": 0,
+  "grade_label": "평시",
+  "active": []
 }

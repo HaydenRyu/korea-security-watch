@@ -1,55 +1,53 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 합참",
-      "North Korea troop movement"
+    "border_clash": [
+      "북한 합참 NLL 지뢰 발견 귀순 DMZ"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
-    ],
-    "logistics": [
-      "북한 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
-    "border_clash": [
-      "북한 합참 지뢰 발견 NLL 귀순",
-      "North Korea Reuters November 23 2026"
+      "북한 미사일 발사 핵 풍계리 영변 합참"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "북한 김정은 방중 방러 APEC 선전",
       "서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 열병식 집결"
-    ],
-    "nk_internal": [
-      "북한 등화관제 준전시"
-    ],
-    "gov_warning": [
-      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
+    "nk_internal": [
+      "북한 준전시"
+    ],
     "calm": [
       "남북 대화 제안",
-      "North Korea talks offer"
+      "통신선 복원"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "logistics": [
+      "북한 탄약 군수 수송 비축",
+      "North Korea ammunition shipment"
+    ],
+    "parade_massing": [
+      "북한 열병식 집결"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 상향 한미일 긴급 경고 대피",
+      "North Korea warning"
     ]
   },
   "opened": [
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll",
-    "https://www.nknews.org/2026/11/russia-proposes-joint-survey-of-tumen-river-with-north-korea-and-china/",
-    "https://www.nknews.org",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
   ],
-  "overall_summary": "새 징후 없음: NLL 인근 '코스트가드' 표기 북한 선박은 월선 없는 감시 사안으로 직전 회차와 동일하다. 접경 열점 후보 0건, 연평도 포격전 16주기 행사는 정례다.",
+  "overall_summary": "신규 징후 없음: 직전 회차의 '코스트가드' 표기 북한 선박 건(합참 감시 중, 월선 없음)만 유지된다. 국내 언론 수집기에서 새 접경 사건은 없었고 연평도 포격 16주년 기념 보도뿐이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,11 +61,11 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "서해 NLL 인근",
-      "lat": 37.8,
-      "lon": 124.7,
-      "summary": "'코스트가드' 표기에 76mm 포로 보이는 무장을 한 북한 선박이 NLL 인근에서 포착돼 합참이 면밀히 감시 중이다(월선 언급 없음).",
-      "meaning": "북한 해안경비 성격 선박의 NLL 인근 활동이나 월선·충돌은 확인되지 않았다.",
+      "region": "서해 NLL",
+      "lat": 37.7,
+      "lon": 125.2,
+      "summary": "'코스트가드' 표기에 76mm 포로 보이는 무장을 한 북한 선박이 NLL 인근에서 포착돼 합참이 실시간 감시 중이다(월선 언급 없음).",
+      "meaning": "중국 어선 단속 성격으로 보이나 서해 해상 긴장 요인이다.",
       "sources": [
         {
           "name": "코리아타임스",
@@ -77,11 +75,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참 대변인이 북한군 활동을 면밀히 주시한다고 밝힘",
-        "기사에 NLL 월선 내용 없음"
+        "합참 정례 브리핑 11/23 발언"
       ],
       "speculation": [
-        "중국 어선 단속용일 가능성"
+        "중국 어선 감시 목적 추정"
       ]
     },
     "electronic_cyber": {
@@ -89,7 +86,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "러시아가 중·북과 두만강 공동 조사를 제안(NK News) — 반복·배경성 외교 사안으로 징후 아님."
+      "summary": "조용원 방러·김정은 방중설은 11/14~18 보도로 24시간 경과한 배경이다."
     },
     "parade_massing": {
       "status": "none"
@@ -104,7 +101,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T12:10:51+00:00",
+  "checked_at": "2026-11-23T13:11:37+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,43 +1,42 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 NLL 함정 합참 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 NLL 김정은 방중 11월 23일",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "북한 NLL 함정 합참 11월 23일"
+      "북한 합참 NLL 김정은 방중 11월 23일",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "logistics": [
-      "북한 NLL 함정 합참 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 NLL 김정은 방중 11월 23일",
+      "North Korea Kim Jong Un China Russia visit"
+    ],
+    "parade_massing": [
+      "북한 합참 NLL 김정은 방중 11월 23일",
+      "North Korea Kim Jong Un China Russia visit"
+    ],
+    "nk_internal": [
+      "북한 합참 NLL 김정은 방중 11월 23일",
+      "North Korea Kim Jong Un China Russia visit"
+    ],
+    "gov_warning": [
+      "북한 합참 NLL 김정은 방중 11월 23일",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "border_clash": [
       "지뢰 발견 DMZ 귀순 북한",
-      "북한 NLL 함정 합참 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 NLL 김정은 방중 11월 23일"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격",
-      "해킹 공격",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "foreign_forces": [
-      "김정은 방중 APEC 선전 트럼프 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중",
+      "North Korea Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 NLL 함정 합참 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
-    ],
-    "nk_internal": [
-      "김정은 방중 APEC 선전 트럼프 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
-    ],
-    "gov_warning": [
-      "북한 NLL 함정 합참 11월 23일",
-      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -50,9 +49,10 @@
   "opened": [
     "https://www.newspim.com/news/view/20261123000230",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll",
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
+    "https://biz.heraldcorp.com/article/10946092",
+    "https://en.sedaily.com/politics/2026/11/23/kim-jong-un-says-north-korea-seeks-neither-hegemony-nor-2"
   ],
-  "overall_summary": "신규 징후 없음. 서해 NLL 북쪽 '해양경찰' 표기 북한 함정(월선 없음, 합참 실시간 감시)만 직전과 같이 유지되며, 김정은 방중은 APEC 기간 성사 보도가 없다. 접경 남측 열점 신규 후보 없음.",
+  "overall_summary": "신규 징후 없음. 서해 NLL 북쪽 '해양경찰' 표기 북한 함정(월선 없음, 합참 추적·관리)만 직전과 같이 유지되며, 김정은은 11/22 신임 대사 신임장을 접수했고 방중·방러 신규 보도는 없다. 접경 남측 열점 신규 후보 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -81,6 +81,11 @@
           "name": "코리아타임스",
           "tier": "B",
           "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll"
+        },
+        {
+          "name": "헤럴드경제",
+          "tier": "B",
+          "url": "https://biz.heraldcorp.com/article/10946092"
         }
       ],
       "confidence": "중간",
@@ -111,7 +116,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T16:10:54+00:00",
+  "checked_at": "2026-11-23T17:10:58+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

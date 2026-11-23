@@ -1,50 +1,59 @@
 {
   "coverage": {
+    "border_clash": [
+      "북한 해양경찰 함정 NLL 합참",
+      "지뢰 발견",
+      "North Korea DMZ NLL"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격",
+      "North Korea GPS jamming"
+    ],
+    "foreign_forces": [
+      "김정은 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물"
+    ],
+    "nuclear": [
+      "영변 우라늄 농축",
+      "North Korea Yongbyon nuclear"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속",
+      "North Korea attributed FBI"
+    ],
     "troop_movement": [
       "북한 병력 이동 전방 증강",
       "North Korea troop movement"
     ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea Yongbyon enrichment"
-    ],
     "logistics": [
-      "북한 군수 탄약 수송",
+      "북한 군수 수송 탄약",
       "North Korea ammunition shipment"
     ],
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참 NLL"
-    ],
-    "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
-    ],
-    "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Reuters AP"
-    ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea wartime posture"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "진돗개 데프콘 발령",
+      "US Japan Korea emergency warning North Korea"
     ],
     "calm": [
-      "남북 대화 제안 통신선"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://view.asiae.co.kr/article/2026112317202549460",
     "https://www.koreajoongangdaily.com/korea/north-koreas-yongbyon-expansion-raises-uranium-output-concerns/12985165",
-    "https://www.koreajoongangdaily.com/korea/norths-kim-defends-arms-buildup-as-selfdefense/12985092"
+    "https://view.asiae.co.kr/article/2026112317202549460",
+    "https://www.nknews.org/2026/11/russia-proposes-joint-survey-of-tumen-river-with-north-korea-and-china/"
   ],
-  "overall_summary": "북한 '해양경찰' 표기 무장 함정이 NLL 북쪽에서 포착됐으나 월선은 없어 정례 범위이며, 영변 농축시설 증축 보도가 새로 나왔으나 핵 사용 준비 징후는 아니다. 접경 열점 후보는 0건이다.",
+  "overall_summary": "직전 회차와 같은 영변 증축(핵)·NLL 북측 무장 해양경찰 표기 함정 2건만 유지되며 신규 징후는 없다. 접경 열점 신규 후보는 확인하지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,24 +84,6 @@
     "logistics": {
       "status": "none"
     },
-    "electronic_cyber": {
-      "status": "none"
-    },
-    "foreign_forces": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
-    },
     "border_clash": {
       "status": "single",
       "routine": true,
@@ -116,9 +107,27 @@
       "speculation": [
         "기존 고속정을 재도색·개조했을 가능성"
       ]
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-23T21:11:22+00:00",
+  "checked_at": "2026-11-23T22:10:34+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,55 +1,54 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Yonhap November 23 2026"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Reuters Yonhap November 23 2026",
-      "북한 합참 발표 11월 23일"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Yonhap November 23 2026"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순",
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Yonhap November 23 2026"
+      "지뢰 발견 DMZ 귀순 합참 11월",
+      "북한 해양경찰 표기 함정 NLL 합참"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 간첩 혐의 국가보안법 구속"
+      "김정은 방중 방러 북한 동향 11월 23일",
+      "North Korea Reuters AP November 23 2026",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Yonhap November 23 2026"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Yonhap November 23 2026"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "북한 합참 발표 11월 23일",
-      "North Korea Reuters Yonhap November 23 2026"
+      "진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
-      "서해 구조물 주한미군 감축 간첩 혐의 국가보안법 구속",
-      "GPS 교란 북한 해킹 개인정보 유출 사이버 공격"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll",
     "https://www.newspim.com/news/view/20261123000230",
-    "https://www.nknews.org/category/news/"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll",
+    "https://www.rfa.org/korean/in-focus/2026/11/16/apec-asean-russia-chaina-trump/",
+    "https://news.tf.co.kr/read/ptoday/2390911.htm"
   ],
-  "overall_summary": "새로 확인된 도발·전쟁 징후는 없고 NLL 북쪽 무장 '해양경찰' 함정 건만 정례 수준으로 이어진다. 접경 열점 후보는 별도 보도가 없어 징후로 올리지 않았다.",
+  "overall_summary": "북한 '해양경찰' 표기 무장 함정이 NLL 북쪽에서 포착됐으나 월선은 없고 합참이 감시 중이라 정례 범위로 본다. 그 밖의 항목은 새 징후가 없고 접경 열점 후보도 0건이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,11 +62,11 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "서해 NLL",
+      "region": "서해 NLL 북쪽",
       "lat": 37.7,
-      "lon": 125.2,
+      "lon": 124.7,
       "summary": "'해양경찰' 표기에 76mm 포로 보이는 무장을 한 북한 함정이 NLL 북쪽에서 포착돼 합참이 실시간 감시 중이다(월선 언급 없음, 11/23 첫 보도).",
-      "meaning": "중국 어선 단속 성격으로 보이나 서해 해상 긴장 요인이다.",
+      "meaning": "북한 경찰체계 도입 흐름의 선박 표기 변화로 보이며 월선·교전은 확인되지 않았다.",
       "sources": [
         {
           "name": "뉴스핌",
@@ -82,18 +81,18 @@
       ],
       "confidence": "중간",
       "facts": [
-        "중앙일보가 16~17일 장재도·석도 인근 촬영분을 11/23 보도",
-        "합참이 접적 해역 북한 선박 활동을 실시간 감시 중이라고 밝힘"
+        "합참 대변인 '북한군 활동 면밀 주시, 최전방 해상 선박 실시간 추적'"
       ],
       "speculation": [
-        "중국 어선 단속 목적 추정"
+        "전환 개조된 해군 함정 가능성"
       ]
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "조용원 방러(11/14)와 미중러 회담 관련 이미 알려진 흐름뿐, 24시간 내 새 확인 사건 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -108,7 +107,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T19:10:41+00:00",
+  "checked_at": "2026-11-23T20:10:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

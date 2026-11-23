@@ -13,16 +13,17 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 NLL 지뢰 발견 귀순 DMZ",
-      "North Korea vessel Coast Guard NLL South Korea monitoring"
+      "북한 합참 지뢰 발견 NLL 귀순",
+      "North Korea Reuters November 23 2026"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격 11월 2026"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 11월"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결"
@@ -31,8 +32,7 @@
       "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "South Korea Japan US emergency warning"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
@@ -45,10 +45,11 @@
   },
   "opened": [
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll",
+    "https://www.nknews.org/2026/11/russia-proposes-joint-survey-of-tumen-river-with-north-korea-and-china/",
     "https://www.nknews.org",
-    "https://www.nknews.org/2026/11/russia-proposes-joint-survey-of-tumen-river-with-north-korea-and-china/"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "새 징후 없음: NLL 인근 '코스트가드' 표기 북한 선박은 월선 없는 정례 감시 사안이다. 직전 회차와 동일 수준이다. 접경 열점 신규 후보 대조는 별도 보도 없음.",
+  "overall_summary": "새 징후 없음: NLL 인근 '코스트가드' 표기 북한 선박은 월선 없는 감시 사안으로 직전 회차와 동일하다. 접경 열점 후보 0건, 연평도 포격전 16주기 행사는 정례다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -103,7 +104,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T11:11:34+00:00",
+  "checked_at": "2026-11-23T12:10:51+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

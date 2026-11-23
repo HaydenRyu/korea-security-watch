@@ -1,50 +1,48 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 합참 발표 지뢰 발견 귀순 DMZ NLL",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변 동향 11월"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약"
-    ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 귀순 DMZ NLL",
-      "지뢰 발견",
-      "귀순"
+      "북한 미사일 발사 합참 11월 23일",
+      "지뢰 발견 DMZ 귀순 북한"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란",
-      "GPS 교란"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit North Korea Reuters",
-      "서해 구조물 주한미군 감축 김정은 방중"
+      "김정은 방중 트럼프 시진핑 회동",
+      "North Korea Reuters Kim Jong Un China Russia visit"
+    ],
+    "troop_movement": [
+      "북한 병력 이동"
+    ],
+    "nuclear": [
+      "북한 핵 동향"
+    ],
+    "logistics": [
+      "북한 군수 수송"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시"
     ],
     "gov_warning": [
-      "North Korea missile launch Japan Ministry of Defense November 2026"
+      "진돗개 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261123504616",
-    "https://www.segye.com/newsView/20261123507894",
-    "https://www.nknews.org"
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.koreadaily.com/article/20261118194507625"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후는 없고 연평도 포격 16주기 추모·정치권 논평만 있다. 직전 회차와 동일하게 전 항목 이상 없음이다.",
+  "overall_summary": "새 도발·전쟁 징후 보도는 확인되지 않았다. 연평도 포격전 16주기 행사와 김정은 방중설 관련 보도만 있고 직전 회차와 같은 평온 상태다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -56,13 +54,15 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "연평도 포격전 16주기 추모 보도뿐, 새 충돌·지뢰 발견 보도 없음(9~10월 DMZ 지뢰는 배경)."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 방중·방러는 실제 이동이 확인되지 않았고(통일부 11/19 '동향 없음'), 삼지연 시찰 등 국내 행보뿐이며 러시아 대사 신임장 접수는 의전 보도라 징후 아님."
     },
     "parade_massing": {
       "status": "none"
@@ -77,7 +77,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T07:12:46+00:00",
+  "checked_at": "2026-11-23T08:11:31+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

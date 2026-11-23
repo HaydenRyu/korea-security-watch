@@ -13,8 +13,8 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "North Korea Reuters missile border November 22 2026"
+      "북한 합참 지뢰 발견 DMZ 귀순",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 합참",
@@ -40,15 +40,20 @@
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://en.yna.co.kr/view/AEN20261122002700315",
-    "https://en.yna.co.kr/view/AEN20261122002900315",
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+    "https://www.seoul.co.kr/news/newsView.php?id=20261023500184",
+    "https://en.yna.co.kr/view/AEN20261122002900315"
   ],
-  "overall_summary": "24시간 내 신규 군사 징후는 없고 김정은의 러 대사 신임장 접수(외교 의전)와 한전 정보 유출(귀속 미확인)만 직전과 같은 수준이다. 접경 남측 열점·핵시설 신규 움직임 보도 없음; 울릉도 표류 북 주민 6명 송환 예정(동아 단독)은 배경이다.",
+  "overall_summary": "24시간 내 신규 군사 징후는 없고 한전 정보 유출(귀속 미확인)과 김정은 러 대사 신임장 접수(외교 의전)만 직전과 같다. 접경 열점 후보 0건, 김정은 방중설은 11/18 보도 이후 새 확정 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -117,7 +122,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-23T00:08:46+00:00",
+  "checked_at": "2026-11-23T01:09:01+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

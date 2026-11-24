@@ -5,23 +5,23 @@
       "North Korea troops Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear 38 North"
+      "North Korea nuclear 38 North Yongbyon Punggye-ri",
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "북한 탄약 군수 수송"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
+      "북한 지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 랜섬웨어 공격"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "김정은 방중 방러",
-      "Kim Jong Un China Russia visit November 2026"
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -37,15 +37,15 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
     "https://www.segye.com/newsView/20261124503104",
-    "https://www.yna.co.kr/view/AKR20261124020900504"
+    "https://www.segye.com/newsView/20261124505426",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "러시아 군용기의 카디즈 진입(영공 침범 없음)과 미 법무부의 북한 바이낸스 해킹 자금 몰수 절차는 직전 회차와 같은 정례 성격이다. 구조된 북한 주민 송환 준비(인도적 절차) 외에 접경 군사 징후나 신규 핵·병력 동향 보도는 없다.",
+  "overall_summary": "러시아 군용기의 카디즈 진입(영공 침범 없음, 울릉 경계경보 혼선)과 미 법무부의 북한 바이낸스 해킹 자금 몰수 소송은 직전 회차와 같은 정례 성격이다. 접경 군사 징후나 신규 핵·병력 동향 보도는 없고, 접경 열점 후보에 대한 신규 대조 사항도 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,19 +62,20 @@
     "electronic_cyber": {
       "status": "single",
       "routine": true,
+      "attribution": "nk",
       "region": "미국",
-      "summary": "미 법무부가 북한 소행 바이낸스 해킹 자금 약 1조5천억원 몰수 소송을 제기했다고 연합뉴스가 11/24 보도했다.",
+      "summary": "미 검찰이 북한 해커가 탈취한 바이낸스 가상자산 약 10억 달러 몰수를 추진한다고 NK News가 11/24 전했다.",
       "meaning": "북한 가상자산 탈취 수사 발표로 정례 성격이다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261124020900504"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "미 법무부 몰수 소송(연합뉴스 제목 확인)"
+        "미 검찰 몰수 추진(NK News 헤드라인 확인)"
       ],
       "speculation": []
     },
@@ -95,7 +96,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "행안부 07:52 경계경보, 경북도 07:57 해제, 합참 영공침범 없음"
+        "합참: 러시아 군용기, 영공 침범 없음"
       ],
       "speculation": []
     },
@@ -112,7 +113,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-24T12:11:32+00:00",
+  "checked_at": "2026-11-24T13:13:58+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

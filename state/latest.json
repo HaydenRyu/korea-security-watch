@@ -1,61 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 도발 합참 11월 24일",
-      "North Korea troop movement"
+      "북한 합참 발표 오늘",
+      "North Korea military mobilization nuclear test preparations November 2026"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "북한 핵실험장 풍계리 영변 동향 38 North",
+      "North Korea military mobilization nuclear test preparations November 2026"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 합참 발표 오늘",
+      "North Korea military mobilization nuclear test preparations November 2026"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견",
-      "DMZ 귀순 월선",
-      "북한 어선 표류 송환 통일부"
+      "목함지뢰 발견 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "랜섬웨어 공격",
-      "사이버 공격"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "서해 구조물 주한미군 감축 진돗개 북한 준전시"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
+      "북한 합참 발표 오늘",
+      "North Korea military mobilization nuclear test preparations November 2026"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense drill"
+      "서해 구조물 주한미군 감축 진돗개 북한 준전시",
+      "North Korea military mobilization nuclear test preparations November 2026"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향",
-      "North Korea warning alert"
+      "서해 구조물 주한미군 감축 진돗개 북한 준전시",
+      "북한 합참 발표 오늘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261124503104",
-    "https://www.segye.com/newsView/20261124505426",
-    "https://www.yna.co.kr/view/AKR20261124093000504",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861597"
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
   ],
-  "overall_summary": "러시아 군용기가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 발령됐으나 합참은 영공 침범이 없었고 북한과 무관하다고 밝혔다. 북한발 새 징후는 확인되지 않았고 접경 열점 보도도 없다.",
+  "overall_summary": "러시아 군용기 카디즈 진입 건은 북한과 무관하며 직전과 같은 정례(routine) 판정이다. 북한발 새 징후와 접경 열점 관련 보도는 확인되지 않았고, 김정은 방중설은 미확정 추측이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,49 +58,29 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "11/3 표류 북한 어선의 송환 절차 보도뿐이며 신규 충돌·지뢰·월선 보도 없음."
+      "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "11/24 당일 신규 GPS 교란·국내 해킹 보도 확인 안 됨."
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
       "status": "none"
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "울릉도",
+      "region": "울릉도 동쪽 카디즈",
       "lat": 37.48,
       "lon": 130.9,
       "summary": "러시아 군용기가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 발령됐으나 합참은 영공 침범이 없었고 북한 항공기가 아니라고 밝혔다.",
-      "meaning": "북한 도발이 아닌 러시아 군용기 근접 비행으로, 행안부 경보와 합참 판단이 엇갈린 혼선이다.",
+      "meaning": "북한 무관 러시아 군용기의 카디즈 진입으로 북한발 징후는 아니다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261124503104"
-        },
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861597"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "07:52 행안부 경계경보, 07:57 해제",
-        "합참: 러시아 군용기, 영공 침범 없음, 북한 무관"
+        "합참: 영공 침범 없음, 북한 무인기 아님"
       ],
       "speculation": []
     },
@@ -123,11 +94,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "바이낸스 해킹 귀속은 11/12 발표라 24시간 경과, 11/24 몰수 소송은 배경으로만 둔다."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-24T22:11:06+00:00",
+  "checked_at": "2026-11-24T23:10:46+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

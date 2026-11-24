@@ -1,45 +1,55 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
+    ],
+    "nuclear": [
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear test site"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한 11월 24일"
+      "목함지뢰 해안 발견 DMZ 합참",
+      "북한 어선 표류 송환 통일부"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출 11월 24일"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중"
-    ],
-    "gov_warning": [
-      "북한 미사일 OR 도발 합참 11월 24일"
-    ],
-    "hybrid_ops": [
-      "DOJ North Korea Binance hack forfeiture complaint November 2026"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강 예비군 동원"
-    ],
-    "nuclear": [
-      "North Korea nuclear Yongbyon Punggye-ri satellite imagery"
-    ],
-    "logistics": [
-      "북한 탄약 군수 수송 러시아"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 준비 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 민방위 훈련 등화관제"
+      "북한 준전시 등화관제"
+    ],
+    "gov_warning": [
+      "진돗개 발령 데프콘 상향",
+      "울릉 경계경보 러시아 군용기"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "North Korea Binance hack forfeiture Justice Department"
+    ],
+    "calm": [
+      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261124503104",
-    "https://www.koreaherald.com/article/10937539",
-    "https://v.daum.net/v/xNTDp4V7Lq?f=p",
-    "https://en.koreadaily.com/binance-hack-north-korea-crypto-forfeiture/"
+    "https://kookbang.dema.mil.kr/newsWeb/20261125/7/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreatimes.co.kr/world/20261114/us-obtains-court-approval-to-seize-restrain-over-12-bil-stolen-in-nk-binance-theft",
+    "https://www.koreajoongangdaily.com/business/us-moves-to-seize-12-billion-linked-to-north-korean-binance-hack/12972799"
   ],
-  "overall_summary": "러시아 군용기 카디즈 진입(영공 침범 없음)과 미 DOJ의 북한 해킹 자금 몰수 소송 외에 새 북한 군사 징후는 없다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "러시아 군용기가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 발령됐으나 합참은 영공 침범이 없었다고 밝혔고, 북한발 새 징후는 확인되지 않았다. 접경 열점·지뢰 등 신규 보도 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -54,16 +64,17 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "11/24 당일 신규 GPS 교란·국내 해킹 보도 확인 안 됨."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "울릉도·동해",
+      "region": "울릉도",
       "lat": 37.48,
       "lon": 130.9,
       "summary": "러시아 군용기가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 발령됐으나 합참은 영공 침범이 없었다고 밝혔다.",
-      "meaning": "러시아 군용기의 카디즈 진입이 있었으나 영공 침범은 없었고 북한 무인기도 아니었다.",
+      "meaning": "북한 도발이 아닌 러시아 군용기 근접 비행으로, 행안부 경보와 합참 판단이 엇갈린 혼선이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -73,8 +84,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참: 비행체는 북한 무인기가 아닌 러시아 군용기",
-        "영공침범 없음, 경보 7시52분 발령·7시57분 해제"
+        "07:52 행안부 경계경보, 07:57 해제",
+        "합참: 러시아 군용기, 영공 침범 없음, 공군 전투기 긴급 출격"
       ],
       "speculation": []
     },
@@ -89,27 +100,10 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "routine": true,
-      "attribution": "nk",
-      "category": "가상자산",
-      "summary": "귀속 미확정 — 미 법무부가 11/23 북한 군 해커가 탈취한 바이낸스 자금 약 11억 달러의 몰수 소송을 제기했다.",
-      "meaning": "수사 결과 발표 성격으로 진행 중인 작전은 아니다.",
-      "sources": [
-        {
-          "name": "Korea Daily",
-          "tier": "B",
-          "url": "https://en.koreadaily.com/binance-hack-north-korea-crypto-forfeiture/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "DOJ 11/23 워싱턴 연방법원 제기"
-      ],
-      "speculation": [],
-      "attribution_dropped": "A 등급 기관의 귀속 발표 없음"
+      "summary": "바이낸스 해킹 귀속은 11/12 발표라 24시간 경과, 11/24 몰수 소송 보도는 원문을 열지 못해 배경으로만 둔다."
     }
   },
-  "checked_at": "2026-11-24T20:10:25+00:00",
+  "checked_at": "2026-11-24T21:10:15+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

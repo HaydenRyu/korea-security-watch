@@ -1,56 +1,42 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순",
-      "North Korea DMZ border"
-    ],
-    "electronic_cyber": [
-      "북한 GPS 교란 해킹 공격 사이버 공격 랜섬웨어",
-      "해킹 개인정보 유출 공격"
+      "North Korea missile launch OR border OR DMZ November 24 2026"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "김정은 방중",
-      "서해 구조물 주한미군 감축"
-    ],
-    "parade_massing": [
-      "북한 열병식 집결"
-    ],
-    "nk_internal": [
-      "북한 전시태세 동원"
-    ],
-    "gov_warning": [
-      "북한 합참 발표 11월 24일",
-      "진돗개 발령 데프콘"
+      "김정은 방중 방러 북한 속보"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "Justice Department North Korea Binance hack forfeiture complaint"
     ],
-    "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "북한 핵시설 영변 풍계리 동향"
+    ],
+    "logistics": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "electronic_cyber": [
+      "북한 GPS 교란 해킹 공격"
+    ],
+    "parade_massing": [
+      "북한 열병식 준비 집결 위성사진"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 노농적위군 동원"
+    ],
+    "gov_warning": [
+      "진돗개 발령 합참 경고 북한 11월 24일"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261124503104",
-    "https://www.nknews.org/",
-    "https://www.nknews.org/2026/11/south-korean-province-mistakes-russian-aircraft-for-possible-north-korean-plane/",
-    "https://www.nknews.org/2026/11/north-korea-threatens-to-expel-swiss-diplomatic-mission-following-sanctions/"
+    "https://www.koreatimes.co.kr/world/20261114/us-obtains-court-approval-to-seize-restrain-over-12-bil-stolen-in-nk-binance-theft",
+    "https://www.koreajoongangdaily.com/business/us-moves-to-seize-12-billion-linked-to-north-korean-binance-hack/12972799"
   ],
-  "overall_summary": "11/24 오전 러시아 군용기 카디즈 진입으로 울릉군 경계경보가 5분간 발령됐으나 합참은 영공 침범이 없었다고 밝혔다. 북한발 새 군사 징후는 없고 김여정의 스위스 공관 철수 위협 담화는 외교 사안이다. 접경 열점 후보는 없다.",
+  "overall_summary": "러시아 군용기 카디즈 진입(울릉 경계경보)은 영공 침범 없이 종료돼 직전과 같다. 북한발 새 군사 징후는 확인되지 않았으며 일부 항목은 제한된 검색만 수행했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -64,6 +50,30 @@
     "border_clash": {
       "status": "none"
     },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "울릉도·동해",
+      "lat": 37.48,
+      "lon": 130.9,
+      "summary": "러시아 군용기가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 발령됐으나 합참은 영공 침범이 없었다고 밝혔다.",
+      "meaning": "러시아 군용기의 카디즈 진입이며 영공 침범이 없어 정례 범위의 대응이다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261124503104"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "합참: 영공 침범 없음, 군 조치로 동해 쪽 이탈"
+      ],
+      "speculation": []
+    },
     "parade_massing": {
       "status": "none"
     },
@@ -74,41 +84,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
-    },
-    "electronic_cyber": {
       "status": "none",
-      "summary": "직전 회차 NK News 미 DOJ 몰수 소송 보도는 11/24 사법 절차 배경으로 두고, 새 사고·귀속 발표는 없다."
-    },
-    "foreign_forces": {
-      "status": "corroborated",
-      "routine": true,
-      "region": "울릉도",
-      "lat": 37.48,
-      "lon": 130.9,
-      "summary": "러시아 군용기가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 발령됐으나 합참은 영공 침범이 없었다고 밝혔다.",
-      "meaning": "러시아 군용기의 동해 카디즈 활동이며 북한 항공기가 아니었고 침범은 없었다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261124503104"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/south-korean-province-mistakes-russian-aircraft-for-possible-north-korean-plane/"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "행안부 7:52 경계경보, 7:57 해제",
-        "합참: 북한 무인기가 아닌 러시아 군용기, 영공침범 없음"
-      ],
-      "speculation": []
+      "summary": "바이낸스 해킹 귀속·압류 발표는 11/12~14 보도로 24시간 경과(배경)."
     }
   },
-  "checked_at": "2026-11-24T17:10:49+00:00",
+  "checked_at": "2026-11-24T18:11:20+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

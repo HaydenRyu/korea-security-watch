@@ -1,48 +1,51 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강 군수 물자 수송"
-    ],
-    "logistics": [
-      "북한 병력 이동 전방 증강 군수 물자 수송"
-    ],
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참",
-      "북한 어선 표류 송환 통일부"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
-    ],
-    "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 진돗개 북한 핵 풍계리"
+      "북한 병력 이동 전방 증강",
+      "North Korea troops Reuters"
     ],
     "nuclear": [
-      "North Korea Reuters missile nuclear November 24 2026"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear 38 North"
+    ],
+    "logistics": [
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출 랜섬웨어 공격"
+    ],
+    "foreign_forces": [
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit November 2026"
     ],
     "parade_massing": [
-      "북한 열병식 준비 등화관제 준전시 노농적위군"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 열병식 준비 등화관제 준전시 노농적위군"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "합참 데프콘 진돗개 발령 북한 경고 11월 2026"
+      "진돗개 데프콘 상향 합참"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
     ]
   },
   "opened": [
+    "https://www.nknews.org/",
     "https://www.segye.com/newsView/20261124503104",
-    "https://kookbang.dema.mil.kr/newsWeb/20261125/7/ATCE_CTGR_0010010000/view.do",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861597",
-    "https://www.nknews.org/"
+    "https://www.yna.co.kr/view/AKR20261124020900504"
   ],
-  "overall_summary": "러시아 군용기 카디즈 진입(영공 침범 없음, 경북도 오발송 문자 정정)과 미 바이낸스 몰수 추진은 직전 회차와 같은 정례 성격이다. 접경 군사 징후나 신규 핵·병력 동향은 확인되지 않았다.",
+  "overall_summary": "러시아 군용기의 카디즈 진입(영공 침범 없음)과 미 법무부의 북한 바이낸스 해킹 자금 몰수 절차는 직전 회차와 같은 정례 성격이다. 구조된 북한 주민 송환 준비(인도적 절차) 외에 접경 군사 징후나 신규 핵·병력 동향 보도는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,47 +62,40 @@
     "electronic_cyber": {
       "status": "single",
       "routine": true,
-      "attribution": "nk",
       "region": "미국",
-      "summary": "미국이 북한 해커가 탈취한 바이낸스 가상자산 약 10억 달러의 몰수를 추진한다고 NK News가 11/24 보도했다.",
-      "meaning": "가상자산 탈취 수사 발표로 정례 성격이다.",
+      "summary": "미 법무부가 북한 소행 바이낸스 해킹 자금 약 1조5천억원 몰수 소송을 제기했다고 연합뉴스가 11/24 보도했다.",
+      "meaning": "북한 가상자산 탈취 수사 발표로 정례 성격이다.",
       "sources": [
         {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261124020900504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "NK News 11/24 헤드라인: US seeks forfeiture of $1B in Binance crypto stolen by North Korean hackers"
+        "미 법무부 몰수 소송(연합뉴스 제목 확인)"
       ],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "울릉도",
       "lat": 37.48,
       "lon": 130.9,
-      "summary": "러시아 군용기 여러 대가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 내려졌으나 합참은 영공 침범이 없었다고 밝혔다.",
-      "meaning": "영공 침범이 없는 카디즈 진입이라 정례 범주다.",
+      "summary": "러시아 군용기 여러 대가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 내려졌으나 합참은 영공 침범이 없었다고 밝혔다.",
+      "meaning": "러시아 군용기의 반복적 카디즈 진입으로 영공 침범이 없어 정례 범주다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261124503104"
-        },
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861597"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "행안부 07:52 경계경보, 합참 영공침범 없음 확인",
-        "경북도 해제 문자의 '북한 항공기 추정'은 오류로 정정됨"
+        "행안부 07:52 경계경보, 경북도 07:57 해제, 합참 영공침범 없음"
       ],
       "speculation": []
     },
@@ -116,7 +112,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-24T12:11:05+00:00",
+  "checked_at": "2026-11-24T12:11:32+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

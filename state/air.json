@@ -1,10 +1,25 @@
 {
- "at": "2026-11-24T00:07:48+00:00",
- "south": 58,
- "area": 77,
- "baseline": 67,
- "ratio": 0.87,
+ "at": "2026-11-24T01:23:01+00:00",
+ "south": 70,
+ "area": 87,
+ "baseline": 76,
+ "ratio": 0.92,
  "samples": 7,
- "mil": [],
+ "mil": [
+  {
+   "type": "BE20",
+   "name": null,
+   "call": "CATS00",
+   "lat": 34.65,
+   "lon": 126.65
+  },
+  {
+   "type": "B190",
+   "name": null,
+   "call": "CATS68",
+   "lat": 36.52,
+   "lon": 127.74
+  }
+ ],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

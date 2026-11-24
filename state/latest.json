@@ -1,7 +1,7 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
+      "북한 도발 합참 11월 24일",
       "North Korea troop movement"
     ],
     "nuclear": [
@@ -14,11 +14,14 @@
     ],
     "border_clash": [
       "목함지뢰 해안 발견",
-      "DMZ NLL 귀순 북한 어선 송환"
+      "DMZ 귀순 월선",
+      "북한 어선 표류 송환 통일부"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참 11월 25일",
-      "해킹 공격 개인정보 유출"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "랜섬웨어 공격",
+      "사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
@@ -26,28 +29,33 @@
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea civil defense drill"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향"
+      "진돗개 발령 데프콘 상향",
+      "North Korea warning alert"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hack"
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안",
+      "통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261124503104",
     "https://www.segye.com/newsView/20261124505426",
-    "https://kookbang.dema.mil.kr/newsWeb/20261125/7/ATCE_CTGR_0010010000/view.do"
+    "https://www.yna.co.kr/view/AKR20261124093000504",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861597"
   ],
-  "overall_summary": "러시아 군용기 카디즈 진입·울릉 경계경보 혼선(합참 영공 침범 없음) 외에 북한발 새 징후는 확인되지 않았다. 접경 열점·지뢰 등 신규 보도 없음.",
+  "overall_summary": "러시아 군용기가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 발령됐으나 합참은 영공 침범이 없었고 북한과 무관하다고 밝혔다. 북한발 새 징후는 확인되지 않았고 접경 열점 보도도 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,7 +68,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "북한 어선 표류·송환(통일부) 보도만 있고 새 접경 충돌·지뢰 발견 없음."
+      "summary": "11/3 표류 북한 어선의 송환 절차 보도뿐이며 신규 충돌·지뢰·월선 보도 없음."
     },
     "electronic_cyber": {
       "status": "none",
@@ -84,24 +92,42 @@
       "region": "울릉도",
       "lat": 37.48,
       "lon": 130.9,
-      "summary": "러시아 군용기가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 발령됐으나 합참은 영공 침범이 없었다고 밝혔다.",
+      "summary": "러시아 군용기가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 발령됐으나 합참은 영공 침범이 없었고 북한 항공기가 아니라고 밝혔다.",
       "meaning": "북한 도발이 아닌 러시아 군용기 근접 비행으로, 행안부 경보와 합참 판단이 엇갈린 혼선이다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261124503104"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861597"
         }
       ],
       "confidence": "중간",
       "facts": [
         "07:52 행안부 경계경보, 07:57 해제",
-        "합참: 러시아 군용기, 영공 침범 없음, 공군 전투기 긴급 출격"
+        "합참: 러시아 군용기, 영공 침범 없음, 북한 무관"
       ],
       "speculation": []
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none",
+      "summary": "바이낸스 해킹 귀속은 11/12 발표라 24시간 경과, 11/24 몰수 소송은 배경으로만 둔다."
     }
   },
-  "checked_at": "2026-11-24T22:09:48+00:00",
+  "checked_at": "2026-11-24T22:11:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

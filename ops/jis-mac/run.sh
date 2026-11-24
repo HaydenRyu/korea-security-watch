@@ -39,7 +39,7 @@ trap '[ "$(cat "$LOCK" 2>/dev/null)" = "$$" ] && rm -f "$LOCK"' EXIT
 # 시크릿: GitHub 시크릿은 읽어 올 수 없어 사람이 이 파일에 옮긴다(README). chmod 600.
 ENVF="$HOME/.config/impactflow/jis-jobs.env"
 if [ -f "$ENVF" ]; then
-  [ "$(stat -f %Lp "$ENVF")" = 600 ] || echo "[경고] $ENVF 권한이 600 이 아님 — chmod 600"
+  [ "$(stat -f %Lp "$ENVF")" = 600 ] && [ -O "$ENVF" ] || { echo "[실패] $ENVF 는 이 계정 소유·권한 600 이어야 한다 — chmod 600"; exit 1; }
   set -a; . "$ENVF"; set +a
 fi
 
@@ -176,33 +176,49 @@ run_summary() {
 
 # notify — 보낸 지점(notify.sha) 이후 origin/main 커밋 중 outbox·보고서를 바꾼 것을 커밋 순서대로 보낸다.
 # push 트리거(notify.yml·reports-notify.yml)는 push 마다 그 커밋의 outbox 를 보냈다 — 틱 사이에 여러 push 가 있어도
-# 커밋마다 보내 같은 결과를 낸다. 발송 단위(커밋 × 채널: ntfy · 웹 푸시 · 보고서 파일)마다 완료를 notify.done 에 적어
-# 재시도 때 이미 간 것은 다시 보내지 않는다. 실패한 단위가 있으면 지점은 그 커밋에서 멈추고 다음 틱에 그 단위만 다시 보낸다.
-# 같은 커밋이 NOTIFY_MAX_TRIES 틱 연속 실패하면 남은 단위를 포기 기록하고 넘어간다(한 커밋이 뒤 알림을 영영 막지 않게).
+# 커밋마다 보내 같은 결과를 낸다. 발송 단위(커밋 × 수신처: ntfy 본인 · ntfy 지인 · 웹 푸시 · 보고서 파일)마다 완료를
+# notify.done 에 적어 재시도 때 이미 간 것은 다시 보내지 않는다. 실패한 단위가 있으면 지점은 그 커밋에서 멈추고 다음 틱에
+# 그 단위만 다시 보낸다. 같은 커밋이 NOTIFY_MAX_TRIES 틱 연속 실패하면 남은 단위를 포기 기록하고 넘어간다.
+# 전환: outbox 단위는 notify.yml, 보고서 단위는 reports-notify.yml 이 GitHub 몫인 동안 「보낸 것」으로만 기록한다(워크플로별 분리).
 NOTIFY_MAX_TRIES=10
-notify_unit() {  # notify_unit <commit> <unit> cmd… — 이미 끝난 단위는 건너뛰고, 성공하면 완료 기록
-  local c="$1" u="$2"; shift 2
+notify_unit() {  # notify_unit <commit> <unit> <워크플로> cmd… — 끝난 단위는 건너뛰고, GitHub 몫이면 기록만, 성공하면 완료 기록
+  local c="$1" u="$2" wf="$3"; shift 3
   grep -qxF "$c $u" "$STATE/notify.done" 2>/dev/null && return 0
+  if gha_wf_owned "$wf"; then echo "$c $u" >> "$STATE/notify.done"; return 0; fi
   "$@" || return 1
   echo "$c $u" >> "$STATE/notify.done"
 }
+split_outbox() {  # split_outbox <outbox> <key> <out> — 수신처 하나만 남긴 outbox(없으면 rc 1)
+  "$PY" - "$@" <<'PY'
+import json, sys
+box = json.load(open(sys.argv[1])); key = sys.argv[2]
+if not box.get(key): sys.exit(1)
+json.dump({key: box[key], "link": box.get("link")}, open(sys.argv[3], "w"), ensure_ascii=False)
+PY
+}
 run_notify() {
-  local f="$STATE/notify.sha" from head c tmp rc=0 r title tries crc
+  local f="$STATE/notify.sha" from head c tmp rc=0 r title tries crc list files reps key
   head=$(git rev-parse origin/main) || return 1
   if [ ! -s "$f" ] || [ "${1:-}" = "--init" ]; then echo "$head" > "$f"; : > "$STATE/notify.done"; : > "$STATE/notify.tries"; echo "notify 지점 초기화 $head"; return 0; fi
   from=$(cat "$f")
   git merge-base --is-ancestor "$from" "$head" 2>/dev/null || { echo "[경고] notify 지점 $from 이 origin/main 조상이 아님 — 재초기화"; echo "$head" > "$f"; return 0; }
+  list=$(git rev-list --reverse "$from..$head" -- state/outbox.json 'reports/*.md') || { echo "[실패] notify 커밋 목록 조회"; return 1; }
   tmp=$(mktemp -d "$STATE/notify.XXXXXX")
-  for c in $(git rev-list --reverse "$from..$head" -- state/outbox.json 'reports/*.md'); do
+  for c in $list; do
     crc=0
-    if git diff-tree --no-commit-id --name-only -r "$c" -- state/outbox.json | grep -q .; then
+    files=$(git diff-tree --no-commit-id --name-only -r "$c" -- state/outbox.json) || { echo "[실패] diff-tree $c"; rc=1; break; }
+    if [ -n "$files" ]; then
       git show "$c:state/outbox.json" > "$tmp/outbox.json" || { rc=1; break; }
-      notify_unit "$c" ntfy "$PY" scripts/ntfy_send.py outbox "$tmp/outbox.json" || { echo "[경고] ntfy 실패($c)"; crc=1; }
-      notify_unit "$c" webpush "$PY" scripts/push_send.py outbox "$tmp/outbox.json" || { echo "[경고] 웹 푸시 실패($c)"; crc=1; }   # 두 채널은 독립(notify.yml 과 같다)
+      for key in me friends; do
+        split_outbox "$tmp/outbox.json" "$key" "$tmp/outbox.$key.json" || continue
+        notify_unit "$c" "ntfy:$key" notify.yml "$PY" scripts/ntfy_send.py outbox "$tmp/outbox.$key.json" || { echo "[경고] ntfy $key 실패($c)"; crc=1; }
+      done
+      notify_unit "$c" webpush notify.yml "$PY" scripts/push_send.py outbox "$tmp/outbox.json" || { echo "[경고] 웹 푸시 실패($c)"; crc=1; }   # 채널은 독립(notify.yml 과 같다)
     fi
-    for r in $(git diff-tree --no-commit-id --name-only --diff-filter=AM -r "$c" -- 'reports/*.md'); do
+    reps=$(git diff-tree --no-commit-id --name-only --diff-filter=AM -r "$c" -- 'reports/*.md') || { echo "[실패] diff-tree $c"; rc=1; break; }
+    for r in $reps; do
       title=$(git show "$c:$r" | head -1 | sed 's/^# *//')
-      notify_unit "$c" "report:$r" "$PY" scripts/ntfy_send.py me "JIS 보고서" "${title} — https://github.com/HaydenRyu/korea-security-watch/blob/main/${r}" 3 \
+      notify_unit "$c" "report:$r" reports-notify.yml "$PY" scripts/ntfy_send.py me "JIS 보고서" "${title} — https://github.com/HaydenRyu/korea-security-watch/blob/main/${r}" 3 \
         || { echo "[경고] 보고서 알림 실패($c $r)"; crc=1; }
     done
     if [ $crc -ne 0 ]; then
@@ -228,16 +244,19 @@ load_gha() {
                gh api "repos/$GH_REPO/actions/runs?status=queued&per_page=100" --jq '.workflow_runs[].path'; } 2>/dev/null \
              | sed 's#.*/##; s#@.*##') || return 1
 }
+gha_wf_owned() {  # gha_wf_owned <워크플로 파일> — 켜져 있거나 회차 진행·대기 중
+  printf '%s\n' "$GHA_ACTIVE" "$GHA_BUSY" | grep -qxF "$1"
+}
 gha_owned() {
   local wf
   case "$1" in
     firms) set -- firms.yml ;;
     calendar|summary) set -- weekly.yml ;;
     watchdog) set -- watchdog.yml ;;
-    notify) set -- notify.yml reports-notify.yml ;;
+    notify) return 1 ;;   # notify 는 단위마다 워크플로별로 가른다(notify_unit)
   esac
   for wf in "$@"; do
-    printf '%s\n' "$GHA_ACTIVE" "$GHA_BUSY" | grep -qxF "$wf" && return 0
+    gha_wf_owned "$wf" && return 0
   done
   return 1
 }
@@ -259,8 +278,7 @@ sync_main || { echo "[실패] origin 동기화 실패"; exit 1; }
 rc=0
 if [ -n "$ONLY" ]; then
   case "$ONLY" in
-    notify) if [ "${1:-}" != "--init" ] && gha_owned notify; then echo "[대기] notify 는 아직 GitHub 몫 — 건너뜀"; exit 0; fi
-            run_notify "$@" || rc=1 ;;
+    notify) run_notify "$@" || rc=1 ;;
     firms|calendar|watchdog|summary)
             if gha_owned "$ONLY"; then echo "[대기] $ONLY 는 아직 GitHub 몫 — 건너뜀"; exit 0; fi
             "run_$ONLY" || rc=1 ;;
@@ -269,12 +287,7 @@ if [ -n "$ONLY" ]; then
   echo "=== $(date '+%F %T') 종료 rc=$rc"; exit $rc
 fi
 
-if gha_owned notify; then
-  git rev-parse origin/main > "$STATE/notify.sha"; : > "$STATE/notify.done"; : > "$STATE/notify.tries"
-  echo "[대기] notify 는 GitHub 몫 — 지점만 origin/main 끝으로"
-else
-  run_notify || { echo "[실패] notify"; rc=1; }
-fi
+run_notify || { echo "[실패] notify"; rc=1; }
 for job in firms calendar watchdog summary; do
   key=$(due "$job"); d=$?
   if [ $d -eq 0 ] && gha_owned "$job"; then echo "$key" > "$STATE/$job.stamp"; echo "[대기] $job ($key) 은 GitHub 몫 — 기록만"; continue; fi

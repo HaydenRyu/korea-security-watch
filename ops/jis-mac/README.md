@@ -14,10 +14,10 @@
 
 ## 전환 안전장치
 잡마다 대체한 GitHub 워크플로(firms → firms.yml · calendar·summary → weekly.yml · watchdog → watchdog.yml · notify → notify.yml·reports-notify.yml)가
-**켜져 있거나 회차가 진행·대기 중이면 그 잡은 GitHub 몫**이다 — run.sh 는 돌리지 않고 「했다」로만 기록한다(notify 는 지점을 origin/main 끝으로).
+**켜져 있거나 회차가 진행·대기 중이면 그 잡은 GitHub 몫**이다 — run.sh 는 돌리지 않고 「했다」로만 기록한다(notify 는 단위마다: outbox = notify.yml · 보고서 = reports-notify.yml).
 gh 로 판정이 안 되면 그 틱 전체를 건너뛴다(rc 3). 그래서 설치 순서와 상관없이 이중 수집·이중 알림이 없고, **워크플로를 끄는 순간 그 잡이 넘어온다**
 (끄는 순간 ≤3분 사이에 push 된 알림만 양쪽에서 한 번씩 갈 수 있다 — 누락보다 중복).
-notify 는 커밋 × 채널(ntfy · 웹 푸시 · 보고서) 단위로 완료를 적어 실패한 단위만 다시 보낸다(10틱 연속 실패하면 포기 기록 후 다음 커밋).
+notify 는 커밋 × 수신처(ntfy 본인 · ntfy 지인 · 웹 푸시 · 보고서) 단위로 완료를 적어 실패한 단위만 다시 보낸다(10틱 연속 실패하면 포기 기록 후 다음 커밋).
 push 6회 실패한 수집 커밋은 `refs/jis-unpushed/<시각>` 에 남는다. 잡 클론이 main 으로 옮겨지지 않으면 hard reset 하지 않고 멈춘다.
 
 ## 설치(2호기, 사람)

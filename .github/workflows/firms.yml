@@ -14,7 +14,9 @@ concurrency: { group: firms, cancel-in-progress: false }
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    # 2026-11-24 헤이든 지시 「GitHub 호스티드 러너 0」(공개 레포 무료분도 예외 없음) — 2호기(worker2) self-hosted.
+    # 개인 레포라 org 러너가 배정되지 않아 이 레포 단위 러너(라벨 worker2) 등록이 선행돼야 한다(사람 몫). 롤백 = runs-on 을 ubuntu-latest 로 되돌리는 커밋 1개
+    runs-on: [self-hosted, worker2]
     # 유형 추정 Overpass 상한 120s(firms.OSM_BUDGET_S) + 토지피복 상한 60s(firms.LC_BUDGET_S, 10/28 실측 칸당 ≈0.6s) 포함.
     # 8분이던 때 navwarn 3.5분 + drills 4분에 걸려 잡이 취소되고 그 회차 수집분이 커밋 전에 버려졌다(11-09 run 42561204273). 단계별 실측 최대 합 ≈670s
     timeout-minutes: 12
@@ -23,6 +25,9 @@ jobs:
         # 이벤트 시점 커밋(github.sha)이 아니라 main 끝을 받는다 — 맥 킥 dispatch 와 늦은 schedule 이 같은 커밋에서 출발해
         # 같은 state 를 따로 써 충돌했다(10-30·10-31). concurrency 로 줄 선 뒤 회차가 앞 회차 push 위에서 시작한다
         with: { ref: main }
+      # 러너 맥의 시스템 python3(버전 미정)에 기대지 않는다 — 호스티드와 같은 3.12 를 툴캐시로 고정
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
       - name: fetch
         id: fetch
         # FIRMS 통신 실패(rc 3, 3회 재시도 뒤)는 이 스텝만 실패로 표시하고 다른 갱신·커밋은 계속한다. rc 3 은 state/firms.json 을 쓰기 전에 끝난다

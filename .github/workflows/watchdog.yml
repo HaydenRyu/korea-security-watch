@@ -8,12 +8,17 @@ concurrency: { group: watchdog, cancel-in-progress: false }
 
 jobs:
   watch:
-    runs-on: ubuntu-latest
+    # 2026-11-24 헤이든 지시 「GitHub 호스티드 러너 0」(공개 레포 무료분도 예외 없음) — 2호기(worker2) self-hosted.
+    # 개인 레포라 org 러너가 배정되지 않아 이 레포 단위 러너(라벨 worker2) 등록이 선행돼야 한다(사람 몫). 롤백 = runs-on 을 ubuntu-latest 로 되돌리는 커밋 1개
+    runs-on: [self-hosted, worker2]
     timeout-minutes: 5
     env:
       NTFY_TOPIC_ME: ${{ secrets.NTFY_TOPIC_ME }}
     steps:
       - uses: actions/checkout@v4
+      # 러너 맥의 시스템 python3(버전 미정)에 기대지 않는다 — 호스티드와 같은 3.12 를 툴캐시로 고정
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
       - name: stale check
         id: stale
         run: |

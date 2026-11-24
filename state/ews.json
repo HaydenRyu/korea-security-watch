@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-24T05:10:08+00:00",
+  "computed_at": "2026-11-24T06:10:05+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 31,
   "band": "관찰",
   "d": 12,
-  "e": 0,
+  "e": 8,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-23T23:40:26+00:00",
-    "latest_updated_at": "2026-11-24T05:10:05+00:00"
+    "linkage_judged_at": "2026-11-24T05:40:48+00:00",
+    "latest_updated_at": "2026-11-24T06:10:05+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "중국이 트럼프 대통령의 대만 관련 입장을 직접 인용해 발표했고 대만 학자들은 미국 정책 변화가 아니라고 평가했다.",
+      "summary": "신화통신이 트럼프 대통령의 대만 관련 발언을 전했고 대만 외교부는 미국 정책이 불변이라고 밝혔다.",
       "sources": [
         {
           "name": "Focus Taiwan(CNA)",
           "tier": "B",
-          "url": "https://focustaiwan.tw/politics/202611230018",
-          "published_at": "2026-11-23T20:49:31+08:00"
+          "url": "https://focustaiwan.tw/politics/202611240008",
+          "published_at": "2026-11-24T13:15:10+08:00"
         }
       ],
-      "judged_at": "2026-11-23T23:40:26+00:00"
+      "judged_at": "2026-11-24T05:40:48+00:00"
     },
     {
       "key": "ukraine",
@@ -39,22 +39,16 @@
       "state": 3,
       "contribution": 0,
       "channels": [],
-      "summary": "젤렌스키 대통령은 리비아 항구에서 러시아 군함이 우크라이나 드론에 격침됐다고 밝혔고, 핀란드만에서 러시아행 화물선이 드론 공격을 받아 예인됐다.",
+      "summary": "우크라이나가 리비아 벵가지항의 러시아 코르벳함을 공격했고 러시아는 우크라이나에 매일 미사일·드론 공습을 계속하고 있다고 BBC가 전했다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo",
-          "published_at": "2026-11-23T15:41:23+00:00"
-        },
-        {
-          "name": "BBC",
-          "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
-          "published_at": "2026-11-22T17:18:26+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cm894p88jzxpo",
+          "published_at": "2026-11-23T20:48:35+00:00"
         }
       ],
-      "judged_at": "2026-11-23T23:40:26+00:00"
+      "judged_at": "2026-11-24T05:40:48+00:00"
     },
     {
       "key": "scs_ecs",
@@ -62,7 +56,7 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
       "sources": [
         {
           "name": "Philstar 국내면 피드",
@@ -71,36 +65,32 @@
           "kind": "feed"
         },
         {
-          "name": "Rappler 피드",
-          "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-23T22:11:41+08:00",
-          "kind": "feed"
-        },
-        {
           "name": "BBC 아시아 피드",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-22T14:05:20+00:00",
+          "published_at": "2026-11-23T23:16:08+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-23T23:40:26+00:00"
+      "judged_at": "2026-11-24T05:40:48+00:00"
     },
     {
       "key": "mideast",
       "observed": true,
       "state": 3,
-      "contribution": 0,
-      "channels": [],
-      "summary": "후티 반군에 포위된 예멘 타이즈 주민들이 몇 주째 외부와 단절된 채 지내고 있다고 BBC가 보도했다.",
+      "contribution": 8,
+      "channels": [
+        "c4_sea_energy"
+      ],
+      "summary": "3월 시작된 이란 관련 분쟁이 이어지는 가운데 호르무즈 해협 재개방과 전투 중단을 촉구하는 보도가 나왔다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cx7v2d8q879eo",
-          "published_at": "2026-11-20T22:14:17+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/c95y1gr27xplo",
+          "published_at": "2026-11-21T16:12:31+00:00"
         }
       ],
-      "judged_at": "2026-11-23T11:40:08+00:00"
+      "judged_at": "2026-11-24T05:40:48+00:00"
     },
     {
       "key": "us_posture",
@@ -113,7 +103,7 @@
         {
           "name": "DVIDS 피드",
           "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-23T22:59:23+00:00",
+          "published_at": "2026-11-24T05:01:01+00:00",
           "kind": "feed"
         },
         {
@@ -123,7 +113,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-23T23:40:26+00:00"
+      "judged_at": "2026-11-24T05:40:48+00:00"
     }
   ],
   "channels": [
@@ -144,8 +134,8 @@
     },
     {
       "key": "c4_sea_energy",
-      "observed": false,
-      "value": 0
+      "observed": true,
+      "value": 8
     },
     {
       "key": "c5_diplomacy",
@@ -156,6 +146,6 @@
   "last_good": {
     "ews": 31,
     "band": "관찰",
-    "computed_at": "2026-11-24T05:10:08+00:00"
+    "computed_at": "2026-11-24T06:10:05+00:00"
   }
 }

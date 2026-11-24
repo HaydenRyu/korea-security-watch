@@ -179,6 +179,8 @@ run_summary() {
 # 커밋마다 보내 같은 결과를 낸다. 발송 단위(커밋 × 수신처: ntfy 본인 · ntfy 지인 · 웹 푸시 · 보고서 파일)마다 완료를
 # notify.done 에 적어 재시도 때 이미 간 것은 다시 보내지 않는다. 실패한 단위가 있으면 지점은 그 커밋에서 멈추고 다음 틱에
 # 그 단위만 다시 보낸다. 같은 커밋이 NOTIFY_MAX_TRIES 틱 연속 실패하면 남은 단위를 포기 기록하고 넘어간다.
+# main 의 first-parent 줄을 따라 각 커밋을 첫 부모와 비교한다(merge 커밋도 최종 결과를 보낸다 — push 트리거와 같다).
+# 지연: 틱(3분) + 같은 틱의 수집 잡 실행 시간(firms 최대 수 분). 3분은 하한이 아니라 틱 간격이다.
 # 전환: outbox 단위는 notify.yml, 보고서 단위는 reports-notify.yml 이 GitHub 몫인 동안 「보낸 것」으로만 기록한다(워크플로별 분리).
 NOTIFY_MAX_TRIES=10
 notify_unit() {  # notify_unit <commit> <unit> <워크플로> cmd… — 끝난 단위는 건너뛰고, GitHub 몫이면 기록만, 성공하면 완료 기록
@@ -202,11 +204,11 @@ run_notify() {
   if [ ! -s "$f" ] || [ "${1:-}" = "--init" ]; then echo "$head" > "$f"; : > "$STATE/notify.done"; : > "$STATE/notify.tries"; echo "notify 지점 초기화 $head"; return 0; fi
   from=$(cat "$f")
   git merge-base --is-ancestor "$from" "$head" 2>/dev/null || { echo "[경고] notify 지점 $from 이 origin/main 조상이 아님 — 재초기화"; echo "$head" > "$f"; return 0; }
-  list=$(git rev-list --reverse "$from..$head" -- state/outbox.json 'reports/*.md') || { echo "[실패] notify 커밋 목록 조회"; return 1; }
+  list=$(git rev-list --reverse --first-parent "$from..$head" -- state/outbox.json 'reports/*.md') || { echo "[실패] notify 커밋 목록 조회"; return 1; }
   tmp=$(mktemp -d "$STATE/notify.XXXXXX")
   for c in $list; do
     crc=0
-    files=$(git diff-tree --no-commit-id --name-only -r "$c" -- state/outbox.json) || { echo "[실패] diff-tree $c"; rc=1; break; }
+    files=$(git diff-tree --no-commit-id --name-only -r -m --first-parent "$c" -- state/outbox.json) || { echo "[실패] diff-tree $c"; rc=1; break; }
     if [ -n "$files" ]; then
       git show "$c:state/outbox.json" > "$tmp/outbox.json" || { rc=1; break; }
       for key in me friends; do
@@ -215,7 +217,7 @@ run_notify() {
       done
       notify_unit "$c" webpush notify.yml "$PY" scripts/push_send.py outbox "$tmp/outbox.json" || { echo "[경고] 웹 푸시 실패($c)"; crc=1; }   # 채널은 독립(notify.yml 과 같다)
     fi
-    reps=$(git diff-tree --no-commit-id --name-only --diff-filter=AM -r "$c" -- 'reports/*.md') || { echo "[실패] diff-tree $c"; rc=1; break; }
+    reps=$(git diff-tree --no-commit-id --name-only --diff-filter=AM -r -m --first-parent "$c" -- 'reports/*.md') || { echo "[실패] diff-tree $c"; rc=1; break; }
     for r in $reps; do
       title=$(git show "$c:$r" | head -1 | sed 's/^# *//')
       notify_unit "$c" "report:$r" reports-notify.yml "$PY" scripts/ntfy_send.py me "JIS 보고서" "${title} — https://github.com/HaydenRyu/korea-security-watch/blob/main/${r}" 3 \

@@ -10,7 +10,7 @@
 | weekly.yml calendar | calendar | UTC 03·09·15·21시 :10 |
 | weekly.yml summary | summary | UTC 일 11:00 |
 | watchdog.yml | watchdog | UTC 00·06·12·18시 :23 |
-| notify.yml · reports-notify.yml (push 트리거) | notify | 3분 틱마다 origin/main 의 새 커밋을 커밋 단위로 |
+| notify.yml · reports-notify.yml (push 트리거) | notify | 3분 틱마다 origin/main 의 새 커밋을 커밋 단위로(first-parent · 지연 = 틱 + 같은 틱 수집 잡 시간) |
 
 ## 전환 안전장치
 잡마다 대체한 GitHub 워크플로(firms → firms.yml · calendar·summary → weekly.yml · watchdog → watchdog.yml · notify → notify.yml·reports-notify.yml)가

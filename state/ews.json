@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-24T00:10:55+00:00",
+  "computed_at": "2026-11-24T01:10:55+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 55,
-  "band": "경계 징후",
+  "ews": 32,
+  "band": "관찰",
   "d": 15,
   "e": 0,
   "alpha": 1.0,
-  "grade": 2,
-  "grade_label": "경계",
+  "grade": 1,
+  "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
     "linkage_judged_at": "2026-11-23T23:40:26+00:00",
-    "latest_updated_at": "2026-11-23T23:11:46+00:00"
+    "latest_updated_at": "2026-11-24T01:10:55+00:00"
   },
   "theaters": [
     {
@@ -154,8 +154,8 @@
     }
   ],
   "last_good": {
-    "ews": 55,
-    "band": "경계 징후",
-    "computed_at": "2026-11-24T00:10:55+00:00"
+    "ews": 32,
+    "band": "관찰",
+    "computed_at": "2026-11-24T01:10:55+00:00"
   }
 }

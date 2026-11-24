@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-24T00:10:54+00:00",
+  "updated_at": "2026-11-24T01:10:55+00:00",
   "tilt": "hold",
   "scenarios": [
     {
@@ -65,7 +65,7 @@
           "id": "grade",
           "label": "상황판 주의 이상",
           "state": "on",
-          "note": "경계"
+          "note": "주의"
         },
         {
           "id": "ladder_low",

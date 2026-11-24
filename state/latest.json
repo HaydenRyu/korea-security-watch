@@ -1,58 +1,61 @@
 {
   "coverage": {
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
+    ],
+    "nuclear": [
+      "영변 농축 증축",
+      "North Korea Yongbyon enrichment"
+    ],
+    "logistics": [
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
+    ],
     "border_clash": [
+      "DMZ 목함지뢰 귀순 NLL 북한",
       "지뢰 발견",
-      "울릉군 경계경보 북한 비행체",
-      "North Korea DMZ NLL",
-      "합참 울릉도 비행체 영공 침범"
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "해킹 공격"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "Justice Department forfeiture North Korea Binance hack Lazarus"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 11월",
-      "Kim Jong Un China Russia visit November 2026",
-      "서해 구조물 주한미군 감축"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 FBI"
-    ],
-    "nuclear": [
-      "영변 우라늄 농축"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약"
+      "김정은 방중",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea nationwide mobilization"
     ],
     "gov_warning": [
-      "울릉군 경계경보 행정안전부",
-      "진돗개 데프콘 발령"
+      "북한 미사일 발사 합참 11월 24일",
+      "울릉 경계경보 합참"
     ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
-    ]
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 11월",
+      "justice.gov civil forfeiture USDC Binance North Korea TraderTraitor",
+      "North Korea attributed FBI"
+    ],
+    "calm": []
   },
   "opened": [
-    "https://www.imaeil.com/page/view/2026112407583439675",
-    "https://www.gokorea.kr/news/articleView.html?idxno=887012",
-    "https://view.asiae.co.kr/article/2026112317202549460",
-    "https://www.koreajoongangdaily.com/korea/north-koreas-yongbyon-expansion-raises-uranium-output-concerns/12985165",
-    "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
-    "https://biz.heraldcorp.com/article/10921557",
-    "https://www.nknews.org/2026/11/russia-proposes-joint-survey-of-tumen-river-with-north-korea-and-china/"
+    "https://www.segye.com/newsView/20261124503104",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008860322",
+    "https://www.yna.co.kr/view/AKR20261124020900504",
+    "https://www.justice.gov/opa/pr/united-states-files-action-recover-more-1-billion-cryptocurrency-assets-stolen-north-korean",
+    "https://www.koreatimes.co.kr/world/20261114/us-obtains-court-approval-to-seize-restrain-over-12-bil-stolen-in-nk-binance-theft",
+    "https://www.yna.co.kr/view/AKR20261122050000504",
+    "https://www.koreajoongangdaily.com/korea/north-koreas-yongbyon-expansion-raises-uranium-output-concerns/12985165"
   ],
-  "overall_summary": "11/24 07:52 울릉군에 실제 경계경보(3~6분)가 발령됐으나 행안부 문자는 러시아 항공기, 연합 등은 북한 항공기 추정으로 엇갈려 기종·국적 미확정이며 합참 공식 입장은 미확인이다. 영변 증축·NLL 북 해양경찰 함정은 직전과 같이 유지된다.",
+  "overall_summary": "11/24 울릉 경계경보는 합참이 러시아 군용기 5대 미만의 카디즈 진입(영공 침범 없음)으로 확인해 북한 항공기 추정 속보는 정정됐고 정례로 내렸다. 미 법무부가 북한 바이낸스 해킹 자금 11억 달러 몰수 소송을 제기했으나 수사 결과 발표라 정례이며, 그 밖의 항목은 직전과 같다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -84,43 +87,66 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "single",
-      "routine": false,
-      "conflict": true,
-      "conflict_what": "행안부 해제 문자는 「러시아 항공기 위험범위 이탈」이라 했으나 연합뉴스·공감신문은 북한 항공기 추정 비행체로 보도했다.",
-      "region": "경북 울릉군",
-      "lat": 37.48,
-      "lon": 130.9,
-      "summary": "11/24 07:52 울릉군에 실제 경계경보·대피 위급문자가 발령돼 연합뉴스가 북한 항공기 추정 비행체의 영공 침범으로 속보했고, 경보는 약 3~6분 뒤 해제됐다.",
-      "meaning": "북한기라면 이례적 영공 침범이나 국적·기종이 확정되지 않았고 합참 공식 확인이 없다.",
-      "sources": [
-        {
-          "name": "매일신문",
-          "tier": "B",
-          "url": "https://www.imaeil.com/page/view/2026112407583439675"
-        },
-        {
-          "name": "공감신문",
-          "tier": "B",
-          "url": "https://www.gokorea.kr/news/articleView.html?idxno=887012"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "07:52 울릉군 경계경보 발령, 07:55~07:58 해제",
-        "행안부 해제 문자 문구는 러시아 항공기 위험범위 이탈(매일신문 인용)"
-      ],
-      "speculation": [
-        "북한기 여부는 연합뉴스 1보 표현 「추정」에 근거하며 미확정"
-      ]
+      "status": "none",
+      "summary": "오보 정정 — 합참이 울릉 경보 원인을 러시아 군용기 카디즈 진입(영공 침범 없음)으로 발표해 북한 항공기 추정 속보가 틀렸고 border_clash 근거가 사라졌다."
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "한전 개인정보 100만 명 유출 보도가 있으나 귀속·원문 미확인으로 이번 회차 징후에서 제외"
+      "status": "corroborated",
+      "routine": true,
+      "attribution": "nk",
+      "attributed_by": {
+        "name": "미 법무부(FBI)",
+        "tier": "A",
+        "what": "바이낸스 해킹 자금 11억 달러 민사 몰수 소송 보도자료, FBI 귀속 경고"
+      },
+      "region": "미국·가상자산",
+      "summary": "미 법무부가 11/23 북한 소행 바이낸스 해킹(10/29, 약 63억 달러) 자금 11억 달러 이상의 몰수 소송을 제기했다.",
+      "meaning": "북한 해킹 조직의 대규모 가상자산 탈취에 대한 후속 수사 발표로 군사 징후는 아니다.",
+      "sources": [
+        {
+          "name": "미 법무부",
+          "tier": "A",
+          "url": "https://www.justice.gov/opa/pr/united-states-files-action-recover-more-1-billion-cryptocurrency-assets-stolen-north-korean"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261124020900504"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "몰수 대상은 서클 발행 USDC 11억 달러 이상",
+        "FBI가 TraderTraitor 소행으로 지목(11/12)"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "조용원 방러·푸틴 면담(11/16)은 24시간 경과 배경이며 김정은 방중·방러 신규 확정은 없다."
+      "status": "corroborated",
+      "routine": true,
+      "region": "동해 울릉도 인근",
+      "lat": 37.48,
+      "lon": 130.9,
+      "summary": "러시아 군용기 5대 미만이 11/24 오전 카디즈에 진입했다가 이탈했고 영공 침범은 없었다(11/17에도 유사 진입).",
+      "meaning": "반복되는 러시아 군용기의 카디즈 진입으로 영공 침범이 없어 평소 범위다.",
+      "sources": [
+        {
+          "name": "SBS(합참 발표 인용)",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008860322"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261124503104"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "합참: F-15K 등 투입, 영공 침범 없음",
+        "울릉군 경계경보 07:52~07:55"
+      ],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -129,46 +155,44 @@
       "status": "none"
     },
     "gov_warning": {
-      "status": "single",
-      "routine": false,
-      "region": "경북 울릉군",
-      "lat": 37.48,
-      "lon": 130.9,
-      "summary": "행안부가 11/24 07:52 울릉군에 지하·건물 내 대피를 안내하는 위급 재난문자를 발송했고 약 3~6분 뒤 해제했다.",
-      "meaning": "실제 경보 발령이나 곧 해제됐고 원인 항공기 국적이 엇갈린다.",
-      "sources": [
-        {
-          "name": "매일신문",
-          "tier": "B",
-          "url": "https://www.imaeil.com/page/view/2026112407583439675"
-        },
-        {
-          "name": "공감신문",
-          "tier": "B",
-          "url": "https://www.gokorea.kr/news/articleView.html?idxno=887012"
-        }
-      ],
-      "confidence": "낮음",
-      "facts": [
-        "경보 해제 문자 07:57~08:00 발송"
-      ],
-      "speculation": []
+      "status": "none",
+      "ended": true,
+      "summary": "경계경보 07:52~07:55 해제, 원인은 러시아 군용기 카디즈 진입이고 영공 침범이 없어 종료됐다."
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "corroborated",
+      "routine": true,
+      "attribution": "nk",
+      "category": "가상자산",
+      "attributed_by": {
+        "name": "미 법무부",
+        "tier": "A",
+        "what": "북한 바이낸스 해킹 자금 민사 몰수 소송 보도자료"
+      },
+      "region": "미국",
+      "summary": "미 법무부가 북한 행위자가 바이낸스에서 탈취한 11억 달러 이상 가상자산 몰수 절차를 11/23 개시했다.",
+      "meaning": "공식 귀속 하의 사법 절차로 배경 성격이다.",
+      "sources": [
+        {
+          "name": "미 법무부",
+          "tier": "A",
+          "url": "https://www.justice.gov/opa/pr/united-states-files-action-recover-more-1-billion-cryptocurrency-assets-stolen-north-korean"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261124020900504"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "법무부 국가안보국 대행이 북한 정권 대응 사례로 언급"
+      ],
+      "speculation": []
     }
   },
-  "checked_at": "2026-11-23T23:11:46+00:00",
-  "grade": 2,
-  "grade_label": "경계",
-  "active": [
-    "border_clash",
-    "gov_warning"
-  ],
-  "held": {
-    "raw_grade": 1,
-    "raw_label": "주의",
-    "at": "2026-11-24T00:10:54+00:00",
-    "summary": "11/24 07:52 울릉군 경계경보의 원인은 북한 항공기가 아니라 러시아 군용기로 합참이 밝혔고 영공 침범도 없었다(직전 판정 정정). 영변 증축 보도는 직전과 같이 유지되며 새 도발·전시 징후는 없다."
-  }
+  "checked_at": "2026-11-24T01:10:55+00:00",
+  "grade": 1,
+  "grade_label": "주의",
+  "active": []
 }

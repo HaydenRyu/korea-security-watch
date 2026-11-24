@@ -1,17 +1,17 @@
 {
- "at": "2026-11-24T21:06:54+00:00",
- "south": 44,
- "area": 47,
- "baseline": 45,
- "ratio": 0.98,
- "samples": 7,
+ "at": "2026-11-24T22:16:59+00:00",
+ "south": 52,
+ "area": 54,
+ "baseline": 55.5,
+ "ratio": 0.94,
+ "samples": 6,
  "mil": [
   {
-   "type": "GLEX",
-   "name": "정찰용 비즈니스젯 가능",
-   "call": "",
-   "lat": 37.32,
-   "lon": 127.46
+   "type": "C130",
+   "name": "C-130 수송기",
+   "call": "PS101",
+   "lat": 35.19,
+   "lon": 128.94
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

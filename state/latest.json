@@ -6,54 +6,46 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
+      "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순",
-      "North Korea DMZ NLL"
+      "지뢰 발견 DMZ 귀순",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hack Binance forfeiture"
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "러시아 군용기 카디즈"
+      "서해 구조물 주한미군 감축 11월"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 전시태세 동원"
     ],
     "gov_warning": [
-      "진돗개 발령",
-      "한미일 긴급 경고"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "간첩 혐의 국가보안법 구속 북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261124503104",
-    "https://www.segye.com/newsView/20261124505426",
-    "https://www.nknews.org/"
+    "https://www.nknews.org/",
+    "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/"
   ],
-  "overall_summary": "11/24 오전 러시아 군용기 카디즈 진입·울릉 경계경보 오발령성 혼선이 있었으나 합참은 영공 침범이 없다고 밝혔다. 북한발 새 군사 징후는 확인되지 않았다.",
+  "overall_summary": "11/24 오전 러시아 군용기 카디즈 진입으로 울릉군에 경계경보가 잠시 발령됐으나 합참은 영공 침범이 없었다고 밝혔다. 북한발 새 군사 징후는 확인되지 않았고, 미 법무부의 북한 해커 바이낸스 자금 몰수 소송이 배경으로 보도됐다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,18 +63,19 @@
       "status": "single",
       "routine": true,
       "attribution": "nk",
+      "region": "미국",
       "summary": "미 법무부가 북한 해커 탈취 바이낸스 자금 약 11억 달러 몰수 소송을 제기했다고 NK News가 11/24 보도했다.",
-      "meaning": "가상자산 탈취 수사 발표로 배경 성격이다.",
+      "meaning": "북한의 가상자산 탈취 자금 조달 활동에 대한 사법 조치다.",
       "sources": [
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/"
+          "url": "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "NK News 11/24 헤드라인"
+        "DOJ가 워싱턴 D.C. 연방지방법원에 민사 몰수 소송 제기"
       ],
       "speculation": []
     },
@@ -93,7 +86,7 @@
       "lat": 37.48,
       "lon": 130.9,
       "summary": "러시아 군용기 여러 대가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 내려졌으나 합참은 영공 침범이 없었다고 밝혔다.",
-      "meaning": "러시아 군용기의 정례적 카디즈 진입 범위로 영공 침범은 없었다.",
+      "meaning": "러시아 군용기의 동해 카디즈 활동이며 북한 항공기가 아니었고 침범은 없었다.",
       "sources": [
         {
           "name": "세계일보",
@@ -101,9 +94,9 @@
           "url": "https://www.segye.com/newsView/20261124503104"
         }
       ],
-      "confidence": "중간",
+      "confidence": "높음",
       "facts": [
-        "합참: 영공 침범 없음"
+        "합참: 북한 무인기가 아닌 러시아 군용기, 영공침범 없음"
       ],
       "speculation": []
     },
@@ -120,7 +113,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-24T15:11:33+00:00",
+  "checked_at": "2026-11-24T16:11:22+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

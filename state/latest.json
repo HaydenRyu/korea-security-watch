@@ -2,14 +2,14 @@
   "coverage": {
     "troop_movement": [
       "김정은 방중 방러",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "Kim Jong Un China Russia visit"
     ],
     "nuclear": [
       "영변 농축 증축",
       "North Korea Yongbyon enrichment"
     ],
     "logistics": [
-      "북한 합참 발표 11월 24일",
+      "북한 합참 발표 오늘",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
@@ -17,12 +17,12 @@
       "North Korea DMZ NLL defector"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 11월",
+      "북한 GPS 교란",
       "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
       "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 11월"
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -34,19 +34,22 @@
       "울릉 경계경보 러시아 군용기"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261124503104",
+    "https://www.segye.com/newsView/20261124505426",
     "https://www.koreatimes.co.kr/southkorea/defense",
-    "https://www.justice.gov/opa/pr/united-states-files-action-recover-more-1-billion-cryptocurrency-assets-stolen-north-korean",
-    "https://www.koreajoongangdaily.com/korea/north-koreas-yongbyon-expansion-raises-uranium-output-concerns/12985165"
+    "https://www.koreajoongangdaily.com/korea/north-koreas-yongbyon-expansion-raises-uranium-output-concerns/12985165",
+    "https://www.justice.gov/opa/pr/united-states-files-action-recover-more-1-billion-cryptocurrency-assets-stolen-north-korean"
   ],
-  "overall_summary": "직전 회차와 같은 정례 사안(러시아 군용기 카디즈 진입·울릉 경계경보 해제, 미 법무부 바이낸스 해킹 자금 몰수, 영변 증축 배경)만 있고 새 도발·병력 징후는 없다. 접경 열점 후보 0건, 출처 추가 요청 없음.",
+  "overall_summary": "직전 회차와 같은 정례 사안(러시아 군용기 카디즈 진입·울릉 경계경보 해제, 미 법무부 바이낸스 해킹 자금 몰수, 영변 증축 배경)뿐이며 새 도발·병력 징후는 없다. 접경 열점 후보 확인 대상 없음, 출처 추가 요청 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,19 +62,19 @@
       "lon": 125.75,
       "summary": "영변 농축 건물 증축동 외관 완공이 11/23 보도됐다(직전과 동일, 배경 성격).",
       "meaning": "농축 능력 확대 가능성이나 이미 알려진 배경이다.",
-      "sources": [
-        {
-          "name": "코리아중앙데일리",
-          "tier": "B",
-          "url": "https://www.koreajoongangdaily.com/korea/north-koreas-yongbyon-expansion-raises-uranium-output-concerns/12985165"
-        }
-      ],
       "confidence": "중간",
       "facts": [
         "11/6 위성사진에서 증축 확인, IAEA 사무총장 10월 말 외관 완공 언급"
       ],
       "speculation": [
         "원심분리기 추가 설치 가능성"
+      ],
+      "sources": [
+        {
+          "name": "코리아중앙데일리",
+          "tier": "B",
+          "url": "https://www.koreajoongangdaily.com/korea/north-koreas-yongbyon-expansion-raises-uranium-output-concerns/12985165"
+        }
       ]
     },
     "logistics": {
@@ -79,7 +82,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "북한 표류 어선 송환(통일부)은 인도적 절차이며 월선·교전 보도는 없다."
+      "summary": "북한 표류 어선 송환은 인도적 절차이며 월선·교전·지뢰 신규 보도는 없다."
     },
     "electronic_cyber": {
       "status": "single",
@@ -93,18 +96,18 @@
       "region": "미국",
       "summary": "미 법무부가 11/23 북한 소행 바이낸스 해킹 자금 11억 달러 이상의 몰수 소송을 제기했다.",
       "meaning": "북한 가상자산 탈취 귀속이나 수사 결과 발표다.",
+      "confidence": "높음",
+      "facts": [
+        "10/29경 탈취, USDC 11억 달러 이상 몰수 소송"
+      ],
+      "speculation": [],
       "sources": [
         {
           "name": "미 법무부",
           "tier": "A",
           "url": "https://www.justice.gov/opa/pr/united-states-files-action-recover-more-1-billion-cryptocurrency-assets-stolen-north-korean"
         }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "10/29경 탈취, USDC 11억 달러 이상 몰수 소송"
-      ],
-      "speculation": []
+      ]
     },
     "foreign_forces": {
       "status": "corroborated",
@@ -114,6 +117,11 @@
       "lon": 130.9,
       "summary": "러시아 군용기 여러 대가 11/24 오전 카디즈에 진입해 울릉에 경계경보가 내려졌으나 영공 침범은 없었다.",
       "meaning": "러시아 군용기 정례성 접근이며 합참이 북한 항공기 오인 경보를 정정했다.",
+      "confidence": "높음",
+      "facts": [
+        "합참: 영공 침범 없음, 공군 전투기 긴급 발진"
+      ],
+      "speculation": [],
       "sources": [
         {
           "name": "세계일보",
@@ -125,12 +133,7 @@
           "tier": "B",
           "url": "https://www.koreatimes.co.kr/southkorea/defense"
         }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "합참: 영공 침범 없음, 공군 전투기 긴급 발진"
-      ],
-      "speculation": []
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -154,21 +157,21 @@
       "region": "미국",
       "summary": "미 법무부가 북한 행위자가 바이낸스에서 탈취한 11억 달러 이상 가상자산 몰수 절차를 11/23 개시했다.",
       "meaning": "수사 결과 발표 성격의 귀속 사건이다.",
+      "confidence": "높음",
+      "facts": [
+        "FBI·비밀경호국·IRS-CI 수사"
+      ],
+      "speculation": [],
       "sources": [
         {
           "name": "미 법무부",
           "tier": "A",
           "url": "https://www.justice.gov/opa/pr/united-states-files-action-recover-more-1-billion-cryptocurrency-assets-stolen-north-korean"
         }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "FBI·비밀경호국·IRS-CI 수사"
-      ],
-      "speculation": []
+      ]
     }
   },
-  "checked_at": "2026-11-24T06:10:05+00:00",
+  "checked_at": "2026-11-24T07:10:57+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

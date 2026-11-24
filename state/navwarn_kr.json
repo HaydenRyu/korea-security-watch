@@ -4,9 +4,9 @@
   "https://www.data.go.kr/data/15057792/openapi.do",
   "https://www.data.go.kr/data/15058193/openapi.do"
  ],
- "fetched_at": "2026-11-24T14:37:05.817219+00:00",
- "status": "ok",
- "status_detail": "",
+ "fetched_at": "2026-11-24T15:52:45.655609+00:00",
+ "status": "error",
+ "status_detail": "getNavigationalWarningInfo(date=20261120,pageNo=1): TimeoutError: The read operation timed out",
  "last_ok_at": "2026-11-24T14:37:05.817219+00:00",
  "warnings": [
   {

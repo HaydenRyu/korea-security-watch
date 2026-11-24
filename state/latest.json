@@ -1,68 +1,56 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 합참 발표 11월 24일",
+      "North Korea Reuters November 24 2026"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리",
-      "North Korea nuclear Yongbyon"
+      "북한 합참 발표 11월 24일",
+      "North Korea Reuters November 24 2026"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment"
+      "북한 합참 발표 11월 24일",
+      "North Korea Reuters November 24 2026"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 목함지뢰 해안",
-      "북한 합참 발표 오늘",
-      "North Korea DMZ border"
+      "지뢰 발견 DMZ 귀순 NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hack Binance DOJ"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격 서해 구조물 주한미군 감축"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 방러 Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 합참 발표 11월 24일"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 합참 발표 11월 24일"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "국가보안법 구속"
+      "북한 합참 발표 11월 24일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI North Korea attributed"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
+      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261124503104",
     "https://www.yna.co.kr/view/AKR20261124020900504",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861597",
     "https://www.yna.co.kr/view/AKR20261124093000504",
-    "https://www.kmib.co.kr/",
-    "https://www.koreaherald.com/"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "러시아 군용기 카디즈 진입(11/24, 영공 침범 없음)과 미 법무부의 북한 바이낸스 해킹 자금 몰수 절차가 확인됐으나 둘 다 직전 회차와 같은 배경·정례 성격이다. 접경 군사 징후나 신규 핵·병력 동향 보도는 없다.",
+  "overall_summary": "러시아 군용기 카디즈 진입(영공 침범 없음)과 미 법무부의 북한 바이낸스 해킹 자금 몰수 절차는 직전 회차와 같은 정례 성격이다. 접경 군사 징후나 신규 핵·병력 동향 보도는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "24시간 경과 — IAEA 영변 증축동 언급은 11/18 보도로 배경."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
@@ -90,7 +78,7 @@
       "speculation": []
     },
     "foreign_forces": {
-      "status": "single",
+      "status": "corroborated",
       "routine": true,
       "region": "울릉도",
       "lat": 37.48,
@@ -102,6 +90,11 @@
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261124503104"
+        },
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861597"
         }
       ],
       "confidence": "중간",
@@ -123,7 +116,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-24T10:10:17+00:00",
+  "checked_at": "2026-11-24T11:10:26+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

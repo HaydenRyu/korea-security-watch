@@ -1,7 +1,7 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
+      "북한 병력 이동 전방 증강",
       "North Korea troop movement"
     ],
     "nuclear": [
@@ -9,33 +9,34 @@
       "North Korea nuclear test site"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
+      "북한 군수 수송 탄약",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
       "지뢰 발견",
       "DMZ 귀순",
-      "North Korea DMZ"
+      "North Korea DMZ NLL"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출",
-      "North Korea hackers Binance forfeiture"
+      "North Korea hack Binance forfeiture"
     ],
     "foreign_forces": [
       "김정은 방중",
+      "Kim Jong Un China Russia visit",
       "서해 구조물",
-      "Kim Jong Un China Russia visit"
+      "러시아 군용기 카디즈"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "북한 전시태세 등화관제"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning evacuation"
+      "진돗개 발령",
+      "한미일 긴급 경고"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -50,10 +51,9 @@
   "opened": [
     "https://www.segye.com/newsView/20261124503104",
     "https://www.segye.com/newsView/20261124505426",
-    "https://kookbang.dema.mil.kr/newsWeb/20261125/7/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/"
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "직전 회차와 같은 두 건(미 법무부 바이낸스 몰수 소송, 러시아 군용기 울릉 카디즈 근접)만 정례 징후이며 새 도발·병력·핵 징후는 확인되지 않았다. 접경 열점 후보는 새로 없고, 북한 어선 송환 등은 정례 절차로 배경 처리했다.",
+  "overall_summary": "11/24 오전 러시아 군용기 카디즈 진입·울릉 경계경보 오발령성 혼선이 있었으나 합참은 영공 침범이 없다고 밝혔다. 북한발 새 군사 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,19 +70,19 @@
     "electronic_cyber": {
       "status": "single",
       "routine": true,
-      "region": "미국",
-      "summary": "미 법무부가 북한 해커가 탈취한 바이낸스 암호화폐 약 11억 달러의 민사 몰수 소송을 11/23 제기했다고 NK News가 11/24 보도했다.",
-      "meaning": "북한 가상자산 탈취 수사 발표로 정례 성격이다.",
+      "attribution": "nk",
+      "summary": "미 법무부가 북한 해커 탈취 바이낸스 자금 약 11억 달러 몰수 소송을 제기했다고 NK News가 11/24 보도했다.",
+      "meaning": "가상자산 탈취 수사 발표로 배경 성격이다.",
       "sources": [
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/"
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "미 법무부 워싱턴 DC 연방지법에 민사 몰수 소송 제기"
+        "NK News 11/24 헤드라인"
       ],
       "speculation": []
     },
@@ -93,7 +93,7 @@
       "lat": 37.48,
       "lon": 130.9,
       "summary": "러시아 군용기 여러 대가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 내려졌으나 합참은 영공 침범이 없었다고 밝혔다.",
-      "meaning": "러시아 군용기의 반복적 카디즈 진입으로 영공 침범이 없어 정례 범주다.",
+      "meaning": "러시아 군용기의 정례적 카디즈 진입 범위로 영공 침범은 없었다.",
       "sources": [
         {
           "name": "세계일보",
@@ -103,7 +103,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "행안부 07:52 경계경보, 경북도 07:57 해제, 합참 영공침범 없음"
+        "합참: 영공 침범 없음"
       ],
       "speculation": []
     },
@@ -120,7 +120,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-24T14:13:16+00:00",
+  "checked_at": "2026-11-24T15:11:33+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

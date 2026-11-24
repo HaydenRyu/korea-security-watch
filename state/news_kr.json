@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-24T17:06:25+00:00",
+ "fetched_at": "2026-11-24T18:18:12+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-24T13:23:21+00:00",
@@ -8,11 +8,11 @@
   "feeds": 15,
   "feeds_failed": 1,
   "fetched": 1067,
-  "hits": 33,
-  "clusters": 27,
+  "hits": 32,
+  "clusters": 26,
   "by_group": {
    "summit": 5,
-   "spy": 7,
+   "spy": 6,
    "drone_balloon": 2,
    "border": 9,
    "mine": 2,
@@ -34,7 +34,7 @@
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 10
+   "hits": 9
   },
   "동아일보": {
    "feeds": 2,
@@ -69,7 +69,7 @@
    "latest": "2026-11-24T16:47:51+00:00"
   },
   "spy": {
-   "clusters": 7,
+   "clusters": 6,
    "max_independent": 2,
    "latest": "2026-11-24T16:42:48+00:00"
   },
@@ -177,7 +177,7 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 7
+   "hits": 6
   },
   {
    "outlet": "동아일보",

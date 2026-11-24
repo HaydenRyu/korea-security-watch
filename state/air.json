@@ -1,18 +1,10 @@
 {
- "at": "2026-11-24T22:16:59+00:00",
- "south": 52,
- "area": 54,
- "baseline": 55.5,
- "ratio": 0.94,
- "samples": 6,
- "mil": [
-  {
-   "type": "C130",
-   "name": "C-130 수송기",
-   "call": "PS101",
-   "lat": 35.19,
-   "lon": 128.94
-  }
- ],
+ "at": "2026-11-24T23:29:48+00:00",
+ "south": 64,
+ "area": 74,
+ "baseline": 62,
+ "ratio": 1.03,
+ "samples": 7,
+ "mil": [],
  "source": "adsb.lol (ADS-B 공개 수신망)"
 }

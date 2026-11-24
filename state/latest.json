@@ -1,55 +1,45 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 탄약 군수 수송",
-      "North Korea Reuters November 24 2026"
-    ],
-    "nuclear": [
-      "북한 영변 풍계리 핵 동향 38 North",
-      "North Korea nuclear Yongbyon satellite imagery November 2026"
-    ],
-    "logistics": [
-      "북한 병력 이동 전방 탄약 군수 수송",
-      "North Korea Reuters November 24 2026"
-    ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순",
+      "지뢰 발견 DMZ 귀순 북한"
+    ],
+    "foreign_forces": [
+      "North Korea Kim Jong Un China Russia visit"
+    ],
+    "gov_warning": [
       "북한 합참 발표 11월 24일"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 해킹 개인정보 유출 사이버 공격",
-      "Justice Department forfeiture North Korea Binance hack $1.1 billion"
-    ],
-    "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Kim Jong Un China Russia visit troops"
-    ],
-    "parade_massing": [
-      "북한 열병식 준비 기념일 전후 병력 집결 North Korea parade preparations"
-    ],
-    "nk_internal": [
-      "북한 전시 동원 노농적위군 등화관제 진돗개 데프콘 11월"
-    ],
-    "gov_warning": [
-      "북한 전시 동원 노농적위군 등화관제 진돗개 데프콘 11월",
-      "북한 합참 발표 11월 24일"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI",
-      "Justice Department forfeiture North Korea Binance hack $1.1 billion"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "북한 핵 영변 풍계리 동향"
+    ],
+    "logistics": [
+      "북한 탄약 군수 수송 러시아"
+    ],
+    "parade_massing": [
+      "북한 열병식 준비 병력 집결 위성사진"
+    ],
+    "nk_internal": [
+      "북한 내부 준전시 등화관제 민방위 훈련"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261124503104",
-    "https://www.aljazeera.com/news/2026/11/19/north-korea-expanding-uranium-enrichment-facility-un-nuclear-watchdog-says",
     "https://www.koreajoongangdaily.com/business/us-moves-to-seize-12-billion-linked-to-north-korean-binance-hack/12972799",
-    "https://www.yna.co.kr/view/AKR20261124020900504",
-    "https://www.segye.com/newsView/20261124505426"
+    "https://www.aljazeera.com/news/2026/11/19/north-korea-expanding-uranium-enrichment-facility-un-nuclear-watchdog-says"
   ],
-  "overall_summary": "러시아 군용기의 11/24 카디즈 진입·울릉 경계경보와 영변 농축시설 확장 등 기존 배경 외에 새 비정례 징후는 없다. 접경 열점·표류 어선 송환 등 특이 사건은 확인되지 않았다.",
+  "overall_summary": "신규 징후는 없고 직전 회차와 같은 배경성 항목만 이어진다. 러 군용기 울릉도 접근은 합참이 영공 침범 없다고 확인했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -85,7 +75,7 @@
       "status": "single",
       "routine": true,
       "attribution": "nk",
-      "summary": "미 법무부가 북한 소행 바이낸스 해킹 자금 약 11억~12억 달러 몰수 절차를 진행 중이다(11/23 연합 보도).",
+      "summary": "미 법무부가 북한 소행 바이낸스 해킹 자금 약 12억 달러 압수·동결 및 몰수 절차를 진행 중이다.",
       "meaning": "가상자산 탈취 수사 발표로 정례 성격이다.",
       "sources": [
         {
@@ -101,29 +91,24 @@
       "speculation": []
     },
     "foreign_forces": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "울릉도",
       "lat": 37.48,
       "lon": 130.9,
       "summary": "러시아 군용기 여러 대가 11/24 오전 카디즈에 진입해 울릉에 경계경보가 내려졌으나 합참은 영공 침범이 없었다고 밝혔다.",
-      "meaning": "러 군용기 접근은 정례 범위의 카디즈 진입이며 영공 침범은 없었다.",
+      "meaning": "러 군용기 카디즈 진입은 정례 범위이며 영공 침범은 없었다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261124503104"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261124020900504"
         }
       ],
       "confidence": "중간",
       "facts": [
         "07:52 경계경보, 07:57 해제",
-        "재난문자는 영공 침범으로 안내했으나 합참은 침범 없음"
+        "행안부 재난문자는 영공 침범으로 안내했으나 합참은 침범 없음"
       ],
       "speculation": []
     },
@@ -137,26 +122,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "routine": true,
-      "attribution": "nk",
-      "category": "가상자산",
-      "summary": "귀속 미확정 — 미 법무부가 북한 행위자가 바이낸스에서 탈취한 가상자산 몰수 절차를 진행 중이다.",
-      "meaning": "수사 결과 발표로 배경 성격이다.",
-      "sources": [
-        {
-          "name": "코리아중앙데일리",
-          "tier": "B",
-          "url": "https://www.koreajoongangdaily.com/business/us-moves-to-seize-12-billion-linked-to-north-korean-binance-hack/12972799"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [],
-      "speculation": [],
-      "attribution_dropped": "A 등급 기관의 귀속 발표 없음"
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-24T08:11:14+00:00",
+  "checked_at": "2026-11-24T09:10:41+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

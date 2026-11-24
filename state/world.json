@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-11-24T05:40:48+00:00",
-  "world_at": "2026-11-24T05:40:48+00:00",
+  "updated_at": "2026-11-24T11:40:36+00:00",
+  "world_at": "2026-11-24T11:40:36+00:00",
   "world": [
     {
-      "title": "나토 사무총장, 러시아 핵탑재 위성 보도에 우주 방어 천명",
-      "summary": "뤼터 나토 사무총장은 러시아가 핵무기 탑재 위성을 발사할 준비를 한다는 독일 언론 보도에 대해 우주 영역을 포함해 동맹 영토를 방어하겠다고 밝혔다. 크렘린은 보도를 일축했다.",
-      "link_korea": "러시아의 전략무기 동향은 북러 군사협력의 기술 이전 우려와 맞닿아 있다.",
-      "region": "유럽",
+      "title": "나토 사무총장, 러시아 핵탑재 위성 보도에 우주 위협 방어 다짐",
+      "summary": "독일 언론이 러시아가 핵무기 탑재 위성 발사를 준비 중이라는 정보 보고를 보도했고, 뤼터 나토 사무총장은 우주 위협에도 동맹이 방어하겠다고 밝혔다. 러시아는 근거 없는 주장이라며 부인했다.",
+      "link_korea": "러시아의 우주·핵 위협 논란은 핵 비확산 체제와 북러 군사협력에 대한 경계를 키우는 배경이다.",
+      "region": "유럽·우주",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/c9x2er1ry2mzo",
@@ -15,38 +15,38 @@
       }
     },
     {
-      "title": "대만 외교부 \"미국 대만 정책 불변\"… 신화통신의 트럼프 발언 주장에 반박",
-      "summary": "대만 외교부는 신화통신이 전한 트럼프 대통령의 대만 관련 발언에도 미국의 대만 정책은 바뀌지 않았다고 24일 밝혔다.",
-      "link_korea": "미·중 대만 구도의 변화는 주한미군 운용과 동북아 안보 환경에 연결된다.",
-      "region": "동아시아",
+      "title": "우크라이나, 리비아 벵가지항 러시아 코르벳함 공격",
+      "summary": "BBC는 우크라이나 보안국·군이 리비아 벵가지에 정박한 러시아 코르벳함 메르쿠리를 야간에 공격했고 러시아가 이를 위험한 확전이라 비난했다고 전했다.",
+      "link_korea": "러-우 전쟁의 확산은 북러 군사협력과 북한군 파병 논의의 배경이 된다.",
+      "region": "러시아·우크라이나",
       "source": {
-        "name": "Focus Taiwan(CNA)",
-        "url": "https://focustaiwan.tw/politics/202611240008",
-        "via": "https://feeds.feedburner.com/rsscna/engnews"
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cm894p88jzxpo",
+        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     },
     {
-      "title": "美 법무부, 북한 바이낸스 해킹 자금 몰수 소송",
-      "summary": "미 법무부는 바이낸스에서 지난달 해킹으로 탈취된 자금 중 약 1조5천억원 규모의 몰수 소송을 냈고, FBI는 배후로 북한 해킹 조직 '트레이더트레이터'를 지목했다.",
-      "link_korea": "북한의 가상화폐 탈취를 통한 제재 회피·자금 조달에 대한 미국의 대응이다.",
-      "region": "한반도·미국",
-      "source": {
-        "name": "연합뉴스",
-        "url": "https://www.yna.co.kr/view/AKR20261124020900504",
-        "via": "https://www.yna.co.kr/view/AKR20261124020900504"
-      }
-    },
-    {
-      "title": "러시아 군용기 KADIZ 진입에 울릉도 경계경보, 영공 침범은 없어",
-      "summary": "러시아 군용기 수 대가 동해 방공식별구역에 진입하자 군이 영공 침범 임박을 우려해 선제 조치했고 울릉도에 경계경보가 내려졌다 해제됐다. 합참은 영공 침범은 없었다고 밝혔다.",
-      "link_korea": "한반도 주변 러시아 군용기 활동과 방공 대응을 보여 준다.",
+      "title": "김정은, 신임 외국 대사들에게 군사력 증강은 주권적 권리라 강조",
+      "summary": "북한 관영매체에 따르면 김정은은 22일 신임장 제정식에서 북한이 지역 패권을 추구하지 않으며 군사력 증강은 자위를 위한 주권적 권리라고 말했다.",
+      "link_korea": "북한의 대외 메시지는 대화 재개 여부와 한반도 긴장 관리에 직접 연결된다.",
       "region": "한반도",
       "source": {
-        "name": "연합뉴스",
-        "url": "https://www.yna.co.kr/view/AKR20261124024852053",
-        "via": "https://www.yna.co.kr/view/AKR20261124024852053"
+        "name": "Stars and Stripes",
+        "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-23/kim-jong-un-north-korea-ambassadors-23551098.html",
+        "via": "https://www.stripes.com/theaters/asia_pacific/"
+      }
+    },
+    {
+      "title": "러시아 군용기, 동해 KADIZ 진입…울릉도 대피 문자 발송",
+      "summary": "합동참모본부에 따르면 러시아 군용기 여러 대가 24일 KADIZ에 진입했고 영공 침범은 없었으며 우리 군이 F-15K로 대응했다.",
+      "link_korea": "일주일 새 세 번째 진입으로 러시아의 동북아 군사 시위와 한국 방공태세 점검 문제가 부각됐다.",
+      "region": "동북아",
+      "source": {
+        "name": "세계일보",
+        "url": "https://www.segye.com/newsView/20261124516425",
+        "via": "https://www.segye.com/Articles/RSSList/segye_politic.xml"
       }
     }
   ],
-  "world_context": "러시아의 전략·군사 행보, 대만 구도, 대북 제재 집행이 한반도 안보 환경과 맞닿아 있다."
+  "world_context": "러시아 관련 군사 긴장이 유럽·지중해·동해로 번지는 가운데 북한은 군사력 증강의 정당성을 강조했다."
 }

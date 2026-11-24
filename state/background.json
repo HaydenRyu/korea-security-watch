@@ -1,38 +1,38 @@
 {
   "version": 1,
-  "at": "2026-11-24T05:40:48+00:00",
-  "opened": 16,
+  "at": "2026-11-24T11:40:36+00:00",
+  "opened": 19,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-24T05:40:48+00:00",
+      "last_ok": "2026-11-24T11:40:36+00:00",
       "raw": 4,
       "kept": 4
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-24T05:40:48+00:00",
+      "last_ok": "2026-11-24T11:40:36+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-24T05:40:48+00:00",
+      "last_ok": "2026-11-24T11:40:36+00:00",
       "raw": 0,
       "kept": 0
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-24T05:40:48+00:00",
+      "last_ok": "2026-11-24T11:40:36+00:00",
       "raw": 5,
       "kept": 5,
       "note": "scs_ecs: Rappler 피드 403 — Philstar·BBC 아시아 2곳으로 평온 확인"
     },
     "incidents": {
-      "status": "checked",
-      "last_ok": "2026-11-24T05:40:48+00:00",
-      "raw": 1,
-      "kept": 1
+      "status": "no_findings",
+      "last_ok": "2026-11-24T11:40:36+00:00",
+      "raw": 0,
+      "kept": 0
     }
   }
 }

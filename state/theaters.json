@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-24T05:40:48+00:00",
+  "judged_at": "2026-11-24T11:40:36+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -13,8 +13,8 @@
           "published_at": "2026-11-23T20:48:35+00:00"
         }
       ],
-      "summary": "우크라이나가 리비아 벵가지항의 러시아 코르벳함을 공격했고 러시아는 우크라이나에 매일 미사일·드론 공습을 계속하고 있다고 BBC가 전했다.",
-      "judged_at": "2026-11-24T05:40:48+00:00"
+      "summary": "우크라이나가 벵가지항의 러시아 코르벳함을 공격했고 러시아는 우크라이나에 매일 미사일·드론 공습을 계속하고 있다고 BBC가 전했다.",
+      "judged_at": "2026-11-24T11:40:36+00:00"
     },
     "mideast": {
       "state": 3,
@@ -29,8 +29,8 @@
           "published_at": "2026-11-21T16:12:31+00:00"
         }
       ],
-      "summary": "3월 시작된 이란 관련 분쟁이 이어지는 가운데 호르무즈 해협 재개방과 전투 중단을 촉구하는 보도가 나왔다.",
-      "judged_at": "2026-11-24T05:40:48+00:00"
+      "summary": "3월 시작된 이란 관련 전쟁이 이어지는 가운데 호르무즈 해협 재개방과 전투 중단을 촉구하는 보도가 나왔다.",
+      "judged_at": "2026-11-24T11:40:36+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -39,52 +39,52 @@
         {
           "name": "Focus Taiwan(CNA)",
           "tier": "B",
-          "url": "https://focustaiwan.tw/politics/202611240008",
-          "published_at": "2026-11-24T13:15:10+08:00"
+          "url": "https://focustaiwan.tw/politics/202611240020",
+          "published_at": "2026-11-24T17:23:40+08:00"
         }
       ],
-      "summary": "신화통신이 트럼프 대통령의 대만 관련 발언을 전했고 대만 외교부는 미국 정책이 불변이라고 밝혔다.",
-      "judged_at": "2026-11-24T05:40:48+00:00"
+      "summary": "대만 대륙위원회 수장이 시진핑 4기 정부에서 중국의 대만 압박이 더 강해질 것이라고 경고했다고 Focus Taiwan이 전했다.",
+      "judged_at": "2026-11-24T11:40:36+00:00"
     },
     "scs_ecs": {
       "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "Philstar 국내면 피드",
+          "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-24T00:00:00+08:00",
+          "published_at": "2026-11-24T17:39:00+08:00",
           "kind": "feed"
         },
         {
-          "name": "BBC 아시아 피드",
+          "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-23T23:16:08+00:00",
+          "published_at": "2026-11-24T07:26:27+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-24T05:40:48+00:00"
+      "judged_at": "2026-11-24T11:40:36+00:00"
     },
     "us_posture": {
       "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "DVIDS 피드",
+          "name": "DVIDS",
           "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-24T05:01:01+00:00",
+          "published_at": "2026-11-24T05:40:36-05:00",
           "kind": "feed"
         },
         {
-          "name": "Stars and Stripes 아시아태평양 목록",
+          "name": "Stars and Stripes",
           "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-23T00:00:00+00:00",
+          "published_at": "2026-11-24T07:30:00+00:00",
           "kind": "feed"
         }
       ],
       "summary": "DVIDS·Stars and Stripes 목록에 72시간 안 미 전략자산 전개 관련 기사 없음",
-      "judged_at": "2026-11-24T05:40:48+00:00"
+      "judged_at": "2026-11-24T11:40:36+00:00"
     }
   }
 }

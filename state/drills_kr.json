@@ -1,22 +1,22 @@
 {
  "source": "접경 지자체 공지(철원 RSS · 고성 공지 · 파주 새소식+HWP · 화천 공지+PDF) — 군 사격훈련 주민 안내",
  "note": "참고 자료 · 등급 판정과 무관. 일정은 부대 사정·기상으로 바뀔 수 있다.",
- "fetched_at": "2026-11-23T22:52:49.050219+00:00",
+ "fetched_at": "2026-11-24T05:30:36.375021+00:00",
  "sources": {
   "cheorwon": {
    "name": "철원군",
    "page": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-23T22:52:49.050219+00:00",
-   "count": 12
+   "last_ok_at": "2026-11-24T05:30:36.375021+00:00",
+   "count": 11
   },
   "goseong": {
    "name": "고성군",
    "page": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/list.do",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-23T22:52:49.050219+00:00",
+   "last_ok_at": "2026-11-24T05:30:36.375021+00:00",
    "count": 10
   },
   "paju": {
@@ -24,7 +24,7 @@
    "page": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=2001",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-23T22:52:49.050219+00:00",
+   "last_ok_at": "2026-11-24T05:30:36.375021+00:00",
    "count": 8
   },
   "hwacheon": {
@@ -32,7 +32,7 @@
    "page": "https://www.ihc.go.kr/www/selectBbsNttList.do?bbsNo=11&key=2338",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-23T22:52:49.050219+00:00",
+   "last_ok_at": "2026-11-24T05:30:36.375021+00:00",
    "count": 6
   }
  },
@@ -231,6 +231,22 @@
    "arms": [
     "박격포"
    ],
+   "active_now": false
+  },
+  {
+   "source": "goseong",
+   "title": "'26년 11월 제102기갑여단 536포병대대 포병사격 훈련 취소 안내",
+   "url": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/view.do?nttId=B000000081588Fm3wL5o",
+   "posted": "2026-11-24",
+   "body": "2026년 11월 육군 제102기갑여단 536포병대대 포탄 사격 훈련이 취소되어 다음과 같이 안내드립니다.\n○ 훈련기간\n가) '26. 11. 25.(수) 08:00 ~ 10:00 → 취소\n○ 취소 사유\n가) 건조주의보 미해제\n나) 현장 낙엽 마름으로 화재 위험도 높음\n다) 강풍으로 인한 헬기 예방살수 지원 제한\n* 위와 같은 사유로 2026. 11. 25.(수) 포병사격 훈련은 취소되었음을 안내하여 드립니다.",
+   "unit": "",
+   "first": "2026-11-25",
+   "last": "2026-11-25",
+   "days": [
+    "2026-11-25"
+   ],
+   "places": [],
+   "arms": [],
    "active_now": false
   },
   {
@@ -538,26 +554,6 @@
     "동막리 M, 문혜리 D진지 → 용화동 피탄지"
    ],
    "arms": [],
-   "active_now": false
-  },
-  {
-   "source": "goseong",
-   "title": "'26년 10월 제3포병여단 10월 포탄사격 훈련 일정 안내",
-   "url": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/view.do?nttId=B000000080824Vr4hZ9f",
-   "posted": "2026-10-12",
-   "body": "육군 제3포병여단 포탄 사격 훈련 일정 안내드립니다.\n○ 훈련기간 : 26. 10. 15.(목) (기존) 08:00 ~ 10:00 ⇒ (조정) 07:00 ~ 10:00 / 155mm포탄 150여발\n○ 훈련장소 : 선유실리 사격장 / 오소령 표적지\n○ 사격시간은 발효된 기상특보 및 당일 기상에 따라 변동 가능\n* 사격당일과 해당시간에 마을 주민께서는 사격장 및 피탄지 주변 출입 전면금지하오니, 이 점 유의하시고 양해 부탁드립니다.\n* 마을 주민 및 가축 등이 놀라지 않도록 사전 조치사항(참문개방, 가축장 음악 및 트랙터 시동 등)을 사격 30분 전부터 부탁드립니다.",
-   "unit": "제3포병여단",
-   "first": "2026-10-15",
-   "last": "2026-10-15",
-   "days": [
-    "2026-10-15"
-   ],
-   "places": [
-    "선유실리 사격장 / 오소령 표적지"
-   ],
-   "arms": [
-    "155mm포탄150여발"
-   ],
    "active_now": false
   }
  ]

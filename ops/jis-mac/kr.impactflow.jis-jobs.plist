@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- JIS 정기 잡(GitHub Actions firms·calendar·watchdog·summary·notify 대체) launchd 잡. 설치는 impactflow-agents
+       provision_runner.sh --install-one kr.impactflow.jis-jobs 가 __HOME__ 을 치환한다(cp 직접 설치 금지). -->
+  <key>Label</key><string>kr.impactflow.jis-jobs</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>__HOME__/korea-security-watch-jobbot/ops/jis-mac/run.sh</string>
+  </array>
+  <!-- 3분 틱 — notify(push 트리거 대체)의 지연 상한. 나머지 잡은 run.sh 가 일정(UTC)과 기록으로 고른다. -->
+  <key>StartInterval</key><integer>180</integer>
+  <key>RunAtLoad</key><true/>
+  <key>Nice</key><integer>10</integer>
+  <key>LowPriorityIO</key><true/>
+  <key>StandardOutPath</key><string>__HOME__/Library/Logs/impactflow/jis-jobs.launchd.log</string>
+  <key>StandardErrorPath</key><string>__HOME__/Library/Logs/impactflow/jis-jobs.launchd.log</string>
+</dict>
+</plist>

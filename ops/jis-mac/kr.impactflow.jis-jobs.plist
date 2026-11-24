@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <!-- JIS 정기 잡(GitHub Actions firms·calendar·watchdog·summary·notify 대체) launchd 잡. 설치는 impactflow-agents
-       provision_runner.sh --install-one kr.impactflow.jis-jobs 가 __HOME__ 을 치환한다(cp 직접 설치 금지). -->
+       provision_runner.sh 의 install-one 모드가 __HOME__ 을 치환한다(cp 직접 설치 금지 · XML 주석 안에 하이픈 두 개 금지). -->
   <key>Label</key><string>kr.impactflow.jis-jobs</string>
   <key>ProgramArguments</key>
   <array>

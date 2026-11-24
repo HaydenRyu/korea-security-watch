@@ -1,13 +1,17 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 24일"
+      "지뢰 발견 DMZ 귀순 합참 11월 24일"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit North Korea"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격 국내"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 확성기 방송 중단"
@@ -16,31 +20,32 @@
       "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "북한 핵실험 풍계리 영변 핵시설 동향"
+      "북한 핵실험 풍계리 영변"
     ],
     "logistics": [
-      "북한 군수 탄약 수송 러시아"
+      "북한 군수 탄약 수송"
     ],
     "parade_massing": [
-      "북한 열병식 준비 병력 집결"
+      "북한 열병식 준비"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군 동원"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 합참 경고"
+      "진돗개 데프콘 상향 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261124503104",
-    "https://www.segye.com/newsView/20261124505426",
-    "https://www.nknews.org",
-    "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/"
+    "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261125/7/ATCE_CTGR_0010010000/view.do",
+    "https://www.wikitree.co.kr/articles/1090485"
   ],
-  "overall_summary": "직전 회차와 같은 두 건(미 법무부 바이낸스 몰수 소송, 러시아 군용기 울릉 카디즈 근접)만 정례 징후로 이어지고 새 도발·병력·핵 징후는 확인되지 않았다. 이번 회차는 검색·원문이 제한적이었다(38 North 403, 항목별 한·영 검색 일부만 수행).",
+  "overall_summary": "직전 회차와 같은 두 건(미 법무부 바이낸스 몰수 소송, 러시아 군용기 울릉 카디즈 근접)만 정례 징후이며 새 도발·병력·핵 징후는 확인되지 않았다. 접경 열점 후보 0건, 표류 북한 어선 송환 등은 정례 인도 절차로 배경 처리했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -107,7 +112,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-24T13:12:25+00:00",
+  "checked_at": "2026-11-24T14:10:44+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

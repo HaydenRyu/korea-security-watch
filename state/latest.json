@@ -2,7 +2,7 @@
   "coverage": {
     "troop_movement": [
       "북한 합참 발표 11월 24일",
-      "North Korea Kim Jong Un China Russia visit"
+      "Kim Jong Un China Russia visit"
     ],
     "nuclear": [
       "영변 농축 증축",
@@ -15,11 +15,13 @@
       "목함지뢰 해안 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 김정은 방러"
+      "김정은 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 합참 발표 11월 24일"
@@ -31,10 +33,11 @@
       "울릉 경계경보 러시아 군용기"
     ],
     "hybrid_ops": [
-      "서해 구조물 주한미군 감축 김정은 방러 남북 대화 제안 국가보안법 구속"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "서해 구조물 주한미군 감축 김정은 방러 남북 대화 제안 국가보안법 구속"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
@@ -44,7 +47,7 @@
     "https://www.justice.gov/opa/pr/united-states-files-action-recover-more-1-billion-cryptocurrency-assets-stolen-north-korean",
     "https://www.koreajoongangdaily.com/korea/north-koreas-yongbyon-expansion-raises-uranium-output-concerns/12985165"
   ],
-  "overall_summary": "러시아 군용기 카디즈 진입에 따른 울릉 경계경보(영공 침범 없음, 합참이 북한 항공기 오인 정정)와 미 법무부 바이낸스 해킹 자금 몰수 소송은 모두 정례·수사 결과 발표라 직전과 같다. 새 도발·병력 징후와 접경 열점 후보는 없다.",
+  "overall_summary": "직전 회차와 같은 정례 사안(러시아 군용기 카디즈 진입·울릉 경계경보, 미 법무부 바이낸스 해킹 자금 몰수, 영변 증축 배경)만 있고 새 도발·병력 징후와 접경 열점 후보는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -76,7 +79,8 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "북한 표류 어선 송환(통일부)은 인도적 절차이며 월선·교전 보도는 없다."
     },
     "electronic_cyber": {
       "status": "single",
@@ -165,7 +169,7 @@
       "speculation": []
     }
   },
-  "checked_at": "2026-11-24T03:10:29+00:00",
+  "checked_at": "2026-11-24T04:09:58+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

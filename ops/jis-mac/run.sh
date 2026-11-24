@@ -31,15 +31,10 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 
 # 동시 실행 방지(수동 실행과 launchd 틱이 겹칠 때). 잠금은 소유 pid 로 판정한다 — 살아 있으면 건너뛰고, 죽었으면 넘겨받는다.
 # 지우는 것도 소유자만(다른 프로세스가 넘겨받은 잠금을 EXIT trap 이 지우지 않게).
-LOCK="$STATE/lock"
-take_lock() {
-  if mkdir "$LOCK" 2>/dev/null; then echo $$ > "$LOCK/pid"; return 0; fi
-  local owner; owner=$(cat "$LOCK/pid" 2>/dev/null || true)
-  if [ -n "$owner" ] && kill -0 "$owner" 2>/dev/null; then return 1; fi
-  rm -rf "$LOCK" && mkdir "$LOCK" 2>/dev/null && echo $$ > "$LOCK/pid"
-}
-take_lock || { echo "$(date '+%F %T') 이전 틱(pid $(cat "$LOCK/pid" 2>/dev/null)) 진행 중 — 건너뜀"; exit 0; }
-trap '[ "$(cat "$LOCK/pid" 2>/dev/null)" = "$$" ] && rm -rf "$LOCK"' EXIT
+LOCK="$STATE/lock.pid"
+# shlock(macOS 기본) = 원자적 생성 + 기록된 pid 가 죽었으면 넘겨받기. 지우는 것도 소유자만.
+if ! /usr/bin/shlock -f "$LOCK" -p $$; then echo "$(date '+%F %T') 다른 회차(pid $(cat "$LOCK" 2>/dev/null)) 진행 중 — 건너뜀"; exit 0; fi
+trap '[ "$(cat "$LOCK" 2>/dev/null)" = "$$" ] && rm -f "$LOCK"' EXIT
 
 # 시크릿: GitHub 시크릿은 읽어 올 수 없어 사람이 이 파일에 옮긴다(README). chmod 600.
 ENVF="$HOME/.config/impactflow/jis-jobs.env"
@@ -60,6 +55,7 @@ PY="$VENV/bin/python"
 cd "$REPO" 2>/dev/null || { echo "[실패] 클론 없음: $REPO (provision_runner.sh --bootstrap)"; exit 1; }
 # 잡 전용 클론만 hard reset 한다 — 최상위·origin 이 맞지 않으면 멈춘다
 [ "$(git rev-parse --show-toplevel 2>/dev/null)" = "$(pwd -P)" ] || { echo "[실패] $REPO 가 레포 최상위가 아님"; exit 1; }
+case "$(basename "$REPO")" in *-jobbot) ;; *) echo "[실패] $REPO 는 잡 전용 클론(*-jobbot)이 아님 — 사람 클론은 hard reset 하지 않는다"; exit 1 ;; esac
 case "$(git remote get-url origin 2>/dev/null)" in
   *github.com[:/]"$GH_REPO"|*github.com[:/]"$GH_REPO".git) ;;
   *) echo "[실패] $REPO 의 origin 이 $GH_REPO 가 아님 — 잡 전용 클론만 쓴다"; exit 1 ;;

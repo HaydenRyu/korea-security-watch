@@ -21,6 +21,7 @@ notify 는 커밋 × 채널(ntfy · 웹 푸시 · 보고서) 단위로 완료를
 push 6회 실패한 수집 커밋은 `refs/jis-unpushed/<시각>` 에 남는다. 잡 클론이 main 으로 옮겨지지 않으면 hard reset 하지 않고 멈춘다.
 
 ## 설치(2호기, 사람)
+선행: impactflow-agents PR #218(provision_runner REPOS·PLIST_SRC·remote_of 등재, host_roles worker 라벨) 머지 + 2호기 러너 클론 pull.
 1. 시크릿: `jis-jobs.env.example` 을 `~/.config/impactflow/jis-jobs.env` 로 복사해 레포 시크릿과 같은 값을 채우고 `chmod 600`.
 2. 잡 전용 클론: `cd ~/impactflow-agents-runner/agents/shared/workspace && scripts/provision_runner.sh --bootstrap`
    (REPOS 의 `korea-security-watch-jobbot` 을 받는다 — 원격 HaydenRyu/korea-security-watch). push·워크플로 상태 조회 자격 = 그 맥의 gh 신원.

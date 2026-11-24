@@ -6,7 +6,7 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "North Korea nuclear"
     ],
     "logistics": [
       "북한 군수 수송 탄약",
@@ -15,28 +15,27 @@
     "border_clash": [
       "지뢰 발견",
       "DMZ 귀순",
-      "North Korea DMZ NLL"
+      "북한 지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hack Binance forfeiture"
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "러시아 군용기 카디즈"
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 등화관제 준전시",
+      "North Korea wartime state"
     ],
     "gov_warning": [
       "진돗개 발령",
-      "한미일 긴급 경고"
+      "한미일 긴급 경고 DEFCON"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -53,7 +52,7 @@
     "https://www.segye.com/newsView/20261124505426",
     "https://www.nknews.org/"
   ],
-  "overall_summary": "11/24 오전 러시아 군용기 카디즈 진입·울릉 경계경보 오발령성 혼선이 있었으나 합참은 영공 침범이 없다고 밝혔다. 북한발 새 군사 징후는 확인되지 않았다.",
+  "overall_summary": "11/24 오전 러시아 군용기 카디즈 진입으로 울릉군 경계경보가 약 5분 발령됐으나 합참은 영공 침범이 없었다고 밝혔다. 북한발 새 군사 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,7 +70,7 @@
       "status": "single",
       "routine": true,
       "attribution": "nk",
-      "summary": "미 법무부가 북한 해커 탈취 바이낸스 자금 약 11억 달러 몰수 소송을 제기했다고 NK News가 11/24 보도했다.",
+      "summary": "미 법무부가 북한 해커 탈취 바이낸스 자금 약 11억 달러 몰수 소송을 제기했다고 NK News가 보도했다.",
       "meaning": "가상자산 탈취 수사 발표로 배경 성격이다.",
       "sources": [
         {
@@ -82,7 +81,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "NK News 11/24 헤드라인"
+        "NK News 헤드라인"
       ],
       "speculation": []
     },
@@ -92,8 +91,8 @@
       "region": "울릉도",
       "lat": 37.48,
       "lon": 130.9,
-      "summary": "러시아 군용기 여러 대가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 내려졌으나 합참은 영공 침범이 없었다고 밝혔다.",
-      "meaning": "러시아 군용기의 정례적 카디즈 진입 범위로 영공 침범은 없었다.",
+      "summary": "러시아 군용기가 11/24 오전 카디즈에 진입해 울릉군에 경계경보가 잠시 내려졌으나 합참은 영공 침범이 없었다고 밝혔다.",
+      "meaning": "영공 침범 없는 정례적 카디즈 진입 범위다.",
       "sources": [
         {
           "name": "세계일보",
@@ -103,7 +102,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참: 영공 침범 없음"
+        "합참 영공침범 없음",
+        "경보 발령 약 5분 뒤 해제"
       ],
       "speculation": []
     },
@@ -120,7 +120,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-24T15:11:33+00:00",
+  "checked_at": "2026-11-24T16:12:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

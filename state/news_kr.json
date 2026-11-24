@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-24T15:56:35+00:00",
+ "fetched_at": "2026-11-24T17:06:25+00:00",
  "status": "partial",
  "status_detail": "국방일보/국방: URLError: <urlopen error timed out>",
  "last_ok_at": "2026-11-24T13:23:21+00:00",
@@ -7,16 +7,16 @@
  "counts": {
   "feeds": 15,
   "feeds_failed": 1,
-  "fetched": 1066,
-  "hits": 31,
-  "clusters": 26,
+  "fetched": 1067,
+  "hits": 33,
+  "clusters": 27,
   "by_group": {
-   "border": 9,
-   "drone_balloon": 2,
-   "summit": 4,
-   "mine": 2,
+   "summit": 5,
    "spy": 7,
-   "hybrid": 3,
+   "drone_balloon": 2,
+   "border": 9,
+   "mine": 2,
+   "hybrid": 2,
    "alert": 2,
    "defect": 1,
    "gps": 1,
@@ -27,8 +27,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 566,
-   "hits": 18
+   "count": 567,
+   "hits": 20
   },
   "SBS": {
    "feeds": 3,
@@ -46,7 +46,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 6
+   "hits": 5
   },
   "세계일보": {
    "feeds": 2,
@@ -63,33 +63,33 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "summit": {
+   "clusters": 5,
+   "max_independent": 1,
+   "latest": "2026-11-24T16:47:51+00:00"
+  },
+  "spy": {
+   "clusters": 7,
+   "max_independent": 2,
+   "latest": "2026-11-24T16:42:48+00:00"
+  },
+  "drone_balloon": {
+   "clusters": 2,
+   "max_independent": 2,
+   "latest": "2026-11-24T16:02:52+00:00"
+  },
   "border": {
    "clusters": 9,
    "max_independent": 2,
    "latest": "2026-11-24T15:31:00+00:00"
-  },
-  "drone_balloon": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-24T15:16:51+00:00"
-  },
-  "summit": {
-   "clusters": 4,
-   "max_independent": 1,
-   "latest": "2026-11-24T13:57:43+00:00"
   },
   "mine": {
    "clusters": 2,
    "max_independent": 2,
    "latest": "2026-11-24T10:08:26+00:00"
   },
-  "spy": {
-   "clusters": 7,
-   "max_independent": 2,
-   "latest": "2026-11-24T09:16:16+00:00"
-  },
   "hybrid": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-24T07:56:52+00:00"
   },
@@ -120,7 +120,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 86,
+   "count": 87,
    "hits": 8
   },
   {
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 6
   },
   {
    "outlet": "SBS",
@@ -201,7 +201,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 6
+   "hits": 5
   },
   {
    "outlet": "국민일보",

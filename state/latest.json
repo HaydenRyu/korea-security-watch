@@ -1,51 +1,46 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troops Reuters"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear 38 North"
-    ],
-    "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 랜섬웨어 공격"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순 11월 24일"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit November 2026"
+      "Kim Jong Un China Russia visit North Korea"
     ],
-    "parade_massing": [
-      "북한 열병식 병력 집결"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
-    ],
-    "gov_warning": [
-      "진돗개 데프콘 상향 합참"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격 국내"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+    ],
+    "troop_movement": [
+      "북한 병력 이동 전방 증강"
+    ],
+    "nuclear": [
+      "북한 핵실험 풍계리 영변 핵시설 동향"
+    ],
+    "logistics": [
+      "북한 군수 탄약 수송 러시아"
+    ],
+    "parade_massing": [
+      "북한 열병식 준비 병력 집결"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 노농적위군 동원"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘 상향 합참 경고"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
     "https://www.segye.com/newsView/20261124503104",
-    "https://www.yna.co.kr/view/AKR20261124020900504"
+    "https://www.segye.com/newsView/20261124505426",
+    "https://www.nknews.org",
+    "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/"
   ],
-  "overall_summary": "러시아 군용기의 카디즈 진입(영공 침범 없음)과 미 법무부의 북한 바이낸스 해킹 자금 몰수 절차는 직전 회차와 같은 정례 성격이다. 구조된 북한 주민 송환 준비(인도적 절차) 외에 접경 군사 징후나 신규 핵·병력 동향 보도는 없다.",
+  "overall_summary": "직전 회차와 같은 두 건(미 법무부 바이낸스 몰수 소송, 러시아 군용기 울릉 카디즈 근접)만 정례 징후로 이어지고 새 도발·병력·핵 징후는 확인되지 않았다. 이번 회차는 검색·원문이 제한적이었다(38 North 403, 항목별 한·영 검색 일부만 수행).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -59,22 +54,34 @@
     "border_clash": {
       "status": "none"
     },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
+    },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "region": "미국",
-      "summary": "미 법무부가 북한 소행 바이낸스 해킹 자금 약 1조5천억원 몰수 소송을 제기했다고 연합뉴스가 11/24 보도했다.",
+      "summary": "미 법무부가 북한 해커가 탈취한 바이낸스 암호화폐 약 11억 달러의 민사 몰수 소송을 11/23 제기했다고 NK News가 11/24 보도했다.",
       "meaning": "북한 가상자산 탈취 수사 발표로 정례 성격이다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261124020900504"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "미 법무부 몰수 소송(연합뉴스 제목 확인)"
+        "미 법무부 워싱턴 DC 연방지법에 민사 몰수 소송 제기"
       ],
       "speculation": []
     },
@@ -98,21 +105,9 @@
         "행안부 07:52 경계경보, 경북도 07:57 해제, 합참 영공침범 없음"
       ],
       "speculation": []
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-24T12:11:32+00:00",
+  "checked_at": "2026-11-24T13:12:25+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

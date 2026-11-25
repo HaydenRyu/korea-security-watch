@@ -1,72 +1,105 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 미사일 발사 합참",
-      "North Korea troops nuclear Yongbyon"
+      "북한 미사일 발사 합참 11월 25일",
+      "North Korea Reuters November 25 2026"
     ],
     "nuclear": [
-      "North Korea troops nuclear Yongbyon",
-      "북한 미사일 발사 합참"
+      "North Korea Reuters November 25 2026",
+      "북한 미사일 발사 합참 11월 25일"
     ],
     "logistics": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "북한 미사일 발사 합참"
+      "North Korea Reuters November 25 2026",
+      "북한 미사일 발사 합참 11월 25일"
     ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순",
-      "국방일보 접경 수집 묶음"
+      "지뢰 발견 DMZ 북한 군사분계선 경고사격"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "북한 해킹 개인정보 유출 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 진돗개"
+      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "국가보안법 구속 간첩 혐의 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 미사일 발사 합참 11월 25일"
     ],
     "nk_internal": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "북한 미사일 발사 합참"
+      "North Korea Reuters November 25 2026"
     ],
     "gov_warning": [
-      "서해 구조물 주한미군 감축 진돗개",
-      "북한 미사일 발사 합참"
+      "북한 미사일 발사 합참 11월 25일",
+      "North Korea Reuters November 25 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 간첩 혐의 구속 북한 해킹 귀속 FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "국가보안법 구속 간첩 혐의 서해 구조물 주한미군 감축"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/category/news/",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://en.yna.co.kr/",
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
+    "https://www.koreatimes.co.kr/foreignaffairs"
   ],
-  "overall_summary": "신규 군사 징후는 없다. 국방일보 접경 완화 포럼, 북한의 스위스 사무소 폐쇄 등 외교·제재 보도뿐이며 직전과 같은 평시 국면이다. 접경 열점 후보 관련 보도는 확인되지 않았다.",
+  "overall_summary": "최근 24시간 군사 도발·발사·접경 사건 보도는 없고, 북한이 스위스 공관을 폐쇄한 외교 분쟁과 ISIS의 영변 확장 위성 분석이 주된 동향이다. 직전 회차와 같은 저긴장 상태이며, 일부 출처(합참·연합·38North·NHK)는 열람 실패로 확인 범위가 제한적이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "평안북도 영변",
+      "lat": 39.8,
+      "lon": 125.75,
+      "summary": "미 ISIS가 위성영상으로 영변 핵단지 확장이 무기급 우라늄 생산을 늘릴 수 있다고 분석했다(검증 시험·배치 징후는 아님).",
+      "meaning": "핵물질 생산능력 확대 추정이나 새 시험·사용 준비 징후는 없다.",
+      "sources": [
+        {
+          "name": "Korea Times",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "ISIS 위성영상 분석 보고서 11/24~25 보도",
+        "IAEA 우려 표명"
+      ],
+      "speculation": [
+        "우라늄 생산 증대 가능성"
+      ]
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "11/23 NLL 인근 북한 해경 표식 선박 포착은 24시간 경과, 배경."
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "nk",
+      "region": "미국",
+      "summary": "미 법무부가 북한 해커의 바이낸스 탈취 가상자산 약 11억 달러 몰수소송을 제기했다(수사 발표).",
+      "meaning": "가상자산 탈취 귀속 수사 발표로 실시간 작전 징후는 아니다.",
+      "sources": [
+        {
+          "name": "Korea Times",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "미 법무부 민사 몰수 소송 11/24"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "11/24 북 고위 인사가 중국 대사 면담, 11/22 러 신임대사 신임장 접수 — 신규 군사협력·정상 방문 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -81,8 +114,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T14:10:46+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-25T14:12:35+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

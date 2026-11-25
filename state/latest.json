@@ -1,60 +1,60 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동",
+      "합참 발표 북한 병력 이동",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵",
-      "North Korea nuclear"
+      "북한 핵 풍계리 영변",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea logistics"
+      "북한 군수 탄약 수송",
+      "North Korea munitions Russia shipment"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순",
-      "합참 발표 DMZ"
+      "지뢰 발견 DMZ 귀순 북한",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
       "Kim Jong Un China Russia visit",
       "서해 구조물",
-      "러시아 군용기 카디즈 합참"
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 전시태세",
-      "North Korea mobilization"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령",
-      "North Korea warning"
+      "진돗개 발령 데프콘",
+      "한미일 긴급 경고"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261125/7/ATCE_CTGR_0010010000/view.do",
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
+    "https://www.koreajoongangdaily.com/business/us-moves-to-seize-12-billion-linked-to-north-korean-binance-hack/12972799",
     "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156789541",
+    "https://www.koreatimes.co.kr/world/20261114/us-obtains-court-approval-to-seize-restrain-over-12-bil-stolen-in-nk-binance-theft",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861312"
   ],
-  "overall_summary": "새로운 군사 징후는 없고 러 군용기 동해 카디즈 근접만 정례 수준으로 남았다. 김정은 삼지연 시찰·방중설은 외교 배경이다.",
+  "overall_summary": "새로 확인된 북한발 군사 징후는 없고, 11/24 러시아 군용기의 동해 카디즈 진입·울릉 북방 영공 근접(영공 침범 없음)만 직전과 같이 정례로 유지한다. 접경 열점 후보 0건이며, 11/12 미 법무부의 바이낸스 해킹 북한 귀속 발표는 24시간이 지나 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -69,17 +69,17 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "11/12 바이낸스 해킹 북한 귀속 발표는 24시간 경과한 배경이다."
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "동해 울릉도 북방",
-      "lat": 37.8,
+      "region": "동해·울릉도 북방",
+      "lat": 37.6,
       "lon": 131.0,
-      "summary": "11/24 러시아 군용기 여러 대가 동해 카디즈에 진입해 울릉도 북방 영공에 근접했으나 영공 침범은 없었다(SBS 단독 보도, 외교부 유감 표명).",
-      "meaning": "러 군용기의 반복적 카디즈 진입으로 북한 직접 연관은 없다.",
-      "confidence": "중간",
+      "summary": "11/24 러시아 군용기 여러 대가 동해 카디즈에 진입해 울릉 북방 영공에 근접했으나 침범은 없었고 외교부가 유감을 표명했다(SBS).",
+      "meaning": "러시아군의 반복적 카디즈 진입으로 북한 직접 연관은 확인되지 않는다.",
       "sources": [
         {
           "name": "SBS",
@@ -87,8 +87,10 @@
           "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861312"
         }
       ],
+      "confidence": "중간",
       "facts": [
-        "11/24 오전 러 군용기 동해 카디즈 진입"
+        "영공 침범은 없었다",
+        "외교부가 외교채널로 유감 표명·재발방지 촉구"
       ],
       "speculation": []
     },
@@ -102,10 +104,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "11/12 미 법무부 바이낸스 귀속 발표는 24시간 경과해 배경이다."
     }
   },
-  "checked_at": "2026-11-25T02:09:32+00:00",
+  "checked_at": "2026-11-25T03:11:09+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

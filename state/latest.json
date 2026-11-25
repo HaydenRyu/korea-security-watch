@@ -1,86 +1,73 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방"
     ],
     "nuclear": [
-      "영변 핵시설 우라늄",
-      "Sohae ICBM engine test stand"
+      "북한 핵 영변 풍계리"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 수송 탄약"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ",
-      "DMZ NLL 귀순 합참"
+      "북한 지뢰 발견 DMZ 귀순 NLL",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
+      "김정은 방중 APEC 선전 트럼프 회동",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
       "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 데프콘 발령",
+      "북한 미사일 발사 합참 11월 25일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속",
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
       "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.yna.co.kr/view/AKR20261124093000504",
-    "https://www.nknews.org/2026/11/south-korean-province-mistakes-russian-aircraft-for-possible-north-korean-plane/"
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
   ],
-  "overall_summary": "도발·전쟁 징후는 없고 영변 우라늄 시설 확장 분석(정례)과 소해 엔진시험대 추정 보도(NK News Pro, 제목만 확인)가 있다. 국내 수집 묶음은 간첩 공방·표류 어선 송환·호르무즈 기뢰 등으로 접경 군사 징후가 아니다.",
+  "overall_summary": "11/25 기준 24시간 내 신규 군사 징후 보도 없음; 직전 대비 변화 없음. 국내 언론 수집은 3개 피드 실패(partial).",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "single",
-      "routine": true,
-      "summary": "미 ISIS가 위성영상으로 영변 농축시설 확장이 무기급 우라늄 생산을 늘릴 수 있다고 분석했다(시험·배치 징후는 아님).",
-      "region": "영변",
-      "lat": 39.8,
-      "lon": 125.75,
-      "sources": [
-        {
-          "name": "Korea Times",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
-        }
-      ],
-      "confidence": "중간"
+      "status": "none",
+      "summary": "이번 회차 신규 보도 확인 못함 — 직전 ISIS 영변 분석은 24시간 경과 배경."
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "DMZ 지뢰 사건(9월)은 후속 조사 배경이며 이번 24시간 신규 발견·충돌 보도 없음."
     },
     "electronic_cyber": {
       "status": "none",
-      "summary": "24시간 경과 — 미 법무부 바이낸스 탈취자금 몰수소송 첫 보도 11/23 22시(UTC)."
+      "summary": "24시간 경과 — 미 법무부 바이낸스 몰수소송 첫 보도 11/24 02시(UTC), 배경."
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 방중·트럼프 회동 설은 11/19 불발, 삼지연 시찰·조용원 방러(11/14~)는 24시간 이전 배경."
     },
     "parade_massing": {
       "status": "none"
@@ -95,8 +82,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T17:10:25+00:00",
-  "grade": 1,
-  "grade_label": "주의",
+  "checked_at": "2026-11-25T17:11:14+00:00",
+  "grade": 0,
+  "grade_label": "평시",
   "active": []
 }

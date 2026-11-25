@@ -1,48 +1,55 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 25일"
+      "북한 병력 이동",
+      "North Korea troop"
     ],
     "nuclear": [
-      "North Korea Reuters November 25 2026"
+      "북한 핵",
+      "North Korea ICBM engine test"
     ],
     "logistics": [
-      "북한 합참 발표 11월 25일"
+      "북한 군수 수송",
+      "North Korea ammunition"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
+      "지뢰 발견",
+      "DMZ 귀순",
+      "MDL 침범"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한 해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "GPS 교란",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 합참 발표 11월 25일"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "North Korea Reuters November 25 2026"
+      "북한 준전시"
     ],
     "gov_warning": [
-      "North Korea missile launch Japan Ministry of Defense 北朝鮮 ミサイル 11月25日"
+      "진돗개 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.nknews.org/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261125/n-koreas-yongbyon-nuclear-complex-expansion-may-boost-weapons-grade-uranium-production-says-us-science-institute",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261124/us-takes-action-to-recover-over-11-bil-in-cryptocurrency-stolen-by-n-korean-hackers",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll"
+    "https://www.yna.co.kr/view/AKR20261124020900504",
+    "https://www.yna.co.kr/view/AKR20261124093000504",
+    "https://www.koreaherald.com/"
   ],
-  "overall_summary": "영변 농축시설 증축 분석과 서해발사장 엔진시험 추정 보도(모두 routine)만 유지되고 신규 도발·경고 징후는 없다. 국내 언론 묶음은 외국 사건·정치 기사 위주로 접경 사건 없음, 접경 열점 후보 0건.",
+  "overall_summary": "최근 24시간 신규 군사 징후는 없고 NK News Pro의 ICBM 엔진시험 추정과 북한의 스위스 외교관 추방이 배경이다. 접경 열점·국내 언론 수집 후보 중 판정 대상 사건은 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -50,38 +57,31 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "평안북도 영변",
-      "lat": 39.8,
-      "lon": 125.75,
-      "summary": "미 ISIS가 위성영상으로 영변 농축시설 증축(9월 착공)이 무기급 우라늄 생산을 늘릴 수 있다고 11/25 분석했고, NK News Pro는 서해발사장 엔진시험대 정황을 추정 보도했다(북한 발표·정부 확인 없음).",
-      "meaning": "핵물질·ICBM 엔진 개발 지속을 시사하나 민간 분석 기반의 기존 흐름이다.",
+      "region": "서해발사장",
+      "lat": 39.66,
+      "lon": 124.7,
+      "summary": "NK News Pro가 11/25자로 ICBM 엔진 시험 정황을 위성영상으로 추정 보도했다(정부 확인 없음, 24시간 내 재확인 유지).",
+      "meaning": "전략무기 시험 정황이나 실전 배치 근거는 없다.",
       "sources": [
-        {
-          "name": "The Korea Times(연합)",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261125/n-koreas-yongbyon-nuclear-complex-expansion-may-boost-weapons-grade-uranium-production-says-us-science-institute"
-        },
         {
           "name": "NK News",
           "tier": "C",
           "url": "https://www.nknews.org/"
         }
       ],
-      "confidence": "중간",
+      "confidence": "낮음",
       "facts": [
-        "ISIS 보고서가 영변 농축시설 증축 확인, IAEA 사무총장은 11/18 우려 표명"
+        "NK News 메인에 해당 기사 제목 게재"
       ],
       "speculation": [
-        "무기급 우라늄 증산 목적 가능성"
+        "ICBM 엔진 시험 추정"
       ]
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "11/23 서해 NLL 인근 '해안경비' 표기 북 선박 포착 보도는 24시간 경과이며 NLL 침범은 확인되지 않아 배경으로만 둔다.",
-      "sources": []
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
@@ -100,10 +100,10 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "summary": "미 법무부 바이낸스 해킹 자금 11억달러 몰수소송(11/23 발표)은 24시간 경과로 배경."
+      "summary": "배경: 美 법무부 북한 바이낸스 해킹 자금 몰수 소송(연합, 원문 A 미열람)이라 징후로 올리지 않음."
     }
   },
-  "checked_at": "2026-11-25T20:10:37+00:00",
+  "checked_at": "2026-11-25T20:10:40+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

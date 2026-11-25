@@ -1,59 +1,53 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 합참",
-      "North Korea troop Reuters"
+      "북한 합참 발표 오늘",
+      "North Korea Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear 38 North"
+      "North Korea Reuters"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "North Korea Reuters"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "North Korea DMZ mine"
+      "지뢰 발견 DMZ 귀순",
+      "합참 발표 북한"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "김정은 방러 방중 Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 11월",
+      "러시아 군용기 카디즈 울릉도 영공 급선회"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "북한 합참 발표 오늘"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "North Korea Reuters"
     ],
     "gov_warning": [
-      "진돗개 데프콘",
-      "US travel advisory Korea"
+      "북한 합참 발표 오늘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
+      "미 법무부 북한 바이낸스 해킹 몰수 소송"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261124020900504",
-    "https://www.yna.co.kr/view/AKR20261125086100009",
-    "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/",
-    "https://www.nknews.org/category/news/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861924",
-    "https://www.nknews.org/2026/11/north-korea-expels-swiss-diplomat-over-sanctions-on-childrens-camp/"
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreajoongangdaily.com/korea/russian-military-aircraft-enter-koreas-air-defense-zonenbspkorean-fighter-jets-scrambled/12975914",
+    "https://www.koreatimes.co.kr/world/20261114/us-obtains-court-approval-to-seize-restrain-over-12-bil-stolen-in-nk-binance-theft",
+    "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861924"
   ],
-  "overall_summary": "신규 징후 없이 러시아 군용기 동해 카디즈 진입(정례)이 유지된다. 미 법무부의 바이낸스 탈취 자금 몰수 소송(귀속 발표, 정례)이 새로 보도됐고 접경 열점 후보는 0건이다.",
+  "overall_summary": "신규 징후는 러시아 군용기의 동해 카디즈 접근(영공 침범 없음, 정례 범위)뿐이며 직전 회차와 같다. 접경 열점 대조 대상·민감 신규 사건은 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -76,8 +70,8 @@
       "region": "동해 울릉도 인근",
       "lat": 37.48,
       "lon": 130.9,
-      "summary": "러시아 군용기 4대가 11/24 동해 카디즈에 진입해 울릉도 영공 직전 급선회했고 영공 침범은 없었다(SBS 단독).",
-      "meaning": "러시아 군용기의 정례적 카디즈 진입 범위로 보이며 영공 침범은 없었다.",
+      "summary": "러시아 군용기 4대(전투기 2·폭격기 2)가 11/24 오전 동해 카디즈에 진입해 울릉도 인근까지 접근했으나 영공 침범은 없었다(SBS 단독, 합참 발표 확인 안 됨).",
+      "meaning": "러시아 군용기의 반복적 카디즈 진입 범위로 보이며 영공 침범은 없었다.",
       "sources": [
         {
           "name": "SBS",
@@ -102,32 +96,10 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "routine": true,
-      "attribution": "nk",
-      "category": "가상자산",
-      "summary": "귀속 미확정 — 미 법무부가 북한 해킹 세력이 바이낸스에서 탈취한 USDC 11억달러 이상의 몰수 민사소송을 제기했다.",
-      "meaning": "수사 결과 발표로 진행 중인 작전은 아니어서 배경 성격이다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261124020900504"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "FBI가 TraderTraitor를 배후로 지목"
-      ],
-      "speculation": [],
-      "attribution_dropped": "A 등급 기관의 귀속 발표 없음"
+      "summary": "미 법무부 바이낸스 탈취 자금 몰수(11/12~14 발표, 24시간 경과)는 배경이며 새 귀속 발표 없음."
     }
   },
-  "checked_at": "2026-11-25T10:11:20+00:00",
+  "checked_at": "2026-11-25T11:11:08+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

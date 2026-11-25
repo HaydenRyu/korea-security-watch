@@ -1,53 +1,54 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea Reuters AP latest missile DMZ"
+      "북한 합참 병력 이동 핵 DMZ 11월 25일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향",
-      "North Korea Reuters AP latest missile DMZ"
+      "북한 합참 병력 이동 핵 DMZ 11월 25일",
+      "NK News 최근 기사"
     ],
     "logistics": [
-      "North Korea Reuters AP latest missile DMZ",
-      "NK News 최신 기사"
+      "북한 합참 병력 이동 핵 DMZ 11월 25일",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한 합참",
-      "North Korea Reuters AP latest missile DMZ"
+      "지뢰 발견 DMZ 귀순 북한",
+      "북한 합참 병력 이동 핵 DMZ 11월 25일"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 11월",
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "Kim Jong Un China Russia visit November 2026",
-      "서해 구조물 주한미군 감축 11월"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "남북 대화 제안 통신선 복원 North Korea talks offer 서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "North Korea Reuters AP latest missile DMZ"
+      "북한 합참 병력 이동 핵 DMZ 11월 25일"
     ],
     "nk_internal": [
-      "NK News 최신 기사",
-      "김정은 방중 방러"
-    ],
-    "hybrid_ops": [
-      "NK News 최신 기사",
-      "미 법무부 북한 바이낸스 몰수"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "NK News 최근 기사"
     ],
     "gov_warning": [
-      "합참 북한 발표 진돗개 데프콘 경계경보"
+      "북한 합참 병력 이동 핵 DMZ 11월 25일",
+      "NK News 최근 기사"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 North Korea talks offer 서해 구조물 주한미군 감축"
     ]
   },
   "opened": [
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862788",
     "https://www.nknews.org/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862788",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861807"
   ],
-  "overall_summary": "신규 징후 없이 직전 회차의 러시아 군용기 동해 카디즈 진입(정례)만 유지된다. 미 법무부의 북한 바이낸스 해킹 자금 몰수 소송은 첫 보도 11/23 말로 24시간이 지나 배경으로만 기록한다.",
+  "overall_summary": "신규 징후 없이 직전 회차의 러시아 군용기 동해 카디즈 진입(정례)만 유지된다. 접경 남측 열점 후보 0건이며 국내 언론 수집에서도 새 군사 도발 보도는 없었다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -62,8 +63,7 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "미 법무부 북한 바이낸스 해킹 자금 몰수 소송은 첫 보도 11/23 말로 24시간 경과 — 배경."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "single",
@@ -82,7 +82,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "영공 침범 없음"
+        "영공 침범 없음",
+        "공군 대응 출격, 국방부 러 무관 초치"
       ],
       "speculation": []
     },
@@ -99,7 +100,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T08:10:31+00:00",
+  "checked_at": "2026-11-25T09:10:32+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -20,7 +20,7 @@
       "GPS 교란",
       "해킹 개인정보 유출",
       "사이버 공격",
-      "North Korea hacking"
+      "Bithumb hack personal information leaked"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
@@ -47,12 +47,12 @@
     ]
   },
   "opened": [
-    "https://www.koreaherald.com/article/10942242",
-    "https://en.yna.co.kr/view/AEN20261116006000315",
-    "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261119/n-korea-to-hold-meeting-of-grassroots-leaders-of-ruling-party-this-month"
+    "https://www.nknews.org/2026/11/north-korea-expels-swiss-diplomat-over-sanctions-on-childrens-camp/",
+    "https://en.yna.co.kr/view/AEN20261125010400320",
+    "https://www.koreatimes.co.kr/southkorea/politics/20261125/cover-story-why-spy-agency-chief-nominee-is-under-scrutiny",
+    "https://www.yna.co.kr/rss/northkorea.xml"
   ],
-  "overall_summary": "신규 군사 징후는 확인되지 않았다(국내 수집 묶음은 정치·제재 배경 기사뿐, 접경 열점 신규 보도 대조 대상 없음). 직전 회차와 같은 평시 국면이다.",
+  "overall_summary": "신규 군사 징후는 없다. 북한의 스위스 외교사무소 폐쇄 등 외교·제재 공방과 국내 해킹 후속 보도뿐이며 직전 회차와 같은 평시 국면이다. 접경 열점 후보는 0건이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -67,7 +67,8 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "빗썸 해킹 개인정보 추가 유출(11/25 연합)은 10/29 최초 보도의 후속이고 귀속 미확인 — 24시간 기준상 배경으로만 기록."
     },
     "foreign_forces": {
       "status": "none"
@@ -85,7 +86,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T13:10:30+00:00",
+  "checked_at": "2026-11-25T13:13:08+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

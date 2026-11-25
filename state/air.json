@@ -1,24 +1,17 @@
 {
- "at": "2026-11-25T07:56:53+00:00",
- "south": 91,
- "area": 115,
- "baseline": 83,
- "ratio": 1.1,
+ "at": "2026-11-25T09:48:23+00:00",
+ "south": 60,
+ "area": 77,
+ "baseline": 63,
+ "ratio": 0.95,
  "samples": 5,
  "mil": [
   {
-   "type": "BE20",
+   "type": "H60",
    "name": null,
-   "call": "CATS82",
-   "lat": 36.82,
-   "lon": 127.01
-  },
-  {
-   "type": "B762",
-   "name": null,
-   "call": "TATRA51",
-   "lat": 33.92,
-   "lon": 132.06
+   "call": "CARD30",
+   "lat": 37.45,
+   "lon": 127.09
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

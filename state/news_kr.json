@@ -1,19 +1,18 @@
 {
- "fetched_at": "2026-11-25T02:48:15+00:00",
- "status": "ok",
- "status_detail": "",
+ "fetched_at": "2026-11-25T03:58:46+00:00",
+ "status": "partial",
+ "status_detail": "동아일보/정치: TimeoutError: The read operation timed out; 동아일보/사회: RemoteDisconnected: Remote end closed connection without response",
  "last_ok_at": "2026-11-25T02:48:15+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 0,
-  "fetched": 1121,
-  "hits": 20,
-  "clusters": 17,
+  "feeds_failed": 2,
+  "fetched": 1024,
+  "hits": 17,
+  "clusters": 15,
   "by_group": {
    "border": 5,
    "drone_balloon": 1,
-   "alert": 2,
    "mine": 2,
    "fire": 3,
    "spy": 3,
@@ -27,7 +26,7 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 562,
+   "count": 565,
    "hits": 12
   },
   "SBS": {
@@ -38,9 +37,9 @@
   },
   "동아일보": {
    "feeds": 2,
-   "failed": 0,
-   "count": 100,
-   "hits": 4
+   "failed": 2,
+   "count": 0,
+   "hits": 0
   },
   "국민일보": {
    "feeds": 2,
@@ -73,11 +72,6 @@
    "max_independent": 1,
    "latest": "2026-11-25T02:34:53+00:00"
   },
-  "alert": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-25T01:08:46+00:00"
-  },
   "mine": {
    "clusters": 2,
    "max_independent": 1,
@@ -90,7 +84,7 @@
   },
   "spy": {
    "clusters": 3,
-   "max_independent": 2,
+   "max_independent": 1,
    "latest": "2026-11-24T23:10:02+00:00"
   },
   "gps": {
@@ -120,7 +114,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 82,
+   "count": 85,
    "hits": 8
   },
   {
@@ -183,17 +177,15 @@
    "outlet": "동아일보",
    "section": "정치",
    "url": "https://rss.donga.com/politics.xml",
-   "ok": true,
-   "count": 50,
-   "hits": 2
+   "ok": false,
+   "error": "TimeoutError: The read operation timed out"
   },
   {
    "outlet": "동아일보",
    "section": "사회",
    "url": "https://rss.donga.com/national.xml",
-   "ok": true,
-   "count": 50,
-   "hits": 2
+   "ok": false,
+   "error": "RemoteDisconnected: Remote end closed connection without response"
   },
   {
    "outlet": "국민일보",

@@ -1,69 +1,90 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 합참 도발 발사 속보",
-      "North Korea Reuters November 25 2026"
-    ],
-    "nuclear": [
-      "Yongbyon enrichment expansion ISIS report Grossi concern",
-      "North Korea Reuters November 25 2026"
-    ],
-    "logistics": [
-      "북한 합참 도발 발사 속보",
-      "North Korea Reuters November 25 2026"
-    ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순",
-      "North Korea Reuters November 25 2026"
-    ],
-    "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "북한 지뢰 발견 DMZ 귀순 합참",
+      "North Korea DMZ NLL GPS jamming Yongbyon uranium"
     ],
     "foreign_forces": [
       "김정은 방중 방러 Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 발표",
-      "러시아 군용기 4대 카디즈 울릉도 영공 급선회 합참"
+      "러시아 군용기 카디즈 진입 울릉도 영공 급선회 합참",
+      "북한 11월 25일 합참 발표 전통문 서해 구조물 주한미군 감축"
     ],
-    "parade_massing": [
-      "북한 합참 도발 발사 속보",
-      "North Korea Reuters November 25 2026"
+    "electronic_cyber": [
+      "GPS 교란 해킹 개인정보 유출 사이버 공격 랜섬웨어",
+      "North Korea DMZ NLL GPS jamming Yongbyon uranium"
     ],
-    "nk_internal": [
-      "North Korea Swiss diplomat persona non grata",
-      "North Korea Reuters November 25 2026"
-    ],
-    "gov_warning": [
-      "북한 합참 도발 발사 속보",
-      "North Korea Reuters November 25 2026"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
-      "North Korea attributed FBI Reuters"
+    "nuclear": [
+      "North Korea Reuters missile launch November 25 2026",
+      "North Korea DMZ NLL GPS jamming Yongbyon uranium"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
+    ],
+    "troop_movement": [
+      "북한 전방 병력 증강 군수 물자 수송 열병식 준비",
+      "North Korea troop buildup ammunition shipment parade preparation"
+    ],
+    "logistics": [
+      "북한 전방 병력 증강 군수 물자 수송 열병식 준비",
+      "North Korea troop buildup ammunition shipment parade preparation"
+    ],
+    "parade_massing": [
+      "북한 전방 병력 증강 군수 물자 수송 열병식 준비",
+      "North Korea troop buildup ammunition shipment parade preparation"
+    ],
+    "nk_internal": [
+      "북한 전시태세 준전시 진돗개 데프콘 국가보안법 간첩 혐의 구속",
+      "North Korea wartime posture J-Alert FBI attributed hackers"
+    ],
+    "gov_warning": [
+      "북한 전시태세 준전시 진돗개 데프콘 국가보안법 간첩 혐의 구속",
+      "North Korea wartime posture J-Alert FBI attributed hackers"
+    ],
+    "hybrid_ops": [
+      "북한 전시태세 준전시 진돗개 데프콘 국가보안법 간첩 혐의 구속",
+      "North Korea wartime posture J-Alert FBI attributed hackers"
     ]
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261125/7/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261125/n-koreas-yongbyon-nuclear-complex-expansion-may-boost-weapons-grade-uranium-production-says-us-science-institute",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861807"
   ],
-  "overall_summary": "신규 징후 없음. 러 군용기 카디즈 진입(11/24, SBS 단독)만 직전과 같이 단독·정례로 유지하며, 영변 농축시설 확장은 IAEA 11/18 발표 이후의 반복 보도라 배경이다.",
+  "overall_summary": "11/24~25 새로 확인된 군사 도발은 없고 직전 러시아 군용기 카디즈 진입(영공 침범 없음)이 유지된다. 영변 확장 위성 분석과 스위스 외교관 추방이 보도됐으나 징후 등급을 바꿀 사안은 아니다. 접경 열점·국내 해킹 후보는 보도 대조 결과 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "영변 농축시설 확장은 IAEA 11/18 발표 이후 반복 보도(ISIS 분석)라 24시간 내 새 사건이 아닌 배경이다."
+      "status": "single",
+      "routine": true,
+      "summary": "미 ISIS가 영변 단지 확장으로 무기급 우라늄 생산이 늘 수 있다고 위성영상 분석을 11/25 발표했다.",
+      "meaning": "핵물질 생산능력 확대 정황이나 시험·사용 준비 근거는 없다.",
+      "sources": [
+        {
+          "name": "코리아타임스",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "ISIS 위성영상 기반 분석 보도"
+      ],
+      "speculation": [
+        "생산 증대 가능성"
+      ],
+      "region": "영변",
+      "lat": 39.8,
+      "lon": 125.75
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "11/23 NLL 인근 북한 「해안경비」 표기 선박 감시 보도는 24시간 경과, 표류 북한 어선은 인도적 송환 예정이라 징후 아님."
     },
     "electronic_cyber": {
       "status": "none"
@@ -71,11 +92,8 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "동해 울릉도 북방",
-      "lat": 37.6,
-      "lon": 130.9,
-      "summary": "러시아 전투기 2대·폭격기 2대가 11/24 오전 동해 카디즈에 진입해 울릉도 영공 직전 급선회했고 영공 침범은 없었다(SBS 단독 보도).",
-      "meaning": "반복되는 중·러 카디즈 진입 범주의 정례 활동이다.",
+      "summary": "러시아 전투기 2대·폭격기 2대가 11/24 오전 7시 50분쯤 동해 카디즈에 진입했으나 영공 침범은 없었다(SBS 보도).",
+      "meaning": "러시아의 정례적 카디즈 진입 양상과 같은 범위다.",
       "sources": [
         {
           "name": "SBS",
@@ -85,9 +103,13 @@
       ],
       "confidence": "중간",
       "facts": [
+        "4대 진입",
         "영공 침범 없음"
       ],
-      "speculation": []
+      "speculation": [],
+      "region": "동해",
+      "lat": 37.5,
+      "lon": 131.0
     },
     "parade_massing": {
       "status": "none"
@@ -102,7 +124,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T06:10:12+00:00",
+  "checked_at": "2026-11-25T07:12:11+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

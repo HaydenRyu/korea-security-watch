@@ -1,59 +1,59 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 합참",
-      "North Korea troop Reuters"
+      "북한 전방 병력 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear 38 North"
+      "North Korea nuclear site"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
+      "북한 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "North Korea DMZ mine"
+      "지뢰 발견",
+      "DMZ 귀순",
+      "North Korea border DMZ"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "North Korea hacking"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방러 방중",
       "Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘",
-      "US travel advisory Korea"
+      "합참 발표 속보",
+      "진돗개 데프콘"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261124020900504",
-    "https://www.yna.co.kr/view/AKR20261125086100009",
-    "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/",
-    "https://www.nknews.org/category/news/",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861924",
-    "https://www.nknews.org/2026/11/north-korea-expels-swiss-diplomat-over-sanctions-on-childrens-camp/"
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
+    "https://www.koreajoongangdaily.com/korea/russian-military-aircraft-enter-koreas-air-defense-zonenbspkorean-fighter-jets-scrambled/12975914",
+    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1440442"
   ],
-  "overall_summary": "신규 징후 없이 러시아 군용기 동해 카디즈 진입(정례)이 유지된다. 미 법무부의 바이낸스 탈취 자금 몰수 소송(귀속 발표, 정례)이 새로 보도됐고 접경 열점 후보는 0건이다.",
+  "overall_summary": "신규 군사 징후는 확인되지 않았고 북러 고위급 교류(조용원 방러, 11/16)는 이미 알려진 배경이다. 접경 열점 후보 0건, 직전 회차와 같은 안정 국면이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,25 +71,8 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "동해 울릉도 인근",
-      "lat": 37.48,
-      "lon": 130.9,
-      "summary": "러시아 군용기 4대가 11/24 동해 카디즈에 진입해 울릉도 영공 직전 급선회했고 영공 침범은 없었다(SBS 단독).",
-      "meaning": "러시아 군용기의 정례적 카디즈 진입 범위로 보이며 영공 침범은 없었다.",
-      "sources": [
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861924"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "영공 침범 없음"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 11/24 러시아 군용기 KADIZ 진입 보도(SBS 단독)는 추가 확인 보도가 없고 영공 침범도 없었다."
     },
     "parade_massing": {
       "status": "none"
@@ -101,40 +84,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "routine": true,
-      "attribution": "nk",
-      "category": "가상자산",
-      "summary": "귀속 미확정 — 미 법무부가 북한 해킹 세력이 바이낸스에서 탈취한 USDC 11억달러 이상의 몰수 민사소송을 제기했다.",
-      "meaning": "수사 결과 발표로 진행 중인 작전은 아니어서 배경 성격이다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261124020900504"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/us-seeks-forfeiture-of-1b-in-binance-crypto-stolen-by-north-korean-hackers/"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "FBI가 TraderTraitor를 배후로 지목"
-      ],
-      "speculation": [],
-      "attribution_dropped": "A 등급 기관의 귀속 발표 없음"
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-25T10:11:20+00:00",
-  "grade": 1,
-  "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-25T11:10:58+00:00",
-    "summary": "신규 군사 징후 없이 북한이 스위스 외교관을 추방하는 제재 갈등과 표류 어민 송환 절차가 보도됐다. 접경 열점 후보는 0건이며 직전 회차와 같은 안정 국면이다."
-  }
+  "checked_at": "2026-11-25T12:11:20+00:00",
+  "grade": 0,
+  "grade_label": "평시",
+  "active": []
 }

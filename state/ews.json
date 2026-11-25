@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-25T11:10:58+00:00",
+  "computed_at": "2026-11-25T12:11:20+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 26,
-  "band": "관찰",
-  "d": 2,
+  "ews": 0,
+  "band": "안정",
+  "d": 0,
   "e": 0,
   "alpha": 1.0,
-  "grade": 1,
-  "grade_label": "주의",
+  "grade": 0,
+  "grade_label": "평시",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-25T05:41:24+00:00",
-    "latest_updated_at": "2026-11-25T10:11:20+00:00"
+    "linkage_judged_at": "2026-11-25T11:40:03+00:00",
+    "latest_updated_at": "2026-11-25T12:11:20+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "중국 정부가 트럼프 대통령이 시진핑에게 대만 독립을 지지하지 않는다고 말했다고 재확인했고 대만 당국은 사실과 다르다고 반박했다.",
+      "summary": "중국 신화통신의 트럼프 발언 보도에 대해 대만 외교부가 미국의 대만 정책은 변함없다고 밝혔다.",
       "sources": [
         {
-          "name": "SBS",
+          "name": "Focus Taiwan",
           "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862871",
-          "published_at": "2026-11-25T05:13:36+00:00"
+          "url": "https://focustaiwan.tw/politics/202611240008",
+          "published_at": "2026-11-24T13:15:10+08:00"
         }
       ],
-      "judged_at": "2026-11-25T05:41:24+00:00"
+      "judged_at": "2026-11-25T11:40:03+00:00"
     },
     {
       "key": "ukraine",
@@ -39,7 +39,7 @@
       "state": 3,
       "contribution": 0,
       "channels": [],
-      "summary": "우크라이나가 리비아 벵가지항의 러시아 코르벳함을 공격했고 전쟁이 계속되고 있다고 BBC가 전했다.",
+      "summary": "우크라이나가 리비아 벵가지항의 러시아 코르벳함을 공격했고 러시아는 매일 우크라이나에 미사일·드론 공격을 이어가고 있다고 BBC가 전했다.",
       "sources": [
         {
           "name": "BBC",
@@ -48,7 +48,7 @@
           "published_at": "2026-11-23T20:48:35+00:00"
         }
       ],
-      "judged_at": "2026-11-25T05:41:24+00:00"
+      "judged_at": "2026-11-25T11:40:03+00:00"
     },
     {
       "key": "scs_ecs",
@@ -56,22 +56,28 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 긴장 관련 기사 없음",
+      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 긴장 관련 기사 없음",
       "sources": [
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-25T00:00:00+08:00",
+          "published_at": "2026-11-25T18:51:00+08:00",
+          "kind": "feed"
+        },
+        {
+          "name": "Rappler",
+          "url": "https://www.rappler.com/feed/",
+          "published_at": "2026-11-25T18:41:34+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-25T03:15:12+00:00",
+          "published_at": "2026-11-25T10:52:09+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-25T05:41:24+00:00"
+      "judged_at": "2026-11-25T11:40:03+00:00"
     },
     {
       "key": "mideast",
@@ -88,7 +94,7 @@
           "published_at": "2026-11-24T15:35:53+00:00"
         }
       ],
-      "judged_at": "2026-11-25T05:41:24+00:00"
+      "judged_at": "2026-11-25T11:40:03+00:00"
     },
     {
       "key": "us_posture",
@@ -101,7 +107,7 @@
         {
           "name": "DVIDS",
           "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-25T00:33:04-05:00",
+          "published_at": "2026-11-25T06:15:32-05:00",
           "kind": "feed"
         },
         {
@@ -111,7 +117,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-25T05:41:24+00:00"
+      "judged_at": "2026-11-25T11:40:03+00:00"
     }
   ],
   "channels": [
@@ -142,8 +148,8 @@
     }
   ],
   "last_good": {
-    "ews": 26,
-    "band": "관찰",
-    "computed_at": "2026-11-25T11:10:58+00:00"
+    "ews": 0,
+    "band": "안정",
+    "computed_at": "2026-11-25T12:11:20+00:00"
   }
 }

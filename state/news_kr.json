@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-24T23:29:57+00:00",
+ "fetched_at": "2026-11-25T00:41:09+00:00",
  "status": "partial",
- "status_detail": "동아일보/정치: RemoteDisconnected: Remote end closed connection without response; 동아일보/사회: TimeoutError: The read operation timed out",
+ "status_detail": "동아일보/정치: TimeoutError: The read operation timed out; 동아일보/사회: URLError: <urlopen error _ssl.c:1063: The handshake operation timed out>",
  "last_ok_at": "2026-11-24T22:17:47+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 2,
   "fetched": 1025,
-  "hits": 21,
-  "clusters": 18,
+  "hits": 17,
+  "clusters": 15,
   "by_group": {
-   "spy": 4,
+   "spy": 3,
    "fire": 2,
    "gps": 2,
    "hybrid": 2,
-   "border": 6,
-   "summit": 3,
+   "border": 5,
+   "summit": 2,
    "drone_balloon": 1,
    "mine": 1,
    "defect": 1
@@ -27,13 +27,13 @@
    "feeds": 5,
    "failed": 0,
    "count": 565,
-   "hits": 13
+   "hits": 11
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 160,
-   "hits": 8
+   "hits": 7
   },
   "동아일보": {
    "feeds": 2,
@@ -51,7 +51,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 40,
-   "hits": 1
+   "hits": 0
   },
   "국방일보": {
    "feeds": 1,
@@ -63,7 +63,7 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "spy": {
-   "clusters": 4,
+   "clusters": 3,
    "max_independent": 1,
    "latest": "2026-11-24T23:10:02+00:00"
   },
@@ -83,12 +83,12 @@
    "latest": "2026-11-24T22:56:42+00:00"
   },
   "border": {
-   "clusters": 6,
+   "clusters": 5,
    "max_independent": 1,
    "latest": "2026-11-24T21:12:00+00:00"
   },
   "summit": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-24T19:33:20+00:00"
   },
@@ -123,7 +123,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 6
+   "hits": 4
   },
   {
    "outlet": "연합뉴스",
@@ -171,21 +171,21 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 102,
-   "hits": 5
+   "hits": 4
   },
   {
    "outlet": "동아일보",
    "section": "정치",
    "url": "https://rss.donga.com/politics.xml",
    "ok": false,
-   "error": "RemoteDisconnected: Remote end closed connection without response"
+   "error": "TimeoutError: The read operation timed out"
   },
   {
    "outlet": "동아일보",
    "section": "사회",
    "url": "https://rss.donga.com/national.xml",
    "ok": false,
-   "error": "TimeoutError: The read operation timed out"
+   "error": "URLError: <urlopen error _ssl.c:1063: The handshake operation timed out>"
   },
   {
    "outlet": "국민일보",
@@ -209,7 +209,7 @@
    "url": "https://www.segye.com/Articles/RSSList/segye_politic.xml",
    "ok": true,
    "count": 20,
-   "hits": 1
+   "hits": 0
   },
   {
    "outlet": "세계일보",

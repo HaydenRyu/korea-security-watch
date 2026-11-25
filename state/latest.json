@@ -6,7 +6,7 @@
     ],
     "nuclear": [
       "영변 핵시설 우라늄",
-      "Sohae ICBM engine test stand imagery November 2026"
+      "Sohae ICBM engine test stand"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
@@ -14,14 +14,16 @@
     ],
     "border_clash": [
       "지뢰 발견 DMZ",
-      "North Korea Reuters border DMZ mine NLL"
+      "DMZ NLL 귀순 합참"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
@@ -41,13 +43,12 @@
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org/",
-    "https://www.nknews.org/2026/11/south-korean-province-mistakes-russian-aircraft-for-possible-north-korean-plane/",
-    "https://www.nknews.org/2026/11/seoul-preparing-to-repatriate-north-koreans-rescued-at-sea-earlier-this-month/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
+    "https://www.yna.co.kr/view/AKR20261124093000504",
+    "https://www.nknews.org/2026/11/south-korean-province-mistakes-russian-aircraft-for-possible-north-korean-plane/"
   ],
-  "overall_summary": "공격·도발 징후는 없고 영변 우라늄 시설 확장 분석과 미 법무부의 북한 해커 자금 몰수소송 등 배경성 보도만 있다. 접경 남측 열점 후보 대조는 새 보도가 없어 징후로 올리지 않았다.",
+  "overall_summary": "도발·전쟁 징후는 없고 영변 우라늄 시설 확장 분석(정례)과 소해 엔진시험대 추정 보도(NK News Pro, 제목만 확인)가 있다. 국내 수집 묶음은 간첩 공방·표류 어선 송환·호르무즈 기뢰 등으로 접경 군사 징후가 아니다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -75,18 +76,8 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "nk",
-      "summary": "미 법무부가 북한 해커의 바이낸스 탈취 가상자산 약 11억 달러 몰수소송을 제기했다(수사 발표).",
-      "sources": [
-        {
-          "name": "Korea Times",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
-        }
-      ],
-      "confidence": "중간"
+      "status": "none",
+      "summary": "24시간 경과 — 미 법무부 바이낸스 탈취자금 몰수소송 첫 보도 11/23 22시(UTC)."
     },
     "foreign_forces": {
       "status": "none"
@@ -104,14 +95,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T15:11:00+00:00",
+  "checked_at": "2026-11-25T17:10:25+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-25T16:11:18+00:00",
-    "summary": "신규 징후 없음; 직전 회차의 핵·사이버 정례 항목만 유지. 국내 수집 결과는 간첩 공방·정치 기사 위주로 군사 징후 없음."
-  }
+  "active": []
 }

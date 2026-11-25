@@ -1,59 +1,53 @@
 {
   "coverage": {
-    "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한",
-      "DMZ NLL border clash North Korea"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 공격 사이버 공격 랜섬웨어"
-    ],
-    "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer"
-    ],
-    "gov_warning": [
-      "합참 북한 발표 11월 25일"
-    ],
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "North Korea Reuters AP latest missile DMZ"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "북한 핵 풍계리 영변 동향",
+      "North Korea Reuters AP latest missile DMZ"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment Russia"
+      "North Korea Reuters AP latest missile DMZ",
+      "NK News 최신 기사"
+    ],
+    "border_clash": [
+      "지뢰 발견 DMZ 귀순 북한 합참",
+      "North Korea Reuters AP latest missile DMZ"
+    ],
+    "electronic_cyber": [
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+    ],
+    "foreign_forces": [
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit November 2026",
+      "서해 구조물 주한미군 감축 11월"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
+      "North Korea Reuters AP latest missile DMZ"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea wartime mobilization"
+      "NK News 최신 기사",
+      "김정은 방중 방러"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "NK News 최신 기사",
+      "미 법무부 북한 바이낸스 몰수"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
+    ],
+    "gov_warning": [
+      "합참 북한 발표 진돗개 데프콘 경계경보"
     ]
   },
   "opened": [
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
-    "https://www.nknews.org/2026/11/north-korea-expels-swiss-diplomat-over-sanctions-on-childrens-camp/",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862788",
+    "https://www.nknews.org/",
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861807"
   ],
-  "overall_summary": "신규 징후 없이 직전 회차의 러시아 군용기 동해 카디즈 진입(정례)만 유지된다. 김정은 방중설은 보도 수준이며 확인된 이동은 없다.",
+  "overall_summary": "신규 징후 없이 직전 회차의 러시아 군용기 동해 카디즈 진입(정례)만 유지된다. 미 법무부의 북한 바이낸스 해킹 자금 몰수 소송은 첫 보도 11/23 말로 24시간이 지나 배경으로만 기록한다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,7 +62,8 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "미 법무부 북한 바이낸스 해킹 자금 몰수 소송은 첫 보도 11/23 말로 24시간 경과 — 배경."
     },
     "foreign_forces": {
       "status": "single",
@@ -104,7 +99,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T07:11:17+00:00",
+  "checked_at": "2026-11-25T08:10:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-25T23:40:16+00:00",
+  "judged_at": "2026-11-25T23:40:25+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -13,22 +13,30 @@
           "published_at": "2026-11-25T14:46:41+00:00"
         }
       ],
-      "summary": "우크라이나 총참모부가 러시아 사바슬레이카 비행장에서 군용기 5대를 타격했다고 밝혔고 러시아는 논평하지 않았다.",
-      "judged_at": "2026-11-25T23:40:16+00:00"
+      "summary": "우크라이나가 러시아 사바슬레이카 공군기지를 공격해 항공기 5대를 맞혔다고 밝혀 전쟁이 계속되고 있다.",
+      "judged_at": "2026-11-25T23:40:25+00:00"
     },
     "mideast": {
       "state": 3,
-      "channels": [],
+      "channels": [
+        "c4_sea_energy"
+      ],
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cmd718zydz9qo",
           "published_at": "2026-11-25T14:06:13+00:00"
+        },
+        {
+          "name": "SBS",
+          "tier": "C",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008863830",
+          "published_at": "2026-11-25T16:55:07+00:00"
         }
       ],
-      "summary": "이스라엘군의 가자시티 공습으로 하마스 내부보안 간부와 가족 3명이 숨졌다고 현지 의료진과 하마스 내무부가 밝혔다.",
-      "judged_at": "2026-11-25T23:40:16+00:00"
+      "summary": "이스라엘이 가자시티를 공습해 하마스 보안 간부와 가족이 숨졌고, 이란군은 호르무즈에서 LNG선·유조선이 기뢰와 접촉해 불이 났다고 밝혔다.",
+      "judged_at": "2026-11-25T23:40:25+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -41,8 +49,8 @@
           "published_at": "2026-11-24T23:05:11+00:00"
         }
       ],
-      "summary": "BBC 베리파이는 중국 연계 네트워크가 대만 지방선거를 앞두고 민진당 겨냥 AI 가짜 영상 500건 넘게 유포했다고 분석했다.",
-      "judged_at": "2026-11-25T23:40:16+00:00"
+      "summary": "BBC Verify가 중국 연계망이 대만 지방선거를 앞두고 민진당 겨냥 AI 가짜영상 500건 이상을 유포했다고 밝혔다.",
+      "judged_at": "2026-11-25T23:40:25+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -55,14 +63,14 @@
           "kind": "feed"
         },
         {
-          "name": "BBC 아시아",
-          "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-25T21:51:17+00:00",
+          "name": "Rappler",
+          "url": "https://www.rappler.com/feed/",
+          "published_at": "2026-11-26T07:27:16+08:00",
           "kind": "feed"
         }
       ],
-      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 긴장 관련 기사 없음",
-      "judged_at": "2026-11-25T23:40:16+00:00"
+      "summary": "필스타·래플러 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "judged_at": "2026-11-25T23:40:25+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -72,11 +80,11 @@
           "name": "Stars and Stripes",
           "tier": "B",
           "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-25/batan-basco-philippines-us-air-force-23570574.html",
-          "published_at": "2026-11-25T00:00:00+00:00"
+          "published_at": "2026-11-25T05:40:00+00:00"
         }
       ],
-      "summary": "Stars and Stripes는 미국과 필리핀이 대만 인근 바탄 공항 시설 개선을 계획한다고 전했고 대규모 전개 보도는 목록에 없다.",
-      "judged_at": "2026-11-25T23:40:16+00:00"
+      "summary": "미·필리핀이 바탄섬 바스코 공항 현대화를 발표했으나 신규 전략자산 전개 보도는 없다.",
+      "judged_at": "2026-11-25T23:40:25+00:00"
     }
   }
 }

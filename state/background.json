@@ -1,36 +1,36 @@
 {
   "version": 1,
-  "at": "2026-11-25T05:41:24+00:00",
-  "opened": 24,
+  "at": "2026-11-25T11:40:03+00:00",
+  "opened": 20,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-25T05:41:24+00:00",
-      "raw": 4,
-      "kept": 4
+      "last_ok": "2026-11-25T11:40:03+00:00",
+      "raw": 3,
+      "kept": 3
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-25T05:41:24+00:00",
+      "last_ok": "2026-11-25T11:40:03+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
       "status": "checked",
-      "last_ok": "2026-11-25T05:41:24+00:00",
+      "last_ok": "2026-11-25T11:40:03+00:00",
       "raw": 1,
       "kept": 1
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-25T05:41:24+00:00",
+      "last_ok": "2026-11-25T11:40:03+00:00",
       "raw": 5,
       "kept": 5,
-      "note": "us_posture: Stars and Stripes 11/25 Batan/Basco 기사는 본문 리다이렉트로 못 읽어 목록·DVIDS 평온 확인만 사용. 대만 국방부·Rappler 제외"
+      "note": "us_posture: 평온 확인(DVIDS·Stars and Stripes 목록). 동아일보 정치·사회 피드 시간 초과"
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-25T05:41:24+00:00",
+      "last_ok": "2026-11-25T11:40:03+00:00",
       "raw": 0,
       "kept": 0
     }

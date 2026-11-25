@@ -1,24 +1,25 @@
 {
- "fetched_at": "2026-11-25T00:41:09+00:00",
- "status": "partial",
- "status_detail": "동아일보/정치: TimeoutError: The read operation timed out; 동아일보/사회: URLError: <urlopen error _ssl.c:1063: The handshake operation timed out>",
- "last_ok_at": "2026-11-24T22:17:47+00:00",
+ "fetched_at": "2026-11-25T01:52:59+00:00",
+ "status": "ok",
+ "status_detail": "",
+ "last_ok_at": "2026-11-25T01:52:59+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 2,
-  "fetched": 1025,
-  "hits": 17,
-  "clusters": 15,
+  "feeds_failed": 0,
+  "fetched": 1124,
+  "hits": 25,
+  "clusters": 21,
   "by_group": {
-   "spy": 3,
-   "fire": 2,
+   "fire": 4,
+   "summit": 4,
+   "alert": 2,
+   "mine": 2,
+   "border": 4,
+   "spy": 4,
    "gps": 2,
    "hybrid": 2,
-   "border": 5,
-   "summit": 2,
    "drone_balloon": 1,
-   "mine": 1,
    "defect": 1
   }
  },
@@ -27,19 +28,19 @@
    "feeds": 5,
    "failed": 0,
    "count": 565,
-   "hits": 11
+   "hits": 13
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
-   "count": 160,
+   "count": 159,
    "hits": 7
   },
   "동아일보": {
    "feeds": 2,
-   "failed": 2,
-   "count": 0,
-   "hits": 0
+   "failed": 0,
+   "count": 100,
+   "hits": 6
   },
   "국민일보": {
    "feeds": 2,
@@ -62,15 +63,35 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
-  "spy": {
-   "clusters": 3,
-   "max_independent": 1,
-   "latest": "2026-11-24T23:10:02+00:00"
-  },
   "fire": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-11-25T01:35:37+00:00"
+  },
+  "summit": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-11-25T01:20:20+00:00"
+  },
+  "alert": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-24T22:56:42+00:00"
+   "latest": "2026-11-25T01:08:46+00:00"
+  },
+  "mine": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-25T01:03:45+00:00"
+  },
+  "border": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-11-25T01:00:03+00:00"
+  },
+  "spy": {
+   "clusters": 4,
+   "max_independent": 2,
+   "latest": "2026-11-24T23:10:02+00:00"
   },
   "gps": {
    "clusters": 2,
@@ -82,25 +103,10 @@
    "max_independent": 1,
    "latest": "2026-11-24T22:56:42+00:00"
   },
-  "border": {
-   "clusters": 5,
-   "max_independent": 1,
-   "latest": "2026-11-24T21:12:00+00:00"
-  },
-  "summit": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-24T19:33:20+00:00"
-  },
   "drone_balloon": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-24T16:02:52+00:00"
-  },
-  "mine": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-24T09:39:07+00:00"
   },
   "defect": {
    "clusters": 1,
@@ -123,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 2
   },
   {
    "outlet": "연합뉴스",
@@ -139,7 +145,7 @@
    "url": "https://www.yna.co.kr/rss/local.xml",
    "ok": true,
    "count": 120,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "연합뉴스",
@@ -147,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 0
+   "hits": 3
   },
   {
    "outlet": "SBS",
@@ -170,22 +176,24 @@
    "section": "속보",
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
-   "count": 102,
+   "count": 101,
    "hits": 4
   },
   {
    "outlet": "동아일보",
    "section": "정치",
    "url": "https://rss.donga.com/politics.xml",
-   "ok": false,
-   "error": "TimeoutError: The read operation timed out"
+   "ok": true,
+   "count": 50,
+   "hits": 3
   },
   {
    "outlet": "동아일보",
    "section": "사회",
    "url": "https://rss.donga.com/national.xml",
-   "ok": false,
-   "error": "URLError: <urlopen error _ssl.c:1063: The handshake operation timed out>"
+   "ok": true,
+   "count": 50,
+   "hits": 3
   },
   {
    "outlet": "국민일보",

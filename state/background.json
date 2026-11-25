@@ -1,36 +1,36 @@
 {
   "version": 1,
-  "at": "2026-11-25T05:40:39+00:00",
-  "opened": 22,
+  "at": "2026-11-25T05:41:24+00:00",
+  "opened": 24,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-25T05:40:39+00:00",
-      "raw": 5,
-      "kept": 5
+      "last_ok": "2026-11-25T05:41:24+00:00",
+      "raw": 4,
+      "kept": 4
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-25T05:40:39+00:00",
+      "last_ok": "2026-11-25T05:41:24+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
-      "status": "no_findings",
-      "last_ok": "2026-11-25T05:40:39+00:00",
-      "raw": 0,
-      "kept": 0
+      "status": "checked",
+      "last_ok": "2026-11-25T05:41:24+00:00",
+      "raw": 1,
+      "kept": 1
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-25T05:40:39+00:00",
+      "last_ok": "2026-11-25T05:41:24+00:00",
       "raw": 5,
       "kept": 5,
-      "note": "scs_ecs: Rappler 403 — 관련 기사(Stripes 드론선 인도)로 평온 판정. 동아일보 RSS 연결 끊김(news_kr 부분 실패)"
+      "note": "us_posture: Stars and Stripes 11/25 Batan/Basco 기사는 본문 리다이렉트로 못 읽어 목록·DVIDS 평온 확인만 사용. 대만 국방부·Rappler 제외"
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-25T05:40:39+00:00",
+      "last_ok": "2026-11-25T05:41:24+00:00",
       "raw": 0,
       "kept": 0
     }

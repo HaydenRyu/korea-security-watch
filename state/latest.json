@@ -1,47 +1,54 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr 수집 접경·병력",
-      "North Korea troop movement"
+      "합참 북한 11월 26일",
+      "North Korea troop"
     ],
     "nuclear": [
-      "김정은 핵무기 핵탄두 우라늄 농축시설 현지지도 조선중앙통신",
-      "Kim Jong Un inspects nuclear warheads uranium enrichment facility KCNA"
+      "김정은 핵시설 시찰",
+      "NK News Kim Jong Un inspects nuclear facilities"
     ],
     "logistics": [
-      "North Korea ammunition shipment Russia"
+      "북한 군수 수송",
+      "North Korea logistics munitions"
     ],
     "border_clash": [
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+      "지뢰 발견 목함지뢰 해안",
+      "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 공격 GPS 교란 북한"
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "Kim Jong Un China Russia visit North Korea Reuters"
+      "김정은 방중 방러",
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 (수집기)"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 (수집기)"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 (수집기)"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 (수집기)"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 (수집기)"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.nknews.org/",
-    "https://www.nknews.org/pro/",
-    "https://www.koreaherald.com/"
+    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/",
+    "https://www.nknews.org/2026/11/seoul-preparing-to-repatriate-north-koreans-rescued-at-sea-earlier-this-month/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후는 없고, 김정은 핵시설 시찰·전술핵 발언(북한 주장)과 서해발사장 ICBM 엔진시험 추정이 배경성 보도로 나왔다. 접경 열점 후보는 0건이며 직전 회차와 판단이 같다.",
+  "overall_summary": "KCNA가 김정은의 핵무기·우라늄 농축시설 시찰을 보도했으나 북한 주장 단계이며, 병력·접경·정부 경고 항목에는 새 징후가 없다. 접경 남측 열점 후보 0건, 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -49,23 +56,21 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "북한(핵시설)",
-      "summary": "KCNA 보도를 인용해 김정은이 핵시설을 시찰하고 전술핵 활용 확대를 강조했다고 NK News가 11/25~26 보도했다(북한 주장, 정부 확인 없음). NK Pro는 서해발사장 ICBM 엔진 시험 추정도 보도.",
-      "meaning": "핵능력 과시성 발언·시찰이며 실전 배치·사용 준비 근거는 없다.",
+      "region": "북한",
+      "summary": "NK News가 KCNA를 인용해 김정은의 핵탄두·우라늄 농축시설 시찰과 핵 개발 지속 발언(11/26)을 보도했다(북한 주장, 정부 확인 없음).",
+      "meaning": "핵 능력 과시성 발언·시찰로 실전 배치·사용 준비 징후는 아니다.",
       "sources": [
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/pro/"
+          "url": "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "NK News가 김정은 핵시설 시찰·전술핵 활용 강조(KCNA 인용)를 보도"
+        "KCNA가 11/26 시찰 사진 공개"
       ],
-      "speculation": [
-        "서해발사장 ICBM 엔진 시험 추정(NK Pro, 위성영상)"
-      ]
+      "speculation": []
     },
     "logistics": {
       "status": "none"
@@ -92,7 +97,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T22:10:33+00:00",
+  "checked_at": "2026-11-25T23:09:31+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-25T11:40:03+00:00",
+  "judged_at": "2026-11-25T23:40:16+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -9,12 +9,12 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cm894p88jzxpo",
-          "published_at": "2026-11-23T20:48:35+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/ck9q8xp5r5pgo",
+          "published_at": "2026-11-25T14:46:41+00:00"
         }
       ],
-      "summary": "우크라이나가 리비아 벵가지항의 러시아 코르벳함을 공격했고 러시아는 매일 우크라이나에 미사일·드론 공격을 이어가고 있다고 BBC가 전했다.",
-      "judged_at": "2026-11-25T11:40:03+00:00"
+      "summary": "우크라이나 총참모부가 러시아 사바슬레이카 비행장에서 군용기 5대를 타격했다고 밝혔고 러시아는 논평하지 않았다.",
+      "judged_at": "2026-11-25T23:40:16+00:00"
     },
     "mideast": {
       "state": 3,
@@ -23,26 +23,26 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/c6rrg7ggq190o",
-          "published_at": "2026-11-24T15:35:53+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cmd718zydz9qo",
+          "published_at": "2026-11-25T14:06:13+00:00"
         }
       ],
-      "summary": "이스라엘의 가자 공습으로 하마스 내부보안 수장을 포함해 최소 7명이 숨졌다고 보건당국·구조대가 BBC에 말했다.",
-      "judged_at": "2026-11-25T11:40:03+00:00"
+      "summary": "이스라엘군의 가자시티 공습으로 하마스 내부보안 간부와 가족 3명이 숨졌다고 현지 의료진과 하마스 내무부가 밝혔다.",
+      "judged_at": "2026-11-25T23:40:16+00:00"
     },
     "taiwan": {
       "state": 1,
       "channels": [],
       "sources": [
         {
-          "name": "Focus Taiwan",
+          "name": "BBC",
           "tier": "B",
-          "url": "https://focustaiwan.tw/politics/202611240008",
-          "published_at": "2026-11-24T13:15:10+08:00"
+          "url": "https://www.bbc.co.uk/news/articles/cv702rw7dzx5o",
+          "published_at": "2026-11-24T23:05:11+00:00"
         }
       ],
-      "summary": "중국 신화통신의 트럼프 발언 보도에 대해 대만 외교부가 미국의 대만 정책은 변함없다고 밝혔다.",
-      "judged_at": "2026-11-25T11:40:03+00:00"
+      "summary": "BBC 베리파이는 중국 연계 네트워크가 대만 지방선거를 앞두고 민진당 겨냥 AI 가짜 영상 500건 넘게 유포했다고 분석했다.",
+      "judged_at": "2026-11-25T23:40:16+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -51,44 +51,32 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-25T18:51:00+08:00",
-          "kind": "feed"
-        },
-        {
-          "name": "Rappler",
-          "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-25T18:41:34+08:00",
+          "published_at": "2026-11-26T00:00:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-25T10:52:09+00:00",
+          "published_at": "2026-11-25T21:51:17+00:00",
           "kind": "feed"
         }
       ],
-      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 긴장 관련 기사 없음",
-      "judged_at": "2026-11-25T11:40:03+00:00"
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 긴장 관련 기사 없음",
+      "judged_at": "2026-11-25T23:40:16+00:00"
     },
     "us_posture": {
       "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "DVIDS",
-          "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-25T06:15:32-05:00",
-          "kind": "feed"
-        },
-        {
           "name": "Stars and Stripes",
-          "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-25T00:00:00+00:00",
-          "kind": "feed"
+          "tier": "B",
+          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-25/batan-basco-philippines-us-air-force-23570574.html",
+          "published_at": "2026-11-25T00:00:00+00:00"
         }
       ],
-      "summary": "DVIDS·Stars and Stripes 목록에 72시간 안 미 전략자산 전개 관련 기사 없음",
-      "judged_at": "2026-11-25T11:40:03+00:00"
+      "summary": "Stars and Stripes는 미국과 필리핀이 대만 인근 바탄 공항 시설 개선을 계획한다고 전했고 대규모 전개 보도는 목록에 없다.",
+      "judged_at": "2026-11-25T23:40:16+00:00"
     }
   }
 }

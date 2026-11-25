@@ -1,36 +1,36 @@
 {
   "version": 1,
-  "at": "2026-11-25T11:40:03+00:00",
-  "opened": 20,
+  "at": "2026-11-25T23:40:16+00:00",
+  "opened": 17,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-25T11:40:03+00:00",
+      "last_ok": "2026-11-25T23:40:16+00:00",
       "raw": 3,
       "kept": 3
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-25T11:40:03+00:00",
+      "last_ok": "2026-11-25T23:40:16+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
-      "status": "checked",
-      "last_ok": "2026-11-25T11:40:03+00:00",
-      "raw": 1,
-      "kept": 1
+      "status": "no_findings",
+      "last_ok": "2026-11-25T23:40:16+00:00",
+      "raw": 0,
+      "kept": 0
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-25T11:40:03+00:00",
+      "last_ok": "2026-11-25T23:40:16+00:00",
       "raw": 5,
       "kept": 5,
-      "note": "us_posture: 평온 확인(DVIDS·Stars and Stripes 목록). 동아일보 정치·사회 피드 시간 초과"
+      "note": "scs_ecs: Rappler 피드 403 — Philstar·BBC 아시아 2곳으로 평온 확인. 연합뉴스 기사 본문 빈 페이지·국민일보 차단으로 국내 사건·연동 원문 미개방"
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-25T11:40:03+00:00",
+      "last_ok": "2026-11-25T23:40:16+00:00",
       "raw": 0,
       "kept": 0
     }

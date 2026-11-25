@@ -1,66 +1,79 @@
 {
   "coverage": {
     "troop_movement": [
-      "North Korea Reuters missile troops nuclear",
-      "국내 언론 수집(news_kr)"
+      "북한 병력 이동 전방"
     ],
     "nuclear": [
-      "North Korea Reuters missile troops nuclear",
-      "North Korea appears to have tested ICBM engine Sohae"
-    ],
-    "logistics": [
-      "North Korea Reuters missile troops nuclear"
+      "North Korea Sohae engine test ICBM satellite imagery November 2026"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 NLL"
+      "북한 지뢰 발견 DMZ 귀순 NLL"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "North Korea Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
-    "parade_massing": [
-      "North Korea Reuters missile troops nuclear"
-    ],
-    "nk_internal": [
-      "North Korea Reuters missile troops nuclear"
-    ],
     "gov_warning": [
-      "지뢰 발견 DMZ 귀순 NLL",
-      "North Korea Reuters missile troops nuclear"
+      "북한 미사일 합참 11월 25일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "북한 해킹 귀속 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
+    ],
+    "logistics": [
+      "북한 군수 수송 탄약 비축"
+    ],
+    "parade_massing": [
+      "북한 열병식 집결 위성사진"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제 노농적위군 동원"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://www.nknews.org/2026/11/north-korea-expels-swiss-diplomat-over-sanctions-on-childrens-camp/",
-    "https://www.nknews.org/2026/11/seoul-preparing-to-repatriate-north-koreans-rescued-at-sea-earlier-this-month/",
     "https://www.nknews.org/pro/north-korea-appears-to-have-tested-icbm-engine-as-trump-sought-kim-meeting/",
-    "https://www.koreatimes.co.kr/southkorea/defense"
+    "https://www.nknews.org/2026/11/north-korea-expels-swiss-diplomat-over-sanctions-on-childrens-camp/",
+    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760"
   ],
-  "overall_summary": "11/25 기준 24시간 내 신규 군사 징후 보도 없음; 직전 대비 변화 없음. NK News 가 Sohae 엔진 시험대 시험 가능성(11/15~19)을 분석했으나 독립 확인이 없어 임박 신호로만 기록. 접경 열점 후보 0건, 국내 언론 수집은 3개 피드 실패(partial).",
+  "overall_summary": "NK News Pro가 11/25 서해발사장 엔진시험 정황(위성영상 추정, 단독)을 보도했으나 시험·발사류라 정례로 본다. 그 외 24시간 내 신규 군사 징후 없음 — 직전과 사실상 동일.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "평안북도 서해위성발사장",
+      "lat": 39.66,
+      "lon": 124.7,
+      "summary": "NK News Pro가 위성영상으로 11/15~19경 서해발사장 수평 엔진시험대에서 ICBM급 엔진 시험 정황을 추정 보도(북한 발표·정부 확인 없음).",
+      "meaning": "시험 성격이라 정례로 보며 실전 배치 근거는 아니다.",
+      "sources": [
+        {
+          "name": "NK News Pro",
+          "tier": "C",
+          "url": "https://www.nknews.org/pro/north-korea-appears-to-have-tested-icbm-engine-as-trump-sought-kim-meeting/"
+        }
+      ],
+      "confidence": "낮음",
+      "facts": [
+        "Maxar·Planet·Sentinel-2 영상에서 시험대 아래 식생 고사"
+      ],
+      "speculation": [
+        "ICBM 엔진 시험 여부는 영상 추정"
+      ]
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
       "status": "none",
-      "summary": "표류 북한 어선 송환 준비(통일부 11/24)는 인도적 송환으로 군사 징후 아님; 신규 지뢰·충돌 보도 없음."
+      "summary": "DMZ 지뢰(9월 UNC 정전협정 위반 판단)는 배경이며 24시간 내 신규 발견·충돌 보도 없음."
     },
     "electronic_cyber": {
       "status": "none",
@@ -68,7 +81,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "11/24 러 군용기 울릉도 인근 KADIZ 진입은 합참이 영공 침범 아님으로 발표, 24시간 경과 배경."
+      "summary": "북한의 스위스 외교관 추방(11/25)은 외교·제재 사안으로 군사 징후 아님."
     },
     "parade_massing": {
       "status": "none"
@@ -83,8 +96,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T18:11:52+00:00",
-  "grade": 0,
-  "grade_label": "평시",
+  "checked_at": "2026-11-25T18:12:06+00:00",
+  "grade": 1,
+  "grade_label": "주의",
   "active": []
 }

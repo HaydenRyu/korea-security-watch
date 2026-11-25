@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-25T18:11:52+00:00",
+  "updated_at": "2026-11-25T18:12:06+00:00",
   "active": [
     {
       "id": "scheduled_event-20261116-2edd67bc",
@@ -46,13 +46,13 @@
     {
       "id": "site_activity-20261125-8a0292c5",
       "kind": "site_activity",
-      "summary": "NK News 가 위성영상 분석으로 11/15~19경 서해위성발사장 수평 엔진 시험대에서 ICBM 엔진 시험이 있었을 가능성을 제기했다.",
+      "summary": "NK News Pro가 11/15~19경 서해발사장 수평 엔진시험대에서 엔진 시험 정황을 위성영상으로 추정했다.",
       "window": {
         "start": "2026-11-15",
-        "end": "2026-11-22"
+        "end": "2026-11-19"
       },
       "level": "analysis",
-      "first_seen": "2026-11-25T18:11:52+00:00",
+      "first_seen": "2026-11-25T18:12:06+00:00",
       "expires": "2026-12-09",
       "source": {
         "url": "https://www.nknews.org/pro/north-korea-appears-to-have-tested-icbm-engine-as-trump-sought-kim-meeting/",

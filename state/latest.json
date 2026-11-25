@@ -1,49 +1,56 @@
 {
   "coverage": {
-    "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 랜섬웨어 공격"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
+    ],
+    "nuclear": [
+      "풍계리 영변 핵시설 활동",
+      "North Korea Reuters"
+    ],
+    "logistics": [
+      "북한 군수 수송 탄약 비축",
+      "North Korea munitions shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+    ],
+    "electronic_cyber": [
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출",
+      "랜섬웨어 공격"
     ],
     "foreign_forces": [
       "김정은 방중 방러 Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
     ],
-    "nuclear": [
-      "North Korea missile launch November 2026",
-      "풍계리 영변 핵시설 활동"
-    ],
-    "calm": [
-      "남북 대화 제안"
-    ],
-    "troop_movement": [
-      "북한 병력 이동 전방 증강"
-    ],
-    "logistics": [
-      "북한 군수 수송 탄약 비축"
-    ],
     "parade_massing": [
-      "북한 열병식 집결 위성"
+      "북한 열병식 집결 위성",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 준전시 등화관제 노농적위군",
+      "North Korea martial blackout"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향"
+      "진돗개 발령 데프콘 상향",
+      "DEFCON Korea raised"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 북한 11월 25일"
     ]
   },
   "opened": [
     "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861807",
-    "https://www.yna.co.kr/view/AKR20261125086100009",
-    "https://kookbang.dema.mil.kr/newsWeb/20261125/7/ATCE_CTGR_0010010000/view.do"
+    "https://kookbang.dema.mil.kr/newsWeb/20261125/7/ATCE_CTGR_0010010000/view.do",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862664"
   ],
-  "overall_summary": "신규 징후 없음. 러 군용기 카디즈 진입(11/24)만 직전과 같이 단독·정례로 유지한다.",
+  "overall_summary": "신규 징후 없음. 러 군용기 카디즈 진입(11/24, SBS 단독)만 직전과 같이 단독·정례로 유지하며, 트럼프의 친서 재개 발언은 외교 발언일 뿐이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -92,7 +99,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T04:10:24+00:00",
+  "checked_at": "2026-11-25T05:10:21+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

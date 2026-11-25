@@ -1,52 +1,63 @@
 {
   "version": 1,
-  "updated_at": "2026-11-24T23:39:48+00:00",
-  "world_at": "2026-11-24T23:39:48+00:00",
+  "updated_at": "2026-11-25T05:40:39+00:00",
+  "world_at": "2026-11-25T05:40:39+00:00",
   "world": [
     {
-      "title": "나토 사무총장, 러시아 핵탑재 위성 보도에 우주 위협 방어 다짐",
-      "summary": "독일 언론이 러시아의 핵무기 탑재 위성 발사 준비 정보 보고(60일 안 발사 가능성)를 보도했고 뤼터 나토 사무총장은 우주 위협에도 동맹이 방어하겠다고 밝혔다.",
-      "link_korea": "러시아의 우주·핵 위협 논란은 핵 비확산 체제와 북러 군사협력에 대한 경계를 키우는 배경이다.",
-      "region": "유럽·우주",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c9x2er1ry2mzo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
-      }
-    },
-    {
-      "title": "우크라이나, 리비아 벵가지항 러시아 코르벳함 공격",
-      "summary": "BBC는 우크라이나 보안국·군이 리비아 벵가지에 정박한 러시아 코르벳함 메르쿠리를 야간에 공격했고 이는 우크라이나 전쟁이 국경 밖으로 확산되는 사례라고 분석했다.",
-      "link_korea": "러-우 전쟁의 확산은 북러 군사협력과 북한군 파병 논의의 배경이 된다.",
+      "title": "러시아 자체 통계로 본 우크라이나전 사망자 50만 명 육박",
+      "summary": "BBC는 유출된 러시아 자체 통계가 우크라이나 전면전 이후 러시아 내 사망 양상을 근본적으로 바꿨고 전쟁 관련 사망이 50만 명에 가깝다고 보도했다.",
+      "link_korea": "러-우 전쟁 장기화는 북러 군사협력과 북한군 파병 논의의 배경이다.",
       "region": "러시아·우크라이나",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cm894p88jzxpo",
+        "url": "https://www.bbc.co.uk/news/articles/cmx27g533zwyo",
         "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     },
     {
-      "title": "이스라엘 공습으로 하마스 내부보안 수장 등 가자서 사망",
-      "summary": "보건당국·구조대에 따르면 이스라엘의 가자지구 공습으로 하마스 내부보안 수장 나임 아부 나헬을 포함해 최소 7명이 숨졌다.",
-      "link_korea": "중동 전선의 장기화는 미군 전력 배분과 해상교통로·에너지 안보를 통해 한반도 방위 여건에 간접 영향을 준다.",
-      "region": "중동",
+      "title": "솔로몬제도, 중국과의 안보협정 종료하고 호주와 조약 체결",
+      "summary": "BBC에 따르면 솔로몬제도 지도자 매튜 웨일은 중국과의 논란 많은 안보협정을 끝내고 호주와의 조약으로 대체한다고 밝혔다.",
+      "link_korea": "인도·태평양 미·중 전략 경쟁 구도는 주한미군 전력 운용과 역내 안보 환경에 간접 영향을 준다.",
+      "region": "오세아니아",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c6rrg7ggq190o",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/ckdd1z2gvlgno",
+        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
       }
     },
     {
-      "title": "대만 대륙위원회 수장, 시진핑 4기 대만 압박 강화 경고",
-      "summary": "대만 대륙위원회 추이추이청 주임위원은 시진핑 4기에 중국이 '통일 전 통치' 접근으로 양안 현상 변경을 더 직접 시도할 수 있다고 24일 밝혔다.",
-      "link_korea": "대만해협 긴장 변화는 주한미군·미 전력 운용과 동북아 안보 환경에 영향을 주는 변수다.",
-      "region": "동아시아",
+      "title": "탈북민 수백 명 증언, 북한서 신앙 이유로 감시·구타·투옥",
+      "summary": "BBC는 새 보고서에 기독교 신앙 때문에 박해받았다는 탈북민 수백 명의 증언이 담겼다고 전했다.",
+      "link_korea": "북한 인권 문제는 대북 제재·유엔 논의와 남북관계의 쟁점이다.",
+      "region": "한반도",
       "source": {
-        "name": "Focus Taiwan(CNA)",
-        "url": "https://focustaiwan.tw/politics/202611240020",
-        "via": "https://feeds.feedburner.com/rsscna/engnews"
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cqgkv8kp7145o",
+        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+      }
+    },
+    {
+      "title": "중국 연계 네트워크, AI 가짜물로 대만 선거 후보 비방",
+      "summary": "BBC Verify는 중국 연계 네트워크가 AI 가짜 영상·이미지로 라이칭더 총통과 여당 후보를 공격했다고 밝혔다.",
+      "link_korea": "대만 해협 정세와 중국의 인지전은 역내 안보 환경과 한반도 연결 변수다.",
+      "region": "대만",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cv702rw7dzx5o",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "北, 평양 주재 스위스 외교사무소 폐쇄 요구",
+      "summary": "조선중앙통신은 북한 외무성이 스위스의 송도원국제소년단야영소 제재에 반발해 스위스 외교사무소 폐쇄를 요구하고 대표에게 48시간 내 출국을 통보했다고 보도했다.",
+      "link_korea": "대북 제재와 북한의 외교 고립·대응 수위를 보여주는 직접 사례다.",
+      "region": "한반도",
+      "source": {
+        "name": "세계일보",
+        "url": "https://www.segye.com/newsView/20261125509726",
+        "via": "https://www.segye.com/Articles/RSSList/segye_politic.xml"
       }
     }
   ],
-  "world_context": "우주·해상·중동·대만해협으로 번지는 분쟁 확산 속에서 한반도 안보 환경의 외부 변수가 커지고 있다."
+  "world_context": "러-우 전쟁 장기화, 인도·태평양 전략 경쟁, 북한의 대외 강경 조치가 같은 날 보도됐다."
 }

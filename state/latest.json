@@ -1,55 +1,55 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동",
+      "news_kr.py 수집(접경·병력 묶음)",
       "North Korea troop"
     ],
     "nuclear": [
-      "북한 핵",
+      "NK News 메인",
       "North Korea ICBM engine test"
     ],
     "logistics": [
-      "북한 군수 수송",
+      "북한 군수 수송 (수집기 묶음)",
       "North Korea ammunition"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순",
-      "MDL 침범"
+      "지뢰 발견 (수집기)",
+      "DMZ 귀순 (수집기)",
+      "NLL 합참 북한 발사"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출"
+      "GPS 교란 (수집기)",
+      "해킹 개인정보 유출 (수집기)",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "김정은 방중 (수집기)",
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식 (수집기)"
     ],
     "nk_internal": [
-      "북한 준전시"
+      "북한 준전시 (수집기)"
     ],
     "gov_warning": [
-      "진돗개 발령"
+      "진돗개 발령 (수집기)"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 (수집기)",
+      "North Korea attributed FBI (수집기)"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 (수집기)"
     ]
   },
   "opened": [
     "https://www.nknews.org/",
-    "https://www.yna.co.kr/view/AKR20261124020900504",
-    "https://www.yna.co.kr/view/AKR20261124093000504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
     "https://www.koreaherald.com/"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후는 없고 NK News Pro의 ICBM 엔진시험 추정과 북한의 스위스 외교관 추방이 배경이다. 접경 열점·국내 언론 수집 후보 중 판정 대상 사건은 확인되지 않았다.",
+  "overall_summary": "최근 24시간 신규 군사 징후는 없다. NK News Pro의 서해발사장 ICBM 엔진시험 추정과 북한의 스위스 외교관 추방이 배경이며 접경 열점 후보는 0건이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,7 +60,7 @@
       "region": "서해발사장",
       "lat": 39.66,
       "lon": 124.7,
-      "summary": "NK News Pro가 11/25자로 ICBM 엔진 시험 정황을 위성영상으로 추정 보도했다(정부 확인 없음, 24시간 내 재확인 유지).",
+      "summary": "NK News Pro가 11/25자로 서해발사장 ICBM 엔진 시험 정황을 위성영상으로 추정 보도했다(정부 확인 없음).",
       "meaning": "전략무기 시험 정황이나 실전 배치 근거는 없다.",
       "sources": [
         {
@@ -100,10 +100,10 @@
     },
     "hybrid_ops": {
       "status": "none",
-      "summary": "배경: 美 법무부 북한 바이낸스 해킹 자금 몰수 소송(연합, 원문 A 미열람)이라 징후로 올리지 않음."
+      "summary": "배경: 美 법무부 북한 바이낸스 해킹 자금 몰수 소송, 영국 북한 위장기업 제재회피 보도(원문 A 미열람)라 징후로 올리지 않음."
     }
   },
-  "checked_at": "2026-11-25T20:10:40+00:00",
+  "checked_at": "2026-11-25T21:10:00+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

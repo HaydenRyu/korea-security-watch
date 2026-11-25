@@ -1,42 +1,48 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 미사일 발사 합참 11월 25일"
+      "북한 합참 발표 11월 25일"
     ],
     "nuclear": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "North Korea Reuters November 25 2026"
     ],
     "logistics": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "북한 합참 발표 11월 25일"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한"
+      "지뢰 발견 목함지뢰 해안 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "GPS 교란 북한 해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 미사일 발사 합참 11월 25일"
+      "북한 합참 발표 11월 25일"
     ],
     "nk_internal": [
-      "북한 미사일 발사 합참 11월 25일"
+      "North Korea Reuters November 25 2026"
     ],
     "gov_warning": [
-      "북한 미사일 발사 합참 11월 25일"
+      "North Korea missile launch Japan Ministry of Defense 北朝鮮 ミサイル 11月25日"
     ],
     "hybrid_ops": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.nknews.org",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+    "https://www.nknews.org/",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261125/n-koreas-yongbyon-nuclear-complex-expansion-may-boost-weapons-grade-uranium-production-says-us-science-institute",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261124/us-takes-action-to-recover-over-11-bil-in-cryptocurrency-stolen-by-n-korean-hackers",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261123/s-korea-monitoring-troop-activities-after-n-korean-vessel-marked-coast-guard-spotted-near-nll"
   ],
-  "overall_summary": "직전과 같이 서해발사장 엔진시험 추정 보도(routine)만 유지되며 신규 도발·경고 징후는 확인되지 않았다. 국내 언론 수집 묶음은 외국 사건·정치 기사 위주로 접경 사건 없음.",
+  "overall_summary": "영변 농축시설 증축 분석과 서해발사장 엔진시험 추정 보도(모두 routine)만 유지되고 신규 도발·경고 징후는 없다. 국내 언론 묶음은 외국 사건·정치 기사 위주로 접경 사건 없음, 접경 열점 후보 0건.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -44,38 +50,44 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "서해발사장",
-      "lat": 39.66,
-      "lon": 124.71,
-      "summary": "NK News Pro가 위성영상으로 11월 중순 서해발사장 엔진시험대의 ICBM급 엔진 시험 정황을 추정 보도했다(북한 발표·정부 확인 없음).",
-      "meaning": "장거리 미사일 개발 지속을 시사하나 시험 성격이다.",
+      "region": "평안북도 영변",
+      "lat": 39.8,
+      "lon": 125.75,
+      "summary": "미 ISIS가 위성영상으로 영변 농축시설 증축(9월 착공)이 무기급 우라늄 생산을 늘릴 수 있다고 11/25 분석했고, NK News Pro는 서해발사장 엔진시험대 정황을 추정 보도했다(북한 발표·정부 확인 없음).",
+      "meaning": "핵물질·ICBM 엔진 개발 지속을 시사하나 민간 분석 기반의 기존 흐름이다.",
       "sources": [
+        {
+          "name": "The Korea Times(연합)",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261125/n-koreas-yongbyon-nuclear-complex-expansion-may-boost-weapons-grade-uranium-production-says-us-science-institute"
+        },
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org"
+          "url": "https://www.nknews.org/"
         }
       ],
-      "confidence": "낮음",
+      "confidence": "중간",
       "facts": [
-        "NK Pro 11/25 보도: 서해발사장 시험대 식생 고사 등 준비 정황"
+        "ISIS 보고서가 영변 농축시설 증축 확인, IAEA 사무총장은 11/18 우려 표명"
       ],
       "speculation": [
-        "엔진 시험 실시 여부는 추정"
+        "무기급 우라늄 증산 목적 가능성"
       ]
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "11/23 서해 NLL 인근 '해안경비' 표기 북 선박 포착 보도는 24시간 경과이며 NLL 침범은 확인되지 않아 배경으로만 둔다.",
+      "sources": []
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "24시간 내 새 사건 없음 — 김정은 방중설은 11/18 이전 보도 배경."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -87,10 +99,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "미 법무부 바이낸스 해킹 자금 11억달러 몰수소송(11/23 발표)은 24시간 경과로 배경."
     }
   },
-  "checked_at": "2026-11-25T19:11:06+00:00",
+  "checked_at": "2026-11-25T20:10:37+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

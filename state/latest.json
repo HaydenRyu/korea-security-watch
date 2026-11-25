@@ -13,8 +13,7 @@
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "DMZ 귀순",
+      "북한 합참 발표 지뢰 발견 DMZ 귀순",
       "North Korea border DMZ"
     ],
     "electronic_cyber": [
@@ -24,7 +23,7 @@
       "North Korea hacking"
     ],
     "foreign_forces": [
-      "김정은 방러 방중",
+      "김정은 방중 방러",
       "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
@@ -48,12 +47,12 @@
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreaherald.com/article/10942242",
+    "https://en.yna.co.kr/view/AEN20261116006000315",
     "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
-    "https://www.koreajoongangdaily.com/korea/russian-military-aircraft-enter-koreas-air-defense-zonenbspkorean-fighter-jets-scrambled/12975914",
-    "https://www.koreancenter.or.kr/news/articleView.html?idxno=1440442"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261119/n-korea-to-hold-meeting-of-grassroots-leaders-of-ruling-party-this-month"
   ],
-  "overall_summary": "신규 군사 징후는 확인되지 않았고 북러 고위급 교류(조용원 방러, 11/16)는 이미 알려진 배경이다. 접경 열점 후보 0건, 직전 회차와 같은 안정 국면이다.",
+  "overall_summary": "신규 군사 징후는 확인되지 않았다(국내 수집 묶음은 정치·제재 배경 기사뿐, 접경 열점 신규 보도 대조 대상 없음). 직전 회차와 같은 평시 국면이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -71,8 +70,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "24시간 경과 — 11/24 러시아 군용기 KADIZ 진입 보도(SBS 단독)는 추가 확인 보도가 없고 영공 침범도 없었다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -87,7 +85,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T12:11:20+00:00",
+  "checked_at": "2026-11-25T13:10:30+00:00",
   "grade": 0,
   "grade_label": "평시",
   "active": []

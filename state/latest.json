@@ -1,55 +1,55 @@
 {
   "coverage": {
     "troop_movement": [
-      "news_kr.py 수집(접경·병력 묶음)",
-      "North Korea troop"
+      "news_kr.py 수집(접경·병력)",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "NK News 메인",
-      "North Korea ICBM engine test"
+      "김정은 핵시설 현지지도 우라늄 농축",
+      "Kim Jong Un inspects nuclear weapons institute uranium enrichment KCNA"
     ],
     "logistics": [
-      "북한 군수 수송 (수집기 묶음)",
+      "북한 군수 수송",
       "North Korea ammunition"
     ],
     "border_clash": [
-      "지뢰 발견 (수집기)",
-      "DMZ 귀순 (수집기)",
-      "NLL 합참 북한 발사"
+      "북한 합참 발표 지뢰 발견 DMZ 귀순",
+      "NLL 합참 북한"
     ],
     "electronic_cyber": [
-      "GPS 교란 (수집기)",
-      "해킹 개인정보 유출 (수집기)",
-      "사이버 공격 랜섬웨어 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 (수집기)",
-      "North Korea Kim Jong Un China Russia visit",
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 (수집기)"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "북한 준전시 (수집기)"
+      "북한 준전시"
     ],
     "gov_warning": [
-      "진돗개 발령 (수집기)"
+      "진돗개 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 (수집기)",
-      "North Korea attributed FBI (수집기)"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 (수집기)"
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
     "https://www.nknews.org/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreaherald.com/"
+    "https://www.koreaherald.com/",
+    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
   ],
-  "overall_summary": "최근 24시간 신규 군사 징후는 없다. NK News Pro의 서해발사장 ICBM 엔진시험 추정과 북한의 스위스 외교관 추방이 배경이며 접경 열점 후보는 0건이다.",
+  "overall_summary": "11/26 KCNA가 김정은의 핵탄두·우라늄 농축시설 시찰을 보도했으나(NK News 인용, 시설 시찰·발언 성격) 새로운 시험·배치 징후는 없다. 접경·병력·정부 경고 등 다른 항목은 신규 징후가 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -57,24 +57,23 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "서해발사장",
-      "lat": 39.66,
-      "lon": 124.7,
-      "summary": "NK News Pro가 11/25자로 서해발사장 ICBM 엔진 시험 정황을 위성영상으로 추정 보도했다(정부 확인 없음).",
-      "meaning": "전략무기 시험 정황이나 실전 배치 근거는 없다.",
+      "region": "북한(미공개)",
+      "summary": "KCNA가 김정은의 핵탄두 설계·우라늄 농축시설 시찰과 '누구의 인정도 구하지 않는다'는 발언을 보도했다(NK News 인용, 북한 주장).",
+      "meaning": "핵보유 과시 성격으로 시험·실전 배치 근거는 없다.",
       "sources": [
         {
           "name": "NK News",
           "tier": "C",
-          "url": "https://www.nknews.org/"
+          "url": "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
         }
       ],
       "confidence": "낮음",
       "facts": [
-        "NK News 메인에 해당 기사 제목 게재"
+        "NK News가 11/26 KCNA 보도를 인용해 우라늄 농축시설 시찰을 전함",
+        "ICBM·시험·배치 언급 없음"
       ],
       "speculation": [
-        "ICBM 엔진 시험 추정"
+        "핵보유국 지위 과시용 메시지"
       ]
     },
     "logistics": {
@@ -99,11 +98,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "배경: 美 법무부 북한 바이낸스 해킹 자금 몰수 소송, 영국 북한 위장기업 제재회피 보도(원문 A 미열람)라 징후로 올리지 않음."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-25T21:10:00+00:00",
+  "checked_at": "2026-11-25T22:10:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

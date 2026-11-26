@@ -1,50 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 김정은 11월 26일 속보",
-      "North Korea Reuters missile"
+      "북한 병력 이동 전방 증강",
+      "North Korea troops DMZ"
     ],
     "nuclear": [
-      "북한 김정은 11월 26일 속보",
-      "North Korea Reuters missile"
+      "김정은 핵시설 시찰 KCNA"
     ],
     "logistics": [
-      "북한 김정은 11월 26일 속보",
-      "North Korea Reuters missile"
+      "북한 군수물자 탄약 수송"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참"
+      "지뢰 발견 DMZ 귀순 합참",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "North Korea Reuters missile"
+      "김정은 방중",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 김정은 11월 26일 속보"
+      "북한 열병식 집결 위성사진"
     ],
     "nk_internal": [
-      "북한 김정은 11월 26일 속보"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "지뢰 발견 DMZ 합참"
+      "진돗개 데프콘 발령 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261125515554",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
-    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
+    "https://www.segye.com/newsView/20261125515554",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261126152400009"
   ],
-  "overall_summary": "김정은의 핵물질·핵무기·핵동력 시설 시찰을 KCNA가 보도했으나 신규 배치·시험은 없는 발언·시찰 수준이다. 접경·병력·군수 등 다른 항목에 새 징후는 확인되지 않아 직전 회차와 같은 평시 범위다. 접경 열점 후보 0건.",
+  "overall_summary": "KCNA의 김정은 핵시설 시찰·전술핵 확대 지시 보도가 있었으나 신규 배치·시험·접경 사건은 없어 직전과 같은 수준이다. 접경 열점 후보 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -52,22 +54,23 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "북한(미공개 시설)",
-      "summary": "KCNA가 25일 김정은의 핵물질 생산기지·핵무기·핵동력 설비 시설 시찰과 전술핵 다영역 운용 확대 지시를 보도했고 신규 배치·시험 발표는 없다.",
-      "meaning": "핵 지위 불가침 선언과 능력 과시 성격의 발언·시찰로 실전 배치 징후는 아니다.",
+      "region": "북한",
+      "summary": "KCNA가 김정은의 핵물질 생산기지·핵무기 연구시설 시찰과 전술핵 다영역 운용 확대 지시를 보도했고 신규 배치·시험 발표는 없다.",
+      "meaning": "핵능력 과시 발언·시찰로 실전 배치 변화는 확인되지 않는다.",
       "sources": [
         {
-          "name": "한국타임스(로이터)",
+          "name": "코리아타임스",
           "tier": "B",
           "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 보도: 25일 시찰, 시설 위치 미공개"
+        "KCNA 보도 25일 시찰",
+        "시설 위치 미공개"
       ],
       "speculation": [
-        "미국에 보내는 메시지라는 분석"
+        "미국 향한 메시지라는 분석"
       ]
     },
     "logistics": {
@@ -80,9 +83,8 @@
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "region": "서울",
-      "summary": "귀속 미확인 — 서울경찰청이 중국 칭다오 해킹조직에서 산 해킹 계정으로 가짜 성형후기를 올린 52명을 송치(북한 무관).",
-      "meaning": "북한 소행 근거가 없는 국내 계정 해킹 범죄로 군사 징후가 아니다.",
+      "summary": "귀속 미확인 — 서울경찰청이 중국 칭다오 해킹조직에서 산 해킹 계정으로 가짜 성형후기를 올린 52명을 송치했다(북한 무관).",
+      "meaning": "국내 계정 도용 범죄로 군사적 의미는 낮다.",
       "sources": [
         {
           "name": "세계일보",
@@ -90,15 +92,14 @@
           "url": "https://www.segye.com/newsView/20261125515554"
         }
       ],
-      "confidence": "높음",
+      "confidence": "중간",
       "facts": [
-        "계정 800여 개로 후기 약 8,400건, 기사에 북한 언급 없음"
+        "계정 약 800개, 후기 8,400건"
       ],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "24시간 경과 — 러시아 군용기 KADIZ 진입(24일 첫 보도) 이후 새 북·러·북·중 협력 확인 없음."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -113,7 +114,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T07:10:04+00:00",
+  "checked_at": "2026-11-26T08:10:19+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,69 +1,61 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 지뢰 발견 DMZ 귀순",
-      "North Korea NK News latest"
+      "합참 북한 군사 동향",
+      "북한 병력 이동 전방"
     ],
     "nuclear": [
-      "북한 탄도미사일 엔진 시험 서해 트럼프 러브콜 당시",
-      "NK Pro Sohae ICBM engine test Trump Kim meeting"
+      "North Korea Reuters AP missile launch November 2026",
+      "동창리 엔진시험"
     ],
     "logistics": [
-      "North Korea NK News latest"
+      "북한 군수 수송 탄약"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순"
+      "합참 북한 군사 동향 지뢰 발견 DMZ 귀순",
+      "목함지뢰 해안"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "북한 GPS 교란 해킹 공격 사이버 공격 11월 26일",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 11월",
       "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 발표"
+      "김정은 방중",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "North Korea NK News latest"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "North Korea NK News latest"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "합참 북한 지뢰 발견 DMZ 귀순"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI"
-    ],
-    "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "간첩 혐의 국가보안법 구속",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261126518166",
-    "https://www.nknews.org/",
     "https://www.yna.co.kr/view/AKR20261126152400009",
-    "https://www.yna.co.kr/view/AKR20261126193900083",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630"
+    "https://www.yna.co.kr/view/AKR20261124093000504",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630",
+    "https://www.nknews.org"
   ],
-  "overall_summary": "신규 징후 없이 직전 회차와 같은 정례 수준이다. NK뉴스가 동창리 엔진 지상분출시험 정황을 보도했으나 시험 성격이라 정례로 본다.",
+  "overall_summary": "신규 징후는 주한미군 아파치 대대 운용 중단(공식 확인, 임무 변화 없음) 정도이고 동창리 엔진시험 정황은 NK뉴스 단독 보도의 지속이다. 접경 열점·충돌·지뢰 신규 보도는 없어 직전과 비슷한 수준이다.",
   "items": {
-    "troop_movement": {
-      "status": "none"
-    },
     "nuclear": {
       "status": "single",
       "routine": true,
       "region": "평안북도 철산군 동창리",
       "lat": 39.66,
-      "lon": 124.7,
-      "summary": "NK뉴스가 위성사진으로 11/15~19일 동창리 엔진시험장의 지상분출시험 정황을 보도했고 연합이 전했으나 북한 발표·독립 확인은 없다.",
-      "meaning": "장거리 발사체 엔진 시험 정황이며 실전 배치 징후는 아니다.",
+      "lon": 124.71,
+      "summary": "NK뉴스가 위성사진으로 11/15~19일 동창리 엔진시험장 지상분출시험 정황을 보도했고 연합이 전했으나 북한 발표·독립 확인은 없다.",
+      "meaning": "고체연료 ICBM·IRBM 엔진 시험 정황이나 시험 성격이라 정례로 본다.",
       "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
-        },
         {
           "name": "연합뉴스",
           "tier": "B",
@@ -72,24 +64,19 @@
       ],
       "confidence": "중간",
       "facts": [
-        "NK뉴스가 상업위성 영상에서 식생 고사 흔적을 확인했다고 보도"
+        "15일 촬영 위성사진에 엔진시험장 가림막 개방",
+        "15~19일 초목 고사 현상"
       ],
       "speculation": [
-        "ICBM용 엔진 시험 가능성"
+        "장거리 탄도미사일용 엔진 시험"
       ]
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "border_clash": {
-      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "summary": "귀속 미확인 — 경찰이 중국 해킹조직에서 산 계정으로 성형외과 가짜 후기를 올린 사건을 적발했다(북한 무관).",
-      "meaning": "국내 계정 도용 범죄이며 군사적 의미는 없다.",
+      "meaning": "정부·기반시설 대상 공격이 아니라 등급에 쓰지 않는다.",
       "sources": [
         {
           "name": "SBS",
@@ -98,19 +85,17 @@
         }
       ],
       "confidence": "중간",
-      "facts": [
-        "경찰이 가짜 후기 약 8천 건을 적발"
-      ],
+      "facts": [],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": false,
       "region": "경기 평택",
-      "lat": 36.97,
-      "lon": 127.03,
+      "lat": 36.99,
+      "lon": 127.11,
       "summary": "주한미군이 2사단 5-17 공중기병대대(아파치) 운용 중단을 확인했고 임무·공약 변화는 없다고 밝혔다.",
-      "meaning": "미군 전력 구조 개편이며 감축 발표는 아니다.",
+      "meaning": "미군 태세 변화 보도이나 병력 감축·임무 변경이 아니라는 공식 입장이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -120,14 +105,12 @@
       ],
       "confidence": "중간",
       "facts": [
-        "운용 중단은 지난해 12월 15일자, CRS 보고서로 처음 알려짐"
+        "주한미군 26일 공식 확인",
+        "미 육군 전력구조 개편의 일환"
       ],
       "speculation": []
     },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
+    "border_clash": {
       "status": "none"
     },
     "gov_warning": {
@@ -135,9 +118,21 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "troop_movement": {
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-26T14:11:11+00:00",
+  "checked_at": "2026-11-26T15:11:01+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

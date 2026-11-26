@@ -1,12 +1,45 @@
 {
   "version": 1,
-  "updated_at": "2026-11-26T11:40:22+00:00",
-  "world_at": "2026-11-26T11:40:22+00:00",
+  "updated_at": "2026-11-26T23:40:50+00:00",
+  "world_at": "2026-11-26T23:40:50+00:00",
   "world": [
     {
-      "title": "미국, 중국·EU 등 다수 교역국에 새 관세 발표",
-      "summary": "BBC는 미국이 중국·EU와 일본·한국·대만 등 14곳에 새 관세를 발표했고 중국이 최대 40%로 가장 높다고 전했다.",
-      "link_korea": "한국이 대상 국가에 포함돼 한미 통상 합의와 수출에 직접 영향을 준다.",
+      "title": "김정은, 핵탄두·핵물질 생산시설 시찰 공개",
+      "summary": "조선중앙통신은 김정은이 핵탄두와 핵물질 생산시설을 시찰했다고 보도했고 핵보유국 지위를 바꾸지 않겠다고 밝혔다.",
+      "link_korea": "북한이 한국의 핵추진잠수함 추진을 미국이 승인했다고 비난해 대화 재개 전망이 낮아졌다.",
+      "region": "한반도",
+      "source": {
+        "name": "Stars and Stripes(Bloomberg)",
+        "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-26/kim-jong-un-nuclear-warheads-23584962.html",
+        "via": "https://www.stripes.com/theaters/asia_pacific/"
+      }
+    },
+    {
+      "title": "쿠웨이트 시설 드론 공격, 이탈리아인 2명 사망",
+      "summary": "쿠웨이트와 이탈리아는 이란제 드론 공격으로 이탈리아 기술자 2명이 숨졌다고 밝혔고 이란은 책임을 부인했다.",
+      "link_korea": "중동 전쟁 확전은 미군 전력 분산과 호르무즈 에너지 수급에 영향을 준다.",
+      "region": "중동",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o",
+        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+      }
+    },
+    {
+      "title": "젤렌스키 「미국, 러시아 압박 부족」",
+      "summary": "젤렌스키는 BBC 인터뷰에서 대공 미사일 인도 지연으로 인명 피해가 난다며 미국이 평화 협상에서 러시아를 충분히 압박하지 않는다고 말했다.",
+      "link_korea": "전쟁 장기화는 북러 군사협력이 이어지는 배경이다.",
+      "region": "유럽",
+      "source": {
+        "name": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo",
+        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+      }
+    },
+    {
+      "title": "미국, 중국·한국 등 14곳에 새 관세 발표",
+      "summary": "BBC는 미국이 중국·EU·일본·한국·대만 등에 새 관세를 발표했고 중국이 최대 40%로 가장 높다고 전했다.",
+      "link_korea": "한국이 대상에 포함돼 수출과 한미 통상 합의에 영향이 있다.",
       "region": "미국·동아시아",
       "source": {
         "name": "BBC",
@@ -15,49 +48,16 @@
       }
     },
     {
-      "title": "북한, 스위스 외교대표 추방…제재 반발",
-      "summary": "북한이 스위스의 원산 송도원 국제소년단야영소 제재에 반발해 스위스 외교대표에게 48시간 안 출국을 요구했다.",
-      "link_korea": "대북 제재에 대한 북한의 외교적 보복으로 서방과의 대화 창구가 줄어든다.",
+      "title": "북한, 스위스 외교대표 추방",
+      "summary": "북한은 스위스가 원산 송도원 국제소년단야영소를 제재한 데 반발해 스위스 외교대표에게 48시간 안 출국을 요구했다.",
+      "link_korea": "서방과의 대화 창구가 줄어 대북 제재를 둘러싼 외교 갈등이 커진다.",
       "region": "한반도",
       "source": {
         "name": "BBC",
         "url": "https://www.bbc.co.uk/news/articles/cq0l34e4kkr5o",
         "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
       }
-    },
-    {
-      "title": "우크라이나, 러시아 사바슬레이카 공군기지 타격 주장",
-      "summary": "우크라이나 총참모부는 MiG-31 3대와 Su-34 2대를 맞혔다고 밝혔고 러시아는 논평하지 않았다.",
-      "link_korea": "러시아 전쟁 장기화가 북러 군사협력 확대의 배경이 된다.",
-      "region": "유럽",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/ck9q8xp5r5pgo",
-        "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
-      }
-    },
-    {
-      "title": "이스라엘, 가자 공습으로 하마스 관리 부부 등 8명 사망",
-      "summary": "이스라엘 총리·국방장관은 공습이 하마스 간부 표적 제거 작전의 일부라고 밝혔고 현지에서 8명이 숨졌다고 전해졌다.",
-      "link_korea": "중동 무력 충돌 지속으로 미군 전력 배치와 에너지 수급에 부담이 이어진다.",
-      "region": "중동",
-      "source": {
-        "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cqvg2n4mzl1jo",
-        "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
-      }
-    },
-    {
-      "title": "중국 국방부, 대만 주변 「무성 군연」 보도에 반대 입장",
-      "summary": "중국 국방부는 ISW 등이 밝힌 대만 포위 모의 미예고 대규모 군사훈련 보도를 부인하지 않고 「과장·炒作」에 반대한다고 말했다.",
-      "link_korea": "대만해협 긴장은 미군 전력 운용과 동북아 안보 환경에 간접 영향을 준다.",
-      "region": "대만해협",
-      "source": {
-        "name": "CNA(중앙통신사)",
-        "url": "https://www.cna.com.tw/news/acn/202611260235.aspx",
-        "via": "https://feeds.feedburner.com/rsscna/mainland"
-      }
     }
   ],
-  "world_context": "관세·제재 갈등과 우크라이나·가자·대만해협의 무력 긴장이 겹치는 가운데 북한은 서방과의 외교 창구를 좁히고 있다."
+  "world_context": "북한의 핵 과시와 중동·우크라이나 전쟁 지속, 미국의 신규 관세가 겹쳐 한반도 안보·통상 환경의 불확실성이 이어진다."
 }

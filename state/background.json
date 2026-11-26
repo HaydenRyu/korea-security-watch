@@ -1,36 +1,36 @@
 {
   "version": 1,
-  "at": "2026-11-26T11:40:22+00:00",
-  "opened": 18,
+  "at": "2026-11-26T23:40:50+00:00",
+  "opened": 23,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-26T11:40:22+00:00",
+      "last_ok": "2026-11-26T23:40:50+00:00",
       "raw": 5,
       "kept": 5
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-26T11:40:22+00:00",
+      "last_ok": "2026-11-26T23:40:50+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
-      "status": "checked",
-      "last_ok": "2026-11-26T11:40:22+00:00",
-      "raw": 1,
-      "kept": 1
+      "status": "no_findings",
+      "last_ok": "2026-11-26T23:40:50+00:00",
+      "raw": 0,
+      "kept": 0
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-26T11:40:22+00:00",
+      "last_ok": "2026-11-26T23:40:50+00:00",
       "raw": 5,
       "kept": 5,
       "note": "Rappler 피드는 빈 응답(미사용). 나머지 전역 관측."
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-26T11:40:22+00:00",
+      "last_ok": "2026-11-26T23:40:50+00:00",
       "raw": 0,
       "kept": 0
     }

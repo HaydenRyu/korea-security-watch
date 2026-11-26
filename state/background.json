@@ -1,38 +1,39 @@
 {
   "version": 1,
-  "at": "2026-11-25T23:40:25+00:00",
-  "opened": 17,
+  "at": "2026-11-26T05:39:43+00:00",
+  "opened": 15,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-25T23:40:25+00:00",
+      "last_ok": "2026-11-26T05:39:43+00:00",
       "raw": 4,
       "kept": 4
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-25T23:40:25+00:00",
+      "last_ok": "2026-11-26T05:39:43+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-25T23:40:25+00:00",
+      "last_ok": "2026-11-26T05:39:43+00:00",
       "raw": 0,
-      "kept": 0
+      "kept": 0,
+      "note": "새 명명 훈련·북러 신규 합의 원문 없음. 검색어는 news_kr 키워드 수집으로 갈음"
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-25T23:40:25+00:00",
+      "last_ok": "2026-11-26T05:39:43+00:00",
       "raw": 5,
-      "kept": 5,
-      "note": "taiwan·us_posture 는 기사 기준, scs_ecs 는 평온 확인. 동아일보·국방일보 피드는 시간 초과."
+      "kept": 5
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-25T23:40:25+00:00",
+      "last_ok": "2026-11-26T05:39:43+00:00",
       "raw": 0,
-      "kept": 0
+      "kept": 0,
+      "note": "news_kr 묶음 중 안보 연결 근거가 기사에 적힌 국내 사건 없음"
     }
   }
 }

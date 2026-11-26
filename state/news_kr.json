@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-26T15:58:44+00:00",
+ "fetched_at": "2026-11-26T17:08:00+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-26T15:58:44+00:00",
+ "last_ok_at": "2026-11-26T17:08:00+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
   "fetched": 1122,
-  "hits": 31,
-  "clusters": 27,
+  "hits": 32,
+  "clusters": 28,
   "by_group": {
    "spy": 7,
+   "summit": 4,
    "drone_balloon": 2,
    "hybrid": 4,
    "border": 3,
    "gps": 3,
-   "summit": 3,
    "sanction": 1,
    "usfk": 2,
    "fire": 4,
@@ -30,7 +30,7 @@
    "feeds": 5,
    "failed": 0,
    "count": 562,
-   "hits": 15
+   "hits": 16
   },
   "SBS": {
    "feeds": 3,
@@ -68,7 +68,12 @@
   "spy": {
    "clusters": 7,
    "max_independent": 1,
-   "latest": "2026-11-26T15:58:44+00:00"
+   "latest": "2026-11-26T17:08:00+00:00"
+  },
+  "summit": {
+   "clusters": 4,
+   "max_independent": 1,
+   "latest": "2026-11-26T16:31:48+00:00"
   },
   "drone_balloon": {
    "clusters": 2,
@@ -89,11 +94,6 @@
    "clusters": 3,
    "max_independent": 1,
    "latest": "2026-11-26T11:41:00+00:00"
-  },
-  "summit": {
-   "clusters": 3,
-   "max_independent": 1,
-   "latest": "2026-11-26T11:08:57+00:00"
   },
   "sanction": {
    "clusters": 1,
@@ -165,7 +165,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "SBS",

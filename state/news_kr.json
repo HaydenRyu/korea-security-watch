@@ -1,16 +1,17 @@
 {
- "fetched_at": "2026-11-26T13:34:07+00:00",
+ "fetched_at": "2026-11-26T14:45:12+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-26T13:34:07+00:00",
+ "last_ok_at": "2026-11-26T14:45:12+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1121,
-  "hits": 28,
-  "clusters": 25,
+  "fetched": 1122,
+  "hits": 29,
+  "clusters": 26,
   "by_group": {
+   "drone_balloon": 2,
    "hybrid": 4,
    "spy": 6,
    "border": 3,
@@ -21,7 +22,6 @@
    "fire": 4,
    "alert": 1,
    "mine": 2,
-   "drone_balloon": 1,
    "defect": 1
   }
  },
@@ -29,8 +29,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 562,
-   "hits": 14
+   "count": 563,
+   "hits": 15
   },
   "SBS": {
    "feeds": 3,
@@ -48,7 +48,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 7
+   "hits": 6
   },
   "세계일보": {
    "feeds": 2,
@@ -65,6 +65,11 @@
  },
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
+  "drone_balloon": {
+   "clusters": 2,
+   "max_independent": 1,
+   "latest": "2026-11-26T14:38:05+00:00"
+  },
   "hybrid": {
    "clusters": 4,
    "max_independent": 1,
@@ -115,11 +120,6 @@
    "max_independent": 1,
    "latest": "2026-11-25T19:30:00+00:00"
   },
-  "drone_balloon": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-25T02:34:53+00:00"
-  },
   "defect": {
    "clusters": 1,
    "max_independent": 1,
@@ -132,7 +132,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 82,
+   "count": 83,
    "hits": 8
   },
   {
@@ -165,7 +165,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 4
   },
   {
    "outlet": "SBS",
@@ -213,7 +213,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 6
+   "hits": 5
   },
   {
    "outlet": "국민일보",

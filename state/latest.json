@@ -1,12 +1,12 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 미사일 발사 핵 11월 26일",
+      "북한 군 이동",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 미사일 발사 핵 11월 26일",
-      "Kim Jong Un nuclear facilities"
+      "Kim Jong Un nuclear facilities",
+      "북한 핵시설"
     ],
     "logistics": [
       "북한 군수 수송",
@@ -16,13 +16,11 @@
       "지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit North Korea",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "서해 구조물"
     ],
     "parade_massing": [
@@ -35,21 +33,42 @@
       "진돗개 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 중단"
+      "남북 대화 제안"
     ]
   },
   "opened": [
     "https://www.nknews.org/",
     "https://www.segye.com/newsView/20261126501325",
-    "https://www.koreaherald.com/"
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "김정은 핵물질 시설 시찰(KCNA 주장)만 확인되며 접경·병력·정부 경고 징후는 없다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "김정은 핵시설 시찰(KCNA 주장)만 확인되며 접경·병력·정부 경고 징후는 없다. 직전 회차와 같은 수준이다. 접경 열점 대조 대상 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
+    },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "region": "평양",
+      "summary": "NK News가 KCNA를 인용해 김정은의 핵시설 시찰(11/26)을 보도했다(북한 주장, 독립 확인 없음).",
+      "meaning": "과시성 시찰이며 실전 배치·사용 준비 근거는 없다.",
+      "sources": [
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "11/26 KCNA 발표 인용 보도"
+      ],
+      "speculation": [
+        "서해 발사장 엔진시험대 정황(NK News 영상 분석)은 징후 미확정"
+      ]
     },
     "logistics": {
       "status": "none"
@@ -74,33 +93,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "평양",
-      "summary": "NK News·코리아헤럴드가 KCNA를 인용해 김정은의 핵물질 시설 시찰과 전술핵 사용 확대 발언(11/26)을 보도했다(북한 주장).",
-      "meaning": "과시성 발언·시찰이며 실전 배치·사용 준비 근거는 없다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
-        },
-        {
-          "name": "코리아헤럴드",
-          "tier": "B",
-          "url": "https://www.koreaherald.com/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "11/26 KCNA 발표 인용 보도"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-26T03:09:45+00:00",
+  "checked_at": "2026-11-26T04:09:45+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

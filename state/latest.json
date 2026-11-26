@@ -1,74 +1,55 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 군 이동",
-      "North Korea troop movement"
+      "북한 김정은 핵시설 시찰 11월 26일",
+      "North Korea Kim Jong Un news"
     ],
     "nuclear": [
-      "북한 핵시설",
-      "Kim Jong Un nuclear facilities"
+      "북한 김정은 핵시설 시찰 11월 26일",
+      "NK News Kim Jong Un nuclear facility visit KCNA November 2026"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea logistics"
+      "North Korea Kim Jong Un news"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 합참"
+      "북한 목함지뢰 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 공격 사이버 공격 랜섬웨어"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "North Korea Kim Jong Un news"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "North Korea Kim Jong Un news"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 김정은 핵시설 시찰 11월 26일"
     ],
     "gov_warning": [
-      "진돗개 데프콘"
+      "북한 목함지뢰 DMZ 귀순 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "calm": [
-      "남북 대화 제안"
+      "North Korea Kim Jong Un news"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
-    "https://www.segye.com/newsView/20261126501325",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261125515554",
+    "https://www.koreajoongangdaily.com/korea/pyongyang-fires-missiles-as-trump-offers-talks-seoul-seeks-beijings-help-to-revive-north-korea-diplomacy/12834681"
   ],
-  "overall_summary": "김정은 핵시설 시찰(KCNA 주장)만 확인되며 접경·병력·정부 경고 징후는 없다. 직전 회차와 같은 수준이다. 접경 열점 대조 대상 없음.",
+  "overall_summary": "새 군사 징후는 확인되지 않았고 접경 사건·정부 경고도 없다. 직전 회차의 핵시설 시찰 보도는 독립 확인이 없어 none 으로 내렸다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "평양",
-      "summary": "NK News가 KCNA를 인용해 김정은의 핵시설 시찰(11/26)을 보도했다(북한 주장, 독립 확인 없음).",
-      "meaning": "과시성 시찰이며 실전 배치·사용 준비 근거는 없다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "11/26 KCNA 발표 인용 보도"
-      ],
-      "speculation": [
-        "ICBM 엔진시험 정황(NK News)은 미확정"
-      ]
+      "status": "none",
+      "summary": "원문 재확인 결과 11/26 핵시설 시찰 보도를 독립 출처에서 찾지 못함(검색에서 확인되는 시찰은 6월·11/18 해군대학뿐)."
     },
     "logistics": {
       "status": "none"
@@ -77,7 +58,25 @@
       "status": "none"
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "summary": "귀속 미확인 — 서울경찰청이 중국 칭다오 해킹조직에서 해킹 계정을 사들여 가짜 성형후기를 올린 52명을 송치(북한 무관).",
+      "meaning": "북한 연계는 없고 국내 계정 해킹 범죄 수사 결과다.",
+      "region": "서울",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261125515554"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "성형외과·광고업체 등 52명 송치",
+        "해킹 계정 800여 개, 후기 약 8,400건"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "none"
@@ -95,7 +94,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T05:09:53+00:00",
+  "checked_at": "2026-11-26T05:10:07+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

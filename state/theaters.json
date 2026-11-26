@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-26T05:39:43+00:00",
+  "judged_at": "2026-11-26T11:39:53+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -14,7 +14,7 @@
         }
       ],
       "summary": "우크라이나가 러시아 사바슬레이카 공군기지를 공격해 항공기 5대를 맞혔다고 밝혀 전쟁이 계속되고 있다.",
-      "judged_at": "2026-11-26T05:39:43+00:00"
+      "judged_at": "2026-11-26T11:39:53+00:00"
     },
     "mideast": {
       "state": 3,
@@ -23,26 +23,26 @@
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cmd718zydz9qo",
-          "published_at": "2026-11-25T14:06:13+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/cqvg2n4mzl1jo",
+          "published_at": "2026-11-26T10:14:08+00:00"
         }
       ],
-      "summary": "이스라엘이 가자시티를 공습해 하마스 보안 간부와 가족이 숨졌다고 의료진이 밝혔다.",
-      "judged_at": "2026-11-26T05:39:43+00:00"
+      "summary": "이스라엘이 가자 지구 세 곳을 공습해 하마스 정치 인사 부부 등 8명이 숨졌다고 BBC가 현지 소식통을 인용해 전했다.",
+      "judged_at": "2026-11-26T11:39:53+00:00"
     },
     "taiwan": {
       "state": 1,
       "channels": [],
       "sources": [
         {
-          "name": "BBC",
+          "name": "CNA",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cv702rw7dzx5o",
-          "published_at": "2026-11-24T23:05:11+00:00"
+          "url": "https://www.cna.com.tw/news/acn/202611260235.aspx",
+          "published_at": "2026-11-26T17:26:19+08:00"
         }
       ],
-      "summary": "BBC는 중국 연계망이 대만 지방선거를 앞두고 라이칭더 총통 등 민진당 인사를 겨냥한 AI 가짜영상을 유포했다고 밝혔고, 선거는 3일 안으로 다가왔다.",
-      "judged_at": "2026-11-26T05:39:43+00:00"
+      "summary": "중국 국방부는 서태평양 100여 척 규모 「무성 군연」 보도를 부인하지 않고 「과장 보도에 반대한다」고 밝혔으며, 대만 국방부장은 랴오닝함 등의 구역거부 훈련을 확인했다.",
+      "judged_at": "2026-11-26T11:39:53+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -51,18 +51,18 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-26T09:02:00+08:00",
+          "published_at": "2026-11-26T18:46:00+08:00",
           "kind": "feed"
         },
         {
           "name": "Rappler",
           "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-26T13:21:00+08:00",
+          "published_at": "2026-11-26T19:16:18+08:00",
           "kind": "feed"
         }
       ],
       "summary": "필스타·래플러 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-26T05:39:43+00:00"
+      "judged_at": "2026-11-26T11:39:53+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -72,11 +72,11 @@
           "name": "DVIDS",
           "tier": "A",
           "url": "https://www.dvidshub.net/news/580325/jmsdf-us-conduct-mine-warfare-exercise-3ja",
-          "published_at": "2026-11-26T00:15:00+00:00"
+          "published_at": "2026-11-25T19:31:35+00:00"
         }
       ],
-      "summary": "미 해군과 일본 해상자위대가 일본 호소시마 인근에서 소해훈련 MINEX 3JA를 11월 10~26일 실시했으나 신규 전략자산 전개 보도는 없다.",
-      "judged_at": "2026-11-26T05:39:43+00:00"
+      "summary": "미 해군과 일본 해상자위대가 소해훈련 MINEX 3JA를 실시했으나 신규 전략자산 전개 보도는 없다.",
+      "judged_at": "2026-11-26T11:39:53+00:00"
     }
   }
 }

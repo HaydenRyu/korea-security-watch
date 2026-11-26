@@ -1,88 +1,68 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
+      "북한 병력 이동 전방",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 동창리 엔진시험",
-      "North Korea nuclear Yongbyon Punggye-ri"
+      "동창리 엔진시험 핵시설",
+      "North Korea nuclear Yongbyon missile launch Japan Ministry of Defense"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
+      "북한 군수 탄약 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견",
-      "DMZ NLL 귀순",
-      "North Korea DMZ"
+      "목함지뢰 해안 발견 DMZ 귀순",
+      "North Korea DMZ border incident"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "North Korea GPS jamming"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "서해 구조물",
       "Kim Jong Un China Russia visit",
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식",
-      "North Korea parade"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning DEFCON"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "진돗개 데프콘 상향"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "남북 대화 제안"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261126518166",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow",
     "https://www.yna.co.kr/view/AKR20261126152400009",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630",
-    "https://www.yna.co.kr/view/AKR20261126193900083"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865571",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630"
   ],
-  "overall_summary": "신규 군사 징후는 없고 직전 회차의 동창리 엔진시험 보도·주한미군 아파치 운용 중단 보도가 이어진다. 열린 원문 기준 평소 범위다.",
+  "overall_summary": "신규 군사 징후는 없고 동창리 엔진시험 정황 보도와 주한미군 아파치 운용 중단 확인이 이어진다. 열린 원문 기준 평소 범위다.",
   "items": {
     "troop_movement": {
-      "status": "none"
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "border_clash": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
       "status": "none"
     },
     "nuclear": {
       "status": "single",
       "routine": true,
-      "summary": "위성사진으로 11/15~19일 동창리 엔진시험장 지상분출시험 정황을 연합이 전했으나 북한 발표·독립 확인은 없다.",
+      "region": "평북 철산 동창리",
+      "lat": 39.66,
+      "lon": 124.7,
+      "summary": "NK뉴스 위성사진 분석으로 11/15~19일 동창리 엔진시험장 지상분출시험 정황이 연합·SBS에 전해졌으나 북한 발표·독립 확인은 없다.",
+      "meaning": "과거 고체연료 발사체 시험 때와 유사한 정황이나 시험 성격이라 평소 범위다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -92,15 +72,21 @@
       ],
       "confidence": "중간",
       "facts": [
-        "연합·SBS가 동창리 엔진시험 보도"
+        "연합·SBS가 NK뉴스 보도를 인용"
       ],
       "speculation": []
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 경찰이 중국 해킹조직에서 산 포털 계정으로 성형외과 가짜 후기를 올린 52명을 적발했다(북한 무관).",
+      "summary": "귀속 미확인 — 경찰이 중국 해킹조직에서 산 포털 계정으로 성형외과 가짜 후기를 올린 업자를 적발했다(북한 무관).",
       "sources": [
         {
           "name": "SBS",
@@ -115,7 +101,11 @@
     "foreign_forces": {
       "status": "single",
       "routine": false,
+      "region": "경기 평택",
+      "lat": 36.96,
+      "lon": 127.03,
       "summary": "주한미군이 2사단 5-17 공중기병대대(아파치) 운용 중단을 확인했고 임무·공약 변화는 없다고 밝혔다.",
+      "meaning": "전력 현대화 명목이며 아파치 전체 철수는 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -125,15 +115,24 @@
       ],
       "confidence": "중간",
       "facts": [
-        "2025-12-15 운용 중단, 미 의회조사국 보고서에서 먼저 알려짐"
+        "2025-12-15 운용 중단, 미 의회조사국 보고서로 먼저 알려짐"
       ],
       "speculation": []
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
     },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T17:09:59+00:00",
+  "checked_at": "2026-11-26T18:10:34+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

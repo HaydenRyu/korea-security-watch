@@ -1,55 +1,60 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동",
-      "North Korea troops deployment"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "핵물질 생산기지 김정은",
-      "North Korea Kim nuclear facility KCNA"
+      "북한 핵 시설 시찰 전술핵",
+      "North Korea nuclear Kim Jong Un facility"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea ammunition shipment Russia"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 지뢰 발견",
-      "DMZ 귀순",
-      "합참 북한 발사"
+      "합참 북한 지뢰 발견 DMZ 귀순 11월 26일",
+      "목함지뢰 해안",
+      "DMZ NLL North Korea border"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "김정은 방중",
-      "Kim Jong Un China Russia visit",
       "서해 구조물",
-      "주한미군 아파치"
+      "주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 노농적위군 동원"
+      "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 발령 데프콘 상향",
+      "North Korea warning Japan Korea US"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
+    "https://www.segye.com/newsView/20261126518166",
     "https://www.segye.com/newsView/20261125515554",
-    "https://www.segye.com/newsView/20261126518166"
+    "https://www.koreaherald.com/article/10937539",
+    "https://www.mt.co.kr/opinion/2026/11/24/2026112315484451393",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
   ],
-  "overall_summary": "KCNA의 김정은 핵시설 시찰·전술핵 확대 보도가 이어지나 신규 배치·시험·접경 사건은 없어 직전과 같은 수준이다. 주한미군 아파치 대대 운용중단 확인은 군 측이 병력 감축이 아닌 전력 현대화라고 밝혔고, 접경 열점 후보는 확인하지 않았다.",
+  "overall_summary": "KCNA의 김정은 핵시설 시찰·전술핵 확대 보도와 주한미군 아파치 대대 운용중단 확인 외에 신규 접경·병력·정부 경고 징후는 없어 직전과 같은 수준이다. 접경 열점 후보는 0건이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -69,7 +74,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 보도 인용: 핵시설 시찰, 전술핵 다영역 운용 확대 촉구, 핵 지위 부정은 선전포고로 간주"
+        "KCNA 보도 인용: 핵시설 시찰, 전술핵 다영역 운용 확대 촉구"
       ],
       "speculation": []
     },
@@ -133,7 +138,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T10:10:02+00:00",
+  "checked_at": "2026-11-26T11:10:55+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

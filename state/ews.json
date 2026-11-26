@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-26T05:10:07+00:00",
+  "computed_at": "2026-11-26T06:10:45+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 26,
+  "ews": 29,
   "band": "관찰",
-  "d": 2,
-  "e": 8,
+  "d": 8,
+  "e": 0,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-25T23:40:25+00:00",
-    "latest_updated_at": "2026-11-26T05:10:07+00:00"
+    "linkage_judged_at": "2026-11-26T05:39:43+00:00",
+    "latest_updated_at": "2026-11-26T06:10:45+00:00"
   },
   "theaters": [
     {
@@ -22,7 +22,7 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "BBC Verify가 중국 연계망이 대만 지방선거를 앞두고 민진당 겨냥 AI 가짜영상 500건 이상을 유포했다고 밝혔다.",
+      "summary": "BBC는 중국 연계망이 대만 지방선거를 앞두고 라이칭더 총통 등 민진당 인사를 겨냥한 AI 가짜영상을 유포했다고 밝혔고, 선거는 3일 안으로 다가왔다.",
       "sources": [
         {
           "name": "BBC",
@@ -31,7 +31,7 @@
           "published_at": "2026-11-24T23:05:11+00:00"
         }
       ],
-      "judged_at": "2026-11-25T23:40:25+00:00"
+      "judged_at": "2026-11-26T05:39:43+00:00"
     },
     {
       "key": "ukraine",
@@ -48,7 +48,7 @@
           "published_at": "2026-11-25T14:46:41+00:00"
         }
       ],
-      "judged_at": "2026-11-25T23:40:25+00:00"
+      "judged_at": "2026-11-26T05:39:43+00:00"
     },
     {
       "key": "scs_ecs",
@@ -61,42 +61,34 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-26T00:00:00+08:00",
+          "published_at": "2026-11-26T09:02:00+08:00",
           "kind": "feed"
         },
         {
           "name": "Rappler",
           "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-26T07:27:16+08:00",
+          "published_at": "2026-11-26T13:21:00+08:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-25T23:40:25+00:00"
+      "judged_at": "2026-11-26T05:39:43+00:00"
     },
     {
       "key": "mideast",
       "observed": true,
       "state": 3,
-      "contribution": 8,
-      "channels": [
-        "c4_sea_energy"
-      ],
-      "summary": "이스라엘이 가자시티를 공습해 하마스 보안 간부와 가족이 숨졌고, 이란군은 호르무즈에서 LNG선·유조선이 기뢰와 접촉해 불이 났다고 밝혔다.",
+      "contribution": 0,
+      "channels": [],
+      "summary": "이스라엘이 가자시티를 공습해 하마스 보안 간부와 가족이 숨졌다고 의료진이 밝혔다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/cmd718zydz9qo",
           "published_at": "2026-11-25T14:06:13+00:00"
-        },
-        {
-          "name": "SBS",
-          "tier": "C",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008863830",
-          "published_at": "2026-11-25T16:55:07+00:00"
         }
       ],
-      "judged_at": "2026-11-25T23:40:25+00:00"
+      "judged_at": "2026-11-26T05:39:43+00:00"
     },
     {
       "key": "us_posture",
@@ -104,16 +96,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미·필리핀이 바탄섬 바스코 공항 현대화를 발표했으나 신규 전략자산 전개 보도는 없다.",
+      "summary": "미 해군과 일본 해상자위대가 일본 호소시마 인근에서 소해훈련 MINEX 3JA를 11월 10~26일 실시했으나 신규 전략자산 전개 보도는 없다.",
       "sources": [
         {
-          "name": "Stars and Stripes",
-          "tier": "B",
-          "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-25/batan-basco-philippines-us-air-force-23570574.html",
-          "published_at": "2026-11-25T05:40:00+00:00"
+          "name": "DVIDS",
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/580325/jmsdf-us-conduct-mine-warfare-exercise-3ja",
+          "published_at": "2026-11-26T00:15:00+00:00"
         }
       ],
-      "judged_at": "2026-11-25T23:40:25+00:00"
+      "judged_at": "2026-11-26T05:39:43+00:00"
     }
   ],
   "channels": [
@@ -134,8 +126,8 @@
     },
     {
       "key": "c4_sea_energy",
-      "observed": true,
-      "value": 8
+      "observed": false,
+      "value": 0
     },
     {
       "key": "c5_diplomacy",
@@ -144,8 +136,8 @@
     }
   ],
   "last_good": {
-    "ews": 26,
+    "ews": 29,
     "band": "관찰",
-    "computed_at": "2026-11-26T05:10:07+00:00"
+    "computed_at": "2026-11-26T06:10:45+00:00"
   }
 }

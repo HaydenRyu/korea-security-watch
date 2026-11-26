@@ -1,69 +1,104 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 김정은 핵시설 시찰 11월 26일",
-      "North Korea Kim Jong Un news"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 김정은 핵시설 시찰 11월 26일",
-      "NK News Kim Jong Un nuclear facility visit KCNA November 2026"
+      "북한 핵 시설 김정은 시찰",
+      "North Korea missile nuclear Reuters November 26 2026"
     ],
     "logistics": [
-      "North Korea Kim Jong Un news"
+      "북한 군수 물자 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 목함지뢰 DMZ 귀순 합참"
+      "목함지뢰 해안",
+      "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Kim Jong Un news"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "North Korea Kim Jong Un news"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 김정은 핵시설 시찰 11월 26일"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "북한 목함지뢰 DMZ 귀순 합참"
+      "진돗개 발령 데프콘",
+      "한미일 긴급 경고"
     ],
     "hybrid_ops": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "북한 해킹 귀속 FBI"
     ],
     "calm": [
-      "North Korea Kim Jong Un news"
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261125515554",
-    "https://www.koreajoongangdaily.com/korea/pyongyang-fires-missiles-as-trump-offers-talks-seoul-seeks-beijings-help-to-revive-north-korea-diplomacy/12834681"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
+    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261125/n-koreas-yongbyon-nuclear-complex-expansion-may-boost-weapons-grade-uranium-production-says-us-science-institute",
+    "https://www.koreatimes.co.kr/southkorea/defense/20261124/s-korea-briefly-issues-alert-on-eastern-island-after-russian-warplanes-near-airspace",
+    "https://www.koreatimes.co.kr/southkorea/defense/20261126/us-military-confirms-inactivation-of-apache-helicopter-squadron-in-s-korea",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261124/us-takes-action-to-recover-over-11-bil-in-cryptocurrency-stolen-by-n-korean-hackers"
   ],
-  "overall_summary": "새 군사 징후는 확인되지 않았고 접경 사건·정부 경고도 없다. 직전 회차의 핵시설 시찰 보도는 독립 확인이 없어 none 으로 내렸다.",
+  "overall_summary": "김정은이 핵물질 생산·핵무기 연구시설을 시찰하고 전술핵 다영역 운용 확대를 주문했다고 KCNA가 26일 보도했으나 신규 배치·시험은 없는 발언·시찰 수준이다. 접경 충돌·병력·군수 등 다른 항목에 새 징후는 없고 직전 회차와 같은 평시 범위다. 접경 열점 후보는 이번 회차 대조하지 않음.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "원문 재확인 결과 11/26 핵시설 시찰 보도를 독립 출처에서 찾지 못함(검색에서 확인되는 시찰은 6월·11/18 해군대학뿐)."
+      "status": "single",
+      "routine": true,
+      "region": "북한(미공개 시설)",
+      "summary": "KCNA가 25일 김정은의 핵물질 생산기지·핵무기 시설 시찰과 전술핵 다영역 운용 확대 지시를 26일 보도했고 신규 배치·시험 발표는 없다.",
+      "meaning": "핵 지위 불가침 선언과 농축능력 확대 과시 성격의 발언·시찰로 실전 배치 징후는 아니다.",
+      "sources": [
+        {
+          "name": "한국타임스(로이터)",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "KCNA 보도: 25일 시찰, 26일 공개, 시설·위치 미공개",
+        "사진에 원심분리기 계단식 배열·소형화 전술탄두(화산-31 추정)",
+        "ISIS는 영변 농축시설 신축 홀(9월 착공)이 무기급 우라늄 증산용일 가능성 평가(25일)"
+      ],
+      "speculation": [
+        "영변 신축 홀의 용도는 ISIS 위성영상 분석에 따른 추정"
+      ]
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "새 지뢰 발견·충돌 보도 없음(강화 해안 지뢰는 8~10월 보도, 24시간 경과)."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 서울경찰청이 중국 칭다오 해킹조직에서 해킹 계정을 사들여 가짜 성형후기를 올린 52명을 송치(북한 무관).",
-      "meaning": "북한 연계는 없고 국내 계정 해킹 범죄 수사 결과다.",
       "region": "서울",
+      "summary": "귀속 미확인 — 서울경찰청이 중국 칭다오 해킹조직에서 산 해킹 계정으로 가짜 성형후기를 올린 52명을 송치(북한 무관).",
+      "meaning": "북한 소행 근거가 없는 국내 계정 해킹 범죄로 군사 징후가 아니다.",
       "sources": [
         {
           "name": "세계일보",
@@ -71,15 +106,31 @@
           "url": "https://www.segye.com/newsView/20261125515554"
         }
       ],
-      "confidence": "중간",
+      "confidence": "높음",
       "facts": [
-        "성형외과·광고업체 등 52명 송치",
-        "해킹 계정 800여 개, 후기 약 8,400건"
+        "계정 800여 개로 후기 약 8,400건, 기사에 북한 언급 없음"
       ],
       "speculation": []
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "울릉도 인근 KADIZ",
+      "summary": "러시아 군용기 약 5대가 24일 KADIZ에 20분가량 진입해 F-15K가 출격했고 합참은 영공 침범은 없었다고 밝혔다.",
+      "meaning": "러시아의 방공식별구역 진입은 반복돼 온 형태이고 영공 침범이 없어 정례 범위다.",
+      "sources": [
+        {
+          "name": "한국타임스(연합)",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/southkorea/defense/20261124/s-korea-briefly-issues-alert-on-eastern-island-after-russian-warplanes-near-airspace"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "합참: 영공 침범 없음",
+        "USFK 5-17 공중기병대대 비활성화 확인, 태세 변화 없다고 밝힘(26일, 배경)"
+      ],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -91,10 +142,11 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none"
+      "status": "none",
+      "summary": "미 법무부의 바이낸스 탈취 자금 몰수 소송(23일 제기)은 24시간 경과 배경."
     }
   },
-  "checked_at": "2026-11-26T05:10:07+00:00",
+  "checked_at": "2026-11-26T06:10:45+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,50 +1,64 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 김정은 11월 26일 속보",
-      "North Korea Reuters missile"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement DMZ"
     ],
     "nuclear": [
-      "북한 김정은 11월 26일 속보",
-      "North Korea Reuters missile"
+      "북한 핵시설 영변 농축 IAEA",
+      "North Korea Yongbyon IAEA Grossi enrichment"
     ],
     "logistics": [
-      "북한 김정은 11월 26일 속보",
-      "North Korea Reuters missile"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 합참"
+      "지뢰 발견 DMZ 귀순 11월 26일",
+      "목함지뢰 해안",
+      "North Korea DMZ NLL border"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
-      "North Korea Reuters missile"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 김정은 11월 26일 속보"
+      "북한 열병식 병력 집결",
+      "North Korea parade preparations"
     ],
     "nk_internal": [
-      "북한 김정은 11월 26일 속보"
+      "북한 준전시 등화관제 대피 훈련",
+      "North Korea mobilization martial"
     ],
     "gov_warning": [
-      "지뢰 발견 DMZ 합참"
+      "진돗개 데프콘 상향 합참",
+      "North Korea warning evacuation alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261126501325",
     "https://www.segye.com/newsView/20261125515554",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
-    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
+    "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156783378",
+    "https://www.nknews.org/2026/11/",
+    "https://www.nknews.org/2026/11/russia-north-korea-signed-agreement-on-protecting-classified-information/",
+    "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/",
+    "https://www.nknews.org/2026/11/seoul-preparing-to-repatriate-north-koreans-rescued-at-sea-earlier-this-month/",
+    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
   ],
-  "overall_summary": "김정은의 핵물질·핵무기·핵동력 시설 시찰을 KCNA가 보도했으나 신규 배치·시험은 없는 발언·시찰 수준이다. 접경·병력·군수 등 다른 항목에 새 징후는 확인되지 않아 직전 회차와 같은 평시 범위다. 접경 열점 후보 0건.",
+  "overall_summary": "김정은의 핵시설 시찰(KCNA)과 IAEA의 영변 농축시설 증설 확인이 있었으나 신규 배치·시험 발표는 없는 발언·시설 동향 수준이다. 접경·병력·군수 등 다른 항목에 새 징후는 없어 직전 회차와 같은 평시 범위다. 접경 열점 후보 0건.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -52,19 +66,27 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "북한(미공개 시설)",
-      "summary": "KCNA가 25일 김정은의 핵물질 생산기지·핵무기·핵동력 설비 시설 시찰과 전술핵 다영역 운용 확대 지시를 보도했고 신규 배치·시험 발표는 없다.",
-      "meaning": "핵 지위 불가침 선언과 능력 과시 성격의 발언·시찰로 실전 배치 징후는 아니다.",
+      "region": "북한(영변 등)",
+      "lat": 39.8,
+      "lon": 125.75,
+      "summary": "KCNA가 25일 김정은의 핵물질 생산기지·핵무기·핵동력 설비 시찰과 전술핵 다영역 운용 확대 지시를 보도했고, IAEA 사무총장은 영변 농축시설 증설이 10월 말 외형상 완료됐다고 이사회에서 밝혔으나 신규 배치·시험 발표는 없다.",
+      "meaning": "핵 지위 불가침 선언과 능력 과시·기존 시설 확장 성격으로 실전 사용 준비 징후는 아니다.",
       "sources": [
         {
           "name": "한국타임스(로이터)",
           "tier": "B",
           "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/un-watchdog-voices-serious-concern-over-upgrades-at-north-korean-nuclear-site/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 보도: 25일 시찰, 시설 위치 미공개"
+        "KCNA 보도: 25일 시찰, 시설 위치 미공개",
+        "IAEA 사무총장: 영변 농축시설 추가 확장이 9월 중순 이후 진행되어 10월 말 외형상 완료"
       ],
       "speculation": [
         "미국에 보내는 메시지라는 분석"
@@ -74,13 +96,16 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "표류 북한 어선 송환 절차(통일부)와 DMZ 지뢰 원인 발표는 과거 사건·인도 절차로 새 접경 징후가 아니다."
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "서울",
+      "lat": 37.57,
+      "lon": 126.98,
       "summary": "귀속 미확인 — 서울경찰청이 중국 칭다오 해킹조직에서 산 해킹 계정으로 가짜 성형후기를 올린 52명을 송치(북한 무관).",
       "meaning": "북한 소행 근거가 없는 국내 계정 해킹 범죄로 군사 징후가 아니다.",
       "sources": [
@@ -98,7 +123,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "24시간 경과 — 러시아 군용기 KADIZ 진입(24일 첫 보도) 이후 새 북·러·북·중 협력 확인 없음."
+      "summary": "러·북 FSB-국가정보국 비밀보호 협정은 3월 체결 건이 이번에 확인된 것으로 24시간 내 신규 군사 이전·파병이 아니다."
     },
     "parade_massing": {
       "status": "none"
@@ -113,7 +138,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T07:10:04+00:00",
+  "checked_at": "2026-11-26T08:10:51+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

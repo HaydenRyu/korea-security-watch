@@ -1,36 +1,36 @@
 {
- "fetched_at": "2026-11-26T20:43:20+00:00",
- "status": "ok",
- "status_detail": "",
+ "fetched_at": "2026-11-26T21:54:25+00:00",
+ "status": "partial",
+ "status_detail": "동아일보/정치: TimeoutError: The read operation timed out; 동아일보/사회: RemoteDisconnected: Remote end closed connection without response",
  "last_ok_at": "2026-11-26T20:43:20+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 0,
-  "fetched": 1120,
-  "hits": 31,
-  "clusters": 28,
+  "feeds_failed": 2,
+  "fetched": 1021,
+  "hits": 30,
+  "clusters": 26,
   "by_group": {
-   "spy": 7,
-   "summit": 4,
-   "defect": 2,
+   "spy": 5,
+   "summit": 5,
+   "border": 4,
+   "fire": 5,
+   "mine": 2,
    "drone_balloon": 2,
    "hybrid": 4,
-   "border": 3,
    "gps": 3,
    "sanction": 1,
-   "usfk": 2,
-   "fire": 4,
+   "usfk": 1,
    "alert": 1,
-   "mine": 1
+   "defect": 1
   }
  },
  "outlets": {
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 560,
-   "hits": 16
+   "count": 561,
+   "hits": 20
   },
   "SBS": {
    "feeds": 3,
@@ -40,15 +40,15 @@
   },
   "동아일보": {
    "feeds": 2,
-   "failed": 0,
-   "count": 100,
-   "hits": 5
+   "failed": 2,
+   "count": 0,
+   "hits": 0
   },
   "국민일보": {
    "feeds": 2,
    "failed": 0,
    "count": 200,
-   "hits": 7
+   "hits": 8
   },
   "세계일보": {
    "feeds": 2,
@@ -66,19 +66,29 @@
  "note": "공개판: 매체·피드별 건수와 상태만. 기사 제목·링크는 싣지 않는다(채택 매체 RSS 는 개인·비상업 구독만 허용). 후보 기사 목록은 감시 루틴이 세션 안에서 `python3 scripts/news_kr.py` 로 만든다.",
  "groups": {
   "spy": {
-   "clusters": 7,
+   "clusters": 5,
    "max_independent": 1,
-   "latest": "2026-11-26T20:43:20+00:00"
+   "latest": "2026-11-26T21:54:25+00:00"
   },
   "summit": {
+   "clusters": 5,
+   "max_independent": 2,
+   "latest": "2026-11-26T21:32:50+00:00"
+  },
+  "border": {
    "clusters": 4,
    "max_independent": 2,
-   "latest": "2026-11-26T19:31:17+00:00"
+   "latest": "2026-11-26T21:23:58+00:00"
   },
-  "defect": {
+  "fire": {
+   "clusters": 5,
+   "max_independent": 2,
+   "latest": "2026-11-26T21:23:58+00:00"
+  },
+  "mine": {
    "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-26T19:30:00+00:00"
+   "max_independent": 2,
+   "latest": "2026-11-26T21:23:58+00:00"
   },
   "drone_balloon": {
    "clusters": 2,
@@ -89,11 +99,6 @@
    "clusters": 4,
    "max_independent": 1,
    "latest": "2026-11-26T13:31:00+00:00"
-  },
-  "border": {
-   "clusters": 3,
-   "max_independent": 1,
-   "latest": "2026-11-26T12:50:46+00:00"
   },
   "gps": {
    "clusters": 3,
@@ -106,24 +111,19 @@
    "latest": "2026-11-26T09:59:06+00:00"
   },
   "usfk": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-26T08:57:21+00:00"
-  },
-  "fire": {
-   "clusters": 4,
-   "max_independent": 2,
-   "latest": "2026-11-26T08:37:15+00:00"
   },
   "alert": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-26T05:49:20+00:00"
   },
-  "mine": {
+  "defect": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-24T09:39:07+00:00"
+   "latest": "2026-11-24T02:42:59+00:00"
   }
  },
  "feeds": [
@@ -132,8 +132,8 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 80,
-   "hits": 8
+   "count": 81,
+   "hits": 10
   },
   {
    "outlet": "연합뉴스",
@@ -141,7 +141,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "연합뉴스",
@@ -165,7 +165,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 6
+   "hits": 7
   },
   {
    "outlet": "SBS",
@@ -195,17 +195,15 @@
    "outlet": "동아일보",
    "section": "정치",
    "url": "https://rss.donga.com/politics.xml",
-   "ok": true,
-   "count": 50,
-   "hits": 3
+   "ok": false,
+   "error": "TimeoutError: The read operation timed out"
   },
   {
    "outlet": "동아일보",
    "section": "사회",
    "url": "https://rss.donga.com/national.xml",
-   "ok": true,
-   "count": 50,
-   "hits": 2
+   "ok": false,
+   "error": "RemoteDisconnected: Remote end closed connection without response"
   },
   {
    "outlet": "국민일보",
@@ -213,7 +211,7 @@
    "url": "https://www.kmib.co.kr/rss/data/kmibPolRss.xml",
    "ok": true,
    "count": 100,
-   "hits": 6
+   "hits": 7
   },
   {
    "outlet": "국민일보",

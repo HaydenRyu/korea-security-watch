@@ -5,8 +5,8 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "Kim Jong Un nuclear facilities",
-      "북한 핵시설"
+      "북한 핵시설",
+      "Kim Jong Un nuclear facilities"
     ],
     "logistics": [
       "북한 군수 수송",
@@ -16,8 +16,8 @@
       "지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격",
-      "해킹 개인정보 유출"
+      "북한 GPS 교란",
+      "해킹 공격 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
       "North Korea Reuters Kim Jong Un China Russia visit",
@@ -67,7 +67,7 @@
         "11/26 KCNA 발표 인용 보도"
       ],
       "speculation": [
-        "서해 발사장 엔진시험대 정황(NK News 영상 분석)은 징후 미확정"
+        "ICBM 엔진시험 정황(NK News)은 미확정"
       ]
     },
     "logistics": {
@@ -95,7 +95,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T04:09:45+00:00",
+  "checked_at": "2026-11-26T05:09:53+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

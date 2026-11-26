@@ -1,59 +1,69 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 군사 동향",
-      "북한 병력 이동 전방"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea Reuters AP missile launch November 2026",
-      "동창리 엔진시험"
+      "동창리 엔진시험",
+      "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "북한 군수 수송 탄약"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "합참 북한 군사 동향 지뢰 발견 DMZ 귀순",
-      "목함지뢰 해안"
+      "지뢰 발견 DMZ 귀순",
+      "합참 북한 발표 11월 26일"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 공격 사이버 공격 11월 26일",
-      "해킹 개인정보 유출"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
+      "North Korea Reuters Kim Jong Un China Russia visit",
       "김정은 방중",
+      "서해 구조물",
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
       "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 발령 데프콘 상향"
     ],
     "hybrid_ops": [
-      "간첩 혐의 국가보안법 구속",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261126518166",
     "https://www.yna.co.kr/view/AKR20261126152400009",
-    "https://www.yna.co.kr/view/AKR20261124093000504",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630",
-    "https://www.nknews.org"
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630"
   ],
-  "overall_summary": "신규 징후는 주한미군 아파치 대대 운용 중단(공식 확인, 임무 변화 없음) 정도이고 동창리 엔진시험 정황은 NK뉴스 단독 보도의 지속이다. 접경 열점·충돌·지뢰 신규 보도는 없어 직전과 비슷한 수준이다.",
+  "overall_summary": "신규 징후는 없고 직전 회차의 동창리 엔진시험 정황(단독 보도)·주한미군 아파치 대대 운용 중단(임무 변화 없음)이 이어진다. 접경 충돌·지뢰·정부 경고 신규 보도는 확인되지 않았다.",
   "items": {
+    "troop_movement": {
+      "status": "none"
+    },
     "nuclear": {
       "status": "single",
       "routine": true,
       "region": "평안북도 철산군 동창리",
       "lat": 39.66,
       "lon": 124.71,
-      "summary": "NK뉴스가 위성사진으로 11/15~19일 동창리 엔진시험장 지상분출시험 정황을 보도했고 연합이 전했으나 북한 발표·독립 확인은 없다.",
+      "summary": "위성사진으로 11/15~19일 동창리 엔진시험장 지상분출시험 정황을 연합이 전했으나 북한 발표·독립 확인은 없다.",
       "meaning": "고체연료 ICBM·IRBM 엔진 시험 정황이나 시험 성격이라 정례로 본다.",
       "sources": [
         {
@@ -71,12 +81,19 @@
         "장거리 탄도미사일용 엔진 시험"
       ]
     },
+    "logistics": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none"
+    },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
-      "summary": "귀속 미확인 — 경찰이 중국 해킹조직에서 산 계정으로 성형외과 가짜 후기를 올린 사건을 적발했다(북한 무관).",
-      "meaning": "정부·기반시설 대상 공격이 아니라 등급에 쓰지 않는다.",
+      "region": "한국",
+      "summary": "귀속 미확인 — 경찰이 중국 해킹조직에서 산 포털 계정으로 성형외과 가짜 후기를 올린 52명을 적발했다(북한 무관).",
+      "meaning": "북한 소행 근거가 없는 국내 계정 해킹 범죄다.",
       "sources": [
         {
           "name": "SBS",
@@ -84,8 +101,10 @@
           "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630"
         }
       ],
-      "confidence": "중간",
-      "facts": [],
+      "confidence": "높음",
+      "facts": [
+        "해킹 피해 계정 800여 명, 게시글 8,400여 건"
+      ],
       "speculation": []
     },
     "foreign_forces": {
@@ -110,7 +129,10 @@
       ],
       "speculation": []
     },
-    "border_clash": {
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
       "status": "none"
     },
     "gov_warning": {
@@ -118,21 +140,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "logistics": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "troop_movement": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-26T15:11:01+00:00",
+  "checked_at": "2026-11-26T16:11:11+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

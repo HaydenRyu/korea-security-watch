@@ -1,63 +1,50 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 김정은 11월 26일 속보",
+      "North Korea Reuters missile"
     ],
     "nuclear": [
-      "북한 핵 시설 김정은 시찰",
-      "North Korea missile nuclear Reuters November 26 2026"
+      "북한 김정은 11월 26일 속보",
+      "North Korea Reuters missile"
     ],
     "logistics": [
-      "북한 군수 물자 수송",
-      "North Korea ammunition shipment"
+      "북한 김정은 11월 26일 속보",
+      "North Korea Reuters missile"
     ],
     "border_clash": [
-      "목함지뢰 해안",
-      "DMZ NLL 귀순"
+      "지뢰 발견 DMZ 합참"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 방러",
+      "North Korea Reuters missile"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 김정은 11월 26일 속보"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 김정은 11월 26일 속보"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "한미일 긴급 경고"
+      "지뢰 발견 DMZ 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261125515554",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
-    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261125/n-koreas-yongbyon-nuclear-complex-expansion-may-boost-weapons-grade-uranium-production-says-us-science-institute",
-    "https://www.koreatimes.co.kr/southkorea/defense/20261124/s-korea-briefly-issues-alert-on-eastern-island-after-russian-warplanes-near-airspace",
-    "https://www.koreatimes.co.kr/southkorea/defense/20261126/us-military-confirms-inactivation-of-apache-helicopter-squadron-in-s-korea",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261124/us-takes-action-to-recover-over-11-bil-in-cryptocurrency-stolen-by-n-korean-hackers"
+    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
   ],
-  "overall_summary": "김정은이 핵물질 생산·핵무기 연구시설을 시찰하고 전술핵 다영역 운용 확대를 주문했다고 KCNA가 26일 보도했으나 신규 배치·시험은 없는 발언·시찰 수준이다. 접경 충돌·병력·군수 등 다른 항목에 새 징후는 없고 직전 회차와 같은 평시 범위다. 접경 열점 후보는 이번 회차 대조하지 않음.",
+  "overall_summary": "김정은의 핵물질·핵무기·핵동력 시설 시찰을 KCNA가 보도했으나 신규 배치·시험은 없는 발언·시찰 수준이다. 접경·병력·군수 등 다른 항목에 새 징후는 확인되지 않아 직전 회차와 같은 평시 범위다. 접경 열점 후보 0건.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -66,8 +53,8 @@
       "status": "single",
       "routine": true,
       "region": "북한(미공개 시설)",
-      "summary": "KCNA가 25일 김정은의 핵물질 생산기지·핵무기 시설 시찰과 전술핵 다영역 운용 확대 지시를 26일 보도했고 신규 배치·시험 발표는 없다.",
-      "meaning": "핵 지위 불가침 선언과 농축능력 확대 과시 성격의 발언·시찰로 실전 배치 징후는 아니다.",
+      "summary": "KCNA가 25일 김정은의 핵물질 생산기지·핵무기·핵동력 설비 시설 시찰과 전술핵 다영역 운용 확대 지시를 보도했고 신규 배치·시험 발표는 없다.",
+      "meaning": "핵 지위 불가침 선언과 능력 과시 성격의 발언·시찰로 실전 배치 징후는 아니다.",
       "sources": [
         {
           "name": "한국타임스(로이터)",
@@ -77,20 +64,17 @@
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 보도: 25일 시찰, 26일 공개, 시설·위치 미공개",
-        "사진에 원심분리기 계단식 배열·소형화 전술탄두(화산-31 추정)",
-        "ISIS는 영변 농축시설 신축 홀(9월 착공)이 무기급 우라늄 증산용일 가능성 평가(25일)"
+        "KCNA 보도: 25일 시찰, 시설 위치 미공개"
       ],
       "speculation": [
-        "영변 신축 홀의 용도는 ISIS 위성영상 분석에 따른 추정"
+        "미국에 보내는 메시지라는 분석"
       ]
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "새 지뢰 발견·충돌 보도 없음(강화 해안 지뢰는 8~10월 보도, 24시간 경과)."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "single",
@@ -113,24 +97,8 @@
       "speculation": []
     },
     "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "울릉도 인근 KADIZ",
-      "summary": "러시아 군용기 약 5대가 24일 KADIZ에 20분가량 진입해 F-15K가 출격했고 합참은 영공 침범은 없었다고 밝혔다.",
-      "meaning": "러시아의 방공식별구역 진입은 반복돼 온 형태이고 영공 침범이 없어 정례 범위다.",
-      "sources": [
-        {
-          "name": "한국타임스(연합)",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/southkorea/defense/20261124/s-korea-briefly-issues-alert-on-eastern-island-after-russian-warplanes-near-airspace"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "합참: 영공 침범 없음",
-        "USFK 5-17 공중기병대대 비활성화 확인, 태세 변화 없다고 밝힘(26일, 배경)"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 러시아 군용기 KADIZ 진입(24일 첫 보도) 이후 새 북·러·북·중 협력 확인 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -142,11 +110,10 @@
       "status": "none"
     },
     "hybrid_ops": {
-      "status": "none",
-      "summary": "미 법무부의 바이낸스 탈취 자금 몰수 소송(23일 제기)은 24시간 경과 배경."
+      "status": "none"
     }
   },
-  "checked_at": "2026-11-26T06:10:45+00:00",
+  "checked_at": "2026-11-26T07:10:04+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

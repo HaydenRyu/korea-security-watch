@@ -48,9 +48,9 @@
   "opened": [
     "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/",
     "https://www.koreajoongangdaily.com/korea/north-korean-leaders-close-aide-meets-senior-officials-in-moscow-amid-deepening-ties/12976273",
-    "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border"
+    "https://www.segye.com/newsView/20261126501325"
   ],
-  "overall_summary": "김정은의 핵탄두·농축시설·해군 핵동력 시설 시찰 보도(KCNA 주장, 11/26)가 있으나 과시성이고 접경·병력·정부 경고 징후는 없다. 직전 회차와 같은 수준.",
+  "overall_summary": "김정은의 핵시설 시찰(KCNA 주장, 11/25 시찰·11/26 보도)이 지속되나 과시성이며 접경·병력·정부 경고 징후는 없다. 직전 회차와 같은 수준.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -84,8 +84,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "러시아 대표단 방북(11/26)은 경제·문화 협력 일정이고 군사 협력 신규 확인 없음 — 외교 배경."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -100,7 +99,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T01:10:25+00:00",
+  "checked_at": "2026-11-26T02:09:45+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

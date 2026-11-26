@@ -45,12 +45,11 @@
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261126518166",
-    "https://www.segye.com/newsView/20261125515554",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
-    "https://www.nhk.or.jp/rss/news/cat6.xml"
+    "https://www.segye.com/newsView/20261125515554",
+    "https://www.segye.com/newsView/20261126518166"
   ],
-  "overall_summary": "KCNA의 김정은 핵시설 시찰·전술핵 확대 보도가 이어지나 신규 배치·시험·접경 사건은 없어 직전과 같은 수준이다. 주한미군이 아파치 5-17 공중기병대대 운용중단을 공식 확인했으나 군 측은 병력 감축이 아닌 전력 현대화라고 밝혔다. 접경 열점 후보 없음.",
+  "overall_summary": "KCNA의 김정은 핵시설 시찰·전술핵 확대 보도가 이어지나 신규 배치·시험·접경 사건은 없어 직전과 같은 수준이다. 주한미군 아파치 대대 운용중단 확인은 군 측이 병력 감축이 아닌 전력 현대화라고 밝혔고, 접경 열점 후보는 확인하지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -70,7 +69,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 보도 인용: 핵시설 시찰, 전술핵 확대 배치 촉구"
+        "KCNA 보도 인용: 핵시설 시찰, 전술핵 다영역 운용 확대 촉구, 핵 지위 부정은 선전포고로 간주"
       ],
       "speculation": []
     },
@@ -134,7 +133,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T09:10:40+00:00",
+  "checked_at": "2026-11-26T10:10:02+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

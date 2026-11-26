@@ -1,48 +1,48 @@
 {
- "fetched_at": "2026-11-26T08:32:54+00:00",
- "status": "ok",
- "status_detail": "",
+ "fetched_at": "2026-11-26T10:12:22+00:00",
+ "status": "partial",
+ "status_detail": "동아일보/정치: TimeoutError: The read operation timed out; 동아일보/사회: RemoteDisconnected: Remote end closed connection without response",
  "last_ok_at": "2026-11-26T08:32:54+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
-  "feeds_failed": 0,
-  "fetched": 1119,
-  "hits": 27,
-  "clusters": 24,
+  "feeds_failed": 2,
+  "fetched": 1021,
+  "hits": 22,
+  "clusters": 20,
   "by_group": {
    "sanction": 2,
    "spy": 5,
    "usfk": 1,
    "fire": 4,
    "alert": 1,
-   "drone_balloon": 2,
    "gps": 3,
    "hybrid": 3,
-   "summit": 2,
-   "mine": 2,
+   "summit": 1,
    "border": 2,
-   "defect": 2
+   "drone_balloon": 1,
+   "mine": 1,
+   "defect": 1
   }
  },
  "outlets": {
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 560,
-   "hits": 13
+   "count": 562,
+   "hits": 12
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
    "count": 159,
-   "hits": 2
+   "hits": 3
   },
   "동아일보": {
    "feeds": 2,
-   "failed": 0,
-   "count": 100,
-   "hits": 6
+   "failed": 2,
+   "count": 0,
+   "hits": 0
   },
   "국민일보": {
    "feeds": 2,
@@ -68,32 +68,27 @@
   "sanction": {
    "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-26T08:32:54+00:00"
+   "latest": "2026-11-26T09:59:06+00:00"
   },
   "spy": {
    "clusters": 5,
    "max_independent": 1,
-   "latest": "2026-11-26T08:32:54+00:00"
+   "latest": "2026-11-26T09:59:06+00:00"
   },
   "usfk": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-26T08:29:37+00:00"
+   "latest": "2026-11-26T08:57:21+00:00"
   },
   "fire": {
    "clusters": 4,
    "max_independent": 2,
-   "latest": "2026-11-26T07:48:35+00:00"
+   "latest": "2026-11-26T08:37:15+00:00"
   },
   "alert": {
    "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-26T05:49:20+00:00"
-  },
-  "drone_balloon": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-26T03:13:00+00:00"
   },
   "gps": {
    "clusters": 3,
@@ -106,24 +101,29 @@
    "latest": "2026-11-26T03:01:00+00:00"
   },
   "summit": {
-   "clusters": 2,
+   "clusters": 1,
    "max_independent": 1,
    "latest": "2026-11-25T23:15:50+00:00"
-  },
-  "mine": {
-   "clusters": 2,
-   "max_independent": 1,
-   "latest": "2026-11-25T19:30:00+00:00"
   },
   "border": {
    "clusters": 2,
    "max_independent": 1,
    "latest": "2026-11-25T15:00:00+00:00"
   },
-  "defect": {
-   "clusters": 2,
+  "drone_balloon": {
+   "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-25T08:12:00+00:00"
+   "latest": "2026-11-25T02:34:53+00:00"
+  },
+  "mine": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-24T09:39:07+00:00"
+  },
+  "defect": {
+   "clusters": 1,
+   "max_independent": 1,
+   "latest": "2026-11-24T02:42:59+00:00"
   }
  },
  "feeds": [
@@ -132,7 +132,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 80,
+   "count": 82,
    "hits": 7
   },
   {
@@ -141,7 +141,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 5
+   "hits": 4
   },
   {
    "outlet": "연합뉴스",
@@ -189,23 +189,21 @@
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
    "count": 101,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "동아일보",
    "section": "정치",
    "url": "https://rss.donga.com/politics.xml",
-   "ok": true,
-   "count": 50,
-   "hits": 5
+   "ok": false,
+   "error": "TimeoutError: The read operation timed out"
   },
   {
    "outlet": "동아일보",
    "section": "사회",
    "url": "https://rss.donga.com/national.xml",
-   "ok": true,
-   "count": 50,
-   "hits": 1
+   "ok": false,
+   "error": "RemoteDisconnected: Remote end closed connection without response"
   },
   {
    "outlet": "국민일보",

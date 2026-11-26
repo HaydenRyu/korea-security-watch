@@ -1,69 +1,117 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
+      "북한 병력 이동",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 시설 시찰 전술핵",
-      "North Korea nuclear Kim Jong Un facility"
+      "서해위성발사장 엔진시험",
+      "North Korea Sohae engine test"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition logistics"
+      "북한 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ 귀순 11월 26일",
-      "목함지뢰 해안",
-      "DMZ NLL North Korea border"
+      "지뢰 발견",
+      "합참 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격 랜섬웨어 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
       "김정은 방중",
-      "서해 구조물",
+      "Kim Jong Un China Russia visit",
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시 노농적위군"
+      "북한 준전시 등화관제",
+      "North Korea blackout drill"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향",
-      "North Korea warning Japan Korea US"
+      "진돗개 발령",
+      "DEFCON Korea"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "북한 해킹 귀속"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
+      "남북 대화 제안",
+      "통신선 복원",
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreaherald.com/article/10937539",
     "https://www.segye.com/newsView/20261126518166",
-    "https://www.segye.com/newsView/20261125515554",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865453",
+    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours"
   ],
-  "overall_summary": "KCNA의 김정은 핵시설 시찰·전술핵 확대 보도와 주한미군 아파치 대대 운용중단 확인 외에 신규 접경·병력·정부 경고 징후는 없어 직전과 같은 수준이다. 접경 열점 후보는 0건이다.",
+  "overall_summary": "NK뉴스 위성사진 분석상 동창리 엔진시험장에서 15~19일 사이 지상분출시험이 있었던 정황과 주한미군 아파치 대대 운용중단 확인 외에 신규 접경·병력·정부 경고 징후는 없어 직전과 같은 수준이다. 접경 열점 후보는 0건이다.",
   "items": {
     "troop_movement": {
       "status": "none"
+    },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "region": "평안북도 철산",
+      "lat": 39.66,
+      "lon": 124.7,
+      "summary": "NK뉴스가 위성사진으로 동창리 서해위성발사장 엔진시험장의 15~19일 지상분출시험 정황을 보도했으나 북한은 공개하지 않았다.",
+      "meaning": "시험 정황 보도이며 신규 실전 배치·핵실험 근거는 없다.",
+      "sources": [
+        {
+          "name": "SBS(NK뉴스 인용)",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865453"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "15~19일 사이 시험 추정, 정확한 날짜 특정 불가"
+      ],
+      "speculation": [
+        "기만 작전 가능성"
+      ]
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
       "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none",
+      "summary": "직전의 성형후기 계정 거래 사건은 북한 무관한 국내 형사사건이라 배경으로 내림."
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": false,
+      "region": "경기 평택",
+      "lat": 36.99,
+      "lon": 127.09,
+      "summary": "주한미군이 5-17 공중기병대대(아파치)의 운용 중단을 공식 확인했고 임무·전력태세 변화는 없다고 밝혔다.",
+      "meaning": "미군 부대 구조 개편이나 한국 방위 공약 변화는 없다고 주한미군이 밝혔다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261126518166"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "운용중단은 지난해 12월 15일자, 올해 초 CRS 보고서로 알려짐"
+      ],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -76,69 +124,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "북한",
-      "summary": "KCNA가 김정은의 핵물질 생산기지·핵무기 연구시설 시찰과 전술핵 다영역 운용 확대 지시를 보도했고 신규 배치·시험 발표는 없다.",
-      "meaning": "핵보유국 지위 강조 발언 수준이며 실전 배치 징후는 확인되지 않았다.",
-      "sources": [
-        {
-          "name": "코리아타임스",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "KCNA 보도 인용: 핵시설 시찰, 전술핵 다영역 운용 확대 촉구"
-      ],
-      "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "서울",
-      "summary": "귀속 미확인 — 서울경찰청이 중국 칭다오 해킹조직에서 산 해킹 계정으로 가짜 성형후기를 올린 52명을 송치했다(북한 무관).",
-      "meaning": "정부·기반시설 마비가 아닌 일반 사이버 범죄다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261125515554"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "서울경찰청 52명 송치"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": false,
-      "region": "경기 평택",
-      "lat": 36.99,
-      "lon": 127.09,
-      "summary": "주한미군이 제2보병사단 5-17 공중기병대대(아파치)의 운용 중단을 공식 확인했고 임무·전력태세 변화는 없다고 밝혔다.",
-      "meaning": "주한미군 항공전력 편성 변화이나 병력 감축·임무 변경은 아니라는 입장이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261126518166"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "주한미군 26일 공식 확인, 운용 중단은 지난해 12월 15일자 시행"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-26T12:10:38+00:00",
+  "checked_at": "2026-11-26T13:11:34+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

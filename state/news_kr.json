@@ -1,22 +1,22 @@
 {
- "fetched_at": "2026-11-25T22:54:00+00:00",
+ "fetched_at": "2026-11-26T00:07:48+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-25T22:54:00+00:00",
+ "last_ok_at": "2026-11-26T00:07:48+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1124,
-  "hits": 21,
-  "clusters": 17,
+  "fetched": 1123,
+  "hits": 22,
+  "clusters": 19,
   "by_group": {
    "sanction": 1,
    "spy": 5,
+   "summit": 3,
    "fire": 3,
    "mine": 3,
-   "border": 3,
-   "summit": 1,
+   "border": 2,
    "defect": 2,
    "drone_balloon": 1,
    "gps": 2,
@@ -27,8 +27,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 564,
-   "hits": 14
+   "count": 563,
+   "hits": 15
   },
   "SBS": {
    "feeds": 3,
@@ -66,32 +66,32 @@
   "sanction": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-25T22:54:00+00:00"
+   "latest": "2026-11-26T00:07:48+00:00"
   },
   "spy": {
    "clusters": 5,
    "max_independent": 2,
-   "latest": "2026-11-25T22:54:00+00:00"
+   "latest": "2026-11-26T00:07:48+00:00"
+  },
+  "summit": {
+   "clusters": 3,
+   "max_independent": 1,
+   "latest": "2026-11-25T23:32:49+00:00"
   },
   "fire": {
    "clusters": 3,
    "max_independent": 1,
-   "latest": "2026-11-25T20:01:00+00:00"
+   "latest": "2026-11-25T23:09:52+00:00"
   },
   "mine": {
    "clusters": 3,
-   "max_independent": 2,
+   "max_independent": 1,
    "latest": "2026-11-25T19:30:00+00:00"
   },
   "border": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-25T18:21:10+00:00"
-  },
-  "summit": {
-   "clusters": 1,
-   "max_independent": 1,
-   "latest": "2026-11-25T15:31:43+00:00"
+   "latest": "2026-11-25T15:00:00+00:00"
   },
   "defect": {
    "clusters": 2,
@@ -120,7 +120,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 84,
+   "count": 83,
    "hits": 7
   },
   {
@@ -129,7 +129,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 4
   },
   {
    "outlet": "연합뉴스",
@@ -145,7 +145,7 @@
    "url": "https://www.yna.co.kr/rss/local.xml",
    "ok": true,
    "count": 120,
-   "hits": 0
+   "hits": 1
   },
   {
    "outlet": "연합뉴스",
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 4
+   "hits": 3
   },
   {
    "outlet": "SBS",

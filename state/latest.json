@@ -2,7 +2,7 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "North Korea troop movement Kim Jong Un Reuters"
     ],
     "nuclear": [
       "북한 핵 시설 시찰 전술핵",
@@ -10,7 +10,7 @@
     ],
     "logistics": [
       "북한 군수 수송 탄약",
-      "North Korea ammunition logistics"
+      "North Korea arms shipments Russia"
     ],
     "border_clash": [
       "합참 북한 지뢰 발견 DMZ 귀순 11월 26일",
@@ -23,10 +23,8 @@
       "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
-      "김정은 방중",
-      "서해 구조물",
-      "주한미군 감축"
+      "김정은 방중 방러 Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 집결"
@@ -39,22 +37,24 @@
       "North Korea warning Japan Korea US"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원",
-      "North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreaherald.com/article/10937539",
     "https://www.segye.com/newsView/20261126518166",
     "https://www.segye.com/newsView/20261125515554",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
+    "https://www.nknews.org",
+    "https://www.nknews.org/2026/11/kyiv-claims-north-korea-temporarily-halted-arms-shipments-to-russia-over-dispute/",
+    "https://www.nknews.org/2026/11/russia-north-korea-signed-agreement-on-protecting-classified-information/"
   ],
-  "overall_summary": "KCNA의 김정은 핵시설 시찰·전술핵 확대 보도와 주한미군 아파치 대대 운용중단 확인 외에 신규 접경·병력·정부 경고 징후는 없어 직전과 같은 수준이다. 접경 열점 후보는 0건이다.",
+  "overall_summary": "KCNA의 김정은 핵시설 시찰·전술핵 확대 보도와 주한미군 아파치 대대 운용중단 확인은 직전과 같고, 우크라이나 정보총국이 북한의 대러 무기 공급 일시 중단을 주장했으나 단독 주장이다. 신규 접경·병력·정부 경고 징후는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -92,17 +92,20 @@
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA 보도 인용: 핵시설 시찰, 전술핵 다영역 운용 확대 촉구"
+        "KCNA 11/26 보도, 시설명·위치 비공개",
+        "새 핵실험·배치 완료 보도 없음"
       ],
-      "speculation": []
+      "speculation": [
+        "분석가는 원심분리기·화산-31 식별"
+      ]
     },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
       "attribution": "unknown",
       "region": "서울",
-      "summary": "귀속 미확인 — 서울경찰청이 중국 칭다오 해킹조직에서 산 해킹 계정으로 가짜 성형후기를 올린 52명을 송치했다(북한 무관).",
-      "meaning": "정부·기반시설 마비가 아닌 일반 사이버 범죄다.",
+      "summary": "귀속 미확인 — 서울경찰청이 중국 칭다오 해킹조직에서 산 계정으로 가짜 성형후기를 올린 52명을 송치했다(북한 무관).",
+      "meaning": "북한 연관 없는 국내 계정 도용 사건이다.",
       "sources": [
         {
           "name": "세계일보",
@@ -112,33 +115,38 @@
       ],
       "confidence": "중간",
       "facts": [
-        "서울경찰청 52명 송치"
+        "허위 후기 8400여건, 계정 800여개"
       ],
       "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": false,
-      "region": "경기 평택",
-      "lat": 36.99,
-      "lon": 127.09,
-      "summary": "주한미군이 제2보병사단 5-17 공중기병대대(아파치)의 운용 중단을 공식 확인했고 임무·전력태세 변화는 없다고 밝혔다.",
-      "meaning": "주한미군 항공전력 편성 변화이나 병력 감축·임무 변경은 아니라는 입장이다.",
+      "region": "경기",
+      "summary": "주한미군이 2사단 5-17 공중기병대대(아파치)의 운용 중단을 공식 확인했고 임무·전력태세 변화는 없다고 밝혔다. 우크라이나 정보총국은 북한의 대러 KN-23·포탄 공급 일시 중단을 주장했으나 단독 주장이다.",
+      "meaning": "미군 전력구조 개편 사안이며 북러 협력 변화는 미확인이다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261126518166"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/kyiv-claims-north-korea-temporarily-halted-arms-shipments-to-russia-over-dispute/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "주한미군 26일 공식 확인, 운용 중단은 지난해 12월 15일자 시행"
+        "운용 중단은 지난해 12/15자"
       ],
-      "speculation": []
+      "speculation": [
+        "DIU 주장은 독립 확인 없음"
+      ]
     }
   },
-  "checked_at": "2026-11-26T12:10:38+00:00",
+  "checked_at": "2026-11-26T13:11:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

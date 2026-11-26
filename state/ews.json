@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "computed_at": "2026-11-26T21:10:17+00:00",
+  "computed_at": "2026-11-26T22:10:05+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 29,
+  "ews": 30,
   "band": "관찰",
-  "d": 8,
+  "d": 10,
   "e": 0,
   "alpha": 1.0,
   "grade": 1,
@@ -13,7 +13,7 @@
   "coverage": {
     "observed_theaters": 5,
     "linkage_judged_at": "2026-11-26T11:40:22+00:00",
-    "latest_updated_at": "2026-11-26T21:10:17+00:00"
+    "latest_updated_at": "2026-11-26T22:10:05+00:00"
   },
   "theaters": [
     {
@@ -136,8 +136,8 @@
     }
   ],
   "last_good": {
-    "ews": 29,
+    "ews": 30,
     "band": "관찰",
-    "computed_at": "2026-11-26T21:10:17+00:00"
+    "computed_at": "2026-11-26T22:10:05+00:00"
   }
 }

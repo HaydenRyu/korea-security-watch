@@ -1,67 +1,134 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troops buildup"
+      "합참 북한 발표 11월 26일",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "North Korea nuclear test Punggye-ri Yongbyon Sohae",
-      "북한 핵 동창리"
+      "북한 동창리 엔진시험",
+      "North Korea nuclear engine test"
     ],
     "logistics": [
-      "북한 탄약 군수 수송"
+      "북한 군수 수송",
+      "North Korea logistics munitions"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "합참 발표 북한 MDL"
+      "지뢰 발견 DMZ 귀순 북한",
+      "북한 MDL 침범 10~11월 40여회 합참"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방러 방중",
-      "Kim Jong Un China Russia visit",
-      "주한미군 감축 서해 구조물"
+      "김정은 방중",
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 노농적위군"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "Japan missile alert State Department"
+      "진돗개 데프콘 발령"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261126518166",
     "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261126518166",
     "https://www.yna.co.kr/view/AKR20261126190400504",
     "https://www.yna.co.kr/view/AKR20261126152400009"
   ],
-  "overall_summary": "신규 군사 징후는 없다. 동창리 엔진시험 정황과 아파치 운용 중단 확인이 이어지고, 합참의 10~11월 MDL 침범 40여회 집계는 요새화 작업 중 반복돼 온 누적 보도라 배경으로 둔다.",
+  "overall_summary": "신규 징후는 연합 보도 MDL 침범 누적(10~11월 40여회, 정례 성격)과 직전 회차의 동창리 엔진시험·주한미군 아파치 중단 후속뿐이며 24시간 내 새 군사행동·경고·최후통첩은 확인되지 않았다. 접경 열점 후보와 일부 피드(동아 2건) 실패는 보도 대조를 못 했다.",
   "items": {
     "troop_movement": {
       "status": "none"
+    },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "region": "평안북도 동창리",
+      "lat": 39.66,
+      "lon": 124.7,
+      "summary": "NK뉴스 위성사진 분석으로 11/15~19일 동창리 엔진시험장 지상분출시험 정황이 연합·SBS에 전해졌으나 북한 발표·독립 확인은 없다.",
+      "meaning": "고체·액체 엔진 시험은 시험 발사 성격의 정례 활동이다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261126152400009"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "연합뉴스가 11/26 엔진시험 정황을 보도"
+      ],
+      "speculation": [
+        "신형 탄도미사일 개발 연계 가능성"
+      ]
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "합참의 10~11월 MDL 침범 40여회는 요새화 작업 중 반복된 누적 집계라 새 사건이 아닌 배경이다(연합 11/26)."
+      "status": "single",
+      "routine": true,
+      "region": "군사분계선(MDL) 일대",
+      "lat": 38.0,
+      "lon": 127.0,
+      "summary": "연합뉴스가 10~11월 북한군의 MDL 침범이 40여회라고 보도했으나 새 교전·사상자 없이 국경선 요새화 작업에 따른 반복 침범의 누적 집계다.",
+      "meaning": "반복 침범이 우발 충돌 위험을 키우나 의도된 도발 근거는 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261126190400504"
+        },
+        {
+          "name": "국방일보",
+          "tier": "B",
+          "url": "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "연합: 지뢰 도발 후에도 MDL 침범 지속",
+        "국방일보: KIMA 포럼이 북 MDL 요새화로 우발 충돌 위험 진단"
+      ],
+      "speculation": []
     },
     "electronic_cyber": {
       "status": "none"
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": false,
+      "region": "경기 평택",
+      "lat": 36.96,
+      "lon": 127.03,
+      "summary": "주한미군이 2사단 5-17 공중기병대대(아파치) 운용 중단을 확인했고 임무·공약 변화는 없다고 밝혔다.",
+      "meaning": "미군 전력 재편이나 한국 방위 공약 변화는 없다는 공식 입장이다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261126518166"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "미 CRS가 지난해 12/15 운용 중단을 먼저 공개"
+      ],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -74,51 +141,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "평북 철산 동창리",
-      "lat": 39.66,
-      "lon": 124.7,
-      "summary": "NK뉴스 위성사진 분석으로 11/15~19일 동창리 엔진시험장 지상분출시험 정황이 연합·SBS에 전해졌으나 북한 발표·독립 확인은 없다.",
-      "meaning": "과거 고체연료 발사체 시험 때와 유사한 정황이나 시험 성격이라 평소 범위다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261126152400009"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "연합·SBS가 NK뉴스 보도를 인용"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": false,
-      "region": "경기 평택",
-      "lat": 36.96,
-      "lon": 127.03,
-      "summary": "주한미군이 2사단 5-17 공중기병대대(아파치) 운용 중단을 확인했고 임무·공약 변화는 없다고 밝혔다.",
-      "meaning": "전력 현대화 명목이며 아파치 전체 철수는 아니다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261126518166"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "2025-12-15 운용 중단, 미 의회조사국 보고서로 먼저 알려짐"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-26T21:10:17+00:00",
+  "checked_at": "2026-11-26T22:10:05+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

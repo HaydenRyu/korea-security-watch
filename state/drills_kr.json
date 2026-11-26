@@ -1,14 +1,14 @@
 {
  "source": "접경 지자체 공지(철원 RSS · 고성 공지 · 파주 새소식+HWP · 화천 공지+PDF) — 군 사격훈련 주민 안내",
  "note": "참고 자료 · 등급 판정과 무관. 일정은 부대 사정·기상으로 바뀔 수 있다.",
- "fetched_at": "2026-11-26T01:21:03.503558+00:00",
+ "fetched_at": "2026-11-26T08:33:18.075996+00:00",
  "sources": {
   "cheorwon": {
    "name": "철원군",
    "page": "https://www.cwg.go.kr/www/selectBbsNttList.do?bbsNo=24&key=206",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-26T01:21:03.503558+00:00",
+   "last_ok_at": "2026-11-26T08:33:18.075996+00:00",
    "count": 10
   },
   "goseong": {
@@ -16,7 +16,7 @@
    "page": "https://www.gwgs.go.kr/prog/bbsArticle/BBSMSTR_000000000412/list.do",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-26T01:21:03.503558+00:00",
+   "last_ok_at": "2026-11-26T08:33:18.075996+00:00",
    "count": 10
   },
   "paju": {
@@ -24,14 +24,14 @@
    "page": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=2001",
    "status": "ok",
    "status_detail": "",
-   "last_ok_at": "2026-11-26T01:21:03.503558+00:00",
+   "last_ok_at": "2026-11-26T08:33:18.075996+00:00",
    "count": 8
   },
   "hwacheon": {
    "name": "화천군",
    "page": "https://www.ihc.go.kr/www/selectBbsNttList.do?bbsNo=11&key=2338",
-   "status": "ok",
-   "status_detail": "",
+   "status": "error",
+   "status_detail": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
    "last_ok_at": "2026-11-26T01:21:03.503558+00:00",
    "count": 6
   }
@@ -188,6 +188,29 @@
     "박격포"
    ],
    "active_now": true
+  },
+  {
+   "source": "paju",
+   "title": "2026년 12월 포병훈련장 사격훈련일정 사전 알림",
+   "url": "https://www.paju.go.kr/user/board/BD_board.view.do?bbsCd=2001&seq=20261126114220659",
+   "posted": "2026-11-26",
+   "body": "2026년도 12월 포병훈련장 사격일정을 붙임과 같이 알려드리오니,\n현지 주민 및 업무 관련자들께서는 필히 참고하시기 바랍니다.\n붙임 1. 훈련계획 1부. 끝.\n'26년 12월 포병사격훈련 계획 전파\n□무건리훈련장\n구 분\n훈련장명\n지 역\n훈련내용\n훈련부대\n사격계획\n비고\n일자\n시간\n1\n무건리훈련장\n파주시\n법원읍\n직천리\n포병사격\n8191부대\n'26.12.3.(목)\n08:00~12:00\n12월\n2\n8567부대\n'26.12.14.(월)\n3\n7226·7305부대\n'26.12.15.(화)\n4\n7226부대\n'26.12.16.(수)\n5\n8890부대\n'26.12.17.(목)\n6\n8890부대\n'26.12.18.(금)",
+   "unit": "",
+   "first": "2026-12-03",
+   "last": "2026-12-18",
+   "days": [
+    "2026-12-03",
+    "2026-12-14",
+    "2026-12-15",
+    "2026-12-16",
+    "2026-12-17",
+    "2026-12-18"
+   ],
+   "places": [
+    "무건리훈련장"
+   ],
+   "arms": [],
+   "active_now": false
   },
   {
    "source": "goseong",

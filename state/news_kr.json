@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-11-26T00:07:48+00:00",
+ "fetched_at": "2026-11-26T01:20:47+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-26T00:07:48+00:00",
+ "last_ok_at": "2026-11-26T01:20:47+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1123,
-  "hits": 22,
-  "clusters": 19,
+  "fetched": 1121,
+  "hits": 20,
+  "clusters": 18,
   "by_group": {
    "sanction": 1,
    "spy": 5,
-   "summit": 3,
+   "summit": 2,
    "fire": 3,
    "mine": 3,
    "border": 2,
@@ -27,20 +27,20 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 563,
-   "hits": 15
+   "count": 562,
+   "hits": 12
   },
   "SBS": {
    "feeds": 3,
    "failed": 0,
-   "count": 160,
+   "count": 159,
    "hits": 1
   },
   "동아일보": {
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 6
+   "hits": 5
   },
   "국민일보": {
    "feeds": 2,
@@ -66,17 +66,17 @@
   "sanction": {
    "clusters": 1,
    "max_independent": 1,
-   "latest": "2026-11-26T00:07:48+00:00"
+   "latest": "2026-11-26T01:20:47+00:00"
   },
   "spy": {
    "clusters": 5,
-   "max_independent": 2,
-   "latest": "2026-11-26T00:07:48+00:00"
+   "max_independent": 1,
+   "latest": "2026-11-26T01:20:47+00:00"
   },
   "summit": {
-   "clusters": 3,
+   "clusters": 2,
    "max_independent": 1,
-   "latest": "2026-11-25T23:32:49+00:00"
+   "latest": "2026-11-25T23:15:50+00:00"
   },
   "fire": {
    "clusters": 3,
@@ -120,7 +120,7 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 83,
+   "count": 82,
    "hits": 7
   },
   {
@@ -153,7 +153,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 0
   },
   {
    "outlet": "SBS",
@@ -176,7 +176,7 @@
    "section": "속보",
    "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do?plink=RSSREADER",
    "ok": true,
-   "count": 102,
+   "count": 101,
    "hits": 1
   },
   {
@@ -185,7 +185,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 5
+   "hits": 4
   },
   {
    "outlet": "동아일보",

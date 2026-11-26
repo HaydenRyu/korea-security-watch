@@ -14,7 +14,7 @@
     ],
     "border_clash": [
       "지뢰 발견 DMZ 귀순 북한",
-      "북한 MDL 침범 10~11월 40여회 합참"
+      "북한 MDL 침범 40여회"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
@@ -22,7 +22,7 @@
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "Kim Jong Un China Russia visit",
       "주한미군 감축"
     ],
     "parade_massing": [
@@ -43,12 +43,13 @@
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261126518166",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008866053",
     "https://www.yna.co.kr/view/AKR20261126190400504",
     "https://www.yna.co.kr/view/AKR20261126152400009"
   ],
-  "overall_summary": "신규 징후는 연합 보도 MDL 침범 누적(10~11월 40여회, 정례 성격)과 직전 회차의 동창리 엔진시험·주한미군 아파치 중단 후속뿐이며 24시간 내 새 군사행동·경고·최후통첩은 확인되지 않았다. 접경 열점 후보와 일부 피드(동아 2건) 실패는 보도 대조를 못 했다.",
+  "overall_summary": "신규 징후는 없다: 직전 회차의 동창리 엔진시험·MDL 침범 누적·주한미군 아파치 중단이 이어지고, 김정은의 러시아 예술단 공연 관람은 외교 일정이다. 접경 열점 후보 대조와 동아 피드 2건은 수집하지 못했다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -143,7 +144,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T22:10:05+00:00",
+  "checked_at": "2026-11-26T23:10:11+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

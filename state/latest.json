@@ -23,7 +23,7 @@
       "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "North Korea Kim Jong Un China Russia visit",
       "김정은 방중",
       "서해 구조물",
       "주한미군 감축"
@@ -48,15 +48,33 @@
     ]
   },
   "opened": [
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.koreaherald.com/article/10937539",
     "https://www.segye.com/newsView/20261126518166",
     "https://www.segye.com/newsView/20261125515554",
-    "https://www.koreaherald.com/article/10937539",
-    "https://www.mt.co.kr/opinion/2026/11/24/2026112315484451393",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
   ],
   "overall_summary": "KCNA의 김정은 핵시설 시찰·전술핵 확대 보도와 주한미군 아파치 대대 운용중단 확인 외에 신규 접경·병력·정부 경고 징후는 없어 직전과 같은 수준이다. 접경 열점 후보는 0건이다.",
   "items": {
     "troop_movement": {
+      "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
       "status": "none"
     },
     "nuclear": {
@@ -78,12 +96,6 @@
       ],
       "speculation": []
     },
-    "logistics": {
-      "status": "none"
-    },
-    "border_clash": {
-      "status": "none"
-    },
     "electronic_cyber": {
       "status": "single",
       "routine": true,
@@ -100,7 +112,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "서울경찰청 사이버수사과 52명 검거"
+        "서울경찰청 52명 송치"
       ],
       "speculation": []
     },
@@ -110,7 +122,7 @@
       "region": "경기 평택",
       "lat": 36.99,
       "lon": 127.09,
-      "summary": "주한미군이 제2보병사단 5-17 공중기병대대(아파치 AH-64E)의 운용 중단을 공식 확인했고 미 육군 전력 구조 개편의 일환이라고 밝혔다.",
+      "summary": "주한미군이 제2보병사단 5-17 공중기병대대(아파치)의 운용 중단을 공식 확인했고 임무·전력태세 변화는 없다고 밝혔다.",
       "meaning": "주한미군 항공전력 편성 변화이나 병력 감축·임무 변경은 아니라는 입장이다.",
       "sources": [
         {
@@ -121,24 +133,12 @@
       ],
       "confidence": "중간",
       "facts": [
-        "주한미군 26일 공식 확인, 현대화·부대 최적화 일환이라고 설명"
+        "주한미군 26일 공식 확인, 운용 중단은 지난해 12월 15일자 시행"
       ],
       "speculation": []
-    },
-    "parade_massing": {
-      "status": "none"
-    },
-    "nk_internal": {
-      "status": "none"
-    },
-    "gov_warning": {
-      "status": "none"
-    },
-    "hybrid_ops": {
-      "status": "none"
     }
   },
-  "checked_at": "2026-11-26T11:10:55+00:00",
+  "checked_at": "2026-11-26T12:10:38+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

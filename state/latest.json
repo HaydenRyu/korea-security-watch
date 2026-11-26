@@ -1,7 +1,7 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 발표 11월 26일",
+      "합참 북한 발표",
       "North Korea troop movement"
     ],
     "nuclear": [
@@ -14,15 +14,15 @@
     ],
     "border_clash": [
       "지뢰 발견 DMZ 귀순 북한",
-      "북한 MDL 침범 10~11월 40여회 합참"
+      "합참 MDL 침범"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
       "주한미군 감축"
     ],
     "parade_massing": [
@@ -39,16 +39,17 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
     "https://www.segye.com/newsView/20261126518166",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261126190400504",
+    "https://www.yna.co.kr/view/AKR20261127006400504",
     "https://www.yna.co.kr/view/AKR20261126152400009"
   ],
-  "overall_summary": "신규 징후는 연합 보도 MDL 침범 누적(10~11월 40여회, 정례 성격)과 직전 회차의 동창리 엔진시험·주한미군 아파치 중단 후속뿐이며 24시간 내 새 군사행동·경고·최후통첩은 확인되지 않았다. 접경 열점 후보와 일부 피드(동아 2건) 실패는 보도 대조를 못 했다.",
+  "overall_summary": "직전 회차와 동일: 연합 MDL 침범 누적 보도·동창리 엔진시험·주한미군 아파치 중단이 이어질 뿐 24시간 내 새 군사행동·경고·최후통첩은 없다. 김정은의 러시아 예술단 공연 관람(조선중앙통신 인용)은 문화 일정이며 새 군사협력 발표는 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -143,7 +144,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T22:10:05+00:00",
+  "checked_at": "2026-11-26T23:10:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

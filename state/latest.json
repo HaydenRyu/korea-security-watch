@@ -1,51 +1,74 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troop movement"
+      "북한 병력 이동 전방 증강 군수 탄약 비축",
+      "North Korea troops buildup nuclear test site Punggye-ri Yongbyon"
     ],
     "nuclear": [
-      "동창리 엔진시험 핵시설",
-      "North Korea nuclear Yongbyon missile launch Japan Ministry of Defense"
+      "North Korea troops buildup nuclear test site Punggye-ri Yongbyon"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 병력 이동 전방 증강 군수 탄약 비축"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순",
-      "North Korea DMZ border incident"
+      "지뢰 발견 DMZ 귀순",
+      "합참 발표 북한"
     ],
     "electronic_cyber": [
       "GPS 교란",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "주한미군 감축"
+      "김정은 방러 방중",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 준전시 열병식 노농적위군 진돗개 발령",
+      "North Korea parade mobilization alert State Department Japan missile alert"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 열병식 노농적위군 진돗개 발령"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향"
+      "North Korea parade mobilization alert State Department Japan missile alert"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI hackers"
     ],
     "calm": [
       "남북 대화 제안"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
     ]
   },
+  "opened": [
+    "https://www.segye.com/newsView/20261126518166",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261126152400009"
+  ],
+  "overall_summary": "신규 군사 징후는 없고 동창리 엔진시험 정황과 주한미군 아파치 운용 중단 확인 보도가 이어진다. 접경 사건·사격 이상 보도 없음, 평소 범위다.",
   "items": {
     "troop_movement": {
-      "status": "none",
-      "sources": []
+      "status": "none"
+    },
+    "logistics": {
+      "status": "none"
+    },
+    "border_clash": {
+      "status": "none"
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "parade_massing": {
+      "status": "none"
+    },
+    "nk_internal": {
+      "status": "none"
+    },
+    "gov_warning": {
+      "status": "none"
+    },
+    "hybrid_ops": {
+      "status": "none"
     },
     "nuclear": {
       "status": "single",
@@ -68,17 +91,6 @@
       ],
       "speculation": []
     },
-    "logistics": {
-      "status": "none",
-      "sources": []
-    },
-    "border_clash": {
-      "status": "none",
-      "sources": []
-    },
-    "electronic_cyber": {
-      "status": "none"
-    },
     "foreign_forces": {
       "status": "single",
       "routine": false,
@@ -99,32 +111,9 @@
         "2025-12-15 운용 중단, 미 의회조사국 보고서로 먼저 알려짐"
       ],
       "speculation": []
-    },
-    "parade_massing": {
-      "status": "none",
-      "sources": []
-    },
-    "nk_internal": {
-      "status": "none",
-      "sources": []
-    },
-    "gov_warning": {
-      "status": "none",
-      "sources": []
-    },
-    "hybrid_ops": {
-      "status": "none",
-      "sources": []
     }
   },
-  "opened": [
-    "https://www.segye.com/newsView/20261126518166",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org",
-    "https://www.yna.co.kr/view/AKR20261126152400009"
-  ],
-  "overall_summary": "신규 군사 징후는 없고 동창리 엔진시험 정황과 주한미군 아파치 운용 중단 확인 보도가 이어진다. 접경 열점·사격 이상 보도 없음, 평소 범위다.",
-  "checked_at": "2026-11-26T19:10:31+00:00",
+  "checked_at": "2026-11-26T20:10:14+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

@@ -1,54 +1,57 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 11월 26일",
-      "North Korea troop"
+      "북한 병력 이동 전방",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "김정은 핵시설 시찰",
-      "NK News Kim Jong Un inspects nuclear facilities"
+      "북한 핵 시설 풍계리 영변",
+      "North Korea Kim Jong Un nuclear KCNA"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea logistics munitions"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 목함지뢰 해안",
+      "지뢰 발견 목함지뢰 해안 11월",
       "DMZ NLL 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
       "김정은 방중 방러",
-      "North Korea Kim Jong Un China Russia visit",
+      "Kim Jong Un China Russia visit",
       "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 집결",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 상향",
+      "합참 북한 발표 11월 26일"
     ],
     "hybrid_ops": [
       "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI"
+      "북한 해킹 귀속 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.nknews.org/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.yna.co.kr/view/AKR20261126025200504",
     "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/",
-    "https://www.nknews.org/2026/11/seoul-preparing-to-repatriate-north-koreans-rescued-at-sea-earlier-this-month/",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
+    "https://www.koreatimes.co.kr/southkorea/defense/20261008/s-korean-military-detonates-suspected-n-korean-land-mine-washed-ashore-on-west-coast"
   ],
-  "overall_summary": "KCNA가 김정은의 핵무기·우라늄 농축시설 시찰을 보도했으나 북한 주장 단계이며, 병력·접경·정부 경고 항목에는 새 징후가 없다. 접경 남측 열점 후보 0건, 직전 회차와 같은 수준이다.",
+  "overall_summary": "북한 핵시설·탄두 시찰 보도(KCNA, 북한 주장)가 있으나 정례 과시 성격이고 접경·병력·정부 경고 징후는 없다. 직전 회차와 같은 수준(경계 이하).",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -56,9 +59,8 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "북한",
-      "summary": "NK News가 KCNA를 인용해 김정은의 핵탄두·우라늄 농축시설 시찰과 핵 개발 지속 발언(11/26)을 보도했다(북한 주장, 정부 확인 없음).",
-      "meaning": "핵 능력 과시성 발언·시찰로 실전 배치·사용 준비 징후는 아니다.",
+      "summary": "NK News가 KCNA를 인용해 김정은의 핵탄두 설계·우라늄 농축시설 시찰과 핵 개발 지속 발언(11/26)을 보도했다(북한 주장, 정부 확인 없음).",
+      "meaning": "핵 능력 과시성 발언·시찰로, 실전 배치·사용 준비 근거는 없다.",
       "sources": [
         {
           "name": "NK News",
@@ -68,7 +70,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "KCNA가 11/26 시찰 사진 공개"
+        "KCNA가 농축시설 원심분리기 캐스케이드와 탄두 사진을 공개했다고 NK News가 전함"
       ],
       "speculation": []
     },
@@ -76,13 +78,15 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "24시간 안 새 접경 사건·지뢰 발견 보도 없음(최근 강화 해안 지뢰는 10월 이후 새 발견 확인 안 됨)."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "러시아 천연자원·문화부 대표단 방북(11/26)은 경제·문화 협력 일정으로 군사 협력 신규 확인 없음 — 외교 일정 배경."
     },
     "parade_massing": {
       "status": "none"
@@ -97,7 +101,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-25T23:09:31+00:00",
+  "checked_at": "2026-11-26T00:10:04+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

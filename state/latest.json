@@ -5,35 +5,41 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "동창리 엔진시험",
+      "북한 핵 동창리 엔진시험",
       "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment Russia"
+      "북한 군수 수송 탄약",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "합참 북한 발표 11월 26일"
+      "목함지뢰 해안 발견",
+      "DMZ NLL 귀순",
+      "North Korea DMZ"
     ],
     "electronic_cyber": [
       "GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "해킹 개인정보 유출",
+      "사이버 공격",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
       "김정은 방중",
       "서해 구조물",
+      "Kim Jong Un China Russia visit",
       "주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향"
+      "진돗개 발령 데프콘",
+      "North Korea warning DEFCON"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
@@ -43,91 +49,26 @@
     "calm": [
       "남북 대화 제안",
       "통신선 복원",
-      "North Korea talks offer"
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261126518166",
     "https://www.yna.co.kr/view/AKR20261126152400009",
-    "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630"
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630",
+    "https://www.yna.co.kr/view/AKR20261126193900083"
   ],
-  "overall_summary": "신규 징후는 없고 직전 회차의 동창리 엔진시험 정황(단독 보도)·주한미군 아파치 대대 운용 중단(임무 변화 없음)이 이어진다. 접경 충돌·지뢰·정부 경고 신규 보도는 확인되지 않았다.",
+  "overall_summary": "신규 군사 징후는 없고 직전 회차의 동창리 엔진시험 보도·주한미군 아파치 운용 중단 보도가 이어진다. 열린 원문 기준 평소 범위다.",
   "items": {
     "troop_movement": {
       "status": "none"
-    },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "평안북도 철산군 동창리",
-      "lat": 39.66,
-      "lon": 124.71,
-      "summary": "위성사진으로 11/15~19일 동창리 엔진시험장 지상분출시험 정황을 연합이 전했으나 북한 발표·독립 확인은 없다.",
-      "meaning": "고체연료 ICBM·IRBM 엔진 시험 정황이나 시험 성격이라 정례로 본다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261126152400009"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "15일 촬영 위성사진에 엔진시험장 가림막 개방",
-        "15~19일 초목 고사 현상"
-      ],
-      "speculation": [
-        "장거리 탄도미사일용 엔진 시험"
-      ]
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
       "status": "none"
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "한국",
-      "summary": "귀속 미확인 — 경찰이 중국 해킹조직에서 산 포털 계정으로 성형외과 가짜 후기를 올린 52명을 적발했다(북한 무관).",
-      "meaning": "북한 소행 근거가 없는 국내 계정 해킹 범죄다.",
-      "sources": [
-        {
-          "name": "SBS",
-          "tier": "B",
-          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "해킹 피해 계정 800여 명, 게시글 8,400여 건"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": false,
-      "region": "경기 평택",
-      "lat": 36.99,
-      "lon": 127.11,
-      "summary": "주한미군이 2사단 5-17 공중기병대대(아파치) 운용 중단을 확인했고 임무·공약 변화는 없다고 밝혔다.",
-      "meaning": "미군 태세 변화 보도이나 병력 감축·임무 변경이 아니라는 공식 입장이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261126518166"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "주한미군 26일 공식 확인",
-        "미 육군 전력구조 개편의 일환"
-      ],
-      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -138,11 +79,61 @@
     "gov_warning": {
       "status": "none"
     },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "summary": "위성사진으로 11/15~19일 동창리 엔진시험장 지상분출시험 정황을 연합이 전했으나 북한 발표·독립 확인은 없다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261126152400009"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "연합·SBS가 동창리 엔진시험 보도"
+      ],
+      "speculation": []
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "summary": "귀속 미확인 — 경찰이 중국 해킹조직에서 산 포털 계정으로 성형외과 가짜 후기를 올린 52명을 적발했다(북한 무관).",
+      "sources": [
+        {
+          "name": "SBS",
+          "tier": "B",
+          "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865630"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [],
+      "speculation": []
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": false,
+      "summary": "주한미군이 2사단 5-17 공중기병대대(아파치) 운용 중단을 확인했고 임무·공약 변화는 없다고 밝혔다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261126518166"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "2025-12-15 운용 중단, 미 의회조사국 보고서에서 먼저 알려짐"
+      ],
+      "speculation": []
+    },
     "hybrid_ops": {
       "status": "none"
     }
   },
-  "checked_at": "2026-11-26T16:11:11+00:00",
+  "checked_at": "2026-11-26T17:09:59+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

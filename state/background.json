@@ -1,39 +1,38 @@
 {
   "version": 1,
-  "at": "2026-11-26T11:39:53+00:00",
-  "opened": 17,
+  "at": "2026-11-26T11:40:22+00:00",
+  "opened": 18,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-26T11:39:53+00:00",
-      "raw": 4,
-      "kept": 4
+      "last_ok": "2026-11-26T11:40:22+00:00",
+      "raw": 5,
+      "kept": 5
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-26T11:39:53+00:00",
+      "last_ok": "2026-11-26T11:40:22+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
-      "status": "no_findings",
-      "last_ok": "2026-11-26T11:39:53+00:00",
-      "raw": 0,
-      "kept": 0,
-      "note": "명명 훈련 종료·북러 신규 합의 공식 원문 없음. CNA 「무성 군연」 보도는 theaters 로 반영"
+      "status": "checked",
+      "last_ok": "2026-11-26T11:40:22+00:00",
+      "raw": 1,
+      "kept": 1
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-26T11:39:53+00:00",
+      "last_ok": "2026-11-26T11:40:22+00:00",
       "raw": 5,
-      "kept": 5
+      "kept": 5,
+      "note": "Rappler 피드는 빈 응답(미사용). 나머지 전역 관측."
     },
     "incidents": {
       "status": "no_findings",
-      "last_ok": "2026-11-26T11:39:53+00:00",
+      "last_ok": "2026-11-26T11:40:22+00:00",
       "raw": 0,
-      "kept": 0,
-      "note": "news_kr 묶음 중 기사에 안보 연결 근거가 적힌 신규 국내 사건 없음"
+      "kept": 0
     }
   }
 }

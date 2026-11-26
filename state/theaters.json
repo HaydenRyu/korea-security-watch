@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-26T11:40:22+00:00",
+  "judged_at": "2026-11-26T23:39:43+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -14,7 +14,7 @@
         }
       ],
       "summary": "우크라이나가 러시아 사바슬레이카 공군기지를 공격해 항공기 5대를 맞혔다고 밝혀 전쟁이 계속되고 있다.",
-      "judged_at": "2026-11-26T11:40:22+00:00"
+      "judged_at": "2026-11-26T23:39:43+00:00"
     },
     "mideast": {
       "state": 3,
@@ -28,7 +28,7 @@
         }
       ],
       "summary": "이스라엘이 가자지구에 공습을 이어 하마스 정치 관리 부부 등 8명이 숨졌다고 BBC가 전했다.",
-      "judged_at": "2026-11-26T11:40:22+00:00"
+      "judged_at": "2026-11-26T23:39:43+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -41,8 +41,8 @@
           "published_at": "2026-11-26T09:26:19+00:00"
         }
       ],
-      "summary": "중국 국방부는 ISW·AEI가 밝힌 대만 포위 모의 미예고 대규모 훈련(함정 100여 척)을 부인하지 않았고, 대만 국방부는 서태평양 구역거부 훈련을 밀착 감시 중이다.",
-      "judged_at": "2026-11-26T11:40:22+00:00"
+      "summary": "중국 「무성」 군사훈련을 두고 중국군이 과장 보도에 반대한다고 밝혔고 대만 당국은 서태평양 훈련을 감시 중이다.",
+      "judged_at": "2026-11-26T23:39:43+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -51,18 +51,18 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-26T10:46:00+00:00",
+          "published_at": "2026-11-26T23:30:00+00:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-26T11:21:50+00:00",
+          "published_at": "2026-11-26T23:08:12+00:00",
           "kind": "feed"
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-26T11:40:22+00:00"
+      "judged_at": "2026-11-26T23:39:43+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -72,11 +72,11 @@
           "name": "DVIDS",
           "tier": "A",
           "url": "https://www.dvidshub.net/news/580325/jmsdf-us-conduct-mine-warfare-exercise-3ja",
-          "published_at": "2026-11-26T00:31:35+00:00"
+          "published_at": "2026-11-25T19:31:35+00:00"
         }
       ],
       "summary": "미 해군과 일본 해상자위대가 11월 10~26일 호소시마 인근에서 정례 소해 훈련 MINEX 3JA를 실시했다.",
-      "judged_at": "2026-11-26T11:40:22+00:00"
+      "judged_at": "2026-11-26T23:39:43+00:00"
     }
   }
 }

@@ -1,68 +1,54 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
-    ],
-    "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
-    ],
-    "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "지뢰 발견",
-      "북한군 MDL 침범 경고사격 합참 11월",
-      "DMZ MDL 침범"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hacking"
+      "목함지뢰 해안 지뢰 발견",
+      "DMZ NLL 귀순 합참"
     ],
     "foreign_forces": [
-      "김정은 방중",
+      "김정은 방중 김정은 방러",
       "Kim Jong Un China Russia visit",
-      "주한미군 감축"
+      "서해 구조물 주한미군 감축"
     ],
-    "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade"
-    ],
-    "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea civil defense drill"
-    ],
-    "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning Japan US"
+    "electronic_cyber": [
+      "GPS 교란 북한",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hackers"
     ],
-    "calm": [
-      "남북 대화 제안"
+    "calm": [],
+    "troop_movement": [
+      "news_kr.local.json 수집 결과 대조"
+    ],
+    "nuclear": [
+      "news_kr.local.json 수집 결과 대조"
+    ],
+    "logistics": [
+      "news_kr.local.json 수집 결과 대조"
+    ],
+    "parade_massing": [
+      "news_kr.local.json 수집 결과 대조"
+    ],
+    "nk_internal": [
+      "news_kr.local.json 수집 결과 대조"
+    ],
+    "gov_warning": [
+      "news_kr.local.json 수집 결과 대조"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261127070700504",
-    "https://www.yna.co.kr/view/AKR20261126190400504",
-    "https://www.yna.co.kr/view/AKR20261127060700504",
-    "https://www.yna.co.kr/view/AKR20261128000600071",
-    "https://www.segye.com/newsView/20261127511522",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
+    "https://biz.heraldcorp.com/article/10921557",
+    "https://www.seoul.co.kr/news/newsView.php?id=20261026002002",
+    "https://www.nknews.org"
   ],
-  "overall_summary": "새로 확인된 징후는 철원 민통선 탈북민 적발(정례 성격) 1건뿐이고 핵·병력·정부 경고 항목에 이상은 없다. 접경 열점 후보는 없었고, 연합의 MDL 40여회 침범 보도는 누적 통계라 배경으로만 둔다.",
+  "overall_summary": "새 징후는 철원 민통선 탈북민 적발(정례 성격) 1건뿐이며 핵·병력·정부 경고 이상은 없다. 바이낸스 FBI 귀속(11/1)·북러 교류는 배경이다. 이번 회차 일부 원문(연합 등) 열람 불가로 검색은 제한적이었다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "NK News Pro(11/25) 서해발사장 엔진시험 추정은 24시간 경과, 배경으로만 둔다."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
@@ -73,28 +59,27 @@
       "region": "강원 철원",
       "lat": 38.15,
       "lon": 127.31,
-      "summary": "11/26 철원 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발됐다(합참: 철책·감시장비 이상 없음, 대공 혐의 조사 중).",
-      "meaning": "단독 월북·귀순 성격으로 군사 도발 근거는 없다.",
+      "summary": "11/26 철원 민통선 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발됐다(NK News 11/27 보도, 합참 조사 중).",
+      "meaning": "민통선 무단 접근 개별 사건으로 군 경계 이상 징후는 보도되지 않았다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261127070700504"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "연합뉴스 제목: 철원 민통선 이북서 GOP 철책 쪽으로 북상하던 30대 탈북민 적발",
-        "연합 11/26 보도: 10~11월 MDL 침범 40여회 누적 통계(새 사건 아님, 배경)"
+        "NK News 11/27 헤드라인: 탈북민이 남북 경계 철책으로 이동 중 체포"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "미 공군 클라우드 플랫폼 해킹(로이터 인용, 11/27)은 한국 대상이 아니고 귀속도 없어 징후로 올리지 않았다."
+      "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 10월 방중과 러시아 대표단 방북은 이미 알려진 협력의 반복 보도라 배경으로만 둔다(서울신문 10/26)."
     },
     "parade_massing": {
       "status": "none"
@@ -109,7 +94,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T18:10:15+00:00",
+  "checked_at": "2026-11-27T19:10:56+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

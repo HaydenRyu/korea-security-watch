@@ -1,48 +1,51 @@
 {
   "coverage": {
-    "border_clash": [
-      "목함지뢰 해안 지뢰 발견",
-      "DMZ NLL 귀순 합참"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "news_kr 수집기"
     ],
-    "foreign_forces": [
-      "김정은 방중 김정은 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+    "nuclear": [
+      "38 North 최근 글",
+      "NK News 핵시설"
+    ],
+    "logistics": [
+      "북한 군수 수송 탄약"
+    ],
+    "border_clash": [
+      "철원 민통선 탈북민 GOP 합참",
+      "North Korea MDL violations October November border fortification South Korea JCS",
+      "지뢰 발견 (news_kr 수집기)",
+      "귀순 (news_kr 수집기)"
     ],
     "electronic_cyber": [
       "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출"
     ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hackers"
-    ],
-    "calm": [],
-    "troop_movement": [
-      "news_kr.local.json 수집 결과 대조"
-    ],
-    "nuclear": [
-      "news_kr.local.json 수집 결과 대조"
-    ],
-    "logistics": [
-      "news_kr.local.json 수집 결과 대조"
+    "foreign_forces": [
+      "김정은 방중 시진핑",
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축 (수집기)"
     ],
     "parade_massing": [
-      "news_kr.local.json 수집 결과 대조"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "news_kr.local.json 수집 결과 대조"
+      "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "news_kr.local.json 수집 결과 대조"
+      "진돗개 데프콘 합참 발표"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의 (수집기)",
+      "North Korea attributed FBI"
     ]
   },
   "opened": [
-    "https://biz.heraldcorp.com/article/10921557",
-    "https://www.seoul.co.kr/news/newsView.php?id=20261026002002",
-    "https://www.nknews.org"
+    "https://www.segye.com/newsView/20261127511522",
+    "https://www.nknews.org",
+    "https://news.sbs.co.kr/news/endPage.do?news_id=N1008867461"
   ],
-  "overall_summary": "새 징후는 철원 민통선 탈북민 적발(정례 성격) 1건뿐이며 핵·병력·정부 경고 이상은 없다. 바이낸스 FBI 귀속(11/1)·북러 교류는 배경이다. 이번 회차 일부 원문(연합 등) 열람 불가로 검색은 제한적이었다.",
+  "overall_summary": "직전 회차와 같이 철원 민통선 이북 탈북민 적발(11/27)만 정례 경계 사건으로 남아 있고, 병력·핵·정부 경고 등 핵심 항목에서 새 징후는 확인되지 않았다. 접경 열점 데이터는 3시간 넘게 갱신되지 않아 근거로 쓰지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,7 +63,7 @@
       "lat": 38.15,
       "lon": 127.31,
       "summary": "11/26 철원 민통선 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발됐다(NK News 11/27 보도, 합참 조사 중).",
-      "meaning": "민통선 무단 접근 개별 사건으로 군 경계 이상 징후는 보도되지 않았다.",
+      "meaning": "귀순·월선 성격의 개별 사건으로 군사적 도발 근거는 없다.",
       "sources": [
         {
           "name": "NK News",
@@ -70,7 +73,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "NK News 11/27 헤드라인: 탈북민이 남북 경계 철책으로 이동 중 체포"
+        "NK News 11/27 목록에 탈북민 적발 기사"
       ],
       "speculation": []
     },
@@ -79,7 +82,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김정은 10월 방중과 러시아 대표단 방북은 이미 알려진 협력의 반복 보도라 배경으로만 둔다(서울신문 10/26)."
+      "summary": "북러 기밀정보 보호 협정(11/26)·모스크바-원산 항공편 논의는 기존 협력의 연장으로 배경."
     },
     "parade_massing": {
       "status": "none"
@@ -94,7 +97,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T19:10:56+00:00",
+  "checked_at": "2026-11-27T20:10:54+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

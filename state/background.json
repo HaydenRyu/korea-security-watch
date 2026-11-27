@@ -1,37 +1,40 @@
 {
   "version": 1,
-  "at": "2026-11-27T11:39:57+00:00",
-  "opened": 18,
+  "at": "2026-11-27T23:39:59+00:00",
+  "opened": 11,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-27T11:39:57+00:00",
-      "raw": 4,
-      "kept": 4
+      "last_ok": "2026-11-27T23:39:59+00:00",
+      "raw": 3,
+      "kept": 3
     },
     "factors": {
-      "status": "checked",
-      "last_ok": "2026-11-27T11:39:57+00:00",
-      "raw": 4,
-      "kept": 4
-    },
-    "linkage": {
-      "status": "no_findings",
+      "status": "failed",
       "last_ok": "2026-11-27T11:39:57+00:00",
       "raw": 0,
-      "kept": 0
+      "kept": 0,
+      "note": "국내 연합 원문이 클라우드에서 열리지 않아 출처 없음"
+    },
+    "linkage": {
+      "status": "failed",
+      "last_ok": "2026-11-27T11:39:57+00:00",
+      "raw": 0,
+      "kept": 0,
+      "note": "대만·한반도 연결 원문 미확보(CNA 본문 추출 실패)"
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-27T11:39:57+00:00",
-      "raw": 5,
-      "kept": 5
+      "last_ok": "2026-11-27T23:39:59+00:00",
+      "raw": 3,
+      "kept": 3
     },
     "incidents": {
-      "status": "checked",
+      "status": "failed",
       "last_ok": "2026-11-27T11:39:57+00:00",
-      "raw": 1,
-      "kept": 1
+      "raw": 0,
+      "kept": 0,
+      "note": "국내 사건 원문 미개봉"
     }
   }
 }

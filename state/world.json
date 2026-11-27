@@ -1,56 +1,34 @@
 {
   "version": 1,
-  "updated_at": "2026-11-27T05:39:43+00:00",
-  "world_at": "2026-11-27T05:39:43+00:00",
+  "updated_at": "2026-11-27T11:39:46+00:00",
+  "world_at": "2026-11-27T11:39:46+00:00",
   "world": [
     {
-      "title": "김정은, 방북 러시아 정부대표단 환대",
-      "summary": "김정은이 북러 무역경제·과학기술협조위 13차 회의를 계기로 방북한 러시아 천연자원부·문화부 대표단을 접견하고 협력 확대를 평가했다고 조선중앙통신이 전했다.",
-      "link_korea": "북러 협력이 군사에서 경제·문화로 넓어지는 직접적 한반도 사안이다.",
-      "region": "한반도",
-      "source": {
-        "name": "연합뉴스",
-        "url": "https://www.yna.co.kr/view/AKR20261127006451504",
-        "via": "https://www.yna.co.kr/view/AKR20261127006451504"
-      }
-    },
-    {
-      "title": "북한 어선 24일 만에 동해 NLL로 송환",
-      "summary": "울릉도 인근에서 표류한 북한 어선이 통일부 발표로 27일 NLL을 통과했고 승선원 7명 중 6명이 송환, 1명은 잔류했다.",
-      "link_korea": "유엔사 채널을 통한 남북 접점 관리 사례다.",
-      "region": "한반도",
-      "source": {
-        "name": "연합뉴스",
-        "url": "https://www.yna.co.kr/view/AKR20261127060700504",
-        "via": "https://www.yna.co.kr/view/AKR20261127060700504"
-      }
-    },
-    {
-      "title": "우크라이나, 러 사바슬레이카 기지 타격 주장",
-      "summary": "우크라이나 총참모부는 MiG-31 3대와 Su-34 2대를 맞혔다고 밝혔고 러시아는 논평하지 않았다.",
-      "link_korea": "러시아 전쟁 수행과 북러 군사협력 환경에 영향을 준다.",
+      "title": "젤렌스키, 트럼프의 푸틴 '친구' 발언 비판",
+      "summary": "젤렌스키 대통령이 BBC 인터뷰에서 미국이 러시아를 충분히 압박하지 않고 방공미사일 인도 지연이 인명 피해를 낳고 있다고 말했다.",
+      "link_korea": "북러 군사협력 속에 러-우 전쟁 협상 구도가 북한의 대러 지원 환경에 영향을 준다.",
       "region": "유럽",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/ck9q8xp5r5pgo",
+        "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo",
         "via": "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
       }
     },
     {
-      "title": "이스라엘, 가자 공습으로 하마스 관리 부부 등 8명 사망",
-      "summary": "BBC에 따르면 이스라엘 총리·국방장관이 하마스 인사 표적 제거 작전의 일환이라고 밝혔다.",
-      "link_korea": "중동 불안은 에너지 수급과 미군 전력 배치에 영향을 준다.",
+      "title": "쿠웨이트 라인메탈 시설 공격으로 이탈리아인 2명 사망",
+      "summary": "이탈리아와 쿠웨이트는 이란 소행이라 밝혔고 이란은 책임을 부인했다. 미·이란 교전과 협상 교착으로 확전 우려가 커졌다.",
+      "link_korea": "중동 전쟁 장기화는 미군 전력 배분과 한반도 억지력 여력에 영향을 준다.",
       "region": "중동",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cqvg2n4mzl1jo",
+        "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o",
         "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
       }
     },
     {
-      "title": "미, 한국·중국·대만 등에 신규 관세 발표",
-      "summary": "미국이 중국(최대 40%)·EU·한국·일본·대만 등 14개 관할에 새 관세를 발표했다고 BBC가 전했다.",
-      "link_korea": "한국이 대상에 포함돼 한미 경제·안보 협상에 변수가 된다.",
+      "title": "미국, 중국 등 다수 국가에 신규 관세 발표",
+      "summary": "미 무역대표부가 중국 최대 40% 등 신규 관세안을 발표했고 시행은 내년 이후이며 의견 수렴 절차를 거친다.",
+      "link_korea": "미중 통상 갈등은 대북 제재 공조와 한국의 대외 환경에 영향을 준다.",
       "region": "아시아",
       "source": {
         "name": "BBC",
@@ -59,5 +37,5 @@
       }
     }
   ],
-  "world_context": "북러 협력 확대와 접경 동향 속에 우크라이나·중동 전선이 이어지고 미국의 신규 관세가 동맹국에도 적용된다."
+  "world_context": "러-우 협상 구도, 중동 확전 우려, 미중 통상 갈등이 동시에 진행 중이다."
 }

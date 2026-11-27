@@ -2,60 +2,79 @@
   "coverage": {
     "troop_movement": [
       "북한 병력 이동 전방 증강",
-      "North Korea troop movement Reuters"
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear 38 North"
+      "북한 핵시설 김정은 시찰",
+      "North Korea nuclear Kim inspects"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "North Korea ammunition shipments Russia"
     ],
     "border_clash": [
-      "합참 북한 지뢰 발견 DMZ NLL 귀순 11월",
-      "목함지뢰 해안"
+      "지뢰 발견",
+      "DMZ NLL 귀순",
+      "MDL 침범"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 개인정보 유출 사이버 공격 11월 27일",
-      "GPS 교란",
-      "해킹 개인정보 유출"
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit November 2026",
-      "김정은 방중",
-      "서해 구조물"
+      "김정은 방중 방러",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 상향 합참"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI hacking"
     ],
     "calm": [
       "남북 대화 제안",
-      "통신선 복원"
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261127508836",
     "https://www.segye.com/newsView/20261127507521",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
+    "https://www.nknews.org/",
+    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
   ],
-  "overall_summary": "접경에서 탈북민 GOP 접근 적발과 표류 북한 어선 송환이 있었으나 정례 범위이며 새로운 군사 징후는 없다. 북러·북중 교류 보도는 기존 협력의 반복이다.",
+  "overall_summary": "접경 탈북민 GOP 접근 적발과 표류 북한 어선 송환은 정례 범위다. 11/26 북한 관영매체가 보도한 김정은 핵시설 시찰은 북한 주장이며 새 군사 이동 징후는 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "북한",
+      "summary": "조선중앙통신이 11/26 김정은의 무기급 핵물질 생산기지·핵동력 시설 시찰을 보도했고 NK News가 이를 전했다(북한 주장, 발언·시찰 성격).",
+      "meaning": "핵 능력 과시 성격이며 실사용 준비나 배치 변화는 확인되지 않았다.",
+      "sources": [
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "KCNA 11/26 보도, 시찰은 11/25",
+        "해군 핵동력 프로그램 첫 공개"
+      ],
+      "speculation": []
     },
     "logistics": {
       "status": "none"
@@ -82,8 +101,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참 관계자: 11/26 18:40경 철책 남쪽 약 200m 민통선 이북에서 신병 확보, 경찰 인계",
-        "통일부: 구조된 7명 중 6명을 11/27 09시 NLL에서 송환"
+        "합참: 철책 이상 없음",
+        "통일부: 6명 11/27 NLL 송환"
       ],
       "speculation": []
     },
@@ -92,7 +111,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "러시아 대표단 방북·단둥 대북 교역 확대 보도는 기존 협력의 반복이며 새 파병·이전·협정이 확인되지 않았다."
+      "summary": "러시아 예술단·대표단 방북과 단둥 교역 확대는 기존 협력의 반복 보도로 새 파병·이전·협정 확인 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -107,7 +126,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T07:10:07+00:00",
+  "checked_at": "2026-11-27T08:10:35+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

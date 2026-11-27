@@ -1,75 +1,61 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 전방 병력 이동"
+    "border_clash": [
+      "북한 합참 발표 11월 27일",
+      "지뢰 발견",
+      "귀순"
+    ],
+    "foreign_forces": [
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "김정은 방중 서해 구조물 주한미군 감축"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 FBI"
+    ],
+    "calm": [
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
     ],
     "nuclear": [
-      "김정은 핵시설 시찰",
-      "North Korea nuclear Kim facility KCNA"
+      "North Korea nuclear facility Kim tour"
+    ],
+    "troop_movement": [
+      "북한 병력 이동"
     ],
     "logistics": [
       "북한 군수 수송"
     ],
-    "border_clash": [
-      "철원 민통선 탈북민",
-      "North Korea defector border"
-    ],
-    "electronic_cyber": [
-      "GPS 교란",
-      "해킹 공격"
-    ],
-    "foreign_forces": [
-      "김정은 방러",
-      "Kim Jong Un China Russia visit"
-    ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시"
+      "북한 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 발령"
-    ],
-    "hybrid_ops": [
-      "간첩 혐의",
-      "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안"
+      "진돗개 발령 데프콘"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261127511522",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/north-korean-defector-in-custody-after-unauthorized-entry-into-restricted-front-line-border-area",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
     "https://www.nknews.org/category/news/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/north-korean-defector-in-custody-after-unauthorized-entry-into-restricted-front-line-border-area",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
   ],
-  "overall_summary": "북한 핵시설 시찰 보도(KCNA)와 철원 탈북민 적발 외 새로운 군사 도발·전쟁 징후는 확인되지 않았다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "철원 탈북민 적발과 어선 송환 외 새 군사 도발·전쟁 징후는 없다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "북한(미공개 시설)",
-      "summary": "KCNA가 11/26 김정은의 핵물질 생산·핵무기 연구시설 시찰과 전술핵 임무별 운용 강조 발언을 보도했다(Reuters 인용, Korea Times).",
-      "meaning": "핵 능력 과시 발언·사진 공개로 신규 배치·사용 준비의 독립 확인은 없다.",
-      "sources": [
-        {
-          "name": "Korea Times(Reuters)",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "KCNA 11/26 보도, 시찰은 11/25로 추정",
-        "시설 명칭·위치 미공개"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 핵시설 시찰 KCNA 보도는 11/26 첫 보도(배경)"
     },
     "logistics": {
       "status": "none"
@@ -77,26 +63,21 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "강원 철원 민통선",
+      "region": "강원 철원",
       "lat": 38.2,
-      "lon": 127.2,
-      "summary": "11/26 18:40경 철원 CCL 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발돼 경찰에 인계됐다(합참·경찰 조사 중).",
-      "meaning": "월선·귀순 사례로 무력 충돌 징후는 아니다.",
+      "lon": 127.3,
+      "summary": "11/26 저녁 철원 민통선 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발돼 경찰에 인계됐다.",
+      "meaning": "북한 주민의 월선·귀순 사례로 군사 도발 근거는 없다.",
       "sources": [
         {
-          "name": "Korea Times(Yonhap)",
+          "name": "Korea Times",
           "tier": "B",
           "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/north-korean-defector-in-custody-after-unauthorized-entry-into-restricted-front-line-border-area"
-        },
-        {
-          "name": "NK News",
-          "tier": "B",
-          "url": "https://www.nknews.org/category/news/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "GOP까지 약 200m에서 적발"
+        "경찰이 간첩 가능성 포함 조사 중"
       ],
       "speculation": []
     },
@@ -104,8 +85,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "북러 문화·경제 교류 보도(러 공연단·모스크바-원산 직항 논의)만 있고 새 군사 협력 확인 없음."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -120,7 +100,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T20:10:44+00:00",
+  "checked_at": "2026-11-27T21:10:18+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -14,8 +14,8 @@
     ],
     "border_clash": [
       "지뢰 발견",
-      "DMZ MDL 침범",
-      "North Korea DMZ border"
+      "북한군 MDL 침범 경고사격 합참 11월",
+      "DMZ MDL 침범"
     ],
     "electronic_cyber": [
       "GPS 교란",
@@ -49,18 +49,20 @@
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261127070700504",
+    "https://www.yna.co.kr/view/AKR20261126190400504",
+    "https://www.yna.co.kr/view/AKR20261127060700504",
+    "https://www.yna.co.kr/view/AKR20261128000600071",
     "https://www.segye.com/newsView/20261127511522",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/pro/north-korea-appears-to-have-tested-icbm-engine-as-trump-sought-kim-meeting/"
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "새로 확인된 징후는 철원 민통선 탈북민 적발(정례 성격) 1건뿐이고 핵·병력·정부 경고 항목에 이상은 없다. 접경 열점 후보는 관련 보도를 찾지 못해 징후로 올리지 않았다.",
+  "overall_summary": "새로 확인된 징후는 철원 민통선 탈북민 적발(정례 성격) 1건뿐이고 핵·병력·정부 경고 항목에 이상은 없다. 접경 열점 후보는 없었고, 연합의 MDL 40여회 침범 보도는 누적 통계라 배경으로만 둔다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
       "status": "none",
-      "summary": "NK News Pro(분석, 11/25)가 11/15~19 서해발사장 엔진시험을 위성영상으로 추정했으나 24시간 경과, 배경으로만 둔다."
+      "summary": "NK News Pro(11/25) 서해발사장 엔진시험 추정은 24시간 경과, 배경으로만 둔다."
     },
     "logistics": {
       "status": "none"
@@ -82,12 +84,14 @@
       ],
       "confidence": "중간",
       "facts": [
-        "연합뉴스 제목: 철원 민통선 이북서 GOP 철책 쪽으로 북상하던 30대 탈북민 적발"
+        "연합뉴스 제목: 철원 민통선 이북서 GOP 철책 쪽으로 북상하던 30대 탈북민 적발",
+        "연합 11/26 보도: 10~11월 MDL 침범 40여회 누적 통계(새 사건 아님, 배경)"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "none",
+      "summary": "미 공군 클라우드 플랫폼 해킹(로이터 인용, 11/27)은 한국 대상이 아니고 귀속도 없어 징후로 올리지 않았다."
     },
     "foreign_forces": {
       "status": "none"
@@ -105,7 +109,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T17:10:38+00:00",
+  "checked_at": "2026-11-27T18:10:15+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

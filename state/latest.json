@@ -1,61 +1,66 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
+      "북한 병력 이동",
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 시설 시찰",
-      "North Korea nuclear facility"
+      "북한 핵 풍계리",
+      "North Korea nuclear test site"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
+      "북한 군수 수송",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
       "지뢰 발견",
-      "NLL 귀순",
-      "DMZ MDL 침범"
+      "DMZ NLL 귀순",
+      "북한 표류 어선 송환 통일부"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "과학기술인공제회 해킹 개인정보 유출"
     ],
     "foreign_forces": [
+      "김정은 방중",
       "Kim Jong Un China Russia visit",
-      "김정은 방러"
+      "서해 구조물"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 준비",
+      "North Korea parade"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시",
+      "North Korea martial"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 발령",
+      "North Korea alert Japan J-Alert"
     ],
     "hybrid_ops": [
-      "간첩 혐의",
-      "국가보안법 구속"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261127508836",
-    "https://www.yna.co.kr/view/AKR20261127060700504",
-    "https://news.mtn.co.kr/article/2026112714154880272",
-    "https://www.etoday.co.kr/news/view/2653862",
-    "https://www.hankyung.com/article/2026112754001",
-    "https://en.sedaily.com/politics/2026/10/25/kim-jong-un-courts-both-china-and-russia-in-border-visit",
-    "https://www.koreajoongangdaily.com/korea/kim-jongun-stays-silent-on-trumps-summit-overture-focuses-on-courting-china-russia/12976798"
+    "https://www.yna.co.kr/view/AKR20261127060751504",
+    "https://www.yna.co.kr/view/AKR20261127070700504",
+    "https://www.yna.co.kr/view/AKR20261126190400504",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.segye.com/newsView/20261127511522"
   ],
-  "overall_summary": "11/27 동해 NLL 표류 북한 어선 선원 6명 송환·1명 귀순 보호 등 정례 성격 사건 외에 새로운 군사 징후는 확인되지 않았다. 직전 회차의 11/26 김정은 핵시설 시찰 보도는 이번 회차에 원문을 다시 열지 못했다.",
+  "overall_summary": "표류 어선 송환·탈북민 적발 등 정례 사안뿐이며 새 군사 징후는 없다. 합참 자료상 10~11월 MDL 침범 40여회는 누적 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "직전 회차의 11/26 KCNA 시찰 보도는 이번 회차에 원문을 다시 열지 못해 징후로 올리지 않는다(발언·시찰 성격 북한 주장)."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
@@ -66,43 +71,33 @@
       "region": "동해 NLL",
       "lat": 38.6,
       "lon": 128.4,
-      "summary": "통일부가 11/27 오전 동해 NLL에서 표류 북한 어선 선원 7명 중 6명을 송환했고 1명은 귀순 의사로 남았다.",
-      "meaning": "인도적 송환 절차로 군사적 긴장 신호는 아니다.",
+      "summary": "통일부가 11/27 표류 북한 어선 선원 7명 중 6명을 동해상 송환하고 1명은 남았으며, 같은 날 합참은 철원 GOP 인근 30대 탈북민 적발을 밝혔다.",
+      "meaning": "정례적 송환·월선 사안으로 군사적 도발 근거는 없다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "연합뉴스",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261127508836"
+          "url": "https://www.yna.co.kr/view/AKR20261127060751504"
+        },
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261127070700504"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "통일부 당국자 발표: 11/3 구조된 7명 중 6명 송환"
+        "24일 만에 동해상 송환",
+        "철원 GOP 약 200m 앞 탈북민 신병 확보"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "region": "국내",
-      "summary": "과학기술인공제회가 11/8 사이버 침해사고로 회원 약 21만건 개인정보가 유출됐다고 11/27 밝혔다(귀속 미확인).",
-      "meaning": "북한 연계 확인은 없어 등급에는 반영하지 않는다.",
-      "sources": [
-        {
-          "name": "MTN",
-          "tier": "B",
-          "url": "https://news.mtn.co.kr/article/2026112714154880272"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "외부 보안기관 정밀조사 결과 발표"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "직전 과기인공제회 해킹 건은 이번 회차 원문 재확인에 실패해 보류 — 귀속 미확인이며 등급 근거 없음."
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "북러 대표단 교류 보도(11/26 연합)는 원문을 열지 않았고 신규 파병·이전 확인은 없다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -117,7 +112,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T09:10:16+00:00",
+  "checked_at": "2026-11-27T10:09:54+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

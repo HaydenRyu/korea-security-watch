@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-27T11:39:46+00:00",
+  "judged_at": "2026-11-27T11:39:57+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -13,8 +13,8 @@
           "published_at": "2026-11-27T09:07:48+00:00"
         }
       ],
-      "summary": "젤렌스키는 BBC에 미국이 러시아를 충분히 압박하지 않고 방공미사일 인도 지연으로 인명 피해가 난다고 밝혀 전쟁과 협상이 계속되고 있다.",
-      "judged_at": "2026-11-27T11:39:46+00:00"
+      "summary": "젤렌스키 대통령이 BBC에 미국이 종전 협상에서 러시아를 충분히 압박하지 않는다고 말해 전쟁과 협상이 계속되고 있다.",
+      "judged_at": "2026-11-27T11:39:57+00:00"
     },
     "mideast": {
       "state": 3,
@@ -25,10 +25,16 @@
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o",
           "published_at": "2026-11-26T21:17:53+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/c6ly7jgv7jzdo",
+          "published_at": "2026-11-27T06:04:51+00:00"
         }
       ],
-      "summary": "쿠웨이트 국방부는 이란발 드론 다수를 탐지·요격했으나 파편으로 라인메탈 시설의 이탈리아인 2명이 숨졌고 이란은 책임을 부인했다.",
-      "judged_at": "2026-11-27T11:39:46+00:00"
+      "summary": "쿠웨이트 공격으로 이탈리아인 2명이 숨졌고 이란은 책임을 부인했으며 사우디는 후티 공격을 받고 있다고 BBC가 전했다.",
+      "judged_at": "2026-11-27T11:39:57+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -37,12 +43,12 @@
         {
           "name": "CNA",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611270030.aspx",
-          "published_at": "2026-11-27T09:47:52+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611270135.aspx",
+          "published_at": "2026-11-27T15:26:45+08:00"
         }
       ],
-      "summary": "대만 국방부는 27일 6시 기준 24시간간 공군기 1대·함정 7척이 대만 주변에서 활동했고 중국이 발사한 운반로켓 경로가 ADIZ를 지났다고 밝혔다.",
-      "judged_at": "2026-11-27T05:39:43+00:00"
+      "summary": "로이터는 중국이 푸젠성 다청만에서 민간 선박을 쓰는 상륙 훈련을 11월 1일부터 수 주째 하고 있다고 보도했다.",
+      "judged_at": "2026-11-27T11:39:57+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -55,40 +61,28 @@
           "kind": "feed"
         },
         {
-          "name": "Rappler",
-          "url": "https://www.rappler.com/feed/",
-          "published_at": "2026-11-27T18:42:50+08:00",
-          "kind": "feed"
-        },
-        {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
           "published_at": "2026-11-27T10:28:35+00:00",
           "kind": "feed"
         }
       ],
-      "summary": "Philstar·Rappler·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-27T11:39:46+00:00"
+      "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
+      "judged_at": "2026-11-27T11:39:57+00:00"
     },
     "us_posture": {
       "state": 0,
       "channels": [],
       "sources": [
         {
-          "name": "Stars and Stripes",
-          "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-26T00:00:00+00:00",
-          "kind": "feed"
-        },
-        {
           "name": "DVIDS",
-          "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-26T10:03:01+00:00",
-          "kind": "feed"
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/580325/jmsdf-us-conduct-mine-warfare-exercise-3ja",
+          "published_at": "2026-11-26T00:19:00+00:00"
         }
       ],
-      "summary": "Stars and Stripes·DVIDS 피드에 72시간 안 미 전략자산 전개 관련 기사 없음",
-      "judged_at": "2026-11-27T11:39:46+00:00"
+      "summary": "미 해군과 일본 해상자위대가 11월 10~26일 일본 호소시마 인근에서 소해 훈련 MINEX 3JA를 실시했다.",
+      "judged_at": "2026-11-27T11:39:57+00:00"
     }
   }
 }

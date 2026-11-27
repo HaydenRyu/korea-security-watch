@@ -1,164 +1,56 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 전방 병력 이동",
-      "North Korea troops deployment border"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "김정은 핵시설 시찰",
-      "North Korea nuclear Kim facility KCNA"
+      "북한 핵시설 김정은 시찰",
+      "North Korea nuclear Kim tactical"
     ],
     "logistics": [
-      "북한 군수 수송 탄약",
-      "North Korea ammunition shipment Russia"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "MDL 침범 지뢰 발견 합참",
-      "철원 민통선 탈북민 DMZ 귀순",
-      "North Korea defector border Cheorwon"
+      "목함지뢰 발견 DMZ 귀순 합참"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출",
-      "서해 구조물"
+      "해킹 개인정보 유출 사이버 공격 GPS 교란"
     ],
     "foreign_forces": [
-      "김정은 방러 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 방러 11월 27일",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 발령"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "북한 해킹 귀속 North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
+      "국가보안법 구속 간첩 혐의"
     ]
   },
   "opened": [
-    "https://www.etoday.co.kr/news/view/2653966",
-    "https://fnnews.com/news/202611271705095787",
-    "https://fnnews.com/news/202611271110214345",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/north-korean-defector-in-custody-after-unauthorized-entry-into-restricted-front-line-border-area",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/n-koreas-kim-attends-russian-troupes-pyongyang-show-amid-deepening-ties",
+    "https://www.segye.com",
+    "https://www.segye.com/newsView/20261127511522",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/n-koreas-kim-attends-russian-troupes-pyongyang-show-amid-deepening-ties",
     "https://m.news.nate.com/view/20261127n30327",
-    "https://www.segye.com/newsView/20261127511522"
+    "https://fnnews.com/news/202611271705095787"
   ],
-  "overall_summary": "접경 MDL 침범 누적 집계(10월 30여 회·11월 10여 회)와 철원 탈북민 적발, 김정은 핵시설 시찰 보도가 이어졌으나 직전 회차와 같은 정례·배경 범위다. 국내 인터넷우체국 해킹(귀속 미확인)이 새로 확인됐고 북러 경제 대표단 교류가 계속됐다. 접경 남측 열점 보도 대조 대상 없음.",
+  "overall_summary": "직전 회차와 같은 수준으로 정례 성격의 징후만 있다(핵시설 시찰 발언, 철원 탈북민 적발, 우체국 해킹, 북러 정부간위원회). 접경 열점·신규 최후통첩·비정례 사건은 확인되지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "북한",
-      "summary": "KCNA가 11/26 김정은의 핵물질 생산·핵무기 연구시설 시찰과 전술핵 다영역 배치 강조 발언을 보도했다(Korea Times·연합 전재).",
-      "meaning": "핵 지위 불가역 선언과 전술핵 확대 의지를 담은 발언 수준으로 실전 배치 징후는 아니다.",
-      "sources": [
-        {
-          "name": "Korea Times",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "KCNA가 시설 위치를 밝히지 않음"
-      ],
-      "speculation": [
-        "대미 협상에서 핵보유국 지위를 앞세우려는 의도"
-      ]
-    },
     "logistics": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "강원 철원",
-      "lat": 38.15,
-      "lon": 127.31,
-      "summary": "11/26 18:40경 철원 민통선 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발돼 경찰에 인계됐다. 별개로 합참 자료상 북한군 MDL 침범은 10월 30여 회·11월 10여 회로 집계됐다(경고사격 대응, 누적 보도).",
-      "meaning": "개인 월경과 기존 국경선 요새화 작업 연계 침범으로 새 도발·교전 징후는 아니다.",
-      "sources": [
-        {
-          "name": "Korea Times",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/north-korean-defector-in-custody-after-unauthorized-entry-into-restricted-front-line-border-area"
-        },
-        {
-          "name": "파이낸셜뉴스",
-          "tier": "B",
-          "url": "https://fnnews.com/news/202611271705095787"
-        },
-        {
-          "name": "이투데이",
-          "tier": "B",
-          "url": "https://www.etoday.co.kr/news/view/2653966"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "탈북민 30대 여성, 간첩 혐의 등 조사 중",
-        "MDL 침범 8월 20여·9월 30여·10월 30여·11월 10여 회"
-      ],
-      "speculation": [
-        "동절기 작업량 감소로 11월 침범 감소"
-      ]
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "region": "대한민국",
-      "summary": "귀속 미확인 — 우정사업본부가 11/27 해외 IP를 이용한 인터넷우체국 해킹으로 등기우편 고객 최소 11만3855명의 성명·주소·전화번호가 유출됐다고 밝혔다.",
-      "meaning": "국내 공공 서비스 대상 해킹이나 북한·중국 등 귀속이 발표되지 않아 등급 근거로 쓰지 않는다.",
-      "attribution": "unknown",
-      "sources": [
-        {
-          "name": "연합뉴스(네이트)",
-          "tier": "B",
-          "url": "https://m.news.nate.com/view/20261127n30327"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "하루치 분석 결과이며 피해는 더 늘 수 있음"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "평양",
-      "lat": 39.02,
-      "lon": 125.75,
-      "summary": "김정은이 러시아 정부 대표단(코즐로프 단장, 북러 정부간위원회 13차 회의)과 러시아 공연단 관람 및 면담을 가졌다(11/26, 연합 11/27 보도).",
-      "meaning": "경제·문화 협력 중심의 외교 일정으로 새 군사협력 발표는 없다.",
-      "sources": [
-        {
-          "name": "Korea Times",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/n-koreas-kim-attends-russian-troupes-pyongyang-show-amid-deepening-ties"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "김정은 방러·방중 일정은 확인되지 않음"
-      ],
-      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -171,9 +63,91 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "nuclear": {
+      "status": "single",
+      "routine": true,
+      "region": "북한",
+      "summary": "KCNA가 11/26 김정은의 핵물질 생산·핵무기 연구시설 시찰과 전술핵 다영역 배치 강조 발언을 보도했다(Korea Times).",
+      "meaning": "핵 보유 불가역 주장과 전술핵 확대 의지 표명으로 발언 성격이다.",
+      "sources": [
+        {
+          "name": "Korea Times",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "KCNA 보도 인용"
+      ],
+      "speculation": []
+    },
+    "border_clash": {
+      "status": "single",
+      "routine": true,
+      "region": "강원 철원",
+      "lat": 38.15,
+      "lon": 127.31,
+      "summary": "11/26 철원 민통선 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발돼 경찰에 인계됐다. 북한군 MDL 침범은 8월 이후 90여 회로 집계됐다(누적 보도).",
+      "meaning": "월선 누적 보도이며 새 교전·피해는 없다.",
+      "sources": [
+        {
+          "name": "파이낸셜뉴스",
+          "tier": "B",
+          "url": "https://fnnews.com/news/202611271705095787"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "탈북민 신병 확보·경찰 인계"
+      ],
+      "speculation": []
+    },
+    "electronic_cyber": {
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "region": "대한민국",
+      "summary": "귀속 미확인 — 우정사업본부 인터넷우체국이 해외 IP 해킹을 당해 11/17~24 개인정보 11만3855건이 조회됐고 경찰에 수사가 의뢰됐다.",
+      "meaning": "귀속이 없어 등급에 쓰지 않는다.",
+      "sources": [
+        {
+          "name": "연합뉴스(네이트)",
+          "tier": "B",
+          "url": "https://m.news.nate.com/view/20261127n30327"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [],
+      "speculation": []
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "평양",
+      "lat": 39.02,
+      "lon": 125.75,
+      "summary": "김정은이 제13차 북러 정부간위원회 러시아 대표단장과 면담하고 러시아 공연단 공연을 관람했다.",
+      "meaning": "외교·문화 협력 일정이며 새 군사 이전·파병 발표는 없다.",
+      "sources": [
+        {
+          "name": "Korea Times",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/n-koreas-kim-attends-russian-troupes-pyongyang-show-amid-deepening-ties"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [],
+      "speculation": []
     }
   },
-  "checked_at": "2026-11-27T21:11:09+00:00",
+  "checked_at": "2026-11-27T22:09:57+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

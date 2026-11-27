@@ -2,27 +2,28 @@
   "coverage": {
     "troop_movement": [
       "합참 북한 발표",
-      "North Korea troop movement"
+      "North Korea Reuters"
     ],
     "nuclear": [
       "북한 동창리 엔진시험",
-      "North Korea nuclear engine test"
+      "North Korea Reuters nuclear"
     ],
     "logistics": [
       "북한 군수 수송",
-      "North Korea logistics munitions"
+      "North Korea Reuters munitions"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순 북한 2026년 11월",
-      "합참 MDL 침범"
+      "지뢰 발견 DMZ 귀순",
+      "MDL 침범 합참"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
+      "김정은 방중",
       "Kim Jong Un China Russia visit",
+      "서해 구조물",
       "주한미군 감축"
     ],
     "parade_massing": [
@@ -39,17 +40,19 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안",
+      "통신선 복원",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261126518166",
+    "https://www.segye.com/newsView/20261127501142",
+    "https://www.segye.com/newsView/20261127504309",
     "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.yna.co.kr/view/AKR20261126190400504",
-    "https://www.yna.co.kr/view/AKR20261127006400504",
+    "https://www.segye.com/newsView/20261126518166",
     "https://www.yna.co.kr/view/AKR20261126152400009"
   ],
-  "overall_summary": "직전 회차와 동일: MDL 침범 누적 보도·동창리 엔진시험·주한미군 아파치 중단이 이어질 뿐 24시간 내 새 군사행동·경고·최후통첩은 없다. 새 북러 협력 발표 없이 러시아 예술단 공연 관람만 보도됐고, 접경 열점 신규 확인 대상은 없었다.",
+  "overall_summary": "직전 회차와 동일: 합참 MDL 침범 40여회 집계(누적)·동창리 엔진시험 정황·주한미군 아파치 대대 중단이 이어질 뿐 24시간 내 새 군사행동·경고·최후통첩은 없다. 북러 정부 간 위원회·예술단 공연은 군사협력 언급이 없고 접경 열점 후보는 0건이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -86,13 +89,13 @@
       "region": "군사분계선(MDL) 일대",
       "lat": 38.0,
       "lon": 127.0,
-      "summary": "연합뉴스가 10~11월 북한군의 MDL 침범이 40여회라고 보도했으나 새 교전·사상자 없이 국경선 요새화 작업에 따른 반복 침범의 누적 집계다.",
+      "summary": "합참 자료를 유용원 의원이 공개해 10~11월 북한군 MDL 침범이 40여회로 확인됐으나 새 교전·사상자 없이 국경선 요새화에 따른 반복 침범 집계다.",
       "meaning": "반복 침범이 우발 충돌 위험을 키우나 의도된 도발 근거는 없다.",
       "sources": [
         {
-          "name": "연합뉴스",
+          "name": "세계일보",
           "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261126190400504"
+          "url": "https://www.segye.com/newsView/20261127501142"
         },
         {
           "name": "국방일보",
@@ -102,8 +105,7 @@
       ],
       "confidence": "중간",
       "facts": [
-        "연합: 지뢰 도발 후에도 MDL 침범 지속",
-        "국방일보: KIMA 포럼이 북 MDL 요새화로 우발 충돌 위험 진단"
+        "합참 자료: 10월 30여회·11월 10여회 침범, 군은 경고방송·경고사격"
       ],
       "speculation": []
     },
@@ -144,7 +146,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T01:09:59+00:00",
+  "checked_at": "2026-11-27T02:10:34+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": [

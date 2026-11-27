@@ -5,59 +5,62 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변 동향 11월",
-      "North Korea nuclear test site Yongbyon November 2026"
+      "북한 핵시설 영변 풍계리 동향",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "North Korea ammunition shipment Russia"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "북한 미사일 발사 합참"
+      "지뢰 발견",
+      "목함지뢰 해안",
+      "DMZ 귀순",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "북한 GPS 교란 합참",
+      "해킹 개인정보 유출 11월 27일",
+      "North Korea GPS jamming"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방중 서해 구조물 주한미군 감축",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 준비 병력 집결",
+      "North Korea parade preparation"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제 노농적위군",
+      "North Korea wartime mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "진돗개 발령 데프콘 상향",
+      "North Korea missile launch November 2026"
     ],
     "hybrid_ops": [
-      "국가보안법 간첩 혐의 구속",
-      "북한 해킹 귀속 FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261127511522",
-    "https://www.aljazeera.com/news/2026/11/19/north-korea-expanding-uranium-enrichment-facility-un-nuclear-watchdog-says",
-    "https://www.cp24.com/news/world/2026/11/19/north-korea-is-expanding-its-original-uranium-enrichment-facility-un-nuclear-watchdog-says/",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
     "https://www.yna.co.kr/view/AKR20261127070700504",
     "https://www.yna.co.kr/view/AKR20261126190400504"
   ],
-  "overall_summary": "탈북민 적발·표류 어선 송환 등 정례 사안뿐이며 미사일 발사·군사 이동 신규 징후는 없다. IAEA 영변 농축시설 확장(11/19)·북러 협력·MDL 침범 누적 보도는 기존 흐름의 배경이다.",
+  "overall_summary": "접경 민통선 탈북민 적발 1건(정례)과 MDL 침범 누적 보도(배경) 외에 새 군사 징후는 없다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "24시간 경과 — IAEA 영변 농축시설 확장 보고는 11/19 보도로 배경."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
@@ -68,8 +71,8 @@
       "region": "강원 철원",
       "lat": 38.15,
       "lon": 127.31,
-      "summary": "철원 민통선 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발됐다(철책·감시장비 이상 없음, 정례 사안).",
-      "meaning": "월북 시도 차단 사례로 군사적 도발과 무관하다.",
+      "summary": "11/26 18시40분경 철원 GOP 철책 남쪽 200m 민통선 이북에서 북상하던 30대 탈북민 여성이 적발됐다(합참: 철책·감시장비 이상 없음, 대공 혐의 조사 중).",
+      "meaning": "철책 훼손·월경 없는 단독 민간인 사안으로 정례 범위다.",
       "sources": [
         {
           "name": "연합뉴스",
@@ -79,7 +82,8 @@
       ],
       "confidence": "중간",
       "facts": [
-        "GOP 철책 200m 지점에서 신병 확보, 대공 혐의 조사 중"
+        "합참 관계자 27일 발표",
+        "철책·경계 구조물 이상 없음"
       ],
       "speculation": []
     },
@@ -88,7 +92,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "북러 대표단 교류는 기존 협력의 반복 보도로 배경."
+      "summary": "연합 제목상 시진핑 김정은 방중 거론 보도를 청와대가 부인했으나 신규 확인된 방중·협정 없음(배경)."
     },
     "parade_massing": {
       "status": "none"
@@ -103,7 +107,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T14:11:09+00:00",
+  "checked_at": "2026-11-27T15:11:07+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

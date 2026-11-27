@@ -1,58 +1,60 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troops deployment border Reuters"
+      "북한 전방 병력 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea missile launch nuclear Reuters"
+      "북한 핵시설 영변 풍계리",
+      "North Korea nuclear facilities Kim inspects"
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea ammunition shipment Russia"
+      "North Korea ammunition shipments Russia"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 합참",
-      "목함지뢰 해안",
-      "NLL DMZ MDL 침범"
+      "지뢰 발견",
+      "DMZ 귀순 철책",
+      "북한 어선 송환"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격",
-      "랜섬웨어 공격"
+      "북한 GPS 교란 서해 구조물 주한미군 감축",
+      "해킹 개인정보 유출 공격 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "북한 김정은 방중 방러",
-      "Kim Jong Un China Russia visit North Korea",
-      "서해 구조물 주한미군 감축 11월"
+      "김정은 방중",
+      "Kim Jong Un China Russia visit November 2026",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 등화관제 준전시",
+      "North Korea martial mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘 상향",
-      "국무부 한국 여행경보"
+      "진돗개 발령 데프콘",
+      "합참 북한 미사일 발사 11월 27일"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hack"
+      "국가보안법 구속",
+      "간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
+    "https://www.segye.com/newsView/20261127508836",
     "https://www.segye.com/newsView/20261127507521",
-    "https://www.segye.com/newsView/20261127504695",
-    "https://www.segye.com/newsView/20261127504309",
-    "https://www.nknews.org/",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+    "https://www.segye.com/newsView/20261127505562",
+    "https://www.nknews.org/category/news/"
   ],
-  "overall_summary": "신규 징후는 접경 정례 범주(MDL 침범 누계 보도, 탈북민 GOP 접근)와 북러 협력 반복 보도뿐이며 직전 회차와 같은 수준이다. 접경 열점 후보 대조·최후통첩·사상자 충돌은 확인되지 않았다.",
+  "overall_summary": "새 군사 징후 없음: 11/26 철원 GOP 인근 탈북민 적발과 표류 북한 어선 선원 6명 NLL 송환(1명 잔류)은 정례 범주이며, 접경 열점 후보는 관련 보도가 확인되지 않았다. 북러 협력 보도는 기존 흐름의 반복이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,8 +65,58 @@
     "logistics": {
       "status": "none"
     },
+    "border_clash": {
+      "status": "single",
+      "routine": true,
+      "region": "강원 철원",
+      "lat": 38.2,
+      "lon": 127.2,
+      "summary": "11/26 철원 민통선 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발됐고, 11/27 표류 북한 어선 선원 6명이 동해 NLL에서 송환(1명 귀순)됐다.",
+      "meaning": "귀순·월선 성격의 개별 사건으로 교전·도발 징후는 아니다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261127507521"
+        },
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261127508836"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "합참 관계자: 11/26 18:40경 철책 남쪽 약 200m 민통선 이북에서 신병 확보, 경찰 인계",
+        "통일부 당국자: 선원 7명 중 6명 27일 오전 9시경 NLL에서 송환"
+      ],
+      "speculation": []
+    },
     "electronic_cyber": {
       "status": "none"
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "summary": "11/26 김정은이 방북 러시아 대표단 공연을 관람하며 협력 확대를 언급했으나 군사협력 언급은 없고, 단둥의 대북 교역 확대 계획·다이빙 중국대사의 한미동맹 우려 발언이 보도됐다.",
+      "meaning": "외교·경제 협력의 반복 보도로 군사적 새 징후는 아니다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261127505562"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/category/news/"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "다이빙 주한중국대사 11/26 간담회에서 동맹 현대화·전략적 유연성이 중국 겨냥으로 느껴진다고 언급"
+      ],
+      "speculation": []
     },
     "parade_massing": {
       "status": "none"
@@ -77,57 +129,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "강원 철원",
-      "lat": 38.15,
-      "lon": 127.31,
-      "summary": "합참 자료 인용 10~11월 북한군 MDL 침범 40여회 집계 및 11/26 철원 GOP 인근 탈북민 30대 여성 적발(경찰 인계)로, 새 교전·사상자 없는 반복 침범이다.",
-      "meaning": "국경선 요새화 작업에 따른 반복 침범이 계속되나 충돌 확대 근거는 없다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261127504695"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261127507521"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "합참 보고: 10월 30여회, 11월 10여회 MDL 침범",
-        "11/26 18:40경 철원 민통선 이북에서 탈북민 신병 확보"
-      ],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "평양",
-      "lat": 39.02,
-      "lon": 125.75,
-      "summary": "김정은이 11/26 방북 러시아 정부 대표단과 공연을 관람하며 협력 확대를 언급했으나 군사협력 언급은 없다.",
-      "meaning": "정례 경제·문화 협력 외교 일정이다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261127504309"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "조선중앙통신 인용: 조러 정부간 위원회 13차 회의 계기 공연 관람"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-27T05:10:20+00:00",
+  "checked_at": "2026-11-27T06:09:43+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

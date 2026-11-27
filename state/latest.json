@@ -1,56 +1,88 @@
 {
   "coverage": {
-    "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
-    ],
-    "nuclear": [
-      "북한 핵시설 김정은 시찰",
-      "North Korea nuclear Kim tactical"
-    ],
-    "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
-    ],
     "border_clash": [
-      "목함지뢰 발견 DMZ 귀순 합참"
-    ],
-    "electronic_cyber": [
-      "해킹 개인정보 유출 사이버 공격 GPS 교란"
+      "북한 MDL 침범 지뢰 발견 합참",
+      "국내언론 수집 border/mine/defect 묶음"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 11월 27일",
-      "North Korea Kim Jong Un China Russia visit"
+      "김정은 방중 방러 서해 구조물 주한미군 감축",
+      "North Korea Kim Jong Un news Reuters"
+    ],
+    "nuclear": [
+      "North Korea Kim Jong Un news Reuters"
+    ],
+    "electronic_cyber": [
+      "국내언론 수집 gps 묶음"
+    ],
+    "troop_movement": [
+      "국내언론 수집 전체"
+    ],
+    "logistics": [
+      "국내언론 수집 전체"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "국내언론 수집 전체"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "국내언론 수집 전체"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘"
+      "국내언론 수집 alert 묶음"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의"
+      "국내언론 수집 spy·influence 묶음"
+    ],
+    "calm": [
+      "국내언론 수집 전체"
     ]
   },
   "opened": [
-    "https://www.segye.com",
-    "https://www.segye.com/newsView/20261127511522",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/n-koreas-kim-attends-russian-troupes-pyongyang-show-amid-deepening-ties",
-    "https://m.news.nate.com/view/20261127n30327",
-    "https://fnnews.com/news/202611271705095787"
+    "https://www.yna.co.kr/view/AKR20261127070700504",
+    "https://www.yna.co.kr/view/AKR20261126190400504",
+    "https://www.yna.co.kr/view/AKR20261127170200001",
+    "https://www.segye.com/newsView/20261127511522"
   ],
-  "overall_summary": "직전 회차와 같은 수준으로 정례 성격의 징후만 있다(핵시설 시찰 발언, 철원 탈북민 적발, 우체국 해킹, 북러 정부간위원회). 접경 열점·신규 최후통첩·비정례 사건은 확인되지 않았다.",
+  "overall_summary": "접경에서는 철원 민통선 이북 탈북민 적발 1건과 누적 MDL 침범 보도만 있고 신규 비정례 사건은 없다. 시진핑의 김정은 방중 언급 보도는 청와대가 부인했고 단둥 특이 동향도 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
+    "nuclear": {
+      "status": "none",
+      "summary": "24시간 경과 — 11/26 KCNA 핵시설 시찰 보도는 첫 보도 후 24시간이 지나 배경으로만 둔다."
+    },
     "logistics": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "single",
+      "routine": true,
+      "region": "강원 철원",
+      "lat": 38.15,
+      "lon": 127.31,
+      "summary": "11/26 18:40경 철원 GOP 철책 남쪽 200m 민통선 이북에서 북상하던 30대 탈북민이 적발돼 경찰에 인계됐고 철책·감시장비는 이상 없다고 합참이 밝혔다.",
+      "meaning": "북측 도발이 아닌 개인 월선 시도로 군사적 위협 신호는 아니다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261127070700504"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "합참 관계자: GOP 철책·경계 구조물 이상 없음",
+        "대공 혐의점 조사 중"
+      ],
+      "speculation": []
+    },
+    "electronic_cyber": {
+      "status": "none",
+      "summary": "이번 회차에 원문을 새로 열지 못했고 직전 회차의 우체국 해킹(귀속 미확인)은 24시간 경과로 배경 처리한다."
+    },
+    "foreign_forces": {
+      "status": "none",
+      "summary": "24시간 경과 — 북러 정부간위원회 면담은 11/26 첫 보도이며, 11/27 시진핑 방중 언급 보도는 청와대가 부인해 징후가 아니다."
     },
     "parade_massing": {
       "status": "none"
@@ -63,91 +95,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "북한",
-      "summary": "KCNA가 11/26 김정은의 핵물질 생산·핵무기 연구시설 시찰과 전술핵 다영역 배치 강조 발언을 보도했다(Korea Times).",
-      "meaning": "핵 보유 불가역 주장과 전술핵 확대 의지 표명으로 발언 성격이다.",
-      "sources": [
-        {
-          "name": "Korea Times",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "KCNA 보도 인용"
-      ],
-      "speculation": []
-    },
-    "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "강원 철원",
-      "lat": 38.15,
-      "lon": 127.31,
-      "summary": "11/26 철원 민통선 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발돼 경찰에 인계됐다. 북한군 MDL 침범은 8월 이후 90여 회로 집계됐다(누적 보도).",
-      "meaning": "월선 누적 보도이며 새 교전·피해는 없다.",
-      "sources": [
-        {
-          "name": "파이낸셜뉴스",
-          "tier": "B",
-          "url": "https://fnnews.com/news/202611271705095787"
-        },
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "탈북민 신병 확보·경찰 인계"
-      ],
-      "speculation": []
-    },
-    "electronic_cyber": {
-      "status": "single",
-      "routine": true,
-      "attribution": "unknown",
-      "region": "대한민국",
-      "summary": "귀속 미확인 — 우정사업본부 인터넷우체국이 해외 IP 해킹을 당해 11/17~24 개인정보 11만3855건이 조회됐고 경찰에 수사가 의뢰됐다.",
-      "meaning": "귀속이 없어 등급에 쓰지 않는다.",
-      "sources": [
-        {
-          "name": "연합뉴스(네이트)",
-          "tier": "B",
-          "url": "https://m.news.nate.com/view/20261127n30327"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [],
-      "speculation": []
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "평양",
-      "lat": 39.02,
-      "lon": 125.75,
-      "summary": "김정은이 제13차 북러 정부간위원회 러시아 대표단장과 면담하고 러시아 공연단 공연을 관람했다.",
-      "meaning": "외교·문화 협력 일정이며 새 군사 이전·파병 발표는 없다.",
-      "sources": [
-        {
-          "name": "Korea Times",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/n-koreas-kim-attends-russian-troupes-pyongyang-show-amid-deepening-ties"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-27T22:09:57+00:00",
+  "checked_at": "2026-11-27T23:10:15+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

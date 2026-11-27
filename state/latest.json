@@ -5,76 +5,57 @@
       "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵시설 김정은 시찰",
-      "North Korea nuclear Kim inspects"
+      "북한 핵 시설 시찰",
+      "North Korea nuclear facility"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipments Russia"
+      "북한 탄약 군수 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
       "지뢰 발견",
-      "DMZ NLL 귀순",
-      "MDL 침범"
+      "NLL 귀순",
+      "DMZ MDL 침범"
     ],
     "electronic_cyber": [
       "북한 GPS 교란 합참",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중 방러",
       "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "김정은 방러"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 열병식 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제 노농적위군"
+      "북한 준전시 등화관제"
     ],
     "gov_warning": [
-      "진돗개 데프콘 상향 합참"
+      "진돗개 발령 데프콘"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hacking"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
+      "간첩 혐의",
+      "국가보안법 구속"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261127508836",
-    "https://www.segye.com/newsView/20261127507521",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea",
-    "https://www.nknews.org/",
-    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
+    "https://www.yna.co.kr/view/AKR20261127060700504",
+    "https://news.mtn.co.kr/article/2026112714154880272",
+    "https://www.etoday.co.kr/news/view/2653862",
+    "https://www.hankyung.com/article/2026112754001",
+    "https://en.sedaily.com/politics/2026/10/25/kim-jong-un-courts-both-china-and-russia-in-border-visit",
+    "https://www.koreajoongangdaily.com/korea/kim-jongun-stays-silent-on-trumps-summit-overture-focuses-on-courting-china-russia/12976798"
   ],
-  "overall_summary": "접경 탈북민 GOP 접근 적발과 표류 북한 어선 송환은 정례 범위다. 11/26 북한 관영매체가 보도한 김정은 핵시설 시찰은 북한 주장이며 새 군사 이동 징후는 확인되지 않았다.",
+  "overall_summary": "11/27 동해 NLL 표류 북한 어선 선원 6명 송환·1명 귀순 보호 등 정례 성격 사건 외에 새로운 군사 징후는 확인되지 않았다. 직전 회차의 11/26 김정은 핵시설 시찰 보도는 이번 회차에 원문을 다시 열지 못했다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "북한",
-      "summary": "조선중앙통신이 11/26 김정은의 무기급 핵물질 생산기지·핵동력 시설 시찰을 보도했고 NK News가 이를 전했다(북한 주장, 발언·시찰 성격).",
-      "meaning": "핵 능력 과시 성격이며 실사용 준비나 배치 변화는 확인되지 않았다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "KCNA 11/26 보도, 시찰은 11/25",
-        "해군 핵동력 프로그램 첫 공개"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "직전 회차의 11/26 KCNA 시찰 보도는 이번 회차에 원문을 다시 열지 못해 징후로 올리지 않는다(발언·시찰 성격 북한 주장)."
     },
     "logistics": {
       "status": "none"
@@ -82,17 +63,12 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "강원 철원·동해 NLL",
-      "lat": 38.2,
-      "lon": 127.2,
-      "summary": "11/26 철원 민통선 이북에서 GOP 철책 200m까지 북상한 30대 탈북민이 적발됐고, 11/27 동해 NLL에서 표류 북한 어선 선원 6명이 송환되고 1명은 보호 중이다.",
-      "meaning": "탈북·표류 처리 사건으로 군사적 도발 근거는 없다.",
+      "region": "동해 NLL",
+      "lat": 38.6,
+      "lon": 128.4,
+      "summary": "통일부가 11/27 오전 동해 NLL에서 표류 북한 어선 선원 7명 중 6명을 송환했고 1명은 귀순 의사로 남았다.",
+      "meaning": "인도적 송환 절차로 군사적 긴장 신호는 아니다.",
       "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261127507521"
-        },
         {
           "name": "세계일보",
           "tier": "B",
@@ -101,17 +77,32 @@
       ],
       "confidence": "중간",
       "facts": [
-        "합참: 철책 이상 없음",
-        "통일부: 6명 11/27 NLL 송환"
+        "통일부 당국자 발표: 11/3 구조된 7명 중 6명 송환"
       ],
       "speculation": []
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "국내",
+      "summary": "과학기술인공제회가 11/8 사이버 침해사고로 회원 약 21만건 개인정보가 유출됐다고 11/27 밝혔다(귀속 미확인).",
+      "meaning": "북한 연계 확인은 없어 등급에는 반영하지 않는다.",
+      "sources": [
+        {
+          "name": "MTN",
+          "tier": "B",
+          "url": "https://news.mtn.co.kr/article/2026112714154880272"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "외부 보안기관 정밀조사 결과 발표"
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "러시아 예술단·대표단 방북과 단둥 교역 확대는 기존 협력의 반복 보도로 새 파병·이전·협정 확인 없음."
+      "summary": "북러 대표단 교류 보도(11/26 연합)는 원문을 열지 않았고 신규 파병·이전 확인은 없다."
     },
     "parade_massing": {
       "status": "none"
@@ -126,7 +117,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T08:10:35+00:00",
+  "checked_at": "2026-11-27T09:10:16+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-11-27T03:29:14+00:00",
+ "fetched_at": "2026-11-27T04:33:40+00:00",
  "status": "ok",
  "status_detail": "",
- "last_ok_at": "2026-11-27T03:29:14+00:00",
+ "last_ok_at": "2026-11-27T04:33:40+00:00",
  "window_h": 72,
  "counts": {
   "feeds": 15,
   "feeds_failed": 0,
-  "fetched": 1125,
-  "hits": 38,
-  "clusters": 29,
+  "fetched": 1126,
+  "hits": 40,
+  "clusters": 31,
   "by_group": {
    "spy": 8,
-   "border": 6,
-   "defect": 3,
+   "border": 8,
+   "defect": 5,
    "gps": 2,
    "fire": 5,
    "summit": 4,
@@ -29,8 +29,8 @@
   "연합뉴스": {
    "feeds": 5,
    "failed": 0,
-   "count": 566,
-   "hits": 19
+   "count": 567,
+   "hits": 22
   },
   "SBS": {
    "feeds": 3,
@@ -42,7 +42,7 @@
    "feeds": 2,
    "failed": 0,
    "count": 100,
-   "hits": 11
+   "hits": 13
   },
   "국민일보": {
    "feeds": 2,
@@ -68,17 +68,17 @@
   "spy": {
    "clusters": 8,
    "max_independent": 1,
-   "latest": "2026-11-27T03:29:14+00:00"
+   "latest": "2026-11-27T04:33:40+00:00"
   },
   "border": {
-   "clusters": 6,
+   "clusters": 8,
    "max_independent": 3,
-   "latest": "2026-11-27T02:53:00+00:00"
+   "latest": "2026-11-27T04:21:42+00:00"
   },
   "defect": {
-   "clusters": 3,
+   "clusters": 5,
    "max_independent": 2,
-   "latest": "2026-11-27T02:45:00+00:00"
+   "latest": "2026-11-27T04:21:42+00:00"
   },
   "gps": {
    "clusters": 2,
@@ -132,8 +132,8 @@
    "section": "북한",
    "url": "https://www.yna.co.kr/rss/northkorea.xml",
    "ok": true,
-   "count": 86,
-   "hits": 14
+   "count": 87,
+   "hits": 15
   },
   {
    "outlet": "연합뉴스",
@@ -141,7 +141,7 @@
    "url": "https://www.yna.co.kr/rss/politics.xml",
    "ok": true,
    "count": 120,
-   "hits": 3
+   "hits": 4
   },
   {
    "outlet": "연합뉴스",
@@ -165,7 +165,7 @@
    "url": "https://www.yna.co.kr/rss/news.xml",
    "ok": true,
    "count": 120,
-   "hits": 2
+   "hits": 3
   },
   {
    "outlet": "SBS",
@@ -197,7 +197,7 @@
    "url": "https://rss.donga.com/politics.xml",
    "ok": true,
    "count": 50,
-   "hits": 7
+   "hits": 8
   },
   {
    "outlet": "동아일보",
@@ -205,7 +205,7 @@
    "url": "https://rss.donga.com/national.xml",
    "ok": true,
    "count": 50,
-   "hits": 4
+   "hits": 5
   },
   {
    "outlet": "국민일보",

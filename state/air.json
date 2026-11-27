@@ -1,17 +1,24 @@
 {
- "at": "2026-11-27T03:29:04+00:00",
- "south": 80,
- "area": 99,
- "baseline": 75,
- "ratio": 1.07,
- "samples": 7,
+ "at": "2026-11-27T04:33:29+00:00",
+ "south": 86,
+ "area": 108,
+ "baseline": 78.0,
+ "ratio": 1.1,
+ "samples": 4,
  "mil": [
   {
    "type": "GLEX",
    "name": "정찰용 비즈니스젯 가능",
    "call": "",
-   "lat": 37.77,
-   "lon": 127.95
+   "lat": 37.25,
+   "lon": 125.56
+  },
+  {
+   "type": "GLF5",
+   "name": null,
+   "call": "ORF4",
+   "lat": 34.1,
+   "lon": 132.28
   }
  ],
  "source": "adsb.lol (ADS-B 공개 수신망)"

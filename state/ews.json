@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-27T05:10:20+00:00",
+  "computed_at": "2026-11-27T06:09:23+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 27,
+  "ews": 26,
   "band": "관찰",
-  "d": 4,
+  "d": 2,
   "e": 0,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-26T23:39:43+00:00",
-    "latest_updated_at": "2026-11-27T05:10:20+00:00"
+    "linkage_judged_at": "2026-11-27T05:39:43+00:00",
+    "latest_updated_at": "2026-11-27T06:09:23+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "중국 「무성」 군사훈련을 두고 중국군이 과장 보도에 반대한다고 밝혔고 대만 당국은 서태평양 훈련을 감시 중이다.",
+      "summary": "대만 국방부는 27일 6시 기준 24시간간 공군기 1대·함정 7척이 대만 주변에서 활동했고 중국이 발사한 운반로켓 경로가 ADIZ를 지났다고 밝혔다.",
       "sources": [
         {
           "name": "CNA",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/acn/202611260235.aspx",
-          "published_at": "2026-11-26T09:26:19+00:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611270030.aspx",
+          "published_at": "2026-11-27T09:47:52+08:00"
         }
       ],
-      "judged_at": "2026-11-26T23:39:43+00:00"
+      "judged_at": "2026-11-27T05:39:43+00:00"
     },
     {
       "key": "ukraine",
@@ -48,7 +48,7 @@
           "published_at": "2026-11-25T14:46:41+00:00"
         }
       ],
-      "judged_at": "2026-11-26T23:39:43+00:00"
+      "judged_at": "2026-11-27T05:39:43+00:00"
     },
     {
       "key": "scs_ecs",
@@ -61,17 +61,17 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-26T23:30:00+00:00",
+          "published_at": "2026-11-27T11:19:00+08:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-26T23:08:12+00:00",
+          "published_at": "2026-11-27T03:28:15+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-26T23:39:43+00:00"
+      "judged_at": "2026-11-27T05:39:43+00:00"
     },
     {
       "key": "mideast",
@@ -88,7 +88,7 @@
           "published_at": "2026-11-26T10:14:08+00:00"
         }
       ],
-      "judged_at": "2026-11-26T23:39:43+00:00"
+      "judged_at": "2026-11-27T05:39:43+00:00"
     },
     {
       "key": "us_posture",
@@ -96,16 +96,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 해군과 일본 해상자위대가 11월 10~26일 호소시마 인근에서 정례 소해 훈련 MINEX 3JA를 실시했다.",
+      "summary": "미 태평양사 요원들이 11월 17~19일 괌 방어체계 구축을 위한 지형 답사를 실시했다.",
       "sources": [
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/580325/jmsdf-us-conduct-mine-warfare-exercise-3ja",
-          "published_at": "2026-11-25T19:31:35+00:00"
+          "url": "https://www.dvidshub.net/news/580336/establishment-guam-defense-system-forefront-recent-us-mili",
+          "published_at": "2026-11-26T00:28:43+00:00"
         }
       ],
-      "judged_at": "2026-11-26T23:39:43+00:00"
+      "judged_at": "2026-11-27T05:39:43+00:00"
     }
   ],
   "channels": [
@@ -136,8 +136,8 @@
     }
   ],
   "last_good": {
-    "ews": 27,
+    "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-27T05:10:20+00:00"
+    "computed_at": "2026-11-27T06:09:23+00:00"
   }
 }

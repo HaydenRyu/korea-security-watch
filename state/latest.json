@@ -1,58 +1,58 @@
 {
   "coverage": {
     "troop_movement": [
-      "합참 북한 발표",
-      "North Korea Reuters"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 동창리 엔진시험",
-      "North Korea Reuters nuclear"
+      "북한 핵시설 시찰",
+      "North Korea nuclear Kim inspects"
     ],
     "logistics": [
-      "북한 군수 수송",
-      "North Korea Reuters munitions"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "MDL 침범 합참"
+      "지뢰 발견",
+      "DMZ MDL 침범 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "북한 GPS 교란 해킹 공격 한국 11월",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "서해 구조물 주한미군 감축",
+      "North Korea Reuters Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "북한 준전시 등화관제",
+      "North Korea wartime footing"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령"
+      "진돗개 데프콘 상향",
+      "North Korea alert Japan J-Alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261127501142",
     "https://www.segye.com/newsView/20261127504309",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.segye.com/newsView/20261126518166",
-    "https://www.yna.co.kr/view/AKR20261126152400009"
+    "https://www.segye.com/newsView/20261127505562",
+    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/",
+    "https://www.nknews.org/2026/11/russia-north-korea-signed-agreement-on-protecting-classified-information/",
+    "https://www.nknews.org"
   ],
-  "overall_summary": "직전 회차와 동일: 합참 MDL 침범 40여회 집계(누적)·동창리 엔진시험 정황·주한미군 아파치 대대 중단이 이어질 뿐 24시간 내 새 군사행동·경고·최후통첩은 없다. 북러 정부 간 위원회·예술단 공연은 군사협력 언급이 없고 접경 열점 후보는 0건이다.",
+  "overall_summary": "전 항목 정례·반복 보도 수준으로 신규 위험 징후는 없다. 김정은 핵시설 시찰(북한 주장)과 MDL 침범 40여회 집계가 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,25 +60,22 @@
     "nuclear": {
       "status": "single",
       "routine": true,
-      "region": "평안북도 동창리",
-      "lat": 39.66,
-      "lon": 124.7,
-      "summary": "NK뉴스 위성사진 분석으로 11/15~19일 동창리 엔진시험장 지상분출시험 정황이 연합·SBS에 전해졌으나 북한 발표·독립 확인은 없다.",
-      "meaning": "고체·액체 엔진 시험은 시험 발사 성격의 정례 활동이다.",
+      "region": "북한",
+      "summary": "조선중앙통신이 11/25 김정은의 무기급핵물질생산기지·핵동력설비생산기지 시찰을 11/26 보도했고 NK뉴스가 이를 전했으나 독립 확인은 없는 북한 주장이다.",
+      "meaning": "핵시설 공개 시찰은 핵보유 의지 과시이며 실전 배치·사용 준비의 근거는 아니다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261126152400009"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "연합뉴스가 11/26 엔진시험 정황을 보도"
+        "KCNA 11/26 보도, 시찰일 11/25",
+        "원심분리기·핵탄두 설계 사진 공개"
       ],
-      "speculation": [
-        "신형 탄도미사일 개발 연계 가능성"
-      ]
+      "speculation": []
     },
     "logistics": {
       "status": "none"
@@ -86,26 +83,19 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "군사분계선(MDL) 일대",
-      "lat": 38.0,
-      "lon": 127.0,
-      "summary": "합참 자료를 유용원 의원이 공개해 10~11월 북한군 MDL 침범이 40여회로 확인됐으나 새 교전·사상자 없이 국경선 요새화에 따른 반복 침범 집계다.",
-      "meaning": "반복 침범이 우발 충돌 위험을 키우나 의도된 도발 근거는 없다.",
+      "region": "MDL",
+      "summary": "합참 자료를 인용한 보도에서 10~11월 북한군 MDL 침범이 40여회로 집계됐으나 새 교전·사상자 없는 반복 침범이다.",
+      "meaning": "국경선 요새화 작업에 따른 반복 침범으로 군은 경고방송·경고사격으로 대응 중이다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261127501142"
-        },
-        {
-          "name": "국방일보",
-          "tier": "B",
-          "url": "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "합참 자료: 10월 30여회·11월 10여회 침범, 군은 경고방송·경고사격"
+        "10월 약 30회, 11월 약 10회"
       ],
       "speculation": []
     },
@@ -114,22 +104,25 @@
     },
     "foreign_forces": {
       "status": "single",
-      "routine": false,
-      "region": "경기 평택",
-      "lat": 36.96,
-      "lon": 127.03,
-      "summary": "주한미군이 2사단 5-17 공중기병대대(아파치) 운용 중단을 확인했고 임무·공약 변화는 없다고 밝혔다.",
-      "meaning": "미군 전력 재편이나 한국 방위 공약 변화는 없다는 공식 입장이다.",
+      "routine": true,
+      "region": "평양",
+      "summary": "김정은이 11/26 방북한 러시아 정부·문화부 대표단과 면담·공연 관람했으나 군사 협력 신규 발표는 없다(외교·경제 일정).",
+      "meaning": "북러 밀착 반복 보도로 새 군사 이전·파병 확인은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261126518166"
+          "url": "https://www.segye.com/newsView/20261127504309"
+        },
+        {
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/2026/11/russia-north-korea-signed-agreement-on-protecting-classified-information/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "미 CRS가 지난해 12/15 운용 중단을 먼저 공개"
+        "북러 무역경제위 제13차 회의 계기"
       ],
       "speculation": []
     },
@@ -146,10 +139,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T02:10:34+00:00",
+  "checked_at": "2026-11-27T03:10:10+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [
-    "foreign_forces"
-  ]
+  "active": []
 }

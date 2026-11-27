@@ -1,28 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-11-26T23:39:43+00:00",
-  "world_at": "2026-11-26T23:39:43+00:00",
+  "updated_at": "2026-11-27T05:39:43+00:00",
+  "world_at": "2026-11-27T05:39:43+00:00",
   "world": [
     {
-      "title": "북한 MDL 침범 10~11월 40여회…지뢰 도발 뒤에도 지속",
-      "summary": "합참 보고에 따르면 북한군이 10~11월 군사분계선을 40여 차례 침범했고 국경선 요새화 작업 중 침범이 반복되고 있다.",
-      "link_korea": "접경 군사 긴장이 직접 이어지는 사안이다.",
+      "title": "김정은, 방북 러시아 정부대표단 환대",
+      "summary": "김정은이 북러 무역경제·과학기술협조위 13차 회의를 계기로 방북한 러시아 천연자원부·문화부 대표단을 접견하고 협력 확대를 평가했다고 조선중앙통신이 전했다.",
+      "link_korea": "북러 협력이 군사에서 경제·문화로 넓어지는 직접적 한반도 사안이다.",
       "region": "한반도",
       "source": {
         "name": "연합뉴스",
-        "url": "https://www.yna.co.kr/view/AKR20261126190400504",
-        "via": "https://www.yna.co.kr/view/AKR20261126190400504"
+        "url": "https://www.yna.co.kr/view/AKR20261127006451504",
+        "via": "https://www.yna.co.kr/view/AKR20261127006451504"
       }
     },
     {
-      "title": "동창리 엔진시험 정황 포착",
-      "summary": "NK뉴스는 위성사진에서 평북 동창리 엔진시험장에 15~19일 지상분출시험 정황이 포착됐다고 전했다.",
-      "link_korea": "장거리 탄도미사일 개발 동향과 직결된다.",
+      "title": "북한 어선 24일 만에 동해 NLL로 송환",
+      "summary": "울릉도 인근에서 표류한 북한 어선이 통일부 발표로 27일 NLL을 통과했고 승선원 7명 중 6명이 송환, 1명은 잔류했다.",
+      "link_korea": "유엔사 채널을 통한 남북 접점 관리 사례다.",
       "region": "한반도",
       "source": {
         "name": "연합뉴스",
-        "url": "https://www.yna.co.kr/view/AKR20261126152400009",
-        "via": "https://www.yna.co.kr/view/AKR20261126152400009"
+        "url": "https://www.yna.co.kr/view/AKR20261127060700504",
+        "via": "https://www.yna.co.kr/view/AKR20261127060700504"
       }
     },
     {
@@ -37,27 +37,27 @@
       }
     },
     {
-      "title": "쿠웨이트 시설 공격으로 이탈리아인 2명 사망",
-      "summary": "쿠웨이트와 이탈리아는 이란을 지목했으나 이란은 책임을 부인했다.",
-      "link_korea": "중동 해상·에너지 불안은 한국 에너지 수급과 미군 전력 배치에 영향을 준다.",
+      "title": "이스라엘, 가자 공습으로 하마스 관리 부부 등 8명 사망",
+      "summary": "BBC에 따르면 이스라엘 총리·국방장관이 하마스 인사 표적 제거 작전의 일환이라고 밝혔다.",
+      "link_korea": "중동 불안은 에너지 수급과 미군 전력 배치에 영향을 준다.",
       "region": "중동",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o",
+        "url": "https://www.bbc.co.uk/news/articles/cqvg2n4mzl1jo",
         "via": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
       }
     },
     {
-      "title": "젤렌스키 \"미국이 러시아를 충분히 압박하지 않는다\"",
-      "summary": "젤렌스키는 BBC 인터뷰에서 방공미사일 인도 지연과 미국의 중동 쏠림에 불만을 표했다.",
-      "link_korea": "미국 안보 자원 분산 논의는 한반도 억제 태세와 연결된다.",
-      "region": "유럽",
+      "title": "미, 한국·중국·대만 등에 신규 관세 발표",
+      "summary": "미국이 중국(최대 40%)·EU·한국·일본·대만 등 14개 관할에 새 관세를 발표했다고 BBC가 전했다.",
+      "link_korea": "한국이 대상에 포함돼 한미 경제·안보 협상에 변수가 된다.",
+      "region": "아시아",
       "source": {
         "name": "BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo",
-        "via": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o",
+        "via": "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
       }
     }
   ],
-  "world_context": "한반도 접경 긴장과 북 미사일 동향이 이어지는 가운데 우크라이나·중동 전선이 미국 안보 자원을 분산시키고 있다."
+  "world_context": "북러 협력 확대와 접경 동향 속에 우크라이나·중동 전선이 이어지고 미국의 신규 관세가 동맹국에도 적용된다."
 }

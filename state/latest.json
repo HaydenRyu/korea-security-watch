@@ -10,19 +10,21 @@
     ],
     "logistics": [
       "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "Kyiv North Korea halted arms shipments Russia dispute"
     ],
     "border_clash": [
       "지뢰 발견",
+      "철원 GOP 철책 접근 탈북민 적발",
       "DMZ MDL 침범 귀순"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란 해킹 공격 한국 11월",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "서해 구조물 주한미군 감축",
-      "North Korea Reuters Kim Jong Un China Russia visit"
+      "김정은 방러",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 병력 집결",
@@ -37,45 +39,29 @@
       "North Korea alert Japan J-Alert"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의",
+      "북한 해킹 귀속 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원"
+      "남북 대화 제안 통신선 복원",
+      "확성기 방송 중단",
+      "North Korea talks offer"
     ]
   },
   "opened": [
-    "https://www.segye.com/newsView/20261127501142",
+    "https://www.segye.com/newsView/20261127504695",
     "https://www.segye.com/newsView/20261127504309",
-    "https://www.segye.com/newsView/20261127505562",
-    "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/",
-    "https://www.nknews.org/2026/11/russia-north-korea-signed-agreement-on-protecting-classified-information/",
-    "https://www.nknews.org"
+    "https://www.nknews.org",
+    "https://www.nknews.org/2026/11/russia-north-korea-signed-agreement-on-protecting-classified-information/"
   ],
-  "overall_summary": "전 항목 정례·반복 보도 수준으로 신규 위험 징후는 없다. 김정은 핵시설 시찰(북한 주장)과 MDL 침범 40여회 집계가 배경이다.",
+  "overall_summary": "전 항목 정례·반복 보도 수준으로 신규 위험 징후는 없다. MDL 침범 40여회 집계와 러시아 정부 대표단 방북이 배경이며, 철원 GOP 접근 건은 탈북민 월북 시도 보도로 원문 확인 전이라 징후로 올리지 않았다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "single",
-      "routine": true,
-      "region": "북한",
-      "summary": "조선중앙통신이 11/25 김정은의 무기급핵물질생산기지·핵동력설비생산기지 시찰을 11/26 보도했고 NK뉴스가 이를 전했으나 독립 확인은 없는 북한 주장이다.",
-      "meaning": "핵시설 공개 시찰은 핵보유 의지 과시이며 실전 배치·사용 준비의 근거는 아니다.",
-      "sources": [
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/kim-jong-un-inspects-nuke-facilities-says-not-seeking-recognition-from-anyone/"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "KCNA 11/26 보도, 시찰일 11/25",
-        "원심분리기·핵탄두 설계 사진 공개"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 김정은 핵시설 시찰은 KCNA 11/26 보도 북한 주장이며 새 보도 없음."
     },
     "logistics": {
       "status": "none"
@@ -84,18 +70,21 @@
       "status": "single",
       "routine": true,
       "region": "MDL",
-      "summary": "합참 자료를 인용한 보도에서 10~11월 북한군 MDL 침범이 40여회로 집계됐으나 새 교전·사상자 없는 반복 침범이다.",
+      "lat": 38.0,
+      "lon": 127.5,
+      "summary": "합참 자료를 인용해 10~11월 북한군 MDL 침범이 40여회로 집계됐으나 새 교전·사상자 없는 반복 침범이다.",
       "meaning": "국경선 요새화 작업에 따른 반복 침범으로 군은 경고방송·경고사격으로 대응 중이다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
-          "url": "https://www.segye.com/newsView/20261127501142"
+          "url": "https://www.segye.com/newsView/20261127504695"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "10월 약 30회, 11월 약 10회"
+        "10월 약 30회, 11월 약 10회",
+        "군은 경고방송·경고사격 대응"
       ],
       "speculation": []
     },
@@ -106,23 +95,18 @@
       "status": "single",
       "routine": true,
       "region": "평양",
-      "summary": "김정은이 11/26 방북한 러시아 정부·문화부 대표단과 면담·공연 관람했으나 군사 협력 신규 발표는 없다(외교·경제 일정).",
-      "meaning": "북러 밀착 반복 보도로 새 군사 이전·파병 확인은 없다.",
+      "summary": "김정은이 11/26 러시아 정부 대표단(천연자원부 장관 코즐로프)과 공연을 관람하며 협력 확대를 언급했으나 군사협력 언급은 없다.",
+      "meaning": "북러 경제·문화 외교 일정으로 새로운 군사 이전·파병 확인은 없다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261127504309"
-        },
-        {
-          "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org/2026/11/russia-north-korea-signed-agreement-on-protecting-classified-information/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "북러 무역경제위 제13차 회의 계기"
+        "북러 정부간 위원회 제13차 회의 계기"
       ],
       "speculation": []
     },
@@ -139,7 +123,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T03:10:10+00:00",
+  "checked_at": "2026-11-27T04:10:27+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

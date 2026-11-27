@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-27T23:39:59+00:00",
+  "judged_at": "2026-11-27T23:40:07+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -9,12 +9,18 @@
         {
           "name": "BBC",
           "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo",
+          "published_at": "2026-11-27T18:00:40+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o",
           "published_at": "2026-11-27T18:42:50+00:00"
         }
       ],
-      "summary": "키이우에 드론·탄도미사일 공격이 이어지고 있다고 BBC가 전했다.",
-      "judged_at": "2026-11-27T23:39:59+00:00"
+      "summary": "BBC는 러시아의 탄도미사일·드론 공격과 우크라이나의 케르치 교량 타격 등 교전이 이어지는 가운데 키이우가 겨울을 맞고 있다고 전했다.",
+      "judged_at": "2026-11-27T23:40:07+00:00"
     },
     "mideast": {
       "state": 3,
@@ -23,20 +29,20 @@
       ],
       "sources": [
         {
-          "name": "DVIDS",
-          "tier": "A",
-          "url": "https://www.dvidshub.net/news/580348/us-forces-disable-commercial-vessel-during-blockade-enforcement-against-iran",
-          "published_at": "2026-11-27T16:14:21+00:00"
-        },
-        {
           "name": "BBC",
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o",
           "published_at": "2026-11-26T21:17:53+00:00"
+        },
+        {
+          "name": "DVIDS",
+          "tier": "A",
+          "url": "https://www.dvidshub.net/news/580348/us-forces-disable-commercial-vessel-during-blockade-enforcement-against-iran",
+          "published_at": "2026-11-27T11:14:21+00:00"
         }
       ],
-      "summary": "미군이 이란 봉쇄를 집행하며 상선 6척을 무력화했고 쿠웨이트 공격으로 이탈리아인 2명이 숨졌다.",
-      "judged_at": "2026-11-27T23:39:59+00:00"
+      "summary": "쿠웨이트 공격으로 이탈리아인 2명이 숨졌고 CENTCOM은 11월 26일 오만만에서 봉쇄를 돌파하려던 상선을 정밀탄으로 무력화했다고 밝혔다.",
+      "judged_at": "2026-11-27T23:40:07+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -50,7 +56,7 @@
         }
       ],
       "summary": "로이터는 중국이 푸젠성 다청만에서 민간 선박을 쓰는 상륙 훈련을 11월 1일부터 수 주째 하고 있다고 보도했다.",
-      "judged_at": "2026-11-27T11:39:57+00:00"
+      "judged_at": "2026-11-27T23:40:07+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -59,7 +65,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-28T00:00:00+08:00",
+          "published_at": "2026-11-27T11:19:00+08:00",
           "kind": "feed"
         },
         {
@@ -70,7 +76,7 @@
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-27T23:39:59+00:00"
+      "judged_at": "2026-11-27T23:40:07+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -79,12 +85,12 @@
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/580325/jmsdf-us-conduct-mine-warfare-exercise-3ja",
-          "published_at": "2026-11-26T00:19:00+00:00"
+          "url": "https://www.dvidshub.net/news/580336/establishment-guam-defense-system-forefront-recent-us-military-terrain-walk",
+          "published_at": "2026-11-26T00:28:43+00:00"
         }
       ],
-      "summary": "미 해군과 일본 해상자위대가 11월 10~26일 일본 호소시마 인근에서 소해 훈련 MINEX 3JA를 실시했다.",
-      "judged_at": "2026-11-27T11:39:57+00:00"
+      "summary": "미 인도태평양 지휘부 인원이 11월 18일 괌 방어체계 현장 점검을 했다고 DVIDS가 전했다.",
+      "judged_at": "2026-11-27T23:40:07+00:00"
     }
   }
 }

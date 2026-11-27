@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-26T23:10:14+00:00",
+  "computed_at": "2026-11-27T00:10:02+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 30,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-26T11:40:22+00:00",
-    "latest_updated_at": "2026-11-26T23:10:14+00:00"
+    "linkage_judged_at": "2026-11-26T23:39:43+00:00",
+    "latest_updated_at": "2026-11-27T00:10:02+00:00"
   },
   "theaters": [
     {
@@ -22,7 +22,7 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "중국 국방부는 ISW·AEI가 밝힌 대만 포위 모의 미예고 대규모 훈련(함정 100여 척)을 부인하지 않았고, 대만 국방부는 서태평양 구역거부 훈련을 밀착 감시 중이다.",
+      "summary": "중국 「무성」 군사훈련을 두고 중국군이 과장 보도에 반대한다고 밝혔고 대만 당국은 서태평양 훈련을 감시 중이다.",
       "sources": [
         {
           "name": "CNA",
@@ -31,7 +31,7 @@
           "published_at": "2026-11-26T09:26:19+00:00"
         }
       ],
-      "judged_at": "2026-11-26T11:40:22+00:00"
+      "judged_at": "2026-11-26T23:39:43+00:00"
     },
     {
       "key": "ukraine",
@@ -48,7 +48,7 @@
           "published_at": "2026-11-25T14:46:41+00:00"
         }
       ],
-      "judged_at": "2026-11-26T11:40:22+00:00"
+      "judged_at": "2026-11-26T23:39:43+00:00"
     },
     {
       "key": "scs_ecs",
@@ -61,17 +61,17 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-26T10:46:00+00:00",
+          "published_at": "2026-11-26T23:30:00+00:00",
           "kind": "feed"
         },
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-26T11:21:50+00:00",
+          "published_at": "2026-11-26T23:08:12+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-26T11:40:22+00:00"
+      "judged_at": "2026-11-26T23:39:43+00:00"
     },
     {
       "key": "mideast",
@@ -88,7 +88,7 @@
           "published_at": "2026-11-26T10:14:08+00:00"
         }
       ],
-      "judged_at": "2026-11-26T11:40:22+00:00"
+      "judged_at": "2026-11-26T23:39:43+00:00"
     },
     {
       "key": "us_posture",
@@ -102,10 +102,10 @@
           "name": "DVIDS",
           "tier": "A",
           "url": "https://www.dvidshub.net/news/580325/jmsdf-us-conduct-mine-warfare-exercise-3ja",
-          "published_at": "2026-11-26T00:31:35+00:00"
+          "published_at": "2026-11-25T19:31:35+00:00"
         }
       ],
-      "judged_at": "2026-11-26T11:40:22+00:00"
+      "judged_at": "2026-11-26T23:39:43+00:00"
     }
   ],
   "channels": [
@@ -138,6 +138,6 @@
   "last_good": {
     "ews": 30,
     "band": "관찰",
-    "computed_at": "2026-11-26T23:10:14+00:00"
+    "computed_at": "2026-11-27T00:10:02+00:00"
   }
 }

@@ -1,31 +1,7 @@
 {
   "version": 1,
-  "updated_at": "2026-11-26T23:10:14+00:00",
+  "updated_at": "2026-11-27T00:10:02+00:00",
   "active": [
-    {
-      "id": "scheduled_event-20261116-2edd67bc",
-      "kind": "scheduled_event",
-      "summary": "트럼프·시진핑·푸틴 첫 3자 정상회담이 11/19 선전 APEC 계기에 열릴 예정이라고 백악관·크렘린이 밝혔다.",
-      "window": {
-        "start": "2026-11-19",
-        "end": "2026-11-19"
-      },
-      "level": "official",
-      "first_seen": "2026-11-16T10:11:31+00:00",
-      "expires": "2026-11-26",
-      "source": {
-        "url": "https://en.yna.co.kr/view/AEN20261116006000315",
-        "title": "S. Korea voices hope upcoming U.S.-China-Russia summit will advance peace on Korean Peninsula",
-        "publisher": "연합뉴스"
-      },
-      "also": [
-        {
-          "url": "https://www.koreaherald.com/article/10942242",
-          "title": "Trump, Xi, Putin set to hold historic trilateral summit; US-N. Korea meeting uncertain",
-          "publisher": "코리아헤럴드"
-        }
-      ]
-    },
     {
       "id": "scheduled_event-20261122-96568d6a",
       "kind": "scheduled_event",
@@ -101,6 +77,31 @@
         }
       ],
       "expired_at": "2026-11-05T00:12:28+00:00"
+    },
+    {
+      "id": "scheduled_event-20261116-2edd67bc",
+      "kind": "scheduled_event",
+      "summary": "트럼프·시진핑·푸틴 첫 3자 정상회담이 11/19 선전 APEC 계기에 열릴 예정이라고 백악관·크렘린이 밝혔다.",
+      "window": {
+        "start": "2026-11-19",
+        "end": "2026-11-19"
+      },
+      "level": "official",
+      "first_seen": "2026-11-16T10:11:31+00:00",
+      "expires": "2026-11-26",
+      "source": {
+        "url": "https://en.yna.co.kr/view/AEN20261116006000315",
+        "title": "S. Korea voices hope upcoming U.S.-China-Russia summit will advance peace on Korean Peninsula",
+        "publisher": "연합뉴스"
+      },
+      "also": [
+        {
+          "url": "https://www.koreaherald.com/article/10942242",
+          "title": "Trump, Xi, Putin set to hold historic trilateral summit; US-N. Korea meeting uncertain",
+          "publisher": "코리아헤럴드"
+        }
+      ],
+      "expired_at": "2026-11-27T00:10:02+00:00"
     }
   ]
 }

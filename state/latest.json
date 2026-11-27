@@ -1,61 +1,52 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방",
-      "North Korea troop movement"
+      "합참 병력 이동 전방 증강",
+      "North Korea troops border Reuters"
     ],
     "nuclear": [
-      "북한 핵 풍계리 영변",
-      "North Korea nuclear test site"
+      "North Korea missile launch Reuters November 27",
+      "북한 핵 풍계리 영변"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
+      "북한 군수 물자 수송 탄약",
       "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "MDL 침범 경고사격",
-      "귀순 탈북민 GOP"
+      "북한 합참 발표 DMZ NLL 귀순",
+      "지뢰 발견 목함지뢰 해안"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "North Korea hacking attributed"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출"
     ],
     "foreign_forces": [
-      "김정은 방러",
-      "서해 구조물",
+      "김정은 방중",
       "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "북한 열병식 집결",
-      "North Korea parade preparation"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea wartime mobilization"
+      "북한 준전시 등화관제 노농적위군",
+      "North Korea martial law mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령",
-      "South Korea alert DEFCON"
+      "진돗개 데프콘 상향 합참",
+      "US Japan Korea government warning North Korea"
     ],
     "hybrid_ops": [
       "국가보안법 구속",
-      "간첩 혐의",
       "North Korea attributed FBI"
-    ],
-    "calm": [
-      "남북 대화 제안",
-      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261127511522",
-    "https://www.yna.co.kr/view/AKR20261127070700504",
-    "https://www.yna.co.kr/view/AKR20261126190400504",
-    "https://www.yna.co.kr/view/AKR20261127060700504"
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "철원 GOP 탈북민 적발과 표류 북한 어선 송환 등 정례 접경 사건만 확인됐고 군사적 이상 징후는 없다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "탈북민 적발·표류 어선 송환 등 정례 사안뿐이며 미사일 발사·군사 이동 신규 징후는 없다. 북러 기밀보호 협정(11/26)은 기존 협력의 반복으로 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -69,28 +60,21 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "강원 철원",
-      "lat": 38.2,
-      "lon": 127.2,
-      "summary": "합참이 철원 GOP 철책 200m 지점의 30대 탈북민 적발을, 통일부가 표류 북한 어선 6명 NLL 송환을 밝혔다(철책·장비 이상 없음, 정례).",
-      "meaning": "월선·귀순·송환은 정례 범위이며 군사 충돌 징후는 아니다.",
+      "region": "철원",
+      "lat": 38.15,
+      "lon": 127.31,
+      "summary": "철원 민통선 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발되고 표류 북한 어선 6명이 송환됐다(정례 사안).",
+      "meaning": "철책·장비 이상 없는 개별 월경·송환 건으로 군사 긴장과 무관하다.",
       "sources": [
         {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261127070700504"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261127060700504"
+          "name": "NK News",
+          "tier": "C",
+          "url": "https://www.nknews.org/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "철책·감시장비 이상 없음",
-        "대공 혐의 조사 중",
-        "북한 어선 6명 송환, 1명 잔류"
+        "11/27 탈북민 적발·북한 어선 6명 해상 송환 보도"
       ],
       "speculation": []
     },
@@ -98,8 +82,7 @@
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "러시아 문화부 대표단 방북·단둥 교역 확대는 이미 알려진 협력의 반복 보도라 배경이다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -114,7 +97,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T13:10:23+00:00",
+  "checked_at": "2026-11-27T13:12:23+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

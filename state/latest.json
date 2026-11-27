@@ -1,54 +1,75 @@
 {
   "coverage": {
-    "border_clash": [
-      "목함지뢰 해안 지뢰 발견",
-      "DMZ NLL 귀순 합참"
-    ],
-    "foreign_forces": [
-      "김정은 방중 김정은 방러",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
-    ],
-    "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출 사이버 공격 랜섬웨어"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
-      "North Korea attributed FBI hackers"
-    ],
-    "calm": [],
     "troop_movement": [
-      "news_kr.local.json 수집 결과 대조"
+      "북한 전방 병력 이동"
     ],
     "nuclear": [
-      "news_kr.local.json 수집 결과 대조"
+      "김정은 핵시설 시찰",
+      "North Korea nuclear Kim facility KCNA"
     ],
     "logistics": [
-      "news_kr.local.json 수집 결과 대조"
+      "북한 군수 수송"
+    ],
+    "border_clash": [
+      "철원 민통선 탈북민",
+      "North Korea defector border"
+    ],
+    "electronic_cyber": [
+      "GPS 교란",
+      "해킹 공격"
+    ],
+    "foreign_forces": [
+      "김정은 방러",
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
-      "news_kr.local.json 수집 결과 대조"
+      "북한 열병식"
     ],
     "nk_internal": [
-      "news_kr.local.json 수집 결과 대조"
+      "북한 준전시"
     ],
     "gov_warning": [
-      "news_kr.local.json 수집 결과 대조"
+      "진돗개 발령"
+    ],
+    "hybrid_ops": [
+      "간첩 혐의",
+      "North Korea attributed FBI"
+    ],
+    "calm": [
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://biz.heraldcorp.com/article/10921557",
-    "https://www.seoul.co.kr/news/newsView.php?id=20261026002002",
-    "https://www.nknews.org"
+    "https://www.segye.com/newsView/20261127511522",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/north-korean-defector-in-custody-after-unauthorized-entry-into-restricted-front-line-border-area",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
+    "https://www.nknews.org/category/news/",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "새 징후는 철원 민통선 탈북민 적발(정례 성격) 1건뿐이며 핵·병력·정부 경고 이상은 없다. 바이낸스 FBI 귀속(11/1)·북러 교류는 배경이다. 이번 회차 일부 원문(연합 등) 열람 불가로 검색은 제한적이었다.",
+  "overall_summary": "북한 핵시설 시찰 보도(KCNA)와 철원 탈북민 적발 외 새로운 군사 도발·전쟁 징후는 확인되지 않았다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "region": "북한(미공개 시설)",
+      "summary": "KCNA가 11/26 김정은의 핵물질 생산·핵무기 연구시설 시찰과 전술핵 임무별 운용 강조 발언을 보도했다(Reuters 인용, Korea Times).",
+      "meaning": "핵 능력 과시 발언·사진 공개로 신규 배치·사용 준비의 독립 확인은 없다.",
+      "sources": [
+        {
+          "name": "Korea Times(Reuters)",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "KCNA 11/26 보도, 시찰은 11/25로 추정",
+        "시설 명칭·위치 미공개"
+      ],
+      "speculation": []
     },
     "logistics": {
       "status": "none"
@@ -56,21 +77,26 @@
     "border_clash": {
       "status": "single",
       "routine": true,
-      "region": "강원 철원",
-      "lat": 38.15,
-      "lon": 127.31,
-      "summary": "11/26 철원 민통선 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발됐다(NK News 11/27 보도, 합참 조사 중).",
-      "meaning": "민통선 무단 접근 개별 사건으로 군 경계 이상 징후는 보도되지 않았다.",
+      "region": "강원 철원 민통선",
+      "lat": 38.2,
+      "lon": 127.2,
+      "summary": "11/26 18:40경 철원 CCL 이북에서 GOP 철책 쪽으로 북상하던 30대 탈북민이 적발돼 경찰에 인계됐다(합참·경찰 조사 중).",
+      "meaning": "월선·귀순 사례로 무력 충돌 징후는 아니다.",
       "sources": [
         {
+          "name": "Korea Times(Yonhap)",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/north-korean-defector-in-custody-after-unauthorized-entry-into-restricted-front-line-border-area"
+        },
+        {
           "name": "NK News",
-          "tier": "C",
-          "url": "https://www.nknews.org"
+          "tier": "B",
+          "url": "https://www.nknews.org/category/news/"
         }
       ],
       "confidence": "중간",
       "facts": [
-        "NK News 11/27 헤드라인: 탈북민이 남북 경계 철책으로 이동 중 체포"
+        "GOP까지 약 200m에서 적발"
       ],
       "speculation": []
     },
@@ -79,7 +105,7 @@
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "김정은 10월 방중과 러시아 대표단 방북은 이미 알려진 협력의 반복 보도라 배경으로만 둔다(서울신문 10/26)."
+      "summary": "북러 문화·경제 교류 보도(러 공연단·모스크바-원산 직항 논의)만 있고 새 군사 협력 확인 없음."
     },
     "parade_massing": {
       "status": "none"
@@ -94,7 +120,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T19:10:56+00:00",
+  "checked_at": "2026-11-27T20:10:44+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

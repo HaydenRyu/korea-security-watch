@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "computed_at": "2026-11-27T11:10:06+00:00",
+  "computed_at": "2026-11-27T12:10:53+00:00",
   "weights_version": 1,
   "status": "ok",
   "ews": 26,
@@ -12,8 +12,8 @@
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-27T05:39:43+00:00",
-    "latest_updated_at": "2026-11-27T11:10:06+00:00"
+    "linkage_judged_at": "2026-11-27T11:39:57+00:00",
+    "latest_updated_at": "2026-11-27T12:10:53+00:00"
   },
   "theaters": [
     {
@@ -22,16 +22,16 @@
       "state": 1,
       "contribution": 0,
       "channels": [],
-      "summary": "대만 국방부는 27일 6시 기준 24시간간 공군기 1대·함정 7척이 대만 주변에서 활동했고 중국이 발사한 운반로켓 경로가 ADIZ를 지났다고 밝혔다.",
+      "summary": "로이터는 중국이 푸젠성 다청만에서 민간 선박을 쓰는 상륙 훈련을 11월 1일부터 수 주째 하고 있다고 보도했다.",
       "sources": [
         {
           "name": "CNA",
           "tier": "B",
-          "url": "https://www.cna.com.tw/news/aipl/202611270030.aspx",
-          "published_at": "2026-11-27T09:47:52+08:00"
+          "url": "https://www.cna.com.tw/news/aipl/202611270135.aspx",
+          "published_at": "2026-11-27T15:26:45+08:00"
         }
       ],
-      "judged_at": "2026-11-27T05:39:43+00:00"
+      "judged_at": "2026-11-27T11:39:57+00:00"
     },
     {
       "key": "ukraine",
@@ -39,16 +39,16 @@
       "state": 3,
       "contribution": 0,
       "channels": [],
-      "summary": "우크라이나가 러시아 사바슬레이카 공군기지를 공격해 항공기 5대를 맞혔다고 밝혀 전쟁이 계속되고 있다.",
+      "summary": "젤렌스키 대통령이 BBC에 미국이 종전 협상에서 러시아를 충분히 압박하지 않는다고 말해 전쟁과 협상이 계속되고 있다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/ck9q8xp5r5pgo",
-          "published_at": "2026-11-25T14:46:41+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo",
+          "published_at": "2026-11-27T09:07:48+00:00"
         }
       ],
-      "judged_at": "2026-11-27T05:39:43+00:00"
+      "judged_at": "2026-11-27T11:39:57+00:00"
     },
     {
       "key": "scs_ecs",
@@ -67,11 +67,11 @@
         {
           "name": "BBC 아시아",
           "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml",
-          "published_at": "2026-11-27T03:28:15+00:00",
+          "published_at": "2026-11-27T10:28:35+00:00",
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-27T05:39:43+00:00"
+      "judged_at": "2026-11-27T11:39:57+00:00"
     },
     {
       "key": "mideast",
@@ -79,16 +79,22 @@
       "state": 3,
       "contribution": 0,
       "channels": [],
-      "summary": "이스라엘이 가자지구에 공습을 이어 하마스 정치 관리 부부 등 8명이 숨졌다고 BBC가 전했다.",
+      "summary": "쿠웨이트 공격으로 이탈리아인 2명이 숨졌고 이란은 책임을 부인했으며 사우디는 후티 공격을 받고 있다고 BBC가 전했다.",
       "sources": [
         {
           "name": "BBC",
           "tier": "B",
-          "url": "https://www.bbc.co.uk/news/articles/cqvg2n4mzl1jo",
-          "published_at": "2026-11-26T10:14:08+00:00"
+          "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o",
+          "published_at": "2026-11-26T21:17:53+00:00"
+        },
+        {
+          "name": "BBC",
+          "tier": "B",
+          "url": "https://www.bbc.co.uk/news/articles/c6ly7jgv7jzdo",
+          "published_at": "2026-11-27T06:04:51+00:00"
         }
       ],
-      "judged_at": "2026-11-27T05:39:43+00:00"
+      "judged_at": "2026-11-27T11:39:57+00:00"
     },
     {
       "key": "us_posture",
@@ -96,16 +102,16 @@
       "state": 0,
       "contribution": 0,
       "channels": [],
-      "summary": "미 태평양사 요원들이 11월 17~19일 괌 방어체계 구축을 위한 지형 답사를 실시했다.",
+      "summary": "미 해군과 일본 해상자위대가 11월 10~26일 일본 호소시마 인근에서 소해 훈련 MINEX 3JA를 실시했다.",
       "sources": [
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/580336/establishment-guam-defense-system-forefront-recent-us-mili",
-          "published_at": "2026-11-26T00:28:43+00:00"
+          "url": "https://www.dvidshub.net/news/580325/jmsdf-us-conduct-mine-warfare-exercise-3ja",
+          "published_at": "2026-11-26T00:19:00+00:00"
         }
       ],
-      "judged_at": "2026-11-27T05:39:43+00:00"
+      "judged_at": "2026-11-27T11:39:57+00:00"
     }
   ],
   "channels": [
@@ -138,6 +144,6 @@
   "last_good": {
     "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-27T11:10:06+00:00"
+    "computed_at": "2026-11-27T12:10:53+00:00"
   }
 }

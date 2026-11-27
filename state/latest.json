@@ -50,13 +50,11 @@
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261127070700504",
-    "https://www.yna.co.kr/view/AKR20261127060751504",
     "https://www.segye.com/newsView/20261127511522",
     "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/18/kim-tours-resort-amid-china-trip-rumours",
-    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760",
-    "https://www.internazionale.it/ultime-notizie-reuters/2026/11/16/north-korea-s-kim-inspects-tourist-zone-as-senior-official-visits-moscow"
+    "https://www.koreajoongangdaily.com/korea/unc-determines-that-armistice-violation-occurred-in-relation-to-dmz-mine-explosionnbsp/12897760"
   ],
-  "overall_summary": "탈북민 적발·표류 어선 송환 등 정례 사안뿐이며 새 군사 징후는 없다. 접경 남측 신규 열점·보도 대조 이상 없음.",
+  "overall_summary": "철원 탈북민 적발·표류 북한 어선 송환 등 정례 사안뿐이며 새 군사 징후는 없다. 접경 열점 대조 이상 없음; MDL 40여회 침범 보도(11/26)는 누적 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -80,11 +78,6 @@
           "name": "연합뉴스",
           "tier": "B",
           "url": "https://www.yna.co.kr/view/AKR20261127070700504"
-        },
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261127060751504"
         }
       ],
       "confidence": "중간",
@@ -112,7 +105,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-27T11:10:06+00:00",
+  "checked_at": "2026-11-27T12:10:53+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

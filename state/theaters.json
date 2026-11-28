@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "judged_at": "2026-11-28T05:40:27+00:00",
+  "judged_at": "2026-11-28T11:40:15+00:00",
   "theaters": {
     "ukraine": {
       "state": 3,
@@ -19,8 +19,8 @@
           "published_at": "2026-11-27T18:42:50+00:00"
         }
       ],
-      "summary": "BBC는 키이우가 러시아의 미사일·드론 공습 경보 속에 또 한 번의 혹독한 겨울을 맞고 있다고 전했다.",
-      "judged_at": "2026-11-28T05:40:27+00:00"
+      "summary": "BBC는 키이우가 러시아의 미사일·드론 공습 속에 또 한 번의 혹독한 겨울을 맞고 있다고 전했다.",
+      "judged_at": "2026-11-28T11:40:15+00:00"
     },
     "mideast": {
       "state": 3,
@@ -37,12 +37,12 @@
         {
           "name": "DVIDS",
           "tier": "A",
-          "url": "https://www.dvidshub.net/news/580348/us-forces-disable-commercial-vessel-during-blockade-enforcement-against-i",
-          "published_at": "2026-11-27T16:14:21+00:00"
+          "url": "https://www.dvidshub.net/news/580348/us-forces-disable-commercial-vessel-during-blockade-enforcement",
+          "published_at": "2026-11-27T11:14:21+00:00"
         }
       ],
       "summary": "CENTCOM은 11월 26일 오만만에서 봉쇄를 돌파하려던 상선을 정밀탄으로 무력화했고, 쿠웨이트 공격으로 이탈리아인 2명이 숨졌다.",
-      "judged_at": "2026-11-28T05:40:27+00:00"
+      "judged_at": "2026-11-28T11:40:15+00:00"
     },
     "taiwan": {
       "state": 1,
@@ -61,8 +61,8 @@
           "published_at": "2026-11-27T15:26:45+08:00"
         }
       ],
-      "summary": "대만 국방부는 27~28일 중국 군용기·군함 등 45대가 대만 주변에서 활동했다고 밝혔고, 로이터는 푸젠성 다청만 상륙훈련이 수 주째라고 보도했다.",
-      "judged_at": "2026-11-28T05:40:27+00:00"
+      "summary": "대만 국방부는 중국 군용기·군함 등 45대가 대만 주변에서 활동했다고 밝혔고, 로이터는 푸젠성 다청만에서 민간선박을 동원한 상륙 지원 훈련이 이뤄졌다고 보도했다.",
+      "judged_at": "2026-11-28T11:40:15+00:00"
     },
     "scs_ecs": {
       "state": 0,
@@ -71,7 +71,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-28T00:00:00+08:00",
+          "published_at": "2026-11-28T17:24:00+08:00",
           "kind": "feed"
         },
         {
@@ -82,7 +82,7 @@
         }
       ],
       "summary": "Philstar·BBC 아시아 피드에 72시간 안 남·동중국해 관련 기사 없음",
-      "judged_at": "2026-11-28T05:40:27+00:00"
+      "judged_at": "2026-11-28T11:40:15+00:00"
     },
     "us_posture": {
       "state": 0,
@@ -91,18 +91,18 @@
         {
           "name": "DVIDS",
           "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-27T18:13:13+00:00",
+          "published_at": "2026-11-27T13:13:47+00:00",
           "kind": "feed"
         },
         {
           "name": "Stars and Stripes",
           "url": "https://www.stripes.com/theaters/asia_pacific/",
-          "published_at": "2026-11-26T00:00:00+00:00",
+          "published_at": "2026-11-27T00:00:00+00:00",
           "kind": "feed"
         }
       ],
       "summary": "DVIDS 피드·Stripes 목록에 72시간 안 미 전략자산 전개 기사 없음",
-      "judged_at": "2026-11-28T05:40:27+00:00"
+      "judged_at": "2026-11-28T11:40:15+00:00"
     }
   }
 }

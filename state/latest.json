@@ -1,66 +1,90 @@
 {
   "coverage": {
     "border_clash": [
-      "국내언론 수집 border/mine/defect 묶음",
-      "북한 미사일 발사 합참 11월 28일"
+      "북한 합참 발표 11월 28일",
+      "지뢰 발견",
+      "귀순"
     ],
     "foreign_forces": [
-      "North Korea Reuters Kim Jong Un China Russia visit",
-      "국내언론 수집 summit 묶음"
-    ],
-    "nuclear": [
-      "국내언론 수집 fire 묶음"
+      "김정은 방중",
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물"
     ],
     "electronic_cyber": [
-      "해킹 개인정보 유출 공격"
-    ],
-    "troop_movement": [
-      "국내언론 수집 전체"
-    ],
-    "logistics": [
-      "국내언론 수집 전체"
-    ],
-    "parade_massing": [
-      "국내언론 수집 전체"
-    ],
-    "nk_internal": [
-      "국내언론 수집 전체"
-    ],
-    "gov_warning": [
-      "북한 미사일 발사 합참 11월 28일"
+      "GPS 교란",
+      "해킹 개인정보 유출 공격",
+      "사이버 공격"
     ],
     "hybrid_ops": [
-      "국내언론 수집 spy·influence 묶음"
+      "국가보안법 구속",
+      "North Korea attributed FBI"
+    ],
+    "nuclear": [
+      "북한 핵 영변 강선"
+    ],
+    "troop_movement": [
+      "북한 병력 이동"
+    ],
+    "logistics": [
+      "북한 군수 수송"
+    ],
+    "parade_massing": [
+      "북한 열병식"
+    ],
+    "nk_internal": [
+      "북한 준전시 등화관제"
+    ],
+    "gov_warning": [
+      "진돗개 데프콘"
     ],
     "calm": [
-      "국내언론 수집 전체"
+      "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261127070700504",
+    "https://www.yna.co.kr/view/AKR20261128024700504",
     "https://www.yna.co.kr/view/AKR20261127170200001",
-    "https://www.yna.co.kr/view/AKR20261126190400504",
-    "https://www.segye.com/newsView/20261127511522",
-    "https://www.segye.com/newsView/20261127511887"
+    "https://www.yna.co.kr/view/AKR20261127070700504",
+    "https://www.segye.com/newsView/20261127511887",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "접경은 철원 탈북민 적발 1건과 누적 MDL 침범 보도뿐이고 신규 비정례 사건은 없다. 접경 열점 후보 0건이며 방중설은 청와대가 부인했다.",
+  "overall_summary": "접경은 철원 탈북민 적발 1건뿐이며 신규 비정례 사건은 없다. 김정은 추가 방중설은 국정원이 동향을 주시 중이라고만 밝혔고 새 확인 사실은 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "24시간 경과 — 11/26 KCNA 핵시설 시찰 보도는 배경이며 11/27 세계일보 기사는 분석 칼럼이다."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "single",
+      "routine": true,
+      "region": "강원 철원",
+      "lat": 38.15,
+      "lon": 127.31,
+      "summary": "11/26 철원 GOP 철책 남쪽 200m 민통선 이북에서 북상하던 30대 탈북민이 적발돼 경찰에 인계됐고 철책은 이상 없다고 합참이 밝혔다.",
+      "meaning": "북측 도발이 아닌 개인 월선 시도다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261127070700504"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "합참: GOP 철책 이상 없음"
+      ],
+      "speculation": []
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "11/27 시진핑 방중 언급 보도는 청와대가 부인했고 신규 파병·협정은 확인되지 않는다."
+      "status": "none"
     },
     "parade_massing": {
       "status": "none"
@@ -73,37 +97,10 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "강원 철원",
-      "lat": 38.15,
-      "lon": 127.31,
-      "summary": "11/26 18:40경 철원 GOP 철책 남쪽 200m 민통선 이북에서 북상하던 탈북민이 적발돼 경찰에 인계됐고 철책은 이상 없다고 합참이 밝혔다.",
-      "meaning": "북측 도발이 아닌 개인 월선 시도다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261127070700504"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "합참: GOP 철책·경계 구조물 이상 없음"
-      ],
-      "speculation": []
     }
   },
-  "checked_at": "2026-11-28T01:10:08+00:00",
+  "checked_at": "2026-11-28T03:09:56+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-28T02:09:39+00:00",
-    "summary": "신규 비정례 징후는 확인되지 않았다. 11/26 핵시설 시찰 보도는 배경이고, 11/28 김정은 추가 방중설에 국정원이 동향을 주시 중이라는 보도(연합·국민, 원문 미열람)만 새로 나왔다. 접경 열점 후보 0건."
-  }
+  "active": []
 }

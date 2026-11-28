@@ -1,18 +1,18 @@
 {
   "coverage": {
     "border_clash": [
-      "북한 MDL 침범 지뢰 발견 합참",
-      "국내언론 수집 border/mine/defect 묶음"
+      "국내언론 수집 border/mine/defect 묶음",
+      "북한 미사일 발사 합참 11월 28일"
     ],
     "foreign_forces": [
-      "김정은 방중 방러 서해 구조물 주한미군 감축",
-      "North Korea Kim Jong Un news Reuters"
+      "North Korea Reuters Kim Jong Un China Russia visit",
+      "국내언론 수집 summit 묶음"
     ],
     "nuclear": [
-      "North Korea Kim Jong Un news Reuters"
+      "국내언론 수집 fire 묶음"
     ],
     "electronic_cyber": [
-      "국내언론 수집 gps 묶음"
+      "해킹 개인정보 유출 공격"
     ],
     "troop_movement": [
       "국내언론 수집 전체"
@@ -27,7 +27,7 @@
       "국내언론 수집 전체"
     ],
     "gov_warning": [
-      "국내언론 수집 alert 묶음"
+      "북한 미사일 발사 합참 11월 28일"
     ],
     "hybrid_ops": [
       "국내언론 수집 spy·influence 묶음"
@@ -38,51 +38,29 @@
   },
   "opened": [
     "https://www.yna.co.kr/view/AKR20261127070700504",
-    "https://www.yna.co.kr/view/AKR20261126190400504",
     "https://www.yna.co.kr/view/AKR20261127170200001",
-    "https://www.segye.com/newsView/20261127511522"
+    "https://www.yna.co.kr/view/AKR20261126190400504",
+    "https://www.segye.com/newsView/20261127511522",
+    "https://www.segye.com/newsView/20261127511887"
   ],
-  "overall_summary": "접경에서는 철원 민통선 이북 탈북민 적발 1건과 누적 MDL 침범 보도만 있고 신규 비정례 사건은 없다. 시진핑의 김정은 방중 언급 보도는 청와대가 부인했고 단둥 특이 동향도 없다.",
+  "overall_summary": "접경은 철원 탈북민 적발 1건과 누적 MDL 침범 보도뿐이고 신규 비정례 사건은 없다. 접경 열점 후보 0건이며 방중설은 청와대가 부인했다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
       "status": "none",
-      "summary": "24시간 경과 — 11/26 KCNA 핵시설 시찰 보도는 첫 보도 후 24시간이 지나 배경으로만 둔다."
+      "summary": "24시간 경과 — 11/26 KCNA 핵시설 시찰 보도는 배경이며 11/27 세계일보 기사는 분석 칼럼이다."
     },
     "logistics": {
       "status": "none"
     },
-    "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "강원 철원",
-      "lat": 38.15,
-      "lon": 127.31,
-      "summary": "11/26 18:40경 철원 GOP 철책 남쪽 200m 민통선 이북에서 북상하던 30대 탈북민이 적발돼 경찰에 인계됐고 철책·감시장비는 이상 없다고 합참이 밝혔다.",
-      "meaning": "북측 도발이 아닌 개인 월선 시도로 군사적 위협 신호는 아니다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261127070700504"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "합참 관계자: GOP 철책·경계 구조물 이상 없음",
-        "대공 혐의점 조사 중"
-      ],
-      "speculation": []
-    },
     "electronic_cyber": {
-      "status": "none",
-      "summary": "이번 회차에 원문을 새로 열지 못했고 직전 회차의 우체국 해킹(귀속 미확인)은 24시간 경과로 배경 처리한다."
+      "status": "none"
     },
     "foreign_forces": {
       "status": "none",
-      "summary": "24시간 경과 — 북러 정부간위원회 면담은 11/26 첫 보도이며, 11/27 시진핑 방중 언급 보도는 청와대가 부인해 징후가 아니다."
+      "summary": "11/27 시진핑 방중 언급 보도는 청와대가 부인했고 신규 파병·협정은 확인되지 않는다."
     },
     "parade_massing": {
       "status": "none"
@@ -95,16 +73,31 @@
     },
     "hybrid_ops": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "single",
+      "routine": true,
+      "region": "강원 철원",
+      "lat": 38.15,
+      "lon": 127.31,
+      "summary": "11/26 18:40경 철원 GOP 철책 남쪽 200m 민통선 이북에서 북상하던 탈북민이 적발돼 경찰에 인계됐고 철책은 이상 없다고 합참이 밝혔다.",
+      "meaning": "북측 도발이 아닌 개인 월선 시도다.",
+      "sources": [
+        {
+          "name": "연합뉴스",
+          "tier": "B",
+          "url": "https://www.yna.co.kr/view/AKR20261127070700504"
+        }
+      ],
+      "confidence": "높음",
+      "facts": [
+        "합참: GOP 철책·경계 구조물 이상 없음"
+      ],
+      "speculation": []
     }
   },
-  "checked_at": "2026-11-27T23:10:15+00:00",
+  "checked_at": "2026-11-28T01:10:08+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-28T00:10:11+00:00",
-    "summary": "최근 24시간 신규 징후 없음. 접경 탈북민 적발은 24시간 경과로 배경 처리, 북러 교류·MDL 요새화 보도는 기존 배경 범위."
-  }
+  "active": []
 }

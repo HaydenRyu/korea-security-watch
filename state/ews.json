@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "computed_at": "2026-11-28T11:11:08+00:00",
+  "computed_at": "2026-11-28T12:10:31+00:00",
   "weights_version": 1,
   "status": "ok",
-  "ews": 27,
+  "ews": 26,
   "band": "관찰",
-  "d": 4,
+  "d": 2,
   "e": 8,
   "alpha": 1.0,
   "grade": 1,
   "grade_label": "주의",
   "coverage": {
     "observed_theaters": 5,
-    "linkage_judged_at": "2026-11-28T05:40:27+00:00",
-    "latest_updated_at": "2026-11-28T11:11:08+00:00"
+    "linkage_judged_at": "2026-11-28T11:39:38+00:00",
+    "latest_updated_at": "2026-11-28T12:10:31+00:00"
   },
   "theaters": [
     {
@@ -37,7 +37,7 @@
           "published_at": "2026-11-27T15:26:45+08:00"
         }
       ],
-      "judged_at": "2026-11-28T05:40:27+00:00"
+      "judged_at": "2026-11-28T11:39:38+00:00"
     },
     {
       "key": "ukraine",
@@ -60,7 +60,7 @@
           "published_at": "2026-11-27T18:42:50+00:00"
         }
       ],
-      "judged_at": "2026-11-28T05:40:27+00:00"
+      "judged_at": "2026-11-28T11:39:38+00:00"
     },
     {
       "key": "scs_ecs",
@@ -73,7 +73,7 @@
         {
           "name": "Philstar",
           "url": "https://www.philstar.com/rss/nation",
-          "published_at": "2026-11-28T00:00:00+08:00",
+          "published_at": "2026-11-28T17:24:00+08:00",
           "kind": "feed"
         },
         {
@@ -83,7 +83,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-28T05:40:27+00:00"
+      "judged_at": "2026-11-28T11:39:38+00:00"
     },
     {
       "key": "mideast",
@@ -100,15 +100,9 @@
           "tier": "B",
           "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o",
           "published_at": "2026-11-26T21:17:53+00:00"
-        },
-        {
-          "name": "DVIDS",
-          "tier": "A",
-          "url": "https://www.dvidshub.net/news/580348/us-forces-disable-commercial-vessel-during-blockade-enforcement-against-i",
-          "published_at": "2026-11-27T16:14:21+00:00"
         }
       ],
-      "judged_at": "2026-11-28T05:40:27+00:00"
+      "judged_at": "2026-11-28T11:39:38+00:00"
     },
     {
       "key": "us_posture",
@@ -121,7 +115,7 @@
         {
           "name": "DVIDS",
           "url": "https://www.dvidshub.net/rss/news",
-          "published_at": "2026-11-27T18:13:13+00:00",
+          "published_at": "2026-11-27T16:14:21-05:00",
           "kind": "feed"
         },
         {
@@ -131,7 +125,7 @@
           "kind": "feed"
         }
       ],
-      "judged_at": "2026-11-28T05:40:27+00:00"
+      "judged_at": "2026-11-28T11:39:38+00:00"
     }
   ],
   "channels": [
@@ -162,8 +156,8 @@
     }
   ],
   "last_good": {
-    "ews": 27,
+    "ews": 26,
     "band": "관찰",
-    "computed_at": "2026-11-28T11:11:08+00:00"
+    "computed_at": "2026-11-28T12:10:31+00:00"
   }
 }

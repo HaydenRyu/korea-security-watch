@@ -1,102 +1,82 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop buildup"
+      "북한 병력 이동 전방 증강"
     ],
     "nuclear": [
-      "북한 핵 전술핵 배치",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Punggye-ri Yongbyon November 2026"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 수송 탄약 러시아"
     ],
     "border_clash": [
-      "지뢰 발견 DMZ 귀순",
-      "NLL DMZ North Korea border incident"
+      "목함지뢰 해안 발견 DMZ 귀순"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격"
+      "해킹 개인정보 유출 11월 28일"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "Kim Jong Un China Russia visit",
-      "서해 구조물",
-      "주한미군 감축"
+      "North Korea Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결"
+      "북한 등화관제 준전시 열병식 진돗개 발령"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시 노농적위군"
+      "북한 등화관제 준전시 열병식 진돗개 발령"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "한미일 긴급 경고"
+      "북한 등화관제 준전시 열병식 진돗개 발령"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
-      "North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261128503206",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261128/spy-agency-says-monitoring-developments-amid-speculation-over-nk-leaders-possible-china-visit",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/north-korean-defector-in-custody-after-unauthorized-entry-into-restricted-front-line-border-area",
-    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org/"
   ],
-  "overall_summary": "신규 비정례 징후는 없다. 김정은 추가 방중설(국정원 「여러 동향 주시」)은 새 확인 사실이 없는 외교 배경이며 접경 열점·지뢰·교전 보도도 없다.",
+  "overall_summary": "김정은 추가 방중설이 이어지나 확인된 군사 징후는 없다. 직전 회차와 큰 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "24시간 경과 — 김정은 전술핵 확대 배치 주문(KCNA 11/26)은 첫 보도 11/26이라 배경이다."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none",
-      "summary": "24시간 경과 — 철원 민통선 탈북민 적발(11/27 02시 UTC 첫 보도)은 배경이며 새 지뢰·교전 보도 없음."
+      "status": "none"
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "corroborated",
+      "status": "single",
       "routine": true,
       "region": "중국 단둥",
-      "summary": "김정은 추가 방중설에 국정원이 「여러 동향 주시」라고 11/28 밝혔다 — 확인된 방문·협정은 없는 외교 일정 관련 배경이다.",
-      "meaning": "북중 정상급 교류 가능성이나 군사 협정·무기 협력 발표는 없다.",
+      "summary": "국정원이 11/28 김정은 추가 방중설에 「여러 동향 주시」라고 밝혔으나 확인된 방문·협정은 없다.",
+      "meaning": "외교 일정 관련 동향으로 군사 협정 징후는 없다.",
+      "confidence": "중간",
+      "facts": [
+        "국정원 「여러 동향 주시 중」 11/28"
+      ],
+      "speculation": [
+        "10월말에 이은 추가 방중 가능성"
+      ],
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261128503206"
-        },
-        {
-          "name": "The Korea Times",
-          "tier": "B",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261128/spy-agency-says-monitoring-developments-amid-speculation-over-nk-leaders-possible-china-visit"
         }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "국정원은 연합뉴스 질의에 「여러 동향을 주시 중」이라고만 답했다."
-      ],
-      "speculation": [
-        "시진핑의 APEC 정상회담 설명이 방중 임박설의 배경이라는 관측"
       ]
     },
     "parade_massing": {
@@ -112,7 +92,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-28T08:09:46+00:00",
+  "checked_at": "2026-11-28T09:09:45+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

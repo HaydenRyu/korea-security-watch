@@ -1,38 +1,37 @@
 {
   "version": 1,
-  "at": "2026-11-27T23:40:07+00:00",
-  "opened": 25,
+  "at": "2026-11-28T05:40:27+00:00",
+  "opened": 21,
   "blocks": {
     "world": {
       "status": "checked",
-      "last_ok": "2026-11-27T23:40:07+00:00",
+      "last_ok": "2026-11-28T05:40:27+00:00",
       "raw": 5,
       "kept": 5
     },
     "factors": {
       "status": "checked",
-      "last_ok": "2026-11-27T23:40:07+00:00",
+      "last_ok": "2026-11-28T05:40:27+00:00",
       "raw": 4,
       "kept": 4
     },
     "linkage": {
       "status": "no_findings",
-      "last_ok": "2026-11-27T23:40:07+00:00",
+      "last_ok": "2026-11-28T05:40:27+00:00",
       "raw": 0,
       "kept": 0
     },
     "theaters": {
       "status": "checked",
-      "last_ok": "2026-11-27T23:40:07+00:00",
+      "last_ok": "2026-11-28T05:40:27+00:00",
       "raw": 5,
-      "kept": 5,
-      "note": "Rappler 피드 빈 응답, Stripes 목록 기사 링크 추출 못 함 — us_posture 는 DVIDS 기사 원문으로 판정"
+      "kept": 5
     },
     "incidents": {
-      "status": "checked",
-      "last_ok": "2026-11-27T23:40:07+00:00",
-      "raw": 1,
-      "kept": 1
+      "status": "no_findings",
+      "last_ok": "2026-11-28T05:40:27+00:00",
+      "raw": 0,
+      "kept": 0
     }
   }
 }

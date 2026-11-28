@@ -13,15 +13,15 @@
       "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "북한 11월 28일 합참 지뢰 목함지뢰 DMZ 귀순"
+      "북한 합참 지뢰 목함지뢰 DMZ 귀순 11월 28일"
     ],
     "electronic_cyber": [
       "북한 GPS 교란",
       "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
-      "김정은 방중",
       "North Korea Kim Jong Un China Russia visit",
+      "김정은 방중",
       "서해 구조물",
       "주한미군 감축"
     ],
@@ -42,7 +42,7 @@
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
+      "남북 대화 제안 통신선 복원 North Korea talks offer"
     ]
   },
   "opened": [
@@ -50,7 +50,7 @@
     "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
     "https://www.nknews.org"
   ],
-  "overall_summary": "김정은 추가 방중설(국정원 「동향 주시」)이 외교 관측 단계로 보도됐고 군사 징후 신규 확인은 없다. 직전 회차와 같은 수준이다.",
+  "overall_summary": "김정은 추가 방중설(국정원 「동향 주시」)이 외교 관측 단계로 보도됐고 군사 징후 신규 확인은 없다. 직전 회차와 같은 수준이며 접경 열점 후보 0건이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -63,7 +63,7 @@
     },
     "border_clash": {
       "status": "none",
-      "summary": "11/27 탈북민 GOP 철책 접근 적발·표류 어선 송환은 24시간 경과 또는 정례 처리, 군 발표 신규 침범·지뢰 발견 없음."
+      "summary": "11/27 탈북민 GOP 접근 적발·표류 어선 송환은 24시간 경과 또는 정례 처리, 군 발표 신규 침범·지뢰 발견 없음."
     },
     "electronic_cyber": {
       "status": "none"
@@ -103,7 +103,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-28T13:10:26+00:00",
+  "checked_at": "2026-11-28T14:09:39+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

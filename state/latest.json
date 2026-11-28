@@ -1,84 +1,93 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 합참 발표 11월 28일",
-      "North Korea Kim Jong Un China Russia visit"
+      "북한 병력 이동 전방 증강",
+      "North Korea troop movement"
     ],
     "nuclear": [
-      "북한 핵무기 우라늄 농축시설 공개",
-      "North Korea nuclear Kim Jong Un"
+      "북한 핵 풍계리 영변 핵시설",
+      "North Korea nuclear Yongbyon Punggye-ri"
     ],
     "logistics": [
-      "북한 군수 탄약 수송",
-      "North Korea ammunition shipment"
+      "북한 군수 수송 탄약 비축",
+      "North Korea munitions shipment"
     ],
     "border_clash": [
-      "북한 지뢰 발견 DMZ 귀순 2026년 11월",
-      "North Korea DMZ MDL warning shots"
+      "지뢰 발견 DMZ 귀순 합참",
+      "North Korea mine DMZ NLL"
     ],
     "electronic_cyber": [
-      "GPS 교란 북한",
-      "해킹 개인정보 유출",
-      "사이버 공격 랜섬웨어 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축 11월 2026"
+      "Kim Jong Un China Russia visit",
+      "서해 구조물 주한미군 감축"
     ],
     "parade_massing": [
-      "북한 열병식 병력 집결",
-      "North Korea parade massing"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제",
-      "North Korea mobilization"
+      "노농적위군 등화관제 준전시"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "North Korea warning US Japan"
+      "진돗개 데프콘 상향"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 북한 2026",
-      "North Korea talks offer",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261128503206",
-    "https://www.segye.com/newsView/20261127511887",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
+    "https://ajunews.com/view/20261127134615485",
+    "https://zdnet.co.kr/view/?no=20261128050855"
   ],
-  "overall_summary": "국정원이 김정은 추가 방중설에 「여러 동향 주시」라 밝혔으나 확인된 방문·협정은 없다. 11/25~26 핵물질 시설 공개는 24시간이 지난 배경이며 직전 회차와 큰 변화 없음.",
+  "overall_summary": "국정원이 김정은 추가 방중설에 「여러 동향 주시」라고 밝혔으나 확인된 방문·협정은 없고, 신규 비정례 징후는 없다. 직전 회차와 같은 평시 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none",
-      "summary": "김정은의 HEU 시설·핵탄두 공개는 11/26 보도로 24시간 경과한 배경이다."
+      "status": "none"
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
-      "status": "none"
+      "status": "none",
+      "summary": "MDL 40여 회 침범 보도(11/26)는 누적 집계로 새 사건이 아니라 배경이다."
     },
     "electronic_cyber": {
-      "status": "none"
+      "status": "single",
+      "routine": true,
+      "attribution": "unknown",
+      "summary": "귀속 미확인 — 가격비교 플랫폼 다나와가 11/25 외부 침입으로 회원정보 일부 유출을 인정했다.",
+      "meaning": "국내 민간 침해 사고이며 북한 연관은 발표되지 않았다.",
+      "sources": [
+        {
+          "name": "ZDNet Korea",
+          "tier": "C",
+          "url": "https://zdnet.co.kr/view/?no=20261128050855"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "다나와 운영사가 11/25 외부 불법 접근 침해사고를 공지하고 회원정보 일부 유출을 인정했다."
+      ],
+      "speculation": []
     },
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "북중 접경",
-      "lat": 40.12,
-      "lon": 124.4,
+      "region": "단둥·평양",
       "summary": "국정원이 11/28 김정은 추가 방중설에 「여러 동향 주시」라고 밝혔으나 확인된 방문·협정은 없다.",
-      "meaning": "외교 일정 관측으로 군사 협정·동행 확인 전까지 정례 범주다.",
+      "meaning": "외교 일정 가능성이며 군사 협정·무기 협력 발표는 없다.",
       "sources": [
         {
           "name": "세계일보",
@@ -88,11 +97,10 @@
       ],
       "confidence": "중간",
       "facts": [
-        "국정원 「여러 동향 주시 중」(연합 질의)",
-        "10/24 김정은 단둥 방문 이후 추가 방중설"
+        "국정원이 연합뉴스 질의에 「여러 동향을 주시 중」이라고 답했다."
       ],
       "speculation": [
-        "12월 초 방중 가능성 분석"
+        "김정은의 추가 방중 가능성"
       ]
     },
     "parade_massing": {
@@ -108,7 +116,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-28T10:10:01+00:00",
+  "checked_at": "2026-11-28T11:11:08+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

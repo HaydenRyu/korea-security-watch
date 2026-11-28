@@ -2,25 +2,16 @@
   "coverage": {
     "border_clash": [
       "북한 합참 발표 11월 28일",
-      "지뢰 발견",
-      "귀순"
+      "지뢰 발견 DMZ 귀순"
     ],
     "foreign_forces": [
-      "김정은 방중",
-      "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물"
+      "김정은 방중 Kim Jong Un China Russia visit"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출 공격",
-      "사이버 공격"
-    ],
-    "hybrid_ops": [
-      "국가보안법 구속",
-      "North Korea attributed FBI"
+      "GPS 교란 해킹 개인정보 유출 사이버 공격"
     ],
     "nuclear": [
-      "북한 핵 영변 강선"
+      "북한 핵 영변 풍계리"
     ],
     "troop_movement": [
       "북한 병력 이동"
@@ -29,26 +20,28 @@
       "북한 군수 수송"
     ],
     "parade_massing": [
-      "북한 열병식"
+      "North Korea parade troops massing"
     ],
     "nk_internal": [
-      "북한 준전시 등화관제"
+      "North Korea state of semi-war nk internal"
     ],
     "gov_warning": [
       "진돗개 데프콘"
+    ],
+    "hybrid_ops": [
+      "국가보안법 구속 간첩 혐의",
+      "North Korea attributed FBI"
     ],
     "calm": [
       "남북 대화 제안"
     ]
   },
   "opened": [
-    "https://www.yna.co.kr/view/AKR20261128024700504",
-    "https://www.yna.co.kr/view/AKR20261127170200001",
-    "https://www.yna.co.kr/view/AKR20261127070700504",
-    "https://www.segye.com/newsView/20261127511887",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
+    "https://www.segye.com/newsView/20261128503206",
+    "https://www.segye.com/newsView/20261127511522",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "접경은 철원 탈북민 적발 1건뿐이며 신규 비정례 사건은 없다. 김정은 추가 방중설은 국정원이 동향을 주시 중이라고만 밝혔고 새 확인 사실은 없다.",
+  "overall_summary": "신규 비정례 징후는 없다. 김정은 추가 방중설(국정원 「동향 주시」)과 북러 경제협력위는 이미 알려진 배경이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -60,31 +53,15 @@
       "status": "none"
     },
     "border_clash": {
-      "status": "single",
-      "routine": true,
-      "region": "강원 철원",
-      "lat": 38.15,
-      "lon": 127.31,
-      "summary": "11/26 철원 GOP 철책 남쪽 200m 민통선 이북에서 북상하던 30대 탈북민이 적발돼 경찰에 인계됐고 철책은 이상 없다고 합참이 밝혔다.",
-      "meaning": "북측 도발이 아닌 개인 월선 시도다.",
-      "sources": [
-        {
-          "name": "연합뉴스",
-          "tier": "B",
-          "url": "https://www.yna.co.kr/view/AKR20261127070700504"
-        }
-      ],
-      "confidence": "높음",
-      "facts": [
-        "합참: GOP 철책 이상 없음"
-      ],
-      "speculation": []
+      "status": "none",
+      "summary": "24시간 경과 — 철원 탈북민 적발 첫 보도 11/27 02시(UTC), 정례 월선 사안."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은 추가 방중설은 국정원이 동향 주시라고만 밝혀 새 확인 사실이 없는 배경이다."
     },
     "parade_massing": {
       "status": "none"
@@ -99,14 +76,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-28T03:09:56+00:00",
-  "grade": 1,
-  "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-28T05:10:23+00:00",
-    "summary": "신규 비정례 징후는 없다. 국정원의 김정은 추가 방중 「동향 주시」 발언, 북러 경제협력위 합의(군사협력 없음), 핵물질 시설 시찰 후속 분석은 이미 알려진 배경이다."
-  }
+  "checked_at": "2026-11-28T06:11:20+00:00",
+  "grade": 0,
+  "grade_label": "평시",
+  "active": []
 }

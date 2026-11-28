@@ -1,67 +1,103 @@
 {
   "coverage": {
-    "border_clash": [
-      "북한 합참 발표 11월 28일",
-      "지뢰 발견 DMZ 귀순"
-    ],
-    "foreign_forces": [
-      "김정은 방중 Kim Jong Un China Russia visit"
-    ],
-    "electronic_cyber": [
-      "GPS 교란 해킹 개인정보 유출 사이버 공격"
+    "troop_movement": [
+      "북한 병력 이동 전방 증강",
+      "North Korea troop buildup"
     ],
     "nuclear": [
-      "북한 핵 영변 풍계리"
-    ],
-    "troop_movement": [
-      "북한 병력 이동"
+      "북한 핵 전술핵 배치",
+      "North Korea nuclear Yongbyon"
     ],
     "logistics": [
-      "북한 군수 수송"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
+    ],
+    "border_clash": [
+      "지뢰 발견 DMZ 귀순",
+      "NLL DMZ North Korea border incident"
+    ],
+    "electronic_cyber": [
+      "북한 GPS 교란",
+      "해킹 개인정보 유출",
+      "사이버 공격"
+    ],
+    "foreign_forces": [
+      "김정은 방중",
+      "Kim Jong Un China Russia visit",
+      "서해 구조물",
+      "주한미군 감축"
     ],
     "parade_massing": [
-      "North Korea parade troops massing"
+      "북한 열병식 병력 집결"
     ],
     "nk_internal": [
-      "North Korea state of semi-war nk internal"
+      "북한 등화관제 준전시 노농적위군"
     ],
     "gov_warning": [
-      "진돗개 데프콘"
+      "진돗개 발령 데프콘",
+      "한미일 긴급 경고"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
+      "간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안"
+      "남북 대화 제안",
+      "통신선 복원"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261128503206",
-    "https://www.segye.com/newsView/20261127511522",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261128/spy-agency-says-monitoring-developments-amid-speculation-over-nk-leaders-possible-china-visit",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says",
+    "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261127/north-korean-defector-in-custody-after-unauthorized-entry-into-restricted-front-line-border-area",
     "https://www.koreatimes.co.kr/foreignaffairs/northkorea"
   ],
-  "overall_summary": "신규 비정례 징후는 없다. 김정은 추가 방중설(국정원 「동향 주시」)과 북러 경제협력위는 이미 알려진 배경이다.",
+  "overall_summary": "신규 비정례 징후는 없다. 김정은 추가 방중설(국정원 「여러 동향 주시」)은 새 확인 사실이 없는 외교 배경이며 접경 열점·지뢰·교전 보도도 없다.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "none",
+      "summary": "24시간 경과 — 김정은 전술핵 확대 배치 주문(KCNA 11/26)은 첫 보도 11/26이라 배경이다."
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
       "status": "none",
-      "summary": "24시간 경과 — 철원 탈북민 적발 첫 보도 11/27 02시(UTC), 정례 월선 사안."
+      "summary": "24시간 경과 — 철원 민통선 탈북민 적발(11/27 02시 UTC 첫 보도)은 배경이며 새 지뢰·교전 보도 없음."
     },
     "electronic_cyber": {
       "status": "none"
     },
     "foreign_forces": {
-      "status": "none",
-      "summary": "김정은 추가 방중설은 국정원이 동향 주시라고만 밝혀 새 확인 사실이 없는 배경이다."
+      "status": "corroborated",
+      "routine": true,
+      "region": "중국 단둥",
+      "summary": "김정은 추가 방중설에 국정원이 「여러 동향 주시」라고 11/28 밝혔다 — 확인된 방문·협정은 없는 외교 일정 관련 배경이다.",
+      "meaning": "북중 정상급 교류 가능성이나 군사 협정·무기 협력 발표는 없다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261128503206"
+        },
+        {
+          "name": "The Korea Times",
+          "tier": "B",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261128/spy-agency-says-monitoring-developments-amid-speculation-over-nk-leaders-possible-china-visit"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "국정원은 연합뉴스 질의에 「여러 동향을 주시 중」이라고만 답했다."
+      ],
+      "speculation": [
+        "시진핑의 APEC 정상회담 설명이 방중 임박설의 배경이라는 관측"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -76,14 +112,8 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-28T06:11:33+00:00",
+  "checked_at": "2026-11-28T08:09:46+00:00",
   "grade": 1,
   "grade_label": "주의",
-  "active": [],
-  "held": {
-    "raw_grade": 0,
-    "raw_label": "평시",
-    "at": "2026-11-28T07:09:55+00:00",
-    "summary": "신규 비정례 징후는 없다. 김정은 추가 방중설(국정원 「여러 동향 주시」)은 새 확인 사실이 없는 배경이며, 접경 열점·지뢰·교전 보도도 없다."
-  }
+  "active": []
 }

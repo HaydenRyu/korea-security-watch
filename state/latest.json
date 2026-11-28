@@ -1,53 +1,66 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강"
+      "북한 합참 발표 11월 28일",
+      "North Korea Kim Jong Un China Russia visit"
     ],
     "nuclear": [
-      "North Korea nuclear Punggye-ri Yongbyon November 2026"
+      "북한 핵무기 우라늄 농축시설 공개",
+      "North Korea nuclear Kim Jong Un"
     ],
     "logistics": [
-      "북한 군수 수송 탄약 러시아"
+      "북한 군수 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "목함지뢰 해안 발견 DMZ 귀순"
+      "북한 지뢰 발견 DMZ 귀순 2026년 11월",
+      "North Korea DMZ MDL warning shots"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 11월 28일"
+      "GPS 교란 북한",
+      "해킹 개인정보 유출",
+      "사이버 공격 랜섬웨어 공격"
     ],
     "foreign_forces": [
+      "김정은 방중",
       "North Korea Kim Jong Un China Russia visit",
-      "서해 구조물 주한미군 감축"
+      "서해 구조물 주한미군 감축 11월 2026"
     ],
     "parade_massing": [
-      "북한 등화관제 준전시 열병식 진돗개 발령"
+      "북한 열병식 병력 집결",
+      "North Korea parade massing"
     ],
     "nk_internal": [
-      "북한 등화관제 준전시 열병식 진돗개 발령"
+      "북한 준전시 등화관제",
+      "North Korea mobilization"
     ],
     "gov_warning": [
-      "북한 등화관제 준전시 열병식 진돗개 발령"
+      "진돗개 발령 데프콘",
+      "North Korea warning US Japan"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의 North Korea attributed FBI"
+      "국가보안법 구속 간첩 혐의 북한 해킹 귀속 FBI",
+      "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안 통신선 복원 북한 2026",
+      "North Korea talks offer",
+      "확성기 방송 중단"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261128503206",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org/"
+    "https://www.segye.com/newsView/20261127511887",
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do"
   ],
-  "overall_summary": "김정은 추가 방중설이 이어지나 확인된 군사 징후는 없다. 직전 회차와 큰 변화 없음.",
+  "overall_summary": "국정원이 김정은 추가 방중설에 「여러 동향 주시」라 밝혔으나 확인된 방문·협정은 없다. 11/25~26 핵물질 시설 공개는 24시간이 지난 배경이며 직전 회차와 큰 변화 없음.",
   "items": {
     "troop_movement": {
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "none",
+      "summary": "김정은의 HEU 시설·핵탄두 공개는 11/26 보도로 24시간 경과한 배경이다."
     },
     "logistics": {
       "status": "none"
@@ -61,22 +74,25 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "중국 단둥",
+      "region": "북중 접경",
+      "lat": 40.12,
+      "lon": 124.4,
       "summary": "국정원이 11/28 김정은 추가 방중설에 「여러 동향 주시」라고 밝혔으나 확인된 방문·협정은 없다.",
-      "meaning": "외교 일정 관련 동향으로 군사 협정 징후는 없다.",
-      "confidence": "중간",
-      "facts": [
-        "국정원 「여러 동향 주시 중」 11/28"
-      ],
-      "speculation": [
-        "10월말에 이은 추가 방중 가능성"
-      ],
+      "meaning": "외교 일정 관측으로 군사 협정·동행 확인 전까지 정례 범주다.",
       "sources": [
         {
           "name": "세계일보",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261128503206"
         }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "국정원 「여러 동향 주시 중」(연합 질의)",
+        "10/24 김정은 단둥 방문 이후 추가 방중설"
+      ],
+      "speculation": [
+        "12월 초 방중 가능성 분석"
       ]
     },
     "parade_massing": {
@@ -92,7 +108,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-28T09:09:45+00:00",
+  "checked_at": "2026-11-28T10:10:01+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

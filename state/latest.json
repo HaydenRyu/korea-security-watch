@@ -6,27 +6,22 @@
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
-      "North Korea nuclear Yongbyon"
+      "North Korea nuclear Reuters"
     ],
     "logistics": [
       "북한 탄약 군수 수송",
-      "North Korea ammunition shipment"
+      "North Korea ammunition logistics"
     ],
     "border_clash": [
-      "지뢰 발견",
-      "목함지뢰 해안",
-      "북한 합참 발표 지뢰 발견 DMZ 귀순"
+      "북한 11월 28일 합참 지뢰 목함지뢰 DMZ 귀순"
     ],
     "electronic_cyber": [
-      "GPS 교란",
-      "해킹 개인정보 유출",
-      "사이버 공격",
-      "랜섬웨어 공격"
+      "북한 GPS 교란",
+      "해킹 개인정보 유출 사이버 공격"
     ],
     "foreign_forces": [
       "김정은 방중",
-      "김정은 방러",
-      "Kim Jong Un China Russia visit",
+      "North Korea Kim Jong Un China Russia visit",
       "서해 구조물",
       "주한미군 감축"
     ],
@@ -36,29 +31,26 @@
     ],
     "nk_internal": [
       "북한 등화관제 준전시",
-      "North Korea martial state"
+      "North Korea wartime mobilization"
     ],
     "gov_warning": [
-      "진돗개 발령 데프콘",
-      "합참 긴급 경고"
+      "진돗개 데프콘 발령",
+      "North Korea warning DEFCON"
     ],
     "hybrid_ops": [
-      "국가보안법 구속",
-      "간첩 혐의",
+      "국가보안법 구속 간첩 혐의",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안",
-      "통신선 복원",
-      "확성기 방송 중단"
+      "남북 대화 제안 통신선 복원 확성기 방송 중단 North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261128503206",
-    "https://www.yna.co.kr/view/AKR20261126190400504",
-    "https://newsis.com/view/NISX20261005_0003814618"
+    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
+    "https://www.nknews.org"
   ],
-  "overall_summary": "신규 비정례 징후는 없고 김정은 추가 방중설만 정례 외교 수준으로 보도됐다. 직전 회차와 같은 평시 수준이다.",
+  "overall_summary": "김정은 추가 방중설(국정원 「동향 주시」)이 외교 관측 단계로 보도됐고 군사 징후 신규 확인은 없다. 직전 회차와 같은 수준이다.",
   "items": {
     "troop_movement": {
       "status": "none"
@@ -68,6 +60,35 @@
     },
     "logistics": {
       "status": "none"
+    },
+    "border_clash": {
+      "status": "none",
+      "summary": "11/27 탈북민 GOP 철책 접근 적발·표류 어선 송환은 24시간 경과 또는 정례 처리, 군 발표 신규 침범·지뢰 발견 없음."
+    },
+    "electronic_cyber": {
+      "status": "none"
+    },
+    "foreign_forces": {
+      "status": "single",
+      "routine": true,
+      "region": "단둥·평양",
+      "summary": "국정원이 11/28 김정은 추가 방중설에 「여러 동향 주시」라고 밝혔으나 확인된 방문·협정은 없다(12월 초 유력설).",
+      "meaning": "외교 일정 관측 단계로 군사 협정·무기 이전 징후는 없다.",
+      "sources": [
+        {
+          "name": "세계일보",
+          "tier": "B",
+          "url": "https://www.segye.com/newsView/20261128503206"
+        }
+      ],
+      "confidence": "중간",
+      "facts": [
+        "국정원 「여러 동향 주시 중」",
+        "가시적 특이 동향 미포착"
+      ],
+      "speculation": [
+        "12월 초 방중 가능성 관측"
+      ]
     },
     "parade_massing": {
       "status": "none"
@@ -80,38 +101,9 @@
     },
     "hybrid_ops": {
       "status": "none"
-    },
-    "border_clash": {
-      "status": "none",
-      "summary": "새 사건 없음 — 연합 11/26 MDL 40여회 침범 보도와 11/27 철원 탈북민 적발은 24시간 경과 배경."
-    },
-    "electronic_cyber": {
-      "status": "none",
-      "summary": "24시간 경과 — 다나와 유출 첫 보도 11/25, 신규 사고·귀속 발표 없음."
-    },
-    "foreign_forces": {
-      "status": "single",
-      "routine": true,
-      "region": "평양·베이징",
-      "summary": "국정원이 11/28 김정은 추가 방중설에 「여러 동향 주시」라고 밝혔으나 확인된 방문·협정은 없다.",
-      "meaning": "정상 방문 가능성 단계로 군사 협정 징후는 없다.",
-      "sources": [
-        {
-          "name": "세계일보",
-          "tier": "B",
-          "url": "https://www.segye.com/newsView/20261128503206"
-        }
-      ],
-      "confidence": "중간",
-      "facts": [
-        "국정원 「여러 동향 주시 중」"
-      ],
-      "speculation": [
-        "12월 초 북중 정상회담설"
-      ]
     }
   },
-  "checked_at": "2026-11-28T12:10:31+00:00",
+  "checked_at": "2026-11-28T13:10:26+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []

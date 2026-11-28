@@ -1,29 +1,31 @@
 {
   "coverage": {
     "troop_movement": [
-      "북한 병력 이동 전방 증강",
-      "North Korea troop movement"
+      "북한 병력 이동 전방",
+      "North Korea troops deployment"
     ],
     "nuclear": [
       "북한 핵 풍계리 영변",
       "North Korea nuclear Reuters"
     ],
     "logistics": [
-      "북한 탄약 군수 수송",
-      "North Korea ammunition logistics"
+      "북한 탄약 수송",
+      "North Korea ammunition shipment"
     ],
     "border_clash": [
-      "북한 합참 지뢰 목함지뢰 DMZ 귀순 11월 28일"
+      "지뢰 발견",
+      "DMZ 귀순 NLL",
+      "North Korea DMZ border"
     ],
     "electronic_cyber": [
-      "북한 GPS 교란",
-      "해킹 개인정보 유출 사이버 공격"
+      "GPS 교란",
+      "해킹 개인정보 유출",
+      "North Korea GPS jamming hacking"
     ],
     "foreign_forces": [
-      "North Korea Kim Jong Un China Russia visit",
       "김정은 방중",
       "서해 구조물",
-      "주한미군 감축"
+      "Kim Jong Un China Russia visit"
     ],
     "parade_massing": [
       "북한 열병식 집결",
@@ -31,24 +33,26 @@
     ],
     "nk_internal": [
       "북한 등화관제 준전시",
-      "North Korea wartime mobilization"
+      "North Korea civil defense"
     ],
     "gov_warning": [
-      "진돗개 데프콘 발령",
-      "North Korea warning DEFCON"
+      "진돗개 데프콘",
+      "North Korea evacuation warning"
     ],
     "hybrid_ops": [
-      "국가보안법 구속 간첩 혐의",
+      "국가보안법 구속",
       "North Korea attributed FBI"
     ],
     "calm": [
-      "남북 대화 제안 통신선 복원 North Korea talks offer"
+      "남북 대화 제안",
+      "North Korea talks offer"
     ]
   },
   "opened": [
     "https://www.segye.com/newsView/20261128503206",
-    "https://kookbang.dema.mil.kr/newsWeb/20261126/6/ATCE_CTGR_0010010000/view.do",
-    "https://www.nknews.org"
+    "https://www.segye.com/newsView/20261127511887",
+    "https://www.nknews.org",
+    "https://www.nknews.org/2026/11/north-korean-defector-apprehended-while-moving-toward-inter-korean-border-fence/"
   ],
   "overall_summary": "김정은 추가 방중설(국정원 「동향 주시」)이 외교 관측 단계로 보도됐고 군사 징후 신규 확인은 없다. 직전 회차와 같은 수준이며 접경 열점 후보 0건이다.",
   "items": {
@@ -56,14 +60,15 @@
       "status": "none"
     },
     "nuclear": {
-      "status": "none"
+      "status": "none",
+      "summary": "11/26 노동신문 핵물질 생산기지 방문 보도는 24시간 경과한 배경이다."
     },
     "logistics": {
       "status": "none"
     },
     "border_clash": {
       "status": "none",
-      "summary": "11/27 탈북민 GOP 접근 적발·표류 어선 송환은 24시간 경과 또는 정례 처리, 군 발표 신규 침범·지뢰 발견 없음."
+      "summary": "철원 민통선 이북 탈북민 적발(11/26 저녁, 첫 보도 11/27)은 24시간 경과, 새 접경 사건 없음."
     },
     "electronic_cyber": {
       "status": "none"
@@ -71,12 +76,12 @@
     "foreign_forces": {
       "status": "single",
       "routine": true,
-      "region": "단둥·평양",
+      "region": "북중",
       "summary": "국정원이 11/28 김정은 추가 방중설에 「여러 동향 주시」라고 밝혔으나 확인된 방문·협정은 없다(12월 초 유력설).",
-      "meaning": "외교 일정 관측 단계로 군사 협정·무기 이전 징후는 없다.",
+      "meaning": "외교 일정 관측 단계로 군사 협정·무기 이전 확인은 없다.",
       "sources": [
         {
-          "name": "세계일보",
+          "name": "세계일보(연합 전재)",
           "tier": "B",
           "url": "https://www.segye.com/newsView/20261128503206"
         }
@@ -84,10 +89,10 @@
       "confidence": "중간",
       "facts": [
         "국정원 「여러 동향 주시 중」",
-        "가시적 특이 동향 미포착"
+        "청와대는 시진핑 방중 거론 취지 언급 없었다고 부인"
       ],
       "speculation": [
-        "12월 초 방중 가능성 관측"
+        "12월 초 방중 유력설"
       ]
     },
     "parade_massing": {
@@ -103,7 +108,7 @@
       "status": "none"
     }
   },
-  "checked_at": "2026-11-28T14:09:39+00:00",
+  "checked_at": "2026-11-28T15:10:06+00:00",
   "grade": 1,
   "grade_label": "주의",
   "active": []
